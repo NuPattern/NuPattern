@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ValueNotOfType" xml:space="preserve">
+    <value>Value must be of type '{0}'.</value>
+  </data>
+  <data name="TargetNotExtendingType" xml:space="preserve">
+    <value>Target type must extend '{0}'.</value>
+  </data>
+  <data name="AddNewProductViewModel_ProductTypeRequired" xml:space="preserve">
+    <value>The selection of a solution element is required.</value>
+  </data>
+  <data name="AddNewProductViewModel_ProductNameRequired" xml:space="preserve">
+    <value>The solution element name is required.</value>
+  </data>
+  <data name="InvalidProductStoreFormat" xml:space="preserve">
+    <value>Invalid product store format.</value>
+  </data>
+  <data name="AddNewProductViewModel_ProductNameDuplicated" xml:space="preserve">
+    <value>A solution element with the name '{0}' already exists in this solution.</value>
+  </data>
+  <data name="MessageBoxCaption" xml:space="preserve">
+    <value>Microsoft Visual Studio</value>
+  </data>
+  <data name="DuplicateProductName" xml:space="preserve">
+    <value>A pattern instance with the same name already exists in the store.</value>
+  </data>
+  <data name="SolutionBuilderViewModel_ProductInstantiationFailed" xml:space="preserve">
+    <value>There was an error creating solution element. If the solution element was associated to either an item template or a project template then the template may have failed in the unfolding process for one of the following possible reasons: The template itself is invalid, or there may be existing projects/items in the currently selected solution/project/folder with the same name. You may try changing the name of the solution element, and try again.</value>
+  </data>
+  <data name="SolutionUriProvider_InvalidProjectItemUri" xml:space="preserve">
+    <value>Cannot resolve uri '{0}' to any project item in the current solution.</value>
+  </data>
+  <data name="TemplateTypeNotSupported" xml:space="preserve">
+    <value>The template type '{0}' is not supported.</value>
+  </data>
+  <data name="PatternManager_CloseInvalidIfNotOpen" xml:space="preserve">
+    <value>No solution product state file is open. Cannot close.</value>
+  </data>
+  <data name="PatternManager_SaveInvalidIfNotOpen" xml:space="preserve">
+    <value>No solution product state file is open. Cannot save.</value>
+  </data>
+  <data name="VsTemplateEditorTitle" xml:space="preserve">
+    <value>Select VS Template</value>
+  </data>
+  <data name="SolutionBuilderViewModel_FailedToRenderElements" xml:space="preserve">
+    <value>Failed to add child nodes to the element '{0}'.</value>
+  </data>
+  <data name="VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot" xml:space="preserve">
+    <value>Failed to retrieve registry root suffix of the currently running Visual Studio instance.</value>
+  </data>
+  <data name="PatternManager_FailedToCloseOpenedStore" xml:space="preserve">
+    <value>Failed to properly unload the currently opened solution product state file '{0}'.</value>
+  </data>
+  <data name="PatternManager_TraceClosingStore" xml:space="preserve">
+    <value>Closing solution product state file '{0}'.</value>
+  </data>
+  <data name="PatternManager_TraceOpeningStore" xml:space="preserve">
+    <value>Opening solution product state file '{0}'.</value>
+  </data>
+  <data name="PatternManager_TraceSavingStore" xml:space="preserve">
+    <value>Saving solution product state file '{0}'.</value>
+  </data>
+  <data name="PatternManager_RestoringProductInfo" xml:space="preserve">
+    <value>Restoring schema information for pattern '{0}' from pattern toolkit extension with identifier '{1}'.</value>
+  </data>
+  <data name="PatternManager_RestoringProductInfoMissing" xml:space="preserve">
+    <value>Failed to restore schema information. No installed pattern toolkit extension has a pattern definition with a matching toolkit identifier '{0}'.</value>
+  </data>
+  <data name="PatternManager_RestoringPropertyInfoMissing" xml:space="preserve">
+    <value>Failed to restore schema information for inherited property '{0}.{1}'. It may have been deleted from the pattern toolkit extension definition.</value>
+  </data>
+  <data name="PatternManager_RestoringStoreSchemaInfo" xml:space="preserve">
+    <value>Restoring schema information for patterns in store '{0}'.</value>
+  </data>
+  <data name="PatternManager_TraceAddingFileToSolution" xml:space="preserve">
+    <value>Adding or replacing content to target parent '{0}' with name '{1}'.</value>
+  </data>
+  <data name="PatternManager_OpenedStore" xml:space="preserve">
+    <value>Solution product state file '{0}' has been opened successfully.</value>
+  </data>
+  <data name="PatternManager_SaveNoExistingParentFound" xml:space="preserve">
+    <value>No existing solution parent (folder or solution folder) found for store '{0}'. Defaulting to 'Solution Items' folder.</value>
+  </data>
+  <data name="PatternManager_SaveNoSolutionItems" xml:space="preserve">
+    <value>No Solution Items folder found. Creating it.</value>
+  </data>
+  <data name="PatternManager_TraceSavingDefaultEmptyState" xml:space="preserve">
+    <value>Saving empty solution product state file to '{0}'.</value>
+  </data>
+  <data name="SchemaResource_AssemblyFileAttributeMissing" xml:space="preserve">
+    <value>The 'AssemblyFile' attribute is missing from the 'CustomExtension' defined in the VSIX manifest.</value>
+  </data>
+  <data name="SettingsManager_InvalidTraceLevel" xml:space="preserve">
+    <value>Tracing level '{0}' specified for trace source '{1}' is invalid.</value>
+  </data>
+  <data name="TraceOutput_FailedToCreateOutputWindow" xml:space="preserve">
+    <value>Failed to create output window '{0}' for message tracing.</value>
+  </data>
+  <data name="TraceOutputWindowManager_FailedToCreateWindowPane" xml:space="preserve">
+    <value>Failed to create output window pane '{0}'.</value>
+  </data>
+  <data name="PatternManager_TraceCreatingProduct" xml:space="preserve">
+    <value>Creating solution element named '{0}' from pattern toolkit '{1}'.</value>
+  </data>
+  <data name="DecoratingReflectionCatalog_CatalogName" xml:space="preserve">
+    <value>Decorating Catalog</value>
+  </data>
+  <data name="DecoratingReflectionCatalog_CatalogNameFor" xml:space="preserve">
+    <value>Decorating Catalog for {0}</value>
+  </data>
+  <data name="ComponentModelCatalog_InvalidExportDefinition" xml:space="preserve">
+    <value>Export definition does not belong to this part.</value>
+  </data>
+  <data name="EventExportExtensions_InvalidPropertyType" xml:space="preserve">
+    <value>Invalid property type for an exported event. Property must be of type {0} with a valid {1} type.</value>
+  </data>
+  <data name="AutomationCommand_CommandExecuteFailed" xml:space="preserve">
+    <value>Failed to execute menu automation '{0}'.</value>
+  </data>
+  <data name="AutomationCommand_QueryStatusFailed" xml:space="preserve">
+    <value>Failed to query the status for the menu automation '{0}'.</value>
+  </data>
+  <data name="SolutionUriProvider_InvalidProjectUri" xml:space="preserve">
+    <value>Cannot resolve uri '{0}' to a project in the current solution.</value>
+  </data>
+  <data name="UriProviderExtensions_WrongScheme" xml:space="preserve">
+    <value>Provider supports uris starting with '{0}://'.</value>
+  </data>
+  <data name="VsixExtensionUriProvider_ManifestMissing" xml:space="preserve">
+    <value>A file named 'extension.vsixmanifest' was not found in the extension installation path '{0}'. Installation of extension with identifier '{1}' might be invalid.</value>
+  </data>
+  <data name="VsixExtensionUriProvider_ExtensionNotInstalled" xml:space="preserve">
+    <value>Extension with identifier '{0}' is not installed. Only installed extensions can be converted to a uri.</value>
+  </data>
+  <data name="TextTemplateUriProvider_ExtensionNotFound" xml:space="preserve">
+    <value>Extension-relative uri '{0}' could not resolve the id '{1}' to an installed extension.</value>
+  </data>
+  <data name="TextTemplateUriProvider_TraceExtensionPath" xml:space="preserve">
+    <value>Found extension at '{0}' for uri '{1}'.</value>
+  </data>
+  <data name="TextTemplateUriProvider_TraceTemplateNotFound" xml:space="preserve">
+    <value>A template file could not be located at '{0}' for uri '{1}'.</value>
+  </data>
+  <data name="TextTemplate_FileNotFound" xml:space="preserve">
+    <value>Template file was not found.</value>
+  </data>
+  <data name="TextTemplate_TraceStartUnfold" xml:space="preserve">
+    <value>Unfolding template '{0}' onto '{1}'.</value>
+  </data>
+  <data name="TextTemplateUriProvider_TraceInvalidExtensionRelative" xml:space="preserve">
+    <value>Uri '{0}' does not contain a valid extension-relative path. It must be of the form: t4://extension/{extension-identifier}/{relative-path-to-t4-file}.</value>
+  </data>
+  <data name="CustomToolRunnerTemplateWizard_FailedToRunCustomTools" xml:space="preserve">
+    <value>Failed to run associated Custom Tool on project items.</value>
+  </data>
+  <data name="ProductElementViewModel_AddMenuText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="ProductViewModel_ViewsMenuText" xml:space="preserve">
+    <value>Views</value>
+  </data>
+  <data name="ProductElementViewModel_DeleteMenuText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ProductElementViewModel_PropertiesMenuText" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="TextTemplate_ErrorCallback" xml:space="preserve">
+    <value>Error: {0}. Line: {1} Column: {2}</value>
+  </data>
+  <data name="TextTemplate_WarningCallback" xml:space="preserve">
+    <value>Warning: {0}. Line: {1} Column: {2}</value>
+  </data>
+  <data name="ProductElementViewModel_ElementCreationFailed" xml:space="preserve">
+    <value>The element/collection '{0}' could not be created.</value>
+  </data>
+  <data name="ProductElementViewModel_ProductCreationFailed" xml:space="preserve">
+    <value>The solution element from pattern toolkit '{0}' could not be created as extension point.</value>
+  </data>
+  <data name="SolutionBuilderViewModel_ServiceNotFound" xml:space="preserve">
+    <value>The service '{0}' can not be found.</value>
+  </data>
+  <data name="ProductElementViewModel_DeleteInputGestureText" xml:space="preserve">
+    <value>Del</value>
+  </data>
+  <data name="AddNewProductViewModel_ProductNameInvalid" xml:space="preserve">
+    <value>The solution element name must start with a letter, number or underscore, contain any letters, numbers, spaces, braces, periods, underscores, dashes and other common characters, and not end in any spaces.</value>
+  </data>
+  <data name="AddNewNodeViewModel_ProductNameRequired" xml:space="preserve">
+    <value>The solution element name is required.</value>
+  </data>
+  <data name="SolutionUriProvider_InvalidUnknownUri" xml:space="preserve">
+    <value>Cannot resolve uri '{0}' to any project, folder, or item in the current solution.</value>
+  </data>
+  <data name="SolutionUriProvider_InvalidSolutionItemUri" xml:space="preserve">
+    <value>Cannot resolve uri '{0}' to any item, folder or project in the current solution.</value>
+  </data>
+  <data name="SolutionUriProvider_InvalidSolutionUriProviderUri" xml:space="preserve">
+    <value>This provider does not support the uri scheme: '{0}'</value>
+  </data>
+  <data name="ProductElementViewModel_PropertiesInputGestureText" xml:space="preserve">
+    <value>Alt+Enter</value>
+  </data>
+  <data name="InstalledToolkitAdapter_FailedToCreateRegistration" xml:space="preserve">
+    <value>Extension installed on '{0}' is not a valid pattern toolkit extension.</value>
+  </data>
+  <data name="SchemaResource_FailedToLoadSchemaStream" xml:space="preserve">
+    <value>Schema stream was not found as an embedded resource named '{0}' (or '{1}') in assembly '{2}'.</value>
+  </data>
+  <data name="FixLinkPathTemplateWizard_FailedToFixLinkPaths" xml:space="preserve">
+    <value>Failed to fix linked project item paths.</value>
+  </data>
+  <data name="SolutionPicker_EmptyItemsMessage" xml:space="preserve">
+    <value>There are no '{0}' files in the current solution.</value>
+  </data>
+  <data name="PatternManager_FailedToOpenStore" xml:space="preserve">
+    <value>Solution Builder failed to properly load the product state for this solution. 
+
+Please close this solution, and open this solution again from within Visual Studio.</value>
+  </data>
+  <data name="PatternManager_DeSerializationFailed" xml:space="preserve">
+    <value>De serialization of solution product state file '{0}' failed.</value>
+  </data>
+  <data name="PatternManager_FailedToVerifyDslVersion" xml:space="preserve">
+    <value>Failed to properly verify dsl version.</value>
+  </data>
+  <data name="PatternManager_NewerDslVersionUpgrade" xml:space="preserve">
+    <value>You are opening a solution whose product state ('{0}') file was created with an older version of the '{1}'. 
+Previous versions of these state files cannot be opened in the 'Solution Builder' window. 
+
+Would you like to automatically upgrade this file to the current version?</value>
+  </data>
+  <data name="SolutionNameTemplateWizard_ContextSolutionName" xml:space="preserve">
+    <value>Found contextual solution name {0}.</value>
+  </data>
+  <data name="SolutionNameTemplateWizard_NewContextSolution" xml:space="preserve">
+    <value>No existing contextual solution found. Setting {0} as the solution name.</value>
+  </data>
+  <data name="EndStoreEventBufferingTemplateWizard_CompletingScope" xml:space="preserve">
+    <value>Completing existing active scope.</value>
+  </data>
+  <data name="FixLinkPathTemplateWizard_LinkFixed" xml:space="preserve">
+    <value>Fixed item {0} to link to {1}.</value>
+  </data>
+  <data name="GuidGeneratorTemplateWizard_GeneratedNewGuid" xml:space="preserve">
+    <value>Generated new Guid available on template replacement with the key {0}.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_DesignerItemNotFound" xml:space="preserve">
+    <value>Designer item for file {0} was not found.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_OpeningDesigner" xml:space="preserve">
+    <value>Opening designer file {0}.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_RetrievedDesignerFile" xml:space="preserve">
+    <value>Designer file name with key $patterndefinition$ was not found in the replacement dictionary.</value>
+  </data>
+  <data name="ReplacementTemplateWizard_Replacing" xml:space="preserve">
+    <value>Processing custom replacement {0}={1}.</value>
+  </data>
+  <data name="CustomToolRunnerTemplateWizard_RunningCustomTool" xml:space="preserve">
+    <value>Running custom tool {0} on item {1} because it has RunCustomToolOnUnfold.</value>
+  </data>
+  <data name="VsRootSuffixTemplateWizard_RootSuffixDetermined" xml:space="preserve">
+    <value>Determined VS root suffix as {0}.</value>
+  </data>
+  <data name="DroppedItemContainerValueProvider_Description" xml:space="preserve">
+    <value>Item Dropped from Solution Explorer</value>
+  </data>
+  <data name="DroppedItemContainerValueProvider_DisplayName" xml:space="preserve">
+    <value>Item Dropped from Solution Explorer</value>
+  </data>
+  <data name="OnSolutionBuilderDragEnter_Description" xml:space="preserve">
+    <value>Raised when dragged data has just entered the solution builder window.</value>
+  </data>
+  <data name="OnSolutionBuilderDragEnter_DisplayName" xml:space="preserve">
+    <value>Dragged Data Enters</value>
+  </data>
+  <data name="OnSolutionBuilderDragLeave_Description" xml:space="preserve">
+    <value>Raised when dragged data has moved outside of the solution builder window.</value>
+  </data>
+  <data name="OnSolutionBuilderDragLeave_DisplayName" xml:space="preserve">
+    <value>Dragged Data Leaves</value>
+  </data>
+  <data name="OnSolutionBuilderDrop_Description" xml:space="preserve">
+    <value>Raised when any dragged data source is dropped onto an element in solution builder window.</value>
+  </data>
+  <data name="OnSolutionBuilderDrop_DisplayName" xml:space="preserve">
+    <value>Dragged Data Dropped</value>
+  </data>
+  <data name="AutomationCategory_DragDrop" xml:space="preserve">
+    <value>Drag and Drop</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib" />
+  <data name="PatternManager_OpeningStoreEventId" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="PatternManager_OpenedStoreEventId" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="PatternManager_SavingStoreEventId" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="PatternManager_SavedStoreEventId" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="PatternManager_ElementLoadingEventId" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="PatternManager_ElementLoadedEventId" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="PatternManager_ElementInstantiatingEventId" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="PatternManager_ElementInstantiatedEventId" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="PatternManager_ElementCreatingEventId" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="PatternManager_ElementCreatedEventId" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="ProductViewModel_FailedToDeleteProduct" xml:space="preserve">
+    <value>Delete operation cannot be completed.</value>
+  </data>
+  <data name="SolutionBuilder_ConfirmDelete" xml:space="preserve">
+    <value>Are you sure you want to delete '{0}'?</value>
+  </data>
+  <data name="AddNewNodeView_TitleFormat" xml:space="preserve">
+    <value>Add New {0}</value>
+  </data>
+  <data name="AddNewNodeView_DefaultTitle" xml:space="preserve">
+    <value>Add New Element</value>
+  </data>
+  <data name="ProductElementViewModel_RenameInputGestureText" xml:space="preserve">
+    <value>F2</value>
+  </data>
+  <data name="ProductElementViewModel_RenameMenuText" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+</root>

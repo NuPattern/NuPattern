@@ -1,0 +1,41 @@
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\Runtime.Store\DslDefinition.dsl'" #>
+<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".cs" #>
+<#@ Include File="..\..\..\Common\Helpers\DslVersion.tt" #>
+<#@ Include File="..\..\..\MasterVSIXInfo.ttinclude" #>
+using System;
+using System.Diagnostics.CodeAnalysis;
+
+namespace Microsoft.VisualStudio.Patterning.Runtime
+{
+	/// <summary>
+	/// Defines constant values for the runtime.
+	/// </summary>
+	public static class Constants
+	{
+		/// <summary>
+		/// Runtime store file extension.
+		/// </summary>
+		public const string RuntimeStoreExtension = ".<#=this.Dsl.Editor.FileExtension#>";
+		
+		/// <summary>
+		/// Runtime store editor description.
+		/// </summary>
+		public const string RuntimeStoreEditorDescription = "Solution Builder";
+
+		/// <summary>
+		/// Current toolkit version.
+		/// </summary>
+		public static readonly Version DslVersion = new Version("<#= this.DslVersion #>");
+
+		/// <summary>
+		/// The name of the registry key for storing settings for the runtime.
+		/// </summary>
+		public const string RegistrySettingsKeyName = "<#=VsixInfo.PatternToolkitRuntime.SettingsName#>";
+		
+		/// <summary>
+		/// The product name.
+		/// </summary>
+		public const string ProductName = "<#=VsixInfo.PatternToolkitRuntime.Name#>";
+	}
+}

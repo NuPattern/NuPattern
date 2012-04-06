@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase">
+    <Position X="5.25" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IProductElement">
+    <Position X="2.75" Y="2.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IProduct" HideInheritanceLine="true">
+    <Position X="0.5" Y="3.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase" IsHidden="true" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IAbstractElement" HideInheritanceLine="true">
+    <Position X="5.25" Y="3.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase" IsHidden="true" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.ICollection" HideInheritanceLine="true">
+    <Position X="6.75" Y="6.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IElementContainer" IsHidden="true" />
+    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" IsHidden="true" />
+    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase" IsHidden="true" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IElement" HideInheritanceLine="true">
+    <Position X="3.75" Y="6.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IElementContainer" IsHidden="true" />
+    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" IsHidden="true" />
+    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase" IsHidden="true" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IView" HideInheritanceLine="true">
+    <Position X="9.75" Y="3.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase" IsHidden="true" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IElementContainer">
+    <Position X="7.5" Y="2.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

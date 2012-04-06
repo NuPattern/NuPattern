@@ -1,0 +1,21 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".cs" #>
+<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\DslDefinition.dsl'" #>
+namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>
+{
+	/// <summary>
+	/// Constants for designer.
+	/// </summary>
+	public static partial class DesignerConstants
+	{
+		/// <summary>
+		/// Model extension.
+		/// </summary>
+		public const string ModelExtension = ".patterndefinition";
+
+		/// <summary>
+		/// Diagram file extension.
+		/// </summary>
+		public const string DiagramFileExtension = ".diagram";
+	}
+}

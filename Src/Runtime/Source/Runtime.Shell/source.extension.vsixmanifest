@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+	<Identifier Id="93373818-600f-414b-8181-3a0cb79fa785">
+		<Name>Pattern Toolkit Manager</Name>
+		<Author>Microsoft</Author>
+		<Version>1.2.19.0</Version>
+		<Description xml:space="preserve">The Solution Builder tool window for accelerating solution development using Pattern Toolkit extensions.</Description>
+		<Locale>1033</Locale>
+		<Icon>Resources\RunTimeVsix.png</Icon>
+		<MoreInfoUrl>http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b</MoreInfoUrl>
+		<GettingStartedGuide>http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b</GettingStartedGuide>
+		<PreviewImage>Resources\RunTimeVsixPreview.png</PreviewImage>
+		<InstalledByMsi>false</InstalledByMsi>
+		<SupportedProducts>
+			<VisualStudio Version="10.0">
+				<Edition>Ultimate</Edition>
+				<Edition>Premium</Edition>
+				<Edition>Pro</Edition>
+			</VisualStudio>
+		</SupportedProducts>
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+	</Identifier>
+	<References>
+		<Reference Id="FeatureExtensionRuntime" MinVersion="1.0">
+			<Name>Feature Extension Runtime</Name>
+			<MoreInfoUrl>http://channel9.msdn.com/tags/FeatureBuilder</MoreInfoUrl>
+			<VsixPath>FeatureExtensionRuntimePro.vsix</VsixPath>
+		</Reference>
+		<Reference Id="NuPackToolsVsix.Microsoft.67e54e40-0ae3-42c5-a949-fddf5739e7a5" MinVersion="1.6.21215.9133">
+			<Name>NuGet Package Manager</Name>
+			<MoreInfoUrl>http://docs.nuget.org/</MoreInfoUrl>
+		</Reference>
+	</References>
+	<Content>
+		<VsPackage>|Runtime.Shell;PkgdefProjectOutputGroup|</VsPackage>
+		<MefComponent>|Runtime|</MefComponent>
+		<MefComponent>|Runtime.Shell|</MefComponent>
+		<MefComponent>|Runtime.Store|</MefComponent>
+		<MefComponent>|Runtime.Schema|</MefComponent>
+		<MefComponent>|Library|</MefComponent>
+		<MefComponent>|Extensibility|</MefComponent>
+		<Assembly AssemblyName="Microsoft.VisualStudio.Patterning.Runtime, Version=1.2.19.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">|Runtime|</Assembly>
+	</Content>
+</Vsix>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<productState xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.2.0.0" Id="db8f61bf-1db6-415b-abde-788bdeb823f6" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/productstate">
+  <products>
+    <product Id="3c8a1973-ddd3-4367-ba7c-e99585cdd559" definitionId="c034429e-01f9-48dd-a478-0321fb708dd3" definitionName="PatternToolkit" instanceName="Runtime.Shell" extensionId="9f6dc301-6f66-4d21-9f9c-b37412b162f6" extensionName="Pattern Toolkit Builder" author="Microsoft" version="1.2.19.0">
+      <properties>
+        <property Id="6a3e62bf-a322-45c7-8bce-bd651137b532" definitionId="7ce5ad5a-88c2-4336-b038-e4998aa02b03" definitionName="TransformOnBuild" rawValue="Never" />
+        <property Id="97649644-bcb9-4567-ae24-4224e0b14320" definitionId="293802b7-0b69-440e-be60-927f07f4e636" definitionName="PatternName" rawValue="MyPattern" />
+        <property Id="940b0356-066e-4526-ac13-3ca47b6f890e" definitionId="710634cd-4863-4314-9785-dc33f6501903" definitionName="PatternDescription" rawValue="A Description of MyPattern" />
+        <property Id="bea5e842-e950-4abb-895a-85f25d292027" definitionId="00123e2b-3459-4924-9f18-628406735664" definitionName="ExistingToolkitId" />
+        <property Id="edde12f7-2581-48dc-9f49-fbbaf52df5d0" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Runtime" />
+        <property Id="eb984bf2-6101-4510-ba06-8335c8992524" definitionId="e73753b6-45e3-479f-b953-1c9ab6836362" definitionName="ProjectRootNamespace" rawValue="Microsoft.VisualStudio.Patterning.Runtime.Shell" />
+        <property Id="74721404-3868-4d5b-b462-bea439b2a32e" definitionId="4b4b1fdf-ea6d-4ea4-b142-c2f1685c0091" definitionName="ProjectAssemblyName" rawValue="Microsoft.VisualStudio.Patterning.Runtime.Shell" />
+        <property Id="f438170e-7a16-4b62-bc9c-4f4b3251d822" definitionId="4121d8f0-87a2-4757-a6d4-6f28d9fa8728" definitionName="ExcludeFromCodeCoverage" rawValue="True" />
+      </properties>
+      <references>
+        <reference Id="900fad07-bd95-4195-9d1c-0e216f870f11" value="solution://d3e93083-99c9-4186-95b5-339a822c63ee/" kind="Microsoft.VisualStudio.Patterning.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: null,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;&#xD;&#xA;}" />
+      </references>
+      <views>
+        <view Id="182cccee-7b23-442f-928f-f15b512a49ff" definitionId="e4f9702a-3b97-4b11-bb76-037a32de07c7" definitionName="Development">
+          <elements>
+            <element Id="9c036f11-8a06-44ae-a823-53c5a01f3841" definitionId="5da53e5a-0ba8-48f8-a922-1712244c388c" definitionName="PatternModel" instanceName="Pattern Model">
+              <properties>
+                <property Id="30cffe7b-82d9-4316-afd0-6fdcfd1cf6c3" definitionId="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" definitionName="ValidateOnBuild" rawValue="Never" />
+                <property Id="88fb531e-ee16-46a8-93a0-7b792ffff20c" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" />
+              </properties>
+              <elements>
+                <collection Id="a17b776a-da7a-42cb-99c3-30b0993bd74f" definitionId="739aef21-5f1e-421b-804a-47f11f93c9c3" definitionName="Views" instanceName="Views">
+                  <elements>
+                    <element Id="d52fd181-5ecb-40d6-9373-f862e8c2c15c" definitionId="6a596dea-529b-4cd5-9eea-7e856a2b332c" definitionName="View" instanceName="DefaultView" />
+                  </elements>
+                </collection>
+              </elements>
+            </element>
+            <element Id="7a78a34e-d628-4fda-b05d-26b6873bc01a" definitionId="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" definitionName="ToolkitInfo" instanceName="Toolkit Info">
+              <properties>
+                <property Id="30850081-973b-47ec-87c2-76df372eba9e" definitionId="c6eb8c9f-7689-405c-9e04-05b4954e3bf6" definitionName="ToolkitName" rawValue="Ignore" />
+                <property Id="0d21eeea-4b12-489b-b907-8bb06f66afc1" definitionId="09a9d6ed-39e6-414d-a8db-b7b381c227ca" definitionName="Author" rawValue="Ignore" />
+                <property Id="a7d95c93-eaa0-4a88-ac1f-08d2690f0b15" definitionId="f28908ca-518f-497b-9b8c-0e3dc47f21dd" definitionName="Description" rawValue="Ignore" />
+                <property Id="c5c1f5bc-26ca-4a49-a55f-628f3817bd42" definitionId="2058a01f-6a09-4ad4-9e59-10393e0fca87" definitionName="Version" rawValue="1.0" />
+                <property Id="4073de06-bfa0-4f62-ac4c-4b69cfce4760" definitionId="766e5ae2-80de-4d94-a0be-4b953a40ac46" definitionName="Identifier" rawValue="93373818-600f-414b-8181-3a0cb79fa785" />
+                <property Id="f5574289-da98-4da5-8bc0-e69db9aac767" definitionId="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" definitionName="Icon" />
+                <property Id="b9e6d98a-b8dc-413b-b491-fc005b270098" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" />
+              </properties>
+            </element>
+            <collection Id="1771d753-d861-4114-9d70-66de670b0284" definitionId="58df3920-65bc-4078-b6a4-ab583f906881" definitionName="Assets" instanceName="Assets">
+              <elements>
+                <element Id="29623964-bb7b-4778-b7d4-d79652ac5a5e" definitionId="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" definitionName="Guidance" instanceName="Guidance">
+                  <properties>
+                    <property Id="adef027a-dd73-4ff6-b6f5-c825314c0184" definitionId="70d70df3-799d-4107-b77b-0001119484a6" definitionName="ProjectContentPath" rawValue="GeneratedCode\Guidance\Content" />
+                    <property Id="85aa968f-7a14-46bf-829e-b01da14e7cd2" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\Platu\Main\Src\Common\Guidance\RuntimeGuidance.doc" />
+                    <property Id="64cf70d9-0d22-4696-948f-d96f8af287cd" definitionId="81c7a831-97e3-4067-9d15-8d7fb671a755" definitionName="DefaultInstanceName" rawValue="Using Patterns in Solution Development" />
+                  </properties>
+                  <references>
+                    <reference Id="74b99852-55db-4e71-aef1-d462714a950f" value="solution://d3e93083-99c9-4186-95b5-339a822c63ee/02990d34-46b5-4617-82f9-cc74c83c5666" kind="Microsoft.VisualStudio.Patterning.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;RuntimeGuidance.doc&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;90291e86-b780-4adf-b500-5c11c868c3fd&quot;&#xD;&#xA;}" />
+                    <reference Id="b823f094-74d0-4356-9d8d-6096ccb76b1b" value="solution://d3e93083-99c9-4186-95b5-339a822c63ee/ae551abf-1da3-405b-8d82-c2ccb986c7f8" kind="Microsoft.VisualStudio.Patterning.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;GuidanceWorkflow&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;50c8adef-76cc-44a0-80c3-ac8aef6c4513&quot;&#xD;&#xA;}" />
+                  </references>
+                </element>
+                <collection Id="5dcc470a-ec3b-44da-9364-5428235eab20" definitionId="f53b1915-e5c9-47f0-b33f-64487813d87c" definitionName="Templates" instanceName="Templates">
+                  <elements>
+                    <collection Id="0498073e-b4e3-4ade-a9e0-464d36de3a9e" definitionId="48591d87-4482-4dae-b5af-3ab807bcd947" definitionName="ItemTemplates" instanceName="Item Templates" />
+                    <collection Id="5f74a2c1-901d-4f46-b31a-75700613843e" definitionId="b48e216c-da3e-46db-9fdd-51af29559489" definitionName="ProjectTemplates" instanceName="Project Templates" />
+                    <collection Id="ff3a67e0-ac19-4909-af1f-8521fb5d3199" definitionId="81dde21d-392a-4c60-a048-5c5445bf6542" definitionName="TextTemplates" instanceName="Text Templates" />
+                  </elements>
+                </collection>
+                <collection Id="cf3c3f6b-2abc-4853-a3c6-37891df378e7" definitionId="e341bc69-c2e1-44ef-811f-6d092497c277" definitionName="Wizards" instanceName="Wizards">
+                  <elements>
+                    <collection Id="bf31a691-39b7-4d1f-8c1c-2d9156b0f611" definitionId="3906075a-6263-4e5d-be94-3750e6fc1e57" definitionName="WizardPages" instanceName="Wizard Pages" />
+                  </elements>
+                </collection>
+              </elements>
+            </collection>
+            <collection Id="c8a4b266-4f1b-4294-86c3-2cb9c90a4325" definitionId="994965b7-d2b1-4460-8947-44ca73227b5f" definitionName="Automation" instanceName="Automation" />
+          </elements>
+        </view>
+        <view Id="e66ebfc6-c3da-4136-abbb-66ef7693115e" definitionId="a5541c90-1637-4405-9fe7-4b31f28eb3cd" definitionName="Design">
+          <elements>
+            <element Id="11baafac-b1d5-4600-903f-32ccccbf3479" definitionId="9291502b-fefc-4ef8-afc0-4c6914f0d2d1" definitionName="ProductionTooling" instanceName="Production Tooling" />
+          </elements>
+        </view>
+      </views>
+    </product>
+  </products>
+</productState>

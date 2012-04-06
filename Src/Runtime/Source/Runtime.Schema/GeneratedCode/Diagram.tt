@@ -1,0 +1,3 @@
+<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\DslDefinition.dsl'" #>
+#pragma warning disable 1591
+<#@ include file="Dsl\Diagram.tt" #>

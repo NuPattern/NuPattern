@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<VSPerformanceSession Version="1.00">
+  <Options>
+    <Solution>C:\Projects\Platu\Main\Src\Authoring\Authoring.sln</Solution>
+    <CollectionMethod>Instrumentation</CollectionMethod>
+    <AllocationMethod>None</AllocationMethod>
+    <LaunchRuntimeControl>true</LaunchRuntimeControl>
+    <Reportname>C:\Projects\Platu\Main\Src\Authoring\PerfTests\devenv.vsp</Reportname>
+    <AddReport>true</AddReport>
+    <ResourceBasedAnalysisSelected>true</ResourceBasedAnalysisSelected>
+    <ThreadBasedAnalysisSelected>true</ThreadBasedAnalysisSelected>
+    <UniqueReport>Timestamp</UniqueReport>
+    <SamplingMethod>Cycles</SamplingMethod>
+    <CycleCount>10000000</CycleCount>
+    <PageFaultCount>10</PageFaultCount>
+    <SysCallCount>10</SysCallCount>
+    <SamplingCounter Name="" ReloadValue="00000000000f4240" DisplayName="" />
+    <RelocateBinaries>false</RelocateBinaries>
+    <BinaryLocation>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\INSTRUMENTED</BinaryLocation>
+    <AdditionalArgruments />
+    <TargetCLRVersion>Automatic</TargetCLRVersion>
+    <CollectOnHpcCluster>false</CollectOnHpcCluster>
+    <HPCSettings>
+      <NumberOfProcesses>0</NumberOfProcesses>
+      <TargetSelection>UnknownDisabled</TargetSelection>
+      <ProfileOnRank>0</ProfileOnRank>
+      <AdvancedProperties>
+        <Project>Authoring.Toolkit</Project>
+        <CleanUp>true</CleanUp>
+        <MpiexecCommand>mpiexec.exe</MpiexecCommand>
+        <DeployCRT>true</DeployCRT>
+      </AdvancedProperties>
+    </HPCSettings>
+    <HardwareCounters EnableHWCounters="false" />
+    <EtwSettings />
+    <PdhSettings>
+      <PdhCountersEnabled>false</PdhCountersEnabled>
+      <PdhCountersRate>500</PdhCountersRate>
+      <PdhCounters>
+        <PdhCounter>\Memory\Pages/sec</PdhCounter>
+        <PdhCounter>\PhysicalDisk(_Total)\Avg. Disk Queue Length</PdhCounter>
+        <PdhCounter>\Processor(_Total)\% Processor Time</PdhCounter>
+      </PdhCounters>
+    </PdhSettings>
+  </Options>
+  <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+  <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+  <PreinstrumentEvent>
+    <InstrEventExclude>false</InstrEventExclude>
+  </PreinstrumentEvent>
+  <PostinstrumentEvent>
+    <InstrEventExclude>false</InstrEventExclude>
+  </PostinstrumentEvent>
+  <Binaries>
+    <ProjBinary>
+      <Path>C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit\obj\Debug\Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit.dll</Path>
+      <TargetCLRVersion>Automatic</TargetCLRVersion>
+      <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <ExecutablePath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\devenv.exe</ExecutablePath>
+      <StartupDirectory>C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit\bin\Debug\</StartupDirectory>
+      <Arguments>/rootsuffix Exp</Arguments>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventProgram />
+        <InstrEventArguments />
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
+        <InstrEventArguments> -Ra "C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit\obj\Debug\Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit.dll" "C:\Projects\Platu\Main\Src\Microsoft.VisualStudio.Patterning.snk"</InstrEventArguments>
+        <InstrEventDescription>Sign Assembly</InstrEventDescription>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+      <ProjRef>{0216A624-C5C5-4335-8361-F640B91B4DEA}|Source\Authoring.Toolkit\Authoring.Toolkit.csproj</ProjRef>
+      <ProjPath>C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit\Authoring.Toolkit.csproj</ProjPath>
+      <ProjName>Authoring.Toolkit</ProjName>
+    </ProjBinary>
+    <ProjBinary>
+      <Path>C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit.Automation\obj\Debug\Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.dll</Path>
+      <TargetCLRVersion>Automatic</TargetCLRVersion>
+      <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <ExecutablePath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\devenv.exe</ExecutablePath>
+      <StartupDirectory>C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit.Automation\bin\Debug\</StartupDirectory>
+      <Arguments>/rootsuffix Exp</Arguments>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventProgram />
+        <InstrEventArguments />
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
+        <InstrEventArguments>  -Ra "C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit.Automation\obj\Debug\Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.dll" "C:\Projects\Platu\Main\Src\Microsoft.VisualStudio.Patterning.snk"</InstrEventArguments>
+        <InstrEventDescription>Sign Assembly</InstrEventDescription>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+      <ProjRef>{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}|Source\Authoring.Toolkit.Automation\Authoring.Toolkit.Automation.csproj</ProjRef>
+      <ProjPath>C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit.Automation\Authoring.Toolkit.Automation.csproj</ProjPath>
+      <ProjName>Authoring.Toolkit.Automation</ProjName>
+    </ProjBinary>
+    <ProjBinary>
+      <Path>C:\Projects\Platu\Main\Src\Authoring\Source\AutomationLibrary.Toolkit\obj\Debug\Microsoft.VisualStudio.Patterning.Authoring.Library.Toolkit.dll</Path>
+      <TargetCLRVersion>Automatic</TargetCLRVersion>
+      <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <ExecutablePath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\devenv.exe</ExecutablePath>
+      <StartupDirectory>C:\Projects\Platu\Main\Src\Authoring\Source\AutomationLibrary.Toolkit\bin\Debug\</StartupDirectory>
+      <Arguments>/rootsuffix Exp</Arguments>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventProgram />
+        <InstrEventArguments />
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
+        <InstrEventArguments>  -Ra "C:\Projects\Platu\Main\Src\Authoring\Source\AutomationLibrary.Toolkit\obj\Debug\Microsoft.VisualStudio.Patterning.Authoring.Library.Toolkit.dll" "C:\Projects\Platu\Main\Src\Microsoft.VisualStudio.Patterning.snk"</InstrEventArguments>
+        <InstrEventDescription>Sign Assembly</InstrEventDescription>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+      <ProjRef>{2F73D922-E3C5-49F8-AB6D-AF54E76EE47E}|Source\AutomationLibrary.Toolkit\AutomationLibrary.Toolkit.csproj</ProjRef>
+      <ProjPath>C:\Projects\Platu\Main\Src\Authoring\Source\AutomationLibrary.Toolkit\AutomationLibrary.Toolkit.csproj</ProjPath>
+      <ProjName>AutomationLibrary.Toolkit</ProjName>
+    </ProjBinary>
+    <ProjBinary>
+      <Path>C:\Projects\Platu\Main\Src\Authoring\Source\ToolkitDesign.Shell\obj\Debug\Microsoft.VisualStudio.Patterning.Authoring.ToolkitDesign.Shell.dll</Path>
+      <TargetCLRVersion>Automatic</TargetCLRVersion>
+      <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <ExecutablePath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\devenv.exe</ExecutablePath>
+      <StartupDirectory>C:\Projects\Platu\Main\Src\Authoring\Source\ToolkitDesign.Shell\bin\Debug\</StartupDirectory>
+      <Arguments>/rootsuffix Exp</Arguments>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventProgram />
+        <InstrEventArguments />
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
+        <InstrEventArguments>  -Ra "C:\Projects\Platu\Main\Src\Authoring\Source\ToolkitDesign.Shell\obj\Debug\Microsoft.VisualStudio.Patterning.Authoring.ToolkitDesign.Shell.dll" "C:\Projects\Platu\Main\Src\Microsoft.VisualStudio.Patterning.snk"</InstrEventArguments>
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+      <ProjRef>{A999A0EB-246C-4B63-8BC1-405020026CAB}|Source\ToolkitDesign.Shell\ToolkitDesign.Shell.csproj</ProjRef>
+      <ProjPath>C:\Projects\Platu\Main\Src\Authoring\Source\ToolkitDesign.Shell\ToolkitDesign.Shell.csproj</ProjPath>
+      <ProjName>ToolkitDesign.Shell</ProjName>
+    </ProjBinary>
+    <Binary>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Extensibility.dll</Path>
+      <AdditionalArgruments />
+      <TargetCLRVersion>Automatic</TargetCLRVersion>
+      <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventProgram />
+        <InstrEventArguments />
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
+        <InstrEventArguments>   -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Extensibility.dll" "C:\Projects\Platu\Main\Src\Microsoft.VisualStudio.Patterning.snk"</InstrEventArguments>
+        <InstrEventDescription>Sign Assembly</InstrEventDescription>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+    </Binary>
+    <Binary>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Library.dll</Path>
+      <AdditionalArgruments />
+      <TargetCLRVersion>Automatic</TargetCLRVersion>
+      <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventProgram />
+        <InstrEventArguments />
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Library.dll" "C:\Projects\Platu\Main\Src\Microsoft.VisualStudio.Patterning.snk"</InstrEventArguments>
+        <InstrEventDescription>Sign Assembly</InstrEventDescription>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+    </Binary>
+    <Binary>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Runtime.dll</Path>
+      <TargetCLRVersion>Automatic</TargetCLRVersion>
+      <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventProgram />
+        <InstrEventArguments />
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Runtime.dll" "C:\Projects\Platu\Main\Src\Microsoft.VisualStudio.Patterning.snk"</InstrEventArguments>
+        <InstrEventDescription>Sign Assembly</InstrEventDescription>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+    </Binary>
+    <Binary>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</Path>
+      <TargetCLRVersion>Automatic</TargetCLRVersion>
+      <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventProgram />
+        <InstrEventArguments />
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" "C:\Projects\Platu\Main\Src\Microsoft.VisualStudio.Patterning.snk"</InstrEventArguments>
+        <InstrEventDescription>Sign Assembly</InstrEventDescription>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+    </Binary>
+    <Binary>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Runtime.Schema.dll</Path>
+      <TargetCLRVersion>Automatic</TargetCLRVersion>
+      <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventProgram />
+        <InstrEventArguments />
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Runtime.Schema.dll" "C:\Projects\Platu\Main\Src\Microsoft.VisualStudio.Patterning.snk"</InstrEventArguments>
+        <InstrEventDescription>Sign Assembly</InstrEventDescription>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+    </Binary>
+    <Binary>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Runtime.Shell.dll</Path>
+      <TargetCLRVersion>Automatic</TargetCLRVersion>
+      <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventProgram />
+        <InstrEventArguments />
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Runtime.Shell.dll" "C:\Projects\Platu\Main\Src\Microsoft.VisualStudio.Patterning.snk"</InstrEventArguments>
+        <InstrEventDescription>Sign Assembly</InstrEventDescription>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+    </Binary>
+    <Binary>
+      <Path>C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Runtime.Store.dll</Path>
+      <TargetCLRVersion>Automatic</TargetCLRVersion>
+      <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
+      <Instrument>true</Instrument>
+      <Sample>true</Sample>
+      <ExternalWebsite>false</ExternalWebsite>
+      <InteractionProfilingEnabled>false</InteractionProfilingEnabled>
+      <IsLocalJavascript>false</IsLocalJavascript>
+      <LaunchProject>true</LaunchProject>
+      <OverrideProjectSettings>false</OverrideProjectSettings>
+      <LaunchMethod>Executable</LaunchMethod>
+      <NetAppHost>IIS</NetAppHost>
+      <NetBrowser>InternetExplorer</NetBrowser>
+      <ExcludeSmallFuncs>true</ExcludeSmallFuncs>
+      <JScriptProfilingEnabled>false</JScriptProfilingEnabled>
+      <PreinstrumentEvent>
+        <InstrEventProgram />
+        <InstrEventArguments />
+        <InstrEventDescription />
+        <InstrEventExclude>false</InstrEventExclude>
+      </PreinstrumentEvent>
+      <PostinstrumentEvent>
+        <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
+        <InstrEventArguments>    -Ra "C:\Users\jezzsa\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\Pattern Toolkit Manager\1.2.19.0\Microsoft.VisualStudio.Patterning.Runtime.Store.dll" "C:\Projects\Platu\Main\Src\Microsoft.VisualStudio.Patterning.snk"</InstrEventArguments>
+        <InstrEventDescription>Sign Assembly</InstrEventDescription>
+        <InstrEventExclude>false</InstrEventExclude>
+      </PostinstrumentEvent>
+    </Binary>
+  </Binaries>
+  <Launches>
+    <ProjBinary>
+      <Path>:PB:{0216A624-C5C5-4335-8361-F640B91B4DEA}|Source\Authoring.Toolkit\Authoring.Toolkit.csproj</Path>
+    </ProjBinary>
+  </Launches>
+  <RuntimeMarks>
+    <MarkName>Mark One</MarkName>
+    <MarkName>Mark Two</MarkName>
+    <MarkName>Mark Three</MarkName>
+    <MarkName>Mark Four</MarkName>
+    <MarkName>Mark Five</MarkName>
+    <MarkName>Mark Six</MarkName>
+    <MarkName>Mark Seven</MarkName>
+    <MarkName>Mark Eight</MarkName>
+    <MarkName>Mark Nine</MarkName>
+    <MarkName>Mark Ten</MarkName>
+  </RuntimeMarks>
+</VSPerformanceSession>
