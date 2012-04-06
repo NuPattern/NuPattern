@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOnLabs", "HandsOnLabs\HandsOnLabs.csproj", "{FB67BCAD-DFB0-40B1-9E02-CE4D8DA5BE9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{76F388A8-B6CE-4516-A25C-9F67A8DAB797}"
+	ProjectSection(SolutionItems) = preProject
+		HandsOnLabs.guidancestate = HandsOnLabs.guidancestate
+		HandsOnLabs.slnbldr = HandsOnLabs.slnbldr
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOnLabs.Automation", "HandsOnLabs.Automation\HandsOnLabs.Automation.csproj", "{EBD848C7-5823-48BD-AF23-3DD723141161}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Models", "Models\Models.modelproj", "{B22E8149-B42D-42E9-8A5D-BE595FDD3CFB}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://vstf-eu-dub-01.partners.extranet.microsoft.com:8443/tfs/ext04_consol_tpc
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = HandsOnLabs.Automation\\HandsOnLabs.Automation.csproj
+		SccProjectName1 = HandsOnLabs.Automation
+		SccLocalPath1 = HandsOnLabs.Automation
+		SccProjectUniqueName2 = HandsOnLabs\\HandsOnLabs.csproj
+		SccProjectName2 = HandsOnLabs
+		SccLocalPath2 = HandsOnLabs
+		SccProjectUniqueName3 = Models\\Models.modelproj
+		SccProjectName3 = Models
+		SccLocalPath3 = Models
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB67BCAD-DFB0-40B1-9E02-CE4D8DA5BE9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB67BCAD-DFB0-40B1-9E02-CE4D8DA5BE9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB67BCAD-DFB0-40B1-9E02-CE4D8DA5BE9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB67BCAD-DFB0-40B1-9E02-CE4D8DA5BE9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD848C7-5823-48BD-AF23-3DD723141161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD848C7-5823-48BD-AF23-3DD723141161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD848C7-5823-48BD-AF23-3DD723141161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD848C7-5823-48BD-AF23-3DD723141161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B22E8149-B42D-42E9-8A5D-BE595FDD3CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22E8149-B42D-42E9-8A5D-BE595FDD3CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22E8149-B42D-42E9-8A5D-BE595FDD3CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B22E8149-B42D-42E9-8A5D-BE595FDD3CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Features = 9f6dc301-6f66-4d21-9f9c-b37412b162f6:Creating Pattern Toolkits:1.2.19.0
+	EndGlobalSection
+EndGlobal
