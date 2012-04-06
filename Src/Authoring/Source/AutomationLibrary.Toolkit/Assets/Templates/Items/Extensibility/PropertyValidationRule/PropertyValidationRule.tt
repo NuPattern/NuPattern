@@ -1,0 +1,40 @@
+﻿<#@ output extension=".vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\..\..\MasterVersion.ttinclude" #>
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Property Validation Rule</Name>
+		<Description>Creates a custom property validation rule.</Description>
+		<TemplateID>1d8f2741fde6-Development.ValidationRules.PropertyValidationRule</TemplateID>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>Extensibility</ProjectSubType>
+		<SortOrder>10</SortOrder>
+		<Icon></Icon>
+		<DefaultName>PropertyValidationRule</DefaultName>
+		<Hidden>true</Hidden>
+	</TemplateData>
+    <TemplateContent>
+        <References />
+        <ProjectItem TargetFileName="$fileinputname$.cs" ReplaceParameters="true">PropertyValidationRule.cs</ProjectItem>
+    </TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=31bf3856ad364e35</Assembly>
+		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.GuidGeneratorTemplateWizard</FullClassName>
+	</WizardExtension>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=31bf3856ad364e35</Assembly>
+		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.ReplacementTemplateWizard</FullClassName>
+	</WizardExtension>
+    <WizardExtension>
+      <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=31bf3856ad364e35</Assembly>
+      <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+    </WizardExtension>
+	<WizardData>
+		<Replacement Key="$assemblyVersion$"  Value="<#=assemblyVersion #>" />
+		<NewGuid Key="$guid11$" />
+		<NewGuid Key="$guid12$" />
+		<NewGuid Key="$guid13$" />
+		<NewGuid Key="$guid14$" />
+		<NewGuid Key="$guid15$" />
+	</WizardData>
+</VSTemplate>

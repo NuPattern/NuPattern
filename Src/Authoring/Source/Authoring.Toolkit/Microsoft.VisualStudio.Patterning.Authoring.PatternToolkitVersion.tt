@@ -1,0 +1,36 @@
+﻿<#@ output extension=".targets" #>
+<#@ Include  File="..\..\..\MasterVsixInfo.ttinclude"#>
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Version Properties -->
+  <PropertyGroup>
+    <!-- Current version of VSPAT and VS -->
+    <PatternToolkitVersion><#=VsixInfo.PatternToolkitBuilder.Version #></PatternToolkitVersion>
+    <VisualStudioVersion>10.0</VisualStudioVersion>
+
+    <!-- Options for references and debugging Pattern Toolkit Projects -->
+    <CopyVsixDebuggingDependencies Condition="'$(CopyVsixDebuggingDependencies)' == ''">true</CopyVsixDebuggingDependencies>
+    <ReferencesExtensionsHive Condition="'$(ReferencesExtensionsHive)' == ''">$(VisualStudioVersion)</ReferencesExtensionsHive>
+    <DebuggingExtensionsHive Condition="'$(DebuggingExtensionsHive)' == ''">$(VisualStudioVersion)Exp</DebuggingExtensionsHive>
+
+    <!-- Paths for referencing assets in installed VSPAT extensions -->
+    <VSExtensionsPath>$(LocalAppData)\Microsoft\VisualStudio\$(ReferencesExtensionsHive)\Extensions</VSExtensionsPath>
+    <PatternToolkitRuntime>$(VSExtensionsPath)\\<#=VsixInfo.PatternToolkitRuntime.Author #>\\<#=VsixInfo.PatternToolkitRuntime.Name #>\\<#=VsixInfo.PatternToolkitRuntime.Version #></PatternToolkitRuntime>
+    <PatternToolkitBuilder>$(VSExtensionsPath)\\<#=VsixInfo.PatternToolkitBuilder.Author #>\\<#=VsixInfo.PatternToolkitBuilder.Name #>\\<#=VsixInfo.PatternToolkitBuilder.Version #></PatternToolkitBuilder>
+    <FeatureExtensionRuntime>$(VSExtensionsPath)\\<#=VsixInfo.FeatureExtensionRuntime.Author #>\\<#=VsixInfo.FeatureExtensionRuntime.Name #>\\<#=VsixInfo.FeatureExtensionRuntime.Version #></FeatureExtensionRuntime>
+
+    <!-- Paths for debugging Pattern Toolkit Projects -->
+    <VSDebuggingExtensionsRegKey>Software\Microsoft\VisualStudio\$(DebuggingExtensionsHive)\ExtensionManager\EnabledExtensions</VSDebuggingExtensionsRegKey>
+    <VSDebuggingExtensionsPath>$(LocalAppData)\Microsoft\VisualStudio\$(DebuggingExtensionsHive)\Extensions\Extensions-$(VisualStudioVersion)</VSDebuggingExtensionsPath>
+    <PatternToolkitRuntimeDebugging>$(VSDebuggingExtensionsPath)\\<#=VsixInfo.PatternToolkitRuntime.Author #>\\<#=VsixInfo.PatternToolkitRuntime.Name #>\\<#=VsixInfo.PatternToolkitRuntime.Version #></PatternToolkitRuntimeDebugging>
+    <FeatureExtensionRuntimeDebugging>$(VSDebuggingExtensionsPath)\\<#=VsixInfo.FeatureExtensionRuntime.Author #>\\<#=VsixInfo.FeatureExtensionRuntime.Name #>\\<#=VsixInfo.FeatureExtensionRuntime.Version #></FeatureExtensionRuntimeDebugging>
+
+  </PropertyGroup>
+  
+  <!-- Additional Pattern Toolkit Project Build Targets -->
+  <Import 
+    Project="$(PatternToolkitBuilder)\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets" 
+    Condition="exists('$(PatternToolkitBuilder)\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets')" />
+
+</Project>

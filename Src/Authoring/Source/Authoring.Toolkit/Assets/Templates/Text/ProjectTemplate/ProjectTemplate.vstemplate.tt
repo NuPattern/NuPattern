@@ -1,0 +1,43 @@
+﻿<#@ output extension=".t4" #>
+<#@ Include File="..\..\..\..\..\..\..\MasterVersion.ttinclude" #>
+\<#@ Template Inherits="Microsoft.VisualStudio.Patterning.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" \#>
+\<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
+\<#@ Output extension=".vstemplate" \#>
+\<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" \#>
+\<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.dll" \#>
+\<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" \#>
+\<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Authoring.Authoring" \#>
+\<#@ Import Namespace="System.Linq" \#>
+\<#
+    IProjectTemplate template = ((IProductElement)this.Element).As<IProjectTemplate>();
+
+    var fileName = template.InstanceName.Replace(" ", string.Empty);
+\#><?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>\<#=template.InstanceName \#></Name>
+		<Description></Description>
+		<TemplateID>\<#=Guid.NewGuid() \#></TemplateID>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType></ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>false</CreateNewFolder>
+		<DefaultName>\<#=fileName \#></DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<Icon>__TemplateIcon.ico</Icon>
+	</TemplateData>
+    <TemplateContent>
+		<Project File="\<#=fileName \#>.csproj" ReplaceParameters="true">
+			<Folder Name="Properties">
+				<ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+			</Folder>
+			<ProjectItem ReplaceParameters="true">Content.cs</ProjectItem>
+		</Project>
+    </TemplateContent>
+    <WizardExtension>
+      <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=31bf3856ad364e35</Assembly>
+      <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+    </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>SampleFactory Toolkit Customization</Name>
+		<Description>This is a new toolkit schema.</Description>
+		<TemplateID>SampleFactoryCustomization</TemplateID>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>Extensibility</ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>true</CreateNewFolder>
+		<DefaultName>SampleFactoryCustomization</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<Icon />
+		<RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+	</TemplateData>
+	<TemplateContent>
+		<Project File="Customization.csproj" ReplaceParameters="true">
+			<ProjectItem ReplaceParameters="true" TargetFileName="source.extension.vsixmanifest">source.vsixmanifest</ProjectItem>
+			<ProjectItem ReplaceParameters="true" OpenInEditor="true">PatternModel.patterndefinition</ProjectItem>
+			<Folder Name="Properties">
+				<ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+			</Folder>
+			<!--<ProjectItem ReplaceParameters="true" TargetFileName="Template\Projects">Customization.vstemplate</ProjectItem>-->
+		</Project>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=31bf3856ad364e35</Assembly>
+		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.ReplacementTemplateWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>

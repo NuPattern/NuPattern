@@ -1,0 +1,35 @@
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\..\..\..\..\..\Runtime\Source\Runtime.Schema\DslDefinition.dsl'" #>
+<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\..\Common\Helpers\DslVersion.tt" #>
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="2320">Main Test</Name>
+    <Description Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="2321">A Description of MainTest</Description>
+    <Icon Package="{FAE04EC1-301F-11d3-BF4B-00C04F79EFBC}" ID="4548" />
+    <ProjectType>CSharp</ProjectType>
+    <TemplateID>9a8b11ad51e8-MainTest</TemplateID>
+    <SortOrder>12</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Main Test</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ConsoleApplication.csproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">App.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=<#= this.DslVersion #>, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.InstantiationTemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=<#= this.DslVersion #>, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+    <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Version Properties -->
+  <PropertyGroup>
+    <!-- Current version of VSPAT and VS -->
+    <PatternToolkitVersion>1.2.19.0</PatternToolkitVersion>
+    <VisualStudioVersion>10.0</VisualStudioVersion>
+
+    <!-- Options for references and debugging Pattern Toolkit Projects -->
+    <CopyVsixDebuggingDependencies Condition="'$(CopyVsixDebuggingDependencies)' == ''">true</CopyVsixDebuggingDependencies>
+    <ReferencesExtensionsHive Condition="'$(ReferencesExtensionsHive)' == ''">$(VisualStudioVersion)</ReferencesExtensionsHive>
+    <DebuggingExtensionsHive Condition="'$(DebuggingExtensionsHive)' == ''">$(VisualStudioVersion)Exp</DebuggingExtensionsHive>
+
+    <!-- Paths for referencing assets in installed VSPAT extensions -->
+    <VSExtensionsPath>$(LocalAppData)\Microsoft\VisualStudio\$(ReferencesExtensionsHive)\Extensions</VSExtensionsPath>
+    <PatternToolkitRuntime>$(VSExtensionsPath)\Microsoft\Pattern Toolkit Manager\1.2.19.0</PatternToolkitRuntime>
+    <PatternToolkitBuilder>$(VSExtensionsPath)\Microsoft\Pattern Toolkit Builder\1.2.19.0</PatternToolkitBuilder>
+    <FeatureExtensionRuntime>$(VSExtensionsPath)\Microsoft\Feature Extension Runtime\1.0</FeatureExtensionRuntime>
+
+    <!-- Paths for debugging Pattern Toolkit Projects -->
+    <VSDebuggingExtensionsRegKey>Software\Microsoft\VisualStudio\$(DebuggingExtensionsHive)\ExtensionManager\EnabledExtensions</VSDebuggingExtensionsRegKey>
+    <VSDebuggingExtensionsPath>$(LocalAppData)\Microsoft\VisualStudio\$(DebuggingExtensionsHive)\Extensions\Extensions-$(VisualStudioVersion)</VSDebuggingExtensionsPath>
+    <PatternToolkitRuntimeDebugging>$(VSDebuggingExtensionsPath)\Microsoft\Pattern Toolkit Manager\1.2.19.0</PatternToolkitRuntimeDebugging>
+    <FeatureExtensionRuntimeDebugging>$(VSDebuggingExtensionsPath)\Microsoft\Feature Extension Runtime\1.0</FeatureExtensionRuntimeDebugging>
+
+  </PropertyGroup>
+  
+  <!-- Additional Pattern Toolkit Project Build Targets -->
+  <Import 
+    Project="$(PatternToolkitBuilder)\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets" 
+    Condition="exists('$(PatternToolkitBuilder)\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets')" />
+
+</Project>

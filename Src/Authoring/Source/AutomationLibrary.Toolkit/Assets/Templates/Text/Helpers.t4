@@ -1,0 +1,187 @@
+﻿<#+
+	private PatternModelSchema LoadModel(string modelfile)
+	{
+		PatternModelSchema patternModel = null;
+		var store = new Store(null, new Type[1] { typeof(PatternModelDomainModel) });
+		Transaction tx = null;
+
+		try
+		{
+			var serializationResult = new SerializationResult();
+			tx = store.TransactionManager.BeginTransaction("Load", true);
+			patternModel = PatternModelSerializationHelper.Instance.LoadModel(serializationResult, store, modelfile, null, null, null);
+
+			if (serializationResult.Failed)
+			{
+				throw new SerializationException(serializationResult);
+			}
+
+			tx.Commit();
+		}
+		finally
+		{
+			if ((tx != null))
+			{
+			tx.Dispose();
+			}
+		}
+
+		return patternModel;
+	}
+
+	private void GenerateDeleteInterfaceMethod()
+	{
+#>
+
+///	<summary>
+///	Deletes this element from the store.
+///	</summary>
+void Delete();
+<#+
+	}
+
+	private void GenerateToolkitCommentsAndAttributes(AttributeTargets target, Microsoft.VisualStudio.Patterning.Authoring.Library.IAutomationLibrary library, Microsoft.VisualStudio.Patterning.Authoring.Authoring.IPatternToolkitInfo toolkitInfo, INamedElementInfo element)
+	{
+		PushIndent("\t");
+		GenerateDescription(element);
+
+		switch (target)
+		{
+			case AttributeTargets.Class:
+#>
+[ToolkitInterfaceProxy(ExtensionId ="<#=toolkitInfo.Identifier #>", DefinitionId = "<#=element.Id #>", ProxyType = typeof(<#=element.CodeIdentifier #>))]
+<#+
+				break;
+
+			case AttributeTargets.Interface:
+#>
+[ToolkitInterface(ExtensionId ="<#=toolkitInfo.Identifier #>", DefinitionId = "<#=element.Id #>", ProxyType = typeof(<#=element.CodeIdentifier #>))]
+<#+
+				break;
+
+			default:
+				break;
+		}
+		GenerateCodeGenAttributes(library, target);
+		GenerateCLSAttributes(element);
+		PopIndent();
+	}
+
+	private void GenerateCodeGenAttributes(Microsoft.VisualStudio.Patterning.Authoring.Library.IAutomationLibrary library, AttributeTargets target)
+	{
+		var excludeFromCodeCoverage = library.ExcludeFromCodeCoverage;
+
+		switch (target)
+		{
+			case AttributeTargets.Class:
+#>
+[System.CodeDom.Compiler.GeneratedCode("<#=libraryToolkitName#>", "<#=libraryToolkitVersion #>")]
+<#+
+				if (excludeFromCodeCoverage)
+				{
+#>
+[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+<#+
+				}
+				break;
+
+			case AttributeTargets.Interface:
+#>
+[System.CodeDom.Compiler.GeneratedCode("<#=libraryToolkitName #>", "<#=libraryToolkitVersion #>")]
+<#+
+				break;
+		}
+	}
+
+	private void GenerateDescription(MemberInfo typeOrMember)
+	{
+		var description = typeOrMember.GetCustomAttributes(true).OfType<DescriptionAttribute>().Select(attr => attr.Description).FirstOrDefault();
+		if (!string.IsNullOrEmpty(description))
+		{
+#>
+///	<summary>
+///	<#=description #>
+///	</summary>
+<#+
+		}
+		else
+		{
+#>
+///	<summary>
+///	The <#=typeOrMember.Name #>.
+///	</summary>
+<#+
+		 }
+	}
+
+	private void GenerateDescription(INamedElementInfo element)
+	{
+		if (!string.IsNullOrEmpty(element.Description))
+	{
+#>
+///	<summary>
+///	<#=element.Description #>
+///	</summary>
+[Description("<#=element.Description #>")]
+<#+
+	}
+	else
+	{
+#>
+///	<summary>
+///	<#=element.Description #>
+///	</summary>
+[Description("Description of <#=element.DisplayName #>")]
+<#+
+																																																																																		 }
+	 }
+
+	private void GenerateUsings<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen)
+		where TInfo : IPatternElementInfo
+		where TRuntime : IProductElement
+	{
+		GenerateUsings(codegen.SafeImports);
+	}
+
+	private void GenerateUsings<TInfo, TRuntime>(ViewCodeGeneration<TInfo, TRuntime> codegen)
+		where TInfo : IViewInfo
+		where TRuntime : IView
+	{
+		GenerateUsings(codegen.SafeImports);
+	}
+
+	private void GenerateUsings(IEnumerable<string> namespaces)
+	{
+		foreach (var ns in namespaces)
+		{
+#>
+	using global::<#=ns #>;
+<#+
+		}
+#>
+	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+<#+
+	}
+
+	private void GenerateCLSAttributes(Microsoft.VisualStudio.Patterning.Runtime.INamedElementInfo element)
+	{
+		// Find all variable properties in the model
+	var properties = element.GetProduct().GetAllProperties();
+
+	var propertyTypes = properties.Select(prop => prop.Type)
+		.Distinct<string>()
+	.Select(type => Type.GetType(type, false, true))
+	.Where(type => type != null);
+
+			// Check if any property types are not CLS compliant.
+		var isNotClsCompliant = propertyTypes
+			.Any(type => !type.IsClsCompliant());
+
+		if (isNotClsCompliant)
+	{
+#>
+[CLSCompliant(false)]
+<#+
+	}
+}
+#>

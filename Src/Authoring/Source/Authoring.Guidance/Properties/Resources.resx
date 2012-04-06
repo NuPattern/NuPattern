@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TocGuidanceProcessor_ErrorNoContentParagraph" xml:space="preserve">
+    <value>The guidance document: {0}, contains no content,  '{0}'</value>
+  </data>
+  <data name="TocGuidanceProcessor_ErrorNoTitleParagraph" xml:space="preserve">
+    <value>The guidance document: {0}, must start with a formatted title,  '{0}'</value>
+  </data>
+  <data name="TocGuidanceProcessor_SampleTopicPlaceholder" xml:space="preserve">
+    <value>(Placeholder) An Example Topic</value>
+  </data>
+  <data name="TocGuidanceProcessor_ErrorDocumentNotFound" xml:space="preserve">
+    <value>The guidance document cannot be found,  '{0}'</value>
+  </data>
+  <data name="TocGuidanceProcessor_ErrorDocumentOpenFailed" xml:space="preserve">
+    <value>The guidance document cannot be opened,  '{0}'</value>
+  </data>
+  <data name="TocGuidanceProcessor_EmptyHeadlineTopicPlaceholder" xml:space="preserve">
+    <value>(Placeholder) {0}</value>
+  </data>
+  <data name="TocGuidanceProcessor_ErrorDuplicateTopic" xml:space="preserve">
+    <value>A guidance topic with the file name '{0}' was already created. All topics must have unique headings in the document.</value>
+  </data>
+  <data name="TocGuidanceProcessor_TraceTopicCreated" xml:space="preserve">
+    <value>A guidance topic with the file name '{0}' being created.</value>
+  </data>
+  <data name="TocGuidanceProcessor_ErrorHyperlinkNotExist" xml:space="preserve">
+    <value>Hyperlink '{0}', is to a topic that does not exist in the guidance document.</value>
+  </data>
+  <data name="TocGuidanceProcessor_ErrorHyperlinkToHeadline" xml:space="preserve">
+    <value>Hyperlink '{0}', is to a headline instead of a topic, which is not valid in a guidance document.</value>
+  </data>
+  <data name="TocGuidanceProcessor_ErrorHyperlinkToContent" xml:space="preserve">
+    <value>Hyperlink '{0}', is not to the heading of a topic, which is not valid in a guidance document.</value>
+  </data>
+  <data name="TocGuidanceProcessor_ValidateDuplicateTopic" xml:space="preserve">
+    <value>The heading of guidance topic '{0}' is defined more than once in the document. Duplicate headings in the document are not permitted, every topic in the document must have unique heading.</value>
+  </data>
+  <data name="TocGuidanceProcessor_ValidateHyperlinkNotExist" xml:space="preserve">
+    <value>Hyperlink '{0}', is to a topic that does not exist in the guidance document. The hyperlink needs removing or re-linking to the heading of a existing topic.</value>
+  </data>
+  <data name="TocGuidanceProcessor_ValidateHyperlinkToContent" xml:space="preserve">
+    <value>Hyperlink '{0}', is not to the heading of a topic, which is not valid in a guidance document. The hyperlink needs removing or re-linking to the heading of an existing topic.</value>
+  </data>
+  <data name="TocGuidanceProcessor_ValidateHyperlinkToHeadline" xml:space="preserve">
+    <value>Hyperlink '{0}', is to a headline instead of a topic, which is not valid in a guidance document. The hyperlink needs removing or re-linking to the heading of a existing topic.</value>
+  </data>
+  <data name="TocGuidanceProcessor_ValidateDocumentNotFormed" xml:space="preserve">
+    <value>The guidance document is not formed correctly. It must start with a single line title (formatted with the 'Title' style), and contain one or more topics or headlines (formatted with a 'Heading' style). </value>
+  </data>
+  <data name="TocGuidanceProcessor_ValidateDocumentNotFound" xml:space="preserve">
+    <value>The guidance document cannot be loaded from its location on disk. Check to see that the document exists, and is not corrupted.</value>
+  </data>
+  <data name="TocGuidanceProcessor_TraceFreeDocumentFailed" xml:space="preserve">
+    <value>Failed to shutdown the application for document: '{0}'. This may cause subsequent automation on the document same to fail.</value>
+  </data>
+  <data name="TocGuidanceProcessor_TraceTryFreeDocument" xml:space="preserve">
+    <value>Waiting, and re-attempting shutdown of open document: '{0}'.</value>
+  </data>
+  <data name="TocGuidanceProcessor_TraceDocumentFailedOpenAsReadOnly" xml:space="preserve">
+    <value>The guidance document failed to open as read-only, '{0}'</value>
+  </data>
+  <data name="TocGuidanceProcessor_TraceDocumentOpeningAsReadOnly" xml:space="preserve">
+    <value>The guidance document is being opened as read-only,  '{0}'</value>
+  </data>
+  <data name="TocGuidanceProcessor_TraceDocumentOpeningAsWritable" xml:space="preserve">
+    <value>The guidance document is being opened as writable,  '{0}'</value>
+  </data>
+  <data name="TocGuidanceProcessor_TraceDocumentReadOnlyRemoved" xml:space="preserve">
+    <value>The guidance document was read-only on disk, and has been made writable,  '{0}'</value>
+  </data>
+  <data name="TocGuidanceProcessor_TraceOpeningMasterSubdocuments" xml:space="preserve">
+    <value>The guidance document is a master document, opening sub-documents,  '{0}'</value>
+  </data>
+  <data name="TocGuidanceProcessor_ErrorGenerateDocuments" xml:space="preserve">
+    <value>Failed to generate workflow documents for document '{0}'.
+Error is: {1}</value>
+  </data>
+  <data name="TocGuidanceProcessor_ErrorCalculateWorkflow" xml:space="preserve">
+    <value>Failed to calculate workflow for document '{0}'.
+Error is: {1}</value>
+  </data>
+  <data name="TocGuidanceProcessor_ErrorValidateDocument" xml:space="preserve">
+    <value>Failed to validate document '{0}'.
+Error is: {1}</value>
+  </data>
+  <data name="TocGuidanceProcessor_ValidateTooLongTopicLength" xml:space="preserve">
+    <value>The heading of guidance topic '{0}' is longer than {1} characters (excluding spaces and other illegal file name characters). Topic headings that exceed this recommended length may prevent the toolkit being installed as the length of the filename generated from this topic may exceed the maximum file path length (260 chars) in some versions of Windows when installed in Visual Studio.  The heading of the topic needs shortening by another '{2}' characters.</value>
+  </data>
+</root>

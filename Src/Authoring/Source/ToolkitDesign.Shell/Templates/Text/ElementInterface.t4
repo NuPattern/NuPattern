@@ -1,0 +1,67 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
+<#@ Assembly Name="System.ComponentModel.Composition" #>
+<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Shell.dll" #>
+<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Extensibility.dll" #>
+<#@ Import Namespace="System.Linq" #>
+<#@ Import Namespace="System.ComponentModel" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Extensibility" #>
+<#@ Assembly Name="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
+<#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
+<#@ Include File="Header.t4" #>
+<#@ Include File="NamedElementParentInterface.t4" #>
+<#@ Include File="ElementContainerInterface.t4" #>
+<#@ Include File="ProductElementInterface.t4" #>
+<# 
+var store = this.ProductLine.Store;
+  
+// The pluralizer in .NET 4.0 only supports English.
+var pluralizer = PluralizationService.CreateService(new System.Globalization.CultureInfo("en-US"));
+
+foreach (var element in store.DefaultPartition.ElementDirectory.AllElements.OfType<IElementInfo>())
+{
+    var codegen = new ProductCodeGeneration<IElementInfo, IElement>(element);
+    codegen.AddType(typeof(Action));
+    codegen.EndInit();
+#>
+namespace <#= RootNamespace #>
+{
+<# 
+	foreach (var ns in codegen.SafeImports)
+	{
+#>
+	using <#=ns #>;
+<#
+	}
+#>
+
+	<#GenerateFactoryInterfaceAttributes(element); #>
+	public partial interface I<#=element.CodeIdentifier #> : IFactoryInterface
+	{ <# 	
+GenerateProperties(codegen, element);
+GenerateParentProperty(element);
+
+PushIndent("\t");
+PushIndent("\t");
+
+GenerateContainedElements(pluralizer, element);
+GenerateDeleteInterfaceMethod();
+
+PopIndent();
+PopIndent();
+#>
+
+		/// <summary>
+		/// Gets the generic <see cref="IElement"/> underlying element.
+		/// </summary>
+		IElement AsElement();
+	}
+}
+
+<#
+}
+#>

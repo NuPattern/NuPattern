@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="bcb52a48-a3db-4694-ad89-91d232ffa760" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodell">
+  <dm0:extensions>
+    <templateSettings Id="0aefad96-521f-4d14-b59e-9ed10274de2d" templateUri="template://item/CSharp/44ec4601d1dd-ExtensionItem" commandId="00000000-0000-0000-0000-000000000000" wizardId="00000000-0000-0000-0000-000000000000" templateAuthoringUri="solution://fc09e8ed-2cc3-4bef-b4e8-2636587ddeec/3ecdc237-a217-4be6-9fd1-316905d53429">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="3092ca81-9113-4f06-a9ac-dcc2b979b9c1" />
+      </extendedElement>
+      <targetFileName>{
+  "Name": "RawTargetFileName",
+  "Value": null,
+  "ValueProvider": null
+}</targetFileName>
+      <targetPath>{
+  "Name": "RawTargetPath",
+  "Value": null,
+  "ValueProvider": null
+}</targetPath>
+    </templateSettings>
+    <guidanceExtension Id="8092cff0-ed05-4133-adb7-4ad58ca7ef87">
+      <extendedElement>
+        <patternSchemaMoniker Id="0a7c0dc0-eab1-41a4-8556-c269fc314e02" />
+      </extendedElement>
+    </guidanceExtension>
+    <artifactExtension Id="147f81a2-6507-47f7-b8b9-5c3fe8a47062">
+      <extendedElement>
+        <patternSchemaMoniker Id="0a7c0dc0-eab1-41a4-8556-c269fc314e02" />
+      </extendedElement>
+    </artifactExtension>
+    <validationExtension Id="a12b89e9-6f7f-4171-bb52-82d996862e61">
+      <extendedElement>
+        <patternSchemaMoniker Id="0a7c0dc0-eab1-41a4-8556-c269fc314e02" />
+      </extendedElement>
+    </validationExtension>
+  </dm0:extensions>
+  <pattern Id="0a7c0dc0-eab1-41a4-8556-c269fc314e02" name="ExtensionItem" displayName="Extension Item" description="A Description of ExtensionItem" codeIdentifier="ExtensionItem" isCustomizable="True" currentDiagramId="9ef5c2db-c77c-4341-bc3d-6a77efecf9e9">
+    <customizationPolicy name="CustomizationPolicySchema1">
+      <settings>
+        <setting propertyId="DisplayName" />
+        <setting propertyId="Description" />
+        <setting propertyId="ValidationRules" />
+        <setting propertyId="Icon" />
+      </settings>
+    </customizationPolicy>
+    <automationSettings>
+      <automationSettings Id="3092ca81-9113-4f06-a9ac-dcc2b979b9c1" name="UnfoldInterface" displayName="Unfold Interface" description="" codeIdentifier="UnfoldInterface" automationType="VS Template Launch Point" classification="LaunchPoint">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+    </automationSettings>
+    <views>
+      <view Id="b8523980-b898-49e5-a0f2-109dcd9380c5" name="DefaultView" displayName="Default View" description="Description for ExtensionItem.DefaultView" codeIdentifier="DefaultView" isDefault="true" diagramId="9ef5c2db-c77c-4341-bc3d-6a77efecf9e9">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="IsVisible" />
+            <setting propertyId="IsDefault" />
+          </settings>
+        </customizationPolicy>
+      </view>
+    </views>
+    <providedExtensionPoints>
+      <providedExtensionPoint Id="72db32c2-ff99-4f9b-ae4f-01d5ef89dc5b" extensionPointId="f7f351f6-f7ee-419c-8f4f-8f3e20b20255.MainTest.DefaultView.ExtensionPoint1" />
+    </providedExtensionPoints>
+  </pattern>
+</patternModel>

@@ -1,0 +1,98 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="System.ComponentModel.Composition.dll" #>
+<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
+<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Shell.dll" #>
+<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Extensibility.dll" #>
+<#@ Import Namespace="System.ComponentModel" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Extensibility" #>
+<#@ Include File="Header.t4" #>
+<#@ Include File="ProductElementImplementation.t4" #>
+<# 
+var product = this.ProductLine.Product;   
+    
+var codegen = new ProductCodeGeneration<IProductInfo, IProduct>(product);
+codegen.AddType(typeof(Action));
+codegen.AddType(typeof(System.ComponentModel.Composition.CreationPolicy));
+codegen.EndInit();
+
+foreach (var ns in codegen.SafeImports)
+{
+#>
+using <#= ns #>;
+<#
+}
+#>
+
+namespace <#= RootNamespace #>
+{
+	<# GenerateFactoryProxyAttributes(product); #>
+	internal partial class <#= product.CodeIdentifier #> : I<#= product.CodeIdentifier #>
+	{
+		private IProduct target;
+		private IProductProxy<I<#= product.CodeIdentifier #>> proxy;
+
+		/// <summary>
+		/// For MEF.
+		/// </summary>
+		[ImportingConstructor]
+		private <#=product.CodeIdentifier#>() { }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="<#= product.CodeIdentifier #>"/> class.
+		/// </summary>
+		public <#= product.CodeIdentifier #>(IProduct target)
+		{
+			this.target = target;
+			this.proxy = target.ProxyFor<I<#= product.CodeIdentifier #>>();
+		}	
+<# GenerateProperties(codegen, product); 
+
+	PushIndent("\t");
+	PushIndent("\t");
+
+	foreach (var view in product.Views)
+	{
+		this.WriteLine("");
+		GenerateDescription(view);
+#>
+public I<#= view.CodeIdentifier #> <#= view.CodeIdentifier #>
+{ 
+	get { return this.proxy.GetView(() => this.<#= view.CodeIdentifier #>, view => new <#= view.CodeIdentifier #>(view)); }
+}
+<#
+	}
+
+	PopIndent();
+	PopIndent();
+#>
+
+		/// <summary>
+		/// Gets the generic <see cref="IProduct"/> underlying element.
+		/// </summary>
+		public IProduct AsProduct()
+		{
+			return this.target;
+		}
+
+		/// <summary>
+		/// Gets the generic underlying element as the given type if possible.
+		/// </summary>
+		public TRuntimeInterface As<TRuntimeInterface>()
+			where TRuntimeInterface : class
+		{
+			return this.target as TRuntimeInterface;
+		}
+
+		/// <summary>
+		/// Deletes this instance.
+		/// </summary>
+		public void Delete()
+		{
+			this.target.Delete();
+		}
+	}
+}
