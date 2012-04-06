@@ -1,0 +1,106 @@
+﻿<#+
+
+private bool IsNotDerived(DomainClass domainClass)
+{
+    return domainClass.BaseClass == null || !domainClass.DslLibrary.Classes.Contains(domainClass.BaseClass);
+}
+
+private void GeneratePropertyChanged(DomainClass domainClass)
+{
+    var className = domainClass.Name;
+
+    if (domainClass.GeneratesDoubleDerived && IsNotDerived(domainClass))
+    {
+        // This separation is needed because in the double-derived pattern, 
+        // the value change handler works with the base class.
+#>
+
+/// <summary>
+/// <#=domainClass.Description #>.
+/// </summary>
+[GeneratedCode("<#=domainClass.Namespace #>", "<#=this.DslVersion #>")]
+public partial class <#=className + "Base" #>
+{
+	private PropertyChangeManager propertyChanges;
+
+	/// <summary>
+	/// Gets the manager for property change event subscriptions for this instance 
+	///	and any of its derived classes.
+	/// </summary>
+	protected PropertyChangeManager PropertyChanges
+	{
+		get
+		{
+			if (this.propertyChanges == null)
+			{
+				this.propertyChanges = new PropertyChangeManager(this);
+			}
+
+			return this.propertyChanges;
+		}
+	}
+}
+
+<#+
+}
+#>
+
+/// <summary>
+/// <#=domainClass.Description #>.
+/// </summary>
+public partial class <#=className #> : INotifyPropertyChanged
+{ <#+
+if (!domainClass.GeneratesDoubleDerived && IsNotDerived(domainClass))
+{        
+#>
+
+	private PropertyChangeManager propertyChanges;
+
+	/// <summary>
+	/// Gets the manager for property change event subscriptions for this instance 
+	///	and any of its derived classes.
+	/// </summary>
+	protected PropertyChangeManager PropertyChanges
+	{
+		get
+		{
+			if (this.propertyChanges == null)
+			{
+				this.propertyChanges = new PropertyChangeManager(this);
+			}
+
+			return this.propertyChanges;
+		}
+	}
+<#+
+}
+
+if (HasAnnotationFlag(domainClass.Notes, "SkipSubscribeChanged"))
+    return;
+
+var annotations = GetAnnotations(domainClass.Notes);
+var typeIdentifier = annotations.ContainsKey("Interface") ?
+    annotations["Interface"] : className;
+ 
+#>
+
+	/// <summary>
+	/// Provides property change subscription.
+	/// </summary>
+	IDisposable I<#=typeIdentifier #>.SubscribeChanged(Expression<Func<I<#=typeIdentifier #>, object>> propertyExpression, Action<I<#=typeIdentifier #>> callbackAction)
+	{
+		return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	}
+
+	/// <summary>
+	/// Exposes the property changed event.
+	/// </summary>
+	event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	{
+		add { this.PropertyChanges.AddHandler(value); }
+		remove { this.PropertyChanges.RemoveHandler(value); }
+	}
+}
+<#+
+}
+#>

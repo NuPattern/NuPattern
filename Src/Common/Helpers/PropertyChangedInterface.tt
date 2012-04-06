@@ -1,0 +1,24 @@
+﻿<#+
+private void GeneratePropertyChanged(DomainClass domainClass, string targetName)
+{
+    //var className = domainClass.GeneratesDoubleDerived ? targetName + "Base" : targetName;
+    var className = targetName;
+#>
+
+/// <summary>
+/// <#=domainClass.Description #>
+/// </summary>
+public partial interface I<#=className #> : INotifyPropertyChanged
+{
+	/// <summary>
+	/// Subscribes to changes in the property referenced in the given 
+	/// <paramref name="propertyExpression"/> with the given 
+	/// <paramref name="callbackAction"/> delegate.
+	/// </summary>
+	/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	IDisposable SubscribeChanged(Expression<Func<I<#=className #>, object>> propertyExpression, Action<I<#=className #>> callbackAction);
+}
+<#+
+}
+#>
