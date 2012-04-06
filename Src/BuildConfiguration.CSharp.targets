@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!-- Common Assembly Properties -->
+	<PropertyGroup>
+		<AssemblyOriginatorKeyFile>$(BranchRoot)Microsoft.72.1024.snk</AssemblyOriginatorKeyFile>
+		<SignAssembly>true</SignAssembly>
+		<DelaySign>true</DelaySign>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+	<!-- CA settings for build configurations -->
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<!-- XML documentation errors should be fixed always -->
+    <DocumentationFile>$(OutDir)\$(TargetName).xml</DocumentationFile>
+    <WarningsAsErrors>1570;1573;1574;1591;1658;1711;1734;1735;</WarningsAsErrors>
+		<RunCodeAnalysis>false</RunCodeAnalysis>
+		<StyleCopEnabled>false</StyleCopEnabled>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<!-- XML documentation generation should be turned on always -->
+		<DocumentationFile>$(OutDir)\$(TargetName).xml</DocumentationFile>
+		<DefineConstants>$(DefineConstants);CODE_ANALYSIS</DefineConstants>
+		<RunCodeAnalysis>false</RunCodeAnalysis>
+		<CodeAnalysisRuleSet>$(BranchRoot)CodeAnalysis.ruleset</CodeAnalysisRuleSet>
+		<CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+		<StyleCopEnabled>false</StyleCopEnabled>
+		<StyleCopOverrideSettingsFile>$(BranchRoot)SourceAnalysis.stylecop</StyleCopOverrideSettingsFile>
+		<StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug With CA|AnyCPU' ">
+		<!-- XML documentation generation should be turned on always -->
+		<DocumentationFile>$(OutDir)\$(TargetName).xml</DocumentationFile>
+		<DefineConstants>$(DefineConstants);CODE_ANALYSIS</DefineConstants>
+		<RunCodeAnalysis>true</RunCodeAnalysis>
+		<CodeAnalysisRuleSet>$(BranchRoot)CodeAnalysis.ruleset</CodeAnalysisRuleSet>
+		<CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+		<StyleCopEnabled>false</StyleCopEnabled>
+		<StyleCopOverrideSettingsFile>$(BranchRoot)SourceAnalysis.stylecop</StyleCopOverrideSettingsFile>
+		<StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
+	</PropertyGroup>
+
+   <!-- Tool includes -->
+	<!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />-->
+</Project>

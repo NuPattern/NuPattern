@@ -1,0 +1,6 @@
+<#@ Include File="..\Product.ttinclude" #>
+<#@ Output Extension=".pkgdef" #>
+[$Initialization$]
+"ApplicationExtensionsFolder"  =  "$RootFolder$\Extensions"
+"PkgDefSearchPath"             = "$ShellFolder$\Common7\IDE\ShellExtensions;$ShellFolder$\Common7\IDE\CommonExtensions;$ApplicationExtensionsFolder$"
+"RegistryRoot"                 = "Software\Microsoft\\<#=IsolatedHostConstants.ProductIdentifier #>\\<#=IsolatedHostConstants.ProductVersion #>"

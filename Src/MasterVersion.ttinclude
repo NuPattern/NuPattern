@@ -1,0 +1,18 @@
+<#    
+    // Assembly Versions
+    var assemblyMajor = 1;
+    var assemblyMinor = 2;
+    var assemblyBuild = 19;
+    var assemblyRevision = 0;
+    var assemblyVersion = new Version(assemblyMajor, assemblyMinor, assemblyBuild, assemblyRevision);
+    var assemblyAuthor = "Microsoft";
+    
+    // Runtime VSIX Version
+    var runtimeVSIXVersion = assemblyVersion;
+
+    // Authoring VSIX Version
+    var authoringVSIXVersion = runtimeVSIXVersion;
+    
+    //DSL Versions, please change version properties of DSLs (Schema, Store, Library)
+
+#>

@@ -1,0 +1,72 @@
+[$RootKey$]
+"InstallDir"="$RootFolder$"
+"ThisVersionDTECLSID"="{18102367-cb13-4d26-8d6a-fd8b698e2705}"
+"ThisVersionSolutionCLSID"="{ff4aab7f-ccf2-4d65-ae46-89fd98b04d8b}"
+"SplashScreenBitmap"="$RootFolder$\Splash.bmp"
+"AppName"="Windows Power Console"
+"AppIcon"="$RootFolder$\ApplicationIcon.ico"
+"ProductVersion"="1.0"
+"CommandLineLogo"="Microsoft Windows Power Console Version 1.2"
+"UserFilesSubFolderName"="Windows Power Console"
+"NewProjDlgSlnTreeNodeTitle"="Windows Power Console Solution"
+"NewProjDlgInstalledTemplatesHdr"="Windows Power Console installed templates"
+"HideMiscellaneousFilesByDefault"=dword:00000000
+"AddinsAllowed"=dword:00000001
+"DisableOutputWindow"=dword:00000000
+"AllowsDroppedFilesOnMainWindow"=dword:00000001
+"DefaultSearchPage"="http://www.bing.com"
+"DefaultHomePage"="http://www.Microsoft.com"
+"HideSolutionConcept"=dword:00000000
+"DefaultDebugEngine"="{00000000-0000-0000-0000-000000000000}"
+"UserOptsFileExt"="Windows Power Console_suo"
+"SolutionFileExt"="Windows Power Console_sln"
+"DefaultUserFilesFolderRoot"="PatternToolkitHost"
+"SolutionFileCreatorIdentifier"="Windows Power Console Solution File, Format Version 11.00"
+"DefaultProjectsLocation"="$MyDocuments$\PatternToolkitHost"
+"AppLocalizationPackage"="{674431a5-47cc-4988-8fa8-9d157b46aad1}"
+// set ShowHierarchyRootInTitle to dword:00000000 to omit the project name from the main window title
+"ShowHierarchyRootInTitle"=dword:00000001
+// Startpage is disabled by default. Uncomment the following to enable start page feature.
+// Please note one need to also specify a Start Page "Uri" under "[$RootKey$\StartPage\Default]" and
+// comment out No_ShellPkg_StartPageCommand in the UI project's vsct file.
+//"DisableStartPage"=dword:00000000
+
+// If you enable a Start Page, specify the Uri of the loose or compiled Start Page XAML file.
+//[$RootKey$\StartPage\Default]
+//"Uri"="$RootFolder$\StartPage.xaml"
+
+//If you have a directory containing assemblies that need to be loaded, but not added
+//  to the probing path of the .config file, then you can add those here. Simply uncomment
+//  then add your directories to this key, and the AppDomain manager will look for your
+//  assemblies under the paths given.
+//[$RootKey$\BindingPaths\{674431a5-47cc-4988-8fa8-9d157b46aad1}]
+//"$RootFolder$"=""
+//"C:\Directory1"=""
+//"C:\Directory2"=""
+
+[$RootKey$\Menus]
+"{674431a5-47cc-4988-8fa8-9d157b46aad1}"=", 1000, 1"
+
+[$RootKey$\Profile]
+"DefaultVsProfile"="$RootFolder$\Profiles\General.vssettings"
+
+[$RootKey$\Packages\{674431a5-47cc-4988-8fa8-9d157b46aad1}]
+"Inprocserver32"="$RootFolder$\PatternToolkitHost.exe"
+
+[$RootKey$\Packages\{674431a5-47cc-4988-8fa8-9d157b46aad1}\SatelliteDll]
+"DllName"="PatternToolkitHostUI.dll"
+"Path"="$RootFolder$"
+
+// Create local VS template location
+[$RootKey$\VSTemplate\Item]
+"UserFolder"="$RootFolder$\ItemTemplates"
+"CacheFolder"="$RootFolder$\ItemTemplatesCache"
+
+[$RootKey$\VSTemplate\Project]
+"UserFolder"="$RootFolder$\ProjectTemplates"
+"CacheFolder"="$RootFolder$\ProjectTemplatesCache"
+
+// Disable the online template tab and the framework dropdown in the new project and item dialog.
+[$RootKey$\NewProjectDialog]
+"DisableOnlineTemplates"=dword:00000001
+"HideFrameworkSelection"=dword:00000001

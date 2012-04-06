@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Include base build configuration settings (before overrides below) -->
+  <Import Project="BuildConfiguration.CSharp.targets" />
+
+	<!-- Clear documentation file as it's not required for test classes -->
+	<PropertyGroup>
+		<DocumentationFile></DocumentationFile>
+		<CreateVsixContainer>false</CreateVsixContainer>
+		<!-- No check for CLS-compliant -->
+    <NoWarn>3003</NoWarn>
+	</PropertyGroup>
+
+  <!-- CA settings for build configurations -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <CodeAnalysisRuleSet>$(BranchRoot)CodeAnalysis.TestProjects.ruleset</CodeAnalysisRuleSet>
+    <StyleCopOverrideSettingsFile>$(BranchRoot)SourceAnalysis.TestProjects.stylecop</StyleCopOverrideSettingsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug With CA|AnyCPU' ">
+    <CodeAnalysisRuleSet>$(BranchRoot)CodeAnalysis.TestProjects.ruleset</CodeAnalysisRuleSet>
+    <StyleCopOverrideSettingsFile>$(BranchRoot)SourceAnalysis.TestProjects.stylecop</StyleCopOverrideSettingsFile>
+  </PropertyGroup>
+</Project>

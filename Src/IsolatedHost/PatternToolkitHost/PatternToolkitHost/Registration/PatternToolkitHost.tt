@@ -1,0 +1,85 @@
+<#@ Include File="..\..\Product.ttinclude" #>
+<#@ Output Extension=".reg" #>
+This file contains information that should be merged into the registry
+from a setup program, or copied into a .reg file and merged into the
+registry for your own personal testing. If you are using a Visual Studio
+Setup Project, then simply copy the file starting below the the "CUT HERE"
+line until the end, and save it to a file with the extension .reg. Then open 
+the Registry editor for your setup program, right click on the Registry editor 
+window, select Import and then browse to the .reg file you have created. All 
+the correct settings have been made and you do not need to make any further 
+modifications. To test these settings on your computer, save the contents of 
+this file to a .reg file like you would for a Setup project, but also search 
+for the value $RootFolder$ and replace it with the directory path containing 
+your program. After saving these changes, double-click on the .reg file and
+merge the changes into the registry.
+
+--------------------------------  CUT HERE  --------------------------------
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\CLSID\{18102367-cb13-4d26-8d6a-fd8b698e2705}]
+@="<#=IsolatedHostConstants.ProductIdentifier #> DTE Object"
+
+[HKEY_CLASSES_ROOT\CLSID\{18102367-cb13-4d26-8d6a-fd8b698e2705}\LocalServer32]
+@="$RootFolder$\\<#=IsolatedHostConstants.ProductFileName #>.exe"
+
+[HKEY_CLASSES_ROOT\CLSID\{18102367-cb13-4d26-8d6a-fd8b698e2705}\ProgID]
+@="<#=IsolatedHostConstants.ProductIdentifier #>.DTE.<#=IsolatedHostConstants.ProductVersion #>"
+
+[HKEY_CLASSES_ROOT\CLSID\{18102367-cb13-4d26-8d6a-fd8b698e2705}\VersionIndependentProgID]
+@="<#=IsolatedHostConstants.ProductIdentifier #>.DTE"
+
+[HKEY_CLASSES_ROOT\CLSID\{18102367-cb13-4d26-8d6a-fd8b698e2705}\Programmable]
+@=""
+
+[HKEY_CLASSES_ROOT\CLSID\{18102367-cb13-4d26-8d6a-fd8b698e2705}\TypeLib]
+@="{80cc9f66-e7d8-4ddd-85b6-d9e6cd0e93e2}"
+
+[HKEY_CLASSES_ROOT\CLSID\{18102367-cb13-4d26-8d6a-fd8b698e2705}\DefaultIcon]
+@="$RootFolder$\\<#=IsolatedHostConstants.ProductFileName #>.exe,1200"
+
+[HKEY_CLASSES_ROOT\CLSID\{18102367-cb13-4d26-8d6a-fd8b698e2705}\Version]
+@="<#=IsolatedHostConstants.ProductVersion #>"
+
+[HKEY_CLASSES_ROOT\CLSID\{ff4aab7f-ccf2-4d65-ae46-89fd98b04d8b}]
+@="<#=IsolatedHostConstants.ProductIdentifier #> Solution Object"
+
+[HKEY_CLASSES_ROOT\CLSID\{ff4aab7f-ccf2-4d65-ae46-89fd98b04d8b}\LocalServer32]
+@="$RootFolder$\\<#=IsolatedHostConstants.ProductFileName #>.exe"
+
+[HKEY_CLASSES_ROOT\CLSID\{ff4aab7f-ccf2-4d65-ae46-89fd98b04d8b}\ProgID]
+@="<#=IsolatedHostConstants.ProductIdentifier #>.Solution.<#=IsolatedHostConstants.ProductVersion #>"
+
+[HKEY_CLASSES_ROOT\CLSID\{ff4aab7f-ccf2-4d65-ae46-89fd98b04d8b}\VersionIndependentProgID]
+@="<#=IsolatedHostConstants.ProductIdentifier #>.Solution"
+
+[HKEY_CLASSES_ROOT\CLSID\{ff4aab7f-ccf2-4d65-ae46-89fd98b04d8b}\Programmable]
+@=""
+
+[HKEY_CLASSES_ROOT\CLSID\{ff4aab7f-ccf2-4d65-ae46-89fd98b04d8b}\TypeLib]
+@="{80cc9f66-e7d8-4ddd-85b6-d9e6cd0e93e2}"
+
+[HKEY_CLASSES_ROOT\CLSID\{ff4aab7f-ccf2-4d65-ae46-89fd98b04d8b}\DefaultIcon]
+@="$RootFolder$\\<#=IsolatedHostConstants.ProductFileName #>.exe,1200"
+
+[HKEY_CLASSES_ROOT\CLSID\{ff4aab7f-ccf2-4d65-ae46-89fd98b04d8b}\Version]
+@="<#=IsolatedHostConstants.ProductVersion #>"
+
+[HKEY_CLASSES_ROOT\\<#=IsolatedHostConstants.ProductIdentifier #>.DTE.<#=IsolatedHostConstants.ProductVersion #>]
+@="<#=IsolatedHostConstants.ProductIdentifier #> DTE Object"
+
+[HKEY_CLASSES_ROOT\\<#=IsolatedHostConstants.ProductIdentifier #>.DTE.<#=IsolatedHostConstants.ProductVersion #>\CLSID]
+@="{18102367-cb13-4d26-8d6a-fd8b698e2705}"
+
+[HKEY_CLASSES_ROOT\\<#=IsolatedHostConstants.ProductIdentifier #>.Solution.<#=IsolatedHostConstants.ProductVersion #>]
+@="<#=IsolatedHostConstants.ProductIdentifier #> Solution Object"
+
+[HKEY_CLASSES_ROOT\\<#=IsolatedHostConstants.ProductIdentifier #>.Solution.<#=IsolatedHostConstants.ProductVersion #>\CLSID]
+@="{ff4aab7f-ccf2-4d65-ae46-89fd98b04d8b}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AppEnv\10.0\Apps\\<#=IsolatedHostConstants.ProductIdentifier #>_<#=IsolatedHostConstants.ProductVersion #>]
+"StubExePath"="$RootFolder$\\<#=IsolatedHostConstants.ProductFileName #>.exe"
+"AppName"="<#=IsolatedHostConstants.ProductName #>"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\\<#=IsolatedHostConstants.ProductFileName #>.exe]
+@="$RootFolder$\\<#=IsolatedHostConstants.ProductFileName #>.exe"

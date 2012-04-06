@@ -1,0 +1,13 @@
+<#+
+    public static class IsolatedHostConstants
+    {
+        public const string ProductVersion = "1.2";
+        public const string ProductVersionLong = ProductVersion + ".0.0";
+        public const string ProductName = "Windows Power Console";
+        public const string ProductDescription = "An environment for running infrastructure and operations toolkits.";
+        public const string ProductIdentifier = "PatternToolkitHost"; // No spaces allowed
+        public const string ProductFileName = ProductIdentifier;
+        public const string DiskFolderLocation = ProductFileName;
+        public const string CompanyName = "Microsoft";
+    }
+#>

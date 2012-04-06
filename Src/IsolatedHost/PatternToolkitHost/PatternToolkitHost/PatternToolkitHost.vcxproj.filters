@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shell Customization">
+      <UniqueIdentifier>{A9BF9D76-DA2A-4CCA-B904-3C7D76C1774A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shell Customization\Registration">
+      <UniqueIdentifier>{fad6bc21-bef8-492d-b768-bbc72bf74f9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shell Customization\Packaging">
+      <UniqueIdentifier>{f5f2a728-37f9-4db7-b892-128747b64fa2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PatternToolkitHost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PatternToolkitHost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <IsolatedShellFiles Include="ApplicationIcon.ico">
+      <Filter>Resource Files</Filter>
+    </IsolatedShellFiles>
+    <None Include="PatternToolkitHost.exe.manifest">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Registration\PatternToolkitHost.reg">
+      <Filter>Shell Customization\Registration</Filter>
+    </None>
+    <None Include="Registration\PatternToolkitHost.tt">
+      <Filter>Shell Customization\Registration</Filter>
+    </None>
+    <None Include="PatternToolkitHost.tt">
+      <Filter>Shell Customization\Packaging</Filter>
+    </None>
+    <None Include="PatternToolkitHost.Application.tt">
+      <Filter>Shell Customization\Packaging</Filter>
+    </None>
+    <None Include="Resources\PatternToolkitHost.tt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="PatternToolkitHost.exe.tt">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <IsolatedShellFiles Include="General.vssettings">
+      <Filter>Shell Customization</Filter>
+    </IsolatedShellFiles>
+    <IsolatedShellFiles Include="Splash.bmp">
+      <Filter>Shell Customization</Filter>
+    </IsolatedShellFiles>
+    <IsolatedShellFiles Include="DebuggerProxy.dll">
+      <Filter>Shell Customization</Filter>
+    </IsolatedShellFiles>
+    <IsolatedShellFiles Include="DebuggerProxy.dll.manifest">
+      <Filter>Shell Customization</Filter>
+    </IsolatedShellFiles>
+    <IsolatedShellFiles Include="PatternToolkitHost.winprf">
+      <Filter>Shell Customization</Filter>
+    </IsolatedShellFiles>
+    <IsolatedShellFiles Include="PatternToolkitHost.pkgundef">
+      <Filter>Shell Customization\Packaging</Filter>
+    </IsolatedShellFiles>
+    <IsolatedShellFiles Include="PatternToolkitHost.pkgdef">
+      <Filter>Shell Customization\Packaging</Filter>
+    </IsolatedShellFiles>
+    <IsolatedShellFiles Include="PatternToolkitHost.Application.pkgdef">
+      <Filter>Shell Customization\Packaging</Filter>
+    </IsolatedShellFiles>
+    <IsolatedShellFiles Include="PatternToolkitHost.exe.config">
+      <Filter>Source Files</Filter>
+    </IsolatedShellFiles>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vssdk.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources\PatternToolkitHost.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

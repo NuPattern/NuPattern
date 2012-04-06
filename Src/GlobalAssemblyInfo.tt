@@ -1,0 +1,20 @@
+<#@ output extension=".cs" #>
+<#@ Include File="MasterVersion.ttinclude" #>
+using System.Reflection;
+using System.Resources;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.InteropServices;
+
+[assembly: AssemblyCompany("<#=assemblyAuthor#>")]
+[assembly: AssemblyProduct("Pattern Automation Toolkit")]
+[assembly: AssemblyCopyright("Copyright <#=assemblyAuthor#> ©2012, allrights reserved.")]
+[assembly: AssemblyTrademark("<#=assemblyAuthor#>")]
+[assembly: AssemblyCulture("")]
+
+[assembly: AssemblyVersion("<#=assemblyVersion #>")]
+[assembly: AssemblyFileVersion("<#=assemblyVersion #>")]
+
+[assembly: ReliabilityContract(Consistency.MayCorruptProcess, Cer.None)]
+[assembly: ComVisible(false)]
+
+[assembly: NeutralResourcesLanguage("en")]

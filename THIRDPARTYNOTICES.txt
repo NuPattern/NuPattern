@@ -1,0 +1,50 @@
+VSPAT Project
+Copyright (C) Microsoft. All rights reserved.
+
+VSPAT requires the works listed below for building, testing and running the source code.
+Moq and Json.NET are not included with VSPAT, but they can be automatically downloaded and installed by NuGet (using the 'Package Restore' feature of NuGet) when the source code is built in Visual Studio. 
+All works are distributed under the licenses below, and obtained from the websites listed below.
+The full text for most of the licenses listed below may be found in the LICENSE.txt file accompanying each work. 
+Please refer to the specific files and/or packages for more detailed information about the authors, copyright notices, and licenses.
+
+Visual Studio SDK
+----- 
+Website:      http://msdn.microsoft.com/en-us/library/bb166441(VS.80).aspx 
+Copyright:    Copyright (c) 2010 Microsoft
+License:      Apache 2.0
+
+Feature Builder Power Tool
+----
+Website:      http://visualstudiogallery.msdn.microsoft.com/67b720f4-9a50-41cb-86a2-82e33b7c5fc4
+Copyright:    Copyright (c) 2010 Microsoft
+License:      Microsoft EULA
+
+Enterprise Library
+----
+Website:      http://entlib.codeplex.com/
+Copyright:    Copyright (c) Microsoft Corporation
+License:      MS-PL
+
+Microsoft Office 2010 (PIAs)
+----
+Website:      http://www.microsoft.com/download/en/details.aspx?id=3508
+Copyright:    Copyright (c) Microsoft Corporation
+License:      Microsoft EULA
+
+NuGet 1.6
+----- 
+Website:      http://nuget.codeplex.com 
+Copyright:    Copyright (c) 2010 Outercurve Foundation
+License:      Apache 2.0
+
+Moq 4.0
+----- 
+Website:      http://code.google.com/p/moq/
+Copyright:    Copyright (c) 2010 Clarius Consulting, Manas Technology Solutions, InSTEDD
+License:      BSD
+
+Json.NET 4.0.2
+----- 
+Website:      http://json.codeplex.com/
+Copyright:    Copyright (c) 2007 James Newton-King
+License:      MIT
