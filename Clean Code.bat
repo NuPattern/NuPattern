@@ -25,6 +25,7 @@ echo Deleting 'Non-Source' Files
 for /f "delims=" %%a in ('dir /ah-hr/s/b *.vspscc') do (del /f/q "%%a")
 for /f "delims=" %%a in ('dir /ah-hr/s/b *.vssscc') do (del /f/q "%%a")
 for /f "delims=" %%a in ('dir /ah/s/b *.suo') do (del /f/q/ah "%%a")
+for /f "delims=" %%a in ('dir /ah/s/b *.user') do (del /f/q/ah "%%a")
 
 echo Cleaned Successfully!
 color 0A

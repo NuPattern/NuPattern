@@ -2332,4 +2332,156 @@
     <Key>Creating Pattern Toolkits.Add/New Project/Item Dialog.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Creating Pattern Toolkits.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Controlling Instancing of Elements.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Controlling Ordering of Elements.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Understanding: Recommended Code Generation Patterns.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Applying the T4 Triad Pattern.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Creating Your Own Drag Drop Commands.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Creating Your Own Drag Conditions.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Creating Your Own Custom Automation Classes.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Naming Your Own Automation Classes.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Coding Your Own Automation Classes.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Applying Tracing to Your Own Automation Classes.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Implementing Your Own Automation Class.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Create You Own Ordering Comparer.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Add Additional Automation Libraries.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Common Automation Scenarios.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Understanding: Building a Toolkit Project.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.How To: Building a Toolkit Project.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Changing the Ordering.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Arranging Shapes on Pattern Model.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Common Automation Tasks.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Adding Properties to Automation Classes.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Importing Services into Automation Classes.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Importing the Current Element into Automation Classes.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Navigating Pattern Models Programmatically (Generically).StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Navigating Pattern Models Programmatically (Typed).StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Moving Between Generic and Typed Pattern Model Schemes.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Provided Automation Types.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Commands.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Conditions.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Value Providers.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Validation Rules.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Events.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Known Issues.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Error when opening a pattern toolkit solution file.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Corruption of pattern model when performing an Undo.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Error in Text Templates when using the Visual T4 Editor.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Build error: “store must be open for this operation”.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Error, building guidance with 64bit versions of Microsoft Word..StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
 </ArrayOfKeyValueOfstringstring>

@@ -13,10 +13,14 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <GacTargetOutput>false</GacTargetOutput>
     <FileAlignment>512</FileAlignment>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>

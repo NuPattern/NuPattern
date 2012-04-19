@@ -20,10 +20,14 @@
     <ClearToolboxCacheInExpHive>true</ClearToolboxCacheInExpHive>
     <StartupObject>
     </StartupObject>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>

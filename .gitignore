@@ -1,0 +1,9 @@
+# git ignore file
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
+Binaries
+TestResults

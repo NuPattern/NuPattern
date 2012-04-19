@@ -11,10 +11,14 @@
     <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.Shell</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectGuid>{D3E93083-99C9-4186-95B5-339A822C63EE}</ProjectGuid>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
     <TargetVsixContainerName>PatternToolkitManager.vsix</TargetVsixContainerName>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>
