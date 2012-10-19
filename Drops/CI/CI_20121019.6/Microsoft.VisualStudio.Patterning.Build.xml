@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.VisualStudio.Patterning.Build</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.VisualStudio.Patterning.Build.RegistrySetValue">
+            <summary>
+            MsBuild task to write registry settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Build.RegistrySetValue.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.VisualStudio.Patterning.Build.RegistrySetValue"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Build.RegistrySetValue.Execute">
+            <summary>
+            Executes the task
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Build.RegistrySetValue.DataType">
+            <summary>
+            Sets the type of the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Build.RegistrySetValue.Data">
+            <summary>
+            Gets the data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Build.RegistrySetValue.Value">
+            <summary>
+            Sets the value. If Value is not provided, an attempt will be made to read the Default Value.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Build.RegistrySetValue.Key">
+            <summary>
+            Sets the key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Build.RegistrySetValue.RegistryHive">
+            <summary>
+            Sets the Registry Hive. Supports ClassesRoot, CurrentUser, LocalMachine, Users, PerformanceData, CurrentConfig, DynData
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Build.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Build.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Build.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Build.Resources.RegistrySetValue_RegistryHiveNotExist">
+            <summary>
+              Looks up a localized string similar to Registry hive &apos;{0}&apos; not found on machine &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Build.Resources.RegistrySetValue_RegistryKeyNotFound">
+            <summary>
+              Looks up a localized string similar to Registry Key &apos;{0}&apos; not found in hive &apos;{1}&apos;, on machine &apos;{2}&apos;..
+            </summary>
+        </member>
+    </members>
+</doc>
