@@ -1,0 +1,55 @@
+﻿using System;
+using System.ComponentModel.Composition;
+using System.ComponentModel.DataAnnotations;
+using System.Windows;
+using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.Patterning.Library.Properties;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+
+namespace Microsoft.VisualStudio.Patterning.Library.Conditions
+{
+    /// <summary>
+    /// Checks if the specified format exists in the drag event's data collection
+    /// </summary>
+    [DisplayNameResource("DropItemFormatCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource("DropItemFormatCondition_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [CLSCompliant(false)]
+    public class DropItemFormatCondition : Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Condition
+    {
+        private static readonly ITraceSource tracer = Tracer.GetSourceFor<DropItemFormatCondition>();
+
+        /// <summary>
+        /// Gets or sets the current element.
+        /// </summary>
+        [Required]
+        [Import(AllowDefault = true)]
+        public DragEventArgs DragArgs { get; set; }
+
+        /// <summary>
+        /// The format to check for
+        /// </summary>
+        [Required(AllowEmptyStrings = false)]
+        [DisplayNameResource("DropItemFormatCondition_Format_DisplayName", typeof(Resources))]
+        [DescriptionResource("DropItemFormatCondition_Format_Description", typeof(Resources))]
+        public string Format { get; set; }
+
+        /// <summary>
+        /// Evaluates the condition by verifying the existence of any data object of the specified format.
+        /// </summary>
+        public override bool Evaluate()
+        {
+            this.ValidateObject();
+
+            tracer.TraceInformation(
+                Resources.DropItemFormatCondition_TraceInitial, this.Format);
+
+            var result = DragArgs.Data.GetDataPresent(Format);
+
+            tracer.TraceInformation(
+                Resources.DropItemFormatCondition_TraceEvaluation, this.Format, result);
+
+            return result;
+        }
+    }
+}

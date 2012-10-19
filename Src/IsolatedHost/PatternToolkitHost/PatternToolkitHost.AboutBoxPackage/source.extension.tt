@@ -1,0 +1,22 @@
+﻿<#@ Include File="..\Product.ttinclude" #>
+<#@ Output Extension=".vsixmanifest" #>
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="1668122b-7fda-49c3-b4cf-23fe59775e4d">
+    <Name><#=IsolatedHostConstants.ProductName #> About Box</Name>
+    <Author><#= IsolatedHostConstants.CompanyName #> </Author>
+    <Version><#=IsolatedHostConstants.ProductVersion #></Version>
+    <Description xml:space="preserve">Information about <#=IsolatedHostConstants.ProductName #> About</Description>
+    <Locale>1033</Locale>
+    <InstalledByMsi>true</InstalledByMsi>
+    <SupportedProducts>
+      <IsolatedShell Version="1.0"><#= IsolatedHostConstants.ProductIdentifier #></IsolatedShell>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+  <References />
+  <Content>
+    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+  </Content>
+</Vsix>

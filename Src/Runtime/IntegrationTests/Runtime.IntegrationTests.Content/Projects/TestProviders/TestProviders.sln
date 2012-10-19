@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopLevelProject", "TestProviders\TopLevelProject.csproj", "{46F565BA-4071-4ACE-A876-BEBFFF6A8B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdLevelProject", "TestProviders2\ThirdLevelProject.csproj", "{B13B408F-4969-48C0-85C2-227461953FA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TopLevelSolutionFolder", "TopLevelSolutionFolder", "{88C1BC84-C304-413B-806C-175E49760A1B}"
+	ProjectSection(SolutionItems) = preProject
+		TopLevelSolutionItem.txt = TopLevelSolutionItem.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SecondLevelSolutionFolder", "SecondLevelSolutionFolder", "{502A6637-BCB1-43F2-97EF-EB8A4DB47023}"
+	ProjectSection(SolutionItems) = preProject
+		SecondLevelSolutionItem.txt = SecondLevelSolutionItem.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdLevelSolutionFolder", "ThirdLevelSolutionFolder", "{EFAB34FA-CED2-4C59-BC35-46CC8456DBE6}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdLevelSolutionItem.txt = ThirdLevelSolutionItem.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46F565BA-4071-4ACE-A876-BEBFFF6A8B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F565BA-4071-4ACE-A876-BEBFFF6A8B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F565BA-4071-4ACE-A876-BEBFFF6A8B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F565BA-4071-4ACE-A876-BEBFFF6A8B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B13B408F-4969-48C0-85C2-227461953FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13B408F-4969-48C0-85C2-227461953FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13B408F-4969-48C0-85C2-227461953FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13B408F-4969-48C0-85C2-227461953FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{502A6637-BCB1-43F2-97EF-EB8A4DB47023} = {88C1BC84-C304-413B-806C-175E49760A1B}
+		{EFAB34FA-CED2-4C59-BC35-46CC8456DBE6} = {502A6637-BCB1-43F2-97EF-EB8A4DB47023}
+		{B13B408F-4969-48C0-85C2-227461953FA7} = {EFAB34FA-CED2-4C59-BC35-46CC8456DBE6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,35 @@
+﻿using System;
+using System.Linq;
+using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
+{
+	[TestClass]
+	public class EnumerableExtensionsSpec
+	{
+		internal static readonly IAssertion Assert = new Assertion();
+
+		[TestMethod]
+		public void WhenEnumerableIsNull_ThenThrowsArgumentNullException()
+		{
+			Assert.Throws<ArgumentNullException>(() => EnumerableExtensions.ForEach<string>(null, s => { }));
+		}
+
+		[TestMethod]
+		public void WhenActionIsNull_ThenThrowsArgumentNullException()
+		{
+			Assert.Throws<ArgumentNullException>(() => EnumerableExtensions.ForEach(Enumerable.Empty<string>(), null));
+		}
+
+		[TestMethod]
+		public void WhenForEachInvoked_ThenCallsActionWithSourceItems()
+		{
+			string arg = null;
+
+			EnumerableExtensions.ForEach(new[] { "foo" }, s => arg = s);
+
+			Assert.Equal("foo", arg);
+		}
+	}
+}

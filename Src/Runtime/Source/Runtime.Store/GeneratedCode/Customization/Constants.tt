@@ -1,0 +1,13 @@
+﻿using System;
+<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\DslDefinition.dsl'" #>
+<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".cs" #>
+
+namespace  Microsoft.VisualStudio.Patterning.Runtime.Store
+{
+	internal static partial class Constants
+	{
+		// Package identifier
+		public const string <#= this.Dsl.Name #>PackageId = "<#= this.Dsl.PackageGuid #>";
+	}
+}

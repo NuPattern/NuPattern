@@ -1,0 +1,39 @@
+﻿<#@ output extension=".vsixmanifest" #>
+<#@ Include  File="source.include.t4"#>
+<#@ Include  File="ToolkitVersionInfo.ttinclude"#>
+<#@ Include  File="..\..\..\MasterVsixInfo.ttinclude"#>
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+	<Identifier Id="<#=HandsOnLabsToolkitInfo.Identifier#>">
+		<Name><#=HandsOnLabsToolkitInfo.Name#></Name>
+		<Author><#=HandsOnLabsToolkitInfo.Author#></Author>
+		<Version><#=HandsOnLabsToolkitInfo.Version#></Version>
+		<Description xml:space="preserve"><#=HandsOnLabsToolkitInfo.Description#></Description>
+		<Locale>1033</Locale>
+		<License>PatternToolkitBuilderLabsLicense.rtf</License>
+		<Icon>Resources\ToolkitIcon.png</Icon>
+		<MoreInfoUrl><#=HandsOnLabsToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
+		<GettingStartedGuide><#=HandsOnLabsToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
+		<PreviewImage>Resources\VsixPreview.png</PreviewImage>
+		<SupportedProducts>
+		  <VisualStudio Version="10.0">
+			<Edition>Ultimate</Edition>
+			<Edition>Premium</Edition>
+			<Edition>Pro</Edition>
+		  </VisualStudio>
+		</SupportedProducts>
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+	  </Identifier>
+	<References>
+		<Reference Id="<#=VsixInfo.PatternToolkitBuilder.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitBuilder.Version #>">
+			<Name><#=VsixInfo.PatternToolkitBuilder.Name #></Name>
+		</Reference>
+	</References>
+	<Content>
+		<MefComponent>|<#=productName #>|</MefComponent>
+		<MefComponent>|<#=productName #>.Automation|</MefComponent>
+		<CustomExtension Type="PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternTool.patterndefinition</CustomExtension>
+		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
+		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
+	</Content>
+</Vsix>

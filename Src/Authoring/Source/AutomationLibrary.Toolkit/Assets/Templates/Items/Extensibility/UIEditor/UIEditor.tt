@@ -1,0 +1,40 @@
+﻿<#@ output extension=".vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\..\..\MasterVersion.ttinclude" #>
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Automation UIEditor</Name>
+		<Description>Creates a custom automation UI editor.</Description>
+		<TemplateID>9f261ce419d4-AutomationLibrary.DefaultView.TypeEditors.UIEditor</TemplateID>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>Extensibility</ProjectSubType>
+		<SortOrder>10</SortOrder>
+		<Icon></Icon>
+		<DefaultName>AutomationUIEditor</DefaultName>
+		<Hidden>true</Hidden>
+	</TemplateData>
+    <TemplateContent>
+        <References />
+        <ProjectItem TargetFileName="$fileinputname$.cs" ReplaceParameters="true">UIEditor.cs</ProjectItem>
+    </TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.GuidGeneratorTemplateWizard</FullClassName>
+	</WizardExtension>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.ReplacementTemplateWizard</FullClassName>
+	</WizardExtension>
+    <WizardExtension>
+      <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=ecdd31353928a4a5</Assembly>
+      <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+    </WizardExtension>
+	<WizardData>
+		<Replacement Key="$assemblyVersion$"  Value="<#=assemblyVersion #>" />
+		<NewGuid Key="$guid11$" />
+		<NewGuid Key="$guid12$" />
+		<NewGuid Key="$guid13$" />
+		<NewGuid Key="$guid14$" />
+		<NewGuid Key="$guid15$" />
+	</WizardData>
+</VSTemplate>

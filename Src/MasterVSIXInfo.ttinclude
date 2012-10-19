@@ -1,0 +1,62 @@
+﻿<#+
+// Toolkit VSIX Info
+public static class VsixInfo
+{
+	public static class PatternToolkitRuntime
+	{
+		public const string Name = "Pattern Toolkit Manager";
+		public const string Description = "The Solution Builder tool window for accelerating solution development using Pattern Toolkit extensions.";
+		public const string Author = "Outercurve";
+		public const string Version = "1.3.20.0";
+		public const string Identifier = "93373818-600f-414b-8181-3a0cb79fa785";
+		public const string VsixFileName = "PatternToolkitManager.vsix";
+		public const string MoreInfoUrl = "http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b";
+		public const string SettingsName = "PatternToolkitExtensions";
+
+	}
+	public static class PatternToolkitBuilder
+	{
+		public const string Name = "Pattern Toolkit Builder";
+		public const string Author = "Outercurve";
+		public const string Version = "1.3.20.0";
+		public const string Identifier = "9f6dc301-6f66-4d21-9f9c-b37412b162f6";
+		public const string VsixFileName = "PatternToolkitBuilder.vsix";
+		public const string MoreInfoUrl = "http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b";
+	}
+	public static class PatternToolkitLibrary
+	{
+		public const string Name = "Pattern Toolkit Automation Library";
+		public const string Author = "Outercurve";
+		public const string Version = "1.3.20.0";
+		public const string Identifier = "97bd7ab2-964b-43f1-8a08-be6db68b018b";
+		public const string VsixFileName = "PatternToolkitAutomationLibrary.vsix";
+		public const string MoreInfoUrl = "http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b";
+	}
+	public static class PatternToolkitHol
+	{
+		public const string Name = "Pattern Toolkit Builder Labs";
+		public const string Author = "Outercurve";
+		public const string Version = "1.3.20.0";
+		public const string Identifier = "5d64cfe6-a6ff-4e73-a000-c6a8832740ff";
+		public const string VsixFileName = "PatternToolkitBuilderLabs.vsix";
+		public const string MoreInfoUrl = "http://visualstudiogallery.msdn.microsoft.com/24b0eb25-352f-45d8-8b2a-bdc7637d80ad";
+	}
+	public static class VsSdk
+	{
+		public const string Name = "Microsoft Visual Studio SDK";
+		public const string Author = "Microsoft";
+		public const string Version = "10.0";
+		public const string Identifier = "Microsoft.VisualStudio.SDK";
+		public const string MoreInfoUrl = "http://www.microsoft.com/download/en/details.aspx?id=2680";
+	}
+	public static class NuGetPackageManager
+	{
+		public const string Name = "NuGet Package Manager";
+		public const string Author = "Microsoft Corporation";
+		public const string Version = "1.6.21215.9133";
+		public const string Identifier = "NuPackToolsVsix.Microsoft.67e54e40-0ae3-42c5-a949-fddf5739e7a5";
+		public const string VsixFileName = "NuGet.Tools.vsix";
+		public const string MoreInfoUrl = "http://docs.nuget.org/";
+	}
+}
+#>

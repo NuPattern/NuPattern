@@ -1,0 +1,8 @@
+<#+
+    public static class HostedToolkitConstants
+    {
+        public const string ToolkitVersion = "1.0.0.0";
+        public const string ToolkitName = "LyncDeploymentToolkit";
+        public const string AuthorName = "Microsoft";
+    }
+#>

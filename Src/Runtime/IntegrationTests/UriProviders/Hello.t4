@@ -1,0 +1,3 @@
+﻿<#@ Template Language="C#" Debug="True" #>
+<#@ Output Extension=".txt" #>
+Hello

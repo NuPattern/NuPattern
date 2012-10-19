@@ -1,0 +1,59 @@
+﻿<#@ output extension=".vsixmanifest" #>
+<#@ Include  File="source.include.t4"#>
+<#@ Include  File="ToolkitVersionInfo.ttinclude"#>
+<#@ Include  File="..\..\..\MasterVsixInfo.ttinclude"#>
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+	<Identifier Id="<#=AuthoringToolkitInfo.Identifier#>">
+		<Name><#=AuthoringToolkitInfo.Name#></Name>
+		<Author><#=AuthoringToolkitInfo.Author#></Author>
+		<Version><#=AuthoringToolkitInfo.Version#></Version>
+		<Description xml:space="preserve"><#=AuthoringToolkitInfo.Description#></Description>
+		<Locale>1033</Locale>
+		<License>PatternToolkitBuilderLicense.rtf</License>
+		<Icon>Resources\DesignTimeVsix.png</Icon>
+		<MoreInfoUrl><#=AuthoringToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
+		<GettingStartedGuide><#=AuthoringToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
+		<PreviewImage>Resources\DesignTimeVsixPreview.png</PreviewImage>
+		<SupportedProducts>
+			<VisualStudio Version="10.0">
+				<Edition>Ultimate</Edition>
+				<Edition>Premium</Edition>
+				<Edition>Pro</Edition>
+			</VisualStudio>
+		</SupportedProducts>
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+	</Identifier>
+	<References>
+		<Reference Id="<#=VsixInfo.NuGetPackageManager.Identifier#>" MinVersion="<#=VsixInfo.NuGetPackageManager.Version#>">
+			<Name><#=VsixInfo.NuGetPackageManager.Name#></Name>
+			<MoreInfoUrl><#=VsixInfo.NuGetPackageManager.MoreInfoUrl#></MoreInfoUrl>
+		</Reference>
+		<Reference Id="<#=VsixInfo.VsSdk.Identifier #>" MinVersion="<#=VsixInfo.VsSdk.Version#>">
+			<Name><#=VsixInfo.VsSdk.Name #></Name>
+			<MoreInfoUrl><#=VsixInfo.VsSdk.MoreInfoUrl#></MoreInfoUrl>
+		</Reference>
+		<Reference Id="<#=VsixInfo.PatternToolkitRuntime.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitRuntime.Version #>">
+			<Name><#=VsixInfo.PatternToolkitRuntime.Name #></Name>
+			<VsixPath><#=VsixInfo.PatternToolkitRuntime.VsixFileName #></VsixPath>
+		</Reference>
+		<Reference Id="<#=VsixInfo.PatternToolkitLibrary.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitLibrary.Version #>">
+			<Name><#=VsixInfo.PatternToolkitLibrary.Name #></Name>
+			<VsixPath><#=VsixInfo.PatternToolkitLibrary.VsixFileName #></VsixPath>
+		</Reference>
+	</References>
+	<Content>
+	<VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+	<MefComponent>|%CurrentProject%|</MefComponent>
+	<VsPackage>|WorkflowDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
+		<MefComponent>|WorkflowDesign.Shell|</MefComponent>
+		<MefComponent>|WorkflowDesign|</MefComponent>
+		<VsPackage>|ToolkitDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
+		<MefComponent>|ToolkitDesign.Shell|</MefComponent>
+		<MefComponent>|Authoring.Toolkit.Automation|</MefComponent>
+		<CustomExtension Type="PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternModel.patterndefinition</CustomExtension>
+		<CustomExtension Type="ToolkitCategory" Category="Authoring"/>
+		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
+		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
+	</Content>
+</Vsix>

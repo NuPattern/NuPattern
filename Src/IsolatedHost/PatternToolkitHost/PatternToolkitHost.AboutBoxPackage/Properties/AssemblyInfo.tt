@@ -1,0 +1,22 @@
+﻿<#@ Include File="..\..\Product.ttinclude" #>
+<#@ Output Extension=".cs" #>
+using System.Reflection;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.InteropServices;
+using System.Resources;
+
+[assembly: AssemblyTitle("About <#=IsolatedHostConstants.ProductName #>")]
+[assembly: AssemblyDescription("<#=IsolatedHostConstants.ProductDescription #>")]
+[assembly: AssemblyCompany("<#=IsolatedHostConstants.CompanyName #>")]
+[assembly: AssemblyProduct("<#=IsolatedHostConstants.ProductName #>")]
+[assembly: AssemblyCopyright("Copyright <#=IsolatedHostConstants.CompanyName #> ©2011, all rights reserved.")]
+[assembly: AssemblyTrademark("<#=IsolatedHostConstants.CompanyName #>")]
+[assembly: AssemblyCulture("")]
+
+[assembly: AssemblyVersion("<#=IsolatedHostConstants.ProductVersion #>")]
+[assembly: AssemblyFileVersion("<#=IsolatedHostConstants.ProductVersion #>")]
+
+[assembly: ReliabilityContract(Consistency.MayCorruptProcess, Cer.None)]
+[assembly: ComVisible(false)]
+
+[assembly: NeutralResourcesLanguage("en")]

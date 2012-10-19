@@ -1,0 +1,77 @@
+﻿<#@ Template Inherits="Microsoft.VisualStudio.Patterning.Library.ModelElementTextTransformation" HostSpecific="True"#>
+<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
+<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.dll" #>
+<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.dll" #>
+<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Extensibility.dll" #>
+<#@ Assembly Name="System.ComponentModel.Composition" #>
+<#@ Assembly Name="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Modeling" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Extensibility" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Authoring.Library" #>
+<#@ Import Namespace="System.Linq" #>
+<#@ Import Namespace="System.Collections.Generic" #>
+<#@ Import Namespace="System.ComponentModel" #>
+<#@ Import Namespace="System.Reflection" #>
+<#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
+<#@ Include File="Constants.t4" #>
+<#@ Include File="Helpers.t4" #>
+<#@ Include File="Header.t4" #>
+<#@ Include File="NamedElementParentInterface.t4" #>
+<#@ Include File="ElementContainerInterface.t4" #>
+<#@ Include File="ProductElementInterface.t4" #>
+<#
+var library = this.Element.As<IAutomationLibrary>();
+var developmentView = this.Element.Parent.Parent.As<Microsoft.VisualStudio.Patterning.Authoring.Authoring.IDevelopment>();
+var toolkitInfo = developmentView.PatternToolkitInfo;
+
+if(toolkitInfo == null)
+	throw new Exception("ToolkitInfo element not found");
+
+var patternModel = developmentView.PatternModel;
+var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
+var store = pattern.Store;
+  
+// The pluralizer in .NET 4.0 only supports English.
+var pluralizer = PluralizationService.CreateService(new System.Globalization.CultureInfo("en-US"));
+
+foreach (var element in store.DefaultPartition.ElementDirectory.AllElements.OfType<IElementInfo>())
+{
+    var codegen = new ProductCodeGeneration<IElementInfo, IElement>(element);
+    codegen.AddType(typeof(Action));
+    codegen.EndInit();
+#>
+namespace <#= library.ToolkitProjectRootNamespace #>
+{
+<#GenerateUsings(codegen);#>
+
+	<#GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, element); #>
+	public partial interface I<#=element.CodeIdentifier #> : IToolkitInterface
+	{ <# 	
+GenerateProperties(codegen, element);
+GenerateParentProperty(element);
+
+PushIndent("\t");
+PushIndent("\t");
+
+GenerateContainedElements(pluralizer, element);
+GenerateDeleteInterfaceMethod();
+
+PopIndent();
+PopIndent();
+#>
+
+		/// <summary>
+		/// Gets the generic <see cref="Runtime.IElement"/> underlying element.
+		/// </summary>
+		Runtime.IElement AsElement();
+	}
+}
+
+<#
+}
+#>

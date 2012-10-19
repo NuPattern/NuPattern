@@ -1,0 +1,20 @@
+<#@ output extension=".cs" #>
+<#@ Include File="MasterVersion.ttinclude" #>
+using System.Reflection;
+using System.Resources;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.InteropServices;
+
+[assembly: AssemblyCompany("<#=assemblyAuthor#>")]
+[assembly: AssemblyProduct("<#=assemblyProductName#>")]
+[assembly: AssemblyCopyright("<#=assemblyCopyright#>")]
+[assembly: AssemblyTrademark("<#=assemblyAuthor#>")]
+[assembly: AssemblyCulture("")]
+
+[assembly: AssemblyVersion("<#=assemblyVersion #>")]
+[assembly: AssemblyFileVersion("<#=assemblyVersion #>")]
+
+[assembly: ReliabilityContract(Consistency.MayCorruptProcess, Cer.None)]
+[assembly: ComVisible(false)]
+
+[assembly: NeutralResourcesLanguage("en")]

@@ -1,0 +1,31 @@
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\..\..\..\Runtime\Source\Runtime.Schema\DslDefinition.dsl'"#>
+<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>
+<#@ output extension=".patterndefinition" #>
+<#@ Include File="..\..\..\..\..\Common\Helpers\DslVersion.tt"#>
+<?xml version="1.0" encoding="utf-8" ?>
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="<#= this.DslVersion #>" Id="6a90ca99-d916-454d-961d-1b47ee941712" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
+	<pattern Id="b3335b68-0efb-44da-8015-61df30fd64ec" name="Test" baseId="de4d967a-6950-403f-88a5-fbc65ea8cfc4">
+		<properties>
+		  <property name="NotTailorable" baseId="8f04d261-28f1-4f6a-877c-84408e7c7f88">
+			<customizationPolicy>
+			  <settings>
+				<setting propertyId="Description"/>
+				<setting propertyId="DisplayName"/>
+			  </settings>
+			</customizationPolicy>
+		  </property>
+		  <property name="Tailorable" baseId="127d909b-cec4-4979-b37f-a9f7adf31f9a">
+			<customizationPolicy>
+			  <settings>
+				<setting propertyId="Description"/>
+				<setting propertyId="DisplayName"/>
+			  </settings>
+			</customizationPolicy>
+		  </property>
+		</properties>
+		<views>
+			<view Id="9ad12313-855b-4cb2-9169-10bc6e37bc09" name="DummyView" isDefault="true" diagramId="7ef2f305-e79b-4fcf-bd92-f6e172e95297">
+			</view>
+		</views>
+	</pattern>
+</patternModel>

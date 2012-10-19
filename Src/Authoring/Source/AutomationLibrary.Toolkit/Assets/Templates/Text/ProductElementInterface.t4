@@ -1,0 +1,116 @@
+﻿<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll" #>
+<#@ Import Namespace="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features" #>
+<#@ Import Namespace="System.Linq" #>
+<#@ Import Namespace="System.Collections.Generic" #>
+<#@ Import Namespace="System.ComponentModel" #>
+<#@ Import Namespace="System.Reflection" #>
+<#@ Import Namespace="System.IO" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" #>
+<#+
+
+private void GenerateProperties<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, TInfo element)
+	where TInfo : IPatternElementInfo
+	where TRuntime : IProductElement
+{
+	PushIndent("\t");	
+
+	foreach (var property in element.Properties)
+	{
+		GenerateProperty(codegen, property);
+	}
+
+	var type = typeof(TRuntime);
+	foreach (var property in type
+		.GetProperties()
+		.Concat(type.GetInterfaces().SelectMany(t => t.GetProperties()))
+		.Where(prop => !prop.IsDefined(typeof(HiddenAttribute), true))
+		.Distinct(new SelectorEqualityComparer<PropertyInfo, string>(prop => prop.Name)))
+	{
+		PushIndent("\t");	
+#>
+<#= "" #>
+<#+
+		GenerateDescription(property);
+		RenderCustomAttributes(codegen, property);
+#><#= codegen.GetTypeName(property.PropertyType) #> <#= property.Name #> { <#= property.CanRead ? "get;" : "" #> <#= property.CanWrite ? "set;" : "" #> }
+<#+
+		PopIndent();
+	}
+
+	PopIndent();
+}
+
+private void RenderCustomAttributes<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, MemberInfo typeOrMember)
+	where TInfo : IPatternElementInfo
+	where TRuntime : IProductElement
+{
+	foreach (var attribute in typeOrMember.GetCustomAttributesData()
+		.Where(attr => attr.Constructor.DeclaringType.Namespace == typeof(IComponent).Namespace))
+	{
+		var ctorParams = string.Join(", ", attribute
+			.ConstructorArguments
+			.Select(prm => codegen.ToCSharpString(prm))
+			.ToList());
+
+		var namedParams = string.Join(", ", attribute
+			.NamedArguments
+			.Select(named => named.MemberInfo.Name + " = " + codegen.ToCSharpString(named.TypedValue)));
+
+		var constructorArgs = ctorParams;
+		if (!string.IsNullOrEmpty(namedParams) && !string.IsNullOrEmpty(ctorParams))
+			constructorArgs += ", ";
+
+		constructorArgs += namedParams;
+
+		var attrName = codegen.GetTypeName(attribute.Constructor.DeclaringType);
+		if (attrName.IndexOf("Attribute") != -1)
+			attrName = attrName.Substring(0, attrName.LastIndexOf("Attribute"));
+
+#>[<#= attrName #><#+
+		if (!string.IsNullOrEmpty(constructorArgs))
+		{
+#>(<#= constructorArgs #>)<#+
+		}
+#>]
+<#+
+	}
+}
+
+private void GenerateProperty<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, IPropertyInfo property)
+	where TInfo : IPatternElementInfo
+	where TRuntime : IProductElement
+{
+	PushIndent("\t");
+	this.WriteLine("");
+	GenerateDescription(property);
+
+	if (!string.IsNullOrEmpty(property.DisplayName))
+	{
+#>
+[DisplayName("<#= property.DisplayName #>")]
+<#+
+	}
+	if (!string.IsNullOrEmpty(property.Category))
+	{
+#>
+[Category("<#= property.Category #>")]
+<#+
+	}
+	if (!string.IsNullOrEmpty(property.TypeConverterTypeName))
+	{
+#>
+[TypeConverter(typeof(<#= codegen.GetTypeName(property.TypeConverterTypeName) #>))]
+<#+
+	}
+	if (!string.IsNullOrEmpty(property.EditorTypeName))
+	{
+#>
+[Editor(typeof(<#= codegen.GetTypeName(property.EditorTypeName) #>), typeof(UITypeEditor))]
+<#+
+	}
+#>
+<#= codegen.GetTypeName(property.Type) #> <#= property.CodeIdentifier #> { get; set; }
+<#+
+	PopIndent();
+}
+#>

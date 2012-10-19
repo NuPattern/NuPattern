@@ -1,0 +1,5057 @@
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="----=_NextPart_01CCFC68.69B15750"
+
+This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
+
+------=_NextPart_01CCFC68.69B15750
+Content-Location: file:///C:/A10244F3/Part4CustomValidationCommands.htm
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="windows-1252"
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml"
+xmlns:o=3D"urn:schemas-microsoft-com:office:office"
+xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml"
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=3DContent-Type content=3D"text/html; charset=3Dwindows-125=
+2">
+<meta name=3DProgId content=3DWord.Document>
+<meta name=3DGenerator content=3D"Microsoft Word 14">
+<meta name=3DOriginator content=3D"Microsoft Word 14">
+<link rel=3DFile-List href=3D"Part4CustomValidationCommands_files/filelist.=
+xml">
+<link rel=3DEdit-Time-Data href=3D"Part4CustomValidationCommands_files/edit=
+data.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Jezz Santos</o:Author>
+  <o:LastAuthor>Jezz Santos</o:LastAuthor>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>0</o:TotalTime>
+  <o:Created>2012-03-07T22:44:00Z</o:Created>
+  <o:LastSaved>2012-03-07T22:44:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>87</o:Words>
+  <o:Characters>502</o:Characters>
+  <o:Company>Microsoft Corporation</o:Company>
+  <o:Lines>4</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>588</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=3DthemeData href=3D"Part4CustomValidationCommands_files/themedata=
+.thmx">
+<link rel=3DcolorSchemeMapping
+href=3D"Part4CustomValidationCommands_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val=3D"Cambria Math"/>
+   <m:brkBin m:val=3D"before"/>
+   <m:brkBinSub m:val=3D"&#45;-"/>
+   <m:smallFrac m:val=3D"off"/>
+   <m:dispDef/>
+   <m:lMargin m:val=3D"0"/>
+   <m:rMargin m:val=3D"0"/>
+   <m:defJc m:val=3D"centerGroup"/>
+   <m:wrapIndent m:val=3D"1440"/>
+   <m:intLim m:val=3D"subSup"/>
+   <m:naryLim m:val=3D"undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState=3D"false" DefUnhideWhenUsed=3D"true"
+  DefSemiHidden=3D"true" DefQFormat=3D"false" DefPriority=3D"99"
+  LatentStyleCount=3D"267">
+  <w:LsdException Locked=3D"false" Priority=3D"0" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Normal"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"heading 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 7"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 8"/>
+  <w:LsdException Locked=3D"false" Priority=3D"9" QFormat=3D"true" Name=3D"=
+heading 9"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 7"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 8"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" Name=3D"toc 9"/>
+  <w:LsdException Locked=3D"false" Priority=3D"35" QFormat=3D"true" Name=3D=
+"caption"/>
+  <w:LsdException Locked=3D"false" Priority=3D"10" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Title"/>
+  <w:LsdException Locked=3D"false" Priority=3D"1" Name=3D"Default Paragraph=
+ Font"/>
+  <w:LsdException Locked=3D"false" Priority=3D"11" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtitle"/>
+  <w:LsdException Locked=3D"false" Priority=3D"22" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Strong"/>
+  <w:LsdException Locked=3D"false" Priority=3D"20" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Emphasis"/>
+  <w:LsdException Locked=3D"false" Priority=3D"59" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Table Grid"/>
+  <w:LsdException Locked=3D"false" UnhideWhenUsed=3D"false" Name=3D"Placeho=
+lder Text"/>
+  <w:LsdException Locked=3D"false" Priority=3D"1" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"No Spacing"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" UnhideWhenUsed=3D"false" Name=3D"Revisio=
+n"/>
+  <w:LsdException Locked=3D"false" Priority=3D"34" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"List Paragraph"/>
+  <w:LsdException Locked=3D"false" Priority=3D"29" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Quote"/>
+  <w:LsdException Locked=3D"false" Priority=3D"30" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Quote"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 1"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 2"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 3"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 4"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 5"/>
+  <w:LsdException Locked=3D"false" Priority=3D"60" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Shading Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"61" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"62" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Light Grid Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"63" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"64" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"65" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"66" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium List 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"67" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"68" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"69" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"70" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Dark List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"71" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Shading Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"72" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful List Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"73" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" Name=3D"Colorful Grid Accent 6"/>
+  <w:LsdException Locked=3D"false" Priority=3D"19" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtle Emphasis"/>
+  <w:LsdException Locked=3D"false" Priority=3D"21" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Emphasis"/>
+  <w:LsdException Locked=3D"false" Priority=3D"31" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Subtle Reference"/>
+  <w:LsdException Locked=3D"false" Priority=3D"32" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Intense Reference"/>
+  <w:LsdException Locked=3D"false" Priority=3D"33" SemiHidden=3D"false"
+   UnhideWhenUsed=3D"false" QFormat=3D"true" Name=3D"Book Title"/>
+  <w:LsdException Locked=3D"false" Priority=3D"37" Name=3D"Bibliography"/>
+  <w:LsdException Locked=3D"false" Priority=3D"39" QFormat=3D"true" Name=3D=
+"TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520084737 -1073683329 41 0 479 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-520092929 1073806591 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-before:always;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#1D1B11;
+	mso-themecolor:background2;
+	mso-themeshade:26;
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-before:always;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:11.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#404040;
+	mso-themecolor:text1;
+	mso-themetint:191;}
+h3
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-before:always;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4A442A;
+	mso-themecolor:background2;
+	mso-themeshade:64;}
+h4
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 4 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	page-break-before:always;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#948A54;
+	mso-themecolor:background2;
+	mso-themeshade:128;
+	font-style:italic;}
+h5
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 5 Char";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	mso-bidi-font-weight:normal;}
+h6
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 6 Char";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#548DD4;
+	mso-themecolor:text2;
+	mso-themetint:153;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 7 Char";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.9in;
+	margin-bottom:.0001pt;
+	text-indent:-.9in;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	mso-list:l33 level7 lfo18;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#404040;
+	mso-themecolor:text1;
+	mso-themetint:191;
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 8 Char";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	text-indent:-1.0in;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:8;
+	mso-list:l33 level8 lfo18;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#404040;
+	mso-themecolor:text1;
+	mso-themetint:191;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 9 Char";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.1in;
+	margin-bottom:.0001pt;
+	text-indent:-1.1in;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:9;
+	mso-list:l33 level9 lfo18;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#404040;
+	mso-themecolor:text1;
+	mso-themetint:191;
+	font-style:italic;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:11.0pt;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:22.0pt;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-priority:99;
+	mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.25in right 6.5in;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-priority:99;
+	mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.25in right 6.5in;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-priority:35;
+	mso-style-qformat:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{mso-style-priority:99;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.25in;
+	mso-add-space:auto;
+	text-indent:-.25in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	mso-list:l0 level1 lfo7;
+	tab-stops:list .25in;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListBulletCxSpFirst, li.MsoListBulletCxSpFirst, div.MsoListBulletCxSpF=
+irst
+	{mso-style-priority:99;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	text-indent:-.25in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	mso-list:l0 level1 lfo7;
+	tab-stops:list .25in;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListBulletCxSpMiddle, li.MsoListBulletCxSpMiddle, div.MsoListBulletCxS=
+pMiddle
+	{mso-style-priority:99;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	text-indent:-.25in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	mso-list:l0 level1 lfo7;
+	tab-stops:list .25in;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListBulletCxSpLast, li.MsoListBulletCxSpLast, div.MsoListBulletCxSpLast
+	{mso-style-priority:99;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.25in;
+	mso-add-space:auto;
+	text-indent:-.25in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	mso-list:l0 level1 lfo7;
+	tab-stops:list .25in;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:20.0pt;
+	mso-bidi-font-size:26.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#0D0D0D;
+	mso-themecolor:text1;
+	mso-themetint:242;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:20.0pt;
+	mso-bidi-font-size:26.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#0D0D0D;
+	mso-themecolor:text1;
+	mso-themetint:242;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:20.0pt;
+	mso-bidi-font-size:26.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#0D0D0D;
+	mso-themecolor:text1;
+	mso-themetint:242;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:20.0pt;
+	mso-bidi-font-size:26.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#0D0D0D;
+	mso-themecolor:text1;
+	mso-themetint:242;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Document Map Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+pre
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParag=
+raphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListPar=
+agraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagra=
+phCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{mso-style-noshow:yes;
+	mso-style-priority:39;
+	mso-style-qformat:yes;
+	mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#1D1B11;
+	mso-themecolor:background2;
+	mso-themeshade:26;
+	mso-fareast-language:JA;
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Segoe UI";
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#1D1B11;
+	mso-themecolor:background2;
+	mso-themeshade:26;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-bidi-font-size:13.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Segoe UI";
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#404040;
+	mso-themecolor:text1;
+	mso-themetint:191;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Segoe UI";
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4A442A;
+	mso-themecolor:background2;
+	mso-themeshade:64;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 4";
+	mso-ansi-font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Segoe UI";
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#948A54;
+	mso-themecolor:background2;
+	mso-themeshade:128;
+	font-weight:bold;
+	font-style:italic;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 5";
+	mso-ansi-font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Segoe UI";
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.Heading6Char
+	{mso-style-name:"Heading 6 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 6";
+	mso-ansi-font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Segoe UI";
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#548DD4;
+	mso-themecolor:text2;
+	mso-themetint:153;
+	font-style:italic;}
+span.Heading7Char
+	{mso-style-name:"Heading 7 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 7";
+	mso-ansi-font-size:9.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#404040;
+	mso-themecolor:text1;
+	mso-themetint:191;
+	font-style:italic;}
+span.Heading8Char
+	{mso-style-name:"Heading 8 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 8";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#404040;
+	mso-themecolor:text1;
+	mso-themetint:191;}
+span.Heading9Char
+	{mso-style-name:"Heading 9 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 9";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#404040;
+	mso-themecolor:text1;
+	mso-themetint:191;
+	font-style:italic;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Title;
+	mso-ansi-font-size:20.0pt;
+	mso-bidi-font-size:26.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Segoe UI";
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#0D0D0D;
+	mso-themecolor:text1;
+	mso-themetint:242;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+p.SourceCode, li.SourceCode, div.SourceCode
+	{mso-style-name:"Source Code";
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	background:#D9D9D9;
+	mso-background-themecolor:background1;
+	mso-background-themeshade:217;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-no-proof:yes;}
+p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
+	{mso-style-name:"Source CodeCxSpFirst";
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	background:#D9D9D9;
+	mso-background-themecolor:background1;
+	mso-background-themeshade:217;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-no-proof:yes;}
+p.SourceCodeCxSpMiddle, li.SourceCodeCxSpMiddle, div.SourceCodeCxSpMiddle
+	{mso-style-name:"Source CodeCxSpMiddle";
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	background:#D9D9D9;
+	mso-background-themecolor:background1;
+	mso-background-themeshade:217;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-no-proof:yes;}
+p.SourceCodeCxSpLast, li.SourceCodeCxSpLast, div.SourceCodeCxSpLast
+	{mso-style-name:"Source CodeCxSpLast";
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	background:#D9D9D9;
+	mso-background-themecolor:background1;
+	mso-background-themeshade:217;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:Consolas;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-no-proof:yes;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.DocumentMapChar
+	{mso-style-name:"Document Map Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Document Map";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+p.Note, li.Note, div.Note
+	{mso-style-name:Note;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Note Char";
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:10.0pt;
+	margin-left:.4in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#FFFFCC;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
+	{mso-style-name:NoteCxSpFirst;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Note Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:0in;
+	margin-left:.4in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#FFFFCC;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
+	{mso-style-name:NoteCxSpMiddle;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Note Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:0in;
+	margin-left:.4in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#FFFFCC;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
+	{mso-style-name:NoteCxSpLast;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Note Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:10.0pt;
+	margin-left:.4in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#FFFFCC;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+span.NoteChar
+	{mso-style-name:"Note Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Note;
+	mso-ansi-font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-hansi-font-family:"Segoe UI";
+	background:#FFFFCC;}
+p.MissingContent, li.MissingContent, div.MissingContent
+	{mso-style-name:"Missing Content";
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Missing Content Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	background:#FFFF66;
+	border:none;
+	mso-border-alt:solid yellow 6.0pt;
+	padding:0in;
+	mso-padding-alt:24.0pt 4.0pt 24.0pt 4.0pt;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:#A6A6A6;
+	mso-themecolor:background1;
+	mso-themeshade:166;}
+span.MissingContentChar
+	{mso-style-name:"Missing Content Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Missing Content";
+	mso-ansi-font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-hansi-font-family:"Segoe UI";
+	color:#A6A6A6;
+	mso-themecolor:background1;
+	mso-themeshade:166;
+	background:#FFFF66;}
+p.Warning, li.Warning, div.Warning
+	{mso-style-name:Warning;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Warning Char";
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:10.0pt;
+	margin-left:.4in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#F2DBDB;
+	mso-background-themecolor:accent2;
+	mso-background-themetint:51;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
+	{mso-style-name:WarningCxSpFirst;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Warning Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:0in;
+	margin-left:.4in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#F2DBDB;
+	mso-background-themecolor:accent2;
+	mso-background-themetint:51;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
+	{mso-style-name:WarningCxSpMiddle;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Warning Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:0in;
+	margin-left:.4in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#F2DBDB;
+	mso-background-themecolor:accent2;
+	mso-background-themetint:51;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
+	{mso-style-name:WarningCxSpLast;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Warning Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:10.0pt;
+	margin-left:.4in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#F2DBDB;
+	mso-background-themecolor:accent2;
+	mso-background-themetint:51;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+span.WarningChar
+	{mso-style-name:"Warning Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"Note Char";
+	mso-style-link:Warning;
+	mso-ansi-font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-hansi-font-family:"Segoe UI";
+	background:#F2DBDB;
+	mso-shading-themecolor:accent2;
+	mso-shading-themetint:51;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Header;
+	mso-ansi-font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-hansi-font-family:"Segoe UI";}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Footer;
+	mso-ansi-font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-hansi-font-family:"Segoe UI";}
+p.Tip, li.Tip, div.Tip
+	{mso-style-name:Tip;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Tip Char";
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:10.0pt;
+	margin-left:.4in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#D6E3BC;
+	mso-background-themecolor:accent3;
+	mso-background-themetint:102;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
+	{mso-style-name:TipCxSpFirst;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Tip Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:0in;
+	margin-left:.4in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#D6E3BC;
+	mso-background-themecolor:accent3;
+	mso-background-themetint:102;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
+	{mso-style-name:TipCxSpMiddle;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Tip Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:0in;
+	margin-left:.4in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#D6E3BC;
+	mso-background-themecolor:accent3;
+	mso-background-themetint:102;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
+	{mso-style-name:TipCxSpLast;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Tip Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:10.0pt;
+	margin-left:.4in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#D6E3BC;
+	mso-background-themecolor:accent3;
+	mso-background-themetint:102;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+span.TipChar
+	{mso-style-name:"Tip Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"Note Char";
+	mso-style-link:Tip;
+	mso-ansi-font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-hansi-font-family:"Segoe UI";
+	background:#D6E3BC;
+	mso-shading-themecolor:accent3;
+	mso-shading-themetint:102;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:1299505206;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-style-link:"List Bullet";
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:39331337;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1685580456 67698689 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:67967763;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1594451044 67698689 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.4in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.4in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.9in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.4in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.9in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.4in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.9in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:201867361;
+	mso-list-type:hybrid;
+	mso-list-template-ids:635846474 67698689 67698691 67698693 67698689 676986=
+91 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l3:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l3:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:469786085;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-780086764 67698693 67698691 67698693 67698689 67698=
+691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l4:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l4:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l4:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l4:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l4:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l4:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:533268422;
+	mso-list-type:hybrid;
+	mso-list-template-ids:525529234 67698689 67698691 67698693 67698689 676986=
+91 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l5:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l5:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l5:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l5:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l5:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:553198275;
+	mso-list-type:hybrid;
+	mso-list-template-ids:358630822 67698689 67698691 67698693 67698689 676986=
+91 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l6:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l6:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l6:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l6:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l6:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:583610117;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1095916312 67698689 67698691 67698693 67698689 67698=
+691 67698693 67698689 67698691 67698693;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l7:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l7:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l7:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l7:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l7:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l8
+	{mso-list-id:603617298;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1361725024 67698689 67698691 67698693 67698689 67698=
+691 67698693 67698689 67698691 67698693;}
+@list l8:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l8:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l8:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l8:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l8:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l8:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l9
+	{mso-list-id:717629621;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1467342980 67698689 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l9:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l9:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l9:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l9:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l9:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l9:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l10
+	{mso-list-id:762147642;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1596148128 67698689 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l10:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l10:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l10:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l10:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l10:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l11
+	{mso-list-id:768114351;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1848761894 67698689 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l11:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l11:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l11:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l11:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l11:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l11:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l12
+	{mso-list-id:845747189;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1060706784 67698689 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l12:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l12:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l12:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l12:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l12:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l12:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l12:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l12:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l13
+	{mso-list-id:858201295;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-272845842 67698703 67698713 67698715 67698703 67698=
+713 67698715 67698703 67698713 67698715;}
+@list l13:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l13:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l13:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l14
+	{mso-list-id:920991938;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1185189276 67698703 67698713 67698715 67698703 67698=
+713 67698715 67698703 67698713 67698715;}
+@list l14:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l14:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l14:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l14:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l14:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l14:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l14:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l14:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l14:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l15
+	{mso-list-id:948705947;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-940510218 67698689 67698691 67698693 67698689 67698=
+691 67698693 67698689 67698691 67698693;}
+@list l15:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l15:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l15:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l15:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l15:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l15:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l15:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l15:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l15:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l16
+	{mso-list-id:982125348;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1036316512 67698689 67698691 67698693 67698689 67698=
+691 67698693 67698689 67698691 67698693;}
+@list l16:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l16:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l16:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l16:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l16:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l16:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l16:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l16:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l16:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l17
+	{mso-list-id:982975902;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1565832036 67698689 67698691 67698693 67698689 67698=
+691 67698693 67698689 67698691 67698693;}
+@list l17:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l17:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l17:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l17:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l17:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l17:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l17:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l17:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l17:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l18
+	{mso-list-id:1207261050;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1455299412 401268418 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l18:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+@list l18:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l18:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l18:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l18:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l18:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l18:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l18:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l18:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l19
+	{mso-list-id:1266616161;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2090836800 67698689 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l19:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l19:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.4in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l19:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l19:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.4in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l19:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.9in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l19:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.4in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l19:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.9in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l19:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.4in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l19:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.9in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l20
+	{mso-list-id:1329362351;
+	mso-list-type:hybrid;
+	mso-list-template-ids:168451368 67698689 67698691 67698693 67698689 676986=
+91 67698693 67698689 67698691 67698693;}
+@list l20:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l20:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l20:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l20:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l20:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l20:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l20:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l20:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l20:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l21
+	{mso-list-id:1366247185;
+	mso-list-type:hybrid;
+	mso-list-template-ids:338444392 67698689 67698691 67698693 67698689 676986=
+91 67698693 67698689 67698691 67698693;}
+@list l21:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l21:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l21:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l21:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l21:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l21:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l21:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l21:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l21:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l22
+	{mso-list-id:1378822258;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1469945940 67698693 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l22:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l22:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l22:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l22:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l22:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l22:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l22:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l22:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l22:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l23
+	{mso-list-id:1485118640;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-879851136 67698689 67698691 67698693 67698689 67698=
+691 67698693 67698689 67698691 67698693;}
+@list l23:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l23:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l23:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l23:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l23:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l23:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l23:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l23:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l23:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l24
+	{mso-list-id:1613897838;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1216812162 67698689 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l24:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l24:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l24:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l24:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l24:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l24:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l24:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l24:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l24:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l25
+	{mso-list-id:1656955962;
+	mso-list-type:hybrid;
+	mso-list-template-ids:445908154 67698689 67698691 67698693 67698689 676986=
+91 67698693 67698689 67698691 67698693;}
+@list l25:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l25:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l25:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l25:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l25:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l25:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l25:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l25:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l25:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l26
+	{mso-list-id:1695959220;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1281324766 67698689 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l26:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l26:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l26:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l26:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l26:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l26:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l26:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l26:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l26:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l27
+	{mso-list-id:1730616985;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-196989286 67698703 67698713 67698715 67698703 67698=
+713 67698715 67698703 67698713 67698715;}
+@list l27:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l27:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l27:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l27:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l27:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l27:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l27:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l27:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l27:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l28
+	{mso-list-id:1741439338;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1957456180 67698689 67698691 67698693 67698689 67698=
+691 67698693 67698689 67698691 67698693;}
+@list l28:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l28:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l28:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l28:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l28:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l28:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l28:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l28:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l28:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l29
+	{mso-list-id:1748915759;
+	mso-list-type:hybrid;
+	mso-list-template-ids:617745380 67698703 67698713 67698715 67698703 676987=
+13 67698715 67698703 67698713 67698715;}
+@list l29:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.25in;}
+@list l29:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.4in;
+	text-indent:-.25in;}
+@list l29:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:1.9in;
+	text-indent:-9.0pt;}
+@list l29:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.4in;
+	text-indent:-.25in;}
+@list l29:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.9in;
+	text-indent:-.25in;}
+@list l29:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:3.4in;
+	text-indent:-9.0pt;}
+@list l29:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.9in;
+	text-indent:-.25in;}
+@list l29:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.4in;
+	text-indent:-.25in;}
+@list l29:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:4.9in;
+	text-indent:-9.0pt;}
+@list l30
+	{mso-list-id:1788741353;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2056983094 67698703 67698689 67698715 67698703 6769=
+8713 67698715 67698703 67698713 67698715;}
+@list l30:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l30:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l30:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l30:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l30:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l30:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l30:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l30:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l30:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l31
+	{mso-list-id:1789009317;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-319410864 67698689 67698691 67698693 67698689 67698=
+691 67698693 67698689 67698691 67698693;}
+@list l31:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l31:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l31:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l31:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l31:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l31:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l31:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l31:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l31:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l32
+	{mso-list-id:1801650971;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1283318468 67698693 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l32:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l32:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l32:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l32:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l32:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l32:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l32:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l32:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l32:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l33
+	{mso-list-id:1827743684;
+	mso-list-template-ids:67698725;}
+@list l33:level1
+	{mso-level-text:%1;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;}
+@list l33:level2
+	{mso-level-text:"%1\.%2";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.4in;
+	text-indent:-.4in;}
+@list l33:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.5in;}
+@list l33:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.6in;}
+@list l33:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.7in;
+	text-indent:-.7in;}
+@list l33:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.8in;
+	text-indent:-.8in;}
+@list l33:level7
+	{mso-level-style-link:"Heading 7";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.9in;}
+@list l33:level8
+	{mso-level-style-link:"Heading 8";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-1.0in;}
+@list l33:level9
+	{mso-level-style-link:"Heading 9";
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.1in;
+	text-indent:-1.1in;}
+@list l34
+	{mso-list-id:1913926553;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2030066880 67698703 67698713 67698715 67698703 67698=
+713 67698715 67698703 67698713 67698715;}
+@list l34:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l34:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l34:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l34:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l34:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l34:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l34:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l34:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l34:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l35
+	{mso-list-id:1959993394;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1152577254 401268418 67698691 67698693 67698689 6769=
+8691 67698693 67698689 67698691 67698693;}
+@list l35:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:\F06E;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+@list l35:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l35:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l35:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l35:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l35:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l35:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l35:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l35:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l36
+	{mso-list-id:1995253629;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1324547392 67698689 67698691 67698693 67698689 67698=
+691 67698693 67698689 67698691 67698693;}
+@list l36:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l36:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.4in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l36:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l36:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.4in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l36:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.9in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l36:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.4in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l36:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.9in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l36:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.4in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l36:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.9in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l37
+	{mso-list-id:2078284247;
+	mso-list-type:hybrid;
+	mso-list-template-ids:699590244 67698703 67698713 67698715 67698703 676987=
+13 67698715 67698703 67698713 67698715;}
+@list l37:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l37:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l37:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l37:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l37:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l37:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l37:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l37:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l37:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l38
+	{mso-list-id:2084833062;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-559533114 67698689 67698691 67698693 67698689 67698=
+691 67698693 67698689 67698691 67698693;}
+@list l38:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l38:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l38:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l38:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l38:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l38:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l38:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l38:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l38:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:59;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=3DEN-US link=3Dblue vlink=3Dpurple style=3D'tab-interval:.5in'>
+
+<div class=3DWordSection1>
+
+<h2 style=3D'page-break-before:auto'>Part 4: Custom Validation Commands<o:p=
+></o:p></h2>
+
+<p class=3DMsoNormal>If you have validation rules that cannot be accomplish=
+ed
+using any of the built-in validator rules, you can create your own custom v=
+alidation
+rules.<o:p></o:p></p>
+
+<p class=3DMsoNormal>In this part, we will create a custom validation rule =
+to
+prevent users from creating controller actions that have both a ‘View’ and =
+a ‘Data’
+elements to enhance the built-in cardinality rules.<o:p></o:p></p>
+
+<p class=3DMsoNormal>The rule we will enforce in this toolkit will be: that=
+ each ‘Action’
+can have either one ‘View’ or one ‘Data’, but not both. <o:p></o:p></p>
+
+<p class=3DMsoNormal>What you see below is an invalid state that we want to
+prevent through validation.<o:p></o:p></p>
+
+<p class=3DMsoNormal><span style=3D'mso-no-proof:yes'><!--[if gte vml 1]><v=
+:shapetype
+ id=3D"_x0000_t75" coordsize=3D"21600,21600" o:spt=3D"75" o:preferrelative=
+=3D"t"
+ path=3D"m@4@5l@4@11@9@11@9@5xe" filled=3D"f" stroked=3D"f">
+ <v:stroke joinstyle=3D"miter"/>
+ <v:formulas>
+  <v:f eqn=3D"if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn=3D"sum @0 1 0"/>
+  <v:f eqn=3D"sum 0 0 @1"/>
+  <v:f eqn=3D"prod @2 1 2"/>
+  <v:f eqn=3D"prod @3 21600 pixelWidth"/>
+  <v:f eqn=3D"prod @3 21600 pixelHeight"/>
+  <v:f eqn=3D"sum @0 0 1"/>
+  <v:f eqn=3D"prod @6 1 2"/>
+  <v:f eqn=3D"prod @7 21600 pixelWidth"/>
+  <v:f eqn=3D"sum @8 21600 0"/>
+  <v:f eqn=3D"prod @7 21600 pixelHeight"/>
+  <v:f eqn=3D"sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok=3D"f" gradientshapeok=3D"t" o:connecttype=3D"rect"/>
+ <o:lock v:ext=3D"edit" aspectratio=3D"t"/>
+</v:shapetype><v:shape id=3D"Picture_x0020_7" o:spid=3D"_x0000_i1025" type=
+=3D"#_x0000_t75"
+ style=3D'width:195pt;height:146.25pt;visibility:visible;mso-wrap-style:squ=
+are'>
+ <v:imagedata src=3D"Part4CustomValidationCommands_files/image001.png" o:ti=
+tle=3D""/>
+</v:shape><![endif]--><![if !vml]><img width=3D260 height=3D195
+src=3D"Part4CustomValidationCommands_files/image002.jpg" v:shapes=3D"Pictur=
+e_x0020_7"><![endif]></span><o:p></o:p></p>
+
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
+
+------=_NextPart_01CCFC68.69B15750
+Content-Location: file:///C:/A10244F3/Part4CustomValidationCommands_files/themedata.thmx
+Content-Transfer-Encoding: base64
+Content-Type: application/vnd.ms-officetheme
+
+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
+cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
+
+------=_NextPart_01CCFC68.69B15750
+Content-Location: file:///C:/A10244F3/Part4CustomValidationCommands_files/colorschememapping.xml
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/xml
+
+<?xml version=3D"1.0" encoding=3D"UTF-8" standalone=3D"yes"?>
+<a:clrMap xmlns:a=3D"http://schemas.openxmlformats.org/drawingml/2006/main"=
+ bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
+2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
+ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
+------=_NextPart_01CCFC68.69B15750
+Content-Location: file:///C:/A10244F3/Part4CustomValidationCommands_files/image001.png
+Content-Transfer-Encoding: base64
+Content-Type: image/png
+
+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
+AAAASUVORK5CYIJ=
+
+------=_NextPart_01CCFC68.69B15750
+Content-Location: file:///C:/A10244F3/Part4CustomValidationCommands_files/image002.jpg
+Content-Transfer-Encoding: base64
+Content-Type: image/jpeg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMg
+IyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wAARCADDAQQDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDsdGi0
+lIdNsP7Hsmb7FFNLNKsYOGXJIBGW5HJ7ZFWzc+GC0Bis9MlhkZ1aVYY9se1CxJ49BVSDS4NU0nS/
+tV2fIjtY/wByAo5MeCd33hwentTz4dtJYwtzfSTNtKFztUlfLKAYA7A/nXI60rvRmqhEs3k/hm0v
+BaNZaabhkdgpgQKNoBIY444INSn/AIRdXlSSDSVeFN8oMUfyDjJJx7j86of8I/C3mNLqkryS+YJX
+2oNwdFQjAGBwgNLJ4ds5Umie+kMEm8rH8vyM2NzA4yc46H1pe2l5hyIs3b+H4dFk1K103TbqJGCf
+LHGo3FgvJI4wTzmnWJ8P3VmJptO023bBLI0UZGA2zcDjlSeh70250q2uLO9t/tRX7XOJ2b5W2sCp
+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
+
+------=_NextPart_01CCFC68.69B15750
+Content-Location: file:///C:/A10244F3/Part4CustomValidationCommands_files/filelist.xml
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/xml; charset="utf-8"
+
+<xml xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+ <o:MainFile HRef=3D"../Part4CustomValidationCommands.htm"/>
+ <o:File HRef=3D"themedata.thmx"/>
+ <o:File HRef=3D"colorschememapping.xml"/>
+ <o:File HRef=3D"image001.png"/>
+ <o:File HRef=3D"image002.jpg"/>
+ <o:File HRef=3D"filelist.xml"/>
+</xml>
+------=_NextPart_01CCFC68.69B15750--

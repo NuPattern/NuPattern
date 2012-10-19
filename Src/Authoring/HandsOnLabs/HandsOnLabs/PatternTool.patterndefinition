@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="9060cbd8-62e7-4e45-a8b6-795a32676067" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
+  <dm0:extensions>
+    <templateSettings Id="aed4ee56-bb0d-4fcd-95a8-8927bf6df103" templateUri="template://projectgroup/CSharp/c3c73531a152-PatternToolkitHOLs" unfoldOnElementCreated="false" commandId="00000000-0000-0000-0000-000000000000" wizardId="00000000-0000-0000-0000-000000000000" templateAuthoringUri="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/aeda2b85-f038-4872-a74a-7ce7f3bb2936">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="502647ac-ce4f-49ec-aff8-276bc9ac5b04" />
+      </extendedElement>
+      <targetFileName>{
+  "Name": "RawTargetFileName",
+  "Value": null,
+  "ValueProvider": null
+}</targetFileName>
+      <targetPath>{
+  "Name": "RawTargetPath",
+  "Value": null,
+  "ValueProvider": null
+}</targetPath>
+    </templateSettings>
+    <eventSettings Id="c98c48ce-8d51-4a65-8f5e-7a0f5ea7e966" commandId="7e2c4448-9877-434c-8302-5abfaf7b870a" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="c88a3a39-4321-4960-8edd-13fd61952167" />
+      </extendedElement>
+    </eventSettings>
+    <commandSettings Id="7e2c4448-9877-434c-8302-5abfaf7b870a" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.InstantiateFeatureCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="d6b5820b-135a-419b-9dc1-7f6279e1771d" />
+      </extendedElement>
+      <properties>
+        <propertySettings Id="402d10ee-b3e0-4c1a-8996-254b4c8200d5" value="5d64cfe6-a6ff-4e73-a000-c6a8832740ff" name="FeatureId" />
+        <propertySettings Id="e8996285-f256-4201-9ea7-b3e97fa52536" value="Pattern Toolkit Hands-On Labs" name="DefaultInstanceName" />
+        <propertySettings Id="f2786bc1-9f02-457e-80f7-4a67aa56b6f1" value="True" name="SharedInstance" />
+        <propertySettings Id="da7f4eb2-637b-441c-92d6-695f42197fb8" value="True" name="ActivateOnInstantiation" />
+      </properties>
+    </commandSettings>
+    <commandSettings Id="0433fe7d-38fd-4aa3-bcbd-fc9dccbf9205" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateFeatureCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="010f16b7-1f97-4696-9a78-8e5336d9b68f" />
+      </extendedElement>
+    </commandSettings>
+    <menuSettings Id="58127e63-c8f4-4f6c-a926-ea6888f85c45" text="Show Hands-On Lab in Guidance Windows" commandId="0433fe7d-38fd-4aa3-bcbd-fc9dccbf9205" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="b27db2af-5815-4363-9727-9412d51173b8" />
+      </extendedElement>
+      <conditions>[
+  {
+    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.ElementReferenceExistsCondition",
+    "Properties": [
+      {
+        "Name": "Kind",
+        "Value": "Microsoft.VisualStudio.Patterning.Extensibility.References.GuidanceReference",
+        "ValueProvider": null
+      }
+    ]
+  }
+]</conditions>
+    </menuSettings>
+    <guidanceExtension Id="e6de3e46-952d-4c32-bf68-38d0879bb653" guidanceInstanceName="Pattern Toolkit Hands-On Labs" guidanceFeatureId="5d64cfe6-a6ff-4e73-a000-c6a8832740ff" guidanceSharedInstance="true">
+      <extendedElement>
+        <patternSchemaMoniker Id="71309920-c4ac-4283-b6bf-3cec975eca86" />
+      </extendedElement>
+    </guidanceExtension>
+    <artifactExtension Id="71b31910-1e4f-4a5e-a189-41952b4102b0">
+      <extendedElement>
+        <patternSchemaMoniker Id="71309920-c4ac-4283-b6bf-3cec975eca86" />
+      </extendedElement>
+    </artifactExtension>
+    <validationExtension Id="13bcdd09-4f7f-4bd0-a02d-b57e72daee84">
+      <extendedElement>
+        <patternSchemaMoniker Id="71309920-c4ac-4283-b6bf-3cec975eca86" />
+      </extendedElement>
+    </validationExtension>
+  </dm0:extensions>
+  <pattern Id="71309920-c4ac-4283-b6bf-3cec975eca86" name="PatternToolkitHOLs" displayName="Pattern Toolkit Hands-On Labs" description="Hands on Labs for Creating Pattern Toolkits" codeIdentifier="PatternToolkitHOLs" isCustomizable="True" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.HandsOnLabs;component/Resources/PatternIcon.png" currentDiagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713" patternLink="patternmanager://92131a71-f4c2-42ef-9a66-efe53b0ca4d8">
+    <customizationPolicy name="CustomizationPolicySchema1">
+      <settings>
+        <setting propertyId="DisplayName" />
+        <setting propertyId="Description" />
+        <setting propertyId="ValidationRules" />
+        <setting propertyId="Icon" />
+      </settings>
+    </customizationPolicy>
+    <automationSettings>
+      <automationSettings Id="d6b5820b-135a-419b-9dc1-7f6279e1771d" name="InstantiateGuidanceCommand" displayName="Instantiate Guidance Command" description="" isSystem="true" codeIdentifier="InstantiateGuidanceCommand" isCustomizable="False" automationType="Command">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+      <automationSettings Id="c88a3a39-4321-4960-8edd-13fd61952167" name="InstantiateGuidanceEvent" displayName="Instantiate Guidance Event" description="" isSystem="true" codeIdentifier="InstantiateGuidanceEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+      <automationSettings Id="010f16b7-1f97-4696-9a78-8e5336d9b68f" name="ActivateGuidanceCommand" displayName="Activate Guidance Command" description="" isSystem="true" codeIdentifier="ActivateGuidanceCommand" isCustomizable="False" automationType="Command">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+      <automationSettings Id="b27db2af-5815-4363-9727-9412d51173b8" name="ActivateGuidanceContextMenu" displayName="Activate Guidance Context Menu" description="" isSystem="true" codeIdentifier="ActivateGuidanceContextMenu" isCustomizable="False" automationType="ContextMenu Launch Point" classification="LaunchPoint">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+      <automationSettings Id="502647ac-ce4f-49ec-aff8-276bc9ac5b04" name="UnfoldProjectOnInstantiate" displayName="Unfold Project On Instantiate" description="" codeIdentifier="UnfoldProjectOnInstantiate" automationType="VS Template Launch Point" classification="LaunchPoint">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+    </automationSettings>
+    <views>
+      <view Id="ac1fde3b-bfa2-4fcf-a1c5-50167323063d" name="DefaultView" displayName="Default View" description="Description for PatternToolkitHOLs.DefaultView" codeIdentifier="DefaultView" isDefault="true" diagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="IsVisible" />
+            <setting propertyId="IsDefault" />
+          </settings>
+        </customizationPolicy>
+      </view>
+    </views>
+  </pattern>
+</patternModel>

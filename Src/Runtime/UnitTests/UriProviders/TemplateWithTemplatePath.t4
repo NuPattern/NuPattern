@@ -1,0 +1,3 @@
+﻿<#@ Template Language="C#" Debug="True" #>
+<#@ Assembly Name="%TemplatePath%\Foo.dll" #>
+<#@ Output Extension=".Designer.cs" #>

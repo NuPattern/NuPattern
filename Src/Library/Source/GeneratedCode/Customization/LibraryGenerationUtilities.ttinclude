@@ -1,0 +1,10 @@
+﻿<#+
+
+internal static class LibraryGenerationUtilities
+{
+	public static string GetXmlSchemaNamespace(Microsoft.VisualStudio.Modeling.DslDefinition.DslLibrary dslLibrary)
+	{
+		return "http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions";
+	}
+}
+#>

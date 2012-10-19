@@ -1,0 +1,67 @@
+﻿<#@ output extension=".ttinclude" #>
+<#@ Include File="Authoring\HandsOnLabs\HandsOnLabs\ToolkitVersionInfo.ttinclude" #>
+<#@ Include File="Authoring\Source\AutomationLibrary.Toolkit\ToolkitVersionInfo.ttinclude" #>
+<#@ Include File="Authoring\Source\Authoring.Toolkit\ToolkitVersionInfo.ttinclude" #>
+<#@ Include File="Runtime\Source\Runtime.Shell\ToolkitVersionInfo.ttinclude" #>
+\<#+
+// Toolkit VSIX Info
+public static class VsixInfo
+{
+	public static class PatternToolkitRuntime
+	{
+		public const string Name = "<#=RuntimeToolkitInfo.Name#>";
+		public const string Description = "<#=RuntimeToolkitInfo.Description#>";
+		public const string Author = "<#=RuntimeToolkitInfo.Author#>";
+		public const string Version = "<#=RuntimeToolkitInfo.Version#>";
+		public const string Identifier = "<#=RuntimeToolkitInfo.Identifier#>";
+		public const string VsixFileName = "<#=RuntimeToolkitInfo.VsixFileName#>";
+		public const string MoreInfoUrl = "<#=RuntimeToolkitInfo.MoreInfoUrl#>";
+		public const string SettingsName = "PatternToolkitExtensions";
+
+	}
+	public static class PatternToolkitBuilder
+	{
+		public const string Name = "<#=AuthoringToolkitInfo.Name#>";
+		public const string Author = "<#=AuthoringToolkitInfo.Author#>";
+		public const string Version = "<#=AuthoringToolkitInfo.Version#>";
+		public const string Identifier = "<#=AuthoringToolkitInfo.Identifier#>";
+		public const string VsixFileName = "<#=AuthoringToolkitInfo.VsixFileName#>";
+		public const string MoreInfoUrl = "<#=AuthoringToolkitInfo.MoreInfoUrl#>";
+	}
+	public static class PatternToolkitLibrary
+	{
+		public const string Name = "<#=AutomationLibraryToolkitInfo.Name#>";
+		public const string Author = "<#=AutomationLibraryToolkitInfo.Author#>";
+		public const string Version = "<#=AutomationLibraryToolkitInfo.Version#>";
+		public const string Identifier = "<#=AutomationLibraryToolkitInfo.Identifier#>";
+		public const string VsixFileName = "<#=AutomationLibraryToolkitInfo.VsixFileName#>";
+		public const string MoreInfoUrl = "<#=AutomationLibraryToolkitInfo.MoreInfoUrl#>";
+	}
+	public static class PatternToolkitHol
+	{
+		public const string Name = "<#=HandsOnLabsToolkitInfo.Name#>";
+		public const string Author = "<#=HandsOnLabsToolkitInfo.Author#>";
+		public const string Version = "<#=HandsOnLabsToolkitInfo.Version#>";
+		public const string Identifier = "<#=HandsOnLabsToolkitInfo.Identifier#>";
+		public const string VsixFileName = "<#=HandsOnLabsToolkitInfo.VsixFileName#>";
+		public const string MoreInfoUrl = "<#=HandsOnLabsToolkitInfo.MoreInfoUrl#>";
+	}
+	public static class VsSdk
+	{
+		public const string Name = "Microsoft Visual Studio SDK";
+		public const string Author = "Microsoft";
+		public const string Version = "10.0";
+		public const string Identifier = "Microsoft.VisualStudio.SDK";
+		public const string MoreInfoUrl = "http://www.microsoft.com/download/en/details.aspx?id=2680";
+	}
+	public static class NuGetPackageManager
+	{
+		public const string Name = "NuGet Package Manager";
+		public const string Author = "Microsoft Corporation";
+		public const string Version = "1.6.21215.9133";
+		public const string Identifier = "NuPackToolsVsix.Microsoft.67e54e40-0ae3-42c5-a949-fddf5739e7a5";
+		public const string VsixFileName = "NuGet.Tools.vsix";
+		public const string MoreInfoUrl = "http://docs.nuget.org/";
+	}
+}
+\#>

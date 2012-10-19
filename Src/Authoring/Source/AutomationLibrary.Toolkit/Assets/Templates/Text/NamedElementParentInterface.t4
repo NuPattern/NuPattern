@@ -1,0 +1,15 @@
+﻿<#+
+private void GenerateParentProperty(Microsoft.VisualStudio.Patterning.Runtime.INamedElementInfo infoElement)
+{
+    if (infoElement.Parent != null)
+    {
+#>
+
+		/// <summary>
+		/// Gets the parent element.
+		/// </summary>
+		I<#=infoElement.Parent.CodeIdentifier #> Parent { get; }
+<#+
+}
+}
+#>

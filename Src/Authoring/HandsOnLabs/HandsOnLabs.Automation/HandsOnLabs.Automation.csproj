@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20305</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBD848C7-5823-48BD-AF23-3DD723141161}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.VisualStudio.Patterning.HandsOnLabs.Automation</RootNamespace>
+    <AssemblyName>Microsoft.VisualStudio.Patterning.HandsOnLabs.Automation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Authoring\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Patterning.Common.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Common.Presentation.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(VS100COMNTOOLS)..\IDE\PrivateAssemblies\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
+      <HintPath>..\..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+      <DependentUpon>GlobalAssemblyInfo.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="GeneratedCode\HandsOnLabs\CollectionImplementation.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Product/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f42359eff-7223-4840-a982-6883fca7662e</SourceModelReference>
+      <ItemGuid>c3326648-0695-4dcb-93a4-72206ce1c573</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\HandsOnLabs\CollectionInterface.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Product/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f42359eff-7223-4840-a982-6883fca7662e</SourceModelReference>
+      <ItemGuid>8366d8b9-a350-44dd-a01d-bf496b0db368</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\HandsOnLabs\ElementImplementation.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Product/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f42359eff-7223-4840-a982-6883fca7662e</SourceModelReference>
+      <ItemGuid>6b3849ed-a114-411c-97bc-ffc67af8ba1d</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\HandsOnLabs\ElementInterface.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Product/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f42359eff-7223-4840-a982-6883fca7662e</SourceModelReference>
+      <ItemGuid>4afcaa46-0191-4074-b10d-1f985e7a5385</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\HandsOnLabs\ExtensionPointImplementation.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Product/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f42359eff-7223-4840-a982-6883fca7662e</SourceModelReference>
+      <ItemGuid>38ae40d3-38d0-4884-8336-e4c617e58287</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\HandsOnLabs\ExtensionPointInterface.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Product/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f42359eff-7223-4840-a982-6883fca7662e</SourceModelReference>
+      <ItemGuid>aeb16607-f8d0-45f8-80e9-586f71cc1d8c</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\HandsOnLabs\ProductImplementation.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Product/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f42359eff-7223-4840-a982-6883fca7662e</SourceModelReference>
+      <ItemGuid>f14d55fe-1154-4e83-806d-f0698369a917</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\HandsOnLabs\ProductInterface.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Product/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f42359eff-7223-4840-a982-6883fca7662e</SourceModelReference>
+      <ItemGuid>9ca65135-7979-435f-9032-9e908e35cc50</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\HandsOnLabs\ViewImplementation.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Product/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f42359eff-7223-4840-a982-6883fca7662e</SourceModelReference>
+      <ItemGuid>40d90ab2-3235-4295-8e13-31a47b9e5c78</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\HandsOnLabs\ViewInterface.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Product/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f42359eff-7223-4840-a982-6883fca7662e</SourceModelReference>
+      <ItemGuid>dbf3cf4d-f737-4762-b5e7-ff420f2dc1a3</ItemGuid>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Conditions\" />
+    <Folder Include="Events\" />
+    <Folder Include="TypeConverters\" />
+    <Folder Include="TypeEditors\" />
+    <Folder Include="ValidationRules\" />
+    <Folder Include="ValueProviders\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\GlobalAssemblyInfo.tt">
+      <Link>Properties\GlobalAssemblyInfo.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GlobalAssemblyInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
+      <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <PropertyGroup>
+    <ReferencesExtensionsHive>10.0Exp</ReferencesExtensionsHive>
+    <CopyVsixDebuggingDependencies>false</CopyVsixDebuggingDependencies>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\Source\Authoring.Toolkit\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets" />
+  <!-- Properties for VSSDK/DSL Targets -->
+  <PropertyGroup>
+    <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
+    <StartAction>Program</StartAction>
+    <StartArguments>/rootsuffix Exp</StartArguments>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <BranchRoot>..\..\..\</BranchRoot>
+  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ProductElement_ReferencesDescription" xml:space="preserve">
+    <value>Items related to this element.</value>
+  </data>
+  <data name="ProductElement_ReferencesDisplayName" xml:space="preserve">
+    <value>Related Items</value>
+  </data>
+  <data name="ProductElement_FailedToDisposeExtension" xml:space="preserve">
+    <value>Failed to dispose automation extension.</value>
+  </data>
+  <data name="ReferencesCollectionEditor_Title" xml:space="preserve">
+    <value>References Collection Editor</value>
+  </data>
+  <data name="TracerWarning_ElementInfoNotFound" xml:space="preserve">
+    <value>DefinitionId not set for element '{0}', the schema information can not be loaded.</value>
+  </data>
+  <data name="TracerWarning_ToolkitInfoNotFound" xml:space="preserve">
+    <value>Could not locate a pattern toolkit extension with identifier '{0}' that defines the pattern named '{1}'.</value>
+  </data>
+  <data name="TracerWarning_ProductInfoNotFound" xml:space="preserve">
+    <value>DefinitionId not set for product '{0}', the schema information can not be loaded.</value>
+  </data>
+  <data name="TracerWarning_PropertyInfoNotFound" xml:space="preserve">
+    <value>DefinitionId not set for property '{0}', the schema information can not be loaded.</value>
+  </data>
+  <data name="Product_InvalidExtension" xml:space="preserve">
+    <value>The product '{0}' is an invalid extension because it does not implement any of the supported extension points.</value>
+  </data>
+  <data name="Property_BindingEvaluationFailed" xml:space="preserve">
+    <value>Binding evaluation of validation rule failed.</value>
+  </data>
+  <data name="Property_BindingEvaluationErrorCode" xml:space="preserve">
+    <value>121</value>
+  </data>
+  <data name="Property_ValidationFailedErrorCode" xml:space="preserve">
+    <value>122</value>
+  </data>
+  <data name="ProductElement_BindingEvaluationErrorCode" xml:space="preserve">
+    <value>123</value>
+  </data>
+  <data name="ProductElement_BindingEvaluationFailed" xml:space="preserve">
+    <value>Binding evaluation of validation rule failed.</value>
+  </data>
+  <data name="ProductElement_ValidationFailedErrorCode" xml:space="preserve">
+    <value>124</value>
+  </data>
+  <data name="ProductElementTypeDescriptor_ToString" xml:space="preserve">
+    <value>(References)</value>
+  </data>
+  <data name="ProductElement_InstanceNameNotValid" xml:space="preserve">
+    <value>The item '{0}' has an invalid name, it must start with a letter, only contain letters, numbers, spaces, periods, underscores and dashes, and ends in letter or number.</value>
+  </data>
+  <data name="ProductElement_InstanceNameNotValidCode" xml:space="preserve">
+    <value>125</value>
+  </data>
+  <data name="ElementContainerImplementation_MisingElementContainerInfo" xml:space="preserve">
+    <value>Cannot create an extension on element {0} because it does not have a valid schema information and valid extensions cannot be determined.</value>
+  </data>
+  <data name="Product_NoExtensionPointsDefined" xml:space="preserve">
+    <value>The product '{0}' is an invalid extension because the element does not support any extension points.</value>
+  </data>
+  <data name="ElementMapper_DefaultValueProviderBindingFailed" xml:space="preserve">
+    <value>Property '{0}.{1}' has a configured value provider '{2}', but its binding evaluation failed. </value>
+  </data>
+  <data name="PropertyPropertyDescriptor_InvalidPropertyValue" xml:space="preserve">
+    <value>Value '{0}' is invalid for property '{1}.{2}' of type '{3}'.</value>
+  </data>
+  <data name="Validation_RequiredServiceMissing" xml:space="preserve">
+    <value>Required service {0} is missing.</value>
+  </data>
+  <data name="Property_UnavailableException" xml:space="preserve">
+    <value>Property schema information is unavailable, so no modifications can be performed at this time.</value>
+  </data>
+  <data name="PropertyTypeLoader_FailedToLoadPropertyType" xml:space="preserve">
+    <value>Element property {0}.{1} has type '{2}' which could not be loaded.</value>
+  </data>
+  <data name="PropertyPropertyDescriptor_ValueProviderBindingFailed" xml:space="preserve">
+    <value>Element property {0}.{1} has a configured binding for value provider {2} but the binding evaluation failed.</value>
+  </data>
+  <data name="ValidationMethodFailed_Error" xml:space="preserve">
+    <value>Validation rule '{0}' failed.</value>
+  </data>
+  <data name="ProductElement_BindingExceptionDescription" xml:space="preserve">
+    <value>Validation Rule Failure: {0} See the Output Window ('Pattern Toolkit Extensions' pane) for more information about the cause of this error.</value>
+  </data>
+  <data name="Product_ToolkitInfoIsNull" xml:space="preserve">
+    <value>The toolkit info proxy is null.</value>
+  </data>
+  <data name="Cardinality_ValidationAtLeastOneCode" xml:space="preserve">
+    <value>127</value>
+  </data>
+  <data name="Cardinality_ValidationAtMostOneCode" xml:space="preserve">
+    <value>126</value>
+  </data>
+  <data name="PropertyPropertyDescriptor_ValueProviderEvaluationFailed" xml:space="preserve">
+    <value>Evaluation of value provider for property '{0}' failed.</value>
+  </data>
+  <data name="ProductToolkitInfo_VersionDescription" xml:space="preserve">
+    <value>The current version of this toolkit.</value>
+  </data>
+  <data name="ProductToolkitInfo_AuthorDescription" xml:space="preserve">
+    <value>The original author of this toolkit.</value>
+  </data>
+  <data name="ProductToolkitInfo_DescriptionDescription" xml:space="preserve">
+    <value>The description of this pattern toolkit.</value>
+  </data>
+  <data name="ProductToolkitInfo_NameDescription" xml:space="preserve">
+    <value>The name of this pattern toolkit.</value>
+  </data>
+  <data name="ProductToolkitInfo_IdentifierDescription" xml:space="preserve">
+    <value>The unique identifier of this toolkit, also used as the VSIX identifier.</value>
+  </data>
+  <data name="Product_ErrorUnknownView" xml:space="preserve">
+    <value>View '{0}' is not a view of this product.</value>
+  </data>
+  <data name="Cardinality_ValidationAtLeastOne" xml:space="preserve">
+    <value>'{0}' does not have at least one instance of a '{1}', which it must have. You must add at least one '{1}'.</value>
+  </data>
+  <data name="Cardinality_ValidationAtMostOne" xml:space="preserve">
+    <value>'{0}' has more than one instance of a '{1}' element, which is all it can have. You must remove all but one '{1}'.</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ProductElementAddRule_InitializedEventId" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="ProductElementAddRule_InitializingEventId" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+</root>

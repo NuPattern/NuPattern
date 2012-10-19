@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Project Template Asset</Name>
+		<Description>Creates a custom project template asset.</Description>
+		<TemplateID>7037915fcaae-.Assets.Templates.ProjectTemplates.ProjectTemplate</TemplateID>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>Extensibility</ProjectSubType>
+		<SortOrder>10</SortOrder>
+		<Icon></Icon>
+		<DefaultName>ProjectTemplate</DefaultName>
+		<Hidden>true</Hidden>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem ItemType="Content" TargetFileName="$fileinputname$.csproj" ReplaceParameters="false">ProjectTemplate.csproj</ProjectItem>
+		<ProjectItem ItemType="Content" TargetFileName="Content.cs" ReplaceParameters="false">ProjectTemplate.cs</ProjectItem>
+		<ProjectItem ItemType="Content" TargetFileName="__TemplateIcon.ico" ReplaceParameters="false">__TemplateIcon.ico</ProjectItem>
+		<ProjectItem ItemType="Content" TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="false">Properties\AssemblyInfo.cs</ProjectItem>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.GuidGeneratorTemplateWizard</FullClassName>
+	</WizardExtension>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.ReplacementTemplateWizard</FullClassName>
+	</WizardExtension>
+	<WizardExtension>
+	  <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=ecdd31353928a4a5</Assembly>
+	  <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+	</WizardExtension>
+	<WizardData>
+		<NewGuid Key="$guid11$" />
+		<NewGuid Key="$guid12$" />
+		<NewGuid Key="$guid13$" />
+		<NewGuid Key="$guid14$" />
+		<NewGuid Key="$guid15$" />
+	</WizardData>
+</VSTemplate>

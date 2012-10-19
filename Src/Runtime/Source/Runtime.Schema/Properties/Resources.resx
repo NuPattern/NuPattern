@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AutomationCategory" xml:space="preserve">
+    <value>Automation</value>
+  </data>
+  <data name="CannotApplyTailorRulesToNonTailored" xml:space="preserve">
+    <value>Cannot apply tailoring rules to a non-tailored product line.</value>
+  </data>
+  <data name="CustomizableSetting_DefaultCaption" xml:space="preserve">
+    <value>&lt;unidentified&gt;</value>
+  </data>
+  <data name="CustomizationCategory" xml:space="preserve">
+    <value>Customization</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CustomizationFalseDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationfalsedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CustomizationFalseEnabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationfalseenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CustomizationInheritedDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationinheriteddisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CustomizationInheritedEnabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationinheritedenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CustomizationTrueDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationtruedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CustomizationTrueEnabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationtrueenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="DiagramTitleFieldText_VariabilityView" xml:space="preserve">
+    <value>Pattern Model</value>
+  </data>
+  <data name="GeneralCategory" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Inherited" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\inherited.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NamedIdentifier_DefaultDisplayName" xml:space="preserve">
+    <value>&lt;unnamed&gt;</value>
+  </data>
+  <data name="SettingsPropertyName" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Validate_AutomationSettingsNameIsNotUnique" xml:space="preserve">
+    <value>'{0}' has the same 'Name' property as another set of settings in the current element. You must define a unique name for every set of settings.</value>
+  </data>
+  <data name="Validate_AutomationSettingsNameIsNotUniqueCode" xml:space="preserve">
+    <value>116</value>
+  </data>
+  <data name="Validate_CustomizableStateRedundantAndShouldInherit" xml:space="preserve">
+    <value>'{0}' has been overridden and explicitly configured to allow customization, but one of its parent or ancestor elements are already customizable. You should remove the override, by setting the property 'Is Customizable' = 'Inherited'.</value>
+  </data>
+  <data name="Validate_CustomizableStateRedundantAndShouldInheritCode" xml:space="preserve">
+    <value>105</value>
+  </data>
+  <data name="Validate_CustomizedSettingsOverriddenByCustomizableState" xml:space="preserve">
+    <value>Customizations made to the customization policy of '{0}' are being overridden by the current value of the 'Is Customizable' property. You should either: reset the 'Customization Policy' property, or reset each setting back to its default value, or change the value of the 'Is Customizable' property to 'Inherit' or 'True' to preserve the customizations.</value>
+  </data>
+  <data name="Validate_CustomizedSettingsOverriddenByCustomizableStateCode" xml:space="preserve">
+    <value>103</value>
+  </data>
+  <data name="Validate_CustomizedStateWithNoCustomizableSettings" xml:space="preserve">
+    <value>'{0}' has been configured for customization, but no settings in the customization policy are customizable. You must either change the value of the property 'Is Customizable' = 'False', or allow customization of one or more settings int eh policy, by setting the property 'Modify...' = 'True'.</value>
+  </data>
+  <data name="Validate_CustomizedStateWithNoCustomizableSettingsCode" xml:space="preserve">
+    <value>104</value>
+  </data>
+  <data name="Validate_NamedElementDisplayNameNotValid" xml:space="preserve">
+    <value>'{0}' has an invalid 'Display Name' property. You must define a display name that starts with a letter, only contain letters, numbers, spaces, periods, underscores and dashes, and ends in letter or number.</value>
+  </data>
+  <data name="Validate_NamedElementDisplayNameNotValidCode" xml:space="preserve">
+    <value>108</value>
+  </data>
+  <data name="Validate_NamedElementNameNotValid" xml:space="preserve">
+    <value>'{0}' has an invalid 'Name' property. You must define a name that starts with a letter, and contains only letters and numbers.</value>
+  </data>
+  <data name="Validate_NamedElementNameNotValidCode" xml:space="preserve">
+    <value>107</value>
+  </data>
+  <data name="Validate_PatternAtLeastOneVisibleView" xml:space="preserve">
+    <value>'{0}' has no visible views. You must designate at least one of the views as being visible, by setting its property 'Is Visible' = 'True'.</value>
+  </data>
+  <data name="Validate_PatternAtLeastOneVisibleViewCode" xml:space="preserve">
+    <value>118</value>
+  </data>
+  <data name="Validate_PatternSingleDefaultView" xml:space="preserve">
+    <value>'{0}' has more than one default view. You can only designate one view as the default view, by setting its property 'Is Default' = 'True'.</value>
+  </data>
+  <data name="Validate_PatternSingleDefaultViewCode" xml:space="preserve">
+    <value>120</value>
+  </data>
+  <data name="Validate_PropertyCategoryNotValid" xml:space="preserve">
+    <value>'{0}' has an invalid 'Category' property. You must define a valid category name that contains more than one letter, number, underscore, dash or space.</value>
+  </data>
+  <data name="Validate_PropertyCategoryNotValidCode" xml:space="preserve">
+    <value>109</value>
+  </data>
+  <data name="Validate_PropertyNameIsNotUnique" xml:space="preserve">
+    <value>'{0}' has the same 'Name' property as another property of the current element. You must define a unique name for every property.</value>
+  </data>
+  <data name="Validate_PropertyNameIsNotUniqueCode" xml:space="preserve">
+    <value>115</value>
+  </data>
+  <data name="Validate_RegistrationVersionIsNotEmpty" xml:space="preserve">
+    <value>You must define an 'Version' for this toolkit.</value>
+  </data>
+  <data name="Validate_RegistrationErrorCode" xml:space="preserve">
+    <value>101</value>
+  </data>
+  <data name="Validate_ViewDefaultIsHidden" xml:space="preserve">
+    <value>'{0}' is the 'default view' and is also hidden. You must either set the 'Is Visible = 'True' on this view, or set another view as the default view by setting its property 'Is Default' = 'True'.</value>
+  </data>
+  <data name="Validate_ViewDefaultIsHiddenCode" xml:space="preserve">
+    <value>117</value>
+  </data>
+  <data name="Validate_ViewNameIsNotUnique" xml:space="preserve">
+    <value>'{0}' has the same 'Name' property as another view in the model. You must define a unique name for every view.</value>
+  </data>
+  <data name="Validate_ViewNameIsNotUniqueCode" xml:space="preserve">
+    <value>121</value>
+  </data>
+  <data name="Validate_PatternAtLeastOneView" xml:space="preserve">
+    <value>'{0}' has no views defines. You must define at least one view.</value>
+  </data>
+  <data name="Validate_PatternAtLeastOneViewCode" xml:space="preserve">
+    <value>119</value>
+  </data>
+  <data name="PatternModelCloner_PatternSchemaNotFound" xml:space="preserve">
+    <value>No PatternSchema element found for cloning.</value>
+  </data>
+  <data name="ProvidedExtensionPointsDisplayName" xml:space="preserve">
+    <value>Extension To</value>
+  </data>
+  <data name="ProvidedExtensionPointsDescription" xml:space="preserve">
+    <value>The extension points of products, that this product provides an extension to.</value>
+  </data>
+  <data name="ProvidedExtensionPointsPropertyDescriptor_OffendingExtensionException" xml:space="preserve">
+    <value>The following extension points provide properties of the same name and/or type and can therefore not be implemented fully by this product. {0}</value>
+  </data>
+  <data name="ExtensionPointSchemaTypeDescriptionProvider_Description" xml:space="preserve">
+    <value>Extension Type: '{0}'.</value>
+  </data>
+  <data name="ExtensibilityCategory" xml:space="preserve">
+    <value>Extensibility</value>
+  </data>
+  <data name="ExtensionPointSchemaTypeDescriptionProvider_DisplayName" xml:space="preserve">
+    <value>{0}  ({1})</value>
+  </data>
+  <data name="NamedElementSchema_DescriptionFormat" xml:space="preserve">
+    <value>Description for {0}</value>
+  </data>
+  <data name="CustomizationPolicyRolePlayerDescriptor_Description" xml:space="preserve">
+    <value>Control of the properties of this element that can be customized, when this element is customizable.</value>
+  </data>
+  <data name="CustomizationPolicyRolePlayerDescriptor_DisplayName" xml:space="preserve">
+    <value>Customization</value>
+  </data>
+  <data name="Validate_RegistrationAuthorIsNotEmpty" xml:space="preserve">
+    <value>You must define an 'Author' of this toolkit.</value>
+  </data>
+  <data name="Validate_RegistrationDescriptionIsNotEmpty" xml:space="preserve">
+    <value>You must define a 'Description' for this toolkit.</value>
+  </data>
+  <data name="Validate_RegistrationToolkitDocumentationIsNotEmpty" xml:space="preserve">
+    <value>You must define a 'Toolkit Documentation' document for the toolkit.</value>
+  </data>
+  <data name="Validate_RegistrationIdentifierIsNotEmpty" xml:space="preserve">
+    <value>You must define a unique 'Identifier' for this toolkit.</value>
+  </data>
+  <data name="Validate_RegistrationNameIsNotEmpty" xml:space="preserve">
+    <value>You must define a 'Toolkit Name' for this toolkit.</value>
+  </data>
+  <data name="Validate_RegistrationProductDocumentationIsNotEmpty" xml:space="preserve">
+    <value>You must define a 'Pattern Documentation' document for the toolkit.</value>
+  </data>
+  <data name="Validate_RegistrationProductRequirementsIsNotEmpty" xml:space="preserve">
+    <value>You must define a 'Pattern Requirements' document for the toolkit.</value>
+  </data>
+  <data name="Validate_RegistrationVersionWrongFormat" xml:space="preserve">
+    <value>The toolkit has an invalid 'Version' number. You must define a version in this format: [MajorNumber].[MinorNumber] or [MajorNumber].[MinorNumber].[BuildNumber].[RevisionNumber]</value>
+  </data>
+  <data name="Validate_PatternNotNamedDefault" xml:space="preserve">
+    <value>'{0}' has a generic name used to describe any pattern. You must rename '{0}' to better describe the pattern being created from this specific toolkit.</value>
+  </data>
+  <data name="Validate_PatternNotNamedDefaultCode" xml:space="preserve">
+    <value>124</value>
+  </data>
+  <data name="Validate_RegistrationEulaIsNotValid" xml:space="preserve">
+    <value>The 'EULA' license document for the toolkit is not valid.</value>
+  </data>
+  <data name="Validate_RegistrationToolkitDocumentationIsNotValid" xml:space="preserve">
+    <value>The 'Toolkit Documentation' document property for the toolkit is either empty, invalid, or does not exist in the current project.</value>
+  </data>
+  <data name="Validate_RegistrationProductDocumentationIsNotValid" xml:space="preserve">
+    <value>The 'Toolkit Documentation' document property for the toolkit is either empty, invalid, or does not exist in the current project.</value>
+  </data>
+  <data name="Validate_RegistrationProductRequirementsIsNotValid" xml:space="preserve">
+    <value>The 'Pattern Requirements' document property for the toolkit is either empty, invalid, or does not exist in the current project.</value>
+  </data>
+  <data name="Validate_AutomationSettingsNameSameAsSystem" xml:space="preserve">
+    <value>'{0}' has the same 'Name' property as a built-in set of settings of the current element. You must define a unique name for every set of settings. To see the built-in settings you can set the property 'Show Hidden Items' = 'True' on the diagram.</value>
+  </data>
+  <data name="Validate_AutomationSettingsNameSameAsSystemCode" xml:space="preserve">
+    <value>126</value>
+  </data>
+  <data name="Validate_PropertyNameSameAsSystem" xml:space="preserve">
+    <value>'{0}' has the same 'Name' property as a built-in property of the current element. You must define a unique name for every property. To see the built-in properties you can set the property 'Show Hidden Items' = 'True' on the diagram.</value>
+  </data>
+  <data name="Validate_PropertyNameSameAsSystemCode" xml:space="preserve">
+    <value>125</value>
+  </data>
+  <data name="ExtensionPointSchema_FailedToParseConditions" xml:space="preserve">
+    <value>Failed to reload conditions configured for extension point '{0}':</value>
+  </data>
+  <data name="Cardinality_NoParentLinkFound" xml:space="preserve">
+    <value>The element does not have a relationship to a containing parent, so the cardinality cannot be determined.</value>
+  </data>
+  <data name="SchemaTypeDescriptionProvider_ConditionsEditorCaption" xml:space="preserve">
+    <value>Constraints Editor</value>
+  </data>
+  <data name="SchemaTypeDescriptionProvider_ValidatorEditorCaption" xml:space="preserve">
+    <value>Validation Rules Editor</value>
+  </data>
+  <data name="HostedExtensionPointPropertyDescriptor_PropertiesWillBeDeleted" xml:space="preserve">
+    <value>All existing variable properties will be cleared in order to host this Extension Point.</value>
+  </data>
+  <data name="HostedExtensionPointPropertyDescriptor_CantSelfHost" xml:space="preserve">
+    <value>You cannot re-represent the current extension Point.</value>
+  </data>
+  <data name="Validate_ValidationRuleSettingsTypeIsNotEmpty" xml:space="preserve">
+    <value>'{0}' validation rule has no value for the 'Type' property. You must select a validation rule from this element to execute in the 'Settings'.</value>
+  </data>
+  <data name="Validate_ValidationRuleSettingsTypeIsNotEmptyCode" xml:space="preserve">
+    <value>130</value>
+  </data>
+  <data name="RegistrationSchema_DocumentEditorTitle" xml:space="preserve">
+    <value>Select VS Document</value>
+  </data>
+  <data name="RegistrationSchema_DocumentEditorFileExtensions" xml:space="preserve">
+    <value>.doc;.docx;.xls;.xlsx;.rtf;.pdf;.htm;.html;.txt</value>
+  </data>
+  <data name="Validate_NamedElementCodeIdentifierIsNotUnique" xml:space="preserve">
+    <value>'{0}' has the same 'Code Identifier' property as another element in the model. You must define a unique identifier for every element.</value>
+  </data>
+  <data name="Validate_NamedElementCodeIdentifierIsNotUniqueCode" xml:space="preserve">
+    <value>127</value>
+  </data>
+  <data name="Validate_NamedElementCodeIdentifierNotValid" xml:space="preserve">
+    <value>'{0}' has an invalid 'Code Identifier' property. You must define an identifier that starts with a letter, and contains only letters and numbers.</value>
+  </data>
+  <data name="Validate_NamedElementCodeIdentifierNotValidCode" xml:space="preserve">
+    <value>128</value>
+  </data>
+  <data name="HostedExtensionPointPropertyDescriptor_InvalidValue" xml:space="preserve">
+    <value>Invalid extension point schema value.</value>
+  </data>
+  <data name="PatternSchema_DefaultName" xml:space="preserve">
+    <value>PatternName</value>
+  </data>
+  <data name="PropertySchema_FailedToLoadPropertyType" xml:space="preserve">
+    <value>Failed to load property type {0} for property {1}. Default value cannot be modified.</value>
+  </data>
+  <data name="Validate_PropertyDefaultValueHasValueOrValueProvider" xml:space="preserve">
+    <value>'{0}' has both a 'Value' and 'Value Provider' set for the 'Default Value' property. You can only define either a static 'Value' or configure a 'ValueProvider'. You must clear one of these settings.</value>
+  </data>
+  <data name="Validate_PropertyDefaultValueHasValueOrValueProviderCode" xml:space="preserve">
+    <value>131</value>
+  </data>
+  <data name="Validate_PropertyValueProviderOrDefaultValue" xml:space="preserve">
+    <value>'{0}' has both the 'Value Provider' and 'Default Value' properties configured. The 'Default Value' property cannot be configured when the property's 'Value Provider' property is also configured. You must either clear the 'Default Value' property or clear the 'Value Provider' property.</value>
+  </data>
+  <data name="Validate_PropertyValueProviderOrDefaultValueCode" xml:space="preserve">
+    <value>132</value>
+  </data>
+  <data name="ValidationMethodFailed_Error" xml:space="preserve">
+    <value>Invoke validation method '{0}' failed.</value>
+  </data>
+  <data name="PatternModelCloner_CloningElement" xml:space="preserve">
+    <value>Cloning source element: '{0}'</value>
+  </data>
+  <data name="PatternModelCloner_CloningProduct" xml:space="preserve">
+    <value>Cloning the pattern.</value>
+  </data>
+  <data name="PatternModelCloner_CloningView" xml:space="preserve">
+    <value>Cloning diagram for view: '{0}'.</value>
+  </data>
+  <data name="PatternModelCloner_CloningViews" xml:space="preserve">
+    <value>Cloning diagrams for all views in model.</value>
+  </data>
+  <data name="PatternModelCloner_EstablishElementInheritance" xml:space="preserve">
+    <value>Establishing element inheritance: '{0}'</value>
+  </data>
+  <data name="PatternModelCloner_EstablishingElementInheritance" xml:space="preserve">
+    <value>Establishing inheritance for all elements in model.</value>
+  </data>
+  <data name="PatternModelCloner_EstablishingPatternModelInheritance" xml:space="preserve">
+    <value>Establishing inheritance for pattern line.</value>
+  </data>
+  <data name="PatternModelCloner_PatternModelCloning" xml:space="preserve">
+    <value>Cloning base product line: '{0}'.</value>
+  </data>
+  <data name="PatternModelCloner_ApplyingTailoringRules" xml:space="preserve">
+    <value>Applying tailoring rules to cloned pattern line.</value>
+  </data>
+  <data name="Validate_NamedElementIconDoesNotPointToAValidFile" xml:space="preserve">
+    <value>Element '{0}'  has an invalid value for the 'Icon' property. You must select an existing icon file from the solution.</value>
+  </data>
+  <data name="Validate_NamedElementIconDoesNotPointToAValidFileCode" xml:space="preserve">
+    <value>135</value>
+  </data>
+  <data name="Validate_NamedElementIconIsNotAResource" xml:space="preserve">
+    <value>Element '{0}'  has a file in its 'Icon' property that is not configured as a 'Resource'. You must set the 'Build Action' to 'Resource' for file '{1}' in Solution Explorer.</value>
+  </data>
+  <data name="Validate_NamedElementIconIsNotAResourceCode" xml:space="preserve">
+    <value>136</value>
+  </data>
+  <data name="AutoCreate_NoParentLinkFound" xml:space="preserve">
+    <value>The element does not have a relationship to a containing parent, so the autocreate cannot be determined.</value>
+  </data>
+  <data name="Validate_NamedElementCodeIdentifierIsNotReserved" xml:space="preserve">
+    <value>'{0}' has a reserved 'Code Identifier' property, that conflicts with built-in generated classes. You must define another code identifier that is not any of these: '{1}'.</value>
+  </data>
+  <data name="Validate_NamedElementCodeIdentifierIsNotReservedCode" xml:space="preserve">
+    <value>137</value>
+  </data>
+  <data name="Validate_PropertyDisplayNameReserved" xml:space="preserve">
+    <value>'{0}' has a reserved 'Display Name' property, that will conflict with names displayed for built-in properties. You must define another value that is not any of these: '{1}'.</value>
+  </data>
+  <data name="Validate_PropertyDisplayNameReservedCode" xml:space="preserve">
+    <value>139</value>
+  </data>
+  <data name="Validate_PropertyTypeUnknown" xml:space="preserve">
+    <value>'{0}' has an invalid 'Type' property value '{1}'. You must select one of the values from the list of available types.</value>
+  </data>
+  <data name="Validate_PropertyTypeUnknownCode" xml:space="preserve">
+    <value>102</value>
+  </data>
+  <data name="PropertySchema_PropertyDataTypes_Boolean" xml:space="preserve">
+    <value>Boolean</value>
+  </data>
+  <data name="PropertySchema_PropertyDataTypes_DateTime" xml:space="preserve">
+    <value>Date and Time</value>
+  </data>
+  <data name="PropertySchema_PropertyDataTypes_Decimal" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+  <data name="PropertySchema_PropertyDataTypes_Double" xml:space="preserve">
+    <value>Floating Point Number</value>
+  </data>
+  <data name="PropertySchema_PropertyDataTypes_Guid" xml:space="preserve">
+    <value>Unique Identifier</value>
+  </data>
+  <data name="PropertySchema_PropertyDataTypes_Int" xml:space="preserve">
+    <value>Integer</value>
+  </data>
+  <data name="PropertySchema_PropertyDataTypes_String" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="PropertySchema_PropertyDataTypes_UInt" xml:space="preserve">
+    <value>Unsigned Integer</value>
+  </data>
+  <data name="DefaultValueDescriptor_TraceResetValue" xml:space="preserve">
+    <value>Resetting property value for '{0}.{1}'</value>
+  </data>
+  <data name="DefaultValueDescriptor_TraceSetValue" xml:space="preserve">
+    <value>Ignoring the value set on property, which must be set on the Value. '{0}.{1}'</value>
+  </data>
+  <data name="DefaultValueDescriptor_TraceTypeLoadFailed" xml:space="preserve">
+    <value>Failed to load type of property definition '{0}'</value>
+  </data>
+  <data name="PropertyValueType_Category_Extended" xml:space="preserve">
+    <value>Additional Types</value>
+  </data>
+  <data name="PropertyValueType_Category_Common" xml:space="preserve">
+    <value>Common Types</value>
+  </data>
+  <data name="ValueTypeTypeConverter_Description" xml:space="preserve">
+    <value>A '{0}' type.</value>
+  </data>
+  <data name="AutomationSettingsSchema_DisplayTextFormat" xml:space="preserve">
+    <value>{0} : {1}</value>
+  </data>
+  <data name="PropertySchema_DisplayTextFormat" xml:space="preserve">
+    <value>{0} : {1}</value>
+  </data>
+  <data name="ViewShape_TransactionLayout" xml:space="preserve">
+    <value>Auto Arrange Shapes</value>
+  </data>
+  <data name="ViewShape_TransactionPerformInitialLayout" xml:space="preserve">
+    <value>Unschedule Auto Arrangement</value>
+  </data>
+  <data name="Validate_PatternElementNameIsNotUnique" xml:space="preserve">
+    <value>'{0}' has the same 'Name' property as another element, collection or extension point in the model. You must define a unique name for every element, collection or extension point.</value>
+  </data>
+  <data name="Validate_PatternElementNameIsNotUniqueCode" xml:space="preserve">
+    <value>110</value>
+  </data>
+  <data name="Validate_ContainedElementInfoOrderGroupComparerIsUniqueToGroupCode" xml:space="preserve">
+    <value>140</value>
+  </data>
+  <data name="Validate_ContainedElementInfoOrderGroupComparerIsUniqueToGroup" xml:space="preserve">
+    <value>'{0}' has a different 'Order Group Comparer' than that of another sibling element, collection or extension point in the same 'Order Group'. You can only define one 'Order Group Comparer' for each 'Order Group'. You must either change the 'Order Group' to order using this comparer. Or you can clear the value 'Order Group Comparer', or select the same value as the other sibling elements, collections and extension points in the same 'Order Group'.</value>
+  </data>
+</root>

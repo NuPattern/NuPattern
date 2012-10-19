@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.10318</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0F2590A-F583-4883-B701-923B43475BB5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime.Schema</RootNamespace>
+    <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.Schema</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <GacTargetOutput>false</GacTargetOutput>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug With CA|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\DSLTools\v10.0\Microsoft.DSLTools.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.ComponentModelHost, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(VS100COMNTOOLS)..\IDE\PrivateAssemblies\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExtensionManager, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(VS100COMNTOOLS)..\IDE\PrivateAssemblies\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix), Version=$(DslToolsAsmVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix), Version=$(DslToolsAsmVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.GraphObject$(DslToolsVersionSuffix), Version=$(DslToolsAsmVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.SDK.Integration.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.Modeling.SDK.Integration.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.SDK.Integration.Shell.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.Modeling.SDK.Integration.Shell.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix), Version=$(DslToolsAsmVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\v2.0\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\v2.0\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\v2.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\v2.0\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\v2.0\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating$(T4VersionSuffix), Version=$(T4AsmVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces$(T4VersionSuffix), Version=$(T4AsmVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Modeling.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.TextTemplating.Modeling.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
+      <HintPath>..\..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools, Version=1.0.1.22313, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces$(T4VersionSuffix)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdapterManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AdapterManager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdapterManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Diagram\Geometrics\FolderShapeGeometry.cs" />
+    <Compile Include="Diagram\Geometrics\GlowShadowRoundedRectangleShapeGeometry.cs" />
+    <Compile Include="Diagram\Geometrics\RoundedRectangleShapeGeometry.cs" />
+    <Compile Include="Diagram\Geometrics\SquaredBottomCornerShapeGeometry.cs" />
+    <Compile Include="Diagram\Geometrics\SquaredBottomShapeGeometry.cs" />
+    <Compile Include="Diagram\ITailoredBackgroundStyles.cs" />
+    <Compile Include="Diagram\Rules\PatternModelSchemaDiagramChangeRule.cs" />
+    <Compile Include="Diagram\Shapes\ExtensionPointShape.cs" />
+    <Compile Include="Diagram\Shapes\TailoredConnectorStyles.cs" />
+    <Compile Include="Diagram\Shapes\CustomizableElementShape.cs" />
+    <Compile Include="Diagram\DiagramTitleField.cs" />
+    <Compile Include="Diagram\Shapes\ITailoredShapeElementStyles.cs" />
+    <Compile Include="Diagram\Shapes\TailoredShapeStyles.cs" />
+    <Compile Include="Diagram\TailoredBackgroundStyles.cs" />
+    <Compile Include="Extensions\CustomizableElementSchemaExtensions.cs" />
+    <Compile Include="Extensions\ContainingLinkSchemaExtensions.cs" />
+    <Compile Include="Extensions\ElementSchemaContainerExtensions.cs" />
+    <Compile Include="Extensions\ModelElementExtensions.cs" />
+    <Compile Include="Extensions\NodeShapeExtensions.cs" />
+    <Compile Include="Model\AbstractElementSchema.cs" />
+    <Compile Include="Model\AbstractElementSchema.Validation.cs">
+      <DependentUpon>AbstractElementSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PatternModelSchema.cs" />
+    <Compile Include="Model\PropertyValueProviderBindingSettings.cs" />
+    <Compile Include="Model\ExtensionPointSchema.Validation.cs">
+      <DependentUpon>ExtensionPointSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PatternElementSchema.Validation.cs">
+      <DependentUpon>PatternElementSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Design\ValueTypesPropertyDescriptor.cs" />
+    <Compile Include="Model\PropertyValueType.cs" />
+    <Compile Include="Model\Rules\NamedElementSchemaAddRule.cs" />
+    <Compile Include="Model\Design\SimpleNamedPropertyDescriptor.cs" />
+    <Compile Include="Model\Automation\AutomationSettingsTypeDescriptorProvider.cs" />
+    <Compile Include="Model\Automation\AutomationSettingsTypeConverter.cs" />
+    <None Include="AdapterManager.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdapterManager.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\Customization\PropertyTracking.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PropertyTracking.cs</LastGenOutput>
+    </None>
+    <Compile Include="Model\PropertySchema.Validation.cs">
+      <DependentUpon>PropertySchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Design\ExtensionPointConverter.cs" />
+    <Compile Include="Model\Design\HostedExtensionPointPropertyDescriptor.cs" />
+    <Compile Include="Model\Design\PatternElementSchemaTypeDescriptionProvider.cs">
+    </Compile>
+    <Compile Include="Model\Design\ExtensionPointsConverter.cs" />
+    <Compile Include="Model\ExtensionPointSchema.cs" />
+    <Compile Include="Model\Design\ExtensionPointSchemaTypeDescriptionProvider.cs">
+    </Compile>
+    <Compile Include="GeneratedCode\Customization\PropertyTracking.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PropertyTracking.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Design\ProvidedExtensionPointsPropertyDescriptor.cs" />
+    <Compile Include="Model\PatternSchema.cs" />
+    <Compile Include="Model\Design\PatternSchemaTypeDescriptionProvider.cs">
+    </Compile>
+    <Compile Include="Model\Rules\ExtensionPointSchemaAddRule.cs" />
+    <Compile Include="Model\Rules\ElementSchemaAddRule.cs" />
+    <Compile Include="Model\NamedElementSchemaNameProvider.cs" />
+    <Compile Include="Model\ViewHasExtensionPoints.cs" />
+    <Compile Include="Model\ElementHasExtensionPoints.cs" />
+    <Compile Include="Model\PatternSchema.Validation.cs">
+      <DependentUpon>PatternSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Design\ValueTypesTypeConverter.cs" />
+    <Compile Include="Diagram\Shapes\PatternElementConnector.cs" />
+    <Compile Include="Diagram\Shapes\ShapeExtensions.cs" />
+    <Compile Include="Extensions\Gestures\AuthoringGestureController.cs" />
+    <Compile Include="Extensions\CustomizationExtensions.cs" />
+    <Compile Include="Extensions\Gestures\AuthoringGestureControllerBase.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Model\Automation\AutomationSettingsSchema.cs" />
+    <Compile Include="Model\CollectionSchema.cs" />
+    <Compile Include="Model\CollectionSchema.Validation.cs">
+      <DependentUpon>CollectionSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Automation\AutomationSettingsSchema.Validation.cs" />
+    <Compile Include="Model\Design\NamedElementTypeDescriptionProvider.cs">
+    </Compile>
+    <Compile Include="Model\ElementSchema.cs" />
+    <Compile Include="Model\ElementSchema.Validation.cs">
+      <DependentUpon>ElementSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Design\PropertySchemaTypeDescriptorProvider.cs">
+    </Compile>
+    <Compile Include="Model\Rules\PatternElementHasPatternElementsChangeRule.cs" />
+    <Compile Include="Model\Rules\CustomizableElementChangeRule.cs" />
+    <Compile Include="Model\Rules\PropertySchemaChangeRule.cs" />
+    <Compile Include="Model\ViewSchema.Validation.cs">
+      <DependentUpon>ViewSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Design\ContainingLinkSchemaTypeDescriptionProvider.cs" />
+    <Compile Include="Model\NamedElementSchema.Validation.cs">
+      <DependentUpon>NamedElementSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Customization\CustomizableElementSchemaValidation.cs" />
+    <Compile Include="Model\Customization\CustomizableDomainElementSettingAttribute.cs" />
+    <Compile Include="Model\Customization\CustomizableSettingAttribute.cs" />
+    <Compile Include="Model\Customization\CustomizationPolicyTypeDescriptionProvider.cs" />
+    <Compile Include="Model\Customization\CustomizationPolicySchema.cs" />
+    <Compile Include="Model\Customization\CustomizableSettingSchema.cs" />
+    <Compile Include="Model\Customization\CustomizableElementSchema.cs" />
+    <Compile Include="Diagram\PatternModelSchemaDiagram.cs" />
+    <Compile Include="Diagram\FixUpMultipleDiagram.cs" />
+    <Compile Include="Diagram\MultipleDiagramsFixup.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultipleDiagramsFixup.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Diagram\Shapes\ElementShape.cs" />
+    <Compile Include="Diagram\Shapes\CollectionShape.cs" />
+    <Compile Include="Diagram\Shapes\ViewShape.cs" />
+    <Compile Include="Extensions\AbstractElementExtensions.cs" />
+    <Compile Include="Extensions\DiagramExtensions.cs" />
+    <Compile Include="Extensions\StoreExtensions.cs" />
+    <Compile Include="GeneratedCode\Customization\DesignerConstants.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DesignerConstants.tt</DependentUpon>
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+    </Compile>
+    <Compile Include="Model\ElementHasElements.cs" />
+    <Compile Include="Model\Customization\CustomizableElementTypeDescriptionProvider.cs" />
+    <Compile Include="Model\IInterceptorTarget.cs" />
+    <Compile Include="Model\CardinalityConstants.cs" />
+    <Compile Include="Model\Rules\PatternSchemaAddRule.cs" />
+    <Compile Include="Extensions\PropertySchemaExtensions.cs" />
+    <Compile Include="Model\Design\DefaultValuePropertyDescriptor.cs">
+    </Compile>
+    <Compile Include="Rehydration\PatternModelCloner.cs" />
+    <Compile Include="Serialization\PatternModelSerializationHelper.cs" />
+    <Compile Include="Serialization\SchemaReader.cs" />
+    <Compile Include="Serialization\PatternModelSchemaDiagramSerializer.cs" />
+    <Compile Include="Serialization\SerializationHelper.cs">
+      <DependentUpon>SerializationHelper.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="..\..\..\Common\Helpers\DomainClassCodeGenerator.tt">
+      <Link>GeneratedCode\Customization\DomainClassCodeGenerator.tt</Link>
+    </None>
+    <None Include="..\..\..\Common\Helpers\DomainProperty.tt">
+      <Link>GeneratedCode\Customization\DomainProperty.tt</Link>
+    </None>
+    <None Include="..\..\..\Common\Helpers\Helpers.tt">
+      <Link>GeneratedCode\Customization\Helpers.tt</Link>
+    </None>
+    <None Include="..\..\..\GlobalAssemblyInfo.tt">
+      <Link>Properties\GlobalAssemblyInfo.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GlobalAssemblyInfo.cs</LastGenOutput>
+    </None>
+    <None Include="Diagram\MultipleDiagramsFixup.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MultipleDiagramsFixup.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\Customization\DesignerConstants.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DesignerConstants.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\PatternModelSchema.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PatternModelSchema.xsd</LastGenOutput>
+    </None>
+    <Content Include="GeneratedCode\PatternModelSchema.xsd">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PatternModelSchema.tt</DependentUpon>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="GeneratedCode\Customization\SchemaPropertyChanged.tt" />
+    <None Include="GeneratedCode\SerializationHelper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SerializationHelper.cs</LastGenOutput>
+    </None>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalAssemblyInfo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Diagram\FixUpDiagram.cs" />
+    <Compile Include="Model\PatternModelDomainModel.cs" />
+    <Compile Include="Diagram\Shapes\PatternShape.cs" />
+    <Compile Include="Model\PropertySchema.cs" />
+    <Compile Include="Model\PatternElementSchema.cs" />
+    <Compile Include="Model\Rules\CustomizableElementAddRule.cs" />
+    <Compile Include="Model\Rules\ViewSchemaAddRule.cs" />
+    <Compile Include="Model\Rules\ViewSchemaChangeRule.cs" />
+    <Compile Include="Model\NamedElementSchema.cs" />
+    <Compile Include="Model\ViewSchema.cs" />
+    <Compile Include="Model\ViewSchemaBase.cs" />
+    <Compile Include="Model\ViewHasElements.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\Customization\SchemaImplementation.cs">
+      <DependentUpon>SchemaImplementation.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="GeneratedCode\ConnectionBuilders.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConnectionBuilders.tt</DependentUpon>
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+    </Compile>
+    <Compile Include="GeneratedCode\Connectors.cs">
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Connectors.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\Diagram.cs">
+      <DependentUpon>Diagram.tt</DependentUpon>
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="GeneratedCode\DirectiveProcessor.cs">
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <DependentUpon>DirectiveProcessor.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="GeneratedCode\DomainClasses.cs">
+      <AutoGen>True</AutoGen>
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DomainClasses.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\DomainRelationships.cs">
+      <AutoGen>True</AutoGen>
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DomainRelationships.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\HelpKeywordHelper.cs">
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpKeywordHelper.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\MultiplicityValidation.cs">
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultiplicityValidation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\PropertiesGrid.cs">
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <DependentUpon>PropertiesGrid.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="GeneratedCode\SerializationHelper.cs">
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SerializationHelper.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\Shapes.cs">
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <DependentUpon>Shapes.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="GeneratedCode\ToolboxHelper.cs">
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <DependentUpon>ToolboxHelper.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GeneratedCode\DomainModel.cs">
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DomainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\Serializer.cs">
+      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Serializer.tt</DependentUpon>
+    </Compile>
+    <None Include="GeneratedCode\Customization\SchemaImplementation.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SchemaImplementation.cs</LastGenOutput>
+    </None>
+    <None Include="Serialization\SerializationHelper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SerializationHelper.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\Runtime\Source\Runtime\Resources\Product.png">
+      <Link>Resources\Product.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Collapse.png">
+      <Link>Resources\Collapse.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Collection.png">
+      <Link>Resources\Collection.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CollectionShapeToolBitmap.bmp">
+      <Link>Resources\CollectionShapeToolBitmap.bmp</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ConnectorSourceCursor.cur">
+      <Link>Resources\ConnectorSourceCursor.cur</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ConnectorTargetCursor.cur">
+      <Link>Resources\ConnectorTargetCursor.cur</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseDisabled.png">
+      <Link>Resources\CustomizationFalseDisabled.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseEnabled.png">
+      <Link>Resources\CustomizationFalseEnabled.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedDisabled.png">
+      <Link>Resources\CustomizationInheritedDisabled.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedEnabled.png">
+      <Link>Resources\CustomizationInheritedEnabled.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueDisabled.png">
+      <Link>Resources\CustomizationTrueDisabled.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueEnabled.png">
+      <Link>Resources\CustomizationTrueEnabled.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Design.png">
+      <Link>Resources\Design.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Element.png">
+      <Link>Resources\Element.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ElementShapeToolBitmap.bmp">
+      <Link>Resources\ElementShapeToolBitmap.bmp</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Expand.png">
+      <Link>Resources\Expand.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ExtensionPoint.png">
+      <Link>Resources\ExtensionPoint.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ExtensionPointToolBitmap.bmp">
+      <Link>Resources\ExtensionPointToolBitmap.bmp</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png">
+      <Link>Resources\Inherited.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Registration.png">
+      <Link>Resources\Registration.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Resize.png">
+      <Link>Resources\Resize.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\View.png">
+      <Link>Resources\View.png</Link>
+    </Content>
+    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Views.png">
+      <Link>Resources\Views.png</Link>
+    </Content>
+    <Resource Include="Resources\Error.png" />
+    <None Include="DslDefinition.dsl.diagram">
+      <DependentUpon>DslDefinition.dsl</DependentUpon>
+    </None>
+    <None Include="GeneratedCode\ConnectionBuilders.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ConnectionBuilders.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\Diagram.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Diagram.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\DirectiveProcessor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DirectiveProcessor.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\DomainRelationships.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DomainRelationships.cs</LastGenOutput>
+    </None>
+    <None Include="DslDefinition.dsl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GeneratedCode\Connectors.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Connectors.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\DomainClasses.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DomainClasses.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\DomainModelResx.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DomainModelResx.resx</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\HelpKeywordHelper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HelpKeywordHelper.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\MultiplicityValidation.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MultiplicityValidation.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\PropertiesGrid.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PropertiesGrid.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\DomainModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DomainModel.cs</LastGenOutput>
+    </None>
+    <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
+      <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
+    </CodeAnalysisDictionary>
+    <None Include="GeneratedCode\Serializer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Serializer.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\Shapes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Shapes.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\ToolboxHelper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ToolboxHelper.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GeneratedCode\DomainModelResx.resx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DomainModelResx.tt</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
+    <StartAction>Program</StartAction>
+    <StartArguments>/rootsuffix Exp</StartArguments>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
+      <Project>{72CC87F3-2860-45CC-8712-00621F868D60}</Project>
+      <Name>Common.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Runtime\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
+      <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
+      <Name>Runtime.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Runtime\Source\Runtime\Runtime.csproj">
+      <Project>{79A7E018-1A92-47F4-A478-17BCC57CC7AD}</Project>
+      <Name>Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Extensibility\Extensibility.csproj">
+      <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
+      <Name>Extensibility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <BranchRoot>..\..\..\</BranchRoot>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
+    <StartAction>Program</StartAction>
+    <StartArguments>/rootsuffix Exp</StartArguments>
+  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
+  <!-- ******************************* -->
+  <!-- T4 MsBuild utilities -->
+  <PropertyGroup>
+    <!-- Whether T4 templates should be transformed as part of the build -->
+    <TransformOnBuild>false</TransformOnBuild>
+    <!-- Whether only out of date output files should be transformed -->
+    <TransformOutOfDateOnly>true</TransformOutOfDateOnly>
+    <!-- Specifies how read-only files should be dealt with. False -> build error, true -> warning -->
+    <OverwriteReadOnlyOutputFiles>false</OverwriteReadOnlyOutputFiles>
+    <!-- Whether to include the additional settings required to transform standard DSL projects -->
+    <IncludeDslT4Settings>true</IncludeDslT4Settings>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Add VS\...\PublicAssemblies to the list of places to look for assemblies used by templates. -->
+    <T4ReferencePath Include="$(VsIdePath)PublicAssemblies\" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\TextTemplating\v10.0\Microsoft.TextTemplating.targets" />-->
+  <!-- End of T4 MsBuild settings -->
+  <!-- *******************************   -->
+</Project>

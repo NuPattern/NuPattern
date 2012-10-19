@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TransformationPropertyValues xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Values>
+    <TransformationPropertyValue>
+      <FileName>Automation\Templates\Items\DataContract\DataContract.tt</FileName>
+      <PropertyName>Host</PropertyName>
+      <Value>VisualStudio</Value>
+    </TransformationPropertyValue>
+    <TransformationPropertyValue>
+      <FileName>Automation\Templates\Projects\ConsoleApplication1\MyTemplate.tt</FileName>
+      <PropertyName>Host</PropertyName>
+      <Value>VisualStudio</Value>
+    </TransformationPropertyValue>
+    <TransformationPropertyValue>
+      <FileName>PatternModel.tt</FileName>
+      <PropertyName>Host</PropertyName>
+      <Value>VisualStudio</Value>
+    </TransformationPropertyValue>
+  </Values>
+</TransformationPropertyValues>

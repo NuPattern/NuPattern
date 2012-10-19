@@ -1,0 +1,63 @@
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\Runtime.Store\DslDefinition.dsl'" #>
+<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".vsct" #><?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+	<Extern href="msobtnid.h"/>
+
+  <Commands package="guidRuntimeShellPkg">
+		<Groups>
+			<Group guid="guidInstallFactoryReferenceCommand" id="grpidInstallFactoryReferenceCommandGroup" priority="0x0100">
+				<Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
+			</Group>
+		</Groups>
+
+		<Buttons>
+			<Button guid="guidInstallFactoryReferenceCommand" id="cmdidInstallFactoryReferenceCommand" priority="0x0100" type="Button">
+				<Parent guid="guidInstallFactoryReferenceCommand" id="grpidInstallFactoryReferenceCommandGroup" />
+				<CommandFlag>DynamicVisibility</CommandFlag>
+				<CommandFlag>DefaultInvisible</CommandFlag>
+				<Strings>
+					<ButtonText>Install References</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" priority="0x0100" type="Button">
+				<Icon guid="guidOpenSolutionBuilderBitmap" id="bmpPic1" />
+				<Strings>
+					<CommandName>cmdidOpenSolutionBuilderCommand</CommandName>
+					<ButtonText>Solution Builder</ButtonText>
+				</Strings>
+			</Button>
+		</Buttons>
+		<Bitmaps>
+			<Bitmap guid="guidOpenSolutionBuilderBitmap" href="Resources\SolutionBuilderToolWindow.bmp" usedList="bmpPic1" />
+		</Bitmaps>
+	</Commands>
+	<CommandPlacements>
+		<CommandPlacement guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" priority="0x0100">
+			<Parent guid="guidSHLMainMenu" id="IDG_VS_VIEW_ORG_WINDOWS"/>
+		</CommandPlacement>
+		<CommandPlacement guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" priority="0x0100">
+		  <Parent guid="guidSHLMainMenu" id="IDG_VS_TOOLSB_NEWWINDOWS"/>
+		</CommandPlacement>
+	</CommandPlacements>
+    <KeyBindings>
+      <KeyBinding editor="guidVSStd97" guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" key1="W" mod1="Control" key2="H" mod2="Control" />
+	   <KeyBinding editor="guidVSStd97" guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" key1="W" mod1="Control" key2="H" />
+    </KeyBindings>
+	<Symbols>
+		<GuidSymbol name="guidRuntimeShellPkg" value="{<#= this.Dsl.PackageGuid #>}" />
+		<GuidSymbol name="guidInstallFactoryReferenceCommand" value="{85fe557d-4cb1-428c-9cf0-497624473978}">
+			<IDSymbol name="cmdidInstallFactoryReferenceCommand" value="0x15B3" />
+			<IDSymbol name="grpidInstallFactoryReferenceCommandGroup" value="0x58C4" />
+		</GuidSymbol>
+		<GuidSymbol name="guidOpenSolutionBuilderCommand" value="{43649871-de44-4b36-8745-73b8ffd737b3}">
+			<IDSymbol name="cmdidOpenSolutionBuilderCommand" value="0x0101" />
+		</GuidSymbol>
+		<GuidSymbol name="guidOpenSolutionBuilderBitmap" value="{9e7810ed-4e56-488a-ba56-34dd8cdeff31}">
+			<IDSymbol name="bmpPic1" value="1"/>
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>
