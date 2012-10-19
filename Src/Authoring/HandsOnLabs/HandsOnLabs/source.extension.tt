@@ -16,14 +16,19 @@
 		<GettingStartedGuide><#=HandsOnLabsToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
 		<PreviewImage>Resources\VsixPreview.png</PreviewImage>
 		<SupportedProducts>
-		  <VisualStudio Version="10.0">
-			<Edition>Ultimate</Edition>
-			<Edition>Premium</Edition>
-			<Edition>Pro</Edition>
-		  </VisualStudio>
+			<VisualStudio Version="10.0">
+				<Edition>Ultimate</Edition>
+				<Edition>Premium</Edition>
+				<Edition>Pro</Edition>
+			</VisualStudio>
+			<VisualStudio Version="11.0">
+				<Edition>Ultimate</Edition>
+				<Edition>Premium</Edition>
+				<Edition>Pro</Edition>
+			</VisualStudio>
 		</SupportedProducts>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
-	  </Identifier>
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
+	</Identifier>
 	<References>
 		<Reference Id="<#=VsixInfo.PatternToolkitBuilder.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitBuilder.Version #>">
 			<Name><#=VsixInfo.PatternToolkitBuilder.Name #></Name>

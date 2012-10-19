@@ -2,49 +2,54 @@
 <#@ Include File="..\..\..\MasterVSIXInfo.ttinclude" #>
 <#@ Include File="ToolkitVersionInfo.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
-<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-	<Identifier Id="<#=RuntimeToolkitInfo.Identifier #>">
-		<Name><#=RuntimeToolkitInfo.Name#></Name>
-		<Author><#=RuntimeToolkitInfo.Author#></Author>
-		<Version><#=RuntimeToolkitInfo.Version#></Version>
-		<Description xml:space="preserve"><#=RuntimeToolkitInfo.Description#></Description>
-		<Locale>1033</Locale>
-		<Icon>Resources\RunTimeVsix.png</Icon>
-		<MoreInfoUrl><#=RuntimeToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
-		<GettingStartedGuide><#=RuntimeToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
-		<PreviewImage>Resources\RunTimeVsixPreview.png</PreviewImage>
-		<InstalledByMsi>false</InstalledByMsi>
-		<SupportedProducts>
-			<VisualStudio Version="10.0">
-				<Edition>Ultimate</Edition>
-				<Edition>Premium</Edition>
-				<Edition>Pro</Edition>
-			</VisualStudio>
-    </SupportedProducts>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0"/>
-	</Identifier>
-	<References>
-		<Reference Id="<#=VsixInfo.NuGetPackageManager.Identifier#>" MinVersion="<#=VsixInfo.NuGetPackageManager.Version#>">
-			<Name><#=VsixInfo.NuGetPackageManager.Name#></Name>
-			<MoreInfoUrl><#=VsixInfo.NuGetPackageManager.MoreInfoUrl#></MoreInfoUrl>
-		</Reference>
-	</References>
-	<Content>
-		<VsPackage>|Runtime.Shell;PkgdefProjectOutputGroup|</VsPackage>
-		<MefComponent>|Runtime|</MefComponent>
-		<MefComponent>|Runtime.Shell|</MefComponent>
-		<MefComponent>|Runtime.Store|</MefComponent>
-		<MefComponent>|Runtime.Schema|</MefComponent>
-		<MefComponent>|Library|</MefComponent>
-		<MefComponent>|Extensibility|</MefComponent>
-		<Assembly AssemblyName="Microsoft.VisualStudio.Patterning.Runtime, Version=<#=RuntimeToolkitInfo.Version#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5">|Runtime|</Assembly>
-    <!-- Feature EXtension Runtime -->
-    <VsPackage>Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.pkgdef</VsPackage>
-    <VsPackage>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.pkgdef</VsPackage>
-    <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</MefComponent>
-    <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.dll</MefComponent>
-    <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</MefComponent>
-    <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.dll</MefComponent>
-    <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Library.dll</MefComponent>
-  </Content>
-</Vsix>
+  <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+    <Identifier Id="<#=RuntimeToolkitInfo.Identifier #>">
+      <Name><#=RuntimeToolkitInfo.Name#></Name>
+      <Author><#=RuntimeToolkitInfo.Author#></Author>
+      <Version><#=RuntimeToolkitInfo.Version#></Version>
+      <Description xml:space="preserve"><#=RuntimeToolkitInfo.Description#></Description>
+      <Locale>1033</Locale>
+      <Icon>Resources\RunTimeVsix.png</Icon>
+      <MoreInfoUrl><#=RuntimeToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
+      <GettingStartedGuide><#=RuntimeToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
+      <PreviewImage>Resources\RunTimeVsixPreview.png</PreviewImage>
+      <InstalledByMsi>false</InstalledByMsi>
+      <SupportedProducts>
+        <VisualStudio Version="10.0">
+          <Edition>Ultimate</Edition>
+          <Edition>Premium</Edition>
+          <Edition>Pro</Edition>
+        </VisualStudio>
+        <VisualStudio Version="11.0">
+          <Edition>Ultimate</Edition>
+          <Edition>Premium</Edition>
+          <Edition>Pro</Edition>
+        </VisualStudio>
+      </SupportedProducts>
+      <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
+    </Identifier>
+    <References>
+      <Reference Id="<#=VsixInfo.NuGetPackageManager.Identifier#>" MinVersion="<#=VsixInfo.NuGetPackageManager.Version#>">
+        <Name><#=VsixInfo.NuGetPackageManager.Name#></Name>
+        <MoreInfoUrl><#=VsixInfo.NuGetPackageManager.MoreInfoUrl#></MoreInfoUrl>
+      </Reference>
+    </References>
+    <Content>
+      <VsPackage>|Runtime.Shell;PkgdefProjectOutputGroup|</VsPackage>
+      <MefComponent>|Runtime|</MefComponent>
+      <MefComponent>|Runtime.Shell|</MefComponent>
+      <MefComponent>|Runtime.Store|</MefComponent>
+      <MefComponent>|Runtime.Schema|</MefComponent>
+      <MefComponent>|Library|</MefComponent>
+      <MefComponent>|Extensibility|</MefComponent>
+      <Assembly AssemblyName="Microsoft.VisualStudio.Patterning.Runtime, Version=<#=RuntimeToolkitInfo.Version#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5">|Runtime|</Assembly>
+      <!-- Feature EXtension Runtime -->
+      <VsPackage>Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.pkgdef</VsPackage>
+      <VsPackage>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.pkgdef</VsPackage>
+      <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</MefComponent>
+      <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.dll</MefComponent>
+      <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</MefComponent>
+      <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.dll</MefComponent>
+      <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Library.dll</MefComponent>
+    </Content>
+  </Vsix>

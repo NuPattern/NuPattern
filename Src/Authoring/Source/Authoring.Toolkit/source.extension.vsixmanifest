@@ -17,8 +17,13 @@
 				<Edition>Premium</Edition>
 				<Edition>Pro</Edition>
 			</VisualStudio>
+			<VisualStudio Version="11.0">
+				<Edition>Ultimate</Edition>
+				<Edition>Premium</Edition>
+				<Edition>Pro</Edition>
+			</VisualStudio>
 		</SupportedProducts>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
 	</Identifier>
 	<References>
 		<Reference Id="NuPackToolsVsix.Microsoft.67e54e40-0ae3-42c5-a949-fddf5739e7a5" MinVersion="1.6.21215.9133">

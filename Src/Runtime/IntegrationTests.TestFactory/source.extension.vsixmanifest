@@ -6,15 +6,20 @@
 		<Version>1.0</Version>
 		<Description xml:space="preserve">Runtime IntegrationTests TestFactory.</Description>
 		<Locale>1033</Locale>
-		<SupportedProducts>
-			<VisualStudio Version="10.0">
-				<Edition>VSTS</Edition>
-				<Edition>VSTD</Edition>
-				<Edition>Pro</Edition>
-			</VisualStudio>
-		</SupportedProducts>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
-	</Identifier>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+      </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
+  </Identifier>
 	<References />
 	<Content>
 		<MefComponent>|Runtime.IntegrationTests.TestFactory|</MefComponent>

@@ -27,14 +27,19 @@ string vsPackageAssembly = "Microsoft.VisualStudio.Patterning.Authoring.ToolkitD
 				<Edition>Premium</Edition>
 				<Edition>Pro</Edition>
 			</VisualStudio>
+			<VisualStudio Version="11.0">
+				<Edition>Ultimate</Edition>
+				<Edition>Premium</Edition>
+				<Edition>Pro</Edition>
+			</VisualStudio>
 		</SupportedProducts>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
 	</Identifier>
 	<References>
-        <Reference Id="<#=VsixInfo.PatternToolkitRuntime.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitRuntime.Version #>">
-            <Name><#=VsixInfo.PatternToolkitRuntime.Name #></Name>
-            <VsixPath><#=VsixInfo.PatternToolkitRuntime.VsixFileName #></VsixPath>
-        </Reference>
+		<Reference Id="<#=VsixInfo.PatternToolkitRuntime.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitRuntime.Version #>">
+			<Name><#=VsixInfo.PatternToolkitRuntime.Name #></Name>
+			<VsixPath><#=VsixInfo.PatternToolkitRuntime.VsixFileName #></VsixPath>
+		</Reference>
 	</References>
 	<Content>
 		<VsPackage>|<#=VsPackageProject#>;PkgdefProjectOutputGroup|</VsPackage>
