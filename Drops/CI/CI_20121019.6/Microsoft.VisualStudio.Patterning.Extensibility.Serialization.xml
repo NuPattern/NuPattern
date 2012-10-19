@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.VisualStudio.Patterning.Extensibility.Serialization</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.CustomCreationConverter`1">
+            <summary>
+            A custom converter for creating Json objects.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonConverter">
+            <summary>
+            A Json Converter
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonConverter.#ctor(System.Object)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonConverter"/> class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonConverter.InnerConverter">
+            <summary>
+            Provides access to the encapsulated converter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.CustomCreationConverter`1.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.CustomCreationConverter`1"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.CustomCreationConverter`1.Create(System.Type)">
+            <summary>
+            Creates an object which will then be populated by the serializer.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.CustomCreationConverterInternal`1">
+            <summary>
+            A wrapper class for a custom creationc converter.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.CustomCreationConverterInternal`1.Create(System.Type)">
+            <summary>
+            Creates something
+            </summary>
+            <param name="objectType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Formatting">
+            <summary>
+            Json formatting
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Formatting.Indented">
+            <summary>
+            Indented formatting
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Formatting.None">
+            <summary>
+            No formatting
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.IsoDateTimeConverter">
+            <summary>
+            A data and time converter that uses Iso times.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.IsoDateTimeConverter.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.IsoDateTimeConverter"/> class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonConvert">
+            <summary>
+            A conversion class for serializing objects in Json.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonConvert.SerializeObject(System.Object)">
+            <summary>
+            Serializes an object value to Json.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonConvert.SerializeObject(System.Object,Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Formatting,Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializerSettings)">
+            <summary>
+            Serializes an object to Json, using the given settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonConvert.SerializeObject(System.Object,Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Formatting,Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonConverter[])">
+            <summary>
+            Serializes an object value to Json, using the given converters.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonConvert.DeserializeObject``1(System.String,Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonConverter[])">
+            <summary>
+            Deserializes an object from Json, using the given converters.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="converters"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonExpandableTypeConverter`1">
+            <summary>
+            A type converter that converts to and from a Json string serialization of a value 
+            of the given <typeparamref name="TValue"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonTypeConverter`1">
+            <summary>
+            A type converter that converts to and from a Json string serialization of a value 
+            of the given <typeparamref name="TValue"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonTypeConverter`1.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Serializes the value to a Json string.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonTypeConverter`1.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the given string value to the typed value.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonExpandableTypeConverter`1.GetPropertiesSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns whether this object supports properties.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <returns>true if System.ComponentModel.TypeConverter.GetProperties(System.Object)
+                should be called to find the properties of this object; otherwise, false.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonExpandableTypeConverter`1.GetProperties(System.ComponentModel.ITypeDescriptorContext,System.Object,System.Attribute[])">
+            <summary>
+            Returns a collection of properties for the type of array specified by the
+                value parameter.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="value">An <see cref="T:System.Object"/> that specifies the type of array for which to get properties.</param>
+            <param name="attributes">An array of type <see cref="T:System.Attribute"/> that is used as a filter.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializationException">
+            <summary>
+            A Json serialization exception
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializationException.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializationException"/> exception.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializationException"/> exception.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializationException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializationException"/> exception.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializationException"/> exception.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializerSettings">
+            <summary>
+            Settings for serialization
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializerSettings.ReferenceLoopHandling">
+            <summary>
+            Loop handling options
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializerSettings.TypeNameHandling">
+            <summary>
+            Type name handling options
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.ReferenceLoopHandling">
+            <summary>
+            Loop handling options
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.ReferenceLoopHandling.Error">
+            <summary>
+            Throw a <see cref="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.JsonSerializationException"/> when a loop is encountered. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.ReferenceLoopHandling.Ignore">
+            <summary>
+            Ignore loop references and do not serialize. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.ReferenceLoopHandling.Serialize">
+            <summary>
+            Serialize loop references. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.TypeNameHandling">
+            <summary>
+            Type handling options
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.TypeNameHandling.None">
+            <summary>
+            Do not include the .NET type name when serializing types. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.TypeNameHandling.Objects">
+            <summary>
+            Include the .NET type name when serializing into a JSON object structure. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.TypeNameHandling.Arrays">
+            <summary>
+            Include the .NET type name when serializing into a JSON array structure. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.TypeNameHandling.All">
+            <summary>
+            Always include the .NET type name when serializing. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.Patterning.Extensibility.Serialization.TypeNameHandling.Auto">
+            <summary>
+            Include the .NET type name when the type of the object being serialized is not the same as its declared type. 
+            </summary>
+        </member>
+    </members>
+</doc>
