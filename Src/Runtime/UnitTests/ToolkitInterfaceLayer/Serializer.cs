@@ -11,7 +11,7 @@ namespace Toolkit14
 	///	Description for WebService.Architecture.Folder.DataContract.Serializer
 	///	</summary>
 	[Description("Description for WebService.Architecture.Folder.DataContract.Serializer")]
-	[ToolkitInterfaceProxy(ExtensionId = "Microsoft", DefinitionId = "fe5452b1-427d-4295-8864-f021d6780785")]
+    [ToolkitInterfaceProxy(ExtensionId = "The Outercurve Foundation", DefinitionId = "fe5452b1-427d-4295-8864-f021d6780785")]
 	internal partial class Serializer : ISerializer
 	{
 		private IProductProxy<ISerializer> proxy;

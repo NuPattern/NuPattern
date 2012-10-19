@@ -109,10 +109,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.VisualStudio.TextTemplating.VSHost.10.0\v4.0_10.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.TextTemplating.VSHost.10.0.dll</HintPath>
     </Reference>
-    <Reference Include="NuGet.Core, Version=1.6.21205.9031, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\NuGet.Core.1.6.1\lib\net40-Client\NuGet.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -135,7 +131,6 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="DependencyDeployer.cs" />
     <Compile Include="Constants.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -622,9 +617,6 @@
     </Content>
     <None Include="Guidance\RuntimeInterfaces.cd" />
     <None Include="Microsoft.VisualStudio.Patterning.Runtime.Shell.targets" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>

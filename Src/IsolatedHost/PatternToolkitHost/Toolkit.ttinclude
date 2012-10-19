@@ -3,6 +3,6 @@
     {
         public const string ToolkitVersion = "1.0.0.0";
         public const string ToolkitName = "LyncDeploymentToolkit";
-        public const string AuthorName = "Microsoft";
+        public const string AuthorName = "The Outercurve Foundation";
     }
 #>

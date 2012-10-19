@@ -129,22 +129,6 @@
   <data name="RuntimeShellPackage_DumpMefLogs" xml:space="preserve">
     <value>A MEF exception happened loading '{0}'. The MEF logs will be opened now for diagnostics.</value>
   </data>
-  <data name="RuntimeShellPackage_ExtensionNotFound" xml:space="preserve">
-    <value>Could not locate the package extension.</value>
-  </data>
-  <data name="RuntimeShellPackage_FailedPackageDependencies" xml:space="preserve">
-    <value>'{0}' extension
-
-Unable to download and install critical dependent packages to initialize this extension.
-This extension will fail to load correctly, and the 'Solution Builder' tool window will not be available in this session of Visual Studio.
-
-Please ensure a recent version of the 'NuGet Package Manager' extension is installed (downloaded from the Visual Studio Gallery), and that you are connected to a network.
-
-Please connect to a network and restart Visual Studio to complete the installation and initialization of this extension correctly.</value>
-  </data>
-  <data name="RuntimeShellPackage_PackageManagerNotInstalled" xml:space="preserve">
-    <value>The Nuget Package Manager service could not be found.</value>
-  </data>
   <data name="ToolkitReferencesFolderName" xml:space="preserve">
     <value>Pattern Toolkit References</value>
   </data>

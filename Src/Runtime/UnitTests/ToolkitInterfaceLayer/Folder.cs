@@ -11,7 +11,7 @@ namespace Toolkit14
 	///	Description for WebService.Architecture.Folder
 	///	</summary>
 	[Description("Description for WebService.Architecture.Folder")]
-	[ToolkitInterfaceProxy(ExtensionId = "Microsoft", DefinitionId = "ccca4e03-00c1-49cf-bcb7-a5eef9243a71")]
+    [ToolkitInterfaceProxy(ExtensionId = "The Outercurve Foundation", DefinitionId = "ccca4e03-00c1-49cf-bcb7-a5eef9243a71")]
 	internal partial class Folder : IFolder
 	{
 		private IAbstractElementProxy<IFolder> proxy;

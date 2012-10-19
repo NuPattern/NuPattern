@@ -11,7 +11,7 @@ namespace Toolkit14
 	///	Description for WebService.Architecture.Folder.DataContract
 	///	</summary>
 	[Description("Description for WebService.Architecture.Folder.DataContract")]
-	[ToolkitInterfaceProxy(ExtensionId = "Microsoft", DefinitionId = "85a60694-1cd9-42db-b531-102c987ab947")]
+    [ToolkitInterfaceProxy(ExtensionId = "The Outercurve Foundation", DefinitionId = "85a60694-1cd9-42db-b531-102c987ab947")]
 	internal partial class DataContract : IDataContract
 	{
 		private IAbstractElement target;

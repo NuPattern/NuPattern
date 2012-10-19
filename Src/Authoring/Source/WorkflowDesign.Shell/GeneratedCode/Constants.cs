@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
 		public const string ProductName = @"WorkflowDesign";
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-		public const string CompanyName = @"Microsoft";
+		public const string CompanyName = @"The Outercurve Foundation";
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
 		public const string ProductVersion = "1.2.0.0";
 

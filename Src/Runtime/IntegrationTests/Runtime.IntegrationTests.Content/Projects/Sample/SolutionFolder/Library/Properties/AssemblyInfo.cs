@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Library")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Company")]
 [assembly: AssemblyProduct("Library")]
 [assembly: AssemblyCopyright("Copyright © Company 2010")]
 [assembly: AssemblyTrademark("")]

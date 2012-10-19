@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TestProviders2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Company")]
 [assembly: AssemblyProduct("TestProviders2")]
 [assembly: AssemblyCopyright("Copyright © Company 2010")]
 [assembly: AssemblyTrademark("")]

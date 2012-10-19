@@ -8,6 +8,6 @@
         public const string ProductIdentifier = "PatternToolkitHost"; // No spaces allowed
         public const string ProductFileName = ProductIdentifier;
         public const string DiskFolderLocation = ProductFileName;
-        public const string CompanyName = "Microsoft";
+        public const string CompanyName = "The Outercurve Foundation";
     }
 #>

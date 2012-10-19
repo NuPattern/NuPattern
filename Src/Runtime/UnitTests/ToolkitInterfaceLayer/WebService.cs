@@ -13,7 +13,7 @@ namespace Toolkit14
 	///	</summary>
 	[Description("Description for WebService")]
 	[PartCreationPolicy(CreationPolicy.NonShared)]
-	[ToolkitInterfaceProxy(ExtensionId = "Microsoft", DefinitionId = "a7d76993-7a93-4bd1-b4f2-1e72af2796a2")]
+    [ToolkitInterfaceProxy(ExtensionId = "The Outercurve Foundation", DefinitionId = "a7d76993-7a93-4bd1-b4f2-1e72af2796a2")]
 	internal partial class WebService : IWebService
 	{
 		private IProductProxy<IWebService> proxy;

@@ -9,7 +9,7 @@ namespace Toolkit14
 	///	Description for WebService.Architecture
 	///	</summary>
 	[Description("Description for WebService.Architecture")]
-	[ToolkitInterfaceProxy(ExtensionId = "Microsoft", DefinitionId = "decb63d3-5dd6-488c-a606-65e01a232320")]
+    [ToolkitInterfaceProxy(ExtensionId = "The Outercurve Foundation", DefinitionId = "decb63d3-5dd6-488c-a606-65e01a232320")]
 	public partial class Architecture : IArchitecture
 	{
 		private IView target;

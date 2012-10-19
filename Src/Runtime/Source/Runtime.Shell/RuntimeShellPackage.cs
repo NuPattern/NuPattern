@@ -136,9 +136,6 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
                 throw;
             }
 
-            // Deploy Dependency Packages
-            this.DeployDependentPackages();
-
             // Add services to VS
             this.AddServices();
 
@@ -160,38 +157,6 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
             this.SolutionEvents.SolutionClosed += OnSolutionClosed;
 
             EnsureVsHelperInitializedHack();
-        }
-
-        private void DeployDependentPackages()
-        {
-            try
-            {
-                // Get extension directory
-                var extensionManager = this.GetService<SVsExtensionManager, IVsExtensionManager>();
-
-                var extensionDir = string.Empty;
-                var runtimeExtension = extensionManager.GetInstalledExtension(Constants.RuntimeShellPkgGuid);
-                if (runtimeExtension != null)
-                {
-                    extensionDir = runtimeExtension.InstallPath;
-                }
-                else
-                {
-                    throw new InvalidOperationException(Resources.RuntimeShellPackage_ExtensionNotFound);
-                }
-
-                //Deploy package
-                var dependency = new DependencyDeployer(this, Constants.PackageDependencies.PackageName, Constants.PackageDependencies.PackageVersion);
-                if (!dependency.IsDeployed(Path.Combine(extensionDir, Constants.PackageDependencies.Marker)))
-                {
-                    dependency.Deploy(extensionDir, Constants.PackageDependencies.TargetDir, Constants.PackageDependencies.TargetMask);
-                }
-            }
-            catch (Exception)
-            {
-                PackageUtility.ShowError(this, String.Format(CultureInfo.InvariantCulture, Resources.RuntimeShellPackage_FailedPackageDependencies, Constants.ProductName));
-                throw;
-            }
         }
 
         private void EnsureVsHelperInitializedHack()
