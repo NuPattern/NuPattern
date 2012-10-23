@@ -1311,6 +1311,7 @@
     <CopyVsixDebuggingDependencies>false</CopyVsixDebuggingDependencies>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" />
   <Import Project="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets" />
   <Import Project="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets" Condition="!exists('$(PatternToolkitBuilder)\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets')" />
   <!-- Properties for VSSDK/DSL Targets -->

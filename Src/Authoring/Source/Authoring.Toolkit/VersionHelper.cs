@@ -16,6 +16,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
     {
         private static string TargetsFilename = "Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets";
         private static string MSBuildNamespace = "http://schemas.microsoft.com/developer/msbuild/2003";
+        private static string ToolkitVersionPath = "{{{0}}}PatternToolkitVersion";
+        private static string HostVersionPath = "{{{0}}}PatternToolkitHostVersion";
 
         /// <summary>
         /// Synchronizes the targets file on disk with targets file in this version of the toolkit.
@@ -26,22 +28,21 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
             {
                 tracer.TraceInformation(Resources.AuthoringPackage_TraceSyncTargetsInitial);
 
-                // Does the file exist where it needs to be ?
+                // Verify targets file exists
                 var targetsPath = CalculateTargetsPath(MsBuildPath);
                 if (File.Exists(targetsPath))
                 {
-                    // Load file as XML
                     tracer.TraceVerbose(Resources.AuthoringPackage_TraceSyncTargetsRetrievingVersion, targetsPath);
 
-                    var version = GetTargetsVersion(targetsPath);
-                    if (!string.IsNullOrEmpty(version))
+                    var version = GetTargetsInfo(targetsPath);
+                    if (!string.IsNullOrEmpty(version.ToolkitVersion))
                     {
-                        // Compare versions
-                        if (!version.Equals(currentVersion, StringComparison.OrdinalIgnoreCase))
+                        // Compare version info
+                        if (!version.ToolkitVersion.Equals(currentVersion, StringComparison.OrdinalIgnoreCase))
                         {
                             tracer.TraceInformation(Resources.AuthoringPackage_TraceSyncTargetsUpdateVersion, targetsPath, version, currentVersion);
 
-                            // Write new targets version
+                            // Write updated targets
                             WriteFile(tracer, targetsPath, currentVersion);
                         }
                         else
@@ -56,7 +57,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
                 }
                 else
                 {
-                    // Write new targets version
+                    // Write current targets
                     WriteFile(tracer, targetsPath, currentVersion);
                 }
             }
@@ -75,20 +76,29 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
         }
 
         /// <summary>
-        /// Returns the version number within the targets file
+        /// Returns the info from targets file
         /// </summary>
-        internal static string GetTargetsVersion(string targetsPath)
+        internal static TargetsInfo GetTargetsInfo(string targetsPath)
         {
+            var targetsInfo = new TargetsInfo();
+
             XDocument document = XDocument.Load(targetsPath);
             var nsManager = new XmlNamespaceManager(new NameTable());
             nsManager.AddNamespace("", MSBuildNamespace);
-            var versionElement = document.Descendants(XName.Get(string.Format(CultureInfo.InvariantCulture, "{{{0}}}PatternToolkitVersion", MSBuildNamespace))).FirstOrDefault();
-            if (versionElement != null)
+
+            var toolkitVersionElement = document.Descendants(XName.Get(string.Format(CultureInfo.InvariantCulture, ToolkitVersionPath, MSBuildNamespace))).FirstOrDefault();
+            if (toolkitVersionElement != null)
             {
-                return (string)versionElement.Value;
+                targetsInfo.ToolkitVersion = (string)toolkitVersionElement.Value;
             }
 
-            return null;
+            var hostVersionElement = document.Descendants(XName.Get(string.Format(CultureInfo.InvariantCulture, HostVersionPath, MSBuildNamespace))).FirstOrDefault();
+            if (hostVersionElement != null)
+            {
+                targetsInfo.HostVersion = (string)hostVersionElement.Value;
+            }
+
+            return targetsInfo;
         }
 
         private static void WriteFile(ITraceSource tracer, string targetsPath, string currentVersion)
@@ -114,6 +124,19 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
                 file.Write(Resources.Microsoft_VisualStudio_Patterning_Authoring_PatternToolkitVersion, 0, Resources.Microsoft_VisualStudio_Patterning_Authoring_PatternToolkitVersion.Length);
                 file.Flush();
             }
+        }
+    
+        internal class TargetsInfo
+        {
+            /// <summary>
+            /// Gets or sets the version of the toolkit
+            /// </summary>
+            public string ToolkitVersion { get; set; }
+
+            /// <summary>
+            /// Gets or sets the version of the host
+            /// </summary>
+            public string HostVersion { get; set; }
         }
     }
 }

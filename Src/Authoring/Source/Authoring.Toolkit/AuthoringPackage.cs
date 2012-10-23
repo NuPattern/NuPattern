@@ -20,6 +20,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<AuthoringPackage>();
 
+		internal static string CurrentHostVersion = "10.0";
         internal static string CurrentToolkitVersion = "1.3.20.0";
         internal static string MsBuildPath = @"%localappdata%\Microsoft\MSBuild\Outercurve\Pattern Toolkit Builder";
 

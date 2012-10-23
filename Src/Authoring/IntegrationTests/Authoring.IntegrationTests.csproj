@@ -128,7 +128,7 @@
     <Compile Include="Commands.cs" />
     <Compile Include="Commands\CreateGuidanceDocumentsCommandSpec.cs" />
     <Compile Include="CreateOnUnfoldSpec.cs" />
-    <Compile Include="VersionTargetsSpec.cs" />
+    <Compile Include="VersionHelperSpec.cs" />
     <Content Include="VersionTargetsSpec\ClassLibrary1\Class1.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

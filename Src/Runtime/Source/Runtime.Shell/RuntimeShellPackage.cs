@@ -35,8 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
     /// </summary>
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Disposed on package dispose.")]
     [ProvideEditorExtension(typeof(ProductStateEditorFactory), Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension, 8, DefaultName = Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreEditorDescription)]
-    //// TODO: see why we need to load on no solution.
-    [ProvideAutoLoad(UIContextGuids.NoSolution)]
+    [ProvideAutoLoad(UIContextGuids.SolutionExists)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [ProvideToolWindow(typeof(SolutionBuilderToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed)]
