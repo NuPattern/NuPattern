@@ -20,7 +20,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Runtime.vsmdi = Runtime.vsmdi
 		..\SourceAnalysis.StyleCop = ..\SourceAnalysis.StyleCop
 		..\SourceAnalysis.TestProjects.StyleCop = ..\SourceAnalysis.TestProjects.StyleCop
-		tmp3235.tmp = tmp3235.tmp
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Store", "Source\Runtime.Store\Runtime.Store.csproj", "{0EF7E7D4-B10B-4FC9-B4D0-66E360F4338A}"
