@@ -10,7 +10,7 @@
 		<Version><#=AutomationLibraryToolkitInfo.Version#></Version>
 		<Description xml:space="preserve"><#=AutomationLibraryToolkitInfo.Description#></Description>
 		<Locale>1033</Locale>
-		<License></License>
+		<License>LICENSE.txt</License>
 		<Icon>Resources\DesignTimeVsix.png</Icon>
 		<MoreInfoUrl><#=AutomationLibraryToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
 		<GettingStartedGuide><#=AutomationLibraryToolkitInfo.GettingStartedUrl#></GettingStartedGuide>

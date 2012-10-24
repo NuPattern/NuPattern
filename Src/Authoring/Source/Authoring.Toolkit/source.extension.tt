@@ -10,7 +10,7 @@
 		<Version><#=AuthoringToolkitInfo.Version#></Version>
 		<Description xml:space="preserve"><#=AuthoringToolkitInfo.Description#></Description>
 		<Locale>1033</Locale>
-		<License>PatternToolkitBuilderLicense.rtf</License>
+		<License>LICENSE.txt</License>
 		<Icon>Resources\DesignTimeVsix.png</Icon>
 		<MoreInfoUrl><#=AuthoringToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
 		<GettingStartedGuide><#=AuthoringToolkitInfo.GettingStartedUrl#></GettingStartedGuide>

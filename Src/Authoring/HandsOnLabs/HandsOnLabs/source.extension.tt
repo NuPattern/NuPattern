@@ -10,7 +10,7 @@
 		<Version><#=HandsOnLabsToolkitInfo.Version#></Version>
 		<Description xml:space="preserve"><#=HandsOnLabsToolkitInfo.Description#></Description>
 		<Locale>1033</Locale>
-		<License>PatternToolkitBuilderLabsLicense.rtf</License>
+		<License>LICENSE.txt</License>
 		<Icon>Resources\ToolkitIcon.png</Icon>
 		<MoreInfoUrl><#=HandsOnLabsToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
 		<GettingStartedGuide><#=HandsOnLabsToolkitInfo.GettingStartedUrl#></GettingStartedGuide>

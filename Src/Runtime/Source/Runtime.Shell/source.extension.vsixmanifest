@@ -7,6 +7,7 @@
       <Description xml:space="preserve">The Solution Builder tool window for accelerating solution development using Pattern Toolkit extensions.</Description>
       <Locale>1033</Locale>
       <Icon>Resources\RunTimeVsix.png</Icon>
+      <License>LICENSE.txt</License>
       <MoreInfoUrl>http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b</MoreInfoUrl>
       <GettingStartedGuide>http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b</GettingStartedGuide>
       <PreviewImage>Resources\RunTimeVsixPreview.png</PreviewImage>

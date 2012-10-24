@@ -10,6 +10,7 @@
       <Description xml:space="preserve"><#=RuntimeToolkitInfo.Description#></Description>
       <Locale>1033</Locale>
       <Icon>Resources\RunTimeVsix.png</Icon>
+      <License>LICENSE.txt</License>
       <MoreInfoUrl><#=RuntimeToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
       <GettingStartedGuide><#=RuntimeToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
       <PreviewImage>Resources\RunTimeVsixPreview.png</PreviewImage>
