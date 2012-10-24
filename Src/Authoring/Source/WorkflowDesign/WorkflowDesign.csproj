@@ -338,13 +338,11 @@
   <!-- Project specific properties to control T4/DSL targets -->
   <PropertyGroup>
     <TransformOnBuild>False</TransformOnBuild>
-    <ReferencesExtensionsHive>10.0Exp</ReferencesExtensionsHive>
-    <CopyVsixDebuggingDependencies>false</CopyVsixDebuggingDependencies>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\DSLTools\v10.0\Microsoft.DSLTools.targets" />
-  <Import Project="..\..\Source\Authoring.Toolkit\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets" />
-  <Import Project="..\..\Source\Authoring.Toolkit\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets" Condition="!exists('$(PatternToolkitBuilder)\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets')" />
+  <Import Project="..\..\Source\Authoring.Toolkit\Authoring.PatternToolkitVersion.targets" />
+  <Import Project="..\..\Source\Authoring.Toolkit\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets" />
   <PropertyGroup>
     <BranchRoot>..\..\..\</BranchRoot>
   </PropertyGroup>

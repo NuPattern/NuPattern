@@ -1,0 +1,8 @@
+﻿<#+
+// Targets Info
+public static class AuthoringTargetsInfo
+{
+	public const string MsBuildPath = "$(LocalAppData)\\Microsoft\\MSBuild";
+	public const string VersionTargets = "Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets";
+}
+#>

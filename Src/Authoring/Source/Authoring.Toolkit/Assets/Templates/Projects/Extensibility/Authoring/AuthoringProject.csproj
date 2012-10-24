@@ -80,27 +80,27 @@
 	<ItemGroup>
 		<Folder Include="Properties\" />
 		<Compile Include="Properties\AssemblyInfo.cs" />
-        <Content Include="Properties\Schemas\LibrarySchema.xsd">
-          <Visible>true</Visible>
-          <Link>Properties\Schemas\LibrarySchema.xsd</Link>
-          <FixedLink>$(PatternToolkitRuntime)\GeneratedCode\LibrarySchema.xsd</FixedLink>
-        </Content>
-        <Content Include="Properties\Schemas\PatternModelSchema.xsd">
-          <Visible>true</Visible>
-          <Link>Properties\Schemas\PatternModelSchema.xsd</Link>
-          <FixedLink>$(PatternToolkitRuntime)\GeneratedCode\PatternModelSchema.xsd</FixedLink>
-        </Content>
-        <Content Include="Properties\Schemas\WorkflowDesignSchema.xsd">
-          <Visible>true</Visible>
-          <Link>Properties\Schemas\WorkflowDesignSchema.xsd</Link>
-          <FixedLink>$(PatternToolkitBuilder)\GeneratedCode\WorkflowDesignSchema.xsd</FixedLink>
-        </Content>
-        <Folder Include="Assets\" />
-		    <Folder Include="Assets\Templates\Text\" />
-		    <Folder Include="Assets\Templates\Items\" />
-		    <Folder Include="Assets\Templates\Projects\" />
-        <Folder Include="Assets\Wizards\" />
-        <Folder Include="Assets\Wizards\Pages\" />
+		<Content Include="Properties\Schemas\LibrarySchema.xsd">
+			<Visible>true</Visible>
+			<Link>Properties\Schemas\LibrarySchema.xsd</Link>
+			<FixedLink>$(PatternToolkitRuntime)\GeneratedCode\LibrarySchema.xsd</FixedLink>
+		</Content>
+		<Content Include="Properties\Schemas\PatternModelSchema.xsd">
+			<Visible>true</Visible>
+			<Link>Properties\Schemas\PatternModelSchema.xsd</Link>
+			<FixedLink>$(PatternToolkitRuntime)\GeneratedCode\PatternModelSchema.xsd</FixedLink>
+		</Content>
+		<Content Include="Properties\Schemas\WorkflowDesignSchema.xsd">
+			<Visible>true</Visible>
+			<Link>Properties\Schemas\WorkflowDesignSchema.xsd</Link>
+			<FixedLink>$(PatternToolkitBuilder)\GeneratedCode\WorkflowDesignSchema.xsd</FixedLink>
+		</Content>
+		<Folder Include="Assets\" />
+		<Folder Include="Assets\Templates\Text\" />
+		<Folder Include="Assets\Templates\Items\" />
+		<Folder Include="Assets\Templates\Projects\" />
+		<Folder Include="Assets\Wizards\" />
+		<Folder Include="Assets\Wizards\Pages\" />
 		<Folder Include="Resources\" />
 		<Content Include="Resources\ToolkitIcon.png">
 			<IncludeInVSIX>True</IncludeInVSIX>
@@ -119,32 +119,32 @@
 			<IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
 		</ProjectReference>
 	</ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <!-- Properties for Toolkit Targets -->
-  <PropertyGroup>
-    <CopyVsixDebuggingDependencies>true</CopyVsixDebuggingDependencies>
-	<CopyVsixToFolder Condition=" '$(TeamBuildConstants)' == '' ">$(SolutionDir)Binaries</CopyVsixToFolder>
+	<ItemGroup>
+		<Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
+	</ItemGroup>
+	<!-- Properties for Toolkit Targets -->
+	<PropertyGroup>
+		<CopyVsixDebuggingDependencies>true</CopyVsixDebuggingDependencies>
+		<CopyVsixToFolder Condition=" '$(TeamBuildConstants)' == '' ">$(SolutionDir)Binaries</CopyVsixToFolder>
 	<!-- <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\TeamProjectRoot\Projects\BranchPath\Binaries</CopyVsixToFolder> -->
-  </PropertyGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" />
-  <Import Project="$(LocalAppData)\Microsoft\MSBuild\Outercurve\Pattern Toolkit Builder\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets"/>
-  <!-- Properties for VSSDK/DSL Targets -->
+	</PropertyGroup>
+	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+	<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" />
+	<Import Project="$(LocalAppData)\Microsoft\MSBuild\Outercurve\Pattern Toolkit Builder\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets"/>
+	<!-- Properties for VSSDK/DSL Targets -->
 	<PropertyGroup>
 		<RegisterOutputPackage>true</RegisterOutputPackage>
 		<RegisterWithCodebase>true</RegisterWithCodebase>
 		<GacTargetOutput>false</GacTargetOutput>
-    <GeneratePkgDefFile>false</GeneratePkgDefFile>
-  </PropertyGroup>
+		<GeneratePkgDefFile>false</GeneratePkgDefFile>
+	</PropertyGroup>
 	<PropertyGroup>
 		<StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
 		<StartAction>Program</StartAction>
 		<StartArguments>/rootsuffix Exp</StartArguments>
 	</PropertyGroup>
 	<!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-    	Other similar extension points exist, see Microsoft.Common.targets.
+			Other similar extension points exist, see Microsoft.Common.targets.
 	<Target Name="BeforeBuild">
 	</Target>
 	<Target Name="AfterBuild">

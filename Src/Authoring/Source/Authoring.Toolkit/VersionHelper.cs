@@ -6,6 +6,8 @@ using System.Xml;
 using System.Xml.Linq;
 using Microsoft.VisualStudio.Patterning.Authoring.Authoring.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using System.Collections.Generic;
+using Microsoft.VisualStudio.ExtensionManager;
 
 namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 {
@@ -14,52 +16,35 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
     /// </summary>
     internal static class VersionHelper
     {
-        private static string TargetsFilename = "Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets";
         private static string MSBuildNamespace = "http://schemas.microsoft.com/developer/msbuild/2003";
-        private static string ToolkitVersionPath = "{{{0}}}PatternToolkitVersion";
-        private static string HostVersionPath = "{{{0}}}PatternToolkitHostVersion";
+        private static string PatternToolkitVersionElementName = "PatternToolkitVersion";
+
+        /// <summary>
+        /// Converts the given collection of extension properties and their identifiers to full paths.
+        /// </summary>
+        internal static Dictionary<string, string> GetInstalledExtensionPaths(IVsExtensionManager extensionManager, IDictionary<string, string> extensionIds)
+        {
+            // Update installed Extensions
+            var installedExtensionPaths = new Dictionary<string, string>();
+            extensionIds.ToList().ForEach(ie =>
+            {
+                installedExtensionPaths.Add(ie.Key, GetInstalledExtensionPath(extensionManager, ie.Value));
+            });
+
+            return installedExtensionPaths;
+        }
 
         /// <summary>
         /// Synchronizes the targets file on disk with targets file in this version of the toolkit.
         /// </summary>
-        internal static void SyncTargets(ITraceSource tracer, string MsBuildPath, string currentVersion)
+        internal static void SyncTargets(ITraceSource tracer, TargetsInfo targetsInfo)
         {
             try
             {
                 tracer.TraceInformation(Resources.AuthoringPackage_TraceSyncTargetsInitial);
 
-                // Verify targets file exists
-                var targetsPath = CalculateTargetsPath(MsBuildPath);
-                if (File.Exists(targetsPath))
-                {
-                    tracer.TraceVerbose(Resources.AuthoringPackage_TraceSyncTargetsRetrievingVersion, targetsPath);
-
-                    var version = GetTargetsInfo(targetsPath);
-                    if (!string.IsNullOrEmpty(version.ToolkitVersion))
-                    {
-                        // Compare version info
-                        if (!version.ToolkitVersion.Equals(currentVersion, StringComparison.OrdinalIgnoreCase))
-                        {
-                            tracer.TraceInformation(Resources.AuthoringPackage_TraceSyncTargetsUpdateVersion, targetsPath, version, currentVersion);
-
-                            // Write updated targets
-                            WriteFile(tracer, targetsPath, currentVersion);
-                        }
-                        else
-                        {
-                            tracer.TraceInformation(Resources.AuthoringPackage_TraceSyncTargetsNoVersionUpdate, targetsPath, currentVersion);
-                        }
-                    }
-                    else
-                    {
-                        tracer.TraceError(Resources.AuthoringPackage_TraceSyncTargetsNoVersion, targetsPath);
-                    }
-                }
-                else
-                {
-                    // Write current targets
-                    WriteFile(tracer, targetsPath, currentVersion);
-                }
+                //Write updated targets file
+                WriteUpdatedTargets(tracer, targetsInfo);
             }
             catch (Exception ex)
             {
@@ -67,76 +52,112 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
             }
         }
 
-        /// <summary>
-        /// Returns the full path to the targets file, given a root directory.
-        /// </summary>
-        internal static string CalculateTargetsPath(string directory)
+        private static void WriteUpdatedTargets(ITraceSource tracer, TargetsInfo targetsInfo)
         {
-            return Environment.ExpandEnvironmentVariables(Path.Combine(directory, TargetsFilename));
-        }
-
-        /// <summary>
-        /// Returns the info from targets file
-        /// </summary>
-        internal static TargetsInfo GetTargetsInfo(string targetsPath)
-        {
-            var targetsInfo = new TargetsInfo();
-
-            XDocument document = XDocument.Load(targetsPath);
-            var nsManager = new XmlNamespaceManager(new NameTable());
-            nsManager.AddNamespace("", MSBuildNamespace);
-
-            var toolkitVersionElement = document.Descendants(XName.Get(string.Format(CultureInfo.InvariantCulture, ToolkitVersionPath, MSBuildNamespace))).FirstOrDefault();
-            if (toolkitVersionElement != null)
-            {
-                targetsInfo.ToolkitVersion = (string)toolkitVersionElement.Value;
-            }
-
-            var hostVersionElement = document.Descendants(XName.Get(string.Format(CultureInfo.InvariantCulture, HostVersionPath, MSBuildNamespace))).FirstOrDefault();
-            if (hostVersionElement != null)
-            {
-                targetsInfo.HostVersion = (string)hostVersionElement.Value;
-            }
-
-            return targetsInfo;
-        }
-
-        private static void WriteFile(ITraceSource tracer, string targetsPath, string currentVersion)
-        {
-            tracer.TraceInformation(Resources.AuthoringPackage_TraceSyncTargetsWritingNewTargets, targetsPath, currentVersion);
+            tracer.TraceInformation(Resources.AuthoringPackage_TraceSyncTargetsWritingNewTargets, targetsInfo.TargetsPath, targetsInfo.ToolkitVersion);
 
             //Delete file if exists
-            if (File.Exists(targetsPath))
+            if (File.Exists(targetsInfo.TargetsPath))
             {
-                File.Delete(targetsPath);
+                File.Delete(targetsInfo.TargetsPath);
             }
 
             // Ensure directory exists
-            var targetsFolder = Path.GetDirectoryName(targetsPath);
+            var targetsFolder = Path.GetDirectoryName(targetsInfo.TargetsPath);
             if (!Directory.Exists(targetsFolder))
             {
                 Directory.CreateDirectory(targetsFolder);
             }
 
-            // Check file can be written
-            using (var file = new FileStream(targetsPath, FileMode.OpenOrCreate, FileAccess.Write))
+            // Write new targets
+            PopulateTargets(targetsInfo);
+        }
+
+        private static string GetInstalledExtensionPath(IVsExtensionManager extensionManager, string extensionId)
+        {
+            if (extensionManager != null)
             {
-                file.Write(Resources.Microsoft_VisualStudio_Patterning_Authoring_PatternToolkitVersion, 0, Resources.Microsoft_VisualStudio_Patterning_Authoring_PatternToolkitVersion.Length);
-                file.Flush();
+                IInstalledExtension extension;
+                if (extensionManager.TryGetInstalledExtension(extensionId, out extension))
+                {
+                    return NormalizePathForMsBuild(extension.InstallPath);
+                }
+            }
+
+            return null;
+        }
+
+        internal static void ReadTargetsValues(TargetsInfo targetsInfo)
+        {
+            // Read toolkit version number
+            targetsInfo.ToolkitVersion = ReadPropertyValue(targetsInfo, PatternToolkitVersionElementName);
+
+            // Read extension paths
+            if (targetsInfo.InstalledExtensionProperties != null)
+            {
+                var readInstalledExtensions = new Dictionary<string, string>();
+                targetsInfo.InstalledExtensionProperties.ToList().ForEach(ie =>
+                    {
+                        readInstalledExtensions.Add(ie.Key, ReadPropertyValue(targetsInfo, ie.Key));
+                    });
+                targetsInfo.InstalledExtensionProperties = readInstalledExtensions;
             }
         }
-    
-        internal class TargetsInfo
-        {
-            /// <summary>
-            /// Gets or sets the version of the toolkit
-            /// </summary>
-            public string ToolkitVersion { get; set; }
 
-            /// <summary>
-            /// Gets or sets the version of the host
-            /// </summary>
-            public string HostVersion { get; set; }
+        private static string ReadPropertyValue(TargetsInfo targetsInfo, string propertyName)
+        {
+            XDocument document = XDocument.Load(targetsInfo.TargetsPath);
+            var nsManager = new XmlNamespaceManager(new NameTable());
+            nsManager.AddNamespace(string.Empty, MSBuildNamespace);
+
+            var propertyElement = document.Descendants(XName.Get(
+                            string.Format(CultureInfo.InvariantCulture, "{{{1}}}{0}", propertyName, MSBuildNamespace))).FirstOrDefault();
+            if (propertyElement != null)
+            {
+                return propertyElement.Value;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        private static void PopulateTargets(TargetsInfo targetsInfo)
+        {
+            using (var stream = new MemoryStream(Resources.Microsoft_VisualStudio_Patterning_Authoring_PatternToolkitVersion))
+            {
+                XDocument document = XDocument.Load(stream);
+                var nsManager = new XmlNamespaceManager(new NameTable());
+                nsManager.AddNamespace(string.Empty, MSBuildNamespace);
+
+                // Update extension paths
+                targetsInfo.InstalledExtensionProperties.ToList().ForEach(ie =>
+                    {
+                        var extensionProp = document.Descendants(XName.Get(
+                            string.Format(CultureInfo.InvariantCulture, "{{{1}}}{0}", ie.Key, MSBuildNamespace))).FirstOrDefault();
+                        if (extensionProp != null)
+                        {
+                            extensionProp.Value = ie.Value ?? string.Empty;
+                        }
+                    });
+
+                // Save targets
+                document.Save(targetsInfo.TargetsPath, SaveOptions.None);
+            }
+        }
+
+        private static string NormalizePathForMsBuild(string path)
+        {
+            var normalized = path;
+
+            //Trim trailing slashes
+            normalized = normalized.TrimEnd(new[] { Path.DirectorySeparatorChar});
+            
+            // Substitute environment variables
+            var localAppDataPath = Environment.ExpandEnvironmentVariables("%localappdata%");
+            normalized = normalized.Replace(localAppDataPath, "$(LocalAppData)");
+            
+            return normalized;
         }
     }
 }

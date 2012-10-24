@@ -474,13 +474,11 @@
   <PropertyGroup>
     <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' == '' ">$(SolutionDir)..\Binaries</CopyVsixToFolder>
     <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\Platu\Projects\Src\Binaries</CopyVsixToFolder>
-    <ReferencesExtensionsHive>10.0Exp</ReferencesExtensionsHive>
-    <CopyVsixDebuggingDependencies>false</CopyVsixDebuggingDependencies>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" />
-  <Import Project="..\Authoring.Toolkit\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets" />
-  <Import Project="..\Authoring.Toolkit\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets" Condition="!exists('$(PatternToolkitBuilder)\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets')" />
+  <Import Project="..\Authoring.Toolkit\Authoring.PatternToolkitVersion.targets" />
+  <Import Project="..\Authoring.Toolkit\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets"/>
   <!-- Properties for VSSDK/DSL Targets -->
   <PropertyGroup>
     <RegisterOutputPackage>true</RegisterOutputPackage>

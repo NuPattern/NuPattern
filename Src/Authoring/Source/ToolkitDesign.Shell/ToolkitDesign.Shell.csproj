@@ -345,12 +345,10 @@
   -->
   <PropertyGroup>
     <BranchRoot>..\..\..\</BranchRoot>
-    <ReferencesExtensionsHive>10.0Exp</ReferencesExtensionsHive>
-    <CopyVsixDebuggingDependencies>false</CopyVsixDebuggingDependencies>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" />
-  <Import Project="..\..\Source\Authoring.Toolkit\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets" />
+  <Import Project="..\..\Source\Authoring.Toolkit\Authoring.PatternToolkitVersion.targets" />
   <!-- ******************************* -->
   <!-- T4 MsBuild utilities -->
   <PropertyGroup>

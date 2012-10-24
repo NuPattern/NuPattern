@@ -1,0 +1,26 @@
+﻿<#@ output extension=".targets" #>
+<#@ Include  File="..\..\..\MasterVsixInfo.ttinclude"#>
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <!-- Installed extension version info -->
+    <PatternToolkitVersion><#=VsixInfo.PatternToolkitBuilder.Version #></PatternToolkitVersion>
+
+    <!-- Referenced artifacts from installed extensions -->
+    <IsPatternToolkitProjectType Condition="'$(ProjectTypeGuids)'=='{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}'">true</IsPatternToolkitProjectType>
+    <VSExtensionsPath>$(LocalAppData)\Microsoft\VisualStudio\10.0Exp\Extensions</VSExtensionsPath>
+    <PatternToolkitRuntime>$(VSExtensionsPath)\\<#=VsixInfo.PatternToolkitRuntime.Author #>\\<#=VsixInfo.PatternToolkitRuntime.Name #>\\<#=VsixInfo.PatternToolkitRuntime.Version #></PatternToolkitRuntime>
+    <PatternToolkitBuilder>$(VSExtensionsPath)\\<#=VsixInfo.PatternToolkitBuilder.Author #>\\<#=VsixInfo.PatternToolkitBuilder.Name #>\\<#=VsixInfo.PatternToolkitBuilder.Version #></PatternToolkitBuilder>
+    <FeatureExtensionRuntime>$(PatternToolkitRuntime)</FeatureExtensionRuntime>
+
+    <!-- Debugging pattern toolkit projects -->
+    <CopyVsixDebuggingDependencies Condition="'$(CopyVsixDebuggingDependencies)' == ''">false</CopyVsixDebuggingDependencies>
+  </PropertyGroup>
+  
+  <!-- Building pattern toolkit projects -->
+  <Import
+    Project="$(PatternToolkitBuilder)\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets"
+    Condition="'$(IsPatternToolkitProjectType)'=='true' and exists('$(PatternToolkitBuilder)\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets')" />
+
+</Project>
