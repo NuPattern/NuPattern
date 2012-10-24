@@ -13,7 +13,7 @@
 
     <!-- Debugging pattern toolkit projects -->
     <CopyVsixDebuggingDependencies Condition="'$(CopyVsixDebuggingDependencies)' == ''">true</CopyVsixDebuggingDependencies>
-    <PatternToolkitRuntimeDebugging>$(ExtensionsDeploymentSubPath)Extensions-$(VsSDKVersion)\Outercurve\Pattern Toolkit Manager\1.3.20.0</PatternToolkitRuntimeDebugging>
+    <PatternToolkitRuntimeDebugging>$(LocalAppData)\$(ExtensionsDeploymentSubPath)Extensions-$(VsSDKVersion)\Outercurve\Pattern Toolkit Manager\1.3.20.0</PatternToolkitRuntimeDebugging>
   </PropertyGroup>
   
   <!-- Building pattern toolkit projects -->

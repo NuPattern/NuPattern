@@ -15,7 +15,7 @@
 
     <!-- Debugging pattern toolkit projects -->
     <CopyVsixDebuggingDependencies Condition="'$(CopyVsixDebuggingDependencies)' == ''">true</CopyVsixDebuggingDependencies>
-    <PatternToolkitRuntimeDebugging>$(ExtensionsDeploymentSubPath)Extensions-$(VsSDKVersion)\\<#=VsixInfo.PatternToolkitRuntime.Author #>\\<#=VsixInfo.PatternToolkitRuntime.Name #>\\<#=VsixInfo.PatternToolkitRuntime.Version #></PatternToolkitRuntimeDebugging>
+    <PatternToolkitRuntimeDebugging>$(LocalAppData)\$(ExtensionsDeploymentSubPath)Extensions-$(VsSDKVersion)\\<#=VsixInfo.PatternToolkitRuntime.Author #>\\<#=VsixInfo.PatternToolkitRuntime.Name #>\\<#=VsixInfo.PatternToolkitRuntime.Version #></PatternToolkitRuntimeDebugging>
   </PropertyGroup>
   
   <!-- Building pattern toolkit projects -->
