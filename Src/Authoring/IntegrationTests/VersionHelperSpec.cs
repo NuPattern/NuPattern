@@ -129,6 +129,10 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
             public void Initialize()
             {
                 //Ensure targets file does exist
+                if (!Directory.Exists(Path.GetDirectoryName(TargetsFilePath)))
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(TargetsFilePath));
+                }
                 File.Copy(PathTo("VersionTargetsSpec\\VersionTargets_Current.targets"), TargetsFilePath, true);
                 this.targetsFileInfo = new FileInfo(TargetsFilePath);
             }

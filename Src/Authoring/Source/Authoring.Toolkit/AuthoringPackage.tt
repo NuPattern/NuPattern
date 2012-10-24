@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<AuthoringPackage>();
         internal static string CurrentToolkitVersion = "<#=VsixInfo.PatternToolkitBuilder.Version #>";
-        private static string MsBuildPath = @"<#=AuthoringTargetsInfo.MsBuildPath#>\\<#= VsixInfo.PatternToolkitBuilder.Author #>\\<#= VsixInfo.PatternToolkitBuilder.Name #>";
+        private static string MsBuildPath = @"<#=AuthoringTargetsInfo.FormatVsEnvVarToMachineEnvVar(AuthoringTargetsInfo.MsBuildPath)#>\\<#= VsixInfo.PatternToolkitBuilder.Author #>\\<#= VsixInfo.PatternToolkitBuilder.Name #>";
 		private static string TargetsFilename = "<#=AuthoringTargetsInfo.VersionTargets#>";
         internal static readonly string TargetsPath = Environment.ExpandEnvironmentVariables(Path.Combine(MsBuildPath, TargetsFilename));
 		internal static readonly Dictionary<string,string> InstalledExtensionProperties = new Dictionary<string, string>
