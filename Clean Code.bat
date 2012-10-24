@@ -24,10 +24,10 @@ if %errorlevel% neq 0 goto :error
 echo Deleting 'Non-Source' Files
 for /f "delims=" %%a in ('dir /ah-hr/s/b *.vspscc') do (del /f/q "%%a")
 for /f "delims=" %%a in ('dir /ah-hr/s/b *.vssscc') do (del /f/q "%%a")
-for /f "delims=" %%a in ('dir /ah/s/b *.suo') do (del /f/q/ah "%%a")
-for /f "delims=" %%a in ('dir /ah/s/b *.user') do (del /f/q/ah "%%a")
-for /f "delims=" %%a in ('dir /ah/s/b *csproj.user') do (del /f/q/ah "%%a")
-for /f "delims=" %%a in ('dir /ah/s/b ~*.*') do (del /f/q/ah "%%a")
+for /f "delims=" %%a in ('dir /ah-hr/s/b *.suo') do (del /f/q "%%a")
+for /f "delims=" %%a in ('dir /ah-hr/s/b *.user') do (del /f/q "%%a")
+for /f "delims=" %%a in ('dir /ah-hr/s/b *.csproj.user') do (del /f/q "%%a")
+for /f "delims=" %%a in ('dir /ah-hr/s/b ~*.*') do (del /f/q "%%a")
 
 echo Cleaned Successfully!
 color 0A
