@@ -313,6 +313,9 @@
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
+  <PropertyGroup>
+	<ReferencesExtensionsHive>11.0Exp</ReferencesExtensionsHive>
+  </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\Authoring.Toolkit\Authoring.PatternToolkitVersion.targets" />
   <!-- Properties for VSSDK/DSL Targets -->

@@ -168,6 +168,9 @@
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
   </ItemGroup>
+  <PropertyGroup>
+	<ReferencesExtensionsHive>11.0Exp</ReferencesExtensionsHive>
+  </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\Source\Authoring.Toolkit\Authoring.PatternToolkitVersion.targets" />
   <!-- Properties for VSSDK/DSL Targets -->

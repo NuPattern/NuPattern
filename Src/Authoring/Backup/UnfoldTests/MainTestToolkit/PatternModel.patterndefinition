@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="ca29d512-9a24-4885-9221-cbbf31282c77" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
+  <dm0:extensions>
+    <templateSettings Id="11c7bbc0-148f-4f4c-8ca1-6d6738f5d6ee" templateUri="template://project/CSharp/b1707c79361e-MainTest" commandId="00000000-0000-0000-0000-000000000000" wizardId="00000000-0000-0000-0000-000000000000" templateAuthoringUri="solution://397c660a-72da-44eb-a4ff-1ec8e673c594/af858aa1-5567-4174-901e-d0f91c7d721d" syncName="true">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="dc66a0e2-7e8e-4fa9-8fb6-8fd8e01650df" />
+      </extendedElement>
+      <targetFileName>{
+  "Name": "RawTargetFileName",
+  "Value": null,
+  "ValueProvider": null
+}</targetFileName>
+      <targetPath>{
+  "Name": "RawTargetPath",
+  "Value": null,
+  "ValueProvider": null
+}</targetPath>
+    </templateSettings>
+    <eventSettings Id="84fd62af-32f7-494c-abfa-cb170648be73" commandId="63205580-568f-4358-8ca8-5f9cb820b3d7" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementPropertyChangedEvent" filterForCurrentElement="true" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="3d9167ef-4848-4b0c-b540-3c437abafd47" />
+      </extendedElement>
+      <conditions>[
+  {
+    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.EventSenderMatchesElementCondition",
+    "Properties": []
+  }
+]</conditions>
+    </eventSettings>
+    <commandSettings Id="63205580-568f-4358-8ca8-5f9cb820b3d7" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.SynchArtifactNameCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="41a46a03-57ca-43fa-9e9b-701910b00b59" />
+      </extendedElement>
+      <properties>
+        <propertySettings Id="6b3a69f1-9e26-47f0-aa5c-e64a3e564c3c" value="FilteredByTag" name="ReferenceTag" />
+      </properties>
+    </commandSettings>
+    <guidanceExtension Id="19777560-c7a0-4d6b-82fe-bf0363f89d24">
+      <extendedElement>
+        <patternSchemaMoniker Id="815a9f7c-09bb-4970-b241-91a30b45292f" />
+      </extendedElement>
+    </guidanceExtension>
+    <guidanceExtension Id="24468d69-5f65-4f01-87c7-46bb934cbb24">
+      <extendedElement>
+        <extensionPointSchemaMoniker Id="7e8f0339-2192-4b2d-a11a-dd2d22928bd9" />
+      </extendedElement>
+    </guidanceExtension>
+    <artifactExtension Id="5e08ef9d-bf51-4fd7-8fba-8838e96bffc6">
+      <extendedElement>
+        <patternSchemaMoniker Id="815a9f7c-09bb-4970-b241-91a30b45292f" />
+      </extendedElement>
+    </artifactExtension>
+    <artifactExtension Id="975e3b5c-7869-4207-bffa-fcd2137a47c8">
+      <extendedElement>
+        <extensionPointSchemaMoniker Id="7e8f0339-2192-4b2d-a11a-dd2d22928bd9" />
+      </extendedElement>
+    </artifactExtension>
+    <validationExtension Id="0e631884-0899-4932-88c3-cbb162a4381c">
+      <extendedElement>
+        <patternSchemaMoniker Id="815a9f7c-09bb-4970-b241-91a30b45292f" />
+      </extendedElement>
+    </validationExtension>
+  </dm0:extensions>
+  <pattern Id="815a9f7c-09bb-4970-b241-91a30b45292f" name="MainTest" displayName="Main Test" description="A Description of MainTest" codeIdentifier="MainTest" isCustomizable="True" currentDiagramId="bfbc51a8-3ace-4c9f-851c-f918a123aac7">
+    <customizationPolicy name="CustomizationPolicySchema1">
+      <settings>
+        <setting propertyId="DisplayName" />
+        <setting propertyId="Description" />
+        <setting propertyId="ValidationRules" />
+        <setting propertyId="Icon" />
+      </settings>
+    </customizationPolicy>
+    <automationSettings>
+      <automationSettings Id="dc66a0e2-7e8e-4fa9-8fb6-8fd8e01650df" name="UnfoldConsole" displayName="Unfold Console" description="" codeIdentifier="UnfoldConsole" automationType="VS Template Launch Point" classification="LaunchPoint">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+      <automationSettings Id="41a46a03-57ca-43fa-9e9b-701910b00b59" name="SyncArtifactNamesCommand" displayName="Sync Artifact Names Command" description="" isSystem="true" codeIdentifier="SyncArtifactNamesCommand" isCustomizable="False" automationType="Command">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+      <automationSettings Id="3d9167ef-4848-4b0c-b540-3c437abafd47" name="SyncArtifactNamesEvent" displayName="Sync Artifact Names Event" description="" isSystem="true" codeIdentifier="SyncArtifactNamesEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+    </automationSettings>
+    <views>
+      <view Id="27b6576e-dbb8-481b-aa4a-573f595a380a" name="DefaultView" displayName="Default View" description="Description for MainTest.DefaultView" codeIdentifier="DefaultView" isDefault="true" diagramId="bfbc51a8-3ace-4c9f-851c-f918a123aac7">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="IsVisible" />
+            <setting propertyId="IsDefault" />
+          </settings>
+        </customizationPolicy>
+        <extensionPoints Id="d7fbd55c-ce51-4c28-89cd-47d3dc07f655">
+          <extensionPoint Id="7e8f0339-2192-4b2d-a11a-dd2d22928bd9" name="ExtensionItem" displayName="Extension Item" description="Description for MainTest.DefaultView.ExtensionItem" codeIdentifier="ExtensionItem">
+            <customizationPolicy name="CustomizationPolicySchema1">
+              <settings>
+                <setting propertyId="DisplayName" />
+                <setting propertyId="Description" />
+                <setting propertyId="ValidationRules" />
+                <setting propertyId="Conditions" />
+                <setting propertyId="Icon" />
+              </settings>
+            </customizationPolicy>
+          </extensionPoint>
+        </extensionPoints>
+      </view>
+    </views>
+  </pattern>
+</patternModel>
