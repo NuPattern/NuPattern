@@ -36,6 +36,18 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			/// </summary>
 			/// <value>The vsix references.</value>
 			public string VsixReferences { get; set; }
-		}
+
+            public string DownloadUpdateUrl
+            {
+                get
+                {
+                    throw new NotImplementedException();
+                }
+                set
+                {
+                    throw new NotImplementedException();
+                }
+            }
+        }
 	}
 }

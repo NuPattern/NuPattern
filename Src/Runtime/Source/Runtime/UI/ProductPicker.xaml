@@ -2,7 +2,7 @@
 	x:Class="Microsoft.VisualStudio.Patterning.Runtime.UI.ProductPicker"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.10.0"
+	xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.11.0"
 	xmlns:p="http://schemas.microsoft.com/visualstudiopatterning/2010/xaml/"
 	xmlns:r="clr-namespace:Microsoft.VisualStudio.Patterning.Runtime;assembly=Microsoft.VisualStudio.Patterning.Runtime.Interfaces"
     xmlns:cp="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation;assembly=Microsoft.VisualStudio.Patterning.Common.Presentation"

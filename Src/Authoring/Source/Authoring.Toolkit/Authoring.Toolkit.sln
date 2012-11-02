@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.Toolkit", "Authoring.Toolkit.csproj", "{0216A624-C5C5-4335-8361-F640B91B4DEA}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Authoring.Guidance", "..\Authoring.Guidance\Authoring.Guidance.modelproj", "{6656191D-2A07-47D9-8C98-4124C1320591}"

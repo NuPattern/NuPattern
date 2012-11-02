@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20305</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{2F73D922-E3C5-49F8-AB6D-AF54E76EE47E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.VisualStudio.Patterning.Authoring.Library</RootNamespace>
+    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.Library.Toolkit</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetVsixContainerName>PatternToolkitAutomationLibrary.vsix</TargetVsixContainerName>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Authoring\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DeployExtension>True</DeployExtension>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug With CA|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Patterning.Library">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Schema">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Schema.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Patterning.Common.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Common.Presentation.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(VS100COMNTOOLS)..\IDE\PrivateAssemblies\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
+      <HintPath>..\..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Library">
+      <HintPath>..\..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Library.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\Feature Extensions\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+      <DependentUpon>GlobalAssemblyInfo.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="..\..\..\LICENSE.txt">
+      <Link>LICENSE.txt</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Items\Extensibility\Command\Command.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Templates\Items\Extensibility\Condition\Condition.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\DataTypeConverter\DataTypeConverter.vstemplate">
+      <DependentUpon>DataTypeConverter.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+      <ItemGuid>66422a35-13e4-45d4-9e89-52fb2ca958cd</ItemGuid>
+    </ItemTemplate>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ElementOrderingComparer\ElementOrderingComparer.vstemplate">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElementOrderingComparer.tt</DependentUpon>
+      <ItemGuid>effe0775-8cf4-4f65-8e6b-4eda19157e6f</ItemGuid>
+    </ItemTemplate>
+    <Content Include="Assets\Templates\Items\Extensibility\EnumTypeConverter\EnumTypeConverter.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Templates\Items\Extensibility\Event\Event.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Templates\Items\Extensibility\TypePickerEditor\TypePickerEditor.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Templates\Items\Extensibility\UIEditor\UIEditor.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\PropertyValidationRule\PropertyValidationRule.vstemplate">
+      <DependentUpon>PropertyValidationRule.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+      <ItemGuid>fa783099-9d1c-420b-b6af-805dacd4190b</ItemGuid>
+    </ItemTemplate>
+    <Content Include="Assets\Templates\Items\Extensibility\ElementValidationRule\ElementValidationRule.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Templates\Items\Extensibility\ValueProvider\ValueProvider.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Templates\Projects\Extensibility\Library\LibraryProject.csproj">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryProject.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Templates\Projects\Extensibility\Library\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Templates\Items\Extensibility\DataTypeConverter\DataTypeConverter.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Templates\Items\Extensibility\Command\Command.Validation.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Templates\Items\Extensibility\PropertyValidationRule\PropertyValidationRule.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Templates\Items\Extensibility\ElementOrderingComparer\ElementOrderingComparer.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="$(PatternToolkitRuntime)\GeneratedCode\LibrarySchema.xsd">
+      <Visible>true</Visible>
+      <Link>Properties\Schemas\LibrarySchema.xsd</Link>
+      <FixedLink>
+      </FixedLink>
+    </Content>
+    <Content Include="$(PatternToolkitRuntime)\GeneratedCode\PatternModelSchema.xsd">
+      <Visible>true</Visible>
+      <Link>Properties\Schemas\PatternModelSchema.xsd</Link>
+      <FixedLink>
+      </FixedLink>
+    </Content>
+    <Content Include="..\WorkflowDesign\GeneratedCode\WorkflowDesignSchema.xsd">
+      <Visible>true</Visible>
+      <Link>Properties\Schemas\WorkflowDesignSchema.xsd</Link>
+      <FixedLink>
+      </FixedLink>
+    </Content>
+    <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
+      <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
+    </CodeAnalysisDictionary>
+    <None Include="Assets\Templates\Items\Extensibility\ElementOrderingComparer\ElementOrderingComparer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ElementOrderingComparer.vstemplate</LastGenOutput>
+    </None>
+    <None Include="ToolkitVersionInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ToolkitVersionInfo.ttinclude</LastGenOutput>
+    </None>
+    <None Include="ToolkitVersionInfo.ttinclude">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolkitVersionInfo.tt</DependentUpon>
+    </None>
+    <Resource Include="Resources\TransformIcon.png" />
+    <Resource Include="Resources\LibraryToolkitIcon.png" />
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\Command\Command.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <ItemGuid>9a30d849-b71c-4591-b534-5f5d4d467347</ItemGuid>
+      <DependentUpon>Command.tt</DependentUpon>
+    </ItemTemplate>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\Condition\Condition.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Condition.tt</DependentUpon>
+      <ItemGuid>9d3d37b4-c4c0-40fb-b99a-edb14ec9f89d</ItemGuid>
+    </ItemTemplate>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\EnumTypeConverter\EnumTypeConverter.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnumTypeConverter.tt</DependentUpon>
+      <ItemGuid>2cb5bbaa-d08a-499f-bf27-fdd82d385af7</ItemGuid>
+    </ItemTemplate>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\Event\Event.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Event.tt</DependentUpon>
+      <ItemGuid>8624b0e5-d07d-4725-8ab3-3ef55b2425ea</ItemGuid>
+    </ItemTemplate>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\TypePickerEditor\TypePickerEditor.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypePickerEditor.tt</DependentUpon>
+      <ItemGuid>9bd0dac6-0175-486e-99a7-a20949996585</ItemGuid>
+    </ItemTemplate>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\UIEditor\UIEditor.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UIEditor.tt</DependentUpon>
+      <ItemGuid>da25243c-9a00-4eaf-9b07-c01a383cf4c9</ItemGuid>
+    </ItemTemplate>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ElementValidationRule\ElementValidationRule.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElementValidationRule.tt</DependentUpon>
+      <ItemGuid>911172d9-9c0d-444f-91d3-4b78a47ff83f</ItemGuid>
+    </ItemTemplate>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ValueProvider\ValueProvider.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValueProvider.tt</DependentUpon>
+      <ItemGuid>e7eb94b2-8d32-46fc-aac1-346bc3a9ae9d</ItemGuid>
+    </ItemTemplate>
+    <None Include="Assets\Templates\Items\Extensibility\PropertyValidationRule\PropertyValidationRule.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PropertyValidationRule.vstemplate</LastGenOutput>
+    </None>
+    <None Include="Assets\Templates\Projects\Extensibility\Library\LibraryProject.tt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LibraryProject.csproj</LastGenOutput>
+    </None>
+    <Content Include="Assets\Templates\Projects\Extensibility\Library\Library.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="9be0eaf7-8717-414f-97fe-58c0c97be587.patterndefinition.diagram">
+      <DependentUpon>PatternModel.patterndefinition</DependentUpon>
+    </None>
+    <None Include="Assets\Templates\Items\Extensibility\DataTypeConverter\DataTypeConverter.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataTypeConverter.vstemplate</LastGenOutput>
+    </None>
+    <None Include="Assets\Templates\Text\Constants.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Constants.t4</LastGenOutput>
+    </None>
+    <Content Include="Assets\Templates\Text\Constants.t4">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Constants.tt</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="source.include.t4">
+      <DependentUpon>source.extension.tt</DependentUpon>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Element/C:\Projects\Platu\Main\Src\Authoring\Authoring.patternstate%252f7b588f3f-4927-42bf-847d-66bd00883529</SourceModelReference>
+      <ItemGuid>f9e7aa00-7024-4128-bad8-097738a18ad0</ItemGuid>
+    </None>
+    <ProjectTemplate Include="Assets\Templates\Projects\Extensibility\Library\Library.vstemplate">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Library.tt</DependentUpon>
+      <ItemGuid>07d8d448-a0b0-49d5-8b2e-f51239a49d63</ItemGuid>
+    </ProjectTemplate>
+    <Resource Include="Resources\AutomationClassIcon.png" />
+    <Content Include="Resources\DesignTimeVsix.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\DesignTimeVsixPreview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <EmbeddedResource Include="PatternModel.patterndefinition">
+      <ItemGuid>c8131dba-0954-41b1-bf71-defcc7035456</ItemGuid>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="..\..\..\GlobalAssemblyInfo.tt">
+      <Link>Properties\GlobalAssemblyInfo.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GlobalAssemblyInfo.cs</LastGenOutput>
+    </None>
+    <Content Include="Assets\Guidance\ToolkitGuidance.doc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <ItemGuid>299380e4-ce08-47e3-a5f8-426cdd58aaf9</ItemGuid>
+    </Content>
+    <None Include="Assets\Templates\Items\Extensibility\Command\Command.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Command.vstemplate</LastGenOutput>
+    </None>
+    <None Include="Assets\Templates\Items\Extensibility\Condition\Condition.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Condition.vstemplate</LastGenOutput>
+    </None>
+    <None Include="Assets\Templates\Items\Extensibility\EnumTypeConverter\EnumTypeConverter.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EnumTypeConverter.vstemplate</LastGenOutput>
+    </None>
+    <None Include="Assets\Templates\Items\Extensibility\Event\Event.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Event.vstemplate</LastGenOutput>
+    </None>
+    <None Include="Assets\Templates\Items\Extensibility\TypePickerEditor\TypePickerEditor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TypePickerEditor.vstemplate</LastGenOutput>
+    </None>
+    <None Include="Assets\Templates\Items\Extensibility\UIEditor\UIEditor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UIEditor.vstemplate</LastGenOutput>
+    </None>
+    <None Include="Assets\Templates\Items\Extensibility\ElementValidationRule\ElementValidationRule.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ElementValidationRule.vstemplate</LastGenOutput>
+    </None>
+    <None Include="Assets\Templates\Items\Extensibility\ValueProvider\ValueProvider.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ValueProvider.vstemplate</LastGenOutput>
+    </None>
+    <None Include="Assets\Templates\Projects\Extensibility\Library\Library.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Library.vstemplate</LastGenOutput>
+    </None>
+    <Content Include="Assets\Templates\Text\CollectionImplementation.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <ItemGuid>ec407639-4851-4333-97ac-40bb6e3768f0</ItemGuid>
+    </Content>
+    <Content Include="Assets\Templates\Text\Helpers.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\Header.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\NamedElementParentImplementation.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\ElementContainerImplementation.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\ProductElementImplementation.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\ViewInterface.t4">
+      <ItemGuid>3cad4121-3707-4ba2-b75e-00138859eff6</ItemGuid>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\ViewImplementation.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <ItemGuid>93e185e9-b959-434e-9682-f9db6bc39cdd</ItemGuid>
+    </Content>
+    <Content Include="Assets\Templates\Text\ProductInterface.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <ItemGuid>84fcec82-6c39-42f1-8a64-a4ce581ee82d</ItemGuid>
+    </Content>
+    <Content Include="Assets\Templates\Text\ProductImplementation.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <ItemGuid>d200252e-c25d-48be-b3f5-9ae32bf62acb</ItemGuid>
+    </Content>
+    <Content Include="Assets\Templates\Text\ProductElementInterface.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\NamedElementParentInterface.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\ExtensionPointImplementation.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <ItemGuid>5bb7bdd5-2ac3-42e7-9c34-748e51fd7d4f</ItemGuid>
+    </Content>
+    <Content Include="Assets\Templates\Text\ExtensionPointInterface.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <ItemGuid>1e17080b-48d4-4f98-9c02-8678505acc05</ItemGuid>
+    </Content>
+    <Content Include="Assets\Templates\Text\ElementInterface.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <ItemGuid>116dfd45-9c58-452e-a3eb-7f2544dbf281</ItemGuid>
+    </Content>
+    <Content Include="Assets\Templates\Text\ElementImplementation.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <ItemGuid>25907df2-ca68-43df-bc28-428aecb472a3</ItemGuid>
+    </Content>
+    <Content Include="Assets\Templates\Text\ElementContainerInterface.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\CollectionInterface.t4">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <ItemGuid>55fe351d-e1a3-44fb-80b3-dbe44eb5ef56</ItemGuid>
+    </Content>
+    <None Include="PatternTooling.toolingdesign">
+      <ItemGuid>ccdd585c-b5e7-4554-8410-e435ba3f4f0a</ItemGuid>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="source.extension.tt">
+      <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <ItemGuid>a119bf32-9e89-4e04-ae3a-912ace116d79</ItemGuid>
+    </None>
+    <None Include="source.extension.vsixmanifest">
+      <DependentUpon>source.extension.tt</DependentUpon>
+      <IsToolkitManifest>true</IsToolkitManifest>
+      <SubType>Designer</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Templates\Projects\Extensibility\Library\GeneratedCode\" />
+    <Folder Include="Assets\Wizards\Pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Authoring.Toolkit.Automation\Authoring.Toolkit.Automation.csproj">
+      <Project>{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}</Project>
+      <Name>Authoring.Toolkit.Automation</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <!-- Properties for Toolkit Targets -->
+  <PropertyGroup>
+    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' == '' ">$(SolutionDir)..\Binaries</CopyVsixToFolder>
+    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\Platu\Projects\Src\Binaries</CopyVsixToFolder>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" />
+  <Import Project="..\Authoring.Toolkit\Authoring.PatternToolkitVersion.targets" />
+  <Import Project="..\Authoring.Toolkit\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets"/>
+  <!-- Properties for VSSDK/DSL Targets -->
+  <PropertyGroup>
+    <RegisterOutputPackage>true</RegisterOutputPackage>
+    <RegisterWithCodebase>true</RegisterWithCodebase>
+    <GacTargetOutput>false</GacTargetOutput>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
+    <StartAction>Program</StartAction>
+    <StartArguments>/rootsuffix Exp</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BranchRoot>..\..\..\</BranchRoot>
+  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

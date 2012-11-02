@@ -1,12 +1,14 @@
 ﻿using System.ComponentModel.Design;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Shell;
+using System;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {
 	/// <summary>
 	/// Provide an adapter between an <see cref="IVsMenuCommand"/> and a <see cref="IMenuCommand"/>.
 	/// </summary>
+    [CLSCompliant(false)]
 	public class VsMenuCommandAdapter : OleMenuCommand, IMenuCommand
 	{
 		/// <summary>

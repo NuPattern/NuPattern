@@ -1,5 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Runtime", "_Runtime", "{B0C8639C-F34C-4D10-871C-6D19DAAC6A30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime", "Source\Runtime\Runtime.csproj", "{79A7E018-1A92-47F4-A478-17BCC57CC7AD}"

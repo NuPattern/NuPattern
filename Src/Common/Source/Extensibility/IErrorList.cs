@@ -1,10 +1,12 @@
 ﻿using Microsoft.VisualStudio.Shell;
+using System;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {
     /// <summary>
     /// Interface for interacting with the VS Error List window.
     /// </summary>
+    [CLSCompliant(false)]
     public interface IErrorList
     {
         /// <summary>

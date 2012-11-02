@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.UnitTests", "UnitTests\Authoring.UnitTests.csproj", "{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.IntegrationTests", "IntegrationTests\Authoring.IntegrationTests.csproj", "{4D526080-A897-4A58-B12A-87974ADC11EB}"

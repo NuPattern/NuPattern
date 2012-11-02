@@ -15,6 +15,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
     /// Provides the Pattern Explorer tool window.
     /// </summary>
     [Guid("c44b2e95-86f4-40dd-8fc8-bbc9725ea86b")]
+    [CLSCompliant(false)]
     public class SolutionBuilderToolWindow : ToolWindowPane
     {
         private SelectionContainer selectionContainer;

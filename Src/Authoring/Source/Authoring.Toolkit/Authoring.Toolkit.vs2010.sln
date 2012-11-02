@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.Toolkit", "Authoring.Toolkit.csproj", "{0216A624-C5C5-4335-8361-F640B91B4DEA}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Authoring.Guidance", "..\Authoring.Guidance\Authoring.Guidance.modelproj", "{6656191D-2A07-47D9-8C98-4124C1320591}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.Toolkit.Automation", "..\Authoring.Toolkit.Automation\Authoring.Toolkit.Automation.csproj", "{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Toolkit", "Toolkit", "{9DA9E72B-2DA1-434D-81F6-038AD677D1C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Guidance", "Guidance", "{77316BAB-12FB-45F9-AEA6-BC56C62C2FA7}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mscs-tfs.tier3network.com:8443/tfs/platuprojectcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Authoring.Toolkit.csproj
+		SccProjectTopLevelParentUniqueName1 = Authoring.Toolkit.sln
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\Authoring.Guidance\\Authoring.Guidance.modelproj
+		SccProjectTopLevelParentUniqueName2 = Authoring.Toolkit.sln
+		SccProjectName2 = ../Authoring.Guidance
+		SccLocalPath2 = ..\\Authoring.Guidance
+		SccProjectUniqueName3 = ..\\Authoring.Toolkit.Automation\\Authoring.Toolkit.Automation.csproj
+		SccProjectTopLevelParentUniqueName3 = Authoring.Toolkit.sln
+		SccProjectName3 = ../Authoring.Toolkit.Automation
+		SccLocalPath3 = ..\\Authoring.Toolkit.Automation
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0216A624-C5C5-4335-8361-F640B91B4DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0216A624-C5C5-4335-8361-F640B91B4DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0216A624-C5C5-4335-8361-F640B91B4DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0216A624-C5C5-4335-8361-F640B91B4DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6656191D-2A07-47D9-8C98-4124C1320591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6656191D-2A07-47D9-8C98-4124C1320591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6656191D-2A07-47D9-8C98-4124C1320591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6656191D-2A07-47D9-8C98-4124C1320591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE} = {9DA9E72B-2DA1-434D-81F6-038AD677D1C3}
+		{0216A624-C5C5-4335-8361-F640B91B4DEA} = {9DA9E72B-2DA1-434D-81F6-038AD677D1C3}
+		{6656191D-2A07-47D9-8C98-4124C1320591} = {77316BAB-12FB-45F9-AEA6-BC56C62C2FA7}
+	EndGlobalSection
+EndGlobal
