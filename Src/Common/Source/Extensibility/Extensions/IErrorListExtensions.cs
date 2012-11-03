@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {
 	/// <summary>
 	/// Extension methods for an Error List.
 	/// </summary>
+    [CLSCompliant(false)]
 	public static class IErrorListExtensions
 	{
 		/// <summary>

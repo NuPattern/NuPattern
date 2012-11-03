@@ -1,10 +1,12 @@
 ﻿using Microsoft.VisualStudio.Shell;
+using System;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 {
     /// <summary>
     /// Provides a service interface to acces a tool window in this package.
     /// </summary>
+    [CLSCompliant(false)]
     public interface IPackageToolWindow
     {
         /// <summary>

@@ -4,7 +4,7 @@
   <!-- Visual Studio Properties -->
   <!--<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />-->
   <!--<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.VisualStudioVersion.v*.Common.props" Condition="'$(VisualStudioVersion)' == ''" />-->
-
+  
 	<!-- Common Assembly Properties -->
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>$(BranchRoot)Outercurve.snk</AssemblyOriginatorKeyFile>
@@ -66,7 +66,6 @@
     <StyleCopOverrideSettingsFile>$(BranchRoot)SourceAnalysis.stylecop</StyleCopOverrideSettingsFile>
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
-
 
   <!-- Tool includes -->
   <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />-->
