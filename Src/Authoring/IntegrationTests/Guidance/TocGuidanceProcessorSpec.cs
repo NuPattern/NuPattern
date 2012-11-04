@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentEmpty_ThenCalculateWorkflowThrows()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasNoTitle_ThenCalculateWorkflowThrows()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -49,7 +49,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasOnlyTitle_ThenCalculateWorkflowCreatesAWorkflow()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -64,7 +64,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleHeadline_ThenCalculateWorkflowCreatesAWorkflow()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -81,7 +81,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopLevelHeadlines_ThenCalculateWorkflowCreatesAWorkflow()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -104,7 +104,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTopLevelHeadlineTwoTopics_ThenCalculateWorkflowCreatesAWorkflow()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -122,7 +122,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasThreeTopLevelHeadlineVariousTopics_ThenCalculateWorkflowCreatesAWorkflow()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -146,7 +146,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTopLevelHeadlineTopLevelTopic_ThenCalculateWorkflowCreatesAWorkflow()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -164,7 +164,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTopLevelHeadlineTopLevelTopicWithSubTopics_ThenCalculateWorkflowCreatesAWorkflow()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -184,7 +184,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTopLevelHeadlineWithSubTopics_ThenCalculateWorkflowCreatesAWorkflow()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -232,7 +232,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentEmpty_ThenShredDocumentsThrows()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -242,7 +242,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasNoTitle_ThenShredDocumentsThrows()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -252,7 +252,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasOnlyTitle_ThenShredDocumentsCreatesDocuments()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -262,7 +262,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleHeadlineNoContent_ThenShredDocumentsCreatesDocuments()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -272,7 +272,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleHeadline_ThenShredDocumentsCreatesDocuments()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -282,7 +282,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleTopic_ThenShredDocumentsCreatesDocuments()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -295,7 +295,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopLevelHeadlines_ThenShredDocumentsCreatesDocuments()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -305,7 +305,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopLevelTopics_ThenShredDocumentsCreatesDocuments()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -320,7 +320,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleHeadlinesAndTopics_ThenShredDocumentsCreatesDocuments()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -335,7 +335,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTwoTopicsWithHyperlinksToThirdTopic_ThenShredDocumentsCreatesDocuments()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -358,7 +358,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasOneHeadlineWithHyperlinkToTopic_ThenShredDocumentsCreatesDocuments()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -371,7 +371,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopicsAndHeadlinesWithDuplicates_ThenShredDocumentsThrows()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -382,7 +382,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTwoTopicsWithHyperlinkToContent_ThenShredDocumentsThrows()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -412,7 +412,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentEmpty_ThenValidateDocumentsFails()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -421,7 +421,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasNoTitle_ThenValidateDocumentsFails()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -430,7 +430,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasOnlyTitle_ThenValidateDocumentsSucceeds()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -440,7 +440,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleHeadlineNoContent_ThenValidateDocumentsSucceeds()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -450,7 +450,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleHeadline_ThenValidateDocumentsSucceeds()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -460,7 +460,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleTopic_ThenValidateDocumentsSucceeds()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -470,7 +470,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopLevelHeadlines_ThenValidateDocumentsSucceeds()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -480,7 +480,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopLevelTopics_ThenValidateDocumentsSucceeds()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -490,7 +490,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleHeadlinesAndTopics_ThenValidateDocumentsSucceeds()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -500,7 +500,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopicsAndHeadlinesWithDuplicates_ThenValidateDocumentsFails()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -510,7 +510,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTwoTopicsWithHyperlinksToThirdTopic_ThenValidateDocumentsSucceeds()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -520,7 +520,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasOneHeadlineWithHyperlinkToTopic_ThenValidateDocumentsSucceeds()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -530,7 +530,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTwoTopicsWithHyperlinkToContent_ThenValidateDocumentsFails()
 			{
 				this.processor = new TocGuidanceProcessor(

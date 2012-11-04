@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
         private DslTestStore<PatternModelDomainModel> store =
             new DslTestStore<PatternModelDomainModel>(typeof(LibraryDomainModel));
 
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenCreatingAnPatternElementSchema_ThenInjectsExtensionElements()
         {
             ElementSchema element = null;
@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
             Assert.True(element.GetExtensions<IArtifactExtension>().Any());
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenLoadingAnPatternElementSchema_ThenInjectsExtensionElements()
         {
             ElementSchema element = null;

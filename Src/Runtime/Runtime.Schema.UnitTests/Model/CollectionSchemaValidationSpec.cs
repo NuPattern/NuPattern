@@ -31,7 +31,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.element);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateNameIsUniqueSucceeds()
             {
                 this.element.ValidateNameIsUnique(validationContext);
@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedElementAddedToDifferentOwner_ThenValidateNameIsUniqueSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -54,7 +54,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedElementAddedToSameOwner_ThenValidateNameIsUniqueFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -91,7 +91,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.element);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateNameIsUniqueSucceeds()
             {
                 this.element.ValidateNameIsUnique(validationContext);
@@ -99,7 +99,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedElementAddedToDifferentOwner_ThenValidateNameIsUniqueSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -114,7 +114,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedElementAddedToSameOwner_ThenValidateNameIsUniqueFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -151,7 +151,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.element);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateNameIsUniqueSucceeds()
             {
                 this.element.ValidateNameIsUnique(validationContext);
@@ -159,7 +159,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedElementAddedToDifferentOwner_ThenValidateNameIsUniqueSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -174,7 +174,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedElementAddedToSameOwner_ThenValidateNameIsUniqueFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>

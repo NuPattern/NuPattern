@@ -42,7 +42,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Guidanc
                 validationContext = new ValidationContext(ValidationCategories.Custom, this.product);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoGuidanceReference_ThenValidateGuidanceReferenceSucceeds()
             {
                 this.validator.ValidateGuidanceReference(validationContext, this.product);
@@ -50,7 +50,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Guidanc
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGuidanceReferenceIsEmpty_ThenValidateGuidanceReferenceSucceeds()
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>
@@ -63,7 +63,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Guidanc
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGuidanceReferenceNotExist_ThenValidateGuidanceReferenceFails()
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>
@@ -77,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Guidanc
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.product) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGuidanceReferenceExist_ThenValidateGuidanceReferenceSucceeds()
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>

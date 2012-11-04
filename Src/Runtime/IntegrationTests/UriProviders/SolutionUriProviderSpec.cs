@@ -29,35 +29,35 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolveUriWithNullUri_ThenThrows()
 		{
 			Assert.Throws<ArgumentNullException>(() => this.provider.ResolveUri(null));
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolveUriWithInvalidUriScheme_ThenThrows()
 		{
 			Assert.Throws<UriFormatException>(() => this.provider.ResolveUri(new Uri("foo://")));
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenCreateUriWithNullInstance_ThenThrows()
 		{
 			Assert.Throws<ArgumentNullException>(() => this.provider.CreateUri(null));
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenOpenWithNullInstance_ThenThrows()
 		{
 			Assert.Throws<ArgumentNullException>(() => this.provider.Open(null));
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolveUriWithNoHost_ThenReturnsSolutionUri()
 		{
 			var expected = this.provider.ResolveUri(new Uri("solution://"));
@@ -68,7 +68,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolveUriWithSolutionFolders_ThenReturnsSolutionFolders()
 		{
 			var expected = this.provider.ResolveUri(new Uri("solution://root/TopLevelSolutionFolder"));
@@ -91,7 +91,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolveUriWithSolutionItems_ThenReturnsSolutionItems()
 		{
 			var expected = this.provider.ResolveUri(new Uri("solution://root/TopLevelSolutionFolder/TopLevelSolutionItem.txt"));
@@ -114,7 +114,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolveUriWithProjectsByPath_ThenReturnsProjects()
 		{
 			var expected = this.provider.ResolveUri(new Uri("solution://root/TopLevelSolutionFolder/SecondLevelSolutionFolder/ThirdLevelSolutionFolder/ThirdLevelProject"));
@@ -131,7 +131,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolveUriWithProjectsById_ThenReturnsProjects()
 		{
 			var expected = this.provider.ResolveUri(new Uri("solution://B13B408F-4969-48C0-85C2-227461953FA7"));
@@ -148,7 +148,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolveUriWithSolutionProjectItems_ThenReturnsProjectItems()
 		{
 			var expected = this.provider.ResolveUri(new Uri("solution://root/TopLevelSolutionFolder/SecondLevelSolutionFolder/ThirdLevelSolutionFolder/ThirdLevelProject/TopLevelProjectItem.cs"));
@@ -159,7 +159,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolveUriWithProjectFolders_ThenReturnsProjectFolders()
 		{
 			var expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopLevelProjectFolder"));
@@ -182,7 +182,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolveUriWithProjectItemByName_ThenReturnsProjectItems()
 		{
 			var expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopLevelProjectItem.cs"));
@@ -211,7 +211,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolveUriWithProjectItemById_ThenReturnsProjectItems()
 		{
 			var expected = this.provider.ResolveUri(new Uri("solution://B13B408F-4969-48C0-85C2-227461953FA7/TopLevelProjectItem.cs"));
@@ -243,7 +243,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenCreateUriWithSolution_TheReturnsUri()
 		{
 			var result = this.provider.CreateUri(this.solution);
@@ -252,7 +252,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenCreateUriWithSolutionFolders_TheReturnsUris()
 		{
 			var result = this.provider.CreateUri(this.solution.Find(@"TopLevelSolutionFolder").FirstOrDefault());
@@ -266,7 +266,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenCreateUriWithSolutionItems_TheReturnsUris()
 		{
 			var result = this.provider.CreateUri(this.solution.Find(@"TopLevelSolutionFolder\TopLevelSolutionItem.txt").FirstOrDefault());
@@ -280,7 +280,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenCreateUriWithSolutionProjectsByPath_TheReturnsUris()
 		{
 			var result = this.provider.CreateUri(this.solution.Find(@"TopLevelSolutionFolder\SecondLevelSolutionFolder\ThirdLevelSolutionFolder\ThirdLevelProject").FirstOrDefault());
@@ -291,7 +291,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenCreateUriWithSolutionProjectItemWithItemGuid_TheReturnsResilientUri()
 		{
 			var result = this.provider.CreateUri(this.solution.Find(@"TopLevelSolutionFolder\SecondLevelSolutionFolder\ThirdLevelSolutionFolder\ThirdLevelProject\TopLevelProjectItemWithItemGuid.cs").FirstOrDefault());
@@ -300,7 +300,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1308:NormalizeStringsToUppercase", Justification = "What??")]
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenCreateUriWithSolutionProjectItemWithoutItemGuid_TheReturnsResilientUri()
 		{
 			var result = this.provider.CreateUri(this.solution.Find(@"TopLevelSolutionFolder\SecondLevelSolutionFolder\ThirdLevelSolutionFolder\ThirdLevelProject\TopLevelProjectItem.cs").FirstOrDefault());
@@ -312,7 +312,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenCreateUriWithProjectFolders_TheReturnsUris()
 		{
 			var result = this.provider.CreateUri(this.solution.Find(@"TopLevelProject\TopLevelProjectFolder").FirstOrDefault());
@@ -326,7 +326,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenCreateUriWithProjectItems_TheReturnsUris()
 		{
 			var result = this.provider.CreateUri(this.solution.Find(@"TopLevelProject\TopLevelProjectItem.cs").FirstOrDefault());

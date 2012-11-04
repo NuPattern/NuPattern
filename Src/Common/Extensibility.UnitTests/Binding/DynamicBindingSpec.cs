@@ -37,7 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				this.binding = new DynamicBinding<IFoo>(new DelegatingCompositionService(compositionService), "Foo");
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenProvidingDynamicValue_ThenBindingCanResolveIt()
 			{
 				using (var context = this.binding.CreateDynamicContext())
@@ -58,7 +58,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				}
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposingDynamicContext_ThenResolvedValueRemainsValid()
 			{
 				var context = this.binding.CreateDynamicContext();
@@ -76,19 +76,19 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				Assert.NotNull(this.binding.Value.Bar);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEvaluatingWithNullContext_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => this.binding.Evaluate(null));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEvaluatingWithNonOwnedContext_ThenThrowsArgumentException()
 			{
 				Assert.Throws<ArgumentException>(() => this.binding.Evaluate(new Mock<IDynamicBindingContext>().Object));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposingDynamicContextAndReevaluating_ThenResolvedValueBecomesInvalid()
 			{
 				using (var context = this.binding.CreateDynamicContext())
@@ -105,7 +105,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				Assert.Null(this.binding.Value.Bar);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 			public void WhenCompositionServiceProvidesExportProvider_ThenChainsDynamicContextWithIt()
 			{
@@ -139,7 +139,8 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				}
 			}
 
-			[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope"), TestMethod]
+			[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
+            [TestMethod, TestCategory("Unit")]
 			public void WhenAddedExportExistsOnBase_ThenOverridesIt()
 			{
 				var catalog = new TypeCatalog(typeof(Foo), typeof(Bar));
@@ -162,7 +163,8 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				}
 			}
 
-			[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope"), TestMethod]
+			[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
+            [TestMethod, TestCategory("Unit")]
 			public void WhenAddedExportExistsOnBase_ThenImportManyGetsBoth()
 			{
 				var catalog = new TypeCatalog(typeof(Foo), typeof(Bar));

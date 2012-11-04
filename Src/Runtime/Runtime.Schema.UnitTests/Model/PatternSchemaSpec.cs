@@ -23,7 +23,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenSchemaPathIsValid()
             {
                 Assert.Equal(this.pattern.Name, this.pattern.SchemaPath);

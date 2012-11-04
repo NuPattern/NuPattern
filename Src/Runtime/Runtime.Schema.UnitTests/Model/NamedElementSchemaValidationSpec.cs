@@ -33,7 +33,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.element);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNameIsAlpanumeric_ThenValidateNameIsLegalSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNameIsEmpty_ThenValidateNameIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -58,7 +58,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.element) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCodeIdentifierIsReserved_ThenValidateCodeIdentiferIsNotReservedFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -71,7 +71,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.element) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCodeIdentifierIsNotReserved_ThenValidateCodeIdentiferIsNotReservedSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -83,7 +83,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNameHasSpaces_ThenValidateNameIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -96,7 +96,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.element) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNameHasSpecialChars_ThenValidateNameIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -109,7 +109,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.element) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNameHasMoreThan512Chars_ThenValidateNameIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -122,7 +122,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.element) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisplayNameIsAplhanumeric_ThenValidateDisplayNameIsLegalSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -134,7 +134,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisplayNameIsEmpty_ThenValidateDisplayNameIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -147,7 +147,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.element) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisplayNameHasSpaces_ThenValidateDisplayNameIsLegalSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -159,7 +159,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisplayNameHasMoreThan512Chars_ThenValidateDisplayNameIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -172,7 +172,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.element) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCodeIdentifierIsAlpanumeric_ThenValidateCodeIdentifierIsLegalSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -184,7 +184,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCodeIdentifierIsEmpty_ThenValidateCodeIdentifierIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -197,7 +197,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.element) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCodeIdentifierIsDuplicate_ThenValidateCodeIdentifierIsUniqueFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>

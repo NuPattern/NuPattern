@@ -44,7 +44,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateTemplateUriIsNotEmptyFails()
             {
                 var templateValidator = new TemplateValidator(this.settings.Name,
@@ -60,7 +60,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.settings) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTemplateUriIsNotEmpty_ThenValidateTemplateUriIsNotEmptySucceeds()
             {
                 var templateValidator = new TemplateValidator(this.settings.Name,
@@ -74,7 +74,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenWizardIdIsInvalid_ThenValidateWizardIdDoesNotSucceed()
             {
                 this.settings.WithTransaction(setting => setting.WizardId = Guid.NewGuid());
@@ -83,7 +83,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 1);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCommandIdIsInvalid_ThenValidateCommandIdDoesNotSucceed()
             {
                 this.settings.WithTransaction(setting => setting.CommandId = Guid.NewGuid());
@@ -92,7 +92,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 1);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoInstantiationAndNoAutomationOnProduct_ThenInstantiationOccursSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -107,7 +107,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoInstantiationAndCommand_ThenValidateNoInstantiationWithAutomationFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -123,7 +123,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.settings) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoInstantiationAndWizard_ThenValidateNoInstantiationWithAutomationFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -139,7 +139,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.settings) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOwnerIsProduct_ValidateOwnerIsProductSucceeds()
             {
                 this.settings.ValidateOwnerIsPattern(validationContext);
@@ -176,7 +176,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoInstantiationAndNoAutomationOnElement_ThenInstantiationOccursFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -192,7 +192,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.settings) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOwnerIsElement_ValidateOwnerIsProductFails()
             {
                 this.settings.ValidateOwnerIsPattern(validationContext);

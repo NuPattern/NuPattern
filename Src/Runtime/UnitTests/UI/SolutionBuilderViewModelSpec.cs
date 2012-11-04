@@ -29,19 +29,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 };
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithNullContext_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new SolutionBuilderViewModel(null, new Mock<IServiceProvider>().Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithNullServiceProvider_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new SolutionBuilderViewModel(new SolutionBuilderContext(), null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewAndSolutionEventsNotFound_ThenThrowsInvalidOperationException()
             {
                 var serviceProvider = new Mock<IServiceProvider>();
@@ -51,7 +51,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Throws<InvalidOperationException>(() => new SolutionBuilderViewModel(this.ctx, serviceProvider.Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSolutionIsNotOpen_ThenAddNewProductIsDisabled()
             {
                 var target = new SolutionBuilderViewModel(this.ctx, GetServiceProvider());
@@ -59,7 +59,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(target.AddNewProductCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSolutionIsOpened_ThenAddNewProductIsEnabled()
             {
                 var serviceProvider = GetServiceProvider();
@@ -72,7 +72,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(target.AddNewProductCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInvokingGuidanceAndFeatureNotInstalled_ThenDisablesGuidance()
             {
                 var serviceProvider = GetServiceProvider();
@@ -85,7 +85,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 target.GuidanceCommand.Execute(null);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInvokingGuidanceAndFeatureInstanciated_ThenActivatesFeature()
             {
                 var serviceProvider = GetServiceProvider();
@@ -104,7 +104,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 featureManager.VerifySet(x => x.ActiveFeature = feature);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInvokingGuidanceAndFeatureNotInstanciated_ThenInstantiatesFeature()
             {
                 var serviceProvider = GetServiceProvider();
@@ -169,7 +169,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.target = new SolutionBuilderViewModel(this.context, serviceProvider);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingProduct_ThenShowDialogIsCalled()
             {
                 this.target.AddNewProductCommand.Execute(null);
@@ -177,7 +177,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.dialog.Verify(d => d.ShowDialog(), Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingProductAndDialogCanceled_ThenDoesNotAddProductToProducts()
             {
                 this.dialog.Setup(d => d.ShowDialog()).Returns(false);
@@ -187,7 +187,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal(0, this.target.Nodes.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingProductAndCancelExceptionThrown_ThenShowsCancelExceptionMessage()
             {
                 Mock.Get(this.context.NewProductDialogFactory.Invoke(null))
@@ -204,7 +204,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     .Verify(x => x.ShowError("foo"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingProduct_ThenAddsNewProductToProducts()
             {
                 this.dialog.Setup(d => d.ShowDialog()).Returns(true);
@@ -216,7 +216,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal(1, this.target.Nodes.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingProductInStore_ThenAddsProductToProducts()
             {
                 Assert.Equal(0, this.target.Nodes.Count());
@@ -226,7 +226,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal(1, this.target.Nodes.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingProduct_ThenSetsAsCurrentNodeAndRaisesCurrentNodeChanged()
             {
                 var changeRaised = false;
@@ -289,13 +289,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.target = new SolutionBuilderViewModel(ctx, serviceProvider);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenLoadProducts()
             {
                 Assert.Equal(2, this.target.Nodes.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingCurrentNode_TheChangesCurrentNodeAndRaisesPropertyChanged()
             {
                 var propertyChangedRaised = false;
@@ -316,7 +316,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(eventRaised);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingCurrentNodeToTheSame_ThenDoesNotRaisePropertyChanged()
             {
                 var propertyChangedRaised = false;
@@ -337,7 +337,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(eventRaised);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenRemovingProductFromStore_ThenRemovesProductFromProducts()
             {
                 Assert.Equal(2, this.target.Nodes.Count());
@@ -347,7 +347,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal(1, this.target.Nodes.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenClosingSolution_ThenAddNewProductIsDisabled()
             {
                 this.solutionEvents.Raise(e => e.SolutionClosed += null, new SolutionEventArgs(null));
@@ -355,7 +355,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(this.target.AddNewProductCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenClosingPatternManager_ThenProductsAreRemovedFromTheScreen()
             {
                 this.patternManager.SetupGet(p => p.IsOpen).Returns(false);
@@ -364,7 +364,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal(0, this.target.Nodes.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenClosingPatternManagerAndSolutionStillOpened_ThenAddNewProductIsEnabled()
             {
                 this.patternManager.SetupGet(p => p.IsOpen).Returns(false);
@@ -373,13 +373,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(this.target.AddNewProductCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeletingNodeAndCurrentNodeIsNull_ThenCanDeleteNodeReturnsFalse()
             {
                 Assert.False(this.target.DeleteCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeletingNodeAndCurrentNodeIsSelected_ThenCanDeleteNodeReturnsTrue()
             {
                 this.target.Nodes.First().IsSelected = true;
@@ -387,13 +387,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(this.target.DeleteCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenBeginingEditNodeAndCurrentNodeIsNull_ThenCanBeginEditNodeReturnsFalse()
             {
                 Assert.False(this.target.BeginEditCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenBeginingEditNodeAndCurrentNodeIsSelected_ThenCanBeginEditNodeReturnsTrue()
             {
                 this.target.Nodes.First().IsSelected = true;
@@ -401,7 +401,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(this.target.BeginEditCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenBeginingEdition_ThenSetsIsEditingToTrue()
             {
                 var product = this.target.Nodes.Cast<ProductViewModel>().First();
@@ -413,19 +413,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(product.IsEditing);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenEndingEditNodeAndCurrentNodeIsNull_ThenCanEndEditNodeReturnsFalse()
             {
                 Assert.False(this.target.EndEditCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCancelingEditNodeAndCurrentNodeIsNull_ThenCanCancelEditNodeReturnsFalse()
             {
                 Assert.False(this.target.CancelEditCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenEndingEditNodeAndCurrentNodeDoesNotEditing_ThenCanEndEditNodeReturnsFalse()
             {
                 this.target.Nodes.First().IsSelected = true;
@@ -433,7 +433,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(this.target.EndEditCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCancelingEditNodeAndCurrentNodeDoesNotEditing_ThenCanCancelEditNodeReturnsFalse()
             {
                 this.target.Nodes.First().IsSelected = true;
@@ -441,7 +441,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(this.target.CancelEditCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenEndingEditNodeAndCurrentNodeIsEditing_ThenCanEndEditNodeReturnsTrue()
             {
                 this.target.Nodes.First().IsSelected = true;
@@ -450,7 +450,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(this.target.EndEditCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCancelingEditNodeAndCurrentNodeIsEditing_ThenCanCancelEditNodeReturnsTrue()
             {
                 this.target.Nodes.First().IsSelected = true;
@@ -459,7 +459,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(this.target.CancelEditCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenEndingEdition_ThenSetsIsEditingToFalse()
             {
                 var productViewModel = this.target.Nodes.First();
@@ -472,7 +472,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(productViewModel.IsEditing);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCancelingEdition_ThenSetsIsEditingToFalse()
             {
                 var productViewModel = this.target.Nodes.First();
@@ -484,13 +484,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(productViewModel.IsEditing);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenActivatingNodeAndCurrentNodeIsNull_ThenCanActivateNodeReturnsFalse()
             {
                 Assert.False(this.target.ActivateCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenActivatingNodeAndCurrentNodeIsSelected_ThenCanActivateNodeReturnsTrue()
             {
                 this.target.Nodes.First().IsSelected = true;
@@ -498,7 +498,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(this.target.ActivateCommand.CanExecute(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenActivatingNode_ThenInvokesPatternManagerActivateElement()
             {
                 var element = this.target.Nodes.First();
@@ -509,7 +509,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.patternManager.Verify(x => x.ActivateElement(element.Model), Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingElementToView_ThenAddsTheElement()
             {
                 var product = this.target.Nodes.First();
@@ -523,7 +523,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal(3, product.Nodes.Count);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingCollectionToView_ThenAddsTheCollection()
             {
                 var product = this.target.Nodes.First();

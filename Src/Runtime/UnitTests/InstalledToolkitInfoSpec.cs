@@ -27,13 +27,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 this.resource = new Mock<ISchemaResource>().Object;
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializingWithANullExtension_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new InstalledToolkitInfo(this.extension, this.reader, this.resource));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenExtensionIsSet()
             {
                 var extension = new Mock<IInstalledExtension>().Object;
@@ -43,7 +43,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Same(extension, target.Extension);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenIdIsExposed()
             {
                 var extension = new Mock<IInstalledExtension>();
@@ -54,7 +54,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal("Foo", target.Id);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenNameIsExposed()
             {
                 var extension = new Mock<IInstalledExtension>();
@@ -65,7 +65,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal("Foo", target.Name);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenAuthorIsExposed()
             {
                 var extension = new Mock<IInstalledExtension>();
@@ -76,7 +76,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal("Foo", target.Author);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenVersionIsExposed()
             {
                 var extension = new Mock<IInstalledExtension>();
@@ -87,7 +87,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(new Version(0, 0, 0, 1), target.Version);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenIconPathIsExposed()
             {
                 var installPath = Path.GetTempPath();
@@ -109,7 +109,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(iconPath, target.ToolkitIconPath);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializingAndIconIsNull_ThenIconPathIsNull()
             {
                 var extension = new Mock<IInstalledExtension>();
@@ -151,7 +151,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 this.target = new InstalledToolkitInfo(this.extension, this.reader, this.resource);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingOtherContent_ThenProductContentIsRetrieved()
             {
                 var content = this.target.GetCustomExtensions(InstalledToolkitAdapter.CustomExtensionType);
@@ -160,19 +160,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal("Foo.patterndefinition", content.First());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingOtherContentWithNullContentType_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => this.target.GetCustomExtensions(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingOtherContentWithEmptyContentType_ThenThrowsArgumentOutOfRangeException()
             {
                 Assert.Throws<ArgumentOutOfRangeException>(() => this.target.GetCustomExtensions(string.Empty));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingCustomizableExtensions_ThenGotItemsMarkedAsIsCustomizableOrInDocumentsFolder()
             {
                 var contents = this.target.GetCustomizableExtensions();
@@ -182,7 +182,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.True(contents.Any(c => c.RelativePath.Equals(@"Sample.file", StringComparison.OrdinalIgnoreCase)));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             [Ignore]
             public void WhenGettingToolkitSchema_ThenInitializesSchemaInstanceAndProductFactoryId()
             {

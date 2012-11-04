@@ -17,19 +17,19 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 		[TestClass]
 		public class GivenNoContext
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingNewWithNullOwner_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => new WizardAutomation(null, new Mock<IWizardSettings>().Object));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingNewWithNullSettings_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => new WizardAutomation(new Mock<IProductElement>().Object, null));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenTypeNameFailsToLoad_ThenThrowsTypeLoadException()
 			{
 				Assert.Throws<ArgumentNullException>(() => new WizardAutomation(
@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 					.Execute());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenTypeNameIsNotAWindow_ThenThrowsInvalidOperationException()
 			{
 				Assert.Throws<ArgumentNullException>(() => new WizardAutomation(
@@ -66,7 +66,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 				this.target.FeatureComposition = this.CompositionService.Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenWizardExecutedAndAccepted_ThenTurnsIsCanceledToFalse()
 			{
 				MockWizardWindow.ShouldBeCanceled = false;
@@ -75,7 +75,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 				Assert.False(this.target.IsCanceled);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenWizardExecutedAndCanceled_ThenTurnsIsCanceledToTrue()
 			{
 				MockWizardWindow.ShouldBeCanceled = true;
@@ -84,7 +84,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 				Assert.True(this.target.IsCanceled);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenWizardIsExecuted_ThenCompositionServiceIsUsedToSatisfyImports()
 			{
 				this.target.Execute();

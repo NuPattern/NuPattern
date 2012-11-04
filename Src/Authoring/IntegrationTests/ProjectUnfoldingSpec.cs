@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 		}
 
 		[Ignore]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		[HostType("VS IDE")]
 		public void WhenUnfolding_ThenProjectIsUnfolded()
 		{

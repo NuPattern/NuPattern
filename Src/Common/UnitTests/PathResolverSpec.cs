@@ -14,20 +14,20 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
     {
         internal static readonly IAssertion Assert = new Assertion();
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenNormalizingWithoutRelativeMove_ThenReturnsSameInput()
         {
             Assert.Equal("Foo\\Bar\\Baz", PathResolver.Normalize("Foo\\Bar\\Baz"));
         }
 
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenNormalizingWithRelativeMove_ThenPreservesNeededOnes()
         {
             Assert.Equal("..\\..\\Foo", PathResolver.Normalize("..\\..\\Foo"));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenNormalizingWithRelativeMove_ThenRemovesUnneededOnes()
         {
             // A\\B\\C\\[start]\\Foo\\ - 2
@@ -37,7 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
             Assert.Equal("..\\..\\Baz", PathResolver.Normalize("Foo\\..\\..\\Bar\\..\\..\\Baz"));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenPathEndsWithSlash_ThenItIsRemoved()
         {
             var resolver = new PathResolver(Mock.Of<IProductElement>(), Mock.Of<IFxrUriReferenceService>(), "Folder\\SubFolder\\");
@@ -70,7 +70,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
                 this.Resolver = new PathResolver(this.Element.Object, this.UriService.Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTargetPathStartsWithTildeButNoAssetLink_ThenThrowsInvalidOperationException()
             {
                 this.Resolver.Path = "~\\Foo";
@@ -80,7 +80,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
                     () => this.Resolver.Resolve());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenArtifactLinkFailsToResolve_ThenThrowsInvalidOperationException()
             {
                 this.Resolver.Path = "~\\Foo";
@@ -97,7 +97,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
                     () => this.Resolver.Resolve());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenArtifactLinkResolves_ThenPrependsToTargetPath()
             {
                 this.Resolver.Path = "~\\Bar";
@@ -119,7 +119,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
                 Assert.Equal("Foo\\Bar", this.Resolver.Path);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenMultipleArtifactLinkResolve_ThenCanFilterDesiredOne()
             {
                 this.Resolver.Path = "~\\Fixed";
@@ -148,7 +148,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
                 Assert.Equal("Baz\\Fixed", this.Resolver.Path);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPathContainsProductRelativeParentThen_ThenResolvesArtifact()
             {
                 this.Resolver.Path = "..\\..\\~\\Bar";
@@ -176,7 +176,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
                 Assert.Equal("Foo\\Bar", this.Resolver.Path);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPathStartsWithSlash_ThenDoesNotResolveArtifactLink()
             {
                 this.Resolver.Path = "\\Solution Items";

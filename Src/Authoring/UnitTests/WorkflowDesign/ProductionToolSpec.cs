@@ -26,13 +26,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				});
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenNotSatisfyingVariability()
 			{
 				Assert.False(this.tool.IsSatisfyingVariability);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenConnectedToAVariabilityRequirement_ThenSatisfyingVariability()
 			{
 				this.tool.WithTransaction(tool => tool.VariabilityRequirements.Add(this.store.ElementFactory.CreateElement<VariabilityRequirement>()));

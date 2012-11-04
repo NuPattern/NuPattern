@@ -14,14 +14,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
         [TestClass]
         public class GivenNoContext
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithNullPatternManager_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(
                     () => new AddNewProductViewModel(null, new Mock<IUserMessageService>().Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithNullUserMessageService_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(
@@ -52,25 +52,25 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.target = new AddNewProductViewModel(this.patternManager.Object, new Mock<IUserMessageService>().Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenFactoriesIsExposed()
             {
                 Assert.Equal(2, this.target.Toolkits.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenCurrentToolkitIsTurnedToFirstItem()
             {
                 Assert.Same(this.target.Toolkits.First(), this.target.CurrentToolkit);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenProductNameTurnedToDefaultName()
             {
                 Assert.Equal("Foo1", this.target.ProductName);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCurrentToolkitChanging_ThenPropertyChangedIsRaised()
             {
                 var eventRaised = false;
@@ -88,7 +88,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(eventRaised);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCurrentToolkitChangingToTheSameValue_ThenPropertyChangedIsNotRaised()
             {
                 var eventRaised = false;
@@ -106,7 +106,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(eventRaised);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProductNameChanging_ThenPropertyChangedIsRaised()
             {
                 var eventRaised = false;
@@ -123,7 +123,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(eventRaised);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProductNameChangingToTheSameValue_ThenPropertyChangedIsNotRaised()
             {
                 var eventRaised = false;
@@ -141,7 +141,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(eventRaised);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCurrentToolkitIsNull_ThenErrorMessageIsAdded()
             {
                 this.target.CurrentToolkit = null;
@@ -150,7 +150,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     this.target[Reflector<AddNewProductViewModel>.GetProperty(x => x.CurrentToolkit).Name].Length > 1);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProductNameIsNull_ThenErrorMessageIsAdded()
             {
                 this.target.ProductName = null;
@@ -159,7 +159,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     this.target[Reflector<AddNewProductViewModel>.GetProperty(x => x.ProductName).Name].Length > 1);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProductNameIsEmpty_ThenErrorMessageIsAdded()
             {
                 this.target.ProductName = string.Empty;
@@ -168,7 +168,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     this.target[Reflector<AddNewProductViewModel>.GetProperty(x => x.ProductName).Name].Length > 1);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCurrentToolkitIsNull_ThenSelectToolkitCommandCanNotExecute()
             {
                 this.target.CurrentToolkit = null;
@@ -177,7 +177,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(this.target.SelectToolkitCommand.CanExecute(new Mock<IDialogWindow>().Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProductNameIsNullOrEmpty_ThenSelectToolkitCommandCanNotExecute()
             {
                 this.target.CurrentToolkit = this.target.Toolkits.First();
@@ -186,7 +186,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(this.target.SelectToolkitCommand.CanExecute(new Mock<IDialogWindow>().Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDataAreValid_ThenSelectToolkitCommandCanExecute()
             {
                 this.target.CurrentToolkit = this.target.Toolkits.First();
@@ -195,7 +195,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(this.target.SelectToolkitCommand.CanExecute(new Mock<IDialogWindow>().Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDataAreValidAndSelectToolkitCommandExecuting_ThenDialogIsClosed()
             {
                 var dialog = new Mock<IDialogWindow>();
@@ -209,7 +209,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 dialog.Verify(d => d.Close());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSelectingANewProduct_ThenProductNameIsChanged()
             {
                 this.target.CurrentToolkit = this.target.Toolkits.First();
@@ -221,7 +221,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal("Bar1", this.target.ProductName);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingProductNameExternallyAndSelectingANewProduct_ThenProductNameIsNotChanged()
             {
                 this.target.CurrentToolkit = this.target.Toolkits.First();
@@ -258,13 +258,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.target = new AddNewProductViewModel(this.patternManager.Object, this.userMessageService.Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializingAndThereIsAProductWithTheSameName_ThenIncrementorIsUsedWithDefaultName()
             {
                 Assert.Equal("Foo3", this.target.ProductName);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAcceptingDialogAndProductNameExistsInPatternManager_ThenErrorMessageIsShownAndDialogIsNotClosed()
             {
                 var dialog = new Mock<IDialogWindow>();

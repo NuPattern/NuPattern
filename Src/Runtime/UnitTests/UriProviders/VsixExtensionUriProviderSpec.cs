@@ -14,13 +14,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenNullExtensionManager_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => new VsixExtensionUriProvider(null, file => { }));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenNullOpenFileAction_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => new VsixExtensionUriProvider(new Mock<IVsExtensionManager>().Object, null));
@@ -40,7 +40,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
 				this.provider = new VsixExtensionUriProvider(this.manager.Object, file => this.openFileAction(file));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenOpeningExtension_ThenInvokesOpenAction()
 			{
 				var extension = Mocks.Of<IInstalledExtension>().First(x => x.InstallPath == Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString()));
@@ -55,7 +55,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
 				Assert.Equal("extension.vsixmanifest", Path.GetFileName(openedFile));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenOpeningExtensionWithMissingManifestFile_ThenThrowsArgumentException()
 			{
 				var extension = Mocks.Of<IInstalledExtension>().First(x =>
@@ -65,13 +65,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
 				Assert.Throws<ArgumentException>(() => this.provider.Open(extension));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenResolvingUriWithUnsupportedScheme_ThenThrowsNotSupportedException()
 			{
 				Assert.Throws<NotSupportedException>(() => this.provider.ResolveUri(new Uri("foo://bar")));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenResolvingValidUri_ThenRetrievesInstalledExtensionFromManager()
 			{
 				var extension = Mocks.Of<IInstalledExtension>().First(x => x.Header.Identifier == "foo-extension");

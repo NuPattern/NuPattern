@@ -30,13 +30,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddRule_ThenCustomizationPolicyIsNotNull()
             {
                 Assert.NotNull(this.property.Policy);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddRule_ThenCustomizationPolicyHasRequiredSettings()
             {
                 IEnumerable<CustomizableSettingSchema> settings = this.property.Policy.Settings;
@@ -54,7 +54,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.NotNull(settings.FirstOrDefault(setting => setting.PropertyId == this.property.GetPropertyName(element => element.RawValueProvider)));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyAddedToElement_ThenPropertyUsageIsGeneral()
             {
                 PropertySchema newProperty = null;
@@ -66,7 +66,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(newProperty.PropertyUsage == Runtime.PropertyUsages.General);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyAddedToExtensionPoint_ThenPropertyUsageIsGeneral()
             {
                 PropertySchema newProperty = null;

@@ -49,7 +49,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewElementWithoutDefinitionId_ThenInfoTurnsNull()
             {
                 using (var tx = this.store.TransactionManager.BeginTransaction())
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewElementWithDefinitionId_ThenSetsSchemaInfo()
             {
                 var target = this.CreateElement();
@@ -69,7 +69,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(this.elementInfo.Object, target.Info);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewElement_ThenSetProperties()
             {
                 this.elementInfo.Setup(v => v.Name).Returns("bar");
@@ -81,7 +81,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(this.elementInfo.Object.Name, target.InstanceName);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewElement_ThenAddSchemaElementsWithOneToOneCardinalityAndAutoCreateOption()
             {
                 this.elementInfo.Setup(e => e.Elements)
@@ -98,7 +98,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(2, target.Elements.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewElement_ThenDoesntAddSchemaElementsWithOneToOneCardinalityAutomatically()
             {
                 this.elementInfo.Setup(e => e.Elements)
@@ -115,7 +115,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(0, target.Elements.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewElement_ThenSetsDefinitionIdInAddedElements()
             {
                 var elementId = Guid.NewGuid();
@@ -134,7 +134,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True(target.Elements.Any(e => e.DefinitionId == collectionId));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewElement_ThenAddSchemaDynamicProperties()
             {
                 this.elementInfo.Setup(e => e.Properties)
@@ -148,7 +148,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(4, target.Properties.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewElement_ThenSetsDefinitionIdInAddedProperties()
             {
                 var propertyId = Guid.NewGuid();
@@ -160,7 +160,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(propertyId, target.Properties.First().DefinitionId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewElementWithPropertiesWithDefaultValues_ThenSetsDefinitionIdInAddedProperties()
             {
                 this.elementInfo.Setup(e => e.Properties)
@@ -222,7 +222,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewCollectionWithoutDefinitionId_ThenInfoTurnsNull()
             {
                 using (var tx = this.store.TransactionManager.BeginTransaction())
@@ -234,7 +234,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewCollectionWithDefinitionId_ThenSetsSchemaInfo()
             {
                 var target = this.CreateCollection();
@@ -242,7 +242,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(this.collectionInfo.Object, target.Info);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewCollection_ThenSetProperties()
             {
                 this.collectionInfo.Setup(v => v.Name).Returns("bar");
@@ -254,7 +254,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(this.collectionInfo.Object.Name, target.InstanceName);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewCollection_ThenAddSchemaElementsWithOneToOneCardinalityAndAutoCreateOption()
             {
                 this.collectionInfo.Setup(e => e.Elements)
@@ -272,7 +272,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
             }
 
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewCollection_ThenDoesntAddSchemaElementsWithOneToOneCardinalityAutomatically()
             {
                 this.collectionInfo.Setup(e => e.Elements)
@@ -289,7 +289,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(0, target.Elements.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewCollection_ThenSetsDefinitionIdInAddedElements()
             {
                 var elementId = Guid.NewGuid();
@@ -308,7 +308,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True(target.Elements.Any(e => e.DefinitionId == collectionId));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewCollection_ThenAddSchemaDynamicProperties()
             {
                 this.collectionInfo.Setup(e => e.Properties)
@@ -322,7 +322,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(4, target.Properties.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewCollection_ThenSetsDefinitionIdInAddedProperties()
             {
                 var propertyId = Guid.NewGuid();
@@ -456,7 +456,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.store = new Dsl.Store(serviceProvider.Object, typeof(Dsl.CoreDomainModel), typeof(ProductStateStoreDomainModel));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithNewOneToOneCardinalityElementsInSchema_ThenAddNewElementsToRuntimeStore()
             {
                 var singleIds = Enumerable.Range(0, 2).Select(x => Guid.NewGuid()).ToArray();
@@ -477,7 +477,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.False(target.Elements.Any(x => x.DefinitionId == mutipleIds[1]));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithDeletedElementsInSchema_ThenDeleteElementsFromStore()
             {
                 var infos = (IList<IAbstractElementInfo>)this.elementInfo.Elements;
@@ -490,7 +490,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.False(target.Elements.Any(x => x.DefinitionId == deletedId));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithDeletedZeroToManyCardinalityElementsInSchema_ThenDeleteElementsFromStore()
             {
                 var infos = (IList<IAbstractElementInfo>)this.elementInfo.Elements;
@@ -504,7 +504,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.False(target.Elements.Any(x => x.DefinitionId == deletedId));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithNewProperties_ThenAddNewPropertiesToRuntimeStore()
             {
                 var propertyIds = Enumerable.Range(0, 2).Select(x => Guid.NewGuid()).ToArray();
@@ -520,7 +520,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True(target.Properties.Any(x => x.DefinitionId == propertyIds[1]));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithNewPropertiesWithDefaultValues_ThenAddNewPropertiesWithValueToStore()
             {
                 var propertyId = Guid.NewGuid();
@@ -536,7 +536,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True(target.Properties.Any(p => p.DefinitionId == propertyId && p.RawValue == "Bar"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithADeletedProperty_ThenRemovesPropertyFromStore()
             {
                 var infos = (IList<IPropertyInfo>)this.elementInfo.Properties;
@@ -549,7 +549,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.False(target.Properties.Any(x => x.DefinitionId == deletedId));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithDeletedExtensionPointInSchema_ThenDeleteExtensionsPointsFromStore()
             {
                 var infos = (IList<IExtensionPointInfo>)this.elementInfo.ExtensionPoints;
@@ -562,7 +562,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.False(target.ExtensionProducts.Any(x => x.DefinitionId == deletedId));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithElementMutiplicityChangedFromMultipleToSingle_ThenDeletesAnyExtraElement()
             {
                 var info = this.elementInfo.Elements.First(x => x.Cardinality == Cardinality.ZeroToMany);
@@ -574,7 +574,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(3, target.Elements.Count);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithExtensionPointMutiplicityChangedFromMultipleToSingle_ThenDeletesAnyExtraExtensionPoint()
             {
                 var info = this.elementInfo.ExtensionPoints.First(x => x.Cardinality == Cardinality.ZeroToMany);

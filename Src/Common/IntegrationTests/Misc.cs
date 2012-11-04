@@ -15,7 +15,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.IntegrationTests
 		internal static readonly IAssertion Assert = new Assertion();
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenGettingServiceProviderFromPackage_ThenSucceeds()
 		{
 			var components = (IComponentModel)Package.GetGlobalService(typeof(SComponentModel));
@@ -25,7 +25,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		[Ignore]
 		public void WhenShowingMessage_ThenSucceeds()
 		{

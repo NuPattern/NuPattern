@@ -21,49 +21,49 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             this.element = new Mock<IProductElement>();
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAddReferenceWithNullElement_ThenThrows()
         {
             Assert.Throws<ArgumentNullException>(
                 () => TestReferenceWithoutItsTypeConverter.AddReference(null, new Uri("solution://")));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAddReferenceWithNullValue_ThenThrows()
         {
             Assert.Throws<ArgumentNullException>(
                 () => TestReferenceWithoutItsTypeConverter.AddReference(this.element.Object, null));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenSetReferenceWithNullElement_ThenThrows()
         {
             Assert.Throws<ArgumentNullException>(
                 () => TestReferenceWithoutItsTypeConverter.SetReference((IProductElement)null, new Uri("solution://")));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenSetReferenceWithNullReference_ThenThrows()
         {
             Assert.Throws<ArgumentNullException>(
                 () => TestReferenceWithoutItsTypeConverter.SetReference((IReference)null, new Uri("solution://")));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenSetReferenceWithNullValue_ThenThrows()
         {
             Assert.Throws<ArgumentNullException>(
                 () => TestReferenceWithoutItsTypeConverter.SetReference(this.element.Object, null));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenGetReferencesWithNullElement_ThenThrows()
         {
             Assert.Throws<ArgumentNullException>(
                 () => TestReferenceWithoutItsTypeConverter.GetReference(null));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenGetReferenceWithNullElement_ThenThrows()
         {
             Assert.Throws<ArgumentNullException>(
@@ -88,14 +88,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingReference_ThenThrowsNotSupportedException()
             {
                 Assert.Throws<NotSupportedException>(() =>
                     TestReferenceWithoutItsTypeConverterAndNonConvertibleValue.AddReference(this.element, new Foo { }));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingReference_ThenThrowsNotSupportedException()
             {
                 element.AddReference(typeof(TestReferenceWithoutItsTypeConverterAndNonConvertibleValue).FullName, "foo://null");
@@ -125,7 +125,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddReferenceWithUri_ThenReferenceAdded()
             {
                 var reference = TestReferenceWithoutItsTypeConverter.AddReference(this.element, new Uri("solution://foo/bar.cs"));
@@ -135,7 +135,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal("solution://foo/bar.cs", reference.Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSetReferenceWithUri_ThenSameReferenceUpdated()
             {
                 var newUri = new Uri("solution://foo/bar.cs");
@@ -148,7 +148,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(newUri, TestReferenceWithoutItsTypeConverter.GetReference(this.element));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSetReferenceWithReferenceInstance_ThenReferenceValueUpdated()
             {
                 var newUri = new Uri("solution://foo/bar.cs");
@@ -161,7 +161,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(newUri, TestReferenceWithoutItsTypeConverter.GetReference(this.element));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGetReferenceWithNoReference_ThenNullReturned()
             {
                 var uri = TestReferenceWithoutItsTypeConverter.GetReference(this.element);
@@ -169,7 +169,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Null(uri);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGetReferenceAfterAddReference_ThenDefaultsToValueTypeConverter()
             {
                 TestReferenceWithoutItsTypeConverter.AddReference(this.element, new Uri("solution://foo/bar.cs"));
@@ -178,7 +178,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.NotNull(uri);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConvertFromReference_ThenGetsTypedValue()
             {
                 var newUri = new Uri("solution://foo/bar.cs");
@@ -209,7 +209,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddReferenceWithUri_ThenReferenceAdded()
             {
                 var reference = TestReferenceWithUriConverter.AddReference(this.element, new Uri("solution://"));
@@ -219,7 +219,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal("solution://", reference.Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSetReferenceWithUri_ThenSameReferenceUpdated()
             {
                 var reference = TestReferenceWithUriConverter.AddReference(this.element, new Uri("solution://"));
@@ -230,7 +230,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal("solution://Bar", reference.Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGetReferenceWithNoReference_ThenNullReturned()
             {
                 var uri = TestReferenceWithUriConverter.GetReference(this.element);
@@ -238,7 +238,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Null(uri);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGetReferenceAfterAddReference_ThenReturnsUri()
             {
                 TestReferenceWithUriConverter.AddReference(this.element, new Uri("solution://"));
@@ -247,7 +247,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(new Uri("solution://"), uri);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGetReferencesAfterAddReference_ThenThrowsNotSupported()
             {
                 TestReferenceWithUriConverter.AddReference(this.element, new Uri("solution://1"));

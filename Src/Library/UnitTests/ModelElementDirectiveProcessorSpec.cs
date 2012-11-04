@@ -28,7 +28,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 			this.provider = new CSharpCodeProvider();
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenTypeAttributeIsNotFound_ThenThrows()
 		{
 			var processor = new ModelElementDirectiveProcessor();
@@ -37,7 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 			Assert.Throws<DirectiveProcessorException>(() => processor.ProcessDirective("ModelElement", new Dictionary<string, string>()));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenTypeAttributeIsFound_ThenElementPropertyIsGenerated()
 		{
 			var processor = new ModelElementDirectiveProcessor();
@@ -51,7 +51,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 			Assert.True(result.Contains("return ((Foo.Bar)(base.Element));"));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenDirectiveNameIsNotModelElement_ThenDirectiveIsNotSupported()
 		{
 			var processor = new ModelElementDirectiveProcessor();
@@ -59,7 +59,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 			Assert.False(processor.IsDirectiveSupported("Foo"));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenDirectiveNameIsModeling_ThenDirectiveIsSupported()
 		{
 			var processor = new ModelElementDirectiveProcessor();
@@ -67,7 +67,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 			Assert.True(processor.IsDirectiveSupported("ModelElement"));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingReferenceWithoutElementAssemblyPath_ThenThrows()
 		{
 			var processor = new ModelElementDirectiveProcessor();
@@ -75,7 +75,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 			Assert.Throws<DirectiveProcessorException>(() => processor.GetReferencesForProcessingRun());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingReferenceWithEmptyElementAssemblyPath_ThenThrows()
 		{
 			var processor = new ModelElementDirectiveProcessor();
@@ -84,7 +84,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 			Assert.Throws<DirectiveProcessorException>(() => processor.GetReferencesForProcessingRun());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingReferenceWithNonExistingElementAssemblyPath_ThenThrows()
 		{
 			var processor = new ModelElementDirectiveProcessor();
@@ -93,7 +93,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 			Assert.Throws<DirectiveProcessorException>(() => processor.GetReferencesForProcessingRun());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingReference_ThenReturnsDefaultReferences()
 		{
 			var processor = new ModelElementDirectiveProcessor();
@@ -109,7 +109,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 			Assert.True(references.Contains(typeof(ModelBusEnabledTextTransformation).Assembly.Location));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingReferenceAndElementAssemblyPathWasDefined_ThenReturnsDefaultReferencesAndElementReference()
 		{
 			var processor = new ModelElementDirectiveProcessor();
@@ -121,7 +121,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 			Assert.True(references.Contains(elementAssemblyPath));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingImports_ThenReturnsDefaultImports()
 		{
 			var processor = new ModelElementDirectiveProcessor();
@@ -133,7 +133,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 			Assert.True(imports.Contains(typeof(Microsoft.VisualStudio.Modeling.Integration.IModelBus).Namespace));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingImportsAndElementNamespaceWasDefined_ThenReturnsDefaultImportsAndElementNamespace()
 		{
 			var processor = new ModelElementDirectiveProcessor();

@@ -27,7 +27,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 this.descriptor = new DesignPropertyValueDescriptor("AProperty", typeof(string), new System.ComponentModel.StringConverter(), new Attribute[0]);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueIsNull_ThenCanResetValueIsFalse()
             {
                 this.settings.Setup(s => s.Value).Returns((string)null);
@@ -35,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.False(this.descriptor.CanResetValue(this.component));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueIsEmpty_ThenCanResetValueIsFalse()
             {
                 this.settings.Setup(s => s.Value).Returns(string.Empty);
@@ -43,7 +43,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.False(this.descriptor.CanResetValue(this.component));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenHasAValue_ThenCanResetValueIsTrue()
             {
                 this.settings.Setup(s => s.Value).Returns("Foo");
@@ -51,7 +51,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.True(this.descriptor.CanResetValue(this.component));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenReset_ThenValueIsEmpty()
             {
                 this.settings.Setup(s => s.Value).Returns("0");
@@ -78,7 +78,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 this.descriptor = new DesignPropertyValueDescriptor("AProperty", typeof(int), new System.ComponentModel.Int32Converter(), new Attribute[0]);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueIsNull_ThenCanResetValueIsFalse()
             {
                 this.settings.Setup(s => s.Value).Returns((string)null);
@@ -86,7 +86,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.False(this.descriptor.CanResetValue(this.component));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueIsEmpty_ThenCanResetValueIsFalse()
             {
                 this.settings.Setup(s => s.Value).Returns(string.Empty);
@@ -94,7 +94,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.False(this.descriptor.CanResetValue(this.component));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenHasAValue_ThenCanResetValueIsTrue()
             {
                 this.settings.Setup(s => s.Value).Returns("0");
@@ -102,7 +102,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.True(this.descriptor.CanResetValue(this.component));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenReset_ThenValueIsEmpty()
             {
                 this.settings.Setup(s => s.Value).Returns("0");

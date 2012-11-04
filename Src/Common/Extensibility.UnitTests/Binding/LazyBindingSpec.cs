@@ -12,7 +12,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
     [TestClass]
     public class LazyBindingSpec
     {
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
         public void WhenExportProvidedUpFront_ThenEvaluatesTrue()
         {
@@ -28,7 +28,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 
         //// TODO: waiting on bug fix BlueTab-PLATU11
         [Ignore]
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
         public void WhenExportProvidedLater_ThenEvaluatesTrue()
         {

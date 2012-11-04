@@ -48,19 +48,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingExtensionPoints_ThenReturnsExtensionPoints()
             {
                 Assert.NotNull(this.descriptor.ExtensionPoints);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingMessageService_ThenReturnsMessageService()
             {
                 Assert.NotNull(this.descriptor.MessageService);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingProperties_ThenReturnsImplementedExtensionPointsRawProperty()
             {
                 Assert.True(

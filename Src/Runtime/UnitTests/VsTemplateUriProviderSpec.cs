@@ -13,25 +13,25 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 
 		private Mock<IServiceProvider> serviceProvider = new Mock<IServiceProvider>();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingWithNullServiceProvider_ThenThrowsException()
 		{
 			Assert.Throws<ArgumentNullException>(() => new VsTemplateUriProvider(null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingAnUriWithNullTemplate_ThenThrowsException()
 		{
 			Assert.Throws<ArgumentNullException>(() => new VsTemplateUriProvider(this.serviceProvider.Object).CreateUri(null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenResolvingAnUriWithoutPath_ThenThrowsException()
 		{
 			Assert.Throws<ArgumentException>(() => new VsTemplateUriProvider(this.serviceProvider.Object).ResolveUri(new Uri("template://Project/CSharp")));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingAnUriWithTemplateId_ThenReturnsReturnsUri()
 		{
 			var template = Mocks.Of<IVsTemplate>().First(t =>
@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 			Assert.Equal(new Uri("template://Project/CSharp/Foo"), uri);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingAnUriWithTemplateName_ThenReturnsUri()
 		{
 			var template = Mocks.Of<IVsTemplate>().First(t =>

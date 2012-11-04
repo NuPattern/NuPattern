@@ -19,7 +19,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
 				this.provider = new RegisteredMachineUserValueProvider();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenReturnsNotNullOrEmpty()
 			{
 				var result = this.provider.Evaluate();

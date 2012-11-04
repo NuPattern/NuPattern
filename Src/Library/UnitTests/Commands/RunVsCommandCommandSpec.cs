@@ -26,7 +26,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.command.Solution = this.solution.Object;
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCommandIsEmpty_ThenThrows()
             {
                 Assert.Throws<ValidationException>(() =>
@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             }
 
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes", Justification = "Test Code")]
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCommandIsInvalid_ThenThrows()
             {
                 var mockSolution = new Mock<EnvDTE.Solution>();
@@ -47,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                     this.command.Execute());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCommandIsValid_ThenCommandIsExecuted()
             {
                 var mockSolution = new Mock<EnvDTE.Solution>();

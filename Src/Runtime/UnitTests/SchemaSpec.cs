@@ -11,7 +11,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenInitializingAndExttensionPathIsNull_ThenThrowsArgumentNullException()
 		{
 			var content = new Mock<IExtensionContent>();
@@ -21,7 +21,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 			Assert.Throws<ArgumentNullException>(() => new SchemaResource(null, content.Object));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenInitializingAndExttensionPathIsEmpty_ThenArgumentOutOfRangeExceptionIsThrown()
 		{
 			var content = new Mock<IExtensionContent>();
@@ -31,13 +31,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 			Assert.Throws<ArgumentOutOfRangeException>(() => new SchemaResource(string.Empty, content.Object));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenInitilizingAndContentIsNull_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => new SchemaResource(@"X:\", null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenExtensionContentAttributesIsNull_ThenArgumentExceptionIsThrown()
 		{
 			var content = new Mock<IExtensionContent>();
@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 			Assert.Throws<ArgumentException>(() => new SchemaResource(@"X:\", content.Object));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenExtensionContentAssemblyFileAttributeIsMissing_ThenArgumentExceptionIsThrown()
 		{
 			var content = new Mock<IExtensionContent>();

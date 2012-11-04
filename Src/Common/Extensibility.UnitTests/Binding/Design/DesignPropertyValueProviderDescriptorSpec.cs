@@ -32,7 +32,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 this.descriptor = new DesignPropertyValueProviderDescriptor(innerDescriptor.Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueProviderIsNull_ThenCanResetValueIsFalse()
             {
                 this.settings.Setup(s => s.ValueProvider).Returns((IValueProviderBindingSettings)null);
@@ -40,7 +40,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.False(this.descriptor.CanResetValue(this.component));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenHasAValueProvider_ThenCanResetValueIsTrue()
             {
                 this.settings.Setup(s => s.ValueProvider).Returns(Mock.Of<IValueProviderBindingSettings>());
@@ -48,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.True(this.descriptor.CanResetValue(this.component));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenReset_ThenValueProviderIsNull()
             {
                 this.settings.Setup(s => s.ValueProvider).Returns(Mock.Of<IValueProviderBindingSettings>());

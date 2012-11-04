@@ -12,7 +12,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenInvokingEndInitTwice_ThenThrowsInvalidOperationOperation()
 		{
 			var codegen = new CodeGeneration();
@@ -21,7 +21,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Throws<InvalidOperationException>(() => codegen.EndInit());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenInvokingBeginInitAfterEndInit_ThenThrowsInvalidOperationOperation()
 		{
 			var codegen = new CodeGeneration();
@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Throws<InvalidOperationException>(() => codegen.BeginInit());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSafeImportsAccessedBeforeEndInit_ThenThrowsInvalidOperationOperation()
 		{
 			var codegen = new CodeGeneration();
@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Throws<InvalidOperationException>(() => codegen.SafeImports.Count());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenAddUsedTypesInvokedAfterEndInit_ThenThrowsInvalidOperationOperation()
 		{
 			var codegen = new CodeGeneration();
@@ -47,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Throws<InvalidOperationException>(() => codegen.AddUsedTypes(typeof(Foo)));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGetTypeNameInvokedBeforeEndInit_ThenThrowsInvalidOperationOperation()
 		{
 			var codegen = new CodeGeneration();
@@ -55,7 +55,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Throws<InvalidOperationException>(() => codegen.GetTypeName(typeof(Foo)));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSimplifyingTypeMap_ThenNoNamespaceTypesAreValid()
 		{
 			var codegen = new CodeGeneration();
@@ -69,7 +69,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Equal("Bar", codegen.TypeNameMap["Bar"], "Bar does not have a namespace but it still is valid.");
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSimplifyingGenericType_ThenAddsUsingsAndSimplifiesGenericParameterType()
 		{
 			var codegen = new CodeGeneration();
@@ -82,7 +82,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.True(codegen.SafeImports.Contains(typeof(NonNestedType).Namespace));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSimplifyingGenericTypeWithNestedTypeParameter_ThenRemovesPlusFromNestedTypeName()
 		{
 			var codegen = new CodeGeneration();
@@ -96,7 +96,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.False(codegen.SafeImports.Contains(typeof(CodeGenerationSpec).FullName), "The nested type parent should not be mistaken for a namespace.");
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSimplifyingGenericTypeWithCollidingParameter_ThenKeepsParameterFullName()
 		{
 			var codegen = new CodeGeneration();
@@ -110,7 +110,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.False(codegen.SafeImports.Contains(typeof(StringConverter).Namespace));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSimplifyingGenericAndNonGenericEnumerable_ThenAddsUsingForBoth()
 		{
 			var codegen = new CodeGeneration();
@@ -125,7 +125,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.True(codegen.SafeImports.Contains(typeof(IEnumerable).Namespace));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSimplifyingAllCoreLib_ThenAddsUsingForGenericsAndNonGenericEnumerable()
 		{
 			var codegen = new CodeGeneration();
@@ -139,7 +139,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.True(codegen.SafeImports.Contains(typeof(IComparable<>).Namespace));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenAddingAssembly_ThenSafeUsingsDoNotContainGenerics()
 		{
 			var codegen = new CodeGeneration();
@@ -151,7 +151,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.False(codegen.SafeImports.Any(s => s.IndexOf('[') != -1));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSimplifyingMultipleGenerics_ThenSimplifiesAllParameters()
 		{
 			var codegen = new CodeGeneration();
@@ -166,7 +166,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.True(codegen.SafeImports.Contains(typeof(CodeGenerationSpec).Namespace));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSimplifyingTypeMap_ThenOnlySimplifiesNonCollidingTypeNames()
 		{
 			var codegen = new CodeGeneration();
@@ -182,7 +182,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Equal("Bar.A", codegen.TypeNameMap["Bar.A"], "B type name is duplicated on namespace Foo, so it cannot be used as a simple type name and its full name should be in the map instead.");
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSimplifyingTypeMap_ThenUniqueTypeNamesAreSimplified()
 		{
 			var codegen = new CodeGeneration();
@@ -196,7 +196,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Equal("B", codegen.TypeNameMap["Bar.B"], "B is unique in the dictionary, so it can be used as a simplified type name.");
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingSafeUsings_ThenOnlyGetsNamespacesFromSimplifiedTypeNames()
 		{
 			var codegen = new CodeGeneration();
@@ -213,7 +213,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.False(codegen.SafeImports.Contains("Bar"));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenBuildingTypeMap_ThenContainsCustomAttributeTypes()
 		{
 			var codegen = new CodeGeneration();
@@ -227,7 +227,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.True(codegen.TypeNameMap.ContainsKey(typeof(PlatformID).FullName));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSimplifyingAssemblyQualifiedName_ThenAddsUsingAndSimplifiesTypeName()
 		{
 			var codegen = new CodeGeneration();

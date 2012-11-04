@@ -23,14 +23,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
 				get;
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenDisplayNameIsTracking()
             {
                 Assert.True(this.Element.IsDisplayNameTracking);
                 Assert.Equal(this.Element.CalculateDisplayNameTrackingValue(), this.Element.DisplayName);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTrackedPropertyIsChanged_ThenDisplayNameNotTracking()
             {
 			    this.Element.Store.TransactionManager.DoWithinTransaction( () =>
@@ -42,14 +42,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal("TestDisplayNameChanged", this.Element.DisplayName);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenDescriptionIsTracking()
             {
                 Assert.True(this.Element.IsDescriptionTracking);
                 Assert.Equal(this.Element.CalculateDescriptionTrackingValue(), this.Element.Description);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTrackedPropertyIsChanged_ThenDescriptionNotTracking()
             {
 			    this.Element.Store.TransactionManager.DoWithinTransaction( () =>
@@ -61,14 +61,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal("TestDescriptionChanged", this.Element.Description);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenCodeIdentifierIsTracking()
             {
                 Assert.True(this.Element.IsCodeIdentifierTracking);
                 Assert.Equal(this.Element.CalculateCodeIdentifierTrackingValue(), this.Element.CodeIdentifier);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTrackedPropertyIsChanged_ThenCodeIdentifierNotTracking()
             {
 			    this.Element.Store.TransactionManager.DoWithinTransaction( () =>

@@ -42,7 +42,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			File.Delete(this.targetTemplate);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		[HostType("VS IDE")]
 		public void WhenUnfolding_ThenParameterIsReplaced()
 		{

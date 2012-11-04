@@ -71,7 +71,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
                 picker.Setup(p => p.SelectedItem).Returns(item);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCancelDialog_ThenReturnPreviousValue()
             {
                 var editor = new ImageUriEditor(new Window());
@@ -84,7 +84,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
             }
 
 
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value"), TestMethod]
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value")]
+            [TestMethod, TestCategory("Unit")]
             public void ItemTypeIsUnchanged()
             {
                 item.Data.ItemType = "None";
@@ -95,7 +96,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
                 Assert.Equal("None", (string)item.Data.ItemType);
             }
 
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value"), TestMethod]
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value")]
+            [TestMethod, TestCategory("Unit")]
             public void CustomToolIsUnchanged()
             {
                 item.Data.CustomTool = "MyTool";
@@ -119,7 +121,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
                 picker.Setup(p => p.SelectedItem).Returns(item);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ReturnUriForComponent()
             {
                 var editor = new ImageUriEditor(new Window());
@@ -129,7 +131,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
                 Assert.Equal("pack://application:,,,/project;component/assets/icon.ico", value);
             }
 
-            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value"), TestMethod]
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value")]
+            [TestMethod, TestCategory("Unit")]
             public void SetResourceAsItemType()
             {
                 var editor = new ImageUriEditor(new Window());
@@ -139,7 +142,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
                 Assert.Equal("Resource", (string)item.Data.ItemType);
             }
 
-            [SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value"), TestMethod]
+            [SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "value")]
+            [TestMethod, TestCategory("Unit")]
             public void CustomToolIsUnchanged()
             {
                 item.Data.CustomTool = "MyTool";
@@ -151,7 +155,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
             }
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenContextIsNotNull_EditStyleIsModal()
         {
             var editor = new ImageUriEditor(new Window());
@@ -161,7 +165,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
             Assert.Equal(UITypeEditorEditStyle.Modal, editor.GetEditStyle(context));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenContextIsNull_EditStyleIsModal()
         {
             var editor = new ImageUriEditor(new Window());
@@ -169,7 +173,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
             Assert.Equal(UITypeEditorEditStyle.Modal, editor.GetEditStyle(null));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenContextIsNotPassed_EditStyleIsModal()
         {
             var editor = new ImageUriEditor(new Window());

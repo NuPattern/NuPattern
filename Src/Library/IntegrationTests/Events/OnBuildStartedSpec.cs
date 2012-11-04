@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Events
 			//// The DTE events are not being raised :(
 			[Ignore]
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenBuildingSolution_ThenBuildStartedRaised()
 			{
 				var called = false;

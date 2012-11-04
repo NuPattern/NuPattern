@@ -35,19 +35,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
             this.converter = new ExtensionPointsConverter();
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenTryingToConvertFromString_ThenReturnsTrue()
         {
             Assert.True(this.converter.CanConvertFrom(typeof(string)));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenTryingToConvertFromIn_ThenReturnsFalse()
         {
             Assert.False(this.converter.CanConvertFrom(typeof(int)));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenConvertingFromValue_ThenReturnsConvertedValue()
         {
             var convertedValue = this.converter.ConvertFrom(this.context, CultureInfo.InvariantCulture, "Foo");
@@ -56,19 +56,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
             Assert.Equal(1, ((List<IExtensionPointSchema>)convertedValue).Count);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenConvertingFromInValidValue_ThenReturnsNull()
         {
             Assert.Null(this.converter.ConvertFrom(this.context, CultureInfo.InvariantCulture, "sdsd"));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenTryingToConvertToString_ThenReturnsTrue()
         {
             Assert.True(this.converter.CanConvertTo(typeof(string)));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenConvertingValueToString_ThenReturnsConvertedValue()
         {
             var extension = new Mock<IExtensionPointSchema>();
@@ -81,19 +81,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
             Assert.Equal("Bar|Bar1", convertedValue as string);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenConvertingInValidValueToString_ThenReturnsInvalidValue()
         {
             Assert.Equal("sdsd", this.converter.ConvertTo(this.context, CultureInfo.InvariantCulture, "sdsd", typeof(string)));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenTryingToConvertToInt_ThenReturnsFalse()
         {
             Assert.False(this.converter.CanConvertTo(typeof(int)));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenGettingStandardValues_ThenReturnsValues()
         {
             var values = this.converter.GetStandardValues(this.context);
@@ -103,7 +103,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
             Assert.Equal("Foo", values.Cast<IExtensionPointSchema>().ElementAt(0).RequiredExtensionPointId);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenGettingFilteredStandardValues_ThenReturnsValues()
         {
             var values = new ExtensionPointsConverter(p => p.Id != "FooId").GetStandardValues(this.context);

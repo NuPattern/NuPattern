@@ -132,7 +132,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingValidExtension_ThenAddsItToExtensionsCollection()
             {
                 var extension = this.view.CreateExtension(prod => { prod.ExtensionId = Ids.ValidExtensionToolkitId; prod.DefinitionId = Ids.ValidExtensionProductId; });
@@ -141,14 +141,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 Assert.Equal(1, this.view.Extensions.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingInvalidExtension_ThenThrows()
             {
                 Assert.Throws<ArgumentException>(() => this.view
                     .CreateExtension(prod => { prod.ExtensionId = Ids.InvalidExtensionToolkitId; prod.DefinitionId = Ids.InvalidExtensionProductId; }));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingChildElement_ThenAddsItToElementsCollection()
             {
                 var existing = this.view.Elements.Count();
@@ -158,7 +158,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 Assert.Equal(existing + 1, this.view.Elements.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingChildCollection_ThenAddsItToElementsCollection()
             {
                 var existing = this.view.Elements.Count();

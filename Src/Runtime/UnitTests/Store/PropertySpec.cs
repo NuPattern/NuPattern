@@ -52,7 +52,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 this.Store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingStringProperty_ThenParentElementRaisesPropertyChangedEvent()
             {
                 this.Property.Info = Mock.Of<IPropertyInfo>(info => info.Name == "My" && info.Type == "System.String");
@@ -64,7 +64,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 Assert.Equal(this.Property.Info.Name, changedProp);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResettingStringProperty_ThenSetsToEmptyString()
             {
                 this.Property.Info = Mock.Of<IPropertyInfo>(info => info.Name == "My" && info.Type == "System.String");
@@ -75,7 +75,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 Assert.Equal(string.Empty, this.Property.RawValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResettingBooleanProperty_ThenSetsToFalse()
             {
                 this.Property.Info = Mock.Of<IPropertyInfo>(info => info.Name == "My" && info.Type == "System.Boolean");
@@ -86,7 +86,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 Assert.Equal("False", this.Property.RawValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResettingWithDefaultValue_ThenSetsToDefault()
             {
                 this.Property.Info = Mock.Of<IPropertyInfo>(info =>
@@ -102,7 +102,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 Assert.Equal("Bar", this.Property.RawValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResettingWithDefaultValueExpression_ThenEvaluatesAgainstOwner()
             {
                 this.Element.InstanceName = "Hello";
@@ -152,7 +152,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                         factory.CreateContext() == this.bindingContext.Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenBindingSucceedsAndResettingProperty_ThenSetsToValueProvider()
             {
                 this.Property.RawValue = "foo";
@@ -165,7 +165,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 Assert.Equal("Hello", this.Property.RawValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenBindingFailsAndResettingProperty_ThenSetsToEvaluatedDefaultValue()
             {
                 this.Property.RawValue = "foo";
@@ -177,7 +177,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 Assert.Equal("Hello World", this.Property.RawValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenBindingFailsAndNoDefaultValue_ThenSetsToTypeDefault()
             {
                 this.Property.RawValue = "foo";
@@ -209,19 +209,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 this.Property.Info = null;
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResettingValue_ThenThrowsInvalidOperationException()
             {
                 Assert.Throws<InvalidOperationException>(() => this.Property.Reset());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValue_ThenThrowsInvalidOperationException()
             {
                 Assert.Throws<InvalidOperationException>(() => this.Property.Value = "Foo");
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenGetsRawValue()
             {
                 this.Property.RawValue = "zz";
@@ -261,7 +261,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                         factory.CreateContext() == this.bindingContext.Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenBindingSucceedsAndRetrievingValue_ThenGetsValueProvided()
             {
                 this.binding.Setup(x => x.Evaluate(this.bindingContext.Object)).Returns(true);
@@ -270,7 +270,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 Assert.Equal("Hello", (string)this.Property.Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenBindingSucceedsAndRetrievingValue_ThenDoesNotSaveRawValueAutomatically()
             {
                 this.Property.RawValue = "Foo";
@@ -282,7 +282,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 Assert.Equal("Foo", this.Property.RawValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenBindingFails_ThenReturnsLastKnownRawValue()
             {
                 this.Property.RawValue = "foo";
@@ -310,7 +310,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                     info.ValidationSettings == new IBindingSettings[] { Mock.Of<IBindingSettings>() });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValidating_ThenBindingContextHasProperty()
             {
                 var controller = new ValidationController();
@@ -320,7 +320,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 this.BindingContext.Verify(x => x.AddExport<IProperty>(this.Property));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValidating_ThenBindingContextHasOwnerElement()
             {
                 var controller = new ValidationController();

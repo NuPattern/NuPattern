@@ -27,7 +27,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.pattern);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateAtLeastOneViewFails()
             {
                 this.pattern.ValidateAtLeastOneView(validationContext);
@@ -36,7 +36,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.pattern) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateSingleDefaultViewFails()
             {
                 this.pattern.ValidateSingleDefaultView(validationContext);
@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.pattern) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateAtLeastOneVisibleViewFails()
             {
                 this.pattern.ValidateAtLeastOneVisibleView(validationContext);
@@ -54,7 +54,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.pattern) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidatePatternNotNamedDefaultSucceeds()
             {
                 this.pattern.ValidatePatternNotNamedDefault(validationContext);
@@ -62,7 +62,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNameIsDefaultName_ThenValidatePatternNotNamedDefaultFails()
             {
                 this.pattern.WithTransaction(pattern => pattern.Name = Properties.Resources.PatternSchema_DefaultName);
@@ -93,7 +93,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.pattern);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateAtLeastOneViewSucceeds()
             {
                 this.pattern.ValidateAtLeastOneView(validationContext);
@@ -101,7 +101,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateSingleDefaultViewSucceeds()
             {
                 this.pattern.ValidateSingleDefaultView(validationContext);
@@ -109,7 +109,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateAtLeastOneVisibleViewSucceeds()
             {
                 this.pattern.ValidateAtLeastOneVisibleView(validationContext);
@@ -117,7 +117,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenHidden_ThenValidateAtLeastOneVisibleViewFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -131,7 +131,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.pattern) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenHiddenAndAnotherViewIsVisible_ThenValidateAtLeastOneVisibleViewSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -146,7 +146,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNotDefaultAndAnotherViewIsDefault_ThenValidateSingleDefaultViewSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>

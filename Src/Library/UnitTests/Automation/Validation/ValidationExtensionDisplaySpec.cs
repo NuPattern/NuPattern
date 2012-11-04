@@ -36,7 +36,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Validat
                 this.validationExtension = ExtensionElement.GetExtension<ValidationExtension>(this.product);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidationExecutionIsBrowsable()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.validationExtension, extension => extension.ValidationExecution);
@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Validat
                 Assert.False(descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidationOnBuildDescriptorNotExist()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.validationExtension, extension => extension.ValidationOnBuild);
@@ -53,7 +53,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Validat
                 Assert.Null(descriptor);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidationOnCustomMenuDescriptorNotExist()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.validationExtension, extension => extension.ValidationOnCustomEvent);
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Validat
                 Assert.Null(descriptor);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidationOnMenuDescriptorNotExist()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.validationExtension, extension => extension.ValidationOnMenu);
@@ -69,7 +69,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Validat
                 Assert.Null(descriptor);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidationOnSaveDescriptorNotExist()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.validationExtension, extension => extension.ValidationOnSave);
@@ -77,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Validat
                 Assert.Null(descriptor);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidationExecutionDescriptorHasCorrectProperties()
             {
                 Mock<ITypeDescriptorContext> mockContext = new Mock<ITypeDescriptorContext>();

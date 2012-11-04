@@ -8,19 +8,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingWithNullSender_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => Event.Create<EventArgs>(null, EventArgs.Empty));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingWithNullArgs_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => Event.Create<EventArgs>(new object(), null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingEvent_ThenInitializesProperties()
 		{
 			var sender = new object();

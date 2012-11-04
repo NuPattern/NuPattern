@@ -64,7 +64,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenCardinalityPropertyIsBrowsableAndNotReadOnly()
             {
                 var propertyName = Reflector<ViewHasElements>.GetProperty(rellie => rellie.Cardinality).Name;
@@ -97,7 +97,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.Element = this.PatternModel.Pattern.Views[0].Elements[0] as ElementSchema;
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenCardinalityPropertyIsBrowsableAndReadOnly()
             {
                 var propertyName = Reflector<ViewHasElements>.GetProperty(rellie => rellie.Cardinality).Name;
@@ -107,7 +107,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingNewElement_ThenCardinalityPropertyIsBrowsableAndNotReadOnly()
             {
                 ElementSchema element2 = null;

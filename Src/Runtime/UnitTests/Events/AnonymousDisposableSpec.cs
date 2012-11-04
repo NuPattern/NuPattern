@@ -8,7 +8,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenConstructedWithNullAction_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() =>
@@ -19,7 +19,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 			});
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenDisposed_ThenInvokesAction()
 		{
 			var called = false;
@@ -32,7 +32,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 		}
 
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times", Justification = "On purpose")]
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenDisposedTwice_ThenInvokesActionOnce()
 		{
 			var called = 0;

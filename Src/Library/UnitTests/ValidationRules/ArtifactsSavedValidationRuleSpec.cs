@@ -31,7 +31,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.rule.CurrentElement = new Mock<IProductElement>().Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenNoValidationError()
 			{
 				var result = this.rule.Validate();
@@ -69,7 +69,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.rule.CurrentElement = mockElement.Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenArtifactIsNotDirty_ThenNoValidationError()
 			{
 				var result = this.rule.Validate();
@@ -77,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				Assert.False(result.Any());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenArtifactIsDirty_ThenValidationError()
 			{
 				this.mockProjectItem.SetupGet(pi => pi.Saved).Returns(false);
@@ -86,7 +86,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				Assert.Equal(1, result.Count());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenArtifactIsNotAnItem_ThenNoValidationError()
 			{
 				this.mockUriReferenceService.Setup(s => s.ResolveUri<IItemContainer>(It.IsAny<Uri>())).Returns(new Mock<ISolution>().Object);

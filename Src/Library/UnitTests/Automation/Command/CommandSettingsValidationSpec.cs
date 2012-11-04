@@ -47,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateTypeIsNotEmptyFails()
             {
                 this.validators.ValidateTypeIsNotEmpty(validationContext, this.settings);
@@ -56,7 +56,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.settings) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTypeIsNotEmpty_ThenValidateTypeIsNotEmptySucceeds()
             {
                 this.settings.WithTransaction(setting => setting.TypeId = "foo");

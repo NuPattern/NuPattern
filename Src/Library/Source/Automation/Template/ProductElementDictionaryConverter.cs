@@ -82,7 +82,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 			else
 			{
 				var parentView = parentElement as IView;
-				if (parentView is IView)
+				if (parentView != null)
 				{
 					AddSelfEntries(parentView, elementPath);
 					AddDecendantElementsEntries(parentView, elementPath, element);
@@ -91,7 +91,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 				else
 				{
 					var parentAbstractElement = parentElement as IAbstractElement;
-					if (parentAbstractElement is IAbstractElement)
+					if (parentAbstractElement != null)
 					{
 						AddSelfEntries(parentAbstractElement, elementPath);
 						AddDecendantElementsEntries(parentAbstractElement, elementPath, element);

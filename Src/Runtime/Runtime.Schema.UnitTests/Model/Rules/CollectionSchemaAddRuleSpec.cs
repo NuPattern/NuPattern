@@ -27,13 +27,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddRule_ThenCustomizationPolicyIsNotNull()
             {
                 Assert.NotNull(this.collection.Policy);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddRule_ThenCustomizationPolicyHasRequiredSettings()
             {
                 IEnumerable<CustomizableSettingSchema> settings = this.collection.Policy.Settings;

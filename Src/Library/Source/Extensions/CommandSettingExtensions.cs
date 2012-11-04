@@ -161,7 +161,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
 		/// </summary>
 		public Runtime.AutomationSettingsClassification Classification
 		{
-			get { return internalSettings.Classification; ; }
+			get { return internalSettings.Classification; }
 		}
 
 		/// <summary>

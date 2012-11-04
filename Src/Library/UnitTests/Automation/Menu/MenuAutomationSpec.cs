@@ -62,7 +62,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				base.Cleanup();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenTextChanged_ThenRaisesPropertyChanged()
 			{
 				var raised = false;
@@ -80,7 +80,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				Assert.Equal(Reflector<MenuAutomation>.GetProperty(x => x.Text).Name, propertyName);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenTextChangedToSameValue_ThenDoesNotRaisePropertyChanged()
 			{
 				var raised = false;
@@ -92,7 +92,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				Assert.False(raised);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEnabledChanged_ThenRaisesPropertyChanged()
 			{
 				var raised = false;
@@ -109,7 +109,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				Assert.Equal(Reflector<MenuAutomation>.GetProperty(x => x.Enabled).Name, propertyName);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenVisibleChanged_ThenRaisesPropertyChanged()
 			{
 				var raised = false;
@@ -176,7 +176,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				base.Cleanup();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutingAutomation_ThenExecutesCommand()
 			{
 				this.Automation.EndInit();
@@ -186,7 +186,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.Command.Verify(x => x.Execute());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCommandIdNotFound_ThenDoesNotThrow()
 			{
 				this.Settings.Setup(x => x.CommandId).Returns(Guid.NewGuid());
@@ -238,7 +238,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.Owner.Setup(x => x.AutomationExtensions).Returns(new[] { this.Command.Object, this.Wizard.Object });
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutingAutomation_ThenExecutesWizardAndCommand()
 			{
 				this.Automation.EndInit();
@@ -249,7 +249,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.Command.Verify(x => x.Execute(), Times.Once());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenWizardIdNotFound_ThenDoesNotThrowAndDoesNotExecuteCommand()
 			{
 				this.Settings.Setup(x => x.WizardId).Returns(Guid.NewGuid());
@@ -261,7 +261,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.Command.Verify(x => x.Execute(), Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenWizardCanceled_ThenDoesNotExecutCommand()
 			{
 				this.Wizard.Setup(x => x.IsCanceled).Returns(true);
@@ -302,7 +302,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.Automation.BindingFactory = this.bindingFactory.Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEndInit_ThenInvokesBindingFactoryForCustomQueryStatus()
 			{
 				this.Automation.EndInit();
@@ -310,7 +310,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.bindingFactory.Verify(x => x.CreateBinding<ICommandStatus>(It.IsAny<IBindingSettings>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecuting_ThenInvokesCustomQueryStatus()
 			{
 				this.Automation.EndInit();
@@ -320,7 +320,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.status.Verify(x => x.QueryStatus(It.IsAny<IMenuCommand>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenQueryingStatus_ThenInvokesCustomQueryStatus()
 			{
 				this.Automation.EndInit();
@@ -330,7 +330,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.status.Verify(x => x.QueryStatus(this.Automation));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenQueryStatusSetsEnabledFalse_ThenCommandIsNotInvoked()
 			{
 				this.status.Setup(x => x.QueryStatus(It.IsAny<IMenuCommand>()))
@@ -380,13 +380,13 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.Automation.EndInit();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenInvokesBindingFactoryForCondition()
 			{
 				this.bindingFactory.Verify(x => x.CreateBinding<ICondition>(It.IsAny<IBindingSettings>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutingAutomation_ThenConditionIsEvaluated()
 			{
 				this.Automation.Execute();
@@ -395,7 +395,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.condition.Verify(x => x.Evaluate());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenQueryingStatus_ThenConditionIsEvaluated()
 			{
 				this.Automation.QueryStatus(this.Automation);
@@ -404,7 +404,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.condition.Verify(x => x.Evaluate());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenBindingReturnsFalse_ThenDoesNotInvokeCommand()
 			{
 				this.conditionBinding.Setup(x => x.Evaluate(It.IsAny<IDynamicBindingContext>())).Returns(false);
@@ -414,7 +414,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.Command.Verify(x => x.Execute(), Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenBindingValueReturnsFalse_ThenDoesNotInvokeCommand()
 			{
 				this.conditionBinding.Setup(x => x.Value.Evaluate()).Returns(false);
@@ -424,7 +424,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.Command.Verify(x => x.Execute(), Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenConditionEvaluatesToFalse_ThenCommandIsNotExecuted()
 			{
 				this.condition.Setup(x => x.Evaluate()).Returns(false);

@@ -27,19 +27,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 };
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithNullProduct_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new ProductViewModel(null, this.ctx));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithNullContext_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new ProductViewModel(new Mock<IProduct>().Object, null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithInfo_ThenShowsEnabledIcon()
             {
                 var viewInfo = Mocks.Of<IViewInfo>().First(v => v.Name == "View1" && v.IsDefault);
@@ -63,7 +63,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal("../../Resources/Product.png", target.IconPath);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithMissingInfo_ThenShowsUninstalledIcon()
             {
                 var product = Mocks.Of<IProduct>().First(p =>
@@ -75,7 +75,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal("../../Resources/ProductUninstalled.png", target.IconPath);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithOneView_ThenDoesNotAddViewsMenuOption()
             {
                 var product = Mocks.Of<IProduct>().First(p =>
@@ -87,7 +87,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(target.MenuOptions.Any(o => o.Caption == Resources.ProductViewModel_ViewsMenuText));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecutingDelete_ThenInvokesPatternManagerDelete()
             {
                 var product = Mocks.Of<IProduct>().First(p =>
@@ -100,7 +100,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Mock.Get(this.ctx.PatternManager).Verify(p => p.DeleteProduct(product));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProductDoesNotHaveInfo_ThenLoadsProductWithoutAnyChildren()
             {
                 var product = Mocks.Of<IProduct>().First(p =>
@@ -115,7 +115,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal(0, target.Nodes.Count);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProductDoesNotHaveInfo_ThenLoadsProductWithDeleteAndPropertiesMenuItemsOnly()
             {
                 var product = Mocks.Of<IProduct>().First(p =>
@@ -209,13 +209,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.target.RenderHierarchyRecursive();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenExposesModel()
             {
                 Assert.Same(this.product, this.target.Model);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenCreatesAddMenuOption()
             {
                 var options = this.target.MenuOptions
@@ -224,7 +224,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.NotNull(options);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenLoadViews()
             {
                 Assert.Equal(
@@ -235,7 +235,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                         .Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenViewIsHidden_ThenOptionIsNotVisible()
             {
                 Assert.True(this.target.MenuOptions
@@ -244,7 +244,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                         .Any(x => !x.IsVisible));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOptionsAreAdded_ThenListIsSortedByDisplayName()
             {
                 Assert.Equal("HiddenView", this.target.MenuOptions
@@ -254,7 +254,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                         .First());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOptionsAreAdded_ThenDisplayNameIsUsedForMenu()
             {
                 Assert.True(this.target.MenuOptions
@@ -263,13 +263,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                         .All(o => o.Caption == ((IView)o.Model).Info.DisplayName));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenDefaultViewIsSelectedAsCurrentView()
             {
                 Assert.Same(this.product.Views.ElementAt(1), this.target.CurrentView);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingCurrentView_ThenRenderNodesFromSelectedView()
             {
                 var view = (IView)this.target.MenuOptions
@@ -284,7 +284,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Contains(this.target.CurrentView.AllElements.ElementAt(0), this.target.Nodes.Select(n => n.Model));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNew_ThenAddMenuOptions()
             {
                 var viewsOption = this.target.MenuOptions
@@ -293,7 +293,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal(4, viewsOption.MenuOptions.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingCurrentView_ThenRefreshAddMenuElements()
             {
                 var addOption = this.target.MenuOptions
@@ -309,7 +309,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal(1, addOption.MenuOptions.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingNewElement_ThenCreatesElementInStore()
             {
                 var addOption = this.target.MenuOptions
@@ -325,7 +325,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     .Verify(x => x.CreateElement(It.IsAny<Action<IElement>>(), It.IsAny<bool>()), Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingNewCollection_ThenCreateCollectionInStore()
             {
                 SolutionBuilderViewModelSpec.SetupCreateCollection(this.patternManager, this.target.CurrentView);
@@ -343,7 +343,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     .Verify(x => x.CreateCollection(It.IsAny<Action<ICollection>>(), It.IsAny<bool>()), Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDelete_ThenPromptsConfirmation()
             {
                 this.target.DeleteCommand.Execute(null);
@@ -352,7 +352,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     .Verify(x => x.PromptWarning(It.IsAny<string>()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeleteThrows_ThenShowsMessageError()
             {
                 Mock.Get(this.patternManager).Setup(x => x.DeleteProduct(this.product)).Throws<InvalidOperationException>();

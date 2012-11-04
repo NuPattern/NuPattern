@@ -32,7 +32,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				this.element = mockElement.Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenBuildingTypeMap_ThenContainsVariablePropertiesUsedTypes()
 			{
 				var codegen = new ProductCodeGeneration<IElementInfo, IElement>(this.element);
@@ -48,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				Assert.False(codegen.SafeImports.Contains("Microsoft.VisualStudio.Patterning"));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenBuildingTypeMap_ThenHasStandardValuesEditor()
 			{
 				var pattern = new Mock<IPatternInfo>();

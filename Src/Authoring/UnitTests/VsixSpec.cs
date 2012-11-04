@@ -14,31 +14,31 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 		[DeploymentItem("Authoring.UnitTests.Content", "Authoring.UnitTests.Content")]
 		public class GivenAVsixFile
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenVsixFileIsEmpty_ThenThrowsArgumentOutOfRangeException()
 			{
 				Assert.Throws<ArgumentOutOfRangeException>(() => Vsix.Unzip(string.Empty, "Target"));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenVsixFileIsNull_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => Vsix.Unzip(null, "Target"));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenTargetDirIsEmpty_ThenArgumentOutOfRangeException()
 			{
 				Assert.Throws<ArgumentOutOfRangeException>(() => Vsix.Unzip("Authoring.UnitTests.Content\\Toolkit1.vsix", string.Empty));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenTargetDirIsNull_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => Vsix.Unzip("Authoring.UnitTests.Content\\Toolkit1.vsix", null));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnzipFromStream_ThenItIsCreated()
 			{
 				using (FileStream vsixFile = File.OpenRead("Authoring.UnitTests.Content\\Toolkit1.vsix"))
@@ -51,7 +51,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				}
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnzipToNonExistingFolder_ThenItIsCreated()
 			{
 				var targetDir = new DirectoryInfo("Target");
@@ -65,7 +65,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.True(Directory.Exists(targetDir.FullName));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnzipToExistingFolder_ThenTargetFolderIsCleaned()
 			{
 				var targetDir = new DirectoryInfo("Target");
@@ -84,7 +84,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.False(File.Exists(existingFile));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnzip_ThenContainsTopLevelFiles()
 			{
 				var targetDir = new DirectoryInfo("Target").FullName;
@@ -95,7 +95,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.True(File.Exists(Path.Combine(targetDir, "Toolkit1.dll")));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnzip_ThenContainsNestedFolders()
 			{
 				var targetDir = new DirectoryInfo("Target").FullName;
@@ -107,7 +107,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.True(Directory.Exists(Path.Combine(targetDir, "Automation\\Templates\\Projects")));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnzip_ThenContainsNestedFiles()
 			{
 				var targetDir = new DirectoryInfo("Target").FullName;
@@ -120,7 +120,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.True(File.Exists(Path.Combine(targetDir, "Automation\\Templates\\Projects\\ToolkitCustomization.zip")));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenReadingManifest_ThenGetsFullInfo()
 			{
 				var extension = Vsix.ReadManifest("Authoring.UnitTests.Content\\Toolkit1.vsix");
@@ -134,7 +134,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "PatternModel").Count());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenReadingVsixFromStream_ThenGetsFullInfo()
 			{
 				using (FileStream vsixFile = File.OpenRead("Authoring.UnitTests.Content\\Toolkit1.vsix"))
@@ -156,7 +156,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 		[TestClass]
 		public class GivenAVsixManifestFile
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenReadingManifest_ThenGetsFullInfo()
 			{
 				var extension = Vsix.ReadManifest("Authoring.UnitTests.Content\\GivenAVsixManifestFile\\extension.vsixmanifest");
@@ -170,7 +170,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "PatternModel").Count());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenReadingManifestId_ThenGetsIdentifier()
 			{
 				var extension = Vsix.ReadManifestIdentifier("Authoring.UnitTests.Content\\GivenAVsixManifestFile\\extension.vsixmanifest");

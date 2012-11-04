@@ -55,37 +55,37 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingConverter_ThenReturnsExtensionPointsConverter()
             {
                 Assert.True(this.descriptor.Converter.GetType() == typeof(ExtensionPointsConverter));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingEditor_ThenReturnsCollectionConverter()
             {
                 Assert.True(this.descriptor.GetEditor(typeof(UITypeEditor)).GetType() == typeof(CollectionDropDownEditor<IExtensionPointSchema>));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingPropertyType_ThenReturnsStringType()
             {
                 Assert.True(this.descriptor.PropertyType == typeof(string));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingReadOnlyProperty_ThenReturnsFalse()
             {
                 Assert.False(this.descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingCanResetValue_ThenReturnsTrue()
             {
                 Assert.True(this.descriptor.CanResetValue(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenReturnsValue()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -97,7 +97,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 CollectionAssert.AreEqual(this.allExtensionPoints.ToList(), (System.Collections.ICollection)this.descriptor.GetValue(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResettingValue_ThenDeletesAllProvidedExtensionsAndContractProperties()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -179,7 +179,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValue_ThenSetsImplementedExtensionPointsAndVariableProperties()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -196,7 +196,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(typeof(string).Name, property1.Type);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenReturnsValue()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -267,7 +267,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValue_ThenSetsImplementedExtensionPointsAndVariableProperties()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -291,7 +291,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(typeof(string).Name, property2.Type);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenReturnsValue()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -363,7 +363,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValue_ThenSetsImplementedExtensionPointsAndVariableProperties()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -383,7 +383,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(typeof(string).Name, property1.Type);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenReturnsValue()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -455,7 +455,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValue_ThenSetsImplementedExtensionPointsAndVariableProperties()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);
@@ -472,7 +472,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(typeof(string).Name, property1.Type);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenReturnsValue()
             {
                 this.descriptor.SetValue(null, this.extensionPoints);

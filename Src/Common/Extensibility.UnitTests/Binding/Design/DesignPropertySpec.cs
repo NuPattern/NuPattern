@@ -25,7 +25,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 this.property.Type = typeof(string);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingsValueIsEmpty_ThenGetValueReturnsNull()
             {
                 this.settings.Setup(s => s.Value).Returns(string.Empty);
@@ -33,7 +33,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.Null(this.property.GetValue());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingsValueIsNotEmpty_ThenGetValueReturnsValue()
             {
                 this.settings.Setup(s => s.Value).Returns("Foo");

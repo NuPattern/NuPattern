@@ -49,7 +49,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
         [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
         public class GivenAnAuthoredPattern : GivenAPatternModel
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenTypePropertyIsBrowsableAndNotReadOnly()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.Property, property => property.Type);
@@ -58,7 +58,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.False(descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void TheValidationRulesPropertyIsBrowsableAndNotReadOnly()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.Property, property => property.RawValidationRules);
@@ -83,7 +83,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.Property = this.PatternModel.Pattern.Properties[0];
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenTypePropertyIsReadOnly()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.Property, property => property.Type);
@@ -92,7 +92,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingNewProperty_ThenNamePropertyIsBrowsableAndNotReadOnly()
             {
                 PropertySchema property = null;

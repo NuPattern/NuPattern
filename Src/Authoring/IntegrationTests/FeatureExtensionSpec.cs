@@ -18,7 +18,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void ThenFeatureExtensionIsInstalled()
 		{
 			var registrations = this.featureManager.InstalledFeatures;

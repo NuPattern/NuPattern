@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.view);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateNameIsUniqueSucceeds()
             {
                 this.view.ValidateNameIsUnique(validationContext);
@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedElementAddedToDifferentOwner_ThenValidateNameIsUniqueSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -53,7 +53,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedElementAddedToSameOwner_ThenValidateNameIsUniqueFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -68,7 +68,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.view) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenHiddenAndNotDefault_ThenValidateDefaultIsHiddenSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -84,7 +84,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenHiddenAndDefault_ThenValidateDefaultIsHiddenFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>

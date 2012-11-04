@@ -7,21 +7,21 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenTemplateTypeIsItem_ThenreturnsBaseUri()
 		{
             Assert.Equal("template://item", 
                 VsTemplateUriProvider.GetUriBase(TeamArchitect.PowerTools.Features.VsTemplateType.Item));
 		}
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenTemplateTypeIsProject_ThenreturnsBaseUri()
         {
             Assert.Equal("template://project",
                 VsTemplateUriProvider.GetUriBase(TeamArchitect.PowerTools.Features.VsTemplateType.Project));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenTemplateTypeIsProjectGroup_ThenreturnsBaseUri()
         {
             Assert.Equal("template://projectgroup",

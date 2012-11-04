@@ -36,7 +36,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Guidanc
                 this.guidanceExtension = ExtensionElement.GetExtension<GuidanceExtension>(this.product);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenAssociatedGuidanceIsBrowsable()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.guidanceExtension, extension => extension.AssociatedGuidance);
@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Guidanc
                 Assert.False(descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenFeatureIdIsNotExist()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.guidanceExtension, extension => extension.GuidanceFeatureId);
@@ -53,7 +53,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Guidanc
                 Assert.Null(descriptor);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenDefaultInstanceNameDescriptorNotExist()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.guidanceExtension, extension => extension.GuidanceInstanceName);
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Guidanc
                 Assert.Null(descriptor);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenActivateOnCreationIsNotExist()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.guidanceExtension, extension => extension.GuidanceActivateOnCreation);
@@ -69,7 +69,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Guidanc
                 Assert.Null(descriptor);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenSharedInstanceIsNotExist()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.guidanceExtension, extension => extension.GuidanceSharedInstance);
@@ -77,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Guidanc
                 Assert.Null(descriptor);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenAssociatedGuidanceDescriptorHasCorrectProperties()
             {
                 Mock<ITypeDescriptorContext> mockContext = new Mock<ITypeDescriptorContext>();

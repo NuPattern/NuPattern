@@ -10,19 +10,19 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenEnumerableIsNull_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => EnumerableExtensions.ForEach<string>(null, s => { }));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenActionIsNull_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => EnumerableExtensions.ForEach(Enumerable.Empty<string>(), null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenForEachInvoked_ThenCallsActionWithSourceItems()
 		{
 			string arg = null;

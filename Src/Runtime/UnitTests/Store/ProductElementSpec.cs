@@ -48,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenContainerDeletedFromParent_ThenDisposesExtension()
             {
                 this.element.WithTransaction(c => c.Delete());
@@ -56,7 +56,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.extension.As<IDisposable>().Verify(x => x.Dispose());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisposingStore_ThenDisposesExtension()
             {
                 this.store.Dispose();
@@ -64,7 +64,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.extension.As<IDisposable>().Verify(x => x.Dispose());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExtensionThrowsOnDisposing_ThenDoesNotFailToDelete()
             {
                 this.extension.As<IDisposable>().Setup(x => x.Dispose()).Throws<InvalidOperationException>();
@@ -72,7 +72,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.element.WithTransaction(c => c.Delete());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExtensionThrowsOnDisposing_ThenDoesNotFailToDisposeStore()
             {
                 this.extension.As<IDisposable>().Setup(x => x.Dispose()).Throws<InvalidOperationException>();
@@ -122,7 +122,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValidating_ThenBindingContextHasElement()
             {
                 var controller = new ValidationController();
@@ -304,7 +304,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenOrderedAsInitiallyConfigured()
             {
                 var collection1 = CreateCollection(Ids.Collection1Id);
@@ -328,7 +328,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True((elements[5] == product2) && (product2.InstanceOrder == 8.1));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameOrder_ThenOrderedInSameGroup()
             {
                 var collection1 = CreateCollection(Ids.Collection1Id);
@@ -368,7 +368,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True((elements[5] == product1) && (product1.InstanceOrder == 5.6));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDiffOrder_ThenOrderedInDiffGroups()
             {
                 var collection1 = CreateCollection(Ids.Collection1Id);
@@ -408,7 +408,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True((elements[5] == product1) && (product1.InstanceOrder == 9.2));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameOrderAndSameDefinitionName_TheOrderedByInstanceName()
             {
                 var collection1 = CreateCollection(Ids.Collection1Id, "f");
@@ -431,7 +431,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True((elements[5] == collection1) && (collection1.InstanceOrder == 1.6));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenComparerDefined_ThenGroupOrderedByComparer()
             {
                 var collection1 = CreateCollection(Ids.Collection1Id, "f");

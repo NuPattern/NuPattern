@@ -7,7 +7,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 	[TestClass]
 	public class DynamicBindingContextExtensionsSpec
 	{
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenAddingAllInterfaces_ThenAddsExportsToContext()
 		{
 			var context = new Mock<IDynamicBindingContext>();

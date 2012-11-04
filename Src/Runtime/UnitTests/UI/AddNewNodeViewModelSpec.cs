@@ -13,7 +13,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
         [TestClass]
         public class GuivenNoContext
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithNullSiblings_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new AddNewNodeViewModel(
@@ -22,7 +22,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     new Mock<IUserMessageService>().Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithNullInfo_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new AddNewNodeViewModel(
@@ -31,7 +31,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     new Mock<IUserMessageService>().Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithNullUserMessageService_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new AddNewNodeViewModel(
@@ -55,13 +55,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     new Mock<IUserMessageService>().Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenInstanceNameTurnedToDefaultName()
             {
                 Assert.Equal("Foo1", this.target.InstanceName);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameChanging_ThenPropertyChangedIsRaised()
             {
                 var eventRaised = false;
@@ -78,7 +78,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(eventRaised);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameChangingToTheSameValue_ThenPropertyChangedIsNotRaised()
             {
                 var eventRaised = false;
@@ -96,7 +96,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(eventRaised);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameIsNull_ThenErrorMessageIsAdded()
             {
                 this.target.InstanceName = null;
@@ -105,7 +105,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     this.target[Reflector<AddNewNodeViewModel>.GetProperty(x => x.InstanceName).Name].Length > 1);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameIsEmpty_ThenErrorMessageIsAdded()
             {
                 this.target.InstanceName = string.Empty;
@@ -114,7 +114,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     this.target[Reflector<AddNewNodeViewModel>.GetProperty(x => x.InstanceName).Name].Length > 1);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameIsNullOrEmpty_ThenAcceptCommandCanNotExecute()
             {
                 this.target.InstanceName = null;
@@ -122,7 +122,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(this.target.AcceptCommand.CanExecute(new Mock<IDialogWindow>().Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDataAreValid_ThenAcceptCommandCanExecute()
             {
                 this.target.InstanceName = "foo";
@@ -130,7 +130,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(this.target.AcceptCommand.CanExecute(new Mock<IDialogWindow>().Object));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDataAreValidAndAcceptCommandExecuting_ThenDialogIsClosed()
             {
                 var dialog = new Mock<IDialogWindow>();
@@ -161,13 +161,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     this.userMessageService.Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInitializingAndThereIsANodeWithTheSameName_ThenIncrementorIsUsedWithDefaultName()
             {
                 Assert.Equal("Foo2", this.target.InstanceName);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAcceptingDialogAndInstanceNameExistsInSiblings_ThenErrorMessageIsShownAndDialogIsNotClosed()
             {
                 var dialog = new Mock<IDialogWindow>();

@@ -35,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
         [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
         public class GivenAnAuthoredPattern : GivenAPatternModel
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void TheValidationRulesPropertyIsBrowsableAndNotReadOnly()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.Element, element => element.ValidationRules);

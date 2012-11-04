@@ -40,7 +40,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewProductWithoutToolkitIdAndDefinitionId_ThenInfoTurnsNull()
             {
                 using (var tx = this.store.TransactionManager.BeginTransaction())
@@ -52,7 +52,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewProductWithToolkitIdAndDefinitionId_ThenSetsSchemaInfo()
             {
                 var target = this.CreateProduct();
@@ -60,7 +60,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(this.toolkit.Schema.Pattern, target.Info);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewProduct_ThenAddSchemaViews()
             {
                 Mock.Get(this.toolkit.Schema.Pattern)
@@ -72,7 +72,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(5, target.Views.Count);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewProduct_ThenSetsDefinitionIdInAddedViews()
             {
                 var viewId = Guid.NewGuid();
@@ -86,7 +86,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(viewId, target.Views.First().DefinitionId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewProduct_ThenAddSchemaDynamicProperties()
             {
                 Mock.Get(this.toolkit.Schema.Pattern)
@@ -101,7 +101,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(4, target.Properties.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewProduct_ThenSetsDefinitionIdInAddedProperties()
             {
                 var propertyId = Guid.NewGuid();
@@ -114,7 +114,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(propertyId, target.Properties.First().DefinitionId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewProductWithPropertiesWithDefaultValues_ThenSetsDefinitionIdInAddedProperties()
             {
                 Mock.Get(this.toolkit.Schema.Pattern)
@@ -191,7 +191,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.store = new Dsl.Store(serviceProvider.Object, typeof(Dsl.CoreDomainModel), typeof(ProductStateStoreDomainModel));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithNewViewsInSchema_ThenAddNewViewsToStore()
             {
                 var viewIds = Enumerable.Range(0, 2).Select(x => Guid.NewGuid()).ToArray();
@@ -207,7 +207,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True(target.Views.Any(x => x.DefinitionId == viewIds[1]));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithARemovedView_ThenRemovesViewFromStore()
             {
                 var infos = (IList<IViewInfo>)this.productInfo.Views;
@@ -220,7 +220,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.False(target.Views.Any(x => x.DefinitionId == deletedId));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithNewProperties_ThenAddNewPropertiesToStore()
             {
                 var propertyIds = Enumerable.Range(0, 2).Select(x => Guid.NewGuid()).ToArray();
@@ -236,7 +236,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True(target.Properties.Any(x => x.DefinitionId == propertyIds[1]));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithNewPropertiesWithDefaultValues_ThenAddNewPropertiesWithValueToStore()
             {
                 var propertyId = Guid.NewGuid();
@@ -252,7 +252,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True(target.Properties.Any(p => p.DefinitionId == propertyId && p.RawValue == "Bar"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithARemovedProperty_ThenRemovesPropertyFromStore()
             {
                 var infos = (IList<IPropertyInfo>)this.productInfo.Properties;
@@ -424,25 +424,25 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.extensionProduct4 = this.view.CreateExtension(prod => { prod.ProductState = this.productStore; prod.ExtensionId = Ids.PatternToolkit2Id; prod.DefinitionId = Ids.ExtensionToolkitPatternSchema2Id; });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenRootProductsFromDiffToolkitHaveDifferentInfo()
             {
                 Assert.NotEqual(rootProduct1.Info, rootProduct2.Info);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenRootProductsFromSameToolkitHaveSameInfo()
             {
                 Assert.Equal(rootProduct2.Info, rootProduct3.Info);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenExtendedProductsFromSameToolkitAndSameExtensionPointHaveSameInfo()
             {
                 Assert.Equal(extensionProduct1.Info, extensionProduct2.Info);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenExtendedProductsFromDiffToolkitAndDiffExtensionPointsHaveDiffInfo()
             {
                 Assert.NotEqual(extensionProduct1.Info, extensionProduct4.Info);

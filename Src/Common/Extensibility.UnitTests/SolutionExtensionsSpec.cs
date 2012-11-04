@@ -83,7 +83,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
         [TestClass]
         public class GivenASolutionForFindOrCreate : GivenASolution
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenEmptySolutionPath_ThenItIsCreatedAtSolution()
             {
                 var evaluatedPath = string.Empty;
@@ -94,7 +94,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal(this.solution, target);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSlashSolutionPath_ThenItIsCreatedAtSolution()
             {
                 var evaluatedPath = Path.DirectorySeparatorChar.ToString();
@@ -105,7 +105,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal(this.solution, target);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProjectFolderPath_ThenItIsCreated()
             {
                 var evaluatedPath = "Project\\GeneratedCode\\Services\\Foo";
@@ -117,7 +117,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal(ItemKind.Folder, target.Kind);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenFolderPath_ThenItIsCreated()
             {
                 var evaluatedPath = "Project\\Folder\\GeneratedCode\\Services\\Foo";
@@ -129,7 +129,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal(ItemKind.Folder, target.Kind);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSolutionRelativePath_ThenItIsCreated()
             {
                 var evaluatedPath = "GeneratedCode\\Services\\Foo";
@@ -141,7 +141,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal(ItemKind.SolutionFolder, target.Kind);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSolutionFolderRelativePath_ThenItIsCreated()
             {
                 var evaluatedPath = "Solution Items\\GeneratedCode\\Services\\Foo";
@@ -153,7 +153,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal(ItemKind.SolutionFolder, target.Kind);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenItemRelativePath_ThenThrowsNotSupportedException()
             {
                 var evaluatedPath = "Solution Items\\Item.cs\\Services\\Foo";
@@ -165,57 +165,57 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
         [TestClass]
         public class GivenASolutionForCalculateNextUniqueChildItemName : GivenASolution
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSolutionChildItems_ThenThrows()
             {
                 Assert.Throws<InvalidOperationException>(
                     () => this.solution.CalculateNextUniqueChildItemName<ISolution>("Foo"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenFolderChildItems_ThenThrows()
             {
                 Assert.Throws<InvalidOperationException>(
                     () => this.solution.CalculateNextUniqueChildItemName<IFolder>("Foo"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoSiblingProjects_ThenReturnsSeededName()
             {
                 Assert.Equal("Foo", this.solution.CalculateNextUniqueChildItemName<IProject>("Foo"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOtherNamedSiblingProjects_ThenReturnsSeededName()
             {
                 Assert.Equal("Foo", this.solution.CalculateNextUniqueChildItemName<IProject>("Foo"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedSiblingProjects_ThenReturnsUniqueName()
             {
                 Assert.Equal("Project2", this.solution.CalculateNextUniqueChildItemName<IProject>("Project"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedSiblingSolutionFolders_ThenReturnsUniqueName()
             {
                 Assert.Equal("Solution Items1", this.solution.CalculateNextUniqueChildItemName<ISolutionFolder>("Solution Items"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOtherNamedSiblingItems_ThenReturnsUniqueName()
             {
                 Assert.Equal("Foo.cs", this.solution.CalculateNextUniqueChildItemName<IItem>("Foo.cs"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedSiblingItems_ThenReturnsUniqueName()
             {
                 Assert.Equal("Item2.cs", this.solution.CalculateNextUniqueChildItemName<IItem>("Item.cs"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSolutionFolderChildItems_ThenThrows()
             {
                 var project = this.solution.Items.OfType<IProject>().FirstOrDefault();
@@ -223,28 +223,28 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                     () => project.CalculateNextUniqueChildItemName<ISolutionFolder>("Foo"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedSiblingItemsOfProject_ThenReturnsUniqueName()
             {
                 var project = this.solution.Items.OfType<IProject>().FirstOrDefault();
                 Assert.Equal("Item2.cs", project.CalculateNextUniqueChildItemName<IItem>("Item.cs"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDifferentNamedSiblingItemsOfProject_ThenReturnsSameName()
             {
                 var project = this.solution.Items.OfType<IProject>().FirstOrDefault();
                 Assert.Equal("Item3.cs", project.CalculateNextUniqueChildItemName<IItem>("Item3.cs"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCalculateNextUniqueChildItemNameNoExtensionWithSameNamedSiblingItemsOfProject_ThenReturnsUniqueName()
             {
                 var project = this.solution.Items.OfType<IProject>().FirstOrDefault();
                 Assert.Equal("ItemNoExtension1", project.CalculateNextUniqueChildItemName<IItem>("ItemNoExtension"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCalculateNextUniqueChildItemNameNoExtensionWithDifferentNamedSiblingItemsOfProject_ThenReturnsSameName()
             {
                 var project = this.solution.Items.OfType<IProject>().FirstOrDefault();
@@ -255,7 +255,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
         [TestClass]
         public class GivenASolutionForRename : GivenASolution
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenEmptyName_ThenThrows()
             {
                 var item = this.solution.Items.OfType<IItem>().FirstOrDefault();
@@ -264,7 +264,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                     () => item.Rename(string.Empty));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProposedNameIsSameAsItem_ThenReturnsName()
             {
                 var item = this.solution.Items.OfType<IItem>().FirstOrDefault();
@@ -273,7 +273,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal(item.Rename("Item.cs"), "Item.cs");
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProposedNameHasDifferentExtension_ThenReturnsNameWithExtension()
             {
                 var item = this.solution.Items.OfType<IItem>().FirstOrDefault();
@@ -282,7 +282,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal(item.Rename("Foo.txt"), "Foo.txt");
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProposedNameHasNoExtension_ThenReturnsNameWithExtension()
             {
                 var item = this.solution.Items.OfType<IItem>().FirstOrDefault();
@@ -291,7 +291,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal(item.Rename("Foo"), "Foo.cs");
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProposedNameHasNoExtensionAndItemHasNoExtension_ThenReturnsNameWithoutExtension()
             {
                 var item = this.solution.Items.OfType<IItem>().Where(x => x.Name == "ItemNoExtension").FirstOrDefault();
@@ -300,7 +300,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal(item.Rename("Foo"), "Foo");
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProposedNameAlreadyExists_ThenThrows()
             {
                 var item = this.solution.Items.OfType<IItem>().FirstOrDefault();
@@ -310,7 +310,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                     () => item.Rename("Item1.cs"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenItem_ThenItemIsRenamed()
             {
                 var parent = this.solution.Items.OfType<IProject>().FirstOrDefault();
@@ -329,7 +329,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal("Foo.cs", result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProject_ThenProjectIsRenamed()
             {
                 var parent = this.solution.Items.OfType<IProject>().FirstOrDefault();
@@ -348,7 +348,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.Equal("Foo", result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenUniquenessAndProposedNameExists_ThenReturnsUniqueName()
             {
                 var item = this.solution.Items.OfType<IItem>().FirstOrDefault();

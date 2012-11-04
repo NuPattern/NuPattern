@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
                 this.command.Extension = "txt";
             }
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void ThenInitializeThrows()
             //{
             //    Assert.Throws<InvalidOperationException>(
@@ -65,7 +65,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
                 this.command.Extension = "txt";
             }
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void WhenTargetContainerNotExist_ThenInitializeCreatesContainer()
             //{
             //    this.command.Execute();
@@ -73,7 +73,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
             //    Assert.Equal("Foo", this.command.FileImporter.TargetContainer.Name);
             //}
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void WhenImportNewFile_ThenNewFileAdded()
             //{
             //    this.command.Execute();
@@ -81,7 +81,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
             //    Assert.Fail();
             //}
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void WhenImportExistingFile_ThenUniqueFileAdded()
             //{
             //    this.command.Execute();
@@ -89,7 +89,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
             //    Assert.Fail();
             //}
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void WhenGetItemWithUnknownFile_ThenReturnNull()
             //{
             //    this.command.Execute();
@@ -97,7 +97,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
             //    Assert.Fail();
             //}
 
-            //[TestMethod]
+            //[TestMethod, TestCategory("Unit")]
             //public void WhenGetItemWithAddedFile_ThenReturnFile()
             //{
             //    this.command.Execute();

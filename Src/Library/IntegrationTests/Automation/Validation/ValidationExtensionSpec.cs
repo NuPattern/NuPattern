@@ -50,7 +50,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenOnBuildIsTrue_ThenCreatesAutomationSettings()
             {
                 this.validationExtension.ValidationOnBuild = true;
@@ -60,7 +60,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenOnBuildIsFalse_ThenUpdatesAutomationSettings()
             {
                 this.validationExtension.ValidationOnBuild = false;
@@ -69,7 +69,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenOnSaveIsTrue_ThenCreatesAutomationSettings()
             {
                 this.validationExtension.ValidationOnSave = true;
@@ -79,7 +79,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenOnSaveIsFalse_ThenUpdatesAutomationSettings()
             {
                 this.validationExtension.ValidationOnSave = false;
@@ -88,7 +88,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenOnMenuIsTrue_ThenCreatesAutomationSettings()
             {
                 this.validationExtension.ValidationOnMenu = true;
@@ -98,7 +98,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenOnMenuIsFalse_ThenUpdatesAutomationSettings()
             {
                 this.validationExtension.ValidationOnMenu = false;
@@ -107,7 +107,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenOnCustomEventIsNotEmpty_ThenCreatesAutomationSettings()
             {
                 this.validationExtension.ValidationOnCustomEvent = "foo";
@@ -117,7 +117,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenOnCustomEventIsEmpty_ThenUpdatesAutomationSettings()
             {
                 this.validationExtension.ValidationOnCustomEvent = string.Empty;

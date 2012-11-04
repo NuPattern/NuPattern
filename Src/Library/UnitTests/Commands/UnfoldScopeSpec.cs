@@ -39,37 +39,37 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				return new UnfoldScope(this.Automation, this.Tag, "template://foo");
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenIsActiveIsTrue()
 			{
 				Assert.True(UnfoldScope.IsActive);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenCurrentIsSame()
 			{
 				Assert.Same(this.Scope, UnfoldScope.Current);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenAutomationIsSame()
 			{
 				Assert.Same(this.Automation, UnfoldScope.Current.Automation);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenHasUnfoldedTemplate()
 			{
 				Assert.True(UnfoldScope.Current.HasUnfolded("template://foo"));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenHasNotUnfoldedOtherTemplate()
 			{
 				Assert.False(UnfoldScope.Current.HasUnfolded("template://bar"));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposingScope_ThenIsActiveFalse()
 			{
 				this.Scope.Dispose();
@@ -77,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				Assert.False(UnfoldScope.IsActive);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposingScope_ThenCurrentIsNull()
 			{
 				this.Scope.Dispose();
@@ -111,7 +111,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				this.RootScope.Dispose();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposingRootScope_ThenIsActiveFalse()
 			{
 				this.RootScope = new UnfoldScope(this.Automation, this.Tag, "template://foo");
@@ -126,7 +126,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				this.NestedScope.Dispose();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposingRootScopeThenNestedScope_ThenIsNoOp()
 			{
 				this.RootScope = new UnfoldScope(this.Automation, this.Tag, "template://foo");
@@ -140,7 +140,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				Assert.Null(UnfoldScope.Current);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenHasUnfoldedRootTemplateFromNested_ThenReturnsTrue()
 			{
 				this.RootScope = new UnfoldScope(this.Automation, this.Tag, "template://foo");

@@ -43,7 +43,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
             this.store.Dispose();
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenCreatingNewPropertyWithoutDefinitionId_ThenInfoTurnsNull()
         {
             using (var tx = this.store.TransactionManager.BeginTransaction())
@@ -55,7 +55,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
             }
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenCreatingNewPropertyWithDefinitionId_ThenSetsSchemaInfo()
         {
             var target = this.CreateProperty();
@@ -63,7 +63,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
             Assert.Equal(this.propertyInfo.Object, target.Info);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenCreatingNewProperty_ThenSetProperties()
         {
             this.propertyInfo.Setup(p => p.Name).Returns("bar");

@@ -26,13 +26,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenIsCustomizatableDefaultsToTrue()
             {
                 Assert.Equal(CustomizationState.True, this.pattern.IsCustomizable);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenLoadingAnExistingPatternWithIsCustomizableInherited_ThenIsCustomizableIsTrue()
             {
                 using (this.store.Store.TransactionManager.BeginTransaction("Loading", true))
@@ -41,13 +41,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddRule_ThenCustomizationPolicyIsNotNull()
             {
                 Assert.NotNull(this.pattern.Policy);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddRule_ThenCustomizationPolicyHasRequiredSettings()
             {
                 IEnumerable<CustomizableSettingSchema> settings = this.pattern.Policy.Settings;

@@ -14,7 +14,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.UriProvider
 		internal static readonly IAssertion Assert = new Assertion();
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolvingUri_ThenNotFeatureRuntimeVsix()
 		{
 			var service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.UriProvider
 		}
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenResolvingUri_ThenRuntimeVsix()
         {
             var service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
@@ -44,7 +44,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.UriProvider
         }
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenCreatingUri_ThenCanRoundTrip()
 		{
 			var service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();

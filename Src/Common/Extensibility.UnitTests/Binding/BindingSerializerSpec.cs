@@ -11,7 +11,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSerialingAnObjectWithAStringPropertyWithBrackets_ThenItDeserializesItProperly()
 		{
 			var foos = new List<Foo> { new Foo { Bar = 1, Baz = "{Baz1}" }, new Foo { Bar = 2, Baz = "{Baz2}" } };
@@ -27,7 +27,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Equal(dserFoos.ElementAt(1).Baz, foos.ElementAt(1).Baz);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSerialingAnObjectWithAStringProperty_ThenItDeserializesItProperly()
 		{
 			var foos = new List<Foo> { new Foo { Bar = 1, Baz = "Baz1" }, new Foo { Bar = 2, Baz = "Baz2" } };
@@ -43,7 +43,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Equal(dserFoos.ElementAt(1).Baz, foos.ElementAt(1).Baz);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenRoundTrippingFullBinding_ThenSucceeds()
 		{
 			IBindingSettings binding = new BindingSettings

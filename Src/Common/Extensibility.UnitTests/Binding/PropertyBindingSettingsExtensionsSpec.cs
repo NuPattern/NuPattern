@@ -36,7 +36,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 				factory.CreateBinding<IValueProvider>(It.IsAny<IBindingSettings>()) == this.binding);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenNoValueProviderExists_ThenReturnsBindingValue()
 		{
 			var settings = new PropertyBindingSettings { Value = "Foo" };
@@ -44,7 +44,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 			Assert.Equal("Foo", settings.Evaluate(this.bindingFactory, this.tracer));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenValueProviderExists_ThenEvaluatesItsValue()
 		{
 			var settings = new PropertyBindingSettings { ValueProvider = new ValueProviderBindingSettings { } };
@@ -52,7 +52,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 			Assert.Equal("Foo", settings.Evaluate(this.bindingFactory, this.tracer));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenValueProviderBindingFails_ThenThrowsInvalidOperationExceptionAndTraces()
 		{
 			var settings = new PropertyBindingSettings { ValueProvider = new ValueProviderBindingSettings { } };
@@ -66,7 +66,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 				.Verify(x => x.TraceData(TraceEventType.Error, It.IsAny<int>(), It.IsAny<object>()));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenContextInitializerNotNull_ThenInvokesItOnEvaluation()
 		{
 			var settings = new PropertyBindingSettings { ValueProvider = new ValueProviderBindingSettings { } };

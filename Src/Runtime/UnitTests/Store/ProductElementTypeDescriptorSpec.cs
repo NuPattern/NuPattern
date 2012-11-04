@@ -47,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyTypeIsString_ThenTypeIsResolvedForPropertyInfo()
             {
                 Mock.Get(this.property.Info).Setup(x => x.Type).Returns("System.String");
@@ -57,7 +57,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(typeof(string), info.PropertyType);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingDescriptorValue_ThenSetsPropertyValue()
             {
                 Mock.Get(this.property.Info).Setup(x => x.Type).Returns("System.String");
@@ -68,7 +68,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal("Bar", this.property.RawValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyTypeIsBoolean_ThenConvertsValue()
             {
                 Mock.Get(this.property.Info).Setup(x => x.Type).Returns("System.Boolean");
@@ -79,7 +79,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True(bool.Parse(this.property.RawValue));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueDoesNotEqualDefaultValue_ThenCanResetProperty()
             {
                 Mock.Get(this.property.Info)
@@ -97,7 +97,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True(info.CanResetValue(this.element));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResettingValue_ThenValueIsRevertedToDefaultValue()
             {
                 Mock.Get(this.property.Info)
@@ -116,14 +116,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(this.property.Info.DefaultValue.Value, this.property.RawValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyIsNotBrowsable_ThenTypeDescriptorReturnsItAnyways()
             {
                 Assert.NotNull(TypeDescriptor.GetProperties(typeof(Foo))["Value"]);
                 Assert.Null(TypeDescriptor.GetProperties(typeof(Foo), new Attribute[] { new BrowsableAttribute(true) })["Value"]);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyIsNotVisible_ThenIsBrowsableIsFalse()
             {
                 Mock.Get(this.property.Info).Setup(x => x.Type).Returns("System.String");
@@ -133,7 +133,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Null(TypeDescriptor.GetProperties(this.descriptor, new Attribute[] { new BrowsableAttribute(true) })[PropertyName]);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyIsReadOnly_ThenIsReadOnlyIsTrue()
             {
                 Mock.Get(this.property.Info).Setup(x => x.Type).Returns("System.String");
@@ -142,7 +142,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.True(this.descriptor.GetProperties()[PropertyName].IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyHasDescription_ThenDescriptorHasDescription()
             {
                 Mock.Get(this.property.Info).Setup(x => x.Type).Returns("System.String");
@@ -151,7 +151,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal("Hello World", this.descriptor.GetProperties()[PropertyName].Description);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyHasCategory_ThenDescriptorHasCategory()
             {
                 Mock.Get(this.property.Info).Setup(x => x.Type).Returns("System.String");
@@ -160,7 +160,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal("Data", this.descriptor.GetProperties()[PropertyName].Category);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyDoesNotHaveInfo_ThenDescriptorHidesIt()
             {
                 var count = this.descriptor.GetProperties().Count;
@@ -170,7 +170,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(count, this.descriptor.GetProperties().Count);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueIsString_ThenSetsPropertyValue()
             {
                 Mock.Get(this.property.Info).Setup(x => x.Type).Returns("System.Int32");
@@ -182,7 +182,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal("foo", this.property.RawValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingTypedValue_ThenConvertsUsingBuiltInConverter()
             {
                 Mock.Get(this.property.Info).Setup(x => x.Type).Returns("System.Int32");
@@ -195,7 +195,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(25, (int)value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingInvalidValue_ThenSetsPropertyValue()
             {
                 Mock.Get(this.property.Info).Setup(x => x.Type).Returns("System.Int32");
@@ -207,7 +207,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(long.MaxValue.ToString(), this.property.RawValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyHasCustomConverter_ThenUsesItAutomatically()
             {
                 Mock.Get(this.property.Info).Setup(x => x.Type).Returns("System.String");

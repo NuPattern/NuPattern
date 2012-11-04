@@ -28,7 +28,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				this.command.CurrentElement = this.element.Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingNew_ThenValidateDescendantsIsTrue()
 			{
 				Assert.True(this.command.ValidateDescendants);

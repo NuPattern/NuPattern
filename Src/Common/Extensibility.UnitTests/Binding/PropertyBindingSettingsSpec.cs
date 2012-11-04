@@ -26,7 +26,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
                 };
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResetValue_ThenValueIsEmpty()
             {
                 this.settings.Reset();
@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
                 Assert.Equal(string.Empty, settings.Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResetValue_ThenValueProviderIsNull()
             {
                 this.settings.Reset();

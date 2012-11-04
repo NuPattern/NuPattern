@@ -41,7 +41,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 				this.traceManager = new TraceOutputWindowManager(this.serviceProvider.Object, this.shellEvents.Object, this.paneId, PaneTitle, SourceName);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreated_ThenDoesNotCreateOutputWindow()
 			{
 				var pane = this.outputPane.Object;
@@ -49,7 +49,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 				this.outputWindow.Verify(x => x.GetPane(ref this.paneId, out pane), Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenShellInitialized_ThenOutputWindowIsInitialized()
 			{
 				var pane = this.outputPane.Object;
@@ -59,7 +59,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 				this.outputWindow.Verify(x => x.GetPane(ref this.paneId, out pane));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenShellInitializedAndExistingTraces_ThenWritesToOutputPane()
 			{
 				var trace = Tracer.GetOrCreateUnderlyingSource(SourceName);
@@ -73,7 +73,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 				this.outputPane.Verify(x => x.OutputStringThreadSafe(It.Is<string>(s => s.Contains("Hello"))));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposed_ThenNoMoreTracesAreWritten()
 			{
 				this.shellEvents.Raise(x => x.ShellInitialized += null, EventArgs.Empty);
@@ -88,7 +88,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 			}
 
 			[Ignore]
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenTraceSourcesSet_ThenAddsNewTracerToOutput()
 			{
 				// TODO: continue to investigate what's wrong with this!!!
@@ -107,7 +107,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 				this.outputPane.Verify(x => x.OutputStringThreadSafe(It.Is<string>(s => s.Contains("Hello"))));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenTraceSourcesSet_ThenNoLongerTracesInitialSource()
 			{
 				var name = Tracer.GetSourceNameFor<TraceTestClass>();

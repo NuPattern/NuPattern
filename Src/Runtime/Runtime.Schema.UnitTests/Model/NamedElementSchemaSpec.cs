@@ -45,25 +45,25 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenNameIsNotEmpty()
             {
                 Assert.False(String.IsNullOrEmpty(this.Element.Name));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenBaseIdIsEmpty()
             {
                 Assert.True(String.IsNullOrEmpty(this.Element.BaseId));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenIsIheritedFromBaseIsFalse()
             {
                 Assert.False(this.Element.IsInheritedFromBase);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNameChanged_ThenDisplayNameTracksValue()
             {
                 this.Element.WithTransaction<NamedElementSchema>(element => element.Name = TestName2);
@@ -71,7 +71,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(NamedElementSchema.MakePascalIntoWords(TestName2), this.Element.DisplayName);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNameChanged_ThenDescriptionTracksValue()
             {
                 this.Element.WithTransaction<NamedElementSchema>(element => element.Name = TestName2);
@@ -102,13 +102,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenBaseIdIsNotEmpty()
             {
                 Assert.Equal(TestBaseId, this.element.BaseId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenIsInheritedFromBaseIsTrue()
             {
                 Assert.True(this.element.IsInheritedFromBase);

@@ -40,7 +40,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenHasEmptyAutomations()
             {
                 Assert.Equal(0, this.element.AutomationExtensions.Count);
@@ -111,13 +111,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenElementIsAdded_ThenCreatesRuntimeAutomation()
             {
                 this.extensionSettings.Verify(x => x.CreateAutomation(It.IsAny<IProductElement>()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAutomationSupportsInitialize_ThenInvokesBeginEndInit()
             {
                 this.automationExtension.As<ISupportInitialize>()

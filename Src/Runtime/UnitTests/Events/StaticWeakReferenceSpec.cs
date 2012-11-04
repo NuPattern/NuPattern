@@ -7,13 +7,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenConstructed_ThenIsAliveIsTrue()
 		{
 			Assert.True(new StaticWeakReference().IsAlive);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenConstructed_ThenTargetIsNull()
 		{
 			Assert.Null(new StaticWeakReference().Target);

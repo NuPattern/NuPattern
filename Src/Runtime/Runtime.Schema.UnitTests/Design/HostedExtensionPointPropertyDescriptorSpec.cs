@@ -86,43 +86,43 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingConverter_ThenReturnsExtensionPointsConverter()
             {
                 Assert.True(this.descriptor.Converter.GetType() == typeof(ExtensionPointConverter));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingEditor_ThenReturnsMultipleValuesEditor()
             {
                 Assert.True(this.descriptor.GetEditor(typeof(UITypeEditor)).GetType() == typeof(StandardValuesEditor));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingComponentType_ThenReturnsExtensionPointType()
             {
                 Assert.True(this.descriptor.ComponentType == typeof(ExtensionPointSchema));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingPropertyType_ThenReturnsStringType()
             {
                 Assert.True(this.descriptor.PropertyType == typeof(string));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingReadOnlyProperty_ThenReturnsFalse()
             {
                 Assert.False(this.descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingCanResetValue_ThenReturnsTrue()
             {
                 Assert.True(this.descriptor.CanResetValue(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingValue_ThenReturnsValue()
             {
                 this.extensionPointSchema.RepresentedExtensionPointId = "foo";
@@ -130,7 +130,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal("foo", this.descriptor.GetValue(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResettingValue_ThenSetsRepresentationOfToNull()
             {
                 this.extensionPointSchema.RepresentedExtensionPointId = "foo";
@@ -140,7 +140,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(string.Empty, this.extensionPointSchema.RepresentedExtensionPointId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenResettingValue_ThenDeletesAllProperties()
             {
                 this.extensionPointSchema.RepresentedExtensionPointId = "foo";
@@ -152,14 +152,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(0, this.extensionPointSchema.Properties.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValueWithNull_ThenThrows()
             {
                 Assert.Throws<ArgumentException>(() =>
                     this.descriptor.SetValue(null, null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValueWithSameExtensionPointIdAsSelf_ShowWarning()
             {
                 this.hostedExtensionPoint.Name = this.extensionPointSchema.Name;
@@ -169,7 +169,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.userMessageService.Verify(msg => msg.ShowWarning(Properties.Resources.HostedExtensionPointPropertyDescriptor_CantSelfHost), Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValueWithNoExistingProperties_ThenSetsRepresentationOfToValue()
             {
                 this.descriptor.SetValue(null, this.hostedExtensionPoint);
@@ -179,7 +179,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(this.hostedExtensionPoint.RequiredExtensionPointId, this.extensionPointSchema.RepresentedExtensionPointId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValueWithNoExistingProperties_ThenAddsContractProperties()
             {
                 this.descriptor.SetValue(null, this.hostedExtensionPoint);
@@ -205,7 +205,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(Locks.Delete, property2.GetLocks());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValueWithExistingProperties_ThenDeletesAllProperties()
             {
                 this.extensionPointSchema.Create<PropertySchema>();
@@ -313,25 +313,25 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingReadOnlyProperty_ThenReturnsTrue()
             {
                 Assert.True(this.descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingCanResetValue_ThenReturnsFalse()
             {
                 Assert.False(this.descriptor.CanResetValue(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenGettingReadOnlyProperty_ThenReturnsFalse()
             {
                 Assert.True(this.descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenContractPropertiesAreStillInheritedAndMaintainCustomization()
             {
                 Assert.Equal(2, this.extensionPointSchema.Properties.Count());

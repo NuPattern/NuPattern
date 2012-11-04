@@ -40,7 +40,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.Command.ToolkitIdentifier = ExpectedToolkitIdentifier;
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecuting_CreatesANewProductElement()
             {
                 this.Command.Execute();
@@ -63,7 +63,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.Command.ToolkitIdentifier = "ElementIdThatIsNotInstalled";
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecuting_ThrowsAnInvalidOperationException()
             {
                 Assert.Throws<InvalidOperationException>(() => this.Command.Execute());
@@ -87,7 +87,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             /// Test ignored until ObjectValidator.ThrowIfInvalid() bug is fixed.
             /// Currently required properties with Internal visibility are not validated.
             /// </remarks>
-            [TestMethod, Ignore]
+            [Ignore]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPatternManagerNull_ValidatorThrowsInvalidOperationException()
             {
                 this.Command.PatternManager = null;
@@ -95,7 +96,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Throws<InvalidOperationException>(() => this.Command.Execute());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenToolkitIdentifierNull_ValidatorThrowsInvalidOperationException()
             {
                 this.Command.ToolkitIdentifier = null;
@@ -103,7 +104,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Throws<ValidationException>(() => this.Command.Execute());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameNull_ValidatorThrowsInvalidOperationException()
             {
                 this.Command.InstanceName = null;

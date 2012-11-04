@@ -17,13 +17,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductState>();
 
         /// <summary>
-        /// Key in the <see cref="DslModeling::Store.PropertyBag"/> that flags 
+        /// Key in the <see cref="PropertyBag"/> that flags 
         /// whether the state is being deserialized.
         /// </summary>
         public const string IsSerializingKey = "IsSerializing";
 
         /// <summary>
-        /// Key in the <see cref="DslModeling::Store.PropertyBag"/> that flags 
+        /// Key in the <see cref="PropertyBag"/> that flags 
         /// whether an element is being created.
         /// </summary>
         public const string IsCreatingElementKey = "IsCreatingElement";

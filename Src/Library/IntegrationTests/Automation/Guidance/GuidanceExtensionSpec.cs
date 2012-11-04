@@ -52,7 +52,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenSettingGuidanceFeatureIdProperty_ThenCreatesAutomationSettings()
             {
                 this.guidanceExtension.GuidanceFeatureId = "Foo";
@@ -65,7 +65,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenChangingGuidanceFeatureIdProperty_ThenUpdatedCommandSettings()
             {
                 this.guidanceExtension.GuidanceFeatureId = "Foo";
@@ -80,7 +80,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenChangingDefaultInstanceNameProperty_ThenUpdatedCommandSettings()
             {
                 this.guidanceExtension.GuidanceFeatureId = "Foo";
@@ -97,7 +97,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenChangingActivateOnCreationProperty_ThenUpdatedCommandSettings()
             {
                 this.guidanceExtension.GuidanceFeatureId = "Foo";
@@ -114,7 +114,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenResettingGuidanceFeatureId_ThenDeletesCommandSettingAndEventSettings()
             {
                 this.guidanceExtension.GuidanceFeatureId = "Foo";

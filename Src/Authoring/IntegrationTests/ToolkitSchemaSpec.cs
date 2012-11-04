@@ -17,7 +17,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 		{
 			[Ignore]
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenDeletingTailorableProperty_ThenThrows()
 			{
 				var dte = VsIdeTestHostContext.Dte;

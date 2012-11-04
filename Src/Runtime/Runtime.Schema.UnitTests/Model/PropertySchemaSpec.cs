@@ -28,13 +28,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyCreated_ThenPropertyUsageIsGeneral()
             {
                 Assert.True(this.property.PropertyUsage == Runtime.PropertyUsages.General);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingDefaultValueSettings_ThenPersistsChangesAutomatically()
             {
                 var settings = (PropertyBindingSettings)this.property.DefaultValue;
@@ -47,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
             }
 
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingValueProviderSettings_ThenPersistsChangesAutomatically()
             {
                 var settings = this.property.ValueProvider;
@@ -59,7 +59,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal("Foo", saved.TypeId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValidatorBindingSettings_ThenPersistsChanges()
             {
                 var settings = new ValidationBindingSettings
@@ -96,7 +96,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal("CurrentUserProvider", saved[0].Properties[1].ValueProvider.TypeId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingSavedValidatorBindingSettings_ThenPersistsChanges()
             {
                 var settings = new ValidationBindingSettings

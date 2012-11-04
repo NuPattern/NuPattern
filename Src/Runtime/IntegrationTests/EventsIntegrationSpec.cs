@@ -26,7 +26,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenSourceRaised_ThenSubscriberNotified()
 			{
 				//// MefLogger.Log();
@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenRetrievingEventExportMetadata_ThenContainsDescription()
 			{
 				var info = this.compositionService

@@ -53,7 +53,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
         [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
         public class GivenAnAuthoredPattern : GivenAPatternModelWithAProperty
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenIsCustomizableIsBrowsableAndNotReadOnly()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.PatternModel.Pattern, pattern => pattern.IsCustomizable);
@@ -62,7 +62,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.False(descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenCustomizationPolicyIsBrowsableAndNotReadOnly()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.PatternModel.Pattern, element => element.Policy);
@@ -71,7 +71,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.False(descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenCustomizationPolicyDisplaysCorrectly()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.PatternModel.Pattern, element => element.Policy);
@@ -83,7 +83,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                         this.PatternModel.Pattern.Policy.CustomizationLevel));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenAllSettingsAreBrowsableAndNotReadOnly()
             {
                 var settingsDescriptors = TypeDescriptor.GetProperties(this.PatternModel.Pattern.Policy)
@@ -94,7 +94,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.False(settingsDescriptors.All(descr => descr.IsReadOnly));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenIsCustomizableChangedToFalse_ThenAllSettingsBecomesReadOnly()
             {
                 this.PatternModel.Pattern.WithTransaction(pattern => pattern.IsCustomizable = CustomizationState.False);
@@ -120,7 +120,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.PatternModel = PatternModelSpec.TailorPatternModel(this.PatternModel, new Version("1.0.0.0"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingIsDisabled_ThenReferredToElementPropertyIsReadOnly()
             {
                 var setting = this.PatternModel.Pattern.Policy.Settings.First();
@@ -151,7 +151,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 setting.WithTransaction(s => s.Disable());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenSettingIsReadOnlyForTailor()
             {
                 var policyDescriptor = TypedDescriptor.GetProperty(this.Property, pattern => pattern.Policy);
@@ -175,7 +175,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.PatternModel.Pattern.WithTransaction(pattern => pattern.DisableCustomization());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenIsCustomizableIsReadOnlyAndFalse()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.PatternModel.Pattern, pattern => pattern.IsCustomizable);
@@ -184,7 +184,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(this.PatternModel.Pattern.IsCustomizable == CustomizationState.False);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenCustomizationPolicyIsNotAvailable()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.PatternModel.Pattern, element => element.Policy);

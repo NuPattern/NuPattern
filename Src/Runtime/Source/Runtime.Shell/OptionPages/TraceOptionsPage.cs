@@ -56,7 +56,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.OptionPages
 		}
 
 		/// <summary>
-		/// Raises the <see cref="E:Apply"/> event.
+		/// Raises the <see cref="OnApply"/> event.
 		/// </summary>
 		/// <param name="e">The <see cref="Microsoft.VisualStudio.Shell.DialogPage.PageApplyEventArgs"/> instance containing the event data.</param>
 		protected override void OnApply(PageApplyEventArgs e)

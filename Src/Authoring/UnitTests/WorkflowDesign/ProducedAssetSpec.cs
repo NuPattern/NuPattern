@@ -12,7 +12,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 		[SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
 		public partial class GivenAnProducedAsset : GivenAnAsset<ProducedAsset>
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenSuppliedToATool_ThenSuppliesATool()
 			{
 				this.Asset.WithTransaction(asset => asset.ProductionTools.Add(this.Asset.Store.ElementFactory.CreateElement<ProductionTool>()));
@@ -20,7 +20,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.True(this.Asset.IsSuppliedToTool);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenIsNotFinal()
 			{
 				Assert.False(this.Asset.IsFinal);

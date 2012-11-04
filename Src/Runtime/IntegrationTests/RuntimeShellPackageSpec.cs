@@ -24,7 +24,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void ThenDependencyIsDownloadedAndDeployed()
             {
                 Assert.True(File.Exists(Path.Combine(this.extensionDir, Shell.Constants.PackageDependencies.Marker)));

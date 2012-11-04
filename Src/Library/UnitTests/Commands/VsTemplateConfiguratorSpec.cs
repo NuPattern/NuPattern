@@ -40,7 +40,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             };
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenProjectTemplateConfigured_ThenSetsVsTemplateBuildAction()
         {
             this.templateItem.PhysicalPath = "VsTemplateConfigurator-Project.vstemplate";
@@ -49,7 +49,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             Assert.Equal("ProjectTemplate", (string)this.templateItem.Data.ItemType);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenProjectTemplateConfigured_ThenSetsContentItemProperties()
         {
             this.templateItem.PhysicalPath = "VsTemplateConfigurator-Project.vstemplate";
@@ -62,7 +62,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             Assert.Equal("false", (string)content.Data.IncludeInVSIX);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenItemTemplateConfigured_ThenSetsVsTemplateBuildAction()
         {
             this.templateItem.PhysicalPath = "VsTemplateConfigurator-Item.vstemplate";
@@ -71,7 +71,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             Assert.Equal("ItemTemplate", (string)this.templateItem.Data.ItemType);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenItemTemplateConfigured_ThenSetsContentItemProperties()
         {
             this.templateItem.PhysicalPath = "VsTemplateConfigurator-Item.vstemplate";
@@ -84,7 +84,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             Assert.Equal("false", (string)content.Data.IncludeInVSIX);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenItemTemplateConfigured_ThenDefaultNameIsSanitized()
         {
             this.templateItem.PhysicalPath = "VsTemplateConfigurator-Item.vstemplate";
