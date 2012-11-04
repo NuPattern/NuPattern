@@ -107,7 +107,7 @@
 		<CopyVsixDebuggingDependencies>false</CopyVsixDebuggingDependencies>
 	</PropertyGroup>
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-	<Import Project="$(LocalAppData)\Microsoft\MSBuild\Outercurve\Pattern Toolkit Builder\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets"/>
+	<Import Project="$(localappdata)\Microsoft\MSBuild\Outercurve\Pattern Toolkit Builder\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets"/>
 	<!-- Properties for VSSDK/DSL Targets -->
 	<PropertyGroup>
 		<StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>

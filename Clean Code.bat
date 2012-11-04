@@ -21,6 +21,10 @@ echo Deleting 'NuGet Packages' directories
 for /f "delims=" %%a in ('dir /ad/s/b Packages') do (rmdir /s/q "%%a")
 if %errorlevel% neq 0 goto :error
 
+echo Deleting 'NuGet Packages' directories
+for /f "delims=" %%a in ('dir /ad/s/b Backup') do (rmdir /s/q "%%a")
+if %errorlevel% neq 0 goto :error
+
 echo Deleting 'Non-Source' Files
 for /f "delims=" %%a in ('dir /ah-hr/s/b *.vspscc') do (del /f/q "%%a")
 for /f "delims=" %%a in ('dir /ah-hr/s/b *.vssscc') do (del /f/q "%%a")

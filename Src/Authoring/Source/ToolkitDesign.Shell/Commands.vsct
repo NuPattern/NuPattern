@@ -8,18 +8,18 @@
   <!-- This causes Visual Studio to re-merge the menu definitions for the package. -->
   <!-- Otherwise, changes won't take effect until the next time devenv /setup is run. -->
   <!-- -->
-  <Extern href="stdidcmd.h"/>
-  <Extern href="vsshlids.h"/>
-  <Extern href="msobtnid.h"/>
-  <Extern href="virtkeys.h"/>
-  <Extern href="DSLToolsCmdID.h"/>
-  <Include href="GeneratedCode\GeneratedVsct.vsct"/>
-  <Include href="Guidance\GeneratedCode\LaunchPoints.vsct" Condition="Exists('..\GeneratedCode\LaunchPoints.vsct')"/>
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <!--<Extern href="msobtnid.h" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" />-->
+  <Extern href="virtkeys.h" />
+  <Extern href="DSLToolsCmdID.h" />
+  <Include href="GeneratedCode\GeneratedVsct.vsct" />
+  <Include href="Guidance\GeneratedCode\LaunchPoints.vsct" Condition="Exists('..\GeneratedCode\LaunchPoints.vsct')" />
 
   <Commands package="guidPkg">
     <Buttons>
       <Button guid="guidStoreViewerCommand" id="cmdidStoreViewerCommand" priority="0x0902" type="Button">
-        <Parent guid="guidCommonModelingMenu" id="grpidExplorerMenuGroup"/>
+        <Parent guid="guidCommonModelingMenu" id="grpidExplorerMenuGroup" />
         <CommandFlag>DefaultInvisible</CommandFlag>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
@@ -27,7 +27,7 @@
         </Strings>
       </Button>
       <Button guid="guidShowViewCommand" id="cmdidShowViewCommand" priority="0x0902" type="Button">
-        <Parent guid="guidCommonModelingMenu" id="grpidExplorerMenuGroup"/>
+        <Parent guid="guidCommonModelingMenu" id="grpidExplorerMenuGroup" />
         <CommandFlag>DefaultInvisible</CommandFlag>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
@@ -35,7 +35,7 @@
         </Strings>
       </Button>
       <Button guid="guidCreateViewCommand" id="cmdidCreateViewCommand" priority="0x0902" type="Button">
-        <Parent guid="guidCommonModelingMenu" id="grpidExplorerMenuGroup"/>
+        <Parent guid="guidCommonModelingMenu" id="grpidExplorerMenuGroup" />
         <CommandFlag>DefaultInvisible</CommandFlag>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
@@ -43,7 +43,7 @@
         </Strings>
       </Button>
       <Button guid="guidSetViewAsDefaultCommand" id="cmdidSetViewAsDefaultCommand" priority="0x0902" type="Button">
-        <Parent guid="guidCommonModelingMenu" id="grpidExplorerMenuGroup"/>
+        <Parent guid="guidCommonModelingMenu" id="grpidExplorerMenuGroup" />
         <CommandFlag>DefaultInvisible</CommandFlag>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
@@ -51,7 +51,7 @@
         </Strings>
       </Button>
       <Button guid="guidCmdSet" id="menuidCommandsExtensionBaseId" type="Button" priority="0x0000">
-        <Parent guid="guidCmdSet" id="grpidContextMain"/>
+        <Parent guid="guidCmdSet" id="grpidContextMain" />
         <CommandFlag>DynamicItemStart</CommandFlag>
         <CommandFlag>DefaultInvisible</CommandFlag>
         <CommandFlag>DynamicVisibility</CommandFlag>
@@ -62,20 +62,20 @@
     </Buttons>
   </Commands>
   <Symbols>
-    <GuidSymbol name="guidCmdSet" value="{16fc96e1-fd3f-47dc-adb2-59804fc401bb}" >
-      <IDSymbol name="menuidCommandsExtensionBaseId" value="0x4000"/>
+    <GuidSymbol name="guidCmdSet" value="{16fc96e1-fd3f-47dc-adb2-59804fc401bb}">
+      <IDSymbol name="menuidCommandsExtensionBaseId" value="0x4000" />
     </GuidSymbol>
-    <GuidSymbol name="guidStoreViewerCommand" value="{A11160A1-7910-44F7-936D-396DB475A89D}" >
-      <IDSymbol name="cmdidStoreViewerCommand" value="0x808"/>
+    <GuidSymbol name="guidStoreViewerCommand" value="{A11160A1-7910-44F7-936D-396DB475A89D}">
+      <IDSymbol name="cmdidStoreViewerCommand" value="0x808" />
     </GuidSymbol>
-    <GuidSymbol name="guidShowViewCommand" value="{EF5A29EA-A6F3-43A8-9718-42A8BBA04D3B}" >
-      <IDSymbol name="cmdidShowViewCommand" value="0x809"/>
+    <GuidSymbol name="guidShowViewCommand" value="{EF5A29EA-A6F3-43A8-9718-42A8BBA04D3B}">
+      <IDSymbol name="cmdidShowViewCommand" value="0x809" />
     </GuidSymbol>
-    <GuidSymbol name="guidCreateViewCommand" value="{251C5115-3D64-401C-8A2B-A9DAA36C41A8}" >
-      <IDSymbol name="cmdidCreateViewCommand" value="0x810"/>
+    <GuidSymbol name="guidCreateViewCommand" value="{251C5115-3D64-401C-8A2B-A9DAA36C41A8}">
+      <IDSymbol name="cmdidCreateViewCommand" value="0x810" />
     </GuidSymbol>
-    <GuidSymbol name="guidSetViewAsDefaultCommand" value="{EBAF084A-496F-4ADF-AC4F-0BEE2360FC80}" >
-      <IDSymbol name="cmdidSetViewAsDefaultCommand" value="0x811"/>
+    <GuidSymbol name="guidSetViewAsDefaultCommand" value="{EBAF084A-496F-4ADF-AC4F-0BEE2360FC80}">
+      <IDSymbol name="cmdidSetViewAsDefaultCommand" value="0x811" />
     </GuidSymbol>  
   </Symbols>
 </CommandTable>

@@ -8,12 +8,12 @@
   <!-- This causes Visual Studio to re-merge the menu definitions for the package. -->
   <!-- Otherwise, changes won't take effect until the next time devenv /setup is run. -->
   <!-- -->
-  <Extern href="stdidcmd.h"/>
-  <Extern href="vsshlids.h"/>
-  <Extern href="msobtnid.h"/>
-  <Extern href="virtkeys.h"/>
-  <Extern href="DSLToolsCmdID.h"/>
-  <Include href="GeneratedCode\GeneratedVsct.vsct"/>
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <!--<Extern href="msobtnid.h" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" />-->
+  <Extern href="virtkeys.h" />
+  <Extern href="DSLToolsCmdID.h" />
+  <Include href="GeneratedCode\GeneratedVsct.vsct" />
   <Commands package="guidPkg">
   </Commands>
 </CommandTable>
