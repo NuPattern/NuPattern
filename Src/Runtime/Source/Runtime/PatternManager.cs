@@ -10,7 +10,6 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Xml.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime.Properties;
@@ -216,7 +215,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
                 //// Do NOT dispose the DSL state or it becomes null in the model elements!!
                 if (VerifyDslVersion(storeFile))
                 {
-                    var result = new SerializationResult();
+                    var result = new Dsl.SerializationResult();
 
                     var dslStore = new Dsl.Store(this.serviceProvider, typeof(Dsl.CoreDomainModel), typeof(ProductStateStoreDomainModel));
 
@@ -390,7 +389,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
         /// <param name="elements">The elements.</param>
         public virtual bool Validate(IEnumerable<IInstanceBase> elements)
         {
-            var modelElements = elements.OfType<ModelElement>();
+            var modelElements = elements.OfType<Dsl.ModelElement>();
 
             return this.ValidationController.ValidateCustom(modelElements, ValidationConstants.RuntimeValidationCategory);
         }

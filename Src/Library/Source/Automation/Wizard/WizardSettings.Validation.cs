@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Globalization;
-using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Modeling.Validation;
+using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.Patterning.Library.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation

@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using Moq;
 using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 {

@@ -6,13 +6,12 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Input;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
 using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.Patterning.Library.Properties;
 using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.Patterning.Runtime.Events;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using Microsoft.VisualStudio.Patterning.Runtime.Events;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation
 {

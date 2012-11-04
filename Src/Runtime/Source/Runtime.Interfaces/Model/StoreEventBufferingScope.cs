@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.Patterning.Runtime.Interfaces;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {

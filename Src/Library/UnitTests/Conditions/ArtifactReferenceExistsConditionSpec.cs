@@ -1,5 +1,5 @@
-﻿using Microsoft.VisualStudio.Patterning.Library.Conditions;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
+﻿using Microsoft.VisualStudio.Patterning.Extensibility.References;
+using Microsoft.VisualStudio.Patterning.Library.Conditions;
 using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;

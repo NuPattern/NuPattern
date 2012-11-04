@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace  Microsoft.VisualStudio.Patterning.Runtime.Store
+﻿namespace  Microsoft.VisualStudio.Patterning.Runtime.Store
 {
 	internal static partial class Constants
 	{

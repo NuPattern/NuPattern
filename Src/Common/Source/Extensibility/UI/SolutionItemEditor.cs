@@ -4,10 +4,10 @@ using System.Drawing.Design;
 using System.Globalization;
 using System.Linq;
 using System.Windows;
+using Microsoft.VisualStudio.ComponentModelHost;
+using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.ComponentModelHost;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

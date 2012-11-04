@@ -1,5 +1,5 @@
-﻿using Microsoft.VisualStudio.Shell;
-using System;
+﻿using System;
+using Microsoft.VisualStudio.Shell;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

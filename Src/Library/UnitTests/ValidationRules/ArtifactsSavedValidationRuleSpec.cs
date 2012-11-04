@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.ValidationRules;
 using Microsoft.VisualStudio.Patterning.Extensibility.References;
+using Microsoft.VisualStudio.Patterning.Library.ValidationRules;
 using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

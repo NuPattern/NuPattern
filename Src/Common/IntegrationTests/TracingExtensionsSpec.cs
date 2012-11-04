@@ -1,9 +1,9 @@
 ﻿using System;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VsSDK.IntegrationTestLibrary;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Moq;
 
 namespace Microsoft.VisualStudio.Patterning.Common.IntegrationTests

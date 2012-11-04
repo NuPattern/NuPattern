@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Patterning.Runtime;
+using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

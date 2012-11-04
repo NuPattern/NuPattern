@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 {

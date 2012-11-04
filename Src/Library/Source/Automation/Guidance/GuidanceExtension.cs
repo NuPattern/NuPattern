@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 using Microsoft.VisualStudio.Patterning.Extensibility.References;
 using Microsoft.VisualStudio.Patterning.Library.Commands;
 using Microsoft.VisualStudio.Patterning.Library.Conditions;
@@ -51,10 +50,10 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
             if (activateMenu != null)
             {
                 // Set the conditions
-                activateMenu.Conditions = BindingSerializer.Serialize(
-                    new List<ConditionBindingSettings>
+                activateMenu.Conditions = Bindings.BindingSerializer.Serialize(
+                    new List<Bindings.ConditionBindingSettings>
 					{
-						new ConditionBindingSettings
+						new Bindings.ConditionBindingSettings
 						{
 							TypeId = typeof(ElementReferenceExistsCondition).FullName,
 							Properties =

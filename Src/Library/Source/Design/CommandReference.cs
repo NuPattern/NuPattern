@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
+using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Library.Automation;
 using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Design
 {

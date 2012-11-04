@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Runtime.InteropServices;
-using Microsoft.VisualStudio.TextTemplating;
-using System.CodeDom.Compiler;
-using System.IO;
 using System.CodeDom;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
 using System.Globalization;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
+using System.IO;
+using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
+using Microsoft.VisualStudio.Patterning.Library.Properties;
+using Microsoft.VisualStudio.TextTemplating;
 
 namespace Microsoft.VisualStudio.Patterning.Library
 {

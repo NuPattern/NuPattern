@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.Modeling.Design;
 using System.ComponentModel;
+using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using Microsoft.VisualStudio.Modeling.Design;
 using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 using Microsoft.VisualStudio.Patterning.Library.Properties;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation

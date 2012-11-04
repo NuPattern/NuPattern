@@ -1,12 +1,9 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.Windows;
-using System.Windows.Forms;
-using Microsoft.VisualStudio.Modeling.Shell;
+using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Shell;
 using VsInterop = Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UI
 {
@@ -18,7 +15,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
 	public class UserMessageService : IUserMessageService
 	{
 		private IServiceProvider serviceProvider;
-		private IVsUIShell shell;
+		private VsInterop.IVsUIShell shell;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="UserMessageService"/> class.
@@ -30,7 +27,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
 			Guard.NotNull(() => serviceProvider, serviceProvider);
 
 			this.serviceProvider = serviceProvider;
-			this.shell = this.serviceProvider.GetService<SVsUIShell, IVsUIShell>();
+			this.shell = this.serviceProvider.GetService<VsInterop.SVsUIShell, VsInterop.IVsUIShell>();
 		}
 
 		/// <summary>

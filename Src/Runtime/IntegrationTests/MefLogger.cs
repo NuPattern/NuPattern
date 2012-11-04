@@ -1,9 +1,8 @@
 ﻿using System.Diagnostics;
 using System.IO;
 using Microsoft.ComponentModel.Composition.Diagnostics;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using Microsoft.VisualStudio.ComponentModelHost;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 {

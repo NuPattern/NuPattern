@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using Newtonsoft.Json;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization
 {

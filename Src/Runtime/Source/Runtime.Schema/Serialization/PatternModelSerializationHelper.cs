@@ -6,8 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml;
-using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.Validation;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
@@ -132,7 +130,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
         /// <param name="validationController">The validation controller.</param>
         /// <param name="serializerLocator">The serialization locator.</param>
         /// <remarks>This overload is called by teh T4Runner engine.</remarks>
-        public override PatternModelSchema LoadModel(SerializationResult serializationResult, Partition partition, string fileName, ISchemaResolver schemaResolver, ValidationController validationController, ISerializerLocator serializerLocator)
+        public override PatternModelSchema LoadModel(DslModeling.SerializationResult serializationResult, DslModeling.Partition partition, string fileName, DslModeling.ISchemaResolver schemaResolver, ValidationController validationController, DslModeling.ISerializerLocator serializerLocator)
         {
             var productLine = base.LoadModel(serializationResult, partition, fileName, schemaResolver, validationController, serializerLocator);
 
@@ -154,7 +152,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
         /// <param name="serializerLocator">The serializer locator.</param>
         /// <remarks>This overload is called by the runtime environment when deserializing with no diagram.</remarks>
         [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "DSL")]
-        public PatternModelSchema LoadModel(Store store, Stream stream, ISchemaResolver schemaResolver, ISerializerLocator serializerLocator)
+        public PatternModelSchema LoadModel(DslModeling.Store store, Stream stream, DslModeling.ISchemaResolver schemaResolver, DslModeling.ISerializerLocator serializerLocator)
         {
             Guard.NotNull(() => store, store);
             Guard.NotNull(() => stream, stream);
@@ -166,7 +164,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 
             var directory = this.GetDirectory(store.DefaultPartition.Store);
             var modelRootSerializer = directory.GetSerializer(PatternModelSchema.DomainClassId);
-            var serializationResult = new SerializationResult();
+            var serializationResult = new DslModeling.SerializationResult();
 
             Debug.Assert(modelRootSerializer != null, "Cannot find serializer for ProductLine!");
 
@@ -174,11 +172,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
             {
                 PatternModelSchema modelRoot = null;
 
-                var serializationContext = new SerializationContext(directory, string.Empty, serializationResult);
+                var serializationContext = new DslModeling.SerializationContext(directory, string.Empty, serializationResult);
                 this.InitializeSerializationContext(store.DefaultPartition, serializationContext, true);
 
-                var transactionContext = new TransactionContext();
-                transactionContext.Add(SerializationContext.TransactionContextKey, serializationContext);
+                var transactionContext = new DslModeling.TransactionContext();
+                transactionContext.Add(DslModeling.SerializationContext.TransactionContextKey, serializationContext);
 
                 using (var tx = store.DefaultPartition.Store.TransactionManager.BeginTransaction("Loading Model", true, transactionContext))
                 {
@@ -195,7 +193,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
                                 serializationResult.Encoding = encoding;
                             }
 
-                            SerializationUtilities.ResolveDomainModels(reader, serializerLocator, store.DefaultPartition.Store);
+                            DslModeling.SerializationUtilities.ResolveDomainModels(reader, serializerLocator, store.DefaultPartition.Store);
 
                             reader.MoveToContent();
 
@@ -209,7 +207,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
                     }
                     catch (XmlException ex)
                     {
-                        SerializationUtilities.AddMessage(serializationContext, SerializationMessageKind.Error, ex);
+                        DslModeling.SerializationUtilities.AddMessage(serializationContext, DslModeling.SerializationMessageKind.Error, ex);
                     }
 
                     if (modelRoot == null && !serializationResult.Failed)
@@ -242,7 +240,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
             Guard.NotNull(() => modelRoot, modelRoot);
             Guard.NotNull(() => stream, stream);
 
-            var context = new SerializationContext(GetDirectory(modelRoot.Store));
+            var context = new DslModeling.SerializationContext(GetDirectory(modelRoot.Store));
 
             this.InitializeSerializationContext(modelRoot.Partition, context, false);
 
@@ -266,14 +264,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
         /// <param name="serializerLocator">The serializer locator.</param>
         [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "DSL")]
         public PatternModelSchema LoadModelAndDiagrams(
-            SerializationResult serializationResult,
-            Partition modelPartition,
+            DslModeling.SerializationResult serializationResult,
+            DslModeling.Partition modelPartition,
             string modelFileName,
-            Partition diagramPartition,
+            DslModeling.Partition diagramPartition,
             IEnumerable<string> diagramFileNames,
-            ISchemaResolver schemaResolver,
+            DslModeling.ISchemaResolver schemaResolver,
             ValidationController validationController,
-            ISerializerLocator serializerLocator)
+            DslModeling.ISerializerLocator serializerLocator)
         {
             Guard.NotNull(() => serializationResult, serializationResult);
             Guard.NotNull(() => modelPartition, modelPartition);
@@ -333,7 +331,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
         /// <param name="writeOptionalPropertiesWithDefaultValue">If set to <c>true</c> [write optional properties with default value].</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times", Justification = "NotApplicable")]
         public void SaveModelAndDiagrams(
-            SerializationResult serializationResult,
+            DslModeling.SerializationResult serializationResult,
             PatternModelSchema modelRoot,
             string modelFileName,
             Dictionary<string, PatternModelSchemaDiagram> diagrams,
@@ -401,13 +399,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
         /// <param name="modelRoot">The model root.</param>
         /// <param name="diagramId">The diagram id.</param>
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "NotApplicable")]
-        internal static PatternModelSchemaDiagram CreatePatternModelSchemaDiagram(SerializationResult serializationResult, Partition diagramPartition, PatternModelSchema modelRoot, string diagramId)
+        internal static PatternModelSchemaDiagram CreatePatternModelSchemaDiagram(DslModeling.SerializationResult serializationResult, DslModeling.Partition diagramPartition, PatternModelSchema modelRoot, string diagramId)
         {
             var diagram = new PatternModelSchemaDiagram(
                 diagramPartition.Store,
-                new PropertyAssignment(Diagram.NameDomainPropertyId, diagramId),
-                new PropertyAssignment(
-                    ElementFactory.IdPropertyAssignment,
+                new DslModeling.PropertyAssignment(DslDiagrams.Diagram.NameDomainPropertyId, diagramId),
+                new DslModeling.PropertyAssignment(
+                    DslModeling.ElementFactory.IdPropertyAssignment,
                     !string.IsNullOrEmpty(diagramId) ? new Guid(diagramId) : Guid.NewGuid()));
 
             diagram.ModelElement = modelRoot;
@@ -422,7 +420,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
         /// </summary>
         /// <param name="diagram">The diagram.</param>
         /// <param name="serializationResult">The serialization result.</param>
-        internal static void DoCheckForOrphanedShapes(Diagram diagram, SerializationResult serializationResult)
+        internal static void DoCheckForOrphanedShapes(DslDiagrams.Diagram diagram, DslModeling.SerializationResult serializationResult)
         {
             PatternModelSerializationHelper.Instance.CheckForOrphanedShapes(diagram, serializationResult);
         }
@@ -437,7 +435,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
         /// regardless of whether they relate to the current element or not.
         /// The additional data should be written as a series of one or more
         /// XML elements.</remarks>
-        protected internal override void WriteExtensions(SerializationContext serializationContext, ModelElement element, XmlWriter writer)
+        protected internal override void WriteExtensions(DslModeling.SerializationContext serializationContext, DslModeling.ModelElement element, XmlWriter writer)
         {
             Guard.NotNull(() => serializationContext, serializationContext);
             Guard.NotNull(() => element, element);
@@ -445,23 +443,23 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 
             if (!(element is PatternModelSchemaDiagram))
             {
-                var allExtensionElements = element.Partition.ElementDirectory.FindElements(ExtensionElement.DomainClassId, true);
+                var allExtensionElements = element.Partition.ElementDirectory.FindElements(DslModeling.ExtensionElement.DomainClassId, true);
                 var nonEmbeddedExtensionsElements =
-                    allExtensionElements.Where(e => DomainClassInfo.FindEmbeddingElementLink(e) == null).OfType<ExtensionElement>();
+                    allExtensionElements.Where(e => DslModeling.DomainClassInfo.FindEmbeddingElementLink(e) == null).OfType<DslModeling.ExtensionElement>();
 
-                SerializationUtilities.WriteExtensions(serializationContext, writer, nonEmbeddedExtensionsElements);
+                DslModeling.SerializationUtilities.WriteExtensions(serializationContext, writer, nonEmbeddedExtensionsElements);
             }
         }
 
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "NotApplicable")]
         private void LoadDiagram(
-            SerializationResult serializationResult,
-            Partition diagramPartition,
+            DslModeling.SerializationResult serializationResult,
+            DslModeling.Partition diagramPartition,
             PatternModelSchema modelRoot,
-            DomainXmlSerializerDirectory directory,
-            DomainClassXmlSerializer diagramSerializer,
+            DslModeling.DomainXmlSerializerDirectory directory,
+            DslModeling.DomainClassXmlSerializer diagramSerializer,
             string diagramFileName,
-            ISchemaResolver schemaResolver,
+            DslModeling.ISchemaResolver schemaResolver,
             ValidationController validationController)
         {
             if (diagramSerializer != null)
@@ -470,10 +468,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 
                 using (FileStream fileStream = File.OpenRead(diagramFileName))
                 {
-                    var serializationContext = new SerializationContext(directory, fileStream.Name, serializationResult);
+                    var serializationContext = new DslModeling.SerializationContext(directory, fileStream.Name, serializationResult);
                     this.InitializeSerializationContext(diagramPartition, serializationContext, true);
-                    var transactionContext = new TransactionContext();
-                    transactionContext.Add(SerializationContext.TransactionContextKey, serializationContext);
+                    var transactionContext = new DslModeling.TransactionContext();
+                    transactionContext.Add(DslModeling.SerializationContext.TransactionContextKey, serializationContext);
 
                     using (var transaction = diagramPartition.Store.TransactionManager.BeginTransaction("LoadDiagram", true, transactionContext))
                     {
@@ -496,7 +494,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
                             }
                             catch (XmlException ex)
                             {
-                                SerializationUtilities.AddMessage(serializationContext, SerializationMessageKind.Error, ex);
+                                DslModeling.SerializationUtilities.AddMessage(serializationContext, DslModeling.SerializationMessageKind.Error, ex);
                             }
 
                             if (serializationResult.Failed)
@@ -514,7 +512,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
                             {
                                 diagram = new PatternModelSchemaDiagram(
                                     diagramPartition.Store,
-                                    new PropertyAssignment(Diagram.NameDomainPropertyId, Guid.NewGuid()));
+                                    new DslModeling.PropertyAssignment(DslDiagrams.Diagram.NameDomainPropertyId, Guid.NewGuid()));
                             }
                             else
                             {

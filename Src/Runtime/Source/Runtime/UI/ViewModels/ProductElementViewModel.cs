@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime.Properties;
@@ -11,11 +12,9 @@ using Microsoft.VisualStudio.Patterning.Runtime.Store;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using Input = System.Windows.Input;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UI
 {
-    using System.Globalization;
     using ElementFactory = Func<IElementContainer, IPatternElementInfo, string, IProductElement>;
     using ViewModelFactory = Func<IProductElement, SolutionBuilderContext, ProductElementViewModel>;
 
@@ -65,12 +64,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// <summary>
         /// Gets the add element command.
         /// </summary>
-        public Input.ICommand AddElementCommand { get; private set; }
+        public System.Windows.Input.ICommand AddElementCommand { get; private set; }
 
         /// <summary>
         /// Gets the extension point to instanciate.
         /// </summary>
-        public Input.ICommand AddExtensionCommand { get; private set; }
+        public System.Windows.Input.ICommand AddExtensionCommand { get; private set; }
 
         /// <summary>
         /// Gets the solution builder context.
@@ -80,12 +79,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// <summary>
         /// Gets the delete command.
         /// </summary>
-        public Input.ICommand DeleteCommand { get; private set; }
+        public System.Windows.Input.ICommand DeleteCommand { get; private set; }
 
         /// <summary>
         /// Gets the rename command.
         /// </summary>
-        public Input.ICommand RenameCommand { get; private set; }
+        public System.Windows.Input.ICommand RenameCommand { get; private set; }
 
         /// <summary>
         /// Gets the icon path.
@@ -191,7 +190,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// <summary>
         /// Gets the show properties command.
         /// </summary>
-        public Input.ICommand ShowPropertiesCommand { get; private set; }
+        public System.Windows.Input.ICommand ShowPropertiesCommand { get; private set; }
 
         /// <summary>
         /// Gets the element container. It is the place where the children are added.
@@ -398,7 +397,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
                     var view = this.Context.NewNodeDialogFactory(viewModel);
                     if (view.ShowDialog().GetValueOrDefault())
                     {
-                        using (new MouseCursor(Input.Cursors.Wait))
+                        using (new MouseCursor(System.Windows.Input.Cursors.Wait))
                         {
                             var element = Factory.CreateElement(this.ElementContainer, info, viewModel.InstanceName);
                             this.Select(element);

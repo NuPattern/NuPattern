@@ -1,14 +1,14 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
+using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime.UriProviders;
-using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Moq;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests

@@ -6,7 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
 using Microsoft.VisualStudio.Patterning.Library.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
+using Microsoft.VisualStudio.Patterning.Extensibility;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {

@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Immutability;
+using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {

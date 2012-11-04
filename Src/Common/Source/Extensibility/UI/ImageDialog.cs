@@ -1,7 +1,6 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Modeling.Shell;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility

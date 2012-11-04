@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Globalization;
+using System.IO;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
-using System.IO;
 
 namespace Microsoft.VisualStudio.Patterning.Common.Presentation.Data
 {

@@ -1,9 +1,9 @@
 using System;
 using System.ComponentModel;
 using System.Globalization;
+using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

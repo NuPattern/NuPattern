@@ -1,5 +1,6 @@
 ﻿
 using System;
+
 namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization
 {
     /// <summary>

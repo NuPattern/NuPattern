@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
+using Microsoft.VisualStudio.Patterning.Extensibility;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {

@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Modeling;
+﻿using Microsoft.VisualStudio.Modeling;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation
 {

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using System.Linq;
 using System.Reflection;
+using Microsoft.VisualStudio.Patterning.Runtime;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing.Design;
 using System.Linq;
 using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using System.ComponentModel;
-using System.Drawing.Design;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility.References
 {
@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.References
 	[DisplayNameResource("SolutionArtifactLinkReference_DisplayName", typeof(Resources))]
 	[DescriptionResource("SolutionArtifactLinkReference_Description", typeof(Resources))]
 	[Editor(typeof(SolutionItemUriEditor), typeof(UITypeEditor))]
-	[SolutionEditorSettingsAttribute(TitleResourceName = "SolutionArtifactLinkReference_EditorTitle", ResourceType = typeof(Resources),
+	[SolutionEditorSettings(TitleResourceName = "SolutionArtifactLinkReference_EditorTitle", ResourceType = typeof(Resources),
 		Kind = ItemKind.Solution | ItemKind.SolutionFolder | ItemKind.Project | ItemKind.Folder | ItemKind.Item)]
 	public class SolutionArtifactLinkReference : ReferenceKindProvider<SolutionArtifactLinkReference, Uri>
 	{

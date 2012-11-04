@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Interop;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.Internal.VisualStudio.PlatformUI;
+using Microsoft.VisualStudio.Patterning.Runtime;
+using Microsoft.VisualStudio.Shell.Interop;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

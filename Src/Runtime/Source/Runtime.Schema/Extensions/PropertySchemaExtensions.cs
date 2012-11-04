@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Modeling.Immutability;
+using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema

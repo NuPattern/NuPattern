@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 {

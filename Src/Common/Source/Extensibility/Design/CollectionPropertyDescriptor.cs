@@ -4,8 +4,8 @@ using System.ComponentModel;
 using System.Drawing.Design;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
-using Microsoft.VisualStudio.ExtensibilityHosting;
 using System.Runtime.CompilerServices;
+using Microsoft.VisualStudio.ExtensibilityHosting;
 
 [assembly: AssemblyTitle("Microsoft.VisualStudio.Patterning.Runtime.Shell")]
 [assembly: AssemblyDescription("")]

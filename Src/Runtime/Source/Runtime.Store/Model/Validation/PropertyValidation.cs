@@ -1,9 +1,4 @@
-﻿using System;
-using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime.Store.Properties;
-using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using Microsoft.VisualStudio.Modeling.Validation;
+﻿using Microsoft.VisualStudio.Modeling.Validation;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 {

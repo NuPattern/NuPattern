@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.IO;
-using System.Linq;
 using EnvDTE;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.Modeling.Integration.Shell;
 using Microsoft.VisualStudio.TextTemplating.Modeling;
-using System.ComponentModel.Composition;
-using System;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {

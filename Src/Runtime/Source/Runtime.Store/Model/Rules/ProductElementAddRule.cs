@@ -1,13 +1,10 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Modeling;
-using System;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using System.Diagnostics;
+using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Patterning.Runtime.Store.Properties;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 {

@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Reflection;
-using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.Shell.Design;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using System.Windows.Input;
-using Ole = Microsoft.VisualStudio.OLE.Interop;
-using VSLangProj;
 using System.ComponentModel.Design;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Windows.Input;
 using EnvDTE;
+using Microsoft.VisualStudio.Patterning.Runtime;
+using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Design;
+using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using VSLangProj;
+using Ole = Microsoft.VisualStudio.OLE.Interop;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

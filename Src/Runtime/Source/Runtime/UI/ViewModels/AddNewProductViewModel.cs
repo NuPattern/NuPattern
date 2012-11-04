@@ -6,7 +6,6 @@ using System.Linq;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Input = System.Windows.Input;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UI
 {
@@ -90,7 +89,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// Gets the select toolkit command.
         /// </summary>
         /// <value>The select toolkit command.</value>
-        public Input.ICommand SelectToolkitCommand { get; private set; }
+        public System.Windows.Input.ICommand SelectToolkitCommand { get; private set; }
 
         private void CloseDialog(IDialogWindow dialog)
         {

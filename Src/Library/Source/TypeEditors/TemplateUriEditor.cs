@@ -4,14 +4,14 @@ using System.Drawing.Design;
 using System.IO;
 using System.Linq;
 using System.Windows;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.ComponentModelHost;
+using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.Patterning.Library.Automation;
+using Microsoft.VisualStudio.Patterning.Library.Commands;
+using Microsoft.VisualStudio.Patterning.Library.Properties;
+using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
 
 namespace Microsoft.VisualStudio.Patterning.Library.TypeEditors
 {

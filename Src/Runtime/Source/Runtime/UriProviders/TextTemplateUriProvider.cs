@@ -2,10 +2,9 @@
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Integration;
+using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;

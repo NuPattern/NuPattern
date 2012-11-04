@@ -1,5 +1,6 @@
 ﻿
 using System.ComponentModel;
+
 namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
 {
     /// <summary>

@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using System.Linq.Expressions;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
+using System.Linq.Expressions;
+using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.Patterning.Library.Automation;
+using Microsoft.VisualStudio.Patterning.Runtime;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Commands
 {

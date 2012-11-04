@@ -6,6 +6,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DF62E953-87DF-4792-97AF-96CDDC99E1F8}"
 	ProjectSection(SolutionItems) = preProject
 		..\BuildConfiguration.CSharp.NoCodeAnalysis.targets = ..\BuildConfiguration.CSharp.NoCodeAnalysis.targets
+		..\BuildConfiguration.CSharp.props = ..\BuildConfiguration.CSharp.props
 		..\BuildConfiguration.CSharp.targets = ..\BuildConfiguration.CSharp.targets
 		..\BuildConfiguration.CSharp.TestProjects.targets = ..\BuildConfiguration.CSharp.TestProjects.targets
 		..\CodeAnalysis.Dictionary.xml = ..\CodeAnalysis.Dictionary.xml

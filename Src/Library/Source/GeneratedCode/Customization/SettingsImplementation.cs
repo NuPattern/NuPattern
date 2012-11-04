@@ -17,8 +17,6 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation
 { 

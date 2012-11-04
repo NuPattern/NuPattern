@@ -1,10 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.Design;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using System.Globalization;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

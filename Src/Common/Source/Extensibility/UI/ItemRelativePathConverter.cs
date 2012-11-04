@@ -2,10 +2,9 @@
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Patterning.Runtime;
+using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

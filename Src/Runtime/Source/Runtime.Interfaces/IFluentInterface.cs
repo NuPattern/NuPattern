@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {
 	/// <summary>
-	/// Helper interface used to hide the base <see cref="Object"/> 
+	/// Helper interface used to hide the base <see cref="object"/> 
 	/// members from the fluent API to make it much cleaner 
 	/// in Visual Studio intellisense.
 	/// </summary>

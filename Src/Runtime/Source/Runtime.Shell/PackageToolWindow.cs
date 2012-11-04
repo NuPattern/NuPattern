@@ -1,8 +1,7 @@
 ﻿using System;
-using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 {

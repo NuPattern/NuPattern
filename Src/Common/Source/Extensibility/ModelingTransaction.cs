@@ -1,5 +1,5 @@
-﻿using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Modeling;
+﻿using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Patterning.Runtime;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

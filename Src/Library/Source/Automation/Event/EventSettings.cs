@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.Conditions;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using Microsoft.VisualStudio.Patterning.Library.Conditions;
 using Microsoft.VisualStudio.Patterning.Runtime;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation

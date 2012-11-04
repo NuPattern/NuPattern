@@ -1,9 +1,8 @@
 ﻿using System;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 {

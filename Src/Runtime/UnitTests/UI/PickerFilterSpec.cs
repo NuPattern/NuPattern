@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+﻿using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 

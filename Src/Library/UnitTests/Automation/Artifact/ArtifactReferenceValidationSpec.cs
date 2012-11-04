@@ -6,10 +6,10 @@ using Microsoft.VisualStudio.Patterning.Extensibility.References;
 using Microsoft.VisualStudio.Patterning.Library.Automation;
 using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Patterning.Runtime.Store;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using IFxrUriReferenceService = Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService;
-using IItemContainer = Microsoft.VisualStudio.TeamArchitect.PowerTools.IItemContainer;
+using ModelElementExtensions = Microsoft.VisualStudio.Patterning.Extensibility.ModelElementExtensions;
 
 namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Artifact
 {
@@ -37,7 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Artifac
                 this.store.TransactionManager.DoWithinTransaction(() =>
                 {
                     var productStore = this.store.ElementFactory.CreateElement<ProductState>();
-                    this.product = productStore.Create<Product>();
+                    this.product = ModelElementExtensions.Create<Product>(productStore);
                 });
 
                 validationContext = new ValidationContext(ValidationCategories.Custom, this.product);

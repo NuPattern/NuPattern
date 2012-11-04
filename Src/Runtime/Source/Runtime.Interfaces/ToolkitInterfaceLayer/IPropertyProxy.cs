@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq.Expressions;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {

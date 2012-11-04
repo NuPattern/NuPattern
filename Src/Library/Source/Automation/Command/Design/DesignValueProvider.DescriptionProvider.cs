@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.Composition;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation
 {

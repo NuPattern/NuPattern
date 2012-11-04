@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
+using Microsoft.VisualStudio.Patterning.Runtime.Store.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using Resources = Microsoft.VisualStudio.Patterning.Runtime.Store.Properties.Resources;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 {

@@ -2,8 +2,8 @@
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Microsoft.VisualStudio.Patterning
 {

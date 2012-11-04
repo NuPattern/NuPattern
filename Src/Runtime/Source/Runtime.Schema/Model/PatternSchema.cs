@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using System.Linq;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {

@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.Patterning.Extensibility;
-using Features = Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation
 {
@@ -17,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		public static void SetPropertyValue<TFeatureCommand, TProperty>(
 			this CommandSettings commandSettings,
 			Expression<Func<TFeatureCommand, TProperty>> expression,
-			object value) where TFeatureCommand : Features.IFeatureCommand
+			object value) where TFeatureCommand : TeamArchitect.PowerTools.Features.IFeatureCommand
 		{
 			var descriptors = TypeDescriptor.GetProperties(commandSettings);
 			var descriptor = descriptors[Reflector<TFeatureCommand>.GetPropertyName(expression)];

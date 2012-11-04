@@ -2,8 +2,8 @@
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Patterning.Extensibility;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {

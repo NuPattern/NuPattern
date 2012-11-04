@@ -2,9 +2,8 @@
 using System.ComponentModel;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Patterning.Extensibility;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {

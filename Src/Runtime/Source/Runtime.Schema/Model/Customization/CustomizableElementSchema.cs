@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Runtime;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
+using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using Microsoft.VisualStudio.Patterning.Runtime.Schema.Properties;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {

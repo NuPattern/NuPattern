@@ -1,50 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <!-- Visual Studio Properties -->
-  <!--<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />-->
-  <!--<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.VisualStudioVersion.v*.Common.props" Condition="'$(VisualStudioVersion)' == ''" />-->
-  
-	<!-- Common Assembly Properties -->
+  <!-- Common Assembly Properties -->
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>$(BranchRoot)Outercurve.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <DelaySign>true</DelaySign>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <OldToolsVersion>4.0</OldToolsVersion>
-    <MinimumVisualStudioVersion>$(VisualStudioVersion)</MinimumVisualStudioVersion>
-    <VsxVersionSuffix Condition="'$(VsxVersionSuffix)' == ''">.$(VisualStudioVersion)</VsxVersionSuffix>
-    <MpfVersionSuffix Condition="'$(MpfVersionSuffix)' == ''">.$(VisualStudioVersion)</MpfVersionSuffix>
-    <DslToolsVersionSuffix Condition="'$(DslToolsVersionSuffix)' == ''">.$(VisualStudioVersion)</DslToolsVersionSuffix>
-    <T4VersionSuffix Condition="'$(T4VersionSuffix)' == ''">.$(VisualStudioVersion)</T4VersionSuffix>
-  </PropertyGroup>
-
-  <!-- Target Framework for build configurations -->
-  <PropertyGroup Condition="'$(VisualStudioVersion)' == '10.0'">
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(VisualStudioVersion)' == '11.0'">
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-  </PropertyGroup>
-  
-  <!-- Build Configurations -->
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2010' or '$(Configuration)' == 'Debug-VS2012' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2010' or '$(Configuration)' == 'Release-VS2012' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
 
   <!-- CA settings for build configurations -->

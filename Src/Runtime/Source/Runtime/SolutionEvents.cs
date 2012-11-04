@@ -1,8 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.Runtime.InteropServices;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;

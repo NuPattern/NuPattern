@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.Patterning.Runtime.UI;
-using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 

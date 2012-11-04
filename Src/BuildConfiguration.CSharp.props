@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Visual Studio Properties -->
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.VisualStudioVersion.v11.Common.props" />
+
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <MinimumVisualStudioVersion>$(VisualStudioVersion)</MinimumVisualStudioVersion>
+    <BranchReferencesPath>$(BranchRoot)..\Lib</BranchReferencesPath>
+  </PropertyGroup>
+      
+  <!-- Targets for References -->
+  <PropertyGroup>
+    <TargetVsVersion>$(VisualStudioVersion)</TargetVsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MpfVersion>$(TargetVsVersion)</MpfVersion>
+    <VsxVersionSuffix Condition="'$(VsxVersionSuffix)' == ''">.$(MpfVersion)</VsxVersionSuffix>
+    <MpfVersionSuffix Condition="'$(MpfVersionSuffix)' == ''">.$(MpfVersion)</MpfVersionSuffix>
+    <VsxTargetsPath>$(BranchRoot)..\Lib\VSSDK\$(TargetVsVersion)\MSBuild</VsxTargetsPath>
+    <DslToolsVersion>$(TargetVsVersion)</DslToolsVersion>
+    <DslToolsVersionSuffix Condition="'$(DslToolsVersionSuffix)' == ''">.$(DslToolsVersion)</DslToolsVersionSuffix>
+    <T4Version>$(DslToolsVersion)</T4Version>
+    <T4VersionSuffix Condition="'$(T4VersionSuffix)' == ''">.$(T4Version)</T4VersionSuffix>
+    <DslTargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\DSLTools</DslTargetsPath>
+  </PropertyGroup>
+
+  <!--
+  Propertiers are repeated here to ensure that they are re-evaluated when the configuration changes.
+  -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2010' or '$(Configuration)' == 'Release-VS2010' ">
+    <TargetVsVersion>10.0</TargetVsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MpfVersion>$(TargetVsVersion)</MpfVersion>
+    <VsxVersionSuffix>.$(MpfVersion)</VsxVersionSuffix>
+    <MpfVersionSuffix>.$(MpfVersion)</MpfVersionSuffix>
+    <VsxTargetsPath>$(BranchRoot)..\Lib\VSSDK\$(TargetVsVersion)\MSBuild</VsxTargetsPath>
+    <DslToolsVersion>$(TargetVsVersion)</DslToolsVersion>
+    <DslToolsVersionSuffix>.$(DslToolsVersion)</DslToolsVersionSuffix>
+    <T4Version>$(DslToolsVersion)</T4Version>
+    <T4VersionSuffix>.$(T4Version)</T4VersionSuffix>
+    <DslTargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\DSLTools</DslTargetsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012' ">
+    <TargetVsVersion>11.0</TargetVsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MpfVersion>$(TargetVsVersion)</MpfVersion>
+    <VsxVersionSuffix>.$(MpfVersion)</VsxVersionSuffix>
+    <MpfVersionSuffix>.$(MpfVersion)</MpfVersionSuffix>
+    <VsxTargetsPath>$(BranchRoot)..\Lib\VSSDK\$(TargetVsVersion)\MSBuild</VsxTargetsPath>
+    <DslToolsVersion>$(TargetVsVersion)</DslToolsVersion>
+    <DslToolsVersionSuffix>.$(DslToolsVersion)</DslToolsVersionSuffix>
+    <T4Version>$(DslToolsVersion)</T4Version>
+    <T4VersionSuffix>.$(T4Version)</T4VersionSuffix>
+    <DslTargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\DSLTools</DslTargetsPath>
+  </PropertyGroup>
+
+  <!-- Build Configurations -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2010' or '$(Configuration)' == 'Debug-VS2012' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2010' or '$(Configuration)' == 'Release-VS2012' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2010' ">
+    <DefineConstants>DEBUG;TRACE;VSVER10</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2012' ">
+    <DefineConstants>DEBUG;TRACE;VSVER11</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2010' ">
+    <DefineConstants>TRACE;VSVER10</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2012' ">
+    <DefineConstants>TRACE;VSVER11</DefineConstants>
+  </PropertyGroup>
+</Project>

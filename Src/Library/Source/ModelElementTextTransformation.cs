@@ -1,13 +1,8 @@
-﻿using System.Diagnostics;
-using System.IO;
-using System.Linq;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Runtime.Remoting.Messaging;
-using System.Threading;
-using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.TextTemplating.Modeling;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
 
 namespace Microsoft.VisualStudio.Patterning.Library
 {

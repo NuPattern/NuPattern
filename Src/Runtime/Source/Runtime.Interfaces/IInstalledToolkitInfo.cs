@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Microsoft.VisualStudio.ExtensionManager;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime

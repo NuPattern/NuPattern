@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.Patterning.Library.Commands;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation
 {

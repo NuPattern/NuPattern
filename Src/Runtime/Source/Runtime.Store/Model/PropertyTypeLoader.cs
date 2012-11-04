@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using System.Globalization;
 using Microsoft.VisualStudio.Patterning.Runtime.Store.Properties;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 {

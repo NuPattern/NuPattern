@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.Patterning.Library.ValueProviders;
+﻿using System;
+using Microsoft.VisualStudio.Patterning.Library.ValueProviders;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
 {

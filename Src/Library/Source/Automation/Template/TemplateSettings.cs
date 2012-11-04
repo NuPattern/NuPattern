@@ -1,11 +1,7 @@
-﻿using System;
-using System.ComponentModel;
-using System.Globalization;
-using System.Linq;
+﻿using System.ComponentModel;
 using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using Microsoft.VisualStudio.Patterning.Runtime;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation
 {

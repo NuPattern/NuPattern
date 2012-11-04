@@ -4,7 +4,6 @@ using System.ComponentModel.Composition;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Features = Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
 {
@@ -75,7 +74,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
 					bindings.Add(
 						new ValueProviderPropertyBinding(
 							property.Name,
-							new DynamicBinding<Features.IValueProvider>(
+							new DynamicBinding<TeamArchitect.PowerTools.Features.IValueProvider>(
 								composition,
 								property.ValueProvider.TypeId,
 								this.GetPropertyBindings(property.ValueProvider.Properties, composition))));

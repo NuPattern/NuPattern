@@ -7,7 +7,6 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Threading;
 using Microsoft.VisualStudio.Patterning.Runtime.Interfaces;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime

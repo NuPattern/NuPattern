@@ -6,7 +6,6 @@ using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using Input = System.Windows.Input;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UI
 {
@@ -50,7 +49,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// <summary>
         /// Gets the change view command.
         /// </summary>
-        public Input.ICommand ChangeViewCommand { get; private set; }
+        public System.Windows.Input.ICommand ChangeViewCommand { get; private set; }
 
         /// <summary>
         /// Gets the current view.

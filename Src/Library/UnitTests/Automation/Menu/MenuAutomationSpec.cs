@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
+using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using Microsoft.VisualStudio.Patterning.Library.Automation;
 using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using Binding = Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using ICondition = Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ICondition;
 
 namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 {
@@ -298,7 +297,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
 				this.statusBinding.Setup(b => b.Evaluate(It.IsAny<IDynamicBindingContext>())).Returns(true);
 
 				this.bindingFactory.Setup(f => f.CreateBinding<ICommandStatus>(It.IsAny<IBindingSettings>())).Returns(this.statusBinding.Object);
-				this.Settings.Setup(x => x.CustomStatus).Returns(BindingSerializer.Serialize(new Binding.BindingSettings { TypeId = "Foo" }));
+				this.Settings.Setup(x => x.CustomStatus).Returns(BindingSerializer.Serialize(new Extensibility.Binding.BindingSettings { TypeId = "Foo" }));
 
 				this.Automation.BindingFactory = this.bindingFactory.Object;
 			}

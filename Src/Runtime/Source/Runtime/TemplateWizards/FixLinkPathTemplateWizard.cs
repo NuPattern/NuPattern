@@ -9,8 +9,6 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
-using Construction = Microsoft.Build.Construction;
-using Evaluation = Microsoft.Build.Evaluation;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
@@ -49,9 +47,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 						foreach (var project in projects)
 						{
 							var fileInfo = new FileInfo(project.FullName);
-							var projectBuilder = Construction.ProjectRootElement.Open(fileInfo.FullName);
-							var projectEvaluated = Evaluation.ProjectCollection.GlobalProjectCollection.LoadedProjects
-								.FirstOrDefault<Evaluation.Project>(p => p.FullPath.Equals(fileInfo.FullName, StringComparison.InvariantCultureIgnoreCase));
+							var projectBuilder = Build.Construction.ProjectRootElement.Open(fileInfo.FullName);
+							var projectEvaluated = Build.Evaluation.ProjectCollection.GlobalProjectCollection.LoadedProjects
+								.FirstOrDefault<Build.Evaluation.Project>(p => p.FullPath.Equals(fileInfo.FullName, StringComparison.InvariantCultureIgnoreCase));
 
 							if (projectBuilder != null && projectEvaluated != null)
 							{

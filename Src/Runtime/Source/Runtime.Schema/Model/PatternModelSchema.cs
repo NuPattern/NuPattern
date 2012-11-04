@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema.Properties;
 using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Patterning.Runtime.Schema.Properties;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {

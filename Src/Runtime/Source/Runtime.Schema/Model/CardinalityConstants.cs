@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualStudio.Patterning.Runtime;
-
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+﻿namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {
     /// <summary>
 	/// Provides constants and helpers for managing Cardinality.

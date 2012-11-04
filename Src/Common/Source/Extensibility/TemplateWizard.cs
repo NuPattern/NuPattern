@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using EnvDTE;
 using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
-using System.Globalization;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Patterning.Extensibility;
@@ -14,8 +15,6 @@ using Microsoft.VisualStudio.Patterning.Library.Events;
 using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Patterning.Runtime.Schema;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
-using Binding = Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 
 namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.Guidance
 {
@@ -207,7 +206,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
 								TypeId = typeof(ElementReferenceExistsCondition).FullName,
 								Properties = 
 								{
-									new Binding.PropertyBindingSettings
+									new Extensibility.Binding.PropertyBindingSettings
 									{
 										Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
 										Value = ReferenceKindConstants.Guidance

@@ -1,12 +1,11 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.Patterning.Runtime.UriProviders;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
-using System.Globalization;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 {

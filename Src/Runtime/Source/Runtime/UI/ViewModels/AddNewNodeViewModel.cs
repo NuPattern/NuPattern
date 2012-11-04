@@ -6,8 +6,6 @@ using System.Linq;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Input = System.Windows.Input;
-
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UI
 {
@@ -47,7 +45,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// <summary>
         /// Gets the accept command.
         /// </summary>
-        public Input.ICommand AcceptCommand { get; private set; }
+        public System.Windows.Input.ICommand AcceptCommand { get; private set; }
 
         /// <summary>
         /// Gets or sets the name of the instance.

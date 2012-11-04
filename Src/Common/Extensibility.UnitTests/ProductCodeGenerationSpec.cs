@@ -1,9 +1,8 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 {

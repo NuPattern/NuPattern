@@ -8,10 +8,6 @@ using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using IFeatureManager = Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureManager;
-using Input = System.Windows.Input;
-using RelayCommand = Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.RelayCommand;
-using ViewModel = Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ViewModel;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UI
 {
@@ -77,42 +73,42 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// <summary>
         /// Gets the activate command.
         /// </summary>
-        public Input.ICommand ActivateCommand { get; private set; }
+        public System.Windows.Input.ICommand ActivateCommand { get; private set; }
 
         /// <summary>
         /// Gets the add new pattern command.
         /// </summary>
-        public Input.ICommand AddNewProductCommand { get; private set; }
+        public System.Windows.Input.ICommand AddNewProductCommand { get; private set; }
 
         /// <summary>
         /// Gets the begin edit command.
         /// </summary>
-        public Input.ICommand BeginEditCommand { get; private set; }
+        public System.Windows.Input.ICommand BeginEditCommand { get; private set; }
 
         /// <summary>
         /// Gets the cancel edit command.
         /// </summary>
-        public Input.ICommand CancelEditCommand { get; private set; }
+        public System.Windows.Input.ICommand CancelEditCommand { get; private set; }
 
         /// <summary>
         /// Gets the collapse all command.
         /// </summary>
-        public Input.ICommand CollapseAllCommand { get; private set; }
+        public System.Windows.Input.ICommand CollapseAllCommand { get; private set; }
 
         /// <summary>
         /// Gets the end edit command.
         /// </summary>
-        public Input.ICommand EndEditCommand { get; private set; }
+        public System.Windows.Input.ICommand EndEditCommand { get; private set; }
 
         /// <summary>
         /// Gets the expand all command.
         /// </summary>
-        public Input.ICommand ExpandAllCommand { get; private set; }
+        public System.Windows.Input.ICommand ExpandAllCommand { get; private set; }
 
         /// <summary>
         /// Gets the guidance command.
         /// </summary>
-        public Input.ICommand GuidanceCommand { get; private set; }
+        public System.Windows.Input.ICommand GuidanceCommand { get; private set; }
 
         /// <summary>
         /// Gets the current node in the pattern explorer tree view.
@@ -142,7 +138,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// <summary>
         /// Gets the delete command.
         /// </summary>
-        public Input.ICommand DeleteCommand { get; private set; }
+        public System.Windows.Input.ICommand DeleteCommand { get; private set; }
 
         /// <summary>
         /// Gets a value indicating whether this instance is solution opened.
@@ -196,7 +192,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// <summary>
         /// Gets the save command.
         /// </summary>
-        public Input.ICommand SaveCommand { get; private set; }
+        public System.Windows.Input.ICommand SaveCommand { get; private set; }
 
         private void ActivateNode()
         {
@@ -213,7 +209,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
                     var view = this.context.NewProductDialogFactory(viewModel);
                     if (view.ShowDialog().GetValueOrDefault())
                     {
-                        using (new MouseCursor(Input.Cursors.Wait))
+                        using (new MouseCursor(System.Windows.Input.Cursors.Wait))
                         {
                             var product = this.context.PatternManager.CreateProduct(viewModel.CurrentToolkit, viewModel.ProductName);
                             this.Select(product);

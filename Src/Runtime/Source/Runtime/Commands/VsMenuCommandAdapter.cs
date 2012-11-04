@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.Design;
+﻿using System;
+using System.ComponentModel.Design;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Shell;
-using System;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime.Store.Properties;
 using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Patterning.Runtime.Store.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Store

@@ -14,8 +14,6 @@ using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 using Microsoft.VisualStudio.Patterning.Library.Properties;
 using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using Binding = Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Features = Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation
 {
@@ -43,7 +41,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 			this.text = settings.Text;
 			this.enabled = true;
 			this.visible = true;
-			this.Conditions = new IDynamicBinding<Features.ICondition>[0];
+			this.Conditions = new IDynamicBinding<TeamArchitect.PowerTools.Features.ICondition>[0];
 			this.CommandStatus = new FixedBinding<ICommandStatus>(new DefaultCommandStatus());
 		}
 
@@ -62,7 +60,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// Gets the conditions that will be evaluated when the event is raised.
 		/// </summary>
 		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
-		public IEnumerable<IDynamicBinding<Features.ICondition>> Conditions { get; private set; }
+		public IEnumerable<IDynamicBinding<TeamArchitect.PowerTools.Features.ICondition>> Conditions { get; private set; }
 
 		/// <summary>
 		/// Gets or sets custom the command status binding.
@@ -163,7 +161,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 			{
 				try
 				{
-					this.Conditions = this.Settings.ConditionSettings.Select(x => this.BindingFactory.CreateBinding<Features.ICondition>(x)).ToArray();
+					this.Conditions = this.Settings.ConditionSettings.Select(x => this.BindingFactory.CreateBinding<TeamArchitect.PowerTools.Features.ICondition>(x)).ToArray();
 				}
 				catch (Exception e)
 				{
@@ -178,7 +176,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 				{
 					try
 					{
-						var bindingSettings = BindingSerializer.Deserialize<Binding.BindingSettings>(this.Settings.CustomStatus);
+						var bindingSettings = BindingSerializer.Deserialize<Extensibility.Binding.BindingSettings>(this.Settings.CustomStatus);
 						if (!string.IsNullOrEmpty(bindingSettings.TypeId))
 							this.CommandStatus = this.BindingFactory.CreateBinding<ICommandStatus>(bindingSettings);
 					}
@@ -319,7 +317,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 			}
 		}
 
-		private bool Evaluate(IDynamicBinding<Features.ICondition> binding)
+		private bool Evaluate(IDynamicBinding<TeamArchitect.PowerTools.Features.ICondition> binding)
 		{
 			using (var context = binding.CreateDynamicContext(this))
 			{

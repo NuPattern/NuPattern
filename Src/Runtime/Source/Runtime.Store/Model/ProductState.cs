@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
@@ -47,14 +46,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
         public ProductState(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
             : base(partition, propertyAssignments)
         {
-            this.Store.EventManagerDirectory.TransactionCommitted.Add(new EventHandler<TransactionCommitEventArgs>(this.OnTransactionCommited));
+            this.Store.EventManagerDirectory.TransactionCommitted.Add(new EventHandler<DslModeling.TransactionCommitEventArgs>(this.OnTransactionCommited));
 
-            this.Store.EventManagerDirectory.ElementEventsBegun.Add(new EventHandler<ElementEventsBegunEventArgs>(this.OnElementEventsBegun));
-            this.Store.EventManagerDirectory.ElementEventsEnded.Add(new EventHandler<ElementEventsEndedEventArgs>(this.OnElementEventsEnded));
+            this.Store.EventManagerDirectory.ElementEventsBegun.Add(new EventHandler<DslModeling.ElementEventsBegunEventArgs>(this.OnElementEventsBegun));
+            this.Store.EventManagerDirectory.ElementEventsEnded.Add(new EventHandler<DslModeling.ElementEventsEndedEventArgs>(this.OnElementEventsEnded));
 
-            this.Store.EventManagerDirectory.ElementDeleted.Add(new EventHandler<ElementDeletedEventArgs>(this.OnElementDeleted));
-            this.Store.EventManagerDirectory.ElementAdded.Add(new EventHandler<ElementAddedEventArgs>(this.OnElementAdded));
-            this.Store.EventManagerDirectory.ElementPropertyChanged.Add(new EventHandler<ElementPropertyChangedEventArgs>(this.OnElementPropertyChanged));
+            this.Store.EventManagerDirectory.ElementDeleted.Add(new EventHandler<DslModeling.ElementDeletedEventArgs>(this.OnElementDeleted));
+            this.Store.EventManagerDirectory.ElementAdded.Add(new EventHandler<DslModeling.ElementAddedEventArgs>(this.OnElementAdded));
+            this.Store.EventManagerDirectory.ElementPropertyChanged.Add(new EventHandler<DslModeling.ElementPropertyChangedEventArgs>(this.OnElementPropertyChanged));
         }
 
         /// <summary>
@@ -190,12 +189,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
             this.Saved(this, EventArgs.Empty);
         }
 
-        private void OnElementEventsBegun(object sender, ElementEventsBegunEventArgs e)
+        private void OnElementEventsBegun(object sender, DslModeling.ElementEventsBegunEventArgs e)
         {
             this.eventsTransactions.Push(this.BeginTransaction());
         }
 
-        private void OnElementEventsEnded(object sender, ElementEventsEndedEventArgs e)
+        private void OnElementEventsEnded(object sender, DslModeling.ElementEventsEndedEventArgs e)
         {
             if (this.eventsTransactions.Count > 0)
             {
@@ -208,7 +207,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
             }
         }
 
-        internal void OnElementDeleting(object sender, ElementDeletingEventArgs e)
+        internal void OnElementDeleting(object sender, DslModeling.ElementDeletingEventArgs e)
         {
             var element = e.ModelElement as IInstanceBase;
             if (element != null && !this.IsSerializing)
@@ -221,7 +220,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
             }
         }
 
-        private void OnTransactionCommited(object sender, TransactionCommitEventArgs e)
+        private void OnTransactionCommited(object sender, DslModeling.TransactionCommitEventArgs e)
         {
             if (!this.IsSerializing && !e.Transaction.IsNested && !e.Transaction.IsSerializing)
             {
@@ -232,7 +231,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
             }
         }
 
-        private void OnElementDeleted(object sender, ElementDeletedEventArgs e)
+        private void OnElementDeleted(object sender, DslModeling.ElementDeletedEventArgs e)
         {
             var element = e.ModelElement as IInstanceBase;
             if (element != null && !this.IsSerializing)
@@ -245,7 +244,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
             }
         }
 
-        private void OnElementAdded(object sender, ElementAddedEventArgs e)
+        private void OnElementAdded(object sender, DslModeling.ElementAddedEventArgs e)
         {
             var element = e.ModelElement as IInstanceBase;
             if (element != null)
@@ -286,7 +285,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
         /// Raises the <see cref="ElementPropertyChanged"/> event as long as the state has not been flagged as 
         /// being deserialized.
         /// </summary>
-        private void OnElementPropertyChanged(object sender, ElementPropertyChangedEventArgs args)
+        private void OnElementPropertyChanged(object sender, DslModeling.ElementPropertyChangedEventArgs args)
         {
             // For element-specific automation, this is not used. This is only for automation 
             // that wants to listen to changes on everything.
@@ -318,7 +317,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
             return this.Store.PropertyBag.TryGetValue(IsCreatingElementKey, out isCreating) && (bool)isCreating;
         }
 
-        private bool ShouldRaiseInstantiate(ModelElement element)
+        private bool ShouldRaiseInstantiate(DslModeling.ModelElement element)
         {
             return !this.Store.PropertyBag.ContainsKey(element);
         }

@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Moq;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 using System.Diagnostics;
+using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using Microsoft.VisualStudio.Patterning.Runtime;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 {

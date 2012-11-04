@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
-using System.Reflection;
 using System.Globalization;
+using System.Linq;
+using System.Reflection;
 using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 

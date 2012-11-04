@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.ComponentModel;
+using Microsoft.VisualStudio.Patterning.Library.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation
 {

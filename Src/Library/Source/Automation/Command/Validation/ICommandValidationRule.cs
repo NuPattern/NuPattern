@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Modeling.Validation;
+﻿using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.Patterning.Library.Automation;
 using Microsoft.VisualStudio.Patterning.Runtime;
 

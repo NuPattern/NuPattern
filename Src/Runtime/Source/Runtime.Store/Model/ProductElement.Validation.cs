@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
@@ -6,7 +7,6 @@ using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime.Store.Properties;
-using System.Collections.Generic;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 {

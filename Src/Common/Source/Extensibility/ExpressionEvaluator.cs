@@ -1,9 +1,5 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Linq;
 using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using System.Reflection;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

@@ -9,7 +9,6 @@ using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
-using System.Collections.Generic;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UriProviders
 {

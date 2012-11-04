@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+
 namespace Microsoft.VisualStudio.Patterning.Library
 {
     /// <summary>

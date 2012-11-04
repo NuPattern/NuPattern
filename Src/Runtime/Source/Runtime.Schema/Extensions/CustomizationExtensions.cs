@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Modeling;
+﻿using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema

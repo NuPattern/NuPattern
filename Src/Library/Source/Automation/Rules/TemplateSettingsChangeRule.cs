@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.Patterning.Library.Properties;
+﻿using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Patterning.Library.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation

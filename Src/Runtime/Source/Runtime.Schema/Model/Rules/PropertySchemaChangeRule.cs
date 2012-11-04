@@ -1,7 +1,6 @@
-﻿using System;
+﻿using System.ComponentModel;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
-using System.ComponentModel;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema

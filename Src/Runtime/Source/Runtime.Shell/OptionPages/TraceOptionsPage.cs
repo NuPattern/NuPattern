@@ -1,12 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
+using System.ComponentModel.Composition;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using Microsoft.VisualStudio.Shell;
-using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.ComponentModelHost;
+using Microsoft.VisualStudio.Shell;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.OptionPages
 {

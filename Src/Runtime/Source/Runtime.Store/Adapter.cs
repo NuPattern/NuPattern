@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.Modeling.Integration.Shell;
-using System.Linq;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 {

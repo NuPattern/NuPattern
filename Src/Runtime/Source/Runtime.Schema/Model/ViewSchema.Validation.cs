@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Modeling.Validation;
+using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.Patterning.Runtime.Schema.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using Resources = Microsoft.VisualStudio.Patterning.Runtime.Schema.Properties.Resources;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Patterning.Runtime.Interfaces;
-using System.Globalization;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {

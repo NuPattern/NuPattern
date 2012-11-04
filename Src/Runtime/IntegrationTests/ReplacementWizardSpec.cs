@@ -2,10 +2,10 @@
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 {

@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.ExtensibilityHosting;
 using System.ComponentModel.Composition.ReflectionModel;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using System.Linq;
+using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
+using Microsoft.VisualStudio.Patterning.Runtime;
+using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
 {

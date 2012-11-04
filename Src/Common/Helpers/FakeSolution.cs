@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Dynamic;
-using System.Linq;
 using System.IO;
+using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
 public abstract class ItemContainer : IItemContainer

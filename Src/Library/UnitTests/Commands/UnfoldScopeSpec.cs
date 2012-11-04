@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
+﻿using Microsoft.VisualStudio.Patterning.Library.Commands;
 using Microsoft.VisualStudio.Patterning.Runtime;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
 namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands

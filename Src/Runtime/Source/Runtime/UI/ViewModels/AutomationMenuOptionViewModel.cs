@@ -6,7 +6,6 @@ using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using Input = System.Windows.Input;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UI
 {
@@ -49,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
             }
         }
 
-        private class AutomationCommand : Input.ICommand
+        private class AutomationCommand : System.Windows.Input.ICommand
         {
             private static readonly Dictionary<string, Action<MenuOptionViewModel, IMenuCommand>> propertyMappings =
                 new Dictionary<string, Action<MenuOptionViewModel, IMenuCommand>>
@@ -120,7 +119,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
                 tracer.ShieldUI(
                     () =>
                     {
-                        using (new MouseCursor(Input.Cursors.Wait))
+                        using (new MouseCursor(System.Windows.Input.Cursors.Wait))
                         {
                             this.automation.Execute();
                         }

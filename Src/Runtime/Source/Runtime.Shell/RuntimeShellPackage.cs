@@ -11,7 +11,6 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using Microsoft.ComponentModel.Composition.Diagnostics;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Library;
@@ -51,7 +50,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
     [ProvideService(typeof(IBindingFactory), ServiceName = "IBindingFactory")]
     [ProvideService(typeof(IBindingCompositionService), ServiceName = "IBindingCompositionService")]
     [ProvideService(typeof(IToolkitInterfaceService), ServiceName = "IToolkitInferfaceService")]
-    [ProvideOptionPageAttribute(typeof(TraceOptionsPage), Constants.SettingsName, "TraceOptionsPage", 17131, 21356, true)]
+    [ProvideOptionPage(typeof(TraceOptionsPage), Constants.SettingsName, "TraceOptionsPage", 17131, 21356, true)]
     [ProvideDirectiveProcessor(typeof(ModelElementDirectiveProcessor), ModelElementDirectiveProcessor.ProcessorName, Constants.LibraryDirectiveProcessorDescription)]
     public sealed class RuntimeShellPackage : Package
     {

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using Microsoft.VisualStudio;
 
 namespace Microsoft.VisualStudio.Patterning.Extensibility
 {

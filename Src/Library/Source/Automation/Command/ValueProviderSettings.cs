@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using System.Collections.ObjectModel;
+using Microsoft.VisualStudio.Patterning.Runtime;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation
 {

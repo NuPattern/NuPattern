@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using System.ComponentModel.Composition;
 using System.IO;
-using Microsoft.VisualStudio.Shell;
+using System.Linq;
 using System.Text.RegularExpressions;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UriProviders
 {

@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Runtime.Shell;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests

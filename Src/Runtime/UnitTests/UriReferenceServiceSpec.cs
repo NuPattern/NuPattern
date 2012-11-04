@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests

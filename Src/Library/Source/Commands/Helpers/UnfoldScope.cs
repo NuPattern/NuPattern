@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
 using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Commands
 {

@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.CodeDom.Compiler;
-using Microsoft.CSharp;
-using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.Modeling.Integration;
-using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.TextTemplating.Modeling;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.Remoting.Messaging;
+using Microsoft.CSharp;
+using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Modeling.Integration;
+using Microsoft.VisualStudio.Shell.Interop;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TextTemplating;
+using Microsoft.VisualStudio.TextTemplating.Modeling;
 
 namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 {

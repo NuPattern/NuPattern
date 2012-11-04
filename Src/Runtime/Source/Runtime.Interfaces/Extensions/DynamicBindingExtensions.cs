@@ -1,7 +1,6 @@
-﻿using System.Reflection;
-using Microsoft.VisualStudio.Patterning.Runtime;
+﻿using System;
+using System.Reflection;
 using Microsoft.VisualStudio.Modeling;
-using System;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime

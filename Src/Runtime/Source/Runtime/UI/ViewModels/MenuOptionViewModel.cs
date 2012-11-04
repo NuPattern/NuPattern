@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Input = System.Windows.Input;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.UI
 {
@@ -42,7 +41,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// </summary>
         /// <param name="caption">The caption.</param>
         /// <param name="command">The command.</param>
-        public MenuOptionViewModel(string caption, Input.ICommand command)
+        public MenuOptionViewModel(string caption, System.Windows.Input.ICommand command)
             : this(caption)
         {
             this.Command = command;
@@ -71,7 +70,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// <summary>
         /// Gets the command.
         /// </summary>
-        public Input.ICommand Command { get; protected set; }
+        public System.Windows.Input.ICommand Command { get; protected set; }
 
         /// <summary>
         /// Gets or sets the model.

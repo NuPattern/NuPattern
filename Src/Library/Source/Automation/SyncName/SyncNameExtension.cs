@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
+using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Library.Commands;
 using Microsoft.VisualStudio.Patterning.Library.Events;
 using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation

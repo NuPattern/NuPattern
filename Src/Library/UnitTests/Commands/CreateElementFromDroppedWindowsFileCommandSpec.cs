@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
+﻿using Microsoft.VisualStudio.Patterning.Library.Commands;
 using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

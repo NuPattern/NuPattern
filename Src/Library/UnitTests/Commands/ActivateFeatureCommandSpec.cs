@@ -1,11 +1,10 @@
-﻿using Microsoft.VisualStudio.Patterning.Library.Automation;
+﻿using System;
+using Microsoft.VisualStudio.Patterning.Extensibility.References;
 using Microsoft.VisualStudio.Patterning.Library.Commands;
 using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using System;
 
 namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 {

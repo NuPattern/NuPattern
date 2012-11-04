@@ -10,7 +10,6 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Markup;
-using Expressions = System.Linq.Expressions;
 
 namespace Microsoft.VisualStudio.Patterning.Common.Presentation
 {
@@ -128,9 +127,9 @@ namespace Microsoft.VisualStudio.Patterning.Common.Presentation
 
 		private static Func<BindingExpression, object> CreateGetAccessor(PropertyInfo propertyInfo)
 		{
-			var instance = Expressions.Expression.Parameter(propertyInfo.DeclaringType, "i");
-			var property = Expressions.Expression.Property(instance, propertyInfo);
-			return (Func<BindingExpression, object>)Expressions.Expression.Lambda(property, instance).Compile();
+			var instance = System.Linq.Expressions.Expression.Parameter(propertyInfo.DeclaringType, "i");
+			var property = System.Linq.Expressions.Expression.Property(instance, propertyInfo);
+			return (Func<BindingExpression, object>)System.Linq.Expressions.Expression.Lambda(property, instance).Compile();
 		}
 
 		private static IServiceProvider GetServiceProvider(DependencyObject reference)

@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using Microsoft.VisualStudio.Patterning.Runtime.Interfaces;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {

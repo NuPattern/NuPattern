@@ -1,10 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using System.Drawing.Design;
-using System.ComponentModel.Design;
+using System.Linq;
 using Microsoft.VisualStudio.Patterning.Extensibility;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 
 namespace Microsoft.VisualStudio.Patterning.Library.Automation
 {
