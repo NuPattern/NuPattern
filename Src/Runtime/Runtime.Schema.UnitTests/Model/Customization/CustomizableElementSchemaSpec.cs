@@ -29,19 +29,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenIsEnabledIsTrue()
             {
                 Assert.True(this.element.IsCustomizationEnabled);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenPolicyIsNotNull()
             {
                 Assert.NotNull(this.element.Policy);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenIsPolicyModifyableIsTrue()
             {
                 Assert.True(this.element.IsCustomizationPolicyModifyable);
@@ -71,25 +71,25 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenIsEnabledIsFalse()
             {
                 Assert.False(this.element.IsCustomizationEnabled);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenIsCustomizableIsFalse()
             {
                 Assert.Equal(this.element.IsCustomizable, CustomizationState.False);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenIsPolicyModifyableIsFalse()
             {
                 Assert.False(this.element.IsCustomizationPolicyModifyable);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenIsCustomizableInherited_ThenIsCustomizableIsFalse()
             {
                 this.store.TransactionManager.DoWithinTransaction(
@@ -98,7 +98,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(this.element.IsCustomizable, CustomizationState.False);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenIsCustomizableTrue_ThenIsCustomizableIsFalse()
             {
                 this.store.TransactionManager.DoWithinTransaction(
@@ -107,7 +107,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(this.element.IsCustomizable, CustomizationState.False);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenAllSettingsDisabled()
             {
                 Assert.False(this.setting.IsEnabled);
@@ -134,13 +134,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenIsCustomizableIsTrue()
             {
                 Assert.Equal(this.element.IsCustomizable, CustomizationState.True);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenIsCustomizableInherited_ThenIsCustomizableIsTrue()
             {
                 this.store.TransactionManager.DoWithinTransaction(
@@ -179,20 +179,20 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenIsCustomizableIsInherit()
             {
                 Assert.Equal(this.childElement.IsCustomizable, CustomizationState.Inherited);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenParentReturnsParentElement()
             {
                 Assert.NotNull(this.childElement.Owner);
                 Assert.Equal(this.childElement.Owner, this.parentElement);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenPolicyModifyableIsTrue()
             {
                 Assert.True(this.childElement.IsCustomizationPolicyModifyable);
@@ -228,20 +228,20 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenIsCustomizableIsInherit()
             {
                 Assert.Equal(this.childElement.IsCustomizable, CustomizationState.Inherited);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenParentReturnsParentElement()
             {
                 Assert.NotNull(this.childElement.Owner);
                 Assert.Equal(this.childElement.Owner, this.parentElement);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenPolicyModifyableIsFalse()
             {
                 Assert.False(this.childElement.IsCustomizationPolicyModifyable);

@@ -11,14 +11,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenResolvingExtensionWithNullContainer_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() =>
 				AutomationExtensionExtensions.ResolveAutomationReference<TestAutomation>(null, Guid.Empty));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenResolvingExtensionAndNoMatches_ThenReturnsNull()
 		{
 			var container = new Mock<IAutomationExtension>();
@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 			Assert.Null(extension);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenResolvingExtension_ThenReturnsMatchingByTypeAndIdAndName()
 		{
 			var extensions = new List<IAutomationExtension>

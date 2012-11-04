@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateTypeIdIsNotEmptyFails()
             {
                 this.settings.ValidateTypeNameNotEmpty(validationContext);
@@ -48,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.settings) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTypeIsNotEmpty_ThenValidateTypeIdIsNotEmptySucceeds()
             {
                 this.settings.WithTransaction(setting => setting.TypeName = "foo");

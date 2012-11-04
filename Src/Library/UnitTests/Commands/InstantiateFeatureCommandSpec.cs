@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.command.ServiceProvider = new Mock<IServiceProvider>().Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingAnInstanceOfAnotherFeature_ThenDoesNotCreateAFeature()
 			{
 				this.command.FeatureId = "FeatureId2";
@@ -47,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				this.mockManager.Verify(fm => fm.Instantiate(this.command.FeatureId, It.IsAny<string>()), Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingAnInstance_ThenCreatesAndActivatesFeatureWithUniqueDefaultFeatureName()
 			{
 				this.command.FeatureId = "FeatureId";
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				this.mockManager.VerifySet(fm => fm.ActiveFeature = mockExtension.Object);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingAnInstanceWithDefaultInstanceName_ThenCreatesAndActivatesFeatureWithDefaultInstanceName()
 			{
 				this.command.FeatureId = "FeatureId";
@@ -77,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				this.mockManager.VerifySet(fm => fm.ActiveFeature = mockExtension.Object);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingAnInstanceWithNoActivateOnInstantiation_ThenCreatesFeatureWithNoActivation()
 			{
 				this.command.FeatureId = "FeatureId";
@@ -92,7 +92,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				this.mockManager.VerifySet(fm => fm.ActiveFeature = mockExtension.Object, Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingAnInstanceWithNoActivateOnInstantiation_ThenCreatesGuidanceReference()
 			{
 				Mock<IProductElement> owner = new Mock<IProductElement>();
@@ -120,7 +120,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				Assert.Equal("DefaultInstanceName", reference.Object.Value);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingAnInstanceWithSharedInstanceOnInstantiation_ThenCreatesGuidanceReference()
 			{
 				Mock<IProductElement> owner = new Mock<IProductElement>();
@@ -178,7 +178,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.command.ServiceProvider = new Mock<IServiceProvider>().Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingAnInstance_ThenCreatesAndActivatesFeatureWithUniqueDefaultFeatureName()
 			{
 				this.command.FeatureId = "FeatureId";
@@ -192,7 +192,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				this.mockManager.VerifySet(fm => fm.ActiveFeature = mockExtension.Object);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingWithSharedInstance_ThenSharesAndActivatesFeatureWithUniqueDefaultFeatureName()
 			{
 				this.command.FeatureId = "FeatureId";

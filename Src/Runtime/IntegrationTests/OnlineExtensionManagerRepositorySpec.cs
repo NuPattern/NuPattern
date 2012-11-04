@@ -26,7 +26,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 
 		[HostType("VS IDE")]
 		[Ignore]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenDownloadingInSyncMode_ThenExtensionIsDownloadedAndInstalled()
 		{
 			var installableExtension =

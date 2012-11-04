@@ -31,13 +31,13 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
                 this.descriptor = new BindingPropertyDescriptor<IValueProvider>(innerDescriptor.Object, new Attribute[0]);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenCanResetValueIsFalse()
             {
                 Assert.False(this.descriptor.CanResetValue(this.component));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueProviderTypeIdIsSet_ThenCanResetValueIsTrue()
             {
                 this.descriptor.SetValue(this.component, "SomeTypeId");

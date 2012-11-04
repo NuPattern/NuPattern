@@ -31,7 +31,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenIsDefaultIsTrue_ThenOtherViewsAreSetToFalseAndNotLocked()
             {
                 this.view.WithTransaction(vw => vw.IsDefault = true);
@@ -43,7 +43,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.False(this.view.IsLocked(Locks.Delete));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSecondViewIsDefaultIsTrue_ThenSecondViewIsLocked()
             {
                 var view2 = this.product.Create<ViewSchema>();
@@ -52,7 +52,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(view2.IsLocked(Locks.Delete));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenIsDefaultIsFalse_ThenIsDefaultIsTrue()
             {
                 this.view.WithTransaction(vw => vw.IsDefault = false);
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(this.view.IsLocked(Locks.Delete));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSecondViewIsDefaultIsFalse_ThenFirstViewIsDefaultIsTrue()
             {
                 var view2 = this.product.Create<ViewSchema>();

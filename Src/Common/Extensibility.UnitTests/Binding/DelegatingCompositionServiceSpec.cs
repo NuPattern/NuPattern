@@ -13,7 +13,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 	public class DelegatingCompositionServiceSpec
 	{
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenComposingParts_ThenDelegates()
 		{
 			var composition = new Mock<IFeatureCompositionService>();
@@ -25,7 +25,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			composition.Verify(c => c.ComposeParts(It.IsAny<object[]>()));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenDisposing_ThenDoesNotDisposeInnerService()
 		{
 			var composition = new Mock<IFeatureCompositionService>();
@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 		}
 
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingExport_ThenDelegates()
 		{
 			var composition = new Mock<IFeatureCompositionService>();
@@ -51,7 +51,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 		}
 
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingExportedValue_ThenDelegates()
 		{
 			var composition = new Mock<IFeatureCompositionService>();
@@ -63,7 +63,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			composition.Verify(c => c.GetExportedValue<IFormatProvider>());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 		public void WhenGettingExportedValueOrDefault_ThenDelegates()
 		{
@@ -76,7 +76,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			composition.Verify(c => c.GetExportedValueOrDefault<IFormatProvider>());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 		public void WhenGettingExportedValues_ThenDelegates()
 		{
@@ -89,7 +89,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			composition.Verify(c => c.GetExportedValues<IFormatProvider>());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 		public void WhenGettingExports_ThenDelegates()
 		{
@@ -102,7 +102,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			composition.Verify(c => c.GetExports<IFormatProvider>());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 		public void WhenSatisfyingImportsOnce_ThenDelegates()
 		{

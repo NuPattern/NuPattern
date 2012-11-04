@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 				this.source.Switch.Level = SourceLevels.Off;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenNewSettingsApplied_ThenTraceSourceLevelIsSet()
 			{
 				var setting = new RuntimeSettings();
@@ -40,7 +40,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 				Assert.Equal(SourceLevels.Warning, this.source.Switch.Level);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposingMonitor_ThenStopsTrackingChanges()
 			{
 				var setting = new RuntimeSettings();
@@ -78,13 +78,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 				this.monitor = new TracingSettingsMonitor(this.manager.Object);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenConstructed_ThenInitialTraceSourceLevelIsApplied()
 			{
 				Assert.Equal(SourceLevels.Warning, this.source.Switch.Level);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenConstructed_ThenDefaultSourceLevelIsApplied()
 			{
 				var defaultSource = Tracer.GetOrCreateUnderlyingSource(TracingSettings.DefaultRootSourceName);
@@ -92,7 +92,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 				Assert.Equal(TracingSettings.DefaultRootSourceLevel, defaultSource.Switch.Level);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenNewSettingsApplied_ThenTraceSourceLevelIsSet()
 			{
 				var setting = new RuntimeSettings();
@@ -103,7 +103,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 				Assert.Equal(SourceLevels.Information, this.source.Switch.Level);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenNewSettingsApplied_ThenDefaultTraceListenerIsRestored()
 			{
 				var setting = new RuntimeSettings();
@@ -116,7 +116,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 				Assert.True(source.Listeners.Cast<TraceListener>().OfType<DefaultTraceListener>().Any());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenNewRootDefaultLevelIsApplied_ThenDefaultSourceLevelIsApplied()
 			{
 				var setting = new RuntimeSettings();

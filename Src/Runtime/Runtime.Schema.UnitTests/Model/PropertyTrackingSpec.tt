@@ -77,14 +77,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
 			{
 #>
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void Then<#=propertyName #>IsTracking()
             {
                 Assert.True(this.Element.Is<#=propertyName #>Tracking);
                 Assert.Equal(this.Element.Calculate<#=propertyName #>TrackingValue(), this.Element.<#=propertyName #>);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTrackedPropertyIsChanged_Then<#=propertyName #>NotTracking()
             {
 			    this.Element.Store.TransactionManager.DoWithinTransaction( () =>

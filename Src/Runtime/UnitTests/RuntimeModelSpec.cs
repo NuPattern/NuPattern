@@ -7,7 +7,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
     [TestClass]
     public class RuntimeModelSpec
     {
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenChangingProperty_ThenNotifiesSubscriber()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();

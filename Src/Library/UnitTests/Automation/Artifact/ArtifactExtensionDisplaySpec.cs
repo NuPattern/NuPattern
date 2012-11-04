@@ -35,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Artifac
                 this.artifactExtension = ExtensionElement.GetExtension<ArtifactExtension>(this.product);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenAssociatedArtifactIsBrowsable()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.artifactExtension, extension => extension.AssociatedArtifacts);
@@ -44,7 +44,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Artifac
                 Assert.False(descriptor.IsReadOnly);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenOnArtifactActivationNameDescriptorNotExist()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.artifactExtension, extension => extension.OnArtifactActivation);
@@ -52,7 +52,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Artifac
                 Assert.Null(descriptor);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenAssociatedArtifactDescriptorHasCorrectProperties()
             {
                 Mock<ITypeDescriptorContext> mockContext = new Mock<ITypeDescriptorContext>();

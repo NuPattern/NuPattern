@@ -28,7 +28,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
 			this.publisher.Dispose();
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenManagerOpenedThenPropertyChanged_ThenSubscriberIsNotified()
 		{
 			var subscriber = new Mock<ISubscriber>();
@@ -40,7 +40,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
 				It.Is<IEvent<PropertyChangedEventArgs>>(e => e.EventArgs.PropertyName == "Foo")));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenDisposingSubscriptionThenPropertyChanged_ThenSubscriberIsNotNotified()
 		{
 			var subscriber = new Mock<ISubscriber>();

@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenValidatingStore_ThenValidationTestInvoked()
         {
             this.patternManager.ValidateProductState();
@@ -48,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenItemIsDeleted_ThenPatternManagerIsNotClosed()
         {
             this.patternManager.Save();

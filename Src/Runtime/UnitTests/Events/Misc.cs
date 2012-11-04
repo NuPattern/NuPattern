@@ -10,7 +10,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSourceEventRaised_ThenSubscriberIsNotified()
 		{
 			var source = new EventSource();
@@ -28,7 +28,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 			Assert.Equal("Foo", EventSubscriber.ChangedProperties[0]);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSourceEventRaised_ThenCollectedSubscriberIsNotNotified()
 		{
 			var source = new EventSource();

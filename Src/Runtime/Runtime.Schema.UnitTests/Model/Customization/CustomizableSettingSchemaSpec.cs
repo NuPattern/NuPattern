@@ -27,51 +27,51 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenIsEnabledIsTrue()
             {
                 Assert.True(this.setting.IsEnabled);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenPropertyIdReturnsEmpty()
             {
                 Assert.Equal(string.Empty, this.setting.PropertyId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenCaptionReturnsDefaultNameCaption()
             {
                 Assert.Equal(this.setting.Caption,
                     string.Format(CultureInfo.CurrentCulture, this.setting.CaptionFormatter, Properties.Resources.CustomizableSetting_DefaultCaption));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenDescriptionReturnsDefaultNameDescription()
             {
                 Assert.Equal(this.setting.Description,
                     string.Format(CultureInfo.CurrentCulture, this.setting.DescriptionFormatter, Properties.Resources.CustomizableSetting_DefaultCaption));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenDefaultValueIsTrue()
             {
                 Assert.True(this.setting.DefaultValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenValueIsDefaultValue()
             {
                 Assert.Equal(this.setting.Value, this.setting.DefaultValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenIsModifiedIsFalse()
             {
                 Assert.False(this.setting.IsModified);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueChanges_ThenIsModifiedIsTrue()
             {
                 this.store.TransactionManager.DoWithinTransaction(
@@ -98,25 +98,25 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisabled_ThenIsEnabledIsFalse()
             {
                 Assert.False(this.setting.IsEnabled);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisabled_ThenIsModifiedIsFalse()
             {
                 Assert.False(this.setting.IsModified);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisabled_ThenValueIsFalse()
             {
                 Assert.False(this.setting.Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingValueFromDefault_ThenIsModifiedRemainsFalse()
             {
                 this.setting.WithTransaction(s => s.Value = !s.DefaultValue);
@@ -124,7 +124,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.False(this.setting.IsModified);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisabledAndValueChanged_ThenValueIsSameValue()
             {
                 bool orignalValue = this.setting.Value;
@@ -134,7 +134,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(this.setting.Value, orignalValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisabledAndDefaultValueChanged_TheDefaultValueIsSameDefaultValue()
             {
                 bool orignalDefaultValue = this.setting.DefaultValue;
@@ -162,20 +162,20 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenPropertyIdReturnsPropertyId()
             {
                 Assert.Equal(TestPropertyId, this.setting.PropertyId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenCaptionReturnsCaption()
             {
                 Assert.Equal(this.setting.Caption,
                     string.Format(CultureInfo.CurrentCulture, this.setting.CaptionFormatter, this.setting.GetPropertyIdDisplayName()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenDescriptionReturnsDescription()
             {
                 Assert.Equal(this.setting.Description,
@@ -200,13 +200,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDefaultValueIsFalse_ThenDefaultValueIsFalse()
             {
                 Assert.False(this.setting.DefaultValue);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDefaultValueIsFalse_ThenIsModifiedIsTrue()
             {
                 Assert.True(this.setting.IsModified);

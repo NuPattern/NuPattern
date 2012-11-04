@@ -11,7 +11,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 		public void WhenAddingExport_ThenCanRetrieveItFromContextContainer()
 		{
@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 		}
 
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenAddingExportWithContractName_ThenCanRetrieveItFromContextContainer()
 		{
 			var catalog = new TypeCatalog(typeof(Foo));

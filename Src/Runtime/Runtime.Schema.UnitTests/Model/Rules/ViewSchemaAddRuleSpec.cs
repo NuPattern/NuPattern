@@ -31,14 +31,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenFirstViewInAProduct_ThenIsDefaultAndIsLocked()
             {
                 Assert.True(this.view.IsDefault);
                 Assert.True(this.view.IsLocked(Locks.Delete));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingTheSecondViewInAProduct_ThenIsNotDefaultAndIsNotLocked()
             {
                 var view2 = this.product.Create<ViewSchema>();
@@ -47,13 +47,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.False(view2.IsLocked(Locks.Delete));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingANewView_ThenCustomizationPolicyIsNotNull()
             {
                 Assert.NotNull(this.view.Policy);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingANewView_ThenCustomizationPolicyHasRequiredSettings()
             {
                 IEnumerable<CustomizableSettingSchema> settings = this.view.Policy.Settings;

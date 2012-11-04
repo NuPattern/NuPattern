@@ -43,7 +43,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Artifac
                 validationContext = new ValidationContext(ValidationCategories.Custom, this.product);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoArtifactReference_ThenValidateArtifactReferenceSucceeds()
             {
                 this.validator.ValidateArtifactReferences(validationContext, this.product);
@@ -51,7 +51,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Artifac
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenArtifactReferenceIsEmpty_ThenValidateArtifactReferenceSucceeds()
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>
@@ -64,7 +64,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Artifac
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenArtifactReferenceNotExist_ThenValidateArtifactReferenceFails()
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>
@@ -78,7 +78,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Artifac
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.product) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenArtifactReferenceExist_ThenValidateArtifactReferenceSucceeds()
             {
                 this.product.Store.TransactionManager.DoWithinTransaction(() =>

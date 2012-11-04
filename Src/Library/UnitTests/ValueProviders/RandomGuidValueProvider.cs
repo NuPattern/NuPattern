@@ -20,7 +20,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
 				this.provider = new RandomGuidValueProvider();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenReturnsGuidInDefaultFormat()
 			{
 				var result = this.provider.Evaluate();
@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
 				Assert.NotNull(Guid.ParseExact((string)result, "D"));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenFormatIsDigitsHyphensCurlyBraces_ThenReturnsFormattedGuid()
 			{
 				this.provider.Format = GuidFormat.DigitsHyphensCurlyBraces;

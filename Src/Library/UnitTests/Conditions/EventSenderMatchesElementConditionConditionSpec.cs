@@ -24,13 +24,13 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
                 this.condition.Event = new Mock<IEvent<EventArgs>>().Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEventIsNull_ThenEvaluateReturnsFalse()
 			{
 				Assert.False(this.condition.Evaluate());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCurrentElementIsNull_ThenEvaluateReturnsFalse()
 			{
 				this.condition.Event = new Mock<IEvent<EventArgs>>().Object;
@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
 				Assert.False(this.condition.Evaluate());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEventSenderIsNull_ThenEvaluateReturnsFalse()
 			{
 				var mockEvent = new Mock<IEvent<EventArgs>>();
@@ -67,14 +67,14 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
 				this.condition.CurrentElement = this.currentElement.Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEventSenderIsCurrentElement_ThenEvaluateReturnsTrue()
 			{
 				this.mockEvent.Setup(e => e.Sender).Returns(this.currentElement.Object);
 				Assert.True(this.condition.Evaluate());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEventSenderIsAnotherElement_ThenEvaluateReturnsFalse()
 			{
 				var anotherElement = new Mock<IProductElement>();
@@ -82,7 +82,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
 				Assert.False(this.condition.Evaluate());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEventSenderIsNotAElement_ThenEvaluateReturnsTrue()
 			{
 				var anObject = new object();

@@ -15,7 +15,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
         {
             internal static readonly IAssertion Assert = new Assertion();
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenLoadingAModel_ThenNullExceptionIsThrown()
             {
                 Assert.Throws<ArgumentNullException>(
@@ -38,14 +38,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store = new DslTestStore<PatternModelDomainModel>().Store;
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenLoadingAModelWithNullStream_ThenNullExceptionIsThrown()
             {
                 Assert.Throws<ArgumentNullException>(() =>
                         PatternModelSerializationHelper.Instance.LoadModel(this.store, null, null, null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenLoadingAModel_ThenPatternModelIsReturned()
             {
                 var stream = new MemoryStream(

@@ -22,7 +22,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
 				this.condition = new ArtifactReferenceExistsCondition();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenNoReferencesExist_ThenEvaluateReturnsFalse()
 			{
 				Mock<IProductElement> mockCurrentElement = new Mock<IProductElement>();
@@ -31,7 +31,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
 				Assert.False(this.condition.Evaluate());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenNoArtifactReferencesExist_ThenEvaluateReturnsFalse()
 			{
 				Mock<IReference> fooReference = new Mock<IReference>();
@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
 				Assert.False(this.condition.Evaluate());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenArtifactReferencesExist_ThenEvaluateReturnsTrue()
 			{
 				Mock<IReference> generatedReference = new Mock<IReference>();

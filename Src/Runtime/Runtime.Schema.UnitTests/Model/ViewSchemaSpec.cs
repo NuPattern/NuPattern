@@ -26,7 +26,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenSchemaPathIsValid()
             {
                 var expected = string.Concat(this.product.SchemaPath, NamedElementSchema.SchemaPathDelimiter, this.view.Name);

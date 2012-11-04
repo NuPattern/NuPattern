@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Patterning.Runtime.Interfaces;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {
 	/// <summary>
-	/// Scope for buffering <see cref="T:Runtime.Store.ProductStore"/> events. Use when you need to delay the raising of the events.
+    /// Scope for buffering <see cref="T:Store.ProductState"/> events. Use when you need to delay the raising of the events.
 	/// </summary>
 	/// <example>
 	/// using (new StoreEventBuggeringScope())

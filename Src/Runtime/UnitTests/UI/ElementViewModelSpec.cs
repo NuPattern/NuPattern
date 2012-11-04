@@ -14,13 +14,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
         [TestClass]
         public class GivenNoContext
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithNullElement_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new ElementViewModel(null, new SolutionBuilderContext()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewWithNullContext_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new ElementViewModel(new Mock<IAbstractElement>().Object, null));
@@ -77,19 +77,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.target.RenderHierarchyRecursive();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenExposesModel()
             {
                 Assert.Same(this.element, this.target.Model);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenExposesIconPath()
             {
                 Assert.Equal("../../Resources/" + this.element.GetType().Name + ".png", this.target.IconPath);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenRenderChildNodes()
             {
                 Assert.Equal(2, this.target.Nodes.Count);
@@ -97,7 +97,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Contains(this.element.AllElements.ElementAt(1), this.target.Nodes.Select(n => n.Model));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNew_ThenAddMenuElements()
             {
                 var addMenuOptions = this.target.MenuOptions
@@ -107,7 +107,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.Equal(4, addMenuOptions.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenCreatesAddMenuOption()
             {
                 var options = this.target.MenuOptions
@@ -116,7 +116,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.NotNull(options);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingNewElement_ThenCreatesCollectionInStore()
             {
                 var addMenuOptions = this.target.MenuOptions
@@ -132,7 +132,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     .Verify(x => x.CreateElement(It.IsAny<Action<IElement>>(), It.IsAny<bool>()), Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingNewCollection_ThenCreatesCollectionInStore()
             {
                 var addMenuOptions = this.target.MenuOptions
@@ -148,7 +148,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     .Verify(x => x.CreateCollection(It.IsAny<Action<ICollection>>(), It.IsAny<bool>()), Times.Once());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDelete_ThenPromptsConfirmation()
             {
                 var toDelete = this.target.Nodes.OfType<ElementViewModel>().First();
@@ -159,7 +159,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     .Verify(x => x.PromptWarning(It.IsAny<string>()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecutingDelete_ThenDeletesElementAndRemoveNodeFromNodesParent()
             {
                 var toDelete = this.target.Nodes.OfType<ElementViewModel>().First();
@@ -198,7 +198,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.target = new ElementViewModel(this.element, ctx);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNew_ThenAddExtensionPointsInAddMenuOption()
             {
                 var addOption = this.target.MenuOptions

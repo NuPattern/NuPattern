@@ -65,28 +65,28 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenSolutionItemExists()
         {
             Assert.True(solution.Items.Any(p => p.Name == instanceName));
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenPatternInstanceExists()
         {
             Assert.NotNull(pattern);
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenReferenceLinkIsAdded()
         {
             base.ReferenceLinkIsAdded();
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenSyncNamesWork()
         {
             base.SyncNamesWorks();
@@ -109,7 +109,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenSolutionItemExists()
         {
             Assert.True(solution.Items.Any(p => p.Name == instanceName));
@@ -121,7 +121,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void ThenReferenceLinkIsAdded()
         {
             base.ReferenceLinkIsAdded();

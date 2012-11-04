@@ -16,14 +16,14 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
 		[TestClass]
 		public class GivenNoContext
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test Code")]
 			public void WhenCreatingNewWithNullOwner_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => new CommandAutomation(null, new Mock<ICommandSettings>().Object));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test Code")]
 			public void WhenCreatingNewWithNullSettings_ThenThrowsArgumentNullException()
 			{
@@ -64,13 +64,13 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
 				this.commandAutomation.EndInit();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenInitialized_ThenSetsCommandBinding()
 			{
 				Assert.NotNull(this.commandAutomation.CommandBinding);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutingCommandWithValidBindings_ThenExecutes()
 			{
 				this.binding.Setup(b => b.Evaluate(this.dynamicContext.Object)).Returns(true);
@@ -79,7 +79,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
 				Mock.Get(this.featureCommand).Verify(f => f.Execute(), Times.Once());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutingCommandWithInvalidBindings_ThenDoesNothing()
 			{
 				this.binding.Setup(b => b.Evaluate(this.dynamicContext.Object)).Returns(false);
@@ -88,7 +88,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
 				Mock.Get(this.featureCommand).Verify(f => f.Execute(), Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutingCommand_ThenAutomationExtensionIsAvailableToBinding()
 			{
 				this.commandAutomation.Execute();
@@ -96,7 +96,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
 				this.dynamicContext.Verify(x => x.AddExport(It.IsAny<IAutomationExtension>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutingCommand_ThenAutomationExtensionOwnerElementIsAvailableToBinding()
 			{
 				this.commandAutomation.Execute();
@@ -104,7 +104,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Command
 				this.dynamicContext.Verify(x => x.AddExport(It.IsAny<IAutomationExtension>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutingCommand_ThenAutomationExtensionOwnerElementIsAvailableToBindingAsAutomationContainer()
 			{
 				this.commandAutomation.Execute();

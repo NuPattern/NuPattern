@@ -19,7 +19,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.converter = new ValueTypesTypeConverter();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenExclusiveStandardValues()
             {
                 Assert.True(this.converter.GetStandardValuesSupported());

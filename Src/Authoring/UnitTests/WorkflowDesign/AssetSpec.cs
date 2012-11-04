@@ -27,13 +27,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 
 			protected TAsset Asset { get; private set; }
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenSourceReferenceEmpty()
 			{
 				Assert.Equal(this.Asset.SourceReference, string.Empty);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenNotSupplyingAnyTools()
 			{
 				Assert.False(this.Asset.IsSuppliedToTool);

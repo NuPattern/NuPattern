@@ -11,7 +11,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
         internal static readonly IAssertion Assert = new Assertion();
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenGettingInstalledToolkitInfos_ThenCanRetrieveThem()
         {
             var componentModel = VsIdeTestHostContext.ServiceProvider.GetService<SComponentModel, IComponentModel>();

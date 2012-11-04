@@ -32,7 +32,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
 			protected Mock<IFxrUriReferenceService> UriService { get; private set; }
 			protected IFxrUriReferenceProvider<ITemplate> UriProvider { get; private set; }
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExtensionRelativeUriCannotResolveExtension_ThenReturnsNull()
 			{
 				var template = this.UriProvider.ResolveUri(new Uri("t4://extension/bar/template.t4"));
@@ -40,7 +40,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
 				Assert.Null(template);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExtensionRelativeUriCannotFindRelativePath_ThenReturnsNull()
 			{
 				this.UriService
@@ -53,7 +53,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
 			}
 
 			[DeploymentItem("UriProviders\\TemplateWithTemplatePath.t4", "Runtime.UnitTests\\TextTemplateUriProviderSpec\\WhenExtensionRelativeFileExists_ThenReturnsValidTemplate")]
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExtensionRelativeFileExists_ThenReturnsValidTemplate()
 			{
 				this.UriService

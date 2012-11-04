@@ -68,7 +68,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTraversingRoot_ThenGetsOwningProduct()
             {
                 var root = this.element.Root;
@@ -77,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
                 Assert.Same(this.product, root);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeletingElement_ThenRaisesDeleteEvents()
             {
                 var element = this.element.Root.Views.First().Elements.First();
@@ -94,7 +94,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
             }
 
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "extension", Justification = "Test Code")]
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTraversingFromExtensionPoint_ThenGetsOwningProduct()
             {
                 ((Element)this.element).Info = Mock.Of<IElementInfo>(elei =>

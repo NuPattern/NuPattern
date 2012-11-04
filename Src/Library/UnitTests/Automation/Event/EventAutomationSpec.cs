@@ -110,7 +110,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEndInitCalled_ThenSubscribesToEvent()
 			{
 				this.Automation.EndInit();
@@ -118,7 +118,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 				this.observable.Verify(x => x.Subscribe(It.IsAny<IObserver<IEvent<EventArgs>>>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenNoConditionsAndEventIsRaised_ThenExecutesCommand()
 			{
 				IObserver<IEvent<EventArgs>> observer = null;
@@ -137,7 +137,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 				this.command.Verify(x => x.Execute());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposingAfterInitialized_ThenDisposesSubscription()
 			{
 				var subscription = new Mock<IDisposable>();
@@ -151,7 +151,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 				subscription.Verify(x => x.Dispose());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenGettingStandardValuesForCommandReference_ThenRetrievesCommandSetting()
 			{
 				var context = Mocks.Of<ITypeDescriptorContext>().First(c => c.Instance == this.settings.Object);
@@ -198,7 +198,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 				this.Automation.EndInit();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenConditionBindingIsInvalid_ThenDoesNotInvokeCommand()
 			{
 				this.eventObserver.OnNext(new Mock<IEvent<EventArgs>>().Object);
@@ -233,13 +233,13 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 				this.Automation.EndInit();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenInvokesBindingFactoryForCondition()
 			{
 				this.bindingFactory.Verify(x => x.CreateBinding<ICondition>(It.IsAny<IBindingSettings>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutingAutomation_ThenConditionIsEvaluated()
 			{
 				this.Automation.Execute();
@@ -247,7 +247,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 				this.conditionBinding.Verify(x => x.Evaluate(It.IsAny<IDynamicBindingContext>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEventIsRaisedIfBindingValueReturnsFalse_ThenDoesNotInvokeCommand()
 			{
 				this.conditionBinding.Setup(x => x.Value.Evaluate()).Returns(false);
@@ -257,7 +257,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 				this.command.Verify(x => x.Execute(), Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEventIsRaised_ThenEventIsNotAvailableToBindingAsImport()
 			{
 				var ev = new Mock<IEvent<EventArgs>>().Object;
@@ -266,7 +266,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 				this.dynamicContext.Verify(x => x.AddExport(ev), Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEventIsRaised_ThenAutomationExtensionIsAvailableToBinding()
 			{
 				this.eventObserver.OnNext(new Mock<IEvent<EventArgs>>().Object);
@@ -274,7 +274,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 				this.dynamicContext.Verify(x => x.AddExport(It.IsAny<IAutomationExtension>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEventIsRaised_ThenAutomationExtensionOwnerElementIsAvailableToBinding()
 			{
 				this.eventObserver.OnNext(new Mock<IEvent<EventArgs>>().Object);
@@ -282,7 +282,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 				this.dynamicContext.Verify(x => x.AddExport(It.IsAny<IInstanceBase>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenEventIsRaised_ThenAutomationExtensionOwnerElementIsAvailableToBindingAsAutomationContainer()
 			{
 				this.eventObserver.OnNext(new Mock<IEvent<EventArgs>>().Object);
@@ -336,7 +336,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCommandIsInvalid_ThenDoesNotFail()
 			{
 				this.automation.Execute(this.dynamicContext.Object);

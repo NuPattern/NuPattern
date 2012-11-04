@@ -81,7 +81,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 File.Delete(TargetsFilePath);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             [HostType("VS IDE")]
             [TestProperty("VSHostRestartOptions", "Before")]
             public void WhenNoSolution_ThenTargetsNotWritten()
@@ -89,7 +89,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 Assert.False(IsTargetsFileExists());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             [HostType("VS IDE")]
             [TestProperty("VSHostRestartOptions", "Before")]
             public void WhenCreateEmptySolution_ThenTargetsWritten()
@@ -103,7 +103,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 Assert.True(IsTargetsFileRewritten());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             [HostType("VS IDE")]
             [TestProperty("VSHostRestartOptions", "Before")]
             public void WhenLoadingExistingSolution_ThenTargetsWritten()
@@ -146,7 +146,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 File.Delete(TargetsFilePath);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             [HostType("VS IDE")]
             [TestProperty("VSHostRestartOptions", "Before")]
             public void WhenNoSolutionOpen_ThenTargetsNotWritten()
@@ -155,7 +155,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 Assert.False(IsTargetsFileRewritten());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             [HostType("VS IDE")]
             [TestProperty("VSHostRestartOptions", "Before")]
             public void WhenCreateEmptySolution_ThenNewTargetsWritten()
@@ -169,7 +169,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 Assert.True(IsTargetsFileRewritten());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             [HostType("VS IDE")]
             [TestProperty("VSHostRestartOptions", "Before")]
             public void WhenLoadingExistingSolution_ThenNewTargetsWritten()

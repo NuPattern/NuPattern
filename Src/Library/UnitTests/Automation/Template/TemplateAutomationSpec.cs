@@ -138,7 +138,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				};
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnfoldOnElementCreatedAndEventAvailable_ThenSubscribesToOnInstantiated()
 			{
 				this.settings.Setup(x => x.UnfoldOnElementCreated).Returns(true);
@@ -147,7 +147,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.onInstantiated.Verify(x => x.Subscribe(It.IsAny<IObserver<IEvent<EventArgs>>>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnfoldScopeIsActive_ThenDoesNotExecuteCommandDirectlyBecauseTemplateWizardDoes()
 			{
 				this.automation.EndInit();
@@ -160,7 +160,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				}
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnfoldScopeIsActive_ThenDoesNotExecuteWizardDirectlyBecauseTemplateWizardDoes()
 			{
 				this.automation.EndInit();
@@ -173,7 +173,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				}
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenNoUnfoldScopeIsActiveAndNoUnfoldOnElementCreated_ThenDoesNotExecuteCommand()
 			{
 				this.settings.Setup(x => x.UnfoldOnElementCreated).Returns(false);
@@ -187,7 +187,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				}
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenSettingsCommandIdCannotBeResolved_ThenNoOps()
 			{
 				this.settings.Setup(x => x.UnfoldOnElementCreated).Returns(false);
@@ -202,7 +202,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				}
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnfoldOnElementCreatedAndEventAvailable_ThenRaisingEventUnfoldsTemplate()
 			{
 				IObserver<IEvent<EventArgs>> observer = null;
@@ -221,7 +221,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.assetUnfoldTemplate.Verify(x => x.Unfold(It.IsAny<string>(), It.IsAny<IItemContainer>()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutedAndWizardIsCanceled_ThenCommandIsNotExecuted()
 			{
 				this.wizard.Setup(x => x.IsCanceled).Returns(true);
@@ -232,7 +232,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.command.Verify(x => x.Execute(), Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutedAndWizardIsCanceled_ThenElementIsDeleted()
 			{
 				this.wizard.Setup(x => x.IsCanceled).Returns(true);
@@ -243,7 +243,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.owner.Verify(x => x.Delete());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutedAndUnfoldOnElementCreatedIsFalseAndWizardIsNotCanceled_ThenCommandIsExecuted()
 			{
 				this.wizard.Setup(x => x.IsCanceled).Returns(false);
@@ -254,7 +254,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.command.Verify(x => x.Execute());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutedAndUnfoldOnElementCreatedIsTrueAndWizardIsNotCanceled_ThenCommandIsExecuted()
 			{
 				this.wizard.Setup(x => x.IsCanceled).Returns(false);
@@ -265,7 +265,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.command.Verify(x => x.Execute());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnfoldingProjectTemplateReference_ThenTemplateIsUnfoldedOnSolutionRoot()
 			{
 				this.settings.Setup(x => x.UnfoldOnElementCreated).Returns(true);
@@ -277,7 +277,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.assetUnfoldTemplate.Verify(x => x.Unfold(It.IsAny<string>(), this.solution));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnfoldingProjectItemReference_ThenTemplateIsUnfoldedOnSolutionItems()
 			{
 				this.settings.Setup(x => x.UnfoldOnElementCreated).Returns(true);
@@ -289,7 +289,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.assetUnfoldTemplate.Verify(x => x.Unfold(It.IsAny<string>(), this.solution.Items.First()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecutingFromTemplateUnfold_ThenTemplateIsNotUnfoldedAgain()
 			{
 				this.settings.Setup(x => x.UnfoldOnElementCreated).Returns(true);
@@ -303,7 +303,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				}
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenUnfolding_ThenEvaluatesFileAndPathPropertyBindings()
 			{
 				this.settings.Setup(x => x.UnfoldOnElementCreated).Returns(true);

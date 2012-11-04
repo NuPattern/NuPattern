@@ -29,13 +29,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests.Model
                 this.descriptor = new DefaultValuePropertyDescriptor("DefaultValue", property, typeof(string), new Attribute[0]);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenCanResetValueIsFalse()
             {
                 Assert.False(this.descriptor.CanResetValue(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDefaultValueHasAValue_ThenCanResetValueIsTrue()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests.Model
                 Assert.True(this.descriptor.CanResetValue(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDefaultValueHasAValueProvider_ThenCanResetValueIsTrue()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -57,7 +57,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests.Model
                 Assert.True(this.descriptor.CanResetValue(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenReset_ThenCanResetValueIsFalse()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -69,7 +69,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests.Model
                 Assert.False(this.descriptor.CanResetValue(null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenReset_ThenDefaultValueIsReset()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>

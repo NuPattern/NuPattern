@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 		[TestClass]
 		public class GivenNoContext
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenInitializingAndLibraryIsNull_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => new AddAutomationExtensionViewModel(null));
@@ -36,13 +36,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				this.target = new AddAutomationExtensionViewModel(automationExtensions);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenInitializing_ThenLibraryIsExposed()
 			{
 				Assert.Equal(1, this.target.ExportedAutomations.Count());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCurrentAutomationExtensionIsNull_ThenSelectAutomationExtensionCommandCanNotExecute()
 			{
 				this.target.CurrentExportedAutomation = null;
@@ -50,7 +50,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.False(this.target.SelectAutomationExtensionCommand.CanExecute(new Mock<IDialogWindow>().Object));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCurrentAutomationExtensionIsNotNull_ThenSelectAutomationExtensionCommandCanExecute()
 			{
 				this.target.CurrentExportedAutomation = new Mock<IExportedAutomationMetadata>().Object;
@@ -58,7 +58,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.True(this.target.SelectAutomationExtensionCommand.CanExecute(new Mock<IDialogWindow>().Object));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDataIsValidAndSelectAutomationExtensionCommandExecuting_ThenDialogIsClosed()
 			{
 				var dialog = new Mock<IDialogWindow>();

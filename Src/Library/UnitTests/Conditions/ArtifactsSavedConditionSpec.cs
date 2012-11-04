@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.condition.CurrentElement = new Mock<IProductElement>().Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenEvaluateReturnsTrue()
 			{
 				var result = this.condition.Evaluate();
@@ -68,7 +68,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.condition.CurrentElement = mockElement.Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenArtifactIsNotDirty_ThenEvaluateReturnsTrue()
 			{
 				var result = this.condition.Evaluate();
@@ -76,7 +76,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				Assert.True(result);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenArtifactIsDirty_ThenEvaluateReturnsFalse()
 			{
 				this.mockProjectItem.SetupGet(pi => pi.Saved).Returns(false);
@@ -85,7 +85,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				Assert.False(result);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenArtifactIsNotAnItem_ThenEvaluateReturnsTrue()
 			{
 				this.mockUriReferenceService.Setup(s => s.ResolveUri<IItemContainer>(It.IsAny<Uri>())).Returns(new Mock<ISolution>().Object);

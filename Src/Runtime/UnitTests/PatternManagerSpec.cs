@@ -18,37 +18,37 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
         [TestClass]
         public class GivenNoContext
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithNullServiceProvider_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new PatternManager(null, Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithNullSolutionEvents_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<IShellEvents>(), null, Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithNullShellEvents_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), null, Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithNullItemEvents_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), null, Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithNullInstalledFactories_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), null, Mock.Of<IUserMessageService>()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithNullMessageService_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), null));
@@ -139,43 +139,43 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingAProductWithNullToolkitInfo_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => this.manager.CreateProduct(null, "foo"));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingAProductWithNullName_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => this.manager.CreateProduct(new Mock<IInstalledToolkitInfo>().Object, null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingAProductWithEmptyName_ThenThrowsArgumentException()
             {
                 Assert.Throws<ArgumentOutOfRangeException>(() => this.manager.CreateProduct(new Mock<IInstalledToolkitInfo>().Object, string.Empty));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeletingANullProduct_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => this.manager.DeleteProduct((IProduct)null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeletingANullProductName_ThenThrowsArgumentNullException()
             {
                 Assert.Throws<ArgumentNullException>(() => this.manager.Delete((string)null));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeletingAnEmptyProductName_ThenThrowsArgumentOutOfRangeException()
             {
                 Assert.Throws<ArgumentOutOfRangeException>(() => this.manager.Delete(string.Empty));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingProduct_ThenRaisesElementInstantiatedEvent()
             {
                 this.manager.Open("Blank" + Constants.RuntimeStoreExtension);
@@ -187,7 +187,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.NotNull(instantiatedProduct);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSavingCreatedProduct_ThenRaisesStoreSavedEvent()
             {
                 this.manager.Open("Blank" + Constants.RuntimeStoreExtension);
@@ -205,7 +205,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.True(storeSavedCalled);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingProduct_ThenDoesNotRaisePropertyChangedEvents()
             {
                 this.manager.Open("Blank" + Constants.RuntimeStoreExtension);
@@ -217,7 +217,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.False(changed);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOpeningStateFile_ThenRaisesIsOpenChanged()
             {
                 var changed = false;
@@ -246,7 +246,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.True(File.ReadAllText(tempFile).Contains(product.Id.ToString()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOpeningInvalidStateFile_ThenIsOpenChangedIsNotRaised()
             {
                 var changed = false;
@@ -258,7 +258,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.False(changed);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOpeningOldVersionWithoutUpgradeStateFile_ThenIsOpenChangedIsNotRaised()
             {
                 var changed = false;
@@ -272,7 +272,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.False(changed);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOpeningOldVersionWithUpgradeStateFile_ThenIsOpenChangedIsNotRaised()
             {
                 var changed = false;
@@ -286,7 +286,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.True(changed);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOpeningInvalidVersionStateFile_ThenIsOpenChangedIsNotRaised()
             {
                 var changed = false;
@@ -298,26 +298,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.False(changed);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSavingAClosedManager_ThenThrowsInvalidOperationException()
             {
                 Assert.Throws<InvalidOperationException>(() => this.manager.Save());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenClosingAClosedManager_ThenThrowsInvalidOperationException()
             {
                 Assert.Throws<InvalidOperationException>(() => this.manager.Close());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenRetrievingProductsFromClosedManager_ThenReturnsEmptyEnumeration()
             {
                 Assert.NotNull(this.manager.Products);
                 Assert.Equal(0, this.manager.Products.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOpeningSolutionWithNoState_ThenDoesNotRiseIsOpenChanged()
             {
                 var changed = false;
@@ -328,7 +328,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.False(changed);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOpeningSolutionButShellNotInitialized_ThenWaitsForShellInitialized()
             {
                 var stateFile = new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName;
@@ -352,7 +352,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(stateFile, this.manager.StoreFile);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOpeningSolutionWithOneStateFile_ThenOpensItInManager()
             {
                 var stateFile = new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName;
@@ -379,7 +379,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(stateFile, this.manager.StoreFile);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOpeningSolutionWithStateFileUnderOtherFolder_ThenDoesNotOpenItInManager()
             {
                 var stateFile = new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName;
@@ -406,7 +406,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.False(this.manager.IsOpen);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOpeningSolutionWithMultipleStateFiles_ThenOpensTheOneMatchingTheSolutionName()
             {
                 var stateFile = new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName;
@@ -432,7 +432,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(stateFile, this.manager.StoreFile);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenOpeningSolutionWithMultipleStateFiles_ThenOpensFirstOneIfNoSolutionNameMatch()
             {
                 var stateFile = new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName;
@@ -459,13 +459,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(stateFile, this.manager.StoreFile);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenClosingSolution_ThenNoOpIfNotOpened()
             {
                 this.solutionEvents.Raise(x => x.SolutionClosing += null, new SolutionEventArgs(new Solution()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenClosingSolution_ThenClosesManagerIfOpened()
             {
                 this.manager.Open(new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName);

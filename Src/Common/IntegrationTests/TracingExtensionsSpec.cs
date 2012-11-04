@@ -16,31 +16,31 @@ namespace Microsoft.VisualStudio.Patterning.Common.IntegrationTests
 		[TestClass]
 		public class GivenNoContext
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenShieldingNullTraceSource_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => TracingExtensions.ShieldUI(null, () => { }, "foo"));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenShieldingNullAction_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => TracingExtensions.ShieldUI(new Mock<ITraceSource>().Object, null, "foo"));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenShieldingNullMessage_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => TracingExtensions.ShieldUI(new Mock<ITraceSource>().Object, () => { }, null));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenShieldingEmptyMessage_ThenThrowsArgumentOutOfRangeException()
 			{
 				Assert.Throws<ArgumentOutOfRangeException>(() => TracingExtensions.ShieldUI(new Mock<ITraceSource>().Object, () => { }, string.Empty));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenShieldingNullMessageArgs_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => TracingExtensions.ShieldUI(new Mock<ITraceSource>().Object, () => { }, "foo", null));
@@ -48,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenShieldedActionThrows_ThenExceptionIsLogged()
 		{
 			var traceSource = new Mock<ITraceSource>();

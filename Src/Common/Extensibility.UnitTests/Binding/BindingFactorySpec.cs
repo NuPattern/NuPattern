@@ -15,7 +15,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 		[TestClass]
 		public class GivenNoContext
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingNewWithNullCompositionService_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => new BindingFactory(null));
@@ -56,7 +56,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				this.target = new BindingFactory(compositionService.Object);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCreatingABinding_ThenReturnsBinding()
 			{
 				var binding = this.target.CreateBinding<IFeatureCommand>(Mocks.Of<IBindingSettings>().First(s => s.TypeId == "Foo"));
@@ -64,7 +64,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				Assert.NotNull(binding);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenPropertyBindingHasValue_ThenBindingResolvesToFixedValue()
 			{
 				var settings = new BindingSettings
@@ -90,7 +90,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				Assert.Equal(FixedValue, binding.Value.Message);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenPropertyBindingHasEmpty_ThenBindingResolvesToValueProvider()
 			{
 				var settings = new BindingSettings

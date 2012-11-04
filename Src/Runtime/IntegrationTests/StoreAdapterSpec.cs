@@ -31,7 +31,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
         }
 
         [HostType("VS IDE")]
-        [TestMethod]
+        [TestMethod, TestCategory("Integration")]
         public void WhenCreatingReference_ThenUsesAdapter()
         {
             var stateFile = this.solution.Find<IItem>(item => item.Name.EndsWith(Constants.RuntimeStoreExtension)).First();

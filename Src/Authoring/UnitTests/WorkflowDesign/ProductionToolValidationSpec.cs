@@ -28,7 +28,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				validationContext = new ValidationContext(ValidationCategories.Save, this.tool);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenValidateNameIsUniqueSucceeds()
 			{
 				this.tool.ValidateNameIsUnique(validationContext);
@@ -36,7 +36,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.True(validationContext.CurrentViolations.Count == 0);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenSameNamedElementAddedToDesign_ThenValidateNameIsUniqueFails()
 			{
 				this.store.TransactionManager.DoWithinTransaction(() =>

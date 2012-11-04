@@ -9,7 +9,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSourceIsNullWithOnNext_ThenThrowsArgumentNullException()
 		{
 			IObservable<IEvent<EventArgs>> source = null;
@@ -18,7 +18,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 				source.Subscribe(e => { }));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSourceIsNullWithOnNextAndOnCompleted_ThenThrowsArgumentNullException()
 		{
 			IObservable<IEvent<EventArgs>> source = null;
@@ -27,7 +27,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 				source.Subscribe(e => { }, () => { }));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSourceIsNullWithOnNextAndOnCompletedAndOnError_ThenThrowsArgumentNullException()
 		{
 			IObservable<IEvent<EventArgs>> source = null;
@@ -36,7 +36,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 				source.Subscribe(e => { }, e => { }, () => { }));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenOnNextIsNull_ThenThrowsArgumentNullException()
 		{
 			var source = new Mock<IObservable<IEvent<EventArgs>>>().Object;
@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 				source.Subscribe((Action<IEvent<EventArgs>>)null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenOnNextIsNullWithOnCompleted_ThenThrowsArgumentNullException()
 		{
 			var source = new Mock<IObservable<IEvent<EventArgs>>>().Object;
@@ -54,7 +54,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 				source.Subscribe((Action<IEvent<EventArgs>>)null, () => { }));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenOnNextIsNullWithOnCompletedAndOnError_ThenThrowsArgumentNullException()
 		{
 			var source = new Mock<IObservable<IEvent<EventArgs>>>().Object;

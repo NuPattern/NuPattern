@@ -42,7 +42,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 
 		[HostType("VS IDE")]
 		[Ignore]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenCreatingAProduct_ThenSetsArtifactLinks()
 		{
 			IProduct product = null;

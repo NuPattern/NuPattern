@@ -34,21 +34,21 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			this.provider.ServiceProvider = serviceProvider.Object;
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenResolvingNullUri_ThenThrowsException()
 		{
 			Assert.Throws<ArgumentNullException>(
 				() => this.provider.ResolveUri(null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenResolvingInvalidUri_ThenThrowsException()
 		{
 			Assert.Throws<ArgumentException>(
 				() => this.provider.ResolveUri(new Uri("foo://")));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenResolvingValidUri_ThenResolvesProject()
 		{
 			var resolvedElement =
@@ -58,13 +58,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			Assert.Equal(resolvedElement.Id, this.id);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingAnUriWithNullNamedElement_ThenThrowsException()
 		{
 			Assert.Throws<ArgumentNullException>(() => this.provider.CreateUri(null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingAnUriWithNamedElement_ThenReturnsUri()
 		{
 			var uri = this.provider.CreateUri(this.element);

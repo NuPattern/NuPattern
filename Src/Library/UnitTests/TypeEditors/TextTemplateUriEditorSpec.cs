@@ -78,7 +78,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				};
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenBuildingUriForTemplateInProject_ThenUsesVsixIdentifierAndRelativePathToFile()
 			{
 				var uri = TextTemplateUriEditor.BuildUri(solution.Traverse().First(i => i.Name == "VsixTemplate.tt"));
@@ -88,13 +88,13 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				Assert.Equal("/ef4561f7-a3ea-4666-a080-bc2f195451e3/Templates/Text/VsixTemplate.tt", uri.PathAndQuery);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenBuildingUriForTemplateOutsideAProject_ThenThrowsArgumentException()
 			{
 				Assert.Throws<ArgumentException>(() => TextTemplateUriEditor.BuildUri(solution.Traverse().First(i => i.Name == "SolutionItem.tt")));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenBuildingUriForTemplateFromNonVsixProject_ThenThrowsArgumentException()
 			{
 				Assert.Throws<ArgumentException>(() => TextTemplateUriEditor.BuildUri(solution.Traverse().First(i => i.Name == "NormalProject.tt")));

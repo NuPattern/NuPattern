@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenShellInitializeRaised_ThenShellIsInitializedIsTrue()
 		{
 			while (!this.initializeRaised &&

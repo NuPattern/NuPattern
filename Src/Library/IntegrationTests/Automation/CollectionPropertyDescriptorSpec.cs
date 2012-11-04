@@ -53,7 +53,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 				};
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenSettingValue_ThenCanRoundtrip()
 			{
 				var property = new Mock<PropertyDescriptor>("foo", new Attribute[0]);
@@ -77,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 				Assert.Equal(this.models.Count, actual.Count);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenSettingValue_ThenSerializesToJson()
 			{
 				var property = new Mock<PropertyDescriptor>("foo", new Attribute[0]);
@@ -98,7 +98,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 				Assert.Equal(2, conditions.Count);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenValueIsNull_ThenCannotReset()
 			{
 				var property = new Mock<PropertyDescriptor>("foo", new Attribute[0]);
@@ -111,7 +111,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 				Assert.False(descriptor.CanResetValue(new object()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenValueIsNotNull_ThenCanReset()
 			{
 				var property = new Mock<PropertyDescriptor>("foo", new Attribute[0]);
@@ -124,7 +124,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 				Assert.True(descriptor.CanResetValue(new object()));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenResettingValue_ThenSetsItToNull()
 			{
 				var property = new Mock<PropertyDescriptor>("foo", new Attribute[0]);

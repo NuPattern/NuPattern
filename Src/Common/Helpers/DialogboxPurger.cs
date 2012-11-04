@@ -167,7 +167,7 @@ namespace Microsoft.VsSDK.IntegrationTestLibrary
 		/// Waits for the dialog box close thread to terminate. If the thread does not signal back within millisecondsToWait that it is shutting down,
 		/// then it will tell to the thread to do it.
 		/// </summary>
-		/// <param name="millisecondsToWait">The number milliseconds to wait for until the dialog purger thread is signaled to terminate. This is just for safe precaution that we do not hang. </param>
+        /// <param name="numberOfMillisecondsToWait">The number milliseconds to wait for until the dialog purger thread is signaled to terminate. This is just for safe precaution that we do not hang. </param>
 		/// <returns>The result of the dialog boxes closing</returns>
 		private bool WaitForDialogThreadToTerminate(int numberOfMillisecondsToWait)
 		{

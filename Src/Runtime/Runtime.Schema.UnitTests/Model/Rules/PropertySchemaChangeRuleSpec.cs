@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingTypeToInt_ThenResetsDefaultValue()
             {
                 this.propertySchema.Type = typeof(int).FullName;

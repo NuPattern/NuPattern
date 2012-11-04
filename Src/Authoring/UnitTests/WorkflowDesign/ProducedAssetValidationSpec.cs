@@ -21,7 +21,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				validationContext = new ValidationContext(ValidationCategories.Save, this.Asset);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenNoToolsAndNotFinal_ThenValidateProducedAssetNotIntermediateAndNotFinalFails()
 			{
 				this.Asset.WithTransaction(asset => asset.IsFinal = false);
@@ -31,7 +31,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.True(validationContext.CurrentViolations.Count == 1);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenValidateNameIsUniqueSucceeds()
 			{
 				this.Asset.ValidateNameIsUnique(validationContext);
@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				Assert.True(validationContext.CurrentViolations.Count == 0);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenSameNamedElementAddedToDesign_ThenValidateNameIsUniqueFails()
 			{
 				this.Asset.Store.TransactionManager.DoWithinTransaction(() =>

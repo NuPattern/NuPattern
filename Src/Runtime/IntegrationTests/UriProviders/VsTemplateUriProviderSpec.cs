@@ -21,7 +21,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			this.target = new VsTemplateUriProvider(this.serviceProvider);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		[HostType("VS IDE")]
 		public void WhenResolvingProjectTemplate_ThenGetsTemplate()
 		{
@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			Assert.NotNull(template);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		[HostType("VS IDE")]
 		public void WhenResolvingItemTemplate_ThenGetsTemplate()
 		{
@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			Assert.NotNull(template);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		[HostType("VS IDE")]
 		public void WhenResolvingProjectTemplateViaUriService_ThenGetsTemplate()
 		{
@@ -48,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			Assert.NotNull(template);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		[HostType("VS IDE")]
 		public void WhenResolvingItemTemplateViaUriService_ThenGetsTemplate()
 		{

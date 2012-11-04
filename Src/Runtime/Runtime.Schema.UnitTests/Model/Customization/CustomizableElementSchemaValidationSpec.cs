@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.element);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateCustomizedSettingsOverriddenByCustomizableStateSucceeds()
             {
                 this.element.ValidateCustomizedSettingsOverriddenByCustomizableState(validationContext);
@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateCustomizedStateWithNoCustomizableSettingsSucceeds()
             {
                 this.element.ValidateCustomizedStateWithNoCustomizableSettings(validationContext);
@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateCustomizableStateRedundantSucceeds()
             {
                 this.element.ValidateCustomizableStateRedundant(validationContext);
@@ -74,7 +74,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.element);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenIsCustomizableIsFalseAndSettingIsModified_ThenValidateCustomizedSettingsOverriddenByCustomizableStateFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -88,7 +88,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.element) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenIsCustomizableIsTrueAndNoSettingsModified_ThenValidateCustomizedStateWithNoCustomizableSettingsFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -133,7 +133,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.childElement);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenIsCustomizableIsTrueAndParentIsCustomizable_ThenValidateCustomizableStateRedundantFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>

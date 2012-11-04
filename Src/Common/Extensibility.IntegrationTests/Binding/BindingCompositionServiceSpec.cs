@@ -19,7 +19,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 		internal static readonly IAssertion Assert = new Assertion();
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolvingISolution_ThenSucceeds()
 		{
 			var composition = ServiceProvider.GetService<IBindingCompositionService>();
@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolvingIBindingFactory_ThenSucceeds()
 		{
 			var composition = ServiceProvider.GetService<IBindingCompositionService>();
@@ -41,7 +41,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolvingEvents_ThenSucceeds()
 		{
 			var composition = ServiceProvider.GetService<IBindingCompositionService>();
@@ -53,7 +53,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolvingOtherVSExports_ThenSucceeds()
 		{
 			var composition = ServiceProvider.GetService<IBindingCompositionService>();
@@ -65,7 +65,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolvingSVsServiceProvider_ThenSucceeds()
 		{
 			var composition = ServiceProvider.GetService<IBindingCompositionService>();
@@ -76,7 +76,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolvingCompositionService_ThenReturnsSelf()
 		{
 			var composition = ServiceProvider.GetService<IBindingCompositionService>();
@@ -86,7 +86,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 			Assert.Same(composition, service);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolvingSVsServiceProviderImport_ThenSucceeds()
 		{
 			var components = new Mock<IComponentModel> { DefaultValue = DefaultValue.Mock };
@@ -104,7 +104,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolvingSVsServiceProviderImportInVS_ThenSucceeds()
 		{
 			var composition = ServiceProvider.GetService<IBindingCompositionService>();
@@ -115,7 +115,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 		}
 
 		[HostType("VS IDE")]
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenResolvingDynamicBindingContxtImport_ThenSucceeds()
 		{
 			var composition = ServiceProvider.GetService<IBindingCompositionService>();

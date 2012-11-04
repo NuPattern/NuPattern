@@ -8,7 +8,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenInitializingSettings_ThenHasPropertyName()
 		{
 			var property = new BoundProperty("Name", () => "", s => { });
@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Equal("Name", property.Settings.Name);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenValueIsEmpty_ThenSettingsInitializedEmpty()
 		{
 			var property = new BoundProperty("Name", () => "", s => { });
@@ -24,7 +24,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Equal("", property.Settings.Value);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenChangingSettingsValue_ThenAutomaticallySerializesValue()
 		{
 			var value = "";
@@ -35,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.NotEqual("", value);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenReassigningSettings_ThenSavesNewValue	()
 		{
 			var value = "";
@@ -47,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.NotEqual("", value);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenReassigningSettings_ThenDetachesChangesFromOlder()
 		{
 			var value = "";
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.False(value.Contains("Foo"));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenExistingLegacyRawValueExists_ThenAutomaticallyUpgradesToBindingValue()
 		{
 			var value = "Foo";

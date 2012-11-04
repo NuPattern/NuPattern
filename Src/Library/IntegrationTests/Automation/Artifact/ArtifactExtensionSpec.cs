@@ -52,7 +52,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenOnArtifactActivationIsOpen_ThenCreatesAutomationSettings()
             {
                 this.artifactExtension.OnArtifactActivation = ArtifactActivatedAction.Open;
@@ -65,7 +65,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenOnArtifactActivationIsSelect_ThenUpdatedCommandSettings()
             {
                 this.artifactExtension.OnArtifactActivation = ArtifactActivatedAction.Select;
@@ -76,7 +76,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenChangingOnArtifactActivationFromOpenToSelect_ThenUpdatedCommandSettings()
             {
                 this.artifactExtension.OnArtifactActivation = ArtifactActivatedAction.Open;
@@ -90,7 +90,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenChangingOnArtifactActivationFromSelectToOpen_ThenUpdatedCommandSettings()
             {
                 this.artifactExtension.OnArtifactActivation = ArtifactActivatedAction.Select;
@@ -106,7 +106,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenResettingOnArtifactActivation_ThenDeletesCommandSettingAndEventSettings()
             {
                 this.artifactExtension.OnArtifactActivation = ArtifactActivatedAction.Open;

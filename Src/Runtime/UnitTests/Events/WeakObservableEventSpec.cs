@@ -9,7 +9,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenConstructed_ThenDoesNotAttachToSource()
 		{
 			var added = false;
@@ -24,7 +24,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 			Assert.False(removed);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenFirstSubscriberAdded_ThenAttachesToSource()
 		{
 			var added = 0;
@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 			Assert.Equal(0, removed);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenLastSubscriberRemovedByDisposingSubscription_ThenDetachesFromSource()
 		{
 			var added = 0;
@@ -65,7 +65,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 			Assert.Equal(1, removed);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSourceEventRaised_ThenInvokesOnNextOnSubscriber()
 		{
 			EventHandler raiseHandler = null;
@@ -83,7 +83,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 			subscriber.Verify(x => x.OnNext(It.Is<IEvent<EventArgs>>(e => e.EventArgs == args)));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSourceEventRaisedAndWeakSubscriberDisposed_ThenRemovesSubscriber()
 		{
 			EventHandler raiseHandler = null;

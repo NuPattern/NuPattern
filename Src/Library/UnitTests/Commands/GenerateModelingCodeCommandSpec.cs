@@ -78,7 +78,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTemplateCannotResolve_ThenThrowsFileNotFoundException()
             {
                 this.uriService.Setup(x => x.ResolveUri<ITemplate>(It.IsAny<Uri>())).Returns((ITemplate)null);
@@ -86,7 +86,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Throws<FileNotFoundException>(() => this.command.Execute());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTargetNameUsesNonExistingProperty_ThenThrowsInvalidOperationException()
             {
                 this.command.TargetFileName = "{NonExistentProperty}";
@@ -94,7 +94,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Throws<InvalidOperationException>(() => this.command.Execute());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSimpleTargetPathExists_ThenUnfoldsToIt()
             {
                 this.command.TargetFileName = "Foo";
@@ -106,7 +106,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold(It.IsAny<string>(), projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTargetFileNameContainsInvalidFileChars_ThenRemovesThemandUnfoldsToIt()
             {
                 this.command.TargetFileName = @"Foo\Bar";
@@ -118,7 +118,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold("FooBar", projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTargetPathContainsDots_ThenCanResolveThem()
             {
                 this.command.TargetFileName = "Foo";
@@ -130,7 +130,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold(It.IsAny<string>(), projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTargetPathExpressionExists_ThenUnfoldsToIt()
             {
                 this.command.TargetFileName = "Foo";
@@ -142,7 +142,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold(It.IsAny<string>(), projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecutingWithTargetNameExpression_ThenEvaluatesItForUnfold()
             {
                 this.command.TargetPath = "Project";
@@ -154,7 +154,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold("IFoo", projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecutingWithTargetNameExpression_ThenEvaluatesVariablePropertyForUnfold()
             {
                 this.command.TargetPath = "Project";
@@ -166,7 +166,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold("IGuidanceValue", projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSimpleTargetPathDoesNotExist_ThenAddsItAndUnfoldsToIt()
             {
                 this.command.TargetFileName = "Foo";
@@ -180,7 +180,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.template.Verify(x => x.Unfold(It.IsAny<string>(), projectParent));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTargetPathExpressionDoesNotExist_ThenAddsItAndUnfoldsToIt()
             {
                 this.command.TargetFileName = "Foo";

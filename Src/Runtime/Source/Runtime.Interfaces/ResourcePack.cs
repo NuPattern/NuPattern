@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {
 	/// <summary>
-	/// Wrapper for IItem to be used in the <see cref="T:Microsoft.VisualStudio.Patterning.Runtime.UriProviders.PackUriProvider"/>
+    /// Wrapper for IItem to be used in the <see cref="T:Microsoft.VisualStudio.Patterning.Runtime.UriProviders.PackUriProvider"/>
 	/// </summary>
 	[CLSCompliant(false)]
 	public class ResourcePack

@@ -29,19 +29,19 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 				this.command.CurrentElement = new Mock<IGuidance>().Object;
 			}
 
-			//[TestMethod]
+			//[TestMethod, TestCategory("Integration")]
 			//public void WhenExecuteWithNoReferences_ThenThrows()
 			//{
 			//    Assert.Throws<InvalidOperationException>(() => command.Execute());
 			//}
 
-			//[TestMethod]
+			//[TestMethod, TestCategory("Integration")]
 			//public void WhenExecuteWithNoGuidanceDocumentReference_ThenThrows()
 			//{
 			//    Assert.Throws<InvalidOperationException>(() => command.Execute());
 			//}
 
-			//[TestMethod]
+			//[TestMethod, TestCategory("Integration")]
 			//public void WhenExecuteAndFailsToCreateContentContainer_ThenThrows()
 			//{
 			//    Assert.Throws<InvalidOperationException>(() => command.Execute());
@@ -65,32 +65,32 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 				this.command.CurrentElement = new Mock<IGuidance>().Object;
 			}
 
-			//[TestMethod]
+			//[TestMethod, TestCategory("Integration")]
 			//public void WhenExecuteAndContentContainerNotExist_ThenCreatesContentContainer()
 			//{
 			//}
 
-			//[TestMethod]
+			//[TestMethod, TestCategory("Integration")]
 			//public void WhenExecuteContentFileNotIncludedInProject_ThenAddsToProjectContainer()
 			//{
 			//}
 
-			//[TestMethod]
+			//[TestMethod, TestCategory("Integration")]
 			//public void WhenExecute_ThenAddsGeneratedFilesToProjectContainer()
 			//{
 			//}
 
-			//[TestMethod]
+			//[TestMethod, TestCategory("Integration")]
 			//public void WhenExecuteAndExcludedFilesOnDisk_ThenAddsIncludesFilesToProjectContainer()
 			//{
 			//}
 
-			//[TestMethod]
+			//[TestMethod, TestCategory("Integration")]
 			//public void WhenExecuteAndNewFilesGenerated_ThenAddsNewFilesToProjectContainer()
 			//{
 			//}
 
-			//[TestMethod]
+			//[TestMethod, TestCategory("Integration")]
 			//public void WhenExecuteAndExistingFilesNotGenerated_ThenDeletesFilesFromProjectContainer()
 			//{
 			//}

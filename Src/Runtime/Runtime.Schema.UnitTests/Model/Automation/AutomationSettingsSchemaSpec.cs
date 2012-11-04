@@ -25,7 +25,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenAutomationTypeNameIsEmpty()
             {
                 Assert.Equal(string.Empty, this.automation.AutomationType);

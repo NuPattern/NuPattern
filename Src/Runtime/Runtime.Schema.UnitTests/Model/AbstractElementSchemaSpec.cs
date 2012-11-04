@@ -37,7 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenSchemaPathIsValid()
             {
                 var expectedElement = string.Concat(this.view.SchemaPath, NamedElementSchema.SchemaPathDelimiter, this.element.Name);
@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(expectedCollection, this.collection.SchemaPath);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenOrderIsDefault()
             {
                 Assert.Equal(1d, this.element.OrderGroup);

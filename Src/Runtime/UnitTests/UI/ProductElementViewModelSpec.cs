@@ -12,7 +12,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
     {
         internal static readonly IAssertion Assert = new Assertion();
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenContainerIsNotAutomationContainer_ThenAutomationMenusIsEmpty()
         {
             var container = new Mock<IProductElement>();
@@ -58,13 +58,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.target = new TestProductElementViewModel<IAbstractElement>(this.element.Object, this.context);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenContainsOneAutomationMenu()
             {
                 Assert.Equal(1, target.MenuOptions.OfType<AutomationMenuOptionViewModel>().Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenCreatesDeleteMenuOption()
             {
                 var option = this.target.MenuOptions.First(o => o.Caption.Equals("Delete"));
@@ -72,7 +72,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.NotNull(option);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenCreatesPropertiesMenuOption()
             {
                 var options = this.target.MenuOptions.First(o => o.Caption.Equals("Properties"));
@@ -80,7 +80,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.NotNull(options);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDelete_ThenPromptsConfirmation()
             {
                 this.target.DeleteCommand.Execute(null);
@@ -89,7 +89,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                     .Verify(x => x.PromptWarning(It.IsAny<string>()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeleteThrows_ThenShowsMessageError()
             {
                 this.element.Setup(x => x.Delete()).Throws<InvalidOperationException>();
@@ -126,42 +126,42 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.target = new TestProductElementViewModel<IAbstractElement>(this.element.Object, this.context);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenShowingNonAbstractElement_ThenMenuAllowed()
             {
                 var result = this.target.CanCreateAddMenuInternal(Mock.Of<IPatternElementInfo>());
                 Assert.True(result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenShowingElementWithNotIsVisible_ThenMenuNotAllowed()
             {
                 var result = this.target.CanCreateAddMenuInternal(Mock.Of<IAbstractElementInfo>(info => info.IsVisible == false));
                 Assert.False(result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenShowingElementWithVisibleAndNotAllowAddNewElement_ThenMenuNotAllowed()
             {
                 var result = this.target.CanCreateAddMenuInternal(Mock.Of<IAbstractElementInfo>(info => info.IsVisible == true && info.AllowAddNew == false));
                 Assert.False(result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenShowingElementWithVisibleAndAllowAddNewElement_ThenMenuAllowed()
             {
                 var result = this.target.CanCreateAddMenuInternal(Mock.Of<IAbstractElementInfo>(info => info.IsVisible == true && info.AllowAddNew == true));
                 Assert.True(result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNonAbstractElement_ThenAddNotAllowed()
             {
                 var result = this.target.CanAddNewInstanceInternal(Mock.Of<IPatternElementInfo>());
                 Assert.False(result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingElementWithAnyManyRelationship_ThenAddAllowed()
             {
                 var result = this.target.CanAddNewInstanceInternal(Mock.Of<IAbstractElementInfo>(info => info.IsVisible == true && info.AllowAddNew == true &&
@@ -172,7 +172,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(result2);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingElementWithAnyOneRelationshipAndNoExistingInstances_ThenAddAllowed()
             {
                 var result = this.target.CanAddNewInstanceInternal(Mock.Of<IAbstractElementInfo>(info => info.IsVisible == true && info.AllowAddNew == true &&
@@ -180,7 +180,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(result);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingElementWithAnyOneRelationshipAndExistingInstance_ThenAddNotAllowed()
             {
                 var mockInfo = Mock.Of<IAbstractElementInfo>(info => info.IsVisible == true && info.AllowAddNew == true &&
@@ -199,7 +199,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.False(result2);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeletingProduct_ThenDeleteAllowed()
             {
                 this.element.As<IProductElement>().Setup(x => x.Info).Returns(Mocks.Of<IPatternInfo>().First());
@@ -234,7 +234,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 this.target = new TestElementViewModel<IAbstractElement>(this.element.Object, this.context);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeletingElementWithAnyZeroRelationship_ThenAllowed()
             {
                 this.element.Setup(x => x.Info).Returns(Mock.Of<IAbstractElementInfo>(info => info.Cardinality == Cardinality.ZeroToOne));
@@ -245,7 +245,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(result2);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeletingElementWithOneToOneRelationshipAndNotAllowNew_ThenAllowedIfAddMenuPresent()
             {
                 this.element.Setup(x => x.Info).Returns(Mock.Of<IAbstractElementInfo>(info => info.AllowAddNew == false && info.Cardinality == Cardinality.OneToOne));
@@ -257,7 +257,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(result2);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeletingElementWithOneToManyRelationshipAndNoSiblings_ThenAllowedIfAddMenuPresent()
             {
                 this.element.Setup(x => x.Parent).Returns(Mock.Of<IElementContainer>(p => p.Elements == Enumerable.Empty<IAbstractElement>()));
@@ -270,7 +270,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
                 Assert.True(result2);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeletingElementWithOneToManyRelationshipAndMoreThanOneSibling_ThenAllowed()
             {
                 var mockInfo = Mock.Of<IAbstractElementInfo>(info => info.Cardinality == Cardinality.OneToMany);

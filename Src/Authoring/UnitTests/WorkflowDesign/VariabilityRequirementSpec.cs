@@ -25,13 +25,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
 				});
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenNotSatifiedByProductionTools()
 			{
 				Assert.False(this.requirement.IsSatisfiedByProductionTool);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenConnectedToATool_ThenSatifiedByAProductionTool()
 			{
 				this.requirement.WithTransaction(requirement => requirement.ProductionTools.Add(this.store.ElementFactory.CreateElement<ProductionTool>()));

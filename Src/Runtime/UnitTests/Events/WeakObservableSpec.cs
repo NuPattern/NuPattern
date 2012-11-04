@@ -8,21 +8,21 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenNullAddHandler_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() =>
 				WeakObservable.FromEvent<EventArgs>(null, handler => { }));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenNullRemoveHandler_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() =>
 				WeakObservable.FromEvent<EventArgs>(handler => { }, null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenNullConversionHandler_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() =>

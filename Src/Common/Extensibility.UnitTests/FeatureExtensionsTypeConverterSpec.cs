@@ -17,7 +17,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 		[SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
 		public class GivenNoContext
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenGettingStandardValues_ThenReturnsFeatureExtensions()
 			{
 				var manager = new Mock<IFeatureManager>();

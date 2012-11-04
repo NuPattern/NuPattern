@@ -40,19 +40,19 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenConditionAreEmpty()
             {
                 Assert.True(String.IsNullOrEmpty(this.settings.Conditions));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenFilterForCurrentElementIsFalse()
             {
                 Assert.False(this.settings.FilterForCurrentElement);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenFilterForCurrentElementIsTrue_ThenAddsFilteringCondition()
             {
                 this.settings.WithTransaction(setting => setting.FilterForCurrentElement = true);
@@ -63,7 +63,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 Assert.Equal(typeof(EventSenderMatchesElementCondition).FullName, result[0].TypeId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenFilteringConditionExistsAndFilterForCurrentElementIsTrue_ThenDoesNotAddFilteringCondition()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -85,7 +85,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
                 Assert.Equal(typeof(EventSenderMatchesElementCondition).FullName, result[0].TypeId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenFilteringConditionExistsAndFilterForCurrentElementIsChangedToFalse_ThenRemovesFilteringCondition()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>

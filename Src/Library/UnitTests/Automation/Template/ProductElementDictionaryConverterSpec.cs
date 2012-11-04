@@ -113,7 +113,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 base.Initialize();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProductHasNoProperties_ThenReturnsBasicProperties()
             {
                 var dictionary = this.Converter.ConvertToDictionary(this.Product);
@@ -122,7 +122,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.False(dictionary.Any());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProductHasOneProperty_ThenReturnDictionary()
             {
                 CreateProperty(this.Product, "Property", "Value");
@@ -134,7 +134,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.False(dictionary.Any());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProductHasTwoProperties_ThenReturnDictionary()
             {
                 var property1 = CreateProperty(this.Product, "Property1", "Value1");
@@ -148,7 +148,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.False(dictionary.Any());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProductHasAView_ThenReturnDictionary()
             {
                 var view = CreateView(this.Product, "AView");
@@ -185,7 +185,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 this.Element = CreateElement(this.View, "N", Cardinality.OneToOne);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenElement_ThenReturnDictionary()
             {
                 var dictionary = this.Converter.ConvertToDictionary(this.Element);
@@ -196,7 +196,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.False(dictionary.Any());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProduct_ThenReturnDictionary()
             {
                 var dictionary = this.Converter.ConvertToDictionary(this.Product);
@@ -232,7 +232,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 this.Element = CreateElement(this.View, "N", Cardinality.OneToMany);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenElement_ThenReturnDictionary()
             {
                 var dictionary = this.Converter.ConvertToDictionary(this.Element);
@@ -243,7 +243,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.False(dictionary.Any());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProduct_ThenReturnDictionary()
             {
                 var dictionary = this.Converter.ConvertToDictionary(this.Product);
@@ -281,7 +281,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 this.Element = CreateElement(this.View, "N", Cardinality.ZeroToMany);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenElement_ThenReturnsDictionary()
             {
                 var dictionary = this.Converter.ConvertToDictionary(this.Element);
@@ -292,7 +292,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                 Assert.False(dictionary.Any());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenElementCardinalityZeroToMany_ThenProductReturnDictionary()
             {
                 var dictionary = this.Converter.ConvertToDictionary(this.Product);
@@ -309,7 +309,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
         [TestClass]
         public class GivenAProduct : GivenAFullHierarchy
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenProduct_ThenReturnDictionary()
             {
                 var dictionary = this.Converter.ConvertToDictionary(this.Product);
@@ -351,7 +351,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenLeaf_ThenReturnDictionary()
             {
                 var dictionary = this.Converter.ConvertToDictionary(this.Leaf);
@@ -391,7 +391,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
                     .Elements.Find(t => t.DefinitionName == "R") as Element;
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenBranch_ThenReturnDictionary()
             {
                 var dictionary = this.Converter.ConvertToDictionary(this.Branch);

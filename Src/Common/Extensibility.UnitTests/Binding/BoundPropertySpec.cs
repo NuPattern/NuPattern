@@ -26,7 +26,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                         s => this.Property = s);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingsHaveAValue_ThenSettingsPersisted()
             {
                 this.property.Settings = new PropertyBindingSettings { Name = "Property", Value = "Foo", ValueProvider = null };
@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.Equal("{\r\n  \"Name\": \"Property\",\r\n  \"Value\": \"Foo\",\r\n  \"ValueProvider\": null\r\n}", this.Property);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingsHaveAValueProvider_ThenSettingsPersisted()
             {
                 this.property.Settings = new PropertyBindingSettings { Name = "Property", Value = "", ValueProvider = new ValueProviderBindingSettings { TypeId = "Foo" } };
@@ -42,7 +42,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.Equal("{\r\n  \"Name\": \"Property\",\r\n  \"Value\": \"\",\r\n  \"ValueProvider\": {\r\n    \"TypeId\": \"Foo\",\r\n    \"Properties\": []\r\n  }\r\n}", this.Property);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingsHasNoValueOrValueProvider_ThenNothingPersisted()
             {
                 this.property.Settings = new PropertyBindingSettings { Name = "Property", Value = "", ValueProvider = null };
@@ -54,7 +54,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.Equal(string.Empty, this.Property);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyIsEmpty_ThenSettingsCreatedBlank()
             {
                 this.Property = string.Empty;
@@ -64,7 +64,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Desi
                 Assert.Equal(null, this.property.Settings.ValueProvider);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPropertyIsNull_ThenSettingsCreatedBlank()
             {
                 this.Property = null;

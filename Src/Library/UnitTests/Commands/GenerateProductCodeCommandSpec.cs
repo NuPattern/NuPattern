@@ -114,7 +114,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Tracer.RemoveListener(Tracer.GetSourceNameFor<SynchArtifactNameCommand>(), this.Listener.Object);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenPatternManagerIsNotOpen_ThenThrowsInvalidOperationException()
             {
                 Mock.Get(this.Command.PatternManager).Setup(x => x.IsOpen).Returns(false);
@@ -135,7 +135,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.PatternManager.Setup(x => x.StoreFile).Returns("C:\\Foo" + Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecuting_ThenSetsModelElementToImportedModelInstance()
             {
                 Mock.Get(this.Command.PatternManager).Setup(x => x.IsOpen).Returns(true);
@@ -146,7 +146,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Same(this.Product, Command.ModelElement);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecuting_ThenSetsModelFileToProductStoreFile()
             {
                 Command.Execute();
@@ -154,7 +154,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Equal("C:\\Foo" + Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension, Command.ModelFile);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecuting_ThenAddsArtifactReference()
             {
                 this.UriService
@@ -166,7 +166,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Equal(1, this.Element.References.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExecuting_ThenSavesValueProvidedProperties()
             {
                 var prop = this.Product.CreateProperty(p =>
@@ -202,7 +202,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.reference.Tag = this.Command.Settings.Id.ToString();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExistingFileResolvesAndSyncNameFalse_ThenCurrentFilenameAndLinkReused()
             {
                 var item = this.Solution.Traverse().OfType<IItem>().First(i => i.Name == "Bar.cs");
@@ -219,7 +219,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Equal("solution://foo/bar", this.Element.References.First().Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExistingFileNotResolvedAndSyncNameFalse_ThenNewFilenameAndReferenceCreated()
             {
                 this.UriService
@@ -233,7 +233,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Equal("solution://folder/solution items/foo.cs", this.Element.References.First().Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExistingFileResolvesAndSyncNameTrueAndFileNameDifferent_ThenFileRenamed()
             {
                 var parent = this.Solution.Traverse().OfType<IItem>().First().Parent;
@@ -266,7 +266,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 Assert.Equal("solution://foo/bar", this.Element.References.First().Value);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExistingFileResolvesAndSyncNameTrueAndFileNameSame_ThenFileNotRenamed()
             {
                 var parent = this.Solution.Traverse().OfType<IItem>().First().Parent;

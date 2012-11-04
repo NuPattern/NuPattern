@@ -12,13 +12,13 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
 		[TestClass]
 		public class GivenAMethodImplementingAnInterface
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenFindingNullDeclaringMethod_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => ReflectionExtensions.FindDeclaringMethod(null));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenFindingDeclaringMethod_ThenGetsInterfaceMethod()
 			{
 				var classDone = Reflector<Foo>.GetMethod(x => x.Done());
@@ -46,13 +46,13 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
 		[TestClass]
 		public class GivenAMethodNotImplementingAnInterface
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenFindingNullDeclaringMethod_ThenThrowsArgumentNullException()
 			{
 				Assert.Throws<ArgumentNullException>(() => ReflectionExtensions.FindDeclaringMethod(null));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenFindingDeclaringMethod_ThenReturnsMethodItself()
 			{
 				var classDone = Reflector<Foo>.GetMethod(x => x.Done());
@@ -74,7 +74,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
 		[TestClass]
 		public class GivenAPropertyImplementingAnInterface
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenFindingDeclaringPropertyGetter_ThenGetsInterfacePropertyGetter()
 			{
 				var classDone = Reflector<Foo>.GetProperty(x => x.Done).GetGetMethod();
@@ -99,7 +99,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
 		[TestClass]
 		public class GivenAPropertyNotImplementingAnInterface
 		{
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenFindingDeclaringPropertyGetter_ThenGetsInterfacePropertyGetter()
 			{
 				var classDone = Reflector<Foo>.GetProperty(x => x.Done).GetGetMethod();

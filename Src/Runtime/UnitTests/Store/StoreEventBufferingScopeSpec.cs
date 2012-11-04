@@ -24,13 +24,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
 				this.Scope.Dispose();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenIsActiveIsTrue()
 			{
 				Assert.True(StoreEventBufferingScope.IsActive);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void ThenCurrentIsSame()
 			{
 				Assert.Same(this.Scope, StoreEventBufferingScope.Current);
@@ -50,7 +50,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
 				this.Scope.AddEvent(() => eventRaised = true);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCompleteCalled_ThenEventIsNotRaisedUntilDisposed()
 			{
 				this.Scope.Complete();
@@ -58,7 +58,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
 				Assert.False(eventRaised);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposedAfterCompleteCalled_ThenEventIsRaised()
 			{
 				this.Scope.Complete();
@@ -67,7 +67,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
 				Assert.True(eventRaised);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposedCalledWithoutComplete_ThenEventIsNotRaised()
 			{
 				this.Scope.Dispose();
@@ -75,7 +75,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
 				Assert.False(eventRaised);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposedAfterCancelCalled_ThenEventIsNotRaised()
 			{
 				this.Scope.Cancel();
@@ -84,7 +84,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
 				Assert.False(eventRaised);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenDisposedAfterCompleteThenCancelCalled_ThenEventIsNotRaised()
 			{
 				this.Scope.Complete();
@@ -120,7 +120,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
 				this.RootScope.Dispose();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenNestedCompleted_ThenNoEventsAreRaised()
 			{
 				this.NestedScope.Complete();
@@ -129,7 +129,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
 				Assert.True(this.events.Count == 0, "No events should be fired unless the topmost scope is disposed.");
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenRootScopeCompleted_ThenRaisesRootEventsButNotNestedUncompletedEvents()
 			{
 				this.RootScope.Complete();
@@ -139,7 +139,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
 				Assert.Equal("root", this.events[0]);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenRootScopeCompletedAfterNestedCompletedAndDisposed_ThenRaisesAllEventsInOrder()
 			{
 				this.NestedScope.Complete();
@@ -152,7 +152,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
 				Assert.Equal("nested", this.events[1]);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenRootScopeCompletedAfterNestedCanceledAndDisposed_ThenDoesNotRaiseAnyEvents()
 			{
 				this.NestedScope.Cancel();

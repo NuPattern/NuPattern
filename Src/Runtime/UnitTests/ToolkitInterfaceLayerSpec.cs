@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             public static readonly Guid FolderCollectionId = new Guid("ccca4e03-00c1-49cf-bcb7-a5eef9243a71");
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenContainerDoesNotContainVariableProperty_ThenThrowsNotSupportedException()
         {
             IWebService ws = new WebService(new Mock<IProduct>().Object);
@@ -37,7 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Throws<NotSupportedException>(() => Console.WriteLine(ws.XmlNamespace));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAsViewImplementsInterface_ThenReturnsSameInstance()
         {
             var view = new Mock<IArchitecture>().As<IView>().Object;
@@ -47,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Same(view, layer);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAsIAbstractElementImplementsInterface_ThenReturnsSameInstance()
         {
             var target = new Mock<IFolder>().As<IAbstractElement>().Object;
@@ -57,7 +57,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Same(target, layer);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAsProductNoStore_ThenReturnsNull()
         {
             var target = new Mock<object>().As<IProduct>().Object;
@@ -67,7 +67,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Null(layer);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAsProductImplementsInterface_ThenReturnsSameInstance()
         {
             var target = new Mock<IWebService>().As<IProduct>().Object;
@@ -77,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Same(target, layer);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAsIProductElementImplementsInterface_ThenReturnsSameInstance()
         {
             var target = new Mock<IDataContract>().As<IProductElement>().Object;
@@ -87,7 +87,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Same(target, layer);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAsIInstanceBaseImplementsInterface_ThenReturnsSameInstance()
         {
             var target = new Mock<IFolder>().As<IAbstractElement>().As<IInstanceBase>().Object;
@@ -97,7 +97,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Same(target, layer);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAsViewFindsCachedLayer_ThenReturnsSameInstance()
         {
             var definitionId = new Guid(typeof(IArchitecture).GetCustomAttribute<ToolkitInterfaceAttribute>(true).DefinitionId);
@@ -111,7 +111,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Same(layer, cached);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAsIAbstractElementFindsCachedLayer_ThenReturnsSameInstance()
         {
             var definitionId = new Guid(typeof(IFolder).GetCustomAttribute<ToolkitInterfaceAttribute>(true).DefinitionId);
@@ -125,7 +125,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Same(layer, cached);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAsProductFindsCachedLayer_ThenReturnsSameInstance()
         {
             var definitionId = new Guid(typeof(IWebService).GetCustomAttribute<ToolkitInterfaceAttribute>(true).DefinitionId);
@@ -139,7 +139,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Same(layer, cached);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAsIProductElementFindsCachedLayer_ThenReturnsSameInstance()
         {
             var definitionId = new Guid(typeof(IDataContract).GetCustomAttribute<ToolkitInterfaceAttribute>(true).DefinitionId);
@@ -153,7 +153,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Same(layer, cached);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAsIInstanceBaseFindsCachedLayer_ThenReturnsSameInstance()
         {
             var definitionId = new Guid(typeof(IFolder).GetCustomAttribute<ToolkitInterfaceAttribute>(true).DefinitionId);
@@ -296,7 +296,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAccessingProperties_BuiltInConverterReturnsTypedValue()
             {
                 IWebService ws = new WebService(this.product);
@@ -313,7 +313,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal("schema2.xsd", ws.Architecture.Folders.First().DataContracts.Skip(1).First().XsdFile);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingProperties_BuiltInConverterIsUsed()
             {
                 IWebService ws = new WebService(this.product);
@@ -333,7 +333,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal("foobar", this.product.InstanceName);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConvertingAsInterface_ThenFindsImplementationFromAttribute()
             {
                 var ws = this.product.As<IWebService>();
@@ -349,7 +349,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.NotNull(folder);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingChild_ThenFindsImplementationFromAttribute()
             {
                 var ws = this.product.As<IWebService>();
@@ -361,7 +361,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal("foo.xsd", contract.XsdFile);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAccessingChild_ThenCachesInterface()
             {
                 var ws = this.product.As<IWebService>();
@@ -371,7 +371,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Same(ws.Architecture.Folders.First().DataContracts.First(), ws.Architecture.Folders.First().DataContracts.First());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConvertingFromIInstanceBase_ThenFindsRightConvertOverload()
             {
                 var ws = ((IInstanceBase)this.product).As<IWebService>();
@@ -387,7 +387,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.NotNull(folder);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConvertingFromInvalidInstanceBase_ThenThrowsInvalidOperationException()
             {
                 Assert.Throws<InvalidOperationException>(() =>
@@ -502,7 +502,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAccessingView_ThenItIsNonNull()
             {
                 var ws = this.product.As<IWebService>();
@@ -510,7 +510,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.NotNull(ws.Architecture);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingFolder_ThenAddsToCollection()
             {
                 var view = this.product.As<IWebService>().Architecture;
@@ -521,7 +521,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(1, view.Folders.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenMultipleFolders_ThenAddsToCollection()
             {
                 this.product.As<IWebService>().Architecture.CreateFolder("Foo");
@@ -530,7 +530,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(2, this.product.As<IWebService>().Architecture.Folders.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingDataContract_ThenAddsToCollection()
             {
                 var folder = this.product.As<IWebService>().Architecture.CreateFolder("Foo");
@@ -540,7 +540,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(1, folder.DataContracts.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAsWrongInterfaceLayer_ThenReturnsNull()
             {
                 var folder = this.product.As<IDataContract>();
@@ -548,7 +548,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Null(folder);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAsWrongInterfaceLayer2_ThenReturnsNull()
             {
                 var view = this.product.As<IWebService>().Architecture;

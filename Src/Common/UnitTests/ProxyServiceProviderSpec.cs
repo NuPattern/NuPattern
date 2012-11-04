@@ -20,43 +20,43 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
 			this.target = new ProxyServiceProvider(this.parent);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingNewWithNullServiceProvider_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => new ProxyServiceProvider(null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingServiceWithNullServiceType_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => this.target.GetService(null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenAddingServiceWithNullServiceType_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => this.target.AddService(null, new object()));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenAddingServiceWithNullServiceInstance_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => this.target.AddService(typeof(object), null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenRemovingServiceWithNullServiceProvider_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => this.target.RemoveService(null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingServiceAndNotFound_ThenReturnsNull()
 		{
 			Assert.Null(this.target.GetService(typeof(object)));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingServiceNotContainedLocally_ThenReturnsServiceFromParentProvider()
 		{
 			var expected = new object();
@@ -67,7 +67,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
 			Assert.Equal(expected, service);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingServicePreviouslyAdded_ThenReturnsService()
 		{
 			var expected = new object();
@@ -78,7 +78,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
 			Assert.Equal(expected, service);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingServiceAndServiceDefinedInBoth_ThenRetursLocalService()
 		{
 			Mock.Get(this.parent).Setup(x => x.GetService(typeof(object))).Returns(new object());
@@ -91,7 +91,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
 			Assert.Equal(expected, service);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenRemovingService_ThenGetServiceReturnsNull()
 		{
 			this.target.AddService(typeof(object), new object());
@@ -101,7 +101,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
 			Assert.Null(this.target.GetService(typeof(object)));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenRemovingServiceDefinedInParentProvider_ThenGetServiceReturnsService()
 		{
 			var expected = new object();

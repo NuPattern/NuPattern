@@ -49,7 +49,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewViewWithoutDefinitionId_ThenInfoTurnsNull()
             {
                 using (var tx = this.store.TransactionManager.BeginTransaction())
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 }
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewViewWithDefinitionId_ThenSetsSchemaInfo()
             {
                 var target = this.CreateView();
@@ -69,7 +69,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(this.viewInfo.Object, target.Info);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewView_ThenSetProperties()
             {
                 this.viewInfo.Setup(v => v.Name).Returns("bar");
@@ -80,7 +80,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(this.viewInfo.Object.Name, target.Info.Name);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewView_ThenAddSchemaElementsWithOneToOneCardinalityAndAutoCreateOption()
             {
                 this.viewInfo.Setup(v => v.Elements)
@@ -98,7 +98,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
             }
 
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewView_ThenDoesntAddSchemaElementsWithOneToOneCardinalityAutomatically()
             {
                 this.viewInfo.Setup(v => v.Elements)
@@ -115,7 +115,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(0, target.Elements.Count());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewView_ThenSetsDefinitionIdInAddedElements()
             {
                 var elementId = Guid.NewGuid();
@@ -233,7 +233,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 this.store = new Dsl.Store(serviceProvider.Object, typeof(Dsl.CoreDomainModel), typeof(ProductStateStoreDomainModel));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithNewOneToOneCardinalityElementsInSchema_ThenAddNewElementsToStore()
             {
                 var singleIds = Enumerable.Range(0, 2).Select(x => Guid.NewGuid()).ToArray();
@@ -254,7 +254,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.False(target.Elements.Any(x => x.DefinitionId == mutipleIds[1]));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithDeletedElementsInSchema_ThenDeleteElementsFromStore()
             {
                 var infos = (IList<IAbstractElementInfo>)this.viewInfo.Elements;
@@ -267,7 +267,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.False(target.Elements.Any(x => x.DefinitionId == deletedId));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithDeletedZeroToManyCardinalityElementsInSchema_ThenDeleteElementsFromStore()
             {
                 var infos = (IList<IAbstractElementInfo>)this.viewInfo.Elements;
@@ -281,7 +281,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.False(target.Elements.Any(x => x.DefinitionId == deletedId));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithDeletedExtensionPointInSchema_ThenDeleteExtensionsPointsFromStore()
             {
                 var infos = (IList<IExtensionPointInfo>)this.viewInfo.ExtensionPoints;
@@ -294,7 +294,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.False(target.ExtensionProducts.Any(x => x.DefinitionId == deletedId));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithElementMutiplicityChangedFromMultipleToSingle_ThenDeletesAnyExtraElement()
             {
                 var info = this.viewInfo.Elements.First(x => x.Cardinality == Cardinality.ZeroToMany);
@@ -306,7 +306,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
                 Assert.Equal(3, target.Elements.Count);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDeserializingWithExtensionPointMutiplicityChangedFromMultipleToSingle_ThenDeletesAnyExtraExtensionPoint()
             {
                 var info = this.viewInfo.ExtensionPoints.First(x => x.Cardinality == Cardinality.ZeroToMany);

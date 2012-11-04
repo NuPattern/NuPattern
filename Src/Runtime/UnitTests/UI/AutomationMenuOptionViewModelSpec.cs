@@ -27,7 +27,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UI
 				this.target = new AutomationMenuOptionViewModel(this.automation.Object);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenImagePresent_ThenImageIsSetAndTypeIsImage()
 			{
 				var automation = new Mock<IAutomationExtension>();
@@ -42,7 +42,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UI
 				Assert.NotNull(viewModel.ImagePath);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenImageNotPresent_ThenImageIsSetAndTypeIsNone()
 			{
 				var automation = new Mock<IAutomationExtension>();
@@ -57,7 +57,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UI
 				Assert.Null(viewModel.ImagePath);
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenCanExecute_ThenQueriesStatusAndReturnsMenuIsEnabled()
 			{
 				this.menu.Setup(x => x.Enabled).Returns(true);
@@ -71,7 +71,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UI
 				this.status.Verify(x => x.QueryStatus(this.menu.Object));
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenExecute_ThenInvokesExtension()
 			{
 				this.target.Command.Execute(null);
@@ -79,7 +79,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UI
 				this.automation.Verify(x => x.Execute());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenAutomationNotImplementingStatus_ThenCanExecuteIsStillTrue()
 			{
 				var automation = new Mock<IAutomationExtension>();

@@ -10,7 +10,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenMultipleProvidersPerScheme_ThenSelectsAppropriateOneForResolving()
 		{
 			var foo = Mock.Of<IFoo>();
@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 
 		// TODO: still failing on FB 1.0
 		[Ignore]
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSingleProviderProvidesMultipleResolvedTypes_ThenThrowsNotSupportedException()
 		{
 			var foo = Mock.Of<IDerivedFoo>();
@@ -56,7 +56,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 
 		// TODO: still failing on FB 1.0
 		[Ignore]
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenMultipleProvidersPerSchemeForRelatedTypes_ThenSelectsAppropriateOneForResolving()
 		{
 			var derived = Mock.Of<IDerivedFoo>();

@@ -8,7 +8,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
         [TestClass]
         public class GivenAnyType
         {
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTypeIsString_ThenIsClsCompliant()
             {
                 var valueType = typeof(string);
@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.IsTrue(valueType.IsClsCompliant());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTypeIsUInt64_ThenNotIsClsCompliant()
             {
                 var valueType = typeof(UInt64);
@@ -24,7 +24,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
                 Assert.IsFalse(valueType.IsClsCompliant());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTypeIstest_ThenNotIsClsCompliant()
             {
                 var valueType = typeof(NonClsCompliantType);

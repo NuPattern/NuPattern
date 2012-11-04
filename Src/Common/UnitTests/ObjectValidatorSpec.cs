@@ -12,7 +12,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
         //    protected abstract object GetObject();
         //    protected abstract string ValidatedPropertyName { get; }
 
-        //    [TestMethod]
+        //    [TestMethod, TestCategory("Unit")]
         //    public void WhenValidated_ThenResultContainsPropertyName()
         //    {
         //        var target = GetObject();
@@ -23,7 +23,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
         //        Assert.True(result.Any(r => r.MemberNames.Contains(ValidatedPropertyName)));
         //    }
 
-        //    [TestMethod]
+        //    [TestMethod, TestCategory("Unit")]
         //    public void WhenValidated_ThenThrowsInvalidWithPropertyName()
         //    {
         //        var target = GetObject();
@@ -35,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
         //[TestClass]
         //public class GivenAValidatorWithNoCustomMessage : GivenAnObjectWithOneInvalidProperty
         //{
-        //    [TestMethod]
+        //    [TestMethod, TestCategory("Unit")]
         //    public void WhenValidated_ThenResultContainsDefaultMessage()
         //    {
         //        var foo = GetObject();
@@ -68,7 +68,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
         //{
         //    private const string CustomMessage = "Hello";
 
-        //    [TestMethod]
+        //    [TestMethod, TestCategory("Unit")]
         //    public void WhenValidated_ThenResultContainsCustomMessage()
         //    {
         //        var foo = GetObject();

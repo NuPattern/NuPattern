@@ -10,7 +10,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
     {
         internal static readonly IAssertion Assert = new Assertion();
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenSubscriberIsAlive_ThenNotifiesSubscriber()
         {
             var notified = false;
@@ -24,7 +24,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.True(notified);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenSubscriberIsNotAlive_ThenDoesNotNotifySubscriber()
         {
             var foo = new Foo();
@@ -42,7 +42,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             manager.NotifyChanged<Foo>(x => x.Name);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenSubscriptionIsDisposed_ThenDoesNotNotifySubscriber()
         {
             var foo = new Foo();
@@ -60,7 +60,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             manager.NotifyChanged<Foo>(x => x.Name);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAddingPropertyChangedHandler_ThenNotifiesSubscriber()
         {
             var notified = false;
@@ -75,7 +75,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.True(notified);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenRemovingPropertyChangedHandler_ThenDoesNotNotifySubscriberAnymore()
         {
             var notified = false;
@@ -91,7 +91,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.False(notified);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenAddedPropertyChangedHandlerTargetIsNotAlive_ThenDoesNotNotify()
         {
             var foo = new Foo();
@@ -110,7 +110,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
         }
 
         [Ignore]
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenStaticMethodIsSubscribed_ThenNotifiesSubscriber()
         {
             var foo = new Foo();
@@ -121,7 +121,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Throws<InvalidOperationException>(() => manager.NotifyChanged<Foo>(x => x.Name));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenDisposingStaticSubscription_ThenDoesNotNotifySubscriber()
         {
             var foo = new Foo();

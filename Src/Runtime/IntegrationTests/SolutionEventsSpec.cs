@@ -28,14 +28,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenThereIsNoSolutionOpened_ThenIsSolutionOpenedIsFalse()
 			{
 				Assert.False(this.solutionEvents.IsSolutionOpened);
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenCreatingANewSolution_ThenIsSolutionOpenedTurnsTrue()
 			{
 				this.solution.CreateInstance(Path.GetTempPath(), Path.GetFileName(Path.GetRandomFileName()));
@@ -44,7 +44,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenCreatingANewSolution_ThenRaisesSolutionOpened()
 			{
 				var eventRaised = false;
@@ -56,7 +56,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenCreatingANewSolution_ThenIsSolutionOpenedTurnsTrueAndThenRaisesSolutionOpened()
 			{
 				var sequenceAchived = false;
@@ -85,7 +85,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenClosingTheSolution_ThenIsSolutionOpenedTurnsFalse()
 			{
 				this.solution.As<Solution>().Close();
@@ -94,7 +94,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenClosingTheSolution_ThenRaisesSolutionClosing()
 			{
 				var eventRaised = false;
@@ -106,7 +106,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenClosingTheSolution_ThenRaisesSolutionClosed()
 			{
 				var eventRaised = false;
@@ -118,7 +118,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenClosingTheSolution_ThenRaisesSolutionClosingAndThenIsSolutionOpenedTurnsFalseAndThenRaisesSolutionClosed()
 			{
 				var index = 0;
@@ -165,7 +165,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenOpeningSolution_ThenIsSolutionOpenedTurnsTrue()
 			{
 				this.solution.As<Solution>().Open(this.solutionPath);
@@ -174,7 +174,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenOpeningSolution_ThenRaisesSolutionOpened()
 			{
 				var eventRaised = false;
@@ -186,7 +186,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 			}
 
 			[HostType("VS IDE")]
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			public void WhenOpeningSolution_ThenIsSolutionOpenedTurnsTrueAndThenRaisesSolutionOpened()
 			{
 				var sequenceAchived = false;

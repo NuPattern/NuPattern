@@ -35,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 this.store.Dispose();
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameIsEmpty_ThenValidateInstanceNameIsLegalFails()
             {
                 this.product.InstanceName = string.Empty;
@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(validationContext.ValidationSubjects[0], this.product);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameStartWithAlpha_ThenValidateInstanceNameIsLegalSucceeds()
             {
                 this.product.InstanceName = "9foo";
@@ -56,7 +56,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameStartWithUnderscore_ThenValidateInstanceNameIsLegalSucceeds()
             {
                 this.product.InstanceName = "_9foo";
@@ -66,7 +66,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameNotStartWithAlpha_ThenValidateInstanceNameIsLegalFails()
             {
                 this.product.InstanceName = "*9foo";
@@ -77,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(validationContext.ValidationSubjects[0], this.product);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameStartsWithSpaces_ThenValidateInstanceNameIsLegalFails()
             {
                 this.product.InstanceName = " foo";
@@ -88,7 +88,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(validationContext.ValidationSubjects[0], this.product);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameContainsSpaces_ThenValidateInstanceNameIsLegalSucceeds()
             {
                 this.product.InstanceName = "foo and bar";
@@ -98,7 +98,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameEndsWithSpace_ThenValidateInstanceNameIsLegalFails()
             {
                 this.product.InstanceName = "Foo bar ";
@@ -109,7 +109,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(validationContext.ValidationSubjects[0], this.product);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameSingleCommonChar_ThenValidateInstanceNameIsLegalFails()
             {
                 this.product.InstanceName = "*";
@@ -120,7 +120,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.Equal(validationContext.ValidationSubjects[0], this.product);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameSingleChar_ThenValidateInstanceNameIsLegalSucceeds()
             {
                 this.product.InstanceName = "d";
@@ -130,7 +130,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenInstanceNameSingleNumeral_ThenValidateInstanceNameIsLegalSucceeds()
             {
                 this.product.InstanceName = "2";

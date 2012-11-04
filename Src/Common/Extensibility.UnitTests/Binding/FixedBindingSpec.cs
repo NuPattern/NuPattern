@@ -9,7 +9,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingBinding_ThenValuesAreSame()
 		{
 			var value = new object();
@@ -18,7 +18,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Same(value, binding.Value);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreated_ThenCreateDynamicContextSucceeds()
 		{
 			var value = new object();
@@ -27,7 +27,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.NotNull(binding.CreateDynamicContext());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreated_ThenEvaluatesToTrue()
 		{
 			var value = new object();
@@ -36,7 +36,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.True(binding.Evaluate());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreated_ThenEvaluatesToTrueWithContext()
 		{
 			var value = new object();
@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.True(binding.Evaluate(context));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreated_ThenEvaluationResultsAreEmpty()
 		{
 			var value = new object();
@@ -55,7 +55,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.False(binding.EvaluationResults.Any());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreated_ThenHasErrorsIsFalse()
 		{
 			var value = new object();
@@ -64,7 +64,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.False(binding.HasErrors);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreated_ThenUserMessageCanBeSet()
 		{
 			var value = new object();

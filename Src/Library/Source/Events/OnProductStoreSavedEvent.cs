@@ -83,7 +83,6 @@ namespace Microsoft.VisualStudio.Patterning.Library.Events
         /// </summary>
         public IDisposable Subscribe(IObserver<IEvent<EventArgs>> observer)
         {
-            ;
             Guard.NotNull(() => observer, observer);
 
             return this.sourceEvent.Subscribe(observer);

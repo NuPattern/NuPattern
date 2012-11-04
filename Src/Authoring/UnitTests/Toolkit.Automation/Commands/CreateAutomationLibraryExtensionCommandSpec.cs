@@ -22,7 +22,7 @@
 //                this.command = new CreateDescendantElementsCommand();
 //            }
 
-//            [TestMethod]
+//            [TestMethod, TestCategory("Unit")]
 //            public void WhenDescendantElementPathIsEmpty_ThenThrows()
 //            {
 //                this.command.DescendantElementPath = string.Empty;
@@ -31,7 +31,7 @@
 //                    this.command.Execute());
 //            }
 
-//            //[TestMethod]
+//            //[TestMethod, TestCategory("Unit")]
 //            //public void WhenDescendantElementPathHasInvalidChars_ThenThrows()
 //            //{
 //            //    this.command.DescendantElementPath = "Foo[";
@@ -55,7 +55,7 @@
 //                this.command.CurrentElement = this.currentElement.Object;
 //            }
 
-//            [TestMethod]
+//            [TestMethod, TestCategory("Unit")]
 //            public void WhenDescendantElementPathElementNotExist_ThenDoesNothing()
 //            {
 //                this.command.DescendantElementPath = "Foo";
@@ -63,7 +63,7 @@
 //                this.currentElement.Verify(e => e.CreateElement(It.IsAny<Action<IElement>>()), Times.Never());
 //            }
 
-//            //[TestMethod]
+//            //[TestMethod, TestCategory("Unit")]
 //            //public void WhenDescendantElementPathContainsSinglePath_ThenElementCreated()
 //            //{
 //            //    this.command.DescendantElementPath = "Bar";
@@ -71,7 +71,7 @@
 //            //    this.currentElement.Verify(e => e.CreateElement(It.IsAny<Action<IElement>>()), Times.Once());
 //            //}
 
-//            //[TestMethod]
+//            //[TestMethod, TestCategory("Unit")]
 //            //public void WhenDescendantElementPathContainsMultiplePaths_ThenEachMultipleElementsCreated()
 //            //{
 //            //    this.command.DescendantElementPath = "Bar1;Bar2";

@@ -27,7 +27,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
                 this.provider.Expression = "{InstanceName} Foo Bar";
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExpressionEvaluatesToEmpty_ThenReturnsEmpty()
             {
                 this.currentElement.Setup(e => e.InstanceName).Returns("");
@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
                 Assert.Equal(result, string.Empty);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoForbiddenChars_ThenReturnsExpressionResult()
             {
                 this.provider.ForbiddenChars = string.Empty;
@@ -48,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
                 Assert.Equal(result, "An Element Foo Bar");
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExpressionContainsNoForbiddenChars_ThenReturnsExpressionResult()
             {
                 this.provider.ForbiddenChars = "%$#@";
@@ -57,7 +57,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
                 Assert.Equal(result, "An Element Foo Bar");
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenExpressionContainsForbiddenChars_ThenReturnsReplacedResult()
             {
                 this.provider.ForbiddenChars = " EAFB";

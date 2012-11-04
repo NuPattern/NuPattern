@@ -9,25 +9,25 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenTryingToWriteANullList_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => ToolkitInfoSerializer.ToXml(null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenTryingToReadANullValue_ThenThrowsArgumentNullException()
 		{
 			Assert.Throws<ArgumentNullException>(() => ToolkitInfoSerializer.FromXml(null));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
         public void WhenTryingToReadAnEmptyValue_ThenThrowsArgumentOutOfRangeException()
 		{
             Assert.Throws<ArgumentOutOfRangeException>(() => ToolkitInfoSerializer.FromXml(string.Empty));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenSavingAList_ThenReturnCanBeLoadedBack()
 		{
 			var infos = new[] { new ToolkitInfo { Name = "Foo" } };

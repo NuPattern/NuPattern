@@ -26,19 +26,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenNoSettings()
             {
                 Assert.True(this.policy.Settings.Count() == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenIsModifiedIsFalse()
             {
                 Assert.False(this.policy.IsModified);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenCustomizedLevelIsNone()
             {
                 Assert.Equal(this.policy.CustomizationLevel, CustomizedLevel.None);
@@ -64,14 +64,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenConstructed_ThenSingleSetting()
             {
                 Assert.NotNull(this.policy.Settings);
                 Assert.True(this.policy.Settings.Count() == 1);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValueChanged_ThenIsModifiedIsTrue()
             {
                 this.store.TransactionManager.DoWithinTransaction(
@@ -80,7 +80,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(this.policy.IsModified);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValueReset_ThenIsModifiedIsFalse()
             {
                 this.store.TransactionManager.DoWithinTransaction(
@@ -89,7 +89,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.False(this.policy.IsModified);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValueIsFalse_ThenCustomizedLevelIsNone()
             {
                 this.store.TransactionManager.DoWithinTransaction(
@@ -98,7 +98,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(CustomizedLevel.None, this.policy.CustomizationLevel);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingIsDisabled_ThenCustomizedLevelIsNone()
             {
                 this.store.TransactionManager.DoWithinTransaction(
@@ -109,7 +109,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(CustomizedLevel.None, this.policy.CustomizationLevel);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSettingValueIsTrue_ThenCustomizedLevelIsAll()
             {
                 this.store.TransactionManager.DoWithinTransaction(
@@ -141,7 +141,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAllSettingsAreReset_ThenCustomizedLevelIsNone()
             {
                 this.store.TransactionManager.DoWithinTransaction(
@@ -152,7 +152,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(this.policy.CustomizationLevel, CustomizedLevel.None);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAllSettingsAreSet_ThenCustomizedLevelIsAll()
             {
                 this.store.TransactionManager.DoWithinTransaction(
@@ -163,7 +163,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.Equal(this.policy.CustomizationLevel, CustomizedLevel.All);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSomeSettingsAreSet_ThenCustomizedLevelIsPartially()
             {
                 this.store.TransactionManager.DoWithinTransaction(

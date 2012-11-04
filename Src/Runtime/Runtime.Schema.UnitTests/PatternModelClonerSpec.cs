@@ -15,7 +15,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
         {
             internal static readonly IAssertion Assert = new Assertion();
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingACloner_ThenNullExceptionIsThrown()
             {
                 Assert.Throws<ArgumentNullException>(() => new PatternModelCloner(null, null, null));
@@ -43,7 +43,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     Mock.Of<IPatternManager>(p => p.InstalledToolkits == new List<IInstalledToolkitInfo>()));
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCreatingAClonerWithNullTargetPatternModel_ThenNullExceptionIsThrown()
             {
                 Assert.Throws<ArgumentNullException>(
@@ -93,7 +93,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.targetPatternModel = targetStore.ElementFactory.CreateElement<PatternModelSchema>());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCloning_ThenTargetPatternIsCloned()
             {
                 new PatternModelCloner(this.sourcePatternModel, new Version("1.0.0.0"), this.targetPatternModel).Clone();
@@ -145,7 +145,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.targetPatternModel = targetStore.ElementFactory.CreateElement<PatternModelSchema>());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCloning_ThenTargetPatternIsCloned()
             {
                 new PatternModelCloner(this.sourcePatternModel, new Version("1.0.0.0"), this.targetPatternModel).Clone();
@@ -205,7 +205,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     () => this.targetPatternModel = targetStore.ElementFactory.CreateElement<PatternModelSchema>());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCloning_ThenTargetPatternIsCloned()
             {
                 new PatternModelCloner(this.sourcePatternModel, new Version("1.0.0.0"), this.targetPatternModel).Clone();
@@ -263,7 +263,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.targetPatternModel = targetStore.ElementFactory.CreateElement<PatternModelSchema>());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCloning_ThenTargetPatternIsCloned()
             {
                 new PatternModelCloner(this.sourcePatternModel, new Version("1.0.0.0"), this.targetPatternModel).Clone();
@@ -321,7 +321,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.targetPatternModel = targetStore.ElementFactory.CreateElement<PatternModelSchema>());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCloning_ThenTargetPatternIsCloned()
             {
                 new PatternModelCloner(this.sourcePatternModel, new Version("1.0.0.0"), this.targetPatternModel).Clone();
@@ -382,7 +382,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.targetPatternModel = targetStore.ElementFactory.CreateElement<PatternModelSchema>());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCloning_ThenTargetPatternIsCloned()
             {
                 new PatternModelCloner(this.sourcePatternModel, new Version("1.0.0.0"), this.targetPatternModel).Clone();
@@ -456,7 +456,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.targetPatternModel = targetStore.ElementFactory.CreateElement<PatternModelSchema>());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCloning_ThenTargetPatternIsCloned()
             {
                 new PatternModelCloner(this.sourcePatternModel, new Version("1.0.0.0"), this.targetPatternModel).Clone();
@@ -531,7 +531,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.targetPatternModel = targetStore.ElementFactory.CreateElement<PatternModelSchema>());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCloning_ThenTargetPatternIsCloned()
             {
                 new PatternModelCloner(this.sourcePatternModel, new Version("1.0.0.0"), this.targetPatternModel).Clone();
@@ -607,7 +607,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.targetPatternModel = targetStore.ElementFactory.CreateElement<PatternModelSchema>());
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCloning_ThenTargetPatternIsCloned()
             {
                 new PatternModelCloner(this.sourcePatternModel, new Version("1.0.0.0"), this.targetPatternModel).Clone();
@@ -680,7 +680,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCloning_ThenTargetPatternIsCloned()
             {
                 new PatternModelCloner(this.sourcePatternModel, new Version("1.0.0.0"), this.targetPatternModel).Clone();

@@ -9,7 +9,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenCreatingANewPickerFilter_ThenKindIsAllItemsByDefault()
 		{
 			const ItemKind AllKinds = ItemKind.Folder | ItemKind.Item | ItemKind.Project | ItemKind.Reference |
@@ -20,7 +20,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
 			Assert.Equal(AllKinds, target.Kind);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenDefininingKindContainingItem_ThenAppliesFilterReturnsTrue()
 		{
 			var child = new Mock<IItemContainer>();
@@ -35,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
 			Assert.True(target.ApplyFilter(container.Object));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenDefininingKindNotContainingItem_ThenAppliesFilterReturnsFalse()
 		{
 			var container = new Mock<IItemContainer>();
@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
 			Assert.False(target.ApplyFilter(container.Object));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenNotIncludingEmptyFoldersAndItemDoesNotHaveChildren_ThenAppliesFilerReturnsFalse()
 		{
 			var container = new Mock<IItemContainer>();
@@ -58,7 +58,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
 			Assert.False(target.ApplyFilter(container.Object));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenKindIsItemAndDefininingFileExtensionsAndItemMachOneInTheList_ThenAppliesFilterReturnsTrue()
 		{
 			var container = new Mock<IItemContainer>();
@@ -70,7 +70,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
 			Assert.True(target.ApplyFilter(container.Object));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenKindIsItemAndDefininingFileExtensionsAndItemDoesNotMachOneInTheList_ThenAppliesFilterReturnsFalse()
 		{
 			var container = new Mock<IItemContainer>();
@@ -82,7 +82,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
 			Assert.False(target.ApplyFilter(container.Object));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenNotIncludingEmptyFolderAndItemHasChildrenThatNotMatchFilter_ThenAppliesFilterReturnsFalse()
 		{
 			var child = new Mock<IItemContainer>();

@@ -37,7 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.property);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTypeIsKnown_ThenValidateTypeIsLegalSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -49,7 +49,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTypeIsEmpty_ThenValidateTypeIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -62,7 +62,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.property) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenTypeIsUnknown_ThenValidateTypeIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -75,7 +75,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.property) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCategoryIsAlphanumeric_ThenValidateCategoryIsLegalSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -87,7 +87,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCategoryIsEmpty_ThenValidateCategoryIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -100,7 +100,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.property) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCategoryHasSpaces_ThenValidateCategoryIsLegalSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -112,7 +112,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCategoryHasSpecialChars_ThenValidateCategoryIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -125,7 +125,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.property) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenCategoryHasMoreThan512Chars_ThenValidateCategoryIsLegalFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -138,7 +138,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.property) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDefaultValueHasOnlyValue_ThenValidateDefaultValueHasBothValueOrValueProviderSucceeds()
             {
                 PropertyBindingSettings propertyBindings = new PropertyBindingSettings();
@@ -153,7 +153,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDefaultValueHasOnlyValueProvider_ThenValidateDefaultValueHasBothValueOrValueProviderSucceeds()
             {
                 var propertyBindings = new PropertyBindingSettings
@@ -172,7 +172,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDefaultValueHasValueAndValueProvider_ThenValidateDefaultValueHasBothValueOrValueProviderFails()
             {
                 PropertyBindingSettings propertyBindings = new PropertyBindingSettings();
@@ -192,7 +192,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.property) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueProviderAndNoDefaultValue_ThenValidateValueProviderOrDefaultValueSucceeds()
             {
                 PropertyBindingSettings defaultValueBindings = new PropertyBindingSettings();
@@ -216,7 +216,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.property) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenNoValueProviderDefaultValue_ThenValidateValueProviderOrDefaultValueSucceeds()
             {
                 PropertyBindingSettings defaultValueBindings = new PropertyBindingSettings();
@@ -240,7 +240,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.property) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueProviderAndDefaultValue_ThenValidateValueProviderOrDefaultValueFails()
             {
                 PropertyBindingSettings defaultValueBindings = new PropertyBindingSettings();
@@ -264,7 +264,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.property) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenValueProviderAndDefaultValueProvider_ThenValidateValueProviderOrDefaultValueFails()
             {
                 PropertyBindingSettings defaultValueBindings = new PropertyBindingSettings();
@@ -288,7 +288,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.property) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisplayNameIsReserved_ThenValidateDisplayNameIsNotReservedFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -301,7 +301,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.ValidationSubjects.IndexOf(this.property) == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenDisplayNameIsNotReserved_ThenValidateDisplayNameIsNotReservedSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -334,7 +334,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 validationContext = new ValidationContext(ValidationCategories.Save, this.element);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenValidateNameIsUniqueSucceeds()
             {
                 this.element.ValidateNameIsUnique(validationContext);
@@ -342,7 +342,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedElementAddedToDifferentOwner_ThenValidateNameIsUniqueSucceeds()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -357,7 +357,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations.Count == 0);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedElementAddedToSameOwner_ThenValidateNameIsUniqueFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>
@@ -373,7 +373,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 Assert.True(validationContext.CurrentViolations[0].Code == Properties.Resources.Validate_PropertyNameIsNotUniqueCode);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenSameNamedSystemElementAddedToSameOwner_ThenValidateNameIsUniqueFails()
             {
                 this.store.TransactionManager.DoWithinTransaction(() =>

@@ -18,7 +18,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Integration")]
 		public void WhenTemplateFileDoesNotExist_ThenThrowsFileNotFoundException()
 		{
 			Assert.Throws<FileNotFoundException>(() => new TextTemplate(
@@ -42,7 +42,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 				this.solution = VsIdeTestHostContext.ServiceProvider.GetService<ISolution>();
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Integration")]
 			[HostType("VS IDE")]
 			[DeploymentItem("Runtime.IntegrationTests.Content\\Projects\\Sample", "Runtime.IntegrationTests\\TextTemplateSpec\\WhenUnfolding_ThenTransformsText")]
 			[DeploymentItem("UriProviders\\Hello.t4", "Runtime.IntegrationTests\\TextTemplateSpec\\WhenUnfolding_ThenTransformsText")]

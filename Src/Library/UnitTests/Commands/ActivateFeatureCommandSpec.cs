@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 this.command.ServiceProvider = new Mock<IServiceProvider>().Object;
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenNoReference_ThenDoesNotActivateFeature()
 			{
 				this.command.Execute();
@@ -46,7 +46,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				this.mockManager.VerifySet(fm => fm.ActiveFeature = It.IsAny<IFeatureExtension>(), Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenGuidanceReferenceNotExistInSolution_ThenDoesNotActivateFeature()
 			{
 				var mockRef = new Mock<IReference>();
@@ -59,7 +59,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
 				this.mockManager.VerifySet(fm => fm.ActiveFeature = It.IsAny<IFeatureExtension>(), Times.Never());
 			}
 
-			[TestMethod]
+			[TestMethod, TestCategory("Unit")]
 			public void WhenGuidanceReferenceExistsInSolution_ThenActivatesFeature()
 			{
 				var mockRef = new Mock<IReference>();

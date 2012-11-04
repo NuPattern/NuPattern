@@ -12,7 +12,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
     {
         internal static readonly IAssertion Assert = new Assertion();
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenProductInstantiated_ThenRaisesInstantiatedEvent()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -37,7 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Same(product, instantiated);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenEventsAreRaised_ThenStoreIsInATransaction()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.True(inTransaction);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenNestedTransactionNotCommited_ThenNestedChangesNotCommited()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -96,7 +96,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Equal("foo", product.DefinitionName);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenProductInstantiated_ThenRetrievesProductInstance()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -113,7 +113,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Equal(product.Id, productState.FindAll<Product>().ElementAt(0).Id);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenViewInstantiated_ThenRaisesInstantiatedEvent()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -138,7 +138,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.NotNull(instantiated);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenElementInstantiated_ThenRaisesInstantiatedEvent()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -164,7 +164,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.NotNull(instantiated);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenCollectionInstantiated_ThenRaisesInstantiatedEvent()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -190,7 +190,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.NotNull(instantiated);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenPropertyInstantiated_ThenRaisesInstantiatedEvent()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -215,7 +215,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.NotNull(instantiated);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenProductInstantiatedWhileSerializing_ThenDoesNotRaiseInstantiatedEvent()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -240,7 +240,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.Null(instantiated);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenProductInstantiatedWhileSerializing_ThenDoesNotRaisePropertyChangeEvents()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -265,7 +265,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.False(changed);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenElementInstantiated_ThenDoesNotRaisePropertyChangedEventsFromInitializerSetters()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -291,7 +291,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
         }
 
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenTransactionCommited_ThenRaisesTransactionCommitedEvent()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -313,7 +313,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             Assert.True(fired);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenTransactionCommitedWhileSerializing_ThenDoesNotRaiseTransactionCommitedEvent()
         {
             var store = new DslTestStore<ProductStateStoreDomainModel>();

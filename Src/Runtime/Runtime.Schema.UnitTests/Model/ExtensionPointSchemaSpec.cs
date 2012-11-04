@@ -53,7 +53,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenRequiredExtensionPointIdReturnsValue()
             {
                 Assert.NotNull(this.view.ExtensionPoints[0]);
@@ -62,14 +62,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.extensionPoint.RequiredExtensionPointId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenSchemaPathIsValid()
             {
                 var expected = string.Concat(this.view.SchemaPath, NamedElementSchema.SchemaPathDelimiter, this.extensionPoint.Name);
                 Assert.Equal(expected, this.extensionPoint.SchemaPath);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingName_ThenExtensionPointIdReturnsNewValue()
             {
                 this.extensionPoint.WithTransaction(extension => extension.Name = "ExtensionPoint2");
@@ -139,7 +139,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 this.tailoredExtensionPoint = tailoredPatternModel.Pattern.Views[0].ExtensionPoints[0];
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenRequiredExtensionPointIdReturnsBaseExtensionPointIdValue()
             {
                 Assert.NotNull(this.tailoredExtensionPoint);
@@ -148,7 +148,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.tailoredExtensionPoint.RequiredExtensionPointId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenAddingANewProperty_ThenRequiredExtensionPointIdReturnsTailoredExtensionPointIdValue()
             {
                 this.tailoredExtensionPoint.WithTransaction(extension => extension.CreatePropertySchema());
@@ -159,7 +159,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.tailoredExtensionPoint.RequiredExtensionPointId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenRemovingAProperty_ThenRequiredExtensionPointIdReturnsBaseExtensionPointIdValue()
             {
                 this.tailoredExtensionPoint.WithTransaction(extension => extension.CreatePropertySchema());
@@ -176,7 +176,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.tailoredExtensionPoint.RequiredExtensionPointId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingName_ThenExtensionPointIdReturnsAuthoredValue()
             {
                 this.tailoredExtensionPoint.WithTransaction(extension => extension.Name = "ExtensionPoint2");
@@ -231,7 +231,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenRequiredExtensionPointIdReturnsValue()
             {
                 Assert.NotNull(this.element.ExtensionPoints[0]);
@@ -240,14 +240,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.element.ExtensionPoints[0].RequiredExtensionPointId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenSchemaPathIsValid()
             {
                 var expected = string.Concat(this.element.SchemaPath, NamedElementSchema.SchemaPathDelimiter, this.extensionPoint.Name);
                 Assert.Equal(expected, this.extensionPoint.SchemaPath);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void WhenChangingName_TheExtensionPointIdReturnsNewValue()
             {
                 this.extensionPoint.WithTransaction(extension => extension.Name = "ExtensionPoint2");
@@ -304,7 +304,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenRequiredExtensionPointIdReturnsValue()
             {
                 Assert.NotNull(this.element.ExtensionPoints[0]);
@@ -313,7 +313,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                     this.extensionPoint.RequiredExtensionPointId);
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenSchemaPathIsValid()
             {
                 var expected = string.Concat(this.element.SchemaPath, NamedElementSchema.SchemaPathDelimiter, this.extensionPoint.Name);
@@ -366,7 +366,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenRequiredExtensionPointIdReturnsValue()
             {
                 Assert.NotNull(this.collection.ExtensionPoints[0]);
@@ -424,7 +424,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenRequiredExtensionPointIdReturnsValue()
             {
                 Assert.NotNull(this.collection.ExtensionPoints[0]);
@@ -482,7 +482,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenRequiredExtensionPointIdReturnsValue()
             {
                 Assert.NotNull(this.element.ExtensionPoints[0]);
@@ -540,7 +540,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
                 });
             }
 
-            [TestMethod]
+            [TestMethod, TestCategory("Unit")]
             public void ThenRequiredExtensionPointIdReturnsValue()
             {
                 Assert.NotNull(this.collection.ExtensionPoints[0]);

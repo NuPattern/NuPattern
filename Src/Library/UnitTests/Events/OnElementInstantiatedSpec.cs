@@ -32,13 +32,13 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
             this.publisher.Dispose();
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenPatternManagerOpenedAndNoSubscribers_ThenNoOp()
         {
             this.manager.Raise(x => x.IsOpenChanged += null, EventArgs.Empty);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenManagerOpenedThenProductInstantiated_ThenSubscriberIsNotifiedIfValueIsCurrentElement()
         {
             var subscriber = new Mock<ISubscriber>();
@@ -54,7 +54,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
                 It.Is<IEvent<EventArgs>>(e => e.Sender == this.current)));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenManagerOpenedThenProductInstantiated_ThenSubscriberIsNotNotifiedIfValueIsNotCurrentElement()
         {
             var product = new Mock<IProduct>();
@@ -71,7 +71,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
                 It.Is<IEvent<EventArgs>>(e => e.Sender == product.Object)), Times.Never());
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenManagerClosedThenProductInstantiated_ThenSubscriberIsNotNotified()
         {
             var subscriber = new Mock<ISubscriber>();
@@ -91,7 +91,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
                 Times.Never());
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenDisposingSubscriptionThenProductInstantiated_ThenSubscriberIsNotNotified()
         {
             var subscriber = new Mock<ISubscriber>();
@@ -110,7 +110,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Events
                 Times.Never());
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenManagerClosedAndReopenedAndProductInstantiated_ThenOldSubscriberIsNotNotified()
         {
             var subscriber = new Mock<ISubscriber>();

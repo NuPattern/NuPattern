@@ -8,7 +8,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenTypeIdChanged_ThenBindingRaisesChanged()
 		{
 			var binding = new BindingSettings();
@@ -20,7 +20,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 			Assert.True(raised);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenPropertyAdded_ThenBindingRaisesChanged()
 		{
 			var binding = new BindingSettings();
@@ -32,7 +32,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 			Assert.True(raised);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenPropertyNameChanged_ThenBindingRaisesChanged()
 		{
 			var binding = new BindingSettings();
@@ -47,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 			Assert.True(raised);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenPropertyValueChanged_ThenBindingRaisesChanged()
 		{
 			var binding = new BindingSettings();
@@ -62,7 +62,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 			Assert.True(raised);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenPropertyValueProviderSet_ThenBindingRaisesChanged()
 		{
 			var binding = new BindingSettings();
@@ -77,7 +77,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 			Assert.True(raised);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenValueProviderTypeIdChanged_ThenBindingRaisesChanged()
 		{
 			var raised = false;
@@ -100,7 +100,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 			Assert.True(raised);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenValueProviderPropertyAdded_ThenBindingRaisesChanged()
 		{
 			var raised = false;
@@ -123,7 +123,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
 			Assert.True(raised);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenValueProviderPropertyChanged_ThenBindingRaisesChanged()
 		{
 			var raised = false;

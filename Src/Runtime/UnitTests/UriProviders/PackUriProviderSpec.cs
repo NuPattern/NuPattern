@@ -36,7 +36,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
             serviceProvider.Setup(s => s.GetService(typeof(IFxrUriReferenceService))).Returns(new UriReferenceService(new[] { new SolutionUriProvider() }));
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenItemExists_ReturnPackForItem()
         {
             var resolver = new PackUriProvider();
@@ -44,7 +44,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
             Assert.Equal("pack://application:,,,/project;component/assets/icon.ico", resolver.CreateUri(new ResourcePack(item)).AbsoluteUri);
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Unit")]
         public void WhenPackIsValid_ReturnItem()
         {
             var resolver = new PackUriProvider();

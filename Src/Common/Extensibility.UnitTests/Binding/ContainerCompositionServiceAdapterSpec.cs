@@ -23,7 +23,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			this.container = new CompositionContainer(new TypeCatalog(typeof(Foo)));
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 		public void WhenComposingParts_ThenDelegates()
 		{
@@ -35,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.NotNull(consumer.Foo);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenDisposing_ThenDoesNotDisposeInnerService()
 		{
 			var delegating = new ContainerCompositionServiceAdapter(this.container);
@@ -48,7 +48,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.NotNull(consumer.Foo);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 		public void WhenGettingExport_ThenDelegates()
 		{
@@ -59,7 +59,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.NotNull(foo);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 		public void WhenGettingExportedValue_ThenDelegates()
 		{
@@ -70,7 +70,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.NotNull(foo);
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 		public void WhenGettingExportedValueOrDefault_ThenDelegates()
 		{
@@ -83,7 +83,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 		}
 
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		public void WhenGettingExportedValues_ThenDelegates()
 		{
 			var delegating = new ContainerCompositionServiceAdapter(this.container);
@@ -93,7 +93,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Equal(1, foos.Count());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 		public void WhenGettingExports_ThenDelegates()
 		{
@@ -104,7 +104,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			Assert.Equal(1, foos.Count());
 		}
 
-		[TestMethod]
+		[TestMethod, TestCategory("Unit")]
 		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
 		public void WhenSatisfyingImportsOnce_ThenDelegates()
 		{

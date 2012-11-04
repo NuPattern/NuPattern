@@ -26,13 +26,6 @@ public interface IAssertion
 public class Assertion : IAssertion
 {
 	/// <summary>
-	/// Initializes a new instance of the <see cref="Assertion"/> class.
-	/// </summary>
-	public Assertion()
-	{
-	}
-
-	/// <summary>
 	/// If a custom message is provided, it's formatted with the given arguments (if any) 
 	/// and prepended to the fixed message, with a new-line separating them.
 	/// </summary>

@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenReadingTracesFirstTime_ThenReturnsEmptySourceSettings()
             {
                 var setting = this.manager.Read();
@@ -42,7 +42,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenSettingRootSourceLevel_ThenCanReadIt()
             {
                 var setting = this.manager.Read();
@@ -56,7 +56,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenSettingTraceSetting_ThenCanReadIt()
             {
                 var setting = this.manager.Read();
@@ -70,7 +70,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             }
 
             [HostType("VS IDE")]
-            [TestMethod]
+            [TestMethod, TestCategory("Integration")]
             public void WhenSettingIsSaved_ThenSettingsChangedPublishesOldAndNewValue()
             {
                 RuntimeSettings oldValue = null;
