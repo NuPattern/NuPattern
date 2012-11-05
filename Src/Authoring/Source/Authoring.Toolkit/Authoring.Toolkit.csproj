@@ -1254,9 +1254,9 @@
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="..\ToolkitDesign.Shell\ToolkitDesign.Shell.csproj">
+    <ProjectReference Include="..\PatternModelDesign.Shell\PatternModelDesign.Shell.csproj">
       <Project>{A999A0EB-246C-4B63-8BC1-405020026CAB}</Project>
-      <Name>ToolkitDesign.Shell</Name>
+      <Name>PatternModelDesign.Shell</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>

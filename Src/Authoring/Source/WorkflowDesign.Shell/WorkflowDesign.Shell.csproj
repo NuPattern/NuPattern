@@ -240,18 +240,18 @@
       <DependentUpon>source.extension.tt</DependentUpon>
     </None>
   </ItemGroup>
+  <PropertyGroup>
+    <RegisterOutputPackage>true</RegisterOutputPackage>
+    <UseCodebase>true</UseCodebase>
+    <GacTargetOutput>false</GacTargetOutput>
+    <TransformOnBuild>false</TransformOnBuild>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
   <Import Project="$(VsxTargetsPath)\Microsoft.VsSDK.targets" />
   <!--<Import Project="$(DslTargetsPath)\Microsoft.DslTools.settings.targets" />-->
   <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
   <Import Project="..\..\Source\Authoring.Toolkit\Authoring.PatternToolkitVersion.targets" />
-  <PropertyGroup>
-    <RegisterOutputPackage>true</RegisterOutputPackage>
-    <UseCodebase>true</UseCodebase>
-    <GacTargetOutput>false</GacTargetOutput>
-    <TransformOnBuild>False</TransformOnBuild>
-  </PropertyGroup>
   <PropertyGroup>
     <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
     <StartAction>Program</StartAction>

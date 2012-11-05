@@ -2412,12 +2412,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.DomainClassId)) 
 				{
 					return true;
 				}
@@ -2446,20 +2446,20 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema;
-			if (sourceAutomationSettingsSchema1 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema sourcePropertySchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema;
+			if (sourcePropertySchema1 != null)
 			{
-				// Create link for path PatternElementHasAutomationSettings.AutomationSettings
-				this.AutomationSettings.Add(sourceAutomationSettingsSchema1);
+				// Create link for path PatternElementHasProperties.Properties
+				this.Properties.Add(sourcePropertySchema1);
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema sourcePropertySchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema;
-			if (sourcePropertySchema2 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema;
+			if (sourceAutomationSettingsSchema2 != null)
 			{
-				// Create link for path PatternElementHasProperties.Properties
-				this.Properties.Add(sourcePropertySchema2);
+				// Create link for path PatternElementHasAutomationSettings.AutomationSettings
+				this.AutomationSettings.Add(sourceAutomationSettingsSchema2);
 
 				return;
 			}
@@ -2486,29 +2486,29 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema;
-			if (sourceAutomationSettingsSchema1 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema sourcePropertySchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema;
+			if (sourcePropertySchema1 != null)
 			{
-				// Delete link for path PatternElementHasAutomationSettings.AutomationSettings
+				// Delete link for path PatternElementHasProperties.Properties
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)this, sourceAutomationSettingsSchema1))
+				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)this, sourcePropertySchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId);
+					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema sourcePropertySchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema;
-			if (sourcePropertySchema2 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema;
+			if (sourceAutomationSettingsSchema2 != null)
 			{
-				// Delete link for path PatternElementHasProperties.Properties
+				// Delete link for path PatternElementHasAutomationSettings.AutomationSettings
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)this, sourcePropertySchema2))
+				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)this, sourceAutomationSettingsSchema2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId);
+					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId);
 				}
 
 				return;
@@ -4175,12 +4175,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
 				{
 					return true;
 				}
@@ -4209,20 +4209,20 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
-			if (sourceExtensionPointSchema1 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
+			if (sourceAbstractElementSchema1 != null)
 			{
-				// Create link for path ViewHasExtensionPoints.ExtensionPoints
-				this.ExtensionPoints.Add(sourceExtensionPointSchema1);
+				// Create link for path ViewHasElements.Elements
+				this.Elements.Add(sourceAbstractElementSchema1);
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
-			if (sourceAbstractElementSchema2 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
+			if (sourceExtensionPointSchema2 != null)
 			{
-				// Create link for path ViewHasElements.Elements
-				this.Elements.Add(sourceAbstractElementSchema2);
+				// Create link for path ViewHasExtensionPoints.ExtensionPoints
+				this.ExtensionPoints.Add(sourceExtensionPointSchema2);
 
 				return;
 			}
@@ -4249,29 +4249,29 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
-			if (sourceExtensionPointSchema1 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
+			if (sourceAbstractElementSchema1 != null)
 			{
-				// Delete link for path ViewHasExtensionPoints.ExtensionPoints
+				// Delete link for path ViewHasElements.Elements
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema)this, sourceExtensionPointSchema1))
+				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema)this, sourceAbstractElementSchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId);
+					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
-			if (sourceAbstractElementSchema2 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
+			if (sourceExtensionPointSchema2 != null)
 			{
-				// Delete link for path ViewHasElements.Elements
+				// Delete link for path ViewHasExtensionPoints.ExtensionPoints
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema)this, sourceAbstractElementSchema2))
+				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema)this, sourceExtensionPointSchema2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId);
+					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId);
 				}
 
 				return;
@@ -5151,12 +5151,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
 				{
 					return true;
 				}
@@ -5185,20 +5185,20 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
-			if (sourceExtensionPointSchema1 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
+			if (sourceAbstractElementSchema1 != null)
 			{
-				// Create link for path ElementHasExtensionPoints.ExtensionPoints
-				this.ExtensionPoints.Add(sourceExtensionPointSchema1);
+				// Create link for path ElementHasElements.Elements
+				this.Elements.Add(sourceAbstractElementSchema1);
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
-			if (sourceAbstractElementSchema2 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
+			if (sourceExtensionPointSchema2 != null)
 			{
-				// Create link for path ElementHasElements.Elements
-				this.Elements.Add(sourceAbstractElementSchema2);
+				// Create link for path ElementHasExtensionPoints.ExtensionPoints
+				this.ExtensionPoints.Add(sourceExtensionPointSchema2);
 
 				return;
 			}
@@ -5225,29 +5225,29 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
-			if (sourceExtensionPointSchema1 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
+			if (sourceAbstractElementSchema1 != null)
 			{
-				// Delete link for path ElementHasExtensionPoints.ExtensionPoints
+				// Delete link for path ElementHasElements.Elements
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema)this, sourceExtensionPointSchema1))
+				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema)this, sourceAbstractElementSchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId);
+					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
-			if (sourceAbstractElementSchema2 != null)
+			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
+			if (sourceExtensionPointSchema2 != null)
 			{
-				// Delete link for path ElementHasElements.Elements
+				// Delete link for path ElementHasExtensionPoints.ExtensionPoints
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema)this, sourceAbstractElementSchema2))
+				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema)this, sourceExtensionPointSchema2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId);
+					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId);
 				}
 
 				return;

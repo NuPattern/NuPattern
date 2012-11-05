@@ -22,7 +22,12 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
         internal static string TemplateFileExtension = ".zip";
         private static string VsTemplateExtension = ".vstemplate";
         private static string UserExportedTemplatesPath = "My Exported Templates";
+#if VSVER10
         private static string VsSettingsRegistryKey = @"Software\Microsoft\VisualStudio\10.0";
+#endif
+#if VSVER11
+        private static string VsSettingsRegistryKey = @"Software\Microsoft\VisualStudio\11.0";
+#endif
         private static string VsSettingsRegistryValue = @"VisualStudioLocation";
         private static string exportPath;
         private string tempFolderPath;

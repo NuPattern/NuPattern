@@ -1023,7 +1023,7 @@
         <ExpandCollapseDecorator Name="ExpandCollapseDecorator" DisplayName="Expand Collapse Decorator" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="-0.025">
-        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png" />
+        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Inherited.png" />
       </ShapeHasDecorators>
       <Compartment Name="Properties" Title="Variable Properties" />
       <Compartment TitleFillColor="234, 234, 234" Name="LaunchPoints" Title="Launch Points" />
@@ -1057,7 +1057,7 @@
         <TextDecorator Name="StereotypeDecorator" DisplayName="Stereotype Decorator" DefaultText="Element" FontSize="7" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0">
-        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png" />
+        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Inherited.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
         <ExpandCollapseDecorator Name="ExpandCollapseDecorator" DisplayName="Expand Collapse Decorator" />
@@ -1093,25 +1093,25 @@
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" FontStyle="Bold, Italic" FontSize="10" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="-0.025">
-        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png" />
+        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Inherited.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationTrueEnabledDecorator" DisplayName="Customization True Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueEnabled.png" />
+        <IconDecorator Name="CustomizationTrueEnabledDecorator" DisplayName="Customization True Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationTrueEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationTrueDisabledDecorator" DisplayName="Customization True Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueDisabled.png" />
+        <IconDecorator Name="CustomizationTrueDisabledDecorator" DisplayName="Customization True Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationTrueDisabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationFalseEnabledDecorator" DisplayName="Customization False Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseEnabled.png" />
+        <IconDecorator Name="CustomizationFalseEnabledDecorator" DisplayName="Customization False Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationFalseEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationFalseDisabledDecorator" DisplayName="Customization False Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseDisabled.png" />
+        <IconDecorator Name="CustomizationFalseDisabledDecorator" DisplayName="Customization False Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationFalseDisabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationInheritedEnabledDecorator" DisplayName="Customization Inherited Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedEnabled.png" />
+        <IconDecorator Name="CustomizationInheritedEnabledDecorator" DisplayName="Customization Inherited Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationInheritedEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.1925" VerticalOffset="-0.025">
-        <IconDecorator Name="CustomizationInheritedDisabledDecorator" DisplayName="Customization Inherited Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedDisabled.png" />
+        <IconDecorator Name="CustomizationInheritedDisabledDecorator" DisplayName="Customization Inherited Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationInheritedDisabled.png" />
       </ShapeHasDecorators>
     </Port>
     <CompartmentShape Id="33005d46-3de2-402a-bca3-9b7e89fa8486" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape" Name="CollectionShape" DisplayName="Collection Shape" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Variable Collection" FillColor="255, 216, 98" OutlineColor="White" InitialWidth="1.6" InitialHeight="0.5" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle" DefaultExpandCollapseState="Collapsed">
@@ -1145,7 +1145,7 @@
         <TextDecorator Name="StereotypeDecorator" DisplayName="Stereotype Decorator" DefaultText="Collection" FontSize="7" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="-0.025">
-        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png" />
+        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Inherited.png" />
       </ShapeHasDecorators>
       <Compartment TitleFillColor="234, 234, 234" Name="Properties" Title="Variable Properties" />
       <Compartment TitleFillColor="234, 234, 234" Name="LaunchPoints" Title="Launch Points" />
@@ -1153,22 +1153,22 @@
     </CompartmentShape>
     <CompartmentShape Id="c7199c01-4aad-496c-b124-f7016fba3749" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementShape" Name="CustomizableElementShape" DisplayName="Customizable Element Shape" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" FixedTooltipText="Customizable Element Shape" InitialHeight="1.1" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationTrueEnabledDecorator" DisplayName="Customization True Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueEnabled.png" />
+        <IconDecorator Name="CustomizationTrueEnabledDecorator" DisplayName="Customization True Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationTrueEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationTrueDisabledDecorator" DisplayName="Customization True Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueDisabled.png" />
+        <IconDecorator Name="CustomizationTrueDisabledDecorator" DisplayName="Customization True Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationTrueDisabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationFalseEnabledDecorator" DisplayName="Customization False Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseEnabled.png" />
+        <IconDecorator Name="CustomizationFalseEnabledDecorator" DisplayName="Customization False Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationFalseEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationFalseDisabledDecorator" DisplayName="Customization False Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseDisabled.png" />
+        <IconDecorator Name="CustomizationFalseDisabledDecorator" DisplayName="Customization False Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationFalseDisabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationInheritedEnabledDecorator" DisplayName="Customization Inherited Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedEnabled.png" />
+        <IconDecorator Name="CustomizationInheritedEnabledDecorator" DisplayName="Customization Inherited Enabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationInheritedEnabled.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0.1475">
-        <IconDecorator Name="CustomizationInheritedDisabledDecorator" DisplayName="Customization Inherited Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedDisabled.png" />
+        <IconDecorator Name="CustomizationInheritedDisabledDecorator" DisplayName="Customization Inherited Disabled Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationInheritedDisabled.png" />
       </ShapeHasDecorators>
     </CompartmentShape>
     <CompartmentShape Id="268f9015-d395-4b5c-bc4f-2f671b82e04d" Description="Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape" Name="ExtensionPointShape" DisplayName="Extension Point Shape" Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" GeneratesDoubleDerived="true" FixedTooltipText="Extension Point" FillColor="153, 204, 205" OutlineColor="White" InitialWidth="1.6" InitialHeight="0.5" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
@@ -1199,7 +1199,7 @@
         <TextDecorator Name="StereotypeDecorator" DisplayName="Stereotype Decorator" DefaultText="Extension Point" FontSize="7" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.0225" VerticalOffset="0">
-        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png" />
+        <IconDecorator Name="InheritedFromBaseDecorator" DisplayName="Inherited From Base Decorator" DefaultIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Inherited.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopRight" HorizontalOffset="0" VerticalOffset="0">
         <ExpandCollapseDecorator Name="ExpandCollapseDecorator" DisplayName="Expand Collapse Decorator" />
@@ -2436,13 +2436,13 @@
       <XmlSerializationBehaviorMoniker Name="PatternModelSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="Pattern Model Designer">
-      <ElementTool Name="Collection" ToolboxIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CollectionShapeToolBitmap.bmp" Caption="Collection" Tooltip="Add a Collection to add structure or grouping of other elements in the pattern." HelpKeyword="Collection">
+      <ElementTool Name="Collection" ToolboxIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CollectionShapeToolBitmap.bmp" Caption="Collection" Tooltip="Add a Collection to add structure or grouping of other elements in the pattern." HelpKeyword="Collection">
         <DomainClassMoniker Name="CollectionSchema" />
       </ElementTool>
-      <ElementTool Name="Element" ToolboxIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ElementShapeToolBitmap.bmp" Caption="Element" Tooltip="Add an Element to define a set of variable elements in the pattern." HelpKeyword="Element">
+      <ElementTool Name="Element" ToolboxIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ElementShapeToolBitmap.bmp" Caption="Element" Tooltip="Add an Element to define a set of variable elements in the pattern." HelpKeyword="Element">
         <DomainClassMoniker Name="ElementSchema" />
       </ElementTool>
-      <ElementTool Name="ExtensionPoint" ToolboxIcon="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ExtensionPointToolBitmap.bmp" Caption="Extension Point" Tooltip="Add an Extension Point to define an extension of your pattern, that will be provided by other pattern toolkits." HelpKeyword="ExtensionPoint">
+      <ElementTool Name="ExtensionPoint" ToolboxIcon="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ExtensionPointToolBitmap.bmp" Caption="Extension Point" Tooltip="Add an Extension Point to define an extension of your pattern, that will be provided by other pattern toolkits." HelpKeyword="ExtensionPoint">
         <DomainClassMoniker Name="ExtensionPointSchema" />
       </ElementTool>
     </ToolboxTab>

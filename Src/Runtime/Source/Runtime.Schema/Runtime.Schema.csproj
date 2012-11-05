@@ -433,70 +433,70 @@
     <Content Include="..\..\..\Runtime\Source\Runtime\Resources\Product.png">
       <Link>Resources\Product.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Collapse.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Collapse.png">
       <Link>Resources\Collapse.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Collection.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Collection.png">
       <Link>Resources\Collection.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CollectionShapeToolBitmap.bmp">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CollectionShapeToolBitmap.bmp">
       <Link>Resources\CollectionShapeToolBitmap.bmp</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ConnectorSourceCursor.cur">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ConnectorSourceCursor.cur">
       <Link>Resources\ConnectorSourceCursor.cur</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ConnectorTargetCursor.cur">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ConnectorTargetCursor.cur">
       <Link>Resources\ConnectorTargetCursor.cur</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseDisabled.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationFalseDisabled.png">
       <Link>Resources\CustomizationFalseDisabled.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationFalseEnabled.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationFalseEnabled.png">
       <Link>Resources\CustomizationFalseEnabled.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedDisabled.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationInheritedDisabled.png">
       <Link>Resources\CustomizationInheritedDisabled.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationInheritedEnabled.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationInheritedEnabled.png">
       <Link>Resources\CustomizationInheritedEnabled.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueDisabled.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationTrueDisabled.png">
       <Link>Resources\CustomizationTrueDisabled.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\CustomizationTrueEnabled.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationTrueEnabled.png">
       <Link>Resources\CustomizationTrueEnabled.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Design.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Design.png">
       <Link>Resources\Design.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Element.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Element.png">
       <Link>Resources\Element.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ElementShapeToolBitmap.bmp">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ElementShapeToolBitmap.bmp">
       <Link>Resources\ElementShapeToolBitmap.bmp</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Expand.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Expand.png">
       <Link>Resources\Expand.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ExtensionPoint.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ExtensionPoint.png">
       <Link>Resources\ExtensionPoint.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\ExtensionPointToolBitmap.bmp">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ExtensionPointToolBitmap.bmp">
       <Link>Resources\ExtensionPointToolBitmap.bmp</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Inherited.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Inherited.png">
       <Link>Resources\Inherited.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Registration.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Registration.png">
       <Link>Resources\Registration.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Resize.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Resize.png">
       <Link>Resources\Resize.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\View.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\View.png">
       <Link>Resources\View.png</Link>
     </Content>
-    <Content Include="..\..\..\Authoring\Source\ToolkitDesign.Shell\Resources\Views.png">
+    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Views.png">
       <Link>Resources\Views.png</Link>
     </Content>
     <Resource Include="Resources\Error.png" />
@@ -577,11 +577,6 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <PropertyGroup>
-    <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
-    <StartAction>Program</StartAction>
-    <StartArguments>/rootsuffix Exp</StartArguments>
-  </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -604,22 +599,15 @@
     <StartAction>Program</StartAction>
     <StartArguments>/rootsuffix Exp</StartArguments>
   </PropertyGroup>
+  <PropertyGroup>
+    <TransformOnBuild>false</TransformOnBuild>
+    <IncludeDslT4Settings>true</IncludeDslT4Settings>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
   <!--<Import Project="$(DslTargetsPath)\Microsoft.DslTools.settings.targets" />-->
   <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
-  <PropertyGroup>
-    <!-- Whether T4 templates should be transformed as part of the build -->
-    <TransformOnBuild>false</TransformOnBuild>
-    <!-- Whether only out of date output files should be transformed -->
-    <TransformOutOfDateOnly>true</TransformOutOfDateOnly>
-    <!-- Specifies how read-only files should be dealt with. False -> build error, true -> warning -->
-    <OverwriteReadOnlyOutputFiles>false</OverwriteReadOnlyOutputFiles>
-    <!-- Whether to include the additional settings required to transform standard DSL projects -->
-    <IncludeDslT4Settings>true</IncludeDslT4Settings>
-  </PropertyGroup>
   <ItemGroup>
-    <!-- Add VS\...\PublicAssemblies to the list of places to look for assemblies used by templates. -->
     <T4ReferencePath Include="$(VsIdePath)PublicAssemblies\" />
   </ItemGroup>
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

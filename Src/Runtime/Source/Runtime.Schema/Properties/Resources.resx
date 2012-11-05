@@ -131,22 +131,22 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CustomizationFalseDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationfalsedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Authoring\Source\PatternModelDesign.Shell\resources\customizationfalsedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomizationFalseEnabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationfalseenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Authoring\Source\PatternModelDesign.Shell\resources\customizationfalseenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomizationInheritedDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationinheriteddisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Authoring\Source\PatternModelDesign.Shell\resources\customizationinheriteddisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomizationInheritedEnabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationinheritedenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Authoring\Source\PatternModelDesign.Shell\resources\customizationinheritedenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomizationTrueDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationtruedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Authoring\Source\PatternModelDesign.Shell\resources\customizationtruedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CustomizationTrueEnabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\customizationtrueenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Authoring\Source\PatternModelDesign.Shell\resources\customizationtrueenabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Default" xml:space="preserve">
     <value>Default</value>
@@ -158,7 +158,7 @@
     <value>General</value>
   </data>
   <data name="Inherited" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Authoring\Source\ToolkitDesign.Shell\resources\inherited.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\Authoring\Source\PatternModelDesign.Shell\resources\inherited.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NamedIdentifier_DefaultDisplayName" xml:space="preserve">
     <value>&lt;unnamed&gt;</value>

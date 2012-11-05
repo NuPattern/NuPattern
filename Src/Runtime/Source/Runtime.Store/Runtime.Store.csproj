@@ -393,26 +393,16 @@
     <StartAction>Program</StartAction>
     <StartArguments>/rootsuffix Exp "..\..\..\Debugging\Debugging.sln"</StartArguments>
   </PropertyGroup>
+  <PropertyGroup>
+    <TransformOnBuild>True</TransformOnBuild>
+    <IncludeDslT4Settings>true</IncludeDslT4Settings>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
   <!--<Import Project="$(DslTargetsPath)\Microsoft.DslTools.settings.targets" />-->
   <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
-  <!-- ******************************* -->
-  <!-- T4 MsBuild utilities -->
-  <PropertyGroup>
-    <!-- Whether T4 templates should be transformed as part of the build -->
-    <TransformOnBuild>false</TransformOnBuild>
-    <!-- Whether only out of date output files should be transformed -->
-    <TransformOutOfDateOnly>true</TransformOutOfDateOnly>
-    <!-- Specifies how read-only files should be dealt with. False -> build error, true -> warning -->
-    <OverwriteReadOnlyOutputFiles>false</OverwriteReadOnlyOutputFiles>
-    <!-- Whether to include the additional settings required to transform standard DSL projects -->
-    <IncludeDslT4Settings>true</IncludeDslT4Settings>
-  </PropertyGroup>
   <ItemGroup>
-    <!-- Add VS\...\PublicAssemblies to the list of places to look for assemblies used by templates. -->
     <T4ReferencePath Include="$(VsIdePath)PublicAssemblies\" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

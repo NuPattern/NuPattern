@@ -116,7 +116,8 @@
 	<ItemGroup>
 		<ProjectReference Include="..\$safeprojectname$.Automation\$safeprojectname$.Automation.csproj">
 			<Name>$safeprojectname$.Automation</Name>
-			<IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
 		</ProjectReference>
 	</ItemGroup>
 	<ItemGroup>
@@ -128,16 +129,15 @@
 		<CopyVsixToFolder Condition=" '$(TeamBuildConstants)' == '' ">$(SolutionDir)Binaries</CopyVsixToFolder>
 	<!-- <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\TeamProjectRoot\Projects\BranchPath\Binaries</CopyVsixToFolder> -->
 	</PropertyGroup>
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-	<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" />
-	<Import Project="$(localappdata)\Microsoft\MSBuild\Outercurve\Pattern Toolkit Builder\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets"/>
-	<!-- Properties for VSSDK/DSL Targets -->
 	<PropertyGroup>
 		<RegisterOutputPackage>true</RegisterOutputPackage>
 		<RegisterWithCodebase>true</RegisterWithCodebase>
 		<GacTargetOutput>false</GacTargetOutput>
 		<GeneratePkgDefFile>false</GeneratePkgDefFile>
 	</PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+	<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" />
+	<Import Project="$(localappdata)\Microsoft\MSBuild\Outercurve\Pattern Toolkit Builder\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets"/>
 	<PropertyGroup>
 		<StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
 		<StartAction>Program</StartAction>

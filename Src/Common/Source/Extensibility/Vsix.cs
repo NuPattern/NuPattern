@@ -17,10 +17,9 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 	[CLSCompliant(false)]
 	public static class Vsix
 	{
-		private const long BUFFERSIZE = 4096;
-		private static readonly Type ExtensionManagerType = Type.GetType("Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService, Microsoft.VisualStudio.ExtensionManager.Implementation, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", true);
+		private const long BufferSize = 4096;
 		private static readonly Microsoft.VisualStudio.Settings.SettingsManager FakeSettings = new FakeSettingsManager();
-
+        private const string ExtensionManagerServiceTypeFormat = "Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService, Microsoft.VisualStudio.ExtensionManager.Implementation, Version={0}.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ;
 		/// <summary>
 		/// Unzips the contents of the vsix file to the target location. If the 
 		/// target folder exists, it will be deleted before unzipping.
@@ -126,7 +125,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 			}
 
 			//// \o/ TODO: we couldn't find a public API for reading the manifest outside of VS.
-			dynamic manager = Activator.CreateInstance(ExtensionManagerType, FakeSettings);
+            dynamic manager = Activator.CreateInstance(GetExtensionManagerType(), FakeSettings);
 
 			return (IExtension)manager.CreateExtension(vsixOrManifest);
 		}
@@ -154,18 +153,22 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 				}
 
 				vsixOrManifest = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString(), "extension.vsixmanifest");
-				Directory.CreateDirectory(Path.GetDirectoryName(vsixOrManifest));
+			    var dir = Path.GetDirectoryName(vsixOrManifest);
+                if (!String.IsNullOrEmpty(dir))
+                {
+                    Directory.CreateDirectory(dir);
 
-				using (var partStream = vsixPart.GetStream())
-				{
-					using (var fileStream = File.Open(vsixOrManifest, FileMode.Create))
-					{
-						CopyStream(partStream, fileStream);
-					}
-				}
+                    using (var partStream = vsixPart.GetStream())
+                    {
+                        using (var fileStream = File.Open(vsixOrManifest, FileMode.Create))
+                        {
+                            CopyStream(partStream, fileStream);
+                        }
+                    }
+                }
 			}
 
-			dynamic manager = Activator.CreateInstance(ExtensionManagerType, FakeSettings);
+            dynamic manager = Activator.CreateInstance(GetExtensionManagerType(), FakeSettings);
 
 			return (IExtension)manager.CreateExtension(vsixOrManifest);
 		}
@@ -187,10 +190,22 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 			return null;
 		}
 
+        private static Type GetExtensionManagerType()
+        {
+#if VSVER11
+            var version = "11.0";
+#endif
+#if VSVER10
+            var version = "10.0";
+#endif
+            var type = string.Format(ExtensionManagerServiceTypeFormat, version);
+            return Type.GetType(type, true);
+        }
+
 		private static string BuildTargetFileName(string baseDir, Uri partUri)
 		{
 			var targetFile = partUri.OriginalString.Replace(Path.AltDirectorySeparatorChar, Path.DirectorySeparatorChar);
-			if (targetFile.StartsWith(Path.DirectorySeparatorChar.ToString(), StringComparison.Ordinal))
+			if (targetFile.StartsWith(Path.DirectorySeparatorChar.ToString(CultureInfo.InvariantCulture), StringComparison.Ordinal))
 			{
 				targetFile = targetFile.Substring(1);
 			}
@@ -200,7 +215,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 
 		private static void CopyStream(System.IO.Stream inputStream, System.IO.Stream outputStream)
 		{
-			long bufferSize = inputStream.Length < BUFFERSIZE ? inputStream.Length : BUFFERSIZE;
+			long bufferSize = inputStream.Length < BufferSize ? inputStream.Length : BufferSize;
 			byte[] buffer = new byte[bufferSize];
 			int bytesRead = 0;
 			long bytesWritten = 0;
@@ -273,7 +288,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 			/// <returns>The writable settings state.</returns>
 			public override WritableSettingsStore GetWritableSettingsStore(SettingsScope scope)
 			{
-				throw new NotImplementedException();
+                return new FakeWritableSettingsStore();
 			}
 
 			/// <summary>
@@ -512,6 +527,159 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 					throw new NotImplementedException();
 				}
 			}
+
+            /// <summary>
+            /// Represents a fake writable settings store.
+            /// </summary>
+            private class FakeWritableSettingsStore : WritableSettingsStore
+            {
+                public override void CreateCollection(string collectionPath)
+                {
+                }
+
+                public override bool DeleteCollection(string collectionPath)
+                {
+                    return true;
+                }
+
+                public override bool DeleteProperty(string collectionPath, string propertyName)
+                {
+                    return true;
+                }
+
+                public override void SetBoolean(string collectionPath, string propertyName, bool value)
+                {
+                }
+
+                public override void SetInt32(string collectionPath, string propertyName, int value)
+                {
+                }
+
+                public override void SetInt64(string collectionPath, string propertyName, long value)
+                {
+                }
+
+                public override void SetMemoryStream(string collectionPath, string propertyName, MemoryStream value)
+                {
+                }
+
+                public override void SetString(string collectionPath, string propertyName, string value)
+                {
+                }
+
+                public override void SetUInt32(string collectionPath, string propertyName, uint value)
+                {
+                }
+
+                public override void SetUInt64(string collectionPath, string propertyName, ulong value)
+                {
+                }
+
+                public override bool CollectionExists(string collectionPath)
+                {
+                    return false;
+                }
+
+                public override bool GetBoolean(string collectionPath, string propertyName, bool defaultValue)
+                {
+                    return defaultValue;
+                }
+
+                public override bool GetBoolean(string collectionPath, string propertyName)
+                {
+                    return false;
+                }
+
+                public override int GetInt32(string collectionPath, string propertyName, int defaultValue)
+                {
+                    return defaultValue;
+                }
+
+                public override int GetInt32(string collectionPath, string propertyName)
+                {
+                    return int.MinValue;
+                }
+
+                public override long GetInt64(string collectionPath, string propertyName, long defaultValue)
+                {
+                    return defaultValue;
+                }
+
+                public override long GetInt64(string collectionPath, string propertyName)
+                {
+                    return long.MinValue;
+                }
+
+                public override DateTime GetLastWriteTime(string collectionPath)
+                {
+                    return DateTime.Now;
+                }
+
+                public override MemoryStream GetMemoryStream(string collectionPath, string propertyName)
+                {
+                    throw new NotImplementedException();
+                }
+
+                public override int GetPropertyCount(string collectionPath)
+                {
+                    return 0;
+                }
+
+                public override IEnumerable<string> GetPropertyNames(string collectionPath)
+                {
+                    throw new NotImplementedException();
+                }
+
+                public override SettingsType GetPropertyType(string collectionPath, string propertyName)
+                {
+                    throw new NotImplementedException();
+                }
+
+                public override string GetString(string collectionPath, string propertyName, string defaultValue)
+                {
+                    return defaultValue;
+                }
+
+                public override string GetString(string collectionPath, string propertyName)
+                {
+                    return string.Empty;
+                }
+
+                public override int GetSubCollectionCount(string collectionPath)
+                {
+                    throw new NotImplementedException();
+                }
+
+                public override IEnumerable<string> GetSubCollectionNames(string collectionPath)
+                {
+                    throw new NotImplementedException();
+                }
+
+                public override uint GetUInt32(string collectionPath, string propertyName, uint defaultValue)
+                {
+                    return defaultValue;
+                }
+
+                public override uint GetUInt32(string collectionPath, string propertyName)
+                {
+                    return uint.MinValue;
+                }
+
+                public override ulong GetUInt64(string collectionPath, string propertyName, ulong defaultValue)
+                {
+                    return defaultValue;
+                }
+
+                public override ulong GetUInt64(string collectionPath, string propertyName)
+                {
+                    return ulong.MinValue;
+                }
+
+                public override bool PropertyExists(string collectionPath, string propertyName)
+                {
+                    return true;
+                }
+            }
 		}
 	}
 }

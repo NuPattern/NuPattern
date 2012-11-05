@@ -204,7 +204,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 		/// The name of this element instance.
 		/// </summary>
 		[Description("The name of this element instance.")]
-		[ParenthesizePropertyName(true)]
+		[System.ComponentModel.ParenthesizePropertyNameAttribute(true)]
 		global::System.String InstanceName { get; set; }
 		
 		/// <summary>

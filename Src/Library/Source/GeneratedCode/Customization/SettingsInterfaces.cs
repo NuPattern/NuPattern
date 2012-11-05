@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.Patterning.Runtime;
+using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 
 #pragma warning disable 0108
 

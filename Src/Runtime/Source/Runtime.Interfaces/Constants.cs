@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {

@@ -17,7 +17,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
     /// </summary>
     public sealed partial class PatternModelSerializationHelper
     {
-        private MemoryStream InternalSaveModel(DslModeling::SerializationResult serializationResult, PatternModelSchema modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+        private MemoryStream InternalSaveModel2(DslModeling::SerializationResult serializationResult, PatternModelSchema modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
         {
             #region Check Parameters
             global::System.Diagnostics.Debug.Assert(serializationResult != null);
@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
             return newFileContent;
         }
 
-        private global::System.IO.MemoryStream InternalSaveDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchemaDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+        private global::System.IO.MemoryStream InternalSaveDiagram2(DslModeling::SerializationResult serializationResult, PatternModelSchemaDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
         {
             #region Check Parameters
             global::System.Diagnostics.Debug.Assert(serializationResult != null);
@@ -350,7 +350,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
             }
 
             using (MemoryStream modelFileContent =
-                this.InternalSaveModel(serializationResult, modelRoot, modelFileName, encoding, writeOptionalPropertiesWithDefaultValue))
+                this.InternalSaveModel2(serializationResult, modelRoot, modelFileName, encoding, writeOptionalPropertiesWithDefaultValue))
             {
                 if (serializationResult.Failed)
                 {
@@ -360,7 +360,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
                 foreach (var diagram in diagrams)
                 {
                     using (MemoryStream diagramFileContent =
-                        this.InternalSaveDiagram(serializationResult, diagram.Value, diagram.Key, encoding, writeOptionalPropertiesWithDefaultValue))
+                        this.InternalSaveDiagram2(serializationResult, diagram.Value, diagram.Key, encoding, writeOptionalPropertiesWithDefaultValue))
                     {
                         if (!serializationResult.Failed)
                         {

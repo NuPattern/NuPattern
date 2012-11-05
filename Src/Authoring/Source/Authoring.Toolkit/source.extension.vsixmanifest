@@ -49,8 +49,8 @@
 	<VsPackage>|WorkflowDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
 		<MefComponent>|WorkflowDesign.Shell|</MefComponent>
 		<MefComponent>|WorkflowDesign|</MefComponent>
-		<VsPackage>|ToolkitDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
-		<MefComponent>|ToolkitDesign.Shell|</MefComponent>
+		<VsPackage>|PatternModelDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
+		<MefComponent>|PatternModelDesign.Shell|</MefComponent>
 		<MefComponent>|Authoring.Toolkit.Automation|</MefComponent>
 		<CustomExtension Type="PatternModel" AssemblyFile="Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit.dll">Microsoft.VisualStudio.Patterning.Authoring.Authoring.PatternModel.patterndefinition</CustomExtension>
 		<CustomExtension Type="ToolkitCategory" Category="Authoring"/>
