@@ -7,20 +7,22 @@
 		<Description xml:space="preserve">Description of the Toolkit1.</Description>
 		<Locale>1033</Locale>
 		<SupportedProducts>
-			<VisualStudio Version="10.0">
-				<Edition>VSTS</Edition>
-				<Edition>VSTD</Edition>
-				<Edition>Pro</Edition>
-			</VisualStudio>
+      <VisualStudio Version="10.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Professional</Edition>
+      </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Professional</Edition>
+      </VisualStudio>
 		</SupportedProducts>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5" />
 	</Identifier>
 	<References />
 	<Content>
 		<MefComponent>Toolkit1.dll</MefComponent>
-		<CustomExtension Type="ToolkitDocumentationRef">Documentation\ToolkitDocumentation.docx</CustomExtension>
-		<CustomExtension Type="PatternDocumentationRef">Documentation\PatternDocumentation.docx</CustomExtension>
-		<CustomExtension Type="PatternRequirementsRef">Documentation\PatternRequirements.xlsx</CustomExtension>
 		<CustomExtension Type="PatternModel" AssemblyFile="Toolkit1.dll">Toolkit1.PatternModel.patterndefinition</CustomExtension>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>

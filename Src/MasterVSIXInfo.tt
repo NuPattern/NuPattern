@@ -22,6 +22,7 @@ public static class VsixInfo
 	public static class PatternToolkitBuilder
 	{
 		public const string Name = "<#=AuthoringToolkitInfo.Name#>";
+		public const string Description = "<#=AuthoringToolkitInfo.Description#>";
 		public const string Author = "<#=AuthoringToolkitInfo.Author#>";
 		public const string Version = "<#=AuthoringToolkitInfo.Version#>";
 		public const string Identifier = "<#=AuthoringToolkitInfo.Identifier#>";
@@ -31,6 +32,7 @@ public static class VsixInfo
 	public static class PatternToolkitLibrary
 	{
 		public const string Name = "<#=AutomationLibraryToolkitInfo.Name#>";
+		public const string Description = "<#=AutomationLibraryToolkitInfo.Description#>";
 		public const string Author = "<#=AutomationLibraryToolkitInfo.Author#>";
 		public const string Version = "<#=AutomationLibraryToolkitInfo.Version#>";
 		public const string Identifier = "<#=AutomationLibraryToolkitInfo.Identifier#>";
@@ -40,6 +42,7 @@ public static class VsixInfo
 	public static class PatternToolkitHol
 	{
 		public const string Name = "<#=HandsOnLabsToolkitInfo.Name#>";
+		public const string Description = "<#=HandsOnLabsToolkitInfo.Description#>";
 		public const string Author = "<#=HandsOnLabsToolkitInfo.Author#>";
 		public const string Version = "<#=HandsOnLabsToolkitInfo.Version#>";
 		public const string Identifier = "<#=HandsOnLabsToolkitInfo.Identifier#>";

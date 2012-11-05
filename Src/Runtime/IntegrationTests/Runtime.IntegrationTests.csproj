@@ -96,10 +96,22 @@
     <Compile Include="..\..\Common\Helpers\IntegrationTest.cs">
       <Link>IntegrationTest.cs</Link>
     </Compile>
+    <Compile Include="..\..\Common\Helpers\VsixPackagingSpec.cs">
+      <Link>VsixPackagingSpec.cs</Link>
+    </Compile>
     <Compile Include="..\..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="ComponentModelExportsSpec.cs" />
+    <None Include="RuntimeShellVsixPackagingSpec.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RuntimeShellVsixPackagingSpec.cs</LastGenOutput>
+    </None>
+    <Compile Include="RuntimeShellVsixPackagingSpec.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RuntimeShellVsixPackagingSpec.tt</DependentUpon>
+    </Compile>
     <Content Include="Runtime.IntegrationTests.Content\Projects\Sample\SolutionFolder\Library\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -218,6 +230,10 @@
     <Folder Include="Runtime.IntegrationTests.Content\Projects\Sample\SolutionFolder\Library\Folder\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Binaries\PatternToolkitManager.vsix">
+      <Link>Runtime.IntegrationTests.Content\PatternToolkitManager.vsix</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Runtime.IntegrationTests.Content\Projects\Sample\Sample.slnbldr">
       <AutoGen>True</AutoGen>
@@ -228,6 +244,9 @@
     <None Include="Runtime.IntegrationTests.Content\Projects\Sample\Sample.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Sample.slnbldr</LastGenOutput>
+    </None>
+    <None Include="Runtime.IntegrationTests.Content\Toolkit1.vsix">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

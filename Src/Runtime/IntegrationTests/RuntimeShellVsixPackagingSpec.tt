@@ -1,0 +1,138 @@
+﻿<#@ output extension=".cs" #>
+<#@ Include File="..\..\MasterVSIXInfo.ttinclude" #>
+using System.Linq;
+using Microsoft.VisualStudio.Patterning.IntegrationTests;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+{
+    [TestClass]
+    public class RuntimeShellVsixPackagingSpec
+    {
+        private static readonly IAssertion Assert = new Assertion();
+        private const string DeployedContentDirectory = "Runtime.IntegrationTests.Content";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitManager.vsix";
+
+        [TestClass]
+        [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]
+        public class GivenTheCompiledVsix : VsixPackagingSpec.GivenAVsix
+        {
+			/// <summary>
+			/// Returns the relative path to the deployed Vsix file in the project
+			/// </summary>
+			protected override string DeployedVsixItemPath
+			{
+				get
+				{
+					return DeployedVsixItem;
+				}
+			}
+         
+            [TestMethod, TestCategory("Integration")]
+            public void ThenVsixInfoCorrect()
+            {
+                //Identifier, Name, Author, Version
+                Assert.Equal(@"<#=VsixInfo.PatternToolkitRuntime.Identifier#>", this.VsixInfo.Header.Identifier);
+                Assert.Equal(@"<#=VsixInfo.PatternToolkitRuntime.Name#>", this.VsixInfo.Header.Name);
+                Assert.Equal(@"<#=VsixInfo.PatternToolkitRuntime.Description#>", this.VsixInfo.Header.Description);
+                Assert.Equal(@"<#=VsixInfo.PatternToolkitRuntime.Author#>", this.VsixInfo.Header.Author);
+                Assert.Equal("<#=VsixInfo.PatternToolkitRuntime.Version#>", this.VsixInfo.Header.Version.ToString());
+				
+				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
+				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
+				Assert.Equal(@"Resources\RunTimeVsix.png", this.VsixInfo.Header.Icon);
+				Assert.Equal(@"Resources\RunTimeVsixPreview.png", this.VsixInfo.Header.PreviewImage);
+				Assert.Equal(@"<#=VsixInfo.PatternToolkitRuntime.MoreInfoUrl#>", this.VsixInfo.Header.MoreInfoUrl.ToString());
+				Assert.Equal(@"<#=VsixInfo.PatternToolkitRuntime.MoreInfoUrl#>", this.VsixInfo.Header.GettingStartedGuide.ToString());
+
+                //SupportedFrameworkRuntimeEdition
+				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
+				Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
+
+				//SupportedProducts
+                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
+                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
+            }
+
+            [TestMethod, TestCategory("Integration")]
+            public void ThenContainsSchemas()
+            {
+                //Schema files (\GeneratedCode\*)
+                Assert.True(this.FolderContainsExclusive(@"GeneratedCode",
+                    new[]
+                        {
+                            "LibrarySchema.xsd",
+                            "PatternModelSchema.xsd",
+                            "ProductStateSchema.xsd",
+                        }));
+			}
+
+			[TestMethod, TestCategory("Integration")]
+            public void ThenContainsGuidance()
+            {
+                //Guidance (\\GeneratedCode\Gudiance\Content\*
+				Assert.True(this.FolderNotEmpty(@"GeneratedCode\Guidance\Content", "*.mht"));
+            }
+
+			[TestMethod, TestCategory("Integration")]
+            public void ThenContainsAssets()
+            {
+			}
+
+			[TestMethod, TestCategory("Integration")]
+            public void ThenContainsResources()
+            {
+                //Schema files (\Resources\*)
+                Assert.True(this.FolderContainsExclusive(@"Resources",
+                    new[]
+                        {
+                            "RunTimeVsix.png",
+                            "RunTimeVsixPreview.png",
+                        }));
+			}
+						
+			[TestMethod, TestCategory("Integration")]
+            public void ThenContainsRedistributables()
+            {
+                //Redist files
+                Assert.True(this.FolderContainsExclusive("",
+                    new[]
+                        {
+							"extension.vsixmanifest",
+							//"[Content_Types].xml",
+                            "LICENSE.txt",
+
+                            //Auxillary Assemblies
+                            "Microsoft.ComponentModel.Composition.Diagnostics.dll",
+                            "Newtonsoft.Json.dll",
+
+                            //Feature Extension Assemblies
+                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.dll",
+                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll",
+                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Library.dll",
+                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.dll",
+                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.pkgdef",
+                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.dll",
+                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.pkgdef",
+
+                            //EntLib Assemblies
+                            "Microsoft.Practices.EnterpriseLibrary.Common.dll",
+                            "Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapterV5.dll",
+                            "Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll",
+
+                            //Runtime Assemblies
+                            "Microsoft.VisualStudio.Patterning.Common.Presentation.dll",
+                            "Microsoft.VisualStudio.Patterning.Extensibility.dll",
+                            "Microsoft.VisualStudio.Patterning.Extensibility.Serialization.dll",
+                            "Microsoft.VisualStudio.Patterning.Library.dll",
+                            "Microsoft.VisualStudio.Patterning.Runtime.dll",
+                            "Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll",
+                            "Microsoft.VisualStudio.Patterning.Runtime.Schema.dll",
+                            "Microsoft.VisualStudio.Patterning.Runtime.Shell.dll",
+                            "Microsoft.VisualStudio.Patterning.Runtime.Shell.pkgdef",
+                            "Microsoft.VisualStudio.Patterning.Runtime.Store.dll",
+                        }));
+            }
+        }
+    }
+}

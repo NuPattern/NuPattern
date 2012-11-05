@@ -56,6 +56,9 @@
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
@@ -114,12 +117,25 @@
     <Compile Include="..\..\Common\Helpers\IntegrationTest.cs">
       <Link>IntegrationTest.cs</Link>
     </Compile>
+    <Compile Include="..\..\Common\Helpers\VsixPackagingSpec.cs">
+      <Link>VsixPackagingSpec.cs</Link>
+    </Compile>
     <Compile Include="..\..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Commands.cs" />
     <Compile Include="Commands\CreateGuidanceDocumentsCommandSpec.cs" />
+    <Compile Include="AutomationLibraryVsixPackagingSpec.cs">
+      <DependentUpon>AutomationLibraryVsixPackagingSpec.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="CreateOnUnfoldSpec.cs" />
+    <Compile Include="AuthoringVsixPackagingSpec.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuthoringVsixPackagingSpec.tt</DependentUpon>
+    </Compile>
     <Compile Include="VersionHelperSpec.cs" />
     <Content Include="VersionTargetsSpec\ClassLibrary1\Class1.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -138,7 +154,22 @@
     <Content Include="VersionTargetsSpec\SimpleLibrarySolution.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="..\..\Binaries\PatternToolkitAutomationLibrary.vsix">
+      <Link>Authoring.IntegrationTests.Content\PatternToolkitAutomationLibrary.vsix</Link>
+    </None>
+    <None Include="..\..\Binaries\PatternToolkitBuilder.vsix">
+      <Link>Authoring.IntegrationTests.Content\PatternToolkitBuilder.vsix</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="AutomationLibraryVsixPackagingSpec.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AutomationLibraryVsixPackagingSpec.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
+    <None Include="AuthoringVsixPackagingSpec.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AuthoringVsixPackagingSpec.cs</LastGenOutput>
+    </None>
     <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\Customization.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Customization.vstemplate</LastGenOutput>

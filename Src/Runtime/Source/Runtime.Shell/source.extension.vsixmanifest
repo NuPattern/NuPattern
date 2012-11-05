@@ -45,9 +45,9 @@
       <VsPackage>Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.pkgdef</VsPackage>
       <VsPackage>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.pkgdef</VsPackage>
       <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</MefComponent>
-      <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.dll</MefComponent>
       <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</MefComponent>
-      <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.dll</MefComponent>
       <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Library.dll</MefComponent>
+      <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.dll</MefComponent>
+      <MefComponent>Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.dll</MefComponent>
     </Content>
   </Vsix>

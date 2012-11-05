@@ -59,7 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Authoring.UnitTests.Content\extension.vsixmanifest">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Authoring.UnitTests.Content\Toolkit1.vsix">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
