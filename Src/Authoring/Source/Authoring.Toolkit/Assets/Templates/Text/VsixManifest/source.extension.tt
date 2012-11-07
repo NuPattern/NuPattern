@@ -1,5 +1,6 @@
 ﻿<#@ output extension=".t4" #>
 <#@ Include File="..\..\..\..\..\..\..\MasterVsixInfo.ttinclude" #>
+<#@ Include File="..\..\..\..\..\..\..\MasterVersion.ttinclude" #>
 \<#@ Template Inherits="Microsoft.VisualStudio.Patterning.Library.ModelElementTextTransformation" HostSpecific="True" \#>
 \<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
 \<#@ output extension=".tt" \#>
@@ -51,6 +52,10 @@
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
       </VisualStudio>
+<# 
+if (targetVsVersion == "11.0")
+{ 
+#>
       <VisualStudio Version="11.0">
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
@@ -58,6 +63,16 @@
       </VisualStudio>
     </SupportedProducts>
     <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
+<# 
+} 
+else
+{
+#>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0"/>
+<#
+}
+#>
   </Identifier>
 	<References>
 		<Reference Id="<#=VsixInfo.PatternToolkitRuntime.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitRuntime.Version #>">

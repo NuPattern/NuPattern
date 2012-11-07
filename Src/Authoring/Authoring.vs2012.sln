@@ -9,9 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Authoring.slnbldr = Authoring.slnbldr
 		Authoring.testsettings = Authoring.testsettings
 		Authoring.vsmdi = Authoring.vsmdi
-		..\MasterVersion.ttinclude = ..\MasterVersion.ttinclude
-		..\MasterVSIXInfo.tt = ..\MasterVSIXInfo.tt
-		..\MasterVSIXInfo.ttinclude = ..\MasterVSIXInfo.ttinclude
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_PatternModelDesign", "_PatternModelDesign", "{0990606D-3AB2-4D61-B4FB-C5C999D6C4AF}"
