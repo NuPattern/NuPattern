@@ -129,11 +129,6 @@
       <Link>Release Notes.docx</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="Assets\Templates\Text\VsixManifest\source.extension.t4">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>source.extension.tt</DependentUpon>
-    </None>
     <None Include="Authoring.PatternToolkitVersion.targets">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -192,6 +187,13 @@
       <Link>Assets\Guidance\CommonUnderstandingGuidance.doc</Link>
     </None>
     <None Include="Assets\Templates\Text\Guidance\Substitution Notes for Guidance Document.txt" />
+    <Content Include="Assets\Templates\Text\VsixManifest\source.extension.t4">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>source.extension.tt</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <ItemGuid>df833f58-85c6-45f7-afc9-834c0217473d</ItemGuid>
+    </Content>
     <Content Include="GeneratedCode\Guidance\Content\WhatisCommonalityVariability.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

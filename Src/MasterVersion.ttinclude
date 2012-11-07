@@ -1,8 +1,4 @@
 <#    
-	// Framework Version
-	var targetFrameworkVersion = "4.5";
-	var targetVsVersion = "11.0";
-
     // Assembly Versions
     var assemblyMajor = 1;
     var assemblyMinor = 3;

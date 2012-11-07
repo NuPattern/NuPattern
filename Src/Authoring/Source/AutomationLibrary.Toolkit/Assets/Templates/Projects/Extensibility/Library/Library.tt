@@ -15,7 +15,7 @@
 	<LocationField>Enabled</LocationField>
 	<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
 	<Icon>Library.ico</Icon>
-	<RequiredFrameworkVersion><#=targetFrameworkVersion#></RequiredFrameworkVersion>
+	<RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
 	<Hidden>false</Hidden>
   </TemplateData>
   <TemplateContent>
