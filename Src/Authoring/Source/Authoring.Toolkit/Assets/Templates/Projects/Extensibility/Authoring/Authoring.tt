@@ -15,7 +15,7 @@
 		<LocationField>Enabled</LocationField>
 		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
 		<Icon>Authoring.ico</Icon>
-		<RequiredFrameworkVersion><#=targetFrameworkVersion#></RequiredFrameworkVersion>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
 		<Hidden>false</Hidden>
 	</TemplateData>
 	<TemplateContent>
@@ -30,7 +30,7 @@
 		</Project>
 	</TemplateContent>
 	<WizardExtension>
-		<Assembly>Microsoft.VisualStudio.Patterning.Extensibility, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<Assembly>Microsoft.VisualStudio.Patterning.Extensibility, PublicKeyToken=ecdd31353928a4a5</Assembly>
 		<FullClassName>Microsoft.VisualStudio.Patterning.Extensibility.CoordinatorTemplateWizard</FullClassName>
 	</WizardExtension>
 	<WizardData>

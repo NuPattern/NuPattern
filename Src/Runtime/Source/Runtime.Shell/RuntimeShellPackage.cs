@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [ProvideToolWindow(typeof(SolutionBuilderToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed)]
     [ProvideDirectiveProcessor(typeof(ProductStateStoreDirectiveProcessor), ProductStateStoreDirectiveProcessor.ProductStateStoreDirectiveProcessorName, Constants.ProductStateStoreDirectiveProcessorDescription)]
-    [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
+    [VisualStudio.Shell.ProvideBindingPath]
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
     [ProvideService(typeof(IPlatuProjectTypeProvider), ServiceName = "IPlatuProjectTypeProvider")]

@@ -47,7 +47,7 @@
 		<Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
 			<EmbedInteropTypes>False</EmbedInteropTypes>
 		</Reference>
-		<Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+		<Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
 		<Reference Include="Microsoft.VisualStudio.Patterning.Library">
 			<HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>
 			<Private>false</Private>
@@ -72,7 +72,7 @@
 			<HintPath>$(PatternToolkitRuntime)\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
 			<Private>false</Private>
 		</Reference>
-		<Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+		<Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
 			<SpecificVersion>False</SpecificVersion>
 			<HintPath>$(VS100COMNTOOLS)..\IDE\PrivateAssemblies\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
 		</Reference>
@@ -85,8 +85,8 @@
 			<HintPath>$(FeatureExtensionRuntime)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="Properties\AssemblyInfo.cs" />
