@@ -193,6 +193,24 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Resources\SolutionBuilderToolWindow.bmp" />
+    <Content Include="..\Runtime.Store\GeneratedCode\ProductStateSchema.xsd">
+      <Link>GeneratedCode\ProductStateSchema.xsd</Link>
+      <SubType>Designer</SubType>
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Runtime.Schema\GeneratedCode\PatternModelSchema.xsd">
+      <Link>GeneratedCode\PatternModelSchema.xsd</Link>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\..\..\Library\Source\GeneratedCode\LibrarySchema.xsd">
+      <Link>GeneratedCode\LibrarySchema.xsd</Link>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="VSPackage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VSPackage.resx</LastGenOutput>

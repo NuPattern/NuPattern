@@ -38,8 +38,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 				
 				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
 				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
-				Assert.Equal(@"Resources\AuthoringVsix.png", this.VsixInfo.Header.Icon);
-				Assert.Equal(@"Resources\AuthoringVsixPreview.png", this.VsixInfo.Header.PreviewImage);
+				Assert.Equal(@"Resources\DesignTimeVsix.png", this.VsixInfo.Header.Icon);
+                Assert.Equal(@"Resources\DesignTimeVsixPreview.png", this.VsixInfo.Header.PreviewImage);
 				Assert.Equal(@"http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b", this.VsixInfo.Header.MoreInfoUrl.ToString());
 				Assert.Equal(@"http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b", this.VsixInfo.Header.GettingStartedGuide.ToString());
 
@@ -144,8 +144,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 Assert.True(this.FolderContainsExclusive(@"Resources",
                     new[]
                         {
-                            "RunTimeVsix.png",
-                            "RunTimeVsixPreview.png",
+                            "DesignTimeVsix.png",
+                            "DesignTimeVsixPreview.png",
                         }));
 			}
 			

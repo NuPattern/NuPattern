@@ -21,11 +21,11 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
       <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
       <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
-      <Private>false</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Schema">
       <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Schema.dll</HintPath>
@@ -156,6 +156,7 @@
     </Content>
     <None Include="..\..\Binaries\PatternToolkitAutomationLibrary.vsix">
       <Link>Authoring.IntegrationTests.Content\PatternToolkitAutomationLibrary.vsix</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="..\..\Binaries\PatternToolkitBuilder.vsix">
       <Link>Authoring.IntegrationTests.Content\PatternToolkitBuilder.vsix</Link>

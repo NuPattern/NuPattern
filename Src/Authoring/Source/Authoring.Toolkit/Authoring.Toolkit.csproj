@@ -1171,9 +1171,11 @@
     </Content>
     <Content Include="..\WorkflowDesign\GeneratedCode\WorkflowDesignSchema.xsd">
       <Visible>true</Visible>
-      <Link>Properties\Schemas\WorkflowDesignSchema.xsd</Link>
+      <Link>GeneratedCode\WorkflowDesignSchema.xsd</Link>
       <FixedLink>
       </FixedLink>
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\..\Common\Guidance\PatternToolkitGuidanceTemplate.dotm">
       <Link>Assets\Guidance\PatternToolkitGuidanceTemplate.dotm</Link>
@@ -1251,13 +1253,11 @@
       <Project>{2F73D922-E3C5-49F8-AB6D-AF54E76EE47E}</Project>
       <Name>AutomationLibrary.Toolkit</Name>
       <Private>False</Private>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
-      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
     <ProjectReference Include="..\PatternModelDesign.Shell\PatternModelDesign.Shell.csproj">
       <Project>{A999A0EB-246C-4B63-8BC1-405020026CAB}</Project>
       <Name>PatternModelDesign.Shell</Name>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIX>PkgdefProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
     <ProjectReference Include="..\WorkflowDesign.Interfaces\WorkflowDesign.Interfaces.csproj">
@@ -1269,14 +1269,14 @@
     <ProjectReference Include="..\WorkflowDesign.Shell\WorkflowDesign.Shell.csproj">
       <Project>{F5214FCD-58A1-4856-85A0-34B2150E621B}</Project>
       <Name>WorkflowDesign.Shell</Name>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIX>PkgdefProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
     <ProjectReference Include="..\WorkflowDesign\WorkflowDesign.csproj">
       <Project>{B29AC5FA-1276-46C3-A6F5-C0F8D2F8914A}</Project>
       <Name>WorkflowDesign</Name>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

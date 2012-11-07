@@ -48,9 +48,9 @@
 		</Reference>
 	</References>
 	<Content>
-	<VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
-	<MefComponent>|%CurrentProject%|</MefComponent>
-	<VsPackage>|WorkflowDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
+		<VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+		<MefComponent>|%CurrentProject%|</MefComponent>
+		<VsPackage>|WorkflowDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
 		<MefComponent>|WorkflowDesign.Shell|</MefComponent>
 		<MefComponent>|WorkflowDesign|</MefComponent>
 		<VsPackage>|PatternModelDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>

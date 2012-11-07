@@ -125,8 +125,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 Assert.True(this.FolderContainsExclusive(@"Resources",
                     new[]
                         {
-                            "RunTimeVsix.png",
-                            "RunTimeVsixPreview.png",
+                            "DesignTimeVsix.png",
+                            "DesignTimeVsixPreview.png",
                         }));
 			}
 
