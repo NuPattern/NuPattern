@@ -394,6 +394,27 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
         {
             var toolkitInfo = patternManager.InstalledToolkits
                 .FirstOrDefault(f => templateFile.StartsWith(f.Extension.InstallPath, StringComparison.OrdinalIgnoreCase));
+            
+#if VSVER11
+            // Try to find template on VS2012
+            if (toolkitInfo == null)
+            {
+                toolkitInfo = patternManager.InstalledToolkits
+                                .FirstOrDefault(f =>
+                                {
+                                    try
+                                    {
+                                        var templateDirectory = Path.GetDirectoryName(templateFile);
+                                        var templateOrigin = f.Extension.InstallPath + "Assets\\Templates\\" + templateDirectory.Substring(templateDirectory.LastIndexOf("\\~PC\\") + "\\~PC\\".Length);
+                                        return File.Exists(templateOrigin);
+                                    }
+                                    catch
+                                    {
+                                        return false;
+                                    }
+                                });
+            }
+#endif
 
             if (toolkitInfo == null)
             {

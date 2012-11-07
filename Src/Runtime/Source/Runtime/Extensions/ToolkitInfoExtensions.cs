@@ -37,6 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			/// <value>The vsix references.</value>
 			public string VsixReferences { get; set; }
 
+#if VSVER11
             public string DownloadUpdateUrl
             {
                 get
@@ -48,6 +49,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
                     throw new NotImplementedException();
                 }
             }
+#endif
         }
 	}
 }

@@ -30,8 +30,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>GlobalAssemblyInfo.cs</LastGenOutput>
     </None>
+    <None Include="..\..\..\MasterVersion.tt">
+      <Link>MasterVersion.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MasterVersion.ttinclude</LastGenOutput>
+    </None>
     <None Include="..\..\..\MasterVersion.ttinclude">
       <Link>MasterVersion.ttinclude</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasterVersion.tt</DependentUpon>
     </None>
     <None Include="..\..\..\MasterVSIXInfo.tt">
       <Link>MasterVSIXInfo.tt</Link>

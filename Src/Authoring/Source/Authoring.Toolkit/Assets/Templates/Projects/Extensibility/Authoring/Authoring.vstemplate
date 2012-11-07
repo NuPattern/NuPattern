@@ -13,7 +13,7 @@
 		<LocationField>Enabled</LocationField>
 		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
 		<Icon>Authoring.ico</Icon>
-		<RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+		<RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
 		<Hidden>false</Hidden>
 	</TemplateData>
 	<TemplateContent>

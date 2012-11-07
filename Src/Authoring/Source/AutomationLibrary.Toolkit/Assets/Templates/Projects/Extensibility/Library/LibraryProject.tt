@@ -1,5 +1,6 @@
 <#@ output extension=".csproj" #>
 <#@ include file="..\..\..\..\..\..\Authoring.Toolkit\ToolkitVersionInfo.ttinclude" #>
+<#@ include file="..\..\..\..\..\..\..\..\MasterVersion.ttinclude" #>
 <#@ include file="..\..\..\..\..\..\Authoring.Toolkit\AuthoringTargets.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -13,7 +14,7 @@
 		<AppDesignerFolder>Properties</AppDesignerFolder>
 		<RootNamespace>$rootnamespace$</RootNamespace>
 		<AssemblyName>$safeprojectname$</AssemblyName>
-		<TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+		<TargetFrameworkVersion>v<#=targetFrameworkVersion#></TargetFrameworkVersion>
 		<FileAlignment>512</FileAlignment>
 		<GeneratePkgDefFile>false</GeneratePkgDefFile>
 	</PropertyGroup>
