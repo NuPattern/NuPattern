@@ -1084,6 +1084,7 @@
     <None Include="Assets\Templates\Projects\Extensibility\Authoring\Authoring.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Authoring.vstemplate</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Assets\Templates\Text\VsixManifest\source.extension.tt">
       <ItemGuid>d123c26c-c9fc-4387-ab4e-c8094314b9e9</ItemGuid>

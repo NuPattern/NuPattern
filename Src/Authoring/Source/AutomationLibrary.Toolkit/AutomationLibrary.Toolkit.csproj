@@ -329,6 +329,7 @@
     <None Include="Assets\Templates\Projects\Extensibility\Library\Library.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Library.vstemplate</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <Content Include="Assets\Templates\Text\CollectionImplementation.t4">
       <IncludeInVSIX>true</IncludeInVSIX>

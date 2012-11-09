@@ -1,6 +1,7 @@
 ﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\..\..\..\..\..\Runtime\Source\Runtime.Schema\DslDefinition.dsl'" #>
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ output extension=".vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\..\MasterVersion.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
@@ -22,11 +23,11 @@
     </Project>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=ecdd31353928a4a5</Assembly>
+    <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
     <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.InstantiationTemplateWizard</FullClassName>
   </WizardExtension>
   <WizardExtension>
-    <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=ecdd31353928a4a5</Assembly>
+    <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
     <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

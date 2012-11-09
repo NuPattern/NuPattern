@@ -30,7 +30,7 @@
 		</Project>
 	</TemplateContent>
 	<WizardExtension>
-		<Assembly>Microsoft.VisualStudio.Patterning.Extensibility, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<Assembly>Microsoft.VisualStudio.Patterning.Extensibility, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
 		<FullClassName>Microsoft.VisualStudio.Patterning.Extensibility.CoordinatorTemplateWizard</FullClassName>
 	</WizardExtension>
 	<WizardData>
@@ -42,31 +42,31 @@
 		<NewGuid Key="$guid15$" />
 		<CoordinatedWizards>
 			<WizardExtension>
-				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=ecdd31353928a4a5</Assembly>
+				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
 				<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.GuidGeneratorTemplateWizard</FullClassName>
 			</WizardExtension>
 			<WizardExtension>
-				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=ecdd31353928a4a5</Assembly>
+				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
 				<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.VsRootSuffixTemplateWizard</FullClassName>
 			</WizardExtension>
 			<WizardExtension>
-				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=ecdd31353928a4a5</Assembly>
+				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
 				<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.ReplacementTemplateWizard</FullClassName>
 			</WizardExtension>
 			<WizardExtension>
-			  <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=ecdd31353928a4a5</Assembly>
+			  <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
 			  <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.InstantiationTemplateWizard</FullClassName>
 			</WizardExtension>
 			<WizardExtension>
-			  <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=ecdd31353928a4a5</Assembly>
+			  <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
 			  <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
 			</WizardExtension>
 			<WizardExtension>
-				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=ecdd31353928a4a5</Assembly>
+				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
 				<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.FixLinkPathTemplateWizard</FullClassName>
 			</WizardExtension>
 			<WizardExtension>
-				<Assembly>Microsoft.VisualStudio.Patterning.Runtime.Shell, PublicKeyToken=ecdd31353928a4a5</Assembly>
+				<Assembly>Microsoft.VisualStudio.Patterning.Runtime.Shell, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
 				<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.Shell.OpenSolutionBuilderTemplateWizard</FullClassName>
 			</WizardExtension>
 		</CoordinatedWizards>

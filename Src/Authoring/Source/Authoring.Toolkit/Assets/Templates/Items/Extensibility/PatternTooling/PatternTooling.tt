@@ -21,15 +21,15 @@
         <ProjectItem OpenInEditor="false" TargetFileName="PatternTooling.toolingdesign" ReplaceParameters="true">PatternTooling.toolingdesign</ProjectItem>
     </TemplateContent>
 	<WizardExtension>
-		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
 		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.GuidGeneratorTemplateWizard</FullClassName>
 	</WizardExtension>
 	<WizardExtension>
-		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
 		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.ReplacementTemplateWizard</FullClassName>
 	</WizardExtension>
     <WizardExtension>
-      <Assembly>Microsoft.VisualStudio.Patterning.Library, PublicKeyToken=ecdd31353928a4a5</Assembly>
+      <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
       <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
     </WizardExtension>
 	<WizardData>

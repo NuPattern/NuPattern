@@ -62,6 +62,12 @@
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <ProjectTemplate Include="Assets\Templates\Projects\Extensibility\HolProjectTemplate\HolProjectTemplate.vstemplate">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HolProjectTemplate.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ProjectTemplate>
     <Content Include="GeneratedCode\Guidance\Content\AddaCommandforRunningtheT4Template.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -152,11 +158,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </None>
-    <ProjectTemplate Include="Assets\Templates\Projects\Extensibility\HolProjectTemplate\HolProjectTemplate.vstemplate">
+    <None Include="Assets\Templates\Projects\Extensibility\HolProjectTemplate\HolProjectTemplate.tt">
       <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Element/C:\Projects\Platu\Dev\Team\Quickstarts\HandsOnLabs\HandsOnLabs.patternstate%252f47f070ae-29fc-4650-8eed-06a7a22f8af6</SourceModelReference>
       <ItemGuid>aeda2b85-f038-4872-a74a-7ce7f3bb2936</ItemGuid>
       <SubType>Designer</SubType>
-    </ProjectTemplate>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HolProjectTemplate.vstemplate</LastGenOutput>
+    </None>
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.cs">
       <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Element/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f608f1a87-b90d-43cd-adfe-121dd850e2dd</SourceModelReference>
       <ItemGuid>0ddee1e0-beae-431c-a10b-5379b9aa183f</ItemGuid>
