@@ -33,6 +33,9 @@
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
     </Reference>
@@ -44,6 +47,10 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VSSDK.TestHostFramework">
       <HintPath>$(BranchReferencesPath)\VSSDK\$(TargetVsVersion)\Microsoft.VSSDK.TestHostFramework.dll</HintPath>
@@ -83,6 +90,7 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Automation\CollectionPropertyDescriptorSpec.cs" />
+    <Compile Include="Automation\Template\InstantiationTemplateWizardSpec.cs" />
     <Compile Include="Automation\Template\TemplateAutomationExtensionSpec.cs" />
     <Compile Include="Automation\Rules\PatternElementSchemaAddRuleSpec.cs" />
     <Compile Include="Automation\Artifact\ArtifactExtensionSpec.cs" />
@@ -90,6 +98,14 @@
     <CodeAnalysisDictionary Include="..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
+    <Content Include="..\..\Runtime\IntegrationTests.TestToolkit\Assets\Templates\Projects\MyTemplate1\MyTemplate1.vstemplate">
+      <Link>Content\MyTemplate1.vstemplate</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Runtime\IntegrationTests.TestToolkit\Assets\Templates\Projects\MyTemplate2\MyTemplate2.vstemplate">
+      <Link>Content\MyTemplate2.vstemplate</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\ClassLibrary\ClassLibrary\Class1.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

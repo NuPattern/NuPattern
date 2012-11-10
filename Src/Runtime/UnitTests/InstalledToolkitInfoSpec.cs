@@ -120,6 +120,18 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 
                 Assert.Null(target.PatternIconPath);
             }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenInitializing_TheTemplatesEmpty()
+            {
+                var extension = new Mock<IInstalledExtension>();
+                extension.Setup(ext => ext.InstallPath).Returns(@"Z:\InstallDir");
+
+                var target = new InstalledToolkitInfo(extension.Object, this.reader, this.resource);
+
+                Assert.NotNull(target.Templates);
+                Assert.Equal(0, target.Templates.Count());
+            }
         }
 
         [TestClass]

@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Runtime.guidancestate = Runtime.guidancestate
 		Runtime.slnbldr = Runtime.slnbldr
 		Runtime.testsettings = Runtime.testsettings
+		Runtime.vs2012.vsmdi = Runtime.vs2012.vsmdi
 		..\SourceAnalysis.StyleCop = ..\SourceAnalysis.StyleCop
 		..\SourceAnalysis.TestProjects.StyleCop = ..\SourceAnalysis.TestProjects.StyleCop
 	EndProjectSection
@@ -71,8 +72,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.IntegrationTests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests.SampleVsix", "IntegrationTests.SampleVsix\Runtime.IntegrationTests.SampleVsix.csproj", "{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests.TestFactory", "IntegrationTests.TestFactory\Runtime.IntegrationTests.TestFactory.csproj", "{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensibility.IntegrationTests", "..\Common\Extensibility.IntegrationTests\Extensibility.IntegrationTests.csproj", "{206ED22C-1F59-40D6-8B49-14B2A56DC9D2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D3E93083-99C9-4186-95B5-339A822C63EE} = {D3E93083-99C9-4186-95B5-339A822C63EE}
@@ -84,7 +83,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensibility.Serialization
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versioning", "..\Common\Source\Versioning\Versioning.csproj", "{AE530C9B-34B7-416F-8477-15B8257CDAC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests.TestToolkit", "IntegrationTests.TestToolkit\Runtime.IntegrationTests.TestToolkit.csproj", "{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}"
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Runtime.vs2012.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug-VS2010|Any CPU = Debug-VS2010|Any CPU
 		Debug-VS2010|Mixed Platforms = Debug-VS2010|Mixed Platforms
@@ -452,26 +456,6 @@ Global
 		{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}.Release-VS2012|Mixed Platforms.Build.0 = Release-VS2012|x86
 		{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}.Release-VS2012|x86.ActiveCfg = Release-VS2012|x86
 		{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}.Release-VS2012|x86.Build.0 = Release-VS2012|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2010|Any CPU.ActiveCfg = Debug-VS2010|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2010|Mixed Platforms.ActiveCfg = Debug-VS2010|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2010|Mixed Platforms.Build.0 = Debug-VS2010|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2010|x86.ActiveCfg = Debug-VS2010|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2010|x86.Build.0 = Debug-VS2010|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2012|Any CPU.ActiveCfg = Debug-VS2012|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2012|Mixed Platforms.ActiveCfg = Debug-VS2012|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2012|Mixed Platforms.Build.0 = Debug-VS2012|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2012|x86.ActiveCfg = Debug-VS2012|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2012|x86.Build.0 = Debug-VS2012|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2010|Any CPU.ActiveCfg = Release-VS2010|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2010|Mixed Platforms.ActiveCfg = Release-VS2010|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2010|Mixed Platforms.Build.0 = Release-VS2010|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2010|x86.ActiveCfg = Release-VS2010|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2010|x86.Build.0 = Release-VS2010|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2012|Any CPU.ActiveCfg = Release-VS2012|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2012|Mixed Platforms.ActiveCfg = Release-VS2012|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2012|Mixed Platforms.Build.0 = Release-VS2012|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2012|x86.ActiveCfg = Release-VS2012|x86
-		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2012|x86.Build.0 = Release-VS2012|x86
 		{206ED22C-1F59-40D6-8B49-14B2A56DC9D2}.Debug-VS2010|Any CPU.ActiveCfg = Debug-VS2010|Any CPU
 		{206ED22C-1F59-40D6-8B49-14B2A56DC9D2}.Debug-VS2010|Any CPU.Build.0 = Debug-VS2010|Any CPU
 		{206ED22C-1F59-40D6-8B49-14B2A56DC9D2}.Debug-VS2010|Mixed Platforms.ActiveCfg = Debug-VS2010|Any CPU
@@ -556,6 +540,26 @@ Global
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0}.Release-VS2012|Mixed Platforms.Build.0 = Release-VS2012|x86
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0}.Release-VS2012|x86.ActiveCfg = Release-VS2012|x86
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0}.Release-VS2012|x86.Build.0 = Release-VS2012|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2010|Any CPU.ActiveCfg = Debug-VS2010|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2010|Mixed Platforms.ActiveCfg = Debug-VS2010|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2010|Mixed Platforms.Build.0 = Debug-VS2010|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2010|x86.ActiveCfg = Debug-VS2010|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2010|x86.Build.0 = Debug-VS2010|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2012|Any CPU.ActiveCfg = Debug-VS2012|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2012|Mixed Platforms.ActiveCfg = Debug-VS2012|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2012|Mixed Platforms.Build.0 = Debug-VS2012|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2012|x86.ActiveCfg = Debug-VS2012|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Debug-VS2012|x86.Build.0 = Debug-VS2012|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2010|Any CPU.ActiveCfg = Release-VS2010|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2010|Mixed Platforms.ActiveCfg = Release-VS2010|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2010|Mixed Platforms.Build.0 = Release-VS2010|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2010|x86.ActiveCfg = Release-VS2010|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2010|x86.Build.0 = Release-VS2010|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2012|Any CPU.ActiveCfg = Release-VS2012|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2012|Mixed Platforms.ActiveCfg = Release-VS2012|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2012|Mixed Platforms.Build.0 = Release-VS2012|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2012|x86.ActiveCfg = Release-VS2012|x86
+		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}.Release-VS2012|x86.Build.0 = Release-VS2012|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

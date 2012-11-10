@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <productState xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.2.0.0" Id="cb968870-fc5b-4f8f-be04-5ea9f2d5ab26" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/productstate">
   <products>
-    <product Id="67debd02-2d2c-4adf-a81a-9ca7f6eccec4" definitionId="44d568d4-01b5-4c42-acb9-df86fbbe0e13" definitionName="TestFactoryProduct" instanceName="TestProduct" extensionId="1530D736-97EA-4B4A-8A25-C6C7A089D1BB">
+    <product Id="67debd02-2d2c-4adf-a81a-9ca7f6eccec4" definitionId="44d568d4-01b5-4c42-acb9-df86fbbe0e13" definitionName="TestToolkitProduct" instanceName="TestProduct" extensionId="1530D736-97EA-4B4A-8A25-C6C7A089D1BB">
       <views>
         <view Id="75ffb517-078e-45bd-8134-4b3a2a8dc297" definitionId="84a33ecc-963d-4401-86bc-af1c16423f32" definitionName="View1">
           <elements>

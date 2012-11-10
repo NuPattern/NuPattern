@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>ConsoleApplication1</Name>
-    <Description>&lt;No description available&gt;</Description>
+    <Name>MyTemplate1</Name>
+    <Description>A test template</Description>
     <Icon>__TemplateIcon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>
     </ProjectSubType>
     <SortOrder>1000</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>ConsoleApplication1</DefaultName>
+    <DefaultName>MyTemplate1</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
     <LocationField>Enabled</LocationField>
   </TemplateData>
   <TemplateContent>
-    <Project File="ConsoleApplication1.csproj" TargetFileName="ConsoleApplication1.csproj" ReplaceParameters="true">
+    <Project File="MyTemplate1.csproj" TargetFileName="MyTemplate1.csproj" ReplaceParameters="true">
       <ProjectItem TargetFileName="Program.cs" ReplaceParameters="true">Program.cs</ProjectItem>
       <Folder Name="Properties" TargetFolderName="Properties">
         <ProjectItem TargetFileName="AssemblyInfo.cs" ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>

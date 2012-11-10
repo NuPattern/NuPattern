@@ -11,7 +11,7 @@ namespace Microsoft.VisualStudio.Patterning.IntegrationTests
     public class VsixPackagingSpec
     {
         [TestClass]
-        public abstract class GivenAVsix
+        public abstract class GivenAVsix : IntegrationTest
         {
             /// <summary>
             /// The information for the VSIX
@@ -31,11 +31,12 @@ namespace Microsoft.VisualStudio.Patterning.IntegrationTests
             [TestInitialize]
             public void Initialize()
             {
-                this.VsixInfo = Vsix.ReadManifest(this.DeployedVsixItemPath);
+                var deployedVsixItemPath = Path.Combine(this.TestContext.DeploymentDirectory, this.DeployedVsixItemPath);
+                this.VsixInfo = Vsix.ReadManifest(deployedVsixItemPath);
 
                 // Unzip VSIX content to target dir
                 this.TargetDir = new DirectoryInfo("Target").FullName;
-                Vsix.Unzip(this.DeployedVsixItemPath, this.TargetDir);
+                Vsix.Unzip(deployedVsixItemPath, this.TargetDir);
                 
                 this.VsixIdentifier = Vsix.ReadManifestIdentifier(Path.Combine(this.TargetDir, "extension.vsixmanifest"));
             }

@@ -1,0 +1,62 @@
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\Source\Runtime.Schema\DslDefinition.dsl'" #>
+<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".patterndefinition" #>
+<#@ Include File="..\..\Common\Helpers\DslVersion.tt" #>
+<?xml version="1.0" encoding="utf-8"?>
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="<#= this.DslVersion #>" Id="27f97919-32b1-4b26-ab60-894ca43a8fca" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
+	<dm0:extensions>
+		<guidanceExtension Id="8ffb2a4e-242a-43e9-804a-7362181bbddb">
+			<extendedElement>
+				<patternSchemaMoniker Id="44d568d4-01b5-4c42-acb9-df86fbbe0e13" />
+			</extendedElement>
+		</guidanceExtension>
+		<guidanceExtension Id="9272c74e-334f-423b-ad64-4393f87e8d3f">
+			<extendedElement>
+				<elementSchemaMoniker Id="39ec1d0f-43d3-407a-840a-3aa8a0b7a729" />
+			</extendedElement>
+		</guidanceExtension>
+		<artifactExtension Id="87ef1dfa-2e83-4a61-a990-6a3c09aa86e2">
+			<extendedElement>
+				<patternSchemaMoniker Id="44d568d4-01b5-4c42-acb9-df86fbbe0e13" />
+			</extendedElement>
+		</artifactExtension>
+		<artifactExtension Id="06e6401d-e61a-41f8-b8d7-e938195f9038">
+			<extendedElement>
+				<elementSchemaMoniker Id="39ec1d0f-43d3-407a-840a-3aa8a0b7a729" />
+			</extendedElement>
+		</artifactExtension>
+	</dm0:extensions>
+	<pattern Id="44d568d4-01b5-4c42-acb9-df86fbbe0e13" name="TestToolkitProduct" displayName="Test Toolkit Product" patternLink="patternmanager://foo" description="Description for the TestToolkitProduct pattern." isCustomizable="True" currentDiagramId="9c9e1f44-1e08-4d15-b176-736d25527d2f" >
+		<customizationPolicy>
+			<settings>
+				<setting propertyId="DisplayName" />
+				<setting propertyId="Description" />
+			</settings>
+		</customizationPolicy>
+		<views>
+			<view Id="84a33ecc-963d-4401-86bc-af1c16423f32" name="View1" displayName="View1" description="Description for TestToolkitProduct.View1" isDefault="true" diagramId="9c9e1f44-1e08-4d15-b176-736d25527d2f">
+				<customizationPolicy>
+					<settings>
+						<setting propertyId="IsVisible" />
+						<setting propertyId="IsDefault" />
+						<setting propertyId="DisplayName" />
+						<setting propertyId="Description" />
+					</settings>
+				</customizationPolicy>
+				<elements>
+					<element Id="39ec1d0f-43d3-407a-840a-3aa8a0b7a729" name="VariableElement1" displayName="Variable Element1" description="Description for TestToolkitProduct.View1.VariableElement1">
+						<customizationPolicy name="CustomizationPolicySchema1">
+							<settings>
+								<setting propertyId="DisplayName" />
+								<setting propertyId="Description" />
+								<setting propertyId="IsVisible" />
+							</settings>
+						</customizationPolicy>
+					</element>
+				</elements>
+			</view>
+		</views>
+	</pattern>
+  <design Id="9f640c66-b643-43ca-a9fb-e0ed46b5d1e3" />
+  <registration Id="Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit" name="TestToolkit" author="The Outercurve Foundation" description="A test Factory." identifier="4a74c168-fac0-4828-93dd-7def0b9ec700"/>
+</patternModel>

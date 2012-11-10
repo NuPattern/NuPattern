@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {
@@ -19,6 +22,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 
         private ISchemaReader reader;
         private ISchemaResource resource;
+        private List<IVsTemplate> templates;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="InstalledToolkitInfo"/> class.
@@ -134,6 +138,36 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
             get
             {
                 return this.Extension.Header.Name;
+            }
+        }
+
+        /// <summary>
+        /// Gets the VS templates deployed by this toolkit.
+        /// </summary>
+        public IEnumerable<IVsTemplate> Templates
+        {
+            get
+            {
+                if (this.templates == null)
+                {
+                    LoadTemplates();
+                }
+
+                return this.templates;
+            }
+        }
+
+        private void LoadTemplates()
+        {
+            this.templates = new List<IVsTemplate>();
+
+            // Get list of vstemplates in installation directories
+            var installationDir = Directory.Exists(this.Extension.InstallPath) ? new DirectoryInfo(this.Extension.InstallPath) : null;
+            if (installationDir != null)
+            {
+                var templateFiles = installationDir.GetFiles("*.zip", SearchOption.AllDirectories);
+                templateFiles.ToList()
+                    .ForEach(tf => this.templates.Add(VsTemplateFile.Read(tf.FullName)));
             }
         }
 

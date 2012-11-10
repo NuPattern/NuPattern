@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             this.solution.CreateInstance(this.DeploymentDirectory, "Blank");
 
             this.patternManager = VsIdeTestHostContext.ServiceProvider.GetService<IPatternManager>();
-            var toolkit = this.patternManager.InstalledToolkits.Single(f => f.Id == "f2bb88d8-1572-4af6-86a6-8b3ded7b8e3b"); //TestFactory
+            var toolkit = this.patternManager.InstalledToolkits.Single(f => f.Id == "Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit");
             UIThreadInvoker.Invoke(new Action(() => this.product = this.patternManager.CreateProduct(toolkit, "Foo")));
         }
 

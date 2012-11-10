@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.ExtensionManager;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
 {
@@ -40,5 +42,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 		{
 			get;
 		}
+
+	    /// <summary>
+	    /// Gets the VS Templates deployed by the toolkit.
+	    /// </summary>
+	    IEnumerable<IVsTemplate> Templates
+	    {
+	        get;
+	    }
 	}
 }

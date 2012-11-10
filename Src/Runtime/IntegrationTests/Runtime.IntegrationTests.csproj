@@ -111,6 +111,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RuntimeShellVsixPackagingSpec.cs</LastGenOutput>
     </None>
+    <Compile Include="InstalledToolkitInfoSpec.cs" />
     <Compile Include="RuntimeShellVsixPackagingSpec.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -189,9 +190,6 @@
     <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TopLevelSolutionItem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\TestTemplate.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Source\Extensibility\Extensibility.csproj">
@@ -201,6 +199,10 @@
     <ProjectReference Include="..\IntegrationTests.SampleVsix\Runtime.IntegrationTests.SampleVsix.csproj">
       <Project>{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}</Project>
       <Name>Runtime.IntegrationTests.SampleVsix</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegrationTests.TestToolkit\Runtime.IntegrationTests.TestToolkit.csproj">
+      <Project>{cb2872d6-f4b1-493c-be4e-b590c03f5fef}</Project>
+      <Name>Runtime.IntegrationTests.TestToolkit</Name>
     </ProjectReference>
     <ProjectReference Include="..\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
       <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>

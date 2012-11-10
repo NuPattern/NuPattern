@@ -390,29 +390,45 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
             return settings;
         }
 
-        private static IInstalledToolkitInfo FindToolkitOrThrow(IPatternManager patternManager, string templateFile)
+        /// <summary>
+        /// Returns the installed toolkit that contains the given template.
+        /// </summary>
+        /// <param name="patternManager">The PatternManager service</param>
+        /// <param name="templateFile">The full path to the vstemplate file. 
+        /// i.e. (VS2010) %localappdata%\Microsoft\VisualStudio\10.0\Extensions\[author][\[extensionname]\[version]\Assets\Templates\Projects\~PC\Template.zip\Template.vstempate
+        /// i.e. (VS2012) %localappdata%\Microsoft\VisualStudio\11.0\VTC\[guid]\~PC\Projects\Template.zip\Template.vstemplate
+        /// </param>
+        /// <returns></returns>
+        internal static IInstalledToolkitInfo FindToolkitOrThrow(IPatternManager patternManager, string templateFile)
         {
+            // Find the toolkit that shares the same path as this vstemplate (VS2010 only)
             var toolkitInfo = patternManager.InstalledToolkits
                 .FirstOrDefault(f => templateFile.StartsWith(f.Extension.InstallPath, StringComparison.OrdinalIgnoreCase));
             
 #if VSVER11
-            // Try to find template on VS2012
+            // In VS2012, vstemplates are loaded from cache not from toolkit installation path.
             if (toolkitInfo == null)
             {
-                toolkitInfo = patternManager.InstalledToolkits
-                                .FirstOrDefault(f =>
-                                {
-                                    try
-                                    {
-                                        var templateDirectory = Path.GetDirectoryName(templateFile);
-                                        var templateOrigin = f.Extension.InstallPath + "Assets\\Templates\\" + templateDirectory.Substring(templateDirectory.LastIndexOf("\\~PC\\") + "\\~PC\\".Length);
-                                        return File.Exists(templateOrigin);
-                                    }
-                                    catch
-                                    {
-                                        return false;
-                                    }
-                                });
+                // Find the toolkit that contains the vstemplate, by TemplateID or Name
+                if (File.Exists(templateFile))
+                {
+                    var template = VsTemplateFile.Read(templateFile);
+                    if (template != null)
+                    {
+                        if (!String.IsNullOrEmpty(template.TemplateData.TemplateID))
+                        {
+                            toolkitInfo = patternManager.InstalledToolkits
+                                .FirstOrDefault(it => it.Templates.Any(t => ((t.TemplateData.TemplateID != null) &&
+                                (t.TemplateData.TemplateID.Equals(template.TemplateData.TemplateID, StringComparison.OrdinalIgnoreCase)))));
+                        }
+                    else
+                        {
+                            toolkitInfo = patternManager.InstalledToolkits
+                                .FirstOrDefault(it => it.Templates.Any(t => ((t.TemplateData.Name != null) &&
+                                (t.TemplateData.Name.Value.Equals(template.TemplateData.Name.Value, StringComparison.OrdinalIgnoreCase)))));
+                        }
+                    }
+                }
             }
 #endif
 

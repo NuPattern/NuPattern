@@ -34,9 +34,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 
 			this.manager = ServiceProvider.GetService<IPatternManager>();
 			var componentModel = ServiceProvider.GetService<SComponentModel, IComponentModel>();
-			var installedFactories = componentModel.GetService<IEnumerable<IInstalledToolkitInfo>>();
+            var installedToolkits = componentModel.GetService<IEnumerable<IInstalledToolkitInfo>>();
 
-			this.toolkit = installedFactories
+            this.toolkit = installedToolkits
 				.SingleOrDefault(toolkit => toolkit.Id.Equals("1530D736-97EA-4B4A-8A25-C6C7A089D1BB", StringComparison.OrdinalIgnoreCase));
 		}
 
