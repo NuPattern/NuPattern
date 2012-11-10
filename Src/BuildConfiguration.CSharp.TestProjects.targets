@@ -12,6 +12,15 @@
     <NoWarn>3003</NoWarn>
   </PropertyGroup>
 
+  <!-- VS2012 test settings -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012'">
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <!--<IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>-->
+  </PropertyGroup>
+
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="('$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012') and Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+
   <!-- CA settings for build configurations -->
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-VS2010|Any CPU' or '$(Configuration)|$(Platform)' == 'Release-VS2012|Any CPU' ">
     <CodeAnalysisRuleSet>$(BranchRoot)CodeAnalysis.TestProjects.ruleset</CodeAnalysisRuleSet>

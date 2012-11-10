@@ -2,7 +2,7 @@
 <TestSettings name="Runtime" id="7dc4b989-029d-498c-b03d-25f7299c949a" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Description>These are default test settings for a local test run.</Description>
   <Execution>
-    <Hosts type="VS IDE" skipUnhostableTests="false">
+    <Hosts skipUnhostableTests="true">
       <VSSDKTestHostRunConfig name="VS IDE" HiveKind="DevEnv" HiveName="11.0Exp" xmlns="http://microsoft.com/schemas/VisualStudio/SDK/Tools/IdeHostAdapter/2006/06" />
     </Hosts>
     <TestTypeSpecific>
