@@ -129,11 +129,12 @@
       <Link>Release Notes.docx</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="Assets\Templates\Text\VsixManifest\source.extension.t4">
+    <Content Include="Assets\Templates\Text\VsixManifest\source.extension.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>source.extension.tt</DependentUpon>
-    </None>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="Authoring.PatternToolkitVersion.targets">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
