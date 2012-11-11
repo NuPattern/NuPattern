@@ -129,6 +129,17 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
                             "Microsoft.VisualStudio.Patterning.Runtime.Shell.dll",
                             "Microsoft.VisualStudio.Patterning.Runtime.Shell.pkgdef",
                             "Microsoft.VisualStudio.Patterning.Runtime.Store.dll",
+
+							// XML documentation
+                            //"Microsoft.VisualStudio.Patterning.Common.Presentation.xml",
+                            "Microsoft.VisualStudio.Patterning.Extensibility.xml",
+                            //"Microsoft.VisualStudio.Patterning.Extensibility.Serialization.xml",
+                            "Microsoft.VisualStudio.Patterning.Library.xml",
+                            "Microsoft.VisualStudio.Patterning.Runtime.xml",
+                            "Microsoft.VisualStudio.Patterning.Runtime.Interfaces.xml",
+                            "Microsoft.VisualStudio.Patterning.Runtime.Schema.xml",
+                            //"Microsoft.VisualStudio.Patterning.Runtime.Shell.xml",
+                            //"Microsoft.VisualStudio.Patterning.Runtime.Store.xml",
                         }));
             }
         }
