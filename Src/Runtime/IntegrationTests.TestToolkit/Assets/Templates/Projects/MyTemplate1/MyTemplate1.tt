@@ -17,7 +17,7 @@
     <LocationField>Enabled</LocationField>
   </TemplateData>
   <TemplateContent>
-    <Project File="MyTemplate1.csproj" TargetFileName="MyTemplate1.csproj" ReplaceParameters="true">
+    <Project File="MyTemplate1Project.csproj" TargetFileName="MyTemplate1.csproj" ReplaceParameters="true">
       <ProjectItem TargetFileName="Program.cs" ReplaceParameters="true">Program.cs</ProjectItem>
       <Folder Name="Properties" TargetFolderName="Properties">
         <ProjectItem TargetFileName="AssemblyInfo.cs" ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
