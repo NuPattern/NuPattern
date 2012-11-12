@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
 	<PropertyGroup>
 		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProductVersion>10.0.20305</ProductVersion>
-		<SchemaVersion>2.0</SchemaVersion>
 		<ProjectGuid>$guid2$</ProjectGuid>
 		<OutputType>Library</OutputType>
 		<AppDesignerFolder>Properties</AppDesignerFolder>
 		<RootNamespace>$rootnamespace$</RootNamespace>
 		<AssemblyName>$safeprojectname$</AssemblyName>
-		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+		<TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
 		<FileAlignment>512</FileAlignment>
 		<GeneratePkgDefFile>false</GeneratePkgDefFile>
 	</PropertyGroup>
@@ -48,6 +47,9 @@
 			<EmbedInteropTypes>False</EmbedInteropTypes>
 		</Reference>
 		<Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+		<Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
 		<Reference Include="Microsoft.VisualStudio.Patterning.Library">
 			<HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>
 			<Private>false</Private>
@@ -72,10 +74,6 @@
 			<HintPath>$(PatternToolkitRuntime)\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
 			<Private>false</Private>
 		</Reference>
-		<Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>$(VS100COMNTOOLS)..\IDE\PrivateAssemblies\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
-		</Reference>
 		<Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
 			<HintPath>$(FeatureExtensionRuntime)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
 			<Private>False</Private>
@@ -85,8 +83,6 @@
 			<HintPath>$(FeatureExtensionRuntime)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="Properties\AssemblyInfo.cs" />

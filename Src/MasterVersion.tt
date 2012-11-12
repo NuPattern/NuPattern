@@ -15,29 +15,24 @@
  var vsVer = buildConstants.Substring(buildConstants.IndexOf("VSVER"), "VSVER".Length + 2);
 
  var targetVsVersion = vsVer;
- var targetFrxVersion = string.Empty;
 
  switch (vsVer)
  {
 	case "VSVER10":
-		targetFrxVersion = "4.0";
 		targetVsVersion = "10.0";
 		break;
 
 	case "VSVER11":
-		targetFrxVersion = "4.5";
 		targetVsVersion = "11.0";
 		break;
 
 	default:
-		targetFrxVersion = "4.0";
 		targetVsVersion = "10.0";
 		break;
  }
 #>
 \<#    
 	// Framework Version
-	var targetFrameworkVersion = "<#=targetFrxVersion#>";
 	var targetVsVersion = "<#=targetVsVersion#>";
 
     // Assembly Versions

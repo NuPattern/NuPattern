@@ -45,11 +45,19 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 
                 //SupportedFrameworkRuntimeEdition
 				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
-				Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
-
-				//SupportedProducts
-                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
+#if VSVER10
+				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
+#endif
+#if VSVER11
+                Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
+#endif
+                //SupportedProducts
+#if VSVER10
                 Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
+#endif
+#if VSVER11
+                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
+#endif
             }
 
             [TestMethod, TestCategory("Integration")]

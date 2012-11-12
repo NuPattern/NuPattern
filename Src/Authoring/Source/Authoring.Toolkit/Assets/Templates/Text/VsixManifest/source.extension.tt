@@ -47,28 +47,22 @@
 	<GettingStartedGuide></GettingStartedGuide>
 	<PreviewImage></PreviewImage>
     <SupportedProducts>
-      <VisualStudio Version="10.0">
-        <Edition>Ultimate</Edition>
-        <Edition>Premium</Edition>
-        <Edition>Pro</Edition>
-      </VisualStudio>
-<# 
-if (targetVsVersion == "11.0")
-{ 
-#>
-      <VisualStudio Version="11.0">
+      <VisualStudio Version="<#=targetVsVersion #>">
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
       </VisualStudio>
     </SupportedProducts>
+<# 
+if (targetVsVersion == "11.0")
+{ 
+#>
     <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
 <# 
 } 
 else
 {
 #>
-    </SupportedProducts>
     <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0"/>
 <#
 }

@@ -23,10 +23,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
         {
             var currentFileInfo = new FileInfo(TargetsFilePath);
 
-            if (currentFileInfo.CreationTime > currentFileInfo.LastWriteTime)
-                return false;
-            else
-                return !currentFileInfo.LastWriteTime.Equals(currentFileInfo.CreationTime);
+            return (currentFileInfo.LastWriteTime > currentFileInfo.CreationTime);
         }
 
         private static bool IsTargetsFileCurrent()

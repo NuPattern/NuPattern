@@ -118,6 +118,12 @@
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplateProject.csproj">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectTemplateProject.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\Templates\Text\Guidance\GuidanceWorkflow.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -900,9 +906,11 @@
     <Content Include="Assets\Templates\Items\Extensibility\ItemTemplate\__TemplateIcon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplate.csproj">
+    <None Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplateProject.tt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ProjectTemplateProject.csproj</LastGenOutput>
+    </None>
     <Content Include="Assets\Templates\Items\Extensibility\ProjectTemplate\__TemplateIcon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

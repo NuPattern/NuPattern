@@ -16,7 +16,7 @@
     <ProvideDefaultName>true</ProvideDefaultName>
   </TemplateData>
   <TemplateContent>
-    <Project File="ConsoleApplication.csproj" ReplaceParameters="true">
+    <Project File="ConsoleApplicationProject.csproj" ReplaceParameters="true">
       <ProjectItem TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" OpenInEditor="true">Program.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true">App.config</ProjectItem>

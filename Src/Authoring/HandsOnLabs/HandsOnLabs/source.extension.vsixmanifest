@@ -12,16 +12,11 @@
 		<GettingStartedGuide>http://visualstudiogallery.msdn.microsoft.com/24b0eb25-352f-45d8-8b2a-bdc7637d80ad</GettingStartedGuide>
 		<PreviewImage>Resources\VsixPreview.png</PreviewImage>
 		<SupportedProducts>
-			<VisualStudio Version="10.0">
-				<Edition>Ultimate</Edition>
-				<Edition>Premium</Edition>
-				<Edition>Pro</Edition>
-			</VisualStudio>
-			<VisualStudio Version="11.0">
-				<Edition>Ultimate</Edition>
-				<Edition>Premium</Edition>
-				<Edition>Pro</Edition>
-			</VisualStudio>
+		  <VisualStudio Version="11.0">
+			<Edition>Ultimate</Edition>
+			<Edition>Premium</Edition>
+			<Edition>Pro</Edition>
+		  </VisualStudio>
 		</SupportedProducts>
 		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
 	</Identifier>
