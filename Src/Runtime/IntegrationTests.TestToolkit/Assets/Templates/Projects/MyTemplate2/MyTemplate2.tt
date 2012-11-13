@@ -18,7 +18,7 @@
 		<RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
 	</TemplateData>
 	<TemplateContent>
-		<Project File="MyTemplate2.csproj" ReplaceParameters="true">
+		<Project File="MyTemplate2Project.csproj" ReplaceParameters="true">
 			<ProjectItem ReplaceParameters="true">source.vsixmanifest</ProjectItem>
 			<Folder Name="Properties">
 				<ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
