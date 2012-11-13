@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 			VsIdeTestHostContext.Dte.Solution.Close();
 		}
 
-		[Ignore]
+		[Ignore] //Need a way to click through the wizard.
 		[TestMethod, TestCategory("Integration")]
 		[HostType("VS IDE")]
 		public void WhenUnfolding_ThenProjectIsUnfolded()
@@ -37,6 +37,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 			var project = (IProject)this.toolkitTemplate.Unfold("Foo", this.solution);
 
 			Assert.Equal("Foo", project.Name);
+            //TODO: verify other values of unfolded items in solution Explorer, and Solution Builder.
 		}
 	}
 }

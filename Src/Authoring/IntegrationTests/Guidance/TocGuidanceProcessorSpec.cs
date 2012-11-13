@@ -15,7 +15,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 	{
 		internal static readonly IAssertion Assert = new Assertion();
 
-		[Ignore] // Cant be executed in Team Build. Word cannot be automated in non-interractive mode.
+		//[Ignore] // Cant be executed in Team Build. Word cannot be automated in non-interractive mode.
 		[DeploymentItem("SampleGuidanceDocs", "SampleGuidanceDocs")]
 		[TestClass]
 		public class GivenADocumentWorkflow : IntegrationTest
@@ -203,7 +203,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 		}
 
-		[Ignore] // Cant be executed in Team Build. Word cannot be automated in non-interractive mode.
+		//[Ignore] // Cant be executed in Team Build. Word cannot be automated in non-interractive mode.
 		[DeploymentItem("SampleGuidanceDocs", "SampleGuidanceDocs")]
 		[TestClass]
 		public class GivenADocumentToShred : IntegrationTest
@@ -393,7 +393,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 			}
 		}
 
-		[Ignore] // Cant be executed in Team Build. Word cannot be automated in non-interractive mode.
+		//[Ignore] // Cant be executed in Team Build. Word cannot be automated in non-interractive mode.
 		[DeploymentItem("SampleGuidanceDocs", "SampleGuidanceDocs")]
 		[TestClass]
 		public class GivenADocumentToValidate : IntegrationTest
