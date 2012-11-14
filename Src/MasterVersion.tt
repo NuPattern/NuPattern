@@ -1,39 +1,48 @@
-<#@ template language="C#" hostspecific="True" #>
+<#@ template language="C#" hostspecific="true" #>
 <#@ output extension=".ttinclude" #>
 <#@ assembly name="System.Core" #>
 <#@ assembly name="EnvDTE" #>
 <#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="EnvDTE" #>
 <#
- var serviceProvider = (IServiceProvider)this.Host;
- var dte = serviceProvider.GetService(typeof(EnvDTE.DTE)) as EnvDTE.DTE;
+	// This code detects the target version of Visual Studio by reading the 
+	// MSBUILD variables of the "Versioning" project that are determined by the current build configuration (see BuildConfiguration.CSharp.props)
+	// This template will only work correctly when transformed within Visual Studio
+	var projectName = "Versioning";
+	var buildConstantName = "DefineConstants";
+	var buildConstantPrefix = "VSVER";
 
- // Detrmine the VSVERXX build constant
- var projects = dte.ActiveSolutionProjects as Array;
- var versionProject = projects.OfType<EnvDTE.Project>().First(p => p.Name == "Versioning");
- var buildConstants = versionProject.ConfigurationManager.ActiveConfiguration.Properties.Item("DefineConstants").Value.ToString();
- var vsVer = buildConstants.Substring(buildConstants.IndexOf("VSVER"), "VSVER".Length + 2);
+	var serviceProvider = (IServiceProvider)this.Host;
+	var dte = serviceProvider.GetService(typeof(EnvDTE.DTE)) as EnvDTE.DTE;
 
- var targetVsVersion = vsVer;
+	// Determine the VSVERXX build constant
+	var projects = GetProjectsFromSolution(dte.Solution).Where(p => p != null);
 
- switch (vsVer)
- {
-	case "VSVER10":
-		targetVsVersion = "10.0";
-		break;
+	var versionProject = projects.First(p => p.Name == projectName);
+	var buildConstants = versionProject.ConfigurationManager.ActiveConfiguration.Properties.Item(buildConstantName).Value.ToString();
+	var vsVer = buildConstants.Substring(buildConstants.IndexOf(buildConstantPrefix), buildConstantPrefix.Length + 2);
 
-	case "VSVER11":
-		targetVsVersion = "11.0";
-		break;
+	var targetVsVersion = vsVer;
 
-	default:
-		targetVsVersion = "10.0";
-		break;
- }
-#>
-\<#    
-	// Framework Version
-	var targetVsVersion = "<#=targetVsVersion#>";
+	switch (vsVer)
+	{
+		case "VSVER10":
+			targetVsVersion = "10.0";
+			break;
+
+		case "VSVER11":
+			targetVsVersion = "11.0";
+			break;
+
+		default:
+			targetVsVersion = vsVer;
+			break;
+	}
+ #>
+\<#
+    // Framework Version
+    var targetVsVersion = "<#=targetVsVersion#>";
 
     // Assembly Versions
     var assemblyMajor = 1;
@@ -55,4 +64,40 @@
 	
 	// Assembly Identity
 	var assemblyProductName = "Pattern Automation Toolkit";
-\#>
+\#><#+
+ private static IEnumerable<EnvDTE.Project> GetProjectsFromSolution(EnvDTE.Solution solution)
+ {
+	var projects = new List<EnvDTE.Project>();
+
+	foreach (var p in solution.Projects.OfType<EnvDTE.Project>())
+	{
+		if (p.Kind == Constants.vsProjectKindSolutionItems)
+		{
+			projects.AddRange(GetSubProjects(p.ProjectItems.OfType<EnvDTE.ProjectItem>()));
+		}
+		else
+		{
+			projects.Add(p);
+		}
+	}
+
+	return projects;
+ }
+
+ private static IEnumerable<EnvDTE.Project> GetSubProjects(IEnumerable<EnvDTE.ProjectItem> projectItems)
+ {
+	var projects = new List<EnvDTE.Project>();
+	foreach (var pi in projectItems)
+	{
+		if (pi.Kind == Constants.vsProjectItemKindSolutionItems)
+		{
+			projects.Add(pi.SubProject);
+		}
+		else if (pi.Kind == Constants.vsProjectKindSolutionItems)
+		{
+			projects.AddRange(GetSubProjects(pi.ProjectItems.OfType<EnvDTE.ProjectItem>()));
+		}
+	}
+	return projects;
+ }
+#>

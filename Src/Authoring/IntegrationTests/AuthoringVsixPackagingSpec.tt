@@ -40,19 +40,27 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 				
 				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
 				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
-				Assert.Equal(@"Resources\AuthoringVsix.png", this.VsixInfo.Header.Icon);
-				Assert.Equal(@"Resources\AuthoringVsixPreview.png", this.VsixInfo.Header.PreviewImage);
+				Assert.Equal(@"Resources\DesignTimeVsix.png", this.VsixInfo.Header.Icon);
+				Assert.Equal(@"Resources\DesignTimeVsixPreview.png", this.VsixInfo.Header.PreviewImage);
 				Assert.Equal(@"<#=VsixInfo.PatternToolkitBuilder.MoreInfoUrl#>", this.VsixInfo.Header.MoreInfoUrl.ToString());
 				Assert.Equal(@"<#=VsixInfo.PatternToolkitBuilder.MoreInfoUrl#>", this.VsixInfo.Header.GettingStartedGuide.ToString());
 
                 //SupportedFrameworkRuntimeEdition
 				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
-				Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
-
-				//SupportedProducts
-                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
+#if VSVER10
+				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
+#endif
+#if VSVER11
+                Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
+#endif
+                //SupportedProducts
+#if VSVER10
                 Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
-            }
+#endif
+#if VSVER11
+                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
+#endif
+			}
 
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsSchemas()
@@ -146,8 +154,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 Assert.True(this.FolderContainsExclusive(@"Resources",
                     new[]
                         {
-                            "RunTimeVsix.png",
-                            "RunTimeVsixPreview.png",
+                            "DesignTimeVsix.png",
+                            "DesignTimeVsixPreview.png",
                         }));
 			}
 			

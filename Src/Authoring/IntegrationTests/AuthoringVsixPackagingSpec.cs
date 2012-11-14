@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
 				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
 				Assert.Equal(@"Resources\DesignTimeVsix.png", this.VsixInfo.Header.Icon);
-                Assert.Equal(@"Resources\DesignTimeVsixPreview.png", this.VsixInfo.Header.PreviewImage);
+				Assert.Equal(@"Resources\DesignTimeVsixPreview.png", this.VsixInfo.Header.PreviewImage);
 				Assert.Equal(@"http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b", this.VsixInfo.Header.MoreInfoUrl.ToString());
 				Assert.Equal(@"http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b", this.VsixInfo.Header.GettingStartedGuide.ToString());
 
@@ -51,14 +51,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 #if VSVER11
                 Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
 #endif
-				//SupportedProducts
+                //SupportedProducts
 #if VSVER10
                 Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
 #endif
 #if VSVER11
                 Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
 #endif
-            }
+			}
 
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsSchemas()

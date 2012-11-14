@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Resources;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.InteropServices;

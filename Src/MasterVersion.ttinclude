@@ -1,6 +1,6 @@
-<#    
-	// Framework Version
-	var targetVsVersion = "11.0";
+<#
+    // Framework Version
+    var targetVsVersion = "11.0";
 
     // Assembly Versions
     var assemblyMajor = 1;
