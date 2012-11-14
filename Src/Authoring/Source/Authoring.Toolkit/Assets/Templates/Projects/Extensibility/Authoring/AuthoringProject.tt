@@ -14,9 +14,9 @@ if (targetVsVersion == "11.0")
 {
 #>
 	<PropertyGroup>
-		<IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+		<IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
 		<IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
-		<IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+		<IncludeDebugSymbolsInLocalVSIXDeployment>true</IncludeDebugSymbolsInLocalVSIXDeployment>
 		<CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
 		<CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
 	</PropertyGroup>
