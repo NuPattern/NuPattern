@@ -18,7 +18,7 @@ public static class HandsOnLabsToolkitInfo
     public const string Author = "<#=vsixAuthor#>";
     public const string Version = "<#=authoringVSIXVersion#>";
 	public const string Identifier = "5d64cfe6-a6ff-4e73-a000-c6a8832740ff";
-	public const string VsixFileName = "PatternToolkitBuilderLabs.vsix"; // Should reflect <TargetVsixContainerName> value in HandsOnLabs.csproj
+	public const string VsixFileName = "PatternToolkitBuilderLabs.<#=targetVsVersion#>.vsix"; // Should reflect <TargetVsixContainerName> value in HandsOnLabs.csproj
 	public const string MoreInfoUrl = "http://visualstudiogallery.msdn.microsoft.com/24b0eb25-352f-45d8-8b2a-bdc7637d80ad";
 	public const string GettingStartedUrl = "http://visualstudiogallery.msdn.microsoft.com/24b0eb25-352f-45d8-8b2a-bdc7637d80ad";
 }

@@ -13,7 +13,6 @@
     <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
-    <TargetVsixContainerName>PatternToolkitBuilder.vsix</TargetVsixContainerName>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -21,6 +20,9 @@
     <BranchRoot>..\..\..\</BranchRoot>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <PropertyGroup>
+    <TargetVsixContainerName>PatternToolkitBuilder.$(TargetVsVersion).vsix</TargetVsixContainerName>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.Patterning.Library">
       <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>
@@ -1223,16 +1225,16 @@
       <RunCustomToolOnUnfold>false</RunCustomToolOnUnfold>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Content Include="..\..\..\Binaries\PatternToolkitManager.vsix">
+    <Content Include="..\..\..\Binaries\PatternToolkitManager.$(TargetVsVersion).vsix">
       <Visible>true</Visible>
-      <Link>PatternToolkitManager.vsix</Link>
+      <Link>PatternToolkitManager.$(TargetVsVersion).vsix</Link>
       <FixedLink>
       </FixedLink>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\Binaries\PatternToolkitAutomationLibrary.vsix">
+    <Content Include="..\..\..\Binaries\PatternToolkitAutomationLibrary.$(TargetVsVersion).vsix">
       <Visible>true</Visible>
-      <Link>PatternToolkitAutomationLibrary.vsix</Link>
+      <Link>PatternToolkitAutomationLibrary.$(TargetVsVersion).vsix</Link>
       <FixedLink>
       </FixedLink>
       <IncludeInVSIX>true</IncludeInVSIX>

@@ -1,7 +1,4 @@
-﻿<#@ PatternModel processor="PatternModelDirectiveProcessor" requires="fileName='..\..\..\AutomationLibrary.Toolkit\PatternModel.patterndefinition'" #>
-<#@ Template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" #>
-<#@ output extension=".cs" #>
+﻿<#@ output extension=".cs" #>
 <#@ Include File="..\..\..\AutomationLibrary.Toolkit\ToolkitVersionInfo.ttinclude" #>
 using System;
 
@@ -15,7 +12,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
 		/// <summary>
 		/// Gets the pattern definition identifier.
 		/// </summary>
-		public static Guid ProductId = new Guid("<#=this.PatternModelSchema.Pattern.Id#>");
+		public static Guid ProductId = new Guid("d6139b37-9971-4834-a9dc-2b3daef962cf");
 
 		/// <summary>
 		/// Gets the VSIX identifier of this toolkit.

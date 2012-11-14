@@ -40,8 +40,8 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="..\..\..\Binaries\PatternToolkitManager.vsix">
-      <Link>PatternToolkitManager.vsix</Link>
+    <Content Include="..\..\..\Binaries\PatternToolkitManager.$(TargetVsVersion).vsix">
+      <Link>PatternToolkitManager.$(TargetVsVersion).vsix</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="source.extension.vsixmanifest" />

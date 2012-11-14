@@ -236,8 +236,8 @@
     <Folder Include="Runtime.IntegrationTests.Content\Projects\Sample\SolutionFolder\Library\Folder\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Binaries\PatternToolkitManager.vsix">
-      <Link>Runtime.IntegrationTests.Content\PatternToolkitManager.vsix</Link>
+    <None Include="..\..\Binaries\PatternToolkitManager.$(TargetVSVersion).vsix">
+      <Link>Runtime.IntegrationTests.Content\PatternToolkitManager.$(TargetVSVersion).vsix</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />

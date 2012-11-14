@@ -114,10 +114,10 @@
 			<IncludeInVSIX>True</IncludeInVSIX>
 		</Content>
 		<Resource Include="Resources\PatternIcon.png"/>
-		<Content Include="PatternToolkitManager.vsix">
+		<Content Include="PatternToolkitManager.11.0.vsix">
 			<Visible>false</Visible>
-			<Link>PatternToolkitManager.vsix</Link>
-			<FixedLink>$(PatternToolkitBuilder)\PatternToolkitManager.vsix</FixedLink>
+			<Link>PatternToolkitManager.11.0.vsix</Link>
+			<FixedLink>$(PatternToolkitBuilder)\PatternToolkitManager.11.0.vsix</FixedLink>
 			<IncludeInVSIX>true</IncludeInVSIX>
 		</Content>
 	</ItemGroup>

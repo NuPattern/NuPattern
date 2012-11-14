@@ -31,11 +31,11 @@
 		</Reference>
 		<Reference Id="93373818-600f-414b-8181-3a0cb79fa785" MinVersion="1.3.20.0">
 			<Name>Pattern Toolkit Manager</Name>
-			<VsixPath>PatternToolkitManager.vsix</VsixPath>
+			<VsixPath>PatternToolkitManager.11.0.vsix</VsixPath>
 		</Reference>
 		<Reference Id="97bd7ab2-964b-43f1-8a08-be6db68b018b" MinVersion="1.3.20.0">
 			<Name>Pattern Toolkit Automation Library</Name>
-			<VsixPath>PatternToolkitAutomationLibrary.vsix</VsixPath>
+			<VsixPath>PatternToolkitAutomationLibrary.11.0.vsix</VsixPath>
 		</Reference>
 	</References>
 	<Content>

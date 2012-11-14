@@ -9,7 +9,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Authoring.IntegrationTests.Content";
-        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitAutomationLibrary.vsix";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitAutomationLibrary.11.0.vsix";
 
         [TestClass]
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]

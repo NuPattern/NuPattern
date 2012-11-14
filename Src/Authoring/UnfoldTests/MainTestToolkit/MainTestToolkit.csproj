@@ -52,8 +52,8 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ConsoleApplicationProject.csproj</LastGenOutput>
     </None>
-    <Content Include="..\..\..\Binaries\PatternToolkitManager.vsix">
-      <Link>PatternToolkitManager.vsix</Link>
+    <Content Include="..\..\..\Binaries\PatternToolkitManager.$(TargetVsVersion).vsix">
+      <Link>PatternToolkitManager.$(TargetVsVersion).vsix</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Assets\Templates\Projects\Console\App.config">

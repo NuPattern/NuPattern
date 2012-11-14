@@ -19,7 +19,7 @@ public static class RuntimeToolkitInfo
     public const string Author = "<#=vsixAuthor#>";
     public const string Version = "<#=runtimeVSIXVersion#>";
 	public const string Identifier = "<#=this.Dsl.PackageGuid #>";
-	public const string VsixFileName = "PatternToolkitManager.vsix"; // Should reflect <TargetVsixContainerName> value in Runtime.Shell.csproj
+	public const string VsixFileName = "PatternToolkitManager.<#=targetVsVersion#>.vsix"; // Should reflect <TargetVsixContainerName> value in Runtime.Shell.csproj
 	public const string MoreInfoUrl = "http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b";
 	public const string GettingStartedUrl = "http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b";
 }

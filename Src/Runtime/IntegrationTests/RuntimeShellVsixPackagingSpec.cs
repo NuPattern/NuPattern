@@ -9,7 +9,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Runtime.IntegrationTests.Content";
-        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitManager.vsix";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitManager.11.0.vsix";
 
         [TestClass]
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]

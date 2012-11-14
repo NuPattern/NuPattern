@@ -10,7 +10,6 @@
     <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime.Shell</RootNamespace>
     <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.Shell</AssemblyName>
     <ProjectGuid>{D3E93083-99C9-4186-95B5-339A822C63EE}</ProjectGuid>
-    <TargetVsixContainerName>PatternToolkitManager.vsix</TargetVsixContainerName>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -18,6 +17,9 @@
     <BranchRoot>..\..\..\</BranchRoot>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <PropertyGroup>
+    <TargetVsixContainerName>PatternToolkitManager.$(TargetVsVersion).vsix</TargetVsixContainerName>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EnvDTE">
       <EmbedInteropTypes>False</EmbedInteropTypes>

@@ -9,7 +9,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Authoring.IntegrationTests.Content";
-        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitBuilder.vsix";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitBuilder.11.0.vsix";
 
         [TestClass]
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]
@@ -187,8 +187,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 							"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Shell.pkgdef",
 
 							//Embedded VSIXes
-							"PatternToolkitAutomationLibrary.vsix",
-							"PatternToolkitManager.vsix",
+							"PatternToolkitAutomationLibrary.11.0.vsix",
+							"PatternToolkitManager.11.0.vsix",
                         }));
             }
         }

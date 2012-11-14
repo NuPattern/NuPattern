@@ -12,7 +12,7 @@ public static class RuntimeToolkitInfo
     public const string Author = "Outercurve";
     public const string Version = "1.3.20.0";
 	public const string Identifier = "93373818-600f-414b-8181-3a0cb79fa785";
-	public const string VsixFileName = "PatternToolkitManager.vsix"; // Should reflect <TargetVsixContainerName> value in Runtime.Shell.csproj
+	public const string VsixFileName = "PatternToolkitManager.11.0.vsix"; // Should reflect <TargetVsixContainerName> value in Runtime.Shell.csproj
 	public const string MoreInfoUrl = "http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b";
 	public const string GettingStartedUrl = "http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b";
 }

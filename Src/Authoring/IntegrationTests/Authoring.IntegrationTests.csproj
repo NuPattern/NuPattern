@@ -154,12 +154,12 @@
     <Content Include="VersionTargetsSpec\SimpleLibrarySolution.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="..\..\Binaries\PatternToolkitAutomationLibrary.vsix">
-      <Link>Authoring.IntegrationTests.Content\PatternToolkitAutomationLibrary.vsix</Link>
+    <None Include="..\..\Binaries\PatternToolkitAutomationLibrary.$(TargetVsVersion).vsix">
+      <Link>Authoring.IntegrationTests.Content\PatternToolkitAutomationLibrary.$(TargetVsVersion).vsix</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\..\Binaries\PatternToolkitBuilder.vsix">
-      <Link>Authoring.IntegrationTests.Content\PatternToolkitBuilder.vsix</Link>
+    <None Include="..\..\Binaries\PatternToolkitBuilder.$(TargetVsVersion).vsix">
+      <Link>Authoring.IntegrationTests.Content\PatternToolkitBuilder.$(TargetVsVersion).vsix</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="AutomationLibraryVsixPackagingSpec.tt">
