@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.UriProvider
         {
             var service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
             Assert.NotNull(service);
-            var uri = new Uri("vsix://93373818-600f-414b-8181-3a0cb79fa785");
+            var uri = new Uri("vsix://" + Runtime.Shell.Constants.VsixIdentifier);
 
             var installed = service.ResolveUri<IInstalledExtension>(uri);
             var extension = service.ResolveUri<IExtension>(uri);

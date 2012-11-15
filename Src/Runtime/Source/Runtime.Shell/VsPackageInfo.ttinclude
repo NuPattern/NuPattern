@@ -1,0 +1,9 @@
+﻿<#+
+/// <summary>
+/// Version information about this VS Package
+/// </summary>
+public static class RuntimeShellPackageInfo
+{
+    public const string PackageGuid = "93373818-600f-414b-8181-3a0cb79fa785";
+}
+#>

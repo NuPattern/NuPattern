@@ -2266,7 +2266,7 @@ Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
 ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>Use a 'Collection' shape when you have an
 'Element' shape with a <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/WhatisCardinality.mht">Cardinality</a>
 of more than ‘One’, or when you have to group multiple different 'Element'
 shapes that are related together.<o:p></o:p></p>
@@ -2318,7 +2318,7 @@ ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Property' shapes is meaningful and up to date. These values are presented to
 pattern users in various different places, and provide important cues for
 configuring correctly.<span style=3D'mso-spacerun:yes'>  </span>See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToControllingtheDisplayofthePattern.mht">Controlling
 the Display of the Pattern</a> for more details for more details on where t=
 hese
@@ -2344,7 +2344,7 @@ ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>Set the 'Auto Create' property to true, to
 automatically create the first instance of an element or collection, to save
 users of the pattern having to manually create it. See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToControllingInstancingofElements.mht">Controlling
 Instancing</a>.<o:p></o:p></p>
 
@@ -2356,10 +2356,10 @@ Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
 ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>Use Validation, and Validation Rules on
 'Pattern', 'Collection', and 'Element' shapes for 'Many' kinds of '<a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/WhatisCardinality.mht">Cardinality</a>'
 to ensure the user configures the correct number of instances. See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToApplyingValidationtoaPropertyorElement.mht">Applying
 Validation</a> for more details.<o:p></o:p></p>
 
@@ -2372,7 +2372,7 @@ pt;
 margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: There is no need to explicitly validate 'One' kinds of '<a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/WhatisCardinality.mht">Cardinality</a>'
 (i.e. OneToOne and OneToMany), these are validated automatically at all tim=
 es.<o:p></o:p></p>
@@ -2389,7 +2389,7 @@ ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 make your pattern to plug-into or integrate with others, or to have other
 pattern toolkits provide extensions to your pattern that have variable
 implementation. See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/UnderstandingEnablingCompositionandPatternReuse.mht">Enabling
 Composition and Pattern Reuse</a> for more details about when and why to use
 extension points.<o:p></o:p></p>
@@ -2406,7 +2406,7 @@ that will be associated to artifacts in the solution (i.e. unfold templates=
  or
 generate code in Automation), set the 'Associated Artifacts' properties, so
 that users can navigate and open those artifacts from Solution Builder. <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToEnablingSolutionNavigation.mht">Enabling
 Solution Navigation</a> for more information on this capability.<o:p></o:p>=
 </p>
@@ -2420,7 +2420,7 @@ ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>Always provide default values for all proper=
 ties
 used by any automation. See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToSettingDefaultValuesforProperties.mht">Setting
 a Default Value</a> for more details.<o:p></o:p></p>
 
@@ -2434,7 +2434,7 @@ ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  or
 manipulated by a toolkit user. Typically, these properties will only be used
 exclusively by automation. See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToControllingtheDisplayofthePattern.mht">Controlling
 the Display of the Pattern</a> for more details.<o:p></o:p></p>
 
@@ -2449,7 +2449,7 @@ be
 seen but not changed by a toolkit user. Invariably, these properties are us=
 ed
 exclusively by automation, but suitable for the user to reference. See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToControllingtheDisplayofthePattern.mht">Controlling
 the Display of the Pattern</a> for more details.<o:p></o:p></p>
 
@@ -2462,7 +2462,7 @@ ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>Use Validation Rules on 'Variable Properties=
 ' to
 ensure property values are always valid for state of the pattern. See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToApplyingValidationtoaPropertyorElement.mht">Applying
 Validation</a> for more details.<o:p></o:p></p>
 

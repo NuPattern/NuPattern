@@ -5,7 +5,7 @@ namespace Microsoft.VisualStudio.Patterning.HandsOnLabs.Guidance
 {
     public partial class Feature
     {
-        private const string PatternToolkitId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6";
+        private const string PatternToolkitId = AuthoringToolkitInfo.VsixIdentifier;
         private const string WidgetPatternToolkitName = "WidgetToolkit";
         private CommandBinding[] commands;
 

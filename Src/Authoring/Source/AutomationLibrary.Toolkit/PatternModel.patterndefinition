@@ -2825,7 +2825,7 @@
       </view>
     </views>
     <providedExtensionPoints>
-      <providedExtensionPoint Id="f45d7712-cf86-4654-9cd4-6789cf359269" extensionPointId="9f6dc301-6f66-4d21-9f9c-b37412b162f6.PatternToolkit.Development.Automation.AutomationLibrary" />
+      <providedExtensionPoint Id="f45d7712-cf86-4654-9cd4-6789cf359269" extensionPointId="84031a32-b20f-479c-a620-beacd982ea13.PatternToolkit.Development.Automation.AutomationLibrary" />
     </providedExtensionPoints>
   </pattern>
 </patternModel>

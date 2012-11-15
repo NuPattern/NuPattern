@@ -151,6 +151,10 @@
     <Content Include="GeneratedCode\Guidance\Content\WhereAreWeNow.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <None Include="AuthoringToolkitInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AuthoringToolkitInfo.cs</LastGenOutput>
+    </None>
     <None Include="ToolkitVersionInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ToolkitVersionInfo.ttinclude</LastGenOutput>
@@ -167,6 +171,11 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>HolProjectTemplate.vstemplate</LastGenOutput>
     </None>
+    <Compile Include="AuthoringToolkitInfo.cs">
+      <DependentUpon>AuthoringToolkitInfo.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.cs">
       <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Element/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f608f1a87-b90d-43cd-adfe-121dd850e2dd</SourceModelReference>
       <ItemGuid>0ddee1e0-beae-431c-a10b-5379b9aa183f</ItemGuid>

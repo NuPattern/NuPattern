@@ -48,8 +48,6 @@
 	<PreviewImage></PreviewImage>
     <SupportedProducts>
       <VisualStudio Version="<#=targetVsVersion #>">
-        <Edition>Ultimate</Edition>
-        <Edition>Premium</Edition>
         <Edition>Pro</Edition>
       </VisualStudio>
     </SupportedProducts>

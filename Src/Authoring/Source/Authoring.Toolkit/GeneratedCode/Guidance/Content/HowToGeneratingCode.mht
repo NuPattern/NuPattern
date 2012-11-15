@@ -2167,7 +2167,7 @@ tom:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
 al'>Recommend:</b>
 See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/WhatareTextTemplates.mht">What
 are Text Templates</a> for understanding how they can be used in pattern
 toolkits.<o:p></o:p></p>
@@ -2179,7 +2179,7 @@ olor:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
 al'>Recommend</b>:
 Study the <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/UnderstandingUnfoldorGenerate.mht">Unfold
 or Generate</a> topic to determine if generating with a text template is the
 right fit for toolkit’s your needs.<o:p></o:p></p>
@@ -2208,7 +2208,7 @@ bottom:
 10.0pt;margin-left:0in;mso-add-space:auto;background:#F2DBDB;mso-background=
 -themecolor:
 accent2;mso-background-themetint:51'>See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToCreatingaTextTemplate.mht">Creating</a>
 for creating text template assets.<span class=3DMsoHyperlink><o:p></o:p></s=
 pan></p>
@@ -2225,7 +2225,7 @@ generate with the template, configure the appropriate automation.<o:p></o:p=
 <p class=3DMsoNormal>To configure a text template on any element in the pat=
 tern
 model, <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/AddingaCommand.mht">add
 a ‘Command’</a> to the element.<o:p></o:p></p>
 
@@ -2346,7 +2346,7 @@ p</b>:
   You can also define expressions in the value of the ‘Target File Name’
   property to substitute property values in calculated names. (i.e.
   {InstanceName} or {Parent.PropertyName}. See the <a
-  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
+  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
 ance/Content/ExpressionSyntax.mht">Expression
   Syntax</a> for more details). Or you can use a Value Provider to calculate
   the name.<o:p></o:p></p>
@@ -2379,7 +2379,7 @@ ormal'>Note</b>:
 the
   first solution item of the current element or the first ancestor element
   found, or if, none found then generated to the solution. See the <a
-  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
+  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
 ance/Content/TargetPathSyntax.mht">Target
   Path Syntax</a> for more details.<o:p></o:p></p>
   <p class=3DWarning style=3D'margin:0in;margin-bottom:.0001pt;mso-add-spac=
@@ -2403,7 +2403,7 @@ p</b>:
 y to
   substitute property values in calculated paths. (i.e. {InstanceName} or
   {Parent.PropertyName}. See the <a
-  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
+  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
 ance/Content/ExpressionSyntax.mht">Expression
   Syntax</a> for more details). Or you can use a Value Provider to calculate
   the path.<o:p></o:p></p>
@@ -2467,7 +2467,7 @@ ght:
  value
   includes property substitutions (i.e. {InstanceName} or
   {Parent.PropertyName}, etc. See the <a
-  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
+  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
 ance/Content/ExpressionSyntax.mht">Expression
   Syntax</a> for more details) or when the value is calculated by a value
   provider.<o:p></o:p></p>
@@ -2584,10 +2584,10 @@ ble
 <p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
 
 <p class=3DMsoNormal>Lastly, <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/AddingaLaunchPoint.mht">add
 an appropriate launch point</a> and <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/ConfiguringaLaunchPoint.mht">configure
 the launch point</a> to execute the command.<o:p></o:p></p>
 

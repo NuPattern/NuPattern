@@ -23,7 +23,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 	///	A Pattern Toolkit for capturing and delivering a design pattern.
 	///	</summary>
 	[Description("A Pattern Toolkit for capturing and delivering a design pattern.")]
-	[ToolkitInterface(ExtensionId ="9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefinitionId = "c034429e-01f9-48dd-a478-0321fb708dd3", ProxyType = typeof(PatternToolkit))]
+	[ToolkitInterface(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "c034429e-01f9-48dd-a478-0321fb708dd3", ProxyType = typeof(PatternToolkit))]
 	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
 	public partial interface IPatternToolkit : IToolkitInterface
 	{ 

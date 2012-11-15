@@ -73,19 +73,19 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction4 = new GuidanceAction
 			{
 				Name = "What is the Pattern Automation Toolkit?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisthePatternAutomationToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisthePatternAutomationToolkit.mht",
 			};
 			fork3.ConnectTo(guidanceaction4);
 			var fork5 = new Fork
 			{
 				Name = "Why Would I Want to Use a Pattern Toolkit?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhyWouldIWanttoUseaPatternToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhyWouldIWanttoUseaPatternToolkit.mht",
 			};
 			guidanceaction4.ConnectTo(fork5);
 			var guidanceaction6 = new GuidanceAction
 			{
 				Name = "Benefits",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/Benefits.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Benefits.mht",
 			};
 			fork5.ConnectTo(guidanceaction6);
 			var join7 = new Join
@@ -96,13 +96,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var fork8 = new Fork
 			{
 				Name = "Why Would I Build a Pattern Toolkit?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhyWouldIBuildaPatternToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhyWouldIBuildaPatternToolkit.mht",
 			};
 			join7.ConnectTo(fork8);
 			var guidanceaction9 = new GuidanceAction
 			{
 				Name = "Motivations",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/Motivations.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Motivations.mht",
 			};
 			fork8.ConnectTo(guidanceaction9);
 			var join10 = new Join
@@ -113,13 +113,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction11 = new GuidanceAction
 			{
 				Name = "Can I Customize a Pattern Toolkit?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/CanICustomizeaPatternToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/CanICustomizeaPatternToolkit.mht",
 			};
 			join10.ConnectTo(guidanceaction11);
 			var guidanceaction12 = new GuidanceAction
 			{
 				Name = "How do Pattern Toolkits Work?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowdoPatternToolkitsWork.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowdoPatternToolkitsWork.mht",
 			};
 			guidanceaction11.ConnectTo(guidanceaction12);
 			var join13 = new Join
@@ -142,37 +142,37 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction16 = new GuidanceAction
 			{
 				Name = "Pre-requisites for Using",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/PrerequisitesforUsing.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/PrerequisitesforUsing.mht",
 			};
 			fork15.ConnectTo(guidanceaction16);
 			var guidanceaction17 = new GuidanceAction
 			{
 				Name = "Installing a Pattern Toolkit",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/InstallingaPatternToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/InstallingaPatternToolkit.mht",
 			};
 			guidanceaction16.ConnectTo(guidanceaction17);
 			var guidanceaction18 = new GuidanceAction
 			{
 				Name = "Browsing & Managing Installed Pattern Toolkits",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/BrowsingManagingInstalledPatternToolkits.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/BrowsingManagingInstalledPatternToolkits.mht",
 			};
 			guidanceaction17.ConnectTo(guidanceaction18);
 			var guidanceaction19 = new GuidanceAction
 			{
 				Name = "Using Pattern Toolkits",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UsingPatternToolkits.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UsingPatternToolkits.mht",
 			};
 			guidanceaction18.ConnectTo(guidanceaction19);
 			var guidanceaction20 = new GuidanceAction
 			{
 				Name = "Viewing & Configuring Solution Elements ",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ViewingConfiguringSolutionElements.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ViewingConfiguringSolutionElements.mht",
 			};
 			guidanceaction19.ConnectTo(guidanceaction20);
 			var guidanceaction21 = new GuidanceAction
 			{
 				Name = "Running Automation",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/RunningAutomation.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/RunningAutomation.mht",
 			};
 			guidanceaction20.ConnectTo(guidanceaction21);
 			var join22 = new Join
@@ -183,49 +183,49 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var fork23 = new Fork
 			{
 				Name = "Creating and Customizing Pattern Toolkits",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/CreatingandCustomizingPatternToolkits.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/CreatingandCustomizingPatternToolkits.mht",
 			};
 			join22.ConnectTo(fork23);
 			var guidanceaction24 = new GuidanceAction
 			{
 				Name = "Pre-Requisites for Authoring",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/PreRequisitesforAuthoring.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/PreRequisitesforAuthoring.mht",
 			};
 			fork23.ConnectTo(guidanceaction24);
 			var guidanceaction25 = new GuidanceAction
 			{
 				Name = "Installing the Pattern Automation Toolkit",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/InstallingthePatternAutomationToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/InstallingthePatternAutomationToolkit.mht",
 			};
 			guidanceaction24.ConnectTo(guidanceaction25);
 			var guidanceaction26 = new GuidanceAction
 			{
 				Name = "Creating a Pattern Toolkit",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/CreatingaPatternToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/CreatingaPatternToolkit.mht",
 			};
 			guidanceaction25.ConnectTo(guidanceaction26);
 			var guidanceaction27 = new GuidanceAction
 			{
 				Name = "The Development Cycle (Overview)",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/TheDevelopmentCycleOverview.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/TheDevelopmentCycleOverview.mht",
 			};
 			guidanceaction26.ConnectTo(guidanceaction27);
 			var guidanceaction28 = new GuidanceAction
 			{
 				Name = "The Development Cycle (In Practice)",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/TheDevelopmentCycleInPractice.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/TheDevelopmentCycleInPractice.mht",
 			};
 			guidanceaction27.ConnectTo(guidanceaction28);
 			var guidanceaction29 = new GuidanceAction
 			{
 				Name = "The Development Process",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/TheDevelopmentProcess.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/TheDevelopmentProcess.mht",
 			};
 			guidanceaction28.ConnectTo(guidanceaction29);
 			var guidanceaction30 = new GuidanceAction
 			{
 				Name = "The Customization Process",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/TheCustomizationProcess.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/TheCustomizationProcess.mht",
 			};
 			guidanceaction29.ConnectTo(guidanceaction30);
 			var join31 = new Join
@@ -247,19 +247,19 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction34 = new GuidanceAction
 			{
 				Name = "What are Patterns?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatarePatterns.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatarePatterns.mht",
 			};
 			fork33.ConnectTo(guidanceaction34);
 			var guidanceaction35 = new GuidanceAction
 			{
 				Name = "What are Pattern Toolkits?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatarePatternToolkits.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatarePatternToolkits.mht",
 			};
 			guidanceaction34.ConnectTo(guidanceaction35);
 			var guidanceaction36 = new GuidanceAction
 			{
 				Name = "What is Customization?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisCustomization.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisCustomization.mht",
 			};
 			guidanceaction35.ConnectTo(guidanceaction36);
 			var fork37 = new Fork
@@ -270,13 +270,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction38 = new GuidanceAction
 			{
 				Name = "What is Solution Builder?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisSolutionBuilder.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisSolutionBuilder.mht",
 			};
 			fork37.ConnectTo(guidanceaction38);
 			var guidanceaction39 = new GuidanceAction
 			{
 				Name = "What is a Solution Element?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisaSolutionElement.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisaSolutionElement.mht",
 			};
 			guidanceaction38.ConnectTo(guidanceaction39);
 			var join40 = new Join
@@ -292,49 +292,49 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction42 = new GuidanceAction
 			{
 				Name = "What is a Pattern Model?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisaPatternModel.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisaPatternModel.mht",
 			};
 			fork41.ConnectTo(guidanceaction42);
 			var guidanceaction43 = new GuidanceAction
 			{
 				Name = "What is Commonality & Variability?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisCommonalityVariability.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisCommonalityVariability.mht",
 			};
 			guidanceaction42.ConnectTo(guidanceaction43);
 			var guidanceaction44 = new GuidanceAction
 			{
 				Name = "What are Variability Views?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareVariabilityViews.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareVariabilityViews.mht",
 			};
 			guidanceaction43.ConnectTo(guidanceaction44);
 			var guidanceaction45 = new GuidanceAction
 			{
 				Name = "What are Variability Elements, Collections and Properties?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareVariabilityElementsCollectionsandProperties.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareVariabilityElementsCollectionsandProperties.mht",
 			};
 			guidanceaction44.ConnectTo(guidanceaction45);
 			var guidanceaction46 = new GuidanceAction
 			{
 				Name = "What are Extension Points?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareExtensionPoints.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareExtensionPoints.mht",
 			};
 			guidanceaction45.ConnectTo(guidanceaction46);
 			var guidanceaction47 = new GuidanceAction
 			{
 				Name = "What is the Pattern Model Designer?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisthePatternModelDesigner.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisthePatternModelDesigner.mht",
 			};
 			guidanceaction46.ConnectTo(guidanceaction47);
 			var guidanceaction48 = new GuidanceAction
 			{
 				Name = "What is Cardinality?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisCardinality.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisCardinality.mht",
 			};
 			guidanceaction47.ConnectTo(guidanceaction48);
 			var guidanceaction49 = new GuidanceAction
 			{
 				Name = "What are Related Items?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareRelatedItems.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareRelatedItems.mht",
 			};
 			guidanceaction48.ConnectTo(guidanceaction49);
 			var join50 = new Join
@@ -350,31 +350,31 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction52 = new GuidanceAction
 			{
 				Name = "What are Assets?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareAssets.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareAssets.mht",
 			};
 			fork51.ConnectTo(guidanceaction52);
 			var guidanceaction53 = new GuidanceAction
 			{
 				Name = "What are Solution Implementation Assets?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareSolutionImplementationAssets.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareSolutionImplementationAssets.mht",
 			};
 			guidanceaction52.ConnectTo(guidanceaction53);
 			var guidanceaction54 = new GuidanceAction
 			{
 				Name = "What are Automation Assets?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareAutomationAssets.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareAutomationAssets.mht",
 			};
 			guidanceaction53.ConnectTo(guidanceaction54);
 			var guidanceaction55 = new GuidanceAction
 			{
 				Name = "What are VS Templates?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareVSTemplates.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareVSTemplates.mht",
 			};
 			guidanceaction54.ConnectTo(guidanceaction55);
 			var guidanceaction56 = new GuidanceAction
 			{
 				Name = "What are Text Templates?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareTextTemplates.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareTextTemplates.mht",
 			};
 			guidanceaction55.ConnectTo(guidanceaction56);
 			var join57 = new Join
@@ -390,31 +390,31 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction59 = new GuidanceAction
 			{
 				Name = "What is Guidance?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisGuidance.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisGuidance.mht",
 			};
 			fork58.ConnectTo(guidanceaction59);
 			var guidanceaction60 = new GuidanceAction
 			{
 				Name = "What is a Guidance Workflow?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisaGuidanceWorkflow.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisaGuidanceWorkflow.mht",
 			};
 			guidanceaction59.ConnectTo(guidanceaction60);
 			var guidanceaction61 = new GuidanceAction
 			{
 				Name = "What is a Guidance Document?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisaGuidanceDocument.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisaGuidanceDocument.mht",
 			};
 			guidanceaction60.ConnectTo(guidanceaction61);
 			var guidanceaction62 = new GuidanceAction
 			{
 				Name = "What is the Guidance Explorer?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatistheGuidanceExplorer.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatistheGuidanceExplorer.mht",
 			};
 			guidanceaction61.ConnectTo(guidanceaction62);
 			var guidanceaction63 = new GuidanceAction
 			{
 				Name = "What is the Guidance Browser?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatistheGuidanceBrowser.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatistheGuidanceBrowser.mht",
 			};
 			guidanceaction62.ConnectTo(guidanceaction63);
 			var join64 = new Join
@@ -430,61 +430,61 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction66 = new GuidanceAction
 			{
 				Name = "What is Automation?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisAutomation.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisAutomation.mht",
 			};
 			fork65.ConnectTo(guidanceaction66);
 			var guidanceaction67 = new GuidanceAction
 			{
 				Name = "What are Automation Extensions?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareAutomationExtensions.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareAutomationExtensions.mht",
 			};
 			guidanceaction66.ConnectTo(guidanceaction67);
 			var guidanceaction68 = new GuidanceAction
 			{
 				Name = "What are Launch Points?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareLaunchPoints.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareLaunchPoints.mht",
 			};
 			guidanceaction67.ConnectTo(guidanceaction68);
 			var guidanceaction69 = new GuidanceAction
 			{
 				Name = "What are Events?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareEvents.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareEvents.mht",
 			};
 			guidanceaction68.ConnectTo(guidanceaction69);
 			var guidanceaction70 = new GuidanceAction
 			{
 				Name = "What are Commands?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareCommands.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareCommands.mht",
 			};
 			guidanceaction69.ConnectTo(guidanceaction70);
 			var guidanceaction71 = new GuidanceAction
 			{
 				Name = "What are Wizards?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareWizards.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareWizards.mht",
 			};
 			guidanceaction70.ConnectTo(guidanceaction71);
 			var guidanceaction72 = new GuidanceAction
 			{
 				Name = "What are Conditions?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareConditions.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareConditions.mht",
 			};
 			guidanceaction71.ConnectTo(guidanceaction72);
 			var guidanceaction73 = new GuidanceAction
 			{
 				Name = "What are Value Providers?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareValueProviders.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareValueProviders.mht",
 			};
 			guidanceaction72.ConnectTo(guidanceaction73);
 			var guidanceaction74 = new GuidanceAction
 			{
 				Name = "What are Validation Rules?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareValidationRules.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareValidationRules.mht",
 			};
 			guidanceaction73.ConnectTo(guidanceaction74);
 			var guidanceaction75 = new GuidanceAction
 			{
 				Name = "What are Artifact Links?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatareArtifactLinks.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatareArtifactLinks.mht",
 			};
 			guidanceaction74.ConnectTo(guidanceaction75);
 			var join76 = new Join
@@ -500,7 +500,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction78 = new GuidanceAction
 			{
 				Name = "What is Toolkit Info?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisToolkitInfo.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisToolkitInfo.mht",
 			};
 			fork77.ConnectTo(guidanceaction78);
 			var join79 = new Join
@@ -516,7 +516,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction81 = new GuidanceAction
 			{
 				Name = "How is a Pattern Toolkit Deployed?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowisaPatternToolkitDeployed.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowisaPatternToolkitDeployed.mht",
 			};
 			fork80.ConnectTo(guidanceaction81);
 			var join82 = new Join
@@ -543,7 +543,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction86 = new GuidanceAction
 			{
 				Name = "Creating Pattern Toolkits",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/CreatingPatternToolkits.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/CreatingPatternToolkits.mht",
 			};
 			fork85.ConnectTo(guidanceaction86);
 			var join87 = new Join
@@ -560,7 +560,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction89 = new GuidanceAction
 			{
 				Name = "Using ",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/Using.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Using.mht",
 			};
 			fork88.ConnectTo(guidanceaction89);
 			var fork90 = new Fork
@@ -572,43 +572,43 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction91 = new GuidanceAction
 			{
 				Name = "Understanding: What is a Toolkit Project?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingWhatisaToolkitProject.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingWhatisaToolkitProject.mht",
 			};
 			fork90.ConnectTo(guidanceaction91);
 			var guidanceaction92 = new GuidanceAction
 			{
 				Name = "How To: Creating a new Toolkit Project",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatinganewToolkitProject.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatinganewToolkitProject.mht",
 			};
 			guidanceaction91.ConnectTo(guidanceaction92);
 			var fork93 = new Fork
 			{
 				Name = "How To: Start Building a Pattern Toolkit",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToStartBuildingaPatternToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToStartBuildingaPatternToolkit.mht",
 			};
 			guidanceaction92.ConnectTo(fork93);
 			var guidanceaction94 = new GuidanceAction
 			{
 				Name = "Find a Problem",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/FindaProblem.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/FindaProblem.mht",
 			};
 			fork93.ConnectTo(guidanceaction94);
 			var guidanceaction95 = new GuidanceAction
 			{
 				Name = "Create an RI",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/CreateanRI.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/CreateanRI.mht",
 			};
 			guidanceaction94.ConnectTo(guidanceaction95);
 			var guidanceaction96 = new GuidanceAction
 			{
 				Name = "Identify Variability",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/IdentifyVariability.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/IdentifyVariability.mht",
 			};
 			guidanceaction95.ConnectTo(guidanceaction96);
 			var guidanceaction97 = new GuidanceAction
 			{
 				Name = "Build the Toolkit",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/BuildtheToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/BuildtheToolkit.mht",
 			};
 			guidanceaction96.ConnectTo(guidanceaction97);
 			var join98 = new Join
@@ -619,31 +619,31 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction99 = new GuidanceAction
 			{
 				Name = "How To: Toolkit Design Guidelines",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToToolkitDesignGuidelines.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToToolkitDesignGuidelines.mht",
 			};
 			join98.ConnectTo(guidanceaction99);
 			var fork100 = new Fork
 			{
 				Name = "How To: Naming in a Toolkit Project",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToNaminginaToolkitProject.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToNaminginaToolkitProject.mht",
 			};
 			guidanceaction99.ConnectTo(fork100);
 			var guidanceaction101 = new GuidanceAction
 			{
 				Name = "Naming the Toolkit Project",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/NamingtheToolkitProject.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/NamingtheToolkitProject.mht",
 			};
 			fork100.ConnectTo(guidanceaction101);
 			var guidanceaction102 = new GuidanceAction
 			{
 				Name = "Naming the Pattern",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/NamingthePattern.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/NamingthePattern.mht",
 			};
 			guidanceaction101.ConnectTo(guidanceaction102);
 			var guidanceaction103 = new GuidanceAction
 			{
 				Name = "Naming Automation",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/NamingAutomation.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/NamingAutomation.mht",
 			};
 			guidanceaction102.ConnectTo(guidanceaction103);
 			var join104 = new Join
@@ -654,13 +654,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction105 = new GuidanceAction
 			{
 				Name = "How To: Run, Debug, Test a Toolkit",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToRunDebugTestaToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToRunDebugTestaToolkit.mht",
 			};
 			join104.ConnectTo(guidanceaction105);
 			var guidanceaction106 = new GuidanceAction
 			{
 				Name = "How To: Troubleshoot Toolkit Problems",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToTroubleshootToolkitProblems.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToTroubleshootToolkitProblems.mht",
 			};
 			guidanceaction105.ConnectTo(guidanceaction106);
 			var fork107 = new Fork
@@ -672,7 +672,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction108 = new GuidanceAction
 			{
 				Name = "How To: Create a Production Tooling Workflow",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreateaProductionToolingWorkflow.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreateaProductionToolingWorkflow.mht",
 			};
 			fork107.ConnectTo(guidanceaction108);
 			var join109 = new Join
@@ -688,121 +688,121 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction111 = new GuidanceAction
 			{
 				Name = "Understanding: What is a Pattern Model?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingWhatisaPatternModel.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingWhatisaPatternModel.mht",
 			};
 			fork110.ConnectTo(guidanceaction111);
 			var guidanceaction112 = new GuidanceAction
 			{
 				Name = "How To: Creating a Pattern Model",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingaPatternModel.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingaPatternModel.mht",
 			};
 			guidanceaction111.ConnectTo(guidanceaction112);
 			var guidanceaction113 = new GuidanceAction
 			{
 				Name = "How To: Modeling Design Guidelines",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToModelingDesignGuidelines.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToModelingDesignGuidelines.mht",
 			};
 			guidanceaction112.ConnectTo(guidanceaction113);
 			var guidanceaction114 = new GuidanceAction
 			{
 				Name = "Understanding: Model Variability",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingModelVariability.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingModelVariability.mht",
 			};
 			guidanceaction113.ConnectTo(guidanceaction114);
 			var guidanceaction115 = new GuidanceAction
 			{
 				Name = "Understanding: Enabling Composition and Pattern Reuse",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingEnablingCompositionandPatternReuse.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingEnablingCompositionandPatternReuse.mht",
 			};
 			guidanceaction114.ConnectTo(guidanceaction115);
 			var guidanceaction116 = new GuidanceAction
 			{
 				Name = "How To: Declaring Extensions",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToDeclaringExtensions.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToDeclaringExtensions.mht",
 			};
 			guidanceaction115.ConnectTo(guidanceaction116);
 			var guidanceaction117 = new GuidanceAction
 			{
 				Name = "How To: Implementing Extensions",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToImplementingExtensions.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToImplementingExtensions.mht",
 			};
 			guidanceaction116.ConnectTo(guidanceaction117);
 			var guidanceaction118 = new GuidanceAction
 			{
 				Name = "How To: Reusing Extensions",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToReusingExtensions.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToReusingExtensions.mht",
 			};
 			guidanceaction117.ConnectTo(guidanceaction118);
 			var guidanceaction119 = new GuidanceAction
 			{
 				Name = "How To: Displaying Aspects with Views",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToDisplayingAspectswithViews.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToDisplayingAspectswithViews.mht",
 			};
 			guidanceaction118.ConnectTo(guidanceaction119);
 			var guidanceaction120 = new GuidanceAction
 			{
 				Name = "How To: Controlling Instancing of Elements",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToControllingInstancingofElements.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToControllingInstancingofElements.mht",
 			};
 			guidanceaction119.ConnectTo(guidanceaction120);
 			var guidanceaction121 = new GuidanceAction
 			{
 				Name = "How To: Controlling Ordering of Elements",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToControllingOrderingofElements.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToControllingOrderingofElements.mht",
 			};
 			guidanceaction120.ConnectTo(guidanceaction121);
 			var guidanceaction122 = new GuidanceAction
 			{
 				Name = "How To: Controlling the Display of the Pattern",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToControllingtheDisplayofthePattern.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToControllingtheDisplayofthePattern.mht",
 			};
 			guidanceaction121.ConnectTo(guidanceaction122);
 			var guidanceaction123 = new GuidanceAction
 			{
 				Name = "How To: Applying Validation",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToApplyingValidation.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToApplyingValidation.mht",
 			};
 			guidanceaction122.ConnectTo(guidanceaction123);
 			var guidanceaction124 = new GuidanceAction
 			{
 				Name = "How To: Setting Default Values for Properties",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToSettingDefaultValuesforProperties.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToSettingDefaultValuesforProperties.mht",
 			};
 			guidanceaction123.ConnectTo(guidanceaction124);
 			var guidanceaction125 = new GuidanceAction
 			{
 				Name = "How To: Defining an List of Values for a Property",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToDefininganListofValuesforaProperty.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToDefininganListofValuesforaProperty.mht",
 			};
 			guidanceaction124.ConnectTo(guidanceaction125);
 			var guidanceaction126 = new GuidanceAction
 			{
 				Name = "How To: Defining a Calculated Property",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToDefiningaCalculatedProperty.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToDefiningaCalculatedProperty.mht",
 			};
 			guidanceaction125.ConnectTo(guidanceaction126);
 			var guidanceaction127 = new GuidanceAction
 			{
 				Name = "How To: Defining Custom Property Data Types",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToDefiningCustomPropertyDataTypes.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToDefiningCustomPropertyDataTypes.mht",
 			};
 			guidanceaction126.ConnectTo(guidanceaction127);
 			var guidanceaction128 = new GuidanceAction
 			{
 				Name = "How To: Defining a Custom UI Property Editor",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToDefiningaCustomUIPropertyEditor.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToDefiningaCustomUIPropertyEditor.mht",
 			};
 			guidanceaction127.ConnectTo(guidanceaction128);
 			var guidanceaction129 = new GuidanceAction
 			{
 				Name = "How To: Defining a .NET Type Picker Property Editor",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToDefiningaNETTypePickerPropertyEditor.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToDefiningaNETTypePickerPropertyEditor.mht",
 			};
 			guidanceaction128.ConnectTo(guidanceaction129);
 			var guidanceaction130 = new GuidanceAction
 			{
 				Name = "How To: Controlling Customization of Elements and Properties",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToControllingCustomizationofElementsandProperties.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToControllingCustomizationofElementsandProperties.mht",
 			};
 			guidanceaction129.ConnectTo(guidanceaction130);
 			var join131 = new Join
@@ -818,85 +818,85 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction133 = new GuidanceAction
 			{
 				Name = "Understanding: What are Assets?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingWhatareAssets.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingWhatareAssets.mht",
 			};
 			fork132.ConnectTo(guidanceaction133);
 			var guidanceaction134 = new GuidanceAction
 			{
 				Name = "Understanding: What are VS Templates?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingWhatareVSTemplates.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingWhatareVSTemplates.mht",
 			};
 			guidanceaction133.ConnectTo(guidanceaction134);
 			var guidanceaction135 = new GuidanceAction
 			{
 				Name = "Understanding: VS Template Design Considerations",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingVSTemplateDesignConsiderations.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingVSTemplateDesignConsiderations.mht",
 			};
 			guidanceaction134.ConnectTo(guidanceaction135);
 			var guidanceaction136 = new GuidanceAction
 			{
 				Name = "How To: Creating a VS Template",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingaVSTemplate.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingaVSTemplate.mht",
 			};
 			guidanceaction135.ConnectTo(guidanceaction136);
 			var guidanceaction137 = new GuidanceAction
 			{
 				Name = "How To: Exporting a VS Template",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToExportingaVSTemplate.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToExportingaVSTemplate.mht",
 			};
 			guidanceaction136.ConnectTo(guidanceaction137);
 			var guidanceaction138 = new GuidanceAction
 			{
 				Name = "How To: Importing a VS Template",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToImportingaVSTemplate.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToImportingaVSTemplate.mht",
 			};
 			guidanceaction137.ConnectTo(guidanceaction138);
 			var guidanceaction139 = new GuidanceAction
 			{
 				Name = "How To: Substituting Values in VS Templates",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToSubstitutingValuesinVSTemplates.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToSubstitutingValuesinVSTemplates.mht",
 			};
 			guidanceaction138.ConnectTo(guidanceaction139);
 			var guidanceaction140 = new GuidanceAction
 			{
 				Name = "How To: Unfolding VS Templates from a Pattern",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToUnfoldingVSTemplatesfromaPattern.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToUnfoldingVSTemplatesfromaPattern.mht",
 			};
 			guidanceaction139.ConnectTo(guidanceaction140);
 			var guidanceaction141 = new GuidanceAction
 			{
 				Name = "How To: Troubleshooting VS Templates",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToTroubleshootingVSTemplates.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToTroubleshootingVSTemplates.mht",
 			};
 			guidanceaction140.ConnectTo(guidanceaction141);
 			var guidanceaction142 = new GuidanceAction
 			{
 				Name = "Understanding: What are Text Templates?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingWhatareTextTemplates.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingWhatareTextTemplates.mht",
 			};
 			guidanceaction141.ConnectTo(guidanceaction142);
 			var guidanceaction143 = new GuidanceAction
 			{
 				Name = "How To: Creating a Text Template",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingaTextTemplate.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingaTextTemplate.mht",
 			};
 			guidanceaction142.ConnectTo(guidanceaction143);
 			var guidanceaction144 = new GuidanceAction
 			{
 				Name = "How To: Templatizing Existing Code",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToTemplatizingExistingCode.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToTemplatizingExistingCode.mht",
 			};
 			guidanceaction143.ConnectTo(guidanceaction144);
 			var guidanceaction145 = new GuidanceAction
 			{
 				Name = "How To: Writing Text Templates",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToWritingTextTemplates.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToWritingTextTemplates.mht",
 			};
 			guidanceaction144.ConnectTo(guidanceaction145);
 			var guidanceaction146 = new GuidanceAction
 			{
 				Name = "How To: Generating Code from a Pattern",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToGeneratingCodefromaPattern.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToGeneratingCodefromaPattern.mht",
 			};
 			guidanceaction145.ConnectTo(guidanceaction146);
 			var join147 = new Join
@@ -912,25 +912,25 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction149 = new GuidanceAction
 			{
 				Name = "Understanding: What is Guidance?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingWhatisGuidance.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingWhatisGuidance.mht",
 			};
 			fork148.ConnectTo(guidanceaction149);
 			var guidanceaction150 = new GuidanceAction
 			{
 				Name = "How To: Adding Guidance to Your Pattern",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToAddingGuidancetoYourPattern.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToAddingGuidancetoYourPattern.mht",
 			};
 			guidanceaction149.ConnectTo(guidanceaction150);
 			var guidanceaction151 = new GuidanceAction
 			{
 				Name = "How To: Writing the Toolkit Guidance Document",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToWritingtheToolkitGuidanceDocument.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToWritingtheToolkitGuidanceDocument.mht",
 			};
 			guidanceaction150.ConnectTo(guidanceaction151);
 			var guidanceaction152 = new GuidanceAction
 			{
 				Name = "How To: Adding Additional Guidance to Your Pattern Toolkit",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToAddingAdditionalGuidancetoYourPatternToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToAddingAdditionalGuidancetoYourPatternToolkit.mht",
 			};
 			guidanceaction151.ConnectTo(guidanceaction152);
 			var join153 = new Join
@@ -946,247 +946,247 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction155 = new GuidanceAction
 			{
 				Name = "Understanding: What is Automation?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingWhatisAutomation.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingWhatisAutomation.mht",
 			};
 			fork154.ConnectTo(guidanceaction155);
 			var guidanceaction156 = new GuidanceAction
 			{
 				Name = "Understanding: Applying Automation to your Pattern",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingApplyingAutomationtoyourPattern.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingApplyingAutomationtoyourPattern.mht",
 			};
 			guidanceaction155.ConnectTo(guidanceaction156);
 			var guidanceaction157 = new GuidanceAction
 			{
 				Name = "How To: Automation Design Guidelines",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToAutomationDesignGuidelines.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToAutomationDesignGuidelines.mht",
 			};
 			guidanceaction156.ConnectTo(guidanceaction157);
 			var guidanceaction158 = new GuidanceAction
 			{
 				Name = "How To: Executing a Command",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToExecutingaCommand.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToExecutingaCommand.mht",
 			};
 			guidanceaction157.ConnectTo(guidanceaction158);
 			var guidanceaction159 = new GuidanceAction
 			{
 				Name = "Understanding: Which Events to Use?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingWhichEventstoUse.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingWhichEventstoUse.mht",
 			};
 			guidanceaction158.ConnectTo(guidanceaction159);
 			var guidanceaction160 = new GuidanceAction
 			{
 				Name = "Understanding: Which Automation to Use?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingWhichAutomationtoUse.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingWhichAutomationtoUse.mht",
 			};
 			guidanceaction159.ConnectTo(guidanceaction160);
 			var guidanceaction161 = new GuidanceAction
 			{
 				Name = "How To: Controlling When Commands are Executed",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToControllingWhenCommandsareExecuted.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToControllingWhenCommandsareExecuted.mht",
 			};
 			guidanceaction160.ConnectTo(guidanceaction161);
 			var guidanceaction162 = new GuidanceAction
 			{
 				Name = "How To: Executing a Sequence of Commands",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToExecutingaSequenceofCommands.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToExecutingaSequenceofCommands.mht",
 			};
 			guidanceaction161.ConnectTo(guidanceaction162);
 			var guidanceaction163 = new GuidanceAction
 			{
 				Name = "Understanding: Wizards",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingWizards.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingWizards.mht",
 			};
 			guidanceaction162.ConnectTo(guidanceaction163);
 			var guidanceaction164 = new GuidanceAction
 			{
 				Name = "How To: Creating a Wizard",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingaWizard.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingaWizard.mht",
 			};
 			guidanceaction163.ConnectTo(guidanceaction164);
 			var guidanceaction165 = new GuidanceAction
 			{
 				Name = "How To: Showing a Context Menu",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToShowingaContextMenu.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToShowingaContextMenu.mht",
 			};
 			guidanceaction164.ConnectTo(guidanceaction165);
 			var guidanceaction166 = new GuidanceAction
 			{
 				Name = "How To: Applying Validation to a Property or Element",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToApplyingValidationtoaPropertyorElement.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToApplyingValidationtoaPropertyorElement.mht",
 			};
 			guidanceaction165.ConnectTo(guidanceaction166);
 			var guidanceaction167 = new GuidanceAction
 			{
 				Name = "How To: Executing Validation Rules",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToExecutingValidationRules.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToExecutingValidationRules.mht",
 			};
 			guidanceaction166.ConnectTo(guidanceaction167);
 			var guidanceaction168 = new GuidanceAction
 			{
 				Name = "Understanding: Unfold or Generate?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingUnfoldorGenerate.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingUnfoldorGenerate.mht",
 			};
 			guidanceaction167.ConnectTo(guidanceaction168);
 			var guidanceaction169 = new GuidanceAction
 			{
 				Name = "How To: Unfolding VS Templates",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToUnfoldingVSTemplates.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToUnfoldingVSTemplates.mht",
 			};
 			guidanceaction168.ConnectTo(guidanceaction169);
 			var guidanceaction170 = new GuidanceAction
 			{
 				Name = "Understanding: Generating VS Templates from Text Templates",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingGeneratingVSTemplatesfromTextTemplates.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingGeneratingVSTemplatesfromTextTemplates.mht",
 			};
 			guidanceaction169.ConnectTo(guidanceaction170);
 			var guidanceaction171 = new GuidanceAction
 			{
 				Name = "How To: Generating Code",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToGeneratingCode.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToGeneratingCode.mht",
 			};
 			guidanceaction170.ConnectTo(guidanceaction171);
 			var guidanceaction172 = new GuidanceAction
 			{
 				Name = "Understanding: Recommended Code Generation Patterns",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingRecommendedCodeGenerationPatterns.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingRecommendedCodeGenerationPatterns.mht",
 			};
 			guidanceaction171.ConnectTo(guidanceaction172);
 			var guidanceaction173 = new GuidanceAction
 			{
 				Name = "How To: Applying the T4 Triad Pattern",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToApplyingtheT4TriadPattern.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToApplyingtheT4TriadPattern.mht",
 			};
 			guidanceaction172.ConnectTo(guidanceaction173);
 			var guidanceaction174 = new GuidanceAction
 			{
 				Name = "How To: Getting a Root Namespace in Generated Code ",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToGettingaRootNamespaceinGeneratedCode.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToGettingaRootNamespaceinGeneratedCode.mht",
 			};
 			guidanceaction173.ConnectTo(guidanceaction174);
 			var guidanceaction175 = new GuidanceAction
 			{
 				Name = "How To: Associating Guidance",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToAssociatingGuidance.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToAssociatingGuidance.mht",
 			};
 			guidanceaction174.ConnectTo(guidanceaction175);
 			var guidanceaction176 = new GuidanceAction
 			{
 				Name = "How To: Enabling Solution Navigation",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToEnablingSolutionNavigation.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToEnablingSolutionNavigation.mht",
 			};
 			guidanceaction175.ConnectTo(guidanceaction176);
 			var guidanceaction177 = new GuidanceAction
 			{
 				Name = "Understanding: Supporting Add from Existing Artifacts",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingSupportingAddfromExistingArtifacts.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingSupportingAddfromExistingArtifacts.mht",
 			};
 			guidanceaction176.ConnectTo(guidanceaction177);
 			var guidanceaction178 = new GuidanceAction
 			{
 				Name = "How To: Supporting Drag & Drop",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToSupportingDragDrop.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToSupportingDragDrop.mht",
 			};
 			guidanceaction177.ConnectTo(guidanceaction178);
 			var guidanceaction179 = new GuidanceAction
 			{
 				Name = "How To: Creating Your Own Drag Drop Commands",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingYourOwnDragDropCommands.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingYourOwnDragDropCommands.mht",
 			};
 			guidanceaction178.ConnectTo(guidanceaction179);
 			var guidanceaction180 = new GuidanceAction
 			{
 				Name = "How To: Creating Your Own Drag Conditions",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingYourOwnDragConditions.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingYourOwnDragConditions.mht",
 			};
 			guidanceaction179.ConnectTo(guidanceaction180);
 			var guidanceaction181 = new GuidanceAction
 			{
 				Name = "How To: Creating an Importing Command",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatinganImportingCommand.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatinganImportingCommand.mht",
 			};
 			guidanceaction180.ConnectTo(guidanceaction181);
 			var guidanceaction182 = new GuidanceAction
 			{
 				Name = "How To: Creating Your Own Custom Automation Classes",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingYourOwnCustomAutomationClasses.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingYourOwnCustomAutomationClasses.mht",
 			};
 			guidanceaction181.ConnectTo(guidanceaction182);
 			var guidanceaction183 = new GuidanceAction
 			{
 				Name = "How To: Naming Your Own Automation Classes",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToNamingYourOwnAutomationClasses.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToNamingYourOwnAutomationClasses.mht",
 			};
 			guidanceaction182.ConnectTo(guidanceaction183);
 			var guidanceaction184 = new GuidanceAction
 			{
 				Name = "How To: Coding Your Own Automation Classes",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCodingYourOwnAutomationClasses.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCodingYourOwnAutomationClasses.mht",
 			};
 			guidanceaction183.ConnectTo(guidanceaction184);
 			var guidanceaction185 = new GuidanceAction
 			{
 				Name = "How To: Applying Tracing to Your Own Automation Classes",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToApplyingTracingtoYourOwnAutomationClasses.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToApplyingTracingtoYourOwnAutomationClasses.mht",
 			};
 			guidanceaction184.ConnectTo(guidanceaction185);
 			var guidanceaction186 = new GuidanceAction
 			{
 				Name = "How To: Implementing Your Own Automation Class",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToImplementingYourOwnAutomationClass.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToImplementingYourOwnAutomationClass.mht",
 			};
 			guidanceaction185.ConnectTo(guidanceaction186);
 			var guidanceaction187 = new GuidanceAction
 			{
 				Name = "How To: Creating Your Own Event",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingYourOwnEvent.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingYourOwnEvent.mht",
 			};
 			guidanceaction186.ConnectTo(guidanceaction187);
 			var guidanceaction188 = new GuidanceAction
 			{
 				Name = "How To: Creating Your Own Commands",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingYourOwnCommands.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingYourOwnCommands.mht",
 			};
 			guidanceaction187.ConnectTo(guidanceaction188);
 			var guidanceaction189 = new GuidanceAction
 			{
 				Name = "How To: Creating Your Own Wizards",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingYourOwnWizards.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingYourOwnWizards.mht",
 			};
 			guidanceaction188.ConnectTo(guidanceaction189);
 			var guidanceaction190 = new GuidanceAction
 			{
 				Name = "How To: Creating Your Own Conditions",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingYourOwnConditions.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingYourOwnConditions.mht",
 			};
 			guidanceaction189.ConnectTo(guidanceaction190);
 			var guidanceaction191 = new GuidanceAction
 			{
 				Name = "How To: Creating Your Own Value Providers",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingYourOwnValueProviders.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingYourOwnValueProviders.mht",
 			};
 			guidanceaction190.ConnectTo(guidanceaction191);
 			var guidanceaction192 = new GuidanceAction
 			{
 				Name = "How To: Create You Own Ordering Comparer",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreateYouOwnOrderingComparer.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreateYouOwnOrderingComparer.mht",
 			};
 			guidanceaction191.ConnectTo(guidanceaction192);
 			var guidanceaction193 = new GuidanceAction
 			{
 				Name = "How To: Creating Your Own Validation Rules",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingYourOwnValidationRules.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingYourOwnValidationRules.mht",
 			};
 			guidanceaction192.ConnectTo(guidanceaction193);
 			var guidanceaction194 = new GuidanceAction
 			{
 				Name = "How To: Add Additional Automation Libraries",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToAddAdditionalAutomationLibraries.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToAddAdditionalAutomationLibraries.mht",
 			};
 			guidanceaction193.ConnectTo(guidanceaction194);
 			var guidanceaction195 = new GuidanceAction
 			{
 				Name = "How To: Common Automation Scenarios",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCommonAutomationScenarios.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCommonAutomationScenarios.mht",
 			};
 			guidanceaction194.ConnectTo(guidanceaction195);
 			var join196 = new Join
@@ -1203,19 +1203,19 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction198 = new GuidanceAction
 			{
 				Name = "Understanding: Building a Toolkit Project",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingBuildingaToolkitProject.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingBuildingaToolkitProject.mht",
 			};
 			fork197.ConnectTo(guidanceaction198);
 			var guidanceaction199 = new GuidanceAction
 			{
 				Name = "How To: Building a Toolkit Project",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToBuildingaToolkitProject.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToBuildingaToolkitProject.mht",
 			};
 			guidanceaction198.ConnectTo(guidanceaction199);
 			var guidanceaction200 = new GuidanceAction
 			{
 				Name = "How To: Building a Toolkit in Team Build",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToBuildingaToolkitinTeamBuild.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToBuildingaToolkitinTeamBuild.mht",
 			};
 			guidanceaction199.ConnectTo(guidanceaction200);
 			var join201 = new Join
@@ -1231,43 +1231,43 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction203 = new GuidanceAction
 			{
 				Name = "Understanding: What is Toolkit Information?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/UnderstandingWhatisToolkitInformation.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/UnderstandingWhatisToolkitInformation.mht",
 			};
 			fork202.ConnectTo(guidanceaction203);
 			var guidanceaction204 = new GuidanceAction
 			{
 				Name = "How To: Packaging Assemblies for Deployment",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToPackagingAssembliesforDeployment.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToPackagingAssembliesforDeployment.mht",
 			};
 			guidanceaction203.ConnectTo(guidanceaction204);
 			var guidanceaction205 = new GuidanceAction
 			{
 				Name = "How To: Updating Toolkit Information",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToUpdatingToolkitInformation.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToUpdatingToolkitInformation.mht",
 			};
 			guidanceaction204.ConnectTo(guidanceaction205);
 			var guidanceaction206 = new GuidanceAction
 			{
 				Name = "How To: Versioning a Toolkit",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToVersioningaToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToVersioningaToolkit.mht",
 			};
 			guidanceaction205.ConnectTo(guidanceaction206);
 			var guidanceaction207 = new GuidanceAction
 			{
 				Name = "How To: Installing a Toolkit for Customization",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToInstallingaToolkitforCustomization.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToInstallingaToolkitforCustomization.mht",
 			};
 			guidanceaction206.ConnectTo(guidanceaction207);
 			var guidanceaction208 = new GuidanceAction
 			{
 				Name = "How To: Creating an MSI for Toolkit Deployment",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatinganMSIforToolkitDeployment.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatinganMSIforToolkitDeployment.mht",
 			};
 			guidanceaction207.ConnectTo(guidanceaction208);
 			var guidanceaction209 = new GuidanceAction
 			{
 				Name = "How To: Packaging Multiple Toolkits Together",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToPackagingMultipleToolkitsTogether.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToPackagingMultipleToolkitsTogether.mht",
 			};
 			guidanceaction208.ConnectTo(guidanceaction209);
 			var join210 = new Join
@@ -1289,13 +1289,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction213 = new GuidanceAction
 			{
 				Name = "What is a Customized Toolkit?",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/WhatisaCustomizedToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisaCustomizedToolkit.mht",
 			};
 			fork212.ConnectTo(guidanceaction213);
 			var guidanceaction214 = new GuidanceAction
 			{
 				Name = "How To: Creating a Customized Toolkit",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCreatingaCustomizedToolkit.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCreatingaCustomizedToolkit.mht",
 			};
 			guidanceaction213.ConnectTo(guidanceaction214);
 			var fork215 = new Fork
@@ -1306,7 +1306,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction216 = new GuidanceAction
 			{
 				Name = "How To: Customizing the Pattern Model",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCustomizingthePatternModel.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCustomizingthePatternModel.mht",
 			};
 			fork215.ConnectTo(guidanceaction216);
 			var join217 = new Join
@@ -1322,7 +1322,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction219 = new GuidanceAction
 			{
 				Name = "How To: Customizing the Assets",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCustomizingtheAssets.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCustomizingtheAssets.mht",
 			};
 			fork218.ConnectTo(guidanceaction219);
 			var join220 = new Join
@@ -1338,7 +1338,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction222 = new GuidanceAction
 			{
 				Name = "How To: Customizing the Guidance",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCustomizingtheGuidance.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCustomizingtheGuidance.mht",
 			};
 			fork221.ConnectTo(guidanceaction222);
 			var join223 = new Join
@@ -1354,7 +1354,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction225 = new GuidanceAction
 			{
 				Name = "How To: Customizing the Automation",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCustomizingtheAutomation.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCustomizingtheAutomation.mht",
 			};
 			fork224.ConnectTo(guidanceaction225);
 			var join226 = new Join
@@ -1370,7 +1370,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction228 = new GuidanceAction
 			{
 				Name = "How To: Customizing the Toolkit Info",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/HowToCustomizingtheToolkitInfo.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/HowToCustomizingtheToolkitInfo.mht",
 			};
 			fork227.ConnectTo(guidanceaction228);
 			var join229 = new Join
@@ -1396,7 +1396,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction233 = new GuidanceAction
 			{
 				Name = "Troubleshooting Toolkits",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/TroubleshootingToolkits.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/TroubleshootingToolkits.mht",
 			};
 			fork232.ConnectTo(guidanceaction233);
 			var fork234 = new Fork
@@ -1413,43 +1413,43 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction236 = new GuidanceAction
 			{
 				Name = "Adding a View",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/AddingaView.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/AddingaView.mht",
 			};
 			fork235.ConnectTo(guidanceaction236);
 			var guidanceaction237 = new GuidanceAction
 			{
 				Name = "Adding a Collection or an Element",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/AddingaCollectionoranElement.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/AddingaCollectionoranElement.mht",
 			};
 			guidanceaction236.ConnectTo(guidanceaction237);
 			var guidanceaction238 = new GuidanceAction
 			{
 				Name = "Adding a Variable Property",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/AddingaVariableProperty.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/AddingaVariableProperty.mht",
 			};
 			guidanceaction237.ConnectTo(guidanceaction238);
 			var guidanceaction239 = new GuidanceAction
 			{
 				Name = "Changing the Cardinality",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ChangingtheCardinality.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ChangingtheCardinality.mht",
 			};
 			guidanceaction238.ConnectTo(guidanceaction239);
 			var guidanceaction240 = new GuidanceAction
 			{
 				Name = "Changing the Ordering",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ChangingtheOrdering.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ChangingtheOrdering.mht",
 			};
 			guidanceaction239.ConnectTo(guidanceaction240);
 			var guidanceaction241 = new GuidanceAction
 			{
 				Name = "Showing ‘Hidden’ Elements",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ShowingHiddenElements.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ShowingHiddenElements.mht",
 			};
 			guidanceaction240.ConnectTo(guidanceaction241);
 			var guidanceaction242 = new GuidanceAction
 			{
 				Name = "Arranging Shapes on Pattern Model",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ArrangingShapesonPatternModel.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ArrangingShapesonPatternModel.mht",
 			};
 			guidanceaction241.ConnectTo(guidanceaction242);
 			var join243 = new Join
@@ -1465,13 +1465,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction245 = new GuidanceAction
 			{
 				Name = "Adding a VS Template",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/AddingaVSTemplate.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/AddingaVSTemplate.mht",
 			};
 			fork244.ConnectTo(guidanceaction245);
 			var guidanceaction246 = new GuidanceAction
 			{
 				Name = "Adding a Text Template",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/AddingaTextTemplate.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/AddingaTextTemplate.mht",
 			};
 			guidanceaction245.ConnectTo(guidanceaction246);
 			var join247 = new Join
@@ -1487,13 +1487,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction249 = new GuidanceAction
 			{
 				Name = "Editing Guidance",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/EditingGuidance.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/EditingGuidance.mht",
 			};
 			fork248.ConnectTo(guidanceaction249);
 			var guidanceaction250 = new GuidanceAction
 			{
 				Name = "Building Guidance",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/BuildingGuidance.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/BuildingGuidance.mht",
 			};
 			guidanceaction249.ConnectTo(guidanceaction250);
 			var join251 = new Join
@@ -1509,115 +1509,115 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction253 = new GuidanceAction
 			{
 				Name = "Adding a Launch Point",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/AddingaLaunchPoint.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/AddingaLaunchPoint.mht",
 			};
 			fork252.ConnectTo(guidanceaction253);
 			var guidanceaction254 = new GuidanceAction
 			{
 				Name = "Configuring a Launch Point",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ConfiguringaLaunchPoint.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ConfiguringaLaunchPoint.mht",
 			};
 			guidanceaction253.ConnectTo(guidanceaction254);
 			var guidanceaction255 = new GuidanceAction
 			{
 				Name = "Configuring a Template Launch Point",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ConfiguringaTemplateLaunchPoint.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ConfiguringaTemplateLaunchPoint.mht",
 			};
 			guidanceaction254.ConnectTo(guidanceaction255);
 			var guidanceaction256 = new GuidanceAction
 			{
 				Name = "Configuring an Event Launch Point",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ConfiguringanEventLaunchPoint.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ConfiguringanEventLaunchPoint.mht",
 			};
 			guidanceaction255.ConnectTo(guidanceaction256);
 			var guidanceaction257 = new GuidanceAction
 			{
 				Name = "Configuring a Context Menu Launch Point",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ConfiguringaContextMenuLaunchPoint.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ConfiguringaContextMenuLaunchPoint.mht",
 			};
 			guidanceaction256.ConnectTo(guidanceaction257);
 			var guidanceaction258 = new GuidanceAction
 			{
 				Name = "Configuring a Drag Drop Launch Point",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ConfiguringaDragDropLaunchPoint.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ConfiguringaDragDropLaunchPoint.mht",
 			};
 			guidanceaction257.ConnectTo(guidanceaction258);
 			var guidanceaction259 = new GuidanceAction
 			{
 				Name = "Adding a Command",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/AddingaCommand.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/AddingaCommand.mht",
 			};
 			guidanceaction258.ConnectTo(guidanceaction259);
 			var guidanceaction260 = new GuidanceAction
 			{
 				Name = "Configuring a Command",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ConfiguringaCommand.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ConfiguringaCommand.mht",
 			};
 			guidanceaction259.ConnectTo(guidanceaction260);
 			var guidanceaction261 = new GuidanceAction
 			{
 				Name = "Adding a Wizard",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/AddingaWizard.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/AddingaWizard.mht",
 			};
 			guidanceaction260.ConnectTo(guidanceaction261);
 			var guidanceaction262 = new GuidanceAction
 			{
 				Name = "Configuring a Wizard",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ConfiguringaWizard.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ConfiguringaWizard.mht",
 			};
 			guidanceaction261.ConnectTo(guidanceaction262);
 			var guidanceaction263 = new GuidanceAction
 			{
 				Name = "Common Automation Tasks",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/CommonAutomationTasks.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/CommonAutomationTasks.mht",
 			};
 			guidanceaction262.ConnectTo(guidanceaction263);
 			var guidanceaction264 = new GuidanceAction
 			{
 				Name = "Adding Properties to Automation Classes",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/AddingPropertiestoAutomationClasses.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/AddingPropertiestoAutomationClasses.mht",
 			};
 			guidanceaction263.ConnectTo(guidanceaction264);
 			var guidanceaction265 = new GuidanceAction
 			{
 				Name = "Importing Services into Automation Classes",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ImportingServicesintoAutomationClasses.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ImportingServicesintoAutomationClasses.mht",
 			};
 			guidanceaction264.ConnectTo(guidanceaction265);
 			var guidanceaction266 = new GuidanceAction
 			{
 				Name = "Importing the Current Element into Automation Classes",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ImportingtheCurrentElementintoAutomationClasses.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ImportingtheCurrentElementintoAutomationClasses.mht",
 			};
 			guidanceaction265.ConnectTo(guidanceaction266);
 			var guidanceaction267 = new GuidanceAction
 			{
 				Name = "Navigating Pattern Models Programmatically (Generically)",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/NavigatingPatternModelsProgrammaticallyGenerically.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/NavigatingPatternModelsProgrammaticallyGenerically.mht",
 			};
 			guidanceaction266.ConnectTo(guidanceaction267);
 			var guidanceaction268 = new GuidanceAction
 			{
 				Name = "Navigating Pattern Models Programmatically (Typed)",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/NavigatingPatternModelsProgrammaticallyTyped.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/NavigatingPatternModelsProgrammaticallyTyped.mht",
 			};
 			guidanceaction267.ConnectTo(guidanceaction268);
 			var guidanceaction269 = new GuidanceAction
 			{
 				Name = "Moving Between Generic and Typed Pattern Model Schemes",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/MovingBetweenGenericandTypedPatternModelSchemes.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/MovingBetweenGenericandTypedPatternModelSchemes.mht",
 			};
 			guidanceaction268.ConnectTo(guidanceaction269);
 			var guidanceaction270 = new GuidanceAction
 			{
 				Name = "Target Path Syntax",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/TargetPathSyntax.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/TargetPathSyntax.mht",
 			};
 			guidanceaction269.ConnectTo(guidanceaction270);
 			var guidanceaction271 = new GuidanceAction
 			{
 				Name = "Expression Syntax",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ExpressionSyntax.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ExpressionSyntax.mht",
 			};
 			guidanceaction270.ConnectTo(guidanceaction271);
 			var join272 = new Join
@@ -1628,37 +1628,37 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var fork273 = new Fork
 			{
 				Name = "Provided Automation Types",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ProvidedAutomationTypes.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ProvidedAutomationTypes.mht",
 			};
 			join272.ConnectTo(fork273);
 			var guidanceaction274 = new GuidanceAction
 			{
 				Name = "Commands",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/Commands.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Commands.mht",
 			};
 			fork273.ConnectTo(guidanceaction274);
 			var guidanceaction275 = new GuidanceAction
 			{
 				Name = "Conditions",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/Conditions.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Conditions.mht",
 			};
 			guidanceaction274.ConnectTo(guidanceaction275);
 			var guidanceaction276 = new GuidanceAction
 			{
 				Name = "Value Providers",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ValueProviders.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ValueProviders.mht",
 			};
 			guidanceaction275.ConnectTo(guidanceaction276);
 			var guidanceaction277 = new GuidanceAction
 			{
 				Name = "Validation Rules",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ValidationRules.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ValidationRules.mht",
 			};
 			guidanceaction276.ConnectTo(guidanceaction277);
 			var guidanceaction278 = new GuidanceAction
 			{
 				Name = "Events",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/Events.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Events.mht",
 			};
 			guidanceaction277.ConnectTo(guidanceaction278);
 			var join279 = new Join
@@ -1680,67 +1680,67 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction282 = new GuidanceAction
 			{
 				Name = "Visual Studio Experimental Instance",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/VisualStudioExperimentalInstance.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/VisualStudioExperimentalInstance.mht",
 			};
 			fork281.ConnectTo(guidanceaction282);
 			var guidanceaction283 = new GuidanceAction
 			{
 				Name = "Solution Builder",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/SolutionBuilder.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/SolutionBuilder.mht",
 			};
 			guidanceaction282.ConnectTo(guidanceaction283);
 			var guidanceaction284 = new GuidanceAction
 			{
 				Name = "Add New Solution Element Dialog",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/AddNewSolutionElementDialog.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/AddNewSolutionElementDialog.mht",
 			};
 			guidanceaction283.ConnectTo(guidanceaction284);
 			var guidanceaction285 = new GuidanceAction
 			{
 				Name = "Pattern Model Designer",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/PatternModelDesigner.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/PatternModelDesigner.mht",
 			};
 			guidanceaction284.ConnectTo(guidanceaction285);
 			var guidanceaction286 = new GuidanceAction
 			{
 				Name = "Guidance Workflow Explorer",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/GuidanceWorkflowExplorer.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/GuidanceWorkflowExplorer.mht",
 			};
 			guidanceaction285.ConnectTo(guidanceaction286);
 			var guidanceaction287 = new GuidanceAction
 			{
 				Name = "Solution Explorer",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/SolutionExplorer.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/SolutionExplorer.mht",
 			};
 			guidanceaction286.ConnectTo(guidanceaction287);
 			var guidanceaction288 = new GuidanceAction
 			{
 				Name = "Properties Window",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/PropertiesWindow.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/PropertiesWindow.mht",
 			};
 			guidanceaction287.ConnectTo(guidanceaction288);
 			var guidanceaction289 = new GuidanceAction
 			{
 				Name = "Add/New Project/Item Dialog",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/AddNewProjectItemDialog.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/AddNewProjectItemDialog.mht",
 			};
 			guidanceaction288.ConnectTo(guidanceaction289);
 			var guidanceaction290 = new GuidanceAction
 			{
 				Name = "Extension Manager",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ExtensionManager.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ExtensionManager.mht",
 			};
 			guidanceaction289.ConnectTo(guidanceaction290);
 			var guidanceaction291 = new GuidanceAction
 			{
 				Name = "Options",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/Options.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Options.mht",
 			};
 			guidanceaction290.ConnectTo(guidanceaction291);
 			var guidanceaction292 = new GuidanceAction
 			{
 				Name = "Tracing Window",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/TracingWindow.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/TracingWindow.mht",
 			};
 			guidanceaction291.ConnectTo(guidanceaction292);
 			var join293 = new Join
@@ -1751,7 +1751,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction294 = new GuidanceAction
 			{
 				Name = "Feature Builder Power Tool",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/FeatureBuilderPowerTool.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/FeatureBuilderPowerTool.mht",
 			};
 			join293.ConnectTo(guidanceaction294);
 			var join295 = new Join
@@ -1762,7 +1762,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction296 = new GuidanceAction
 			{
 				Name = "More Information",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/MoreInformation.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/MoreInformation.mht",
 			};
 			join295.ConnectTo(guidanceaction296);
 			var fork297 = new Fork
@@ -1774,31 +1774,31 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction298 = new GuidanceAction
 			{
 				Name = "Error when opening a pattern toolkit solution file",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/Errorwhenopeningapatterntoolkitsolutionfile.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Errorwhenopeningapatterntoolkitsolutionfile.mht",
 			};
 			fork297.ConnectTo(guidanceaction298);
 			var guidanceaction299 = new GuidanceAction
 			{
 				Name = "Corruption of pattern model when performing an Undo",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/CorruptionofpatternmodelwhenperforminganUndo.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/CorruptionofpatternmodelwhenperforminganUndo.mht",
 			};
 			guidanceaction298.ConnectTo(guidanceaction299);
 			var guidanceaction300 = new GuidanceAction
 			{
 				Name = "Error in Text Templates when using the Visual T4 Editor",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/ErrorinTextTemplateswhenusingtheVisualT4Editor.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ErrorinTextTemplateswhenusingtheVisualT4Editor.mht",
 			};
 			guidanceaction299.ConnectTo(guidanceaction300);
 			var guidanceaction301 = new GuidanceAction
 			{
 				Name = "Build error: “store must be open for this operation”",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/Builderrorstoremustbeopenforthisoperation.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Builderrorstoremustbeopenforthisoperation.mht",
 			};
 			guidanceaction300.ConnectTo(guidanceaction301);
 			var guidanceaction302 = new GuidanceAction
 			{
 				Name = "Error, building guidance with 64bit versions of Microsoft Word.",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/Errorbuildingguidancewith64bitversionsofMicrosoftWord.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Errorbuildingguidancewith64bitversionsofMicrosoftWord.mht",
 			};
 			guidanceaction301.ConnectTo(guidanceaction302);
 			var join303 = new Join
@@ -1809,7 +1809,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 			var guidanceaction304 = new GuidanceAction
 			{
 				Name = "Feedback",
-				Link = "content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidance/Content/Feedback.mht",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Feedback.mht",
 			};
 			join303.ConnectTo(guidanceaction304);
 			var final305 = new Final
@@ -1827,7 +1827,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 	/// <summary>
 	/// Defines the feature extension containing the guidance workflow.
 	/// </summary>
-	[Feature("9f6dc301-6f66-4d21-9f9c-b37412b162f6", DefaultName="Working with Pattern Toolkits")]
+	[Feature("84031a32-b20f-479c-a620-beacd982ea13", DefaultName="Working with Pattern Toolkits")]
 	[Export(typeof(IFeatureExtension))]
 	[PartCreationPolicy(CreationPolicy.NonShared)]
 	[CLSCompliant(false)]

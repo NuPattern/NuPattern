@@ -115,7 +115,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HandOnLabsToolkitInfo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Guidance\Links\RuntimeShellInfo.cs" />
     <Content Include="..\..\..\LICENSE.txt">
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -143,6 +142,14 @@
       <DependentUpon>source.extension.tt</DependentUpon>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <None Include="AuthoringToolkitInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AuthoringToolkitInfo.cs</LastGenOutput>
+    </None>
+    <None Include="RuntimeShellInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RuntimeShellInfo.cs</LastGenOutput>
+    </None>
     <None Include="Authoring.PatternToolkitVersion.targets">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,12 +159,22 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AuthoringPackage.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="AuthoringPackage.cs" />
     <Compile Include="AuthoringPackage.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AuthoringPackage.tt</DependentUpon>
     </Compile>
+    <Compile Include="AuthoringToolkitInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuthoringToolkitInfo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RuntimeShellInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RuntimeShellInfo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuthoringPackage.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

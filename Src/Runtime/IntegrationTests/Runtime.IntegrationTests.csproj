@@ -111,6 +111,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RuntimeShellVsixPackagingSpec.cs</LastGenOutput>
     </None>
+    <Compile Include="FeatureExtensionSpec.cs" />
     <Compile Include="InstalledToolkitInfoSpec.cs" />
     <Compile Include="RuntimeShellVsixPackagingSpec.cs">
       <AutoGen>True</AutoGen>

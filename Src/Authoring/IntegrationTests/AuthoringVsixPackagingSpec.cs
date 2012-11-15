@@ -30,8 +30,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
             public void ThenVsixInfoCorrect()
             {
                 //Identifier, Name, Author, Version
-                Assert.Equal(@"9f6dc301-6f66-4d21-9f9c-b37412b162f6", this.VsixInfo.Header.Identifier);
-                Assert.Equal(@"Pattern Toolkit Builder", this.VsixInfo.Header.Name);
+                Assert.Equal(@"84031a32-b20f-479c-a620-beacd982ea13", this.VsixInfo.Header.Identifier);
+                Assert.Equal(@"Pattern Toolkit Builder 4VS2012", this.VsixInfo.Header.Name);
                 Assert.Equal(@"An extension for designing and building Pattern Toolkit extensions, that combine automation and guidance with design patterns for repeatable solution development.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"Outercurve", this.VsixInfo.Header.Author);
                 Assert.Equal("1.3.20.0", this.VsixInfo.Header.Version.ToString());
@@ -53,10 +53,10 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 #endif
                 //SupportedProducts
 #if VSVER10
-                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
+                Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
 #endif
 #if VSVER11
-                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
+                Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
 #endif
 			}
 

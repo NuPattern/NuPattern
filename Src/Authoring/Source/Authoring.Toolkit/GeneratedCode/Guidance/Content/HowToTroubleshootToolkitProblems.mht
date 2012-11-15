@@ -2180,7 +2180,7 @@ application with Visual Studio, simply build your toolkit project and run in
 debug mode.<o:p></o:p></p>
 
 <p class=3DMsoNormal>Your toolkit will be loaded in the <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/VisualStudioExperimentalInstance.mht">'Experimental
 Instance of Visual Studio'</a>, and you will be able to set breakpoints in =
 the
@@ -2218,7 +2218,7 @@ diagnostic purposes.<o:p></o:p></p>
 which
 toolkits execute, uses diagnostic tracing as the primary mechanism for
 identifying and troubleshooting. See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/TroubleshootingToolkits.mht">Troubleshooting
 Toolkits</a> for more details on using trace information to diagnose issues
 with your toolkit and others you work with.<o:p></o:p></p>
@@ -2226,7 +2226,7 @@ with your toolkit and others you work with.<o:p></o:p></p>
 <p class=3DMsoNormal>You are strongly encouraged to participate in this tra=
 cing
 mechanism when building your own pattern toolkits. See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToApplyingTracingtoYourOwnAutomationClasses.mht">Applying
 Tracing to Automation Classes</a> for more details.<o:p></o:p></p>
 

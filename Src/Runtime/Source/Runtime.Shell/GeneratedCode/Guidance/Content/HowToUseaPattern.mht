@@ -2170,7 +2170,7 @@ l'>Important:</b>
 In order to use the pattern contained within a Pattern Toolkit, the Pattern
 Toolkit must be installed. You can verify this by looking at the ‘Installed
 Extensions’ in the <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/ExtensionManager.mht">‘Extension
 Manager’</a> dialog in Visual Studio (Tools | Extension Manager).<o:p></o:p=
 ></p>
@@ -2190,7 +2190,7 @@ a pattern (from a pattern toolkit) what we are really doing as users <o:p><=
 <p class=3DMsoNormal>If the pattern toolkit includes a project or item temp=
 late,
 it will appear in the <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/AddNewProjectItemDialog.mht">Add
 New Project/Item dialog</a> in Visual Studio.<o:p></o:p></p>
 
@@ -2261,7 +2261,7 @@ always find it from the next method below<o:p></o:p></p>
 <h5>Create From Solution Builder<o:p></o:p></h5>
 
 <p class=3DMsoNormal>Otherwise, <u>all</u> patterns can be found in the <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/AddNewSolutionElementDialog.mht">‘Add
 New Solution Element’ dialog</a>.<o:p></o:p></p>
 
@@ -2280,7 +2280,7 @@ new pattern this way.<o:p></o:p></p>
 </div>
 
 <p class=3DMsoNormal>From an existing or new solution, open the <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a> tool window, and click the ‘Add New Solution Element’ button (=
 or
@@ -2325,15 +2325,15 @@ pt;
 margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: Even though a pattern may or may not appear in the <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/AddNewProjectItemDialog.mht">Add
 New Project/Item dialog</a> in Visual Studio (depending on whether it suppl=
 ies
 a project or item template), all patterns appear in the <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/AddNewSolutionElementDialog.mht">‘Add
 New Solution Element’ dialog</a>, in the <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a> tool window.<o:p></o:p></p>
 
@@ -2344,13 +2344,13 @@ Builder’</a> tool window.<o:p></o:p></p>
 <p class=3DMsoNormal>In either case, a new instance of the pattern will be
 created for you and displayed in ‘Solution Builder’, and you work with the
 created <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/WhatisaSolutionElement.mht">‘Solution
 Elements’</a> in that window with the tools and guidance the pattern toolkit
 provides for you.<o:p></o:p></p>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/ViewingConfiguringSolutionElements.mht">Viewing
 and Configuring Solution Elements</a> for examples of the kinds of automati=
 on

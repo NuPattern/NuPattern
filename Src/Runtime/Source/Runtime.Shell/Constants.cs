@@ -10,6 +10,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 		/// <summary>
 		/// The GUID for this package.
 		/// </summary>
+		public const string VsixIdentifier = "c869918e-f94e-4e7a-ab25-b076ff4e751b";
+
+		/// <summary>
+		/// The GUID for this package.
+		/// </summary>
 		public const string RuntimeShellPkgGuid = "93373818-600f-414b-8181-3a0cb79fa785";
 
 		/// <summary>
@@ -36,14 +41,5 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 		/// The name for storing settings for this package.
 		/// </summary>
 		public const string SettingsName = "PatternToolkitExtensions";
-
-		internal static class PackageDependencies
-		{
-			public const string PackageName = @"Newtonsoft.Json";
-            public static readonly Version PackageVersion = new Version("4.0.2");
-            public const string Marker = @"Newtonsoft.Json.dll";
-            public const string TargetDir = @"lib\net40";
-            public const string TargetMask = @"*.dll";
-		}
 	}
 }

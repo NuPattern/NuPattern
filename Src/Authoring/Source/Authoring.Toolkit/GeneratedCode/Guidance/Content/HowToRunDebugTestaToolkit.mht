@@ -2171,16 +2171,16 @@ first in the solution, in order to run.<o:p></o:p></p>
 </div>
 
 <p class=3DMsoNormal>Your toolkit will be loaded in the <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/VisualStudioExperimentalInstance.mht">'Experimental
 Instance of Visual Studio'</a>, you will see your toolkit already loaded in=
  <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/ExtensionManager.mht">Extension
 Manager</a>, and you will then be able to create new instances of its patte=
 rn
 in the <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a> window.<o:p></o:p></p>
 
@@ -2203,7 +2203,7 @@ to
 this rule is when your pattern has a ‘Template Launch Point’ configured on =
 it
 with a project template that appears in the <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/AddNewProjectItemDialog.mht">Add
 New Project/Item</a> dialog box. You can then use that project template to
 create an instance of your pattern, as a solution is automatically created =
@@ -2214,7 +2214,7 @@ you.<o:p></o:p></p>
 
 <p class=3DMsoNormal>Once a test solution is created in the ‘Experimental
 Instance’, use the <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a> window to create a new instance of your pattern, and then manu=
 ally
@@ -2268,7 +2268,7 @@ process.<o:p></o:p></p>
 </div>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToTroubleshootToolkitProblems.mht">Troubleshooting
 Toolkit Problems</a> for more details on how to debug and diagnose your
 automation classes.<o:p></o:p></p>
@@ -2283,7 +2283,7 @@ same way as you can with any .NET application. <o:p></o:p></p>
 classes are very highly recommended.<o:p></o:p></p>
 
 <p class=3DMsoNormal>As for automated testing of the toolkits’ UI in <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a>, any UI test framework (such as <a
 href=3D"http://msdn.microsoft.com/en-us/library/dd286726.aspx">Coded UI Tes=

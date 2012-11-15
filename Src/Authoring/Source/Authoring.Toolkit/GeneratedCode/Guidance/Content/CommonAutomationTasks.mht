@@ -2265,12 +2265,12 @@ page-break-before:always'>
 configuration of a ‘Target Path’ or ‘Project Path’ property that resolves f=
 rom
 an element to a solution item through an <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/WhatareArtifactLinks.mht">artifact
 link</a> found by traversing the configured path. The syntax for these kind=
 s of
 paths is described in <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/TargetPathSyntax.mht">Target
 Path Syntax</a>.<o:p></o:p></p>
 
@@ -2386,7 +2386,7 @@ configuration of a ‘Target File Name’ or similar property that resolves a
 pattern author defined expression and substitutes values from properties of
 element instances in the pattern. The syntax for these kinds of paths is
 described in <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/ExpressionSyntax.mht">Expression
 Syntax</a>.<o:p></o:p></p>
 
@@ -2467,7 +2467,7 @@ ays'>
 
 <p class=3DMsoNormal>For any element in a pattern model that has one or mor=
 e <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/WhatareArtifactLinks.mht">artifact
 link</a>s associated to it, you can resolve those links to solution items.<=
 o:p></o:p></p>

@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
             public void ThenVsixInfoCorrect()
             {
                 //Identifier, Name, Author, Version
-                Assert.Equal(@"97bd7ab2-964b-43f1-8a08-be6db68b018b", this.VsixInfo.Header.Identifier);
+                Assert.Equal(@"080eb0ef-518d-4807-9b5c-aa32d0032e0b", this.VsixInfo.Header.Identifier);
                 Assert.Equal(@"Pattern Toolkit Automation Library", this.VsixInfo.Header.Name);
                 Assert.Equal(@"An extension for creating shared automation libraries for Pattern Toolkit extensions.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"Outercurve", this.VsixInfo.Header.Author);
@@ -53,10 +53,10 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 #endif
                 //SupportedProducts
 #if VSVER10
-                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
+                Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
 #endif
 #if VSVER11
-                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
+                Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
 #endif
             }
 

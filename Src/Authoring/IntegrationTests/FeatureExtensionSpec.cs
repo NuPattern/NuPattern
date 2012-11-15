@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Microsoft.VisualStudio.Patterning.Authoring.Authoring;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
@@ -22,7 +23,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 		public void ThenFeatureExtensionIsInstalled()
 		{
 			var registrations = this.featureManager.InstalledFeatures;
-			var feature = registrations.FirstOrDefault(registration => registration.FeatureId == "9f6dc301-6f66-4d21-9f9c-b37412b162f6");
+			var feature = registrations.FirstOrDefault(registration => registration.FeatureId == AuthoringToolkitInfo.VsixIdentifier);
 
 			Assert.NotNull(feature);
 		}

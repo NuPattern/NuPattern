@@ -111,11 +111,6 @@
     <Compile Include="Model\ProductElement.DescriptionProvider.cs">
       <DependentUpon>ProductElement.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\Customization\Constants.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Constants.tt</DependentUpon>
-    </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="GeneratedCode\Customization\RuntimeImplementation.cs">
       <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
@@ -179,10 +174,6 @@
     <None Include="AdapterManager.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AdapterManager.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="GeneratedCode\Customization\Constants.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Constants.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\SerializationHelper.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

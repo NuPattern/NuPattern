@@ -2320,7 +2320,7 @@ You can also define expressions in the value of the ‘Target File Name’ prop=
 erty
 to substitute property values in calculated names. (i.e. {InstanceName} or
 {Parent.PropertyName}. See the <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/ExpressionSyntax.mht">Expression
 Syntax</a> for more details). Or you can use a Value Provider to calculate =
 the
@@ -2352,7 +2352,7 @@ fold
 into the solution item of the first ancestor element found, or if, none fou=
 nd
 then unfold to the solution. See the <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/TargetPathSyntax.mht">Target
 Path Syntax</a> for more details.<o:p></o:p></p>
 
@@ -2366,7 +2366,7 @@ You can also define expressions in the value of the ‘Target Path’ property =
 to
 substitute property values in calculated paths. (i.e. {InstanceName} or
 {Parent.PropertyName}. See the <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/ExpressionSyntax.mht">Expression
 Syntax</a> for more details). Or you can use a Value Provider to calculate =
 the
@@ -2409,7 +2409,7 @@ bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ded’
 property, to automatically create an instance of the element whenever the
 template is manually used to create or add a project or item from the ‘<a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/AddNewProjectItemDialog.mht">Add
 New Project/Item’ dialog</a>.<o:p></o:p></p>
 
@@ -2493,7 +2493,7 @@ style=3D'mso-bidi-font-weight:normal'>Note:</b> This only has effect when t=
 he
 Target File Name property value includes property substitutions (i.e.
 {InstanceName} or {Parent.PropertyName}, etc. See the <a
-href=3D"content://93373818-600f-414b-8181-3a0cb79fa785/GeneratedCode/Guidan=
+href=3D"content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidan=
 ce/Content/ExpressionSyntax.mht">Expression
 Syntax</a> for more details) or when the value is calculated by a value
 provider.<o:p></o:p></p>

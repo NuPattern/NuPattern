@@ -2270,7 +2270,7 @@ al
 Studio, and both the master and all child VSIXes still appear individually =
 in
 the <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/ExtensionManager.mht">Extension
 Manager</a>. This means potentially that a user can remove one or more of t=
 he
@@ -2322,7 +2322,7 @@ remove the &lt;reference&gt; to the PatternToolkitRuntime VSIX:<o:p></o:p><=
 /p>
 
 <p class=3DSourceCode><span style=3D'mso-tab-count:1'>       </span>&lt;Ref=
-erence&nbsp;Id=3D&quot;93373818-600f-414b-8181-3a0cb79fa785&quot;&nbsp;MinV=
+erence&nbsp;Id=3D&quot;c869918e-f94e-4e7a-ab25-b076ff4e751b&quot;&nbsp;MinV=
 ersion=3D&quot;1.X.X.X&quot;&gt;<br>
 <span style=3D'mso-tab-count:1'>       </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
 ;&nbsp;&lt;Name&gt;Pattern

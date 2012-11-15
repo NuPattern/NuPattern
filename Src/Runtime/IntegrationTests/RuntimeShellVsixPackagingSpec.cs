@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             public void ThenVsixInfoCorrect()
             {
                 //Identifier, Name, Author, Version
-                Assert.Equal(@"93373818-600f-414b-8181-3a0cb79fa785", this.VsixInfo.Header.Identifier);
+                Assert.Equal(@"c869918e-f94e-4e7a-ab25-b076ff4e751b", this.VsixInfo.Header.Identifier);
                 Assert.Equal(@"Pattern Toolkit Manager", this.VsixInfo.Header.Name);
                 Assert.Equal(@"The Solution Builder tool window for accelerating solution development using Pattern Toolkit extensions.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"Outercurve", this.VsixInfo.Header.Author);
@@ -45,11 +45,19 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 
                 //SupportedFrameworkRuntimeEdition
 				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
-				Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
-
-				//SupportedProducts
-                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
-                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
+#if VSVER10
+				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
+#endif
+#if VSVER11
+                Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
+#endif
+                //SupportedProducts
+#if VSVER10
+                Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
+#endif
+#if VSVER11
+                Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
+#endif
             }
 
             [TestMethod, TestCategory("Integration")]

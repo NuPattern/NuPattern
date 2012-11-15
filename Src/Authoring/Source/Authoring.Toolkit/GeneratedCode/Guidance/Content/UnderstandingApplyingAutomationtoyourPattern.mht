@@ -2236,7 +2236,7 @@ pt;
 margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/WhatareAutomationExtensions.mht">What
 are Automation Extensions</a> for more background on the process discussed
 below.<o:p></o:p></p>
@@ -2352,7 +2352,7 @@ style=3D'mso-bidi-font-weight:normal'>For Example</b>: If you want to unfol=
 d a VS
 Project Template when the pattern is first instantiated, and you want that
 template to appear in the <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/AddNewProjectItemDialog.mht">Add
 New Project dialog</a> of Visual Studio – you simply configure a ‘Template
 Launch Point’.<o:p></o:p></p>
@@ -2371,7 +2371,7 @@ detects the ‘OnBuildStarted’ event of Visual Studio.<o:p></o:p></p>
 <p class=3DNoteCxSpLast style=3D'margin-top:0in;margin-right:0in;margin-bot=
 tom:
 10.0pt;margin-left:0in;mso-add-space:auto;background:#FFFFCC'>See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/UnderstandingWhichAutomationtoUse.mht">Which
 Automation to Use</a> for more examples of common automation scenarios, and
 which combinations of Launch Points and Commands to use.<o:p></o:p></p>
@@ -2379,7 +2379,7 @@ which combinations of Launch Points and Commands to use.<o:p></o:p></p>
 </div>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToExecutingaCommand.mht">Executing
 a Command</a> for details on how to configure a Launch Points with Commands=
  and

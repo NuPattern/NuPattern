@@ -45,8 +45,8 @@
 	   <KeyBinding editor="guidVSStd97" guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" key1="W" mod1="Control" key2="H" />
     </KeyBindings>
 	<Symbols>
-		<GuidSymbol name="guidRuntimeShellPkg" value="{93373818-600f-414b-8181-3a0cb79fa785}" />
-		<GuidSymbol name="guidInstallFactoryReferenceCommand" value="{85fe557d-4cb1-428c-9cf0-497624473978}">
+    <GuidSymbol name="guidRuntimeShellPkg" value="{93373818-600f-414b-8181-3a0cb79fa785}" />
+      <GuidSymbol name="guidInstallFactoryReferenceCommand" value="{85fe557d-4cb1-428c-9cf0-497624473978}">
 			<IDSymbol name="cmdidInstallFactoryReferenceCommand" value="0x15B3" />
 			<IDSymbol name="grpidInstallFactoryReferenceCommandGroup" value="0x58C4" />
 		</GuidSymbol>

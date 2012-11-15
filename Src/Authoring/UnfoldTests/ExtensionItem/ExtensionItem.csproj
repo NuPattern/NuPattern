@@ -44,7 +44,15 @@
       <Link>PatternToolkitManager.$(TargetVsVersion).vsix</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="source.extension.vsixmanifest" />
+    <None Include="source.extension.vsixmanifest">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>source.extension.tt</DependentUpon>
+    </None>
+    <None Include="source.extension.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
+    </None>
     <ItemTemplate Include="Assets\Templates\Items\Interface\Interface.vstemplate">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

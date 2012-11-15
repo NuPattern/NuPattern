@@ -113,6 +113,11 @@
     <Compile Include="Commands\VsMenuCommand.cs" />
     <Compile Include="Commands\VsMenuCommandAdapter.cs" />
     <Compile Include="Extensions\MenuCommandServiceExtensions.cs" />
+    <Compile Include="RuntimeShellInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RuntimeShellInfo.tt</DependentUpon>
+    </Compile>
     <Compile Include="ToolkitInterfaceService.cs" />
     <Compile Include="ObjectDumper.cs">
       <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
@@ -288,6 +293,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\ProductUninstalled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RuntimeShellInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RuntimeShellInfo.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />

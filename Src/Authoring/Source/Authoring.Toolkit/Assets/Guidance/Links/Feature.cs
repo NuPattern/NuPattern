@@ -32,7 +32,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 	                    new CommandBinding(
 	                        this.FeatureComposition, 
 							typeof(ActivateOrInstantiateSharedFeatureCommand).FullName,
-							new FixedValuePropertyBinding(Reflect<ActivateOrInstantiateSharedFeatureCommand>.GetProperty(t => t.FeatureId).Name, RuntimeShellInfo.Identifier))
+							new FixedValuePropertyBinding(Reflect<ActivateOrInstantiateSharedFeatureCommand>.GetProperty(t => t.FeatureId).Name, RuntimeShellInfo.VsixIdentifier))
 	                    {
 	                        Name = InstantiateUsingGuidanceLink.CommandBindingName
 	                    },

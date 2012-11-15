@@ -40,7 +40,15 @@
       <Link>PatternToolkitManager.$(TargetVsVersion).vsix</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="source.extension.vsixmanifest" />
+    <None Include="source.extension.vsixmanifest">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>source.extension.tt</DependentUpon>
+    </None>
+    <None Include="source.extension.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
+    </None>
     <EmbeddedResource Include="PatternModel.patterndefinition">
       <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/MainTestToolkit/Element/c:\users\joj\documents\visual studio 2010\Projects\MainTestToolkit\MainTestToolkit.patternstate%252fd283ce73-5e49-4e3f-8dac-1e8bd82686c5</SourceModelReference>
       <ItemGuid>eb858d93-fc73-41ec-9aae-c04048cffb63</ItemGuid>

@@ -55,10 +55,10 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 #endif
                 //SupportedProducts
 #if VSVER10
-                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
+                Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
 #endif
 #if VSVER11
-                Assert.Equal(3, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
+                Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
 #endif
 			}
 

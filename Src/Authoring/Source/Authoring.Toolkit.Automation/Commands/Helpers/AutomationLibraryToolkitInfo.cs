@@ -15,7 +15,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
 		/// <summary>
 		/// Gets the VSIX identifier of this toolkit.
 		/// </summary>
-		public static string ToolkitId = "97bd7ab2-964b-43f1-8a08-be6db68b018b";
+		public static string ToolkitId = "080eb0ef-518d-4807-9b5c-aa32d0032e0b";
 
 		/// <summary>
 		/// Gets the VSIX name of this toolkit.

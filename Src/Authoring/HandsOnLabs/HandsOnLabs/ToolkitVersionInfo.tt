@@ -3,6 +3,22 @@
 <#@ Include File="..\..\..\MasterVersion.ttinclude" #>
 <#
 	// WARNING: After changing this file, you must regenerate MasterVSIXInfo.tt
+
+	var vsixId = "";
+	var vsixName = "Pattern Toolkit Builder HOL 4VS";
+	var vsixUrl = "";
+	if (targetVsVersion == "10.0")
+	{
+		vsixId = "5d64cfe6-a6ff-4e73-a000-c6a8832740ff";
+		vsixName += "2010";
+		vsixUrl = "http://visualstudiogallery.msdn.microsoft.com/24b0eb25-352f-45d8-8b2a-bdc7637d80ad";
+	}
+	else if (targetVsVersion == "11.0")
+	{
+		vsixId = "5413c755-6024-4c41-ba0c-9aa3d6fd9caf";
+		vsixName += "2012";
+		vsixUrl = "http://visualstudiogallery.msdn.microsoft.com/24b0eb25-352f-45d8-8b2a-bdc7637d80ad";
+	}
 #>
 \<#+
 /// <summary>
@@ -13,13 +29,13 @@
 /// </remarks>
 public static class HandsOnLabsToolkitInfo
 {
-    public const string Name = "Pattern Toolkit Builder Labs";
-	public const string Description = "Hands-On Labs for Creating Pattern Toolkits.";
+    public const string Name = "<#=vsixName #>";
+	public const string Description = "A Hands-On Lab for creating Pattern Toolkit projects.";
     public const string Author = "<#=vsixAuthor#>";
     public const string Version = "<#=authoringVSIXVersion#>";
-	public const string Identifier = "5d64cfe6-a6ff-4e73-a000-c6a8832740ff";
+	public const string Identifier = "<#=vsixId #>";
 	public const string VsixFileName = "PatternToolkitBuilderLabs.<#=targetVsVersion#>.vsix"; // Should reflect <TargetVsixContainerName> value in HandsOnLabs.csproj
-	public const string MoreInfoUrl = "http://visualstudiogallery.msdn.microsoft.com/24b0eb25-352f-45d8-8b2a-bdc7637d80ad";
-	public const string GettingStartedUrl = "http://visualstudiogallery.msdn.microsoft.com/24b0eb25-352f-45d8-8b2a-bdc7637d80ad";
+	public const string MoreInfoUrl = "<#=vsixUrl #>";
+	public const string GettingStartedUrl = "<#=vsixUrl #>";
 }
 \#>

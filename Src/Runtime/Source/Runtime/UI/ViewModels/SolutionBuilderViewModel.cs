@@ -17,7 +17,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
     [CLSCompliant(false)]
     public class SolutionBuilderViewModel : ViewModel
     {
-        internal const string UsingGuidanceFeatureId = Microsoft.VisualStudio.Patterning.Runtime.Store.Constants.ProductStateStorePackageId;
+        internal const string UsingGuidanceFeatureId = RuntimeShellInfo.VsixIdentifier;
 
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SolutionBuilderViewModel>();
 

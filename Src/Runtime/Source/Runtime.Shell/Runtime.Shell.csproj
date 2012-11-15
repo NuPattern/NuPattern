@@ -208,10 +208,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <None Include="ToolkitVersionInfo.ttinclude">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolkitVersionInfo.tt</DependentUpon>
+    </None>
     <None Include="VSPackage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VSPackage.resx</LastGenOutput>
     </None>
+    <None Include="VsPackageInfo.ttinclude" />
     <VSCTCompile Include="RuntimeShellVSCT.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
       <SubType>Designer</SubType>
@@ -658,11 +664,6 @@
     <None Include="ToolkitVersionInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ToolkitVersionInfo.ttinclude</LastGenOutput>
-    </None>
-    <None Include="ToolkitVersionInfo.ttinclude">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ToolkitVersionInfo.tt</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

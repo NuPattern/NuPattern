@@ -1,5 +1,4 @@
-﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\Runtime.Store\DslDefinition.dsl'" #>
-<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+﻿<#@ Include File="VsPackageInfo.ttinclude" #>
 <#@ output extension=".vsct" #><?xml version="1.0" encoding="utf-8"?>
 <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<Extern href="stdidcmd.h"/>
@@ -47,8 +46,8 @@
 	   <KeyBinding editor="guidVSStd97" guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" key1="W" mod1="Control" key2="H" />
     </KeyBindings>
 	<Symbols>
-		<GuidSymbol name="guidRuntimeShellPkg" value="{<#= this.Dsl.PackageGuid #>}" />
-		<GuidSymbol name="guidInstallFactoryReferenceCommand" value="{85fe557d-4cb1-428c-9cf0-497624473978}">
+    <GuidSymbol name="guidRuntimeShellPkg" value="{<#= RuntimeShellPackageInfo.PackageGuid #>}" />
+      <GuidSymbol name="guidInstallFactoryReferenceCommand" value="{85fe557d-4cb1-428c-9cf0-497624473978}">
 			<IDSymbol name="cmdidInstallFactoryReferenceCommand" value="0x15B3" />
 			<IDSymbol name="grpidInstallFactoryReferenceCommandGroup" value="0x58C4" />
 		</GuidSymbol>

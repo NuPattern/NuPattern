@@ -46,6 +46,11 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="source.extension.vsixmanifest">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>source.extension.tt</DependentUpon>
+    </None>
     <None Include="Assets\Templates\Projects\Console\ConsoleApplicationProject.tt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>false</IncludeInVSIX>
@@ -63,7 +68,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ConsoleApplication.vstemplate</LastGenOutput>
     </None>
-    <None Include="source.extension.vsixmanifest" />
+    <None Include="source.extension.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
+    </None>
     <ProjectTemplate Include="Assets\Templates\Projects\Console\ConsoleApplication.vstemplate">
       <ItemGuid>af858aa1-5567-4174-901e-d0f91c7d721d</ItemGuid>
       <AutoGen>True</AutoGen>

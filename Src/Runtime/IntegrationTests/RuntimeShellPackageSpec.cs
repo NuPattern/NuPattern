@@ -13,21 +13,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
         [TestClass]
         public class GivenNoContext : IntegrationTest
         {
-            private string extensionDir;
-
             [TestInitialize]
             public void InitializeContext()
             {
-                var extensionManager = VsIdeTestHostContext.ServiceProvider.GetService<SVsExtensionManager, IVsExtensionManager>();
-                var runtimeExtension = extensionManager.GetInstalledExtension(Microsoft.VisualStudio.Patterning.Runtime.Shell.Constants.RuntimeShellPkgGuid);
-                this.extensionDir = runtimeExtension.InstallPath;
-            }
-
-            [HostType("VS IDE")]
-            [TestMethod, TestCategory("Integration")]
-            public void ThenDependencyIsDownloadedAndDeployed()
-            {
-                Assert.True(File.Exists(Path.Combine(this.extensionDir, Shell.Constants.PackageDependencies.Marker)));
             }
         }
     }

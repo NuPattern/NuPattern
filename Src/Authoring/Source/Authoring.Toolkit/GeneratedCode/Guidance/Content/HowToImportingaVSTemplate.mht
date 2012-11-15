@@ -2209,7 +2209,7 @@ o:p></h4>
 rt
 process in adding a VS template to a pattern toolkit. The first part is to
 create a VS template archive (a *.zip file) using the process in <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToExportingaVSTemplate.mht">Exporting
 a VS Template</a>, or by obtaining an existing VS template archive (i.e. fr=
 om a
@@ -2225,7 +2225,7 @@ margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: If you create a VS template from scratch using the method
 described in <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToCreatingaVSTemplate.mht">Creating
 a VS Template</a>, the VS template already exists in the pattern toolkit
 project and there is no need to import the template again.<o:p></o:p></p>
@@ -2326,7 +2326,7 @@ src=3D"HowToImportingaVSTemplate_files/image002.jpg" v:shapes=3D"Picture_x0=
 Project) into your toolkit project, right-click on the ‘Project Templates’ =
 or
 ‘Item templates’ folders in <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a>, and select ‘Import’.<o:p></o:p></p>
 
@@ -2525,7 +2525,7 @@ Project) into your toolkit project form ‘Windows Explorer’, simply drag the=
 template archive (a *.zip file) from Windows Explorer, and drop on either t=
 he
 ‘Project Templates’ or ‘Item templates’ folders in <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a>.<o:p></o:p></p>
 
@@ -2585,14 +2585,14 @@ edit
 these files to substitute values from both the environment and from the pat=
 tern
 model when the templates are unfolded. See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToSubstitutingValuesinVSTemplates.mht">Substituting
 Values in VS Templates</a> for more details.<o:p></o:p></p>
 
 <h5>Automate the Template<o:p></o:p></h5>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToUnfoldingVSTemplates.mht">Unfolding
 VS Templates</a><span style=3D'mso-spacerun:yes'>  </span>for how to automa=
 te the

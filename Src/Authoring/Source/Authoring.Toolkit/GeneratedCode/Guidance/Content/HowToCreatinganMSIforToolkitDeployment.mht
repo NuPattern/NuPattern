@@ -2170,7 +2170,7 @@ or other 3<sup>rd</sup> party products.<o:p></o:p></p>
 
 <p class=3DMsoNormal>VSIXes support being packaged in MSI, and have special
 properties in the source.extension.vsixmanifest file to indicate to <a
-href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
+href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/ExtensionManager.mht">‘Extension
 Manager’</a> that the VSIX has been deployed by MSI to prevent Visual Studio
 users from uninstalling the VSIX from Extension Manager manually.<o:p></o:p=
