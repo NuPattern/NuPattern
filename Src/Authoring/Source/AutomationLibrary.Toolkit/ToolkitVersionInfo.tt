@@ -5,16 +5,15 @@
 	// WARNING: After changing this file, you must regenerate MasterVSIXInfo.tt
 
 	var vsixId = "";
-	var vsixUrl = "";
+	var moreInfoUrl = "http://vspat.codeplex.com";
+	var gettingStartedUrl = "http://vspat.codeplex.com";
 	if (targetVsVersion == "10.0")
 	{
 		vsixId = "97bd7ab2-964b-43f1-8a08-be6db68b018b";
-		vsixUrl = "http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b";
 	}
 	else if (targetVsVersion == "11.0")
 	{
 		vsixId = "080eb0ef-518d-4807-9b5c-aa32d0032e0b";
-		vsixUrl = "http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b";
 	}
 #>
 \<#+
@@ -32,7 +31,7 @@ public static class AutomationLibraryToolkitInfo
     public const string Version = "<#=authoringVSIXVersion#>";
 	public const string Identifier = "<#=vsixId #>";
 	public const string VsixFileName = "PatternToolkitAutomationLibrary.<#=targetVsVersion#>.vsix"; // Should reflect <TargetVsixContainerName> value in AutomationLibrary.Toolkit.csproj
-	public const string MoreInfoUrl = "<#=vsixUrl #>";
-	public const string GettingStartedUrl = "<#=vsixUrl #>";
+	public const string MoreInfoUrl = "<#=moreInfoUrl #>";
+	public const string GettingStartedUrl = "<#=gettingStartedUrl #>";
 }
 \#>

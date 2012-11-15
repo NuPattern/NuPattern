@@ -8,8 +8,8 @@
       <Locale>1033</Locale>
       <Icon>Resources\RunTimeVsix.png</Icon>
       <License>LICENSE.txt</License>
-      <MoreInfoUrl>http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b</MoreInfoUrl>
-      <GettingStartedGuide>http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b</GettingStartedGuide>
+      <MoreInfoUrl>http://vspat.codeplex.com</MoreInfoUrl>
+      <GettingStartedGuide>http://vspat.codeplex.com</GettingStartedGuide>
       <PreviewImage>Resources\RunTimeVsixPreview.png</PreviewImage>
       <InstalledByMsi>false</InstalledByMsi>
       <SupportedProducts>

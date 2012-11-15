@@ -31,7 +31,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
             {
                 //Identifier, Name, Author, Version
                 Assert.Equal(@"84031a32-b20f-479c-a620-beacd982ea13", this.VsixInfo.Header.Identifier);
-                Assert.Equal(@"Pattern Toolkit Builder 4VS2012", this.VsixInfo.Header.Name);
+                Assert.Equal(@"Pattern Toolkit Builder VS2012", this.VsixInfo.Header.Name);
                 Assert.Equal(@"An extension for designing and building Pattern Toolkit extensions, that combine automation and guidance with design patterns for repeatable solution development.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"Outercurve", this.VsixInfo.Header.Author);
                 Assert.Equal("1.3.20.0", this.VsixInfo.Header.Version.ToString());
@@ -40,8 +40,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
 				Assert.Equal(@"Resources\DesignTimeVsix.png", this.VsixInfo.Header.Icon);
 				Assert.Equal(@"Resources\DesignTimeVsixPreview.png", this.VsixInfo.Header.PreviewImage);
-				Assert.Equal(@"http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b", this.VsixInfo.Header.MoreInfoUrl.ToString());
-				Assert.Equal(@"http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b", this.VsixInfo.Header.GettingStartedGuide.ToString());
+				Assert.Equal(@"http://vspat.codeplex.com", this.VsixInfo.Header.MoreInfoUrl.ToString());
+				Assert.Equal(@"http://vspat.codeplex.com", this.VsixInfo.Header.GettingStartedGuide.ToString());
 
                 //SupportedFrameworkRuntimeEdition
 				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());

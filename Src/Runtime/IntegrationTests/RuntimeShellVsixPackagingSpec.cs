@@ -40,8 +40,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
 				Assert.Equal(@"Resources\RunTimeVsix.png", this.VsixInfo.Header.Icon);
 				Assert.Equal(@"Resources\RunTimeVsixPreview.png", this.VsixInfo.Header.PreviewImage);
-				Assert.Equal(@"http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b", this.VsixInfo.Header.MoreInfoUrl.ToString());
-				Assert.Equal(@"http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b", this.VsixInfo.Header.GettingStartedGuide.ToString());
+				Assert.Equal(@"http://vspat.codeplex.com", this.VsixInfo.Header.MoreInfoUrl.ToString());
+				Assert.Equal(@"http://vspat.codeplex.com", this.VsixInfo.Header.GettingStartedGuide.ToString());
 
                 //SupportedFrameworkRuntimeEdition
 				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());

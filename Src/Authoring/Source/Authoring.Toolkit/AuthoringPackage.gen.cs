@@ -13,7 +13,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<AuthoringPackage>();
         internal static string CurrentToolkitVersion = "1.3.20.0";
-        private static string MsBuildPath = @"%localappdata%\Microsoft\MSBuild\Outercurve\Pattern Toolkit Builder 4VS2012";
+        private static string MsBuildPath = @"%localappdata%\Microsoft\MSBuild\Outercurve\Pattern Toolkit Builder VS2012";
 		private static string TargetsFilename = "Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets";
         internal static readonly string TargetsPath = Environment.ExpandEnvironmentVariables(Path.Combine(MsBuildPath, TargetsFilename));
 		internal static readonly Dictionary<string,string> InstalledExtensionProperties = new Dictionary<string, string>

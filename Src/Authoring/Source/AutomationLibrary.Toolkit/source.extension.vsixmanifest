@@ -8,8 +8,8 @@
 		<Locale>1033</Locale>
 		<License>LICENSE.txt</License>
 		<Icon>Resources\DesignTimeVsix.png</Icon>
-		<MoreInfoUrl>http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b</MoreInfoUrl>
-		<GettingStartedGuide>http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b</GettingStartedGuide>
+		<MoreInfoUrl>http://vspat.codeplex.com</MoreInfoUrl>
+		<GettingStartedGuide>http://vspat.codeplex.com</GettingStartedGuide>
 		<PreviewImage>Resources\DesignTimeVsixPreview.png</PreviewImage>
 		<SupportedProducts>
 		  <VisualStudio Version="11.0">

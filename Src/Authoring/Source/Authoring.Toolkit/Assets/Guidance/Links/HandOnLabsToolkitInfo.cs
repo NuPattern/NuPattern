@@ -15,7 +15,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance.Links
 		/// <summary>
 		/// Gets the VSIX name of this toolkit.
 		/// </summary>
-		public static string RegistrationName = "Pattern Toolkit Builder HOL 4VS2012";
+		public static string RegistrationName = "Pattern Toolkit Builder HOL VS2012";
 	}
 }
 

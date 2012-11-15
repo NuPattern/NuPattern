@@ -5,19 +5,18 @@
 	// WARNING: After changing this file, you must regenerate MasterVSIXInfo.tt
 
 	var vsixId = "";
-	var vsixName = "Pattern Toolkit Builder 4VS";
-	var vsixUrl = "";
+	var vsixName = "Pattern Toolkit Builder VS";
+	var moreInfoUrl = "http://vspat.codeplex.com";
+	var gettingStartedUrl = "http://vspat.codeplex.com";
 	if (targetVsVersion == "10.0")
 	{
 		vsixId = "84031a32-b20f-479c-a620-beacd982ea13";
 		vsixName += "2010";
-		vsixUrl = "http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b";
 	}
 	else if (targetVsVersion == "11.0")
 	{
 		vsixId = "84031a32-b20f-479c-a620-beacd982ea13";
 		vsixName += "2012";
-		vsixUrl = "http://visualstudiogallery.msdn.microsoft.com/332f060b-2352-41c9-b8dc-95d8ad21329b";
 	}
 #>
 \<#+
@@ -35,7 +34,7 @@ public static class AuthoringToolkitInfo
     public const string Version = "<#=authoringVSIXVersion#>";
 	public const string Identifier = "<#= vsixId #>";
 	public const string VsixFileName = "PatternToolkitBuilder.<#=targetVsVersion#>.vsix"; // Should reflect <TargetVsixContainerName> value in Authoring.Toolkit.csproj
-	public const string MoreInfoUrl = "<#=vsixUrl #>";
-	public const string GettingStartedUrl = "<#=vsixUrl #>";
+	public const string MoreInfoUrl = "<#=moreInfoUrl #>";
+	public const string GettingStartedUrl = "<#=gettingStartedUrl #>";
 }
 \#>
