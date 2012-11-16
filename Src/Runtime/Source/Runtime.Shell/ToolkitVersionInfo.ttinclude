@@ -14,5 +14,5 @@ public static class RuntimeToolkitInfo
 	public const string Identifier = "c869918e-f94e-4e7a-ab25-b076ff4e751b";
 	public const string VsixFileName = "PatternToolkitManager.11.0.vsix"; // Should reflect <TargetVsixContainerName> value in Runtime.Shell.csproj
 	public const string MoreInfoUrl = "http://vspat.codeplex.com";
-	public const string GettingStartedUrl = "http://vspat.codeplex.com";}
+	public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";}
 #>

@@ -11,6 +11,7 @@ public static class VsixInfo
 		public const string Identifier = "c869918e-f94e-4e7a-ab25-b076ff4e751b";
 		public const string VsixFileName = "PatternToolkitManager.11.0.vsix";
 		public const string MoreInfoUrl = "http://vspat.codeplex.com";
+		public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 		public const string SettingsName = "PatternToolkitExtensions";
 
 	}
@@ -23,6 +24,7 @@ public static class VsixInfo
 		public const string Identifier = "84031a32-b20f-479c-a620-beacd982ea13";
 		public const string VsixFileName = "PatternToolkitBuilder.11.0.vsix";
 		public const string MoreInfoUrl = "http://vspat.codeplex.com";
+		public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 	}
 	public static class PatternToolkitLibrary
 	{
@@ -33,6 +35,7 @@ public static class VsixInfo
 		public const string Identifier = "080eb0ef-518d-4807-9b5c-aa32d0032e0b";
 		public const string VsixFileName = "PatternToolkitAutomationLibrary.11.0.vsix";
 		public const string MoreInfoUrl = "http://vspat.codeplex.com";
+		public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 	}
 	public static class PatternToolkitHol
 	{
@@ -43,6 +46,7 @@ public static class VsixInfo
 		public const string Identifier = "5413c755-6024-4c41-ba0c-9aa3d6fd9caf";
 		public const string VsixFileName = "PatternToolkitBuilderLabs.11.0.vsix";
 		public const string MoreInfoUrl = "http://vspat.codeplex.com";
+		public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 	}
 	public static class VsSdk
 	{

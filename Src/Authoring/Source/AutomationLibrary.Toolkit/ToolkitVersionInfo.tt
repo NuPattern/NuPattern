@@ -6,7 +6,7 @@
 
 	var vsixId = "";
 	var moreInfoUrl = "http://vspat.codeplex.com";
-	var gettingStartedUrl = "http://vspat.codeplex.com";
+	var gettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 	if (targetVsVersion == "10.0")
 	{
 		vsixId = "97bd7ab2-964b-43f1-8a08-be6db68b018b";

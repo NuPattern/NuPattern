@@ -7,7 +7,7 @@
 	var vsixId = "";
 	var vsixName = "Pattern Toolkit Builder HOL VS";
 	var moreInfoUrl = "http://vspat.codeplex.com";
-	var gettingStartedUrl = "http://vspat.codeplex.com";
+	var gettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 	if (targetVsVersion == "10.0")
 	{
 		vsixId = "5d64cfe6-a6ff-4e73-a000-c6a8832740ff";

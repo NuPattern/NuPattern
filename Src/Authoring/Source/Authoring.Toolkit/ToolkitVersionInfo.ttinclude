@@ -14,6 +14,6 @@ public static class AuthoringToolkitInfo
 	public const string Identifier = "84031a32-b20f-479c-a620-beacd982ea13";
 	public const string VsixFileName = "PatternToolkitBuilder.11.0.vsix"; // Should reflect <TargetVsixContainerName> value in Authoring.Toolkit.csproj
 	public const string MoreInfoUrl = "http://vspat.codeplex.com";
-	public const string GettingStartedUrl = "http://vspat.codeplex.com";
+	public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 }
 #>

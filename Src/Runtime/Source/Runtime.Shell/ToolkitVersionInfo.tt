@@ -6,7 +6,7 @@
 
 	var vsixId = "";
 	var moreInfoUrl = "http://vspat.codeplex.com";
-	var gettingStartedUrl = "http://vspat.codeplex.com";
+	var gettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 	if (targetVsVersion == "10.0")
 	{
 		vsixId = RuntimeShellPackageInfo.PackageGuid; // Legacy for previous versions of VSPAT
