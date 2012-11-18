@@ -20,10 +20,6 @@
       <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
     </Identifier>
     <References>
-      <Reference Id="NuPackToolsVsix.Microsoft.67e54e40-0ae3-42c5-a949-fddf5739e7a5" MinVersion="1.6.21215.9133">
-        <Name>NuGet Package Manager</Name>
-        <MoreInfoUrl>http://docs.nuget.org/</MoreInfoUrl>
-      </Reference>
     </References>
     <Content>
       <VsPackage>|Runtime.Shell;PkgdefProjectOutputGroup|</VsPackage>

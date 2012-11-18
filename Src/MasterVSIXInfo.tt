@@ -1,4 +1,5 @@
 ﻿<#@ output extension=".ttinclude" #>
+<#@ Include File="MasterVersion.ttinclude" #>
 <#@ Include File="Authoring\HandsOnLabs\HandsOnLabs\ToolkitVersionInfo.ttinclude" #>
 <#@ Include File="Authoring\Source\AutomationLibrary.Toolkit\ToolkitVersionInfo.ttinclude" #>
 <#@ Include File="Authoring\Source\Authoring.Toolkit\ToolkitVersionInfo.ttinclude" #>
@@ -57,18 +58,22 @@ public static class VsixInfo
 	{
 		public const string Name = "Microsoft Visual Studio SDK";
 		public const string Author = "Microsoft";
-		public const string Version = "10.0";
+		public const string Version = "<#=targetVsVersion#>";
 		public const string Identifier = "Microsoft.VisualStudio.SDK";
-		public const string MoreInfoUrl = "http://www.microsoft.com/download/en/details.aspx?id=2680";
-	}
-	public static class NuGetPackageManager
+<#
+	if (targetVsVersion == "10.0")
 	{
-		public const string Name = "NuGet Package Manager";
-		public const string Author = "Microsoft Corporation";
-		public const string Version = "1.6.21215.9133";
-		public const string Identifier = "NuPackToolsVsix.Microsoft.67e54e40-0ae3-42c5-a949-fddf5739e7a5";
-		public const string VsixFileName = "NuGet.Tools.vsix";
-		public const string MoreInfoUrl = "http://docs.nuget.org/";
+#>
+		public const string MoreInfoUrl = "http://www.microsoft.com/en-us/download/details.aspx?id=2680";
+<#
+	}
+	else if (targetVsVersion == "11.0")
+	{
+#>
+		public const string MoreInfoUrl = "http://www.microsoft.com/en-us/download/details.aspx?id=30668";
+<#
+	}
+#>
 	}
 }
 \#>

@@ -37,10 +37,6 @@ else
 #>
 	</Identifier>
 	<References>
-		<Reference Id="<#=VsixInfo.NuGetPackageManager.Identifier#>" MinVersion="<#=VsixInfo.NuGetPackageManager.Version#>">
-			<Name><#=VsixInfo.NuGetPackageManager.Name#></Name>
-			<MoreInfoUrl><#=VsixInfo.NuGetPackageManager.MoreInfoUrl#></MoreInfoUrl>
-		</Reference>
 		<Reference Id="<#=VsixInfo.VsSdk.Identifier #>" MinVersion="<#=VsixInfo.VsSdk.Version#>">
 			<Name><#=VsixInfo.VsSdk.Name #></Name>
 			<MoreInfoUrl><#=VsixInfo.VsSdk.MoreInfoUrl#></MoreInfoUrl>
