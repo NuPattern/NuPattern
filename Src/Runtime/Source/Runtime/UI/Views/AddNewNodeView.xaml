@@ -44,7 +44,7 @@
 				Margin="0,2,0,0" />
 		</Grid>
 
-		<StackPanel Grid.Row="1" Background="{DynamicResource {x:Static vsfx:VsBrushes.EnvironmentBackgroundTexture2Key}}">
+		<StackPanel Grid.Row="1" Background="{DynamicResource VsBrush.EnvironmentBackgroundTexture2}">
 			<Grid Grid.IsSharedSizeScope="True" VerticalAlignment="Center" HorizontalAlignment="Right">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />

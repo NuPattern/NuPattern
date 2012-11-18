@@ -288,7 +288,7 @@
 					<Button Grid.Column="0" Margin="3,0,2,0" Style="{StaticResource NavigationArrowPreviousButton}"/>
 					<Button Grid.Column="1" Margin="2,0,0,0" Style="{StaticResource NavigationArrowNextButton}"/>
 				</Grid>
-				<StackPanel Background="{DynamicResource {x:Static vsfx:VsBrushes.EnvironmentBackgroundTexture2Key}}" DockPanel.Dock="Bottom">
+				<StackPanel Background="{DynamicResource VsBrush.EnvironmentBackgroundTexture2}" DockPanel.Dock="Bottom">
 					<Grid Grid.IsSharedSizeScope="True" VerticalAlignment="Bottom" HorizontalAlignment="Right">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
@@ -336,7 +336,7 @@
 
 	<Style TargetType="l:WizardWindow">
 		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
-		<Setter Property="Background" Value="{DynamicResource {x:Static vsfx:VsBrushes.NewProjectBackgroundKey}}"/>
+		<Setter Property="Background" Value="{DynamicResource VsBrush.NewProjectBackground}"/>
 		<Setter Property="Template" Value="{StaticResource WizardWindow.Template}"/>
         <Setter Property="Width" Value="620"/>
         <Setter Property="Height" Value="420"/>

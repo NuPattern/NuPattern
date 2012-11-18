@@ -21,12 +21,12 @@ namespace Microsoft.VisualStudio.Patterning.Common.Presentation.Vs
         /// <summary>
         /// Gets the color property.
         /// </summary>
-        public static readonly DependencyProperty ColorProperty = DependencyProperty.Register("Color", typeof(System.Windows.Media.Color), typeof(SystemDropShadowChrome), new FrameworkPropertyMetadata(System.Windows.Media.Color.FromArgb(0x71, 0, 0, 0), FrameworkPropertyMetadataOptions.AffectsRender, new PropertyChangedCallback(VsSystemDropShadowChrome.ClearBrushes)));
+        public static readonly DependencyProperty ColorProperty = DependencyProperty.Register("Color", typeof(System.Windows.Media.Color), typeof(VsSystemDropShadowChrome), new FrameworkPropertyMetadata(System.Windows.Media.Color.FromArgb(0x71, 0, 0, 0), FrameworkPropertyMetadataOptions.AffectsRender, new PropertyChangedCallback(VsSystemDropShadowChrome.ClearBrushes)));
         
         /// <summary>
         /// Gets the corner radius property.
         /// </summary>
-        public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.Register("CornerRadius", typeof(System.Windows.CornerRadius), typeof(SystemDropShadowChrome), new FrameworkPropertyMetadata(new System.Windows.CornerRadius(), FrameworkPropertyMetadataOptions.AffectsRender, new PropertyChangedCallback(VsSystemDropShadowChrome.ClearBrushes)), new ValidateValueCallback(VsSystemDropShadowChrome.IsCornerRadiusValid));
+        public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.Register("CornerRadius", typeof(System.Windows.CornerRadius), typeof(VsSystemDropShadowChrome), new FrameworkPropertyMetadata(new System.Windows.CornerRadius(), FrameworkPropertyMetadataOptions.AffectsRender, new PropertyChangedCallback(VsSystemDropShadowChrome.ClearBrushes)), new ValidateValueCallback(VsSystemDropShadowChrome.IsCornerRadiusValid));
 
         private static void ClearBrushes(DependencyObject o, DependencyPropertyChangedEventArgs e)
         {

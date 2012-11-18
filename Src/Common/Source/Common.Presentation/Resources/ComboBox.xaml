@@ -9,12 +9,12 @@
 		</Border>
 		<ControlTemplate.Triggers>
 			<Trigger Property="IsHighlighted" Value="True">
-				<Setter TargetName="bd" Property="Background" Value="{DynamicResource vsfx:VsBrush.ComboBoxMouseOverBackgroundGradient}" />
-                <Setter TargetName="bd" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.ComboBoxMouseOverBorder}" />
-                <Setter TargetName="bd" Property="TextElement.Foreground" Value="{DynamicResource vsfx:VsBrush.CommandBarTextHover}" />
+				<Setter TargetName="bd" Property="Background" Value="{DynamicResource VsBrush.ComboBoxMouseOverBackgroundGradient}" />
+                <Setter TargetName="bd" Property="BorderBrush" Value="{DynamicResource VsBrush.ComboBoxMouseOverBorder}" />
+                <Setter TargetName="bd" Property="TextElement.Foreground" Value="{DynamicResource VsBrush.CommandBarTextHover}" />
 			</Trigger>
 			<Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Foreground" Value="{DynamicResource vsfx:VsBrush.CommandBarTextInactive}" />
+                <Setter Property="Foreground" Value="{DynamicResource VsBrush.CommandBarTextInactive}" />
 			</Trigger>
 		</ControlTemplate.Triggers>
 	</ControlTemplate>
@@ -23,7 +23,7 @@
 		<Setter Property="BorderThickness" Value="1" />
 		<Setter Property="BorderBrush" Value="#00FFFFFF" />
 		<Setter Property="Background" Value="#00FFFFFF" />
-        <Setter Property="Foreground" Value="{DynamicResource vsfx:VsBrush.CommandBarTextActive}" />
+        <Setter Property="Foreground" Value="{DynamicResource VsBrush.CommandBarTextActive}" />
 		<Setter Property="Template" Value="{StaticResource ComboBoxItem.Template}" />
 		<Setter Property="Margin" Value="2,0" />
 	</Style>
@@ -49,12 +49,12 @@
 		</Grid>
 		<ControlTemplate.Triggers>
 			<Trigger Property="IsChecked" Value="True">
-                <Setter TargetName="Border" Property="Background" Value="{DynamicResource vsfx:VsBrush.DropDownMouseDownBackground}" />
-                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.DropDownMouseDownBorder}" />
+                <Setter TargetName="Border" Property="Background" Value="{DynamicResource VsBrush.DropDownMouseDownBackground}" />
+                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource VsBrush.DropDownMouseDownBorder}" />
 			</Trigger>
 			<Trigger Property="IsPressed" Value="True">
-                <Setter TargetName="Border" Property="Background" Value="{DynamicResource vsfx:VsBrush.DropDownMouseDownBackground}" />
-                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.DropDownMouseDownBorder}" />
+                <Setter TargetName="Border" Property="Background" Value="{DynamicResource VsBrush.DropDownMouseDownBackground}" />
+                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource VsBrush.DropDownMouseDownBorder}" />
 			</Trigger>
 		</ControlTemplate.Triggers>
 	</ControlTemplate>
@@ -64,7 +64,7 @@
 	</ControlTemplate>
 
 	<ControlTemplate x:Key="ComboBox.Template" TargetType="ComboBox">
-        <Border x:Name="Border" BorderThickness="1" CornerRadius="1" BorderBrush="{DynamicResource vsfx:VsBrush.DropDownBorder}" Background="{DynamicResource vsfx:VsBrush.DropDownBackground}" SnapsToDevicePixels="True">
+        <Border x:Name="Border" BorderThickness="1" CornerRadius="1" BorderBrush="{DynamicResource VsBrush.DropDownBorder}" Background="{DynamicResource VsBrush.DropDownBackground}" SnapsToDevicePixels="True">
 			<Grid>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*" />
@@ -72,42 +72,42 @@
 				</Grid.ColumnDefinitions>
 				<Popup x:Name="PART_Popup" IsOpen="{TemplateBinding IsDropDownOpen}" Placement="Bottom" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" AllowsTransparency="True" Margin="1" Grid.ColumnSpan="2">
 					<vsfx:VsSystemDropShadowChrome x:Name="shdw" Color="#00FFFFFF" Width="{TemplateBinding ActualWidth}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
-                        <Border x:Name="dropDownBorder" BorderThickness="1" BorderBrush="{DynamicResource vsfx:VsBrush.DropDownPopupBorder}">
+                        <Border x:Name="dropDownBorder" BorderThickness="1" BorderBrush="{DynamicResource VsBrush.DropDownPopupBorder}">
 							<ScrollViewer CanContentScroll="True">
-                                <Grid Background="{DynamicResource vsfx:VsBrush.DropDownPopupBackgroundGradient}" RenderOptions.ClearTypeHint="Enabled">
+                                <Grid Background="{DynamicResource VsBrush.DropDownPopupBackgroundGradient}" RenderOptions.ClearTypeHint="Enabled">
 									<ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.DirectionalNavigation="Contained" />
 								</Grid>
 							</ScrollViewer>
 						</Border>
 					</vsfx:VsSystemDropShadowChrome>
 				</Popup>
-				<ToggleButton x:Name="toggleButton" IsChecked="{Binding IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}" BorderBrush="#00FFFFFF" Background="#00FFFFFF" Foreground="{DynamicResource vsfx:VsBrush.DropDownGlyph}" Grid.ColumnSpan="2" IsTabStop="False" Focusable="False" ClickMode="Press" Template="{StaticResource ComboBox.ToogleButton.Template}" />
+				<ToggleButton x:Name="toggleButton" IsChecked="{Binding IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}" BorderBrush="#00FFFFFF" Background="#00FFFFFF" Foreground="{DynamicResource VsBrush.DropDownGlyph}" Grid.ColumnSpan="2" IsTabStop="False" Focusable="False" ClickMode="Press" Template="{StaticResource ComboBox.ToogleButton.Template}" />
 				<ContentPresenter Content="{TemplateBinding SelectionBoxItem}" ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" IsHitTestVisible="False" Grid.Column="0" />
 			</Grid>
 		</Border>
 		<ControlTemplate.Triggers>
 			<Trigger Property="IsKeyboardFocusWithin" Value="True">
-                <Setter TargetName="toggleButton" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.DropDownMouseOverBorder}" />
-                <Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource vsfx:VsBrush.DropDownMouseOverBackgroundGradient}" />
-                <Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource vsfx:VsBrush.DropDownMouseOverGlyph}" />
-                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.DropDownMouseOverBorder}" />
+                <Setter TargetName="toggleButton" Property="BorderBrush" Value="{DynamicResource VsBrush.DropDownMouseOverBorder}" />
+                <Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource VsBrush.DropDownMouseOverBackgroundGradient}" />
+                <Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource VsBrush.DropDownMouseOverGlyph}" />
+                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource VsBrush.DropDownMouseOverBorder}" />
 			</Trigger>
 			<Trigger Property="IsMouseOver" Value="True">
-                <Setter TargetName="toggleButton" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.DropDownMouseOverBorder}" />
-                <Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource vsfx:VsBrush.DropDownMouseOverBackgroundGradient}" />
-                <Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource vsfx:VsBrush.DropDownMouseOverGlyph}" />
-                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.DropDownMouseOverBorder}" />
+                <Setter TargetName="toggleButton" Property="BorderBrush" Value="{DynamicResource VsBrush.DropDownMouseOverBorder}" />
+                <Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource VsBrush.DropDownMouseOverBackgroundGradient}" />
+                <Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource VsBrush.DropDownMouseOverGlyph}" />
+                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource VsBrush.DropDownMouseOverBorder}" />
 			</Trigger>
 			<Trigger Property="HasItems" Value="False">
 				<Setter TargetName="dropDownBorder" Property="Height" Value="95" />
 			</Trigger>
 			<Trigger Property="IsEnabled" Value="False">
 				<Setter TargetName="toggleButton" Property="BorderBrush" Value="#00FFFFFF" />
-                <Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource vsfx:VsBrush.DropDownDisabledBackground}" />
-                <Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource vsfx:VsBrush.DropDownDisabledGlyph}" />
-                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.DropDownDisabledBorder}" />
-                <Setter TargetName="Border" Property="Background" Value="{DynamicResource vsfx:VsBrush.DropDownDisabledBackground}" />
-                <Setter Property="Foreground" Value="{DynamicResource vsfx:VsBrush.CommandBarTextInactive}" />
+                <Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource VsBrush.DropDownDisabledBackground}" />
+                <Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource VsBrush.DropDownDisabledGlyph}" />
+                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource VsBrush.DropDownDisabledBorder}" />
+                <Setter TargetName="Border" Property="Background" Value="{DynamicResource VsBrush.DropDownDisabledBackground}" />
+                <Setter Property="Foreground" Value="{DynamicResource VsBrush.CommandBarTextInactive}" />
 			</Trigger>
 			<Trigger Property="IsGrouping" Value="True">
 				<Setter Property="ScrollViewer.CanContentScroll" Value="False" />
@@ -118,7 +118,7 @@
 					<Condition Binding="{Binding AreGradientsAllowed}" Value="True" />
 				</MultiDataTrigger.Conditions>
 				<Setter TargetName="shdw" Property="Margin" Value="0,0,5,5" />
-				<Setter TargetName="shdw" Property="Color" Value="{DynamicResource vsfx:VsColor.DropShadow}" />
+				<Setter TargetName="shdw" Property="Color" Value="{DynamicResource VsColor.DropShadow}" />
 			</MultiDataTrigger>
 			<DataTrigger Binding="{Binding AreAnimationsAllowed}" Value="False">
 				<Setter TargetName="PART_Popup" Property="PopupAnimation" Value="None" />
@@ -127,7 +127,7 @@
 	</ControlTemplate>
 
 	<ControlTemplate x:Key="ComboBox.Editable.Template" TargetType="ComboBox">
-        <Border x:Name="Border" BorderThickness="1" CornerRadius="1" BorderBrush="{DynamicResource vsfx:VsBrush.ComboBoxBorder}" Background="{DynamicResource vsfx:VsBrush.ComboBoxBackground}">
+        <Border x:Name="Border" BorderThickness="1" CornerRadius="1" BorderBrush="{DynamicResource VsBrush.ComboBoxBorder}" Background="{DynamicResource VsBrush.ComboBoxBackground}">
 			<Grid SnapsToDevicePixels="True">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*" />
@@ -135,9 +135,9 @@
 				</Grid.ColumnDefinitions>
 				<Popup x:Name="PART_Popup" IsOpen="{TemplateBinding IsDropDownOpen}" Placement="Bottom" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" AllowsTransparency="True" Grid.ColumnSpan="2">
 					<vsfx:VsSystemDropShadowChrome x:Name="shdw" Color="#00FFFFFF" Width="{TemplateBinding ActualWidth}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
-                        <Border x:Name="dropDownBorder" BorderThickness="1" BorderBrush="{DynamicResource vsfx:VsBrush.ComboBoxPopupBorder}">
+                        <Border x:Name="dropDownBorder" BorderThickness="1" BorderBrush="{DynamicResource VsBrush.ComboBoxPopupBorder}">
 							<ScrollViewer>
-                                <Grid Background="{DynamicResource vsfx:VsBrush.ComboBoxPopupBackgroundGradient}" RenderOptions.ClearTypeHint="Enabled">
+                                <Grid Background="{DynamicResource VsBrush.ComboBoxPopupBackgroundGradient}" RenderOptions.ClearTypeHint="Enabled">
 									<ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.DirectionalNavigation="Contained" />
 								</Grid>
 							</ScrollViewer>
@@ -145,32 +145,32 @@
 					</vsfx:VsSystemDropShadowChrome>
 				</Popup>
 				<TextBox x:Name="PART_EditableTextBox" IsReadOnly="False" AllowDrop="True" MinWidth="0" MinHeight="0" FocusVisualStyle="{x:Null}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" Margin="0" VerticalAlignment="Center" Template="{StaticResource ComboBox.TextBox.Template}" xml:space="preserve" />
-				<ToggleButton x:Name="toggleButton" IsChecked="{Binding IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}" BorderBrush="#00FFFFFF" Background="#00FFFFFF" Foreground="{DynamicResource vsfx:VsBrush.DropDownGlyph}" Grid.Column="1" IsTabStop="False" Focusable="False" ClickMode="Press" Template="{StaticResource ComboBox.ToogleButton.Template}" />
+				<ToggleButton x:Name="toggleButton" IsChecked="{Binding IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}" BorderBrush="#00FFFFFF" Background="#00FFFFFF" Foreground="{DynamicResource VsBrush.DropDownGlyph}" Grid.Column="1" IsTabStop="False" Focusable="False" ClickMode="Press" Template="{StaticResource ComboBox.ToogleButton.Template}" />
 			</Grid>
 		</Border>
 		<ControlTemplate.Triggers>
 			<Trigger Property="IsKeyboardFocusWithin" Value="True">
-                <Setter TargetName="toggleButton" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.ComboBoxMouseOverBorder}" />
-                <Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource vsfx:VsBrush.ComboBoxMouseOverBackgroundGradient}" />
-                <Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource vsfx:VsBrush.ComboBoxMouseOverGlyph}" />
-                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.ComboBoxMouseOverBorder}" />
+                <Setter TargetName="toggleButton" Property="BorderBrush" Value="{DynamicResource VsBrush.ComboBoxMouseOverBorder}" />
+                <Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource VsBrush.ComboBoxMouseOverBackgroundGradient}" />
+                <Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource VsBrush.ComboBoxMouseOverGlyph}" />
+                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource VsBrush.ComboBoxMouseOverBorder}" />
 			</Trigger>
 			<Trigger Property="IsMouseOver" Value="True">
-                <Setter TargetName="toggleButton" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.ComboBoxMouseOverBorder}" />
-                <Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource vsfx:VsBrush.ComboBoxMouseOverBackgroundGradient}" />
-				<Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource vsfx:VsBrush.ComboBoxMouseOverGlyph}" />
-				<Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.ComboBoxMouseOverBorder}" />
+                <Setter TargetName="toggleButton" Property="BorderBrush" Value="{DynamicResource VsBrush.ComboBoxMouseOverBorder}" />
+                <Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource VsBrush.ComboBoxMouseOverBackgroundGradient}" />
+				<Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource VsBrush.ComboBoxMouseOverGlyph}" />
+				<Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource VsBrush.ComboBoxMouseOverBorder}" />
 			</Trigger>
 			<Trigger Property="HasItems" Value="False">
 				<Setter TargetName="dropDownBorder" Property="Height" Value="95" />
 			</Trigger>
 			<Trigger Property="IsEnabled" Value="False">
 				<Setter TargetName="toggleButton" Property="BorderBrush" Value="#00FFFFFF" />
-				<Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource vsfx:VsBrush.ComboBoxDisabledBackground}" />
-				<Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource vsfx:VsBrush.ComboBoxDisabledGlyph}" />
-				<Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource vsfx:VsBrush.ComboBoxDisabledBorder}" />
-				<Setter TargetName="Border" Property="Background" Value="{DynamicResource vsfx:VsBrush.ComboBoxDisabledBackground}" />
-				<Setter TargetName="PART_EditableTextBox" Property="Foreground" Value="{DynamicResource vsfx:VsBrush.CommandBarTextInactive}" />
+				<Setter TargetName="toggleButton" Property="Background" Value="{DynamicResource VsBrush.ComboBoxDisabledBackground}" />
+				<Setter TargetName="toggleButton" Property="Foreground" Value="{DynamicResource VsBrush.ComboBoxDisabledGlyph}" />
+				<Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource VsBrush.ComboBoxDisabledBorder}" />
+				<Setter TargetName="Border" Property="Background" Value="{DynamicResource VsBrush.ComboBoxDisabledBackground}" />
+				<Setter TargetName="PART_EditableTextBox" Property="Foreground" Value="{DynamicResource VsBrush.CommandBarTextInactive}" />
 			</Trigger>
 			<Trigger Property="IsGrouping" Value="True">
 				<Setter Property="ScrollViewer.CanContentScroll" Value="False" />
@@ -181,7 +181,7 @@
 					<Condition Binding="{Binding AreGradientsAllowed}" Value="True" />
 				</MultiDataTrigger.Conditions>
 				<Setter TargetName="shdw" Property="Margin" Value="0,0,5,5" />
-				<Setter TargetName="shdw" Property="Color" Value="{DynamicResource vsfx:VsColor.DropShadow}" />
+				<Setter TargetName="shdw" Property="Color" Value="{DynamicResource VsColor.DropShadow}" />
 			</MultiDataTrigger>
 			<DataTrigger Binding="{Binding AreAnimationsAllowed}" Value="False">
 				<Setter TargetName="PART_Popup" Property="Popup.PopupAnimation" Value="None" />

@@ -9,6 +9,8 @@ namespace Microsoft.VisualStudio.Patterning.Common.Presentation.Vs
     /// <summary>
     /// The VS EnvironmentRenderCapabilities control.
     /// </summary>
+    /// <remarks>This class is a direct copy of the <see cref="EnvironmentRenderCapabilities"/>, and is embedded here to avoid 
+    /// referencing Microsoft.VisualStudio.Shell.1X.0 in any xaml files that use this class.</remarks>
     public class VsEnvironmentRenderCapabilities : DisposableObject, INotifyPropertyChanged, IVsShellPropertyEvents
     {
         private bool areAnimationsAllowed;

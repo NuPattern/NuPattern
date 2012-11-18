@@ -74,8 +74,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\VS\VsSystemDropShadowChrome.cs" />
-    <Compile Include="Resources\VS\VsBrushes.cs" />
-    <Compile Include="Resources\VS\VsColors.cs" />
     <Compile Include="Resources\VS\VsDialogButton.cs" />
     <Compile Include="Resources\VS\VsDialogWindow.cs" />
     <Compile Include="Resources\VS\VsEnvironmentRenderCapabilities.cs" />
