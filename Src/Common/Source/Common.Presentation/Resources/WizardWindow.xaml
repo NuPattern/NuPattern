@@ -1,8 +1,7 @@
 ﻿<ResourceDictionary
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.11.0"
-	xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.11.0"
+	xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Vs"
 	xmlns:l="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation">
 
 	<JournalEntryUnifiedViewConverter x:Key="JournalEntryUnifiedViewConverter"/>
@@ -81,7 +80,7 @@
 				<ControlTemplate TargetType="MenuItem">
 					<Grid>
 						<Popup x:Name="PART_Popup" AllowsTransparency="true" Focusable="false" IsOpen="{Binding (MenuItem.IsSubmenuOpen), RelativeSource={RelativeSource TemplatedParent}}" PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}" Placement="Bottom" VerticalOffset="2">
-							<vs:SystemDropShadowChrome x:Name="Shdw" Color="Transparent">
+							<vsfx:VsSystemDropShadowChrome x:Name="Shdw" Color="Transparent">
 								<Border x:Name="SubMenuBorder" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" BorderThickness="1" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}">
 									<ScrollViewer x:Name="SubMenuScrollViewer" CanContentScroll="true" Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
 										<Grid RenderOptions.ClearTypeHint="Enabled">
@@ -92,7 +91,7 @@
 										</Grid>
 									</ScrollViewer>
 								</Border>
-							</vs:SystemDropShadowChrome>
+							</vsfx:VsSystemDropShadowChrome>
 						</Popup>
 						<Grid x:Name="Panel" Background="Transparent" HorizontalAlignment="Right" Width="26">
 							<Border x:Name="HighlightBorder" BorderBrush="#B0B5BACE" BorderThickness="1" CornerRadius="2" SnapsToDevicePixels="True" Visibility="Hidden">
@@ -300,10 +299,10 @@
 							<ColumnDefinition Width="3" />
 							<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
 						</Grid.ColumnDefinitions>
-						<vs:DialogButton Margin="0,6,10,6" VerticalAlignment="Top" Content="Back" Command="{x:Static l:WizardCommands.PreviousPage}" />
-						<vs:DialogButton Grid.Column="2" Margin="0,6,10,6" VerticalAlignment="Top" Content="Next" Command="{x:Static l:WizardCommands.NextPage}" />
-						<vs:DialogButton Grid.Column="4" Margin="0,6,10,6" Content="Finish" IsDefault="True" Command="{x:Static l:WizardCommands.FinishWizard}" />
-						<vs:DialogButton Grid.Column="6" Margin="0,6,10,6" Content="Cancel" IsCancel="True" />
+						<vsfx:VsDialogButton Margin="0,6,10,6" VerticalAlignment="Top" Content="Back" Command="{x:Static l:WizardCommands.PreviousPage}" />
+                        <vsfx:VsDialogButton Grid.Column="2" Margin="0,6,10,6" VerticalAlignment="Top" Content="Next" Command="{x:Static l:WizardCommands.NextPage}" />
+                        <vsfx:VsDialogButton Grid.Column="4" Margin="0,6,10,6" Content="Finish" IsDefault="True" Command="{x:Static l:WizardCommands.FinishWizard}" />
+                        <vsfx:VsDialogButton Grid.Column="6" Margin="0,6,10,6" Content="Cancel" IsCancel="True" />
 					</Grid>
 				</StackPanel>
 				<Grid>

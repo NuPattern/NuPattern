@@ -35,6 +35,10 @@
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -69,6 +73,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\VS\VsSystemDropShadowChrome.cs" />
+    <Compile Include="Resources\VS\VsBrushes.cs" />
+    <Compile Include="Resources\VS\VsColors.cs" />
+    <Compile Include="Resources\VS\VsDialogButton.cs" />
+    <Compile Include="Resources\VS\VsDialogWindow.cs" />
+    <Compile Include="Resources\VS\VsEnvironmentRenderCapabilities.cs" />
     <Compile Include="SortBehavior.cs" />
     <Compile Include="ValueEditor.cs" />
     <Compile Include="WizardCommands.cs" />

@@ -1,7 +1,8 @@
 ﻿<ResourceDictionary
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:l="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation">
+	xmlns:l="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation"
+    xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Vs">
 
 	<SolidColorBrush x:Key="VsBrushes.SoftwareFactories.ListItemSelectedHoverBorder" Color="#FFCFCFCF" />
 
@@ -24,13 +25,13 @@
 		</Border>
 		<ControlTemplate.Triggers>
 			<Trigger Property="IsMouseOver" Value="true">
-				<Setter Property="Background" Value="{StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}"/>
-				<Setter Property="BorderBrush" Value="{StaticResource VsBrush.ComboBoxMouseDownBorder}"/>
+                <Setter Property="Background" Value="{StaticResource  vsfx:VsBrushes.ComboBoxMouseOverBackgroundGradientKey}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource  vsfx:VsBrushes.ComboBoxMouseDownBorderKey}"/>
 				<Setter Property="Visibility" TargetName="UpperHighlight" Value="Visible"/>
 			</Trigger>
 			<Trigger Property="IsSelected" Value="true">
-				<Setter Property="Background" Value="{StaticResource VsBrush.ComboBoxMouseDownBackground}"/>
-				<Setter Property="BorderBrush" Value="{StaticResource VsBrush.ComboBoxMouseDownBorder}"/>
+                <Setter Property="Background" Value="{StaticResource vsfx:VsBrushes.ComboBoxMouseOverBackgroundGradientKey}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource vsfx:VsBrushes.ComboBoxMouseDownBorderKey}"/>
 				<Setter Property="BorderBrush" TargetName="InnerBorder" Value="#80FFFFFF"/>
 				<Setter Property="Visibility" TargetName="UpperHighlight" Value="Visible"/>
 				<Setter Property="Fill" TargetName="UpperHighlight" Value="#40FFFFFF"/>
@@ -40,16 +41,16 @@
 					<Condition Property="IsSelected" Value="true"/>
 					<Condition Property="Selector.IsSelectionActive" Value="false"/>
 				</MultiTrigger.Conditions>
-				<Setter Property="Background" Value="{StaticResource VsBrushes.SoftwareFactories.ListItemSelectedInactiveFill}"/>
-				<Setter Property="BorderBrush" Value="{StaticResource VsBrushes.SoftwareFactories.ListItemSelectedInactiveBorder}"/>
+                <Setter Property="Background" Value="{StaticResource vsfx:VsBrushes.ListItemSelectedInactiveFill}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource vsfx:VsBrushes.ListItemSelectedInactiveBorder}"/>
 			</MultiTrigger>
 			<MultiTrigger>
 				<MultiTrigger.Conditions>
 					<Condition Property="IsSelected" Value="true"/>
 					<Condition Property="IsMouseOver" Value="true"/>
 				</MultiTrigger.Conditions>
-				<Setter Property="Background" Value="{StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}"/>
-				<Setter Property="BorderBrush" Value="{StaticResource VsBrushes.SoftwareFactories.ListItemSelectedHoverBorder}"/>
+                <Setter Property="Background" Value="{StaticResource vsfx:VsBrush.ComboBoxMouseOverBackgroundGradientKey}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource vsfx:VsBrushes.ListItemSelectedHoverBorder}"/>
 			</MultiTrigger>
 			<Trigger Property="IsEnabled" Value="false">
 				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>

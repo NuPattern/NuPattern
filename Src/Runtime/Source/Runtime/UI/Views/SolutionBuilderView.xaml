@@ -5,7 +5,7 @@
 	xmlns:p="http://schemas.microsoft.com/visualstudiopatterning/2010/xaml/"
 	xmlns:l="clr-namespace:Microsoft.VisualStudio.Patterning.Runtime.UI"
 	xmlns:k="clr-namespace:Microsoft.VisualStudio.Patterning.Runtime.UI.Data"
-	xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.11.0"
+	xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Vs;assembly=Microsoft.VisualStudio.Patterning.Common.Presentation"
     xmlns:cp="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation;assembly=Microsoft.VisualStudio.Patterning.Common.Presentation"
 	Background="{DynamicResource {x:Static vsfx:VsBrushes.ToolWindowBackgroundKey}}">
 	<UserControl.Resources>

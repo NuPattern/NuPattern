@@ -4,7 +4,7 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:p="http://schemas.microsoft.com/visualstudiopatterning/2010/xaml/"
 	xmlns:l="clr-namespace:Microsoft.VisualStudio.Patterning.Runtime.UI"
-    xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.11.0"
+    xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Vs;assembly=Microsoft.VisualStudio.Patterning.Common.Presentation"
     xmlns:cp="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation;assembly=Microsoft.VisualStudio.Patterning.Common.Presentation"
 	Name="solutionPicker"
 	Title="Select Item"
@@ -13,14 +13,14 @@
 	WindowStartupLocation="CenterOwner"
 	FocusManager.FocusedElement="{x:Reference solutionItems}"
 	ShowInTaskbar="False">
-	<vs:DialogWindow.Resources>
+	<vsfx:VsDialogWindow.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/Edition.xaml" />
 				<ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/TreeView.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
-	</vs:DialogWindow.Resources>
+	</vsfx:VsDialogWindow.Resources>
 
 	<Grid>
 		<Grid.RowDefinitions>
@@ -77,8 +77,8 @@
 				<ColumnDefinition Width="3" />
 				<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
 			</Grid.ColumnDefinitions>
-			<vs:DialogButton x:Name="ok" VerticalAlignment="Top" Content="OK" />
-			<vs:DialogButton Grid.Column="2" VerticalAlignment="Top" Content="Cancel" IsCancel="True"/>
+			<vsfx:VsDialogButton x:Name="ok" VerticalAlignment="Top" Content="OK" />
+			<vsfx:VsDialogButton Grid.Column="2" VerticalAlignment="Top" Content="Cancel" IsCancel="True"/>
 		</Grid>
 	</Grid>
 </cp:CommonDialogWindow>

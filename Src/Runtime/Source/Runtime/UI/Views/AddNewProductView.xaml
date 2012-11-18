@@ -2,8 +2,7 @@
 	x:Class="Microsoft.VisualStudio.Patterning.Runtime.UI.AddNewProductView"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.11.0"
-	xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.11.0"
+	xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Vs;assembly=Microsoft.VisualStudio.Patterning.Common.Presentation"
 	xmlns:p="http://schemas.microsoft.com/visualstudiopatterning/2010/xaml/"
     xmlns:cp="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation;assembly=Microsoft.VisualStudio.Patterning.Common.Presentation"
 	Name="selector"
@@ -12,9 +11,8 @@
 	Width="768"
 	Height="432"
 	ShowInTaskbar="False"
-	FocusManager.FocusedElement="{x:Reference patterns}"
-	Background="{StaticResource VsBrush.ProjectDesignerBackgroundGradient}">
-	<vs:DialogWindow.Resources>
+	FocusManager.FocusedElement="{x:Reference patterns}">
+	<vsfx:VsDialogWindow.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/Edition.xaml" />
@@ -24,7 +22,7 @@
 			<p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />
 			<BitmapImage x:Key="DefaultProductIcon" UriSource="../../Resources/ProductLarge.png" />
 		</ResourceDictionary>
-	</vs:DialogWindow.Resources>
+	</vsfx:VsDialogWindow.Resources>
 
 	<Grid>
 		<Grid.RowDefinitions>
@@ -130,7 +128,7 @@
 					<ColumnDefinition Width="3" />
 					<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
 				</Grid.ColumnDefinitions>
-				<vs:DialogButton
+				<vsfx:VsDialogButton
 					Margin="0,6,10,6"
 					AutomationProperties.AutomationId="Ok"
 					VerticalAlignment="Top"
@@ -138,7 +136,7 @@
 					IsDefault="True"
 					Command="{Binding SelectToolkitCommand}"
 					CommandParameter="{Binding ElementName=selector}" />
-				<vs:DialogButton Grid.Column="2" Margin="0,6,10,6" VerticalAlignment="Top" Content="Cancel" IsCancel="True" />
+                <vsfx:VsDialogButton Grid.Column="2" Margin="0,6,10,6" VerticalAlignment="Top" Content="Cancel" IsCancel="True" />
 			</Grid>
 		</StackPanel>
 	</Grid>
