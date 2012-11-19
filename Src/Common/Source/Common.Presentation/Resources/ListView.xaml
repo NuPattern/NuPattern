@@ -3,9 +3,9 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:l="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation">
 
-	<SolidColorBrush x:Key="VsBrush.ListItemSelectedHoverBorder" Color="#FFCFCFCF" />
-	<SolidColorBrush x:Key="VsBrush.ListItemSelectedInactiveBorder" Color="#FFCFCFCF" />
-	<SolidColorBrush x:Key="VsBrush.ListItemSelectedInactiveFill" Color="#FFEAE9E9" />
+	<SolidColorBrush x:Key="LvBrush.SelectedHoverBorder" Color="#FFCFCFCF" />
+	<SolidColorBrush x:Key="LvBrush.SelectedInactiveBorder" Color="#FFCFCFCF" />
+	<SolidColorBrush x:Key="LvBrush.SelectedInactiveFill" Color="#FFEAE9E9" />
 
 	<ControlTemplate x:Key="ListViewItem.Template" TargetType="ListViewItem">
 		<Border SnapsToDevicePixels="true" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2">
@@ -38,8 +38,8 @@
 					<Condition Property="IsSelected" Value="true"/>
 					<Condition Property="Selector.IsSelectionActive" Value="false"/>
 				</MultiTrigger.Conditions>
-                <Setter Property="Background" Value="{DynamicResource VsBrush.ListItemSelectedInactiveFill}"/>
-                <Setter Property="BorderBrush" Value="{DynamicResource VsBrush.ListItemSelectedInactiveBorder}"/>
+                <Setter Property="Background" Value="{DynamicResource LvBrush.SelectedInactiveFill}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource LvBrush.SelectedInactiveBorder}"/>
 			</MultiTrigger>
 			<MultiTrigger>
 				<MultiTrigger.Conditions>
@@ -47,7 +47,7 @@
 					<Condition Property="IsMouseOver" Value="true"/>
 				</MultiTrigger.Conditions>
                 <Setter Property="Background" Value="{DynamicResource VsBrush.ComboBoxMouseOverBackgroundGradient}"/>
-                <Setter Property="BorderBrush" Value="{DynamicResource VsBrush.ListItemSelectedHoverBorder}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource LvBrush.SelectedHoverBorder}"/>
 			</MultiTrigger>
 			<Trigger Property="IsEnabled" Value="false">
 				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>

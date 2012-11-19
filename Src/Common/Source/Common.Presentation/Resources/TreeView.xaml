@@ -2,19 +2,16 @@
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-	<SolidColorBrush x:Key="VsBrush.PowerTools.ActiveTreeNodeBorder" Color="#FF84ACDD" />
-
-	<LinearGradientBrush x:Key="VsBrush.PowerTools.SelectedTreeNodeBackground" StartPoint="0,0" EndPoint="0,1">
-		<GradientStop Color="#FFFBFBFC" Offset="0" />
-		<GradientStop Color="#FFE6E6E6" Offset="1" />
-	</LinearGradientBrush>
-
-	<SolidColorBrush x:Key="VsBrush.PowerTools.SelectedTreeNodeBorder" Color="#FFDADADA" />
-
-	<LinearGradientBrush x:Key="VsBrush.PowerTools.ActiveTreeNodeBackground" StartPoint="0,0" EndPoint="0,1">
+	<SolidColorBrush x:Key="TvBrush.ActiveTreeNodeBorder" Color="#FF84ACDD" />
+	<LinearGradientBrush x:Key="TvBrush.ActiveTreeNodeBackground" StartPoint="0,0" EndPoint="0,1">
 		<GradientStop Color="#FFF2F8FF" Offset="0" />
 		<GradientStop Color="#FFD0E5FF" Offset="1" />
 	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="TvBrush.SelectedTreeNodeBackground" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#FFFBFBFC" Offset="0" />
+		<GradientStop Color="#FFE6E6E6" Offset="1" />
+	</LinearGradientBrush>
+	<SolidColorBrush x:Key="TvBrush.SelectedTreeNodeBorder" Color="#FFDADADA" />
 
 	<ControlTemplate x:Key="TreeViewItem.TextBox.Template" TargetType="TextBox">
 		<Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" Height="{TemplateBinding ActualHeight}" SnapsToDevicePixels="true">
@@ -83,16 +80,16 @@
 				<Setter TargetName="expander" Property="Visibility" Value="Hidden" />
 			</Trigger>
 			<Trigger Property="IsSelected" Value="True">
-				<Setter TargetName="bd" Property="Background" Value="{DynamicResource VsBrush.PowerTools.ActiveTreeNodeBackground}" />
-				<Setter TargetName="bd" Property="BorderBrush" Value="{DynamicResource VsBrush.PowerTools.ActiveTreeNodeBorder}" />
+				<Setter TargetName="bd" Property="Background" Value="{DynamicResource TvBrush.ActiveTreeNodeBackground}" />
+				<Setter TargetName="bd" Property="BorderBrush" Value="{DynamicResource TvBrush.ActiveTreeNodeBorder}" />
 			</Trigger>
 			<MultiTrigger>
 				<MultiTrigger.Conditions>
 					<Condition Property="IsSelected" Value="True" />
 					<Condition Property="IsSelectionActive" Value="False" />
 				</MultiTrigger.Conditions>
-				<Setter TargetName="bd" Property="Background" Value="{DynamicResource VsBrush.PowerTools.SelectedTreeNodeBackground}" />
-				<Setter TargetName="bd" Property="BorderBrush" Value="{DynamicResource VsBrush.PowerTools.SelectedTreeNodeBorder}" />
+				<Setter TargetName="bd" Property="Background" Value="{DynamicResource TvBrush.SelectedTreeNodeBackground}" />
+				<Setter TargetName="bd" Property="BorderBrush" Value="{DynamicResource TvBrush.SelectedTreeNodeBorder}" />
 			</MultiTrigger>
 			<Trigger Property="IsEnabled" Value="False">
 				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
