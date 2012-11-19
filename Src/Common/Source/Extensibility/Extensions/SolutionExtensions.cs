@@ -730,22 +730,6 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
             }
         }
 
-        /// <summary>
-        /// Gets the hierarchy.
-        /// </summary>
-        [CLSCompliant(false)]
-        public static EnvDTE.UIHierarchy GetHierarchy(this EnvDTE.DTE dte)
-        {
-            Guard.NotNull(() => dte, dte);
-
-            var solutionExplorer = dte.Windows.Item(EnvDTE.Constants.vsWindowKindSolutionExplorer);
-            if (solutionExplorer != null)
-            {
-                return solutionExplorer.Object as EnvDTE.UIHierarchy;
-            }
-
-            return null;
-        }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1806:DoNotIgnoreMethodResults", MessageId = "Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchyWindow.ExpandItem(Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy,System.UInt32,Microsoft.VisualStudio.Shell.Interop.EXPANDFLAGS)"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1806:DoNotIgnoreMethodResults", MessageId = "Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show")]
         private static void Select(IEnumerable<IHierarchyNode> hierarchyNodes)

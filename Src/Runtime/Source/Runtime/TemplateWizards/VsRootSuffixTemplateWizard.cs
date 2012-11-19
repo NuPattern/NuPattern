@@ -19,7 +19,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 	public class VsRootSuffixTemplateWizard : Extensibility.TemplateWizard
 	{
 		private static readonly ITraceSource tracer = Tracer.GetSourceFor<VsRootSuffixTemplateWizard>();
-
+#if VSVER10
+        private static string VsSettingsRegistryKey = @"Software\Microsoft\VisualStudio\10.0";
+#endif
+#if VSVER11
+        private static string VsSettingsRegistryKey = @"Software\Microsoft\VisualStudio\11.0";
+#endif
 		/// <summary>
 		/// Runs custom wizard logic at the beginning of a template wizard run.
 		/// </summary>
@@ -42,7 +47,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 						var shell = serviceProvider.GetService<SVsShell, IVsShell>();
 
 						var registryRoot = VsHelper.GetPropertyOrDefault<string>(shell.GetProperty, (int)__VSSPROPID.VSSPROPID_VirtualRegistryRoot);
-						var suffix = registryRoot.Replace(@"Software\Microsoft\VisualStudio\10.0", string.Empty);
+						var suffix = registryRoot.Replace(VsSettingsRegistryKey, string.Empty);
 
 						replacementsDictionary.Add("$vsrootsuffix$", suffix);
 

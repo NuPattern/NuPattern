@@ -156,6 +156,7 @@
     <Compile Include="CoordinatorTemplateWizard.cs" />
     <Compile Include="Design\PropertyDescriptorTypeDescriptor.cs" />
     <Compile Include="Extensions\CollapseOptions.cs" />
+    <Compile Include="Extensions\DteExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="Extensions\UIHierarchyExtensions.cs" />
     <Compile Include="Extensions\ValidatorExtensions.cs" />
