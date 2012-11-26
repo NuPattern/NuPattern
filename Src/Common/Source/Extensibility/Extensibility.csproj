@@ -161,8 +161,10 @@
     <Compile Include="Extensions\UIHierarchyExtensions.cs" />
     <Compile Include="Extensions\ValidatorExtensions.cs" />
     <Compile Include="IPropertyEvaluator.cs" />
+    <Compile Include="IRegistryReader.cs" />
     <Compile Include="ObjectValidator.cs" />
     <Compile Include="PropertyEvaluator.cs" />
+    <Compile Include="RegistryReader.cs" />
     <Compile Include="TempFileCleaner.cs" />
     <Compile Include="UniqueNameGenerator.cs" />
     <Compile Include="ViewCodeGeneration.cs" />

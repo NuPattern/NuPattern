@@ -805,24 +805,6 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to create a new empty solution, an error occurred creating and saving the new solution to &apos;{0}&apos;..
-        /// </summary>
-        internal static string SolutionBuilderViewModel_CreateNewSolution_FailedCreate {
-            get {
-                return ResourceManager.GetString("SolutionBuilderViewModel_CreateNewSolution_FailedCreate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to create a new empty solution, the default save location for solutions could not be found..
-        /// </summary>
-        internal static string SolutionBuilderViewModel_CreateNewSolution_FailedDirSearch {
-            get {
-                return ResourceManager.GetString("SolutionBuilderViewModel_CreateNewSolution_FailedDirSearch", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Failed to add child nodes to the element &apos;{0}&apos;..
         /// </summary>
         internal static string SolutionBuilderViewModel_FailedToRenderElements {

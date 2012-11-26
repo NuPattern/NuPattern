@@ -74,10 +74,14 @@
     <Compile Include="..\Helpers\Assertions.cs">
       <Link>Assertions.cs</Link>
     </Compile>
+    <Compile Include="..\Helpers\IntegrationTest.cs">
+      <Link>IntegrationTest.cs</Link>
+    </Compile>
     <Compile Include="..\Helpers\VsHostedSpec.cs">
       <Link>VsHostedSpec.cs</Link>
     </Compile>
     <Compile Include="Binding\BindingCompositionServiceSpec.cs" />
+    <Compile Include="DteExtensionsSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VsixSpec.cs" />
   </ItemGroup>

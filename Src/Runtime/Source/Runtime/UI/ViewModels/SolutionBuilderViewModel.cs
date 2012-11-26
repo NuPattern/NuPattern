@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Windows.Data;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime.Properties;
@@ -481,41 +478,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
             var dte = this.serviceProvider.GetService<EnvDTE.DTE>();
             if (dte != null)
             {
-                //Close existing solution
-                if (dte.Solution.IsOpen)
-                {
-                    dte.Solution.Close(true);
-                }
-
-                // Determine next available solution directory
-                var defaultSaveLocation = dte.GetDefaultProjectSaveLocation();
-                if (string.IsNullOrEmpty(defaultSaveLocation))
-                {
-                    throw new InvalidOperationException(Resources.SolutionBuilderViewModel_CreateNewSolution_FailedDirSearch);
-                }
-
-                var existingSolutionFolders = Directory.GetDirectories(defaultSaveLocation).Select(dir => new DirectoryInfo(dir).Name);
-                var nextSolutionDir = UniqueNameGenerator.EnsureUnique(NewSolutionNamePrefix, existingSolutionFolders, true);
-
-                // Create solution directory
-                var solutionDir = Path.Combine(defaultSaveLocation, nextSolutionDir);
-                if (!Directory.Exists(solutionDir))
-                {
-                    Directory.CreateDirectory(solutionDir);
-                }
-
-                // Save and Open new solution
-                var solutionFullPath = Path.Combine(solutionDir, nextSolutionDir);
-                try
-                {
-                    dte.Solution.Create(solutionDir, nextSolutionDir);
-                    dte.Solution.SaveAs(solutionFullPath);
-                }
-                catch (COMException)
-                {
-                    throw new InvalidOperationException(string.Format(CultureInfo.CurrentCulture, 
-                        Resources.SolutionBuilderViewModel_CreateNewSolution_FailedCreate, solutionDir));
-                }
+                dte.CreateBlankSolution();
             }
         }
     }
