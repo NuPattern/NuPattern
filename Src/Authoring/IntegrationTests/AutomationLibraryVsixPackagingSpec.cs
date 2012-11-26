@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.Patterning.IntegrationTests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -40,8 +41,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
 				Assert.Equal(@"Resources\DesignTimeVsix.png", this.VsixInfo.Header.Icon);
 				Assert.Equal(@"Resources\DesignTimeVsixPreview.png", this.VsixInfo.Header.PreviewImage);
-				Assert.Equal(@"http://vspat.codeplex.com", this.VsixInfo.Header.MoreInfoUrl.ToString());
-				Assert.Equal(@"http://vspat.codeplex.com", this.VsixInfo.Header.GettingStartedGuide.ToString());
+				Assert.Equal(new Uri(@"http://vspat.codeplex.com"), this.VsixInfo.Header.MoreInfoUrl);
+				Assert.Equal(new Uri(@"http://vspat.codeplex.com/wikipage?title=Getting%20Started"), this.VsixInfo.Header.GettingStartedGuide);
 
                 //SupportedFrameworkRuntimeEdition
 				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
