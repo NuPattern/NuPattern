@@ -54,6 +54,14 @@ public static class VsixInfo
 		public const string MoreInfoUrl = "<#=HandsOnLabsToolkitInfo.MoreInfoUrl#>";
 		public const string GettingStartedUrl = "<#=HandsOnLabsToolkitInfo.GettingStartedUrl#>";
 	}
+	public static class FeatureExtensionRuntime
+	{
+		public static class Identifier
+		{
+			public const string Pro = "FeatureExtensionRuntime";
+			public const string Ultimate = "FeatureExtensionUltimateRuntime";
+		}
+	}
 	public static class VsSdk
 	{
 		public const string Name = "Microsoft Visual Studio SDK";

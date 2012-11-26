@@ -48,6 +48,14 @@ public static class VsixInfo
 		public const string MoreInfoUrl = "http://vspat.codeplex.com";
 		public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 	}
+	public static class FeatureExtensionRuntime
+	{
+		public static class Identifier
+		{
+			public const string Pro = "FeatureExtensionRuntime";
+			public const string Ultimate = "FeatureExtensionUltimateRuntime";
+		}
+	}
 	public static class VsSdk
 	{
 		public const string Name = "Microsoft Visual Studio SDK";
