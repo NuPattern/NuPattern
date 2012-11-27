@@ -79,6 +79,20 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The following extension is currently installed and enabled: 
+        ///    {0}.
+        ///
+        ///This extension is not compatible with the current version of the &apos;{1}&apos; extension. We recommend that you disable this extension for correct operation.
+        ///
+        ///To remedy this problem, open the &apos;Extension Manager&apos; window in Visual Studio (Tools menu), disable the listed extension above, and restart Visual Studio..
+        /// </summary>
+        internal static string RuntimeShellPackage_CheckFertInstalled_Enabled {
+            get {
+                return ResourceManager.GetString("RuntimeShellPackage_CheckFertInstalled_Enabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The dependency &apos;{0}&apos; could not be found in the repository..
         /// </summary>
         internal static string RuntimeShellPackage_DependencyNotAvailable {

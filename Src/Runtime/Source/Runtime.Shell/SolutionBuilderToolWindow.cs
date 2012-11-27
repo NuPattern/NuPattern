@@ -5,8 +5,10 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties;
 using Microsoft.VisualStudio.Patterning.Runtime.UI;
+using Microsoft.VisualStudio.Settings;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using Microsoft.VisualStudio.Shell.Settings;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
@@ -18,6 +20,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
     [CLSCompliant(false)]
     public class SolutionBuilderToolWindow : ToolWindowPane
     {
+        private const string SolutionBuilderVisibilitySetting = "FirstTimeInitialization";
+        private const string SolutionBuilderAutoOpenedSetting = "SolutionBuilderAutoOpened";
         private SelectionContainer selectionContainer;
         private SolutionBuilderViewModel viewModel;
         private IVsTrackSelectionEx trackSelection;
@@ -85,6 +89,81 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 
             this.viewModel = new SolutionBuilderViewModel(context, this.ServiceProvider);
             this.Content = new SolutionBuilderView { DataContext = this.viewModel };
+        }
+
+        /// <summary>
+        /// Displays the tool window the first time the environment is used after installation.
+        /// </summary>
+        internal static void InitializeWindowVisibility(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var settingsManager = new ShellSettingsManager(serviceProvider);
+            var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+            if (!(store.CollectionExists(Constants.SettingsName) &&
+                  store.PropertyExists(Constants.SettingsName, SolutionBuilderVisibilitySetting)))
+            {
+                //First time after installation
+                packageToolWindow.ShowWindow<SolutionBuilderToolWindow>();
+
+                store.CreateCollection(Constants.SettingsName);
+                store.SetString(Constants.SettingsName, SolutionBuilderVisibilitySetting, bool.FalseString);
+            }
+            else
+            {
+                // Afterwards, we load the toolwindow so that the drag&drop events can get access to the 
+                // toolwindow usercontrol that handles the operations.
+                // Querying visibility will automatically create the control.
+                packageToolWindow.IsWindowVisible<SolutionBuilderToolWindow>();
+            }
+        }
+
+        /// <summary>
+        /// Automatically opens the window, if not already opened.
+        /// </summary>
+        internal static void AutoOpenWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(()=> serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+            if (!packageToolWindow.IsWindowVisible<SolutionBuilderToolWindow>())
+            {
+                packageToolWindow.ShowWindow<SolutionBuilderToolWindow>();
+
+                var settingsManager = new ShellSettingsManager(serviceProvider);
+                var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
+
+                if (!store.CollectionExists(Constants.SettingsName))
+                {
+                    store.CreateCollection(Constants.SettingsName);
+                }
+
+                store.SetString(Constants.SettingsName, SolutionBuilderAutoOpenedSetting, bool.TrueString);
+            }
+        }
+
+        /// <summary>
+        /// Automatically hides the window, if it was automatically opened.
+        /// </summary>
+        internal static void AutoHideWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var settingsManager = new ShellSettingsManager(serviceProvider);
+            var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
+
+            if (store.CollectionExists(Constants.SettingsName) &&
+                store.PropertyExists(Constants.SettingsName, SolutionBuilderAutoOpenedSetting))
+            {
+                var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+                packageToolWindow.HideWindow<SolutionBuilderToolWindow>();
+
+                store.DeleteProperty(Constants.SettingsName, SolutionBuilderAutoOpenedSetting);
+            }
         }
 
         private void OnCurrentNodeChanged(object sender, EventArgs e)

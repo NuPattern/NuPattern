@@ -16,6 +16,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 		public const string VsixIdentifier = "<#=VsixInfo.PatternToolkitRuntime.Identifier#>";
 
 		/// <summary>
+		/// The Identifiers of the FERT VSixes
+		/// </summary>
+		public static readonly string[] FertVsixIdentifiers = new []
+			{
+				"<#=VsixInfo.FeatureExtensionRuntime.Identifier.Pro#>",
+				"<#=VsixInfo.FeatureExtensionRuntime.Identifier.Ultimate#>",
+			};
+
+		/// <summary>
 		/// The GUID for this package.
 		/// </summary>
 		public const string RuntimeShellPkgGuid = "<#=RuntimeShellPackageInfo.PackageGuid#>";

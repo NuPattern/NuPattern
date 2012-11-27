@@ -17,6 +17,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
     [CLSCompliant(false)]
     public class SolutionBuilderViewModel : ViewModel
     {
+        private const string NewSolutionNamePrefix = "Solution";
+
         internal const string UsingGuidanceFeatureId = RuntimeShellInfo.VsixIdentifier;
 
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SolutionBuilderViewModel>();
@@ -111,6 +113,21 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         public System.Windows.Input.ICommand GuidanceCommand { get; private set; }
 
         /// <summary>
+        /// Gets the create new solution command.
+        /// </summary>
+        public System.Windows.Input.ICommand CreateNewSolutionCommand { get; private set; }
+
+        /// <summary>
+        /// Gets the delete command.
+        /// </summary>
+        public System.Windows.Input.ICommand DeleteCommand { get; private set; }
+
+        /// <summary>
+        /// Gets the save command.
+        /// </summary>
+        public System.Windows.Input.ICommand SaveCommand { get; private set; }
+
+        /// <summary>
         /// Gets the current node in the pattern explorer tree view.
         /// </summary>
         public ProductElementViewModel CurrentNode
@@ -134,11 +151,6 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
                 }
             }
         }
-
-        /// <summary>
-        /// Gets the delete command.
-        /// </summary>
-        public System.Windows.Input.ICommand DeleteCommand { get; private set; }
 
         /// <summary>
         /// Gets a value indicating whether this instance is solution opened.
@@ -189,10 +201,6 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// </summary>
         public ObservableCollection<ProductElementViewModel> Nodes { get; private set; }
 
-        /// <summary>
-        /// Gets the save command.
-        /// </summary>
-        public System.Windows.Input.ICommand SaveCommand { get; private set; }
 
         private void ActivateNode()
         {
@@ -278,6 +286,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
             return false;
         }
 
+        private bool CanShowCreateNewSolution()
+        {
+            return true;
+        }
+
         private void ChangeIsExpanded(bool isExpanded)
         {
             foreach (var node in this.Nodes.Cast<ProductElementViewModel>().Traverse(n => n.Nodes))
@@ -333,6 +346,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
             this.SaveCommand = new RelayCommand(this.context.PatternManager.Save, () => this.context.PatternManager.IsOpen);
             this.ExpandAllCommand = new RelayCommand(() => this.ChangeIsExpanded(true), () => this.Nodes.Count > 0);
             this.CollapseAllCommand = new RelayCommand(() => this.ChangeIsExpanded(false), () => this.Nodes.Count > 0);
+            this.CreateNewSolutionCommand = new RelayCommand(this.CreateNewSolution, this.CanShowCreateNewSolution);
 
             this.ActivateCommand = new RelayCommand(this.ActivateNode, () => this.currentNode != null);
             this.DeleteCommand = new RelayCommand(this.DeleteNode, this.CanDeleteNode);
@@ -456,6 +470,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
             if (featureManager != null)
             {
                 featureManager.ActivateSharedGuidanceWorkflow(this.serviceProvider, UsingGuidanceFeatureId);
+            }
+        }
+
+        private void CreateNewSolution()
+        {
+            var dte = this.serviceProvider.GetService<EnvDTE.DTE>();
+            if (dte != null)
+            {
+                dte.CreateBlankSolution();
             }
         }
     }

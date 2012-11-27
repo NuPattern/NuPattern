@@ -407,7 +407,7 @@ Would you like to automatically upgrade this file to the current version?</value
   <data name="AutomationCategory_DragDrop" xml:space="preserve">
     <value>Drag and Drop</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib" />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PatternManager_OpeningStoreEventId" type="System.Int32, mscorlib">
     <value>100</value>
   </data>

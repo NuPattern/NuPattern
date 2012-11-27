@@ -91,10 +91,10 @@
 													<Run Text="There are no solution elements in the current solution." />
 													<LineBreak />
 													<LineBreak />
-													<Hyperlink Command="{Binding AddNewProductCommand}" Focusable="false">Click here to Add a New Solution Element.</Hyperlink>
+													<Hyperlink Command="{Binding AddNewProductCommand}" Focusable="false">Add a new solution element.</Hyperlink>
+                                                    <LineBreak />
 													<LineBreak />
-													<LineBreak />
-													<Hyperlink Command="{Binding GuidanceCommand}" Focusable="false">Click here for getting started with Solution Builder.</Hyperlink>
+													<Hyperlink Command="{Binding GuidanceCommand}" Focusable="false">Getting started with Solution Builder.</Hyperlink>
 												</TextBlock>
 											</ContentControl>
 										</Border>
@@ -106,9 +106,12 @@
 															<Run Text="A solution must be open in order to create or view solution elements." />
 															<LineBreak />
 															<LineBreak />
-															<Hyperlink Command="{Binding GuidanceCommand}" Focusable="false">Click here for getting started with Solution Builder.</Hyperlink>
-														</TextBlock>
-													</Setter.Value>
+															<Hyperlink Command="{Binding CreateNewSolutionCommand}" Focusable="false">Create a new empty solution.</Hyperlink>
+															<LineBreak />
+															<LineBreak />
+															<Hyperlink Command="{Binding GuidanceCommand}" Focusable="false">Getting started with Solution Builder.</Hyperlink>
+                                                        </TextBlock>
+                                                    </Setter.Value>
 												</Setter>
 											</DataTrigger>
 										</ControlTemplate.Triggers>

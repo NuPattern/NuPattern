@@ -48,22 +48,21 @@ public static class VsixInfo
 		public const string MoreInfoUrl = "http://vspat.codeplex.com";
 		public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 	}
+	public static class FeatureExtensionRuntime
+	{
+		public static class Identifier
+		{
+			public const string Pro = "FeatureExtensionRuntime";
+			public const string Ultimate = "FeatureExtensionUltimateRuntime";
+		}
+	}
 	public static class VsSdk
 	{
 		public const string Name = "Microsoft Visual Studio SDK";
 		public const string Author = "Microsoft";
-		public const string Version = "10.0";
+		public const string Version = "11.0";
 		public const string Identifier = "Microsoft.VisualStudio.SDK";
-		public const string MoreInfoUrl = "http://www.microsoft.com/download/en/details.aspx?id=2680";
-	}
-	public static class NuGetPackageManager
-	{
-		public const string Name = "NuGet Package Manager";
-		public const string Author = "Microsoft Corporation";
-		public const string Version = "1.6.21215.9133";
-		public const string Identifier = "NuPackToolsVsix.Microsoft.67e54e40-0ae3-42c5-a949-fddf5739e7a5";
-		public const string VsixFileName = "NuGet.Tools.vsix";
-		public const string MoreInfoUrl = "http://docs.nuget.org/";
+		public const string MoreInfoUrl = "http://www.microsoft.com/en-us/download/details.aspx?id=30668";
 	}
 }
 #>

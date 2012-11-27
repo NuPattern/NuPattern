@@ -123,6 +123,14 @@
   <data name="ExplorerWindowTitle" xml:space="preserve">
     <value>Solution Builder</value>
   </data>
+  <data name="RuntimeShellPackage_CheckFertInstalled_Enabled" xml:space="preserve">
+    <value>The following extension is currently installed and enabled: 
+    {0}.
+
+This extension is not compatible with the current version of the '{1}' extension. We recommend that you disable this extension for correct operation.
+
+To remedy this problem, open the 'Extension Manager' window in Visual Studio (Tools menu), disable the listed extension above, and restart Visual Studio.</value>
+  </data>
   <data name="RuntimeShellPackage_DependencyNotAvailable" xml:space="preserve">
     <value>The dependency '{0}' could not be found in the repository.</value>
   </data>

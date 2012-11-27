@@ -19,13 +19,9 @@
 		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
 	</Identifier>
 	<References>
-		<Reference Id="NuPackToolsVsix.Microsoft.67e54e40-0ae3-42c5-a949-fddf5739e7a5" MinVersion="1.6.21215.9133">
-			<Name>NuGet Package Manager</Name>
-			<MoreInfoUrl>http://docs.nuget.org/</MoreInfoUrl>
-		</Reference>
-		<Reference Id="Microsoft.VisualStudio.SDK" MinVersion="10.0">
+		<Reference Id="Microsoft.VisualStudio.SDK" MinVersion="11.0">
 			<Name>Microsoft Visual Studio SDK</Name>
-			<MoreInfoUrl>http://www.microsoft.com/download/en/details.aspx?id=2680</MoreInfoUrl>
+			<MoreInfoUrl>http://www.microsoft.com/en-us/download/details.aspx?id=30668</MoreInfoUrl>
 		</Reference>
 		<Reference Id="c869918e-f94e-4e7a-ab25-b076ff4e751b" MinVersion="1.3.20.0">
 			<Name>Pattern Toolkit Manager</Name>

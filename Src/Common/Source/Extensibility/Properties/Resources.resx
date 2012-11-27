@@ -442,4 +442,10 @@ The solution item has instead been renamed to: '{1}'.</value>
   <data name="FeatureManagerExtensions_TraceActivation" xml:space="preserve">
     <value>Activating guidance workflow '{0}'</value>
   </data>
+  <data name="DteExtensions_CreateNewSolution_FailedDirSearch" xml:space="preserve">
+    <value>Failed to create a new empty solution, the default save location for new solutions could not be found.</value>
+  </data>
+  <data name="DteExtensions_CreateNewSolution_FailedCreate" xml:space="preserve">
+    <value>Failed to create a new empty solution, an error occurred creating and saving the new solution to '{0}'. Verify that you have permissions to create new subfolders in the parent directory.</value>
+  </data>
 </root>
