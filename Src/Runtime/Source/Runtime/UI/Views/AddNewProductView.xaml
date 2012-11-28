@@ -11,12 +11,14 @@
 	Width="768"
 	Height="432"
 	ShowInTaskbar="False"
+    Foreground="{DynamicResource VsBrush.WindowText}"
 	FocusManager.FocusedElement="{x:Reference patterns}">
 	<vsfx:VsDialogWindow.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
-				<ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/Edition.xaml" />
-				<ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/ListView.xaml" />
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/CommonStyles.xaml" />
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/VsVersionStyles.xaml" />
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/ListView.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 
 			<p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />
@@ -24,7 +26,7 @@
 		</ResourceDictionary>
 	</vsfx:VsDialogWindow.Resources>
 
-	<Grid>
+    <Grid Background="{StaticResource VsVersion.Dialog.Background}">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
 			<RowDefinition />
@@ -87,7 +89,7 @@
 		</ListView>
 
 		<StackPanel Grid.Row="1" Grid.Column="1" Margin="0,6,6,6" Width="150" Background="White">
-			<TextBlock x:Name="description" Padding="3" TextWrapping="WrapWithOverflow">
+			<TextBlock x:Name="description" Padding="3" TextWrapping="WrapWithOverflow" Foreground="Black">
 				<Run FontWeight="Bold" Text="Pattern Toolkit: " />
 				<LineBreak />
 				<Run Text="{Binding CurrentToolkit.Name,Mode=OneWay}" />
@@ -114,14 +116,14 @@
 				<RowDefinition Height="Auto" MinHeight="26" />
 				<RowDefinition Name="TempFillerColumn" Height="*" />
 			</Grid.RowDefinitions>
-			<Label Content="        Name:" MinHeight="26" Margin="0,0,6,0" />
+			<Label Content="Name:" Width="100" HorizontalContentAlignment="Right" MinHeight="26" Margin="0,0,6,0" />
 			<TextBox
 				Grid.Column="1"
 				Text="{Binding ProductName,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}"
 				Margin="0,2,0,0" />
 		</Grid>
 
-		<StackPanel Grid.Row="3" Grid.ColumnSpan="2" Background="{DynamicResource VsBrush.EnvironmentBackgroundTexture2}">
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Background="{StaticResource VsVersion.Dialog.CmdButton.Panel.Fill}">
 			<Grid Grid.IsSharedSizeScope="True" VerticalAlignment="Bottom" HorizontalAlignment="Right">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />

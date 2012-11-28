@@ -8,21 +8,23 @@
 	x:Name="automationExtensionSelector"
 	Title="Add New Automation"
 	WindowStartupLocation="CenterOwner"
+    Foreground="{DynamicResource VsBrush.WindowText}"
 	ShowInTaskbar="False"
 	ResizeMode="CanResizeWithGrip"
     Height="280" Width="340">
     <vsfx:VsDialogWindow.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
-				<ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/Edition.xaml" />
-			</ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/CommonStyles.xaml" />
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/VsVersionStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
 
 			<p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />
 			<BitmapImage x:Key="DefaultProductIcon" UriSource="../../Resources/DefaultAutomation.png" />
 		</ResourceDictionary>
     </vsfx:VsDialogWindow.Resources>
 
-	<DockPanel>
+    <DockPanel Background="{StaticResource VsVersion.Dialog.Background}">
 		<Grid DockPanel.Dock="Bottom" HorizontalAlignment="Right">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
@@ -39,7 +41,9 @@
 			ItemsSource="{Binding ExportedAutomations}"
 			SelectedItem="{Binding CurrentExportedAutomation,Mode=TwoWay}"
 			IsSynchronizedWithCurrentItem="true"
-			SelectionMode="Single">
+			SelectionMode="Single"
+            Background="{DynamicResource VsBrush.ToolWindowBackground}"
+            Foreground="{DynamicResource VsBrush.WindowText}">
 			<ListBox.Resources>
 				<Style TargetType="ListBoxItem" BasedOn="{StaticResource {x:Type ListBoxItem}}">
 					<Setter Property="p:ControlBehavior.DoubleClickCommand" Value="{Binding DataContext.SelectAutomationExtensionCommand,ElementName=automationExtensionSelector}" />
@@ -63,6 +67,39 @@
 					</StackPanel>
 				</DataTemplate>
 			</ListBox.ItemTemplate>
-		</ListBox>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{StaticResource  VsVersion.ListBoxItem.HoverFill}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.HoverBorder}"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="true">
+                            <Setter Property="Background" Value="{StaticResource VsVersion.ListBoxItem.SelectedFill}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.SelectedBorder}"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="true"/>
+                                <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{StaticResource VsVersion.ListBoxItem.SelectedInactiveFill}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.SelectedInactiveBorder}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="true"/>
+                                <Condition Property="IsMouseOver" Value="true"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{StaticResource VsVersion.ListBoxItem.SelectedHoverFill}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.SelectedHoverBorder}"/>
+                        </MultiTrigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
 	</DockPanel>
 </cp:CommonDialogWindow>

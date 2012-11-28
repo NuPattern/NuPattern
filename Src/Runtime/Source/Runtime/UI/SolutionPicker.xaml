@@ -11,18 +11,20 @@
 	SizeToContent="WidthAndHeight"
 	ResizeMode="NoResize"
 	WindowStartupLocation="CenterOwner"
+    Foreground="{DynamicResource VsBrush.WindowText}"
 	FocusManager.FocusedElement="{x:Reference solutionItems}"
 	ShowInTaskbar="False">
 	<vsfx:VsDialogWindow.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
-				<ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/Edition.xaml" />
-				<ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/TreeView.xaml" />
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/CommonStyles.xaml" />
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/VsVersionStyles.xaml" />
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/TreeView.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</vsfx:VsDialogWindow.Resources>
 
-	<Grid>
+    <Grid Background="{StaticResource VsVersion.Dialog.Background}">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
 			<RowDefinition Height="Auto" />

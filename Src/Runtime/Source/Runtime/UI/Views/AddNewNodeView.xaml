@@ -10,17 +10,19 @@
 	SizeToContent="Height"
 	ResizeMode="NoResize"
 	WindowStartupLocation="CenterOwner"
+    Foreground="{DynamicResource VsBrush.WindowText}"
 	ShowInTaskbar="False"
 	FocusManager.FocusedElement="{x:Reference instanceName}">
 	<vsfx:VsDialogWindow.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
-				<ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/Edition.xaml" />
-			</ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/CommonStyles.xaml" />
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/VsVersionStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</vsfx:VsDialogWindow.Resources>
 
-	<Grid>
+	<Grid Background="{StaticResource VsVersion.Dialog.Background}">
 		<Grid.RowDefinitions>
 			<RowDefinition />
 			<RowDefinition />
@@ -44,7 +46,7 @@
 				Margin="0,2,0,0" />
 		</Grid>
 
-		<StackPanel Grid.Row="1" Background="{DynamicResource VsBrush.EnvironmentBackgroundTexture2}">
+        <StackPanel Grid.Row="1" Background="{StaticResource VsVersion.Dialog.CmdButton.Panel.Fill}">
 			<Grid Grid.IsSharedSizeScope="True" VerticalAlignment="Center" HorizontalAlignment="Right">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />

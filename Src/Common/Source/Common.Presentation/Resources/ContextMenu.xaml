@@ -4,6 +4,10 @@
 	xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Vs"
 	xmlns:d="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Data">
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="VsVersionStyles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
 	<d:GrayscaleImageConverter x:Key="GrayscaleImageConverter" />
 	<d:ImageConverter x:Key="ImageConverter" />
 
@@ -86,7 +90,7 @@
 			</Trigger>
 			<Trigger Property="IsHighlighted" Value="true">
 				<Setter TargetName="Bg" Property="Fill" Value="{DynamicResource VsBrush.CommandBarMouseOverBackgroundGradient}" />
-				<Setter TargetName="Bg" Property="Stroke" Value="{DynamicResource VsBrush.CommandBarBorder}" />
+				<Setter TargetName="Bg" Property="Stroke" Value="{StaticResource VsVersion.ContextMenu.MenuItemBorder}" />
 				<Setter Property="Foreground" Value="{DynamicResource VsBrush.CommandBarTextHover}" />
 				<Setter TargetName="Arrow" Property="Fill" Value="{DynamicResource VsBrush.CommandBarMenuMouseOverSubmenuGlyph}" />
 			</Trigger>
@@ -125,7 +129,7 @@
 			</Trigger>
 			<Trigger Property="IsHighlighted" Value="true">
 				<Setter TargetName="Bg" Property="Fill" Value="{DynamicResource VsBrush.CommandBarMouseOverBackgroundGradient}" />
-				<Setter TargetName="Bg" Property="Stroke" Value="{DynamicResource VsBrush.CommandBarBorder}" />
+				<Setter TargetName="Bg" Property="Stroke" Value="{StaticResource VsVersion.ContextMenu.MenuItemBorder}" />
 				<Setter Property="Foreground" Value="{DynamicResource VsBrush.CommandBarTextHover}" />
 				<Setter TargetName="GlyphPanel" Property="Background" Value="{DynamicResource VsBrush.CommandBarHoverOverSelectedIcon}" />
 				<Setter TargetName="GlyphPanel" Property="BorderBrush" Value="{DynamicResource VsBrush.CommandBarHoverOverSelectedIconBorder}" />

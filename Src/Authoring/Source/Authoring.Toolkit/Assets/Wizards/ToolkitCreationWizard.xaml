@@ -8,8 +8,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Height="467" Width="700"
     Title="New Pattern Toolkit">
+    <p:WizardWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/CommonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </p:WizardWindow.Resources>
+    
     <p:WizardWindow.Pages>
-		<l:ToolkitType />
-		<l:ToolkitInfo />
+        <l:ToolkitType />
+        <l:ToolkitInfo />
     </p:WizardWindow.Pages>
 </p:WizardWindow>

@@ -95,7 +95,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Resources\Edition.xaml">
+    <Page Include="Resources\CommonStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -110,6 +110,18 @@
     <Page Include="Resources\ValueEditor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <None Include="Resources\VsVersionStyles.tt">
+      <SubType>Designer</SubType>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>VsVersionStyles.xaml</LastGenOutput>
+    </None>
+    <Page Include="Resources\VsVersionStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VsVersionStyles.tt</DependentUpon>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Resources\WizardWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -133,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />

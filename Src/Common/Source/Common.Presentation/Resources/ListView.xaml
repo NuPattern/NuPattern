@@ -3,10 +3,10 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:l="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation">
 
-	<SolidColorBrush x:Key="LvBrush.SelectedHoverBorder" Color="#FFCFCFCF" />
-	<SolidColorBrush x:Key="LvBrush.SelectedInactiveBorder" Color="#FFCFCFCF" />
-	<SolidColorBrush x:Key="LvBrush.SelectedInactiveFill" Color="#FFEAE9E9" />
-
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="VsVersionStyles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
 	<ControlTemplate x:Key="ListViewItem.Template" TargetType="ListViewItem">
 		<Border SnapsToDevicePixels="true" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2">
 			<Border x:Name="InnerBorder" BorderThickness="1" CornerRadius="1">
@@ -15,44 +15,48 @@
 						<RowDefinition MaxHeight="11"/>
 						<RowDefinition/>
 					</Grid.RowDefinitions>
-					<Rectangle x:Name="UpperHighlight" Fill="#75FFFFFF" Visibility="Collapsed"/>
+                    <Rectangle x:Name="UpperHighlight" Fill="{StaticResource VsVersion.ListViewItem.UpperHighlight.Fill}" Visibility="Collapsed"/>
 					<GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Grid.RowSpan="2"/>
 				</Grid>
 			</Border>
 		</Border>
 		<ControlTemplate.Triggers>
 			<Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Background" Value="{DynamicResource  VsBrush.ComboBoxMouseOverBackgroundGradient}"/>
-                <Setter Property="BorderBrush" Value="{DynamicResource  VsBrush.ComboBoxMouseDownBorder}"/>
+                <Setter Property="Background" Value="{StaticResource  VsVersion.ListViewItem.HoverFill}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.HoverBorder}"/>
 				<Setter Property="Visibility" TargetName="UpperHighlight" Value="Visible"/>
-			</Trigger>
+                <Setter Property="Fill" TargetName="UpperHighlight" Value="{StaticResource VsVersion.ListViewItem.UpperHighlight.HoverFill}"/>
+            </Trigger>
 			<Trigger Property="IsSelected" Value="true">
-                <Setter Property="Background" Value="{DynamicResource VsBrush.ComboBoxMouseOverBackgroundGradient}"/>
-                <Setter Property="BorderBrush" Value="{DynamicResource VsBrush.ComboBoxMouseDownBorder}"/>
-				<Setter Property="BorderBrush" TargetName="InnerBorder" Value="#80FFFFFF"/>
+                <Setter Property="Background" Value="{StaticResource VsVersion.ListViewItem.SelectedFill}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.SelectedBorder}"/>
+                <Setter Property="BorderBrush" TargetName="InnerBorder" Value="{StaticResource VsVersion.ListViewItem.InnerBorder.SelectedBorder}"/>
 				<Setter Property="Visibility" TargetName="UpperHighlight" Value="Visible"/>
-				<Setter Property="Fill" TargetName="UpperHighlight" Value="#40FFFFFF"/>
+                <Setter Property="Fill" TargetName="UpperHighlight" Value="{StaticResource VsVersion.ListViewItem.UpperHighlight.SelectedFill}"/>
 			</Trigger>
 			<MultiTrigger>
 				<MultiTrigger.Conditions>
 					<Condition Property="IsSelected" Value="true"/>
 					<Condition Property="Selector.IsSelectionActive" Value="false"/>
 				</MultiTrigger.Conditions>
-                <Setter Property="Background" Value="{DynamicResource LvBrush.SelectedInactiveFill}"/>
-                <Setter Property="BorderBrush" Value="{DynamicResource LvBrush.SelectedInactiveBorder}"/>
-			</MultiTrigger>
+                <Setter Property="Background" Value="{StaticResource VsVersion.ListViewItem.SelectedInactiveFill}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.SelectedInactiveBorder}"/>
+                <Setter Property="BorderBrush" TargetName="InnerBorder" Value="{StaticResource VsVersion.ListViewItem.InnerBorder.SelectedInactiveBorder}"/>
+                <Setter Property="Fill" TargetName="UpperHighlight" Value="{StaticResource VsVersion.ListViewItem.SelectedInactiveFill}"/>
+            </MultiTrigger>
 			<MultiTrigger>
 				<MultiTrigger.Conditions>
 					<Condition Property="IsSelected" Value="true"/>
 					<Condition Property="IsMouseOver" Value="true"/>
 				</MultiTrigger.Conditions>
-                <Setter Property="Background" Value="{DynamicResource VsBrush.ComboBoxMouseOverBackgroundGradient}"/>
-                <Setter Property="BorderBrush" Value="{DynamicResource LvBrush.SelectedHoverBorder}"/>
-			</MultiTrigger>
+                <Setter Property="Background" Value="{StaticResource VsVersion.ListViewItem.SelectedHoverFill}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.SelectedHoverBorder}"/>
+                <Setter Property="Fill" TargetName="UpperHighlight" Value="{StaticResource VsVersion.ListViewItem.UpperHighlight.SelectedHoverFill}"/>
+            </MultiTrigger>
 			<Trigger Property="IsEnabled" Value="false">
 				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
 			</Trigger>
-		</ControlTemplate.Triggers>
+        </ControlTemplate.Triggers>
 	</ControlTemplate>
 
 	<Style TargetType="ListViewItem">
@@ -63,15 +67,17 @@
 		<Setter Property="Padding" Value="5,2,5,2"/>
 		<Setter Property="VerticalContentAlignment" Value="Center"/>
 		<Setter Property="Template" Value="{StaticResource ListViewItem.Template}" />
-	</Style>
+    </Style>
 
 	<Style TargetType="GridViewColumnHeader">
 		<Setter Property="HorizontalContentAlignment" Value="Stretch" />
-	</Style>
+    </Style>
 
 	<Style TargetType="ListView">
 		<Setter Property="BorderThickness" Value="0" />
-	</Style>
+        <Setter Property="Foreground" Value="{DynamicResource VsBrush.WindowText}"/>
+        <Setter Property="Background" Value="{DynamicResource VsBrush.ToolWindowBackground}"/>
+    </Style>
 
 	<DataTemplate x:Key="SortHeader">
 		<Grid Margin="3,0">
