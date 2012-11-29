@@ -122,7 +122,7 @@
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ComponentModel.Composition.Diagnostics">
-      <HintPath>..\..\..\..\Lib\Microsoft.ComponentModel.Composition.Diagnostics.dll</HintPath>
+      <HintPath>..\..\..\..\Lib\MEF\Microsoft.ComponentModel.Composition.Diagnostics.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
