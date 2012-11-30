@@ -26,7 +26,7 @@
         <automationSettingsSchemaMoniker Id="d6b5820b-135a-419b-9dc1-7f6279e1771d" />
       </extendedElement>
       <properties>
-        <propertySettings Id="402d10ee-b3e0-4c1a-8996-254b4c8200d5" value="5d64cfe6-a6ff-4e73-a000-c6a8832740ff" name="FeatureId" />
+        <propertySettings Id="402d10ee-b3e0-4c1a-8996-254b4c8200d5" value="5413c755-6024-4c41-ba0c-9aa3d6fd9caf" name="FeatureId" />
         <propertySettings Id="e8996285-f256-4201-9ea7-b3e97fa52536" value="Pattern Toolkit Hands-On Labs" name="DefaultInstanceName" />
         <propertySettings Id="f2786bc1-9f02-457e-80f7-4a67aa56b6f1" value="True" name="SharedInstance" />
         <propertySettings Id="da7f4eb2-637b-441c-92d6-695f42197fb8" value="True" name="ActivateOnInstantiation" />
@@ -54,7 +54,7 @@
   }
 ]</conditions>
     </menuSettings>
-    <guidanceExtension Id="e6de3e46-952d-4c32-bf68-38d0879bb653" guidanceInstanceName="Pattern Toolkit Hands-On Labs" guidanceFeatureId="5d64cfe6-a6ff-4e73-a000-c6a8832740ff" guidanceSharedInstance="true">
+    <guidanceExtension Id="e6de3e46-952d-4c32-bf68-38d0879bb653" guidanceInstanceName="Pattern Toolkit Hands-On Labs" guidanceFeatureId="5413c755-6024-4c41-ba0c-9aa3d6fd9caf" guidanceSharedInstance="true">
       <extendedElement>
         <patternSchemaMoniker Id="71309920-c4ac-4283-b6bf-3cec975eca86" />
       </extendedElement>

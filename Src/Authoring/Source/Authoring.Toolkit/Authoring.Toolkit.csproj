@@ -1238,10 +1238,19 @@
       <SubType>Designer</SubType>
     </None>
     <EmbeddedResource Include="PatternModel.patterndefinition">
+      <DependentUpon>PatternModel.tt</DependentUpon>
       <ItemGuid>aa404b57-5bb4-4521-95fa-b103034d26e3</ItemGuid>
       <RunCustomToolOnUnfold>false</RunCustomToolOnUnfold>
       <SubType>Designer</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </EmbeddedResource>
+    <None Include="PatternModel.tt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+    </None>
     <Content Include="..\..\..\Binaries\PatternToolkitManager.$(TargetVsVersion).vsix">
       <Visible>true</Visible>
       <Link>PatternToolkitManager.$(TargetVsVersion).vsix</Link>

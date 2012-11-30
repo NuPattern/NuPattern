@@ -22,7 +22,7 @@ namespace Microsoft.VisualStudio.Patterning.HandsOnLabs
 	///	Description for PatternToolkitHOLs.DefaultView
 	///	</summary>
 	[Description("Description for PatternToolkitHOLs.DefaultView")]
-	[ToolkitInterface(ExtensionId ="5d64cfe6-a6ff-4e73-a000-c6a8832740ff", DefinitionId = "ac1fde3b-bfa2-4fcf-a1c5-50167323063d", ProxyType = typeof(DefaultView))]
+	[ToolkitInterface(ExtensionId ="5413c755-6024-4c41-ba0c-9aa3d6fd9caf", DefinitionId = "ac1fde3b-bfa2-4fcf-a1c5-50167323063d", ProxyType = typeof(DefaultView))]
 	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
 	public partial interface IDefaultView : IToolkitInterface
 	{ 

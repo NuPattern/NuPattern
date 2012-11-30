@@ -282,9 +282,18 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <EmbeddedResource Include="PatternModel.patterndefinition">
+      <DependentUpon>PatternModel.tt</DependentUpon>
       <ItemGuid>c8131dba-0954-41b1-bf71-defcc7035456</ItemGuid>
       <SubType>Designer</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </EmbeddedResource>
+    <None Include="PatternModel.tt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+    </None>
     <None Include="..\..\..\GlobalAssemblyInfo.tt">
       <Link>Properties\GlobalAssemblyInfo.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>

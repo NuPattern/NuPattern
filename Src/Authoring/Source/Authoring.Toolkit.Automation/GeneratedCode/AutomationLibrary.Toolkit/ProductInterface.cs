@@ -23,7 +23,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Library
 	///	A library containing custom automation for a pattern toolkit.
 	///	</summary>
 	[Description("A library containing custom automation for a pattern toolkit.")]
-	[ToolkitInterface(ExtensionId ="97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "d6139b37-9971-4834-a9dc-2b3daef962cf", ProxyType = typeof(AutomationLibrary))]
+	[ToolkitInterface(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "d6139b37-9971-4834-a9dc-2b3daef962cf", ProxyType = typeof(AutomationLibrary))]
 	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
 	public partial interface IAutomationLibrary : IToolkitInterface
 	{ 

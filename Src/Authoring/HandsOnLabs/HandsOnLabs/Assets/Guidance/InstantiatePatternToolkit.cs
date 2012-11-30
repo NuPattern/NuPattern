@@ -8,7 +8,7 @@ namespace Microsoft.VisualStudio.Patterning.HandsOnLabs.Guidance
     /// Link launch point for instantiating the Hands-On Lab guidance.
     /// </summary>
     /// <remarks>This command is invoked using a link with this type of syntax: 
-    /// launchpoint://5d64cfe6-a6ff-4e73-a000-c6a8832740ff/InstantiatePatternToolkit</remarks>
+    /// launchpoint://{vsixid}/InstantiatePatternToolkit</remarks>
     [CLSCompliant(false)]
     [LaunchPoint(Id = "InstantiatePatternToolkit")]
     public class InstantiatePatternToolkit : LinkLaunchPoint
