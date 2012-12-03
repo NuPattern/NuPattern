@@ -14,7 +14,7 @@
 	<TemplateContent>
 		<ProjectItem ItemType="Content" TargetFileName="$fileinputname$.csproj" ReplaceParameters="false">ProjectTemplateProject.csproj</ProjectItem>
 		<ProjectItem ItemType="Content" TargetFileName="Content.cs" ReplaceParameters="false">ProjectTemplate.cs</ProjectItem>
-		<ProjectItem ItemType="Content" TargetFileName="__TemplateIcon.ico" ReplaceParameters="false">__TemplateIcon.ico</ProjectItem>
+		<ProjectItem ItemType="Content" TargetFileName="__TemplateIcon.ico" ReplaceParameters="false">VsTemplateIconProjectTemplate.ico</ProjectItem>
 		<ProjectItem ItemType="Content" TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="false">Properties\AssemblyInfo.cs</ProjectItem>
 	</TemplateContent>
 	<WizardExtension>

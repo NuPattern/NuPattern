@@ -22,7 +22,7 @@
 			</ResourceDictionary.MergedDictionaries>
 
 			<p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />
-			<BitmapImage x:Key="DefaultProductIcon" UriSource="../../Resources/ProductLarge.png" />
+			<BitmapImage x:Key="DefaultProductIcon" UriSource="../../Resources/PatternNodeDefault.png" />
 		</ResourceDictionary>
 	</vsfx:VsDialogWindow.Resources>
 

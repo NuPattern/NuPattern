@@ -78,7 +78,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.ComponentModel.Composition.Diagnostics">
-      <HintPath>..\..\..\Lib\Microsoft.ComponentModel.Composition.Diagnostics.dll</HintPath>
+      <HintPath>..\..\..\Lib\MEF\Microsoft.ComponentModel.Composition.Diagnostics.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Moq">

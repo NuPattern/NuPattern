@@ -15,8 +15,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
     [CLSCompliant(false)]
     public class ProductViewModel : ProductElementViewModel
     {
-        private const string IconEnabledPath = "../../Resources/Product.png";
-        private const string IconUninstalledPath = "../../Resources/ProductUninstalled.png";
+        private const string IconEnabledPath = "../../Resources/NodeProductDefault.png";
+        private const string IconUninstalledPath = "../../Resources/NodeProductVersionNotFound.png";
 
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductViewModel>();
 

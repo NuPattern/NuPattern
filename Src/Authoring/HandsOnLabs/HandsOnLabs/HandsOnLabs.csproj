@@ -202,17 +202,10 @@
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <Content Include="Assets\Templates\Projects\Extensibility\HolProjectTemplate\__TemplateIcon.ico">
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsTemplateIconHOLProject.ico">
+      <Link>Assets\Templates\Projects\Extensibility\HolProjectTemplate\VsTemplateIconHOLProject.ico</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>false</IncludeInVSIX>
-    </Content>
-    <Content Include="Resources\VsixPreview.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\ToolkitIcon.png">
-      <IncludeInVSIX>True</IncludeInVSIX>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="..\..\..\GlobalAssemblyInfo.tt">
       <Link>Properties\GlobalAssemblyInfo.tt</Link>
@@ -422,7 +415,21 @@
       <DependentUpon>source.extension.tt</DependentUpon>
       <IsToolkitManifest>True</IsToolkitManifest>
     </None>
-    <Resource Include="Resources\PatternIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixPreviewHOL.png">
+      <Link>Resources\VsixPreviewHOL.png</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixIconHOL.png">
+      <Link>Resources\VsixIconHOL.png</Link>
+      <IncludeInVSIX>True</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\PatternNodeHOL.png">
+      <Link>Resources\PatternNodeHOL.png</Link>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HandsOnLabs.Automation\HandsOnLabs.Automation.csproj">

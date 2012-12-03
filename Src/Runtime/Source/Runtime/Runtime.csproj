@@ -264,35 +264,42 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Remove.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Installed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\AddProduct.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Product.png" />
-    <Resource Include="Resources\Collection.png" />
-    <Resource Include="Resources\Element.png" />
-    <Resource Include="Resources\ProductLarge.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Properties.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Guidance.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Save.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\CollapseAll.png" />
-    <Resource Include="Resources\ExpandAll.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\ProductUninstalled.png" />
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandRemove.png">
+      <Link>Resources\CommandRemove.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandAddNewProduct.png">
+      <Link>Resources\CommandAddNewProduct.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\NodeProductDefault.png">
+      <Link>Resources\NodeProductDefault.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\NodeCollection.png">
+      <Link>Resources\NodeCollection.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\NodeElement.png">
+      <Link>Resources\NodeElement.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\PatternNodeDefault.png">
+      <Link>Resources\PatternNodeDefault.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandProperties.png">
+      <Link>Resources\CommandProperties.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandShowGuidance.png">
+      <Link>Resources\CommandShowGuidance.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandSave.png">
+      <Link>Resources\CommandSave.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandCollapseAll.png">
+      <Link>Resources\CommandCollapseAll.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandExpandAll.png">
+      <Link>Resources\CommandExpandAll.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\NodeProductVersionNotFound.png">
+      <Link>Resources\NodeProductVersionNotFound.png</Link>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <None Include="RuntimeShellInfo.tt">

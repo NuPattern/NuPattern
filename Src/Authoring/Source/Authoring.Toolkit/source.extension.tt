@@ -12,10 +12,10 @@
 		<Description xml:space="preserve"><#=AuthoringToolkitInfo.Description#></Description>
 		<Locale>1033</Locale>
 		<License>LICENSE.txt</License>
-		<Icon>Resources\DesignTimeVsix.png</Icon>
+		<Icon>Resources\VsixIconAuthoring.png</Icon>
 		<MoreInfoUrl><#=AuthoringToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
 		<GettingStartedGuide><#=AuthoringToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
-		<PreviewImage>Resources\DesignTimeVsixPreview.png</PreviewImage>
+		<PreviewImage>Resources\VsixPreviewAuthoring.png</PreviewImage>
 		<SupportedProducts>
 		  <VisualStudio Version="<#=targetVsVersion #>">
 			<Edition>Pro</Edition>

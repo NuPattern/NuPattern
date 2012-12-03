@@ -256,6 +256,11 @@
     <Compile Include="Extensions\PropertySchemaExtensions.cs" />
     <Compile Include="Model\Design\DefaultValuePropertyDescriptor.cs">
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Rehydration\PatternModelCloner.cs" />
     <Compile Include="Serialization\PatternModelSerializationHelper.cs" />
     <Compile Include="Serialization\SchemaReader.cs" />
@@ -321,11 +326,6 @@
     <Compile Include="Model\ViewSchema.cs" />
     <Compile Include="Model\ViewSchemaBase.cs" />
     <Compile Include="Model\ViewHasElements.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="GeneratedCode\Customization\SchemaImplementation.cs">
       <DependentUpon>SchemaImplementation.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -430,76 +430,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\Runtime\Source\Runtime\Resources\Product.png">
-      <Link>Resources\Product.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Collapse.png">
-      <Link>Resources\Collapse.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Collection.png">
-      <Link>Resources\Collection.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CollectionShapeToolBitmap.bmp">
-      <Link>Resources\CollectionShapeToolBitmap.bmp</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ConnectorSourceCursor.cur">
-      <Link>Resources\ConnectorSourceCursor.cur</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ConnectorTargetCursor.cur">
-      <Link>Resources\ConnectorTargetCursor.cur</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationFalseDisabled.png">
-      <Link>Resources\CustomizationFalseDisabled.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationFalseEnabled.png">
-      <Link>Resources\CustomizationFalseEnabled.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationInheritedDisabled.png">
-      <Link>Resources\CustomizationInheritedDisabled.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationInheritedEnabled.png">
-      <Link>Resources\CustomizationInheritedEnabled.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationTrueDisabled.png">
-      <Link>Resources\CustomizationTrueDisabled.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\CustomizationTrueEnabled.png">
-      <Link>Resources\CustomizationTrueEnabled.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Design.png">
-      <Link>Resources\Design.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Element.png">
-      <Link>Resources\Element.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ElementShapeToolBitmap.bmp">
-      <Link>Resources\ElementShapeToolBitmap.bmp</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Expand.png">
-      <Link>Resources\Expand.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ExtensionPoint.png">
-      <Link>Resources\ExtensionPoint.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\ExtensionPointToolBitmap.bmp">
-      <Link>Resources\ExtensionPointToolBitmap.bmp</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Inherited.png">
-      <Link>Resources\Inherited.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Registration.png">
-      <Link>Resources\Registration.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Resize.png">
-      <Link>Resources\Resize.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\View.png">
-      <Link>Resources\View.png</Link>
-    </Content>
-    <Content Include="..\..\..\Authoring\Source\PatternModelDesign.Shell\Resources\Views.png">
-      <Link>Resources\Views.png</Link>
-    </Content>
-    <Resource Include="Resources\Error.png" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
     </None>
@@ -580,8 +510,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

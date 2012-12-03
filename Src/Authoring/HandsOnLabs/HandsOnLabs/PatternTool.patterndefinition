@@ -70,7 +70,7 @@
       </extendedElement>
     </validationExtension>
   </dm0:extensions>
-  <pattern Id="71309920-c4ac-4283-b6bf-3cec975eca86" name="PatternToolkitHOLs" displayName="Pattern Toolkit Hands-On Labs" description="Hands on Labs for Creating Pattern Toolkits" codeIdentifier="PatternToolkitHOLs" isCustomizable="True" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.HandsOnLabs;component/Resources/PatternIcon.png" currentDiagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713" patternLink="patternmanager://92131a71-f4c2-42ef-9a66-efe53b0ca4d8">
+  <pattern Id="71309920-c4ac-4283-b6bf-3cec975eca86" name="PatternToolkitHOLs" displayName="Pattern Toolkit Hands-On Labs" description="Hands on Labs for Creating Pattern Toolkits" codeIdentifier="PatternToolkitHOLs" isCustomizable="True" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.HandsOnLabs;component/Resources/PatternNodeHOL.png" currentDiagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713" patternLink="patternmanager://92131a71-f4c2-42ef-9a66-efe53b0ca4d8">
     <customizationPolicy name="CustomizationPolicySchema1">
       <settings>
         <setting propertyId="DisplayName" />

@@ -15,7 +15,7 @@
 	</TemplateData>
 	<TemplateContent>
 		<ProjectItem ItemType="Content" TargetFileName="Content.cs" ReplaceParameters="false">ItemTemplate.cs</ProjectItem>
-		<ProjectItem ItemType="Content" TargetFileName="__TemplateIcon.ico" ReplaceParameters="false">__TemplateIcon.ico</ProjectItem>
+		<ProjectItem ItemType="Content" TargetFileName="__TemplateIcon.ico" ReplaceParameters="false">VsTemplateIconItemTemplate.ico</ProjectItem>
 	</TemplateContent>
 	<WizardExtension>
 		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>

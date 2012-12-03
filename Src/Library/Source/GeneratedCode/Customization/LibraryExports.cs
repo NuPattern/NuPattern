@@ -18,7 +18,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Exports the 'TemplateSettings' extension element.
 	/// </summary>
-	[ExportedAutomation(ExportingType = typeof(TemplateSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/TemplateSettings.png")]
+	[ExportedAutomation(ExportingType = typeof(TemplateSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/AutomationSettingsTemplateSettings.png")]
 	public partial class TemplateSettings
 	{
 	}
@@ -26,7 +26,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Exports the 'EventSettings' extension element.
 	/// </summary>
-	[ExportedAutomation(ExportingType = typeof(EventSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/EventSettings.png")]
+	[ExportedAutomation(ExportingType = typeof(EventSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/AutomationSettingsEventSettings.png")]
 	public partial class EventSettings
 	{
 	}
@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Exports the 'CommandSettings' extension element.
 	/// </summary>
-	[ExportedAutomation(ExportingType = typeof(CommandSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/CommandSettings.png")]
+	[ExportedAutomation(ExportingType = typeof(CommandSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/AutomationSettingsCommandSettings.png")]
 	public partial class CommandSettings
 	{
 	}
@@ -42,7 +42,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Exports the 'MenuSettings' extension element.
 	/// </summary>
-	[ExportedAutomation(ExportingType = typeof(MenuSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/MenuSettings.png")]
+	[ExportedAutomation(ExportingType = typeof(MenuSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/AutomationSettingsMenuSettings.png")]
 	public partial class MenuSettings
 	{
 	}
@@ -50,7 +50,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Exports the 'WizardSettings' extension element.
 	/// </summary>
-	[ExportedAutomation(ExportingType = typeof(WizardSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/WizardSettings.png")]
+	[ExportedAutomation(ExportingType = typeof(WizardSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/AutomationSettingsWizardSettings.png")]
 	public partial class WizardSettings
 	{
 	}
@@ -58,7 +58,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Exports the 'DragDropSettings' extension element.
 	/// </summary>
-	[ExportedAutomation(ExportingType = typeof(DragDropSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/DragDropSettings.png")]
+	[ExportedAutomation(ExportingType = typeof(DragDropSettings), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/AutomationSettingsDragDropSettings.png")]
 	public partial class DragDropSettings
 	{
 	}
