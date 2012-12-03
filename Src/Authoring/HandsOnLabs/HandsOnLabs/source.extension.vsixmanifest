@@ -7,10 +7,10 @@
 		<Description xml:space="preserve">A Hands-On Lab for creating Pattern Toolkit projects.</Description>
 		<Locale>1033</Locale>
 		<License>LICENSE.txt</License>
-		<Icon>Resources\ToolkitIcon.png</Icon>
+		<Icon>Resources\VsixIconHOL.png</Icon>
 		<MoreInfoUrl>http://vspat.codeplex.com</MoreInfoUrl>
 		<GettingStartedGuide>http://vspat.codeplex.com/wikipage?title=Getting%20Started</GettingStartedGuide>
-		<PreviewImage>Resources\VsixPreview.png</PreviewImage>
+		<PreviewImage>Resources\VsixPreviewHOL.png</PreviewImage>
 		<SupportedProducts>
 		  <VisualStudio Version="11.0">
 			<Edition>Pro</Edition>

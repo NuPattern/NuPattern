@@ -6,7 +6,7 @@
     <Name>Pattern Toolkit Hands-On Labs</Name>
     <Description>Hands on Labs for Creating Pattern Toolkits</Description>
     <TemplateID>c3c73531a152-PatternToolkitHOLs</TemplateID>
-    <Icon>__TemplateIcon.ico</Icon>
+    <Icon>VsTemplateIconHOLProject.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <ProjectSubType>Extensibility</ProjectSubType>
     <SortOrder>1000</SortOrder>

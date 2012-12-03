@@ -46,8 +46,8 @@
     <SolidColorBrush x:Key="VsVersion.TreeViewToggleButton.HoverFill" Color="Transparent" />
     <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedBorder" Color="{DynamicResource VsColor.Highlight}" />
     <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedFill" Color="{DynamicResource VsColor.Highlight}" />
-    <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedInactiveFill" Color="{DynamicResource VsColor.NewProjectProviderInactiveBegin}" />
-    <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectProviderInactiveBegin}" />
+    <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedInactiveFill" Color="{DynamicResource VsColor.NewProjectItemInactiveBegin}" />
+    <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBegin}" />
 
     <!-- WizardWindow -->
     <SolidColorBrush x:Key="VsVersion.WizardWindow.NavChrome.Background" Color="{DynamicResource VsColor.CommandBarGradientBegin}"/>

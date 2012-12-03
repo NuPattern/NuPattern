@@ -193,7 +193,6 @@
     <Content Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.pkgdef">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Resources\SolutionBuilderToolWindow.bmp" />
     <Content Include="..\Runtime.Store\GeneratedCode\ProductStateSchema.xsd">
       <Link>GeneratedCode\ProductStateSchema.xsd</Link>
       <SubType>Designer</SubType>
@@ -229,11 +228,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RuntimeShellVSCT.tt</DependentUpon>
     </VSCTCompile>
-    <Content Include="Resources\RunTimeVsix.png">
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\ToolWindowSolutionBuilder.bmp">
+      <Link>Resources\ToolWindowSolutionBuilder.bmp</Link>
+    </Content>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixIconRunTime.png">
+      <Link>Resources\VsixIconRunTime.png</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Resources\RunTimeVsixPreview.png">
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixPreviewRunTime.png">
+      <Link>Resources\VsixPreviewRunTime.png</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -682,7 +688,6 @@
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
     <Content Include="Registry.pkgdef" />
-    <Content Include="Resources\Package.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\Source\Extensibility.Serialization\Extensibility.Serialization.csproj">

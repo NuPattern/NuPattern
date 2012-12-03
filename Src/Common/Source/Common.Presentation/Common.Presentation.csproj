@@ -144,7 +144,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Error.png" />
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\ValidationError.png" >
+      <Link>Resources\ValidationError.png</Link>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

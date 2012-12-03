@@ -453,14 +453,30 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\NavigateSolutionItemIcon.png" />
-    <Resource Include="Resources\ShowGuidanceIcon.png" />
-    <Resource Include="Resources\DragDropSettings.png" />
-    <Resource Include="Resources\TemplateSettings.png" />
-    <Resource Include="Resources\MenuSettings.png" />
-    <Resource Include="Resources\EventSettings.png" />
-    <Resource Include="Resources\WizardSettings.png" />
-    <Resource Include="Resources\CommandSettings.png" />
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandNavigateSolutionItem.png" >
+      <Link>Resources\CommandNavigateSolutionItem.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandShowGuidance.png" >
+      <Link>Resources\CommandShowGuidance.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsDragDropSettings.png" >
+      <Link>Resources\AutomationSettingsDragDropSettings.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsTemplateSettings.png" >
+      <Link>Resources\AutomationSettingsTemplateSettings.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsMenuSettings.png" >
+      <Link>Resources\AutomationSettingsMenuSettings.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsEventSettings.png" >
+      <Link>Resources\AutomationSettingsEventSettings.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsWizardSettings.png" >
+      <Link>Resources\AutomationSettingsWizardSettings.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsCommandSettings.png" >
+      <Link>Resources\AutomationSettingsCommandSettings.png</Link>
+    </Resource>
     <EmbeddedResource Include="GeneratedCode\DomainModelResx.resx">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

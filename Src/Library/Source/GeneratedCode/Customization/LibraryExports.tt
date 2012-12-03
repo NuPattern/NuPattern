@@ -46,7 +46,7 @@ private void GenerateExportAttributes(DomainClass domainClass)
 /// <summary>
 /// Exports the '<#= domainClass.Name #>' extension element.
 /// </summary>
-[ExportedAutomation(ExportingType = typeof(<#= domainClass.Name #>), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/<#= domainClass.Name #>.png")]
+[ExportedAutomation(ExportingType = typeof(<#= domainClass.Name #>), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/AutomationSettings<#= domainClass.Name #>.png")]
 public partial class <#= domainClass.Name #>
 {
 }

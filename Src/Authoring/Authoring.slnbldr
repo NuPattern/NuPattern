@@ -199,7 +199,7 @@
                 <property Id="91002af9-105d-48d0-9820-1ce7fcd432d1" definitionId="f28908ca-518f-497b-9b8c-0e3dc47f21dd" definitionName="Description" rawValue="An extension for designing and building Pattern Toolkit extensions, that combine automation and guidance with design patterns for repeatable solution development." />
                 <property Id="745e793c-9853-4322-ab0b-23587cee80c7" definitionId="2058a01f-6a09-4ad4-9e59-10393e0fca87" definitionName="Version" rawValue="1.3.20.0" />
                 <property Id="9d2fb797-d32c-4767-88bf-d0cd63a166f7" definitionId="766e5ae2-80de-4d94-a0be-4b953a40ac46" definitionName="Identifier" rawValue="84031a32-b20f-479c-a620-beacd982ea13" />
-                <property Id="28b88ca3-d7b3-4ab2-a618-ff0a3ab71bae" definitionId="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" definitionName="Icon" rawValue="Resources\DesignTimeVsix.png" />
+                <property Id="28b88ca3-d7b3-4ab2-a618-ff0a3ab71bae" definitionId="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" definitionName="Icon" rawValue="Resources\VsixIconAuthoring.png" />
                 <property Id="2d602453-e8fa-4d52-a109-08e3ee9adb96" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" rawValue="PatternToolkitBuilderLicense.rtf" />
               </properties>
               <references>
@@ -329,7 +329,7 @@
                 <property Id="93de0135-1174-4e05-9ee0-fc286ee31551" definitionId="f28908ca-518f-497b-9b8c-0e3dc47f21dd" definitionName="Description" rawValue="An extension for creating shared automation libraries for Pattern Toolkit extensions." />
                 <property Id="997414c1-dd95-45ac-bd0c-927ac9f72354" definitionId="2058a01f-6a09-4ad4-9e59-10393e0fca87" definitionName="Version" rawValue="1.3.20.0" />
                 <property Id="9213dfb5-9af6-4c1a-bfd2-dc6325551d34" definitionId="766e5ae2-80de-4d94-a0be-4b953a40ac46" definitionName="Identifier" rawValue="080eb0ef-518d-4807-9b5c-aa32d0032e0b" />
-                <property Id="26095a6f-5e8e-49e7-9600-dc4035a07bda" definitionId="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" definitionName="Icon" rawValue="Resources\DesignTimeVsix.png" />
+                <property Id="26095a6f-5e8e-49e7-9600-dc4035a07bda" definitionId="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" definitionName="Icon" rawValue="Resources\VsixIconAuthoring.png" />
                 <property Id="9f600c5b-a2ce-4d78-9595-625bb9056365" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" />
               </properties>
               <references>

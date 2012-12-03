@@ -191,38 +191,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>source.extension.tt</DependentUpon>
     </None>
-    <Resource Include="Resources\DefaultAutomation.png" />
-    <Resource Include="Resources\AutomationBackground.png" />
-    <Content Include="Resources\DesignTimeVsix.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Resources\DesignTimeVsixPreview.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Resources\Registration.png" />
-    <None Include="Resources\ProductStoreFile.ico" />
-    <Content Include="Resources\Collapse.png" />
-    <Content Include="Resources\CollectionShapeToolBitmap.bmp" />
-    <Content Include="Resources\ConnectorSourceCursor.cur" />
-    <Content Include="Resources\ConnectorTargetCursor.cur" />
-    <Content Include="Resources\Collection.png" />
-    <Content Include="Resources\Element.png" />
-    <Content Include="Resources\CustomizationFalseDisabled.png" />
-    <Content Include="Resources\CustomizationFalseEnabled.png" />
-    <Content Include="Resources\CustomizationInheritedDisabled.png" />
-    <Content Include="Resources\CustomizationInheritedEnabled.png" />
-    <Content Include="Resources\CustomizationTrueDisabled.png" />
-    <Content Include="Resources\CustomizationTrueEnabled.png" />
-    <Content Include="Resources\Design.png" />
-    <Content Include="Resources\ElementShapeToolBitmap.bmp" />
-    <Content Include="Resources\Expand.png" />
-    <Content Include="Resources\ExtensionPoint.png" />
-    <Content Include="Resources\ExtensionPointToolBitmap.bmp" />
-    <Content Include="Resources\Inherited.png" />
-    <Content Include="Resources\Product.png" />
-    <Content Include="Resources\Resize.png" />
-    <Content Include="Resources\View.png" />
-    <Content Include="Resources\Views.png" />
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsDefault.png">
+      <Link>Resources\AutomationSettingsDefault.png</Link>
+    </Resource>
     <None Include="GeneratedCode\Constants.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Constants.cs</LastGenOutput>
@@ -319,7 +290,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GeneratedVSCT.tt</DependentUpon>
     </None>
-    <Content Include="Resources\PatternModelExplorerToolWindowBitmaps.bmp" />
     <Page Include="ModelingCommands\UI\AddAutomationExtensionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

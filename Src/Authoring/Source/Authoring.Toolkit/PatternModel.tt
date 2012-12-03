@@ -1248,12 +1248,12 @@
 ]
 </conditions>
     </menuSettings>
-    <menuSettings Id="50cbb339-338b-4276-9e58-93567a64f2a7" text="Build Guidance" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/BuildGuidanceIcon.png" commandId="5a814601-5260-42a6-94fd-1e8a7a178ace" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="50cbb339-338b-4276-9e58-93567a64f2a7" text="Build Guidance" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/CommandBuildGuidance.png" commandId="5a814601-5260-42a6-94fd-1e8a7a178ace" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="14427d95-ca80-4c2f-9f81-218266b07247" />
       </extendedElement>
     </menuSettings>
-    <menuSettings Id="1f354ebc-ded5-41c3-a17b-6c0963071dc7" text="Transform Templates" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/TransformIcon.png" commandId="f55383be-22ca-4142-ad04-a192b61c5641" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="1f354ebc-ded5-41c3-a17b-6c0963071dc7" text="Transform Templates" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/CommandTransformTemplates.png" commandId="f55383be-22ca-4142-ad04-a192b61c5641" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="316d3345-6833-43de-96e4-fb22875205a6" />
       </extendedElement>
@@ -1263,7 +1263,7 @@
         <automationSettingsSchemaMoniker Id="4ad531e4-1a31-4420-a74e-cb7e1dfe9649" />
       </extendedElement>
     </menuSettings>
-    <menuSettings Id="06eeafa3-2e89-449d-827c-c812099783a9" text="Transform Toolkit Info" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/TransformIcon.png" commandId="d321df0a-d467-45d6-944f-ccd9b82225fe" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="06eeafa3-2e89-449d-827c-c812099783a9" text="Transform Toolkit Info" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/CommandTransformTemplates.png" commandId="d321df0a-d467-45d6-944f-ccd9b82225fe" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="2a86c145-aae7-46df-bcf5-7acb52f312d3" />
       </extendedElement>
@@ -1630,7 +1630,7 @@
 </dropConditions>
     </dragDropSettings>
   </dm0:extensions>
-  <pattern Id="c034429e-01f9-48dd-a478-0321fb708dd3" name="PatternToolkit" displayName="Pattern Toolkit" description="A Pattern Toolkit for capturing and delivering a design pattern." codeIdentifier="PatternToolkit" isCustomizable="True" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/PatternToolkitIcon.png" currentDiagramId="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8" patternLink="patternmanager://eba0a4b0-d271-4785-8691-5963645ed0bd">
+  <pattern Id="c034429e-01f9-48dd-a478-0321fb708dd3" name="PatternToolkit" displayName="Pattern Toolkit" description="A Pattern Toolkit for capturing and delivering a design pattern." codeIdentifier="PatternToolkit" isCustomizable="True" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/PatternNodeAuthoring.png" currentDiagramId="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8" patternLink="patternmanager://eba0a4b0-d271-4785-8691-5963645ed0bd">
     <customizationPolicy>
       <settings>
         <setting propertyId="DisplayName" />
@@ -2084,7 +2084,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="7475fa2d-8033-461c-a460-7e0793491874" name="ItemTemplate" displayName="Item Template" description="A Visual Studio item template." codeIdentifier="ItemTemplate" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/VsTemplateIcon.png">
+                      <element Id="7475fa2d-8033-461c-a460-7e0793491874" name="ItemTemplate" displayName="Item Template" description="A Visual Studio item template." codeIdentifier="ItemTemplate" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeVsTemplate.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2267,7 +2267,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="f03d48a2-2377-4e56-a2c4-ae24d34302d3" name="ProjectTemplate" displayName="Project Template" description="A Visual Studio project template" codeIdentifier="ProjectTemplate" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/VsTemplateIcon.png">
+                      <element Id="f03d48a2-2377-4e56-a2c4-ae24d34302d3" name="ProjectTemplate" displayName="Project Template" description="A Visual Studio project template" codeIdentifier="ProjectTemplate" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeVsTemplate.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2414,7 +2414,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="c6a0f8d4-59df-4dad-b92e-c6a1e54be5e2" name="TextTemplate" displayName="Text Template" description="A custom T4 text template." codeIdentifier="TextTemplate" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/T4TemplateIcon.png">
+                      <element Id="c6a0f8d4-59df-4dad-b92e-c6a1e54be5e2" name="TextTemplate" displayName="Text Template" description="A custom T4 text template." codeIdentifier="TextTemplate" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeT4Template.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2545,7 +2545,7 @@
                   </automationSettings>
                 </automationSettings>
                 <childElement cardinality="ZeroToMany" autoCreate="false">
-                  <element Id="b013c2ba-e9e0-484d-a0bc-e821c38c192b" name="Wizard" displayName="Wizard" description="A custom wizard." codeIdentifier="Wizard" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/WizardIcon.png">
+                  <element Id="b013c2ba-e9e0-484d-a0bc-e821c38c192b" name="Wizard" displayName="Wizard" description="A custom wizard." codeIdentifier="Wizard" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeWizard.png">
                     <customizationPolicy name="CustomizationPolicySchema1">
                       <settings>
                         <setting propertyId="DisplayName" />
@@ -2672,7 +2672,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="93ee656b-6308-42d1-a5d7-e10fcea47ee7" name="WizardPage" displayName="Wizard Page" description="A custom wizard page" codeIdentifier="WizardPage" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/WizardPageIcon.png">
+                      <element Id="93ee656b-6308-42d1-a5d7-e10fcea47ee7" name="WizardPage" displayName="Wizard Page" description="A custom wizard page" codeIdentifier="WizardPage" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeWizardPage.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2772,7 +2772,7 @@
               </collection>
             </childElement>
             <childElement>
-              <element Id="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" name="Guidance" displayName="Guidance" description="Guidance for the toolkit." codeIdentifier="Guidance" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/GuidanceIcon.png">
+              <element Id="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" name="Guidance" displayName="Guidance" description="Guidance for the toolkit." codeIdentifier="Guidance" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeGuidance.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -3028,7 +3028,7 @@
           </collection>
         </elements>
         <elements>
-          <element Id="5da53e5a-0ba8-48f8-a922-1712244c388c" name="PatternModel" displayName="Pattern Model" description="The definition of the pattern." codeIdentifier="PatternModel" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/PatternToolIcon.png">
+          <element Id="5da53e5a-0ba8-48f8-a922-1712244c388c" name="PatternModel" displayName="Pattern Model" description="The definition of the pattern." codeIdentifier="PatternModel" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodePatternModel.png">
             <customizationPolicy name="CustomizationPolicySchema1">
               <settings>
                 <setting propertyId="DisplayName" />
@@ -3214,7 +3214,7 @@
                   </settings>
                 </customizationPolicy>
                 <childElement cardinality="ZeroToMany" autoCreate="false">
-                  <element Id="6a596dea-529b-4cd5-9eea-7e856a2b332c" name="View" displayName="View" description="A view or aspect of the pattern." codeIdentifier="ViewModel" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/ViewIcon.png">
+                  <element Id="6a596dea-529b-4cd5-9eea-7e856a2b332c" name="View" displayName="View" description="A view or aspect of the pattern." codeIdentifier="ViewModel" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeView.png">
                     <customizationPolicy name="CustomizationPolicySchema1">
                       <settings>
                         <setting propertyId="DisplayName" />
@@ -3332,7 +3332,7 @@
           </element>
         </elements>
         <elements>
-          <element Id="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" name="ToolkitInfo" displayName="Toolkit Info" description="Information for packaging the toolkit as a VSIX extension." codeIdentifier="PatternToolkitInfo" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/ToolkitInfoIcon.png">
+          <element Id="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" name="ToolkitInfo" displayName="Toolkit Info" description="Information for packaging the toolkit as a VSIX extension." codeIdentifier="PatternToolkitInfo" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeToolkitInfo.png">
             <customizationPolicy name="CustomizationPolicySchema1">
               <settings>
                 <setting propertyId="DisplayName" />
@@ -3691,7 +3691,7 @@
           </settings>
         </customizationPolicy>
         <elements>
-          <element Id="9291502b-fefc-4ef8-afc0-4c6914f0d2d1" name="ProductionTooling" displayName="Production Tooling" description="The design of the tooling of the toolkit." codeIdentifier="ProductionTooling" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/ProductionToolingIcon.png">
+          <element Id="9291502b-fefc-4ef8-afc0-4c6914f0d2d1" name="ProductionTooling" displayName="Production Tooling" description="The design of the tooling of the toolkit." codeIdentifier="ProductionTooling" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeProductionTooling.png">
             <customizationPolicy name="CustomizationPolicySchema1">
               <settings>
                 <setting propertyId="DisplayName" />

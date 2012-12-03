@@ -364,13 +364,13 @@
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" FontStyle="Bold" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.34" VerticalOffset="0.3">
-        <IconDecorator Name="IsSatisfyingVariabilityDecorator" DisplayName="Is Satisfying Variability Decorator" DefaultIcon="..\WorkflowDesign.Shell\Resources\BoundIndicator.png" />
+        <IconDecorator Name="IsSatisfyingVariabilityDecorator" DisplayName="Is Satisfying Variability Decorator" DefaultIcon="..\..\..\Images\BoundIndicator.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.34" VerticalOffset="0.3">
-        <IconDecorator Name="IsNotSatisfyingVariabilityDecorator" DisplayName="Is Not Satisfying Variability Decorator" DefaultIcon="..\WorkflowDesign.Shell\Resources\UnboundIndicator.png" />
+        <IconDecorator Name="IsNotSatisfyingVariabilityDecorator" DisplayName="Is Not Satisfying Variability Decorator" DefaultIcon="..\..\..\Images\UnboundIndicator.png" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.31" VerticalOffset="-0.01">
-        <IconDecorator Name="IndicatorBackgroundDecorator" DisplayName="Indicator Background Decorator" DefaultIcon="..\WorkflowDesign.Shell\Resources\IndicatorBackground.png" />
+        <IconDecorator Name="IndicatorBackgroundDecorator" DisplayName="Indicator Background Decorator" DefaultIcon="..\..\..\Images\IndicatorBackground.png" />
       </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="a2bcd210-b675-4fac-aa78-d57e942ad65d" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape" Name="ProducedAssetShape" DisplayName="Produced Asset Shape" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" GeneratesDoubleDerived="true" FixedTooltipText="Produced Asset" TextColor="White" FillColor="153, 102, 153" OutlineColor="White" InitialWidth="1.8" InitialHeight="0.6" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
@@ -920,16 +920,16 @@
       <XmlSerializationBehaviorMoniker Name="WorkflowDesignSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="Production Tooling">
-      <ElementTool Name="SuppliedAsset" ToolboxIcon="..\WorkflowDesign.Shell\Resources\SuppliedAssetShapeToolBitmap.bmp" Caption="Supplied Asset" Tooltip="Create a fixed or variable material asset or user supplied information, that is supplied as input to a production tool." HelpKeyword="SuppliedAsset">
+      <ElementTool Name="SuppliedAsset" ToolboxIcon="..\..\..\Images\SuppliedAssetShapeToolBitmap.bmp" Caption="Supplied Asset" Tooltip="Create a fixed or variable material asset or user supplied information, that is supplied as input to a production tool." HelpKeyword="SuppliedAsset">
         <DomainClassMoniker Name="SuppliedAsset" />
       </ElementTool>
-      <ElementTool Name="ProductionTool" ToolboxIcon="..\WorkflowDesign.Shell\Resources\ProductionToolShapeToolBitmap.bmp" Caption="Production Tool" Tooltip="Create a production tool that accepts user supplied or material input assets, and produces intermediate or final assets." HelpKeyword="ProductionTool">
+      <ElementTool Name="ProductionTool" ToolboxIcon="..\..\..\Images\ProductionToolShapeToolBitmap.bmp" Caption="Production Tool" Tooltip="Create a production tool that accepts user supplied or material input assets, and produces intermediate or final assets." HelpKeyword="ProductionTool">
         <DomainClassMoniker Name="ProductionTool" />
       </ElementTool>
-      <ElementTool Name="ProducedAsset" ToolboxIcon="..\WorkflowDesign.Shell\Resources\ProducedAssetShapeToolBitmap.bmp" Caption="Produced Asset" Tooltip="Produced Asset" HelpKeyword="ProducedAsset">
+      <ElementTool Name="ProducedAsset" ToolboxIcon="..\..\..\Images\ProducedAssetShapeToolBitmap.bmp" Caption="Produced Asset" Tooltip="Produced Asset" HelpKeyword="ProducedAsset">
         <DomainClassMoniker Name="ProducedAsset" />
       </ElementTool>
-      <ConnectionTool Name="ProductionWorkflowConnector" ToolboxIcon="..\WorkflowDesign.Shell\Resources\DesignConnectorToolBitmap.bmp" Caption="Connector" Tooltip="Connects supplied assets, produced assets and production tools." HelpKeyword="ProductionWorkflowConnector">
+      <ConnectionTool Name="ProductionWorkflowConnector" ToolboxIcon="..\..\..\Images\DesignConnectorToolBitmap.bmp" Caption="Connector" Tooltip="Connects supplied assets, produced assets and production tools." HelpKeyword="ProductionWorkflowConnector">
         <ConnectionBuilderMoniker Name="WorkflowDesign/ProductionWorkflow" />
       </ConnectionTool>
     </ToolboxTab>
