@@ -30,21 +30,21 @@
 		<StackPanel Style="{DynamicResource CommandBar.Panel}">
 			<StackPanel Orientation="Horizontal" Margin="2">
 				<Button ToolTip="Add a New Solution Element" Command="{Binding AddNewProductCommand}" Focusable="false">
-					<BitmapImage UriSource="../../Resources/AddProduct.png" />
+					<BitmapImage UriSource="../../Resources/CommandAddNewProduct.png" />
 				</Button>
 				<Button ToolTip="Save All" Command="{Binding SaveCommand}" Focusable="false">
-					<BitmapImage UriSource="../../Resources/Save.png" />
+					<BitmapImage UriSource="../../Resources/CommandSave.png" />
 				</Button>
 				<Separator />
 				<Button ToolTip="Expand All" Command="{Binding ExpandAllCommand}" Focusable="false">
-					<BitmapImage UriSource="../../Resources/ExpandAll.png" />
+					<BitmapImage UriSource="../../Resources/CommandExpandAll.png" />
 				</Button>
 				<Button ToolTip="Collapse All" Command="{Binding CollapseAllCommand}" Focusable="false">
-					<BitmapImage UriSource="../../Resources/CollapseAll.png" />
+					<BitmapImage UriSource="../../Resources/CommandCollapseAll.png" />
 				</Button>
 				<Separator />
 				<Button ToolTip="Getting Started with Solution Builder" Command="{Binding GuidanceCommand}" Focusable="false">
-					<BitmapImage UriSource="../../Resources/Guidance.png" />
+					<BitmapImage UriSource="../../Resources/CommandShowGuidance.png" />
 				</Button>
 			</StackPanel>
 		</StackPanel>

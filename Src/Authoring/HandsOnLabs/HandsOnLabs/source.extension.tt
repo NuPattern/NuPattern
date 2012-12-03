@@ -12,10 +12,10 @@
 		<Description xml:space="preserve"><#=HandsOnLabsToolkitInfo.Description#></Description>
 		<Locale>1033</Locale>
 		<License>LICENSE.txt</License>
-		<Icon>Resources\ToolkitIcon.png</Icon>
+		<Icon>Resources\VsixIconHOL.png</Icon>
 		<MoreInfoUrl><#=HandsOnLabsToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
 		<GettingStartedGuide><#=HandsOnLabsToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
-		<PreviewImage>Resources\VsixPreview.png</PreviewImage>
+		<PreviewImage>Resources\VsixPreviewHOL.png</PreviewImage>
 		<SupportedProducts>
 		  <VisualStudio Version="<#=targetVsVersion #>">
 			<Edition>Pro</Edition>

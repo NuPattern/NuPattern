@@ -1,4 +1,5 @@
 ﻿<#@ Include File="VsPackageInfo.ttinclude" #>
+<#@ Include File="..\..\..\MasterVersion.ttinclude" #>
 <#@ output extension=".vsct" #><?xml version="1.0" encoding="utf-8"?>
 <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<Extern href="stdidcmd.h"/>
@@ -30,7 +31,7 @@
 			</Button>
 		</Buttons>
 		<Bitmaps>
-			<Bitmap guid="guidOpenSolutionBuilderBitmap" href="Resources\SolutionBuilderToolWindow.bmp" usedList="bmpPic1" />
+			<Bitmap guid="guidOpenSolutionBuilderBitmap" href="..\..\..\Images\\<#=targetVsVersion #>\ToolWindowSolutionBuilder.bmp" usedList="bmpPic1" />
 		</Bitmaps>
 	</Commands>
 	<CommandPlacements>

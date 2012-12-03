@@ -17,11 +17,11 @@ for /f "delims=" %%a in ('dir /ad/s/b Binaries') do (rmdir /s/q "%%a")
 echo Deleting 'TestResults' directories
 for /f "delims=" %%a in ('dir /ad/s/b TestResults') do (rmdir /s/q "%%a")
 
-echo Deleting 'NuGet Packages' directories
-for /f "delims=" %%a in ('dir /ad/s/b Packages') do (rmdir /s/q "%%a")
-if %errorlevel% neq 0 goto :error
+rem echo Deleting 'NuGet Packages' directories
+rem for /f "delims=" %%a in ('dir /ad/s/b Packages') do (rmdir /s/q "%%a")
+rem if %errorlevel% neq 0 goto :error
 
-echo Deleting 'NuGet Packages' directories
+echo Deleting backup directories
 for /f "delims=" %%a in ('dir /ad/s/b Backup') do (rmdir /s/q "%%a")
 if %errorlevel% neq 0 goto :error
 

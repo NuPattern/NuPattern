@@ -12,10 +12,10 @@
 		<Description xml:space="preserve"><#=AutomationLibraryToolkitInfo.Description#></Description>
 		<Locale>1033</Locale>
 		<License>LICENSE.txt</License>
-		<Icon>Resources\DesignTimeVsix.png</Icon>
+		<Icon>Resources\VsixIconAutomationLibrary.png</Icon>
 		<MoreInfoUrl><#=AutomationLibraryToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
 		<GettingStartedGuide><#=AutomationLibraryToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
-		<PreviewImage>Resources\DesignTimeVsixPreview.png</PreviewImage>
+		<PreviewImage>Resources\VsixPreviewAutomationLibrary.png</PreviewImage>
 		<SupportedProducts>
 		  <VisualStudio Version="<#=targetVsVersion #>">
 			<Edition>Pro</Edition>

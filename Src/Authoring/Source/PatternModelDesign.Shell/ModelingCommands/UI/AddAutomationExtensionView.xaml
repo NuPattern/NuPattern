@@ -20,7 +20,7 @@
             </ResourceDictionary.MergedDictionaries>
 
 			<p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />
-			<BitmapImage x:Key="DefaultProductIcon" UriSource="../../Resources/DefaultAutomation.png" />
+			<BitmapImage x:Key="DefaultProductIcon" UriSource="../../Resources/AutomationSettingsDefault.png" />
 		</ResourceDictionary>
     </vsfx:VsDialogWindow.Resources>
 

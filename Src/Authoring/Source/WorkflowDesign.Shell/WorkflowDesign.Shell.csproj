@@ -63,7 +63,7 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" >
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Immutable.10.0.dll</HintPath>
     </Reference>
@@ -224,19 +224,6 @@
     </CodeAnalysisDictionary>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\BoundIndicator.png" />
-    <Content Include="Resources\DesignConnectorToolBitmap.bmp" />
-    <Content Include="Resources\DesignTimeVsix.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Resources\DesignTimeVsixPreview.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Resources\IndicatorBackground.png" />
-    <Content Include="Resources\ProducedAssetShapeToolBitmap.bmp" />
-    <Content Include="Resources\ProductionToolShapeToolBitmap.bmp" />
-    <Content Include="Resources\SuppliedAssetShapeToolBitmap.bmp" />
-    <Content Include="Resources\UnboundIndicator.png" />
     <None Include="source.extension.vsixmanifest">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

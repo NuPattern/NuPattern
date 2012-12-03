@@ -10,8 +10,6 @@
     <Version><#=VsixInfo.PatternToolkitRuntime.Version #></Version>
     <Description>The design time experience for creating pattern toolkits that guide and automate the creation of elements in a solution.</Description>
     <Locale>1033</Locale>
-	<Icon>Resources\DesignTimeVsix.png</Icon>
-	<PreviewImage>Resources\DesignTimeVsixPreview.png</PreviewImage>
 	<InstalledByMsi>false</InstalledByMsi>
     <SupportedProducts>
       <VisualStudio Version="10.0">

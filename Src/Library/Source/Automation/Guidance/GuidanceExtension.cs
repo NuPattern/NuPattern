@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
     /// </summary>
     public partial class GuidanceExtension
     {
-        private static readonly string guidanceIconPath = ""; //"Resources/ShowGuidanceIcon.png";
+        private static readonly string guidanceIconPath = ""; //"Resources/CommandShowGuidance.png";
 
         /// <summary>
         /// Ensures the associated commands and launchpoint automation are created and configured correctly.

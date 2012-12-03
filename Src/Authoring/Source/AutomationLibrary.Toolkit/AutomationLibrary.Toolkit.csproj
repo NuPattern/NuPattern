@@ -173,8 +173,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ToolkitVersionInfo.tt</DependentUpon>
     </None>
-    <Resource Include="Resources\TransformIcon.png" />
-    <Resource Include="Resources\LibraryToolkitIcon.png" />
     <ItemTemplate Include="Assets\Templates\Items\Extensibility\Command\Command.vstemplate">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <AutoGen>True</AutoGen>
@@ -240,7 +238,8 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>LibraryProject.csproj</LastGenOutput>
     </None>
-    <Content Include="Assets\Templates\Projects\Extensibility\Library\Library.ico">
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsTemplateIconAutomationLibraryProject.ico">
+      <Link>Assets\Templates\Projects\Extensibility\Library\VsTemplateIconAutomationLibraryProject.ico</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="9be0eaf7-8717-414f-97fe-58c0c97be587.patterndefinition.diagram">
@@ -272,15 +271,6 @@
       <DependentUpon>Library.tt</DependentUpon>
       <ItemGuid>07d8d448-a0b0-49d5-8b2e-f51239a49d63</ItemGuid>
     </ProjectTemplate>
-    <Resource Include="Resources\AutomationClassIcon.png" />
-    <Content Include="Resources\DesignTimeVsix.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Resources\DesignTimeVsixPreview.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <EmbeddedResource Include="PatternModel.patterndefinition">
       <DependentUpon>PatternModel.tt</DependentUpon>
       <ItemGuid>c8131dba-0954-41b1-bf71-defcc7035456</ItemGuid>
@@ -422,6 +412,27 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandTransformTemplates.png">
+      <Link>Resources\CommandTransformTemplates.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\PatternNodeAutomationLibrary.png">
+      <Link>Resources\PatternNodeAutomationLibrary.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\NodeCustomAutomationClass.png">
+      <Link>Resources\NodeCustomAutomationClass.png</Link>
+    </Resource>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixIconAutomationLibrary.png">
+      <Link>Resources\VsixIconAutomationLibrary.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixPreviewAutomationLibrary.png">
+      <Link>Resources\VsixPreviewAutomationLibrary.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />

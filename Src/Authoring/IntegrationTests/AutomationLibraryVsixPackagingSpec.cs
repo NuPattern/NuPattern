@@ -39,8 +39,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 				
 				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
 				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
-				Assert.Equal(@"Resources\DesignTimeVsix.png", this.VsixInfo.Header.Icon);
-				Assert.Equal(@"Resources\DesignTimeVsixPreview.png", this.VsixInfo.Header.PreviewImage);
+				Assert.Equal(@"Resources\VsixIconAutomationLibrary.png", this.VsixInfo.Header.Icon);
+				Assert.Equal(@"Resources\VsixPreviewAutomationLibrary.png", this.VsixInfo.Header.PreviewImage);
 				Assert.Equal(new Uri(@"http://vspat.codeplex.com"), this.VsixInfo.Header.MoreInfoUrl);
 				Assert.Equal(new Uri(@"http://vspat.codeplex.com/wikipage?title=Getting%20Started"), this.VsixInfo.Header.GettingStartedGuide);
 
@@ -134,8 +134,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 Assert.True(this.FolderContainsExclusive(@"Resources",
                     new[]
                         {
-                            "DesignTimeVsix.png",
-                            "DesignTimeVsixPreview.png",
+                            "VsixIconAutomationLibrary.png",
+                            "VsixPreviewAutomationLibrary.png",
                         }));
 			}
 

@@ -12,7 +12,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
     /// </summary>
     public partial class ArtifactExtension
     {
-        private static readonly string navigateIconPath = ""; //"Resources/NavigateSolutionItemIcon.png";
+        private static readonly string navigateIconPath = ""; //"Resources/CommandNavigateSolutionItem.png";
 
         /// <summary>
         /// Ensures the associated commands and launchpoint automation are created and configured correctly.

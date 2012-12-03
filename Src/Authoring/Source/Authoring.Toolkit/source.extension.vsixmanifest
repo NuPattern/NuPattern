@@ -7,10 +7,10 @@
 		<Description xml:space="preserve">An extension for designing and building Pattern Toolkit extensions, that combine automation and guidance with design patterns for repeatable solution development.</Description>
 		<Locale>1033</Locale>
 		<License>LICENSE.txt</License>
-		<Icon>Resources\DesignTimeVsix.png</Icon>
+		<Icon>Resources\VsixIconAuthoring.png</Icon>
 		<MoreInfoUrl>http://vspat.codeplex.com</MoreInfoUrl>
 		<GettingStartedGuide>http://vspat.codeplex.com/wikipage?title=Getting%20Started</GettingStartedGuide>
-		<PreviewImage>Resources\DesignTimeVsixPreview.png</PreviewImage>
+		<PreviewImage>Resources\VsixPreviewAuthoring.png</PreviewImage>
 		<SupportedProducts>
 		  <VisualStudio Version="11.0">
 			<Edition>Pro</Edition>

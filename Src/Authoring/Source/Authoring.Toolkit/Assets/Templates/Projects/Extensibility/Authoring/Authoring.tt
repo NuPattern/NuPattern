@@ -14,7 +14,7 @@
 		<ProvideDefaultName>true</ProvideDefaultName>
 		<LocationField>Enabled</LocationField>
 		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
-		<Icon>Authoring.ico</Icon>
+		<Icon>VsTemplateIconAuthoringProject.ico</Icon>
     <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
 		<Hidden>false</Hidden>
 	</TemplateData>
@@ -24,8 +24,8 @@
 				<ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
 			</Folder>
 			<Folder Name="Resources">
-				<ProjectItem ReplaceParameters="false">ToolkitIcon.png</ProjectItem>
-				<ProjectItem ReplaceParameters="false">PatternIcon.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="ToolkitIcon.png">VsixIconAuthoringProjectTemplate.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="PatternIcon.png">PatternNodeDefault.png</ProjectItem>
 			</Folder>
 		</Project>
 	</TemplateContent>
