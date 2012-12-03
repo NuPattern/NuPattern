@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -86,7 +87,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenExposesIconPath()
             {
-                Assert.Equal("../../Resources/" + this.element.GetType().Name + ".png", this.target.IconPath);
+                Assert.Equal(string.Format(CultureInfo.InvariantCulture, ElementViewModel.IconPathFormat, this.element.GetType().Name ), this.target.IconPath);
             }
 
             [TestMethod, TestCategory("Unit")]
