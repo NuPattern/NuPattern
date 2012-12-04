@@ -7,8 +7,8 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="VsVersionStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-	<d:GrayscaleImageConverter x:Key="GrayscaleImageConverter" />
+
+    <d:DisabledImageConverter x:Key="DisabledImageConverter" />
 	<d:ImageConverter x:Key="ImageConverter" />
 
 	<Geometry x:Key="RightArrow">M 0,0 L 4,3.5 L 0,7 Z</Geometry>
@@ -194,7 +194,7 @@
 		<ControlTemplate.Triggers>
 			<Trigger Property="IsEnabled" Value="False">
 				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
-				<Setter TargetName="content" Property="Content" Value="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource GrayscaleImageConverter}}" />
+                <Setter TargetName="content" Property="Content" Value="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource DisabledImageConverter}}" />
 			</Trigger>
 		</ControlTemplate.Triggers>
 	</ControlTemplate>

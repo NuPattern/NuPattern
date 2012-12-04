@@ -53,7 +53,7 @@
     </Compile>
     <Compile Include="CommonDialogWindow.cs" />
     <Compile Include="CommonUserControl.cs" />
-    <Compile Include="Data\GrayscaleImageConverter.cs" />
+    <Compile Include="Data\DisabledImageConverter.cs" />
     <Compile Include="Data\GroupingEnumerableConverter.cs" />
     <Compile Include="Data\ImageConverter.cs" />
     <Compile Include="MenuItemSeparatorStyleSelector.cs" />
@@ -144,7 +144,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\ValidationError.png" >
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\ValidationError.png">
       <Link>Resources\ValidationError.png</Link>
     </Resource>
   </ItemGroup>

@@ -3,8 +3,8 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:d="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Data">
     
-	<d:GrayscaleImageConverter x:Key="GrayscaleImageConverter" />
-	<d:ImageConverter x:Key="ImageConverter" />
+    <d:DisabledImageConverter x:Key="DisabledImageConverter" />
+    <d:ImageConverter x:Key="ImageConverter" />
 
 	<ControlTemplate x:Key="CommandBar.Separator.Template" TargetType="Separator">
 		<Border
@@ -38,7 +38,7 @@
 			</Trigger>
 			<Trigger Property="IsEnabled" Value="False">
 				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrush}}" />
-				<Setter TargetName="content" Property="Content" Value="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource GrayscaleImageConverter}}" />
+                <Setter TargetName="content" Property="Content" Value="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource DisabledImageConverter}}" />
 			</Trigger>
 		</ControlTemplate.Triggers>
 	</ControlTemplate>
