@@ -32,11 +32,7 @@
     <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedInactiveFill" Color="{DynamicResource VsColor.NewProjectProviderInactiveBegin}" />
     <SolidColorBrush x:Key="VsVersion.ListViewItem.InnerBorder.SelectedBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
     <SolidColorBrush x:Key="VsVersion.ListViewItem.InnerBorder.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectProviderInactiveBegin}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.UpperHighlight.Fill" Color="{DynamicResource VsColor.NewProjectItemSelected}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.UpperHighlight.SelectedFill" Color="{DynamicResource VsColor.NewProjectItemSelected}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.UpperHighlight.HoverFill" Color="{DynamicResource VsColor.NewProjectProviderHoverBegin}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.UpperHighlight.SelectedHoverFill" Color="{DynamicResource VsColor.NewProjectItemSelected}" />
-  
+
     <!-- TreeView -->
     <SolidColorBrush x:Key="VsVersion.TreeViewToggleButton.Border" Color="{DynamicResource VsColor.WindowText}" />
     <SolidColorBrush x:Key="VsVersion.TreeViewToggleButton.Fill" Color="Transparent" />
@@ -107,29 +103,48 @@
     <!-- ListBox -->
     <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
     <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedFill" Color="{DynamicResource VsColor.NewProjectItemSelected}" />
-    <SolidColorBrush x:Key="VsVersion.ListBoxItem.HoverBorder" Color="{DynamicResource VsColor.NewProjectProviderHoverBegin}" />
-    <SolidColorBrush x:Key="VsVersion.ListBoxItem.HoverFill" Color="{DynamicResource VsColor.NewProjectProviderHoverBegin}" />
-    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedHoverBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
-    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedHoverFill" Color="{DynamicResource VsColor.NewProjectItemSelected}" />
-    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectProviderInactiveBegin}" />
-    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveFill" Color="{DynamicResource VsColor.NewProjectProviderInactiveBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ListBoxItem.HoverBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
+    <!--<SolidColorBrush x:Key="VsVersion.ListBoxItem.HoverFill" Color="{DynamicResource VsColor.NewProjectProviderHoverBegin}" />-->
+  <LinearGradientBrush x:Key="VsVersion.ListBoxItem.HoverFill"
+                     StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
+                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
+                     GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"/>
   
-    <!-- ListView -->
+    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedHoverBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
+    <!--<SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedHoverFill" Color="{DynamicResource VsColor.NewProjectItemSelected}" />-->
+  <LinearGradientBrush x:Key="VsVersion.ListBoxItem.SelectedHoverFill"
+                     StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
+                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
+                     GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"/>
+
+  <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBorder}" />
+    <!--<SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveFill" Color="{DynamicResource VsColor.NewProjectProviderInactiveBegin}" />-->
+  <LinearGradientBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveFill"
+                     StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
+                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
+                     GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"/>
+
+  <!-- ListView -->
     <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
     <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedFill" Color="{DynamicResource VsColor.NewProjectItemSelected}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.HoverBorder" Color="{DynamicResource VsColor.NewProjectProviderHoverBegin}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.HoverFill" Color="{DynamicResource VsColor.NewProjectProviderHoverBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.HoverBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
+    <LinearGradientBrush x:Key="VsVersion.ListViewItem.HoverFill" 
+                         StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}" 
+                         EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
+                         GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"/>
     <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedHoverBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedHoverFill" Color="{DynamicResource VsColor.NewProjectItemSelected}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectProviderInactiveBegin}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedInactiveFill" Color="{DynamicResource VsColor.NewProjectProviderInactiveBegin}" />
+    <LinearGradientBrush x:Key="VsVersion.ListViewItem.SelectedHoverFill" 
+                         StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}" 
+                         EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
+                         GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"/>
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBorder}" />
+    <LinearGradientBrush x:Key="VsVersion.ListViewItem.SelectedInactiveFill" 
+                         StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}" 
+                         EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
+                         GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"/>  
     <SolidColorBrush x:Key="VsVersion.ListViewItem.InnerBorder.SelectedBorder" Color="#80FFFFFF" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.InnerBorder.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectProviderInactiveBegin}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.UpperHighlight.Fill" Color="#75FFFFFF" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.UpperHighlight.SelectedFill" Color="#40FFFFFF" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.UpperHighlight.HoverFill" Color="#40FFFFFF" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.UpperHighlight.SelectedHoverFill" Color="#40FFFFFF" />
-  
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.InnerBorder.SelectedInactiveBorder" Color="Transparent" />
+
     <!-- TreeView -->
     <SolidColorBrush x:Key="VsVersion.TreeViewToggleButton.Border" Color="{DynamicResource VsColor.WindowText}" />
     <SolidColorBrush x:Key="VsVersion.TreeViewToggleButton.Fill" Color="Transparent" />
