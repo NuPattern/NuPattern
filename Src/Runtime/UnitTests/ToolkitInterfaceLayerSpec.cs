@@ -100,7 +100,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
         [TestMethod, TestCategory("Unit")]
         public void WhenAsViewFindsCachedLayer_ThenReturnsSameInstance()
         {
-            var definitionId = new Guid(typeof(IArchitecture).GetCustomAttribute<ToolkitInterfaceAttribute>(true).DefinitionId);
+            var definitionId = new Guid(ReflectionExtensions.GetCustomAttribute<ToolkitInterfaceAttribute>(typeof(IArchitecture), true).DefinitionId);
             var bag = new Dictionary<object, object>();
             var cached = Mock.Of<IArchitecture>();
             var target = Mock.Of<IView>(x => x.Root.ProductState.PropertyBag == bag && x.DefinitionId == definitionId);
@@ -114,7 +114,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
         [TestMethod, TestCategory("Unit")]
         public void WhenAsIAbstractElementFindsCachedLayer_ThenReturnsSameInstance()
         {
-            var definitionId = new Guid(typeof(IFolder).GetCustomAttribute<ToolkitInterfaceAttribute>(true).DefinitionId);
+            var definitionId = new Guid(ReflectionExtensions.GetCustomAttribute<ToolkitInterfaceAttribute>(typeof(IFolder), true).DefinitionId);
             var bag = new Dictionary<object, object>();
             var cached = Mock.Of<IFolder>();
             var target = Mock.Of<IAbstractElement>(x => x.Root.ProductState.PropertyBag == bag && x.DefinitionId == definitionId);
@@ -128,7 +128,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
         [TestMethod, TestCategory("Unit")]
         public void WhenAsProductFindsCachedLayer_ThenReturnsSameInstance()
         {
-            var definitionId = new Guid(typeof(IWebService).GetCustomAttribute<ToolkitInterfaceAttribute>(true).DefinitionId);
+            var definitionId = new Guid(ReflectionExtensions.GetCustomAttribute<ToolkitInterfaceAttribute>(typeof(IWebService), true).DefinitionId);
             var bag = new Dictionary<object, object>();
             var cached = Mock.Of<IWebService>();
             var target = Mock.Of<IProduct>(x => x.Root.ProductState.PropertyBag == bag && x.DefinitionId == definitionId);
@@ -142,7 +142,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
         [TestMethod, TestCategory("Unit")]
         public void WhenAsIProductElementFindsCachedLayer_ThenReturnsSameInstance()
         {
-            var definitionId = new Guid(typeof(IDataContract).GetCustomAttribute<ToolkitInterfaceAttribute>(true).DefinitionId);
+            var definitionId = new Guid(ReflectionExtensions.GetCustomAttribute<ToolkitInterfaceAttribute>(typeof(IDataContract), true).DefinitionId);
             var bag = new Dictionary<object, object>();
             var cached = Mock.Of<IDataContract>();
             var target = Mock.Of<IElement>(x => x.Root.ProductState.PropertyBag == bag && x.DefinitionId == definitionId);
@@ -156,7 +156,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
         [TestMethod, TestCategory("Unit")]
         public void WhenAsIInstanceBaseFindsCachedLayer_ThenReturnsSameInstance()
         {
-            var definitionId = new Guid(typeof(IFolder).GetCustomAttribute<ToolkitInterfaceAttribute>(true).DefinitionId);
+            var definitionId = new Guid(ReflectionExtensions.GetCustomAttribute<ToolkitInterfaceAttribute>(typeof(IFolder), true).DefinitionId);
             var bag = new Dictionary<object, object>();
             var cached = Mock.Of<IFolder>();
             var element = new Mock<IAbstractElement>();

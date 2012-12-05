@@ -4,9 +4,9 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Reflection;
 using System.Threading;
 using Microsoft.VisualStudio.Patterning.Runtime.Interfaces;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime
@@ -407,10 +407,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
                 .Select(extension => GetInterfaceLayer(extension, () => productProxyFactory(extension)));
         }
 
-        private static PropertyInfo GetExpressionPropertyOrThrow<TProperty>(Expression<Func<TProperty>> propertyExpression)
+        private static System.Reflection.PropertyInfo GetExpressionPropertyOrThrow<TProperty>(Expression<Func<TProperty>> propertyExpression)
         {
             var member = propertyExpression.Body as MemberExpression;
-            if (member == null || !(member.Member is PropertyInfo))
+            if (member == null || !(member.Member is System.Reflection.PropertyInfo))
             {
                 throw new ArgumentException(string.Format(
                     CultureInfo.CurrentCulture,
@@ -418,10 +418,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
                     propertyExpression), "propertyExpression");
             }
 
-            return (PropertyInfo)member.Member;
+            return (System.Reflection.PropertyInfo)member.Member;
         }
 
-        private static PropertyDescriptor GetInterfacePropertyOrThrow<TInterface>(PropertyInfo expressionProperty)
+        private static PropertyDescriptor GetInterfacePropertyOrThrow<TInterface>(System.Reflection.PropertyInfo expressionProperty)
         {
             var property = TypeDescriptor.GetProperties(typeof(TInterface)).Find(expressionProperty.Name, false);
             if (property == null)
@@ -435,7 +435,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 
         private static ToolkitInterfaceAttribute GetToolkitInterfaceAttributeOrThrow(Type type)
         {
-            var toolkitInterface = type.GetCustomAttribute<ToolkitInterfaceAttribute>();
+            var toolkitInterface = ReflectionExtensions.GetCustomAttribute<ToolkitInterfaceAttribute>(type);
             if (toolkitInterface == null)
                 throw new NotSupportedException(string.Format(
                     CultureInfo.CurrentCulture,
@@ -492,7 +492,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 
                     return layer as IToolkitInterface;
                 }
-                catch (TargetInvocationException tie)
+                catch (System.Reflection.TargetInvocationException tie)
                 {
                     tracer.TraceError(tie.InnerException, "Failed to instantiate the interface layer proxy type '{0}'.", proxyType);
                 }
@@ -601,7 +601,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
                     expectedInterface.FullName));
         }
 
-        private static ConstructorInfo GetProxyConstructorOrThrow(Type proxyType, Type argumentType)
+        private static System.Reflection.ConstructorInfo GetProxyConstructorOrThrow(Type proxyType, Type argumentType)
         {
             var constructor = proxyType.GetConstructor(new[] { argumentType });
             if (constructor == null)

@@ -1,0 +1,171 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<!--
+	File containing MSBuild targets specific to building DSL tools.
+-->
+	<Import Project="Microsoft.DSLTools.Settings.targets" />
+
+	<!-- Import the T4 targets for optional use of T4 from msbuild for compile-time code generation -->
+	<PropertyGroup>
+		<IncludeDslT4Settings>true</IncludeDslT4Settings>
+	</PropertyGroup>
+	<Import Project="..\..\TextTemplating\v$(T4Version)\Microsoft.TextTemplating.targets" />
+	
+	<!--
+	Target for clearing the toolbox cache in exp hive - required when modifing the mapping between 
+	a toolbox item and the MEL(s) it's creating when dropped on the design surface.
+	Note: The target will clear the cache only in the Exp hive.
+	-->
+	<UsingTask TaskName="CleanToolboxCache" AssemblyFile="Microsoft.DSLTools.Build.Tasks.dll" />
+
+	<PropertyGroup>
+		<ClearToolboxCacheInExpHive Condition="'$(ClearToolboxCacheInExpHive)' == ''">false</ClearToolboxCacheInExpHive>
+		<BuildDependsOn>$(BuildDependsOn);DSLClearToolboxCache</BuildDependsOn>
+	</PropertyGroup>
+
+	<Target Name="DSLClearToolboxCache"
+		Condition="'$(ClearToolboxCacheInExpHive)'=='true'">
+		<CleanToolboxCache />
+	</Target>
+
+	<!-- 
+	  Target to locate DSL Tools include paths. 
+	-->
+	<UsingTask TaskName="FindDslToolsInstallation" AssemblyFile="Microsoft.DSLTools.Build.Tasks.dll" />
+	<PropertyGroup>
+		<CtcCompileDependsOn>$(CtcCompileDependsOn);DSLToolsAppendIncludePath</CtcCompileDependsOn>
+		<VSCTCompileDependsOn>$(VSCTCompileDependsOn);DSLToolsAppendIncludePath</VSCTCompileDependsOn>
+		<MergeCtoResourceDependsOn>$(MergeCtoResourceDependsOn);DSLToolsCreatePackageResources</MergeCtoResourceDependsOn>
+	</PropertyGroup>
+	<Target Name="DSLToolsFindInstallation"
+          Condition="'$(DslToolsIncludes)'==''">
+		<FindDslToolsInstallation>
+			<Output TaskParameter="DslToolsIncludes" PropertyName="DslToolsIncludes" />
+		</FindDslToolsInstallation>
+	</Target>
+	
+	<!-- 
+	  Target to add DSL tools include paths to VSCT & CTC include directories. 
+	-->
+	<Target Name="DSLToolsAppendIncludePath"
+		 DependsOnTargets="DSLToolsFindInstallation">
+		<CreateItem Include="$(DslToolsIncludes)">
+			<Output ItemName="CtcIncludePath" TaskParameter="Include"/>
+			<Output ItemName="VSCTIncludePath" TaskParameter="Include"/>
+		</CreateItem>
+	</Target>
+	
+	<!-- 
+	  Target to set up required VSCT/CTC resource properties/items, if they don't already exist. 
+	  If the project doesn't specify a no-culture .resources file to merge the CTO into, this
+	  target will create one with the name VSPackage.resources; the VS managed resource loader
+	  is optimized to look for a resource with this name first.
+	-->
+	<Target Name="DSLToolsCreatePackageResources"
+		 Condition="'@(_ResourcesToMergeWithCTO)'=='' And '$(PackageResources)'==''" 
+		 DependsOnTargets="GenerateResourceToMergeWithCTO">
+		<CreateItem Include="$(IntermediateOutputPath)VSPackage.resources" AdditionalMetadata="Type=Non-Resx;LogicalName=VSPackage.resources;WithCulture=false">
+			<Output ItemName="EmbeddedResource" TaskParameter="Include"/>
+		</CreateItem>
+		<CreateProperty Value="$(IntermediateOutputPath)VSPackage.resources">
+			<Output TaskParameter="Value" PropertyName="PackageResources"/>
+		</CreateProperty>
+	</Target>
+
+  <!--
+    Target to check whether we need to update the DevenvSetup.cache file so that devenv /setup doesn't 
+    run on first build.
+  -->
+  <PropertyGroup>
+    <SettingUpDevenvDependsOn>$(SettingUpDevenvDependsOn);DSLToolsUpdateDevenvSetupCacheFile</SettingUpDevenvDependsOn>
+  </PropertyGroup>
+  <Target Name="DSLToolsUpdateDevenvSetupCacheFile"
+		 Condition="'$(BuildingProject)'=='True' And Exists('$(IntermediateOutputPath)FirstBuild.cache')" >
+    <Delete Files="$(IntermediateOutputPath)FirstBuild.cache" />
+    <WriteLinesToFile File="$(DevenvSetupStateFile)" Lines="' '" Overwrite="true"/>
+  </Target>
+
+  <!-- 
+	  Targets for creating project item template zip archives. 
+	-->
+  <UsingTask TaskName="CreateProjectItemTemplate" AssemblyFile="Microsoft.DSLTools.Build.Tasks.dll" />
+  <UsingTask TaskName="GetProjectItemTemplateInfo" AssemblyFile="Microsoft.DSLTools.Build.Tasks.dll" />
+  <PropertyGroup>
+    <CompileDependsOn>$(CompileDependsOn);DSLToolsCreateProjectItemTemplates;DSLToolsDeployProjectItemTemplates;DSLToolsRecordProjectItemTemplateFileWrites</CompileDependsOn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ItemTemplateCleanFile Condition="'$(ItemTemplateCleanFile)'==''">$(MSBuildProjectFile).ItemTemplates.txt</ItemTemplateCleanFile>
+    <CleanDependsOn>$(CleanDependsOn);DSLToolsCleanProjectItemTemplates</CleanDependsOn>
+  </PropertyGroup>
+  <Target
+	  Name="DSLToolsGetProjectItemTemplateInfo"
+	  Condition="'@(VSItemTemplate)'!='' And '$(BuildingProject)'=='true'">
+    <GetProjectItemTemplateInfo
+			TemplateFiles="@(VSItemTemplate)">
+			<Output TaskParameter="OutputFiles" ItemName="ItemTemplateOutputFiles" />
+			<Output TaskParameter="TemplateContentFiles" ItemName="ItemTemplateContentFiles" />
+			<Output TaskParameter="ItemTemplateRootDirectory" PropertyName="ItemTemplateRootDirectory" />
+		</GetProjectItemTemplateInfo>
+	</Target>
+	<Target
+	  Name="DSLToolsCreateProjectItemTemplates"
+	  Condition="'$(BuildingProject)'=='true'"
+	  Inputs="@(VSItemTemplate);@(ItemTemplateContentFiles)" 
+	  Outputs="@(ItemTemplateOutputFiles->'$(OutDir)%(Identity)')" 
+	  DependsOnTargets="DSLToolsGetProjectItemTemplateInfo">
+		<CreateProjectItemTemplate
+			TemplateFiles="@(VSItemTemplate)"
+			TemplateContentFiles="@(ItemTemplateContentFiles)"
+			OutputFiles="@(ItemTemplateOutputFiles->'$(OutDir)%(Identity)')" />
+
+		<ItemGroup>
+			<VSIXSourceItem Include="@(ItemTemplateOutputFiles->'$(OutDir)%(Identity)')">
+				<VSIXSubPath>ItemTemplates\%(RelativeDir)</VSIXSubPath>
+			</VSIXSourceItem>
+		</ItemGroup>
+	</Target>
+
+	<!--
+	  Target for copying project item template to the appropriate VS installation directories.
+	  This target runs only if the RegisterOutputPackage property is set.
+	-->
+	<Target
+	  Name="DSLToolsDeployProjectItemTemplates"
+	  Condition="'$(BuildingProject)'=='true' And '$(RegisterOutputPackage)'=='true' And '$(ItemTemplateRootDirectory)'!=''"
+	  DependsOnTargets="DSLToolsCreateProjectItemTemplates" 
+	  Inputs="@(VSItemTemplate);@(ItemTemplateContentFiles)"
+	  Outputs="@(ItemTemplateOutputFiles->'$(ItemTemplateRootDirectory)\%(Identity)')">
+		<Copy SourceFiles="@(ItemTemplateOutputFiles->'$(OutDir)%(Identity)')" 
+		  DestinationFiles="@(ItemTemplateOutputFiles->'$(ItemTemplateRootDirectory)\%(Identity)')"/>
+		
+		<!-- implement our own clean mechanism for files in VS ItemTemplates directory.  Standard clean only cleans intermediate and/or output files. -->
+		<!-- Make sure the directory exists. -->
+		<MakeDir Directories="$(BaseIntermediateOutputPath)"/>
+
+		<!-- Write list of deployed item template files to disk. -->
+		<WriteLinesToFile File="$(BaseIntermediateOutputPath)$(ItemTemplateCleanFile)" Lines="@(ItemTemplateOutputFiles->'$(ItemTemplateRootDirectory)\%(Identity)')" Overwrite="true" />
+	</Target>
+
+	<!--
+	  Targets for cleaning project item template files.
+	  DSLToolsCleanProjectItemTemplates, which removes files from the VS installation,
+	  runs only if the RegisterOutputPackage property is set.
+	-->
+	<Target Name="DSLToolsRecordProjectItemTemplateFileWrites">
+		<!-- Use standard Microsoft.Common.Targets clean mechanism for files in output directory. -->
+		<CreateItem Include="@(ItemTemplateOutputFiles->'$(OutDir)%(Identity)')">
+			<Output ItemName="FileWrites" TaskParameter="Include"/>
+		</CreateItem>
+	</Target>
+	<Target Name="DSLToolsCleanProjectItemTemplates"
+		 Condition="'$(RegisterOutputPackage)'=='true'">
+		<!-- Read in list of item template files that were written to disk in past builds. -->
+		<ReadLinesFromFile File="$(BaseIntermediateOutputPath)$(ItemTemplateCleanFile)">
+			<Output TaskParameter="Lines" ItemName="_CleanPriorItemTemplateWrites"/>
+		</ReadLinesFromFile>
+		<!-- Delete those files. -->
+		<Delete 
+		  Files="@(_CleanPriorItemTemplateWrites);$(BaseIntermediateOutputPath)$(ItemTemplateCleanFile)"
+		  TreatErrorsAsWarnings="false">
+		</Delete>
+	</Target>
+</Project>

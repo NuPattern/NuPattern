@@ -24,7 +24,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 		private IPatternManager manager;
 		private IInstalledToolkitInfo toolkit;
 	    private EnvDTE.DTE dte;
+#if VSVER11
 	    private string testToolkitTemplatePath;
+#endif
 
 		[TestInitialize]
 		public override void Initialize()
@@ -50,6 +52,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 #endif
         }
 
+#if VSVER11
+
 	    [TestCleanup]
 	    public void CleanUp()
 	    {
@@ -58,8 +62,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
                 Directory.Delete(Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath), true);
 	        }
 	    }
+#endif
 
-	    [HostType("VS IDE")]
+        [HostType("VS IDE")]
 		[TestMethod, TestCategory("Integration")]
         public void WhenFindToolkitOrThrowWithUnknownTemplate_ThenThrows()
 		{

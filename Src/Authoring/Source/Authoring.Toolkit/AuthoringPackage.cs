@@ -14,7 +14,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
     [CLSCompliant(false)]
     [Guid("4AABC2F4-D907-4685-A5E7-9FB851DAC3E9")]
     [ComVisible(true)]
-    [ProvideBindingPath]
+    [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
     partial class AuthoringPackage
     {
         /// <summary>

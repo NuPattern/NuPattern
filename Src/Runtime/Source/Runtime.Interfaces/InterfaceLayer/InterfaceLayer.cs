@@ -217,7 +217,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 
 		private static string GetDesignerOrThrow(Type type)
 		{
-			var designer = type.GetCustomAttribute<DesignerAttribute>();
+			var designer = ReflectionExtensions.GetCustomAttribute<DesignerAttribute>(type);
 			if (designer == null)
 				throw new NotSupportedException(string.Format(
 					CultureInfo.CurrentCulture,
@@ -241,7 +241,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 
 		private static Type GetProxyTypeOrThrow(Type type)
 		{
-			var designer = type.GetCustomAttribute<DesignerAttribute>();
+			var designer = ReflectionExtensions.GetCustomAttribute<DesignerAttribute>(type);
 			if (designer == null)
 				throw new NotSupportedException(string.Format(
 					CultureInfo.CurrentCulture,

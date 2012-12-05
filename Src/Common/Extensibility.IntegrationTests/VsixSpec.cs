@@ -8,8 +8,16 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.IntegrationTests
 	public class VsixSpec
 	{
 		private static readonly IAssertion Assert = new Assertion();
+#if VSVER10
+        private const string VsixContentTypeMefComponent = "MefComponent";
+        private const string VsixContentTypeProjectTemplate = "ProjectTemplate";
+#endif
+#if VSVER11
+        private const string VsixContentTypeMefComponent = "Microsoft.VisualStudio.MefComponent";
+        private const string VsixContentTypeProjectTemplate = "Microsoft.VisualStudio.ProjectTemplate";
+#endif
 
-		[TestClass]
+        [TestClass]
 		[DeploymentItem("Extensibility.IntegrationTests.Content", "Extensibility.IntegrationTests.Content")]
 		public class GivenAVsixFile
 		{
@@ -122,8 +130,8 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.IntegrationTests
 				var extension = Vsix.ReadManifest("Extensibility.IntegrationTests.Content\\Toolkit1.vsix");
 
 				Assert.Equal("Toolkit1", extension.Header.Name);
-                Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "Microsoft.VisualStudio.MefComponent").Count());
-				Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "Microsoft.VisualStudio.ProjectTemplate").Count());
+                Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeMefComponent).Count());
+				Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeProjectTemplate).Count());
 				Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "PatternModel").Count());
 			}
 
@@ -135,8 +143,8 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.IntegrationTests
 					var extension = Vsix.ReadManifest(vsixFile);
 
 					Assert.Equal("Toolkit1", extension.Header.Name);
-                    Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "Microsoft.VisualStudio.MefComponent").Count());
-                    Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "Microsoft.VisualStudio.ProjectTemplate").Count());
+                    Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeMefComponent).Count());
+                    Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeProjectTemplate).Count());
 					Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "PatternModel").Count());
 				}
 			}
@@ -152,8 +160,8 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.IntegrationTests
 				var extension = Vsix.ReadManifest("Extensibility.IntegrationTests.Content\\GivenAVsixManifestFile\\extension.vsixmanifest");
 
 				Assert.Equal("Toolkit1", extension.Header.Name);
-                Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "Microsoft.VisualStudio.MefComponent").Count());
-                Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "Microsoft.VisualStudio.ProjectTemplate").Count());
+                Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeMefComponent).Count());
+                Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeProjectTemplate).Count());
 				Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "PatternModel").Count());
 			}
 

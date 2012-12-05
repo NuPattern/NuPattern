@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <!-- Visual Studio Properties -->
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.VisualStudioVersion.v11.Common.props" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+
+    <!-- Visual Studio Properties -->
+  <Import Condition="'$(VisualStudioVersion)' == '11.0'" Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <Import Condition="'$(VisualStudioVersion)' == '11.0'" Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.VisualStudioVersion.v11.Common.props" />
 
   <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
-    <OldToolsVersion>4.0</OldToolsVersion>
+    <!--<VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>-->
+    <OldToolsVersion Condition="'$(VisualStudioVersion)' == '11.0'">4.0</OldToolsVersion>
     <MinimumVisualStudioVersion>$(VisualStudioVersion)</MinimumVisualStudioVersion>
     <BranchReferencesPath>$(BranchRoot)..\Lib</BranchReferencesPath>
   </PropertyGroup>
@@ -15,7 +19,8 @@
   <!-- Targets for References -->
   <PropertyGroup>
     <TargetVsVersion>$(VisualStudioVersion)</TargetVsVersion>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(VisualStudioVersion)' == '10.0'">v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(VisualStudioVersion)' == '11.0'">v4.5</TargetFrameworkVersion>
     <MpfVersion>$(TargetVsVersion)</MpfVersion>
     <VsxVersionSuffix Condition="'$(VsxVersionSuffix)' == ''">.$(MpfVersion)</VsxVersionSuffix>
     <MpfVersionSuffix Condition="'$(MpfVersionSuffix)' == ''">.$(MpfVersion)</MpfVersionSuffix>
