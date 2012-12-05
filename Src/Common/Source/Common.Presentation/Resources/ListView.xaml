@@ -15,7 +15,6 @@
 						<RowDefinition MaxHeight="11"/>
 						<RowDefinition/>
 					</Grid.RowDefinitions>
-                    <Rectangle x:Name="UpperHighlight" Fill="{StaticResource VsVersion.ListViewItem.UpperHighlight.Fill}" Visibility="Collapsed"/>
 					<GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Grid.RowSpan="2"/>
 				</Grid>
 			</Border>
@@ -24,15 +23,11 @@
 			<Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Background" Value="{StaticResource  VsVersion.ListViewItem.HoverFill}"/>
                 <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.HoverBorder}"/>
-				<Setter Property="Visibility" TargetName="UpperHighlight" Value="Visible"/>
-                <Setter Property="Fill" TargetName="UpperHighlight" Value="{StaticResource VsVersion.ListViewItem.UpperHighlight.HoverFill}"/>
             </Trigger>
 			<Trigger Property="IsSelected" Value="true">
                 <Setter Property="Background" Value="{StaticResource VsVersion.ListViewItem.SelectedFill}"/>
                 <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.SelectedBorder}"/>
                 <Setter Property="BorderBrush" TargetName="InnerBorder" Value="{StaticResource VsVersion.ListViewItem.InnerBorder.SelectedBorder}"/>
-				<Setter Property="Visibility" TargetName="UpperHighlight" Value="Visible"/>
-                <Setter Property="Fill" TargetName="UpperHighlight" Value="{StaticResource VsVersion.ListViewItem.UpperHighlight.SelectedFill}"/>
 			</Trigger>
 			<MultiTrigger>
 				<MultiTrigger.Conditions>
@@ -42,7 +37,6 @@
                 <Setter Property="Background" Value="{StaticResource VsVersion.ListViewItem.SelectedInactiveFill}"/>
                 <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.SelectedInactiveBorder}"/>
                 <Setter Property="BorderBrush" TargetName="InnerBorder" Value="{StaticResource VsVersion.ListViewItem.InnerBorder.SelectedInactiveBorder}"/>
-                <Setter Property="Fill" TargetName="UpperHighlight" Value="{StaticResource VsVersion.ListViewItem.SelectedInactiveFill}"/>
             </MultiTrigger>
 			<MultiTrigger>
 				<MultiTrigger.Conditions>
@@ -51,7 +45,6 @@
 				</MultiTrigger.Conditions>
                 <Setter Property="Background" Value="{StaticResource VsVersion.ListViewItem.SelectedHoverFill}"/>
                 <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.SelectedHoverBorder}"/>
-                <Setter Property="Fill" TargetName="UpperHighlight" Value="{StaticResource VsVersion.ListViewItem.UpperHighlight.SelectedHoverFill}"/>
             </MultiTrigger>
 			<Trigger Property="IsEnabled" Value="false">
 				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
@@ -63,7 +56,7 @@
 		<Setter Property="Background" Value="Transparent"/>
 		<Setter Property="BorderBrush" Value="Transparent"/>
 		<Setter Property="BorderThickness" Value="1"/>
-		<Setter Property="Margin" Value="0,0,0,1"/>
+		<Setter Property="Margin" Value="5,0,0,1"/>
 		<Setter Property="Padding" Value="5,2,5,2"/>
 		<Setter Property="VerticalContentAlignment" Value="Center"/>
 		<Setter Property="Template" Value="{StaticResource ListViewItem.Template}" />
@@ -76,7 +69,6 @@
 	<Style TargetType="ListView">
 		<Setter Property="BorderThickness" Value="0" />
         <Setter Property="Foreground" Value="{DynamicResource VsBrush.WindowText}"/>
-        <Setter Property="Background" Value="{DynamicResource VsBrush.ToolWindowBackground}"/>
     </Style>
 
 	<DataTemplate x:Key="SortHeader">

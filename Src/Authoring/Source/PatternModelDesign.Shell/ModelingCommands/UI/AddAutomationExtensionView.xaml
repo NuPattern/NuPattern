@@ -17,13 +17,15 @@
 			<ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/CommonStyles.xaml" />
                 <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/VsVersionStyles.xaml" />
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/ListBox.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
 			<p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />
 			<BitmapImage x:Key="DefaultProductIcon" UriSource="../../Resources/AutomationSettingsDefault.png" />
-		</ResourceDictionary>
-    </vsfx:VsDialogWindow.Resources>
+        </ResourceDictionary>
 
+    </vsfx:VsDialogWindow.Resources>
+    
     <DockPanel Background="{StaticResource VsVersion.Dialog.Background}">
 		<Grid DockPanel.Dock="Bottom" HorizontalAlignment="Right">
 			<Grid.ColumnDefinitions>
@@ -42,7 +44,7 @@
 			SelectedItem="{Binding CurrentExportedAutomation,Mode=TwoWay}"
 			IsSynchronizedWithCurrentItem="true"
 			SelectionMode="Single"
-            Background="{DynamicResource VsBrush.ToolWindowBackground}"
+            ItemContainerStyle="{StaticResource ListBoxItems}"
             Foreground="{DynamicResource VsBrush.WindowText}">
 			<ListBox.Resources>
 				<Style TargetType="ListBoxItem" BasedOn="{StaticResource {x:Type ListBoxItem}}">
@@ -67,39 +69,6 @@
 					</StackPanel>
 				</DataTemplate>
 			</ListBox.ItemTemplate>
-            <ListBox.ItemContainerStyle>
-                <Style TargetType="{x:Type ListBoxItem}">
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" Value="{StaticResource  VsVersion.ListBoxItem.HoverFill}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.HoverBorder}"/>
-                        </Trigger>
-                        <Trigger Property="IsSelected" Value="true">
-                            <Setter Property="Background" Value="{StaticResource VsVersion.ListBoxItem.SelectedFill}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.SelectedBorder}"/>
-                        </Trigger>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsSelected" Value="true"/>
-                                <Condition Property="Selector.IsSelectionActive" Value="false"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Background" Value="{StaticResource VsVersion.ListBoxItem.SelectedInactiveFill}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.SelectedInactiveBorder}"/>
-                        </MultiTrigger>
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="IsSelected" Value="true"/>
-                                <Condition Property="IsMouseOver" Value="true"/>
-                            </MultiTrigger.Conditions>
-                            <Setter Property="Background" Value="{StaticResource VsVersion.ListBoxItem.SelectedHoverFill}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListBoxItem.SelectedHoverBorder}"/>
-                        </MultiTrigger>
-                        <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </ListBox.ItemContainerStyle>
         </ListBox>
 	</DockPanel>
 </cp:CommonDialogWindow>
