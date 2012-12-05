@@ -68,9 +68,9 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 
 		private static StandardValue CreateStandardValue(Type type)
 		{
-			var displayNameAttribute = type.GetCustomAttribute<DisplayNameAttribute>(false);
-			var descriptionAttribute = type.GetCustomAttribute<DescriptionAttribute>(false);
-			var categoryAttribute = type.GetCustomAttribute<CategoryAttribute>(false);
+            var displayNameAttribute = ReflectionExtensions.GetCustomAttribute<DisplayNameAttribute>(type, false);
+            var descriptionAttribute = ReflectionExtensions.GetCustomAttribute<DescriptionAttribute>(type, false);
+            var categoryAttribute = ReflectionExtensions.GetCustomAttribute<CategoryAttribute>(type, false);
 
 			return new StandardValue(
 				displayNameAttribute != null ? displayNameAttribute.DisplayName : type.FullName,

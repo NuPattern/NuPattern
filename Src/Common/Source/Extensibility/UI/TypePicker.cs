@@ -18,7 +18,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UI
             Guard.NotNull(() => context, context);
 
             ITypeDescriptorContext delegatedContext;
-            var attribute = this.GetType().GetCustomAttribute<EditorBaseTypeAttribute>(true);
+            var attribute = ReflectionExtensions.GetCustomAttribute<EditorBaseTypeAttribute>(this.GetType(), true);
 
             if (attribute != null)
             {
