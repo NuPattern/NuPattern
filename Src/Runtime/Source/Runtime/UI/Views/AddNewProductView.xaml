@@ -88,8 +88,8 @@
 			</ListView.View>
 		</ListView>
 
-		<StackPanel Grid.Row="1" Grid.Column="1" Margin="0,6,6,6" Width="150" Background="White">
-			<TextBlock x:Name="description" Padding="3" TextWrapping="WrapWithOverflow" Foreground="Black">
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,6,6,6" Width="150" Background="{DynamicResource VsVersion.Controls.Fill}">
+            <TextBlock x:Name="description" Padding="3" TextWrapping="WrapWithOverflow" Foreground="{DynamicResource VsVersion.Controls.Text}">
 				<Run FontWeight="Bold" Text="Pattern Toolkit: " />
 				<LineBreak />
 				<Run Text="{Binding CurrentToolkit.Name,Mode=OneWay}" />

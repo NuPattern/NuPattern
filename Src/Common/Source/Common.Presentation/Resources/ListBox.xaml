@@ -1,12 +1,16 @@
 ﻿<ResourceDictionary
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:l="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation">
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="VsVersionStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
+    <Style TargetType="{x:Type ListBox}">
+        <Setter Property="Background" Value="{DynamicResource VsVersion.Controls.Fill}"/>
+        <Setter Property="Foreground" Value="{DynamicResource VsVersion.Controls.Text}"/>
+    </Style>
+    
     <Style x:Key="ListBoxItems" TargetType="{x:Type ListBoxItem}">
         <Setter Property="Template">
             <Setter.Value>

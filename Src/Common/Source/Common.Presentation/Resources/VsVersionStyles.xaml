@@ -3,52 +3,29 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!-- ContextMenu -->
-    <SolidColorBrush x:Key="VsVersion.ContextMenu.MenuItemBorder" Color="{DynamicResource VsColor.CommandBarBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ContextMenu.MenuItemBorder" Color="{DynamicResource VsColor.CommandBarMouseOverBackgroundGradient}" />
 
     <!-- ListBox -->
-    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
-    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedFill" Color="{DynamicResource VsColor.NewProjectItemSelected}" />
-    <SolidColorBrush x:Key="VsVersion.ListBoxItem.HoverBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
-    <!--<SolidColorBrush x:Key="VsVersion.ListBoxItem.HoverFill" Color="{DynamicResource VsColor.NewProjectProviderHoverBegin}" />-->
-  <LinearGradientBrush x:Key="VsVersion.ListBoxItem.HoverFill"
-                     StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
-                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
-                     GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"/>
-  
-    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedHoverBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
-    <!--<SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedHoverFill" Color="{DynamicResource VsColor.NewProjectItemSelected}" />-->
-  <LinearGradientBrush x:Key="VsVersion.ListBoxItem.SelectedHoverFill"
-                     StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
-                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
-                     GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"/>
+    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedBorder" Color="{DynamicResource VsColor.Highlight}" />
+    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedFill" Color="{DynamicResource VsColor.Highlight}" />
+    <SolidColorBrush x:Key="VsVersion.ListBoxItem.HoverBorder" Color="{DynamicResource VsColor.NewProjectProviderHoverBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ListBoxItem.HoverFill" Color="{DynamicResource VsColor.NewProjectProviderHoverBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedHoverBorder" Color="{DynamicResource VsColor.Highlight}" />
+    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedHoverFill" Color="{DynamicResource VsColor.Highlight}" />
+    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveFill" Color="{DynamicResource VsColor.NewProjectItemInactiveBegin}" />
 
-  <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBorder}" />
-    <!--<SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveFill" Color="{DynamicResource VsColor.NewProjectProviderInactiveBegin}" />-->
-  <LinearGradientBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveFill"
-                     StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
-                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
-                     GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"/>
-
-  <!-- ListView -->
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedFill" Color="{DynamicResource VsColor.NewProjectItemSelected}" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.HoverBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
-    <LinearGradientBrush x:Key="VsVersion.ListViewItem.HoverFill" 
-                         StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}" 
-                         EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
-                         GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"/>
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedHoverBorder" Color="{DynamicResource VsColor.NewProjectItemSelectedBorder}" />
-    <LinearGradientBrush x:Key="VsVersion.ListViewItem.SelectedHoverFill" 
-                         StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}" 
-                         EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
-                         GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"/>
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBorder}" />
-    <LinearGradientBrush x:Key="VsVersion.ListViewItem.SelectedInactiveFill" 
-                         StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}" 
-                         EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
-                         GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"/>  
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.InnerBorder.SelectedBorder" Color="#80FFFFFF" />
-    <SolidColorBrush x:Key="VsVersion.ListViewItem.InnerBorder.SelectedInactiveBorder" Color="Transparent" />
+    <!-- ListView -->
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedBorder" Color="{DynamicResource VsColor.Highlight}" />
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedFill" Color="{DynamicResource VsColor.Highlight}" />
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.HoverBorder" Color="{DynamicResource VsColor.NewProjectProviderHoverBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.HoverFill" Color="{DynamicResource VsColor.NewProjectProviderHoverBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedHoverBorder" Color="{DynamicResource VsColor.Highlight}" />
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedHoverFill" Color="{DynamicResource VsColor.Highlight}" />
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.SelectedInactiveFill" Color="{DynamicResource VsColor.NewProjectItemInactiveBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.InnerBorder.SelectedBorder" Color="{DynamicResource VsColor.Highlight}" />
+    <SolidColorBrush x:Key="VsVersion.ListViewItem.InnerBorder.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBegin}" />
 
     <!-- TreeView -->
     <SolidColorBrush x:Key="VsVersion.TreeViewToggleButton.Border" Color="{DynamicResource VsColor.WindowText}" />
@@ -57,24 +34,13 @@
     <SolidColorBrush x:Key="VsVersion.TreeViewToggleButton.CheckedFill" Color="{DynamicResource VsColor.WindowText}" />
     <SolidColorBrush x:Key="VsVersion.TreeViewToggleButton.HoverBorder" Color="#FF1BBBFA" />
     <SolidColorBrush x:Key="VsVersion.TreeViewToggleButton.HoverFill" Color="Transparent" />
-    <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedBorder" Color="#FF84ACDD" />
-    <LinearGradientBrush x:Key="VsVersion.TreeViewItem.SelectedFill" StartPoint="0,0" EndPoint="0,1">
-        <GradientStop Color="#FFF2F8FF" Offset="0" />
-        <GradientStop Color="#FFD0E5FF" Offset="1" />
-    </LinearGradientBrush>
-    <LinearGradientBrush x:Key="VsVersion.TreeViewItem.SelectedInactiveFill" StartPoint="0,0" EndPoint="0,1">
-        <GradientStop Color="#FFFBFBFC" Offset="0" />
-        <GradientStop Color="#FFE6E6E6" Offset="1" />
-    </LinearGradientBrush>
-    <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedInactiveBorder" Color="#FFDADADA" />
+    <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedBorder" Color="{DynamicResource VsColor.Highlight}" />
+    <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedFill" Color="{DynamicResource VsColor.Highlight}" />
+    <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedInactiveFill" Color="{DynamicResource VsColor.NewProjectItemInactiveBegin}" />
+    <SolidColorBrush x:Key="VsVersion.TreeViewItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBegin}" />
 
     <!-- WizardWindow -->
-    <LinearGradientBrush x:Key="VsVersion.WizardWindow.NavChrome.Background" EndPoint="0,1" StartPoint="0,0">
-        <GradientStop Color="#FFFFFF" Offset="0"/>
-        <GradientStop Color="#E3E8F4" Offset="0.5"/>
-        <GradientStop Color="#CFD7EB" Offset="0.5"/>
-        <GradientStop Color="#E9ECFA" Offset="1.0"/>
-    </LinearGradientBrush>
+    <SolidColorBrush x:Key="VsVersion.WizardWindow.NavChrome.Background" Color="{DynamicResource VsColor.CommandBarGradientBegin}"/>
     <LinearGradientBrush x:Key="VsVersion.WizardWindow.NavChrome.DropArrow.Fill" EndPoint="0,1" StartPoint="0,0">
         <GradientStop Color="#A0C2CCE7" Offset="0"/>
         <GradientStop Color="#60FFFFFF" Offset="1"/>
@@ -96,41 +62,10 @@
     </LinearGradientBrush>
     <SolidColorBrush x:Key="VsVersion.WizardWindow.MenuItem.HighlightBorder.Border.Border" Color="#A0FFFFFF"/>
     <SolidColorBrush x:Key="VsVersion.WizardWindow.MenuItem.Shadow.Border" Color="#71000000"/>
-    <LinearGradientBrush x:Key="VsVersion.WizardWindow.NavButton.Fill" EndPoint="0.5,1.0" StartPoint="0.5,0.0">
-        <GradientStop Color="#FFFFFF" Offset="0.0"/>
-        <GradientStop Color="#CCD4E9" Offset="0.1"/>
-        <GradientStop Color="#4881D2" Offset="0.47"/>
-        <GradientStop Color="#001A5A" Offset="0.47"/>
-        <GradientStop Color="#007BD6" Offset="0.70"/>
-        <GradientStop Color="#54DAFF" Offset="0.85"/>
-        <GradientStop Color="#86FFFF" Offset="0.95"/>
-        <GradientStop Color="#FFFFFF" Offset="1.0"/>
-    </LinearGradientBrush>
-    <LinearGradientBrush x:Key="VsVersion.WizardWindow.NavButton.HoverFill" EndPoint="0.5,1.0" StartPoint="0.5,0.0">
-        <GradientStop Color="#FFFFFF" Offset="0.0"/>
-        <GradientStop Color="#DFEDF9" Offset="0.1"/>
-        <GradientStop Color="#3086E1" Offset="0.47"/>
-        <GradientStop Color="#003B91" Offset="0.47"/>
-        <GradientStop Color="#1793EF" Offset="0.70"/>
-        <GradientStop Color="#5AD4FF" Offset="0.85"/>
-        <GradientStop Color="#BDFFFF" Offset="0.95"/>
-        <GradientStop Color="#FFFFFF" Offset="1.0"/>
-    </LinearGradientBrush>
-    <LinearGradientBrush x:Key="VsVersion.WizardWindow.NavButton.PressedFill" EndPoint="0.5,1.0" StartPoint="0.5,0.0">
-        <GradientStop Color="#C0D2F5" Offset="0.0"/>
-        <GradientStop Color="#5E7A9C" Offset="0.47"/>
-        <GradientStop Color="#00062D" Offset="0.47"/>
-        <GradientStop Color="#005F9F" Offset="0.70"/>
-        <GradientStop Color="#1FA4E2" Offset="0.85"/>
-        <GradientStop Color="#61DAFF" Offset="0.95"/>
-        <GradientStop Color="#48CFFF" Offset="1.0"/>
-    </LinearGradientBrush>
-    <LinearGradientBrush x:Key="VsVersion.WizardWindow.NavButton.Border" EndPoint="0,1" StartPoint="0,0">
-        <GradientStop Color="#6C90C4" Offset="0"/>
-        <GradientStop Color="#315BB4" Offset="0.5"/>
-        <GradientStop Color="#002091" Offset="0.5"/>
-        <GradientStop Color="#08377C" Offset="1"/>
-    </LinearGradientBrush>
+    <SolidColorBrush x:Key="VsVersion.WizardWindow.NavButton.Fill" Color="#001A5A"/>
+    <SolidColorBrush x:Key="VsVersion.WizardWindow.NavButton.HoverFill" Color="#001A5A"/>
+    <SolidColorBrush x:Key="VsVersion.WizardWindow.NavButton.PressedFill" Color="#001A5A"/>
+    <SolidColorBrush x:Key="VsVersion.WizardWindow.NavButton.Border" Color="#001A5A"/>
     <LinearGradientBrush x:Key="VsVersion.WizardWindow.NavButton.DisabledFill" EndPoint="0.5,1.0" StartPoint="0.5,0.0">
         <GradientStop Color="#FFFFFF" Offset="0"/>
         <GradientStop Color="#EBEEF5" Offset="0.5"/>
@@ -143,15 +78,16 @@
         <GradientStop Color="#EEEEEE" Offset="0.5"/>
         <GradientStop Color="#B0B0B0" Offset="1"/>
     </LinearGradientBrush>
-    <LinearGradientBrush x:Key="VsVersion.WizardWindow.NavArrow.Border" EndPoint="0,1" StartPoint="0,0">
-        <GradientStop Color="#8AB1FB" Offset="0"/>
-        <GradientStop Color="#002874" Offset="1"/>
-    </LinearGradientBrush>
+    <SolidColorBrush x:Key="VsVersion.WizardWindow.NavArrow.Border" Color="#001A5A"/>
     <SolidColorBrush x:Key="VsVersion.WizardWindow.NavArrow.DisabledFill" Color="#D0FFFFFF"/>
     <SolidColorBrush x:Key="VsVersion.WizardWindow.NavArrow.DisabledBorder" Color="#B0B5BACE"/>
-    <SolidColorBrush x:Key="VsVersion.WizardWindow.CmdButton.Panel.Fill" Color="{DynamicResource VsColor.EnvironmentBackgroundTexture2}"/>
-
-  <!-- Dialogs -->
-  <SolidColorBrush x:Key="VsVersion.Dialog.Background" Color="{DynamicResource VsColor.NewProjectBackground}"/>
-  <SolidColorBrush x:Key="VsVersion.Dialog.CmdButton.Panel.Fill" Color="{DynamicResource VsColor.EnvironmentBackgroundTexture2}"/>
+    <SolidColorBrush x:Key="VsVersion.WizardWindow.CmdButton.Panel.Fill" Color="{DynamicResource VsColor.NewProjectBackground}"/>
+  
+    <!-- Dialogs -->
+    <SolidColorBrush x:Key="VsVersion.Dialog.Background" Color="{DynamicResource VsColor.NewProjectBackground}"/>
+    <SolidColorBrush x:Key="VsVersion.Dialog.CmdButton.Panel.Fill" Color="{DynamicResource VsColor.NewProjectBackground}"/>
+    
+    <!-- Controls -->
+    <SolidColorBrush x:Key="VsVersion.Controls.Fill" Color="{DynamicResource VsColor.Window}"/>
+    <SolidColorBrush x:Key="VsVersion.Controls.Text" Color="{DynamicResource VsColor.WindowText}"/>
 </ResourceDictionary>

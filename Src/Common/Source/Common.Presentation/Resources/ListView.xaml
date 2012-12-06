@@ -68,7 +68,8 @@
 
 	<Style TargetType="ListView">
 		<Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Foreground" Value="{DynamicResource VsBrush.WindowText}"/>
+        <Setter Property="Background" Value="{DynamicResource VsVersion.Controls.Fill}"/>
+        <Setter Property="Foreground" Value="{DynamicResource VsVersion.Controls.Text}"/>
     </Style>
 
 	<DataTemplate x:Key="SortHeader">
