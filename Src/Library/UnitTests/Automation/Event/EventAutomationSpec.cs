@@ -157,7 +157,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Event
 				var context = Mocks.Of<ITypeDescriptorContext>().First(c => c.Instance == this.settings.Object);
 				var property =
 					new SettingsReferencePropertyDescriptor<IEventSettings, ICommandSettings>(
-						TypeDescriptor.GetProperties(typeof(EventSettings))[this.settings.Object.GetPropertyName(x => x.CommandId)],
+						TypeDescriptor.GetProperties(typeof(IEventSettings))[this.settings.Object.GetPropertyName(x => x.CommandId)],
 						ev => ev.CommandId);
 
 				var converter = property.Converter;
