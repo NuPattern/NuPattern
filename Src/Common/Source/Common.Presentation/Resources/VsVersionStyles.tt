@@ -5,9 +5,18 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 <# 
-  if (targetVsVersion =="11.0")
+  if (targetVsVersion == "11.0")
     {
 #>
+    <!-- TextBox -->
+    <LinearGradientBrush x:Key="VsVersion.TextBox.Fill"
+                     StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
+                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
+                     GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"/>
+    <SolidColorBrush x:Key="VsVersion.TextBox.Border" Color="{DynamicResource VsColor.ComboBoxMouseOverBorder}" />
+    <SolidColorBrush x:Key="VsVersion.TextBox.FocusedFill" Color="{DynamicResource VsColor.ComboBoxMouseDownBackground}" />
+    <SolidColorBrush x:Key="VsVersion.TextBox.FocusedBorder" Color="{DynamicResource VsColor.ComboBoxMouseDownBorder}" />
+  
     <!-- ContextMenu -->
     <SolidColorBrush x:Key="VsVersion.ContextMenu.MenuItemBorder" Color="{DynamicResource VsColor.CommandBarMouseOverBackgroundGradient}" />
 
@@ -97,6 +106,12 @@
     if (targetVsVersion == "10.0")
     {
 #>
+    <!-- TextBox -->
+    <SolidColorBrush x:Key="VsVersion.TextBox.Fill" Color="{DynamicResource VsColor.Window}" />
+    <SolidColorBrush x:Key="VsVersion.TextBox.Border" Color="{DynamicResource VsColor.ControlOutline}" />
+    <SolidColorBrush x:Key="VsVersion.TextBox.FocusedFill" Color="{DynamicResource VsColor.Window}" />
+    <SolidColorBrush x:Key="VsVersion.TextBox.FocusedBorder" Color="{DynamicResource VsColor.ControlOutline}" />
+  
     <!-- ContextMenu -->
     <SolidColorBrush x:Key="VsVersion.ContextMenu.MenuItemBorder" Color="{DynamicResource VsColor.CommandBarBorder}" />
 
@@ -113,10 +128,10 @@
                      StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
                      EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
                      GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"/>
-    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBorder}" />
+    <SolidColorBrush x:Key=                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
+"VsVersion.ListBoxItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBorder}" />
     <LinearGradientBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveFill"
                      StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
-                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
                      GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"/>
 
     <!-- ListView -->

@@ -2,6 +2,15 @@
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+    <!-- TextBox -->
+    <LinearGradientBrush x:Key="VsVersion.TextBox.Fill"
+                     StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
+                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
+                     GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"/>
+    <SolidColorBrush x:Key="VsVersion.TextBox.Border" Color="{DynamicResource VsColor.ComboBoxMouseOverBorder}" />
+    <SolidColorBrush x:Key="VsVersion.TextBox.FocusedFill" Color="{DynamicResource VsColor.ComboBoxMouseDownBackground}" />
+    <SolidColorBrush x:Key="VsVersion.TextBox.FocusedBorder" Color="{DynamicResource VsColor.ComboBoxMouseDownBorder}" />
+  
     <!-- ContextMenu -->
     <SolidColorBrush x:Key="VsVersion.ContextMenu.MenuItemBorder" Color="{DynamicResource VsColor.CommandBarMouseOverBackgroundGradient}" />
 
