@@ -128,10 +128,10 @@
                      StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
                      EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"
                      GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectProviderHoverGradient}}"/>
-    <SolidColorBrush x:Key=                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
-"VsVersion.ListBoxItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveBorder" Color="{DynamicResource VsColor.NewProjectItemInactiveBorder}" />
     <LinearGradientBrush x:Key="VsVersion.ListBoxItem.SelectedInactiveFill"
                      StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
+                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"
                      GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.NewProjectItemInactiveGradient}}"/>
 
     <!-- ListView -->
