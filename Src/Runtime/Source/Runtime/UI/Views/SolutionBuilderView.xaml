@@ -53,6 +53,7 @@
 			<TreeView
 				Name="explorer"
 				Focusable="false"
+                SnapsToDevicePixels="True"
 				ItemsSource="{Binding Nodes}"
 				PreviewMouseLeftButtonDown="OnPreviewMouseLeftButtonDown"
 				PreviewMouseMove="OnPreviewMouseMove"
@@ -152,6 +153,7 @@
 				<Style TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
 					<Setter Property="IsExpanded" Value="{Binding IsExpanded,Mode=TwoWay}" />
 					<Setter Property="IsSelected" Value="{Binding IsSelected,Mode=TwoWay}" />
+                    <Setter Property="SnapsToDevicePixels" Value="True"/>
 					<EventSetter Event="MouseRightButtonDown" Handler="OnItemMouseRightButtonDown" />
                     <EventSetter Event="ContextMenuOpening" Handler="OnContextMenuOpening" />
                     <EventSetter Event="TreeViewItem.DragEnter"  Handler="OnDragEnter"/>
