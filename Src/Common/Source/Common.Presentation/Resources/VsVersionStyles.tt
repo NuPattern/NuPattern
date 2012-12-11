@@ -9,13 +9,44 @@
     {
 #>
     <!-- TextBox -->
-    <LinearGradientBrush x:Key="VsVersion.TextBox.Fill"
-                     StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
-                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
-                     GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"/>
-    <SolidColorBrush x:Key="VsVersion.TextBox.Border" Color="{DynamicResource VsColor.ComboBoxMouseOverBorder}" />
+    <SolidColorBrush x:Key="VsVersion.TextBox.Fill" Color="{DynamicResource VsColor.ComboBoxMouseDownBackground}"/>
+    <SolidColorBrush x:Key="VsVersion.TextBox.Border" Color="{DynamicResource VsColor.ComboBoxMouseDownBorder}" />
     <SolidColorBrush x:Key="VsVersion.TextBox.FocusedFill" Color="{DynamicResource VsColor.ComboBoxMouseDownBackground}" />
     <SolidColorBrush x:Key="VsVersion.TextBox.FocusedBorder" Color="{DynamicResource VsColor.ComboBoxMouseDownBorder}" />
+
+    <!-- DropDown -->
+    <SolidColorBrush x:Key="VsVersion.DropDown.Fill" Color="{DynamicResource VsColor.DropDownBackground}" />
+    <SolidColorBrush x:Key="VsVersion.DropDown.Border" Color="{DynamicResource VsColor.DropDownBorder}" />
+    <SolidColorBrush x:Key="VsVersion.DropDown.HoverFill" Color="{DynamicResource VsColor.DropDownMouseOverBackgroundBegin}" />
+    <SolidColorBrush x:Key="VsVersion.DropDown.HoverBorder" Color="{DynamicResource VsColor.DropDownMouseOverBorder}" />
+    <SolidColorBrush x:Key="VsVersion.DropDown.DisabledText" Color="{DynamicResource VsColor.DropDownDisabledGlyph}" />
+    <SolidColorBrush x:Key="VsVersion.DropDown.DisabledFill" Color="{DynamicResource VsColor.DropDownDisabledBackground}" />
+    <SolidColorBrush x:Key="VsVersion.DropDown.DisabledBorder" Color="{DynamicResource VsColor.DropDownDisabledBorder}" />
+  
+    <!-- ComboBox -->
+    <SolidColorBrush x:Key="VsVersion.ComboBox.Fill" Color="{DynamicResource VsColor.ComboBoxBackground}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.Border" Color="{DynamicResource VsColor.ComboBoxBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.HoverFill" Color="{DynamicResource VsColor.ComboBoxMouseOverBackgroundBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.HoverBorder" Color="{DynamicResource VsColor.ComboBoxMouseOverBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.DisabledText" Color="{DynamicResource VsColor.ComboBoxDisabledGlyph}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.DisabledFill" Color="{DynamicResource VsColor.ComboBoxDisabledBackground}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.DisabledBorder" Color="{DynamicResource VsColor.ComboBoxDisabledBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.HoverFill" Color="{DynamicResource VsColor.ComboBoxPopupBackgroundBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.HoverBorder" Color="{DynamicResource VsColor.ComboBoxMouseOverGlyph}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.HoverText" Color="{DynamicResource VsColor.ComboBoxMouseOverGlyph}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.PressedFill" Color="{DynamicResource VsColor.ComboBoxMouseOverGlyph}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.PressedBorder" Color="{DynamicResource VsColor.ComboBoxBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.PressedText" Color="{DynamicResource VsColor.ComboBoxBackground}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.DisabledText" Color="{DynamicResource VsColor.ComboBoxDisabledGlyph}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.DisabledFill" Color="{DynamicResource VsColor.ComboBoxDisabledBackground}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.DisabledBorder" Color="{DynamicResource VsColor.ComboBoxDisabledBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.Fill" Color="Transparent" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.Border" Color="Transparent" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.Text" Color="{DynamicResource VsColor.WindowText}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.HoverFill" Color="{DynamicResource VsColor.ComboBoxMouseOverBackgroundBegin}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.HoverBorder" Color="{DynamicResource VsColor.ComboBoxMouseOverBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.HoverText" Color="{DynamicResource VsColor.WindowText}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.InactiveText" Color="{DynamicResource VsColor.ComboBoxDisabledGlyph}" />
   
     <!-- ContextMenu -->
     <SolidColorBrush x:Key="VsVersion.ContextMenu.MenuItemBorder" Color="{DynamicResource VsColor.CommandBarMouseOverBackgroundGradient}" />
@@ -111,6 +142,52 @@
     <SolidColorBrush x:Key="VsVersion.TextBox.Border" Color="{DynamicResource VsColor.ControlOutline}" />
     <SolidColorBrush x:Key="VsVersion.TextBox.FocusedFill" Color="{DynamicResource VsColor.Window}" />
     <SolidColorBrush x:Key="VsVersion.TextBox.FocusedBorder" Color="{DynamicResource VsColor.ControlOutline}" />
+    
+    <!-- DropDown -->
+    <SolidColorBrush x:Key="VsVersion.DropDown.Fill" Color="{DynamicResource VsColor.DropDownBackground}" />
+    <SolidColorBrush x:Key="VsVersion.DropDown.Border" Color="{DynamicResource VsColor.DropDownBorder}" />
+    <LinearGradientBrush x:Key="VsVersion.DropDown.HoverFill"
+                   StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.DropDownMouseOverBackgroundGradient}}"
+                   EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.DropDownMouseOverBackgroundGradient}}"
+                   GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.DropDownMouseOverBackgroundGradient}}"/>
+    <SolidColorBrush x:Key="VsVersion.DropDown.HoverBorder" Color="{DynamicResource VsColor.DropDownMouseOverBorder}" />
+    <SolidColorBrush x:Key="VsVersion.DropDown.DisabledText" Color="{DynamicResource VsColor.DropDownDisabledGlyph}" />
+    <SolidColorBrush x:Key="VsVersion.DropDown.DisabledFill" Color="{DynamicResource VsColor.DropDownDisabledBackground}" />
+    <SolidColorBrush x:Key="VsVersion.DropDown.DisabledBorder" Color="{DynamicResource VsColor.DropDownDisabledBorder}" />
+
+    <!-- ComboBox -->
+    <SolidColorBrush x:Key="VsVersion.ComboBox.Fill" Color="{DynamicResource VsColor.ComboBoxBackground}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.Border" Color="{DynamicResource VsColor.ComboBoxBorder}" />
+    <LinearGradientBrush x:Key="VsVersion.ComboBox.HoverFill"
+                   StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
+                   EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
+                   GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"/>
+    <SolidColorBrush x:Key="VsVersion.ComboBox.HoverBorder" Color="{DynamicResource VsColor.ComboBoxMouseOverBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.DisabledText" Color="{DynamicResource VsColor.ComboBoxDisabledGlyph}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.DisabledFill" Color="{DynamicResource VsColor.ComboBoxDisabledBackground}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.DisabledBorder" Color="{DynamicResource VsColor.ComboBoxDisabledBorder}" />
+    <LinearGradientBrush x:Key="VsVersion.ComboBox.ToggleButton.HoverFill"
+                   StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
+                   EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
+                   GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"/>
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.HoverBorder" Color="{DynamicResource VsColor.ComboBoxMouseOverBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.HoverText" Color="{DynamicResource VsColor.ComboBoxMouseOverGlyph}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.PressedFill" Color="{DynamicResource VsColor.ComboBoxMouseDownBackground}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.PressedBorder" Color="{DynamicResource VsColor.ComboBoxMouseDownBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.PressedText" Color="{DynamicResource VsColor.ComboBoxGlyph}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.DisabledText" Color="{DynamicResource VsColor.ComboBoxDisabledGlyph}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.DisabledFill" Color="{DynamicResource VsColor.ComboBoxDisabledBackground}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBox.ToggleButton.DisabledBorder" Color="{DynamicResource VsColor.ComboBoxDisabledBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.Fill" Color="Transparent" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.Border" Color="Transparent" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.Text" Color="{DynamicResource VsColor.WindowText}" />
+    <LinearGradientBrush x:Key="VsVersion.ComboBoxItem.HoverFill"
+                     StartPoint="{Binding StartPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
+                     EndPoint="{Binding EndPoint, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"
+                     GradientStops="{Binding GradientStops, Source={StaticResource VsBrush.ComboBoxMouseOverBackgroundGradient}}"/>
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.HoverBorder" Color="{DynamicResource VsColor.ComboBoxMouseOverBorder}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.HoverText" Color="{DynamicResource VsColor.WindowText}" />
+    <SolidColorBrush x:Key="VsVersion.ComboBoxItem.InactiveText" Color="{DynamicResource VsColor.ComboBoxDisabledGlyph}" />
   
     <!-- ContextMenu -->
     <SolidColorBrush x:Key="VsVersion.ContextMenu.MenuItemBorder" Color="{DynamicResource VsColor.CommandBarBorder}" />

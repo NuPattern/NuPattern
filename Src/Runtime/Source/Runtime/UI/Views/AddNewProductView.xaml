@@ -14,12 +14,11 @@
     Foreground="{DynamicResource VsBrush.WindowText}"
 	FocusManager.FocusedElement="{x:Reference patterns}">
 	<vsfx:VsDialogWindow.Resources>
-		<ResourceDictionary>
+	    <ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/CommonStyles.xaml" />
-                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/VsVersionStyles.xaml" />
                 <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/ListView.xaml" />
-			</ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary.MergedDictionaries>
 
 			<p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />
 			<BitmapImage x:Key="DefaultProductIcon" UriSource="../../Resources/PatternNodeDefault.png" />
@@ -117,11 +116,11 @@
 				<RowDefinition Name="TempFillerColumn" Height="*" />
 			</Grid.RowDefinitions>
 			<Label Content="Name:" Width="100" HorizontalContentAlignment="Right" MinHeight="26" Margin="0,0,6,0" />
-			<TextBox
+                        <TextBox
 				Grid.Column="1"
 				Text="{Binding ProductName,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}"
 				Margin="0,2,0,0" />
-		</Grid>
+                </Grid>
 
         <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Background="{StaticResource VsVersion.Dialog.CmdButton.Panel.Fill}">
 			<Grid Grid.IsSharedSizeScope="True" VerticalAlignment="Bottom" HorizontalAlignment="Right">

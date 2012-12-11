@@ -14,10 +14,10 @@
 	</ControlTemplate>
 
 	<Style TargetType="TextBox">
-        <Setter Property="Background" Value="{DynamicResource VsVersion.TextBox.Fill}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource VsVersion.TextBox.Border}"/>
-        <Setter Property="Foreground" Value="{DynamicResource VsVersion.Controls.Text}"/>
-        <Setter Property="CaretBrush" Value="{DynamicResource VsVersion.Controls.Text}"/>
+        <Setter Property="Background" Value="{StaticResource VsVersion.TextBox.Fill}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource VsVersion.TextBox.Border}"/>
+        <Setter Property="Foreground" Value="{StaticResource VsVersion.Controls.Text}"/>
+        <Setter Property="CaretBrush" Value="{StaticResource VsVersion.Controls.Text}"/>
         <Setter Property="SnapsToDevicePixels" Value="True" />
 		<Setter Property="MinHeight" Value="21" />
 		<Setter Property="Validation.ErrorTemplate" Value="{StaticResource TextBox.ErrorTemplate}" />
@@ -26,8 +26,8 @@
 				<Setter Property="ToolTip" Value="{Binding Path=(Validation.Errors)[0].ErrorContent,RelativeSource={x:Static RelativeSource.Self}}" />
 			</Trigger>
             <Trigger Property="IsFocused" Value="true">
-                <Setter Property="Background" Value="{DynamicResource VsVersion.TextBox.FocusedFill}"/>
-                <Setter Property="BorderBrush" Value="{DynamicResource VsVersion.TextBox.FocusedBorder}"/>
+                <Setter Property="Background" Value="{StaticResource VsVersion.TextBox.FocusedFill}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource VsVersion.TextBox.FocusedBorder}"/>
             </Trigger>
         </Style.Triggers>
 	</Style>
