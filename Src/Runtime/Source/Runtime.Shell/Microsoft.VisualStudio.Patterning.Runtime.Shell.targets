@@ -4,8 +4,8 @@
     Copies the VSIX output of a tookit project to a shared <CopyVsixToFolder> folder, to aid VSIX packaging.
   -->
     <Target Name="AfterBuild" Condition="'$(CopyVsixToFolder)' != '' and '$(TargetVsixContainer)' != '' and '$(CreateVsixContainer)' == 'true'">
-        <Copy SourceFiles="$(TargetVsixContainer)" DestinationFolder="$(CopyVsixToFolder)" OverwriteReadOnlyFiles="true">
+      <Message Importance="High" Text="Copying VSIX To local folder for packaging -&gt; $(CopyVsixToFolder)" />
+      <Copy SourceFiles="$(TargetVsixContainer)" DestinationFolder="$(CopyVsixToFolder)" OverwriteReadOnlyFiles="true">
         </Copy>
-        <Message Importance="High" Text="Copying VSIX To local folder for packaging -&gt; $(CopyVsixToFolder)" />
     </Target>
 </Project>

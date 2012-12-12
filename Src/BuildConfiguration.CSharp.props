@@ -30,6 +30,8 @@
     <T4Version>$(DslToolsVersion)</T4Version>
     <T4VersionSuffix Condition="'$(T4VersionSuffix)' == ''">.$(T4Version)</T4VersionSuffix>
     <DslTargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\DSLTools</DslTargetsPath>
+    <T4TargetsPath Condition="'$(VisualStudioVersion)' == '10.0'">$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\TextTemplating\v$(TargetVsVersion)</T4TargetsPath>
+    <T4TargetsPath Condition="'$(VisualStudioVersion)' == '11.0'">$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\TextTemplating</T4TargetsPath>
   </PropertyGroup>
 
   <!--
@@ -47,6 +49,7 @@
     <T4Version>$(DslToolsVersion)</T4Version>
     <T4VersionSuffix>.$(T4Version)</T4VersionSuffix>
     <DslTargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\DSLTools</DslTargetsPath>
+    <T4TargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\TextTemplating\v$(TargetVsVersion)</T4TargetsPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012' ">
     <TargetVsVersion>11.0</TargetVsVersion>
@@ -60,6 +63,7 @@
     <T4Version>$(DslToolsVersion)</T4Version>
     <T4VersionSuffix>.$(T4Version)</T4VersionSuffix>
     <DslTargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\DSLTools</DslTargetsPath>
+    <T4TargetsPath>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\MSBuild\TextTemplating</T4TargetsPath>
   </PropertyGroup>
 
   <!-- Build Configurations -->

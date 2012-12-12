@@ -29,6 +29,12 @@
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
 
+  <!-- Include T4 MSBUILD support for all generated files -->
+  <PropertyGroup>
+    <TransformOnBuild>true</TransformOnBuild>
+  </PropertyGroup>
+  <Import Project="$(ProjectDir)$(T4TargetsPath)\Microsoft.TextTemplating.targets" />
+
   <!-- Tool includes -->
   <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />-->
 </Project>
