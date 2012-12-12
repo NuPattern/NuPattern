@@ -404,7 +404,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />
-  <Import Project="..\Source\Authoring.Toolkit\Authoring.PatternToolkitVersion.targets" />
+  <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

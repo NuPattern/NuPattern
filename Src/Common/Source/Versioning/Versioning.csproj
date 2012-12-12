@@ -67,6 +67,26 @@
     <None Include="..\..\..\Versioning Instructions.docx">
       <Link>Docs\Versioning Instructions.docx</Link>
     </None>
+    <None Include="Authoring.PatternToolkitVersion.targets">
+      <DependentUpon>Authoring.PatternToolkitVersion.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
+    <None Include="Authoring.PatternToolkitVersion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Authoring.PatternToolkitVersion.targets</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets">
+      <DependentUpon>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
+    <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\..\Signing Key Info.txt">
