@@ -1,5 +1,5 @@
 ﻿<#@ output extension=".t4" #>
-<#@ Include File="..\..\..\..\ToolkitVersionInfo.ttinclude" #>
+<#@ Include File="..\..\..\..\..\..\..\MasterVsixInfo.ttinclude" #>
 <#@ Include File="..\..\..\..\source.include.t4" #>
 \<#@ Template inherits="Microsoft.VisualStudio.Patterning.Authoring.Guidance.TocProcessWorkflowTextTransformation" HostSpecific="True" Debug="True" \#>
 \<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
@@ -38,7 +38,7 @@ namespace \<#=rootNamespace \#>.Guidance
 \<#
 	}
 \#>
-	[System.CodeDom.Compiler.GeneratedCode("<#= AuthoringToolkitInfo.Name #>", "<#= AuthoringToolkitInfo.Version #>")]
+	[System.CodeDom.Compiler.GeneratedCode("<#= VsixInfo.PatternToolkitBuilder.Name #>", "<#= VsixInfo.PatternToolkitBuilder.Version #>")]
 	public partial class ProcessWorkflow : GuidanceWorkflow
 	{
 		/// <summary>
@@ -97,7 +97,7 @@ namespace \<#=rootNamespace \#>.Guidance
 \<#
 	}
 \#>
-	[System.CodeDom.Compiler.GeneratedCode("<#= AuthoringToolkitInfo.Name #>", "<#= AuthoringToolkitInfo.Version #>")]
+	[System.CodeDom.Compiler.GeneratedCode("<#= VsixInfo.PatternToolkitBuilder.Name #>", "<#= VsixInfo.PatternToolkitBuilder.Version #>")]
 	public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
 	{
 		/// <summary>

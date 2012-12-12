@@ -1,4 +1,4 @@
-﻿<#@ include file="ToolkitVersionInfo.ttinclude" #>
+﻿<#@ include file="..\..\..\MasterVSIXInfo.ttinclude" #>
 <#@ output extension=".patterndefinition" #>
 <?xml version="1.0" encoding="utf-8"?>
 <patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="9cc7bde6-881f-47aa-8f65-c7c2ecd3fc9a" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
@@ -432,7 +432,7 @@
         <propertySettings Id="6ce6e057-572e-4232-946d-e2772933623c" value="False" name="SyncName" />
         <propertySettings Id="fa92a495-9e17-43b9-bba3-ef6587a91510" value="ViewImplementation" name="TargetFileName" />
         <propertySettings Id="c0f0694f-572e-4ebc-a023-2004003d85e8" value="~\GeneratedCode\{Parent.Parent.Parent.InstanceName}" name="TargetPath" />
-        <propertySettings Id="d2810ec9-73b7-46af-b1fc-1cc5ebae98fd" value="t4://extension/<#=AutomationLibraryToolkitInfo.Identifier #>/Assets/Templates/Text/ViewImplementation.t4" name="TemplateUri" />
+        <propertySettings Id="d2810ec9-73b7-46af-b1fc-1cc5ebae98fd" value="t4://extension/<#=VsixInfo.PatternToolkitLibrary.Identifier #>/Assets/Templates/Text/ViewImplementation.t4" name="TemplateUri" />
         <propertySettings Id="b57df099-0d7d-4902-8469-2650bb6c2678" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/93e185e9-b959-434e-9682-f9db6bc39cdd" name="TemplateAuthoringUri" />
         <propertySettings Id="d482685a-c273-4a8f-90fa-0f3dd1192269" name="Tag" />
         <propertySettings Id="e493c482-4157-4120-bab2-673de65304bb" name="TargetBuildAction" />
@@ -464,7 +464,7 @@
         <propertySettings Id="4e9e3e74-7a5f-4c1c-90c2-c501e7fcf2ed" value="False" name="SyncName" />
         <propertySettings Id="e1da30f4-f4ce-49b3-9bb3-eccf27dff1e5" value="CollectionImplementation" name="TargetFileName" />
         <propertySettings Id="15357ea7-6fef-4924-8eb6-840b3c820ab5" value="~\GeneratedCode\{Parent.Parent.Parent.InstanceName}" name="TargetPath" />
-        <propertySettings Id="4367f9d3-2c95-4bf7-9138-347b9acf1e74" value="t4://extension/<#=AutomationLibraryToolkitInfo.Identifier #>/Assets/Templates/Text/CollectionImplementation.t4" name="TemplateUri" />
+        <propertySettings Id="4367f9d3-2c95-4bf7-9138-347b9acf1e74" value="t4://extension/<#=VsixInfo.PatternToolkitLibrary.Identifier #>/Assets/Templates/Text/CollectionImplementation.t4" name="TemplateUri" />
         <propertySettings Id="73dcaf00-11c4-4292-b8b4-0f5a11966a8a" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/ec407639-4851-4333-97ac-40bb6e3768f0" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
@@ -477,7 +477,7 @@
         <propertySettings Id="da2566a6-7206-4997-b9ba-9f5912110ad3" value="False" name="SyncName" />
         <propertySettings Id="84956562-d57e-4f76-b5e7-6df56d735ffc" value="CollectionInterface" name="TargetFileName" />
         <propertySettings Id="bd5a5166-fd93-4014-9cf0-c38155977196" value="~\GeneratedCode\{Parent.Parent.Parent.InstanceName}" name="TargetPath" />
-        <propertySettings Id="04372a62-f6b0-4274-a89b-8953babe49a3" value="t4://extension/<#=AutomationLibraryToolkitInfo.Identifier #>/Assets/Templates/Text/CollectionInterface.t4" name="TemplateUri" />
+        <propertySettings Id="04372a62-f6b0-4274-a89b-8953babe49a3" value="t4://extension/<#=VsixInfo.PatternToolkitLibrary.Identifier #>/Assets/Templates/Text/CollectionInterface.t4" name="TemplateUri" />
         <propertySettings Id="0a05c3c0-003b-43ef-aa64-b18af70b9951" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/55fe351d-e1a3-44fb-80b3-dbe44eb5ef56" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
@@ -490,7 +490,7 @@
         <propertySettings Id="dc29fea4-b608-4379-bab1-e966aaf648e2" value="False" name="SyncName" />
         <propertySettings Id="0c861214-323b-44b8-8429-4642162f179f" value="ElementImplementation" name="TargetFileName" />
         <propertySettings Id="5fc94f59-3b48-4c89-8151-d9b67e975a47" value="~\GeneratedCode\{Parent.Parent.Parent.InstanceName}" name="TargetPath" />
-        <propertySettings Id="af1a586b-4478-4287-be94-1522a02514fc" value="t4://extension/<#=AutomationLibraryToolkitInfo.Identifier #>/Assets/Templates/Text/ElementImplementation.t4" name="TemplateUri" />
+        <propertySettings Id="af1a586b-4478-4287-be94-1522a02514fc" value="t4://extension/<#=VsixInfo.PatternToolkitLibrary.Identifier #>/Assets/Templates/Text/ElementImplementation.t4" name="TemplateUri" />
         <propertySettings Id="79928841-9ab1-4614-9e6f-f0c1a43fae43" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/25907df2-ca68-43df-bc28-428aecb472a3" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
@@ -503,7 +503,7 @@
         <propertySettings Id="95e868ad-bdf2-4410-981b-cd4cd59bab77" value="False" name="SyncName" />
         <propertySettings Id="0a348d1b-117b-4c8c-b62e-ddb77811c12a" value="ElementInterface" name="TargetFileName" />
         <propertySettings Id="ad9e3d4c-5cc7-4adb-be2c-ede4a40e2beb" value="~\GeneratedCode\{Parent.Parent.Parent.InstanceName}" name="TargetPath" />
-        <propertySettings Id="48fe72f4-9486-41b0-9f83-ab0a0997f1ba" value="t4://extension/<#=AutomationLibraryToolkitInfo.Identifier #>/Assets/Templates/Text/ElementInterface.t4" name="TemplateUri" />
+        <propertySettings Id="48fe72f4-9486-41b0-9f83-ab0a0997f1ba" value="t4://extension/<#=VsixInfo.PatternToolkitLibrary.Identifier #>/Assets/Templates/Text/ElementInterface.t4" name="TemplateUri" />
         <propertySettings Id="098d9db4-9eaa-40f5-ab33-06ad1a0a6079" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/116dfd45-9c58-452e-a3eb-7f2544dbf281" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
@@ -516,7 +516,7 @@
         <propertySettings Id="5876df64-70b6-4e0a-a98d-3a559935a083" value="False" name="SyncName" />
         <propertySettings Id="36662b61-fcd0-4dd4-a949-96a8d3e73822" value="ExtensionPointImplementation" name="TargetFileName" />
         <propertySettings Id="3724590d-f2fb-4eec-bb66-a45e99e3b982" value="~\GeneratedCode\{Parent.Parent.Parent.InstanceName}" name="TargetPath" />
-        <propertySettings Id="c02a849f-c892-4326-a48c-f8461d012699" value="t4://extension/<#=AutomationLibraryToolkitInfo.Identifier #>/Assets/Templates/Text/ExtensionPointImplementation.t4" name="TemplateUri" />
+        <propertySettings Id="c02a849f-c892-4326-a48c-f8461d012699" value="t4://extension/<#=VsixInfo.PatternToolkitLibrary.Identifier #>/Assets/Templates/Text/ExtensionPointImplementation.t4" name="TemplateUri" />
         <propertySettings Id="204bf26a-e730-4760-9745-5878998ddf96" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/5bb7bdd5-2ac3-42e7-9c34-748e51fd7d4f" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
@@ -529,7 +529,7 @@
         <propertySettings Id="c842258b-a27f-45ca-8d9e-079a0621dd64" value="False" name="SyncName" />
         <propertySettings Id="fd3969fc-0706-4dab-b532-15bfbbf356cd" value="ExtensionPointInterface" name="TargetFileName" />
         <propertySettings Id="4f0f10c4-b9e9-4ef1-b91b-ec1ed121ff61" value="~\GeneratedCode\{Parent.Parent.Parent.InstanceName}" name="TargetPath" />
-        <propertySettings Id="51c55a11-3179-4af0-94d5-ae968be00c8c" value="t4://extension/<#=AutomationLibraryToolkitInfo.Identifier #>/Assets/Templates/Text/ExtensionPointInterface.t4" name="TemplateUri" />
+        <propertySettings Id="51c55a11-3179-4af0-94d5-ae968be00c8c" value="t4://extension/<#=VsixInfo.PatternToolkitLibrary.Identifier #>/Assets/Templates/Text/ExtensionPointInterface.t4" name="TemplateUri" />
         <propertySettings Id="b657b1dc-d624-4213-b2e9-d58bad51286e" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/1e17080b-48d4-4f98-9c02-8678505acc05" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
@@ -542,7 +542,7 @@
         <propertySettings Id="ef3352ff-3c55-4c89-8ee4-f19db72f02fe" value="False" name="SyncName" />
         <propertySettings Id="663ef2dc-efd2-4b56-abfa-fb1429bd4a3e" value="ProductImplementation" name="TargetFileName" />
         <propertySettings Id="5a37f164-1562-4682-8535-662986b1f850" value="~\GeneratedCode\{Parent.Parent.Parent.InstanceName}" name="TargetPath" />
-        <propertySettings Id="fe838330-331d-41d2-a770-c2e8dab74e9e" value="t4://extension/<#=AutomationLibraryToolkitInfo.Identifier #>/Assets/Templates/Text/ProductImplementation.t4" name="TemplateUri" />
+        <propertySettings Id="fe838330-331d-41d2-a770-c2e8dab74e9e" value="t4://extension/<#=VsixInfo.PatternToolkitLibrary.Identifier #>/Assets/Templates/Text/ProductImplementation.t4" name="TemplateUri" />
         <propertySettings Id="7adb2a80-c77d-41c1-a9cf-af1e7873c54f" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/d200252e-c25d-48be-b3f5-9ae32bf62acb" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
@@ -555,7 +555,7 @@
         <propertySettings Id="506a9a0c-c913-4bc4-91be-a6685cbf8405" value="False" name="SyncName" />
         <propertySettings Id="219373b5-67af-41b7-bf86-2bf0b0f679d1" value="ViewInterface" name="TargetFileName" />
         <propertySettings Id="39bce7f9-310e-4a4a-a9c0-7f6acf84bb0f" value="~\GeneratedCode\{Parent.Parent.Parent.InstanceName}" name="TargetPath" />
-        <propertySettings Id="71e64f00-bcf2-4086-9138-55083ba642b7" value="t4://extension/<#=AutomationLibraryToolkitInfo.Identifier #>/Assets/Templates/Text/ViewInterface.t4" name="TemplateUri" />
+        <propertySettings Id="71e64f00-bcf2-4086-9138-55083ba642b7" value="t4://extension/<#=VsixInfo.PatternToolkitLibrary.Identifier #>/Assets/Templates/Text/ViewInterface.t4" name="TemplateUri" />
         <propertySettings Id="4c6de241-98bc-47ee-bfaf-a2aa7f91cc1a" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/3cad4121-3707-4ba2-b75e-00138859eff6" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
@@ -568,7 +568,7 @@
         <propertySettings Id="a0bbd40f-f2f8-4934-8694-e14830f7ef22" value="False" name="SyncName" />
         <propertySettings Id="dab2065d-55e7-420f-9921-c20de7049846" value="ProductInterface" name="TargetFileName" />
         <propertySettings Id="a706eab8-cd2f-44b1-af31-ca2515c04a85" value="~\GeneratedCode\{Parent.Parent.Parent.InstanceName}" name="TargetPath" />
-        <propertySettings Id="77dcfaf5-1bb6-4d08-bfee-be0d56ef0d2d" value="t4://extension/<#=AutomationLibraryToolkitInfo.Identifier #>/Assets/Templates/Text/ProductInterface.t4" name="TemplateUri" />
+        <propertySettings Id="77dcfaf5-1bb6-4d08-bfee-be0d56ef0d2d" value="t4://extension/<#=VsixInfo.PatternToolkitLibrary.Identifier #>/Assets/Templates/Text/ProductInterface.t4" name="TemplateUri" />
         <propertySettings Id="fdeabdd3-58fa-4439-8759-ecade16aedc0" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/84fcec82-6c39-42f1-8a64-a4ce581ee82d" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>

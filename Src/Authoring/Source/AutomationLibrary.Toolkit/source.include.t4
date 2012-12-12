@@ -1,15 +1,15 @@
 ﻿<#+
-	string identifier = "080eb0ef-518d-4807-9b5c-aa32d0032e0b";
-	string toolkitName = "Ignore";
-    string author = "Ignore";
-	string version = "1.0";
-    string description = "Ignore";
-	string eula = @"Ignore";
-	string icon = @"Ignore";
+	public const string identifier = "080eb0ef-518d-4807-9b5c-aa32d0032e0b";
+	public const string toolkitName = "Ignore";
+	public const string author = "Ignore";
+	public const string version = "1.0";
+	public const string description = "Ignore";
+	public const string eula = @"Ignore";
+	public const string icon = @"Ignore";
 
-	string productName = "AutomationLibrary.Toolkit";
-	string rootNamespace = "Microsoft.VisualStudio.Patterning.Authoring.Library";
-	string assemblyName = "Microsoft.VisualStudio.Patterning.Authoring.Library.Toolkit";
+	public const string productName = "AutomationLibrary.Toolkit";
+	public const string rootNamespace = "Microsoft.VisualStudio.Patterning.Authoring.Library";
+	public const string assemblyName = "Microsoft.VisualStudio.Patterning.Authoring.Library.Toolkit";
 
 	public bool HasValue(string value)
 	{

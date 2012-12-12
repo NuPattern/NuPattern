@@ -164,15 +164,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ElementOrderingComparer.vstemplate</LastGenOutput>
     </None>
-    <None Include="ToolkitVersionInfo.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ToolkitVersionInfo.ttinclude</LastGenOutput>
-    </None>
-    <None Include="ToolkitVersionInfo.ttinclude">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ToolkitVersionInfo.tt</DependentUpon>
-    </None>
     <ItemTemplate Include="Assets\Templates\Items\Extensibility\Command\Command.vstemplate">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <AutoGen>True</AutoGen>

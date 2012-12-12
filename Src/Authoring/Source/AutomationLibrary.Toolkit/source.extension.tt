@@ -1,28 +1,27 @@
 ﻿<#@ output extension=".vsixmanifest" #>
 <#@ Include  File="source.include.t4"#>
-<#@ Include  File="ToolkitVersionInfo.ttinclude"#>
 <#@ Include  File="..\..\..\MasterVsixInfo.ttinclude"#>
 <#@ include  File="..\..\..\MasterVersion.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-	<Identifier Id="<#=AutomationLibraryToolkitInfo.Identifier#>">
-		<Name><#=AutomationLibraryToolkitInfo.Name#></Name>
-		<Author><#=AutomationLibraryToolkitInfo.Author#></Author>
-		<Version><#=AutomationLibraryToolkitInfo.Version#></Version>
-		<Description xml:space="preserve"><#=AutomationLibraryToolkitInfo.Description#></Description>
+	<Identifier Id="<#=VsixInfo.PatternToolkitLibrary.Identifier#>">
+		<Name><#=VsixInfo.PatternToolkitLibrary.Name#></Name>
+		<Author><#=VsixInfo.PatternToolkitLibrary.Author#></Author>
+		<Version><#=VsixInfo.PatternToolkitLibrary.Version#></Version>
+		<Description xml:space="preserve"><#=VsixInfo.PatternToolkitLibrary.Description#></Description>
 		<Locale>1033</Locale>
 		<License>LICENSE.txt</License>
 		<Icon>Resources\VsixIconAutomationLibrary.png</Icon>
-		<MoreInfoUrl><#=AutomationLibraryToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
-		<GettingStartedGuide><#=AutomationLibraryToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
+		<MoreInfoUrl><#=VsixInfo.PatternToolkitLibrary.MoreInfoUrl#></MoreInfoUrl>
+		<GettingStartedGuide><#=VsixInfo.PatternToolkitLibrary.GettingStartedUrl#></GettingStartedGuide>
 		<PreviewImage>Resources\VsixPreviewAutomationLibrary.png</PreviewImage>
 		<SupportedProducts>
-		  <VisualStudio Version="<#=targetVsVersion #>">
+		  <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
 			<Edition>Pro</Edition>
 		  </VisualStudio>
 		</SupportedProducts>
 <# 
-if (targetVsVersion == "11.0")
+if (VersionInfo.TargetVsVersion == "11.0")
 { 
 #>
 		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>

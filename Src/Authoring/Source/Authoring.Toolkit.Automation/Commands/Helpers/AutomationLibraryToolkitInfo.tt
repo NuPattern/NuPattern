@@ -1,5 +1,5 @@
 ﻿<#@ output extension=".cs" #>
-<#@ Include File="..\..\..\AutomationLibrary.Toolkit\ToolkitVersionInfo.ttinclude" #>
+<#@ Include File="..\..\..\..\..\MasterVSIXInfo.ttinclude" #>
 using System;
 
 namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
@@ -17,12 +17,12 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
 		/// <summary>
 		/// Gets the VSIX identifier of this toolkit.
 		/// </summary>
-		public static string ToolkitId = "<#=new Guid(AutomationLibraryToolkitInfo.Identifier).ToString() #>";
+		public static string ToolkitId = "<#=new Guid(VsixInfo.PatternToolkitLibrary.Identifier).ToString() #>";
 
 		/// <summary>
 		/// Gets the VSIX name of this toolkit.
 		/// </summary>
-		public static string RegistrationName = "<#=AutomationLibraryToolkitInfo.Name#>";
+		public static string RegistrationName = "<#=VsixInfo.PatternToolkitLibrary.Name#>";
 	}
 }
 

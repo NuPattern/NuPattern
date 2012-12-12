@@ -1,5 +1,5 @@
 ﻿<#@ output extension=".cs" #>
-<#@ Include File="..\..\..\..\..\HandsOnLabs\HandsOnLabs\ToolkitVersionInfo.ttinclude" #>
+<#@ Include File="..\..\..\..\..\..\MasterVsixInfo.ttinclude" #>
 using System;
 
 namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance.Links
@@ -12,12 +12,12 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance.Links
 		/// <summary>
 		/// Gets the VSIX identifier of this toolkit.
 		/// </summary>
-		public static string Identifier = "<#= new Guid(HandsOnLabsToolkitInfo.Identifier).ToString() #>";
+		public static string Identifier = "<#= new Guid(VsixInfo.PatternToolkitHol.Identifier).ToString() #>";
 
 		/// <summary>
 		/// Gets the VSIX name of this toolkit.
 		/// </summary>
-		public static string RegistrationName = "<#=HandsOnLabsToolkitInfo.Name#>";
+		public static string RegistrationName = "<#=VsixInfo.PatternToolkitHol.Name#>";
 	}
 }
 

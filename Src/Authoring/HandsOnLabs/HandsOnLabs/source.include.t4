@@ -1,15 +1,15 @@
 ﻿<#+
-	string identifier = "5413c755-6024-4c41-ba0c-9aa3d6fd9caf";
-	string toolkitName = "Ignore";
-	string author = "Ignore";
-	string version = "1.0";
-	string description = "Ignore";
-	string eula = @"Ignore";
-	string icon = @"Ignore";
+	public const string identifier = "5413c755-6024-4c41-ba0c-9aa3d6fd9caf";
+	public const string toolkitName = "Ignore";
+	public const string author = "Ignore";
+	public const string version = "1.0";
+	public const string description = "Ignore";
+	public const string eula = @"Ignore";
+	public const string icon = @"Ignore";
 
-	string productName = "HandsOnLabs";
-	string rootNamespace = "Microsoft.VisualStudio.Patterning.HandsOnLabs";
-	string assemblyName = "Microsoft.VisualStudio.Patterning.HandsOnLabs";
+	public const string productName = "HandsOnLabs";
+	public const string rootNamespace = "Microsoft.VisualStudio.Patterning.HandsOnLabs";
+	public const string assemblyName = "Microsoft.VisualStudio.Patterning.HandsOnLabs";
 
 	public bool HasValue(string value)
 	{

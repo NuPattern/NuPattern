@@ -1,7 +1,7 @@
 ﻿<#@ output extension=".t4" #>
-<#@ Include File="..\..\..\ToolkitVersionInfo.ttinclude" #>
+<#@ Include File="..\..\..\..\..\..\MasterVSIXInfo.ttinclude" #>
 
 \<#+
-	string libraryToolkitVersion = "<#= AutomationLibraryToolkitInfo.Version #>";
-	string libraryToolkitName = "<#= AutomationLibraryToolkitInfo.Name #>";
+	string libraryToolkitVersion = "<#= VsixInfo.PatternToolkitLibrary.Version #>";
+	string libraryToolkitName = "<#= VsixInfo.PatternToolkitLibrary.Name #>";
 \#>

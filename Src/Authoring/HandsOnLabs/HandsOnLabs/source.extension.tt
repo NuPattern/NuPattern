@@ -1,28 +1,27 @@
 ﻿<#@ output extension=".vsixmanifest" #>
 <#@ Include  File="source.include.t4"#>
-<#@ Include  File="ToolkitVersionInfo.ttinclude"#>
 <#@ Include  File="..\..\..\MasterVsixInfo.ttinclude"#>
 <#@ Include  File="..\..\..\MasterVersion.ttinclude"#>
 <?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-	<Identifier Id="<#=HandsOnLabsToolkitInfo.Identifier#>">
-		<Name><#=HandsOnLabsToolkitInfo.Name#></Name>
-		<Author><#=HandsOnLabsToolkitInfo.Author#></Author>
-		<Version><#=HandsOnLabsToolkitInfo.Version#></Version>
-		<Description xml:space="preserve"><#=HandsOnLabsToolkitInfo.Description#></Description>
+	<Identifier Id="<#=VsixInfo.PatternToolkitHol.Identifier#>">
+		<Name><#=VsixInfo.PatternToolkitHol.Name#></Name>
+		<Author><#=VsixInfo.PatternToolkitHol.Author#></Author>
+		<Version><#=VsixInfo.PatternToolkitHol.Version#></Version>
+		<Description xml:space="preserve"><#=VsixInfo.PatternToolkitHol.Description#></Description>
 		<Locale>1033</Locale>
 		<License>LICENSE.txt</License>
 		<Icon>Resources\VsixIconHOL.png</Icon>
-		<MoreInfoUrl><#=HandsOnLabsToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
-		<GettingStartedGuide><#=HandsOnLabsToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
+		<MoreInfoUrl><#=VsixInfo.PatternToolkitHol.MoreInfoUrl#></MoreInfoUrl>
+		<GettingStartedGuide><#=VsixInfo.PatternToolkitHol.GettingStartedUrl#></GettingStartedGuide>
 		<PreviewImage>Resources\VsixPreviewHOL.png</PreviewImage>
 		<SupportedProducts>
-		  <VisualStudio Version="<#=targetVsVersion #>">
+		  <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
 			<Edition>Pro</Edition>
 		  </VisualStudio>
 		</SupportedProducts>
 <# 
-if (targetVsVersion == "11.0")
+if (VersionInfo.TargetVsVersion == "11.0")
 { 
 #>
 		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>

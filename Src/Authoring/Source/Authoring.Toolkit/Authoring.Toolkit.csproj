@@ -280,15 +280,6 @@
       <DependentUpon>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.tt</DependentUpon>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ToolkitVersionInfo.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ToolkitVersionInfo.ttinclude</LastGenOutput>
-    </None>
-    <None Include="ToolkitVersionInfo.ttinclude">
-      <DependentUpon>ToolkitVersionInfo.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </None>
     <Content Include="GeneratedCode\Guidance\Content\WhatareAutomationAssets.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

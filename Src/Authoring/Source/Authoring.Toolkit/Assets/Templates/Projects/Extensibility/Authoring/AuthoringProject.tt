@@ -5,12 +5,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<MinimumVisualStudioVersion><#=targetVsVersion#></MinimumVisualStudioVersion>
-		<VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''"><#=targetVsVersion#></VisualStudioVersion>
+		<MinimumVisualStudioVersion><#=VersionInfo.TargetVsVersion#></MinimumVisualStudioVersion>
+		<VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''"><#=VersionInfo.TargetVsVersion#></VisualStudioVersion>
 		<VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
 	</PropertyGroup>
 <#
-if (targetVsVersion == "11.0")
+if (VersionInfo.TargetVsVersion == "11.0")
 {
 #>
 	<PropertyGroup>
@@ -66,9 +66,9 @@ if (targetVsVersion == "11.0")
 		<Reference Include="PresentationCore" />
 		<Reference Include="PresentationFramework" />
 		<Reference Include="WindowsBase" />
-		<Reference Include="Microsoft.VisualStudio.Shell, Version=<#=targetVsVersion#>.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-		<Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=<#=targetVsVersion#>.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-		<Reference Include="Microsoft.VisualStudio.Shell.Immutable.<#=targetVsVersion#>, Version=<#=targetVsVersion#>.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+		<Reference Include="Microsoft.VisualStudio.Shell, Version=<#=VersionInfo.TargetVsVersion#>.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+		<Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=<#=VersionInfo.TargetVsVersion#>.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+		<Reference Include="Microsoft.VisualStudio.Shell.Immutable.<#=VersionInfo.TargetVsVersion#>, Version=<#=VersionInfo.TargetVsVersion#>.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
 		<Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
 		<Reference Include="Microsoft.VisualStudio.Patterning.Library">
 			<HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>

@@ -1,28 +1,27 @@
 ﻿<#@ output extension=".vsixmanifest" #>
 <#@ Include  File="source.include.t4"#>
-<#@ Include  File="ToolkitVersionInfo.ttinclude"#>
 <#@ Include  File="..\..\..\MasterVsixInfo.ttinclude"#>
 <#@ include  File="..\..\..\MasterVersion.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-	<Identifier Id="<#=AuthoringToolkitInfo.Identifier#>">
-		<Name><#=AuthoringToolkitInfo.Name#></Name>
-		<Author><#=AuthoringToolkitInfo.Author#></Author>
-		<Version><#=AuthoringToolkitInfo.Version#></Version>
-		<Description xml:space="preserve"><#=AuthoringToolkitInfo.Description#></Description>
+	<Identifier Id="<#=VsixInfo.PatternToolkitBuilder.Identifier#>">
+		<Name><#=VsixInfo.PatternToolkitBuilder.Name#></Name>
+		<Author><#=VsixInfo.PatternToolkitBuilder.Author#></Author>
+		<Version><#=VsixInfo.PatternToolkitBuilder.Version#></Version>
+		<Description xml:space="preserve"><#=VsixInfo.PatternToolkitBuilder.Description#></Description>
 		<Locale>1033</Locale>
 		<License>LICENSE.txt</License>
 		<Icon>Resources\VsixIconAuthoring.png</Icon>
-		<MoreInfoUrl><#=AuthoringToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
-		<GettingStartedGuide><#=AuthoringToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
+		<MoreInfoUrl><#=VsixInfo.PatternToolkitBuilder.MoreInfoUrl#></MoreInfoUrl>
+		<GettingStartedGuide><#=VsixInfo.PatternToolkitBuilder.GettingStartedUrl#></GettingStartedGuide>
 		<PreviewImage>Resources\VsixPreviewAuthoring.png</PreviewImage>
 		<SupportedProducts>
-		  <VisualStudio Version="<#=targetVsVersion #>">
+		  <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
 			<Edition>Pro</Edition>
 		  </VisualStudio>
 		</SupportedProducts>
 <# 
-if (targetVsVersion == "11.0")
+if (VersionInfo.TargetVsVersion == "11.0")
 { 
 #>
 		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
