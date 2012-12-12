@@ -7,11 +7,11 @@
 	var vsixId = "";
 	var moreInfoUrl = "http://vspat.codeplex.com";
 	var gettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
-	if (targetVsVersion == "10.0")
+	if (VersionInfo.TargetVsVersion == "10.0")
 	{
 		vsixId = RuntimeShellPackageInfo.PackageGuid; // Legacy for previous versions of VSPAT
 	}
-	else if (targetVsVersion == "11.0")
+	else if (VersionInfo.TargetVsVersion == "11.0")
 	{
 		vsixId = "c869918e-f94e-4e7a-ab25-b076ff4e751b";
 	}
@@ -27,10 +27,10 @@ public static class RuntimeToolkitInfo
 {
     public const string Name = "Pattern Toolkit Manager";
 	public const string Description = "The Solution Builder tool window for accelerating solution development using Pattern Toolkit extensions.";
-    public const string Author = "<#=vsixAuthor#>";
-    public const string Version = "<#=runtimeVSIXVersion#>";
+    public const string Author = "<#=VersionInfo.VsixAuthor#>";
+    public const string Version = "<#=VersionInfo.RuntimeVSIXVersion#>";
 	public const string Identifier = "<#=vsixId #>";
-	public const string VsixFileName = "PatternToolkitManager.<#=targetVsVersion#>.vsix"; // Should reflect <TargetVsixContainerName> value in Runtime.Shell.csproj
+	public const string VsixFileName = "PatternToolkitManager.<#=VersionInfo.TargetVsVersion#>.vsix"; // Should reflect <TargetVsixContainerName> value in Runtime.Shell.csproj
 	public const string MoreInfoUrl = "<#=moreInfoUrl #>";
 	public const string GettingStartedUrl = "<#=gettingStartedUrl #>";}
 \#>

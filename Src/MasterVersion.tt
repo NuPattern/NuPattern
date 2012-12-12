@@ -40,30 +40,34 @@
 			break;
 	}
  #>
-\<#
+\<#+
+// Product Version Info
+public static class VersionInfo
+{
     // Framework Version
-    var targetVsVersion = "<#=targetVsVersion#>";
+    public const string TargetVsVersion = "<#=targetVsVersion#>";
 
     // Assembly Versions
-    var assemblyMajor = 1;
-    var assemblyMinor = 3;
-    var assemblyBuild = 20;
-    var assemblyRevision = 0;
-    var assemblyVersion = new Version(assemblyMajor, assemblyMinor, assemblyBuild, assemblyRevision);
+    public const int AssemblyMajor = 1;
+    public const int AssemblyMinor = 3;
+    public const int AssemblyBuild = 20;
+    public const int AssemblyRevision = 0;
+    public static Version AssemblyVersion = new Version(AssemblyMajor, AssemblyMinor, AssemblyBuild, AssemblyRevision);
 
     //Note: To change Versions of DSL schemas, please change designer properties of DSLs (Schema, Store, Library)
 
     // VSIX Versions
-    var runtimeVSIXVersion = assemblyVersion;
-    var authoringVSIXVersion = runtimeVSIXVersion;
+    public static Version RuntimeVSIXVersion = AssemblyVersion;
+    public static Version AuthoringVSIXVersion = RuntimeVSIXVersion;
     
     // Ownership
-    var vsixAuthor = "Outercurve";
-	var assemblyAuthor = "The Outercurve Foundation";
-	var assemblyCopyright = "Copyright 2012, The Outercurve Foundation under Apache 2.0 license.";
+    public const string VsixAuthor = "Outercurve";
+	public const string AssemblyAuthor = "The Outercurve Foundation";
+	public const string AssemblyCopyright = "Copyright 2012, The Outercurve Foundation under Apache 2.0 license.";
 	
 	// Assembly Identity
-	var assemblyProductName = "Pattern Automation Toolkit";
+	public const string AssemblyProductName = "Pattern Automation Toolkit";
+}
 \#><#+
  private static IEnumerable<EnvDTE.Project> GetProjectsFromSolution(EnvDTE.Solution solution)
  {

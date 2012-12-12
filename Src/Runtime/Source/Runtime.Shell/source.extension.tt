@@ -17,12 +17,12 @@
       <PreviewImage>Resources\VsixPreviewRunTime.png</PreviewImage>
       <InstalledByMsi>false</InstalledByMsi>
       <SupportedProducts>
-        <VisualStudio Version="<#=targetVsVersion #>">
+        <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
           <Edition>Pro</Edition>
         </VisualStudio>
       </SupportedProducts>
 <# 
-if (targetVsVersion == "11.0")
+if (VersionInfo.TargetVsVersion == "11.0")
 { 
 #>
       <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>

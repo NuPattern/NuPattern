@@ -5,7 +5,7 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 <# 
-  if (targetVsVersion == "11.0")
+  if (VersionInfo.TargetVsVersion == "11.0")
     {
 #>
     <!-- TextBox -->
@@ -134,7 +134,7 @@
     <SolidColorBrush x:Key="VsVersion.Dialog.CmdButton.Panel.Fill" Color="{DynamicResource VsColor.NewProjectBackground}"/>
   <# 
     }
-    if (targetVsVersion == "10.0")
+    if (VersionInfo.TargetVsVersion == "10.0")
     {
 #>
     <!-- TextBox -->
@@ -146,7 +146,7 @@
     <!-- DropDown -->
     <SolidColorBrush x:Key="VsVersion.DropDown.Fill" Color="{DynamicResource VsColor.DropDownBackground}" />
     <SolidColorBrush x:Key="VsVersion.DropDown.Border" Color="{DynamicResource VsColor.DropDownBorder}" />
-    <SolidColorBrush x:Key="VsVersion.ComboBox.HoverFill" Color="{DynamicResource VsColor.DropDownBackground}" />
+    <SolidColorBrush x:Key="VsVersion.DropDown.HoverFill" Color="{DynamicResource VsColor.DropDownBackground}" />
     <SolidColorBrush x:Key="VsVersion.DropDown.HoverBorder" Color="{DynamicResource VsColor.DropDownMouseOverBorder}" />
     <SolidColorBrush x:Key="VsVersion.DropDown.DisabledText" Color="{DynamicResource VsColor.DropDownDisabledGlyph}" />
     <SolidColorBrush x:Key="VsVersion.DropDown.DisabledFill" Color="{DynamicResource VsColor.DropDownDisabledBackground}" />

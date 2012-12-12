@@ -66,16 +66,16 @@ public static class VsixInfo
 	{
 		public const string Name = "Microsoft Visual Studio SDK";
 		public const string Author = "Microsoft";
-		public const string Version = "<#=targetVsVersion#>";
+		public const string Version = "<#=VersionInfo.TargetVsVersion#>";
 		public const string Identifier = "Microsoft.VisualStudio.SDK";
 <#
-	if (targetVsVersion == "10.0")
+	if (VersionInfo.TargetVsVersion == "10.0")
 	{
 #>
 		public const string MoreInfoUrl = "http://www.microsoft.com/en-us/download/details.aspx?id=2680";
 <#
 	}
-	else if (targetVsVersion == "11.0")
+	else if (VersionInfo.TargetVsVersion == "11.0")
 	{
 #>
 		public const string MoreInfoUrl = "http://www.microsoft.com/en-us/download/details.aspx?id=30668";

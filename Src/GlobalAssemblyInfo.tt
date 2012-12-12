@@ -5,14 +5,14 @@ using System.Resources;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyCompany("<#=assemblyAuthor#>")]
-[assembly: AssemblyProduct("<#=assemblyProductName#>")]
-[assembly: AssemblyCopyright("<#=assemblyCopyright#>")]
-[assembly: AssemblyTrademark("<#=assemblyAuthor#>")]
+[assembly: AssemblyCompany("<#=VersionInfo.AssemblyAuthor#>")]
+[assembly: AssemblyProduct("<#=VersionInfo.AssemblyProductName#>")]
+[assembly: AssemblyCopyright("<#=VersionInfo.AssemblyCopyright#>")]
+[assembly: AssemblyTrademark("<#=VersionInfo.AssemblyAuthor#>")]
 [assembly: AssemblyCulture("")]
 
-[assembly: AssemblyVersion("<#=assemblyVersion #>")]
-[assembly: AssemblyFileVersion("<#=assemblyVersion #>")]
+[assembly: AssemblyVersion("<#=VersionInfo.AssemblyVersion #>")]
+[assembly: AssemblyFileVersion("<#=VersionInfo.AssemblyVersion #>")]
 
 [assembly: ReliabilityContract(Consistency.MayCorruptProcess, Cer.None)]
 [assembly: ComVisible(false)]
