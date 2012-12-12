@@ -6,7 +6,7 @@
 	//Failure to do so may result in your Toolbox items not appearing correctly.
     string dslAssembly = "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll";
 #>
-<#@ include file="DslPackage\Package.tt" #>
+<#@ include file="DslTemp\DslPackage\Package.tt" #>
 <#
 	string directiveName = this.Dsl.Name;
 #>

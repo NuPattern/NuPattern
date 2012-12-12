@@ -12,6 +12,7 @@ using VSShell = global::Microsoft.VisualStudio.Shell;
 using DslShell = global::Microsoft.VisualStudio.Modeling.Shell;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
+using VSTextTemplatingHost = global::Microsoft.VisualStudio.TextTemplating.VSHost;
 using System;
 using System.Diagnostics;
 using System.Drawing.Design;
@@ -23,7 +24,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
-	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\11.0")]
+	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\10.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideStaticToolboxGroup("@Production ToolingToolboxTab;Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll", "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Production ToolingToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Production ToolingToolboxTab",
@@ -56,7 +57,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 					0xff00ff)]
 	[VSShell::ProvideEditorFactory(typeof(WorkflowDesignEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(WorkflowDesignEditorFactory), "." + Constants.DesignerFileExtension, 50)]
-	[VSShell::ProvideEditorLogicalView(typeof(WorkflowDesignEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
 	[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
 		ProjectSystem = DslShell::ProvideRelatedFileAttribute.CSharpProjectGuid,
 		FileOptions = DslShell::RelatedFileType.FileName)]
@@ -67,7 +67,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	[global::System.Runtime.InteropServices.ComVisible(true)]
 	[DslShell::ProvideBindingPath]
 	[DslShell::ProvideXmlEditorChooserBlockSxSWithXmlEditor(@"WorkflowDesign", typeof(WorkflowDesignEditorFactory))]
-
 	internal abstract partial class WorkflowDesignPackageBase : DslShell::ModelingPackage
 	{
 		protected global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper toolboxHelper;	
