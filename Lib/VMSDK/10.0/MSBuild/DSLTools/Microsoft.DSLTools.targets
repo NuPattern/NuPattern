@@ -6,9 +6,9 @@
 
 	<!-- Import the T4 targets for optional use of T4 from msbuild for compile-time code generation -->
 	<PropertyGroup>
-		<IncludeDslT4Settings>true</IncludeDslT4Settings>
+		<IncludeDslT4Settings Condition="'$(IncludeDslT4Settings)' == ''">true</IncludeDslT4Settings>
 	</PropertyGroup>
-	<Import Project="..\..\TextTemplating\v$(T4Version)\Microsoft.TextTemplating.targets" />
+  <Import Project="..\..\TextTemplating\v$(T4Version)\Microsoft.TextTemplating.targets" />
 	
 	<!--
 	Target for clearing the toolbox cache in exp hive - required when modifing the mapping between 

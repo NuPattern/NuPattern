@@ -215,11 +215,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="ToolkitVersionInfo.ttinclude">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ToolkitVersionInfo.tt</DependentUpon>
-    </None>
     <None Include="VSPackage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VSPackage.resx</LastGenOutput>
@@ -676,10 +671,6 @@
       <SubType>Designer</SubType>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-    </None>
-    <None Include="ToolkitVersionInfo.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ToolkitVersionInfo.ttinclude</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

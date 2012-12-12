@@ -1,19 +1,18 @@
 ﻿<#@ output extension=".vsixmanifest" #>
 <#@ Include File="..\..\..\MasterVSIXInfo.ttinclude" #>
-<#@ Include File="ToolkitVersionInfo.ttinclude" #>
 <#@ include  File="..\..\..\MasterVersion.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
   <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-    <Identifier Id="<#=RuntimeToolkitInfo.Identifier #>">
-      <Name><#=RuntimeToolkitInfo.Name#></Name>
-      <Author><#=RuntimeToolkitInfo.Author#></Author>
-      <Version><#=RuntimeToolkitInfo.Version#></Version>
-      <Description xml:space="preserve"><#=RuntimeToolkitInfo.Description#></Description>
+    <Identifier Id="<#=VsixInfo.PatternToolkitRuntime.Identifier #>">
+      <Name><#=VsixInfo.PatternToolkitRuntime.Name#></Name>
+      <Author><#=VsixInfo.PatternToolkitRuntime.Author#></Author>
+      <Version><#=VsixInfo.PatternToolkitRuntime.Version#></Version>
+      <Description xml:space="preserve"><#=VsixInfo.PatternToolkitRuntime.Description#></Description>
       <Locale>1033</Locale>
       <Icon>Resources\VsixIconRunTime.png</Icon>
       <License>LICENSE.txt</License>
-      <MoreInfoUrl><#=RuntimeToolkitInfo.MoreInfoUrl#></MoreInfoUrl>
-      <GettingStartedGuide><#=RuntimeToolkitInfo.GettingStartedUrl#></GettingStartedGuide>
+      <MoreInfoUrl><#=VsixInfo.PatternToolkitRuntime.MoreInfoUrl#></MoreInfoUrl>
+      <GettingStartedGuide><#=VsixInfo.PatternToolkitRuntime.GettingStartedUrl#></GettingStartedGuide>
       <PreviewImage>Resources\VsixPreviewRunTime.png</PreviewImage>
       <InstalledByMsi>false</InstalledByMsi>
       <SupportedProducts>
@@ -46,7 +45,7 @@ else
       <MefComponent>|Runtime.Schema|</MefComponent>
       <MefComponent>|Library|</MefComponent>
       <MefComponent>|Extensibility|</MefComponent>
-      <Assembly AssemblyName="Microsoft.VisualStudio.Patterning.Runtime, Version=<#=RuntimeToolkitInfo.Version#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5">|Runtime|</Assembly>
+      <Assembly AssemblyName="Microsoft.VisualStudio.Patterning.Runtime, Version=<#=VsixInfo.PatternToolkitRuntime.Version#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5">|Runtime|</Assembly>
       <!-- Feature EXtension Runtime -->
       <VsPackage>Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.pkgdef</VsPackage>
       <VsPackage>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.pkgdef</VsPackage>
