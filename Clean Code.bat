@@ -21,6 +21,11 @@ rem echo Deleting 'NuGet Packages' directories
 rem for /f "delims=" %%a in ('dir /ad/s/b Packages') do (rmdir /s/q "%%a")
 rem if %errorlevel% neq 0 goto :error
 
+
+echo Deleting DslTemp directories
+for /f "delims=" %%a in ('dir /ad/s/b DslTemp') do (rmdir /s/q "%%a")
+if %errorlevel% neq 0 goto :error
+
 echo Deleting backup directories
 for /f "delims=" %%a in ('dir /ad/s/b Backup') do (rmdir /s/q "%%a")
 if %errorlevel% neq 0 goto :error

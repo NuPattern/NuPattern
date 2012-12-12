@@ -5,11 +5,11 @@
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
 <#@ output extension=".xsd" encoding="utf-8"#>
-<#@ include file="Dsl\DomainClassSchema.tt" #>
-<#@ include file="Dsl\DomainClassMonikerSchema.tt" #>
-<#@ include file="Dsl\DomainEnumerationSchema.tt" #>
-<#@ include file="Dsl\SerializationUtilities.tt" #>
-<#@ include file="Dsl\MonikerSerializer.tt" #>
+<#@ include file="DslTemp\Dsl\DomainClassSchema.tt" #>
+<#@ include file="DslTemp\Dsl\DomainClassMonikerSchema.tt" #>
+<#@ include file="DslTemp\Dsl\DomainEnumerationSchema.tt" #>
+<#@ include file="DslTemp\Dsl\SerializationUtilities.tt" #>
+<#@ include file="DslTemp\Dsl\MonikerSerializer.tt" #>
 <#@ include file="LibraryGenerationUtilities.ttinclude" #>
 <#
 	GenerateDomainModelSchema(this.DslLibrary);
