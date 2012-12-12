@@ -562,12 +562,7 @@
       <Name>Runtime</Name>
     </ProjectReference>
   </ItemGroup>
-  <PropertyGroup>
-    <TransformOnBuild>True</TransformOnBuild>
-  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
-  <!--<Import Project="$(DslTargetsPath)\Microsoft.DslTools.settings.targets" />-->
-  <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.DslProjects.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

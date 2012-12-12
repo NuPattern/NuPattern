@@ -340,17 +340,8 @@
       <DependentUpon>CollectionDropDown.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Guidance\RTMFixes\Binding.t4" />
-    <None Include="Guidance\RTMFixes\FeatureCommandsInclude.t4" />
-    <None Include="Guidance\RTMFixes\FeatureExtension.t4" />
-    <None Include="Guidance\RTMFixes\GuidanceWorkflow.t4" />
-    <None Include="Guidance\RTMFixes\VSTemplateLaunchPoint.t4" />
-  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
-  <!--<Import Project="$(DslTargetsPath)\Microsoft.DslTools.settings.targets" />-->
-  <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

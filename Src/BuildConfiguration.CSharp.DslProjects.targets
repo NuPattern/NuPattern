@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Include base build configuration settings (before overrides below) -->
+  <Import Project="BuildConfiguration.CSharp.targets" />
+
+  <!-- Include DSL Tools targets -->
+  <!--<Import Project="$(DslTargetsPath)\Microsoft.DslTools.settings.targets" />-->
+  <Import Project="$(ProjectDir)$(DslTargetsPath)\Microsoft.DSLTools.targets" />
+
+  <!-- Include T4 MSBUILD support -->
+  <PropertyGroup>
+    <IncludeDslT4Settings>true</IncludeDslT4Settings>
+    <IncludeFolders>$(ProjectDir)\$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\TextTemplates\</IncludeFolders>
+    <BeforeTransform>OnBeforeTransform</BeforeTransform>
+  </PropertyGroup>
+  <ItemGroup>
+    <T4ReferencePath Include="$(VsInstallDir)PublicAssemblies\" />
+  </ItemGroup>
+
+  <!-- Copy DSL T4 Include Files to Project Folder -->
+  <PropertyGroup>
+    <DslIncludeSourceDir>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\TextTemplates</DslIncludeSourceDir>
+    <DslIncludeTargetDir Condition="'$(DslIncludeTargetDir)' == ''">GeneratedCode\DslTemp</DslIncludeTargetDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <DslIncludeFiles Include="$(DslIncludeSourceDir)\**\*.tt"/>
+  </ItemGroup>
+  
+  <Target Name="OnBeforeTransform">
+    <RemoveDir ContinueOnError="true" Directories="$(ProjectDir)\$(DslIncludeTargetDir)"/>
+    <Message Importance="High" Text="Copying DSL includes from VMSDK '$(DslIncludeSourceDir)' to project directory -&gt; '$(DslIncludeTargetDir)'"/>
+    <Copy
+      SourceFiles="@(DslIncludeFiles)"
+      DestinationFolder="$(ProjectDir)\$(DslIncludeTargetDir)\%(RecursiveDir)"
+      OverwriteReadOnlyFiles="true"/>
+  </Target>
+
+  <Target Name="AfterClean">
+    <RemoveDir ContinueOnError="true" Directories="$(ProjectDir)\$(DslIncludeTargetDir)"/>
+  </Target>
+</Project>

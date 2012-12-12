@@ -663,7 +663,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="Guidance\RuntimeInterfaces.cd" />
-    <None Include="Microsoft.VisualStudio.Patterning.Runtime.Shell.targets" />
+    <None Include="Microsoft.VisualStudio.Patterning.Runtime.Shell.targets">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>

@@ -532,16 +532,7 @@
     <StartAction>Program</StartAction>
     <StartArguments>/rootsuffix Exp</StartArguments>
   </PropertyGroup>
-  <PropertyGroup>
-    <TransformOnBuild>false</TransformOnBuild>
-    <IncludeDslT4Settings>true</IncludeDslT4Settings>
-  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
-  <!--<Import Project="$(DslTargetsPath)\Microsoft.DslTools.settings.targets" />-->
-  <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
-  <ItemGroup>
-    <T4ReferencePath Include="$(VsIdePath)PublicAssemblies\" />
-  </ItemGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.DslProjects.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

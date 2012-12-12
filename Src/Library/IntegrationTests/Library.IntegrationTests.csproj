@@ -171,7 +171,5 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />
-  <!--<Import Project="$(DslTargetsPath)\Microsoft.DslTools.settings.targets" />-->
-  <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>
