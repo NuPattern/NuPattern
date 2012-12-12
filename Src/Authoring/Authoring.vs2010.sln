@@ -24,42 +24,99 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9ADEA3
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.UnitTests", "UnitTests\Authoring.UnitTests.csproj", "{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.IntegrationTests", "IntegrationTests\Authoring.IntegrationTests.csproj", "{4D526080-A897-4A58-B12A-87974ADC11EB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowDesign", "Source\WorkflowDesign\WorkflowDesign.csproj", "{B29AC5FA-1276-46C3-A6F5-C0F8D2F8914A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowDesign.Interfaces", "Source\WorkflowDesign.Interfaces\WorkflowDesign.Interfaces.csproj", "{A55CFA2E-1519-4719-BAFB-D67F3C67E375}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowDesign.Shell", "Source\WorkflowDesign.Shell\WorkflowDesign.Shell.csproj", "{F5214FCD-58A1-4856-85A0-34B2150E621B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.UserTests", "UserTests\Authoring.UserTests.csproj", "{EDC59846-6F05-4F66-B835-CD936DBD3D1B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.Toolkit.Automation", "Source\Authoring.Toolkit.Automation\Authoring.Toolkit.Automation.csproj", "{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.Toolkit", "Source\Authoring.Toolkit\Authoring.Toolkit.csproj", "{0216A624-C5C5-4335-8361-F640B91B4DEA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternModelDesign.Shell", "Source\PatternModelDesign.Shell\PatternModelDesign.Shell.csproj", "{A999A0EB-246C-4B63-8BC1-405020026CAB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomationLibrary.Toolkit", "Source\AutomationLibrary.Toolkit\AutomationLibrary.Toolkit.csproj", "{2F73D922-E3C5-49F8-AB6D-AF54E76EE47E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionItem", "UnfoldTests\ExtensionItem\ExtensionItem.csproj", "{FC09E8ED-2CC3-4BEF-B4E8-2636587DDEEC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionItem.Automation", "UnfoldTests\ExtensionItem.Automation\ExtensionItem.Automation.csproj", "{8576E425-7DF9-475D-9B2D-BCB13A792B59}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionProject", "UnfoldTests\ExtensionProject\ExtensionProject.csproj", "{F5B750EA-7891-4F83-A5C8-A46F65682586}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionProject.Automation", "UnfoldTests\ExtensionProject.Automation\ExtensionProject.Automation.csproj", "{3A48CD99-E28B-4E2B-8BFF-CCC9E2C9D42F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainTestToolkit", "UnfoldTests\MainTestToolkit\MainTestToolkit.csproj", "{397C660A-72DA-44EB-A4FF-1EC8E673C594}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainTestToolkit.Automation", "UnfoldTests\MainTestToolkit.Automation\MainTestToolkit.Automation.csproj", "{EA864829-AD31-4AAF-95D1-131B7401403B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.Guidance", "Source\Authoring.Guidance\Authoring.Guidance.csproj", "{67257A67-4ECB-4D70-92EE-445835343670}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOnLabs.Automation", "HandsOnLabs\HandsOnLabs.Automation\HandsOnLabs.Automation.csproj", "{EBD848C7-5823-48BD-AF23-3DD723141161}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOnLabs", "HandsOnLabs\HandsOnLabs\HandsOnLabs.csproj", "{FB67BCAD-DFB0-40B1-9E02-CE4D8DA5BE9D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versioning", "..\Common\Source\Versioning\Versioning.csproj", "{AE530C9B-34B7-416F-8477-15B8257CDAC0}"
 EndProject
