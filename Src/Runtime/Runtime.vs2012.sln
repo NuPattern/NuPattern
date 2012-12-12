@@ -5,6 +5,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Runtime", "_Runtime", "{B0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DF62E953-87DF-4792-97AF-96CDDC99E1F8}"
 	ProjectSection(SolutionItems) = preProject
+		..\BuildConfiguration.CSharp.DslProjects.targets = ..\BuildConfiguration.CSharp.DslProjects.targets
 		..\BuildConfiguration.CSharp.NoCodeAnalysis.targets = ..\BuildConfiguration.CSharp.NoCodeAnalysis.targets
 		..\BuildConfiguration.CSharp.props = ..\BuildConfiguration.CSharp.props
 		..\BuildConfiguration.CSharp.targets = ..\BuildConfiguration.CSharp.targets
@@ -35,52 +36,108 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AA3EE7
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime", "Source\Runtime\Runtime.csproj", "{79A7E018-1A92-47F4-A478-17BCC57CC7AD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.UnitTests", "UnitTests\Runtime.UnitTests.csproj", "{D43AF2D1-F811-4AC8-B5B5-0D4360731385}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Store", "Source\Runtime.Store\Runtime.Store.csproj", "{0EF7E7D4-B10B-4FC9-B4D0-66E360F4338A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Interfaces", "Source\Runtime.Interfaces\Runtime.Interfaces.csproj", "{446F0156-39D1-4B11-9B15-BE9637CB057F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.UnitTests", "..\Common\UnitTests\Common.UnitTests.csproj", "{DBB67587-6B46-469E-B427-C8CAFAC513A3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensibility", "..\Common\Source\Extensibility\Extensibility.csproj", "{76718F52-8F7E-43B4-9085-EF08DB52AC46}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "..\Library\Source\Library.csproj", "{C6519E4A-2077-4E80-A280-E8BA90D53A3E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.UnitTests", "..\Library\UnitTests\Library.UnitTests.csproj", "{88DE6544-A387-4E89-98DC-76AF4B8032E7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Presentation", "..\Common\Source\Common.Presentation\Common.Presentation.csproj", "{72CC87F3-2860-45CC-8712-00621F868D60}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Schema", "Source\Runtime.Schema\Runtime.Schema.csproj", "{B0F2590A-F583-4883-B701-923B43475BB5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Schema.UnitTests", "Runtime.Schema.UnitTests\Runtime.Schema.UnitTests.csproj", "{1249F63B-95F5-47E3-BC06-BC92BFCE9C0E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensibility.UnitTests", "..\Common\Extensibility.UnitTests\Extensibility.UnitTests.csproj", "{87E50B58-FF4A-434F-A800-5455E86BEBDD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests", "IntegrationTests\Runtime.IntegrationTests.csproj", "{727AFA69-15BC-4899-95CD-920B466BF9C1}"
 	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF} = {CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.IntegrationTests", "..\Common\IntegrationTests\Common.IntegrationTests.csproj", "{30CFE347-2CCA-4F54-8DAA-7CE639EA8A8F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.IntegrationTests", "..\Library\IntegrationTests\Library.IntegrationTests.csproj", "{A635E681-9C81-4D9F-8D3A-A527575161E4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests.SampleVsix", "IntegrationTests.SampleVsix\Runtime.IntegrationTests.SampleVsix.csproj", "{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensibility.IntegrationTests", "..\Common\Extensibility.IntegrationTests\Extensibility.IntegrationTests.csproj", "{206ED22C-1F59-40D6-8B49-14B2A56DC9D2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D3E93083-99C9-4186-95B5-339A822C63EE} = {D3E93083-99C9-4186-95B5-339A822C63EE}
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Shell", "Source\Runtime.Shell\Runtime.Shell.csproj", "{D3E93083-99C9-4186-95B5-339A822C63EE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensibility.Serialization", "..\Common\Source\Extensibility.Serialization\Extensibility.Serialization.csproj", "{B2B1ED0A-60E0-4A5C-822A-605527663E0B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versioning", "..\Common\Source\Versioning\Versioning.csproj", "{AE530C9B-34B7-416F-8477-15B8257CDAC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests.TestToolkit", "IntegrationTests.TestToolkit\Runtime.IntegrationTests.TestToolkit.csproj", "{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -590,8 +647,8 @@ Global
 		{B0F2590A-F583-4883-B701-923B43475BB5} = {B0C8639C-F34C-4D10-871C-6D19DAAC6A30}
 		{1249F63B-95F5-47E3-BC06-BC92BFCE9C0E} = {B0C8639C-F34C-4D10-871C-6D19DAAC6A30}
 		{727AFA69-15BC-4899-95CD-920B466BF9C1} = {B0C8639C-F34C-4D10-871C-6D19DAAC6A30}
-		{D3E93083-99C9-4186-95B5-339A822C63EE} = {B0C8639C-F34C-4D10-871C-6D19DAAC6A30}
 		{BBD7F731-F49B-4A10-90A0-9CDE33D6B745} = {B0C8639C-F34C-4D10-871C-6D19DAAC6A30}
+		{D3E93083-99C9-4186-95B5-339A822C63EE} = {B0C8639C-F34C-4D10-871C-6D19DAAC6A30}
 		{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF} = {B0C8639C-F34C-4D10-871C-6D19DAAC6A30}
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {DF62E953-87DF-4792-97AF-96CDDC99E1F8}
 		{DBB67587-6B46-469E-B427-C8CAFAC513A3} = {A5B66E52-7E8D-4AE6-8397-CA4198C1F470}
