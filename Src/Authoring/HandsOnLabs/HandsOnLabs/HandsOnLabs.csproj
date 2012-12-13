@@ -473,7 +473,6 @@
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
   <Import Project="$(VsxTargetsPath)\Microsoft.VsSDK.targets" />
   <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.targets" />
-  <Import Project="$(BranchRoot)Common\Source\Versioning\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets" />
   <!-- Properties for VSSDK/DSL Targets -->
   <PropertyGroup>
     <RegisterOutputPackage>true</RegisterOutputPackage>
