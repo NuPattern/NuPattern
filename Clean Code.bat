@@ -22,11 +22,11 @@ rem for /f "delims=" %%a in ('dir /ad/s/b Packages') do (rmdir /s/q "%%a")
 rem if %errorlevel% neq 0 goto :error
 
 
-echo Deleting DslTemp directories
-for /f "delims=" %%a in ('dir /ad/s/b DslTemp') do (rmdir /s/q "%%a")
+echo Deleting DslIncludeTemp directories
+for /f "delims=" %%a in ('dir /ad/s/b DslIncludeTemp') do (rmdir /s/q "%%a")
 if %errorlevel% neq 0 goto :error
 
-echo Deleting backup directories
+echo Deleting Backup directories
 for /f "delims=" %%a in ('dir /ad/s/b Backup') do (rmdir /s/q "%%a")
 if %errorlevel% neq 0 goto :error
 

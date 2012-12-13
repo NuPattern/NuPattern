@@ -13,14 +13,14 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-<#@ include file="DslTemp\Dsl\DomainClassSerializer.tt" #>
-<#@ include file="DslTemp\Dsl\DomainModelSerializer.tt" #>
-<#@ include file="DslTemp\Dsl\SerializationUtilities.tt" #>
-<#@ include file="DslTemp\Dsl\MonikerSerializer.tt" #>
+<#@ include file="Dsl\DomainClassSerializer.tt" #>
+<#@ include file="Dsl\DomainModelSerializer.tt" #>
+<#@ include file="Dsl\SerializationUtilities.tt" #>
+<#@ include file="Dsl\MonikerSerializer.tt" #>
 <#@ include file="DomainXmlSerializationBehavior.tt" #>
-<#@ include file="DslTemp\Dsl\DomainXmlMonikerResolver.tt" #>
-<#@ include file="DslTemp\Dsl\SerializationMessages.tt" #>
-<#@ include file="DslTemp\Dsl\Utilities.tt" #>
+<#@ include file="Dsl\DomainXmlMonikerResolver.tt" #>
+<#@ include file="Dsl\SerializationMessages.tt" #>
+<#@ include file="Dsl\Utilities.tt" #>
 <#@ include file="LibraryGenerationUtilities.ttinclude" #>
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;

@@ -1,2 +1,2 @@
-<#@ include file="DslTemp\Dsl\MultiplicityValidation.tt" #>
+<#@ include file="Dsl\MultiplicityValidation.tt" #>
 <#@ Dsl processor="DslDirectiveProcessor"  requires="fileName='..\DslDefinition.dsl'" #> 

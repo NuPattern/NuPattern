@@ -1,2 +1,2 @@
-<#@ include file="DslTemp\Dsl\DslResxGenerator.tt" #>
+<#@ include file="Dsl\DslResxGenerator.tt" #>
 <#@ Dsl processor="DslDirectiveProcessor"  requires="fileName='..\DslDefinition.dsl'" #>

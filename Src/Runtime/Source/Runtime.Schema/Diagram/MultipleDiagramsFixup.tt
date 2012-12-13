@@ -4,7 +4,7 @@
 <#@ import namespace="System.Drawing" #>
 <#@ import namespace="System.Drawing.Drawing2D" #>
 <#@ assembly name="System.Drawing.dll" #>
-<#@ include file="..\GeneratedCode\DslTemp\Dsl\PathMerge.tt" #>
+<#@ include file="Dsl\PathMerge.tt" #>
 <#@ output extension=".cs" #>
 <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\DslDefinition.dsl'" #>
 //------------------------------------------------------------------------------
