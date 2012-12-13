@@ -38,8 +38,12 @@
       OverwriteReadOnlyFiles="true"/>
   </Target>
 
-  <!-- Cleanup T4 include files from Project Folder -->
-  <Target Name="AfterClean">
+  <!-- Cleanup T4 include files from Project Folder on Clean -->
+  <PropertyGroup>
+    <RebuildDependsOn>CleanDslIncludeFiles;$(RebuildDependsOn)</RebuildDependsOn>
+  </PropertyGroup>
+  <Target Name="CleanDslIncludeFiles">
+    <Message Importance="High" Text="Removing cloned DSLTools T4 include files"/>
     <RemoveDir ContinueOnError="true" Directories="$(ProjectDir)\$(DslIncludeTargetDir)"/>
   </Target>
 </Project>

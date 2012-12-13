@@ -57,4 +57,16 @@
 
   <!-- Tool includes -->
   <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />-->
+
+  <!-- Cleanup T4 Tracking files on Clean -->
+  <PropertyGroup>
+    <RebuildDependsOn>CleanT4TrackingFiles;$(RebuildDependsOn)</RebuildDependsOn>
+  </PropertyGroup>
+  <ItemGroup>
+    <T4TrackingFilesToDelete Include="$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\**\T4Transform*.tlog"/>
+  </ItemGroup>
+  <Target Name="CleanT4TrackingFiles">
+    <Message Importance="High" Text="Removing T4 transformation tracking files"/>
+    <Delete Files="@(T4TrackingFilesToDelete)" ContinueOnError="true"/>
+  </Target>
 </Project>
