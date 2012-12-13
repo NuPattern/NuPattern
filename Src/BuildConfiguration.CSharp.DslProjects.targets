@@ -38,7 +38,7 @@
       OverwriteReadOnlyFiles="true"/>
   </Target>
 
-  <!-- Cleanup T4 include files from Project Folder on Clean -->
+  <!-- Cleanup T4 include files from Project Folder on Rebuild -->
   <PropertyGroup>
     <RebuildDependsOn>CleanDslIncludeFiles;$(RebuildDependsOn)</RebuildDependsOn>
   </PropertyGroup>

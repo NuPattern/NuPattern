@@ -58,7 +58,7 @@
   <!-- Tool includes -->
   <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />-->
 
-  <!-- Cleanup T4 Tracking files on Clean -->
+  <!-- Cleanup T4 Tracking files on Rebuild -->
   <PropertyGroup>
     <RebuildDependsOn>CleanT4TrackingFiles;$(RebuildDependsOn)</RebuildDependsOn>
   </PropertyGroup>
