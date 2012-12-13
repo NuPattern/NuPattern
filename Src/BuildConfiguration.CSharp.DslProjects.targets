@@ -13,7 +13,7 @@
     <!-- Use only DSLTools T4 files for current version of VS. Removes dependency on VMSDK being installed -->
     <DslIncludeSourceDir>$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\TextTemplates</DslIncludeSourceDir>
     <!-- Sub folder of project to copy DSLTools T4 include files. Override this in the individual project file if needed -->
-    <DslIncludeTargetDir Condition="'$(DslIncludeTargetDir)' == ''">GeneratedCode\DslTemp</DslIncludeTargetDir>
+    <DslIncludeTargetDir Condition="'$(DslIncludeTargetDir)' == ''">DslIncludeTemp</DslIncludeTargetDir>
     <!-- Set T4 processor to include only DSLTools T4 files for current version of VS -->
     <IncludeFolders>$(ProjectDir)$(DslIncludeSourceDir)\</IncludeFolders>
     <BeforeTransform>OnBeforeTransform</BeforeTransform>
