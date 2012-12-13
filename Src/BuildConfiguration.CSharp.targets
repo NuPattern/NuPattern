@@ -29,10 +29,13 @@
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
 
+  <!-- Tool includes -->
+  <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />-->
+  
   <!-- Include T4 MSBUILD support for all T4 files -->
   <PropertyGroup>
     <TransformOnBuild>true</TransformOnBuild>
-    <!-- Turn off default host settings, we want to specify them below to use files in source tree only -->
+    <!-- Turn off default T4 MSBUILD settings, so that we can fully control the templates to include, and which assembly dependencies to use in the transform -->
     <IncludeDslT4Settings>false</IncludeDslT4Settings>
   </PropertyGroup>
   <ItemGroup>
@@ -50,15 +53,9 @@
       <CodeBase>$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.DslDefinition$(VsxVersionSuffix).dll</CodeBase>
     </DirectiveProcessor>
   </ItemGroup>
+  <Import Condition="'$(ImportT4Targets)'!='false'" Project="$(ProjectDir)$(T4TargetsPath)\Microsoft.TextTemplating.targets" />
 
-  <Import
-    Condition="'$(ImportT4Targets)'!='false'" 
-    Project="$(ProjectDir)$(T4TargetsPath)\Microsoft.TextTemplating.targets" />
-
-  <!-- Tool includes -->
-  <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />-->
-
-  <!-- Cleanup T4 Tracking files on Rebuild -->
+  <!-- Remove T4 Tracking files so that we force a full transform on Rebuild -->
   <PropertyGroup>
     <RebuildDependsOn>CleanT4TrackingFiles;$(RebuildDependsOn)</RebuildDependsOn>
   </PropertyGroup>
@@ -66,7 +63,7 @@
     <T4TrackingFilesToDelete Include="$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\**\T4Transform*.tlog"/>
   </ItemGroup>
   <Target Name="CleanT4TrackingFiles">
-    <Message Importance="High" Text="Removing T4 transformation tracking files"/>
+    <Message Importance="High" Text="Removing T4 tracking data to force a full transform"/>
     <Delete Files="@(T4TrackingFilesToDelete)" ContinueOnError="true"/>
   </Target>
 </Project>
