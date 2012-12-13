@@ -8,6 +8,12 @@
     <IncludeFolders>$(ProjectDir)$(BranchRoot)..\Lib\VMSDK\$(TargetVsVersion)\TextTemplates\</IncludeFolders>
     <BeforeTransform>OnBeforeTransform</BeforeTransform>
   </PropertyGroup>
+  <ItemGroup>
+    <!-- Required for DSLTools T4 templates -->
+    <T4ParameterValues Include="ProjectDefaultNamespace">
+      <Value>$(RootNamespace)</Value>
+    </T4ParameterValues>
+  </ItemGroup>
 
   <!-- Include base build configuration settings (before overrides below) -->
   <Import Project="BuildConfiguration.CSharp.targets" />

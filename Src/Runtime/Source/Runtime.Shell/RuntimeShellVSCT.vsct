@@ -30,7 +30,7 @@
 		</Buttons>
 		<Bitmaps>
 			<Bitmap guid="guidOpenSolutionBuilderBitmap" href="..\..\..\Images\11.0\ToolWindowSolutionBuilder.bmp" usedList="bmpPic1" />
-		</Bitmaps>
+      </Bitmaps>
 	</Commands>
 	<CommandPlacements>
 		<CommandPlacement guid="guidOpenSolutionBuilderCommand" id="cmdidOpenSolutionBuilderCommand" priority="0x0100">
