@@ -13,8 +13,8 @@
   <!--<Extern href="msobtnid.h" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" />-->
   <Extern href="virtkeys.h" />
   <Extern href="DSLToolsCmdID.h" />
-  <Include href="GeneratedCode\GeneratedVsct.vsct" />
-  <Include href="Guidance\GeneratedCode\LaunchPoints.vsct" Condition="Exists('..\GeneratedCode\LaunchPoints.vsct')" />
+  <Include href="GeneratedCode\GeneratedVsct.gen.vsct" />
+  <Include href="Guidance\GeneratedCode\LaunchPoints.gen.vsct" Condition="Exists('..\GeneratedCode\LaunchPoints.gen.vsct')" />
 
   <Commands package="guidPkg">
     <Buttons>

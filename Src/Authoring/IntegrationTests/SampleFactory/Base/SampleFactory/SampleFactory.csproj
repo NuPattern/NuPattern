@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="GeneratedCode\PatternModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PatternModel.patterndefinition">
+    <EmbeddedResource Include="PatternModel.gen.patterndefinition">
       <Generator>TextTransformationGenerator</Generator>
     </EmbeddedResource>
     <None Include="source.extension.vsixmanifest">

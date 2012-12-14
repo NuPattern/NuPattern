@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Pattern Toolkit</Name>
+		<Description>Creates a new project that defines a parameterized pattern, and builds a pattern extension toolkit that can be used to create and configure variants of the pattern as new elements in a solution.</Description>
+		<TemplateID>301af1ad3bdb-PatternToolkit</TemplateID>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>Extensibility</ProjectSubType>
+		<SortOrder>1000</SortOrder>
+		<CreateNewFolder>false</CreateNewFolder>
+		<DefaultName>PatternToolkit</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+		<Icon>VsTemplateIconAuthoringProject.ico</Icon>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+		<Hidden>false</Hidden>
+	</TemplateData>
+	<TemplateContent>
+		<Project File="AuthoringProject.gen.csproj" ReplaceParameters="true" TargetFileName="AuthoringProject.csproj">
+			<Folder Name="Properties">
+				<ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+			</Folder>
+			<Folder Name="Resources">
+				<ProjectItem ReplaceParameters="false" TargetFileName="ToolkitIcon.png">VsixIconAuthoringProjectTemplate.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="PatternIcon.png">PatternNodeDefault.png</ProjectItem>
+			</Folder>
+		</Project>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.Patterning.Extensibility, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>Microsoft.VisualStudio.Patterning.Extensibility.CoordinatorTemplateWizard</FullClassName>
+	</WizardExtension>
+	<WizardData>
+		<Replacement Key="$runtimeVSIXVersion$"  Value="1.3.20.0" />
+		<NewGuid Key="$guid11$" />
+		<NewGuid Key="$guid12$" />
+		<NewGuid Key="$guid13$" />
+		<NewGuid Key="$guid14$" />
+		<NewGuid Key="$guid15$" />
+		<CoordinatedWizards>
+			<WizardExtension>
+				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+				<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.GuidGeneratorTemplateWizard</FullClassName>
+			</WizardExtension>
+			<WizardExtension>
+				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+				<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.VsRootSuffixTemplateWizard</FullClassName>
+			</WizardExtension>
+			<WizardExtension>
+				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+				<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.ReplacementTemplateWizard</FullClassName>
+			</WizardExtension>
+			<WizardExtension>
+			  <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+			  <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.InstantiationTemplateWizard</FullClassName>
+			</WizardExtension>
+			<WizardExtension>
+			  <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+			  <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+			</WizardExtension>
+			<WizardExtension>
+				<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+				<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.FixLinkPathTemplateWizard</FullClassName>
+			</WizardExtension>
+			<WizardExtension>
+				<Assembly>Microsoft.VisualStudio.Patterning.Runtime.Shell, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+				<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.Shell.OpenSolutionBuilderTemplateWizard</FullClassName>
+			</WizardExtension>
+		</CoordinatedWizards>
+	</WizardData>
+</VSTemplate>

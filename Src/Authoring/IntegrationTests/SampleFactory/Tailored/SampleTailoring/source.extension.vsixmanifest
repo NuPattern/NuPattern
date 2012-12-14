@@ -18,7 +18,7 @@
 	<References />
 	<Content>
 		<MefComponent>|SampleTailoring|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="SampleTailoring.dll">SampleTailoring.PatternModel.patterndefinition</CustomExtension>
+		<CustomExtension Type="PatternModel" AssemblyFile="SampleTailoring.dll">SampleTailoring.PatternModel.gen.patterndefinition</CustomExtension>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>
 </Vsix>

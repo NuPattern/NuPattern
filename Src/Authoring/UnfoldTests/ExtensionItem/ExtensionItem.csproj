@@ -53,7 +53,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
     </None>
-    <ItemTemplate Include="Assets\Templates\Items\Interface\Interface.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Interface\Interface.gen.vstemplate">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Interface.tt</DependentUpon>
@@ -67,7 +67,7 @@
     </EmbeddedResource>
     <None Include="Assets\Templates\Items\Interface\Interface.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Interface.vstemplate</LastGenOutput>
+      <LastGenOutput>Interface.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="PatternTooling.toolingdesign">
       <ItemGuid>634f8726-c7bf-4dfb-ab1e-8964aa23ae20</ItemGuid>

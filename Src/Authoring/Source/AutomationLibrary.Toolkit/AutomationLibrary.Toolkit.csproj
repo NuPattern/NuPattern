@@ -76,14 +76,14 @@
     <Content Include="Assets\Templates\Items\Extensibility\Condition\Condition.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\DataTypeConverter\DataTypeConverter.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\DataTypeConverter\DataTypeConverter.gen.vstemplate">
       <DependentUpon>DataTypeConverter.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DesignTime>True</DesignTime>
       <ItemGuid>66422a35-13e4-45d4-9e89-52fb2ca958cd</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ElementOrderingComparer\ElementOrderingComparer.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ElementOrderingComparer\ElementOrderingComparer.gen.vstemplate">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ElementOrderingComparer.tt</DependentUpon>
@@ -101,7 +101,7 @@
     <Content Include="Assets\Templates\Items\Extensibility\UIEditor\UIEditor.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\PropertyValidationRule\PropertyValidationRule.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\PropertyValidationRule\PropertyValidationRule.gen.vstemplate">
       <DependentUpon>PropertyValidationRule.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -114,7 +114,7 @@
     <Content Include="Assets\Templates\Items\Extensibility\ValueProvider\ValueProvider.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Templates\Projects\Extensibility\Library\LibraryProject.csproj">
+    <Content Include="Assets\Templates\Projects\Extensibility\Library\LibraryProject.gen.csproj">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LibraryProject.tt</DependentUpon>
@@ -159,58 +159,58 @@
     </CodeAnalysisDictionary>
     <None Include="Assets\Templates\Items\Extensibility\ElementOrderingComparer\ElementOrderingComparer.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ElementOrderingComparer.vstemplate</LastGenOutput>
+      <LastGenOutput>ElementOrderingComparer.gen.vstemplate</LastGenOutput>
     </None>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\Command\Command.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\Command\Command.gen.vstemplate">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <ItemGuid>9a30d849-b71c-4591-b534-5f5d4d467347</ItemGuid>
       <DependentUpon>Command.tt</DependentUpon>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\Condition\Condition.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\Condition\Condition.gen.vstemplate">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Condition.tt</DependentUpon>
       <ItemGuid>9d3d37b4-c4c0-40fb-b99a-edb14ec9f89d</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\EnumTypeConverter\EnumTypeConverter.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\EnumTypeConverter\EnumTypeConverter.gen.vstemplate">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EnumTypeConverter.tt</DependentUpon>
       <ItemGuid>2cb5bbaa-d08a-499f-bf27-fdd82d385af7</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\Event\Event.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\Event\Event.gen.vstemplate">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Event.tt</DependentUpon>
       <ItemGuid>8624b0e5-d07d-4725-8ab3-3ef55b2425ea</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\TypePickerEditor\TypePickerEditor.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\TypePickerEditor\TypePickerEditor.gen.vstemplate">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TypePickerEditor.tt</DependentUpon>
       <ItemGuid>9bd0dac6-0175-486e-99a7-a20949996585</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\UIEditor\UIEditor.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\UIEditor\UIEditor.gen.vstemplate">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UIEditor.tt</DependentUpon>
       <ItemGuid>da25243c-9a00-4eaf-9b07-c01a383cf4c9</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ElementValidationRule\ElementValidationRule.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ElementValidationRule\ElementValidationRule.gen.vstemplate">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ElementValidationRule.tt</DependentUpon>
       <ItemGuid>911172d9-9c0d-444f-91d3-4b78a47ff83f</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ValueProvider\ValueProvider.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ValueProvider\ValueProvider.gen.vstemplate">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -219,29 +219,29 @@
     </ItemTemplate>
     <None Include="Assets\Templates\Items\Extensibility\PropertyValidationRule\PropertyValidationRule.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PropertyValidationRule.vstemplate</LastGenOutput>
+      <LastGenOutput>PropertyValidationRule.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Projects\Extensibility\Library\LibraryProject.tt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>LibraryProject.csproj</LastGenOutput>
+      <LastGenOutput>LibraryProject.gen.csproj</LastGenOutput>
     </None>
     <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsTemplateIconAutomationLibraryProject.ico">
       <Link>Assets\Templates\Projects\Extensibility\Library\VsTemplateIconAutomationLibraryProject.ico</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="9be0eaf7-8717-414f-97fe-58c0c97be587.patterndefinition.diagram">
-      <DependentUpon>PatternModel.patterndefinition</DependentUpon>
+    <None Include="9be0eaf7-8717-414f-97fe-58c0c97be587.gen.patterndefinition.diagram">
+      <DependentUpon>PatternModel.gen.patterndefinition</DependentUpon>
     </None>
     <None Include="Assets\Templates\Items\Extensibility\DataTypeConverter\DataTypeConverter.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DataTypeConverter.vstemplate</LastGenOutput>
+      <LastGenOutput>DataTypeConverter.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Text\Constants.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Constants.t4</LastGenOutput>
+      <LastGenOutput>Constants.gen.t4</LastGenOutput>
     </None>
-    <Content Include="Assets\Templates\Text\Constants.t4">
+    <Content Include="Assets\Templates\Text\Constants.gen.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Constants.tt</DependentUpon>
@@ -252,14 +252,14 @@
       <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Element/C:\Projects\Platu\Main\Src\Authoring\Authoring.patternstate%252f7b588f3f-4927-42bf-847d-66bd00883529</SourceModelReference>
       <ItemGuid>f9e7aa00-7024-4128-bad8-097738a18ad0</ItemGuid>
     </None>
-    <ProjectTemplate Include="Assets\Templates\Projects\Extensibility\Library\Library.vstemplate">
+    <ProjectTemplate Include="Assets\Templates\Projects\Extensibility\Library\Library.gen.vstemplate">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Library.tt</DependentUpon>
       <ItemGuid>07d8d448-a0b0-49d5-8b2e-f51239a49d63</ItemGuid>
     </ProjectTemplate>
-    <EmbeddedResource Include="PatternModel.patterndefinition">
+    <EmbeddedResource Include="PatternModel.gen.patterndefinition">
       <DependentUpon>PatternModel.tt</DependentUpon>
       <ItemGuid>c8131dba-0954-41b1-bf71-defcc7035456</ItemGuid>
       <SubType>Designer</SubType>
@@ -270,7 +270,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
     <Content Include="Assets\Guidance\ToolkitGuidance.doc">
       <SubType>Designer</SubType>
@@ -280,39 +280,39 @@
     </Content>
     <None Include="Assets\Templates\Items\Extensibility\Command\Command.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Command.vstemplate</LastGenOutput>
+      <LastGenOutput>Command.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Items\Extensibility\Condition\Condition.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Condition.vstemplate</LastGenOutput>
+      <LastGenOutput>Condition.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Items\Extensibility\EnumTypeConverter\EnumTypeConverter.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EnumTypeConverter.vstemplate</LastGenOutput>
+      <LastGenOutput>EnumTypeConverter.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Items\Extensibility\Event\Event.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Event.vstemplate</LastGenOutput>
+      <LastGenOutput>Event.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Items\Extensibility\TypePickerEditor\TypePickerEditor.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TypePickerEditor.vstemplate</LastGenOutput>
+      <LastGenOutput>TypePickerEditor.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Items\Extensibility\UIEditor\UIEditor.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>UIEditor.vstemplate</LastGenOutput>
+      <LastGenOutput>UIEditor.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Items\Extensibility\ElementValidationRule\ElementValidationRule.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ElementValidationRule.vstemplate</LastGenOutput>
+      <LastGenOutput>ElementValidationRule.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Items\Extensibility\ValueProvider\ValueProvider.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ValueProvider.vstemplate</LastGenOutput>
+      <LastGenOutput>ValueProvider.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Projects\Extensibility\Library\Library.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Library.vstemplate</LastGenOutput>
+      <LastGenOutput>Library.gen.vstemplate</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <Content Include="Assets\Templates\Text\CollectionImplementation.t4">

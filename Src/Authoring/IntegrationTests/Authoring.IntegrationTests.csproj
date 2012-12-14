@@ -137,13 +137,13 @@
     </Compile>
     <Compile Include="Commands.cs" />
     <Compile Include="Commands\CreateGuidanceDocumentsCommandSpec.cs" />
-    <Compile Include="AutomationLibraryVsixPackagingSpec.cs">
+    <Compile Include="AutomationLibraryVsixPackagingSpec.gen.cs">
       <DependentUpon>AutomationLibraryVsixPackagingSpec.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="CreateOnUnfoldSpec.cs" />
-    <Compile Include="AuthoringVsixPackagingSpec.cs">
+    <Compile Include="AuthoringVsixPackagingSpec.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AuthoringVsixPackagingSpec.tt</DependentUpon>
@@ -176,18 +176,18 @@
     </None>
     <None Include="AutomationLibraryVsixPackagingSpec.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AutomationLibraryVsixPackagingSpec.cs</LastGenOutput>
+      <LastGenOutput>AutomationLibraryVsixPackagingSpec.gen.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="AuthoringVsixPackagingSpec.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AuthoringVsixPackagingSpec.cs</LastGenOutput>
+      <LastGenOutput>AuthoringVsixPackagingSpec.gen.cs</LastGenOutput>
     </None>
     <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\Customization.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Customization.vstemplate</LastGenOutput>
+      <LastGenOutput>Customization.gen.vstemplate</LastGenOutput>
     </None>
-    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\Customization.vstemplate">
+    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\Customization.gen.vstemplate">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Customization.tt</DependentUpon>
@@ -199,16 +199,16 @@
     <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Customization.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\PatternModel.patterndefinition">
+    <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\PatternModel.gen.patterndefinition">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.tt</DependentUpon>
     </None>
     <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Customization.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Customization.vstemplate</LastGenOutput>
+      <LastGenOutput>Customization.gen.vstemplate</LastGenOutput>
     </None>
-    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Customization.vstemplate">
+    <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Customization.gen.vstemplate">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Customization.tt</DependentUpon>
@@ -312,12 +312,12 @@
     </None>
     <None Include="VersionTargetsSpec\VersionTargets_Current.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>VersionTargets_Current.targets</LastGenOutput>
+      <LastGenOutput>VersionTargets_Current.gen.targets</LastGenOutput>
     </None>
     <Content Include="VersionTargetsSpec\VersionTargets_Old.targets">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="VersionTargetsSpec\VersionTargets_Current.targets">
+    <Content Include="VersionTargetsSpec\VersionTargets_Current.gen.targets">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VersionTargets_Current.tt</DependentUpon>
@@ -355,34 +355,34 @@
   <ItemGroup>
     <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\PatternModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
-    <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\PatternModel.patterndefinition">
+    <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\PatternModel.gen.patterndefinition">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.tt</DependentUpon>
     </None>
     <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\PatternModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
-    <None Include="SampleFactory\Base\SampleFactory\PatternModel.patterndefinition">
+    <None Include="SampleFactory\Base\SampleFactory\PatternModel.gen.patterndefinition">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.tt</DependentUpon>
     </None>
     <None Include="SampleFactory\Base\SampleFactory\PatternModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
-    <None Include="SampleFactory\Tailored\SampleTailoring\PatternModel.patterndefinition">
+    <None Include="SampleFactory\Tailored\SampleTailoring\PatternModel.gen.patterndefinition">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.tt</DependentUpon>
     </None>
     <None Include="SampleFactory\Tailored\SampleTailoring\PatternModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿<#@ output extension=".cs" #>
+﻿<#@ output extension=".gen.cs" #>
 
 namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 {

@@ -1,4 +1,4 @@
-﻿<#@ output extension=".t4" #>
+﻿<#@ output extension=".gen.t4" #>
 <#@ Include File="..\..\..\..\..\..\..\MasterVsixInfo.ttinclude" #>
 <#@ Include File="..\..\..\..\source.include.t4" #>
 \<#@ Template inherits="Microsoft.VisualStudio.Patterning.Authoring.Guidance.TocProcessWorkflowTextTransformation" HostSpecific="True" Debug="True" \#>

@@ -1,4 +1,4 @@
-<#@ output extension=".vstemplate" #>
+<#@ output extension=".gen.vstemplate" #>
 <#@ Include File="..\..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Type="ProjectGroup" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">

@@ -1,4 +1,4 @@
-<#@ output extension=".txt" #>
+<#@ output extension=".gen.txt" #>
 <#@ Include  File="..\..\..\MasterVsixInfo.ttinclude"#>
 Redist files for the Visual Studio Pattern Automation Toolkit Builder
 

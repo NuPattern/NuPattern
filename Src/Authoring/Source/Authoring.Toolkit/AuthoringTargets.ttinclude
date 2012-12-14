@@ -3,7 +3,7 @@
 public static class AuthoringTargetsInfo
 {
 	public const string MsBuildPath = "$(localappdata)\\Microsoft\\MSBuild";
-	public const string VersionTargets = "Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets";
+	public const string VersionTargets = "Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.gen.targets";
 
 	public static string FormatVsEnvVarToMachineEnvVar(string path)
 	{

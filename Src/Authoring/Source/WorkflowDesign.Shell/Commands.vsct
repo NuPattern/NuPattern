@@ -13,7 +13,7 @@
   <!--<Extern href="msobtnid.h" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" />-->
   <Extern href="virtkeys.h" />
   <Extern href="DSLToolsCmdID.h" />
-  <Include href="GeneratedCode\GeneratedVsct.vsct" />
+  <Include href="GeneratedCode\GeneratedVsct.gen.vsct" />
   <Commands package="guidPkg">
   </Commands>
 </CommandTable>

@@ -61,7 +61,7 @@
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <ProjectTemplate Include="Assets\Templates\Projects\Extensibility\HolProjectTemplate\HolProjectTemplate.vstemplate">
+    <ProjectTemplate Include="Assets\Templates\Projects\Extensibility\HolProjectTemplate\HolProjectTemplate.gen.vstemplate">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HolProjectTemplate.tt</DependentUpon>
@@ -150,16 +150,16 @@
     </Content>
     <None Include="AuthoringToolkitInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AuthoringToolkitInfo.cs</LastGenOutput>
+      <LastGenOutput>AuthoringToolkitInfo.gen.cs</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Projects\Extensibility\HolProjectTemplate\HolProjectTemplate.tt">
       <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Element/C:\Projects\Platu\Dev\Team\Quickstarts\HandsOnLabs\HandsOnLabs.patternstate%252f47f070ae-29fc-4650-8eed-06a7a22f8af6</SourceModelReference>
       <ItemGuid>aeda2b85-f038-4872-a74a-7ce7f3bb2936</ItemGuid>
       <SubType>Designer</SubType>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>HolProjectTemplate.vstemplate</LastGenOutput>
+      <LastGenOutput>HolProjectTemplate.gen.vstemplate</LastGenOutput>
     </None>
-    <Compile Include="AuthoringToolkitInfo.cs">
+    <Compile Include="AuthoringToolkitInfo.gen.cs">
       <DependentUpon>AuthoringToolkitInfo.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -96,58 +96,58 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneratedCode\CommandSet.cs">
+    <Compile Include="GeneratedCode\CommandSet.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CommandSet.tt</DependentUpon>
     </Compile>
     <None Include="GeneratedCode\Constants.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Constants.cs</LastGenOutput>
+      <LastGenOutput>Constants.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="GeneratedCode\Constants.cs">
+    <Compile Include="GeneratedCode\Constants.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Constants.tt</DependentUpon>
     </Compile>
     <None Include="GeneratedCode\DocData.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DocData.cs</LastGenOutput>
+      <LastGenOutput>DocData.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="GeneratedCode\DocData.cs">
+    <Compile Include="GeneratedCode\DocData.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DocData.tt</DependentUpon>
     </Compile>
     <None Include="GeneratedCode\DocView.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DocView.cs</LastGenOutput>
+      <LastGenOutput>DocView.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="GeneratedCode\DocView.cs">
+    <Compile Include="GeneratedCode\DocView.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DocView.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\EditorFactory.cs">
+    <Compile Include="GeneratedCode\EditorFactory.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EditorFactory.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\ModelExplorer.cs">
+    <Compile Include="GeneratedCode\ModelExplorer.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelExplorer.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\ModelExplorerToolWindow.cs">
+    <Compile Include="GeneratedCode\ModelExplorerToolWindow.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelExplorerToolWindow.tt</DependentUpon>
     </Compile>
     <None Include="GeneratedCode\ModelExplorer.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelExplorer.cs</LastGenOutput>
+      <LastGenOutput>ModelExplorer.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="GeneratedCode\Package.cs">
+    <Compile Include="GeneratedCode\Package.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Package.tt</DependentUpon>
@@ -156,15 +156,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="GeneratedCode\EditorFactory.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EditorFactory.cs</LastGenOutput>
+      <LastGenOutput>EditorFactory.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\ModelExplorerToolWindow.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelExplorerToolWindow.cs</LastGenOutput>
+      <LastGenOutput>ModelExplorerToolWindow.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\Package.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Package.cs</LastGenOutput>
+      <LastGenOutput>Package.gen.cs</LastGenOutput>
     </None>
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -197,13 +197,13 @@
     </VSCTCompile>
     <None Include="GeneratedCode\CommandSet.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>CommandSet.cs</LastGenOutput>
+      <LastGenOutput>CommandSet.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\GeneratedVSCT.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GeneratedVSCT.vsct</LastGenOutput>
+      <LastGenOutput>GeneratedVSCT.gen.vsct</LastGenOutput>
     </None>
-    <None Include="GeneratedCode\GeneratedVSCT.vsct">
+    <None Include="GeneratedCode\GeneratedVSCT.gen.vsct">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GeneratedVSCT.tt</DependentUpon>

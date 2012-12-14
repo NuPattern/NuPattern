@@ -23,12 +23,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeneratedCode\InfoInterfaces.cs">
+    <Compile Include="GeneratedCode\InfoInterfaces.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InfoInterfaces.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\SchemaInterfaces.cs">
+    <Compile Include="GeneratedCode\SchemaInterfaces.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SchemaInterfaces.tt</DependentUpon>
@@ -38,11 +38,11 @@
   <ItemGroup>
     <None Include="GeneratedCode\InfoInterfaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>InfoInterfaces.cs</LastGenOutput>
+      <LastGenOutput>InfoInterfaces.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\SchemaInterfaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SchemaInterfaces.cs</LastGenOutput>
+      <LastGenOutput>SchemaInterfaces.gen.cs</LastGenOutput>
     </None>
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>

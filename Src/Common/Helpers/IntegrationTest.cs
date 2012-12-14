@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 /// <summary>
 /// Base class for integration tests that need to deploy content.
@@ -87,7 +88,14 @@ public class IntegrationTest
 				File.SetAttributes(file, FileAttributes.Normal);
 			}
 
-			Directory.Delete(this.DeploymentDirectory, true);
+            try
+            {
+                Directory.Delete(this.DeploymentDirectory, true);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                // Ignore and continue
+            }
 		}
 	}
 }

@@ -1,4 +1,4 @@
-<#@ output extension=".csproj" #>
+<#@ output extension=".gen.csproj" #>
 <#@ include file="..\..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 <#@ include file="..\..\..\..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ include file="..\..\..\..\..\..\Authoring.Toolkit\AuthoringTargets.ttinclude" #>

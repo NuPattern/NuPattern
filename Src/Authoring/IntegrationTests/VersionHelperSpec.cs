@@ -130,7 +130,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 {
                     Directory.CreateDirectory(Path.GetDirectoryName(TargetsFilePath));
                 }
-                File.Copy(PathTo("VersionTargetsSpec\\VersionTargets_Current.targets"), TargetsFilePath, true);
+                File.Copy(PathTo("VersionTargetsSpec\\VersionTargets_Current.gen.targets"), TargetsFilePath, true);
                 this.targetsFileInfo = new FileInfo(TargetsFilePath);
                 System.Threading.Thread.Sleep(500); // Introduce a minimal delay so tests dont fail due to execution speed.
             }

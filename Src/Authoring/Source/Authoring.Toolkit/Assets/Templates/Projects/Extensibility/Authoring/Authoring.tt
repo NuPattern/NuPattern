@@ -1,4 +1,4 @@
-﻿<#@ output extension=".vstemplate" #>
+﻿<#@ output extension=".gen.vstemplate" #>
 <#@ Include File="..\..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
@@ -19,7 +19,7 @@
 		<Hidden>false</Hidden>
 	</TemplateData>
 	<TemplateContent>
-		<Project File="AuthoringProject.csproj" ReplaceParameters="true">
+		<Project File="AuthoringProject.gen.csproj" ReplaceParameters="true" TargetFileName="AuthoringProject.csproj">
 			<Folder Name="Properties">
 				<ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
 			</Folder>

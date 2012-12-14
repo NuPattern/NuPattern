@@ -109,11 +109,8 @@
   <ItemGroup>
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
-      <DependentUpon>GlobalAssemblyInfo.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Assets\Guidance\Links\HandOnLabsToolkitInfo.cs">
+    <Compile Include="Assets\Guidance\Links\HandOnLabsToolkitInfo.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HandOnLabsToolkitInfo.tt</DependentUpon>
@@ -122,13 +119,13 @@
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplateProject.csproj">
+    <Content Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplateProject.gen.csproj">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectTemplateProject.tt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Templates\Text\Guidance\GuidanceWorkflow.t4">
+    <Content Include="Assets\Templates\Text\Guidance\GuidanceWorkflow.gen.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GuidanceWorkflow.tt</DependentUpon>
@@ -139,7 +136,7 @@
       <Link>Release Notes.docx</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Assets\Templates\Text\VsixManifest\source.extension.t4">
+    <Content Include="Assets\Templates\Text\VsixManifest\source.extension.gen.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>source.extension.tt</DependentUpon>
@@ -147,11 +144,11 @@
     </Content>
     <None Include="AuthoringToolkitInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AuthoringToolkitInfo.cs</LastGenOutput>
+      <LastGenOutput>AuthoringToolkitInfo.gen.cs</LastGenOutput>
     </None>
     <None Include="RuntimeShellInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RuntimeShellInfo.cs</LastGenOutput>
+      <LastGenOutput>RuntimeShellInfo.gen.cs</LastGenOutput>
     </None>
     <None Include="AuthoringPackage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -162,12 +159,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AuthoringPackage.tt</DependentUpon>
     </Compile>
-    <Compile Include="AuthoringToolkitInfo.cs">
+    <Compile Include="AuthoringToolkitInfo.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AuthoringToolkitInfo.tt</DependentUpon>
     </Compile>
-    <Compile Include="RuntimeShellInfo.cs">
+    <Compile Include="RuntimeShellInfo.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RuntimeShellInfo.tt</DependentUpon>
@@ -190,12 +187,12 @@
     </EmbeddedResource>
     <None Include="Assets\Guidance\Links\HandOnLabsToolkitInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>HandOnLabsToolkitInfo.cs</LastGenOutput>
+      <LastGenOutput>HandOnLabsToolkitInfo.gen.cs</LastGenOutput>
     </None>
     <Content Include="..\..\..\Common\Guidance\Creating the PDF Guidance.txt">
       <Link>Assets\Guidance\Creating the PDF Guidance.txt</Link>
     </Content>
-    <Content Include="Assets\Templates\Projects\Extensibility\Authoring\AuthoringProject.csproj">
+    <Content Include="Assets\Templates\Projects\Extensibility\Authoring\AuthoringProject.gen.csproj">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AuthoringProject.tt</DependentUpon>
@@ -851,13 +848,13 @@
       <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Element/C:\Projects\Platu\Main\Src\Authoring\Authoring.patternstate%252f875cc557-a93c-4b12-b9ea-54a732b9c242</SourceModelReference>
       <ItemGuid>13058dda-d9fb-4b59-b5ca-bde04f01b2ae</ItemGuid>
     </None>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\PatternTooling\PatternTooling.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\PatternTooling\PatternTooling.gen.vstemplate">
       <DependentUpon>PatternTooling.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Designer</SubType>
       <DesignTime>True</DesignTime>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ItemTemplate\ItemTemplate.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ItemTemplate\ItemTemplate.gen.vstemplate">
       <DependentUpon>ItemTemplate.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Designer</SubType>
@@ -865,7 +862,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ItemGuid>25a95e13-8628-403d-a209-d21ee15d1dad</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplate.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplate.gen.vstemplate">
       <DependentUpon>ProjectTemplate.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Designer</SubType>
@@ -873,7 +870,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ItemGuid>e36d91f5-33a4-4762-831d-4120774ba1fc</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\TextTemplate\TextTemplate.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\TextTemplate\TextTemplate.gen.vstemplate">
       <DependentUpon>TextTemplate.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Designer</SubType>
@@ -881,7 +878,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ItemGuid>7b3a729b-dc58-41a7-b9f7-cc7108712f8f</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\Wizard\Wizard.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\Wizard\Wizard.gen.vstemplate">
       <DependentUpon>Wizard.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Designer</SubType>
@@ -889,7 +886,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ItemGuid>d803627a-5f37-40a2-9158-f2b0b1ff4371</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\WizardPage\WizardPage.vstemplate">
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\WizardPage\WizardPage.gen.vstemplate">
       <DependentUpon>WizardPage.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Designer</SubType>
@@ -907,7 +904,7 @@
     <None Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplateProject.tt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ProjectTemplateProject.csproj</LastGenOutput>
+      <LastGenOutput>ProjectTemplateProject.gen.csproj</LastGenOutput>
     </None>
     <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsTemplateIconProjectTemplate.ico">
       <Link>Assets\Templates\Items\Extensibility\ProjectTemplate\VsTemplateIconProjectTemplate.ico</Link>
@@ -1014,7 +1011,7 @@
     <Content Include="GeneratedCode\Guidance\Content\WhatisaGuidanceWorkflow.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Assets\Templates\Text\Guidance\ToolkitGuidance.t4">
+    <Content Include="Assets\Templates\Text\Guidance\ToolkitGuidance.gen.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ToolkitGuidance.tt</DependentUpon>
@@ -1023,7 +1020,7 @@
     </Content>
     <None Include="Assets\Templates\Text\Guidance\ToolkitGuidance.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ToolkitGuidance.t4</LastGenOutput>
+      <LastGenOutput>ToolkitGuidance.gen.t4</LastGenOutput>
     </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsTemplateIconAuthoringProject.ico">
@@ -1033,9 +1030,9 @@
     <None Include="Assets\Templates\Projects\Extensibility\Authoring\AuthoringProject.tt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AuthoringProject.csproj</LastGenOutput>
+      <LastGenOutput>AuthoringProject.gen.csproj</LastGenOutput>
     </None>
-    <ProjectTemplate Include="Assets\Templates\Projects\Extensibility\Authoring\Authoring.vstemplate">
+    <ProjectTemplate Include="Assets\Templates\Projects\Extensibility\Authoring\Authoring.gen.vstemplate">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Authoring.tt</DependentUpon>
@@ -1045,20 +1042,20 @@
     </ProjectTemplate>
     <None Include="Assets\Templates\Text\Guidance\GuidanceWorkflow.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GuidanceWorkflow.t4</LastGenOutput>
+      <LastGenOutput>GuidanceWorkflow.gen.t4</LastGenOutput>
     </None>
     <Content Include="Assets\Templates\Text\Header.t4">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="Assets\Templates\Text\ItemTemplate\ItemTemplate.vstemplate.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ItemTemplate.vstemplate.t4</LastGenOutput>
+      <LastGenOutput>ItemTemplate.vstemplate.gen.t4</LastGenOutput>
     </None>
     <None Include="redist.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>redist.txt</LastGenOutput>
+      <LastGenOutput>redist.gen.txt</LastGenOutput>
     </None>
-    <Content Include="redist.txt">
+    <Content Include="redist.gen.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>redist.tt</DependentUpon>
@@ -1067,18 +1064,15 @@
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <None Include="3e44e242-5b47-4338-827f-ca394a899c57.patterndefinition.diagram">
-      <DependentUpon>PatternModel.patterndefinition</DependentUpon>
-    </None>
     <None Include="Assets\Templates\Projects\Extensibility\Authoring\Authoring.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Authoring.vstemplate</LastGenOutput>
+      <LastGenOutput>Authoring.gen.vstemplate</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="Assets\Templates\Text\VsixManifest\source.extension.tt">
       <ItemGuid>d123c26c-c9fc-4387-ab4e-c8094314b9e9</ItemGuid>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>source.extension.t4</LastGenOutput>
+      <LastGenOutput>source.extension.gen.t4</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Items\Extensibility\PatternTooling\PatternTooling.toolingdesign">
       <SubType>Designer</SubType>
@@ -1086,29 +1080,29 @@
     </None>
     <Content Include="Assets\Templates\Items\Extensibility\PatternTooling\PatternTooling.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternTooling.vstemplate</LastGenOutput>
+      <LastGenOutput>PatternTooling.gen.vstemplate</LastGenOutput>
     </Content>
     <Content Include="Assets\Templates\Items\Extensibility\ItemTemplate\ItemTemplate.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ItemTemplate.vstemplate</LastGenOutput>
+      <LastGenOutput>ItemTemplate.gen.vstemplate</LastGenOutput>
     </Content>
     <Content Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplate.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ProjectTemplate.vstemplate</LastGenOutput>
+      <LastGenOutput>ProjectTemplate.gen.vstemplate</LastGenOutput>
     </Content>
     <Content Include="Assets\Templates\Items\Extensibility\TextTemplate\TextTemplate.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TextTemplate.vstemplate</LastGenOutput>
+      <LastGenOutput>TextTemplate.gen.vstemplate</LastGenOutput>
     </Content>
     <Content Include="Assets\Templates\Items\Extensibility\Wizard\Wizard.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Wizard.vstemplate</LastGenOutput>
+      <LastGenOutput>Wizard.gen.vstemplate</LastGenOutput>
     </Content>
     <Content Include="Assets\Templates\Items\Extensibility\WizardPage\WizardPage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>WizardPage.vstemplate</LastGenOutput>
+      <LastGenOutput>WizardPage.gen.vstemplate</LastGenOutput>
     </Content>
-    <Content Include="Assets\Templates\Text\PatternModel\PatternModel.patterndefinition.t4">
+    <Content Include="Assets\Templates\Text\PatternModel\PatternModel.patterndefinition.gen.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.patterndefinition.tt</DependentUpon>
@@ -1118,20 +1112,20 @@
     </Content>
     <None Include="Assets\Templates\Text\PatternModel\PatternModel.patterndefinition.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition.t4</LastGenOutput>
+      <LastGenOutput>PatternModel.patterndefinition.gen.t4</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Text\ProjectTemplate\ProjectTemplate.vstemplate.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ProjectTemplate.vstemplate.t4</LastGenOutput>
+      <LastGenOutput>ProjectTemplate.vstemplate.gen.t4</LastGenOutput>
     </None>
-    <Content Include="Assets\Templates\Text\ItemTemplate\ItemTemplate.vstemplate.t4">
+    <Content Include="Assets\Templates\Text\ItemTemplate\ItemTemplate.vstemplate.gen.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ItemTemplate.vstemplate.tt</DependentUpon>
       <IncludeInVSIX>true</IncludeInVSIX>
       <ItemGuid>ee377e53-72e7-4715-a1f2-0a6c8e89e89b</ItemGuid>
     </Content>
-    <Content Include="Assets\Templates\Text\ProjectTemplate\ProjectTemplate.vstemplate.t4">
+    <Content Include="Assets\Templates\Text\ProjectTemplate\ProjectTemplate.vstemplate.gen.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectTemplate.vstemplate.tt</DependentUpon>
@@ -1142,24 +1136,21 @@
       <IncludeInVSIX>true</IncludeInVSIX>
       <ItemGuid>d93786b4-73bd-4850-8a9b-dc71b0c85d79</ItemGuid>
     </Content>
-    <None Include="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8.patterndefinition.diagram">
-      <DependentUpon>PatternModel.patterndefinition</DependentUpon>
-    </None>
-    <Content Include="$(PatternToolkitRuntime)\GeneratedCode\LibrarySchema.xsd">
+    <Content Include="$(PatternToolkitRuntime)\GeneratedCode\LibrarySchema.gen.xsd">
       <Visible>true</Visible>
-      <Link>Properties\Schemas\LibrarySchema.xsd</Link>
+      <Link>Properties\Schemas\LibrarySchema.gen.xsd</Link>
       <FixedLink>
       </FixedLink>
     </Content>
-    <Content Include="$(PatternToolkitRuntime)\GeneratedCode\PatternModelSchema.xsd">
+    <Content Include="$(PatternToolkitRuntime)\GeneratedCode\PatternModelSchema.gen.xsd">
       <Visible>true</Visible>
-      <Link>Properties\Schemas\PatternModelSchema.xsd</Link>
+      <Link>Properties\Schemas\PatternModelSchema.gen.xsd</Link>
       <FixedLink>
       </FixedLink>
     </Content>
-    <Content Include="..\WorkflowDesign\GeneratedCode\WorkflowDesignSchema.xsd">
+    <Content Include="..\WorkflowDesign\GeneratedCode\WorkflowDesignSchema.gen.xsd">
       <Visible>true</Visible>
-      <Link>GeneratedCode\WorkflowDesignSchema.xsd</Link>
+      <Link>GeneratedCode\WorkflowDesignSchema.gen.xsd</Link>
       <FixedLink>
       </FixedLink>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -1193,7 +1184,7 @@
       <DependentUpon>source.extension.tt</DependentUpon>
       <SubType>Designer</SubType>
     </None>
-    <EmbeddedResource Include="PatternModel.patterndefinition">
+    <EmbeddedResource Include="PatternModel.gen.patterndefinition">
       <DependentUpon>PatternModel.tt</DependentUpon>
       <ItemGuid>aa404b57-5bb4-4521-95fa-b103034d26e3</ItemGuid>
       <RunCustomToolOnUnfold>false</RunCustomToolOnUnfold>
@@ -1205,7 +1196,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
     <Content Include="..\..\..\Binaries\PatternToolkitManager.$(TargetVsVersion).vsix">
       <Visible>true</Visible>

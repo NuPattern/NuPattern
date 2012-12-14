@@ -1,4 +1,4 @@
-﻿<#@ output extension=".cs" #>
+﻿<#@ output extension=".gen.cs" #>
 <#@ Include File="..\..\MasterVSIXInfo.gen.ttinclude" #>
 using System;
 using System.Linq;
@@ -109,7 +109,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                         {
 							"CollectionImplementation.t4",
 							"CollectionInterface.t4",
-							"Constants.t4",
+							"Constants.gen.t4",
 							"ElementContainerImplementation.t4",
 							"ElementContainerInterface.t4",
 							"ElementImplementation.t4",
