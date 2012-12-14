@@ -4,7 +4,7 @@
 	xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Vs">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="VsVersionStyles.xaml" />
+        <ResourceDictionary Source="VsVersionStyles.gen.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
     <ControlTemplate x:Key="ComboBoxItem.Template" TargetType="ComboBoxItem">

@@ -1,5 +1,5 @@
 ﻿<#@ output extension=".t4" #>
-<#@ Include File="..\..\..\..\..\..\..\MasterVersion.ttinclude" #>
+<#@ Include File="..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 \<#@ Template Inherits="Microsoft.VisualStudio.Patterning.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" \#>
 \<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
 \<#@ Output extension=".vstemplate" \#>

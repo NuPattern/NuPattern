@@ -1,5 +1,5 @@
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#
 	string dslName = this.DslLibrary.Name;

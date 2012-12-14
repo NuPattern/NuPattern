@@ -41,9 +41,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             public void ThenTemplatesReturned()
             {
                 Assert.Equal(3, this.toolkit.Templates.Count());
-                Assert.Equal("DataContract", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "DataContract.vstemplate").TemplateData.Name.Value);
-                Assert.Equal("MyTemplate1", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "MyTemplate1.vstemplate").TemplateData.Name.Value);
-                Assert.Equal("MyTemplate2", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "MyTemplate2.vstemplate").TemplateData.Name.Value);
+                Assert.Equal("DataContract", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "DataContract.gen.vstemplate").TemplateData.Name.Value);
+                Assert.Equal("MyTemplate1", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "MyTemplate1.gen.vstemplate").TemplateData.Name.Value);
+                Assert.Equal("MyTemplate2", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "MyTemplate2.gen.vstemplate").TemplateData.Name.Value);
             }
         }
     }

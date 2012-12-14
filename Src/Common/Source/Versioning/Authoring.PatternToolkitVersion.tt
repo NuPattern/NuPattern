@@ -1,7 +1,7 @@
 ﻿<#@ template language="C#" hostspecific="True" #>
-<#@ output extension=".targets" #>
+<#@ output extension=".gen.targets" #>
 <#@ Include  File="..\..\..\MasterVsixInfo.ttinclude"#>
-<#@ Include  File="..\..\..\MasterVersion.ttinclude"#>
+<#@ Include  File="..\..\..\MasterVersion.gen.ttinclude"#>
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 

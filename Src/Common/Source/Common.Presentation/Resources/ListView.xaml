@@ -4,7 +4,7 @@
 	xmlns:l="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="VsVersionStyles.xaml" />
+        <ResourceDictionary Source="VsVersionStyles.gen.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
 	<ControlTemplate x:Key="ListViewItem.Template" TargetType="ListViewItem">

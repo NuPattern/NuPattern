@@ -12,8 +12,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 {
 	[TestClass]
-    [DeploymentItem("Content\\MyTemplate1.vstemplate")]
-    [DeploymentItem("Content\\MyTemplate2.vstemplate")]
+    [DeploymentItem("Content\\MyTemplate1.gen.vstemplate")]
+    [DeploymentItem("Content\\MyTemplate2.gen.vstemplate")]
     [CLSCompliant(false)]
 	public class InstantiationTemplateWizardSpec : VsHostedSpec
 	{
@@ -88,7 +88,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
         {
             var result = InstantiationTemplateWizard.FindToolkitOrThrow(this.manager, 
                 Path.Combine(this.toolkit.Extension.InstallPath, 
-                @"Templates\Projects\~PC\MyTemplate1.zip\MyTemplate1.vstemplate"));
+                @"Templates\Projects\~PC\MyTemplate1.gen.zip\MyTemplate1.gen.vstemplate"));
 
             Assert.Equal(result.Id, TestToolkitId);
         }
@@ -99,7 +99,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
         public void WhenFindToolkitOrThrowWithToolkitTemplateVs2012_ThenReturnsToolkit()
         {
             var result = InstantiationTemplateWizard.FindToolkitOrThrow(this.manager,
-                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate1.zip\MyTemplate1.vstemplate"));
+                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate1.gen.zip\MyTemplate1.gen.vstemplate"));
 
             Assert.Equal(result.Id, TestToolkitId);
         }
@@ -109,7 +109,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
         public void WhenFindToolkitOrThrowWithToolkitTemplateAndTemplateIdVs2012_ThenReturnsToolkit()
         {
             var result = InstantiationTemplateWizard.FindToolkitOrThrow(this.manager,
-                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate2.zip\MyTemplate2.vstemplate"));
+                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate2.gen.zip\MyTemplate2.gen.vstemplate"));
 
             Assert.Equal(result.Id, TestToolkitId);
         }

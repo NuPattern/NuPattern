@@ -107,8 +107,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
       <DependentUpon>GlobalAssemblyInfo.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -262,7 +262,7 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="AuthoringTargets.ttinclude" />
-    <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets">
+    <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.gen.targets">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.tt</DependentUpon>
@@ -843,7 +843,7 @@
     </Content>
     <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.targets</LastGenOutput>
+      <LastGenOutput>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.gen.targets</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="source.include.t4">
@@ -1067,11 +1067,6 @@
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <None Include="..\..\..\GlobalAssemblyInfo.tt">
-      <Link>Properties\GlobalAssemblyInfo.tt</Link>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GlobalAssemblyInfo.cs</LastGenOutput>
-    </None>
     <None Include="3e44e242-5b47-4338-827f-ca394a899c57.patterndefinition.diagram">
       <DependentUpon>PatternModel.patterndefinition</DependentUpon>
     </None>
@@ -1371,7 +1366,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
   <Import Project="$(VsxTargetsPath)\Microsoft.VsSDK.targets" />
-  <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.targets" />
+  <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.gen.targets" />
   <!-- Properties for VSSDK/DSL Targets -->
   <PropertyGroup>
     <RegisterOutputPackage>true</RegisterOutputPackage>

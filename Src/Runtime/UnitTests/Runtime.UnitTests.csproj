@@ -105,7 +105,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Blank.slnbldr">
+    <None Include="Blank.gen.slnbldr">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Blank.tt</DependentUpon>
@@ -113,13 +113,13 @@
     </None>
     <None Include="Blank.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Blank.slnbldr</LastGenOutput>
+      <LastGenOutput>Blank.gen.slnbldr</LastGenOutput>
     </None>
     <Content Include="UriProviders\TemplateWithTemplatePath.t4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
-    <None Include="ToolkitInterfaceLayer\PatternModel.patterndefinition">
+    <None Include="ToolkitInterfaceLayer\PatternModel.gen.patterndefinition">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.tt</DependentUpon>
@@ -145,8 +145,8 @@
     <Compile Include="..\..\Common\Helpers\FakeSolution.cs">
       <Link>FakeSolution.cs</Link>
     </Compile>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="AutomationExtensionsSpec.cs" />
     <Compile Include="Events\AnonymousDisposableSpec.cs" />
@@ -249,7 +249,7 @@
   <ItemGroup>
     <None Include="ToolkitInterfaceLayer\PatternModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

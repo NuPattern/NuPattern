@@ -1,5 +1,5 @@
 ﻿<#@ output extension=".cs" #>
-<#@ Include File="..\..\..\..\..\MasterVSIXInfo.ttinclude" #>
+<#@ Include File="..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 using System;
 
 namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands

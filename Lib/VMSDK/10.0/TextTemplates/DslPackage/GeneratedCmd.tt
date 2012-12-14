@@ -1,5 +1,5 @@
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".h" #>
+<#@ output extension=".gen.h" #>
 <#
 	string dslName = this.Dsl.Name;
 	string dslDisplayName = this.Dsl.DisplayName;

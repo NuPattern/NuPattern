@@ -1,8 +1,8 @@
 ﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\Runtime.Store\DslDefinition.dsl'" #>
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ Include File="..\..\..\Common\Helpers\DslVersion.tt" #>
-<#@ Include File="..\..\..\MasterVSIXInfo.ttinclude" #>
+<#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 using System;
 using System.Diagnostics.CodeAnalysis;
 

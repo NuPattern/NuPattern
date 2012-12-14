@@ -1,6 +1,6 @@
 ﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\Source\Runtime.Schema\DslDefinition.dsl'" #>
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".patterndefinition" #>
+<#@ output extension=".gen.patterndefinition" #>
 <#@ Include File="..\..\Common\Helpers\DslVersion.tt" #>
 <?xml version="1.0" encoding="utf-8"?>
 <patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="<#= this.DslVersion #>" Id="27f97919-32b1-4b26-ab60-894ca43a8fca" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">

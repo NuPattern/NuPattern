@@ -1,6 +1,6 @@
-﻿<#@ Include File="..\..\..\MasterVSIXInfo.ttinclude" #>
-<#@ Include File="..\..\..\MasterVersion.ttinclude" #>
-<#@ output extension=".resx" #>
+﻿<#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
+<#@ Include File="..\..\..\MasterVersion.gen.ttinclude" #>
+<#@ output extension=".gen.resx" #>
 <?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 

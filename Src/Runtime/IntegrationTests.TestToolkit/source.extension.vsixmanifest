@@ -19,7 +19,7 @@
 	<References />
 	<Content>
 		<MefComponent>|Runtime.IntegrationTests.TestToolkit|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit.dll">Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit.PatternModel.patterndefinition</CustomExtension>
+		<CustomExtension Type="PatternModel" AssemblyFile="Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit.dll">Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit.PatternModel.gen.patterndefinition</CustomExtension>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>

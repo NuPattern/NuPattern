@@ -1,6 +1,6 @@
-﻿<#@ Include File="..\..\..\MasterVSIXInfo.ttinclude" #>
+﻿<#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ Include File="VSPackageInfo.ttinclude" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 using System;
 
 namespace Microsoft.VisualStudio.Patterning.Runtime.Shell

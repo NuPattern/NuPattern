@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D70F79C1-8A0B-44E6-A218-9A253DFBA1A6}"
 	ProjectSection(SolutionItems) = preProject
-		Sample.slnbldr = Sample.slnbldr
+		Sample.gen.slnbldr = Sample.gen.slnbldr
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{565DDD83-721B-4494-9F43-5150B1A33498}"

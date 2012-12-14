@@ -1,5 +1,5 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".vsct" encoding="utf-8"#>
+<#@ output extension=".gen.vsct" encoding="utf-8"#>
 <#
 	string dslName = this.Dsl.Name;
 	string dslDisplayName = this.Dsl.DisplayName;

@@ -1,5 +1,5 @@
-﻿<#@ output extension=".xaml" #>
-<#@ include file="..\..\..\..\MasterVersion.ttinclude" #>
+﻿<#@ output extension=".gen.xaml" #>
+<#@ include file="..\..\..\..\MasterVersion.gen.ttinclude" #>
 <ResourceDictionary
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">

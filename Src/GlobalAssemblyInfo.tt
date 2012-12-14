@@ -1,5 +1,5 @@
-<#@ output extension=".cs" #>
-<#@ Include File="MasterVersion.ttinclude" #>
+<#@ output extension=".gen.cs" #>
+<#@ Include File="MasterVersion.gen.ttinclude" #>
 using System.Reflection;
 using System.Resources;
 using System.Runtime.ConstrainedExecution;

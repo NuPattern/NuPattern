@@ -25,15 +25,15 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Content Include="Assets\Templates\Projects\MyTemplate1\MyTemplate1Project.csproj">
+    <Content Include="Assets\Templates\Projects\MyTemplate1\MyTemplate1Project.gen.csproj">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MyTemplate1Project.tt</DependentUpon>
     </Content>
-    <Content Include="Assets\Templates\Projects\MyTemplate2\MyTemplate2Project.csproj">
+    <Content Include="Assets\Templates\Projects\MyTemplate2\MyTemplate2Project.gen.csproj">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MyTemplate2Project.tt</DependentUpon>
@@ -46,18 +46,18 @@
     <Content Include="Assets\Templates\Projects\MyTemplate2\source.vsixmanifest" />
     <None Include="Assets\Templates\Projects\MyTemplate2\MyTemplate2Project.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MyTemplate2Project.csproj</LastGenOutput>
+      <LastGenOutput>MyTemplate2Project.gen.csproj</LastGenOutput>
     </None>
-    <VSTemplate Include="Assets\Templates\Projects\MyTemplate2\MyTemplate2.vstemplate">
+    <VSTemplate Include="Assets\Templates\Projects\MyTemplate2\MyTemplate2.gen.vstemplate">
       <DependentUpon>MyTemplate2.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </VSTemplate>
     <None Include="Assets\Templates\Items\DataContract\DataContract.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DataContract.vstemplate</LastGenOutput>
+      <LastGenOutput>DataContract.gen.vstemplate</LastGenOutput>
     </None>
-    <VSTemplate Include="Assets\Templates\Items\DataContract\DataContract.vstemplate">
+    <VSTemplate Include="Assets\Templates\Items\DataContract\DataContract.gen.vstemplate">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataContract.tt</DependentUpon>
@@ -65,7 +65,7 @@
     <Content Include="Assets\Templates\Items\DataContract\__TemplateIcon.ico">
       <IncludeInVSIX>false</IncludeInVSIX>
     </Content>
-    <VSTemplate Include="Assets\Templates\Projects\MyTemplate1\MyTemplate1.vstemplate">
+    <VSTemplate Include="Assets\Templates\Projects\MyTemplate1\MyTemplate1.gen.vstemplate">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MyTemplate1.tt</DependentUpon>
@@ -79,28 +79,29 @@
     <None Include="Assets\Templates\Projects\MyTemplate1\MyTemplate1Project.tt">
       <IncludeInVSIX>false</IncludeInVSIX>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MyTemplate1Project.csproj</LastGenOutput>
+      <LastGenOutput>MyTemplate1Project.gen.csproj</LastGenOutput>
     </None>
     <None Include="Assets\Templates\Projects\MyTemplate1\MyTemplate1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MyTemplate1.vstemplate</LastGenOutput>
+      <LastGenOutput>MyTemplate1.gen.vstemplate</LastGenOutput>
     </None>
     <Content Include="Assets\Templates\Projects\MyTemplate1\__TemplateIcon.ico">
       <IncludeInVSIX>false</IncludeInVSIX>
     </Content>
-    <EmbeddedResource Include="PatternModel.patterndefinition">
+    <EmbeddedResource Include="PatternModel.gen.patterndefinition">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.tt</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Assets\Templates\Projects\MyTemplate2\MyTemplate2.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MyTemplate2.vstemplate</LastGenOutput>
+      <LastGenOutput>MyTemplate2.gen.vstemplate</LastGenOutput>
     </None>
     <None Include="PatternModel.tt">
       <SubType>Designer</SubType>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.patterndefinition</LastGenOutput>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>

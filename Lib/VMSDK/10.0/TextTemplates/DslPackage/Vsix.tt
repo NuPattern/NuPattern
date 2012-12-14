@@ -1,5 +1,5 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".vsixmanifest" #>
+<#@ output extension=".gen.vsixmanifest" #>
 <#
 /***************************************************************************
 	Please note this .tt file is OBSOLETE and will be removed from a 

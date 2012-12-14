@@ -28,10 +28,10 @@
     <None Include="..\..\..\MasterVersion.tt">
       <Link>MasterVersion.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MasterVersion.ttinclude</LastGenOutput>
+      <LastGenOutput>MasterVersion.gen.ttinclude</LastGenOutput>
     </None>
-    <None Include="..\..\..\MasterVersion.ttinclude">
-      <Link>MasterVersion.ttinclude</Link>
+    <None Include="..\..\..\MasterVersion.gen.ttinclude">
+      <Link>MasterVersion.gen.ttinclude</Link>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MasterVersion.tt</DependentUpon>
@@ -39,10 +39,10 @@
     <None Include="..\..\..\MasterVSIXInfo.tt">
       <Link>MasterVSIXInfo.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MasterVSIXInfo.ttinclude</LastGenOutput>
+      <LastGenOutput>MasterVSIXInfo.gen.ttinclude</LastGenOutput>
     </None>
-    <None Include="..\..\..\MasterVSIXInfo.ttinclude">
-      <Link>MasterVSIXInfo.ttinclude</Link>
+    <None Include="..\..\..\MasterVSIXInfo.gen.ttinclude">
+      <Link>MasterVSIXInfo.gen.ttinclude</Link>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MasterVSIXInfo.tt</DependentUpon>
@@ -50,10 +50,10 @@
     <None Include="..\..\..\GlobalAssemblyInfo.tt">
       <Link>GlobalAssemblyInfo.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GlobalAssemblyInfo.cs</LastGenOutput>
+      <LastGenOutput>GlobalAssemblyInfo.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>GlobalAssemblyInfo.gen.cs</Link>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GlobalAssemblyInfo.tt</DependentUpon>
@@ -67,14 +67,14 @@
     <None Include="..\..\..\Versioning Instructions.docx">
       <Link>Docs\Versioning Instructions.docx</Link>
     </None>
-    <None Include="Authoring.PatternToolkitVersion.targets">
+    <None Include="Authoring.PatternToolkitVersion.gen.targets">
       <DependentUpon>Authoring.PatternToolkitVersion.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </None>
     <None Include="Authoring.PatternToolkitVersion.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Authoring.PatternToolkitVersion.targets</LastGenOutput>
+      <LastGenOutput>Authoring.PatternToolkitVersion.gen.targets</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets">

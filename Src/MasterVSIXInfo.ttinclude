@@ -8,8 +8,8 @@ public static class VsixInfo
 		public const string Description = "The Solution Builder tool window for accelerating solution development using Pattern Toolkit extensions.";
 		public const string Author = "Outercurve";
 		public const string Version = "1.3.20.0";
-		public const string Identifier = "c869918e-f94e-4e7a-ab25-b076ff4e751b";
-		public const string VsixFileName = "PatternToolkitManager.11.0.vsix"; // Should reflect <TargetVsixContainerName> value in Runtime.Shell.csproj
+		public const string Identifier = "93373818-600f-414b-8181-3a0cb79fa785";
+		public const string VsixFileName = "PatternToolkitManager.10.0.vsix"; // Should reflect <TargetVsixContainerName> value in Runtime.Shell.csproj
 		public const string MoreInfoUrl = "http://vspat.codeplex.com";
 		public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 		public const string SettingsName = "PatternToolkitExtensions";
@@ -17,12 +17,12 @@ public static class VsixInfo
 	}
 	public static class PatternToolkitBuilder
 	{
-		public const string Name = "Pattern Toolkit Builder VS2012";
+		public const string Name = "Pattern Toolkit Builder VS2010";
 		public const string Description = "An extension for designing and building Pattern Toolkit extensions, that combine automation and guidance with design patterns for repeatable solution development.";
 		public const string Author = "Outercurve";
 		public const string Version = "1.3.20.0";
-		public const string Identifier = "84031a32-b20f-479c-a620-beacd982ea13";
-		public const string VsixFileName = "PatternToolkitBuilder.11.0.vsix"; // Should reflect <TargetVsixContainerName> value in Authoring.Toolkit.csproj
+		public const string Identifier = "9f6dc301-6f66-4d21-9f9c-b37412b162f6";
+		public const string VsixFileName = "PatternToolkitBuilder.10.0.vsix"; // Should reflect <TargetVsixContainerName> value in Authoring.Toolkit.csproj
 		public const string MoreInfoUrl = "http://vspat.codeplex.com";
 		public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 	}
@@ -32,19 +32,19 @@ public static class VsixInfo
 		public const string Description = "An extension for creating shared automation libraries for Pattern Toolkit extensions.";
 		public const string Author = "Outercurve";
 		public const string Version = "1.3.20.0";
-		public const string Identifier = "080eb0ef-518d-4807-9b5c-aa32d0032e0b";
-		public const string VsixFileName = "PatternToolkitAutomationLibrary.11.0.vsix"; // Should reflect <TargetVsixContainerName> value in AutomationLibrary.Toolkit.csproj
+		public const string Identifier = "97bd7ab2-964b-43f1-8a08-be6db68b018b";
+		public const string VsixFileName = "PatternToolkitAutomationLibrary.10.0.vsix"; // Should reflect <TargetVsixContainerName> value in AutomationLibrary.Toolkit.csproj
 		public const string MoreInfoUrl = "http://vspat.codeplex.com";
 		public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 	}
 	public static class PatternToolkitHol
 	{
-		public const string Name = "Pattern Toolkit Builder HOL VS2012";
+		public const string Name = "Pattern Toolkit Builder HOL VS2010";
 		public const string Description = "A Hands-On Lab for creating Pattern Toolkit projects.";
 		public const string Author = "Outercurve";
 		public const string Version = "1.3.20.0";
-		public const string Identifier = "5413c755-6024-4c41-ba0c-9aa3d6fd9caf";
-		public const string VsixFileName = "PatternToolkitBuilderLabs.11.0.vsix"; // Should reflect <TargetVsixContainerName> value in HandsOnLabs.csproj
+		public const string Identifier = "5d64cfe6-a6ff-4e73-a000-c6a8832740ff";
+		public const string VsixFileName = "PatternToolkitBuilderLabs.10.0.vsix"; // Should reflect <TargetVsixContainerName> value in HandsOnLabs.csproj
 		public const string MoreInfoUrl = "http://vspat.codeplex.com";
 		public const string GettingStartedUrl = "http://vspat.codeplex.com/wikipage?title=Getting%20Started";
 	}
@@ -60,9 +60,9 @@ public static class VsixInfo
 	{
 		public const string Name = "Microsoft Visual Studio SDK";
 		public const string Author = "Microsoft";
-		public const string Version = "11.0";
+		public const string Version = "10.0";
 		public const string Identifier = "Microsoft.VisualStudio.SDK";
-		public const string MoreInfoUrl = "http://www.microsoft.com/en-us/download/details.aspx?id=30668";
+		public const string MoreInfoUrl = "http://www.microsoft.com/en-us/download/details.aspx?id=2680";
 	}
 }
 #>

@@ -1,4 +1,4 @@
-﻿<#@ Include File="..\..\..\MasterVSIXInfo.ttinclude" #>
+﻿<#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ output extension=".cs" #>
 
 namespace Microsoft.VisualStudio.Patterning.HandsOnLabs

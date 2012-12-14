@@ -1,4 +1,4 @@
-﻿<#@ Include File="..\..\..\MasterVSIXInfo.ttinclude" #>
+﻿<#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ Include File="AuthoringTargets.ttinclude" #>
 <#@ output extension=".gen.cs" #>
 using System;

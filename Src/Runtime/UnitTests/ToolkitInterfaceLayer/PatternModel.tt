@@ -1,6 +1,6 @@
 ﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Source\Runtime.Schema\DslDefinition.dsl'" #>
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".patterndefinition" #>
+<#@ output extension=".gen.patterndefinition" #>
 <#@ Include File="..\..\..\Common\Helpers\DslVersion.tt" #>
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Original design that generated the toolkit interface layer -->

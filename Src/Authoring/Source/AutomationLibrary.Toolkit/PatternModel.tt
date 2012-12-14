@@ -1,4 +1,4 @@
-﻿<#@ include file="..\..\..\MasterVSIXInfo.ttinclude" #>
+﻿<#@ include file="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ output extension=".patterndefinition" #>
 <?xml version="1.0" encoding="utf-8"?>
 <patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="9cc7bde6-881f-47aa-8f65-c7c2ecd3fc9a" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">

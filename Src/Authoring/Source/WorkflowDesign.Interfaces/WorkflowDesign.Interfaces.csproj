@@ -44,16 +44,8 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SchemaInterfaces.cs</LastGenOutput>
     </None>
-    <None Include="..\..\..\GlobalAssemblyInfo.tt">
-      <Link>Properties\GlobalAssemblyInfo.tt</Link>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GlobalAssemblyInfo.cs</LastGenOutput>
-    </None>
-    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GlobalAssemblyInfo.tt</DependentUpon>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>

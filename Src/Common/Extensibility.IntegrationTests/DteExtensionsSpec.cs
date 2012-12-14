@@ -32,7 +32,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.IntegrationTests
             [TestCleanup]
             public void Cleanup()
             {
-                VsIdeTestHostContext.Dte.Solution.Close();
+                VsIdeTestHostContext.Dte.Solution.Close(false);
                 if (Directory.Exists(this.ProjectsDirectory))
                 {
                     Directory.Delete(this.ProjectsDirectory, true);

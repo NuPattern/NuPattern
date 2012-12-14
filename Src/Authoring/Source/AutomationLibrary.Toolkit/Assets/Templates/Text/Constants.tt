@@ -1,5 +1,5 @@
 ﻿<#@ output extension=".t4" #>
-<#@ Include File="..\..\..\..\..\..\MasterVSIXInfo.ttinclude" #>
+<#@ Include File="..\..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 
 \<#+
 	string libraryToolkitVersion = "<#= VsixInfo.PatternToolkitLibrary.Version #>";

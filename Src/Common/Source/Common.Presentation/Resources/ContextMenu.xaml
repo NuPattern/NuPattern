@@ -5,7 +5,7 @@
 	xmlns:d="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Data">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="VsVersionStyles.xaml" />
+        <ResourceDictionary Source="VsVersionStyles.gen.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <d:DisabledImageConverter x:Key="DisabledImageConverter" />

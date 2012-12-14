@@ -1,6 +1,6 @@
 ﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\..\..\Source\Runtime.Schema\DslDefinition.dsl'" #>
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".slnbldr" #>
+<#@ output extension=".gen.slnbldr" #>
 <#@ Include File="..\..\..\..\..\Common\Helpers\DslVersion.tt" #>
 <?xml version="1.0" encoding="utf-8"?>
 <productState xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="<#= this.DslVersion #>" Id="cb968870-fc5b-4f8f-be04-5ea9f2d5ab26" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/productstate">

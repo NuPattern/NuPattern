@@ -17,7 +17,7 @@
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/CommonStyles.xaml" />
-                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/VsVersionStyles.xaml" />
+                <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/VsVersionStyles.gen.xaml" />
                 <ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/TreeView.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 

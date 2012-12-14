@@ -1,6 +1,6 @@
 ﻿<#@ Template Inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='DslDefinition.dsl'" #>
-<#@ Output Extension=".Designer.cs" #>
+<#@ Output Extension=".gen.cs" #>
 <#@ Include File="..\..\..\Common\Helpers\Helpers.tt" #>
 <#string dslName = this.Dsl.Name; #>
 using System;

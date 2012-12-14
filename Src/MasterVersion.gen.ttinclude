@@ -1,0 +1,29 @@
+<#+
+// Product Version Info
+public static class VersionInfo
+{
+    // Framework Version
+    public static readonly string TargetVsVersion = "10.0";
+
+    // Assembly Versions
+    public const int AssemblyMajor = 1;
+    public const int AssemblyMinor = 3;
+    public const int AssemblyBuild = 20;
+    public const int AssemblyRevision = 0;
+    public static Version AssemblyVersion = new Version(AssemblyMajor, AssemblyMinor, AssemblyBuild, AssemblyRevision);
+
+    //Note: To change Versions of DSL schemas, please change designer properties of DSLs (Schema, Store, Library)
+
+    // VSIX Versions
+    public static Version RuntimeVSIXVersion = AssemblyVersion;
+    public static Version AuthoringVSIXVersion = RuntimeVSIXVersion;
+    
+    // Ownership
+    public const string VsixAuthor = "Outercurve";
+	public const string AssemblyAuthor = "The Outercurve Foundation";
+	public const string AssemblyCopyright = "Copyright 2012, The Outercurve Foundation under Apache 2.0 license.";
+	
+	// Assembly Identity
+	public const string AssemblyProductName = "Pattern Automation Toolkit";
+}
+#>

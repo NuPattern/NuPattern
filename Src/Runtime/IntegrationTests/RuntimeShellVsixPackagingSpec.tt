@@ -1,5 +1,5 @@
-﻿<#@ output extension=".cs" #>
-<#@ Include File="..\..\MasterVSIXInfo.ttinclude" #>
+﻿<#@ output extension=".gen.cs" #>
+<#@ Include File="..\..\MasterVSIXInfo.gen.ttinclude" #>
 using System;
 using System.Linq;
 using Microsoft.VisualStudio.Patterning.IntegrationTests;
@@ -71,9 +71,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
                 Assert.True(this.FolderContainsExclusive(@"GeneratedCode",
                     new[]
                         {
-                            "LibrarySchema.xsd",
-                            "PatternModelSchema.xsd",
-                            "ProductStateSchema.xsd",
+                            "LibrarySchema.gen.xsd",
+                            "PatternModelSchema.gen.xsd",
+                            "ProductStateSchema.gen.xsd",
                         }));
 			}
 

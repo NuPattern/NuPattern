@@ -1,7 +1,7 @@
 ﻿<#@ output extension=".vsixmanifest" #>
 <#@ Include  File="source.include.t4"#>
 <#@ Include  File="..\..\..\MasterVsixInfo.ttinclude"#>
-<#@ Include  File="..\..\..\MasterVersion.ttinclude"#>
+<#@ Include  File="..\..\..\MasterVersion.gen.ttinclude"#>
 <?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
 	<Identifier Id="<#=VsixInfo.PatternToolkitHol.Identifier#>">

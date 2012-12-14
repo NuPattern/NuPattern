@@ -1,5 +1,5 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Runtime.Store\DslDefinition.dsl'" #>
 <#@ include file="Dsl\Utilities.tt" #>
 <#@ Include File="..\..\..\..\Common\Helpers\DslVersion.tt" #>

@@ -1,5 +1,5 @@
-﻿<#@ output extension=".csproj" #>
-<#@ Include File="..\..\..\..\..\..\MasterVersion.ttinclude" #>
+﻿<#@ output extension=".gen.csproj" #>
+<#@ Include File="..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 <#

@@ -1,5 +1,5 @@
 <#@ template language="C#" hostspecific="true" #>
-<#@ output extension=".ttinclude" #>
+<#@ output extension=".gen.ttinclude" #>
 <#@ assembly name="System.Core" #>
 <#@ assembly name="EnvDTE" #>
 <#@ import namespace="System.Linq" #>

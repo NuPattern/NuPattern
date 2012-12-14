@@ -23,6 +23,10 @@
     <T4ParameterValues Include="ProjectDefaultNamespace">
       <Value>$(RootNamespace)</Value>
     </T4ParameterValues>
+    <!-- Override for DSLTools T4 templates -->
+    <T4ParameterValues Include="GeneratedResourceFile">
+      <Value>DomainModelResx.gen</Value>
+    </T4ParameterValues>
   </ItemGroup>
   
   <!-- Include (modified) DSL Tools targets, which includes TextTemplating.targets -->

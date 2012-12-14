@@ -53,11 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
-      <DependentUpon>GlobalAssemblyInfo.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="IGuidanceProcessor.cs" />
@@ -70,13 +67,6 @@
     <Compile Include="TocGuidanceProcessor.cs" />
     <Compile Include="TocProcessWorkflowController.cs" />
     <Compile Include="TocProcessWorkflowTextTransformation.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\GlobalAssemblyInfo.tt">
-      <Link>Properties\GlobalAssemblyInfo.tt</Link>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GlobalAssemblyInfo.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="..\..\..\CodeAnalysis.Dictionary.xml">
@@ -94,7 +84,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
-  <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.targets" />
+  <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.gen.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

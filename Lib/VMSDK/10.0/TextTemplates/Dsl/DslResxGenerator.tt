@@ -5,7 +5,7 @@
 <#@ import namespace="System.Globalization" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
-<#@ output extension=".resx" encoding="utf-8" #>
+<#@ output extension=".gen.resx" encoding="utf-8" #>
 <#@ include file="Dsl\Utilities.tt" #>
 <#
 	Dictionary<string, KeyValuePair<string, string>> resourcedStrings = new Dictionary<string, KeyValuePair<string, string>>();

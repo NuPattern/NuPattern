@@ -1,6 +1,6 @@
 <#@ output extension=".csproj" #>
-<#@ include file="..\..\..\..\..\..\..\..\MasterVersion.ttinclude" #>
-<#@ include file="..\..\..\..\..\..\..\..\MasterVSIXInfo.ttinclude" #>
+<#@ include file="..\..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
+<#@ include file="..\..\..\..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ include file="..\..\..\..\..\..\Authoring.Toolkit\AuthoringTargets.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

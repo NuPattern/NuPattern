@@ -1,5 +1,5 @@
-<#@ output extension=".vstemplate" #>
-<#@ Include File="..\..\..\..\..\..\MasterVersion.ttinclude" #>
+<#@ output extension=".gen.vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
@@ -17,7 +17,7 @@
     <LocationField>Enabled</LocationField>
   </TemplateData>
   <TemplateContent>
-    <Project File="MyTemplate1Project.csproj" TargetFileName="MyTemplate1.csproj" ReplaceParameters="true">
+    <Project File="MyTemplate1Project.gen.csproj" TargetFileName="MyTemplate1.csproj" ReplaceParameters="true">
       <ProjectItem TargetFileName="Program.cs" ReplaceParameters="true">Program.cs</ProjectItem>
       <Folder Name="Properties" TargetFolderName="Properties">
         <ProjectItem TargetFileName="AssemblyInfo.cs" ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
