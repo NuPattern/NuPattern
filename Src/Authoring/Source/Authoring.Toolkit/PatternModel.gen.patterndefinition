@@ -3062,6 +3062,34 @@
   "Properties": []
 }</valueProvider>
               </property>
+              <property Id="a3436f96-4d42-4ad4-92c4-07a16502b397" name="ToolkitDefinitionFile" displayName="Toolkit Definition File" description="Path to the definition file." codeIdentifier="ToolkitDefinitionFile" isVisible="false">
+                <customizationPolicy name="CustomizationPolicySchema1">
+                  <settings>
+                    <setting propertyId="DisplayName" />
+                    <setting propertyId="Description" />
+                    <setting propertyId="RawDefaultValue" />
+                    <setting propertyId="IsVisible" />
+                    <setting propertyId="IsReadOnly" />
+                    <setting propertyId="Category" />
+                    <setting propertyId="TypeConverterTypeName" />
+                    <setting propertyId="EditorTypeName" />
+                    <setting propertyId="RawValidationRules" />
+                    <setting propertyId="RawValueProvider" />
+                  </settings>
+                </customizationPolicy>
+                <valueProvider>
+                  {
+                  "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValueProviders.ReferencedSolutionItemPathValueProvider",
+                  "Properties": [
+                  {
+                  "Name": "Extension",
+                  "Value": ".patterndefinition",
+                  "ValueProvider": null
+                  }
+                  ]
+                  }
+                </valueProvider>
+              </property>
             </properties>
             <automationSettings>
               <automationSettings Id="b57b778e-95e5-4d37-ba50-44d9f417be71" name="GenerateAllOnInstantiate" displayName="Generate All On Instantiate" description="" codeIdentifier="GenerateAllOnInstantiate" automationType="Event Launch Point" classification="LaunchPoint">

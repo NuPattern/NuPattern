@@ -1,4 +1,4 @@
-﻿<#@ include file="..\..\..\MasterVsixInfo.ttinclude" #>
+﻿<#@ include file="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ output extension=".gen.patterndefinition" #>
 <?xml version="1.0" encoding="utf-8"?>
 <patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="2c5403a9-5eaa-4d02-b309-0d948a9f740a" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
@@ -3063,6 +3063,34 @@
   "TypeId": null,
   "Properties": []
 }</valueProvider>
+              </property>
+              <property Id="a3436f96-4d42-4ad4-92c4-07a16502b397" name="ToolkitDefinitionFile" displayName="Toolkit Definition File" description="Path to the definition file." codeIdentifier="ToolkitDefinitionFile" isVisible="false">
+                <customizationPolicy name="CustomizationPolicySchema1">
+                  <settings>
+                    <setting propertyId="DisplayName" />
+                    <setting propertyId="Description" />
+                    <setting propertyId="RawDefaultValue" />
+                    <setting propertyId="IsVisible" />
+                    <setting propertyId="IsReadOnly" />
+                    <setting propertyId="Category" />
+                    <setting propertyId="TypeConverterTypeName" />
+                    <setting propertyId="EditorTypeName" />
+                    <setting propertyId="RawValidationRules" />
+                    <setting propertyId="RawValueProvider" />
+                  </settings>
+                </customizationPolicy>
+                <valueProvider>
+                  {
+                  "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValueProviders.ReferencedSolutionItemPathValueProvider",
+                  "Properties": [
+                  {
+                  "Name": "Extension",
+                  "Value": ".patterndefinition",
+                  "ValueProvider": null
+                  }
+                  ]
+                  }
+                </valueProvider>
               </property>
             </properties>
             <automationSettings>
