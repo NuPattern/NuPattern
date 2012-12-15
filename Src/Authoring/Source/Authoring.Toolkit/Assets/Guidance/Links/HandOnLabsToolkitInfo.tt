@@ -1,5 +1,5 @@
 ﻿<#@ output extension=".gen.cs" #>
-<#@ Include File="..\..\..\..\..\..\MasterVsixInfo.ttinclude" #>
+<#@ Include File="..\..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 using System;
 
 namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance.Links

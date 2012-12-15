@@ -1,5 +1,5 @@
 <#@ output extension=".gen.txt" #>
-<#@ Include  File="..\..\..\MasterVsixInfo.ttinclude"#>
+<#@ Include  File="..\..\..\MasterVSIXInfo.gen.ttinclude"#>
 Redist files for the Visual Studio Pattern Automation Toolkit Builder
 
 The following list is a list of files available with Visual Studio Pattern Automation Toolkit Builder for redistribution under the Visual Studio Pattern Automation Toolkit Builder license.

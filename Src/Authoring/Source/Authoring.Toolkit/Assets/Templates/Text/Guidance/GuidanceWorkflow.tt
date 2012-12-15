@@ -1,5 +1,5 @@
 ﻿<#@ output extension=".gen.t4" #>
-<#@ Include File="..\..\..\..\..\..\..\MasterVsixInfo.ttinclude" #>
+<#@ Include File="..\..\..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ Include File="..\..\..\..\source.include.t4" #>
 \<#@ Template inherits="Microsoft.VisualStudio.Patterning.Authoring.Guidance.TocProcessWorkflowTextTransformation" HostSpecific="True" Debug="True" \#>
 \<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" \#>

@@ -1,5 +1,5 @@
 <#@ output extension=".gen.csproj" #>
-<#@ include file="..\..\..\..\..\..\..\..\MasterVsixInfo.ttinclude" #>
+<#@ include file="..\..\..\..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ include file="..\..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 <#@ include file="..\..\..\..\..\AuthoringTargets.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>

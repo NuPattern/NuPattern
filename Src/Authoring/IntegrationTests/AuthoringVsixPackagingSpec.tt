@@ -170,7 +170,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 							"extension.vsixmanifest",
 							//"[Content_Types].xml",
                             "LICENSE.txt",
-							"redist.txt",
+							"redist.gen.txt",
 							"Release%20Notes.docx",
 
                             //Auxillary Assemblies
