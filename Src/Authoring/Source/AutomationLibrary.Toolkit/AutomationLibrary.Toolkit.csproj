@@ -245,7 +245,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Constants.tt</DependentUpon>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>Constants.t4</IncludeInVSIXAs>
     </Content>
     <None Include="source.include.t4">
       <DependentUpon>source.extension.tt</DependentUpon>

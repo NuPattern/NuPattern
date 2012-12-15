@@ -99,20 +99,20 @@ if (VersionInfo.TargetVsVersion == "11.0")
 	<ItemGroup>
 		<Folder Include="Properties\" />
 		<Compile Include="Properties\AssemblyInfo.cs" />
-		<Content Include="Properties\Schemas\LibrarySchema.gen.xsd">
+		<Content Include="Properties\Schemas\LibrarySchema.xsd">
 			<Visible>true</Visible>
-			<Link>Properties\Schemas\LibrarySchema.gen.xsd</Link>
-			<FixedLink>$(PatternToolkitRuntime)\GeneratedCode\LibrarySchema.gen.xsd</FixedLink>
+			<Link>Properties\Schemas\LibrarySchema.xsd</Link>
+			<FixedLink>$(PatternToolkitRuntime)\GeneratedCode\LibrarySchema.xsd</FixedLink>
 		</Content>
-		<Content Include="Properties\Schemas\PatternModelSchema.gen.xsd">
+		<Content Include="Properties\Schemas\PatternModelSchema.xsd">
 			<Visible>true</Visible>
-			<Link>Properties\Schemas\PatternModelSchema.gen.xsd</Link>
-			<FixedLink>$(PatternToolkitRuntime)\GeneratedCode\PatternModelSchema.gen.xsd</FixedLink>
+			<Link>Properties\Schemas\PatternModelSchema.xsd</Link>
+			<FixedLink>$(PatternToolkitRuntime)\GeneratedCode\PatternModelSchema.xsd</FixedLink>
 		</Content>
-		<Content Include="Properties\Schemas\WorkflowDesignSchema.gen.xsd">
+		<Content Include="Properties\Schemas\WorkflowDesignSchema.xsd">
 			<Visible>true</Visible>
-			<Link>Properties\Schemas\WorkflowDesignSchema.gen.xsd</Link>
-			<FixedLink>$(PatternToolkitBuilder)\GeneratedCode\WorkflowDesignSchema.gen.xsd</FixedLink>
+			<Link>Properties\Schemas\WorkflowDesignSchema.xsd</Link>
+			<FixedLink>$(PatternToolkitBuilder)\GeneratedCode\WorkflowDesignSchema.xsd</FixedLink>
 		</Content>
 		<Folder Include="Assets\" />
 		<Folder Include="Assets\Templates\Text\" />

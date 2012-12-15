@@ -66,4 +66,60 @@
     <Message Importance="High" Text="Removing T4 tracking data to force a full transform"/>
     <Delete Files="@(T4TrackingFilesToDelete)" ContinueOnError="true"/>
   </Target>
+  
+  <!-- 
+        Include items in VSIX using alternative file name.
+        
+        If you need to include a file in a VSIX but need its filename changed in the VSIX (e.g. for a generated file),
+        The item must be of type <Content>
+        Add the property <IncludeInVSIXAs>newname.extension</IncludeInVSIXAs>
+        The item will appear int eh VSIX in teh sam folder structure as in the project.
+        You can optionally override the destination folder in the VSIX by specifying the property <VSIXSubPath>newpath</VSIXSubPath>
+  -->
+  <PropertyGroup>
+    <GetVsixSourceItemsDependsOn>$(GetVsixSourceItemsDependsOn);IncludeFilesInVsixAs</GetVsixSourceItemsDependsOn>
+  </PropertyGroup>
+  <Target Name="IncludeFilesInVsixAs" Condition="'@(Content.IncludeInVSIXAs)'!=''">
+    <!-- Copy item with 'As' name to target dir as it would be packaged in the VSIX -->
+    <Message
+      Condition="'%(Content.IncludeInVSIXAs)'!=''"
+      Importance="high"
+      Text="Adding file: '%(Content.RelativeDir)%(Content.Filename)%(Content.Extension)' to VSIX as: '%(Content.IncludeInVSIXAs)'"/>
+    <!-- Copy Project Files -->
+    <Copy
+      Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'=='' AND '%(Content.Link)' == ''" 
+      SourceFiles="@(Content)"
+      DestinationFiles="$(TargetDir)%(Content.RelativeDir)%(Content.IncludeInVSIXAs)" />
+    <!-- Copy Linked Files -->
+    <Copy
+      Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'=='' AND '%(Content.Link)' != ''"
+      SourceFiles="@(Content)"
+      DestinationFiles="$(TargetDir)$([System.IO.Path]::GetDirectoryName(%(Content.Link)))\%(Content.IncludeInVSIXAs)" />
+    <!-- Copy Project/Linked SubPathed Files -->
+    <Copy
+      Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'!=''"
+      SourceFiles="@(Content)"
+      DestinationFiles="$(TargetDir)%(Content.VSIXSubPath)\%(Content.IncludeInVSIXAs)" />
+
+    <ItemGroup>
+      <!-- Add Project Files -->
+      <VSIXSourceItem 
+        Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'=='' AND '%(Content.Link)' == ''"
+        Include="$(TargetDir)%(Content.RelativeDir)%(Content.IncludeInVSIXAs)" >
+        <VSIXSubPath>%(Content.RelativeDir)</VSIXSubPath>
+      </VSIXSourceItem>
+      <!-- Add Linked Files -->
+      <VSIXSourceItem 
+        Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'=='' AND '%(Content.Link)' != ''"
+        Include="$(TargetDir)$([System.IO.Path]::GetDirectoryName(%(Content.Link)))\%(Content.IncludeInVSIXAs)">
+        <VSIXSubPath>$([System.IO.Path]::GetDirectoryName(%(Content.Link)))</VSIXSubPath>
+      </VSIXSourceItem>
+      <!-- Add Project/Linked SubPathed Files -->
+      <VSIXSourceItem
+        Condition="'%(Content.IncludeInVSIXAs)'!='' AND '%(Content.VSIXSubPath)'!=''"
+        Include="$(TargetDir)%(Content.VSIXSubPath)\%(Content.IncludeInVSIXAs)">
+        <VSIXSubPath>%(Content.VSIXSubPath)</VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+  </Target>
 </Project>

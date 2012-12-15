@@ -385,7 +385,7 @@
       <properties>
         <propertySettings Id="a558019e-b880-4d38-a026-53602d3d08c8" value="{InstanceName}" name="TargetFileName" />
         <propertySettings Id="586c62cc-816b-47f3-9d6d-7c0243a51160" value="..\..\..\..\~\Assets\Templates\Items\{InstanceName}" name="TargetPath" />
-        <propertySettings Id="1010eb7c-f1d8-4cb5-a49f-fa4f9458ca73" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/ItemTemplate/ItemTemplate.vstemplate.gen.t4" name="TemplateUri" />
+        <propertySettings Id="1010eb7c-f1d8-4cb5-a49f-fa4f9458ca73" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/ItemTemplate/ItemTemplate.vstemplate.t4" name="TemplateUri" />
           <propertySettings Id="7301b8d3-dc2f-42b2-8615-47bf3092d4e6" value="True" name="SanitizeName" />
         <propertySettings Id="4e791890-f969-45d6-b6ce-301f48745968" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/ee377e53-72e7-4715-a1f2-0a6c8e89e89b" name="TemplateAuthoringUri" />
         <propertySettings Id="c84af3f9-7226-4792-93ca-6571d2e4923d" value="False" name="SyncName" />
@@ -546,7 +546,7 @@
       <properties>
         <propertySettings Id="2b8fe33b-aa80-40b0-945f-7caa2a84199d" value="{InstanceName}" name="TargetFileName" />
         <propertySettings Id="aec14cf0-f9ba-48ca-ac18-c1cefdb9d62e" value="..\..\..\..\~\Assets\Templates\Projects\{InstanceName}" name="TargetPath" />
-        <propertySettings Id="04899ce1-199a-4935-929c-9f29025d57a3" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/ProjectTemplate/ProjectTemplate.vstemplate.gen.t4" name="TemplateUri" />
+        <propertySettings Id="04899ce1-199a-4935-929c-9f29025d57a3" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/ProjectTemplate/ProjectTemplate.vstemplate.t4" name="TemplateUri" />
           <propertySettings Id="2b1c2f8f-deda-4a79-a820-e726d1802405" value="True" name="SanitizeName" />
         <propertySettings Id="5f6e184e-ac88-41f3-8a0a-571698911527" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/736354eb-f066-475f-8a43-b78cf07a135d" name="TemplateAuthoringUri" />
         <propertySettings Id="984aba49-0154-4688-8b9f-eca44a95851c" value="False" name="SyncName" />
@@ -590,7 +590,7 @@
         <automationSettingsSchemaMoniker Id="e584cf89-312d-4698-b57d-ea003e4bf5f4" />
       </extendedElement>
       <properties>
-        <propertySettings Id="02392644-0bc8-41ce-9184-7777b02b41cf" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/PatternModel/PatternModel.patterndefinition.gen.t4" name="TemplateUri" />
+        <propertySettings Id="02392644-0bc8-41ce-9184-7777b02b41cf" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/PatternModel/PatternModel.patterndefinition.t4" name="TemplateUri" />
           <propertySettings Id="c7f6e88f-f951-437f-9344-e5f66959948e" value="..\~" name="TargetPath" />
         <propertySettings Id="4a729bce-b240-4094-82ca-7c64c4a4dce5" value="PatternModel.patterndefinition" name="TargetFileName" />
         <propertySettings Id="32796853-4a49-4c20-b544-aa03d720a17f" value="True" name="SanitizeName" />
@@ -653,7 +653,7 @@
         <propertySettings Id="faf6c896-5b22-4702-b77c-956c6ee8216e" value="..\..\~\Assets\Guidance" name="TargetPath" />
         <propertySettings Id="d454ff47-921f-44ca-9297-160f80c0219b" value="True" name="SanitizeName" />
         <propertySettings Id="a6561caa-9717-45d8-9935-d851807f5936" value="False" name="SyncName" />
-        <propertySettings Id="4d82b5e8-e719-4ca5-b7a1-710dbb12a8db" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/Guidance/ToolkitGuidance.gen.t4" name="TemplateUri" />
+        <propertySettings Id="4d82b5e8-e719-4ca5-b7a1-710dbb12a8db" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/Guidance/ToolkitGuidance.t4" name="TemplateUri" />
           <propertySettings Id="af1bd1e1-3a18-452e-81e9-8be1131d16bd" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/deddac25-042a-4a6d-92b1-8cb2b4beb60a" name="TemplateAuthoringUri" />
         <propertySettings Id="b6b6d1a1-14e8-4156-b3a8-5b48daba9b0a" name="Tag" />
         <propertySettings Id="0377a1ef-edc9-470b-ae59-5bd035f693cc" name="TargetBuildAction" />
@@ -669,7 +669,7 @@
         <propertySettings Id="a571e9f8-c756-4e66-80de-5535bd1724ec" value="..\..\~\GeneratedCode\Guidance" name="TargetPath" />
         <propertySettings Id="99a78b06-2175-4237-a5b3-cc3cc535542f" value="True" name="SanitizeName" />
         <propertySettings Id="7f16834e-1509-49ea-9700-2df8d52cac3a" value="False" name="SyncName" />
-        <propertySettings Id="2842b2fc-ec6e-4302-86d9-70d3bd9eaf2c" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/Guidance/GuidanceWorkflow.gen.t4" name="TemplateUri" />
+        <propertySettings Id="2842b2fc-ec6e-4302-86d9-70d3bd9eaf2c" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/Guidance/GuidanceWorkflow.t4" name="TemplateUri" />
           <propertySettings Id="880cc1f9-83ed-44df-aaab-62cb7e550e91" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/0891b2f7-6a6a-4a7f-8d9d-7320d1884b1c" name="TemplateAuthoringUri" />
         <propertySettings Id="d413ae36-b9fc-47c5-8283-c33d69301134" name="Tag" />
         <propertySettings Id="768fa27b-7e82-4410-ad17-e832b9e6b318" name="TargetBuildAction" />
@@ -714,7 +714,7 @@
         <propertySettings Id="2b65efb1-f568-455f-ba2a-ba5f8e158025" value="False" name="SyncName" />
         <propertySettings Id="eb004004-3f68-4c6b-b494-68d89e850cec" value="source.extension.tt" name="TargetFileName" />
         <propertySettings Id="99d70c98-3f40-4123-a75c-35741a94f9ad" name="TargetPath" />
-        <propertySettings Id="c4eb1e35-133c-4706-b740-ce8036b39e0b" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/VsixManifest/source.extension.gen.t4" name="TemplateUri" />
+        <propertySettings Id="c4eb1e35-133c-4706-b740-ce8036b39e0b" value="t4://extension/<#=VsixInfo.PatternToolkitBuilder.Identifier #>/Assets/Templates/Text/VsixManifest/source.extension.t4" name="TemplateUri" />
           <propertySettings Id="6041f199-728a-4416-9750-031d0fec66b6" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/df833f58-85c6-45f7-afc9-834c0217473d" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>

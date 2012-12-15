@@ -71,9 +71,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
                 Assert.True(this.FolderContainsExclusive(@"GeneratedCode",
                     new[]
                         {
-                            "LibrarySchema.gen.xsd",
-                            "PatternModelSchema.gen.xsd",
-                            "ProductStateSchema.gen.xsd",
+                            "LibrarySchema.xsd",
+                            "PatternModelSchema.xsd",
+                            "ProductStateSchema.xsd",
                         }));
 			}
 

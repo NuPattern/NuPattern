@@ -200,20 +200,20 @@
     <Content Include="..\Runtime.Store\GeneratedCode\ProductStateSchema.gen.xsd">
       <Link>GeneratedCode\ProductStateSchema.gen.xsd</Link>
       <SubType>Designer</SubType>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>ProductStateSchema.xsd</IncludeInVSIXAs>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Runtime.Schema\GeneratedCode\PatternModelSchema.gen.xsd">
       <Link>GeneratedCode\PatternModelSchema.gen.xsd</Link>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>PatternModelSchema.xsd</IncludeInVSIXAs>
     </Content>
     <Content Include="..\..\..\Library\Source\GeneratedCode\LibrarySchema.gen.xsd">
       <Link>GeneratedCode\LibrarySchema.gen.xsd</Link>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>LibrarySchema.xsd</IncludeInVSIXAs>
     </Content>
     <None Include="VSPackage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

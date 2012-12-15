@@ -107,7 +107,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                         {
 							"CollectionImplementation.t4",
 							"CollectionInterface.t4",
-							"Constants.gen.t4",
+							"Constants.t4",
 							"ElementContainerImplementation.t4",
 							"ElementContainerInterface.t4",
 							"ElementImplementation.t4",

@@ -70,7 +70,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                 Assert.True(this.FolderContainsExclusive(@"GeneratedCode",
                     new[]
                         {
-                            "WorkflowDesignSchema.gen.xsd",
+                            "WorkflowDesignSchema.xsd",
                         }));
 			}
 
@@ -118,32 +118,32 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\Guidance",
                     new[]
                         {
-							"GuidanceWorkflow.gen.t4",
-							"ToolkitGuidance.gen.t4",
+							"GuidanceWorkflow.t4",
+							"ToolkitGuidance.t4",
 						}));
 
 				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\ItemTemplate",
                     new[]
                         {
-							"ItemTemplate.vstemplate.gen.t4",
+							"ItemTemplate.vstemplate.t4",
 						}));
 
 				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\PatternModel",
                     new[]
                         {
-							"PatternModel.patterndefinition.gen.t4",
+							"PatternModel.patterndefinition.t4",
 						}));
 				
 				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\ProjectTemplate",
                     new[]
                         {
-							"ProjectTemplate.vstemplate.gen.t4",
+							"ProjectTemplate.vstemplate.t4",
 						}));
 				
 				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\VsixManifest",
                     new[]
                         {
-							"source.extension.gen.t4",
+							"source.extension.t4",
 							"source.include.t4",
 						}));
 			}
@@ -170,7 +170,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 							"extension.vsixmanifest",
 							//"[Content_Types].xml",
                             "LICENSE.txt",
-							"redist.gen.txt",
+							"redist.txt",
 							"Release%20Notes.docx",
 
                             //Auxillary Assemblies

@@ -129,7 +129,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GuidanceWorkflow.tt</DependentUpon>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>GuidanceWorkflow.t4</IncludeInVSIXAs>
       <ItemGuid>0891b2f7-6a6a-4a7f-8d9d-7320d1884b1c</ItemGuid>
     </Content>
     <Content Include="..\..\..\..\Docs\Release Notes.docx">
@@ -140,7 +140,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>source.extension.tt</DependentUpon>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>source.extension.t4</IncludeInVSIXAs>
     </Content>
     <None Include="AuthoringToolkitInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -1015,7 +1015,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ToolkitGuidance.tt</DependentUpon>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>ToolkitGuidance.t4</IncludeInVSIXAs>
       <ItemGuid>deddac25-042a-4a6d-92b1-8cb2b4beb60a</ItemGuid>
     </Content>
     <None Include="Assets\Templates\Text\Guidance\ToolkitGuidance.tt">
@@ -1059,7 +1059,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>redist.tt</DependentUpon>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>redist.txt</IncludeInVSIXAs>
     </Content>
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
@@ -1106,7 +1106,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternModel.patterndefinition.tt</DependentUpon>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>PatternModel.patterndefinition.t4</IncludeInVSIXAs>
       <SubType>Designer</SubType>
       <ItemGuid>65938d55-f3c6-4923-b32e-6682ba09c7bd</ItemGuid>
     </Content>
@@ -1122,14 +1122,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ItemTemplate.vstemplate.tt</DependentUpon>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>ItemTemplate.vstemplate.t4</IncludeInVSIXAs>
       <ItemGuid>ee377e53-72e7-4715-a1f2-0a6c8e89e89b</ItemGuid>
     </Content>
     <Content Include="Assets\Templates\Text\ProjectTemplate\ProjectTemplate.vstemplate.gen.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectTemplate.vstemplate.tt</DependentUpon>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>ProjectTemplate.vstemplate.t4</IncludeInVSIXAs>
       <ItemGuid>736354eb-f066-475f-8a43-b78cf07a135d</ItemGuid>
     </Content>
     <Content Include="Assets\Templates\Text\VsixManifest\source.include.t4">
@@ -1153,7 +1153,7 @@
       <Link>GeneratedCode\WorkflowDesignSchema.gen.xsd</Link>
       <FixedLink>
       </FixedLink>
-      <IncludeInVSIX>true</IncludeInVSIX>
+      <IncludeInVSIXAs>WorkflowDesignSchema.xsd</IncludeInVSIXAs>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\..\Common\Guidance\PatternToolkitGuidanceTemplate.dotm">

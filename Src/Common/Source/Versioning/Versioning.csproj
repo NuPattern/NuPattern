@@ -81,6 +81,7 @@
       <DependentUpon>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
