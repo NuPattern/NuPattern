@@ -383,9 +383,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromPatternSchemaForProperties(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromPatternSchemaForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)element;
+				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema> result = root.Properties;
 				
@@ -397,9 +397,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				////////
 				return FilterElementsFromPatternSchemaForProperties(result);
 			}
-			internal static global::System.Collections.IList GetElementsFromPatternSchemaForAutomation(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromPatternSchemaForAutomation(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)element;
+				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
@@ -411,9 +411,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				////////
 				return FilterElementsFromPatternSchemaForAutomation(result);
 			}
-			internal static global::System.Collections.IList GetElementsFromPatternSchemaForLaunchPoints(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromPatternSchemaForLaunchPoints(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)element;
+				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
@@ -1133,9 +1133,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromElementSchemaForProperties(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromElementSchemaForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)element;
+				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema> result = root.Properties;
 				
@@ -1147,9 +1147,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				////////
 				return FilterElementsFromElementSchemaForProperties(result);
 			}
-			internal static global::System.Collections.IList GetElementsFromElementSchemaForAutomation(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromElementSchemaForAutomation(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)element;
+				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
@@ -1161,9 +1161,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				////////
 				return FilterElementsFromElementSchemaForAutomation(result);
 			}
-			internal static global::System.Collections.IList GetElementsFromElementSchemaForLaunchPoints(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromElementSchemaForLaunchPoints(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)element;
+				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
@@ -2564,9 +2564,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromCollectionSchemaForLaunchPoints(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromCollectionSchemaForLaunchPoints(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)element;
+				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
@@ -2578,9 +2578,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				////////
 				return FilterElementsFromCollectionSchemaForLaunchPoints(result);
 			}
-			internal static global::System.Collections.IList GetElementsFromCollectionSchemaForProperties(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromCollectionSchemaForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)element;
+				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema> result = root.Properties;
 				
@@ -2592,9 +2592,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				////////
 				return FilterElementsFromCollectionSchemaForProperties(result);
 			}
-			internal static global::System.Collections.IList GetElementsFromCollectionSchemaForAutomation(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromCollectionSchemaForAutomation(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)element;
+				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
@@ -3527,9 +3527,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 		
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
-			internal static global::System.Collections.IList GetElementsFromExtensionPointSchemaForProperties(DslModeling::ModelElement element)
+			internal static global::System.Collections.IList GetElementsFromExtensionPointSchemaForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)element;
+				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
 					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema> result = root.Properties;
 				

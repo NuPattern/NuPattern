@@ -3,7 +3,7 @@
 public static class VersionInfo
 {
     // Framework Version
-    public static readonly string TargetVsVersion = "10.0";
+    public static readonly string TargetVsVersion = "11.0";
 
     // Assembly Versions
     public const int AssemblyMajor = 1;

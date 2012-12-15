@@ -10,7 +10,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Authoring.IntegrationTests.Content";
-        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitBuilder.10.0.vsix";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitBuilder.11.0.vsix";
 
         [TestClass]
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]
@@ -31,8 +31,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
             public void ThenVsixInfoCorrect()
             {
                 //Identifier, Name, Author, Version
-                Assert.Equal(@"9f6dc301-6f66-4d21-9f9c-b37412b162f6", this.VsixInfo.Header.Identifier);
-                Assert.Equal(@"Pattern Toolkit Builder VS2010", this.VsixInfo.Header.Name);
+                Assert.Equal(@"84031a32-b20f-479c-a620-beacd982ea13", this.VsixInfo.Header.Identifier);
+                Assert.Equal(@"Pattern Toolkit Builder VS2012", this.VsixInfo.Header.Name);
                 Assert.Equal(@"An extension for designing and building Pattern Toolkit extensions, that combine automation and guidance with design patterns for repeatable solution development.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"Outercurve", this.VsixInfo.Header.Author);
                 Assert.Equal("1.3.20.0", this.VsixInfo.Header.Version.ToString());
@@ -188,8 +188,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 							"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Shell.pkgdef",
 
 							//Embedded VSIXes
-							"PatternToolkitAutomationLibrary.10.0.vsix",
-							"PatternToolkitManager.10.0.vsix",
+							"PatternToolkitAutomationLibrary.11.0.vsix",
+							"PatternToolkitManager.11.0.vsix",
                         }));
             }
         }

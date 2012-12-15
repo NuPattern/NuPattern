@@ -45,10 +45,10 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
             this.testToolkitTemplatePath = string.Format(CultureInfo.InvariantCulture, TestToolkitTemplateCacheFormat, dte.Version);
             Directory.CreateDirectory(Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate1.zip"));
             Directory.CreateDirectory(Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate2.zip"));
-            File.Copy(Path.Combine(this.TestContext.DeploymentDirectory, @"MyTemplate1.vstemplate"),
-                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate1.zip\MyTemplate1.vstemplate"), true);
-            File.Copy(Path.Combine(this.TestContext.DeploymentDirectory, @"MyTemplate2.vstemplate"),
-                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate2.zip\MyTemplate2.vstemplate"), true);
+            File.Copy(Path.Combine(this.TestContext.DeploymentDirectory, @"MyTemplate1.gen.vstemplate"),
+                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate1.zip\MyTemplate1.gen.vstemplate"), true);
+            File.Copy(Path.Combine(this.TestContext.DeploymentDirectory, @"MyTemplate2.gen.vstemplate"),
+                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate2.zip\MyTemplate2.gen.vstemplate"), true);
 #endif
         }
 
@@ -99,7 +99,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
         public void WhenFindToolkitOrThrowWithToolkitTemplateVs2012_ThenReturnsToolkit()
         {
             var result = InstantiationTemplateWizard.FindToolkitOrThrow(this.manager,
-                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate1.gen.zip\MyTemplate1.gen.vstemplate"));
+                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate1.zip\MyTemplate1.gen.vstemplate"));
 
             Assert.Equal(result.Id, TestToolkitId);
         }
@@ -109,7 +109,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
         public void WhenFindToolkitOrThrowWithToolkitTemplateAndTemplateIdVs2012_ThenReturnsToolkit()
         {
             var result = InstantiationTemplateWizard.FindToolkitOrThrow(this.manager,
-                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate2.gen.zip\MyTemplate2.gen.vstemplate"));
+                Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath + @"\~PC\Projects\MyTemplate2.zip\MyTemplate2.gen.vstemplate"));
 
             Assert.Equal(result.Id, TestToolkitId);
         }

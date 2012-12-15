@@ -375,7 +375,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			global::System.Collections.Generic.List<string> references = new global::System.Collections.Generic.List<string>(base.GetReferencesForProcessingRun());
 			references.Add(this.GetType().Assembly.Location);
 			references.Add(typeof(DslModeling::Store).Assembly.Location);
-			references.Add("Microsoft.VisualStudio.TextTemplating.Modeling.10.0.dll");
+			references.Add("Microsoft.VisualStudio.TextTemplating.Modeling.11.0.dll");
 			return references.ToArray();
 		}
 	}

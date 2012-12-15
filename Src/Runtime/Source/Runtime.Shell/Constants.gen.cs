@@ -10,7 +10,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 		/// <summary>
 		/// The GUID for this package.
 		/// </summary>
-		public const string VsixIdentifier = "93373818-600f-414b-8181-3a0cb79fa785";
+		public const string VsixIdentifier = "c869918e-f94e-4e7a-ab25-b076ff4e751b";
 
 		/// <summary>
 		/// The Identifiers of the FERT VSixes

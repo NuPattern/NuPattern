@@ -10,7 +10,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Runtime.IntegrationTests.Content";
-        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitManager.10.0.vsix";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitManager.11.0.vsix";
 
         [TestClass]
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]
@@ -31,7 +31,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             public void ThenVsixInfoCorrect()
             {
                 //Identifier, Name, Author, Version
-                Assert.Equal(@"93373818-600f-414b-8181-3a0cb79fa785", this.VsixInfo.Header.Identifier);
+                Assert.Equal(@"c869918e-f94e-4e7a-ab25-b076ff4e751b", this.VsixInfo.Header.Identifier);
                 Assert.Equal(@"Pattern Toolkit Manager", this.VsixInfo.Header.Name);
                 Assert.Equal(@"The Solution Builder tool window for accelerating solution development using Pattern Toolkit extensions.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"Outercurve", this.VsixInfo.Header.Author);

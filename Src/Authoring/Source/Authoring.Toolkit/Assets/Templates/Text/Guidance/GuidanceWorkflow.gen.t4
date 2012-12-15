@@ -35,7 +35,7 @@ namespace <#=rootNamespace #>.Guidance
 <#
 	}
 #>
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2010", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2012", "1.3.20.0")]
 	public partial class ProcessWorkflow : GuidanceWorkflow
 	{
 		/// <summary>
@@ -94,7 +94,7 @@ namespace <#=rootNamespace #>.Guidance
 <#
 	}
 #>
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2010", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2012", "1.3.20.0")]
 	public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
 	{
 		/// <summary>
