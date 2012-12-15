@@ -233,8 +233,8 @@
     <GacTargetOutput>false</GacTargetOutput>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.DslProjects.targets" />
   <Import Project="$(VsxTargetsPath)\Microsoft.VsSDK.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.DslProjects.targets" />
   <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.gen.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>
