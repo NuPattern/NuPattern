@@ -77,7 +77,7 @@
       <LastGenOutput>Authoring.PatternToolkitVersion.gen.targets</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets">
+    <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.gen.targets">
       <DependentUpon>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,7 +85,7 @@
     </None>
     <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets</LastGenOutput>
+      <LastGenOutput>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.gen.targets</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

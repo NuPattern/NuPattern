@@ -118,7 +118,7 @@
     <Compile Include="Commands\CreateViewElementsCommand.cs">
       <ItemGuid>d36159cf-7425-4b2c-a2d9-08282301b2c7</ItemGuid>
     </Compile>
-    <Compile Include="Commands\Helpers\AutomationLibraryToolkitInfo.cs">
+    <Compile Include="Commands\Helpers\AutomationLibraryToolkitInfo.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AutomationLibraryToolkitInfo.tt</DependentUpon>
@@ -246,7 +246,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Commands\Helpers\AutomationLibraryToolkitInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AutomationLibraryToolkitInfo.cs</LastGenOutput>
+      <LastGenOutput>AutomationLibraryToolkitInfo.gen.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

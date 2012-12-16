@@ -22,7 +22,7 @@
   
   <!-- Building pattern toolkit projects -->
   <Import
-    Project="$(ProjectDir)$(BranchRoot)Common\Source\Versioning\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets"
+    Project="$(ProjectDir)$(BranchRoot)Common\Source\Versioning\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.gen.targets"
     Condition="'$(IsPatternToolkitProjectType)'=='true'" />
 
 </Project>

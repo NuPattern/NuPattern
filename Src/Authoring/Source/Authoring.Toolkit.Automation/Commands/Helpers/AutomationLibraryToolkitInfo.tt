@@ -1,4 +1,4 @@
-﻿<#@ output extension=".cs" #>
+﻿<#@ output extension=".gen.cs" #>
 <#@ Include File="..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 using System;
 

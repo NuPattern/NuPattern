@@ -233,9 +233,10 @@
     <Content Include="GeneratedCode\Guidance\Content\WhatareVSTemplates.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\Common\Source\Versioning\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets">
-      <Link>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets</Link>
-      <IncludeInVSIX>true</IncludeInVSIX>
+    <Content Include="..\..\..\Common\Source\Versioning\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.gen.targets">
+      <Link>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.gen.targets</Link>
+      <IncludeInVSIXAs>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets</IncludeInVSIXAs>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\ArrangingShapesonPatternModel.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
