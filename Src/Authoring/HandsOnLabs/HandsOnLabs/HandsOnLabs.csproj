@@ -66,6 +66,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HolProjectTemplate.tt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>27fdaf3f-8ec0-409e-9664-7ba94c121dff</ItemGuid>
     </ProjectTemplate>
     <Content Include="GeneratedCode\Guidance\Content\AddaCommandforRunningtheT4Template.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -448,7 +449,7 @@
     </None>
     <None Include="source.include.t4">
       <DependentUpon>source.extension.tt</DependentUpon>
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Element/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f23369711-1fee-4fa6-b891-5269a7e59cec</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Element/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252fa71545af-2d3b-4467-b23a-5b49138d4667</SourceModelReference>
       <ItemGuid>94470e9e-4cd7-447b-842b-5b18e708fd20</ItemGuid>
     </None>
   </ItemGroup>
