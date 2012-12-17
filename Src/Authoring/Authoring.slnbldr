@@ -46,7 +46,7 @@
             </element>
             <collection Id="7748d9c9-29f1-45fe-a8cb-45de4d3667ee" definitionId="994965b7-d2b1-4460-8947-44ca73227b5f" definitionName="Automation" instanceName="Automation">
               <extensionProducts>
-                <product Id="994ad7c1-20d3-4b83-a06c-70caedc6cf91" definitionId="d6139b37-9971-4834-a9dc-2b3daef962cf" definitionName="AutomationLibrary" instanceName="Library" extensionId="97bd7ab2-964b-43f1-8a08-be6db68b018b" extensionName="Pattern Toolkit Library Support" author="Microsoft" version="1.3.20.0">
+                <product Id="994ad7c1-20d3-4b83-a06c-70caedc6cf91" definitionId="d6139b37-9971-4834-a9dc-2b3daef962cf" definitionName="AutomationLibrary" instanceName="Library" extensionId="080eb0ef-518d-4807-9b5c-aa32d0032e0b" extensionName="Pattern Toolkit Library Support" author="Microsoft" version="1.3.20.0">
                   <properties>
                     <property Id="947b2c7b-499a-4784-9822-73cf07d1d951" definitionId="96a8d40e-c7e5-47ba-b550-489745d95cd2" definitionName="TransformOnBuild" rawValue="Never" />
                     <property Id="6ddfcc42-0ca3-4ef1-a892-8203cde86e90" definitionId="32699d9a-aa7d-4a51-8c86-6b2a708be486" definitionName="ToolkitProjectRootNamespace" rawValue="Microsoft.VisualStudio.Patterning.Authoring.Authoring" />
@@ -285,7 +285,7 @@
             </collection>
             <collection Id="53019e62-5f17-4099-a4f5-a344ff6b5f11" definitionId="994965b7-d2b1-4460-8947-44ca73227b5f" definitionName="Automation" instanceName="Automation">
               <extensionProducts>
-                <product Id="6defbb92-8435-4e41-bd89-8b30a73ca42b" definitionId="d6139b37-9971-4834-a9dc-2b3daef962cf" definitionName="AutomationLibrary" instanceName="Library" extensionId="97bd7ab2-964b-43f1-8a08-be6db68b018b" extensionName="Pattern Toolkit Library Support" author="Microsoft" version="1.3.20.0">
+                <product Id="6defbb92-8435-4e41-bd89-8b30a73ca42b" definitionId="d6139b37-9971-4834-a9dc-2b3daef962cf" definitionName="AutomationLibrary" instanceName="Library" extensionId="080eb0ef-518d-4807-9b5c-aa32d0032e0b" extensionName="Pattern Toolkit Library Support" author="Microsoft" version="1.3.20.0">
                   <properties>
                     <property Id="af2b28ec-2804-4389-84d3-c0bf0ec49f0e" definitionId="96a8d40e-c7e5-47ba-b550-489745d95cd2" definitionName="TransformOnBuild" rawValue="Never" />
                     <property Id="73ee5dbe-dc6e-444c-9c36-a904436bea1b" definitionId="32699d9a-aa7d-4a51-8c86-6b2a708be486" definitionName="ToolkitProjectRootNamespace" rawValue="Microsoft.VisualStudio.Patterning.Authoring.Library" />
