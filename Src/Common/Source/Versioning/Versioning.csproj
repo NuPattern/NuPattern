@@ -67,6 +67,9 @@
     <None Include="..\..\..\Versioning Instructions.docx">
       <Link>Docs\Versioning Instructions.docx</Link>
     </None>
+    <None Include="..\..\..\VSGalleryInfo.docx">
+      <Link>Docs\VSGalleryInfo.docx</Link>
+    </None>
     <None Include="Authoring.PatternToolkitVersion.gen.targets">
       <DependentUpon>Authoring.PatternToolkitVersion.tt</DependentUpon>
       <AutoGen>True</AutoGen>
