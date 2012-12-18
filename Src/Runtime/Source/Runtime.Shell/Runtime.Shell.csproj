@@ -155,7 +155,7 @@
     <Compile Include="Events\ItemEvents.cs" />
     <Compile Include="Extensions\IPatternManagerExtensions.cs" />
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Runtime/Element/C:\Projects\Platu\Main\Src\Runtime\Runtime.slnbldr%252f29623964-bb7b-4778-b7d4-d79652ac5a5e</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Runtime/Element/C:\Projects\VSPAT\sprint20\Src\Runtime\Runtime.slnbldr%252f29623964-bb7b-4778-b7d4-d79652ac5a5e</SourceModelReference>
       <ItemGuid>ae551abf-1da3-405b-8d82-c2ccb986c7f8</ItemGuid>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />

@@ -23,7 +23,7 @@ namespace Microsoft.VisualStudio.Patterning.HandsOnLabs
 	///	Description for PatternToolkitHOLs.DefaultView
 	///	</summary>
 	[Description("Description for PatternToolkitHOLs.DefaultView")]
-	[ToolkitInterfaceProxy(ExtensionId ="5413c755-6024-4c41-ba0c-9aa3d6fd9caf", DefinitionId = "ac1fde3b-bfa2-4fcf-a1c5-50167323063d", ProxyType = typeof(DefaultView))]
+	[ToolkitInterfaceProxy(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "ac1fde3b-bfa2-4fcf-a1c5-50167323063d", ProxyType = typeof(DefaultView))]
 	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class DefaultView : IDefaultView

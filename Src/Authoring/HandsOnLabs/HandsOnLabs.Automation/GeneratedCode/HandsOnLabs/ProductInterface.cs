@@ -22,7 +22,7 @@ namespace Microsoft.VisualStudio.Patterning.HandsOnLabs
 	///	Hands on Labs for Creating Pattern Toolkits
 	///	</summary>
 	[Description("Hands on Labs for Creating Pattern Toolkits")]
-	[ToolkitInterface(ExtensionId ="5413c755-6024-4c41-ba0c-9aa3d6fd9caf", DefinitionId = "71309920-c4ac-4283-b6bf-3cec975eca86", ProxyType = typeof(PatternToolkitHOLs))]
+	[ToolkitInterface(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "71309920-c4ac-4283-b6bf-3cec975eca86", ProxyType = typeof(PatternToolkitHOLs))]
 	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
 	public partial interface IPatternToolkitHOLs : IToolkitInterface
 	{ 

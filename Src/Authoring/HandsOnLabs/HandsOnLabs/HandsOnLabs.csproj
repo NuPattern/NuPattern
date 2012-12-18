@@ -166,7 +166,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/HandsOnLabs/Element/C:\Projects\Platu\Main\Src\Authoring\HandsOnLabs\HandsOnLabs.slnbldr%252f608f1a87-b90d-43cd-adfe-121dd850e2dd</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Element/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f14fc43ef-9d28-4b36-905f-adc76a9c92f3</SourceModelReference>
       <ItemGuid>0ddee1e0-beae-431c-a10b-5379b9aa183f</ItemGuid>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

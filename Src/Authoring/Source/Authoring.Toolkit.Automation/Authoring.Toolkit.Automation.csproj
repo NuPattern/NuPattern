@@ -186,43 +186,43 @@
       <ItemGuid>4761ad9a-e077-434a-8566-b84cf2bbb596</ItemGuid>
     </Compile>
     <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\CollectionImplementation.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>556691bd-2eda-416e-bd83-fc6bf3660688</ItemGuid>
     </Compile>
     <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\CollectionInterface.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>b63472f0-6f42-48ca-b623-0694f681a1e0</ItemGuid>
     </Compile>
     <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ElementImplementation.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>595d79e1-65b5-46c3-b34b-e8af5d82d290</ItemGuid>
     </Compile>
     <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ElementInterface.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>7817736b-848a-4802-964a-935794dde061</ItemGuid>
     </Compile>
     <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ExtensionPointImplementation.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>e54004a9-a19f-4e48-befc-f4786c2a83d8</ItemGuid>
     </Compile>
     <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ExtensionPointInterface.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>ee0129c1-5066-4122-a504-1c940f2a6435</ItemGuid>
     </Compile>
     <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ProductImplementation.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>b5bd3141-7dd6-4aa4-8f4d-fc8b178768f9</ItemGuid>
     </Compile>
     <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ProductInterface.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>afb82b47-9d2f-49c8-8edc-fea6c9ac4490</ItemGuid>
     </Compile>
     <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ViewImplementation.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>099660a7-5227-4dce-9aa5-9811026e8b0d</ItemGuid>
     </Compile>
     <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ViewInterface.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>a381b1cb-8c14-460f-912e-55215d67f78b</ItemGuid>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />

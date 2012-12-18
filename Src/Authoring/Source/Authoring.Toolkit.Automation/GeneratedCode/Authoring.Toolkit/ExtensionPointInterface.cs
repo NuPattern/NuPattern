@@ -47,8 +47,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[Description("The name of this element instance.")]
 		[ParenthesizePropertyName(true)]
+		[Description("The name of this element instance.")]
 		String InstanceName { get; set; }
 		
 		///	<summary>

@@ -20,7 +20,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 	/// </summary>
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2012", "1.3.20.0")]
 	public partial class ProcessWorkflow : GuidanceWorkflow
 	{
 		/// <summary>
@@ -1832,7 +1832,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
 	[PartCreationPolicy(CreationPolicy.NonShared)]
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2012", "1.3.20.0")]
 	public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
 	{
 		/// <summary>

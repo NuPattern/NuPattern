@@ -225,7 +225,7 @@
         <property Id="1726ca66-eff0-4c5e-b94c-e8a9a0966a76" definitionId="293802b7-0b69-440e-be60-927f07f4e636" definitionName="PatternName" rawValue="AutomationLibrary" />
         <property Id="d8931bc6-5e93-49ca-88b2-a6ae7baf2ebc" definitionId="710634cd-4863-4314-9785-dc33f6501903" definitionName="PatternDescription" />
         <property Id="07ae0c83-f464-48eb-8ca1-f01d92ec4c01" definitionId="00123e2b-3459-4924-9f18-628406735664" definitionName="ExistingToolkitId" />
-        <property Id="6f1d4d03-bd86-4ca8-82b9-ba7b85cc0f80" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Authoring" />
+        <property Id="6f1d4d03-bd86-4ca8-82b9-ba7b85cc0f80" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Authoring.vs2012" />
         <property Id="074f7a75-51a4-4ece-8c23-3ec702d2d788" definitionId="e73753b6-45e3-479f-b953-1c9ab6836362" definitionName="ProjectRootNamespace" rawValue="Microsoft.VisualStudio.Patterning.Authoring.Library" />
         <property Id="dac19e5e-d6be-4d85-bede-55a29ffa09f4" definitionId="4b4b1fdf-ea6d-4ea4-b142-c2f1685c0091" definitionName="ProjectAssemblyName" rawValue="Microsoft.VisualStudio.Patterning.Authoring.Library.Toolkit" />
         <property Id="908876a7-61b7-4e72-bcf0-db2c2fe7dfcc" definitionId="4121d8f0-87a2-4757-a6d4-6f28d9fa8728" definitionName="ExcludeFromCodeCoverage" rawValue="True" />
@@ -240,7 +240,7 @@
             <element Id="d3cfafe7-ae36-419a-853e-1b496681c616" definitionId="5da53e5a-0ba8-48f8-a922-1712244c388c" definitionName="PatternModel" instanceName="Pattern Model">
               <properties>
                 <property Id="f5ec9071-911f-4ec0-811f-522e6ab07dbe" definitionId="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" definitionName="ValidateOnBuild" rawValue="Never" />
-                <property Id="cfe0e0a4-09bc-44d5-8d1a-a8842ce5b940" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="C:\Projects\VSPAT\Src\Authoring\Source\AutomationLibrary.Toolkit\PatternModel.patterndefinition" />
+                <property Id="cfe0e0a4-09bc-44d5-8d1a-a8842ce5b940" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="C:\Projects\VSPAT\sprint20\Src\Authoring\Source\AutomationLibrary.Toolkit\PatternModel.gen.patterndefinition" />
               </properties>
               <references>
                 <reference Id="ac774585-f116-433c-9c1c-36b14ef3b859" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/c8131dba-0954-41b1-bf71-defcc7035456" kind="Microsoft.VisualStudio.Patterning.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;PatternModel.patterndefinition&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;e52d1228-39f9-422d-b667-1e6f26249aa0&quot;&#xD;&#xA;}" />
@@ -274,11 +274,12 @@
                 <element Id="64a27b45-faa5-48fc-8aac-8acbaad5964b" definitionId="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" definitionName="Guidance" instanceName="Guidance">
                   <properties>
                     <property Id="c0ff273a-f4c5-4ed4-89e7-1cccf20ccb50" definitionId="70d70df3-799d-4107-b77b-0001119484a6" definitionName="ProjectContentPath" rawValue="GeneratedCode\Guidance\Content" />
-                    <property Id="c32bf7e6-a844-4975-a0e1-82cbb7ef9846" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\VSPAT\Src\Authoring\Source\AutomationLibrary.Toolkit\Assets\Guidance\ToolkitGuidance.doc" />
+                    <property Id="c32bf7e6-a844-4975-a0e1-82cbb7ef9846" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\VSPAT\sprint20\Src\Authoring\Source\AutomationLibrary.Toolkit\Assets\Guidance\ToolkitGuidance.doc" />
                     <property Id="07fa19c6-9f70-4ea1-a9ef-f03e16215870" definitionId="81c7a831-97e3-4067-9d15-8d7fb671a755" definitionName="DefaultInstanceName" rawValue="Working with Automation Libraries" />
                   </properties>
                   <references>
                     <reference Id="df5b7a76-c6f6-4244-9b83-f5773f14758e" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/299380e4-ce08-47e3-a5f8-426cdd58aaf9" kind="Microsoft.VisualStudio.Patterning.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;ToolkitGuidance.doc&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;90291e86-b780-4adf-b500-5c11c868c3fd&quot;&#xD;&#xA;}" />
+                    <reference Id="64fde4b7-6b04-4067-b2bf-9e1d76d6defa" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/2c9c6e11-838d-4e31-ae01-365b07bb003c" kind="Microsoft.VisualStudio.Patterning.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;Tag&quot;: &quot;&quot;,&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;GuidanceWorkflow&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;50c8adef-76cc-44a0-80c3-ac8aef6c4513&quot;&#xD;&#xA;}" />
                   </references>
                 </element>
               </elements>
@@ -417,6 +418,7 @@
                   </properties>
                   <references>
                     <reference Id="0e0eafa3-e132-4b5f-9425-5655a4aebd5d" value="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/ab617e0d-91f1-4707-bafc-22c4a1c44b77" kind="Microsoft.VisualStudio.Patterning.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;ToolkitGuidance.doc&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;90291e86-b780-4adf-b500-5c11c868c3fd&quot;&#xD;&#xA;}" />
+                    <reference Id="edf6d6a7-c3e2-430d-9e91-95dde7e5d56b" value="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/0ddee1e0-beae-431c-a10b-5379b9aa183f" kind="Microsoft.VisualStudio.Patterning.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;Tag&quot;: &quot;&quot;,&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;GuidanceWorkflow&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;50c8adef-76cc-44a0-80c3-ac8aef6c4513&quot;&#xD;&#xA;}" />
                   </references>
                 </element>
               </elements>
