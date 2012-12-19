@@ -213,6 +213,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIXAs>LibrarySchema.xsd</IncludeInVSIXAs>
     </Content>
+    <Content Include="GeneratedCode\Guidance\Content\Feedback.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\InstallingNuPattern.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatisNuPattern.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="VSPackage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VSPackage.gen.resx</LastGenOutput>
@@ -325,9 +334,6 @@
     <Content Include="GeneratedCode\Guidance\Content\ExtensionManager.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="GeneratedCode\Guidance\Content\FeatureBuilderPowerTool.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="GeneratedCode\Guidance\Content\GuidanceWorkflowExplorer.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -374,9 +380,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\InstallingaPatternToolkit.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\InstallingthePatternAutomationToolkit.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\MoreInformation.mht">
@@ -521,9 +524,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\WhatistheGuidanceExplorer.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisthePatternAutomationToolkit.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\WhatisthePatternModelDesigner.mht">
