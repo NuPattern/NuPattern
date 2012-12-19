@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Custom <see cref="PropertyDescriptor"/> that delegates calls to the inner descriptor, buts allows overriding of its attributes.

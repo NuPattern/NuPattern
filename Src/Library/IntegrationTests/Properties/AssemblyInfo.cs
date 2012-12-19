@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle(@"Microsoft.VisualStudio.Patterning.Library.IntegrationTests")]
+[assembly: AssemblyTitle(@"NuPattern.Library.IntegrationTests")]
 [assembly: AssemblyDescription(@"")]
 [assembly: AssemblyConfiguration("")]
 

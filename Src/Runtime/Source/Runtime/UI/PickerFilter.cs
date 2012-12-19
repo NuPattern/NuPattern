@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Represents a filter to be applied to the elements in hierarchy items.

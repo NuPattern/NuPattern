@@ -1,11 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.UriProviders;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.UriProviders;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
+namespace NuPattern.Runtime.UnitTests.UriProviders
 {
     [TestClass]
     public class PackUriProviderSpec

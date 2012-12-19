@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq.Expressions;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// The state of all products in the solution.
@@ -35,7 +35,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 	/// The state of all products in the solution.
 	/// </summary>
 	[Description("The state of all products in the solution.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IProductState : ISupportTransaction 
 	{
 		/// <summary>
@@ -82,7 +82,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 	/// A property of an element.
 	/// </summary>
 	[Description("A property of an element.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IProperty : IInstanceBase 
 	{
 		/// <summary>
@@ -127,7 +127,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 	/// A container for elements in a view.
 	/// </summary>
 	[Description("A container for elements in a view.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface ICollection : IAbstractElement 
 	{
 		/// <summary>
@@ -158,7 +158,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 	/// An element of a view.
 	/// </summary>
 	[Description("An element of a view.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IElement : IAbstractElement 
 	{
 		/// <summary>
@@ -189,7 +189,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 	/// An element within the product.
 	/// </summary>
 	[Description("An element within the product.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IProductElement : IInstanceBase 
 	{
 		/// <summary>
@@ -261,7 +261,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 	/// A product instance in the solution.
 	/// </summary>
 	[Description("A product instance in the solution.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IProduct : IProductElement 
 	{
 		/// <summary>
@@ -355,7 +355,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 	/// A view of a product instance.
 	/// </summary>
 	[Description("A view of a product instance.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IView : IInstanceBase 
 	{
 		/// <summary>
@@ -393,7 +393,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 	/// A child collection or element.
 	/// </summary>
 	[Description("A child collection or element.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IAbstractElement : IProductElement 
 	{
 		/// <summary>
@@ -438,7 +438,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 	/// An element instance.
 	/// </summary>
 	[Description("An element instance.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IInstanceBase : ISupportTransaction 
 	{
 		/// <summary>
@@ -502,7 +502,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 	/// A reference to external data or service.
 	/// </summary>
 	[Description("A reference to external data or service.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IReference : ISupportTransaction 
 	{
 		/// <summary>

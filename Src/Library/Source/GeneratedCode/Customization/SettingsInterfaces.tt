@@ -17,8 +17,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq.Expressions;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using NuPattern.Runtime;
 
 #pragma warning disable 0108
 
@@ -263,6 +262,6 @@ public Version DslVersion
 
 public string ToolName
 {
-    get { return "Microsoft.VisualStudio.Patterning"; }
+    get { return "NuPattern"; }
 }
 #>

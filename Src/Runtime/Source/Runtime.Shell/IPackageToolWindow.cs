@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.Shell;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
     /// <summary>
     /// Provides a service interface to acces a tool window in this package.

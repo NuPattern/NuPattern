@@ -2,11 +2,11 @@
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
+namespace NuPattern.Runtime.Store.UnitTests
 {
     public class ProductElementTypeDescriptorSpec
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Change rule for <see cref="GuidanceExtension"/> domain class.

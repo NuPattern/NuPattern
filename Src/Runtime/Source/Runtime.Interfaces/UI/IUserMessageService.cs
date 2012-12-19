@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Runtime
+﻿namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Provides a contract to send messages to the user.

@@ -4,12 +4,12 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Runtime.Store;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
+namespace NuPattern.Runtime.UnitTests
 {
     public class PatternManagerSpec
     {

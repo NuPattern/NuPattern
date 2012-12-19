@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
 namespace Toolkit14
 {
@@ -26,9 +26,9 @@ namespace Toolkit14
 		String InstanceName { get; set; }
 
 		///	<summary>
-		///	Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ProductElement
+		///	Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement
 		///	</summary>
-		[Description("Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ProductElement")]
+		[Description("Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement")]
 		IEnumerable<IReference> References { get; }
 
 		///	<summary>

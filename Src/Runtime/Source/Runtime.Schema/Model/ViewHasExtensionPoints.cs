@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// ViewHasExtensionPoints relationship definition.

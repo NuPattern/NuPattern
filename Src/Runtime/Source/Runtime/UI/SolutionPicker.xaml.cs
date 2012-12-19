@@ -2,11 +2,11 @@
 using System.Globalization;
 using System.Windows;
 using System.Windows.Input;
-using Microsoft.VisualStudio.Patterning.Common.Presentation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Common.Presentation;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Interaction logic for SolutionPickerView.xaml.

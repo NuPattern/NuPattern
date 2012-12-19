@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
+using NuPattern.Extensibility;
+using NuPattern.Library.Commands;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Deleting rule to keep command aggregator on sync

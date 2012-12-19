@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
 namespace Toolkit14
 {

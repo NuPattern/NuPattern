@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase">
+  <Interface Name="NuPattern.Runtime.IInstanceBase">
     <Position X="5.25" Y="0.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
@@ -8,58 +8,58 @@
     </Compartments>
     <TypeIdentifier />
   </Interface>
-  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IProductElement">
+  <Interface Name="NuPattern.Runtime.IProductElement">
     <Position X="2.75" Y="2.5" Width="2" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier />
   </Interface>
-  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IProduct" HideInheritanceLine="true">
+  <Interface Name="NuPattern.Runtime.IProduct" HideInheritanceLine="true">
     <Position X="0.5" Y="3.75" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
-    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase" IsHidden="true" />
+    <InheritanceLine Type="NuPattern.Runtime.IInstanceBase" IsHidden="true" />
     <TypeIdentifier />
   </Interface>
-  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IAbstractElement" HideInheritanceLine="true">
+  <Interface Name="NuPattern.Runtime.IAbstractElement" HideInheritanceLine="true">
     <Position X="5.25" Y="3.75" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
-    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase" IsHidden="true" />
+    <InheritanceLine Type="NuPattern.Runtime.IInstanceBase" IsHidden="true" />
     <TypeIdentifier />
   </Interface>
-  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.ICollection" HideInheritanceLine="true">
+  <Interface Name="NuPattern.Runtime.ICollection" HideInheritanceLine="true">
     <Position X="6.75" Y="6.75" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
-    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IElementContainer" IsHidden="true" />
-    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" IsHidden="true" />
-    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase" IsHidden="true" />
+    <InheritanceLine Type="NuPattern.Runtime.IElementContainer" IsHidden="true" />
+    <InheritanceLine Type="NuPattern.Runtime.IProductElement" IsHidden="true" />
+    <InheritanceLine Type="NuPattern.Runtime.IInstanceBase" IsHidden="true" />
     <TypeIdentifier />
   </Interface>
-  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IElement" HideInheritanceLine="true">
+  <Interface Name="NuPattern.Runtime.IElement" HideInheritanceLine="true">
     <Position X="3.75" Y="6.75" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
-    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IElementContainer" IsHidden="true" />
-    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" IsHidden="true" />
-    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase" IsHidden="true" />
+    <InheritanceLine Type="NuPattern.Runtime.IElementContainer" IsHidden="true" />
+    <InheritanceLine Type="NuPattern.Runtime.IProductElement" IsHidden="true" />
+    <InheritanceLine Type="NuPattern.Runtime.IInstanceBase" IsHidden="true" />
     <TypeIdentifier />
   </Interface>
-  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IView" HideInheritanceLine="true">
+  <Interface Name="NuPattern.Runtime.IView" HideInheritanceLine="true">
     <Position X="9.75" Y="3.75" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
-    <InheritanceLine Type="Microsoft.VisualStudio.Patterning.Runtime.IInstanceBase" IsHidden="true" />
+    <InheritanceLine Type="NuPattern.Runtime.IInstanceBase" IsHidden="true" />
     <TypeIdentifier />
   </Interface>
-  <Interface Name="Microsoft.VisualStudio.Patterning.Runtime.IElementContainer">
+  <Interface Name="NuPattern.Runtime.IElementContainer">
     <Position X="7.5" Y="2.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />

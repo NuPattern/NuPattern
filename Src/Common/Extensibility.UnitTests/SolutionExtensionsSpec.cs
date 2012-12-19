@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
+namespace NuPattern.Extensibility.UnitTests
 {
     public class SolutionExtensionsSpec
     {

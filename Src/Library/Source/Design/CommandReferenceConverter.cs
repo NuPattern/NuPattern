@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Commands;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Design
+namespace NuPattern.Library.Design
 {
     /// <summary>
     /// CommandReference type converter

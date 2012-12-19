@@ -2,7 +2,7 @@
 using System.Drawing.Drawing2D;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Rounded rectangle geometry with custom drop shadow.

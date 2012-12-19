@@ -4,7 +4,7 @@ using System.Runtime.Remoting.Messaging;
 using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.TextTemplating.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Library
+namespace NuPattern.Library
 {
 	/// <summary>
 	/// Base class for text transformation templates that receive the element via the session context.

@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema.Properties;
+using NuPattern.Runtime.Schema.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Customizations for the <see cref="AutomationSettingsSchema"/> class.

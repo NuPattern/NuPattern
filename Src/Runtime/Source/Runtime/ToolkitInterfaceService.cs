@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	[PartCreationPolicy(CreationPolicy.Shared)]
 	[Export(typeof(IToolkitInterfaceService))]

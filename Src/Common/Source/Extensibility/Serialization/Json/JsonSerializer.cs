@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
-using ErrorEventArgs = Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json.ErrorEventArgs;
+using ErrorEventArgs = NuPattern.Extensibility.Serialization.Json.ErrorEventArgs;
 using System.Runtime.Serialization.Formatters;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     /// <summary>
     /// Serializes and deserializes objects into and from the JSON format.

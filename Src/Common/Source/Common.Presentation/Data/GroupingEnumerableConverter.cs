@@ -3,10 +3,10 @@ using System.Collections;
 using System.ComponentModel;
 using System.Globalization;
 using System.Windows.Data;
-using Microsoft.VisualStudio.Patterning.Common.Presentation.Properties;
 using Microsoft.VisualStudio.PlatformUI;
+using NuPattern.Common.Presentation.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation.Data
+namespace NuPattern.Common.Presentation.Data
 {
 	/// <summary>
 	/// Applies grouping to the given <see cref="IEnumerable"/>.

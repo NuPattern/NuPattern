@@ -5,10 +5,10 @@ using System.Resources;
 
 [assembly: AssemblyTitle("About Windows Power Console")]
 [assembly: AssemblyDescription("An environment for running infrastructure and operations toolkits.")]
-[assembly: AssemblyCompany("The Outercurve Foundation")]
+[assembly: AssemblyCompany("NuPattern")]
 [assembly: AssemblyProduct("Windows Power Console")]
-[assembly: AssemblyCopyright("Copyright The Outercurve Foundation ©2012, all rights reserved.")]
-[assembly: AssemblyTrademark("The Outercurve Foundation")]
+[assembly: AssemblyCopyright("Copyright NuPattern ©2012, all rights reserved.")]
+[assembly: AssemblyTrademark("NuPattern")]
 [assembly: AssemblyCulture("")]
 
 [assembly: AssemblyVersion("1.2")]

@@ -1,10 +1,10 @@
-﻿using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+﻿using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Commands;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands.Helpers
+namespace NuPattern.Library.UnitTests.Commands.Helpers
 {
     [TestClass]
     public class CreateElementFromDroppedWindowsFileCommandSpec

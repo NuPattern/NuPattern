@@ -6,7 +6,7 @@ using System.Windows.Data;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation.Data
+namespace NuPattern.Common.Presentation.Data
 {
 	/// <summary>
 	/// Provides a converter to convert an <see cref="Icon"/> to a <see cref="BitmapSource"/>.

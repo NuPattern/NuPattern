@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Defines a MEF Exported attribute to identify providers of Reference Kinds.

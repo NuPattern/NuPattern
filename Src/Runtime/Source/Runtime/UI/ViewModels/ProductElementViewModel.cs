@@ -6,14 +6,14 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Properties;
+using NuPattern.Runtime.Store;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     using ElementFactory = Func<IElementContainer, IPatternElementInfo, string, IProductElement>;
     using ViewModelFactory = Func<IProductElement, SolutionBuilderContext, ProductElementViewModel>;

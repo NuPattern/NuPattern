@@ -2,16 +2,16 @@
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Library.Events;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Commands;
+using NuPattern.Library.Events;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
+namespace NuPattern.Library.UnitTests
 {
 	[TestClass]
 	public class TemplateAutomationSpec
@@ -84,7 +84,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
 				this.wizard = Mock.Get(Mock.Of<IWizardAutomationExtension>(w => w.Name == "Wizard" && w.IsCanceled == false));
 
 				this.owner = Mock.Get(Mock.Of<IProductElement>(o =>
-					o.BeginTransaction() == Mock.Of<Microsoft.VisualStudio.Patterning.Runtime.ITransaction>() &&
+					o.BeginTransaction() == Mock.Of<NuPattern.Runtime.ITransaction>() &&
 					o.InstanceName == "ElementWithTemplateAutomation" &&
 					o.Info.AutomationSettings == new[] { commandInfo, wizardInfo } &&
 					o.AutomationExtensions == new[] { this.command.Object, this.wizard.Object }

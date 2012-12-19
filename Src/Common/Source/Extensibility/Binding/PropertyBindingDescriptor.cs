@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
+namespace NuPattern.Extensibility.Binding
 {
 	/// <summary>
 	/// A custom descriptor that automatically serializes a property binding to Json and exposes 

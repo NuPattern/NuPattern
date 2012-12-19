@@ -10,7 +10,7 @@
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PatternModelSchemaSerializerBase for DomainClass PatternModelSchema.
@@ -813,7 +813,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PatternSchemaSerializer for DomainClass PatternSchema.
@@ -1741,7 +1741,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer NamedElementSchemaSerializer for DomainClass NamedElementSchema.
@@ -2358,7 +2358,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PatternElementSchemaSerializer for DomainClass PatternElementSchema.
@@ -3180,7 +3180,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PropertySchemaSerializer for DomainClass PropertySchema.
@@ -3398,8 +3398,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				string attribPropertyUsage = PatternModelSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "propertyUsage");
 				if (attribPropertyUsage != null)
 				{
-					global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages valueOfPropertyUsage;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages>(serializationContext, attribPropertyUsage, out valueOfPropertyUsage))
+					global::NuPattern.Runtime.PropertyUsages valueOfPropertyUsage;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::NuPattern.Runtime.PropertyUsages>(serializationContext, attribPropertyUsage, out valueOfPropertyUsage))
 					{
 						// Non-public setter, use DomainPropertyInfo method.
 						DslModeling::DomainPropertyInfo propInfo = instanceOfPropertySchema.Partition.DomainDataDirectory.GetDomainProperty (PropertySchema.PropertyUsageDomainPropertyId);
@@ -3408,7 +3408,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					}
 					else
 					{	// Invalid property value, ignored.
-						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "propertyUsage", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages), attribPropertyUsage);
+						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "propertyUsage", typeof(global::NuPattern.Runtime.PropertyUsages), attribPropertyUsage);
 					}
 				}
 			}
@@ -4026,8 +4026,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			// PropertyUsage
 			if (!serializationContext.Result.Failed)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages propValue = instanceOfPropertySchema.PropertyUsage;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages>(serializationContext, propValue);
+				global::NuPattern.Runtime.PropertyUsages propValue = instanceOfPropertySchema.PropertyUsage;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::NuPattern.Runtime.PropertyUsages>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
 					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "General") != 0)
@@ -4177,7 +4177,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ViewSchemaSerializerBase for DomainClass ViewSchema.
@@ -5020,7 +5020,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer CollectionSchemaSerializer for DomainClass CollectionSchema.
@@ -5584,7 +5584,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ElementSchemaSerializer for DomainClass ElementSchema.
@@ -6148,7 +6148,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer CustomizableElementSchemaSerializerBase for DomainClass CustomizableElementSchema.
@@ -6255,14 +6255,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				string attribIsCustomizable = PatternModelSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "isCustomizable");
 				if (attribIsCustomizable != null)
 				{
-					global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState valueOfIsCustomizable;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState>(serializationContext, attribIsCustomizable, out valueOfIsCustomizable))
+					global::NuPattern.Runtime.CustomizationState valueOfIsCustomizable;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::NuPattern.Runtime.CustomizationState>(serializationContext, attribIsCustomizable, out valueOfIsCustomizable))
 					{
 						instanceOfCustomizableElementSchema.IsCustomizable = valueOfIsCustomizable;
 					}
 					else
 					{	// Invalid property value, ignored.
-						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "isCustomizable", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState), attribIsCustomizable);
+						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "isCustomizable", typeof(global::NuPattern.Runtime.CustomizationState), attribIsCustomizable);
 					}
 				}
 			}
@@ -6636,8 +6636,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			// IsCustomizable
 			if (!serializationContext.Result.Failed)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState propValue = instanceOfCustomizableElementSchema.IsCustomizable;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState>(serializationContext, propValue);
+				global::NuPattern.Runtime.CustomizationState propValue = instanceOfCustomizableElementSchema.IsCustomizable;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::NuPattern.Runtime.CustomizationState>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
 					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "Inherited") != 0)
@@ -6804,7 +6804,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer AbstractElementSchemaSerializer for DomainClass AbstractElementSchema.
@@ -7419,7 +7419,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer CustomizationPolicySchemaSerializerBase for DomainClass CustomizationPolicySchema.
@@ -8185,7 +8185,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer CustomizableSettingSchemaSerializerBase for DomainClass CustomizableSettingSchema.
@@ -8902,7 +8902,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer AutomationSettingsSchemaSerializer for DomainClass AutomationSettingsSchema.
@@ -9089,14 +9089,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				string attribClassification = PatternModelSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "classification");
 				if (attribClassification != null)
 				{
-					global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification valueOfClassification;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification>(serializationContext, attribClassification, out valueOfClassification))
+					global::NuPattern.Runtime.AutomationSettingsClassification valueOfClassification;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::NuPattern.Runtime.AutomationSettingsClassification>(serializationContext, attribClassification, out valueOfClassification))
 					{
 						instanceOfAutomationSettingsSchema.Classification = valueOfClassification;
 					}
 					else
 					{	// Invalid property value, ignored.
-						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "classification", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification), attribClassification);
+						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "classification", typeof(global::NuPattern.Runtime.AutomationSettingsClassification), attribClassification);
 					}
 				}
 			}
@@ -9530,8 +9530,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			// Classification
 			if (!serializationContext.Result.Failed)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification propValue = instanceOfAutomationSettingsSchema.Classification;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification>(serializationContext, propValue);
+				global::NuPattern.Runtime.AutomationSettingsClassification propValue = instanceOfAutomationSettingsSchema.Classification;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::NuPattern.Runtime.AutomationSettingsClassification>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
 					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "General") != 0)
@@ -9595,7 +9595,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ProvidedExtensionPointSchemaSerializer for DomainClass ProvidedExtensionPointSchema.
@@ -10261,7 +10261,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ExtensionPointSchemaSerializer for DomainClass ExtensionPointSchema.
@@ -11018,7 +11018,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PatternModelHasPatternSerializer for DomainClass PatternModelHasPattern.
@@ -11689,7 +11689,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PatternElementHasPropertiesSerializer for DomainClass PatternElementHasProperties.
@@ -12360,7 +12360,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PatternHasViewsSerializer for DomainClass PatternHasViews.
@@ -13031,7 +13031,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ViewHasElementsSerializer for DomainClass ViewHasElements.
@@ -13247,14 +13247,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				string attribCardinality = PatternModelSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinality");
 				if (attribCardinality != null)
 				{
-					global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality valueOfCardinality;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>(serializationContext, attribCardinality, out valueOfCardinality))
+					global::NuPattern.Runtime.Cardinality valueOfCardinality;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::NuPattern.Runtime.Cardinality>(serializationContext, attribCardinality, out valueOfCardinality))
 					{
 						instanceOfViewHasElements.Cardinality = valueOfCardinality;
 					}
 					else
 					{	// Invalid property value, ignored.
-						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinality", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality), attribCardinality);
+						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinality", typeof(global::NuPattern.Runtime.Cardinality), attribCardinality);
 					}
 				}
 			}
@@ -13729,8 +13729,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			// Cardinality
 			if (!serializationContext.Result.Failed)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality propValue = instanceOfViewHasElements.Cardinality;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>(serializationContext, propValue);
+				global::NuPattern.Runtime.Cardinality propValue = instanceOfViewHasElements.Cardinality;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::NuPattern.Runtime.Cardinality>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
 					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "OneToOne") != 0)
@@ -13904,7 +13904,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PolicyHasSettingsSerializer for DomainClass PolicyHasSettings.
@@ -14575,7 +14575,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer CustomizableElementHasPolicySerializer for DomainClass CustomizableElementHasPolicy.
@@ -15246,7 +15246,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ElementHasElementsSerializer for DomainClass ElementHasElements.
@@ -15462,14 +15462,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				string attribCardinality = PatternModelSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinality");
 				if (attribCardinality != null)
 				{
-					global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality valueOfCardinality;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>(serializationContext, attribCardinality, out valueOfCardinality))
+					global::NuPattern.Runtime.Cardinality valueOfCardinality;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::NuPattern.Runtime.Cardinality>(serializationContext, attribCardinality, out valueOfCardinality))
 					{
 						instanceOfElementHasElements.Cardinality = valueOfCardinality;
 					}
 					else
 					{	// Invalid property value, ignored.
-						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinality", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality), attribCardinality);
+						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinality", typeof(global::NuPattern.Runtime.Cardinality), attribCardinality);
 					}
 				}
 			}
@@ -15944,8 +15944,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			// Cardinality
 			if (!serializationContext.Result.Failed)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality propValue = instanceOfElementHasElements.Cardinality;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>(serializationContext, propValue);
+				global::NuPattern.Runtime.Cardinality propValue = instanceOfElementHasElements.Cardinality;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::NuPattern.Runtime.Cardinality>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
 					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "OneToOne") != 0)
@@ -16119,7 +16119,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PatternHasProvidedExtensionPointsSerializer for DomainClass PatternHasProvidedExtensionPoints.
@@ -16851,7 +16851,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ElementHasExtensionPointsSerializer for DomainClass ElementHasExtensionPoints.
@@ -17067,14 +17067,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				string attribCardinality = PatternModelSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinality");
 				if (attribCardinality != null)
 				{
-					global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality valueOfCardinality;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>(serializationContext, attribCardinality, out valueOfCardinality))
+					global::NuPattern.Runtime.Cardinality valueOfCardinality;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::NuPattern.Runtime.Cardinality>(serializationContext, attribCardinality, out valueOfCardinality))
 					{
 						instanceOfElementHasExtensionPoints.Cardinality = valueOfCardinality;
 					}
 					else
 					{	// Invalid property value, ignored.
-						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinality", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality), attribCardinality);
+						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinality", typeof(global::NuPattern.Runtime.Cardinality), attribCardinality);
 					}
 				}
 			}
@@ -17601,8 +17601,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			// Cardinality
 			if (!serializationContext.Result.Failed)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality propValue = instanceOfElementHasExtensionPoints.Cardinality;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>(serializationContext, propValue);
+				global::NuPattern.Runtime.Cardinality propValue = instanceOfElementHasExtensionPoints.Cardinality;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::NuPattern.Runtime.Cardinality>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
 					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "OneToOne") != 0)
@@ -17728,7 +17728,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ViewHasExtensionPointsSerializer for DomainClass ViewHasExtensionPoints.
@@ -17944,14 +17944,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				string attribCardinality = PatternModelSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinality");
 				if (attribCardinality != null)
 				{
-					global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality valueOfCardinality;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>(serializationContext, attribCardinality, out valueOfCardinality))
+					global::NuPattern.Runtime.Cardinality valueOfCardinality;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::NuPattern.Runtime.Cardinality>(serializationContext, attribCardinality, out valueOfCardinality))
 					{
 						instanceOfViewHasExtensionPoints.Cardinality = valueOfCardinality;
 					}
 					else
 					{	// Invalid property value, ignored.
-						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinality", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality), attribCardinality);
+						PatternModelSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinality", typeof(global::NuPattern.Runtime.Cardinality), attribCardinality);
 					}
 				}
 			}
@@ -18478,8 +18478,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			// Cardinality
 			if (!serializationContext.Result.Failed)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality propValue = instanceOfViewHasExtensionPoints.Cardinality;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>(serializationContext, propValue);
+				global::NuPattern.Runtime.Cardinality propValue = instanceOfViewHasExtensionPoints.Cardinality;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::NuPattern.Runtime.Cardinality>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
 					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "OneToOne") != 0)
@@ -18605,7 +18605,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PatternElementHasAutomationSettingsSerializer for DomainClass PatternElementHasAutomationSettings.
@@ -19337,7 +19337,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PatternShapeSerializerBase for DomainClass PatternShape.
@@ -20099,7 +20099,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ElementShapeSerializerBase for DomainClass ElementShape.
@@ -20861,7 +20861,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ViewShapeSerializerBase for DomainClass ViewShape.
@@ -21659,7 +21659,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer CollectionShapeSerializerBase for DomainClass CollectionShape.
@@ -22421,7 +22421,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer CustomizableElementShapeSerializer for DomainClass CustomizableElementShape.
@@ -22838,7 +22838,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ExtensionPointShapeSerializerBase for DomainClass ExtensionPointShape.
@@ -23600,7 +23600,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ViewHasElementsConnectorSerializer for DomainClass ViewHasElementsConnector.
@@ -24104,7 +24104,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ElementHasElementsConnectorSerializer for DomainClass ElementHasElementsConnector.
@@ -24608,7 +24608,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PatternElementConnectorSerializerBase for DomainClass PatternElementConnector.
@@ -25143,7 +25143,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ElementHasExtensionPointsConnectorSerializer for DomainClass ElementHasExtensionPointsConnector.
@@ -25647,7 +25647,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer ViewHasExtensionPointsConnectorSerializer for DomainClass ViewHasExtensionPointsConnector.
@@ -26151,7 +26151,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Serializer PatternModelSchemaDiagramSerializerBase for DomainClass PatternModelSchemaDiagram.
@@ -26992,7 +26992,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// A DomainXmlSerializationBehavior implementation for defined behavior PatternModelSerializationBehavior.
@@ -27119,7 +27119,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				if (PatternModelSerializationBehavior.namespaceEntries == null)
 				{
 					PatternModelSerializationBehavior.namespaceEntries = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerNamespaceEntry>();
-					PatternModelSerializationBehavior.namespaceEntries.Add(new DslModeling::DomainXmlSerializerNamespaceEntry(DomainModelXmlNamespace, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel)));
+					PatternModelSerializationBehavior.namespaceEntries.Add(new DslModeling::DomainXmlSerializerNamespaceEntry(DomainModelXmlNamespace, typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel)));
 				}
 				return PatternModelSerializationBehavior.namespaceEntries.AsReadOnly();
 			}
@@ -27163,7 +27163,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Moniker resolver for serialization behavior PatternModelSerializationBehavior.
@@ -27302,7 +27302,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Utility class to provide serialization messages
@@ -27862,7 +27862,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Provides an implementation of the IDomainModelSerializer interface
@@ -27871,7 +27871,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <remarks>Double-derived class - the default implementation is in PatternModelDomainModelSerializerBase.
 	/// This class exist so users can customize behavior easily.</remarks>
 	[global::System.ComponentModel.Composition.Export(typeof(DslModeling::IDomainModelSerializer))]
-	[DslModeling::DomainModelSerializer(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSerializationBehavior.DomainModelXmlNamespace, "patterndefinition")]
+	[DslModeling::DomainModelSerializer(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), global::NuPattern.Runtime.Schema.PatternModelSerializationBehavior.DomainModelXmlNamespace, "patterndefinition")]
 	public partial class PatternModelDomainModelSerializer : PatternModelDomainModelSerializerBase
 	{
 	}
@@ -27891,7 +27891,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		public virtual string DomainModelNamespace
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSerializationBehavior.DomainModelXmlNamespace; }
+			get { return global::NuPattern.Runtime.Schema.PatternModelSerializationBehavior.DomainModelXmlNamespace; }
 		}
 	
 		/// <summary>
@@ -27909,7 +27909,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		public virtual global::System.Type DomainModelType
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel); }
+			get { return typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel); }
 		}
 	
 		/// <summary>
@@ -27964,11 +27964,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if (modelRoot == null) { throw new global::System.ArgumentNullException("modelRoot"); }
 			if (string.IsNullOrEmpty("fileName")) { throw new global::System.ArgumentNullException("fileName"); }
 	
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema rootElement = modelRoot as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema;
+			global::NuPattern.Runtime.Schema.PatternModelSchema rootElement = modelRoot as global::NuPattern.Runtime.Schema.PatternModelSchema;
 			if (rootElement == null)
 			{
 				string errorMessage = string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-					global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("InvalidSaveRootElementType"),
+					global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("InvalidSaveRootElementType"),
 					modelRoot.GetType().ToString());
 	
 				throw new global::System.ArgumentException(errorMessage, "modelRoot");
@@ -28045,20 +28045,20 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if (diagram == null) { throw new global::System.ArgumentNullException("diagram"); }
 			if (string.IsNullOrEmpty("diagramFileName")) { throw new global::System.ArgumentNullException("diagramFileName"); }
 	
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema typedRoot = modelRoot as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema;
+			global::NuPattern.Runtime.Schema.PatternModelSchema typedRoot = modelRoot as global::NuPattern.Runtime.Schema.PatternModelSchema;
 			if (typedRoot == null)
 			{
 				string errorMessage = string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-					global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("InvalidSaveRootElementType"),
+					global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("InvalidSaveRootElementType"),
 					modelRoot.GetType().ToString());
 	
 				throw new global::System.ArgumentException(errorMessage, "modelRoot");
 			}
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram typedDiagram = diagram as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram;
+			global::NuPattern.Runtime.Schema.PatternModelSchemaDiagram typedDiagram = diagram as global::NuPattern.Runtime.Schema.PatternModelSchemaDiagram;
 			if (typedDiagram == null)
 			{
 				string errorMessage = string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-					global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("InvalidSaveDiagramType"),
+					global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("InvalidSaveDiagramType"),
 					diagram.GetType().ToString());
 	
 				throw new global::System.ArgumentException(errorMessage, "diagram");

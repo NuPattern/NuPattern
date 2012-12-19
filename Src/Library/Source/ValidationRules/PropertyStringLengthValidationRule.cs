@@ -1,10 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
+using NuPattern.Extensibility;
+using NuPattern.Library.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValidationRules
+namespace NuPattern.Library.ValidationRules
 {
     /// <summary>
     /// Specifies the minimum and maximum length of characters that are allowed in a data field.

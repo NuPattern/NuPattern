@@ -117,619 +117,619 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.LibraryDomainModel.Description" xml:space="preserve">
     <value>Library</value>
     <comment>Description for DslLibrary &apos;Library&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.LibraryDomainModel.DisplayName" xml:space="preserve">
     <value>Library</value>
     <comment>DisplayName for DslLibrary &apos;Library&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings.Description" xml:space="preserve">
     <value>Configures the settings for adding a project or item template to unfold, and execute other automation on this element.</value>
     <comment>Description for DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings.DisplayName" xml:space="preserve">
     <value>VS Template Launch Point</value>
     <comment>DisplayName for DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/TemplateUri.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/TemplateUri.Description" xml:space="preserve">
     <value>The project or item template to unfold.</value>
     <comment>Description for DomainProperty &apos;TemplateUri&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/TemplateUri.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/TemplateUri.DisplayName" xml:space="preserve">
     <value>Template</value>
     <comment>DisplayName for DomainProperty &apos;TemplateUri&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/CreateElementOnUnfold.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/CreateElementOnUnfold.Description" xml:space="preserve">
     <value>Whether to create the current element when the template is unfolded from the New Project/Item dialog in Visual Studio.</value>
     <comment>Description for DomainProperty &apos;CreateElementOnUnfold&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/CreateElementOnUnfold.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/CreateElementOnUnfold.DisplayName" xml:space="preserve">
     <value>Create When Unfolded</value>
     <comment>DisplayName for DomainProperty &apos;CreateElementOnUnfold&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/UnfoldOnElementCreated.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/UnfoldOnElementCreated.Description" xml:space="preserve">
     <value>Whether to unfold the template when the element is created from the Solution Builder.</value>
     <comment>Description for DomainProperty &apos;UnfoldOnElementCreated&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/UnfoldOnElementCreated.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/UnfoldOnElementCreated.DisplayName" xml:space="preserve">
     <value>Unfold When Created</value>
     <comment>DisplayName for DomainProperty &apos;UnfoldOnElementCreated&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/CommandId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/CommandId.Description" xml:space="preserve">
     <value>The command to execute after the template is unfolded.</value>
     <comment>Description for DomainProperty &apos;CommandId&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/CommandId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/CommandId.DisplayName" xml:space="preserve">
     <value>Command</value>
     <comment>DisplayName for DomainProperty &apos;CommandId&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/WizardId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/WizardId.Description" xml:space="preserve">
     <value>A wizard to gather input from the user, that configures the properties of this element, before the template is unfolded.</value>
     <comment>Description for DomainProperty &apos;WizardId&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/WizardId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/WizardId.DisplayName" xml:space="preserve">
     <value>Wizard</value>
     <comment>DisplayName for DomainProperty &apos;WizardId&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/TemplateAuthoringUri.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/TemplateAuthoringUri.Description" xml:space="preserve">
     <value>The Uri to resolve the referenced template at authoring time.</value>
     <comment>Description for DomainProperty &apos;TemplateAuthoringUri&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/TemplateAuthoringUri.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/TemplateAuthoringUri.DisplayName" xml:space="preserve">
     <value>Template Authoring Uri</value>
     <comment>DisplayName for DomainProperty &apos;TemplateAuthoringUri&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SyncName.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/SyncName.Description" xml:space="preserve">
     <value>Whether to keep in sync the name of the unfolded artifact with the name of the current element.</value>
     <comment>Description for DomainProperty &apos;SyncName&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SyncName.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/SyncName.DisplayName" xml:space="preserve">
     <value>Sync Name</value>
     <comment>DisplayName for DomainProperty &apos;SyncName&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SanitizeName.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/SanitizeName.Description" xml:space="preserve">
     <value>Whether to remove spaces and other illegal characters from the name of the unfolded artifact.</value>
     <comment>Description for DomainProperty &apos;SanitizeName&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SanitizeName.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/SanitizeName.DisplayName" xml:space="preserve">
     <value>Sanitize Name</value>
     <comment>DisplayName for DomainProperty &apos;SanitizeName&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetFileName.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.Description" xml:space="preserve">
     <value>The name of the unfolded artifact. For an item template, if no extension is provided, it is taken from the vstemplate file. This property supports property value substitution from properties on the current element. (e.g. {InstanceName} or {VariablePropertyName}). See guidance documentation for details.</value>
     <comment>Description for DomainProperty &apos;RawTargetFileName&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetFileName.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.DisplayName" xml:space="preserve">
     <value>Target File Name</value>
     <comment>DisplayName for DomainProperty &apos;RawTargetFileName&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetPath.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/RawTargetPath.Description" xml:space="preserve">
     <value>The path to the target file, project, folder or solution folder in the current solution where the artifact is to be unfolded. Folders that don&apos;t currently exist are created automatically. i.e. ..\~\GeneratedCode, navigates up to the parent element, and traverses the first artifact link found on the parent element and into the &apos;GeneratedCode&apos; sub-folder of that container (project or folder).  See guidance documentation for more example paths and details.</value>
     <comment>Description for DomainProperty &apos;RawTargetPath&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetPath.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/RawTargetPath.DisplayName" xml:space="preserve">
     <value>Target Path</value>
     <comment>DisplayName for DomainProperty &apos;RawTargetPath&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/Tag.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/Tag.Description" xml:space="preserve">
     <value>An optional arbitrary text value to tag the generated solution item, that is used as an aid in resolving the artifact reference to the solution item.</value>
     <comment>Description for DomainProperty &apos;Tag&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/Tag.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.TemplateSettings/Tag.DisplayName" xml:space="preserve">
     <value>Tag</value>
     <comment>DisplayName for DomainProperty &apos;Tag&apos; on DomainClass &apos;TemplateSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings.Description" xml:space="preserve">
     <value>Configures the settings for handling an event for executing other automation on this element.</value>
     <comment>Description for DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings.DisplayName" xml:space="preserve">
     <value>Event Launch Point</value>
     <comment>DisplayName for DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings/EventId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings/EventId.Description" xml:space="preserve">
     <value>The type of event which triggers the command to execute when all conditions are met.</value>
     <comment>Description for DomainProperty &apos;EventId&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings/EventId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings/EventId.DisplayName" xml:space="preserve">
     <value>Event Type</value>
     <comment>DisplayName for DomainProperty &apos;EventId&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings/CommandId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings/CommandId.Description" xml:space="preserve">
     <value>The command to execute on this event.</value>
     <comment>Description for DomainProperty &apos;CommandId&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings/CommandId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings/CommandId.DisplayName" xml:space="preserve">
     <value>Command</value>
     <comment>DisplayName for DomainProperty &apos;CommandId&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings/Conditions.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings/Conditions.Description" xml:space="preserve">
     <value>The conditions that must be satisfied when the event is raised in order to execute the command.</value>
     <comment>Description for DomainProperty &apos;Conditions&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings/Conditions.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings/Conditions.DisplayName" xml:space="preserve">
     <value>Conditions</value>
     <comment>DisplayName for DomainProperty &apos;Conditions&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings/FilterForCurrentElement.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings/FilterForCurrentElement.Description" xml:space="preserve">
     <value>Whether to add a condition that filters the events to the current element only. Typically required for element instantiation and property change events types as examples.</value>
     <comment>Description for DomainProperty &apos;FilterForCurrentElement&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings/FilterForCurrentElement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings/FilterForCurrentElement.DisplayName" xml:space="preserve">
     <value>Current Element Only</value>
     <comment>DisplayName for DomainProperty &apos;FilterForCurrentElement&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings/WizardId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings/WizardId.Description" xml:space="preserve">
     <value>A wizard to gather input from the user, that configures the properties of this element, when the event is raised.</value>
     <comment>Description for DomainProperty &apos;WizardId&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.EventSettings/WizardId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.EventSettings/WizardId.DisplayName" xml:space="preserve">
     <value>Wizard</value>
     <comment>DisplayName for DomainProperty &apos;WizardId&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings</value>
+  <data name="NuPattern.Library.Automation.PropertySettings.Description" xml:space="preserve">
+    <value>Description for NuPattern.Library.Automation.PropertySettings</value>
     <comment>Description for DomainClass &apos;PropertySettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.PropertySettings.DisplayName" xml:space="preserve">
     <value>Property</value>
     <comment>DisplayName for DomainClass &apos;PropertySettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings/Value.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.PropertySettings/Value.Description" xml:space="preserve">
     <value>The configured value of the property.</value>
     <comment>Description for DomainProperty &apos;Value&apos; on DomainClass &apos;PropertySettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings/Value.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.PropertySettings/Value.DisplayName" xml:space="preserve">
     <value>Value</value>
     <comment>DisplayName for DomainProperty &apos;Value&apos; on DomainClass &apos;PropertySettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings/Name.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.PropertySettings/Name.Description" xml:space="preserve">
     <value>The name of the property.</value>
     <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;PropertySettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings/Name.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.PropertySettings/Name.DisplayName" xml:space="preserve">
     <value>Name</value>
     <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;PropertySettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings</value>
+  <data name="NuPattern.Library.Automation.ValueProviderSettings.Description" xml:space="preserve">
+    <value>Description for NuPattern.Library.Automation.ValueProviderSettings</value>
     <comment>Description for DomainClass &apos;ValueProviderSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValueProviderSettings.DisplayName" xml:space="preserve">
     <value>Value Provider Settings</value>
     <comment>DisplayName for DomainClass &apos;ValueProviderSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings/TypeId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValueProviderSettings/TypeId.Description" xml:space="preserve">
     <value>The ValueProvider that provides the value of this property.</value>
     <comment>Description for DomainProperty &apos;TypeId&apos; on DomainClass &apos;ValueProviderSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings/TypeId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValueProviderSettings/TypeId.DisplayName" xml:space="preserve">
     <value>Provider Type</value>
     <comment>DisplayName for DomainProperty &apos;TypeId&apos; on DomainClass &apos;ValueProviderSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettings.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.CommandSettings.Description" xml:space="preserve">
     <value>Configures the settings for adding a command that can be executed on this element.</value>
     <comment>Description for DomainClass &apos;CommandSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.CommandSettings.DisplayName" xml:space="preserve">
     <value>Command</value>
     <comment>DisplayName for DomainClass &apos;CommandSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettings/TypeId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.CommandSettings/TypeId.Description" xml:space="preserve">
     <value>The type of the command. Once selected, the specific properties of the selected command can be configured.</value>
     <comment>Description for DomainProperty &apos;TypeId&apos; on DomainClass &apos;CommandSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettings/TypeId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.CommandSettings/TypeId.DisplayName" xml:space="preserve">
     <value>Command Type</value>
     <comment>DisplayName for DomainProperty &apos;TypeId&apos; on DomainClass &apos;CommandSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings.Description" xml:space="preserve">
     <value>Configures the settings for adding a context menu item for executing other automation on this element.</value>
     <comment>Description for DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings.DisplayName" xml:space="preserve">
     <value>ContextMenu Launch Point</value>
     <comment>DisplayName for DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/Conditions.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/Conditions.Description" xml:space="preserve">
     <value>The conditions that must be satisfied in order to display the menu.</value>
     <comment>Description for DomainProperty &apos;Conditions&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/Conditions.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/Conditions.DisplayName" xml:space="preserve">
     <value>Conditions</value>
     <comment>DisplayName for DomainProperty &apos;Conditions&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/Text.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/Text.Description" xml:space="preserve">
     <value>The text that is displayed on the menu to the user.</value>
     <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/Text.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/Text.DisplayName" xml:space="preserve">
     <value>Menu Text</value>
     <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/Icon.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/Icon.Description" xml:space="preserve">
     <value>The icon that is displayed on the menu to the user.</value>
     <comment>Description for DomainProperty &apos;Icon&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/Icon.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/Icon.DisplayName" xml:space="preserve">
     <value>Icon</value>
     <comment>DisplayName for DomainProperty &apos;Icon&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/CommandId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/CommandId.Description" xml:space="preserve">
     <value>The command to execute when the menu is clicked.</value>
     <comment>Description for DomainProperty &apos;CommandId&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/CommandId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/CommandId.DisplayName" xml:space="preserve">
     <value>Command</value>
     <comment>DisplayName for DomainProperty &apos;CommandId&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/CustomStatus.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/CustomStatus.Description" xml:space="preserve">
     <value>An optional type that provides dynamic menu status updates for this menu.</value>
     <comment>Description for DomainProperty &apos;CustomStatus&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/CustomStatus.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/CustomStatus.DisplayName" xml:space="preserve">
     <value>Status Provider</value>
     <comment>DisplayName for DomainProperty &apos;CustomStatus&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/WizardId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/WizardId.Description" xml:space="preserve">
     <value>A wizard to gather input from the user, that configures the properties of this element, when the menu is clicked.</value>
     <comment>Description for DomainProperty &apos;WizardId&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/WizardId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/WizardId.DisplayName" xml:space="preserve">
     <value>Wizard</value>
     <comment>DisplayName for DomainProperty &apos;WizardId&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/SortOrder.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/SortOrder.Description" xml:space="preserve">
     <value>A number that orders this menu item with others on the context menu.</value>
     <comment>Description for DomainProperty &apos;SortOrder&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.MenuSettings/SortOrder.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.MenuSettings/SortOrder.DisplayName" xml:space="preserve">
     <value>Menu Order</value>
     <comment>DisplayName for DomainProperty &apos;SortOrder&apos; on DomainClass &apos;MenuSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension.Description" xml:space="preserve">
     <value>Configures the settings for associating guidance to this element.</value>
     <comment>Description for DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension.DisplayName" xml:space="preserve">
     <value>Guidance Extension</value>
     <comment>DisplayName for DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/AssociatedGuidance.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/AssociatedGuidance.Description" xml:space="preserve">
     <value>Configures guidance associated to this element. Expand this property to configure.</value>
     <comment>Description for DomainProperty &apos;AssociatedGuidance&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/AssociatedGuidance.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/AssociatedGuidance.DisplayName" xml:space="preserve">
     <value>Associated Guidance</value>
     <comment>DisplayName for DomainProperty &apos;AssociatedGuidance&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/AssociatedGuidance.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/AssociatedGuidance.Category" xml:space="preserve">
     <value>Guidance</value>
     <comment>Category for DomainProperty &apos;AssociatedGuidance&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceInstanceName.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceInstanceName.Description" xml:space="preserve">
     <value>The name of the created guidance workflow in the Guidance Explorer. If left blank, the instance name is calculated from the configured default name of the feature extension.</value>
     <comment>Description for DomainProperty &apos;GuidanceInstanceName&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceInstanceName.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceInstanceName.DisplayName" xml:space="preserve">
     <value>Instance Name</value>
     <comment>DisplayName for DomainProperty &apos;GuidanceInstanceName&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceInstanceName.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceInstanceName.Category" xml:space="preserve">
     <value>Guidance</value>
     <comment>Category for DomainProperty &apos;GuidanceInstanceName&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceActivateOnCreation.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceActivateOnCreation.Description" xml:space="preserve">
     <value>Whether to make this guidance the currently selected guidance in Guidance Explorer, when this element is created.</value>
     <comment>Description for DomainProperty &apos;GuidanceActivateOnCreation&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceActivateOnCreation.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceActivateOnCreation.DisplayName" xml:space="preserve">
     <value>Activate On Creation</value>
     <comment>DisplayName for DomainProperty &apos;GuidanceActivateOnCreation&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceActivateOnCreation.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceActivateOnCreation.Category" xml:space="preserve">
     <value>Guidance</value>
     <comment>Category for DomainProperty &apos;GuidanceActivateOnCreation&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceFeatureId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.Description" xml:space="preserve">
     <value>The identifier of the feature extension associated to this element. This is the VSIX ID of the Feature Extension, found in the source.extension.vsixmanifest file in the feature extension project.</value>
     <comment>Description for DomainProperty &apos;GuidanceFeatureId&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceFeatureId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.DisplayName" xml:space="preserve">
     <value>Feature Id</value>
     <comment>DisplayName for DomainProperty &apos;GuidanceFeatureId&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceFeatureId.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.Category" xml:space="preserve">
     <value>Guidance</value>
     <comment>Category for DomainProperty &apos;GuidanceFeatureId&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceSharedInstance.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceSharedInstance.Description" xml:space="preserve">
     <value>Whether a single guidance instance is shared between all instances of this element, or a separate instance of guidance is created for each instance of this element.</value>
     <comment>Description for DomainProperty &apos;GuidanceSharedInstance&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceSharedInstance.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceSharedInstance.DisplayName" xml:space="preserve">
     <value>Shared Instance</value>
     <comment>DisplayName for DomainProperty &apos;GuidanceSharedInstance&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.GuidanceExtension/GuidanceSharedInstance.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceSharedInstance.Category" xml:space="preserve">
     <value>Guidance</value>
     <comment>Category for DomainProperty &apos;GuidanceSharedInstance&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.WizardSettings.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.WizardSettings.Description" xml:space="preserve">
     <value>Configures the settings for adding a wizard to gather and initialize data for properties on this element.</value>
     <comment>Description for DomainClass &apos;WizardSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.WizardSettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.WizardSettings.DisplayName" xml:space="preserve">
     <value>Wizard</value>
     <comment>DisplayName for DomainClass &apos;WizardSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.WizardSettings/TypeName.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.WizardSettings/TypeName.Description" xml:space="preserve">
     <value>The type name of the wizard. </value>
     <comment>Description for DomainProperty &apos;TypeName&apos; on DomainClass &apos;WizardSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.WizardSettings/TypeName.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.WizardSettings/TypeName.DisplayName" xml:space="preserve">
     <value>Wizard Type</value>
     <comment>DisplayName for DomainProperty &apos;TypeName&apos; on DomainClass &apos;WizardSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactExtension.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactExtension.Description" xml:space="preserve">
     <value>Configures settings for managing associated artifacts to this element.</value>
     <comment>Description for DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactExtension.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactExtension.DisplayName" xml:space="preserve">
     <value>Artifact Extension</value>
     <comment>DisplayName for DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactExtension/AssociatedArtifacts.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactExtension/AssociatedArtifacts.Description" xml:space="preserve">
     <value>Configures actions for working with artifacts associated with this element. Expand this property to configure.</value>
     <comment>Description for DomainProperty &apos;AssociatedArtifacts&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactExtension/AssociatedArtifacts.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactExtension/AssociatedArtifacts.DisplayName" xml:space="preserve">
     <value>Associated Artifacts</value>
     <comment>DisplayName for DomainProperty &apos;AssociatedArtifacts&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactExtension/AssociatedArtifacts.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactExtension/AssociatedArtifacts.Category" xml:space="preserve">
     <value>Artifacts</value>
     <comment>Category for DomainProperty &apos;AssociatedArtifacts&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactExtension/OnArtifactActivation.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactActivation.Description" xml:space="preserve">
     <value>The action to perform on associated artifacts, when this element is &apos;activated&apos; by the user (i.e. double-clicked). A value of &apos;Open&apos; will open the artifact in its default view, a value of &apos;Select&apos; will select the file in Solution Explorer.</value>
     <comment>Description for DomainProperty &apos;OnArtifactActivation&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactExtension/OnArtifactActivation.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactActivation.DisplayName" xml:space="preserve">
     <value>On Activation</value>
     <comment>DisplayName for DomainProperty &apos;OnArtifactActivation&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactExtension/OnArtifactActivation.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactActivation.Category" xml:space="preserve">
     <value>Artifacts</value>
     <comment>Category for DomainProperty &apos;OnArtifactActivation&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension.Description" xml:space="preserve">
     <value>Configures settings for managing validation of this element.</value>
     <comment>Description for DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension.DisplayName" xml:space="preserve">
     <value>Validation Extension</value>
     <comment>DisplayName for DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationExecution.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationExecution.Description" xml:space="preserve">
     <value>Configures actions for validating this element. Expand this property to configure.</value>
     <comment>Description for DomainProperty &apos;ValidationExecution&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationExecution.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationExecution.DisplayName" xml:space="preserve">
     <value>Validation Execution</value>
     <comment>DisplayName for DomainProperty &apos;ValidationExecution&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationExecution.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationExecution.Category" xml:space="preserve">
     <value>Validation</value>
     <comment>Category for DomainProperty &apos;ValidationExecution&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnBuild.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnBuild.Description" xml:space="preserve">
     <value>Whether to validate the current element and all its descendants on build of the solution. (OnBuildStarted event).</value>
     <comment>Description for DomainProperty &apos;ValidationOnBuild&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnBuild.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnBuild.DisplayName" xml:space="preserve">
     <value>On Build</value>
     <comment>DisplayName for DomainProperty &apos;ValidationOnBuild&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnBuild.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnBuild.Category" xml:space="preserve">
     <value>Validation</value>
     <comment>Category for DomainProperty &apos;ValidationOnBuild&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnSave.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnSave.Description" xml:space="preserve">
     <value>Whether to validate the current element and all its descendants on save of the product. (OnProductStoreSaved event).</value>
     <comment>Description for DomainProperty &apos;ValidationOnSave&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnSave.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnSave.DisplayName" xml:space="preserve">
     <value>On Save</value>
     <comment>DisplayName for DomainProperty &apos;ValidationOnSave&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnSave.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnSave.Category" xml:space="preserve">
     <value>Validation</value>
     <comment>Category for DomainProperty &apos;ValidationOnSave&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnMenu.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnMenu.Description" xml:space="preserve">
     <value>Whether to provide a menu to execute validation on this element and all its descendants. (&apos;Validate All&apos; menu item).</value>
     <comment>Description for DomainProperty &apos;ValidationOnMenu&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnMenu.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnMenu.DisplayName" xml:space="preserve">
     <value>On Menu</value>
     <comment>DisplayName for DomainProperty &apos;ValidationOnMenu&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnMenu.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnMenu.Category" xml:space="preserve">
     <value>Validation</value>
     <comment>Category for DomainProperty &apos;ValidationOnMenu&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnCustomEvent.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.Description" xml:space="preserve">
     <value>A custom event to execute validation on the current element and all its descendants.</value>
     <comment>Description for DomainProperty &apos;ValidationOnCustomEvent&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnCustomEvent.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.DisplayName" xml:space="preserve">
     <value>On Custom Event</value>
     <comment>DisplayName for DomainProperty &apos;ValidationOnCustomEvent&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExtension/ValidationOnCustomEvent.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.Category" xml:space="preserve">
     <value>Validation</value>
     <comment>Category for DomainProperty &apos;ValidationOnCustomEvent&apos; on DomainClass &apos;ValidationExtension&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.DragDropSettings.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.DragDropSettings.Description" xml:space="preserve">
     <value>Configures settings for handling a drag drop operations on this element.</value>
     <comment>Description for DomainClass &apos;DragDropSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.DragDropSettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.DragDropSettings.DisplayName" xml:space="preserve">
     <value>Drag Drop Launch Point</value>
     <comment>DisplayName for DomainClass &apos;DragDropSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.DragDropSettings/CommandId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.DragDropSettings/CommandId.Description" xml:space="preserve">
     <value>The command to execute when valid data is dropped on instances of this element.</value>
     <comment>Description for DomainProperty &apos;CommandId&apos; on DomainClass &apos;DragDropSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.DragDropSettings/CommandId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.DragDropSettings/CommandId.DisplayName" xml:space="preserve">
     <value>Drop Command</value>
     <comment>DisplayName for DomainProperty &apos;CommandId&apos; on DomainClass &apos;DragDropSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.DragDropSettings/DropConditions.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.DragDropSettings/DropConditions.Description" xml:space="preserve">
     <value>The conditions that determine whether the data being dragged over instances of this element is permitted for dropping.</value>
     <comment>Description for DomainProperty &apos;DropConditions&apos; on DomainClass &apos;DragDropSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.DragDropSettings/DropConditions.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.DragDropSettings/DropConditions.DisplayName" xml:space="preserve">
     <value>Drop Conditions</value>
     <comment>DisplayName for DomainProperty &apos;DropConditions&apos; on DomainClass &apos;DragDropSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.DragDropSettings/WizardId.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.DragDropSettings/WizardId.Description" xml:space="preserve">
     <value>A wizard to gather input from the user, that configures the properties of this element, when dragged data is dropped on instances of this element.</value>
     <comment>Description for DomainProperty &apos;WizardId&apos; on DomainClass &apos;DragDropSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.DragDropSettings/WizardId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.DragDropSettings/WizardId.DisplayName" xml:space="preserve">
     <value>Wizard</value>
     <comment>DisplayName for DomainProperty &apos;WizardId&apos; on DomainClass &apos;DragDropSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.DragDropSettings/StatusText.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.DragDropSettings/StatusText.Description" xml:space="preserve">
     <value>Informative message to display in Visual Studio&apos;s status bar when data is being dragged over instances of this element.</value>
     <comment>Description for DomainProperty &apos;StatusText&apos; on DomainClass &apos;DragDropSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.DragDropSettings/StatusText.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.DragDropSettings/StatusText.DisplayName" xml:space="preserve">
     <value>Status Text</value>
     <comment>DisplayName for DomainProperty &apos;StatusText&apos; on DomainClass &apos;DragDropSettings&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider</value>
+  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider.Description" xml:space="preserve">
+    <value>Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider</value>
     <comment>Description for DomainClass &apos;PropertySettingsHasValueProvider&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider.DisplayName" xml:space="preserve">
     <value>Property Settings Has Value Provider</value>
     <comment>DisplayName for DomainClass &apos;PropertySettingsHasValueProvider&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.PropertySettings</value>
+  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.Description" xml:space="preserve">
+    <value>Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettings</value>
     <comment>Description for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.DisplayName" xml:space="preserve">
     <value>Property Settings</value>
     <comment>DisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.PropertyDisplayName" xml:space="preserve">
     <value>Value Provider</value>
     <comment>PropertyDisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettings</value>
+  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.Description" xml:space="preserve">
+    <value>Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettings</value>
     <comment>Description for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.DisplayName" xml:space="preserve">
     <value>Value Provider Settings</value>
     <comment>DisplayName for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.PropertyDisplayName" xml:space="preserve">
     <value>Owner Property</value>
     <comment>PropertyDisplayName for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties</value>
+  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.Description" xml:space="preserve">
+    <value>Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties</value>
     <comment>Description for DomainClass &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.DisplayName" xml:space="preserve">
     <value>Value Provider Settings References Properties</value>
     <comment>DisplayName for DomainClass &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettings</value>
+  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.Description" xml:space="preserve">
+    <value>Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettings</value>
     <comment>Description for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.DisplayName" xml:space="preserve">
     <value>Value Provider Settings</value>
     <comment>DisplayName for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.PropertyDisplayName" xml:space="preserve">
     <value>Properties</value>
     <comment>PropertyDisplayName for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettings</value>
+  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.Description" xml:space="preserve">
+    <value>Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettings</value>
     <comment>Description for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.DisplayName" xml:space="preserve">
     <value>Property Settings</value>
     <comment>DisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.PropertyDisplayName" xml:space="preserve">
     <value>Parent Provider</value>
     <comment>PropertyDisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties</value>
+  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties.Description" xml:space="preserve">
+    <value>Description for NuPattern.Library.Automation.CommandSettingsHasProperties</value>
     <comment>Description for DomainClass &apos;CommandSettingsHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties.DisplayName" xml:space="preserve">
     <value>Command Settings Has Properties</value>
     <comment>DisplayName for DomainClass &apos;CommandSettingsHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/CommandSettings.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.CommandSettings</value>
+  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/CommandSettings.Description" xml:space="preserve">
+    <value>Description for NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettings</value>
     <comment>Description for DomainRole &apos;CommandSettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/CommandSettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/CommandSettings.DisplayName" xml:space="preserve">
     <value>Command Settings</value>
     <comment>DisplayName for DomainRole &apos;CommandSettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/CommandSettings.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/CommandSettings.PropertyDisplayName" xml:space="preserve">
     <value>Properties</value>
     <comment>PropertyDisplayName for DomainRole &apos;CommandSettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/PropertySettings.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.PropertySettings</value>
+  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/PropertySettings.Description" xml:space="preserve">
+    <value>Description for NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettings</value>
     <comment>Description for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/PropertySettings.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/PropertySettings.DisplayName" xml:space="preserve">
     <value>Property Settings</value>
     <comment>DisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/PropertySettings.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/PropertySettings.PropertyDisplayName" xml:space="preserve">
     <value>Command Settings</value>
     <comment>PropertyDisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactActivatedAction/None.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactActivatedAction/None.DisplayName" xml:space="preserve">
     <value>None</value>
     <comment>Display name for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;ArtifactActivatedAction&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactActivatedAction/None.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactActivatedAction/None.Description" xml:space="preserve">
     <value>No action is performed, activated items are neither opened nor selected.</value>
     <comment>Description for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;ArtifactActivatedAction&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactActivatedAction/Open.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactActivatedAction/Open.DisplayName" xml:space="preserve">
     <value>Open</value>
     <comment>Display name for EnumerationLiteral &apos;Open&apos; on DomainEnumeration &apos;ArtifactActivatedAction&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactActivatedAction/Open.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactActivatedAction/Open.Description" xml:space="preserve">
     <value>Associated artifacts are opened, in their default view.</value>
     <comment>Description for EnumerationLiteral &apos;Open&apos; on DomainEnumeration &apos;ArtifactActivatedAction&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactActivatedAction/Select.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactActivatedAction/Select.DisplayName" xml:space="preserve">
     <value>Select</value>
     <comment>Display name for EnumerationLiteral &apos;Select&apos; on DomainEnumeration &apos;ArtifactActivatedAction&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactActivatedAction/Select.Description" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.ArtifactActivatedAction/Select.Description" xml:space="preserve">
     <value>Associated artifacts are selected in Solution Explorer.</value>
     <comment>Description for EnumerationLiteral &apos;Select&apos; on DomainEnumeration &apos;ArtifactActivatedAction&apos;</comment>
   </data>

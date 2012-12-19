@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Properties {
-    using System;
-    
-    
+namespace NuPattern.Extensibility.Properties
+{
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.VisualStudio.Patterning.Extensibility.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NuPattern.Extensibility.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -772,7 +772,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please see the Output Window (&apos;Pattern Toolkit Extensions&apos; pane) for more information...
+        ///   Looks up a localized string similar to Please see the Output Window (&apos;NuPattern Toolkit Extensions&apos; pane) for more information...
         /// </summary>
         internal static string SeeDiagnosticsWindow {
             get {

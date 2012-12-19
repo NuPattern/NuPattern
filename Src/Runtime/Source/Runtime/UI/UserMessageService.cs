@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.Windows;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Shell;
+using NuPattern.Extensibility;
 using VsInterop = Microsoft.VisualStudio.Shell.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
 	/// <summary>
 	/// Provides an implementation to send messages to the user using a message box.

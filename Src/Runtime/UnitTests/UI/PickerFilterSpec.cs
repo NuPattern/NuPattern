@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
+namespace NuPattern.Runtime.UI.UnitTests
 {
 	[TestClass]
 	public class PickerFilterSpec

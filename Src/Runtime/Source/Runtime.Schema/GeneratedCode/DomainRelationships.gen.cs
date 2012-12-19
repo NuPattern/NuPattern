@@ -9,16 +9,15 @@
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainRelationship PatternModelHasPattern
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern
+	/// Description for NuPattern.Runtime.Schema.PatternModelHasPattern
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelHasPattern.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelHasPattern.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("ef11f513-2a94-4473-8b92-e23ad76801f3")]
@@ -96,9 +95,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole PatternModelSchema
 		/// The pattern in this definition.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern/PatternModelSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern/PatternModelSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Pattern", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern/PatternModelSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelHasPattern/PatternModelSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelHasPattern/PatternModelSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Pattern", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternModelHasPattern/PatternModelSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("ba78db30-bb4c-4613-b749-2c4112135770")]
 		public virtual PatternModelSchema PatternModelSchema
 		{
@@ -147,9 +146,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole PatternSchema
 		/// The definition of the pattern.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern/PatternSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern/PatternSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "PatternModel", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern/PatternSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelHasPattern/PatternSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelHasPattern/PatternSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "PatternModel", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternModelHasPattern/PatternSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("a173d11e-d3aa-41c0-800c-8a90c8bfdf2b")]
 		public virtual PatternSchema PatternSchema
 		{
@@ -193,9 +192,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern GetLinkToPattern (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema patternModelSchemaInstance)
+		public static global::NuPattern.Runtime.Schema.PatternModelHasPattern GetLinkToPattern (global::NuPattern.Runtime.Schema.PatternModelSchema patternModelSchemaInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern>(patternModelSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternModelHasPattern>(patternModelSchemaInstance, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of PatternModelSchema not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -213,9 +212,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern GetLinkToPatternModel (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema patternSchemaInstance)
+		public static global::NuPattern.Runtime.Schema.PatternModelHasPattern GetLinkToPatternModel (global::NuPattern.Runtime.Schema.PatternSchema patternSchemaInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern>(patternSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.PatternSchemaDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternModelHasPattern>(patternSchemaInstance, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of PatternSchema not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -234,11 +233,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern> GetLinks( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternModelHasPattern> GetLinks( global::NuPattern.Runtime.Schema.PatternModelSchema source, global::NuPattern.Runtime.Schema.PatternSchema target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternModelHasPattern> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternModelHasPattern>();
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternModelHasPattern>(source, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PatternModelHasPattern link in links )
 			{
 				if ( target.Equals(link.PatternSchema) )
 				{
@@ -252,10 +251,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern GetLink( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema target )
+		public static global::NuPattern.Runtime.Schema.PatternModelHasPattern GetLink( global::NuPattern.Runtime.Schema.PatternModelSchema source, global::NuPattern.Runtime.Schema.PatternSchema target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternModelHasPattern>(source, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PatternModelHasPattern link in links )
 			{
 				if ( target.Equals(link.PatternSchema) )
 				{
@@ -268,16 +267,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainRelationship PatternElementHasProperties
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties
+	/// Description for NuPattern.Runtime.Schema.PatternElementHasProperties
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementHasProperties.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasProperties.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("4b1811b8-c0fe-451a-9715-881e3af1eb2f")]
@@ -355,9 +353,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole PatternElementSchema
 		/// The properties of this element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties/PatternElementSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties/PatternElementSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Properties", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties/PatternElementSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementHasProperties/PatternElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasProperties/PatternElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Properties", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternElementHasProperties/PatternElementSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("047b91aa-4ea9-4dfe-9f20-b5c2ff8ae6df")]
 		public virtual PatternElementSchema PatternElementSchema
 		{
@@ -406,9 +404,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole PropertySchema
 		/// The owning element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties/PropertySchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties/PropertySchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties/PropertySchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementHasProperties/PropertySchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasProperties/PropertySchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternElementHasProperties/PropertySchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("a36dc941-fb07-4d65-847f-09fe8ee64497")]
 		public virtual PropertySchema PropertySchema
 		{
@@ -442,9 +440,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties> GetLinksToProperties ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema patternElementSchemaInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasProperties> GetLinksToProperties ( global::NuPattern.Runtime.Schema.PatternElementSchema patternElementSchemaInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties>(patternElementSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasProperties>(patternElementSchemaInstance, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId);
 		}
 		#endregion
 		#region PropertySchema link accessor
@@ -453,9 +451,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties GetLinkToOwner (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema propertySchemaInstance)
+		public static global::NuPattern.Runtime.Schema.PatternElementHasProperties GetLinkToOwner (global::NuPattern.Runtime.Schema.PropertySchema propertySchemaInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties>(propertySchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasProperties>(propertySchemaInstance, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of PropertySchema not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -474,11 +472,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties> GetLinks( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasProperties> GetLinks( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.PropertySchema target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternElementHasProperties> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternElementHasProperties>();
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasProperties>(source, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PatternElementHasProperties link in links )
 			{
 				if ( target.Equals(link.PropertySchema) )
 				{
@@ -492,10 +490,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties GetLink( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema target )
+		public static global::NuPattern.Runtime.Schema.PatternElementHasProperties GetLink( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.PropertySchema target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasProperties>(source, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PatternElementHasProperties link in links )
 			{
 				if ( target.Equals(link.PropertySchema) )
 				{
@@ -508,15 +506,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainRelationship PatternHasViews
-	/// Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews
+	/// Description for NuPattern.Runtime.Schema.PatternHasViews
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternHasViews.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasViews.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("aad70656-c8af-4d31-bd93-e288096ee274")]
@@ -594,9 +592,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole PatternSchema
 		/// The views of this pattern.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews/PatternSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews/PatternSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Views", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews/PatternSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.OneMany)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternHasViews/PatternSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasViews/PatternSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Views", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternHasViews/PatternSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.OneMany)]
 		[DslModeling::DomainObjectId("9b7b2ee3-1c1f-48f2-a873-07774f4dd02d")]
 		public virtual PatternSchema PatternSchema
 		{
@@ -645,9 +643,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole ViewSchema
 		/// The owning pattern.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews/ViewSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews/ViewSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Pattern", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews/ViewSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternHasViews/ViewSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasViews/ViewSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Pattern", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternHasViews/ViewSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("413f3607-99ef-4762-8093-eab85559d32d")]
 		public virtual ViewSchema ViewSchema
 		{
@@ -681,9 +679,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews> GetLinksToViews ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema patternSchemaInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasViews> GetLinksToViews ( global::NuPattern.Runtime.Schema.PatternSchema patternSchemaInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews>(patternSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasViews>(patternSchemaInstance, global::NuPattern.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId);
 		}
 		#endregion
 		#region ViewSchema link accessor
@@ -692,9 +690,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews GetLinkToPattern (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema viewSchemaInstance)
+		public static global::NuPattern.Runtime.Schema.PatternHasViews GetLinkToPattern (global::NuPattern.Runtime.Schema.ViewSchema viewSchemaInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews>(viewSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.ViewSchemaDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasViews> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasViews>(viewSchemaInstance, global::NuPattern.Runtime.Schema.PatternHasViews.ViewSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ViewSchema not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -713,11 +711,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews> GetLinks( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasViews> GetLinks( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ViewSchema target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternHasViews> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternHasViews>();
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasViews> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasViews>(source, global::NuPattern.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PatternHasViews link in links )
 			{
 				if ( target.Equals(link.ViewSchema) )
 				{
@@ -731,10 +729,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews GetLink( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema target )
+		public static global::NuPattern.Runtime.Schema.PatternHasViews GetLink( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ViewSchema target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasViews> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasViews>(source, global::NuPattern.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PatternHasViews link in links )
 			{
 				if ( target.Equals(link.ViewSchema) )
 				{
@@ -747,15 +745,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainRelationship ViewHasElements
-	/// Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements
+	/// Description for NuPattern.Runtime.Schema.ViewHasElements
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("3bfd2e51-26d4-48dd-89a2-7e7a715b2bfd")]
@@ -833,9 +831,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole ViewSchema
 		/// The child elements of the view.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/ViewSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/ViewSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elements", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/ViewSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements/ViewSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements/ViewSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elements", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ViewHasElements/ViewSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("f8ee9bb4-3327-41db-84c6-10f81425e0b1")]
 		public virtual ViewSchema ViewSchema
 		{
@@ -884,9 +882,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole AbstractElementSchema
 		/// The owning view.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/AbstractElementSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/AbstractElementSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "View", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/AbstractElementSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements/AbstractElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements/AbstractElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "View", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ViewHasElements/AbstractElementSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("9144c828-2674-4da6-b7cd-02ba2caa48b0")]
 		public virtual AbstractElementSchema AbstractElementSchema
 		{
@@ -924,18 +922,18 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Storage for Cardinality
 		/// </summary>
-		private global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality cardinalityPropertyStorage = DslModeling::SerializationUtilities.GetValue<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>("OneToOne");
+		private global::NuPattern.Runtime.Cardinality cardinalityPropertyStorage = DslModeling::SerializationUtilities.GetValue<global::NuPattern.Runtime.Cardinality>("OneToOne");
 		
 		/// <summary>
 		/// Gets or sets the value of Cardinality domain property.
 		/// The number of instances of this collection/element, for this view.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/Cardinality.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/Cardinality.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/Cardinality.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[global::System.ComponentModel.DefaultValue(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality), "OneToOne")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements/Cardinality.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasElements/Cardinality.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements/Cardinality.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[global::System.ComponentModel.DefaultValue(typeof(global::NuPattern.Runtime.Cardinality), "OneToOne")]
 		[DslModeling::DomainObjectId("dfc4aa83-b438-459f-bb11-b470e82cbcc2")]
-		public global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality Cardinality
+		public global::NuPattern.Runtime.Cardinality Cardinality
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -951,7 +949,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Value handler for the ViewHasElements.Cardinality domain property.
 		/// </summary>
-		internal sealed partial class CardinalityPropertyHandler : DslModeling::DomainPropertyValueHandler<ViewHasElements, global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>
+		internal sealed partial class CardinalityPropertyHandler : DslModeling::DomainPropertyValueHandler<ViewHasElements, global::NuPattern.Runtime.Cardinality>
 		{
 			private CardinalityPropertyHandler() { }
 		
@@ -977,7 +975,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality GetValue(ViewHasElements element)
+			public override sealed global::NuPattern.Runtime.Cardinality GetValue(ViewHasElements element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.cardinalityPropertyStorage;
@@ -988,11 +986,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ViewHasElements element, global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality newValue)
+			public override sealed void SetValue(ViewHasElements element, global::NuPattern.Runtime.Cardinality newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality oldValue = GetValue(element);
+				global::NuPattern.Runtime.Cardinality oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1014,9 +1012,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of CardinalityCaption domain property.
 		/// The displayed caption for the cardinality.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/CardinalityCaption.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/CardinalityCaption.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/CardinalityCaption.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements/CardinalityCaption.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasElements/CardinalityCaption.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements/CardinalityCaption.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -1087,9 +1085,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Whether to automatically create the first instance of this collection/element
 		/// when the view is created.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/AutoCreate.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/AutoCreate.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/AutoCreate.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements/AutoCreate.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasElements/AutoCreate.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements/AutoCreate.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[DslModeling::DomainObjectId("a805afd4-df27-410e-b467-1f5e7fcdb78e")]
 		public global::System.Boolean AutoCreate
@@ -1177,9 +1175,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Whether to allow UI (i.e. menus) for adding new instances of this
 		/// collection/element manually.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/AllowAddNew.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/AllowAddNew.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/AllowAddNew.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements/AllowAddNew.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasElements/AllowAddNew.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements/AllowAddNew.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[DslModeling::DomainObjectId("c19f4398-079f-4f7d-9d83-57995ad2a715")]
 		public global::System.Boolean AllowAddNew
@@ -1269,9 +1267,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// of all sibling elements/collections are ordered together alphabetically by their
 		/// 'InstanceName' property.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/OrderGroup.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/OrderGroup.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/OrderGroup.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements/OrderGroup.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasElements/OrderGroup.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements/OrderGroup.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(1)]
 		[DslModeling::DomainObjectId("b4bdc451-c23d-4ad0-8d54-2f0b1b5ff25c")]
 		public global::System.Int32 OrderGroup
@@ -1362,11 +1360,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("c619605a-9fed-4372-be5c-dca910fc1061")]
 		public global::System.String OrderGroupComparerTypeName
 		{
@@ -1442,9 +1440,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements> GetLinksToElements ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema viewSchemaInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasElements> GetLinksToElements ( global::NuPattern.Runtime.Schema.ViewSchema viewSchemaInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements>(viewSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasElements>(viewSchemaInstance, global::NuPattern.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId);
 		}
 		#endregion
 		#region AbstractElementSchema link accessor
@@ -1453,9 +1451,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements GetLinkToView (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema abstractElementSchemaInstance)
+		public static global::NuPattern.Runtime.Schema.ViewHasElements GetLinkToView (global::NuPattern.Runtime.Schema.AbstractElementSchema abstractElementSchemaInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements>(abstractElementSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasElements>(abstractElementSchemaInstance, global::NuPattern.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AbstractElementSchema not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -1474,11 +1472,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements> GetLinks( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasElements> GetLinks( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ViewHasElements> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ViewHasElements>();
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasElements>(source, global::NuPattern.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.ViewHasElements link in links )
 			{
 				if ( target.Equals(link.AbstractElementSchema) )
 				{
@@ -1492,10 +1490,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements GetLink( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema target )
+		public static global::NuPattern.Runtime.Schema.ViewHasElements GetLink( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasElements>(source, global::NuPattern.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.ViewHasElements link in links )
 			{
 				if ( target.Equals(link.AbstractElementSchema) )
 				{
@@ -1508,16 +1506,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainRelationship PolicyHasSettings
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings
+	/// Description for NuPattern.Runtime.Schema.PolicyHasSettings
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PolicyHasSettings.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PolicyHasSettings.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("c30fb6ed-9e58-473d-a596-e52f20c88224")]
@@ -1595,9 +1592,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole CustomizationPolicySchema
 		/// The individual settings of the customization policy
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings/CustomizationPolicySchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings/CustomizationPolicySchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Settings", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings/CustomizationPolicySchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PolicyHasSettings/CustomizationPolicySchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PolicyHasSettings/CustomizationPolicySchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Settings", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PolicyHasSettings/CustomizationPolicySchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("eb849f5a-92b0-4bd1-8b0d-05663de599cd")]
 		public virtual CustomizationPolicySchema CustomizationPolicySchema
 		{
@@ -1646,9 +1643,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole CustomizableSettingSchema
 		/// The owning policy.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings/CustomizableSettingSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings/CustomizableSettingSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Policy", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings/CustomizableSettingSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PolicyHasSettings/CustomizableSettingSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PolicyHasSettings/CustomizableSettingSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Policy", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PolicyHasSettings/CustomizableSettingSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("ab2c4075-57db-4e21-9b1f-da59fa3e5d3d")]
 		public virtual CustomizableSettingSchema CustomizableSettingSchema
 		{
@@ -1682,9 +1679,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings> GetLinksToSettings ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema customizationPolicySchemaInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PolicyHasSettings> GetLinksToSettings ( global::NuPattern.Runtime.Schema.CustomizationPolicySchema customizationPolicySchemaInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings>(customizationPolicySchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PolicyHasSettings>(customizationPolicySchemaInstance, global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId);
 		}
 		#endregion
 		#region CustomizableSettingSchema link accessor
@@ -1693,9 +1690,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings GetLinkToPolicy (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema customizableSettingSchemaInstance)
+		public static global::NuPattern.Runtime.Schema.PolicyHasSettings GetLinkToPolicy (global::NuPattern.Runtime.Schema.CustomizableSettingSchema customizableSettingSchemaInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings>(customizableSettingSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.CustomizableSettingSchemaDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PolicyHasSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PolicyHasSettings>(customizableSettingSchemaInstance, global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizableSettingSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CustomizableSettingSchema not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -1714,11 +1711,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings> GetLinks( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PolicyHasSettings> GetLinks( global::NuPattern.Runtime.Schema.CustomizationPolicySchema source, global::NuPattern.Runtime.Schema.CustomizableSettingSchema target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PolicyHasSettings> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PolicyHasSettings>();
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PolicyHasSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PolicyHasSettings>(source, global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PolicyHasSettings link in links )
 			{
 				if ( target.Equals(link.CustomizableSettingSchema) )
 				{
@@ -1732,10 +1729,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings GetLink( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema target )
+		public static global::NuPattern.Runtime.Schema.PolicyHasSettings GetLink( global::NuPattern.Runtime.Schema.CustomizationPolicySchema source, global::NuPattern.Runtime.Schema.CustomizableSettingSchema target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PolicyHasSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PolicyHasSettings>(source, global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PolicyHasSettings link in links )
 			{
 				if ( target.Equals(link.CustomizableSettingSchema) )
 				{
@@ -1748,16 +1745,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainRelationship CustomizableElementHasPolicy
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy
+	/// Description for NuPattern.Runtime.Schema.CustomizableElementHasPolicy
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementHasPolicy.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementHasPolicy.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("b060fe61-7009-47eb-a1ad-5267426e6afd")]
@@ -1835,9 +1831,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole CustomizableElementSchema
 		/// The customization policy that applies to the element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy/CustomizableElementSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy/CustomizableElementSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Policy", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy/CustomizableElementSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizableElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizableElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Policy", PropertyDisplayNameKey="NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizableElementSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("873ce323-5608-4607-870b-1419d5a4c88d")]
 		public virtual CustomizableElementSchema CustomizableElementSchema
 		{
@@ -1886,9 +1882,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole CustomizationPolicySchema
 		/// The owning element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy/CustomizationPolicySchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy/CustomizationPolicySchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy/CustomizationPolicySchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizationPolicySchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizationPolicySchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizationPolicySchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("fdc3a233-a290-4fa9-b891-b5f9ae2425f7")]
 		public virtual CustomizationPolicySchema CustomizationPolicySchema
 		{
@@ -1932,9 +1928,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy GetLinkToPolicy (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema customizableElementSchemaInstance)
+		public static global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy GetLinkToPolicy (global::NuPattern.Runtime.Schema.CustomizableElementSchema customizableElementSchemaInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy>(customizableElementSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy>(customizableElementSchemaInstance, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CustomizableElementSchema not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -1952,9 +1948,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy GetLinkToOwner (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema customizationPolicySchemaInstance)
+		public static global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy GetLinkToOwner (global::NuPattern.Runtime.Schema.CustomizationPolicySchema customizationPolicySchemaInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy>(customizationPolicySchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.CustomizationPolicySchemaDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy>(customizationPolicySchemaInstance, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizationPolicySchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CustomizationPolicySchema not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -1973,11 +1969,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy> GetLinks( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> GetLinks( global::NuPattern.Runtime.Schema.CustomizableElementSchema source, global::NuPattern.Runtime.Schema.CustomizationPolicySchema target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy>();
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy>(source, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy link in links )
 			{
 				if ( target.Equals(link.CustomizationPolicySchema) )
 				{
@@ -1991,10 +1987,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy GetLink( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema target )
+		public static global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy GetLink( global::NuPattern.Runtime.Schema.CustomizableElementSchema source, global::NuPattern.Runtime.Schema.CustomizationPolicySchema target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy>(source, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy link in links )
 			{
 				if ( target.Equals(link.CustomizationPolicySchema) )
 				{
@@ -2007,16 +2003,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainRelationship ElementHasElements
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements
+	/// Description for NuPattern.Runtime.Schema.ElementHasElements
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("b0afa4dc-233e-4c6c-a058-5b2f2989b751")]
@@ -2094,9 +2089,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole ParentElement
 		/// The child elemets of this element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/ParentElement.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/ParentElement.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elements", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/ParentElement.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements/ParentElement.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements/ParentElement.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elements", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ElementHasElements/ParentElement.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("8a909b18-fbd3-48c1-adf9-a6fbeae26aa6")]
 		public virtual AbstractElementSchema ParentElement
 		{
@@ -2145,9 +2140,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole ChildElement
 		/// The owning element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/ChildElement.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/ChildElement.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/ChildElement.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements/ChildElement.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements/ChildElement.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ElementHasElements/ChildElement.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("f9fecc66-b0f5-4f50-9ab8-30fffb30f00e")]
 		public virtual AbstractElementSchema ChildElement
 		{
@@ -2185,18 +2180,18 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Storage for Cardinality
 		/// </summary>
-		private global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality cardinalityPropertyStorage = DslModeling::SerializationUtilities.GetValue<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>("OneToOne");
+		private global::NuPattern.Runtime.Cardinality cardinalityPropertyStorage = DslModeling::SerializationUtilities.GetValue<global::NuPattern.Runtime.Cardinality>("OneToOne");
 		
 		/// <summary>
 		/// Gets or sets the value of Cardinality domain property.
 		/// The number of instances of this element/collection, for each parent element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/Cardinality.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/Cardinality.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/Cardinality.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[global::System.ComponentModel.DefaultValue(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality), "OneToOne")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements/Cardinality.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasElements/Cardinality.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements/Cardinality.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[global::System.ComponentModel.DefaultValue(typeof(global::NuPattern.Runtime.Cardinality), "OneToOne")]
 		[DslModeling::DomainObjectId("c67de03d-9482-4c9a-a6b9-e619f5aef380")]
-		public global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality Cardinality
+		public global::NuPattern.Runtime.Cardinality Cardinality
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2212,7 +2207,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Value handler for the ElementHasElements.Cardinality domain property.
 		/// </summary>
-		internal sealed partial class CardinalityPropertyHandler : DslModeling::DomainPropertyValueHandler<ElementHasElements, global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>
+		internal sealed partial class CardinalityPropertyHandler : DslModeling::DomainPropertyValueHandler<ElementHasElements, global::NuPattern.Runtime.Cardinality>
 		{
 			private CardinalityPropertyHandler() { }
 		
@@ -2238,7 +2233,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality GetValue(ElementHasElements element)
+			public override sealed global::NuPattern.Runtime.Cardinality GetValue(ElementHasElements element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.cardinalityPropertyStorage;
@@ -2249,11 +2244,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ElementHasElements element, global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality newValue)
+			public override sealed void SetValue(ElementHasElements element, global::NuPattern.Runtime.Cardinality newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality oldValue = GetValue(element);
+				global::NuPattern.Runtime.Cardinality oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2275,9 +2270,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of CardinalityCaption domain property.
 		/// The displayed caption for the cardinality.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/CardinalityCaption.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/CardinalityCaption.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/CardinalityCaption.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements/CardinalityCaption.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasElements/CardinalityCaption.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements/CardinalityCaption.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -2348,9 +2343,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Whether to automatically create the first instance of this collection/element
 		/// when the parent element is created.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/AutoCreate.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/AutoCreate.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/AutoCreate.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements/AutoCreate.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasElements/AutoCreate.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements/AutoCreate.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[DslModeling::DomainObjectId("03cf9a2c-aa6b-4d4f-a657-c4dd8a85e6f5")]
 		public global::System.Boolean AutoCreate
@@ -2438,9 +2433,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Whether to allow UI (i.e. menus) for adding new instances of this
 		/// collection/element manually.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/AllowAddNew.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/AllowAddNew.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/AllowAddNew.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements/AllowAddNew.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasElements/AllowAddNew.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements/AllowAddNew.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[DslModeling::DomainObjectId("f8af50a7-3fa3-4904-8365-4b7bcb05e0f2")]
 		public global::System.Boolean AllowAddNew
@@ -2530,9 +2525,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// of all sibling elements/collections are ordered together alphabetically by their
 		/// 'InstanceName' property.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/OrderGroup.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/OrderGroup.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/OrderGroup.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements/OrderGroup.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasElements/OrderGroup.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements/OrderGroup.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(1)]
 		[DslModeling::DomainObjectId("23dd652d-01cb-4d67-9ba8-12c5432e2021")]
 		public global::System.Int32 OrderGroup
@@ -2623,11 +2618,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("790467d4-8890-464e-a449-5eca7313a082")]
 		public global::System.String OrderGroupComparerTypeName
 		{
@@ -2703,9 +2698,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements> GetLinksToElements ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema parentElementInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasElements> GetLinksToElements ( global::NuPattern.Runtime.Schema.AbstractElementSchema parentElementInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements>(parentElementInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasElements>(parentElementInstance, global::NuPattern.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId);
 		}
 		#endregion
 		#region ChildElement link accessor
@@ -2714,9 +2709,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements GetLinkToOwner (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema childElementInstance)
+		public static global::NuPattern.Runtime.Schema.ElementHasElements GetLinkToOwner (global::NuPattern.Runtime.Schema.AbstractElementSchema childElementInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements>(childElementInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasElements>(childElementInstance, global::NuPattern.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ChildElement not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -2735,11 +2730,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements> GetLinks( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasElements> GetLinks( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ElementHasElements> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ElementHasElements>();
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasElements>(source, global::NuPattern.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.ElementHasElements link in links )
 			{
 				if ( target.Equals(link.ChildElement) )
 				{
@@ -2753,10 +2748,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements GetLink( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema target )
+		public static global::NuPattern.Runtime.Schema.ElementHasElements GetLink( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasElements>(source, global::NuPattern.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.ElementHasElements link in links )
 			{
 				if ( target.Equals(link.ChildElement) )
 				{
@@ -2769,16 +2764,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainRelationship PatternHasProvidedExtensionPoints
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints
+	/// Description for NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("932e4f6e-8c17-4cdd-923e-409a627ba93c")]
@@ -2856,9 +2850,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole PatternSchema
 		/// The extension points of other patterns that this pattern extends.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints/PatternSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints/PatternSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ProvidedExtensionPoints", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints/PatternSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/PatternSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/PatternSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ProvidedExtensionPoints", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/PatternSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("ac61bcdd-4aa4-44a2-b7a1-d71a7f46999a")]
 		public virtual PatternSchema PatternSchema
 		{
@@ -2907,9 +2901,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole ProvidedExtensionPointSchema
 		/// The owning pattern.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints/ProvidedExtensionPointSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints/ProvidedExtensionPointSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Pattern", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints/ProvidedExtensionPointSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/ProvidedExtensionPointSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/ProvidedExtensionPointSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Pattern", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/ProvidedExtensionPointSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("28e7dfd9-4a29-473c-a0cb-74bd9b3b3c6a")]
 		public virtual ProvidedExtensionPointSchema ProvidedExtensionPointSchema
 		{
@@ -2943,9 +2937,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints> GetLinksToProvidedExtensionPoints ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema patternSchemaInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> GetLinksToProvidedExtensionPoints ( global::NuPattern.Runtime.Schema.PatternSchema patternSchemaInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints>(patternSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints>(patternSchemaInstance, global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId);
 		}
 		#endregion
 		#region ProvidedExtensionPointSchema link accessor
@@ -2954,9 +2948,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints GetLinkToPattern (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema providedExtensionPointSchemaInstance)
+		public static global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints GetLinkToPattern (global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema providedExtensionPointSchemaInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints>(providedExtensionPointSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.ProvidedExtensionPointSchemaDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints>(providedExtensionPointSchemaInstance, global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.ProvidedExtensionPointSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ProvidedExtensionPointSchema not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -2975,11 +2969,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints> GetLinks( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> GetLinks( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints>();
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints>(source, global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints link in links )
 			{
 				if ( target.Equals(link.ProvidedExtensionPointSchema) )
 				{
@@ -2993,10 +2987,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints GetLink( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema target )
+		public static global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints GetLink( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints>(source, global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints link in links )
 			{
 				if ( target.Equals(link.ProvidedExtensionPointSchema) )
 				{
@@ -3009,16 +3003,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainRelationship ElementHasExtensionPoints
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints
+	/// Description for NuPattern.Runtime.Schema.ElementHasExtensionPoints
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("936a92cc-4eec-4e05-84b5-4dca5b2845bd")]
@@ -3096,9 +3089,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole ParentElement
 		/// The child extension points of this element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/ParentElement.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/ParentElement.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ExtensionPoints", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/ParentElement.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/ParentElement.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/ParentElement.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ExtensionPoints", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ElementHasExtensionPoints/ParentElement.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("398dc337-36b1-4259-a3b2-1a1a61db928a")]
 		public virtual AbstractElementSchema ParentElement
 		{
@@ -3147,9 +3140,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole ChildElement
 		/// The owning element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/ChildElement.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/ChildElement.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/ChildElement.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/ChildElement.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/ChildElement.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ElementHasExtensionPoints/ChildElement.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("1e701701-d288-458a-a579-10e1474d9b2a")]
 		public virtual ExtensionPointSchema ChildElement
 		{
@@ -3187,18 +3180,18 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Storage for Cardinality
 		/// </summary>
-		private global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality cardinalityPropertyStorage = DslModeling::SerializationUtilities.GetValue<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>("OneToOne");
+		private global::NuPattern.Runtime.Cardinality cardinalityPropertyStorage = DslModeling::SerializationUtilities.GetValue<global::NuPattern.Runtime.Cardinality>("OneToOne");
 		
 		/// <summary>
 		/// Gets or sets the value of Cardinality domain property.
 		/// The number of instances of this extension, for each parent element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/Cardinality.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/Cardinality.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/Cardinality.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[global::System.ComponentModel.DefaultValue(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality), "OneToOne")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/Cardinality.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/Cardinality.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/Cardinality.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[global::System.ComponentModel.DefaultValue(typeof(global::NuPattern.Runtime.Cardinality), "OneToOne")]
 		[DslModeling::DomainObjectId("5852a2c3-b9c7-4833-9d7d-1374e473bd2d")]
-		public global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality Cardinality
+		public global::NuPattern.Runtime.Cardinality Cardinality
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3214,7 +3207,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Value handler for the ElementHasExtensionPoints.Cardinality domain property.
 		/// </summary>
-		internal sealed partial class CardinalityPropertyHandler : DslModeling::DomainPropertyValueHandler<ElementHasExtensionPoints, global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>
+		internal sealed partial class CardinalityPropertyHandler : DslModeling::DomainPropertyValueHandler<ElementHasExtensionPoints, global::NuPattern.Runtime.Cardinality>
 		{
 			private CardinalityPropertyHandler() { }
 		
@@ -3240,7 +3233,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality GetValue(ElementHasExtensionPoints element)
+			public override sealed global::NuPattern.Runtime.Cardinality GetValue(ElementHasExtensionPoints element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.cardinalityPropertyStorage;
@@ -3251,11 +3244,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ElementHasExtensionPoints element, global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality newValue)
+			public override sealed void SetValue(ElementHasExtensionPoints element, global::NuPattern.Runtime.Cardinality newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality oldValue = GetValue(element);
+				global::NuPattern.Runtime.Cardinality oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -3277,9 +3270,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of CardinalityCaption domain property.
 		/// The displayed caption for the cardinality.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/CardinalityCaption.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/CardinalityCaption.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/CardinalityCaption.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/CardinalityCaption.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/CardinalityCaption.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/CardinalityCaption.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -3352,9 +3345,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// of all sibling elements/collections are ordered together alphabetically by their
 		/// 'InstanceName' property.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/OrderGroup.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/OrderGroup.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/OrderGroup.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroup.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroup.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroup.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(1)]
 		[DslModeling::DomainObjectId("f0c1d459-a2fb-4ad1-87b2-af89eeecb9fc")]
 		public global::System.Int32 OrderGroup
@@ -3445,11 +3438,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("3291230f-5c4d-41af-b574-0ddf27a169f2")]
 		public global::System.String OrderGroupComparerTypeName
 		{
@@ -3525,9 +3518,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints> GetLinksToExtensionPoints ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema parentElementInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> GetLinksToExtensionPoints ( global::NuPattern.Runtime.Schema.AbstractElementSchema parentElementInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints>(parentElementInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints>(parentElementInstance, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId);
 		}
 		#endregion
 		#region ChildElement link accessor
@@ -3536,9 +3529,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints GetLinkToOwner (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema childElementInstance)
+		public static global::NuPattern.Runtime.Schema.ElementHasExtensionPoints GetLinkToOwner (global::NuPattern.Runtime.Schema.ExtensionPointSchema childElementInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints>(childElementInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints>(childElementInstance, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ChildElement not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -3557,11 +3550,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints> GetLinks( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> GetLinks( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints>();
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints>(source, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.ElementHasExtensionPoints link in links )
 			{
 				if ( target.Equals(link.ChildElement) )
 				{
@@ -3575,10 +3568,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints GetLink( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema target )
+		public static global::NuPattern.Runtime.Schema.ElementHasExtensionPoints GetLink( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints>(source, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.ElementHasExtensionPoints link in links )
 			{
 				if ( target.Equals(link.ChildElement) )
 				{
@@ -3591,16 +3584,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainRelationship ViewHasExtensionPoints
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints
+	/// Description for NuPattern.Runtime.Schema.ViewHasExtensionPoints
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("990a7838-e437-42ab-8bd6-2accfad82fc7")]
@@ -3678,9 +3670,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole ViewSchema
 		/// The child extension points of the view.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/ViewSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/ViewSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ExtensionPoints", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/ViewSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/ViewSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/ViewSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ExtensionPoints", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ViewHasExtensionPoints/ViewSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("f48796b2-8c83-41b9-beb8-8c98b4d99521")]
 		public virtual ViewSchema ViewSchema
 		{
@@ -3729,9 +3721,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole ExtensionPointSchema
 		/// The owning view.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/ExtensionPointSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/ExtensionPointSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "View", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/ExtensionPointSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/ExtensionPointSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/ExtensionPointSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "View", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ViewHasExtensionPoints/ExtensionPointSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("4322ef66-06a1-48f4-a863-4f61fc52d4de")]
 		public virtual ExtensionPointSchema ExtensionPointSchema
 		{
@@ -3769,18 +3761,18 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Storage for Cardinality
 		/// </summary>
-		private global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality cardinalityPropertyStorage = DslModeling::SerializationUtilities.GetValue<global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>("OneToOne");
+		private global::NuPattern.Runtime.Cardinality cardinalityPropertyStorage = DslModeling::SerializationUtilities.GetValue<global::NuPattern.Runtime.Cardinality>("OneToOne");
 		
 		/// <summary>
 		/// Gets or sets the value of Cardinality domain property.
 		/// The number of instances of this extension, for this view.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/Cardinality.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/Cardinality.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/Cardinality.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[global::System.ComponentModel.DefaultValue(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality), "OneToOne")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/Cardinality.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/Cardinality.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/Cardinality.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[global::System.ComponentModel.DefaultValue(typeof(global::NuPattern.Runtime.Cardinality), "OneToOne")]
 		[DslModeling::DomainObjectId("d3949f1f-1041-4a92-80b6-c17f6051119e")]
-		public global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality Cardinality
+		public global::NuPattern.Runtime.Cardinality Cardinality
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3796,7 +3788,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Value handler for the ViewHasExtensionPoints.Cardinality domain property.
 		/// </summary>
-		internal sealed partial class CardinalityPropertyHandler : DslModeling::DomainPropertyValueHandler<ViewHasExtensionPoints, global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality>
+		internal sealed partial class CardinalityPropertyHandler : DslModeling::DomainPropertyValueHandler<ViewHasExtensionPoints, global::NuPattern.Runtime.Cardinality>
 		{
 			private CardinalityPropertyHandler() { }
 		
@@ -3822,7 +3814,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality GetValue(ViewHasExtensionPoints element)
+			public override sealed global::NuPattern.Runtime.Cardinality GetValue(ViewHasExtensionPoints element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.cardinalityPropertyStorage;
@@ -3833,11 +3825,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ViewHasExtensionPoints element, global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality newValue)
+			public override sealed void SetValue(ViewHasExtensionPoints element, global::NuPattern.Runtime.Cardinality newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::Microsoft.VisualStudio.Patterning.Runtime.Cardinality oldValue = GetValue(element);
+				global::NuPattern.Runtime.Cardinality oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -3859,9 +3851,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of CardinalityCaption domain property.
 		/// The displayed caption for the cardinality.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/CardinalityCaption.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/CardinalityCaption.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/CardinalityCaption.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/CardinalityCaption.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/CardinalityCaption.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/CardinalityCaption.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -3934,9 +3926,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// of all sibling elements/collections are ordered together alphabetically by their
 		/// 'InstanceName' property.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/OrderGroup.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/OrderGroup.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/OrderGroup.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroup.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroup.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroup.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(1)]
 		[DslModeling::DomainObjectId("5d525bd9-7baa-4d99-9d04-ddfbd58e70fe")]
 		public global::System.Int32 OrderGroup
@@ -4027,11 +4019,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("98134d80-f742-4671-87db-e5c9380cca7e")]
 		public global::System.String OrderGroupComparerTypeName
 		{
@@ -4107,9 +4099,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints> GetLinksToExtensionPoints ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema viewSchemaInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> GetLinksToExtensionPoints ( global::NuPattern.Runtime.Schema.ViewSchema viewSchemaInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints>(viewSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints>(viewSchemaInstance, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId);
 		}
 		#endregion
 		#region ExtensionPointSchema link accessor
@@ -4118,9 +4110,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints GetLinkToView (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema extensionPointSchemaInstance)
+		public static global::NuPattern.Runtime.Schema.ViewHasExtensionPoints GetLinkToView (global::NuPattern.Runtime.Schema.ExtensionPointSchema extensionPointSchemaInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints>(extensionPointSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints>(extensionPointSchemaInstance, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ExtensionPointSchema not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -4139,11 +4131,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints> GetLinks( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> GetLinks( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints>();
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints>(source, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.ViewHasExtensionPoints link in links )
 			{
 				if ( target.Equals(link.ExtensionPointSchema) )
 				{
@@ -4157,10 +4149,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints GetLink( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema target )
+		public static global::NuPattern.Runtime.Schema.ViewHasExtensionPoints GetLink( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints>(source, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.ViewHasExtensionPoints link in links )
 			{
 				if ( target.Equals(link.ExtensionPointSchema) )
 				{
@@ -4173,16 +4165,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainRelationship PatternElementHasAutomationSettings
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings
+	/// Description for NuPattern.Runtime.Schema.PatternElementHasAutomationSettings
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("66cfcfbd-f570-48a2-a9e7-a317c9779ca0")]
@@ -4260,9 +4251,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole PatternElementSchema
 		/// The automation settings of this element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings/PatternElementSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings/PatternElementSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AutomationSettings", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings/PatternElementSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/PatternElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/PatternElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AutomationSettings", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/PatternElementSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("5f06d1b0-aba7-4689-8c74-e92735685207")]
 		public virtual PatternElementSchema PatternElementSchema
 		{
@@ -4311,9 +4302,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// DomainRole AutomationSettingsSchema
 		/// The owning element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings/AutomationSettingsSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings/AutomationSettingsSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings/AutomationSettingsSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/AutomationSettingsSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/AutomationSettingsSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/AutomationSettingsSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("1740ff91-ccb8-4f9f-a970-88ea0cae783c")]
 		public virtual AutomationSettingsSchema AutomationSettingsSchema
 		{
@@ -4347,9 +4338,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings> GetLinksToAutomationSettings ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema patternElementSchemaInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> GetLinksToAutomationSettings ( global::NuPattern.Runtime.Schema.PatternElementSchema patternElementSchemaInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings>(patternElementSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings>(patternElementSchemaInstance, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId);
 		}
 		#endregion
 		#region AutomationSettingsSchema link accessor
@@ -4358,9 +4349,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings GetLinkToOwner (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema automationSettingsSchemaInstance)
+		public static global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings GetLinkToOwner (global::NuPattern.Runtime.Schema.AutomationSettingsSchema automationSettingsSchemaInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings>(automationSettingsSchemaInstance, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings>(automationSettingsSchemaInstance, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AutomationSettingsSchema not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -4379,11 +4370,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings> GetLinks( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> GetLinks( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.AutomationSettingsSchema target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings>();
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings>(source, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings link in links )
 			{
 				if ( target.Equals(link.AutomationSettingsSchema) )
 				{
@@ -4397,10 +4388,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings GetLink( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema target )
+		public static global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings GetLink( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.AutomationSettingsSchema target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings>(source, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings>(source, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId);
+			foreach ( global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings link in links )
 			{
 				if ( target.Equals(link.AutomationSettingsSchema) )
 				{

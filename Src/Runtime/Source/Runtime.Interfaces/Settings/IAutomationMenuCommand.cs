@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Wrapper for <see cref="T:Microsoft.VisualStudio.Modeling.ExtensionEnablement.IMenuCommand"/> that provides the ability to specify an Icon

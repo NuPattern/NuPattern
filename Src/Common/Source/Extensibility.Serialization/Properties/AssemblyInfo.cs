@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-[assembly: AssemblyTitle(@"Microsoft.VisualStudio.Patterning.Extensibility.Serialization")]
+[assembly: AssemblyTitle(@"NuPattern.Extensibility.Serialization")]
 [assembly: AssemblyDescription(@"")]
 [assembly: AssemblyConfiguration("")]
 

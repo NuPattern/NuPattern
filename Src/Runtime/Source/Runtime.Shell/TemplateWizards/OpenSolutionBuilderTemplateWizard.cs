@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
 	/// <summary>
 	/// Custom template wizard extension that opens the solution builder toolwindow.

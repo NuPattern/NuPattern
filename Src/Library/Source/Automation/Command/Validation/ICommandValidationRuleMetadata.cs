@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.VisualStudio.Patterning.Library
+namespace NuPattern.Library
 {
 	/// <summary>
 	/// Metadata for the  <see cref="ICommandValidationRule"/>

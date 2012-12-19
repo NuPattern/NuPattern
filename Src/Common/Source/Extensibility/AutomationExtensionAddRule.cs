@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Add rule that automation extensions can use to automatically create a 1..1 related 

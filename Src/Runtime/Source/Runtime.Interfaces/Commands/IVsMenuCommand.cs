@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Defines a Visual Studio command.

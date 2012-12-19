@@ -15,7 +15,7 @@ using System.Drawing.Design;
 using System.Windows.Forms;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Helper class used to create and initialize toolbox items for this DSL.
@@ -94,7 +94,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			get
 			{
-				return global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("Pattern Model DesignerToolboxTab", global::System.Globalization.CultureInfo.CurrentUICulture);
+				return global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("Pattern Model DesignerToolboxTab", global::System.Globalization.CultureInfo.CurrentUICulture);
 			}
 		}
 		
@@ -151,56 +151,56 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				return null;
 			}
-			global::System.Resources.ResourceManager resourceManager = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager;
+			global::System.Resources.ResourceManager resourceManager = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager;
 			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
 			switch(itemId)
 			{
-				case "Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionToolboxItem":
+				case "NuPattern.Runtime.Schema.CollectionToolboxItem":
 					// Add Collection shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"NuPattern.Runtime.Schema.CollectionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						1, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("CollectionToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("CollectionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Microsoft.VisualStudio.Patterning.Runtime.Schema.Pattern Model DesignerToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						"NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("Pattern Model DesignerToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"Collection", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("CollectionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionSchema.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						CreateElementToolPrototype(store, global::NuPattern.Runtime.Schema.CollectionSchema.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require),
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(CollectionFilterString)
 						});
 					break;
-				case "Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementToolboxItem":
+				case "NuPattern.Runtime.Schema.ElementToolboxItem":
 					// Add Element shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"NuPattern.Runtime.Schema.ElementToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						2, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ElementToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ElementToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Microsoft.VisualStudio.Patterning.Runtime.Schema.Pattern Model DesignerToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						"NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("Pattern Model DesignerToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"Element", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ElementToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementSchema.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						CreateElementToolPrototype(store, global::NuPattern.Runtime.Schema.ElementSchema.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require),
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ElementFilterString)
 						});
 					break;
-				case "Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointToolboxItem":
+				case "NuPattern.Runtime.Schema.ExtensionPointToolboxItem":
 					// Add ExtensionPoint shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"NuPattern.Runtime.Schema.ExtensionPointToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						3, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ExtensionPointToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ExtensionPointToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Microsoft.VisualStudio.Patterning.Runtime.Schema.Pattern Model DesignerToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						"NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("Pattern Model DesignerToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"ExtensionPoint", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ExtensionPointToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						CreateElementToolPrototype(store, global::NuPattern.Runtime.Schema.ExtensionPointSchema.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require),
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ExtensionPointFilterString)
@@ -238,7 +238,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					AppDomain.CurrentDomain.DomainUnload += new EventHandler(StoreCleanUp);
 					
 					//load the domain model
-					toolboxStore.LoadDomainModels(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel));
+					toolboxStore.LoadDomainModels(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel));
 					
 				}
 				return toolboxStore;
@@ -278,7 +278,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			DslDesign::ModelingToolboxItem item = null;
 
-			global::System.Resources.ResourceManager resourceManager = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager;
+			global::System.Resources.ResourceManager resourceManager = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager;
 			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
 
 			System.Windows.Forms.IDataObject tbxDataObj;

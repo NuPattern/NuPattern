@@ -2,9 +2,9 @@
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
+namespace NuPattern.Extensibility.Binding
 {
     /// <summary>
     /// Defines a <see cref="TypeDescriptionProvider"/> over <see cref="DesignProperty"/>.

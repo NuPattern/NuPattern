@@ -1,6 +1,6 @@
 ﻿using Microsoft.Win32;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
     /// <summary>
     /// A class that reads values form the registry.

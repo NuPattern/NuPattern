@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Defines extension methods related to DSL <see cref="ModelElement"/>.

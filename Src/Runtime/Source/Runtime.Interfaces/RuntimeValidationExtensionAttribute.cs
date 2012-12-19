@@ -2,7 +2,7 @@
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Modeling.Validation;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Runtime Validation Extension MEF attribute.

@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
+namespace NuPattern.Runtime.UnitTests
 {
     [TestClass]
     public class PropertyChangedManagerSpec

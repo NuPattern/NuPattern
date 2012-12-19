@@ -3,10 +3,10 @@ using System.Collections;
 using System.ComponentModel;
 using System.Globalization;
 using System.Windows.Data;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.PlatformUI;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI.Data
+namespace NuPattern.Runtime.UI.Data
 {
     /// <summary>
     /// Applies grouping to the given <see cref="IEnumerable"/> collection of menus.

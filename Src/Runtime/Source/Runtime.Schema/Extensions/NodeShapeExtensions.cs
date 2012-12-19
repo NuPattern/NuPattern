@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Extensions to the <see cref="NodeShape"/> class

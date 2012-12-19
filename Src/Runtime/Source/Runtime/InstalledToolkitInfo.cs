@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
     // TODO: this class should be abstract and implemented and exported by toolkits.
 

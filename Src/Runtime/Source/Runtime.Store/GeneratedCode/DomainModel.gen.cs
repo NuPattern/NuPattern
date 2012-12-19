@@ -9,14 +9,14 @@
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// DomainModel ProductStateStoreDomainModel
 	/// The store of the state of all products in the solution.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.ProductStateStoreDomainModel.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.ProductStateStoreDomainModel.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.CoreDomainModel))]
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
@@ -169,7 +169,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 				// construct exception error message		
 				string exceptionError = string.Format(
 								global::System.Globalization.CultureInfo.CurrentCulture,
-								global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel.SingletonResourceManager.GetString("UnrecognizedElementType"),
+								global::NuPattern.Runtime.Store.ProductStateStoreDomainModel.SingletonResourceManager.GetString("UnrecognizedElementType"),
 								elementType.Name);
 				throw new global::System.ArgumentException(exceptionError, "elementType");
 			}
@@ -224,7 +224,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 				// construct exception error message
 				string exceptionError = string.Format(
 								global::System.Globalization.CultureInfo.CurrentCulture,
-								global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel.SingletonResourceManager.GetString("UnrecognizedElementLinkType"),
+								global::NuPattern.Runtime.Store.ProductStateStoreDomainModel.SingletonResourceManager.GetString("UnrecognizedElementLinkType"),
 								elementLinkType.Name);
 				throw new global::System.ArgumentException(exceptionError, "elementLinkType");
 			
@@ -250,7 +250,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// <summary>
 		/// The base name of this model's resources.
 		/// </summary>
-		public const string ResourceBaseName = "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen";
+		public const string ResourceBaseName = "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen";
 		
 		/// <summary>
 		/// Gets the DomainModel's ResourceManager. If the ResourceManager does not already exist, then it is created.
@@ -378,14 +378,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		public ProductStateStoreDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties.PropertyDomainRoleId, true);
-			DomainRoles.Add(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews.ViewDomainRoleId, true);
-			DomainRoles.Add(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements.AbstractElementDomainRoleId, true);
-			DomainRoles.Add(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements.ChildElementDomainRoleId, true);
-			DomainRoles.Add(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts.ProductDomainRoleId, true);
-			DomainRoles.Add(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions.ExtensionDomainRoleId, true);
-			DomainRoles.Add(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts.ExtensionDomainRoleId, true);
-			DomainRoles.Add(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ReferenceDomainRoleId, true);
+			DomainRoles.Add(global::NuPattern.Runtime.Store.ProductElementHasProperties.PropertyDomainRoleId, true);
+			DomainRoles.Add(global::NuPattern.Runtime.Store.ProductHasViews.ViewDomainRoleId, true);
+			DomainRoles.Add(global::NuPattern.Runtime.Store.ViewHasElements.AbstractElementDomainRoleId, true);
+			DomainRoles.Add(global::NuPattern.Runtime.Store.ElementHasChildElements.ChildElementDomainRoleId, true);
+			DomainRoles.Add(global::NuPattern.Runtime.Store.ProductStateHasProducts.ProductDomainRoleId, true);
+			DomainRoles.Add(global::NuPattern.Runtime.Store.ElementHasExtensions.ExtensionDomainRoleId, true);
+			DomainRoles.Add(global::NuPattern.Runtime.Store.ViewHasExtensionProducts.ExtensionDomainRoleId, true);
+			DomainRoles.Add(global::NuPattern.Runtime.Store.ProductElementHasReferences.ReferenceDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

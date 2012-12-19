@@ -1,7 +1,7 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using NuPattern.Extensibility.Binding;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// A delegate class to help ValueProvider properties manage their binding values.

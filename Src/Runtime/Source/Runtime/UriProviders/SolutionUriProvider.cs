@@ -4,10 +4,10 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using EnvDTE;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UriProviders
+namespace NuPattern.Runtime.UriProviders
 {
 	/// <summary>
 	/// Provides support for uris that reference elements in a solution.

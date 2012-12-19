@@ -3,7 +3,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Data;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Returns the sort descriptions for the treeview.

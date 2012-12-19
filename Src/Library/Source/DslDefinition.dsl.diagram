@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <microsoft.VisualStudio.Modeling.DslDesigner.DslDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.435416671633721, 20.184549153645825" name="DslDefinition">
-  <DslLibraryMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/Library" />
+  <DslLibraryMoniker Name="/NuPattern.Library.Automation/Library" />
   <nestedChildShapes>
     <microsoft.VisualStudio.Modeling.DslDesigner.DomainModelElements Id="d7b98268-eab1-4420-9462-89e421fe9a98" absoluteBounds="0, 0, 12.435416671633721, 20.184549153645825">
       <nestedChildShapes>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="24a5d4e4-48e6-44c4-8771-bb1b098d2069" isExpanded="false" absoluteBounds="4.95, 18.302858072916663, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/PropertySettingsHasValueProvider" />
+          <DomainRelationshipMoniker Name="/NuPattern.Library.Automation/PropertySettingsHasValueProvider" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="69947339-e70c-426d-90b9-531cb5217ec5" absoluteBounds="4.95, 18.302858072916663, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="55bafe66-ba29-4ec9-bbdc-d5133083bf34" isExpanded="false" absoluteBounds="8.3, 19.544549153645828, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/ValueProviderSettingsReferencesProperties" />
+          <DomainRelationshipMoniker Name="/NuPattern.Library.Automation/ValueProviderSettingsReferencesProperties" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="040c054a-16e7-4da0-b55d-aaed238cd17a" absoluteBounds="8.3, 19.544549153645828, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="c1784b30-0210-4d00-a341-8a1c8eca24ee" isExpanded="false" absoluteBounds="1.6, 16.868865559895831, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/CommandSettingsHasProperties" />
+          <DomainRelationshipMoniker Name="/NuPattern.Library.Automation/CommandSettingsHasProperties" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="5c0b4a3e-e524-48b5-9a58-b3d0e92fa00a" absoluteBounds="1.6, 16.868865559895831, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
@@ -159,64 +159,64 @@
           <Roots>
             <RootNode Id="b51b69f0-8879-4446-be44-267a16e84992">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/TemplateSettings" />
+                <DomainClassMoniker Name="/NuPattern.Library.Automation/TemplateSettings" />
               </Class>
             </RootNode>
             <RootNode Id="2b121024-7b16-422c-9635-f5763a4278aa">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/EventSettings" />
+                <DomainClassMoniker Name="/NuPattern.Library.Automation/EventSettings" />
               </Class>
             </RootNode>
             <RootNode Id="41573d66-63c9-4c8e-91f4-54801590a7b2">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/MenuSettings" />
+                <DomainClassMoniker Name="/NuPattern.Library.Automation/MenuSettings" />
               </Class>
             </RootNode>
             <RootNode Id="6bdf8704-cb3a-4b74-801c-20fa627a5abf">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/DragDropSettings" />
+                <DomainClassMoniker Name="/NuPattern.Library.Automation/DragDropSettings" />
               </Class>
             </RootNode>
             <RootNode Id="df00cab4-f920-43da-94c6-c3fba5b0a9c4">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/WizardSettings" />
+                <DomainClassMoniker Name="/NuPattern.Library.Automation/WizardSettings" />
               </Class>
             </RootNode>
             <RootNode Id="416cfa63-8645-442f-a78a-852c2690951e">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/GuidanceExtension" />
+                <DomainClassMoniker Name="/NuPattern.Library.Automation/GuidanceExtension" />
               </Class>
             </RootNode>
             <RootNode Id="e851db40-62e4-4277-ae72-d3ed6bfafb41">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/ArtifactExtension" />
+                <DomainClassMoniker Name="/NuPattern.Library.Automation/ArtifactExtension" />
               </Class>
             </RootNode>
             <RootNode Id="d32343a5-abcb-4fdc-a9e7-5dbf85b0e392">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/ValidationExtension" />
+                <DomainClassMoniker Name="/NuPattern.Library.Automation/ValidationExtension" />
               </Class>
             </RootNode>
             <RootNode Id="245d6a9a-0c7c-4ecb-a633-05870676762c" IsInheritanceTreeExpanded="false">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/CommandSettings" />
+                <DomainClassMoniker Name="/NuPattern.Library.Automation/CommandSettings" />
               </Class>
             </RootNode>
           </Roots>
           <Arcs>
             <SourceRoleNode Id="6d35c467-dcfc-4188-be95-d5b5fe2e9de4">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/PropertySettingsHasValueProvider/PropertySettings" />
+                <DomainRoleMoniker Name="/NuPattern.Library.Automation/PropertySettingsHasValueProvider/PropertySettings" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="59de098d-8b1a-4245-bbdf-b20eec2c8333" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/ValueProviderSettingsReferencesProperties/ValueProviderSettings" />
+                <DomainRoleMoniker Name="/NuPattern.Library.Automation/ValueProviderSettingsReferencesProperties/ValueProviderSettings" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="ebd5fb45-25dd-4033-b5a3-a7c3104b85aa">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Library.Automation/CommandSettingsHasProperties/CommandSettings" />
+                <DomainRoleMoniker Name="/NuPattern.Library.Automation/CommandSettingsHasProperties/CommandSettings" />
               </Role>
             </SourceRoleNode>
           </Arcs>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
 	/// <summary>
 	/// Provides a Visual Studio command to open the pattern explorer tool window.

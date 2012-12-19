@@ -2,7 +2,6 @@
 <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='DslDefinition.dsl'" #>
 <#@ output extension=".gen.cs" #>
 <# string dslName = this.Dsl.Name; #>
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Integration;

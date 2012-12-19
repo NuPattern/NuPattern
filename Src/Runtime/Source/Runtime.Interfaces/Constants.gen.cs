@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Diagnostics.CodeAnalysis;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Defines constant values for the runtime.
@@ -26,11 +25,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 		/// <summary>
 		/// The name of the registry key for storing settings for the runtime.
 		/// </summary>
-		public const string RegistrySettingsKeyName = "PatternToolkitExtensions";
+		public const string RegistrySettingsKeyName = "NuPatternToolkitManager";
 		
 		/// <summary>
 		/// The product name.
 		/// </summary>
-		public const string ProductName = "Pattern Toolkit Manager";
+		public const string ProductName = "NuPattern Toolkit Manager";
 	}
 }

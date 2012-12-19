@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Runtime
+﻿namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Defines general validation constants.

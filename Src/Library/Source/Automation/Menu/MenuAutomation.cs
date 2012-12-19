@@ -9,13 +9,13 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Input;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Implements the runtime behavior of the menu launch point.
@@ -41,7 +41,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 			this.text = settings.Text;
 			this.enabled = true;
 			this.visible = true;
-			this.Conditions = new IDynamicBinding<TeamArchitect.PowerTools.Features.ICondition>[0];
+			this.Conditions = new IDynamicBinding<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ICondition>[0];
 			this.CommandStatus = new FixedBinding<ICommandStatus>(new DefaultCommandStatus());
 		}
 
@@ -60,7 +60,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// Gets the conditions that will be evaluated when the event is raised.
 		/// </summary>
 		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
-		public IEnumerable<IDynamicBinding<TeamArchitect.PowerTools.Features.ICondition>> Conditions { get; private set; }
+		public IEnumerable<IDynamicBinding<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ICondition>> Conditions { get; private set; }
 
 		/// <summary>
 		/// Gets or sets custom the command status binding.
@@ -161,12 +161,12 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 			{
 				try
 				{
-					this.Conditions = this.Settings.ConditionSettings.Select(x => this.BindingFactory.CreateBinding<TeamArchitect.PowerTools.Features.ICondition>(x)).ToArray();
+					this.Conditions = this.Settings.ConditionSettings.Select(x => this.BindingFactory.CreateBinding<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ICondition>(x)).ToArray();
 				}
 				catch (Exception e)
 				{
 					tracer.TraceError(e, Resources.MenuAutomation_FailedToParseConditions, this.Name);
-					if (ErrorHandler.IsCriticalException(e))
+                    if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(e))
 					{
 						throw;
 					}
@@ -183,7 +183,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 					catch (Exception e)
 					{
 						tracer.TraceError(e, Resources.MenuAutomation_FailedToParseCustomStatus, this.Name);
-						if (ErrorHandler.IsCriticalException(e))
+                        if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(e))
 						{
 							throw;
 						}
@@ -317,7 +317,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 			}
 		}
 
-		private bool Evaluate(IDynamicBinding<TeamArchitect.PowerTools.Features.ICondition> binding)
+		private bool Evaluate(IDynamicBinding<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ICondition> binding)
 		{
 			using (var context = binding.CreateDynamicContext(this))
 			{

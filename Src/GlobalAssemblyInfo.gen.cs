@@ -3,10 +3,10 @@ using System.Resources;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyCompany("The Outercurve Foundation")]
-[assembly: AssemblyProduct("Pattern Automation Toolkit")]
-[assembly: AssemblyCopyright("Copyright 2012, The Outercurve Foundation under Apache 2.0 license.")]
-[assembly: AssemblyTrademark("The Outercurve Foundation")]
+[assembly: AssemblyCompany("NuPattern")]
+[assembly: AssemblyProduct("NuPattern")]
+[assembly: AssemblyCopyright("Copyright 2012, NuPattern under Apache 2.0 license.")]
+[assembly: AssemblyTrademark("NuPattern")]
 [assembly: AssemblyCulture("")]
 
 [assembly: AssemblyVersion("1.3.20.0")]

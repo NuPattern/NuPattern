@@ -4,5 +4,5 @@
 		get { return new Version(this.Dsl.MajorVersion, this.Dsl.MinorVersion, this.Dsl.Build, this.Dsl.Revision); }
 	}
 
-	public string ToolName { get { return "Microsoft.VisualStudio.Patterning"; } }
+	public string ToolName { get { return "NuPattern"; } }
 #>

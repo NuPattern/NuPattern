@@ -6,7 +6,7 @@ using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation.Data
+namespace NuPattern.Common.Presentation.Data
 {
 	/// <summary>
 	/// Converts an <see cref="ImageSource"/> into an <see cref="Image"/>.

@@ -1,5 +1,5 @@
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     internal class JsonSerializerProxy : JsonSerializer
     {

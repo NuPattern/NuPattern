@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.Shell;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
     /// <summary>
     /// Interface for interacting with the VS Error List window.

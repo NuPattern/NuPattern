@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility.Binding;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
+namespace NuPattern.Extensibility.UnitTests
 {
 	public class BindingFactorySpec
 	{

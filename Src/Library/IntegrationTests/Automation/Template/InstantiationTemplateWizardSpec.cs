@@ -4,12 +4,12 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Library.Automation;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
+namespace NuPattern.Library.IntegrationTests
 {
 	[TestClass]
     [DeploymentItem("Content\\MyTemplate1.gen.vstemplate")]
@@ -18,7 +18,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
 	public class InstantiationTemplateWizardSpec : VsHostedSpec
 	{
 	    private const string TestToolkitTemplateCacheFormat = @"%localappdata%\Microsoft\VisualStudio\{0}Exp\VTC\Library.IntegrationTests";
-        private const string TestToolkitId = "Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit";
+        private const string TestToolkitId = "NuPattern.Runtime.IntegrationTests.TestToolkit";
 		private static readonly IAssertion Assert = new Assertion();
 
 		private IPatternManager manager;

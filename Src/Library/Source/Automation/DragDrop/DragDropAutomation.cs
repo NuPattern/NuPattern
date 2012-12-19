@@ -7,15 +7,15 @@ using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	class DragDropAutomation : AutomationExtension<IDragDropSettings>
 	{
@@ -92,7 +92,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 				catch (Exception e)
 				{
 					tracer.TraceError(e, Resources.EventAutomation_FailedToParseConditions, this.Name);
-					if (ErrorHandler.IsCriticalException(e))
+                    if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(e))
 					{
 						throw;
 					}

@@ -3,7 +3,7 @@ using System;
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     internal class JsonFormatterConverter : IFormatterConverter
     {

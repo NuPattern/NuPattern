@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-[assembly: AssemblyTitle("Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests")]
+[assembly: AssemblyTitle("NuPattern.Runtime.IntegrationTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 

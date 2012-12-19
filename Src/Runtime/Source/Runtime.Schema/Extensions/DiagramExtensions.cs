@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Diagram extension methods.

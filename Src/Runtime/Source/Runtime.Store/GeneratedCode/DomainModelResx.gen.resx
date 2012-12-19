@@ -117,467 +117,467 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductStateStoreDomainModel.Description" xml:space="preserve">
     <value>The store of the state of all products in the solution.</value>
     <comment>Description for DslLibrary &apos;ProductStateStore&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductStateStoreDomainModel.DisplayName" xml:space="preserve">
     <value>Product State Store</value>
     <comment>DisplayName for DslLibrary &apos;ProductStateStore&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductState.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductState.Description" xml:space="preserve">
     <value>The state of all products in the solution.</value>
     <comment>Description for DomainClass &apos;ProductState&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductState.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductState.DisplayName" xml:space="preserve">
     <value>Product State</value>
     <comment>DisplayName for DomainClass &apos;ProductState&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Property.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Property.Description" xml:space="preserve">
     <value>A property of an element.</value>
     <comment>Description for DomainClass &apos;Property&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Property.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Property.DisplayName" xml:space="preserve">
     <value>Property</value>
     <comment>DisplayName for DomainClass &apos;Property&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Property/RawValue.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Property/RawValue.Description" xml:space="preserve">
     <value>The current serialized value of the property. Use Value to get the typed value.</value>
     <comment>Description for DomainProperty &apos;RawValue&apos; on DomainClass &apos;Property&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Property/RawValue.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Property/RawValue.DisplayName" xml:space="preserve">
     <value>Raw Value</value>
     <comment>DisplayName for DomainProperty &apos;RawValue&apos; on DomainClass &apos;Property&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Collection.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Collection.Description" xml:space="preserve">
     <value>A container for elements in a view.</value>
     <comment>Description for DomainClass &apos;Collection&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Collection.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Collection.DisplayName" xml:space="preserve">
     <value>Solution Element</value>
     <comment>DisplayName for DomainClass &apos;Collection&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Element.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Element.Description" xml:space="preserve">
     <value>An element of a view.</value>
     <comment>Description for DomainClass &apos;Element&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Element.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Element.DisplayName" xml:space="preserve">
     <value>Solution Element</value>
     <comment>DisplayName for DomainClass &apos;Element&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElement.Description" xml:space="preserve">
     <value>An element within the product.</value>
     <comment>Description for DomainClass &apos;ProductElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElement.DisplayName" xml:space="preserve">
     <value>Product Element</value>
     <comment>DisplayName for DomainClass &apos;ProductElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceName.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElement/InstanceName.Description" xml:space="preserve">
     <value>The name of this element instance.</value>
     <comment>Description for DomainProperty &apos;InstanceName&apos; on DomainClass &apos;ProductElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceName.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElement/InstanceName.DisplayName" xml:space="preserve">
     <value>Name</value>
     <comment>DisplayName for DomainProperty &apos;InstanceName&apos; on DomainClass &apos;ProductElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceName.Category" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElement/InstanceName.Category" xml:space="preserve">
     <value>General</value>
     <comment>Category for DomainProperty &apos;InstanceName&apos; on DomainClass &apos;ProductElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceOrder.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElement/InstanceOrder.Description" xml:space="preserve">
     <value>The order of this element relative to its siblings.</value>
     <comment>Description for DomainProperty &apos;InstanceOrder&apos; on DomainClass &apos;ProductElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceOrder.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElement/InstanceOrder.DisplayName" xml:space="preserve">
     <value>Instance Order</value>
     <comment>DisplayName for DomainProperty &apos;InstanceOrder&apos; on DomainClass &apos;ProductElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceOrder.Category" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElement/InstanceOrder.Category" xml:space="preserve">
     <value>Appearance</value>
     <comment>Category for DomainProperty &apos;InstanceOrder&apos; on DomainClass &apos;ProductElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Product.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Product.Description" xml:space="preserve">
     <value>A product instance in the solution.</value>
     <comment>Description for DomainClass &apos;Product&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Product.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Product.DisplayName" xml:space="preserve">
     <value>Product</value>
     <comment>DisplayName for DomainClass &apos;Product&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Product/ExtensionId.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Product/ExtensionId.Description" xml:space="preserve">
     <value>The identifier of the Visual Studio extension deploying the product.</value>
     <comment>Description for DomainProperty &apos;ExtensionId&apos; on DomainClass &apos;Product&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Product/ExtensionId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Product/ExtensionId.DisplayName" xml:space="preserve">
     <value>Extension Id</value>
     <comment>DisplayName for DomainProperty &apos;ExtensionId&apos; on DomainClass &apos;Product&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Product/ExtensionId.Category" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Product/ExtensionId.Category" xml:space="preserve">
     <value>General</value>
     <comment>Category for DomainProperty &apos;ExtensionId&apos; on DomainClass &apos;Product&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Product/ExtensionName.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Product/ExtensionName.Description" xml:space="preserve">
     <value>The name of the Visual Studio extension that deploys this product.</value>
     <comment>Description for DomainProperty &apos;ExtensionName&apos; on DomainClass &apos;Product&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Product/ExtensionName.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Product/ExtensionName.DisplayName" xml:space="preserve">
     <value>Extension Name</value>
     <comment>DisplayName for DomainProperty &apos;ExtensionName&apos; on DomainClass &apos;Product&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Product/Author.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Product/Author.Description" xml:space="preserve">
     <value>The author of this product.</value>
     <comment>Description for DomainProperty &apos;Author&apos; on DomainClass &apos;Product&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Product/Author.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Product/Author.DisplayName" xml:space="preserve">
     <value>Author</value>
     <comment>DisplayName for DomainProperty &apos;Author&apos; on DomainClass &apos;Product&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Product/Version.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Product/Version.Description" xml:space="preserve">
     <value>The version of this product.</value>
     <comment>Description for DomainProperty &apos;Version&apos; on DomainClass &apos;Product&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Product/Version.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Product/Version.DisplayName" xml:space="preserve">
     <value>Version</value>
     <comment>DisplayName for DomainProperty &apos;Version&apos; on DomainClass &apos;Product&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.View.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.View.Description" xml:space="preserve">
     <value>A view of a product instance.</value>
     <comment>Description for DomainClass &apos;View&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.View.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.View.DisplayName" xml:space="preserve">
     <value>View</value>
     <comment>DisplayName for DomainClass &apos;View&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.AbstractElement.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.AbstractElement.Description" xml:space="preserve">
     <value>A child collection or element.</value>
     <comment>Description for DomainClass &apos;AbstractElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.AbstractElement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.AbstractElement.DisplayName" xml:space="preserve">
     <value>Abstract Element</value>
     <comment>DisplayName for DomainClass &apos;AbstractElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.InstanceBase.Description" xml:space="preserve">
     <value>An element instance.</value>
     <comment>Description for DomainClass &apos;InstanceBase&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.InstanceBase.DisplayName" xml:space="preserve">
     <value>Instance Base</value>
     <comment>DisplayName for DomainClass &apos;InstanceBase&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/DefinitionId.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.InstanceBase/DefinitionId.Description" xml:space="preserve">
     <value>The model element identifier in the owning definition.</value>
     <comment>Description for DomainProperty &apos;DefinitionId&apos; on DomainClass &apos;InstanceBase&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/DefinitionId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.InstanceBase/DefinitionId.DisplayName" xml:space="preserve">
     <value>Definition Id</value>
     <comment>DisplayName for DomainProperty &apos;DefinitionId&apos; on DomainClass &apos;InstanceBase&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/DefinitionName.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.InstanceBase/DefinitionName.Description" xml:space="preserve">
     <value>Informational-only rendering of the defining element referenced by the DefinitionId property.</value>
     <comment>Description for DomainProperty &apos;DefinitionName&apos; on DomainClass &apos;InstanceBase&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/DefinitionName.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.InstanceBase/DefinitionName.DisplayName" xml:space="preserve">
     <value>Definition Name</value>
     <comment>DisplayName for DomainProperty &apos;DefinitionName&apos; on DomainClass &apos;InstanceBase&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/Notes.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.InstanceBase/Notes.Description" xml:space="preserve">
     <value>Notes for this element.</value>
     <comment>Description for DomainProperty &apos;Notes&apos; on DomainClass &apos;InstanceBase&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/Notes.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.InstanceBase/Notes.DisplayName" xml:space="preserve">
     <value>Notes</value>
     <comment>DisplayName for DomainProperty &apos;Notes&apos; on DomainClass &apos;InstanceBase&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/Notes.Category" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.InstanceBase/Notes.Category" xml:space="preserve">
     <value>Documentation</value>
     <comment>Category for DomainProperty &apos;Notes&apos; on DomainClass &apos;InstanceBase&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Reference.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Reference.Description" xml:space="preserve">
     <value>A reference to external data or service.</value>
     <comment>Description for DomainClass &apos;Reference&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Reference.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Reference.DisplayName" xml:space="preserve">
     <value>Reference</value>
     <comment>DisplayName for DomainClass &apos;Reference&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Value.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Reference/Value.Description" xml:space="preserve">
     <value>The value of the reference, having meaning to the kind of the reference.</value>
     <comment>Description for DomainProperty &apos;Value&apos; on DomainClass &apos;Reference&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Value.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Reference/Value.DisplayName" xml:space="preserve">
     <value>Value</value>
     <comment>DisplayName for DomainProperty &apos;Value&apos; on DomainClass &apos;Reference&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Kind.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Reference/Kind.Description" xml:space="preserve">
     <value>The kind of the reference, used to classify the reference. If this is the full type name of a class, then the class is used to provide the display characteristics of this reference.</value>
     <comment>Description for DomainProperty &apos;Kind&apos; on DomainClass &apos;Reference&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Kind.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Reference/Kind.DisplayName" xml:space="preserve">
     <value>Kind</value>
     <comment>DisplayName for DomainProperty &apos;Kind&apos; on DomainClass &apos;Reference&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Tag.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Reference/Tag.Description" xml:space="preserve">
     <value>Provides arbitrary annotations on a reference, typically used by automation.</value>
     <comment>Description for DomainProperty &apos;Tag&apos; on DomainClass &apos;Reference&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Tag.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.Reference/Tag.DisplayName" xml:space="preserve">
     <value>Tag</value>
     <comment>DisplayName for DomainProperty &apos;Tag&apos; on DomainClass &apos;Reference&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties</value>
+  <data name="NuPattern.Runtime.Store.ProductElementHasProperties.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Store.ProductElementHasProperties</value>
     <comment>Description for DomainClass &apos;ProductElementHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasProperties.DisplayName" xml:space="preserve">
     <value>Product Element Has Properties</value>
     <comment>DisplayName for DomainClass &apos;ProductElementHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties/ProductElement.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasProperties/ProductElement.Description" xml:space="preserve">
     <value>The properties of this element.</value>
     <comment>Description for DomainRole &apos;ProductElement&apos; on DomainRelationship &apos;ProductElementHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties/ProductElement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasProperties/ProductElement.DisplayName" xml:space="preserve">
     <value>Product Element</value>
     <comment>DisplayName for DomainRole &apos;ProductElement&apos; on DomainRelationship &apos;ProductElementHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties/ProductElement.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasProperties/ProductElement.PropertyDisplayName" xml:space="preserve">
     <value>Properties</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProductElement&apos; on DomainRelationship &apos;ProductElementHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties/Property.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasProperties/Property.Description" xml:space="preserve">
     <value>The owning element.</value>
     <comment>Description for DomainRole &apos;Property&apos; on DomainRelationship &apos;ProductElementHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties/Property.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasProperties/Property.DisplayName" xml:space="preserve">
     <value>Property</value>
     <comment>DisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;ProductElementHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties/Property.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasProperties/Property.PropertyDisplayName" xml:space="preserve">
     <value>Owner</value>
     <comment>PropertyDisplayName for DomainRole &apos;Property&apos; on DomainRelationship &apos;ProductElementHasProperties&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews</value>
+  <data name="NuPattern.Runtime.Store.ProductHasViews.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Store.ProductHasViews</value>
     <comment>Description for DomainClass &apos;ProductHasViews&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductHasViews.DisplayName" xml:space="preserve">
     <value>Product Has Views</value>
     <comment>DisplayName for DomainClass &apos;ProductHasViews&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews/Product.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductHasViews/Product.Description" xml:space="preserve">
     <value>The views of this product.</value>
     <comment>Description for DomainRole &apos;Product&apos; on DomainRelationship &apos;ProductHasViews&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews/Product.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductHasViews/Product.DisplayName" xml:space="preserve">
     <value>Product</value>
     <comment>DisplayName for DomainRole &apos;Product&apos; on DomainRelationship &apos;ProductHasViews&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews/Product.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductHasViews/Product.PropertyDisplayName" xml:space="preserve">
     <value>Views</value>
     <comment>PropertyDisplayName for DomainRole &apos;Product&apos; on DomainRelationship &apos;ProductHasViews&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews/View.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductHasViews/View.Description" xml:space="preserve">
     <value>The owning product.</value>
     <comment>Description for DomainRole &apos;View&apos; on DomainRelationship &apos;ProductHasViews&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews/View.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductHasViews/View.DisplayName" xml:space="preserve">
     <value>View</value>
     <comment>DisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;ProductHasViews&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews/View.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductHasViews/View.PropertyDisplayName" xml:space="preserve">
     <value>Product</value>
     <comment>PropertyDisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;ProductHasViews&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements</value>
+  <data name="NuPattern.Runtime.Store.ViewHasElements.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Store.ViewHasElements</value>
     <comment>Description for DomainClass &apos;ViewHasElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasElements.DisplayName" xml:space="preserve">
     <value>View Has Elements</value>
     <comment>DisplayName for DomainClass &apos;ViewHasElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements/View.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasElements/View.Description" xml:space="preserve">
     <value>The child elements of this view.</value>
     <comment>Description for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements/View.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasElements/View.DisplayName" xml:space="preserve">
     <value>View</value>
     <comment>DisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements/View.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasElements/View.PropertyDisplayName" xml:space="preserve">
     <value>Elements</value>
     <comment>PropertyDisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements/AbstractElement.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasElements/AbstractElement.Description" xml:space="preserve">
     <value>The owning view.</value>
     <comment>Description for DomainRole &apos;AbstractElement&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements/AbstractElement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasElements/AbstractElement.DisplayName" xml:space="preserve">
     <value>Abstract Element</value>
     <comment>DisplayName for DomainRole &apos;AbstractElement&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements/AbstractElement.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasElements/AbstractElement.PropertyDisplayName" xml:space="preserve">
     <value>View</value>
     <comment>PropertyDisplayName for DomainRole &apos;AbstractElement&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements</value>
+  <data name="NuPattern.Runtime.Store.ElementHasChildElements.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Store.ElementHasChildElements</value>
     <comment>Description for DomainClass &apos;ElementHasChildElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasChildElements.DisplayName" xml:space="preserve">
     <value>Element Has Child Elements</value>
     <comment>DisplayName for DomainClass &apos;ElementHasChildElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements/ParentElement.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasChildElements/ParentElement.Description" xml:space="preserve">
     <value>The child elements of this element.</value>
     <comment>Description for DomainRole &apos;ParentElement&apos; on DomainRelationship &apos;ElementHasChildElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements/ParentElement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasChildElements/ParentElement.DisplayName" xml:space="preserve">
     <value>Parent Element</value>
     <comment>DisplayName for DomainRole &apos;ParentElement&apos; on DomainRelationship &apos;ElementHasChildElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements/ParentElement.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasChildElements/ParentElement.PropertyDisplayName" xml:space="preserve">
     <value>Elements</value>
     <comment>PropertyDisplayName for DomainRole &apos;ParentElement&apos; on DomainRelationship &apos;ElementHasChildElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements/ChildElement.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasChildElements/ChildElement.Description" xml:space="preserve">
     <value>The owning element.</value>
     <comment>Description for DomainRole &apos;ChildElement&apos; on DomainRelationship &apos;ElementHasChildElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements/ChildElement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasChildElements/ChildElement.DisplayName" xml:space="preserve">
     <value>Child Element</value>
     <comment>DisplayName for DomainRole &apos;ChildElement&apos; on DomainRelationship &apos;ElementHasChildElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements/ChildElement.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasChildElements/ChildElement.PropertyDisplayName" xml:space="preserve">
     <value>Owner</value>
     <comment>PropertyDisplayName for DomainRole &apos;ChildElement&apos; on DomainRelationship &apos;ElementHasChildElements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts</value>
+  <data name="NuPattern.Runtime.Store.ProductStateHasProducts.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Store.ProductStateHasProducts</value>
     <comment>Description for DomainClass &apos;ProductStateHasProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductStateHasProducts.DisplayName" xml:space="preserve">
     <value>Product State Has Products</value>
     <comment>DisplayName for DomainClass &apos;ProductStateHasProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts/ProductState.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductStateHasProducts/ProductState.Description" xml:space="preserve">
     <value>The products in this solution.</value>
     <comment>Description for DomainRole &apos;ProductState&apos; on DomainRelationship &apos;ProductStateHasProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts/ProductState.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductStateHasProducts/ProductState.DisplayName" xml:space="preserve">
     <value>Product State</value>
     <comment>DisplayName for DomainRole &apos;ProductState&apos; on DomainRelationship &apos;ProductStateHasProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts/ProductState.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductStateHasProducts/ProductState.PropertyDisplayName" xml:space="preserve">
     <value>Products</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProductState&apos; on DomainRelationship &apos;ProductStateHasProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts/Product.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductStateHasProducts/Product.Description" xml:space="preserve">
     <value>The owning state model.</value>
     <comment>Description for DomainRole &apos;Product&apos; on DomainRelationship &apos;ProductStateHasProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts/Product.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductStateHasProducts/Product.DisplayName" xml:space="preserve">
     <value>Product</value>
     <comment>DisplayName for DomainRole &apos;Product&apos; on DomainRelationship &apos;ProductStateHasProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts/Product.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductStateHasProducts/Product.PropertyDisplayName" xml:space="preserve">
     <value>Product State</value>
     <comment>PropertyDisplayName for DomainRole &apos;Product&apos; on DomainRelationship &apos;ProductStateHasProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions</value>
+  <data name="NuPattern.Runtime.Store.ElementHasExtensions.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Store.ElementHasExtensions</value>
     <comment>Description for DomainClass &apos;ElementHasExtensions&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasExtensions.DisplayName" xml:space="preserve">
     <value>Element Has Extensions</value>
     <comment>DisplayName for DomainClass &apos;ElementHasExtensions&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions/AbstractElement.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasExtensions/AbstractElement.Description" xml:space="preserve">
     <value>The child extension products of this element.</value>
     <comment>Description for DomainRole &apos;AbstractElement&apos; on DomainRelationship &apos;ElementHasExtensions&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions/AbstractElement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasExtensions/AbstractElement.DisplayName" xml:space="preserve">
     <value>Abstract Element</value>
     <comment>DisplayName for DomainRole &apos;AbstractElement&apos; on DomainRelationship &apos;ElementHasExtensions&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions/AbstractElement.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasExtensions/AbstractElement.PropertyDisplayName" xml:space="preserve">
     <value>Extension Products</value>
     <comment>PropertyDisplayName for DomainRole &apos;AbstractElement&apos; on DomainRelationship &apos;ElementHasExtensions&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions/Extension.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasExtensions/Extension.Description" xml:space="preserve">
     <value>The owning element.</value>
     <comment>Description for DomainRole &apos;Extension&apos; on DomainRelationship &apos;ElementHasExtensions&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions/Extension.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasExtensions/Extension.DisplayName" xml:space="preserve">
     <value>Extension</value>
     <comment>DisplayName for DomainRole &apos;Extension&apos; on DomainRelationship &apos;ElementHasExtensions&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions/Extension.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ElementHasExtensions/Extension.PropertyDisplayName" xml:space="preserve">
     <value>Owner</value>
     <comment>PropertyDisplayName for DomainRole &apos;Extension&apos; on DomainRelationship &apos;ElementHasExtensions&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts</value>
+  <data name="NuPattern.Runtime.Store.ViewHasExtensionProducts.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Store.ViewHasExtensionProducts</value>
     <comment>Description for DomainClass &apos;ViewHasExtensionProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasExtensionProducts.DisplayName" xml:space="preserve">
     <value>View Has Extension Products</value>
     <comment>DisplayName for DomainClass &apos;ViewHasExtensionProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts/View.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasExtensionProducts/View.Description" xml:space="preserve">
     <value>The child extension products of this view.</value>
     <comment>Description for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasExtensionProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts/View.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasExtensionProducts/View.DisplayName" xml:space="preserve">
     <value>View</value>
     <comment>DisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasExtensionProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts/View.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasExtensionProducts/View.PropertyDisplayName" xml:space="preserve">
     <value>Extension Products</value>
     <comment>PropertyDisplayName for DomainRole &apos;View&apos; on DomainRelationship &apos;ViewHasExtensionProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts/Extension.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasExtensionProducts/Extension.Description" xml:space="preserve">
     <value>The owning view.</value>
     <comment>Description for DomainRole &apos;Extension&apos; on DomainRelationship &apos;ViewHasExtensionProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts/Extension.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasExtensionProducts/Extension.DisplayName" xml:space="preserve">
     <value>Extension</value>
     <comment>DisplayName for DomainRole &apos;Extension&apos; on DomainRelationship &apos;ViewHasExtensionProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts/Extension.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ViewHasExtensionProducts/Extension.PropertyDisplayName" xml:space="preserve">
     <value>View</value>
     <comment>PropertyDisplayName for DomainRole &apos;Extension&apos; on DomainRelationship &apos;ViewHasExtensionProducts&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences</value>
+  <data name="NuPattern.Runtime.Store.ProductElementHasReferences.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Store.ProductElementHasReferences</value>
     <comment>Description for DomainClass &apos;ProductElementHasReferences&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasReferences.DisplayName" xml:space="preserve">
     <value>Product Element Has References</value>
     <comment>DisplayName for DomainClass &apos;ProductElementHasReferences&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences/ProductElement.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasReferences/ProductElement.Description" xml:space="preserve">
     <value>The references of this element.</value>
     <comment>Description for DomainRole &apos;ProductElement&apos; on DomainRelationship &apos;ProductElementHasReferences&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences/ProductElement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasReferences/ProductElement.DisplayName" xml:space="preserve">
     <value>Product Element</value>
     <comment>DisplayName for DomainRole &apos;ProductElement&apos; on DomainRelationship &apos;ProductElementHasReferences&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences/ProductElement.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasReferences/ProductElement.PropertyDisplayName" xml:space="preserve">
     <value>References</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProductElement&apos; on DomainRelationship &apos;ProductElementHasReferences&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences/Reference.Description" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasReferences/Reference.Description" xml:space="preserve">
     <value>The owning element.</value>
     <comment>Description for DomainRole &apos;Reference&apos; on DomainRelationship &apos;ProductElementHasReferences&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences/Reference.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasReferences/Reference.DisplayName" xml:space="preserve">
     <value>Reference</value>
     <comment>DisplayName for DomainRole &apos;Reference&apos; on DomainRelationship &apos;ProductElementHasReferences&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences/Reference.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Runtime.Store.ProductElementHasReferences/Reference.PropertyDisplayName" xml:space="preserve">
     <value>Owner</value>
     <comment>PropertyDisplayName for DomainRole &apos;Reference&apos; on DomainRelationship &apos;ProductElementHasReferences&apos;</comment>
   </data>

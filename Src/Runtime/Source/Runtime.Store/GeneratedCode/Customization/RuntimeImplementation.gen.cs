@@ -16,7 +16,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 { 
 	/// <summary>
 	/// The state of all products in the solution..
@@ -63,7 +63,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	/// <summary>
 	/// The state of all products in the solution.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class ProductState : IProductState
 	{ 
 		/// <summary>
@@ -116,7 +116,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 { 
 	/// <summary>
 	/// A property of an element..
@@ -144,7 +144,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	/// <summary>
 	/// A property of an element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class Property : IProperty
 	{ 
 		/// <summary>
@@ -166,7 +166,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 { 
 	/// <summary>
 	/// A container for elements in a view..
@@ -194,7 +194,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	/// <summary>
 	/// A container for elements in a view.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class Collection : ICollection
 	{ 
 		/// <summary>
@@ -207,7 +207,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 { 
 	/// <summary>
 	/// An element of a view..
@@ -235,7 +235,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	/// <summary>
 	/// An element of a view.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class Element : IElement
 	{ 
 		/// <summary>
@@ -248,7 +248,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 { 
 	/// <summary>
 	/// An element within the product..
@@ -276,7 +276,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	/// <summary>
 	/// An element within the product.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class ProductElement : IProductElement
 	{ 
 		/// <summary>
@@ -349,7 +349,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 { 
 	/// <summary>
 	/// A product instance in the solution..
@@ -377,7 +377,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	/// <summary>
 	/// A product instance in the solution.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class Product : IProduct
 	{ 
 		/// <summary>
@@ -447,7 +447,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 { 
 	/// <summary>
 	/// A view of a product instance..
@@ -475,7 +475,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	/// <summary>
 	/// A view of a product instance.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class View : IView
 	{ 
 		/// <summary>
@@ -497,7 +497,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 { 
 	/// <summary>
 	/// A child collection or element..
@@ -525,7 +525,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	/// <summary>
 	/// A child collection or element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class AbstractElement : IAbstractElement
 	{ 
 		/// <summary>
@@ -556,7 +556,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 { 
 	/// <summary>
 	/// An element instance..
@@ -603,7 +603,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	/// <summary>
 	/// An element instance.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class InstanceBase : IInstanceBase
 	{ 
 		/// <summary>
@@ -631,7 +631,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 { 
 	/// <summary>
 	/// A reference to external data or service..
@@ -678,7 +678,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	/// <summary>
 	/// A reference to external data or service.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class Reference : IReference
 	{ 
 		/// <summary>

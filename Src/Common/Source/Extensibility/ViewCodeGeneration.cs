@@ -1,7 +1,7 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
     /// <summary>
     /// Defines utility methods for use in templates that generate code from a view schema.

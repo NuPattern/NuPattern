@@ -1,7 +1,7 @@
-﻿using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Extensibility.Binding;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Design
+namespace NuPattern.Extensibility.UnitTests.Binding.Design
 {
     public class BoundPropertySpec
     {

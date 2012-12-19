@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
+namespace NuPattern.Runtime.UnitTests
 {
     public class InstalledToolkitInfoSpec
     {

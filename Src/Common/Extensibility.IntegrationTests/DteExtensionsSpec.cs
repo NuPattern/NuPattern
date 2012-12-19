@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Moq;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.IntegrationTests
+namespace NuPattern.Extensibility.IntegrationTests
 {
     public class DteExtensionsSpec
     {

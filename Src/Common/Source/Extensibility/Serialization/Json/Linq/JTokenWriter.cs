@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     /// <summary>
     /// Represents a writer that provides a fast, non-cached, forward-only way of generating Json data.

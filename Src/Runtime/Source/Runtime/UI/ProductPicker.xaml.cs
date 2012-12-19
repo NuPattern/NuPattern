@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.Patterning.Common.Presentation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Common.Presentation;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Interaction logic for ProductPicker.xaml.

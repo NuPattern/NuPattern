@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Represents an installed extension that provides a toolkit.

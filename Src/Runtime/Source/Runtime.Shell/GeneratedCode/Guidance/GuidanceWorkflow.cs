@@ -13,7 +13,7 @@ using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Guidance
+namespace NuPattern.Runtime.Shell.Guidance
 {
 	/// <summary>
 	/// Defines a base class for the guidance workflow for this feature.

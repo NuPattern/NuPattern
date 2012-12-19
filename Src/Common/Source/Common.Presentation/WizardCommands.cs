@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation
+namespace NuPattern.Common.Presentation
 {
 	/// <summary>
 	/// Provides a standard set of navigation-related commands.

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Store;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
+namespace NuPattern.Runtime.UnitTests
 {
     [TestClass]
     public class ReferenceKindProviderSpec

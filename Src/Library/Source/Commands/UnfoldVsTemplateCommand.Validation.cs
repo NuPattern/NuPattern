@@ -1,13 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Automation.Template;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Automation.Template;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
 	/// <summary>
 	/// Validations for the <see cref="UnfoldVsTemplateCommand"/> command
@@ -23,7 +23,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
 		/// <param name="context">Validation Context where to add validation errors</param>
 		/// <param name="settingsElement">The settings element in the model being validated</param>
 		/// <param name="settings">Settings for the command</param>
-		public void Validate(VisualStudio.Modeling.Validation.ValidationContext context, IAutomationSettingsSchema settingsElement, ICommandSettings settings)
+		public void Validate(Microsoft.VisualStudio.Modeling.Validation.ValidationContext context, IAutomationSettingsSchema settingsElement, ICommandSettings settings)
 		{
 			try
 			{

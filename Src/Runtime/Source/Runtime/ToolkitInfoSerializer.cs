@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Markup;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Helper class that reads and writes <see cref="IToolkitInfo"/> instances as XML.

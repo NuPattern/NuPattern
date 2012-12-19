@@ -1,5 +1,5 @@
 ﻿
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Guidance
+namespace NuPattern.Runtime.Shell.Guidance
 {
 	/// <summary>
 	/// Defines the feature extension containing the guidance workflow.

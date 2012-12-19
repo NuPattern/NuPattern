@@ -70,12 +70,12 @@ public static class VersionInfo
     public static Version AuthoringVSIXVersion = RuntimeVSIXVersion;
     
     // Ownership
-    public const string VsixAuthor = "Outercurve";
-	public const string AssemblyAuthor = "The Outercurve Foundation";
-	public const string AssemblyCopyright = "Copyright 2012, The Outercurve Foundation under Apache 2.0 license.";
+    public const string VsixAuthor = "NuPattern";
+	public const string AssemblyAuthor = "NuPattern";
+	public const string AssemblyCopyright = "Copyright 2012, NuPattern under Apache 2.0 license.";
 	
 	// Assembly Identity
-	public const string AssemblyProductName = "Pattern Automation Toolkit";
+	public const string AssemblyProductName = "NuPattern";
 }
 \#><#+
  private static IEnumerable<EnvDTE.Project> GetProjectsFromSolution(EnvDTE.Solution solution)

@@ -2228,7 +2228,7 @@ side code statements that make the substitutions.<o:p></o:p></p>
 <p class=3DSourceCode><span style=3D'background:gold'>&lt;#@</span>&nbsp;<b=
 ><span
 style=3D'color:brown'>Template</span></b>&nbsp;<span style=3D'color:red'>In=
-herits</span>=3D&quot;Microsoft.VisualStudio.Patterning.Library.ModelElemen=
+herits</span>=3D&quot;NuPattern.Library.ModelElemen=
 tTextTransformation&quot;&nbsp;<span
 style=3D'color:red'>HostSpecific</span>=3D&quot;True&quot;&nbsp;<span
 style=3D'color:red'>Debug</span>=3D&quot;True&quot;&nbsp;<span style=3D'bac=
@@ -2236,7 +2236,7 @@ kground:
 gold'>#&gt;</span><span style=3D'color:olive;background:white'><br>
 </span><span style=3D'background:gold'>&lt;#@</span>&nbsp;<b><span
 style=3D'color:brown'>ModelElement</span></b>&nbsp;<span style=3D'color:red=
-'>Type</span>=3D&quot;Microsoft.VisualStudio.Patterning.Runtime.IProductEle=
+'>Type</span>=3D&quot;NuPattern.Runtime.IProductEle=
 ment&quot;&nbsp;<span
 style=3D'color:red'>Processor</span>=3D&quot;ModelElementProcessor&quot;&nb=
 sp;<span
@@ -2244,13 +2244,13 @@ style=3D'background:gold'>#&gt;</span><span style=3D'color:olive;background=
 :white'><br>
 </span><span style=3D'background:gold'>&lt;#@</span>&nbsp;<b><span
 style=3D'color:brown'>Assembly</span></b>&nbsp;<span style=3D'color:red'>Na=
-me</span>=3D&quot;Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll&=
+me</span>=3D&quot;NuPattern.Runtime.Interfaces.dll&=
 quot;&nbsp;<span
 style=3D'background:gold'>#&gt;</span><span style=3D'color:olive;background=
 :white'><br>
 </span><span style=3D'background:gold'>&lt;#@</span>&nbsp;<b><span
 style=3D'color:brown'>Import</span></b>&nbsp;<span style=3D'color:red'>Name=
-space</span>=3D&quot;Microsoft.VisualStudio.Patterning.Runtime&quot;&nbsp;<=
+space</span>=3D&quot;NuPattern.Runtime&quot;&nbsp;<=
 span
 style=3D'background:gold'>#&gt;</span><span style=3D'color:olive;background=
 :white'><br>

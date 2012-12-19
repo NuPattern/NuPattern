@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
+namespace NuPattern.Extensibility.UnitTests
 {
 	[TestClass]
 	public class CodeGenerationSpec
@@ -105,7 +105,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			codegen.AddType(typeof(System.ComponentModel.StringConverter));
 			codegen.EndInit();
 
-            Assert.Equal("IEnumerable<Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.StringConverter>", codegen.GetTypeName(typeof(IEnumerable<StringConverter>)));
+            Assert.Equal("IEnumerable<NuPattern.Extensibility.UnitTests.StringConverter>", codegen.GetTypeName(typeof(IEnumerable<StringConverter>)));
 			Assert.True(codegen.SafeImports.Contains(typeof(IEnumerable<>).Namespace));
 			Assert.False(codegen.SafeImports.Contains(typeof(StringConverter).Namespace));
 		}
@@ -161,7 +161,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 			codegen.AddType(typeof(System.ComponentModel.StringConverter));
 			codegen.EndInit();
 
-            Assert.Equal("IDictionary<IList<KeyValuePair<String, Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.StringConverter>>, CodeGenerationSpec.NestedType>", codegen.GetTypeName(type));
+            Assert.Equal("IDictionary<IList<KeyValuePair<String, NuPattern.Extensibility.UnitTests.StringConverter>>, CodeGenerationSpec.NestedType>", codegen.GetTypeName(type));
 			Assert.True(codegen.SafeImports.Contains(typeof(IEnumerable<>).Namespace));
 			Assert.True(codegen.SafeImports.Contains(typeof(CodeGenerationSpec).Namespace));
 		}

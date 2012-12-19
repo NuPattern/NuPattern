@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	[RuleOn(typeof(PropertySettings), FireTime = TimeToFire.TopLevelCommit)]
 	class PropertySettingsChangeRule : ChangeRule

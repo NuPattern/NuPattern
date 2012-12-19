@@ -1,7 +1,7 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Common.Presentation;
+using NuPattern.Common.Presentation;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Interaction logic for AddNewProductView.xaml.

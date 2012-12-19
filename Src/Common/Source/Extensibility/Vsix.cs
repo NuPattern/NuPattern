@@ -6,10 +6,10 @@ using System.IO.Packaging;
 using System.Linq;
 using System.Xml;
 using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.Settings;
+using NuPattern.Extensibility.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Helper methods for dealing with Visual Studio extension manifests.

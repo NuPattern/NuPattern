@@ -8,7 +8,7 @@ using System.Globalization;
 
 #endif
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     /// <summary>
     /// Represents a JSON object.

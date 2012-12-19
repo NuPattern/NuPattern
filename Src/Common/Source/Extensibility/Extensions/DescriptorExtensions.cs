@@ -4,10 +4,10 @@ using System.ComponentModel.Composition;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.Extensibility.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Extensions that property and type descriptors could use.

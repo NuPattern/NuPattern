@@ -14,12 +14,12 @@ using Microsoft.ComponentModel.Composition.Diagnostics;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Shell;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library;
-using Microsoft.VisualStudio.Patterning.Runtime.Shell.OptionPages;
-using Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
-using Microsoft.VisualStudio.Patterning.Runtime.UI;
+using NuPattern.Extensibility;
+using NuPattern.Library;
+using NuPattern.Runtime.Shell.OptionPages;
+using NuPattern.Runtime.Shell.Properties;
+using NuPattern.Runtime.Store;
+using NuPattern.Runtime.UI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
@@ -27,13 +27,13 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
     /// <summary>
     /// Represents the VS package for this assembly.
     /// </summary>
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Disposed on package dispose.")]
-    [ProvideEditorExtension(typeof(ProductStateEditorFactory), Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension, 8, DefaultName = Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreEditorDescription)]
+    [ProvideEditorExtension(typeof(ProductStateEditorFactory), NuPattern.Runtime.Constants.RuntimeStoreExtension, 8, DefaultName = NuPattern.Runtime.Constants.RuntimeStoreEditorDescription)]
     [ProvideAutoLoad(UIContextGuids.NoSolution)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
@@ -141,7 +141,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
             this.tracingMonitor = new TracingSettingsMonitor(this.SettingsManager);
 
             var sourceNames = GetConfiguredSourceNames(this.SettingsManager.Read());
-            this.traceOutputWindowManager = new TraceOutputWindowManager(this, this.ShellEvents, OutputPaneGuid, Resources.TraceOutput_WindowTitle, sourceNames.ToArray());
+            this.traceOutputWindowManager = new TraceOutputWindowManager(this, this.ShellEvents, OutputPaneGuid, Constants.OutputWindowTitle, sourceNames.ToArray());
 
             // Monitor setting changes to refresh output window.
             this.SettingsManager.SettingsChanged += this.OnSettingsChanged;

@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     /// <summary>
     /// Represents a token that can contain other tokens.

@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
+namespace NuPattern.Runtime.UnitTests.UriProviders
 {
 	[TestClass]
 	public class VsTemplateUriProviderSpec
@@ -11,21 +11,21 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UriProviders
 		public void WhenTemplateTypeIsItem_ThenreturnsBaseUri()
 		{
             Assert.Equal("template://item", 
-                VsTemplateUriProvider.GetUriBase(TeamArchitect.PowerTools.Features.VsTemplateType.Item));
+                VsTemplateUriProvider.GetUriBase(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.VsTemplateType.Item));
 		}
 
         [TestMethod, TestCategory("Unit")]
         public void WhenTemplateTypeIsProject_ThenreturnsBaseUri()
         {
             Assert.Equal("template://project",
-                VsTemplateUriProvider.GetUriBase(TeamArchitect.PowerTools.Features.VsTemplateType.Project));
+                VsTemplateUriProvider.GetUriBase(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.VsTemplateType.Project));
         }
 
         [TestMethod, TestCategory("Unit")]
         public void WhenTemplateTypeIsProjectGroup_ThenreturnsBaseUri()
         {
             Assert.Equal("template://projectgroup",
-                VsTemplateUriProvider.GetUriBase(TeamArchitect.PowerTools.Features.VsTemplateType.ProjectGroup));
+                VsTemplateUriProvider.GetUriBase(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.VsTemplateType.ProjectGroup));
         }
     }
 }

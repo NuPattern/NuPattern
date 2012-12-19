@@ -2,16 +2,16 @@
 using System.ComponentModel.Composition;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime.UI;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Shell.Properties;
+using NuPattern.Runtime.UI;
 using Microsoft.VisualStudio.Settings;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.Shell.Settings;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
     /// <summary>
     /// Provides the Pattern Explorer tool window.
@@ -73,7 +73,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
             componentModel.DefaultCompositionService.SatisfyImportsOnce(this);
 
             this.trackSelection = this.GetService<SVsTrackSelectionEx, IVsTrackSelectionEx>();
-            ErrorHandler.ThrowOnFailure(this.trackSelection.OnSelectChange(this.selectionContainer));
+            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.trackSelection.OnSelectChange(this.selectionContainer));
 
             var shell = this.GetService<SVsUIShell, IVsUIShell>();
 
@@ -172,7 +172,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 
             this.selectionContainer.SelectableObjects = selectedObjects;
             this.selectionContainer.SelectedObjects = selectedObjects;
-            ErrorHandler.ThrowOnFailure(this.trackSelection.OnSelectChange(this.selectionContainer));
+            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.trackSelection.OnSelectChange(this.selectionContainer));
         }
 
         private void ShowProperties()

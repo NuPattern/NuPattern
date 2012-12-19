@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Events
+namespace NuPattern.Runtime.Events
 {
 	/// <summary>
 	/// Represents a condition that can filter an event.

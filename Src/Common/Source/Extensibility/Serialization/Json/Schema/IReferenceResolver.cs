@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+﻿namespace NuPattern.Extensibility.Serialization.Json
 {
     /// <summary>
     /// Used to resolve references when serializing and deserializing JSON by the <see cref="JsonSerializer"/>.

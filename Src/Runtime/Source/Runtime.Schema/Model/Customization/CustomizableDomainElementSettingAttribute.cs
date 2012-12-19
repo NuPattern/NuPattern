@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Defines an attribute that is used to designate a DomainClass, DomainRole, DomainProperty as represeting a customizable setting.

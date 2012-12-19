@@ -14,7 +14,7 @@ using System.Diagnostics;
 using System.Drawing.Design;
 using System.Windows.Forms;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Helper class used to create and initialize toolbox items for this DSL.

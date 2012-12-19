@@ -9,15 +9,15 @@
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// DomainClass ProductState
 	/// The state of all products in the solution.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductState.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductState.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.ProductState.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.ProductState.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("567410f3-5e44-4211-8623-bd9ee337dd82")]
 	public partial class ProductState : DslModeling::ModelElement
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Product>, Product>(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts.ProductStateDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Product>, Product>(global::NuPattern.Runtime.Store.ProductStateHasProducts.ProductStateDomainRoleId);
 			}
 		}
 		#endregion
@@ -85,7 +85,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Store.Product.DomainClassId)) 
 				{
 					return true;
 				}
@@ -114,7 +114,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product sourceProduct1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product;
+			global::NuPattern.Runtime.Store.Product sourceProduct1 = sourceElement as global::NuPattern.Runtime.Store.Product;
 			if (sourceProduct1 != null)
 			{
 				// Create link for path ProductStateHasProducts.Products
@@ -145,15 +145,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product sourceProduct1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product;
+			global::NuPattern.Runtime.Store.Product sourceProduct1 = sourceElement as global::NuPattern.Runtime.Store.Product;
 			if (sourceProduct1 != null)
 			{
 				// Delete link for path ProductStateHasProducts.Products
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductState)this, sourceProduct1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Store.ProductStateHasProducts.GetLinks((global::NuPattern.Runtime.Store.ProductState)this, sourceProduct1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts.ProductStateDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts.ProductDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Store.ProductStateHasProducts.ProductStateDomainRoleId, global::NuPattern.Runtime.Store.ProductStateHasProducts.ProductDomainRoleId);
 				}
 
 				return;
@@ -164,15 +164,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// DomainClass Property
 	/// A property of an element.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Property.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Property.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Property.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Property.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("9d160ca6-f94d-4cb7-956d-e2f537a0e33d")]
 	public partial class Property : InstanceBase
@@ -221,8 +221,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// Gets or sets the value of RawValue domain property.
 		/// The current serialized value of the property. Use Value to get the typed value.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Property/RawValue.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Property/RawValue.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Property/RawValue.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Property/RawValue.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("e0bdc7da-54bd-4b50-a3df-4b26e569b88d")]
@@ -324,26 +324,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties.PropertyDomainRoleId) as ProductElement;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Store.ProductElementHasProperties.PropertyDomainRoleId) as ProductElement;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties.PropertyDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Store.ProductElementHasProperties.PropertyDomainRoleId, value);
 			}
 		}
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// DomainClass Collection
 	/// A container for elements in a view.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Collection.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Collection.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Collection.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Collection.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("4d1f8038-151c-461d-97cc-3eaf779f50eb")]
 	public partial class Collection : AbstractElement
@@ -376,15 +376,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// DomainClass Element
 	/// An element of a view.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Element.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Element.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Element.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Element.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("375050fd-908d-47b2-9494-7626fee46113")]
 	public partial class Element : AbstractElement
@@ -417,16 +417,16 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// DomainClass ProductElement
 	/// An element within the product.
 	/// </summary>
 	[System.ComponentModel.TypeDescriptionProvider(typeof(ProductElementTypeDescriptionProvider))]
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.ProductElement.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.ProductElement.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("ce0a63a4-80a0-4a07-b9d1-d97fd206a8f1")]
 	public abstract partial class ProductElement : InstanceBase
@@ -466,9 +466,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// The name of this element instance.
 		/// </summary>
 		[System.ComponentModel.ParenthesizePropertyNameAttribute(true)]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceName.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceName.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceName.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.ProductElement/InstanceName.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Store.ProductElement/InstanceName.Category", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.ProductElement/InstanceName.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("5ed95450-9b27-4485-92c7-862e2c0721d1")]
 		public global::System.String InstanceName
 		{
@@ -574,9 +574,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// Gets or sets the value of InstanceOrder domain property.
 		/// The order of this element relative to its siblings.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceOrder.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceOrder.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement/InstanceOrder.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.ProductElement/InstanceOrder.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Store.ProductElement/InstanceOrder.Category", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.ProductElement/InstanceOrder.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("01523a35-435b-40a4-a24e-7656b71c1ad6")]
@@ -680,7 +680,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Property>, Property>(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasProperties.ProductElementDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Property>, Property>(global::NuPattern.Runtime.Store.ProductElementHasProperties.ProductElementDomainRoleId);
 			}
 		}
 		#endregion
@@ -699,7 +699,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Reference>, Reference>(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ProductElementDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Reference>, Reference>(global::NuPattern.Runtime.Store.ProductElementHasReferences.ProductElementDomainRoleId);
 			}
 		}
 		#endregion
@@ -723,7 +723,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Store.Reference.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Store.Reference.DomainClassId)) 
 				{
 					return true;
 				}
@@ -752,7 +752,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Store.Reference sourceReference1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Store.Reference;
+			global::NuPattern.Runtime.Store.Reference sourceReference1 = sourceElement as global::NuPattern.Runtime.Store.Reference;
 			if (sourceReference1 != null)
 			{
 				// Create link for path ProductElementHasReferences.References
@@ -783,15 +783,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Store.Reference sourceReference1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Store.Reference;
+			global::NuPattern.Runtime.Store.Reference sourceReference1 = sourceElement as global::NuPattern.Runtime.Store.Reference;
 			if (sourceReference1 != null)
 			{
 				// Delete link for path ProductElementHasReferences.References
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElement)this, sourceReference1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Store.ProductElementHasReferences.GetLinks((global::NuPattern.Runtime.Store.ProductElement)this, sourceReference1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ProductElementDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ReferenceDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Store.ProductElementHasReferences.ProductElementDomainRoleId, global::NuPattern.Runtime.Store.ProductElementHasReferences.ReferenceDomainRoleId);
 				}
 
 				return;
@@ -802,15 +802,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// DomainClass Product
 	/// A product instance in the solution.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Product.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Product.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Product.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Product.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("f7b1afaf-b90d-411b-9792-1b402d72dfaf")]
 	public partial class Product : ProductElement
@@ -858,9 +858,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// The identifier of the Visual Studio extension deploying the product.
 		/// </summary>
 		[Hidden()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Product/ExtensionId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Product/ExtensionId.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Product/ExtensionId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Product/ExtensionId.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Store.Product/ExtensionId.Category", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Product/ExtensionId.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[DslModeling::DomainObjectId("8f8d39a6-537c-4b79-b9fe-49636a5a88bb")]
 		public global::System.String ExtensionId
@@ -968,8 +968,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// The name of the Visual Studio extension that deploys this product.
 		/// </summary>
 		[Hidden()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Product/ExtensionName.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Product/ExtensionName.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Product/ExtensionName.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Product/ExtensionName.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("f69e7d29-03b1-41c8-ab04-f6137567f952")]
@@ -1078,8 +1078,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// The author of this product.
 		/// </summary>
 		[Hidden()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Product/Author.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Product/Author.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Product/Author.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Product/Author.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("7871da94-2979-4616-9a84-a0bc6a7e5b65")]
@@ -1188,8 +1188,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// The version of this product.
 		/// </summary>
 		[Hidden()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Product/Version.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Product/Version.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Product/Version.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Product/Version.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("b55b9568-ce0e-47cb-8110-543e5ad9c692")]
@@ -1292,7 +1292,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<View>, View>(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews.ProductDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<View>, View>(global::NuPattern.Runtime.Store.ProductHasViews.ProductDomainRoleId);
 			}
 		}
 		#endregion
@@ -1306,12 +1306,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts.ProductDomainRoleId) as ProductState;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Store.ProductStateHasProducts.ProductDomainRoleId) as ProductState;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateHasProducts.ProductDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Store.ProductStateHasProducts.ProductDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1325,12 +1325,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions.ExtensionDomainRoleId) as AbstractElement;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Store.ElementHasExtensions.ExtensionDomainRoleId) as AbstractElement;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions.ExtensionDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Store.ElementHasExtensions.ExtensionDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1344,26 +1344,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts.ExtensionDomainRoleId) as View;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Store.ViewHasExtensionProducts.ExtensionDomainRoleId) as View;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts.ExtensionDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Store.ViewHasExtensionProducts.ExtensionDomainRoleId, value);
 			}
 		}
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// DomainClass View
 	/// A view of a product instance.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.View.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.View.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.View.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.View.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("f02be9bc-9733-4d6c-a35c-8460b2d6e310")]
 	public partial class View : InstanceBase
@@ -1404,12 +1404,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews.ViewDomainRoleId) as Product;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Store.ProductHasViews.ViewDomainRoleId) as Product;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductHasViews.ViewDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Store.ProductHasViews.ViewDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1424,7 +1424,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<AbstractElement>, AbstractElement>(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements.ViewDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AbstractElement>, AbstractElement>(global::NuPattern.Runtime.Store.ViewHasElements.ViewDomainRoleId);
 			}
 		}
 		#endregion
@@ -1439,7 +1439,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Product>, Product>(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts.ViewDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Product>, Product>(global::NuPattern.Runtime.Store.ViewHasExtensionProducts.ViewDomainRoleId);
 			}
 		}
 		#endregion
@@ -1463,7 +1463,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Store.Product.DomainClassId)) 
 				{
 					return true;
 				}
@@ -1492,7 +1492,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product sourceProduct1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product;
+			global::NuPattern.Runtime.Store.Product sourceProduct1 = sourceElement as global::NuPattern.Runtime.Store.Product;
 			if (sourceProduct1 != null)
 			{
 				// Create link for path ViewHasExtensionProducts.ExtensionProducts
@@ -1523,15 +1523,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product sourceProduct1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product;
+			global::NuPattern.Runtime.Store.Product sourceProduct1 = sourceElement as global::NuPattern.Runtime.Store.Product;
 			if (sourceProduct1 != null)
 			{
 				// Delete link for path ViewHasExtensionProducts.ExtensionProducts
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Store.View)this, sourceProduct1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Store.ViewHasExtensionProducts.GetLinks((global::NuPattern.Runtime.Store.View)this, sourceProduct1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts.ViewDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasExtensionProducts.ExtensionDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Store.ViewHasExtensionProducts.ViewDomainRoleId, global::NuPattern.Runtime.Store.ViewHasExtensionProducts.ExtensionDomainRoleId);
 				}
 
 				return;
@@ -1542,15 +1542,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// DomainClass AbstractElement
 	/// A child collection or element.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.AbstractElement.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.AbstractElement.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.AbstractElement.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.AbstractElement.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("fb175123-6a49-496b-88b4-4c82c6d2e6ca")]
 	public abstract partial class AbstractElement : ProductElement
@@ -1581,12 +1581,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements.AbstractElementDomainRoleId) as View;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Store.ViewHasElements.AbstractElementDomainRoleId) as View;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ViewHasElements.AbstractElementDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Store.ViewHasElements.AbstractElementDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1601,7 +1601,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<AbstractElement>, AbstractElement>(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements.ParentElementDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AbstractElement>, AbstractElement>(global::NuPattern.Runtime.Store.ElementHasChildElements.ParentElementDomainRoleId);
 			}
 		}
 		#endregion
@@ -1615,12 +1615,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements.ChildElementDomainRoleId) as AbstractElement;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Store.ElementHasChildElements.ChildElementDomainRoleId) as AbstractElement;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasChildElements.ChildElementDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Store.ElementHasChildElements.ChildElementDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1635,7 +1635,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Product>, Product>(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions.AbstractElementDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Product>, Product>(global::NuPattern.Runtime.Store.ElementHasExtensions.AbstractElementDomainRoleId);
 			}
 		}
 		#endregion
@@ -1659,7 +1659,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Store.Product.DomainClassId)) 
 				{
 					return true;
 				}
@@ -1688,7 +1688,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product sourceProduct1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product;
+			global::NuPattern.Runtime.Store.Product sourceProduct1 = sourceElement as global::NuPattern.Runtime.Store.Product;
 			if (sourceProduct1 != null)
 			{
 				// Create link for path ElementHasExtensions.ExtensionProducts
@@ -1719,15 +1719,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product sourceProduct1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Store.Product;
+			global::NuPattern.Runtime.Store.Product sourceProduct1 = sourceElement as global::NuPattern.Runtime.Store.Product;
 			if (sourceProduct1 != null)
 			{
 				// Delete link for path ElementHasExtensions.ExtensionProducts
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Store.AbstractElement)this, sourceProduct1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Store.ElementHasExtensions.GetLinks((global::NuPattern.Runtime.Store.AbstractElement)this, sourceProduct1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions.AbstractElementDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ElementHasExtensions.ExtensionDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Store.ElementHasExtensions.AbstractElementDomainRoleId, global::NuPattern.Runtime.Store.ElementHasExtensions.ExtensionDomainRoleId);
 				}
 
 				return;
@@ -1738,15 +1738,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// DomainClass InstanceBase
 	/// An element instance.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.InstanceBase.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.InstanceBase.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (DefinitionName = {DefinitionName})")]
 	[DslModeling::DomainObjectId("30b2207d-bb9a-456f-82ee-a116d74598ef")]
@@ -1785,8 +1785,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// The model element identifier in the owning definition.
 		/// </summary>
 		[Hidden()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/DefinitionId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/DefinitionId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.InstanceBase/DefinitionId.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.InstanceBase/DefinitionId.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("d029965b-4622-4b05-853b-95cc6d163e0b")]
@@ -1891,8 +1891,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// DefinitionId property.
 		/// </summary>
 		[Hidden()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/DefinitionName.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/DefinitionName.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.InstanceBase/DefinitionName.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.InstanceBase/DefinitionName.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[DslModeling::ElementName]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.CustomStorage)]
@@ -2008,9 +2008,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// Notes for this element.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(System.ComponentModel.Design.MultilineStringEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/Notes.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/Notes.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.InstanceBase/Notes.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.InstanceBase/Notes.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Store.InstanceBase/Notes.Category", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.InstanceBase/Notes.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("277f2180-34d8-49f7-a33b-0497da7c5cbc")]
 		public global::System.String Notes
 		{
@@ -2102,16 +2102,16 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// DomainClass Reference
 	/// A reference to external data or service.
 	/// </summary>
 	[System.ComponentModel.DefaultProperty("Kind")]
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Reference.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Reference.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Reference.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Reference.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Kind = {kindPropertyStorage})")]
 	[DslModeling::DomainObjectId("3fcc5eb5-c492-48ba-84a1-9172012c8f5f")]
@@ -2159,8 +2159,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// Gets or sets the value of Value domain property.
 		/// The value of the reference, having meaning to the kind of the reference.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Value.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Value.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Reference/Value.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Reference/Value.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("f7d5f1f0-6498-42a2-b0c4-622d3770af4d")]
 		public global::System.String Value
 		{
@@ -2268,8 +2268,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// type name of a class, then the class is used to provide the display
 		/// characteristics of this reference.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Kind.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Kind.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Reference/Kind.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Reference/Kind.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::ElementName]
 		[DslModeling::DomainObjectId("5b404e8a-2ac5-4470-950f-203b4e8099a6")]
 		public global::System.String Kind
@@ -2376,8 +2376,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// Gets or sets the value of Tag domain property.
 		/// Provides arbitrary annotations on a reference, typically used by automation.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Tag.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Store.Reference/Tag.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Reference/Tag.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Reference/Tag.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("304e2b4e-b105-47dd-bb81-027a220c37e2")]
 		public global::System.String Tag
 		{
@@ -2477,12 +2477,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ReferenceDomainRoleId) as ProductElement;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Store.ProductElementHasReferences.ReferenceDomainRoleId) as ProductElement;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ReferenceDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Store.ProductElementHasReferences.ReferenceDomainRoleId, value);
 			}
 		}
 		#endregion

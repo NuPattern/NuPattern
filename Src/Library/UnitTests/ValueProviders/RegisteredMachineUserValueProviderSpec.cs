@@ -1,9 +1,9 @@
-﻿using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.ValueProviders;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
+using NuPattern.Library.ValueProviders;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
+namespace NuPattern.Library.UnitTests.ValueProviders
 {
 	[TestClass]
 	public class RegisteredMachineUserValueProviderSpec

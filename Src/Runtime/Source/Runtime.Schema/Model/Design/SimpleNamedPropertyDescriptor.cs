@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Simple <see cref="PropertyDescriptor"/> for model elements.

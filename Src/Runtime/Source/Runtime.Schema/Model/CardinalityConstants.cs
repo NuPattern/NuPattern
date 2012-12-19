@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+﻿namespace NuPattern.Runtime.Schema
 {
     /// <summary>
 	/// Provides constants and helpers for managing Cardinality.

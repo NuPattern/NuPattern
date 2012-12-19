@@ -12,7 +12,7 @@ using System.Linq;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	
 	partial class ProductStateStoreDomainModel
@@ -302,7 +302,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 }
 
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	
 	partial class ProductStateStoreSerializationHelperBase
@@ -875,7 +875,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		/// <param name="modelRoot">Root instance to be saved.</param>
 		/// <param name="encoding">Encoding to use when saving the root instance.</param>
 		/// <returns>Model in XML form</returns>
-		public virtual string GetSerializedModelString(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductState modelRoot, global::System.Text.Encoding encoding)
+		public virtual string GetSerializedModelString(global::NuPattern.Runtime.Store.ProductState modelRoot, global::System.Text.Encoding encoding)
 		{
 			string result = string.Empty;
 			if (modelRoot == null)
@@ -1002,7 +1002,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public partial class ProductState

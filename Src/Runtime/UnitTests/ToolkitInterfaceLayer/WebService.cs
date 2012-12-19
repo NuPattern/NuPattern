@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
 namespace Toolkit14
 {
@@ -13,7 +13,7 @@ namespace Toolkit14
 	///	</summary>
 	[Description("Description for WebService")]
 	[PartCreationPolicy(CreationPolicy.NonShared)]
-    [ToolkitInterfaceProxy(ExtensionId = "The Outercurve Foundation", DefinitionId = "a7d76993-7a93-4bd1-b4f2-1e72af2796a2")]
+    [ToolkitInterfaceProxy(ExtensionId = "NuPattern", DefinitionId = "a7d76993-7a93-4bd1-b4f2-1e72af2796a2")]
 	internal partial class WebService : IWebService
 	{
 		private IProductProxy<IWebService> proxy;
@@ -67,9 +67,9 @@ namespace Toolkit14
 		}
 
 		///	<summary>
-		///	Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ProductElement
+		///	Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement
 		///	</summary>
-		[Description("Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ProductElement")]
+		[Description("Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement")]
 		public IEnumerable<IReference> References
 		{
 			get { return this.proxy.GetValue(() => this.References); }

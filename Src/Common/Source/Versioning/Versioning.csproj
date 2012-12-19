@@ -8,8 +8,8 @@
     <ProjectGuid>{AE530C9B-34B7-416F-8477-15B8257CDAC0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Versioning</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Versioning</AssemblyName>
+    <RootNamespace>NuPattern.Versioning</RootNamespace>
+    <AssemblyName>NuPattern.Versioning</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -24,6 +24,12 @@
   <ItemGroup>
     <None Include="..\..\..\..\Docs\Release Notes.docx">
       <Link>Docs\Release Notes.docx</Link>
+    </None>
+    <None Include="..\..\..\BuildConfiguration.CSharp.VsixProjects.gen.props">
+      <Link>BuildConfiguration.CSharp.VsixProjects.gen.props</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildConfiguration.CSharp.VsixProjects.tt</DependentUpon>
     </None>
     <None Include="..\..\..\MasterVersion.tt">
       <Link>MasterVersion.tt</Link>
@@ -70,6 +76,11 @@
     <None Include="..\..\..\VSGalleryInfo.docx">
       <Link>Docs\VSGalleryInfo.docx</Link>
     </None>
+    <None Include="..\..\..\BuildConfiguration.CSharp.VsixProjects.tt">
+      <Link>BuildConfiguration.CSharp.VsixProjects.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BuildConfiguration.CSharp.VsixProjects.gen.props</LastGenOutput>
+    </None>
     <None Include="Authoring.PatternToolkitVersion.gen.targets">
       <DependentUpon>Authoring.PatternToolkitVersion.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -80,15 +91,15 @@
       <LastGenOutput>Authoring.PatternToolkitVersion.gen.targets</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.gen.targets">
-      <DependentUpon>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.tt</DependentUpon>
+    <None Include="NuPattern.Authoring.PatternToolkit.gen.targets">
+      <DependentUpon>NuPattern.Authoring.PatternToolkit.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.tt">
+    <None Include="NuPattern.Authoring.PatternToolkit.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.gen.targets</LastGenOutput>
+      <LastGenOutput>NuPattern.Authoring.PatternToolkit.gen.targets</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

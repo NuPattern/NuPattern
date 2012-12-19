@@ -8,8 +8,8 @@
     <ProjectGuid>{0EF7E7D4-B10B-4FC9-B4D0-66E360F4338A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime.Store</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.Store</AssemblyName>
+    <RootNamespace>NuPattern.Runtime.Store</RootNamespace>
+    <AssemblyName>NuPattern.Runtime.Store</AssemblyName>
     <GacTargetOutput>false</GacTargetOutput>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>

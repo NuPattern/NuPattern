@@ -1,15 +1,15 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.References;
+using NuPattern.Library.Automation;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Store;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Guidance
+namespace NuPattern.Library.UnitTests.Automation.Guidance
 {
     [TestClass]
     public class GuidanceReferenceValidationSpec

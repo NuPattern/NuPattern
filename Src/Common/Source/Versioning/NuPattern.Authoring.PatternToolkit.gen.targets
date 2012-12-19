@@ -95,13 +95,13 @@
     </ItemGroup>
 
     <Message Condition="!Exists('$(PatternToolkitRuntimeDebugging)')"
-        Importance="High" Text="Copying VSIX dependencies to experimental instance for debugging -&gt; 'Pattern Toolkit Manager'" />
+        Importance="High" Text="Copying VSIX dependencies to experimental instance for debugging -&gt; 'NuPattern Toolkit Manager'" />
     <Copy Condition="!Exists('$(PatternToolkitRuntimeDebugging)')"
         SourceFiles="@(PatternToolkitRuntimeFiles)"
         DestinationFiles="@(PatternToolkitRuntimeFiles->'$(PatternToolkitRuntimeDebugging)\%(RecursiveDir)%(Filename)%(Extension)')"
         SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true"/>
     <Message Condition="!Exists('$(PatternToolkitRuntimeExtensionEnableRegVal)')"
-        Importance="High" Text="Enabling VSIX extension in experimental instance for debugging -&gt; 'Pattern Toolkit Manager'" />
+        Importance="High" Text="Enabling VSIX extension in experimental instance for debugging -&gt; 'NuPattern Toolkit Manager'" />
     <EnableExtension
         VsixIdentifier="c869918e-f94e-4e7a-ab25-b076ff4e751b"
         RootSuffix="$(VSSDKTargetPlatformRegRootSuffix)"

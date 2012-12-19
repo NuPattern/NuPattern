@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.IntegrationTests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.IntegrationTests;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests
 {
     [TestClass]
     public class RuntimeShellVsixPackagingSpec
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Runtime.IntegrationTests.Content";
-        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitManager.11.0.vsix";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\NuPatternToolkitManager.11.0.vsix";
 
         [TestClass]
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]
@@ -32,17 +32,17 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             {
                 //Identifier, Name, Author, Version
                 Assert.Equal(@"c869918e-f94e-4e7a-ab25-b076ff4e751b", this.VsixInfo.Header.Identifier);
-                Assert.Equal(@"Pattern Toolkit Manager", this.VsixInfo.Header.Name);
-                Assert.Equal(@"The Solution Builder tool window for accelerating solution development using Pattern Toolkit extensions.", this.VsixInfo.Header.Description);
-                Assert.Equal(@"Outercurve", this.VsixInfo.Header.Author);
+                Assert.Equal(@"NuPattern Toolkit Manager", this.VsixInfo.Header.Name);
+                Assert.Equal(@"Includes the 'Solution Builder' window, and automation framework for accelerating solution development using NuPattern Toolkit extensions.", this.VsixInfo.Header.Description);
+                Assert.Equal(@"NuPattern", this.VsixInfo.Header.Author);
                 Assert.Equal("1.3.20.0", this.VsixInfo.Header.Version.ToString());
 				
 				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
 				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
 				Assert.Equal(@"Resources\VsixIconRunTime.png", this.VsixInfo.Header.Icon);
 				Assert.Equal(@"Resources\VsixPreviewRunTime.png", this.VsixInfo.Header.PreviewImage);
-				Assert.Equal(new Uri(@"http://vspat.codeplex.com"), this.VsixInfo.Header.MoreInfoUrl);
-				Assert.Equal(new Uri(@"http://vspat.codeplex.com/wikipage?title=Getting%20Started"), this.VsixInfo.Header.GettingStartedGuide);
+				Assert.Equal(new Uri(@"http://nupattern.codeplex.com"), this.VsixInfo.Header.MoreInfoUrl);
+				Assert.Equal(new Uri(@"http://nupattern.codeplex.com/wikipage?title=Getting%20Started"), this.VsixInfo.Header.GettingStartedGuide);
 
                 //SupportedFrameworkRuntimeEdition
 #if VSVER10
@@ -129,27 +129,27 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
                             "Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll",
 
                             //Runtime Assemblies
-                            "Microsoft.VisualStudio.Patterning.Common.Presentation.dll",
-                            "Microsoft.VisualStudio.Patterning.Extensibility.dll",
-                            "Microsoft.VisualStudio.Patterning.Extensibility.Serialization.dll",
-                            "Microsoft.VisualStudio.Patterning.Library.dll",
-                            "Microsoft.VisualStudio.Patterning.Runtime.dll",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Schema.dll",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Shell.dll",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Shell.pkgdef",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Store.dll",
+                            "NuPattern.Common.Presentation.dll",
+                            "NuPattern.Extensibility.dll",
+                            "NuPattern.Extensibility.Serialization.dll",
+                            "NuPattern.Library.dll",
+                            "NuPattern.Runtime.dll",
+                            "NuPattern.Runtime.Interfaces.dll",
+                            "NuPattern.Runtime.Schema.dll",
+                            "NuPattern.Runtime.Shell.dll",
+                            "NuPattern.Runtime.Shell.pkgdef",
+                            "NuPattern.Runtime.Store.dll",
 
 							// XML documentation
-                            //"Microsoft.VisualStudio.Patterning.Common.Presentation.xml",
-                            "Microsoft.VisualStudio.Patterning.Extensibility.xml",
-                            //"Microsoft.VisualStudio.Patterning.Extensibility.Serialization.xml",
-                            "Microsoft.VisualStudio.Patterning.Library.xml",
-                            "Microsoft.VisualStudio.Patterning.Runtime.xml",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Interfaces.xml",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Schema.xml",
-                            //"Microsoft.VisualStudio.Patterning.Runtime.Shell.xml",
-                            //"Microsoft.VisualStudio.Patterning.Runtime.Store.xml",
+                            //"NuPattern.Common.Presentation.xml",
+                            "NuPattern.Extensibility.xml",
+                            //"NuPattern.Extensibility.Serialization.xml",
+                            "NuPattern.Library.xml",
+                            "NuPattern.Runtime.xml",
+                            "NuPattern.Runtime.Interfaces.xml",
+                            "NuPattern.Runtime.Schema.xml",
+                            //"NuPattern.Runtime.Shell.xml",
+                            //"NuPattern.Runtime.Store.xml",
                         }));
             }
         }

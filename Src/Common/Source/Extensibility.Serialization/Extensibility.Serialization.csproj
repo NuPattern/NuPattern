@@ -8,8 +8,8 @@
     <ProjectGuid>{B2B1ED0A-60E0-4A5C-822A-605527663E0B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Extensibility.Serialization</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Extensibility.Serialization</AssemblyName>
+    <RootNamespace>NuPattern.Extensibility.Serialization</RootNamespace>
+    <AssemblyName>NuPattern.Extensibility.Serialization</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>

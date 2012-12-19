@@ -10,7 +10,7 @@
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public abstract partial class PatternModelSchemaBase
@@ -26,15 +26,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
 					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
-						Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
 						"PatternModelSchema", "", "Pattern"),
 						"DSL0001", this);
 			}
 		} // ValidatePatternModelSchemaBaseMultiplicity
 	} // class PatternModelSchemaBase
-} // Microsoft.VisualStudio.Patterning.Runtime.Schema
+} // NuPattern.Runtime.Schema
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public partial class PatternSchema
@@ -50,15 +50,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
 					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
-						Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
 						"PatternSchema", this.Name, "Views"),
 						"DSL0001", this);
 			}
 		} // ValidatePatternSchemaMultiplicity
 	} // class PatternSchema
-} // Microsoft.VisualStudio.Patterning.Runtime.Schema
+} // NuPattern.Runtime.Schema
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public abstract partial class CustomizableElementSchemaBase
@@ -74,13 +74,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
 					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
-						Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
 						"CustomizableElementSchema", this.Name, "Policy"),
 						"DSL0001", this);
 			}
 		} // ValidateCustomizableElementSchemaBaseMultiplicity
 	} // class CustomizableElementSchemaBase
-} // Microsoft.VisualStudio.Patterning.Runtime.Schema
+} // NuPattern.Runtime.Schema
 
 	
  

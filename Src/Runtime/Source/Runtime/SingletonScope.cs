@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Remoting.Messaging;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// A scope that can only be set as active by the 

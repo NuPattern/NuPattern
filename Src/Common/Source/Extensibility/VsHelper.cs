@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Helper for common calling patterns in VS-COM.
@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 		{
 			object value = null;
 
-			if (ErrorHandler.Succeeded(handler(propId, out value)))
+			if (Microsoft.VisualStudio.ErrorHandler.Succeeded(handler(propId, out value)))
 			{
 				return (T)value;
 			}

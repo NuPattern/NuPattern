@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.SampleVsix
+namespace NuPattern.Runtime.IntegrationTests.SampleVsix
 {
 	/// <summary>
 	/// Sample event publisher.

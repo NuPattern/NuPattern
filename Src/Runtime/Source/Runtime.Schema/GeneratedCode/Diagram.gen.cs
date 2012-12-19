@@ -12,16 +12,16 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-[module: global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Scope = "type", Target = "Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram")]
+[module: global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Scope = "type", Target = "NuPattern.Runtime.Schema.PatternModelSchemaDiagram")]
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass PatternModelSchemaDiagram
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("bbbccbe0-cf42-4307-b8a3-d9ac6b7169ff")]
 	public abstract partial class PatternModelSchemaDiagramBase : DslDiagrams::Diagram
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 		#region Toolbox filters
 		private static global::System.ComponentModel.ToolboxItemFilterAttribute[] toolboxFilters = new global::System.ComponentModel.ToolboxItemFilterAttribute[] {
-					new global::System.ComponentModel.ToolboxItemFilterAttribute(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelToolboxHelperBase.ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) };
+					new global::System.ComponentModel.ToolboxItemFilterAttribute(global::NuPattern.Runtime.Schema.PatternModelToolboxHelperBase.ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) };
 		
 		/// <summary>
 		/// Toolbox item filter attributes for this diagram.
@@ -306,7 +306,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if (connector == null)
 				throw new global::System.ArgumentNullException("connector");
 			#endregion
-			if (connector.GetType() == typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementConnector))
+			if (connector.GetType() == typeof(global::NuPattern.Runtime.Schema.PatternElementConnector))
 				return false;
 			return base.IsConnectorMappedToLink(connector);
 		}
@@ -318,54 +318,54 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementSchema)
+			if(element is global::NuPattern.Runtime.Schema.ElementSchema)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape newShape = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape(this.Partition);
+				global::NuPattern.Runtime.Schema.ElementShape newShape = new global::NuPattern.Runtime.Schema.ElementShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionSchema)
+			if(element is global::NuPattern.Runtime.Schema.CollectionSchema)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape newShape = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape(this.Partition);
+				global::NuPattern.Runtime.Schema.CollectionShape newShape = new global::NuPattern.Runtime.Schema.CollectionShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema)
+			if(element is global::NuPattern.Runtime.Schema.PatternSchema)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape newShape = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape(this.Partition);
+				global::NuPattern.Runtime.Schema.PatternShape newShape = new global::NuPattern.Runtime.Schema.PatternShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema)
+			if(element is global::NuPattern.Runtime.Schema.ExtensionPointSchema)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape newShape = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape(this.Partition);
+				global::NuPattern.Runtime.Schema.ExtensionPointShape newShape = new global::NuPattern.Runtime.Schema.ExtensionPointShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema)
+			if(element is global::NuPattern.Runtime.Schema.ViewSchema)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape newShape = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape(this.Partition);
+				global::NuPattern.Runtime.Schema.ViewShape newShape = new global::NuPattern.Runtime.Schema.ViewShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements)
+			if(element is global::NuPattern.Runtime.Schema.ViewHasElements)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElementsConnector newShape = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElementsConnector(this.Partition);
+				global::NuPattern.Runtime.Schema.ViewHasElementsConnector newShape = new global::NuPattern.Runtime.Schema.ViewHasElementsConnector(this.Partition);
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements)
+			if(element is global::NuPattern.Runtime.Schema.ElementHasElements)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElementsConnector newShape = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElementsConnector(this.Partition);
+				global::NuPattern.Runtime.Schema.ElementHasElementsConnector newShape = new global::NuPattern.Runtime.Schema.ElementHasElementsConnector(this.Partition);
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints)
+			if(element is global::NuPattern.Runtime.Schema.ElementHasExtensionPoints)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPointsConnector newShape = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPointsConnector(this.Partition);
+				global::NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector newShape = new global::NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector(this.Partition);
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints)
+			if(element is global::NuPattern.Runtime.Schema.ViewHasExtensionPoints)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPointsConnector newShape = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPointsConnector(this.Partition);
+				global::NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector newShape = new global::NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector(this.Partition);
 				return newShape;
 			}
 			return base.CreateChildShape(element);
@@ -379,15 +379,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape.DecoratorsInitialized += PatternShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape.DecoratorsInitialized += ElementShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape.DecoratorsInitialized += CollectionShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape.DecoratorsInitialized += ExtensionPointShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape.DecoratorsInitialized += ViewShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElementsConnector.DecoratorsInitialized += ElementHasElementsConnectorDecoratorMap.OnDecoratorsInitialized;
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElementsConnector.DecoratorsInitialized += ViewHasElementsConnectorDecoratorMap.OnDecoratorsInitialized;
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPointsConnector.DecoratorsInitialized += ElementHasExtensionPointsConnectorDecoratorMap.OnDecoratorsInitialized;
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPointsConnector.DecoratorsInitialized += ViewHasExtensionPointsConnectorDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Runtime.Schema.PatternShape.DecoratorsInitialized += PatternShapeDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Runtime.Schema.ElementShape.DecoratorsInitialized += ElementShapeDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Runtime.Schema.CollectionShape.DecoratorsInitialized += CollectionShapeDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Runtime.Schema.ExtensionPointShape.DecoratorsInitialized += ExtensionPointShapeDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Runtime.Schema.ViewShape.DecoratorsInitialized += ViewShapeDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Runtime.Schema.ElementHasElementsConnector.DecoratorsInitialized += ElementHasElementsConnectorDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Runtime.Schema.ViewHasElementsConnector.DecoratorsInitialized += ViewHasElementsConnectorDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector.DecoratorsInitialized += ElementHasExtensionPointsConnectorDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector.DecoratorsInitialized += ViewHasExtensionPointsConnectorDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -405,34 +405,34 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.IsInheritedFromBaseDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.NamedElementSchema.IsInheritedFromBaseDomainPropertyId);
 				propertyInfo.FilteringValues.Add("True");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "InheritedFromBaseDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("FalseDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationFalseDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("FalseEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationFalseEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("InheritedDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationInheritedDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("InheritedEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationInheritedEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("TrueDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationTrueDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("TrueEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationTrueEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 			}
@@ -466,34 +466,34 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("FalseDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationFalseDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("FalseEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationFalseEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("InheritedDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationInheritedDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("InheritedEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationInheritedEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("TrueDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationTrueDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("TrueEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationTrueEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.IsInheritedFromBaseDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.NamedElementSchema.IsInheritedFromBaseDomainPropertyId);
 				propertyInfo.FilteringValues.Add("True");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "InheritedFromBaseDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 			}
@@ -514,34 +514,34 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("FalseDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationFalseDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("FalseEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationFalseEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("InheritedDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationInheritedDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("InheritedEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationInheritedEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("TrueDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationTrueDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("TrueEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationTrueEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.IsInheritedFromBaseDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.NamedElementSchema.IsInheritedFromBaseDomainPropertyId);
 				propertyInfo.FilteringValues.Add("True");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "InheritedFromBaseDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 			}
@@ -562,34 +562,34 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("FalseDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationFalseDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("FalseEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationFalseEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("InheritedDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationInheritedDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("InheritedEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationInheritedEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("TrueDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationTrueDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("TrueEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationTrueEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.IsInheritedFromBaseDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.NamedElementSchema.IsInheritedFromBaseDomainPropertyId);
 				propertyInfo.FilteringValues.Add("True");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "InheritedFromBaseDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 			}
@@ -608,34 +608,34 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.IsInheritedFromBaseDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.NamedElementSchema.IsInheritedFromBaseDomainPropertyId);
 				propertyInfo.FilteringValues.Add("True");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "InheritedFromBaseDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("FalseDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationFalseDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("FalseEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationFalseEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("InheritedDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationInheritedDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("InheritedEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationInheritedEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("TrueDisabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationTrueDisabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.CustomizableElementSchema.IsCustomizationEnabledStateDomainPropertyId);
 				propertyInfo.FilteringValues.Add("TrueEnabled");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CustomizationTrueEnabledDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 			}
@@ -654,10 +654,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ElementHasElements.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ElementHasElements.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -675,16 +675,16 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ViewHasElements.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ViewHasElements.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ViewHasElements.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ViewHasElements.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -702,16 +702,16 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -729,13 +729,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.CardinalityCaptionDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.CardinalityCaptionDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardinalityDecorator").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -796,9 +796,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		
 		#region Toolbox actions
 		private bool changingMouseAction;
-		private global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionCreateAction collectionCreateAction;
-		private global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementCreateAction elementCreateAction;
-		private global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointCreateAction extensionPointCreateAction;
+		private global::NuPattern.Runtime.Schema.CollectionCreateAction collectionCreateAction;
+		private global::NuPattern.Runtime.Schema.ElementCreateAction elementCreateAction;
+		private global::NuPattern.Runtime.Schema.ExtensionPointCreateAction extensionPointCreateAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -833,31 +833,31 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				}
 		
 				DslDiagrams::MouseAction action = null;
-				if (SelectedToolboxItemSupportsFilterString(activeView, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelToolboxHelper.CollectionFilterString))
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::NuPattern.Runtime.Schema.PatternModelToolboxHelper.CollectionFilterString))
 				{
 					if (this.collectionCreateAction == null)
 					{
-						this.collectionCreateAction = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionCreateAction(this);
+						this.collectionCreateAction = new global::NuPattern.Runtime.Schema.CollectionCreateAction(this);
 						this.collectionCreateAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnToolboxActionDeactivated);
 					}
 					this.collectionCreateAction.StickyMode = stickyMode;
 					action = this.collectionCreateAction;
 				}
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelToolboxHelper.ElementFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::NuPattern.Runtime.Schema.PatternModelToolboxHelper.ElementFilterString))
 				{
 					if (this.elementCreateAction == null)
 					{
-						this.elementCreateAction = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementCreateAction(this);
+						this.elementCreateAction = new global::NuPattern.Runtime.Schema.ElementCreateAction(this);
 						this.elementCreateAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnToolboxActionDeactivated);
 					}
 					this.elementCreateAction.StickyMode = stickyMode;
 					action = this.elementCreateAction;
 				}
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelToolboxHelper.ExtensionPointFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::NuPattern.Runtime.Schema.PatternModelToolboxHelper.ExtensionPointFilterString))
 				{
 					if (this.extensionPointCreateAction == null)
 					{
-						this.extensionPointCreateAction = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointCreateAction(this);
+						this.extensionPointCreateAction = new global::NuPattern.Runtime.Schema.ExtensionPointCreateAction(this);
 						this.extensionPointCreateAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnToolboxActionDeactivated);
 					}
 					this.extensionPointCreateAction.StickyMode = stickyMode;
@@ -975,8 +975,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of AuthoringGradientColor domain property.
 		/// The color of the gradient in the title of the background.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/AuthoringGradientColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/AuthoringGradientColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringGradientColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringGradientColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "WhiteSmoke")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1063,11 +1063,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		
 		/// <summary>
 		/// Gets or sets the value of AuthoringBackgroundColor domain property.
-		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram.Authoring Background Color
+		/// Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram.Authoring
+		/// Background Color
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/AuthoringBackgroundColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/AuthoringBackgroundColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringBackgroundColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringBackgroundColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "White")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1156,8 +1156,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of AuthoringTitleTextColor domain property.
 		/// The color of the text of the diagram title.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/AuthoringTitleTextColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/AuthoringTitleTextColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringTitleTextColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringTitleTextColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "DarkGray")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1246,8 +1246,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringGradientColor domain property.
 		/// The color of the gradient in the title of the background.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/TailoringGradientColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/TailoringGradientColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringGradientColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringGradientColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "WhiteSmoke")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1334,11 +1334,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		
 		/// <summary>
 		/// Gets or sets the value of TailoringBackgroundColor domain property.
-		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram.Tailoring Background Color
+		/// Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram.Tailoring
+		/// Background Color
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/TailoringBackgroundColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/TailoringBackgroundColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringBackgroundColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringBackgroundColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "204, 204, 204")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1427,8 +1427,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringTitleTextColor domain property.
 		/// The color of the text of the diagram title.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/TailoringTitleTextColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/TailoringTitleTextColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringTitleTextColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringTitleTextColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "DarkGray")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1517,9 +1517,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of ShowHiddenEntries domain property.
 		/// Whether to display the hidden items on this model.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/ShowHiddenEntries.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/ShowHiddenEntries.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram/ShowHiddenEntries.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/ShowHiddenEntries.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/ShowHiddenEntries.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram/ShowHiddenEntries.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("6c89c15a-5ef2-4026-9c1f-28b5c415cfe1")]
 		public global::System.Boolean ShowHiddenEntries
 		{
@@ -1592,8 +1592,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 	/// <summary>
 	/// DomainClass PatternModelSchemaDiagram
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram
+	/// Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 			
@@ -1622,7 +1621,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	
 		/// <summary>
@@ -1640,15 +1639,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority + 1, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.CollectionSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PatternSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ExtensionPointSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ViewSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority + 1, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ViewHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ViewHasExtensionPoints), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -1664,46 +1663,46 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementSchema)
+				if(childElement is global::NuPattern.Runtime.Schema.ElementSchema)
 				{
 					// Method:
 					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForElementSchema(ElementSchema childElement)
 					// {
 					// }
-					// must be implemented in a partial class of Microsoft.VisualStudio.Patterning.Runtime.Schema.FixUpDiagram.  Given a child element,
+					// must be implemented in a partial class of NuPattern.Runtime.Schema.FixUpDiagram.  Given a child element,
 					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
 					// of the shape created for this child.  If no shape should be created, the method should return null.
-					parentElement = GetParentForElementSchema((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementSchema)childElement);
+					parentElement = GetParentForElementSchema((global::NuPattern.Runtime.Schema.ElementSchema)childElement);
 				} else
-				if(childElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionSchema)
+				if(childElement is global::NuPattern.Runtime.Schema.CollectionSchema)
 				{
 					// Method:
 					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForCollectionSchema(CollectionSchema childElement)
 					// {
 					// }
-					// must be implemented in a partial class of Microsoft.VisualStudio.Patterning.Runtime.Schema.FixUpDiagram.  Given a child element,
+					// must be implemented in a partial class of NuPattern.Runtime.Schema.FixUpDiagram.  Given a child element,
 					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
 					// of the shape created for this child.  If no shape should be created, the method should return null.
-					parentElement = GetParentForCollectionSchema((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionSchema)childElement);
+					parentElement = GetParentForCollectionSchema((global::NuPattern.Runtime.Schema.CollectionSchema)childElement);
 				} else
-				if(childElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema)
+				if(childElement is global::NuPattern.Runtime.Schema.PatternSchema)
 				{
-					parentElement = GetParentForPatternSchema((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema)childElement);
+					parentElement = GetParentForPatternSchema((global::NuPattern.Runtime.Schema.PatternSchema)childElement);
 				} else
-				if(childElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema)
+				if(childElement is global::NuPattern.Runtime.Schema.ExtensionPointSchema)
 				{
 					// Method:
 					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForExtensionPointSchema(ExtensionPointSchema childElement)
 					// {
 					// }
-					// must be implemented in a partial class of Microsoft.VisualStudio.Patterning.Runtime.Schema.FixUpDiagram.  Given a child element,
+					// must be implemented in a partial class of NuPattern.Runtime.Schema.FixUpDiagram.  Given a child element,
 					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
 					// of the shape created for this child.  If no shape should be created, the method should return null.
-					parentElement = GetParentForExtensionPointSchema((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema)childElement);
+					parentElement = GetParentForExtensionPointSchema((global::NuPattern.Runtime.Schema.ExtensionPointSchema)childElement);
 				} else
-				if(childElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema)
+				if(childElement is global::NuPattern.Runtime.Schema.ViewSchema)
 				{
-					parentElement = GetParentForViewSchema((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema)childElement);
+					parentElement = GetParentForViewSchema((global::NuPattern.Runtime.Schema.ViewSchema)childElement);
 				} else
 				{
 					parentElement = null;
@@ -1714,17 +1713,17 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema GetParentForPatternSchema( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema root )
+			public static global::NuPattern.Runtime.Schema.PatternModelSchema GetParentForPatternSchema( global::NuPattern.Runtime.Schema.PatternSchema root )
 			{
 				// Segments 0 and 1
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema result = root.PatternModel;
+				global::NuPattern.Runtime.Schema.PatternModelSchema result = root.PatternModel;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema GetParentForViewSchema( global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema root )
+			public static global::NuPattern.Runtime.Schema.PatternSchema GetParentForViewSchema( global::NuPattern.Runtime.Schema.ViewSchema root )
 			{
 				// Segments 0 and 1
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema result = root.Pattern;
+				global::NuPattern.Runtime.Schema.PatternSchema result = root.Pattern;
 				if ( result == null ) return null;
 				return result;
 			}
@@ -1816,8 +1815,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Rule to update compartments when an item is added to the list
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemAddRule : DslModeling::AddRule
 		{
 			/// <summary>
@@ -1834,196 +1833,196 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				if(e==null) throw new global::System.ArgumentNullException("e");
 				if (e.ModelElement.IsDeleted)
 					return;
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasProperties)
 				{
-					global::System.Collections.IEnumerable elements = GetPatternSchemaForPatternShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Properties", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetPatternSchemaForPatternShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Properties", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.IEnumerable elements = GetPatternSchemaForPatternShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Automation", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetPatternSchemaForPatternShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Automation", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.IEnumerable elements = GetPatternSchemaForPatternShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetPatternSchemaForPatternShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasProperties)
 				{
-					global::System.Collections.IEnumerable elements = GetElementSchemaForElementShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Properties", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetElementSchemaForElementShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Properties", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.IEnumerable elements = GetElementSchemaForElementShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Automation", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetElementSchemaForElementShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Automation", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.IEnumerable elements = GetElementSchemaForElementShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetElementSchemaForElementShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.IEnumerable elements = GetCollectionSchemaForCollectionShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetCollectionSchemaForCollectionShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasProperties)
 				{
-					global::System.Collections.IEnumerable elements = GetCollectionSchemaForCollectionShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetCollectionSchemaForCollectionShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.IEnumerable elements = GetCollectionSchemaForCollectionShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetCollectionSchemaForCollectionShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasProperties)
 				{
-					global::System.Collections.IEnumerable elements = GetExtensionPointSchemaForExtensionPointShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetExtensionPointSchemaForExtensionPointShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
 				}
 			}
 			
 			#region static DomainPath traversal methods to get the list of compartments to update
-			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapePropertiesFromLastLink(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties root)
+			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapePropertiesFromLastLink(global::NuPattern.Runtime.Schema.PatternElementHasProperties root)
 			{
 				// Segment 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapeProperties(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema root)
+			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapeProperties(global::NuPattern.Runtime.Schema.PropertySchema root)
 			{
 				// Segments 1 and 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.Owner;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.Owner;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapeAutomationFromLastLink(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings root)
+			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapeAutomationFromLastLink(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings root)
 			{
 				// Segment 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapeAutomation(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema root)
+			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapeAutomation(global::NuPattern.Runtime.Schema.AutomationSettingsSchema root)
 			{
 				// Segments 1 and 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.Owner;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.Owner;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapeLaunchPointsFromLastLink(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings root)
+			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapeLaunchPointsFromLastLink(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings root)
 			{
 				// Segment 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapeLaunchPoints(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema root)
+			internal static global::System.Collections.ICollection GetPatternSchemaForPatternShapeLaunchPoints(global::NuPattern.Runtime.Schema.AutomationSettingsSchema root)
 			{
 				// Segments 1 and 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.Owner;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.Owner;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetElementSchemaForElementShapePropertiesFromLastLink(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties root)
+			internal static global::System.Collections.ICollection GetElementSchemaForElementShapePropertiesFromLastLink(global::NuPattern.Runtime.Schema.PatternElementHasProperties root)
 			{
 				// Segment 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetElementSchemaForElementShapeProperties(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema root)
+			internal static global::System.Collections.ICollection GetElementSchemaForElementShapeProperties(global::NuPattern.Runtime.Schema.PropertySchema root)
 			{
 				// Segments 1 and 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.Owner;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.Owner;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetElementSchemaForElementShapeAutomationFromLastLink(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings root)
+			internal static global::System.Collections.ICollection GetElementSchemaForElementShapeAutomationFromLastLink(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings root)
 			{
 				// Segment 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetElementSchemaForElementShapeAutomation(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema root)
+			internal static global::System.Collections.ICollection GetElementSchemaForElementShapeAutomation(global::NuPattern.Runtime.Schema.AutomationSettingsSchema root)
 			{
 				// Segments 1 and 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.Owner;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.Owner;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetElementSchemaForElementShapeLaunchPointsFromLastLink(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings root)
+			internal static global::System.Collections.ICollection GetElementSchemaForElementShapeLaunchPointsFromLastLink(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings root)
 			{
 				// Segment 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetElementSchemaForElementShapeLaunchPoints(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema root)
+			internal static global::System.Collections.ICollection GetElementSchemaForElementShapeLaunchPoints(global::NuPattern.Runtime.Schema.AutomationSettingsSchema root)
 			{
 				// Segments 1 and 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.Owner;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.Owner;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapeLaunchPointsFromLastLink(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings root)
+			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapeLaunchPointsFromLastLink(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings root)
 			{
 				// Segment 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapeLaunchPoints(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema root)
+			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapeLaunchPoints(global::NuPattern.Runtime.Schema.AutomationSettingsSchema root)
 			{
 				// Segments 1 and 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.Owner;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.Owner;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapePropertiesFromLastLink(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties root)
+			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapePropertiesFromLastLink(global::NuPattern.Runtime.Schema.PatternElementHasProperties root)
 			{
 				// Segment 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapeProperties(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema root)
+			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapeProperties(global::NuPattern.Runtime.Schema.PropertySchema root)
 			{
 				// Segments 1 and 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.Owner;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.Owner;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapeAutomationFromLastLink(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings root)
+			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapeAutomationFromLastLink(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings root)
 			{
 				// Segment 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapeAutomation(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema root)
+			internal static global::System.Collections.ICollection GetCollectionSchemaForCollectionShapeAutomation(global::NuPattern.Runtime.Schema.AutomationSettingsSchema root)
 			{
 				// Segments 1 and 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.Owner;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.Owner;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetExtensionPointSchemaForExtensionPointShapePropertiesFromLastLink(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties root)
+			internal static global::System.Collections.ICollection GetExtensionPointSchemaForExtensionPointShapePropertiesFromLastLink(global::NuPattern.Runtime.Schema.PatternElementHasProperties root)
 			{
 				// Segment 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.PatternElementSchema;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetExtensionPointSchemaForExtensionPointShapeProperties(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema root)
+			internal static global::System.Collections.ICollection GetExtensionPointSchemaForExtensionPointShapeProperties(global::NuPattern.Runtime.Schema.PropertySchema root)
 			{
 				// Segments 1 and 0
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema result = root.Owner;
+				global::NuPattern.Runtime.Schema.PatternElementSchema result = root.Owner;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
@@ -2072,8 +2071,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Rule to update compartments when an items is removed from the list
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemDeleteRule : DslModeling::DeleteRule
 		{
 			/// <summary>
@@ -2088,55 +2087,55 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			internal static void ElementDeleted(DslModeling::ElementDeletedEventArgs e, bool repaintOnly)
 			{
 				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasProperties)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Properties", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Properties", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Automation", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Automation", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasProperties)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetElementSchemaForElementShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Properties", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetElementSchemaForElementShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Properties", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Automation", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Automation", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasProperties)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PatternElementHasProperties)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
 				}
 			}
 		}
@@ -2144,8 +2143,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Rule to update compartments when the property on an item being displayed changes.
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PropertySchema), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.AutomationSettingsSchema), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemChangeRule : DslModeling::ChangeRule 
 		{
 			/// <summary>
@@ -2160,55 +2159,55 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			internal static void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e, bool repaintOnly)
 			{
 				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema && e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.NameDomainPropertyId)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PropertySchema && e.DomainProperty.Id == global::NuPattern.Runtime.Schema.PropertySchema.NameDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Properties", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Properties", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::NuPattern.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomation((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Automation", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomation((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Automation", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::NuPattern.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPoints((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPoints((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema && e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.NameDomainPropertyId)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PropertySchema && e.DomainProperty.Id == global::NuPattern.Runtime.Schema.PropertySchema.NameDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Properties", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Properties", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::NuPattern.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomation((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Automation", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomation((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Automation", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::NuPattern.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPoints((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPoints((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::NuPattern.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPoints((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPoints((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema && e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.NameDomainPropertyId)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PropertySchema && e.DomainProperty.Id == global::NuPattern.Runtime.Schema.PropertySchema.NameDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.AutomationSettingsSchema && e.DomainProperty.Id == global::NuPattern.Runtime.Schema.AutomationSettingsSchema.NameDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomation((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomation((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
 				}
-				if(e.ModelElement is global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema && e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.NameDomainPropertyId)
+				if(e.ModelElement is global::NuPattern.Runtime.Schema.PropertySchema && e.DomainProperty.Id == global::NuPattern.Runtime.Schema.PropertySchema.NameDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
 				}
 			}
 		}
@@ -2216,8 +2215,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Rule to update compartments when a roleplayer change happens
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemRolePlayerChangeRule : DslModeling::RolePlayerChangeRule 
 		{
 			/// <summary>
@@ -2232,17 +2231,17 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			internal static void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e, bool repaintOnly)
 			{
 				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(e.DomainRole.IsSource)
 					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetPatternSchemaForPatternShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.OldRolePlayer);
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetPatternSchemaForPatternShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PropertySchema)e.OldRolePlayer);
 						//foreach(DslModeling::ModelElement element in oldElements)
 						//{
 						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
 						//	foreach(DslDiagrams::PresentationElement pel in pels)
 						//	{
-						//		global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape compartmentShape = pel as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape;
+						//		global::NuPattern.Runtime.Schema.PatternShape compartmentShape = pel as global::NuPattern.Runtime.Schema.PatternShape;
 						//		if(compartmentShape != null)
 						//		{
 						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
@@ -2250,26 +2249,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 						//	}
 						//}
 						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Properties", repaintOnly);
 					}
 					else 
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Properties", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(e.DomainRole.IsSource)
 					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
 						//foreach(DslModeling::ModelElement element in oldElements)
 						//{
 						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
 						//	foreach(DslDiagrams::PresentationElement pel in pels)
 						//	{
-						//		global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape compartmentShape = pel as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape;
+						//		global::NuPattern.Runtime.Schema.PatternShape compartmentShape = pel as global::NuPattern.Runtime.Schema.PatternShape;
 						//		if(compartmentShape != null)
 						//		{
 						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
@@ -2277,26 +2276,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 						//	}
 						//}
 						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Automation", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Automation", repaintOnly);
 					}
 					else 
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomation((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Automation", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomation((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Automation", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(e.DomainRole.IsSource)
 					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
 						//foreach(DslModeling::ModelElement element in oldElements)
 						//{
 						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
 						//	foreach(DslDiagrams::PresentationElement pel in pels)
 						//	{
-						//		global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape compartmentShape = pel as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape;
+						//		global::NuPattern.Runtime.Schema.PatternShape compartmentShape = pel as global::NuPattern.Runtime.Schema.PatternShape;
 						//		if(compartmentShape != null)
 						//		{
 						//			compartmentShape.GetCompartmentMappings()[2].InitializeCompartmentShape(compartmentShape);
@@ -2304,26 +2303,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 						//	}
 						//}
 						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
 					}
 					else 
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPoints((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPoints((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(e.DomainRole.IsSource)
 					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetElementSchemaForElementShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.OldRolePlayer);
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetElementSchemaForElementShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PropertySchema)e.OldRolePlayer);
 						//foreach(DslModeling::ModelElement element in oldElements)
 						//{
 						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
 						//	foreach(DslDiagrams::PresentationElement pel in pels)
 						//	{
-						//		global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape compartmentShape = pel as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape;
+						//		global::NuPattern.Runtime.Schema.ElementShape compartmentShape = pel as global::NuPattern.Runtime.Schema.ElementShape;
 						//		if(compartmentShape != null)
 						//		{
 						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
@@ -2331,26 +2330,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 						//	}
 						//}
 						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Properties", repaintOnly);
 					}
 					else 
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Properties", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(e.DomainRole.IsSource)
 					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
 						//foreach(DslModeling::ModelElement element in oldElements)
 						//{
 						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
 						//	foreach(DslDiagrams::PresentationElement pel in pels)
 						//	{
-						//		global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape compartmentShape = pel as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape;
+						//		global::NuPattern.Runtime.Schema.ElementShape compartmentShape = pel as global::NuPattern.Runtime.Schema.ElementShape;
 						//		if(compartmentShape != null)
 						//		{
 						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
@@ -2358,26 +2357,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 						//	}
 						//}
 						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Automation", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Automation", repaintOnly);
 					}
 					else 
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomation((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Automation", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomation((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Automation", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(e.DomainRole.IsSource)
 					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
 						//foreach(DslModeling::ModelElement element in oldElements)
 						//{
 						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
 						//	foreach(DslDiagrams::PresentationElement pel in pels)
 						//	{
-						//		global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape compartmentShape = pel as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape;
+						//		global::NuPattern.Runtime.Schema.ElementShape compartmentShape = pel as global::NuPattern.Runtime.Schema.ElementShape;
 						//		if(compartmentShape != null)
 						//		{
 						//			compartmentShape.GetCompartmentMappings()[2].InitializeCompartmentShape(compartmentShape);
@@ -2385,26 +2384,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 						//	}
 						//}
 						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
 					}
 					else 
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPoints((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPoints((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(e.DomainRole.IsSource)
 					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
 						//foreach(DslModeling::ModelElement element in oldElements)
 						//{
 						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
 						//	foreach(DslDiagrams::PresentationElement pel in pels)
 						//	{
-						//		global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape compartmentShape = pel as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape;
+						//		global::NuPattern.Runtime.Schema.CollectionShape compartmentShape = pel as global::NuPattern.Runtime.Schema.CollectionShape;
 						//		if(compartmentShape != null)
 						//		{
 						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
@@ -2412,26 +2411,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 						//	}
 						//}
 						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPointsFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPointsFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
 					}
 					else 
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPoints((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPoints((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(e.DomainRole.IsSource)
 					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.OldRolePlayer);
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PropertySchema)e.OldRolePlayer);
 						//foreach(DslModeling::ModelElement element in oldElements)
 						//{
 						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
 						//	foreach(DslDiagrams::PresentationElement pel in pels)
 						//	{
-						//		global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape compartmentShape = pel as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape;
+						//		global::NuPattern.Runtime.Schema.CollectionShape compartmentShape = pel as global::NuPattern.Runtime.Schema.CollectionShape;
 						//		if(compartmentShape != null)
 						//		{
 						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
@@ -2439,26 +2438,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 						//	}
 						//}
 						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
 					}
 					else 
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(e.DomainRole.IsSource)
 					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.OldRolePlayer);
 						//foreach(DslModeling::ModelElement element in oldElements)
 						//{
 						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
 						//	foreach(DslDiagrams::PresentationElement pel in pels)
 						//	{
-						//		global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape compartmentShape = pel as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape;
+						//		global::NuPattern.Runtime.Schema.CollectionShape compartmentShape = pel as global::NuPattern.Runtime.Schema.CollectionShape;
 						//		if(compartmentShape != null)
 						//		{
 						//			compartmentShape.GetCompartmentMappings()[2].InitializeCompartmentShape(compartmentShape);
@@ -2466,26 +2465,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 						//	}
 						//}
 						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomationFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomationFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
 					}
 					else 
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomation((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomation((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(e.DomainRole.IsSource)
 					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.OldRolePlayer);
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PropertySchema)e.OldRolePlayer);
 						//foreach(DslModeling::ModelElement element in oldElements)
 						//{
 						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
 						//	foreach(DslDiagrams::PresentationElement pel in pels)
 						//	{
-						//		global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape compartmentShape = pel as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape;
+						//		global::NuPattern.Runtime.Schema.ExtensionPointShape compartmentShape = pel as global::NuPattern.Runtime.Schema.ExtensionPointShape;
 						//		if(compartmentShape != null)
 						//		{
 						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
@@ -2493,13 +2492,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 						//	}
 						//}
 						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapePropertiesFromLastLink((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapePropertiesFromLastLink((global::NuPattern.Runtime.Schema.PatternElementHasProperties)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
 					}
 					else 
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
 					}
 				}
 			}
@@ -2508,8 +2507,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Rule to update compartments when the order of items in the list changes.
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemRolePlayerPositionChangeRule : DslModeling::RolePlayerPositionChangeRule 
 		{
 			/// <summary>
@@ -2524,84 +2523,84 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			internal static void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e, bool repaintOnly)
 			{
 				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Properties", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomation((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "Automation", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeAutomation((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "Automation", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPoints((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetPatternSchemaForPatternShapeLaunchPoints((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.PatternShape), "LaunchPoints", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Properties", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomation((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "Automation", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeAutomation((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "Automation", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPoints((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetElementSchemaForElementShapeLaunchPoints((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ElementShape), "LaunchPoints", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPoints((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeLaunchPoints((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "LaunchPoints", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Properties", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomation((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetCollectionSchemaForCollectionShapeAutomation((global::NuPattern.Runtime.Schema.AutomationSettingsSchema)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.CollectionShape), "Automation", repaintOnly);
 					}
 				}
-				if(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::NuPattern.Runtime.Schema.PatternElementHasProperties).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapeProperties((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetExtensionPointSchemaForExtensionPointShapeProperties((global::NuPattern.Runtime.Schema.PropertySchema)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::NuPattern.Runtime.Schema.ExtensionPointShape), "Properties", repaintOnly);
 					}
 				}
 			}
@@ -2611,10 +2610,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// A rule which fires when data mapped to outer text decorators has changed,
 		/// so we can update the decorator host's bounds.
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements), InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements), InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints), InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints), InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ViewHasElements), InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementHasElements), InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints), InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ViewHasExtensionPoints), InitiallyDisabled=true)]
 		internal sealed class DecoratorPropertyChanged : DslModeling::ChangeRule
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
@@ -2622,81 +2621,81 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				if(e == null) throw new global::System.ArgumentNullException("e");
 				
-				if (e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.CardinalityCaptionDomainPropertyId)
+				if (e.DomainProperty.Id == global::NuPattern.Runtime.Schema.ViewHasElements.CardinalityCaptionDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElementsConnector.FindViewHasElementsConnectorDecorator("CardinalityDecorator");
+					DslDiagrams::Decorator decorator = global::NuPattern.Runtime.Schema.ViewHasElementsConnector.FindViewHasElementsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ViewHasElements.DomainClassId);
 					}
-					decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElementsConnector.FindViewHasElementsConnectorDecorator("CardinalityDecorator");
+					decorator = global::NuPattern.Runtime.Schema.ViewHasElementsConnector.FindViewHasElementsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ViewHasElements.DomainClassId);
 					}
-					decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElementsConnector.FindViewHasElementsConnectorDecorator("CardinalityDecorator");
+					decorator = global::NuPattern.Runtime.Schema.ViewHasElementsConnector.FindViewHasElementsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ViewHasElements.DomainClassId);
 					}
-					decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElementsConnector.FindViewHasElementsConnectorDecorator("CardinalityDecorator");
+					decorator = global::NuPattern.Runtime.Schema.ViewHasElementsConnector.FindViewHasElementsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ViewHasElements.DomainClassId);
 					}
 				}
-				else if (e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.CardinalityCaptionDomainPropertyId)
+				else if (e.DomainProperty.Id == global::NuPattern.Runtime.Schema.ElementHasElements.CardinalityCaptionDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElementsConnector.FindElementHasElementsConnectorDecorator("CardinalityDecorator");
+					DslDiagrams::Decorator decorator = global::NuPattern.Runtime.Schema.ElementHasElementsConnector.FindElementHasElementsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ElementHasElements.DomainClassId);
 					}
-					decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElementsConnector.FindElementHasElementsConnectorDecorator("CardinalityDecorator");
+					decorator = global::NuPattern.Runtime.Schema.ElementHasElementsConnector.FindElementHasElementsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ElementHasElements.DomainClassId);
 					}
 				}
-				else if (e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.CardinalityCaptionDomainPropertyId)
+				else if (e.DomainProperty.Id == global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.CardinalityCaptionDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPointsConnector.FindElementHasExtensionPointsConnectorDecorator("CardinalityDecorator");
+					DslDiagrams::Decorator decorator = global::NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector.FindElementHasExtensionPointsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.DomainClassId);
 					}
-					decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPointsConnector.FindElementHasExtensionPointsConnectorDecorator("CardinalityDecorator");
+					decorator = global::NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector.FindElementHasExtensionPointsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.DomainClassId);
 					}
-					decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPointsConnector.FindElementHasExtensionPointsConnectorDecorator("CardinalityDecorator");
+					decorator = global::NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector.FindElementHasExtensionPointsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.DomainClassId);
 					}
-					decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPointsConnector.FindElementHasExtensionPointsConnectorDecorator("CardinalityDecorator");
+					decorator = global::NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector.FindElementHasExtensionPointsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.DomainClassId);
 					}
 				}
-				else if (e.DomainProperty.Id == global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.CardinalityCaptionDomainPropertyId)
+				else if (e.DomainProperty.Id == global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.CardinalityCaptionDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPointsConnector.FindViewHasExtensionPointsConnectorDecorator("CardinalityDecorator");
+					DslDiagrams::Decorator decorator = global::NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector.FindViewHasExtensionPointsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.DomainClassId);
 					}
-					decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPointsConnector.FindViewHasExtensionPointsConnectorDecorator("CardinalityDecorator");
+					decorator = global::NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector.FindViewHasExtensionPointsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.DomainClassId);
 					}
-					decorator = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPointsConnector.FindViewHasExtensionPointsConnectorDecorator("CardinalityDecorator");
+					decorator = global::NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector.FindViewHasExtensionPointsConnectorDecorator("CardinalityDecorator");
 					if(decorator != null)
 					{
-						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.DomainClassId);
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.DomainClassId);
 					}
 				}
 			}
@@ -2705,10 +2704,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ViewHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ViewHasExtensionPoints), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>
@@ -2725,7 +2724,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					DslDiagrams::BinaryLinkShape linkShape = connectorLink.Presentation as DslDiagrams::BinaryLinkShape;
 					if (linkShape != null)
 					{
-						global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram diagram = linkShape.Diagram as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram;
+						global::NuPattern.Runtime.Schema.PatternModelSchemaDiagram diagram = linkShape.Diagram as global::NuPattern.Runtime.Schema.PatternModelSchemaDiagram;
 						if (diagram != null)
 						{
 							if (e.NewRolePlayer != null)

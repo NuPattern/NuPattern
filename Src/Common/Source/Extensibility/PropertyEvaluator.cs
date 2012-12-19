@@ -2,9 +2,9 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Implements the default <see cref="IPropertyEvaluator"/> behavior.

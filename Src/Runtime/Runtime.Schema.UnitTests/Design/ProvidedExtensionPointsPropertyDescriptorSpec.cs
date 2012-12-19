@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Drawing.Design;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
+namespace NuPattern.Runtime.Schema.UnitTests
 {
     public class ProvidedExtensionPointsPropertyDescriptorSpec
     {

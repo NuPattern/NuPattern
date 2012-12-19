@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Extensions over <see cref="ITraceSource"/>.

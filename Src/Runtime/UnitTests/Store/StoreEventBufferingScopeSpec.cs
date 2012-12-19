@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Store
+namespace NuPattern.Runtime.UnitTests.Store
 {
 	public class StoreEventBufferingScopeSpec
 	{

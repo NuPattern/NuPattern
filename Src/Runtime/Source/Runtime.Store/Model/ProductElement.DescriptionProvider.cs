@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	internal class ProductElementTypeDescriptionProvider : ElementTypeDescriptionProvider
 	{

@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Xml;
 using Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// PatternModel diagram serializer extension class.
