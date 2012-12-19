@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Properties;
+using NuPattern.Authoring.Automation.Properties;
+using NuPattern.Extensibility;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.UriProviders
+namespace NuPattern.Authoring.Automation.UriProviders
 {
 	/// <summary>
 	/// Provides type information for the <see cref="ViewArtifactLinkReference"/> reference kind.

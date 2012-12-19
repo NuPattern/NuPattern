@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using DataAnnotations = System.ComponentModel.DataAnnotations;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
+namespace NuPattern.Authoring.Guidance.IntegrationTests
 {
 	[TestClass]
 	public class TocGuidanceProcessorSpec
@@ -22,13 +22,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 		{
 			private TocGuidanceProcessor processor;
 
-			[TestCleanup]
-			public void Cleanup()
-			{
-				VsIdeTestHostContext.Dte.Solution.Close();
-			}
-
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentEmpty_ThenCalculateWorkflowThrows()
 			{
@@ -38,7 +31,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					this.processor.CalculateWorkflow());
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasNoTitle_ThenCalculateWorkflowThrows()
 			{
@@ -48,7 +40,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					this.processor.CalculateWorkflow());
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasOnlyTitle_ThenCalculateWorkflowCreatesAWorkflow()
 			{
@@ -63,7 +54,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleHeadline_ThenCalculateWorkflowCreatesAWorkflow()
 			{
@@ -80,7 +70,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopLevelHeadlines_ThenCalculateWorkflowCreatesAWorkflow()
 			{
@@ -103,7 +92,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTopLevelHeadlineTwoTopics_ThenCalculateWorkflowCreatesAWorkflow()
 			{
@@ -121,7 +109,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasThreeTopLevelHeadlineVariousTopics_ThenCalculateWorkflowCreatesAWorkflow()
 			{
@@ -145,7 +132,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTopLevelHeadlineTopLevelTopic_ThenCalculateWorkflowCreatesAWorkflow()
 			{
@@ -163,7 +149,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTopLevelHeadlineTopLevelTopicWithSubTopics_ThenCalculateWorkflowCreatesAWorkflow()
 			{
@@ -183,7 +168,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTopLevelHeadlineWithSubTopics_ThenCalculateWorkflowCreatesAWorkflow()
 			{
@@ -228,10 +212,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				{
 					// Ignore cleanup
 				}
-				VsIdeTestHostContext.Dte.Solution.Close();
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentEmpty_ThenShredDocumentsThrows()
 			{
@@ -241,7 +223,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					this.processor.GenerateWorkflowDocuments(this.shredDirectory));
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasNoTitle_ThenShredDocumentsThrows()
 			{
@@ -251,7 +232,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					this.processor.GenerateWorkflowDocuments(this.shredDirectory));
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasOnlyTitle_ThenShredDocumentsCreatesDocuments()
 			{
@@ -261,7 +241,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyDocuments(this.processor.GenerateWorkflowDocuments(this.shredDirectory), this.shredDirectory, null);
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleHeadlineNoContent_ThenShredDocumentsCreatesDocuments()
 			{
@@ -271,7 +250,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyDocuments(this.processor.GenerateWorkflowDocuments(this.shredDirectory), this.shredDirectory, null);
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleHeadline_ThenShredDocumentsCreatesDocuments()
 			{
@@ -281,7 +259,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyDocuments(this.processor.GenerateWorkflowDocuments(this.shredDirectory), this.shredDirectory, null);
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleTopic_ThenShredDocumentsCreatesDocuments()
 			{
@@ -294,7 +271,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopLevelHeadlines_ThenShredDocumentsCreatesDocuments()
 			{
@@ -304,7 +280,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyDocuments(this.processor.GenerateWorkflowDocuments(this.shredDirectory), this.shredDirectory, null);
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopLevelTopics_ThenShredDocumentsCreatesDocuments()
 			{
@@ -319,7 +294,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleHeadlinesAndTopics_ThenShredDocumentsCreatesDocuments()
 			{
@@ -334,7 +308,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTwoTopicsWithHyperlinksToThirdTopic_ThenShredDocumentsCreatesDocuments()
 			{
@@ -357,7 +330,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasOneHeadlineWithHyperlinkToTopic_ThenShredDocumentsCreatesDocuments()
 			{
@@ -370,7 +342,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				});
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopicsAndHeadlinesWithDuplicates_ThenShredDocumentsThrows()
 			{
@@ -381,7 +352,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 					this.processor.GenerateWorkflowDocuments(this.shredDirectory));
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTwoTopicsWithHyperlinkToContent_ThenShredDocumentsThrows()
 			{
@@ -400,19 +370,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 		{
 			private TocGuidanceProcessor processor;
 
-			[TestInitialize]
-			public void InitializeContext()
-			{
-			}
-
-			[TestCleanup]
-			public void Cleanup()
-			{
-				VsIdeTestHostContext.Dte.Solution.Close();
-			}
-
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
+            [TestMethod, TestCategory("Integration")]
 			public void WhenDocumentEmpty_ThenValidateDocumentsFails()
 			{
 				this.processor = new TocGuidanceProcessor(
@@ -420,7 +378,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument(), 1);
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasNoTitle_ThenValidateDocumentsFails()
 			{
@@ -429,7 +386,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument(), 1);
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasOnlyTitle_ThenValidateDocumentsSucceeds()
 			{
@@ -439,7 +395,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument());
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleHeadlineNoContent_ThenValidateDocumentsSucceeds()
 			{
@@ -449,7 +404,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument());
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleHeadline_ThenValidateDocumentsSucceeds()
 			{
@@ -459,7 +413,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument());
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasSingleTopic_ThenValidateDocumentsSucceeds()
 			{
@@ -469,7 +422,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument());
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopLevelHeadlines_ThenValidateDocumentsSucceeds()
 			{
@@ -479,7 +431,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument());
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopLevelTopics_ThenValidateDocumentsSucceeds()
 			{
@@ -489,7 +440,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument());
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleHeadlinesAndTopics_ThenValidateDocumentsSucceeds()
 			{
@@ -499,7 +449,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument());
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasMultipleTopicsAndHeadlinesWithDuplicates_ThenValidateDocumentsFails()
 			{
@@ -509,7 +458,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument(), 1);
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTwoTopicsWithHyperlinksToThirdTopic_ThenValidateDocumentsSucceeds()
 			{
@@ -519,7 +467,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument());
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasOneHeadlineWithHyperlinkToTopic_ThenValidateDocumentsSucceeds()
 			{
@@ -529,7 +476,6 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance.IntegrationTests
 				VerifyValidationErrors(this.processor.ValidateDocument());
 			}
 
-			[HostType("VS IDE")]
 			[TestMethod, TestCategory("Integration")]
 			public void WhenDocumentHasTwoTopicsWithHyperlinkToContent_ThenValidateDocumentsFails()
 			{

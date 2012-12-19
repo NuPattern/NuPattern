@@ -1,9 +1,9 @@
-<#@ Template Inherits="Microsoft.VisualStudio.Patterning.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" #>
-<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.dll" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Authoring.Authoring" #>
+<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" #>
+<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
+<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="NuPattern.Authoring.Toolkit.Automation.dll" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Authoring.Authoring" #>
 <#@ output extension=".doc" #>
 <#
 	IGuidance guidance = this.Element.As<IGuidance>();

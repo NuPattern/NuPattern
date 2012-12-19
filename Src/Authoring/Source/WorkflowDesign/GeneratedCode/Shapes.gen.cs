@@ -11,14 +11,14 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass ProductionToolShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolShape.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolShape.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProductionToolShape.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionToolShape.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("38a6bf9c-4b83-43e7-b028-30eaa21d1ee8")]
 	public abstract partial class ProductionToolShapeBase : DslDiagrams::NodeShape
@@ -191,7 +191,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("StereotypeDecorator");
-			field1.DefaultText = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ProductionToolShapeStereotypeDecoratorDefaultText");
+			field1.DefaultText = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ProductionToolShapeStereotypeDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -201,7 +201,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			shapeFields.Add(field1);
 			
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("NameDecorator");
-			field2.DefaultText = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ProductionToolShapeNameDecoratorDefaultText");
+			field2.DefaultText = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ProductionToolShapeNameDecoratorDefaultText");
 			field2.DefaultFocusable = true;
 			field2.DefaultAutoSize = true;
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -211,15 +211,15 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			shapeFields.Add(field2);
 			
 			DslDiagrams::ImageField field3 = new DslDiagrams::ImageField("IsSatisfyingVariabilityDecorator");
-			field3.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetObject("ProductionToolShapeIsSatisfyingVariabilityDecoratorDefaultImage"));
+			field3.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetObject("ProductionToolShapeIsSatisfyingVariabilityDecoratorDefaultImage"));
 			shapeFields.Add(field3);
 			
 			DslDiagrams::ImageField field4 = new DslDiagrams::ImageField("IsNotSatisfyingVariabilityDecorator");
-			field4.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetObject("ProductionToolShapeIsNotSatisfyingVariabilityDecoratorDefaultImage"));
+			field4.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetObject("ProductionToolShapeIsNotSatisfyingVariabilityDecoratorDefaultImage"));
 			shapeFields.Add(field4);
 			
 			DslDiagrams::ImageField field5 = new DslDiagrams::ImageField("IndicatorBackgroundDecorator");
-			field5.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetObject("ProductionToolShapeIndicatorBackgroundDecoratorDefaultImage"));
+			field5.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetObject("ProductionToolShapeIndicatorBackgroundDecoratorDefaultImage"));
 			shapeFields.Add(field5);
 			
 		}
@@ -294,8 +294,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 	/// <summary>
 	/// DomainClass ProductionToolShape
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolShape
+	/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolShape
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 			
@@ -324,14 +323,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass ProducedAssetShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetShape.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetShape.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a2bcd210-b675-4fac-aa78-d57e942ad65d")]
 	public abstract partial class ProducedAssetShapeBase : DslDiagrams::NodeShape
@@ -504,7 +503,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("StereotypeDecorator");
-			field1.DefaultText = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ProducedAssetShapeStereotypeDecoratorDefaultText");
+			field1.DefaultText = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ProducedAssetShapeStereotypeDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -514,7 +513,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			shapeFields.Add(field1);
 			
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("NameDecorator");
-			field2.DefaultText = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ProducedAssetShapeNameDecoratorDefaultText");
+			field2.DefaultText = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ProducedAssetShapeNameDecoratorDefaultText");
 			field2.DefaultFocusable = true;
 			field2.DefaultAutoSize = true;
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -596,8 +595,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of IsFinalColor domain property.
 		/// The color of a deliverable asset.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape/IsFinalColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape/IsFinalColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetShape/IsFinalColor.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetShape/IsFinalColor.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "0, 52, 0")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -686,8 +685,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of IsIntermediateColor domain property.
 		/// The color of a intermediate asset.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape/IsIntermediateColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape/IsIntermediateColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetShape/IsIntermediateColor.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetShape/IsIntermediateColor.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "153, 102, 153")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -763,8 +762,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 	/// <summary>
 	/// DomainClass ProducedAssetShape
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape
+	/// Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetShape
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 			
@@ -793,14 +791,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass SuppliedAssetShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("b9afa446-5e10-4f35-9489-7bdd0cf307d7")]
 	public abstract partial class SuppliedAssetShapeBase : DslDiagrams::NodeShape
@@ -973,7 +971,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("StereotypeDecorator");
-			field1.DefaultText = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("SuppliedAssetShapeStereotypeDecoratorDefaultText");
+			field1.DefaultText = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("SuppliedAssetShapeStereotypeDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -983,7 +981,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			shapeFields.Add(field1);
 			
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("NameDecorator");
-			field2.DefaultText = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("SuppliedAssetShapeNameDecoratorDefaultText");
+			field2.DefaultText = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("SuppliedAssetShapeNameDecoratorDefaultText");
 			field2.DefaultFocusable = true;
 			field2.DefaultAutoSize = true;
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -1065,8 +1063,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of IsUserSuppliedColor domain property.
 		/// The color of a user supplied asset.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedColor.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedColor.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "0, 51, 52")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1155,8 +1153,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of IsMaterialColor domain property.
 		/// The color of a supplied material asset.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialColor.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialColor.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "255, 105, 55")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1245,8 +1243,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of IsUserSuppliedStereotypeText domain property.
 		/// The stereotype text of a user supplied asset.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedStereotypeText.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedStereotypeText.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedStereotypeText.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedStereotypeText.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue("User Supplied Asset")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1335,8 +1333,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of IsMaterialStereotypeText domain property.
 		/// The stereotype text of a supplied material asset.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialStereotypeText.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialStereotypeText.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialStereotypeText.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialStereotypeText.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue("Supplied Material Asset")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1420,8 +1418,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of StereotypeText domain property.
 		/// The text of the stereotype of this element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/StereotypeText.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/StereotypeText.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/StereotypeText.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/StereotypeText.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -1478,8 +1476,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 	/// <summary>
 	/// DomainClass SuppliedAssetShape
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape
+	/// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 			

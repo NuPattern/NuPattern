@@ -15,7 +15,7 @@ using System.Drawing.Design;
 using System.Windows.Forms;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Helper class used to create and initialize toolbox items for this DSL.
@@ -98,7 +98,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		{
 			get
 			{
-				return global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("Production ToolingToolboxTab", global::System.Globalization.CultureInfo.CurrentUICulture);
+				return global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("Production ToolingToolboxTab", global::System.Globalization.CultureInfo.CurrentUICulture);
 			}
 		}
 		
@@ -155,70 +155,70 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			{
 				return null;
 			}
-			global::System.Resources.ResourceManager resourceManager = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager;
+			global::System.Resources.ResourceManager resourceManager = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager;
 			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
 			switch(itemId)
 			{
-				case "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetToolboxItem":
+				case "NuPattern.Authoring.WorkflowDesign.SuppliedAssetToolboxItem":
 					// Add SuppliedAsset shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"NuPattern.Authoring.WorkflowDesign.SuppliedAssetToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						1, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("SuppliedAssetToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("SuppliedAssetToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Production ToolingToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						"NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("Production ToolingToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"SuppliedAsset", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("SuppliedAssetToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						CreateElementToolPrototype(store, global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require),
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(SuppliedAssetFilterString)
 						});
 					break;
-				case "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolToolboxItem":
+				case "NuPattern.Authoring.WorkflowDesign.ProductionToolToolboxItem":
 					// Add ProductionTool shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"NuPattern.Authoring.WorkflowDesign.ProductionToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						2, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ProductionToolToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ProductionToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Production ToolingToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						"NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("Production ToolingToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"ProductionTool", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ProductionToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						CreateElementToolPrototype(store, global::NuPattern.Authoring.WorkflowDesign.ProductionTool.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require),
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ProductionToolFilterString)
 						});
 					break;
-				case "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetToolboxItem":
+				case "NuPattern.Authoring.WorkflowDesign.ProducedAssetToolboxItem":
 					// Add ProducedAsset shape tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"NuPattern.Authoring.WorkflowDesign.ProducedAssetToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						3, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ProducedAssetToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ProducedAssetToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Production ToolingToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						"NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("Production ToolingToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"ProducedAsset", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ProducedAssetToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
-						CreateElementToolPrototype(store, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						CreateElementToolPrototype(store, global::NuPattern.Authoring.WorkflowDesign.ProducedAsset.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require),
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ProducedAssetFilterString)
 						});
 					break;
-				case "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionWorkflowConnectorToolboxItem":
+				case "NuPattern.Authoring.WorkflowDesign.ProductionWorkflowConnectorToolboxItem":
 
 					// Add ProductionWorkflowConnector connector tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionWorkflowConnectorToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"NuPattern.Authoring.WorkflowDesign.ProductionWorkflowConnectorToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						4, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ProductionWorkflowConnectorToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ProductionWorkflowConnectorToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Production ToolingToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						"NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
 						resourceManager.GetString("Production ToolingToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"ProductionWorkflowConnector", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ProductionWorkflowConnectorToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
@@ -260,7 +260,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 					AppDomain.CurrentDomain.DomainUnload += new EventHandler(StoreCleanUp);
 					
 					//load the domain model
-					toolboxStore.LoadDomainModels(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel));
+					toolboxStore.LoadDomainModels(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel));
 					
 				}
 				return toolboxStore;
@@ -300,7 +300,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		{
 			DslDesign::ModelingToolboxItem item = null;
 
-			global::System.Resources.ResourceManager resourceManager = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager;
+			global::System.Resources.ResourceManager resourceManager = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager;
 			global::System.Globalization.CultureInfo resourceCulture = global::System.Globalization.CultureInfo.CurrentUICulture;
 
 			System.Windows.Forms.IDataObject tbxDataObj;

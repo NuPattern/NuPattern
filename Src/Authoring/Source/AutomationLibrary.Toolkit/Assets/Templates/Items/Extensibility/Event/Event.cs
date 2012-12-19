@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 

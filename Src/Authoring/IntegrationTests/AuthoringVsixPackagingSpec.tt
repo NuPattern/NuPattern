@@ -2,10 +2,10 @@
 <#@ Include File="..\..\MasterVSIXInfo.gen.ttinclude" #>
 using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.IntegrationTests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.IntegrationTests;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
+namespace NuPattern.Authoring.IntegrationTests
 {
     [TestClass]
     public class AuthoringVsixPackagingSpec
@@ -174,20 +174,20 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
 							"Release%20Notes.docx",
 
                             //Auxillary Assemblies
-							"Microsoft.VisualStudio.Patterning.Runtime.Schema.dll",
+							"NuPattern.Runtime.Schema.dll",
 
                             //Authoring Assemblies
-                            "Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit.dll",
-                            "Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit.pkgdef",
-                            "Microsoft.VisualStudio.Patterning.Authoring.Guidance.dll",
-                            "Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets",
-                            "Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.dll",
-                            "Microsoft.VisualStudio.Patterning.Authoring.PatternModelDesign.Shell.dll",
-                            "Microsoft.VisualStudio.Patterning.Authoring.PatternModelDesign.Shell.pkgdef",
-                            "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll",
-                            "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces.dll",
-                            "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Shell.dll",
-							"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Shell.pkgdef",
+                            "NuPattern.Authoring.Authoring.Toolkit.dll",
+                            "NuPattern.Authoring.Authoring.Toolkit.pkgdef",
+                            "NuPattern.Authoring.Guidance.dll",
+                            "NuPattern.Authoring.PatternToolkit.targets",
+                            "NuPattern.Authoring.Toolkit.Automation.dll",
+                            "NuPattern.Authoring.PatternModelDesign.Shell.dll",
+                            "NuPattern.Authoring.PatternModelDesign.Shell.pkgdef",
+                            "NuPattern.Authoring.WorkflowDesign.dll",
+                            "NuPattern.Authoring.WorkflowDesign.Interfaces.dll",
+                            "NuPattern.Authoring.WorkflowDesign.Shell.dll",
+							"NuPattern.Authoring.WorkflowDesign.Shell.pkgdef",
 
 							//Embedded VSIXes
 							"<#=VsixInfo.PatternToolkitLibrary.VsixFileName#>",

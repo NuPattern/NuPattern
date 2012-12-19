@@ -1,8 +1,8 @@
 ﻿using System.Globalization;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Properties;
+using NuPattern.Authoring.WorkflowDesign.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
     /// <summary>
     /// Cutomizes the <see cref="ProducedAsset"/> class.

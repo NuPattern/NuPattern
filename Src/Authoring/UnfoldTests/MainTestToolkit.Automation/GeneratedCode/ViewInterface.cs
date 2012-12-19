@@ -11,7 +11,7 @@
 namespace MainTestToolkit.Automation.GeneratedCode
 {
 	using System.ComponentModel;
-	using Microsoft.VisualStudio.Patterning.Runtime;
+	using NuPattern.Runtime;
 
 	///	<summary>
 	///	Description for MainTest.DefaultView

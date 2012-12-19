@@ -8,43 +8,43 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Library
+namespace NuPattern.Authoring.Library
 {
-	using global::Microsoft.VisualStudio.Patterning.Extensibility;
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Extensibility;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
-	///	A library containing custom automation for a pattern toolkit.
+	///	A library that contains reusable automation types for sharing between Pattern Toolkit projects.
 	///	</summary>
-	[Description("A library containing custom automation for a pattern toolkit.")]
-	[ToolkitInterfaceProxy(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "d6139b37-9971-4834-a9dc-2b3daef962cf", ProxyType = typeof(AutomationLibrary))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[Description("A library that contains reusable automation types for sharing between Pattern Toolkit projects.")]
+	[ToolkitInterfaceProxy(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "d6139b37-9971-4834-a9dc-2b3daef962cf", ProxyType = typeof(PatternToolkitLibrary))]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	internal partial class AutomationLibrary : IAutomationLibrary
+	internal partial class PatternToolkitLibrary : IPatternToolkitLibrary
 	{
 		private Runtime.IProduct target;
-		private Runtime.IProductProxy<IAutomationLibrary> proxy;
+		private Runtime.IProductProxy<IPatternToolkitLibrary> proxy;
 
 		/// <summary>
 		/// For MEF.
 		/// </summary>
 		[ImportingConstructor]
-		private AutomationLibrary() { }
+		private PatternToolkitLibrary() { }
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="AutomationLibrary"/> class.
+		/// Initializes a new instance of the <see cref="PatternToolkitLibrary"/> class.
 		/// </summary>
-		public AutomationLibrary(Runtime.IProduct target)
+		public PatternToolkitLibrary(Runtime.IProduct target)
 		{
 			this.target = target;
-			this.proxy = target.ProxyFor<IAutomationLibrary>();
+			this.proxy = target.ProxyFor<IPatternToolkitLibrary>();
 			OnCreated();
 		}	
 
@@ -175,9 +175,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Library
 		}
 
 		///	<summary>
-		///	Description for AutomationLibrary.Development
+		///	Description for PatternToolkitLibrary.Development
 		///	</summary>
-		[Description("Description for AutomationLibrary.Development")]
+		[Description("Description for PatternToolkitLibrary.Development")]
 		public virtual IDevelopment Development
 		{ 
 			get { return this.proxy.GetView(() => this.Development, view => new Development(view)); }

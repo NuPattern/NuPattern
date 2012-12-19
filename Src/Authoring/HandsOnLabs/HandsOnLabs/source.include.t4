@@ -8,8 +8,8 @@
 	public const string icon = @"Ignore";
 
 	public const string productName = "HandsOnLabs";
-	public const string rootNamespace = "Microsoft.VisualStudio.Patterning.HandsOnLabs";
-	public const string assemblyName = "Microsoft.VisualStudio.Patterning.HandsOnLabs";
+	public const string rootNamespace = "NuPattern.HandsOnLabs";
+	public const string assemblyName = "NuPattern.HandsOnLabs";
 
 	public bool HasValue(string value)
 	{

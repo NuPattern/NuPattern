@@ -2,17 +2,17 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Authoring.Authoring;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Properties;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.UriProviders;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Authoring.Authoring;
+using NuPattern.Authoring.Automation.Properties;
+using NuPattern.Authoring.Automation.UriProviders;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.References;
+using NuPattern.Runtime.Schema;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
+namespace NuPattern.Authoring.Automation.Commands
 {
     /// <summary>
     /// Command to set a view as the default view

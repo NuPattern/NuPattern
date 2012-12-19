@@ -14,7 +14,7 @@ using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 using VSShellInterop = global::Microsoft.VisualStudio.Shell.Interop;
 using global::System.Linq;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.
@@ -62,7 +62,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			get
 			{
-				return global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("FormatList"); 
+				return global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("FormatList"); 
 			}
 		}
 
@@ -156,7 +156,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			// Log and suppress all binding failure exceptions.
 			string errorMessage = string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("BindingErrorOccurred"),
+				global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("BindingErrorOccurred"),
 				exception.ToString());
 			
 			this.AddErrorListItem(new DslShell::SimpleErrorListItem(errorMessage, this.FileName, global::Microsoft.VisualStudio.Shell.TaskPriority.Normal, global::Microsoft.VisualStudio.Shell.TaskErrorCategory.Warning));
@@ -319,7 +319,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			global::System.Collections.Generic.List<global::System.Type> allTypes = new System.Collections.Generic.List<System.Type>();
 
 			// In the type of our base domain model
-			allTypes.Add(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel));
+			allTypes.Add(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel));
 
 			// Add in any extension domain models
 			global::System.Collections.Generic.IEnumerable<global::System.Type> extensionTypes = this.GetExtensionDomainModels();
@@ -343,7 +343,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				return null;
 			}
 
-			global::System.Collections.Generic.IEnumerable<global::System.Type> extensionDomainModels = this.ExtensionLocator.GetExtendingDomainModels(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel));
+			global::System.Collections.Generic.IEnumerable<global::System.Type> extensionDomainModels = this.ExtensionLocator.GetExtendingDomainModels(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel));
 
 			return extensionDomainModels;
 		}
@@ -357,15 +357,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		protected override void Load(string fileName, bool isReload)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema modelRoot = null;
+			global::NuPattern.Runtime.Schema.PatternModelSchema modelRoot = null;
 			DslModeling::ISchemaResolver schemaResolver = new DslShell::ModelingSchemaResolver(this.ServiceProvider);
 			//clear the current root element
 			this.SetRootElement(null);
 			// Enable diagram fixup rules in our store, because we will load diagram data.
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.EnableDiagramRules(this.Store);
+			global::NuPattern.Runtime.Schema.PatternModelDomainModel.EnableDiagramRules(this.Store);
 			string diagramFileName = fileName + this.DiagramExtension;
 			
-			modelRoot = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSerializationHelper.Instance.LoadModelAndDiagram(serializationResult, this.GetModelPartition(), fileName, this.GetDiagramPartition(), diagramFileName, schemaResolver, null /* no load-time validation */, this.SerializerLocator);
+			modelRoot = global::NuPattern.Runtime.Schema.PatternModelSerializationHelper.Instance.LoadModelAndDiagram(serializationResult, this.GetModelPartition(), fileName, this.GetDiagramPartition(), diagramFileName, schemaResolver, null /* no load-time validation */, this.SerializerLocator);
 
 			// Report serialization messages.
 			this.SuspendErrorListRefresh();
@@ -384,7 +384,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if (serializationResult.Failed)
 			{	
 				// Load failed, can't open the file.
-				throw new global::System.InvalidOperationException(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CannotOpenDocument"));
+				throw new global::System.InvalidOperationException(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CannotOpenDocument"));
 			}
 			else
 			{
@@ -409,7 +409,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 							if (this.diagramDocumentLockHolder == null)
 							{
 								throw new global::System.InvalidOperationException(string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-													global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CannotCloseExistingDiagramDocument"),
+													global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CannotCloseExistingDiagramDocument"),
 													diagramFileName));
 							}
 						}
@@ -443,13 +443,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		protected virtual void OnDocumentLoaded()
 		{
 			// Enable CompartmentItems events.
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema modelRoot = this.RootElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema;
+			global::NuPattern.Runtime.Schema.PatternModelSchema modelRoot = this.RootElement as global::NuPattern.Runtime.Schema.PatternModelSchema;
 			if (modelRoot != null)
 			{
 				global::System.Collections.Generic.IList<DslDiagrams::PresentationElement> diagrams = DslDiagrams::PresentationViewsSubject.GetPresentation(modelRoot);
 				if (diagrams.Count > 0)
 				{
-					global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram diagram = diagrams[0] as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram;
+					global::NuPattern.Runtime.Schema.PatternModelSchemaDiagram diagram = diagrams[0] as global::NuPattern.Runtime.Schema.PatternModelSchemaDiagram;
 					if (diagram != null)
 					{
 						diagram.SubscribeCompartmentItemsEvents();
@@ -483,7 +483,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				if (vc.ErrorMessages.Count != 0)
 				{
 					string errorMsg = (unloadableError ? "UnloadableSaveValidationFailed" : "SaveValidationFailed");
-					global::System.Windows.Forms.DialogResult result = DslShell::PackageUtility.ShowMessageBox(this.ServiceProvider, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString(errorMsg), VSShellInterop::OLEMSGBUTTON.OLEMSGBUTTON_YESNO, VSShellInterop::OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_SECOND, VSShellInterop::OLEMSGICON.OLEMSGICON_WARNING);
+					global::System.Windows.Forms.DialogResult result = DslShell::PackageUtility.ShowMessageBox(this.ServiceProvider, global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString(errorMsg), VSShellInterop::OLEMSGBUTTON.OLEMSGBUTTON_YESNO, VSShellInterop::OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_SECOND, VSShellInterop::OLEMSGICON.OLEMSGICON_WARNING);
 					return (result == global::System.Windows.Forms.DialogResult.Yes);
 				}
 			}
@@ -534,7 +534,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		protected override void Save(string fileName)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema modelRoot = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema)this.RootElement;
+			global::NuPattern.Runtime.Schema.PatternModelSchema modelRoot = (global::NuPattern.Runtime.Schema.PatternModelSchema)this.RootElement;
 
 			
 			// Only save the diagrams if
@@ -547,7 +547,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			global::System.Collections.Generic.IList<DslDiagrams::PresentationElement> diagrams = DslDiagrams::PresentationViewsSubject.GetPresentation(this.RootElement);
 			if (diagrams.Count > 0 && (!saveAs || this.diagramDocumentLockHolder == null))
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram diagram = diagrams[0] as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram;
+				global::NuPattern.Runtime.Schema.PatternModelSchemaDiagram diagram = diagrams[0] as global::NuPattern.Runtime.Schema.PatternModelSchemaDiagram;
 				if (diagram != null)
 				{
 					string diagramFileName = fileName + this.DiagramExtension;
@@ -555,7 +555,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					{
 						this.SuspendFileChangeNotification(diagramFileName);
 						
-						global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSerializationHelper.Instance.SaveModelAndDiagram(serializationResult, modelRoot, fileName, diagram, diagramFileName, this.Encoding, false);
+						global::NuPattern.Runtime.Schema.PatternModelSerializationHelper.Instance.SaveModelAndDiagram(serializationResult, modelRoot, fileName, diagram, diagramFileName, this.Encoding, false);
 					}
 					finally
 					{
@@ -565,7 +565,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			}
 			else
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSerializationHelper.Instance.SaveModel(serializationResult, modelRoot, fileName, this.Encoding, false);
+				global::NuPattern.Runtime.Schema.PatternModelSerializationHelper.Instance.SaveModel(serializationResult, modelRoot, fileName, this.Encoding, false);
 			}
 			// Report serialization messages.
 			this.SuspendErrorListRefresh();
@@ -583,7 +583,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 
 			if (serializationResult.Failed)
 			{	// Save failed.
-				throw new global::System.InvalidOperationException(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
+				throw new global::System.InvalidOperationException(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
 			}
 		}
 		/// <summary>
@@ -619,14 +619,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			global::System.Collections.Generic.IList<DslDiagrams::PresentationElement> diagrams = DslDiagrams::PresentationViewsSubject.GetPresentation(this.RootElement);
 			if (diagrams.Count > 0)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram diagram = diagrams[0] as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchemaDiagram;
+				global::NuPattern.Runtime.Schema.PatternModelSchemaDiagram diagram = diagrams[0] as global::NuPattern.Runtime.Schema.PatternModelSchemaDiagram;
 				if (diagram != null)
 				{
 					try
 					{
 						this.SuspendFileChangeNotification(fileName);
 						
-						global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSerializationHelper.Instance.SaveDiagram(serializationResult, diagram, fileName, this.Encoding, false);
+						global::NuPattern.Runtime.Schema.PatternModelSerializationHelper.Instance.SaveDiagram(serializationResult, diagram, fileName, this.Encoding, false);
 					}
 					finally
 					{
@@ -655,7 +655,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			else
 			{	
 				// Save failed.
-				throw new global::System.InvalidOperationException(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
+				throw new global::System.InvalidOperationException(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
 			}						
 		}
 		
@@ -680,11 +680,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			get
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema modelRoot = this.RootElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema;
+				global::NuPattern.Runtime.Schema.PatternModelSchema modelRoot = this.RootElement as global::NuPattern.Runtime.Schema.PatternModelSchema;
 				string modelFile = string.Empty;
 				if (modelRoot != null)
 				{
-					modelFile = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSerializationHelper.Instance.GetSerializedModelString(modelRoot, this.Encoding);
+					modelFile = global::NuPattern.Runtime.Schema.PatternModelSerializationHelper.Instance.GetSerializedModelString(modelRoot, this.Encoding);
 				}
 				return modelFile;
 			}

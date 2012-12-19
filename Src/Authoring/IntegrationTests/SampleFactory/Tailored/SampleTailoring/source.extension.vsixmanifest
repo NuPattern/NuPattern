@@ -2,7 +2,7 @@
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
 	<Identifier Id="f1c41133-bbc5-46cb-aaf9-9242fd317d13">
 		<Name>SampleTailoring</Name>
-		<Author>Outercurve</Author>
+		<Author>NuPattern</Author>
 		<Version>1.0</Version>
 		<Description xml:space="preserve">Description of the SampleTailoring Toolkit.</Description>
 		<Locale>1033</Locale>

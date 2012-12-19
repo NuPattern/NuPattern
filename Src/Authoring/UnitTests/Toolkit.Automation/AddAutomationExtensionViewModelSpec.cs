@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema;
+using NuPattern.Extensibility;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Schema;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
+namespace NuPattern.Authoring.UnitTests
 {
 	public class AddAutomationExtensionViewModelSpec
 	{

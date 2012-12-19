@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Extensibility;
 using Input = System.Windows.Input;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// View model for add automation extension

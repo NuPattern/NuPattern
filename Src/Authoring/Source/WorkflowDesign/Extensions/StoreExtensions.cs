@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Store extension methods.

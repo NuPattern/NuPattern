@@ -11,16 +11,15 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass DesignConnector
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignConnector
+	/// Description for NuPattern.Authoring.WorkflowDesign.DesignConnector
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignConnector.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignConnector.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.DesignConnector.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignConnector.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("1a58d220-af4d-465b-8aff-a62573131fd1")]
 	public abstract partial class DesignConnector : DslDiagrams::BinaryLinkShape
@@ -80,16 +79,15 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass ToolInputConnector
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolInputConnector
+	/// Description for NuPattern.Authoring.WorkflowDesign.ToolInputConnector
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolInputConnector.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolInputConnector.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ToolInputConnector.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ToolInputConnector.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a1da0e63-fd65-4168-b144-9e9d9ef08824")]
 	public partial class ToolInputConnector : DesignConnector
@@ -207,7 +205,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("ActionDecorator");
-			field1.DefaultText = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ToolInputConnectorActionDecoratorDefaultText");
+			field1.DefaultText = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ToolInputConnectorActionDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -248,16 +246,15 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass ToolOutputConnector
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolOutputConnector
+	/// Description for NuPattern.Authoring.WorkflowDesign.ToolOutputConnector
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolOutputConnector.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolOutputConnector.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ToolOutputConnector.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ToolOutputConnector.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("bfe9b906-3fdc-4c62-9e64-27567c7a82a1")]
 	public partial class ToolOutputConnector : DesignConnector
@@ -375,7 +372,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("ActionDecorator");
-			field1.DefaultText = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ToolOutputConnectorActionDecoratorDefaultText");
+			field1.DefaultText = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ToolOutputConnectorActionDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -416,16 +413,15 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass ToolCopyConnector
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolCopyConnector
+	/// Description for NuPattern.Authoring.WorkflowDesign.ToolCopyConnector
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolCopyConnector.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolCopyConnector.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ToolCopyConnector.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ToolCopyConnector.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("d5a4626d-0dd7-4d2b-8a95-7f4e9e14bec4")]
 	public partial class ToolCopyConnector : DesignConnector
@@ -543,7 +539,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			base.InitializeDecorators(shapeFields, decorators);
 			
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("ActionDecorator");
-			field1.DefaultText = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ToolCopyConnectorActionDecoratorDefaultText");
+			field1.DefaultText = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("ToolCopyConnectorActionDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;

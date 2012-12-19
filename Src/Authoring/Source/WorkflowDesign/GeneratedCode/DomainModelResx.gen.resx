@@ -117,571 +117,571 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesign</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.WorkflowDesign</value>
     <comment>Description for DslLibrary &apos;WorkflowDesign&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.DisplayName" xml:space="preserve">
     <value>WorkflowDesign</value>
     <comment>DisplayName for DslLibrary &apos;WorkflowDesign&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.VariabilityRequirement.Description" xml:space="preserve">
     <value>A requirement for a point of variability in the product line.</value>
     <comment>Description for DomainClass &apos;VariabilityRequirement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.VariabilityRequirement.DisplayName" xml:space="preserve">
     <value>Variability Requirement</value>
     <comment>DisplayName for DomainClass &apos;VariabilityRequirement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.Description" xml:space="preserve">
     <value>Determines whether the requirement is satisfied by one or more tools in the design.</value>
     <comment>Description for DomainProperty &apos;IsSatisfiedByProductionTool&apos; on DomainClass &apos;VariabilityRequirement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.DisplayName" xml:space="preserve">
     <value>Is Satisfied By Production Tool</value>
     <comment>DisplayName for DomainProperty &apos;IsSatisfiedByProductionTool&apos; on DomainClass &apos;VariabilityRequirement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.Category" xml:space="preserve">
     <value>Design</value>
     <comment>Category for DomainProperty &apos;IsSatisfiedByProductionTool&apos; on DomainClass &apos;VariabilityRequirement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAsset.Description" xml:space="preserve">
     <value>An asset that is produced by a production tool.</value>
     <comment>Description for DomainClass &apos;ProducedAsset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAsset.DisplayName" xml:space="preserve">
     <value>Produced Asset</value>
     <comment>DisplayName for DomainClass &apos;ProducedAsset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset/IsFinal.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAsset/IsFinal.Description" xml:space="preserve">
     <value>Whether the asset is part of the final delivered product.</value>
     <comment>Description for DomainProperty &apos;IsFinal&apos; on DomainClass &apos;ProducedAsset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset/IsFinal.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAsset/IsFinal.DisplayName" xml:space="preserve">
     <value>Is Deliverable</value>
     <comment>DisplayName for DomainProperty &apos;IsFinal&apos; on DomainClass &apos;ProducedAsset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset/IsFinal.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAsset/IsFinal.Category" xml:space="preserve">
     <value>Design</value>
     <comment>Category for DomainProperty &apos;IsFinal&apos; on DomainClass &apos;ProducedAsset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionTool.Description" xml:space="preserve">
     <value>A tool that is supplied assets that produces more assets.</value>
     <comment>Description for DomainClass &apos;ProductionTool&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionTool.DisplayName" xml:space="preserve">
     <value>Production Tool</value>
     <comment>DisplayName for DomainClass &apos;ProductionTool&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/Classification.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionTool/Classification.Description" xml:space="preserve">
     <value>The intended classification of this tool, defining how it processes and produces its assets.</value>
     <comment>Description for DomainProperty &apos;Classification&apos; on DomainClass &apos;ProductionTool&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/Classification.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionTool/Classification.DisplayName" xml:space="preserve">
     <value>Classification</value>
     <comment>DisplayName for DomainProperty &apos;Classification&apos; on DomainClass &apos;ProductionTool&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/Classification.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionTool/Classification.Category" xml:space="preserve">
     <value>Design</value>
     <comment>Category for DomainProperty &apos;Classification&apos; on DomainClass &apos;ProductionTool&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.Description" xml:space="preserve">
     <value>Whether the tool satisfies any variability requirements.</value>
     <comment>Description for DomainProperty &apos;IsSatisfyingVariability&apos; on DomainClass &apos;ProductionTool&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.DisplayName" xml:space="preserve">
     <value>Is Satisfying Variability</value>
     <comment>DisplayName for DomainProperty &apos;IsSatisfyingVariability&apos; on DomainClass &apos;ProductionTool&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.Category" xml:space="preserve">
     <value>Design</value>
     <comment>Category for DomainProperty &apos;IsSatisfyingVariability&apos; on DomainClass &apos;ProductionTool&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAsset.Description" xml:space="preserve">
     <value>An asset that is supplied to a production tool.</value>
     <comment>Description for DomainClass &apos;SuppliedAsset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAsset.DisplayName" xml:space="preserve">
     <value>Supplied Asset</value>
     <comment>DisplayName for DomainClass &apos;SuppliedAsset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.Description" xml:space="preserve">
     <value>Whether this asset is supplied by the user as configuration to the product, or a supplied artifact as input to the product line.</value>
     <comment>Description for DomainProperty &apos;IsUserSupplied&apos; on DomainClass &apos;SuppliedAsset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.DisplayName" xml:space="preserve">
     <value>Is User Supplied</value>
     <comment>DisplayName for DomainProperty &apos;IsUserSupplied&apos; on DomainClass &apos;SuppliedAsset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.Category" xml:space="preserve">
     <value>Design</value>
     <comment>Category for DomainProperty &apos;IsUserSupplied&apos; on DomainClass &apos;SuppliedAsset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.Asset.Description" xml:space="preserve">
     <value>A supplied or fabricated asset in the product line.</value>
     <comment>Description for DomainClass &apos;Asset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.Asset.DisplayName" xml:space="preserve">
     <value>Asset</value>
     <comment>DisplayName for DomainClass &apos;Asset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/SourceReference.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.Asset/SourceReference.Description" xml:space="preserve">
     <value>A reference to a known physical artifact that is represented by this asset.</value>
     <comment>Description for DomainProperty &apos;SourceReference&apos; on DomainClass &apos;Asset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/SourceReference.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.Asset/SourceReference.DisplayName" xml:space="preserve">
     <value>Source Reference</value>
     <comment>DisplayName for DomainProperty &apos;SourceReference&apos; on DomainClass &apos;Asset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/SourceReference.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.Asset/SourceReference.Category" xml:space="preserve">
     <value>Design</value>
     <comment>Category for DomainProperty &apos;SourceReference&apos; on DomainClass &apos;Asset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.Description" xml:space="preserve">
     <value>Whether the asset is used as an input to a tool.</value>
     <comment>Description for DomainProperty &apos;IsSuppliedToTool&apos; on DomainClass &apos;Asset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.DisplayName" xml:space="preserve">
     <value>Is Supplied To Tool</value>
     <comment>DisplayName for DomainProperty &apos;IsSuppliedToTool&apos; on DomainClass &apos;Asset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.Category" xml:space="preserve">
     <value>Design</value>
     <comment>Category for DomainProperty &apos;IsSuppliedToTool&apos; on DomainClass &apos;Asset&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.Design.Description" xml:space="preserve">
     <value>A production line design.</value>
     <comment>Description for DomainClass &apos;Design&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.Design.DisplayName" xml:space="preserve">
     <value>Design</value>
     <comment>DisplayName for DomainClass &apos;Design&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema.Description" xml:space="preserve">
     <value>An element that has a unique name.</value>
     <comment>Description for DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema.DisplayName" xml:space="preserve">
     <value>Named Element Schema</value>
     <comment>DisplayName for DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Name.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Name.Description" xml:space="preserve">
     <value>The well-known name of this item in this model.</value>
     <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Name.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Name.DisplayName" xml:space="preserve">
     <value>Name</value>
     <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Name.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Name.Category" xml:space="preserve">
     <value>General</value>
     <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/BaseId.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/BaseId.Description" xml:space="preserve">
     <value>The identifier of the inherited variability model.</value>
     <comment>Description for DomainProperty &apos;BaseId&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/BaseId.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/BaseId.DisplayName" xml:space="preserve">
     <value>Base Id</value>
     <comment>DisplayName for DomainProperty &apos;BaseId&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.Description" xml:space="preserve">
     <value>The name used for instances of this item, as seen by the user. Also used to name associated artifacts/configuration created for this item.</value>
     <comment>Description for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.DisplayName" xml:space="preserve">
     <value>Display Name</value>
     <comment>DisplayName for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.Category" xml:space="preserve">
     <value>General</value>
     <comment>Category for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/IsDisplayNameTracking.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/IsDisplayNameTracking.Description" xml:space="preserve">
     <value>Used to track whether the user changed the display name manually.</value>
     <comment>Description for DomainProperty &apos;IsDisplayNameTracking&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/IsDisplayNameTracking.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/IsDisplayNameTracking.DisplayName" xml:space="preserve">
     <value>Is Display Name Tracking</value>
     <comment>DisplayName for DomainProperty &apos;IsDisplayNameTracking&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Description.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Description.Description" xml:space="preserve">
     <value>The description of this item displayed to the user.</value>
     <comment>Description for DomainProperty &apos;Description&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Description.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Description.DisplayName" xml:space="preserve">
     <value>Description</value>
     <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Description.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Description.Category" xml:space="preserve">
     <value>General</value>
     <comment>Category for DomainProperty &apos;Description&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/IsInheritedFromBase.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/IsInheritedFromBase.Description" xml:space="preserve">
     <value>Whether the element is derived from a base variability model definition.</value>
     <comment>Description for DomainProperty &apos;IsInheritedFromBase&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/IsInheritedFromBase.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.NamedElementSchema/IsInheritedFromBase.DisplayName" xml:space="preserve">
     <value>Is Inherited From Base</value>
     <comment>DisplayName for DomainProperty &apos;IsInheritedFromBase&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignElement.Description" xml:space="preserve">
     <value>An element used for realization.</value>
     <comment>Description for DomainClass &apos;DesignElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignElement.DisplayName" xml:space="preserve">
     <value>Design Element</value>
     <comment>DisplayName for DomainClass &apos;DesignElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/DesignNotes.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignElement/DesignNotes.Description" xml:space="preserve">
     <value>Design notes for this element.</value>
     <comment>Description for DomainProperty &apos;DesignNotes&apos; on DomainClass &apos;DesignElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/DesignNotes.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignElement/DesignNotes.DisplayName" xml:space="preserve">
     <value>Design Notes</value>
     <comment>DisplayName for DomainProperty &apos;DesignNotes&apos; on DomainClass &apos;DesignElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/DesignNotes.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignElement/DesignNotes.Category" xml:space="preserve">
     <value>Design</value>
     <comment>Category for DomainProperty &apos;DesignNotes&apos; on DomainClass &apos;DesignElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/IsIgnored.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignElement/IsIgnored.Description" xml:space="preserve">
     <value>Whether to ignore this item. Ignored items will not be considered part of the current design.</value>
     <comment>Description for DomainProperty &apos;IsIgnored&apos; on DomainClass &apos;DesignElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/IsIgnored.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignElement/IsIgnored.DisplayName" xml:space="preserve">
     <value>Ignore</value>
     <comment>DisplayName for DomainProperty &apos;IsIgnored&apos; on DomainClass &apos;DesignElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/IsIgnored.Category" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignElement/IsIgnored.Category" xml:space="preserve">
     <value>Design</value>
     <comment>Category for DomainProperty &apos;IsIgnored&apos; on DomainClass &apos;DesignElement&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements</value>
     <comment>Description for DomainClass &apos;ProductionToolReferencesVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.DisplayName" xml:space="preserve">
     <value>Production Tool References Variability Requirements</value>
     <comment>DisplayName for DomainClass &apos;ProductionToolReferencesVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/ProductionTool.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionTool</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/ProductionTool.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionTool</value>
     <comment>Description for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;ProductionToolReferencesVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/ProductionTool.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/ProductionTool.DisplayName" xml:space="preserve">
     <value>Production Tool</value>
     <comment>DisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;ProductionToolReferencesVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/ProductionTool.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/ProductionTool.PropertyDisplayName" xml:space="preserve">
     <value>Variability Requirements</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;ProductionToolReferencesVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/VariabilityRequirement.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirement</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/VariabilityRequirement.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirement</value>
     <comment>Description for DomainRole &apos;VariabilityRequirement&apos; on DomainRelationship &apos;ProductionToolReferencesVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/VariabilityRequirement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/VariabilityRequirement.DisplayName" xml:space="preserve">
     <value>Variability Requirement</value>
     <comment>DisplayName for DomainRole &apos;VariabilityRequirement&apos; on DomainRelationship &apos;ProductionToolReferencesVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/VariabilityRequirement.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/VariabilityRequirement.PropertyDisplayName" xml:space="preserve">
     <value>Production Tools</value>
     <comment>PropertyDisplayName for DomainRole &apos;VariabilityRequirement&apos; on DomainRelationship &apos;ProductionToolReferencesVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets</value>
     <comment>Description for DomainClass &apos;ProductionToolProducesProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.DisplayName" xml:space="preserve">
     <value>Production Tool Produces Produced Assets</value>
     <comment>DisplayName for DomainClass &apos;ProductionToolProducesProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProductionTool.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionTool</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProductionTool.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionTool</value>
     <comment>Description for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;ProductionToolProducesProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProductionTool.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProductionTool.DisplayName" xml:space="preserve">
     <value>Production Tool</value>
     <comment>DisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;ProductionToolProducesProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProductionTool.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProductionTool.PropertyDisplayName" xml:space="preserve">
     <value>Produced Produced Assets</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;ProductionToolProducesProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProducedAsset.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAsset</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProducedAsset.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAsset</value>
     <comment>Description for DomainRole &apos;ProducedAsset&apos; on DomainRelationship &apos;ProductionToolProducesProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProducedAsset.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProducedAsset.DisplayName" xml:space="preserve">
     <value>Produced Asset</value>
     <comment>DisplayName for DomainRole &apos;ProducedAsset&apos; on DomainRelationship &apos;ProductionToolProducesProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProducedAsset.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProducedAsset.PropertyDisplayName" xml:space="preserve">
     <value>Producing Production Tools</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProducedAsset&apos; on DomainRelationship &apos;ProductionToolProducesProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools</value>
     <comment>Description for DomainClass &apos;ProducedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.DisplayName" xml:space="preserve">
     <value>Produced Asset Supplies Production Tools</value>
     <comment>DisplayName for DomainClass &apos;ProducedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProducedAsset.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAsset</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProducedAsset.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAsset</value>
     <comment>Description for DomainRole &apos;ProducedAsset&apos; on DomainRelationship &apos;ProducedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProducedAsset.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProducedAsset.DisplayName" xml:space="preserve">
     <value>Produced Asset</value>
     <comment>DisplayName for DomainRole &apos;ProducedAsset&apos; on DomainRelationship &apos;ProducedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProducedAsset.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProducedAsset.PropertyDisplayName" xml:space="preserve">
     <value>Production Tools</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProducedAsset&apos; on DomainRelationship &apos;ProducedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProductionTool.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionTool</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProductionTool.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionTool</value>
     <comment>Description for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;ProducedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProductionTool.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProductionTool.DisplayName" xml:space="preserve">
     <value>Production Tool</value>
     <comment>DisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;ProducedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProductionTool.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProductionTool.PropertyDisplayName" xml:space="preserve">
     <value>Supplied Produced Assets</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;ProducedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets</value>
     <comment>Description for DomainClass &apos;SuppliedAssetCopiesToProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.DisplayName" xml:space="preserve">
     <value>Supplied Asset Copies To Produced Assets</value>
     <comment>DisplayName for DomainClass &apos;SuppliedAssetCopiesToProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/SuppliedAsset.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAsset</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/SuppliedAsset.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAsset</value>
     <comment>Description for DomainRole &apos;SuppliedAsset&apos; on DomainRelationship &apos;SuppliedAssetCopiesToProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/SuppliedAsset.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/SuppliedAsset.DisplayName" xml:space="preserve">
     <value>Supplied Asset</value>
     <comment>DisplayName for DomainRole &apos;SuppliedAsset&apos; on DomainRelationship &apos;SuppliedAssetCopiesToProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/SuppliedAsset.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/SuppliedAsset.PropertyDisplayName" xml:space="preserve">
     <value>Produced Assets</value>
     <comment>PropertyDisplayName for DomainRole &apos;SuppliedAsset&apos; on DomainRelationship &apos;SuppliedAssetCopiesToProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/ProducedAsset.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAsset</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/ProducedAsset.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAsset</value>
     <comment>Description for DomainRole &apos;ProducedAsset&apos; on DomainRelationship &apos;SuppliedAssetCopiesToProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/ProducedAsset.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/ProducedAsset.DisplayName" xml:space="preserve">
     <value>Produced Asset</value>
     <comment>DisplayName for DomainRole &apos;ProducedAsset&apos; on DomainRelationship &apos;SuppliedAssetCopiesToProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/ProducedAsset.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/ProducedAsset.PropertyDisplayName" xml:space="preserve">
     <value>Supplied Assets</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProducedAsset&apos; on DomainRelationship &apos;SuppliedAssetCopiesToProducedAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools</value>
     <comment>Description for DomainClass &apos;SuppliedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.DisplayName" xml:space="preserve">
     <value>Supplied Asset Supplies Production Tools</value>
     <comment>DisplayName for DomainClass &apos;SuppliedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/SuppliedAsset.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAsset</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/SuppliedAsset.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAsset</value>
     <comment>Description for DomainRole &apos;SuppliedAsset&apos; on DomainRelationship &apos;SuppliedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/SuppliedAsset.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/SuppliedAsset.DisplayName" xml:space="preserve">
     <value>Supplied Asset</value>
     <comment>DisplayName for DomainRole &apos;SuppliedAsset&apos; on DomainRelationship &apos;SuppliedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/SuppliedAsset.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/SuppliedAsset.PropertyDisplayName" xml:space="preserve">
     <value>Production Tools</value>
     <comment>PropertyDisplayName for DomainRole &apos;SuppliedAsset&apos; on DomainRelationship &apos;SuppliedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/ProductionTool.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionTool</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/ProductionTool.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionTool</value>
     <comment>Description for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;SuppliedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/ProductionTool.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/ProductionTool.DisplayName" xml:space="preserve">
     <value>Production Tool</value>
     <comment>DisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;SuppliedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/ProductionTool.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/ProductionTool.PropertyDisplayName" xml:space="preserve">
     <value>Supplied Supplied Assets</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;SuppliedAssetSuppliesProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools</value>
     <comment>Description for DomainClass &apos;AssetSuppliesAllProducingTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.DisplayName" xml:space="preserve">
     <value>Asset Supplies All Producing Tools</value>
     <comment>DisplayName for DomainClass &apos;AssetSuppliesAllProducingTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/Asset.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/Asset.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset</value>
     <comment>Description for DomainRole &apos;Asset&apos; on DomainRelationship &apos;AssetSuppliesAllProducingTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/Asset.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/Asset.DisplayName" xml:space="preserve">
     <value>Asset</value>
     <comment>DisplayName for DomainRole &apos;Asset&apos; on DomainRelationship &apos;AssetSuppliesAllProducingTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/Asset.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/Asset.PropertyDisplayName" xml:space="preserve">
     <value>All Producing Tools</value>
     <comment>PropertyDisplayName for DomainRole &apos;Asset&apos; on DomainRelationship &apos;AssetSuppliesAllProducingTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/ProductionTool.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.ComponentModel.AssetSuppliesAllProducingTools.ProductionTool</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/ProductionTool.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.ComponentModel.AssetSuppliesAllProducingTools.ProductionTool</value>
     <comment>Description for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;AssetSuppliesAllProducingTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/ProductionTool.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/ProductionTool.DisplayName" xml:space="preserve">
     <value>Production Tool</value>
     <comment>DisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;AssetSuppliesAllProducingTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/ProductionTool.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/ProductionTool.PropertyDisplayName" xml:space="preserve">
     <value>All Supplied Assets</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;AssetSuppliesAllProducingTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools</value>
     <comment>Description for DomainClass &apos;DesignHasProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.DisplayName" xml:space="preserve">
     <value>Design Has Production Tools</value>
     <comment>DisplayName for DomainClass &apos;DesignHasProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools/Design.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.Design</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools/Design.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.Design</value>
     <comment>Description for DomainRole &apos;Design&apos; on DomainRelationship &apos;DesignHasProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools/Design.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools/Design.DisplayName" xml:space="preserve">
     <value>Design</value>
     <comment>DisplayName for DomainRole &apos;Design&apos; on DomainRelationship &apos;DesignHasProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools/Design.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools/Design.PropertyDisplayName" xml:space="preserve">
     <value>Production Tools</value>
     <comment>PropertyDisplayName for DomainRole &apos;Design&apos; on DomainRelationship &apos;DesignHasProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools/ProductionTool.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionTool</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools/ProductionTool.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionTool</value>
     <comment>Description for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;DesignHasProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools/ProductionTool.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools/ProductionTool.DisplayName" xml:space="preserve">
     <value>Production Tool</value>
     <comment>DisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;DesignHasProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools/ProductionTool.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools/ProductionTool.PropertyDisplayName" xml:space="preserve">
     <value>Design</value>
     <comment>PropertyDisplayName for DomainRole &apos;ProductionTool&apos; on DomainRelationship &apos;DesignHasProductionTools&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets</value>
     <comment>Description for DomainClass &apos;DesignHasAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasAssets.DisplayName" xml:space="preserve">
     <value>Design Has Assets</value>
     <comment>DisplayName for DomainClass &apos;DesignHasAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets/Design.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.Design</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasAssets/Design.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Design</value>
     <comment>Description for DomainRole &apos;Design&apos; on DomainRelationship &apos;DesignHasAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets/Design.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasAssets/Design.DisplayName" xml:space="preserve">
     <value>Design</value>
     <comment>DisplayName for DomainRole &apos;Design&apos; on DomainRelationship &apos;DesignHasAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets/Design.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasAssets/Design.PropertyDisplayName" xml:space="preserve">
     <value>Assets</value>
     <comment>PropertyDisplayName for DomainRole &apos;Design&apos; on DomainRelationship &apos;DesignHasAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets/Asset.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.Asset</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasAssets/Asset.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Asset</value>
     <comment>Description for DomainRole &apos;Asset&apos; on DomainRelationship &apos;DesignHasAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets/Asset.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasAssets/Asset.DisplayName" xml:space="preserve">
     <value>Asset</value>
     <comment>DisplayName for DomainRole &apos;Asset&apos; on DomainRelationship &apos;DesignHasAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets/Asset.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasAssets/Asset.PropertyDisplayName" xml:space="preserve">
     <value>Design</value>
     <comment>PropertyDisplayName for DomainRole &apos;Asset&apos; on DomainRelationship &apos;DesignHasAssets&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements</value>
     <comment>Description for DomainClass &apos;DesignHasVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DisplayName" xml:space="preserve">
     <value>Design Has Variability Requirements</value>
     <comment>DisplayName for DomainClass &apos;DesignHasVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/Design.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Design</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/Design.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Design</value>
     <comment>Description for DomainRole &apos;Design&apos; on DomainRelationship &apos;DesignHasVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/Design.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/Design.DisplayName" xml:space="preserve">
     <value>Design</value>
     <comment>DisplayName for DomainRole &apos;Design&apos; on DomainRelationship &apos;DesignHasVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/Design.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/Design.PropertyDisplayName" xml:space="preserve">
     <value>Variability Requirements</value>
     <comment>PropertyDisplayName for DomainRole &apos;Design&apos; on DomainRelationship &apos;DesignHasVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/VariabilityRequirement.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirement</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/VariabilityRequirement.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirement</value>
     <comment>Description for DomainRole &apos;VariabilityRequirement&apos; on DomainRelationship &apos;DesignHasVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/VariabilityRequirement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/VariabilityRequirement.DisplayName" xml:space="preserve">
     <value>Variability Requirement</value>
     <comment>DisplayName for DomainRole &apos;VariabilityRequirement&apos; on DomainRelationship &apos;DesignHasVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/VariabilityRequirement.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/VariabilityRequirement.PropertyDisplayName" xml:space="preserve">
     <value>Design</value>
     <comment>PropertyDisplayName for DomainRole &apos;VariabilityRequirement&apos; on DomainRelationship &apos;DesignHasVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements</value>
     <comment>Description for DomainClass &apos;ParentVariabilityRequirementHasParentVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.DisplayName" xml:space="preserve">
     <value>Parent Variability Requirement Has Parent Variability Requirements</value>
     <comment>DisplayName for DomainClass &apos;ParentVariabilityRequirementHasParentVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/SourceVariabilityRequirement.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirement</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/SourceVariabilityRequirement.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirement</value>
     <comment>Description for DomainRole &apos;SourceVariabilityRequirement&apos; on DomainRelationship &apos;ParentVariabilityRequirementHasParentVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/SourceVariabilityRequirement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/SourceVariabilityRequirement.DisplayName" xml:space="preserve">
     <value>Source Variability Requirement</value>
     <comment>DisplayName for DomainRole &apos;SourceVariabilityRequirement&apos; on DomainRelationship &apos;ParentVariabilityRequirementHasParentVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/SourceVariabilityRequirement.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/SourceVariabilityRequirement.PropertyDisplayName" xml:space="preserve">
     <value>Variability Requirements</value>
     <comment>PropertyDisplayName for DomainRole &apos;SourceVariabilityRequirement&apos; on DomainRelationship &apos;ParentVariabilityRequirementHasParentVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/TargetVariabilityRequirement.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirement</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/TargetVariabilityRequirement.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirement</value>
     <comment>Description for DomainRole &apos;TargetVariabilityRequirement&apos; on DomainRelationship &apos;ParentVariabilityRequirementHasParentVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/TargetVariabilityRequirement.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/TargetVariabilityRequirement.DisplayName" xml:space="preserve">
     <value>Target Variability Requirement</value>
     <comment>DisplayName for DomainRole &apos;TargetVariabilityRequirement&apos; on DomainRelationship &apos;ParentVariabilityRequirementHasParentVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/TargetVariabilityRequirement.PropertyDisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/TargetVariabilityRequirement.PropertyDisplayName" xml:space="preserve">
     <value>Parent Variability Requirement</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetVariabilityRequirement&apos; on DomainRelationship &apos;ParentVariabilityRequirementHasParentVariabilityRequirements&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolShape.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolShape</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolShape.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ProductionToolShape</value>
     <comment>Description for DomainClass &apos;ProductionToolShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolShape.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProductionToolShape.DisplayName" xml:space="preserve">
     <value>Production Tool Shape</value>
     <comment>DisplayName for DomainClass &apos;ProductionToolShape&apos;</comment>
   </data>
@@ -693,27 +693,27 @@
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetShape.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetShape</value>
     <comment>Description for DomainClass &apos;ProducedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetShape.DisplayName" xml:space="preserve">
     <value>Produced Asset Shape</value>
     <comment>DisplayName for DomainClass &apos;ProducedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape/IsFinalColor.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetShape/IsFinalColor.Description" xml:space="preserve">
     <value>The color of a deliverable asset.</value>
     <comment>Description for DomainProperty &apos;IsFinalColor&apos; on DomainClass &apos;ProducedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape/IsFinalColor.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetShape/IsFinalColor.DisplayName" xml:space="preserve">
     <value>Is Final Color</value>
     <comment>DisplayName for DomainProperty &apos;IsFinalColor&apos; on DomainClass &apos;ProducedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape/IsIntermediateColor.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetShape/IsIntermediateColor.Description" xml:space="preserve">
     <value>The color of a intermediate asset.</value>
     <comment>Description for DomainProperty &apos;IsIntermediateColor&apos; on DomainClass &apos;ProducedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape/IsIntermediateColor.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ProducedAssetShape/IsIntermediateColor.DisplayName" xml:space="preserve">
     <value>Is Intermediate Color</value>
     <comment>DisplayName for DomainProperty &apos;IsIntermediateColor&apos; on DomainClass &apos;ProducedAssetShape&apos;</comment>
   </data>
@@ -725,51 +725,51 @@
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape</value>
     <comment>Description for DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape.DisplayName" xml:space="preserve">
     <value>Supplied Asset Shape</value>
     <comment>DisplayName for DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedColor.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedColor.Description" xml:space="preserve">
     <value>The color of a user supplied asset.</value>
     <comment>Description for DomainProperty &apos;IsUserSuppliedColor&apos; on DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedColor.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedColor.DisplayName" xml:space="preserve">
     <value>Is User Supplied Color</value>
     <comment>DisplayName for DomainProperty &apos;IsUserSuppliedColor&apos; on DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialColor.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialColor.Description" xml:space="preserve">
     <value>The color of a supplied material asset.</value>
     <comment>Description for DomainProperty &apos;IsMaterialColor&apos; on DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialColor.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialColor.DisplayName" xml:space="preserve">
     <value>Is Material Color</value>
     <comment>DisplayName for DomainProperty &apos;IsMaterialColor&apos; on DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedStereotypeText.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedStereotypeText.Description" xml:space="preserve">
     <value>The stereotype text of a user supplied asset.</value>
     <comment>Description for DomainProperty &apos;IsUserSuppliedStereotypeText&apos; on DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedStereotypeText.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsUserSuppliedStereotypeText.DisplayName" xml:space="preserve">
     <value>Is User Supplied Stereotype Text</value>
     <comment>DisplayName for DomainProperty &apos;IsUserSuppliedStereotypeText&apos; on DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialStereotypeText.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialStereotypeText.Description" xml:space="preserve">
     <value>The stereotype text of a supplied material asset.</value>
     <comment>Description for DomainProperty &apos;IsMaterialStereotypeText&apos; on DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialStereotypeText.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/IsMaterialStereotypeText.DisplayName" xml:space="preserve">
     <value>Is Material Stereotype Text</value>
     <comment>DisplayName for DomainProperty &apos;IsMaterialStereotypeText&apos; on DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/StereotypeText.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/StereotypeText.Description" xml:space="preserve">
     <value>The text of the stereotype of this element.</value>
     <comment>Description for DomainProperty &apos;StereotypeText&apos; on DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape/StereotypeText.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape/StereotypeText.DisplayName" xml:space="preserve">
     <value>Stereotype Text</value>
     <comment>DisplayName for DomainProperty &apos;StereotypeText&apos; on DomainClass &apos;SuppliedAssetShape&apos;</comment>
   </data>
@@ -781,19 +781,19 @@
     <value>NameDecorator</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignConnector.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignConnector</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignConnector.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.DesignConnector</value>
     <comment>Description for DomainClass &apos;DesignConnector&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignConnector.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.DesignConnector.DisplayName" xml:space="preserve">
     <value>Design Connector</value>
     <comment>DisplayName for DomainClass &apos;DesignConnector&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolInputConnector.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolInputConnector</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ToolInputConnector.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ToolInputConnector</value>
     <comment>Description for DomainClass &apos;ToolInputConnector&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolInputConnector.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ToolInputConnector.DisplayName" xml:space="preserve">
     <value>Tool Input Connector</value>
     <comment>DisplayName for DomainClass &apos;ToolInputConnector&apos;</comment>
   </data>
@@ -801,11 +801,11 @@
     <value>Supplies Input</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolOutputConnector.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolOutputConnector</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ToolOutputConnector.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ToolOutputConnector</value>
     <comment>Description for DomainClass &apos;ToolOutputConnector&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolOutputConnector.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ToolOutputConnector.DisplayName" xml:space="preserve">
     <value>Tool Output Connector</value>
     <comment>DisplayName for DomainClass &apos;ToolOutputConnector&apos;</comment>
   </data>
@@ -813,11 +813,11 @@
     <value>Produces</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolCopyConnector.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolCopyConnector</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.ToolCopyConnector.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.ToolCopyConnector</value>
     <comment>Description for DomainClass &apos;ToolCopyConnector&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolCopyConnector.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.ToolCopyConnector.DisplayName" xml:space="preserve">
     <value>Tool Copy Connector</value>
     <comment>DisplayName for DomainClass &apos;ToolCopyConnector&apos;</comment>
   </data>
@@ -833,59 +833,59 @@
     <value>WorkflowDesign Explorer</value>
     <comment>Model Explorer Toolwindow title</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram</value>
     <comment>Description for DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.DisplayName" xml:space="preserve">
     <value>WorkflowDesignDiagram</value>
     <comment>DisplayName for DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringGradientColor.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringGradientColor.Description" xml:space="preserve">
     <value>The color of the gradient in the title of the background.</value>
     <comment>Description for DomainProperty &apos;AuthoringGradientColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringGradientColor.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringGradientColor.DisplayName" xml:space="preserve">
     <value>Authoring Gradient Color</value>
     <comment>DisplayName for DomainProperty &apos;AuthoringGradientColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringBackgroundColor.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram.Authoring Background Color</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringBackgroundColor.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.Authoring Background Color</value>
     <comment>Description for DomainProperty &apos;AuthoringBackgroundColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringBackgroundColor.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringBackgroundColor.DisplayName" xml:space="preserve">
     <value>Authoring Background Color</value>
     <comment>DisplayName for DomainProperty &apos;AuthoringBackgroundColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringTitleTextColor.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringTitleTextColor.Description" xml:space="preserve">
     <value>The color of the text of the diagram title.</value>
     <comment>Description for DomainProperty &apos;AuthoringTitleTextColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringTitleTextColor.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringTitleTextColor.DisplayName" xml:space="preserve">
     <value>Authoring Title Text Color</value>
     <comment>DisplayName for DomainProperty &apos;AuthoringTitleTextColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringGradientColor.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringGradientColor.Description" xml:space="preserve">
     <value>The color of the gradient in the title of the background.</value>
     <comment>Description for DomainProperty &apos;TailoringGradientColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringGradientColor.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringGradientColor.DisplayName" xml:space="preserve">
     <value>Tailoring Gradient Color</value>
     <comment>DisplayName for DomainProperty &apos;TailoringGradientColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringBackgroundColor.Description" xml:space="preserve">
-    <value>Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram.Tailoring Background Color</value>
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringBackgroundColor.Description" xml:space="preserve">
+    <value>Description for NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.Tailoring Background Color</value>
     <comment>Description for DomainProperty &apos;TailoringBackgroundColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringBackgroundColor.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringBackgroundColor.DisplayName" xml:space="preserve">
     <value>Tailoring Background Color</value>
     <comment>DisplayName for DomainProperty &apos;TailoringBackgroundColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringTitleTextColor.Description" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringTitleTextColor.Description" xml:space="preserve">
     <value>The color of the text of the diagram title.</value>
     <comment>Description for DomainProperty &apos;TailoringTitleTextColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>
-  <data name="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringTitleTextColor.DisplayName" xml:space="preserve">
+  <data name="NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringTitleTextColor.DisplayName" xml:space="preserve">
     <value>Tailoring Title Text Color</value>
     <comment>DisplayName for DomainProperty &apos;TailoringTitleTextColor&apos; on DomainClass &apos;WorkflowDesignDiagram&apos;</comment>
   </data>

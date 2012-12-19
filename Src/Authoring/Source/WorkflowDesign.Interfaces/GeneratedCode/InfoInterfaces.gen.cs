@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq.Expressions;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
+namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 {
 	
 	/// <summary>
@@ -36,26 +36,26 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 	/// A requirement for a point of variability in the product line.
 	/// </summary>
 	[Description("A requirement for a point of variability in the product line.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IVariabilityRequirementInfo : IDesignElementInfo 
 	{
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirement
+		/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirement
 		/// </summary>
 		IEnumerable<IProductionToolInfo> ProductionTools { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirement
+		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirement
 		/// </summary>
 		IDesignInfo Design { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirement
+		/// Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirement
 		/// </summary>
 		IEnumerable<IVariabilityRequirementInfo> VariabilityRequirements { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirement
+		/// Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirement
 		/// </summary>
 		IVariabilityRequirementInfo ParentVariabilityRequirement { get; }
 	}
@@ -80,7 +80,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 	/// An asset that is produced by a production tool.
 	/// </summary>
 	[Description("An asset that is produced by a production tool.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IProducedAssetInfo : IAssetInfo 
 	{
 		/// <summary>
@@ -90,17 +90,17 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 		global::System.Boolean IsFinal { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAsset
+		/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAsset
 		/// </summary>
 		IEnumerable<IProductionToolInfo> ProducingProductionTools { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAsset
+		/// Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAsset
 		/// </summary>
 		IEnumerable<IProductionToolInfo> ProductionTools { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAsset
+		/// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAsset
 		/// </summary>
 		IEnumerable<ISuppliedAssetInfo> SuppliedAssets { get; }
 	}
@@ -125,7 +125,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 	/// A tool that is supplied assets that produces more assets.
 	/// </summary>
 	[Description("A tool that is supplied assets that produces more assets.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IProductionToolInfo : IDesignElementInfo 
 	{
 		/// <summary>
@@ -135,32 +135,32 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 		global::System.String Classification { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionTool
+		/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionTool
 		/// </summary>
 		IEnumerable<IVariabilityRequirementInfo> VariabilityRequirements { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionTool
+		/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionTool
 		/// </summary>
 		IEnumerable<IProducedAssetInfo> ProducedProducedAssets { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionTool
+		/// Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionTool
 		/// </summary>
 		IEnumerable<IProducedAssetInfo> SuppliedProducedAssets { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionTool
+		/// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionTool
 		/// </summary>
 		IEnumerable<ISuppliedAssetInfo> SuppliedSuppliedAssets { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.ComponentModel.AssetSuppliesAllProducingTools.ProductionTool
+		/// Description for NuPattern.Authoring.ComponentModel.AssetSuppliesAllProducingTools.ProductionTool
 		/// </summary>
 		IEnumerable<IAssetInfo> AllSuppliedAssets { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionTool
+		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionTool
 		/// </summary>
 		IDesignInfo Design { get; }
 	}
@@ -185,7 +185,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 	/// An asset that is supplied to a production tool.
 	/// </summary>
 	[Description("An asset that is supplied to a production tool.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface ISuppliedAssetInfo : IAssetInfo 
 	{
 		/// <summary>
@@ -195,12 +195,12 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 		global::System.Boolean IsUserSupplied { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAsset
+		/// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAsset
 		/// </summary>
 		IEnumerable<IProducedAssetInfo> ProducedAssets { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAsset
+		/// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAsset
 		/// </summary>
 		IEnumerable<IProductionToolInfo> ProductionTools { get; }
 	}
@@ -225,7 +225,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 	/// A supplied or fabricated asset in the product line.
 	/// </summary>
 	[Description("A supplied or fabricated asset in the product line.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IAssetInfo : IDesignElementInfo 
 	{
 		/// <summary>
@@ -235,12 +235,12 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 		global::System.String SourceReference { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset
+		/// Description for NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset
 		/// </summary>
 		IEnumerable<IProductionToolInfo> AllProducingTools { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.Asset
+		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Asset
 		/// </summary>
 		IDesignInfo Design { get; }
 	}
@@ -265,7 +265,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 	/// A production line design.
 	/// </summary>
 	[Description("A production line design.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IDesignInfo  
 	{
 		/// <summary>
@@ -274,17 +274,17 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 		[Description("Gets the identifier for this element.")]
 		global::System.Guid Id { get; } 
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.Design
+		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.Design
 		/// </summary>
 		IEnumerable<IProductionToolInfo> ProductionTools { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.Design
+		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Design
 		/// </summary>
 		IEnumerable<IAssetInfo> Assets { get; }
 		
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Design
+		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Design
 		/// </summary>
 		IEnumerable<IVariabilityRequirementInfo> VariabilityRequirements { get; }
 	}
@@ -309,7 +309,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 	/// An element that has a unique name.
 	/// </summary>
 	[Description("An element that has a unique name.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface INamedElementInfo  
 	{
 		/// <summary>
@@ -368,7 +368,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
 	/// An element used for realization.
 	/// </summary>
 	[Description("An element used for realization.")]
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IDesignElementInfo : INamedElementInfo 
 	{
 		/// <summary>

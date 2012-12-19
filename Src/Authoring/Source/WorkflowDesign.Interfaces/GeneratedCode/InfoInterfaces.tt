@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq.Expressions;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces
+namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 {
 <#
 	foreach (var domainClass in this.DslLibrary.Classes)

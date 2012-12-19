@@ -8,8 +8,8 @@
     <ProjectGuid>{A55CFA2E-1519-4719-BAFB-D67F3C67E375}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Interfaces</AssemblyName>
+    <RootNamespace>NuPattern.Authoring.WorkflowDesign.Interfaces</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.WorkflowDesign.Interfaces</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>

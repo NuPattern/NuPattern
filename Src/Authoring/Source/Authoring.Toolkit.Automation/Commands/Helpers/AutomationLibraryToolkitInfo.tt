@@ -2,7 +2,7 @@
 <#@ Include File="..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 using System;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
+namespace NuPattern.Authoring.Automation.Commands
 {
 	/// <summary>
 	/// Definitions for the AutomationLibrary.Toolkit toolkit project

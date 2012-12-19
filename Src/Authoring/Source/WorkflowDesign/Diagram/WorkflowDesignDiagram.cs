@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using Microsoft.VisualStudio.Modeling.Diagrams;
-using Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Properties;
+using NuPattern.Authoring.WorkflowDesign.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Class that represents the main diagram.

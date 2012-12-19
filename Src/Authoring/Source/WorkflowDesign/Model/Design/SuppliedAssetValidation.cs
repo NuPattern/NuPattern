@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Customizations for the SuppliedAsset class.

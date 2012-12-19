@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	internal static partial class Constants
 	{
@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
 		public const string ProductName = @"WorkflowDesign";
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-		public const string CompanyName = @"The Outercurve Foundation";
+		public const string CompanyName = @"NuPattern";
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
 		public const string ProductVersion = "1.2.0.0";
 
@@ -40,7 +40,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 //
 // Constants not generated from values in DesignerDefinition.dsl are defined below
 //
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	internal static partial class Constants
 	{

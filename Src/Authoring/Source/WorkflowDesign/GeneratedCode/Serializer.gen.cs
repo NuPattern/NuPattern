@@ -10,7 +10,7 @@
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer VariabilityRequirementSerializer for DomainClass VariabilityRequirement.
@@ -732,7 +732,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer ProducedAssetSerializer for DomainClass ProducedAsset.
@@ -1521,7 +1521,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer ProductionToolSerializer for DomainClass ProductionTool.
@@ -2387,7 +2387,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer SuppliedAssetSerializer for DomainClass SuppliedAsset.
@@ -3254,7 +3254,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer AssetSerializer for DomainClass Asset.
@@ -3737,7 +3737,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer DesignSerializer for DomainClass Design.
@@ -4647,7 +4647,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer NamedElementSchemaSerializer for DomainClass NamedElementSchema.
@@ -5252,7 +5252,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer DesignElementSerializer for DomainClass DesignElement.
@@ -5765,7 +5765,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer ProductionToolReferencesVariabilityRequirementsSerializer for DomainClass ProductionToolReferencesVariabilityRequirements.
@@ -6639,7 +6639,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer ProductionToolProducesProducedAssetsSerializer for DomainClass ProductionToolProducesProducedAssets.
@@ -7513,7 +7513,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer ProducedAssetSuppliesProductionToolsSerializer for DomainClass ProducedAssetSuppliesProductionTools.
@@ -8259,7 +8259,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer SuppliedAssetCopiesToProducedAssetsSerializer for DomainClass SuppliedAssetCopiesToProducedAssets.
@@ -9133,7 +9133,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer SuppliedAssetSuppliesProductionToolsSerializer for DomainClass SuppliedAssetSuppliesProductionTools.
@@ -9879,7 +9879,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer AssetSuppliesAllProducingToolsSerializer for DomainClass AssetSuppliesAllProducingTools.
@@ -10520,7 +10520,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer DesignHasProductionToolsSerializer for DomainClass DesignHasProductionTools.
@@ -11305,7 +11305,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer DesignHasAssetsSerializer for DomainClass DesignHasAssets.
@@ -12090,7 +12090,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer DesignHasVariabilityRequirementsSerializer for DomainClass DesignHasVariabilityRequirements.
@@ -12875,7 +12875,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer ParentVariabilityRequirementHasParentVariabilityRequirementsSerializer for DomainClass ParentVariabilityRequirementHasParentVariabilityRequirements.
@@ -13660,7 +13660,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer ProductionToolShapeSerializerBase for DomainClass ProductionToolShape.
@@ -14276,7 +14276,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer ProducedAssetShapeSerializerBase for DomainClass ProducedAssetShape.
@@ -15002,7 +15002,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer SuppliedAssetShapeSerializerBase for DomainClass SuppliedAssetShape.
@@ -15798,7 +15798,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer DesignConnectorSerializer for DomainClass DesignConnector.
@@ -16215,7 +16215,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer ToolInputConnectorSerializer for DomainClass ToolInputConnector.
@@ -16778,7 +16778,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer ToolOutputConnectorSerializer for DomainClass ToolOutputConnector.
@@ -17341,7 +17341,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer ToolCopyConnectorSerializer for DomainClass ToolCopyConnector.
@@ -17904,7 +17904,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Serializer WorkflowDesignDiagramSerializerBase for DomainClass WorkflowDesignDiagram.
@@ -18774,7 +18774,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// A DomainXmlSerializationBehavior implementation for defined behavior WorkflowDesignSerializationBehavior.
@@ -18889,7 +18889,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 				if (WorkflowDesignSerializationBehavior.namespaceEntries == null)
 				{
 					WorkflowDesignSerializationBehavior.namespaceEntries = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerNamespaceEntry>();
-					WorkflowDesignSerializationBehavior.namespaceEntries.Add(new DslModeling::DomainXmlSerializerNamespaceEntry(DomainModelXmlNamespace, typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel)));
+					WorkflowDesignSerializationBehavior.namespaceEntries.Add(new DslModeling::DomainXmlSerializerNamespaceEntry(DomainModelXmlNamespace, typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel)));
 				}
 				return WorkflowDesignSerializationBehavior.namespaceEntries.AsReadOnly();
 			}
@@ -18933,7 +18933,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Moniker resolver for serialization behavior WorkflowDesignSerializationBehavior.
@@ -19072,7 +19072,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Utility class to provide serialization messages
@@ -19632,7 +19632,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Provides an implementation of the IDomainModelSerializer interface
@@ -19641,7 +19641,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	/// <remarks>Double-derived class - the default implementation is in WorkflowDesignDomainModelSerializerBase.
 	/// This class exist so users can customize behavior easily.</remarks>
 	[global::System.ComponentModel.Composition.Export(typeof(DslModeling::IDomainModelSerializer))]
-	[DslModeling::DomainModelSerializer(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignSerializationBehavior.DomainModelXmlNamespace, "toolingdesign")]
+	[DslModeling::DomainModelSerializer(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignSerializationBehavior.DomainModelXmlNamespace, "toolingdesign")]
 	public partial class WorkflowDesignDomainModelSerializer : WorkflowDesignDomainModelSerializerBase
 	{
 	}
@@ -19661,7 +19661,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		public virtual string DomainModelNamespace
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignSerializationBehavior.DomainModelXmlNamespace; }
+			get { return global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignSerializationBehavior.DomainModelXmlNamespace; }
 		}
 	
 		/// <summary>
@@ -19679,7 +19679,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		public virtual global::System.Type DomainModelType
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel); }
+			get { return typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel); }
 		}
 	
 		/// <summary>
@@ -19734,11 +19734,11 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			if (modelRoot == null) { throw new global::System.ArgumentNullException("modelRoot"); }
 			if (string.IsNullOrEmpty("fileName")) { throw new global::System.ArgumentNullException("fileName"); }
 	
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design rootElement = modelRoot as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design;
+			global::NuPattern.Authoring.WorkflowDesign.Design rootElement = modelRoot as global::NuPattern.Authoring.WorkflowDesign.Design;
 			if (rootElement == null)
 			{
 				string errorMessage = string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-					global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("InvalidSaveRootElementType"),
+					global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("InvalidSaveRootElementType"),
 					modelRoot.GetType().ToString());
 	
 				throw new global::System.ArgumentException(errorMessage, "modelRoot");
@@ -19815,20 +19815,20 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			if (diagram == null) { throw new global::System.ArgumentNullException("diagram"); }
 			if (string.IsNullOrEmpty("diagramFileName")) { throw new global::System.ArgumentNullException("diagramFileName"); }
 	
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design typedRoot = modelRoot as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design;
+			global::NuPattern.Authoring.WorkflowDesign.Design typedRoot = modelRoot as global::NuPattern.Authoring.WorkflowDesign.Design;
 			if (typedRoot == null)
 			{
 				string errorMessage = string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-					global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("InvalidSaveRootElementType"),
+					global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("InvalidSaveRootElementType"),
 					modelRoot.GetType().ToString());
 	
 				throw new global::System.ArgumentException(errorMessage, "modelRoot");
 			}
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram typedDiagram = diagram as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram;
+			global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram typedDiagram = diagram as global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram;
 			if (typedDiagram == null)
 			{
 				string errorMessage = string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-					global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("InvalidSaveDiagramType"),
+					global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("InvalidSaveDiagramType"),
 					diagram.GetType().ToString());
 	
 				throw new global::System.ArgumentException(errorMessage, "diagram");

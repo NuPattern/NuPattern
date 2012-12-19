@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Linq;
 using EnvDTE;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
+namespace NuPattern.Authoring.Automation.Commands
 {
 	internal static class DesignerCommandHelper
 	{

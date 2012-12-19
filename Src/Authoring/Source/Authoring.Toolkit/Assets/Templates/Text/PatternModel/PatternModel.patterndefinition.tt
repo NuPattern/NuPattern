@@ -2,13 +2,13 @@
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ output extension=".gen.t4" #>
 <#@ Include File="..\..\..\..\..\..\..\Common\Helpers\DslVersion.tt" #>
-\<#@ Template Inherits="Microsoft.VisualStudio.Patterning.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" \#>
-\<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
+\<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" \#>
+\<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
 \<#@ Output extension=".patterndefinition" \#>
-\<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" \#>
-\<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.dll" \#>
-\<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" \#>
-\<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Authoring.Authoring" \#>
+\<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" \#>
+\<#@ Assembly Name="NuPattern.Authoring.Toolkit.Automation.dll" \#>
+\<#@ Import Namespace="NuPattern.Runtime" \#>
+\<#@ Import Namespace="NuPattern.Authoring.Authoring" \#>
 \<#@ Import Namespace="System.Linq" \#>
 \<#
     var element = this.Element.As<IPatternModel>();

@@ -2760,7 +2760,7 @@ name, IItemContainer parent)<o:p></o:p></span></p>
 <p class=3DSourceCodeCxSpMiddle><span style=3D'font-size:7.0pt;mso-bidi-fon=
 t-size:
 11.0pt;line-height:115%'><span style=3D'mso-spacerun:yes'>   </span>at
-Microsoft.VisualStudio.Patterning.Library.Commands.UnfoldVsTemplateCommand.=
+NuPattern.Library.Commands.UnfoldVsTemplateCommand.=
 UnfoldTemplate(ISolution
 solution, IFxrUriReferenceService uriService, IServiceProvider serviceProvi=
 der,
@@ -2774,7 +2774,7 @@ and.cs:line
 <p class=3DSourceCodeCxSpMiddle><span style=3D'font-size:7.0pt;mso-bidi-fon=
 t-size:
 11.0pt;line-height:115%'><span style=3D'mso-spacerun:yes'>   </span>at
-Microsoft.VisualStudio.Patterning.Library.Automation.TemplateAutomation.&lt=
+NuPattern.Library.Automation.TemplateAutomation.&lt=
 ;Execute&gt;b__2()
 in D:\Projects\Platu\Dev\Team\Src\Library\Source\Automation\Template\Templa=
 teAutomation.cs:line
@@ -2783,7 +2783,7 @@ teAutomation.cs:line
 <p class=3DSourceCodeCxSpLast><span style=3D'font-size:7.0pt;mso-bidi-font-=
 size:
 11.0pt;line-height:115%'><span style=3D'mso-spacerun:yes'>   </span>at
-Microsoft.VisualStudio.Patterning.Extensibility.TracingExtensions.DoShield(=
+NuPattern.Extensibility.TracingExtensions.DoShield(=
 ITraceSource
 traceSource, Action action, String format, Boolean showUI, String[] args) i=
 n D:\Projects\Platu\Dev\Team\Src\Common\Source\Extensibility\Extensions\Tra=

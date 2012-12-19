@@ -9,13 +9,13 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.References;
+using NuPattern.Library.Commands;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Double-derived class to allow easier code customization.
@@ -104,7 +104,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
                 if (serializationResult.Encoding != null)
                 {
                     this.ModelingDocStore.SetEncoding(serializationResult.Encoding);
-                    ErrorHandler.ThrowOnFailure(this.SetDocDataDirty(0)); // Setting the encoding will mark the document as dirty, so clear the dirty flag.
+                    Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.SetDocDataDirty(0)); // Setting the encoding will mark the document as dirty, so clear the dirty flag.
                 }
             }
 

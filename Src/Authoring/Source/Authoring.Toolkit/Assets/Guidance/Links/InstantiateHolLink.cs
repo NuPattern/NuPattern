@@ -3,7 +3,7 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance.Links
+namespace NuPattern.Authoring.Authoring.Guidance.Links
 {
     /// <summary>
     /// Link launch point for instantiating the Hands-On Lab guidance.

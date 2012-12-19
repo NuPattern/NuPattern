@@ -1,8 +1,8 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Library;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Library;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance
+namespace NuPattern.Authoring.Guidance
 {
 	/// <summary>
 	/// A text template class for transforming a TOC workflow.

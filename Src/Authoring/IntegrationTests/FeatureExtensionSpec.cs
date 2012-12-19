@@ -1,10 +1,10 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.Patterning.Authoring.Authoring;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Authoring.Authoring;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
+namespace NuPattern.Authoring.IntegrationTests
 {
 	[TestClass]
 	public class FeatureExtensionSpec

@@ -1,5 +1,5 @@
 ﻿
-namespace Microsoft.VisualStudio.Patterning.HandsOnLabs
+namespace NuPattern.HandsOnLabs
 {
     /// <summary>
     /// Information about the toolkit

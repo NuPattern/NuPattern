@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Provides a custom type descriptor for the <see cref="NamedElementSchema" /> class. 

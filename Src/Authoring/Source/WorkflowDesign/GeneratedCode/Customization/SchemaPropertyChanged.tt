@@ -15,19 +15,19 @@ private void GeneratePropertyChanged(DomainClass domainClass)
 [GeneratedCode("<#= domainClass.Namespace #>", "<#= this.DslVersion #>")]
 public partial class <#= className + "Base" #>
 {
-	private Microsoft.VisualStudio.Patterning.Runtime.PropertyChangeManager propertyChanges;
+	private NuPattern.Runtime.PropertyChangeManager propertyChanges;
 
 	/// <summary>
 	/// Gets the manager for property change event subscriptions for this instance 
 	///	and any of its derived classes.
 	/// </summary>
-	protected Microsoft.VisualStudio.Patterning.Runtime.PropertyChangeManager PropertyChanges
+	protected NuPattern.Runtime.PropertyChangeManager PropertyChanges
 	{
 		get
 		{
 			if (this.propertyChanges == null)
 			{
-				this.propertyChanges = new Microsoft.VisualStudio.Patterning.Runtime.PropertyChangeManager(this);
+				this.propertyChanges = new NuPattern.Runtime.PropertyChangeManager(this);
 			}
 
 			return this.propertyChanges;
@@ -46,7 +46,7 @@ public partial class <#= className #> : INotifyPropertyChanged
 	if (!domainClass.GeneratesDoubleDerived && domainClass.BaseClass == null)
 	{	
 #>
-	private Microsoft.VisualStudio.Patterning.Runtime.PropertyChangeManager propertyChanges;
+	private NuPattern.Runtime.PropertyChangeManager propertyChanges;
 
 <#+
 	}
@@ -93,13 +93,13 @@ public partial class <#= className #> : INotifyPropertyChanged
 	/// Gets the manager for property change event subscriptions for this instance 
 	///	and any of its derived classes.
 	/// </summary>
-	protected Microsoft.VisualStudio.Patterning.Runtime.PropertyChangeManager PropertyChanges
+	protected NuPattern.Runtime.PropertyChangeManager PropertyChanges
 	{
 		get
 		{
 			if (this.propertyChanges == null)
 			{
-				this.propertyChanges = new Microsoft.VisualStudio.Patterning.Runtime.PropertyChangeManager(this);
+				this.propertyChanges = new NuPattern.Runtime.PropertyChangeManager(this);
 			}
 
 			return this.propertyChanges;

@@ -11,7 +11,7 @@ private void GenerateContainedElements(PluralizationService pluralizer, IElement
 		GenerateContainedElementProperty(pluralizer, extension, "GetExtension", "GetExtensions");		
 	}
 
-	foreach (var element in infoElement.Elements.Where(e => e.Multiplicity == Microsoft.VisualStudio.Patterning.Runtime.Multiplicity.Multiple))
+	foreach (var element in infoElement.Elements.Where(e => e.Multiplicity == NuPattern.Runtime.Multiplicity.Multiple))
 	{
 		GenerateContainedElementCreate(pluralizer, element);		
 	}
@@ -53,7 +53,7 @@ public I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(string nam
 
 private void GenerateContainedElementProperty(PluralizationService pluralizer, IContainedElementInfo element, string singularMethod, string pluralMethod)
 {
-	if (element.Multiplicity == Microsoft.VisualStudio.Patterning.Runtime.Multiplicity.Single)
+	if (element.Multiplicity == NuPattern.Runtime.Multiplicity.Single)
 	{
 #>
 

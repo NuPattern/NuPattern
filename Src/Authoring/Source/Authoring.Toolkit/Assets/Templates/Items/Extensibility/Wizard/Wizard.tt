@@ -19,16 +19,16 @@
         <ProjectItem TargetFileName="$fileinputname$.xaml.cs" ReplaceParameters="true">Wizard.xaml.cs</ProjectItem>
     </TemplateContent>
 	<WizardExtension>
-		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.GuidGeneratorTemplateWizard</FullClassName>
+		<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>NuPattern.Runtime.GuidGeneratorTemplateWizard</FullClassName>
 	</WizardExtension>
 	<WizardExtension>
-		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.ReplacementTemplateWizard</FullClassName>
+		<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>NuPattern.Runtime.ReplacementTemplateWizard</FullClassName>
 	</WizardExtension>
     <WizardExtension>
-      <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-      <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+      <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+      <FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
     </WizardExtension>
 	<WizardData>
 		<NewGuid Key="$guid11$" />

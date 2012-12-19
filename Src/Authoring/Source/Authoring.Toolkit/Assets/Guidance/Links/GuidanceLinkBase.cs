@@ -2,7 +2,7 @@
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance.Links
+namespace NuPattern.Authoring.Authoring.Guidance.Links
 {
     /// <summary>
     /// Link launch point base class

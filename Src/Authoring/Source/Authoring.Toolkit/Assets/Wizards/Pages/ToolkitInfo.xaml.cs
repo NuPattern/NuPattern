@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Assets.Wizards.Pages
+namespace NuPattern.Authoring.Authoring.Assets.Wizards.Pages
 {
 	/// <summary>
 	/// A custom wizard page that edits the properties of the current element.

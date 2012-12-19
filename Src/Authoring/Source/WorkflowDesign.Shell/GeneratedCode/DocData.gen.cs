@@ -14,7 +14,7 @@ using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 using VSShellInterop = global::Microsoft.VisualStudio.Shell.Interop;
 using global::System.Linq;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.
@@ -62,7 +62,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		{
 			get
 			{
-				return global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("FormatList"); 
+				return global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("FormatList"); 
 			}
 		}
 
@@ -156,7 +156,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		{
 			// Log and suppress all binding failure exceptions.
 			string errorMessage = string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("BindingErrorOccurred"),
+				global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("BindingErrorOccurred"),
 				exception.ToString());
 			
 			this.AddErrorListItem(new DslShell::SimpleErrorListItem(errorMessage, this.FileName, global::Microsoft.VisualStudio.Shell.TaskPriority.Normal, global::Microsoft.VisualStudio.Shell.TaskErrorCategory.Warning));
@@ -319,7 +319,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			global::System.Collections.Generic.List<global::System.Type> allTypes = new System.Collections.Generic.List<System.Type>();
 
 			// In the type of our base domain model
-			allTypes.Add(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel));
+			allTypes.Add(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel));
 
 			// Add in any extension domain models
 			global::System.Collections.Generic.IEnumerable<global::System.Type> extensionTypes = this.GetExtensionDomainModels();
@@ -343,7 +343,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 				return null;
 			}
 
-			global::System.Collections.Generic.IEnumerable<global::System.Type> extensionDomainModels = this.ExtensionLocator.GetExtendingDomainModels(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel));
+			global::System.Collections.Generic.IEnumerable<global::System.Type> extensionDomainModels = this.ExtensionLocator.GetExtendingDomainModels(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel));
 
 			return extensionDomainModels;
 		}
@@ -357,15 +357,15 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		protected override void Load(string fileName, bool isReload)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design modelRoot = null;
+			global::NuPattern.Authoring.WorkflowDesign.Design modelRoot = null;
 			DslModeling::ISchemaResolver schemaResolver = new DslShell::ModelingSchemaResolver(this.ServiceProvider);
 			//clear the current root element
 			this.SetRootElement(null);
 			// Enable diagram fixup rules in our store, because we will load diagram data.
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.EnableDiagramRules(this.Store);
+			global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.EnableDiagramRules(this.Store);
 			string diagramFileName = fileName + this.DiagramExtension;
 			
-			modelRoot = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignSerializationHelper.Instance.LoadModelAndDiagram(serializationResult, this.GetModelPartition(), fileName, this.GetDiagramPartition(), diagramFileName, schemaResolver, null /* no load-time validation */, this.SerializerLocator);
+			modelRoot = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignSerializationHelper.Instance.LoadModelAndDiagram(serializationResult, this.GetModelPartition(), fileName, this.GetDiagramPartition(), diagramFileName, schemaResolver, null /* no load-time validation */, this.SerializerLocator);
 
 			// Report serialization messages.
 			this.SuspendErrorListRefresh();
@@ -384,7 +384,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			if (serializationResult.Failed)
 			{	
 				// Load failed, can't open the file.
-				throw new global::System.InvalidOperationException(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("CannotOpenDocument"));
+				throw new global::System.InvalidOperationException(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("CannotOpenDocument"));
 			}
 			else
 			{
@@ -409,7 +409,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 							if (this.diagramDocumentLockHolder == null)
 							{
 								throw new global::System.InvalidOperationException(string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-													global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("CannotCloseExistingDiagramDocument"),
+													global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("CannotCloseExistingDiagramDocument"),
 													diagramFileName));
 							}
 						}
@@ -443,7 +443,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 				if (vc.ErrorMessages.Count != 0)
 				{
 					string errorMsg = (unloadableError ? "UnloadableSaveValidationFailed" : "SaveValidationFailed");
-					global::System.Windows.Forms.DialogResult result = DslShell::PackageUtility.ShowMessageBox(this.ServiceProvider, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString(errorMsg), VSShellInterop::OLEMSGBUTTON.OLEMSGBUTTON_YESNO, VSShellInterop::OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_SECOND, VSShellInterop::OLEMSGICON.OLEMSGICON_WARNING);
+					global::System.Windows.Forms.DialogResult result = DslShell::PackageUtility.ShowMessageBox(this.ServiceProvider, global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString(errorMsg), VSShellInterop::OLEMSGBUTTON.OLEMSGBUTTON_YESNO, VSShellInterop::OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_SECOND, VSShellInterop::OLEMSGICON.OLEMSGICON_WARNING);
 					return (result == global::System.Windows.Forms.DialogResult.Yes);
 				}
 			}
@@ -494,7 +494,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		protected override void Save(string fileName)
 		{
 			DslModeling::SerializationResult serializationResult = new DslModeling::SerializationResult();
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design modelRoot = (global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design)this.RootElement;
+			global::NuPattern.Authoring.WorkflowDesign.Design modelRoot = (global::NuPattern.Authoring.WorkflowDesign.Design)this.RootElement;
 
 			
 			// Only save the diagrams if
@@ -507,7 +507,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			global::System.Collections.Generic.IList<DslDiagrams::PresentationElement> diagrams = DslDiagrams::PresentationViewsSubject.GetPresentation(this.RootElement);
 			if (diagrams.Count > 0 && (!saveAs || this.diagramDocumentLockHolder == null))
 			{
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram diagram = diagrams[0] as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram;
+				global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram diagram = diagrams[0] as global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram;
 				if (diagram != null)
 				{
 					string diagramFileName = fileName + this.DiagramExtension;
@@ -515,7 +515,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 					{
 						this.SuspendFileChangeNotification(diagramFileName);
 						
-						global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignSerializationHelper.Instance.SaveModelAndDiagram(serializationResult, modelRoot, fileName, diagram, diagramFileName, this.Encoding, false);
+						global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignSerializationHelper.Instance.SaveModelAndDiagram(serializationResult, modelRoot, fileName, diagram, diagramFileName, this.Encoding, false);
 					}
 					finally
 					{
@@ -525,7 +525,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			}
 			else
 			{
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignSerializationHelper.Instance.SaveModel(serializationResult, modelRoot, fileName, this.Encoding, false);
+				global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignSerializationHelper.Instance.SaveModel(serializationResult, modelRoot, fileName, this.Encoding, false);
 			}
 			// Report serialization messages.
 			this.SuspendErrorListRefresh();
@@ -543,7 +543,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 
 			if (serializationResult.Failed)
 			{	// Save failed.
-				throw new global::System.InvalidOperationException(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
+				throw new global::System.InvalidOperationException(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
 			}
 		}
 		/// <summary>
@@ -579,14 +579,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			global::System.Collections.Generic.IList<DslDiagrams::PresentationElement> diagrams = DslDiagrams::PresentationViewsSubject.GetPresentation(this.RootElement);
 			if (diagrams.Count > 0)
 			{
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram diagram = diagrams[0] as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram;
+				global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram diagram = diagrams[0] as global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram;
 				if (diagram != null)
 				{
 					try
 					{
 						this.SuspendFileChangeNotification(fileName);
 						
-						global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignSerializationHelper.Instance.SaveDiagram(serializationResult, diagram, fileName, this.Encoding, false);
+						global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignSerializationHelper.Instance.SaveDiagram(serializationResult, diagram, fileName, this.Encoding, false);
 					}
 					finally
 					{
@@ -615,7 +615,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			else
 			{	
 				// Save failed.
-				throw new global::System.InvalidOperationException(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
+				throw new global::System.InvalidOperationException(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.SingletonResourceManager.GetString("CannotSaveDocument"));
 			}						
 		}
 		
@@ -640,11 +640,11 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		{
 			get
 			{
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design modelRoot = this.RootElement as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design;
+				global::NuPattern.Authoring.WorkflowDesign.Design modelRoot = this.RootElement as global::NuPattern.Authoring.WorkflowDesign.Design;
 				string modelFile = string.Empty;
 				if (modelRoot != null)
 				{
-					modelFile = global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignSerializationHelper.Instance.GetSerializedModelString(modelRoot, this.Encoding);
+					modelFile = global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignSerializationHelper.Instance.GetSerializedModelString(modelRoot, this.Encoding);
 				}
 				return modelFile;
 			}

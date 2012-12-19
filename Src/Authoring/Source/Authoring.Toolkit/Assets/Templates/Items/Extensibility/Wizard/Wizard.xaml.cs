@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Common.Presentation;
+using NuPattern.Common.Presentation;
 
 namespace $rootnamespace$
 {

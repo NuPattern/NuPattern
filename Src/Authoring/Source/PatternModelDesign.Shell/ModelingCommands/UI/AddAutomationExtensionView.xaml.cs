@@ -1,7 +1,7 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Common.Presentation;
+using NuPattern.Common.Presentation;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Interaction logic for AddAutomationExtensionView.xaml.

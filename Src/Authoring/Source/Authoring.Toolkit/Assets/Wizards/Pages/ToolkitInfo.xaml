@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Microsoft.VisualStudio.Patterning.Authoring.Authoring.Assets.Wizards.Pages.ToolkitInfo"
+    x:Class="NuPattern.Authoring.Authoring.Assets.Wizards.Pages.ToolkitInfo"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:p="http://schemas.microsoft.com/visualstudiopatterning/2010/xaml/"

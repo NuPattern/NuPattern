@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.Patterning.Authoring.Authoring;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands;
-using Microsoft.VisualStudio.Patterning.Authoring.Guidance;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+﻿using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Authoring.Authoring;
+using NuPattern.Authoring.Automation.Commands;
+using NuPattern.Authoring.Guidance;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
+namespace NuPattern.Authoring.IntegrationTests
 {
 	[TestClass]
 	public class CreateGuidanceDocumentsCommandSpec

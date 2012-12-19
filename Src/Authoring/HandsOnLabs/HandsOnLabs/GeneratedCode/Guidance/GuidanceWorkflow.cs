@@ -8,12 +8,11 @@
 //------------------------------------------------------------------------------
 
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.HandsOnLabs.Guidance
+namespace NuPattern.HandsOnLabs.Guidance
 {
 	/// <summary>
 	/// Defines a base class for the guidance workflow for this feature.

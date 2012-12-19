@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
+namespace NuPattern.Authoring.Automation.Commands
 {
 	/// <summary>
 	/// Definitions for the AutomationLibrary.Toolkit toolkit project
@@ -20,7 +20,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
 		/// <summary>
 		/// Gets the VSIX name of this toolkit.
 		/// </summary>
-		public static string RegistrationName = "Pattern Toolkit Automation Library";
+		public static string RegistrationName = "NuPattern Toolkit Library";
 	}
 }
 

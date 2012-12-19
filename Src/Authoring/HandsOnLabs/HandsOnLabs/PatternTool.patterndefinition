@@ -16,12 +16,12 @@
   "ValueProvider": null
 }</targetPath>
     </templateSettings>
-    <eventSettings Id="c98c48ce-8d51-4a65-8f5e-7a0f5ea7e966" commandId="7e2c4448-9877-434c-8302-5abfaf7b870a" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="c98c48ce-8d51-4a65-8f5e-7a0f5ea7e966" commandId="7e2c4448-9877-434c-8302-5abfaf7b870a" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="c88a3a39-4321-4960-8edd-13fd61952167" />
       </extendedElement>
     </eventSettings>
-    <commandSettings Id="7e2c4448-9877-434c-8302-5abfaf7b870a" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.InstantiateFeatureCommand">
+    <commandSettings Id="7e2c4448-9877-434c-8302-5abfaf7b870a" typeId="NuPattern.Library.Commands.InstantiateFeatureCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d6b5820b-135a-419b-9dc1-7f6279e1771d" />
       </extendedElement>
@@ -32,7 +32,7 @@
         <propertySettings Id="da7f4eb2-637b-441c-92d6-695f42197fb8" value="True" name="ActivateOnInstantiation" />
       </properties>
     </commandSettings>
-    <commandSettings Id="0433fe7d-38fd-4aa3-bcbd-fc9dccbf9205" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateFeatureCommand">
+    <commandSettings Id="0433fe7d-38fd-4aa3-bcbd-fc9dccbf9205" typeId="NuPattern.Library.Commands.ActivateFeatureCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="010f16b7-1f97-4696-9a78-8e5336d9b68f" />
       </extendedElement>
@@ -43,11 +43,11 @@
       </extendedElement>
       <conditions>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.ElementReferenceExistsCondition",
+    "TypeId": "NuPattern.Library.Conditions.ElementReferenceExistsCondition",
     "Properties": [
       {
         "Name": "Kind",
-        "Value": "Microsoft.VisualStudio.Patterning.Extensibility.References.GuidanceReference",
+        "Value": "NuPattern.Extensibility.References.GuidanceReference",
         "ValueProvider": null
       }
     ]
@@ -70,7 +70,7 @@
       </extendedElement>
     </validationExtension>
   </dm0:extensions>
-  <pattern Id="71309920-c4ac-4283-b6bf-3cec975eca86" name="PatternToolkitHOLs" displayName="Pattern Toolkit Hands-On Labs" description="Hands on Labs for Creating Pattern Toolkits" codeIdentifier="PatternToolkitHOLs" isCustomizable="True" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.HandsOnLabs;component/Resources/PatternNodeHOL.png" currentDiagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713" patternLink="patternmanager://92131a71-f4c2-42ef-9a66-efe53b0ca4d8">
+  <pattern Id="71309920-c4ac-4283-b6bf-3cec975eca86" name="PatternToolkitHOLs" displayName="Pattern Toolkit Hands-On Labs" description="Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project." codeIdentifier="PatternToolkitHOLs" isCustomizable="True" icon="pack://application:,,,/NuPattern.HandsOnLabs;component/Resources/PatternNodeHOL.png" currentDiagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713" patternLink="patternmanager://92131a71-f4c2-42ef-9a66-efe53b0ca4d8">
     <customizationPolicy name="CustomizationPolicySchema1">
       <settings>
         <setting propertyId="DisplayName" />

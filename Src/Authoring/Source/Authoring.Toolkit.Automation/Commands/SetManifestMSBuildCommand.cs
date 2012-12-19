@@ -5,18 +5,18 @@ using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using EnvDTE;
-using Microsoft.VisualStudio.Patterning.Authoring.Authoring;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Authoring.Authoring;
+using NuPattern.Authoring.Automation.Properties;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.References;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
+namespace NuPattern.Authoring.Automation.Commands
 {
     /// <summary>
     /// Command used to validate the pattern model 

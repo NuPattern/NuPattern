@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Modeling.Shell;
-using Microsoft.VisualStudio.Patterning.Extensibility;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Add variable property command.

@@ -4593,7 +4593,7 @@ with it:<o:p></o:p></p>
 <p class=3DSourceCodeCxSpFirst style=3D'margin-left:.5in;mso-add-space:auto=
 '>&lt;#@
 Template
-Inherits=3D&quot;Microsoft.VisualStudio.Patterning.Library.ModelElementText=
+Inherits=3D&quot;NuPattern.Library.ModelElementText=
 Transformation&quot;
 HostSpecific=3D&quot;True&quot; Debug=3D&quot;True&quot; #&gt;<o:p></o:p></=
 p>
@@ -4601,18 +4601,18 @@ p>
 <p class=3DSourceCodeCxSpMiddle style=3D'margin-left:.5in;mso-add-space:aut=
 o'>&lt;#@
 ModelElement
-Type=3D&quot;Microsoft.VisualStudio.Patterning.Runtime.IProductElement&quot;
+Type=3D&quot;NuPattern.Runtime.IProductElement&quot;
 Processor=3D&quot;ModelElementProcessor&quot; #&gt;<o:p></o:p></p>
 
 <p class=3DSourceCodeCxSpMiddle style=3D'margin-left:.5in;mso-add-space:aut=
 o'>&lt;#@
 Assembly
-Name=3D&quot;Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll&quot;=
+Name=3D&quot;NuPattern.Runtime.Interfaces.dll&quot;=
  #&gt;<o:p></o:p></p>
 
 <p class=3DSourceCodeCxSpMiddle style=3D'margin-left:.5in;mso-add-space:aut=
 o'>&lt;#@
-Import Namespace=3D&quot;Microsoft.VisualStudio.Patterning.Runtime&quot; #&=
+Import Namespace=3D&quot;NuPattern.Runtime&quot; #&=
 gt;<o:p></o:p></p>
 
 <p class=3DSourceCodeCxSpMiddle style=3D'margin-left:.5in;mso-add-space:aut=

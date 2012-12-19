@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.HandsOnLabs.Guidance
+namespace NuPattern.HandsOnLabs.Guidance
 {
     public partial class Feature
     {
@@ -22,7 +22,7 @@ namespace Microsoft.VisualStudio.Patterning.HandsOnLabs.Guidance
 	                {
 	                    new CommandBinding(
 	                        this.FeatureComposition, 
-	                        "Microsoft.VisualStudio.Patterning.Library.Commands.InstantiateSolutionElementCommand",
+	                        "NuPattern.Library.Commands.InstantiateSolutionElementCommand",
 	                        new FixedValuePropertyBinding("ToolkitIdentifier", PatternToolkitId), 
                             new FixedValuePropertyBinding("InstanceName", WidgetPatternToolkitName))
 	                    {

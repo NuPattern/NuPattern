@@ -3,11 +3,11 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
     [ProvideAutoLoad(UIContextGuids.EmptySolution), ProvideAutoLoad(UIContextGuids.SolutionExists)]
     [PackageRegistration(UseManagedResourcesOnly = true)]

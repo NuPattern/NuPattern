@@ -9,15 +9,15 @@
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass VariabilityRequirement
 	/// A requirement for a point of variability in the product line.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.VariabilityRequirement.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.VariabilityRequirement.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("19c7bdb0-d161-487c-bd32-38fb3f9bb023")]
 	public partial class VariabilityRequirement : DesignElement
@@ -60,9 +60,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Determines whether the requirement is satisfied by one or more tools in the
 		/// design.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.VariabilityRequirement/IsSatisfiedByProductionTool.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -121,14 +121,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of ProductionTools.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirement
+		/// NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirement
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<ProductionTool> ProductionTools
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirementDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirementDomainRoleId);
 			}
 		}
 		#endregion
@@ -136,19 +136,19 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets or sets Design.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirement
+		/// NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirement
 		/// </summary>
 		public virtual Design Design
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirementDomainRoleId) as Design;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirementDomainRoleId) as Design;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirementDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirementDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -157,14 +157,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of VariabilityRequirements.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirement
+		/// NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirement
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<VariabilityRequirement> VariabilityRequirements
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<VariabilityRequirement>, VariabilityRequirement>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirementDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<VariabilityRequirement>, VariabilityRequirement>(global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirementDomainRoleId);
 			}
 		}
 		#endregion
@@ -172,19 +172,19 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets or sets ParentVariabilityRequirement.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirement
+		/// NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirement
 		/// </summary>
 		public virtual VariabilityRequirement ParentVariabilityRequirement
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirementDomainRoleId) as VariabilityRequirement;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirementDomainRoleId) as VariabilityRequirement;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirementDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirementDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -208,7 +208,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement.DomainClassId)) 
 				{
 					return true;
 				}
@@ -237,7 +237,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement;
+			global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement1 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement;
 			if (sourceVariabilityRequirement1 != null)
 			{
 				// Create link for path ParentVariabilityRequirementHasParentVariabilityRequirements.VariabilityRequirements
@@ -268,15 +268,15 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement;
+			global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement1 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement;
 			if (sourceVariabilityRequirement1 != null)
 			{
 				// Delete link for path ParentVariabilityRequirementHasParentVariabilityRequirements.VariabilityRequirements
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.GetLinks((global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement)this, sourceVariabilityRequirement1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.GetLinks((global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement)this, sourceVariabilityRequirement1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirementDomainRoleId, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirementDomainRoleId);
+					link.Delete(global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirementDomainRoleId, global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirementDomainRoleId);
 				}
 
 				return;
@@ -287,15 +287,15 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass ProducedAsset
 	/// An asset that is produced by a production tool.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProducedAsset.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProducedAsset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("82cf2129-d420-41dc-8b95-12a99a5d20c9")]
 	public partial class ProducedAsset : Asset
@@ -342,9 +342,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of IsFinal domain property.
 		/// Whether the asset is part of the final delivered product.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset/IsFinal.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset/IsFinal.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset/IsFinal.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProducedAsset/IsFinal.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.ProducedAsset/IsFinal.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProducedAsset/IsFinal.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("bfe0dc2d-98d8-4de6-a901-3bebc6f2ea7f")]
 		public global::System.Boolean IsFinal
 		{
@@ -419,14 +419,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of ProducingProductionTools.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAsset
+		/// NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAsset
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<ProductionTool> ProducingProductionTools
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAssetDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAssetDomainRoleId);
 			}
 		}
 		#endregion
@@ -435,14 +435,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of ProductionTools.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAsset
+		/// NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAsset
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<ProductionTool> ProductionTools
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAssetDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAssetDomainRoleId);
 			}
 		}
 		#endregion
@@ -451,28 +451,28 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of SuppliedAssets.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAsset
+		/// NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAsset
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<SuppliedAsset> SuppliedAssets
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<SuppliedAsset>, SuppliedAsset>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAssetDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<SuppliedAsset>, SuppliedAsset>(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAssetDomainRoleId);
 			}
 		}
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass ProductionTool
 	/// A tool that is supplied assets that produces more assets.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProductionTool.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionTool.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("67726e9a-a7da-4c26-b642-b4065710cee0")]
 	public partial class ProductionTool : DesignElement
@@ -520,9 +520,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// The intended classification of this tool, defining how it processes and produces
 		/// its assets.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/Classification.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/Classification.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/Classification.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProductionTool/Classification.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.ProductionTool/Classification.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionTool/Classification.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue("(undefined)")]
 		[DslModeling::DomainObjectId("86433396-f14f-4697-9a45-f0f7c95265ae")]
 		public global::System.String Classification
@@ -604,9 +604,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of IsSatisfyingVariability domain property.
 		/// Whether the tool satisfies any variability requirements.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionTool/IsSatisfyingVariability.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -665,14 +665,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of VariabilityRequirements.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionTool
+		/// NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionTool
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<VariabilityRequirement> VariabilityRequirements
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<VariabilityRequirement>, VariabilityRequirement>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionToolDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<VariabilityRequirement>, VariabilityRequirement>(global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionToolDomainRoleId);
 			}
 		}
 		#endregion
@@ -681,14 +681,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of ProducedProducedAssets.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionTool
+		/// NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionTool
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<ProducedAsset> ProducedProducedAssets
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ProducedAsset>, ProducedAsset>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionToolDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ProducedAsset>, ProducedAsset>(global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionToolDomainRoleId);
 			}
 		}
 		#endregion
@@ -697,14 +697,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of SuppliedProducedAssets.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionTool
+		/// NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionTool
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<ProducedAsset> SuppliedProducedAssets
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ProducedAsset>, ProducedAsset>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionToolDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ProducedAsset>, ProducedAsset>(global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionToolDomainRoleId);
 			}
 		}
 		#endregion
@@ -713,14 +713,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of SuppliedSuppliedAssets.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionTool
+		/// NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionTool
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<SuppliedAsset> SuppliedSuppliedAssets
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<SuppliedAsset>, SuppliedAsset>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionToolDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<SuppliedAsset>, SuppliedAsset>(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionToolDomainRoleId);
 			}
 		}
 		#endregion
@@ -729,14 +729,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of AllSuppliedAssets.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.ComponentModel.AssetSuppliesAllProducingTools.ProductionTool
+		/// NuPattern.Authoring.ComponentModel.AssetSuppliesAllProducingTools.ProductionTool
 		/// </summary>
 		public virtual DslModeling::ReadOnlyLinkedElementCollection<Asset> AllSuppliedAssets
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<Asset>, Asset>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.ProductionToolDomainRoleId);
+				return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<Asset>, Asset>(global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.ProductionToolDomainRoleId);
 			}
 		}
 		#endregion
@@ -744,33 +744,33 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets or sets Design.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionTool
+		/// NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionTool
 		/// </summary>
 		public virtual Design Design
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionToolDomainRoleId) as Design;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionToolDomainRoleId) as Design;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionToolDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionToolDomainRoleId, value);
 			}
 		}
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass SuppliedAsset
 	/// An asset that is supplied to a production tool.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAsset.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAsset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a395e79e-1a6d-4132-9724-671c4413ddab")]
 	public partial class SuppliedAsset : Asset
@@ -818,9 +818,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Whether this asset is supplied by the user as configuration to the product, or a
 		/// supplied artifact as input to the product line.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAsset/IsUserSupplied.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("cb4d8e7b-c39a-4096-a1c3-b5f8b7be6765")]
 		public global::System.Boolean IsUserSupplied
 		{
@@ -895,14 +895,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of ProducedAssets.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAsset
+		/// NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAsset
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<ProducedAsset> ProducedAssets
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ProducedAsset>, ProducedAsset>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAssetDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ProducedAsset>, ProducedAsset>(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAssetDomainRoleId);
 			}
 		}
 		#endregion
@@ -911,28 +911,28 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of ProductionTools.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAsset
+		/// NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAsset
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<ProductionTool> ProductionTools
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAssetDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAssetDomainRoleId);
 			}
 		}
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass Asset
 	/// A supplied or fabricated asset in the product line.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.Asset.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.Asset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("245abfec-9096-464a-a73b-358748042100")]
 	public abstract partial class Asset : DesignElement
@@ -969,9 +969,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of SourceReference domain property.
 		/// A reference to a known physical artifact that is represented by this asset.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/SourceReference.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/SourceReference.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/SourceReference.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.Asset/SourceReference.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.Asset/SourceReference.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.Asset/SourceReference.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("22610cd1-2a38-467c-8395-ccbe6f01d83e")]
 		public global::System.String SourceReference
 		{
@@ -1052,9 +1052,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of IsSuppliedToTool domain property.
 		/// Whether the asset is used as an input to a tool.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.Asset/IsSuppliedToTool.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -1113,48 +1113,47 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of AllProducingTools.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset
+		/// NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset
 		/// </summary>
 		public virtual DslModeling::ReadOnlyLinkedElementCollection<ProductionTool> AllProducingTools
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<ProductionTool>, ProductionTool>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.AssetDomainRoleId);
+				return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<ProductionTool>, ProductionTool>(global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.AssetDomainRoleId);
 			}
 		}
 		#endregion
 		#region Design opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Design.
-		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.Asset
+		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Asset
 		/// </summary>
 		public virtual Design Design
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.AssetDomainRoleId) as Design;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets.AssetDomainRoleId) as Design;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.AssetDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets.AssetDomainRoleId, value);
 			}
 		}
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass Design
 	/// A production line design.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.Design.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.Design.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("fedd3e36-d9ec-4f70-85b9-16728700f201")]
 	public partial class Design : DslModeling::ModelElement
@@ -1190,14 +1189,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of ProductionTools.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.Design
+		/// NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.Design
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<ProductionTool> ProductionTools
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.DesignDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.DesignDomainRoleId);
 			}
 		}
 		#endregion
@@ -1205,15 +1204,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		
 		/// <summary>
 		/// Gets a list of Assets.
-		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.Design
+		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Design
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<Asset> Assets
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Asset>, Asset>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.DesignDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Asset>, Asset>(global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets.DesignDomainRoleId);
 			}
 		}
 		#endregion
@@ -1222,14 +1220,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets a list of VariabilityRequirements.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Design
+		/// NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Design
 		/// </summary>
 		public virtual DslModeling::LinkedElementCollection<VariabilityRequirement> VariabilityRequirements
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<VariabilityRequirement>, VariabilityRequirement>(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DesignDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<VariabilityRequirement>, VariabilityRequirement>(global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DesignDomainRoleId);
 			}
 		}
 		#endregion
@@ -1253,17 +1251,17 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Authoring.WorkflowDesign.ProductionTool.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Authoring.WorkflowDesign.Asset.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement.DomainClassId)) 
 				{
 					return true;
 				}
@@ -1292,7 +1290,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool sourceProductionTool1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool;
+			global::NuPattern.Authoring.WorkflowDesign.ProductionTool sourceProductionTool1 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.ProductionTool;
 			if (sourceProductionTool1 != null)
 			{
 				// Create link for path DesignHasProductionTools.ProductionTools
@@ -1301,7 +1299,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset sourceAsset2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset;
+			global::NuPattern.Authoring.WorkflowDesign.Asset sourceAsset2 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.Asset;
 			if (sourceAsset2 != null)
 			{
 				// Create link for path DesignHasAssets.Assets
@@ -1310,7 +1308,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement3 = sourceElement as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement;
+			global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement3 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement;
 			if (sourceVariabilityRequirement3 != null)
 			{
 				// Create link for path DesignHasVariabilityRequirements.VariabilityRequirements
@@ -1341,43 +1339,43 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool sourceProductionTool1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool;
+			global::NuPattern.Authoring.WorkflowDesign.ProductionTool sourceProductionTool1 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.ProductionTool;
 			if (sourceProductionTool1 != null)
 			{
 				// Delete link for path DesignHasProductionTools.ProductionTools
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.GetLinks((global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design)this, sourceProductionTool1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.GetLinks((global::NuPattern.Authoring.WorkflowDesign.Design)this, sourceProductionTool1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.DesignDomainRoleId, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionToolDomainRoleId);
+					link.Delete(global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.DesignDomainRoleId, global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionToolDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset sourceAsset2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset;
+			global::NuPattern.Authoring.WorkflowDesign.Asset sourceAsset2 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.Asset;
 			if (sourceAsset2 != null)
 			{
 				// Delete link for path DesignHasAssets.Assets
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.GetLinks((global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design)this, sourceAsset2))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets.GetLinks((global::NuPattern.Authoring.WorkflowDesign.Design)this, sourceAsset2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.DesignDomainRoleId, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.AssetDomainRoleId);
+					link.Delete(global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets.DesignDomainRoleId, global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets.AssetDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement3 = sourceElement as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.VariabilityRequirement;
+			global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement3 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement;
 			if (sourceVariabilityRequirement3 != null)
 			{
 				// Delete link for path DesignHasVariabilityRequirements.VariabilityRequirements
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.GetLinks((global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design)this, sourceVariabilityRequirement3))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.GetLinks((global::NuPattern.Authoring.WorkflowDesign.Design)this, sourceVariabilityRequirement3))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DesignDomainRoleId, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirementDomainRoleId);
+					link.Delete(global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DesignDomainRoleId, global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirementDomainRoleId);
 				}
 
 				return;
@@ -1388,15 +1386,15 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass NamedElementSchema
 	/// An element that has a unique name.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("6665aba9-d5b1-4412-9757-e5172874d63b")]
@@ -1434,9 +1432,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of Name domain property.
 		/// The well-known name of this item in this model.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Name.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Name.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Name.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Name.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Name.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Name.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::ElementName]
 		[DslModeling::DomainObjectId("1264ecd0-db3c-4300-b15e-7cda16874ea4")]
 		public global::System.String Name
@@ -1523,8 +1521,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of BaseId domain property.
 		/// The identifier of the inherited variability model.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/BaseId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/BaseId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/BaseId.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/BaseId.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("afaadae8-6ae4-43d6-afeb-5fb3968e78fe")]
@@ -1608,9 +1606,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// The name used for instances of this item, as seen by the user. Also used to name
 		/// associated artifacts/configuration created for this item.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/DisplayName.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.CustomStorage)]
 		[DslModeling::DomainObjectId("22a06ee5-1b83-40dd-8c3a-6b7dd9b29a62")]
 		public global::System.String DisplayName
@@ -1703,8 +1701,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of IsDisplayNameTracking domain property.
 		/// Used to track whether the user changed the display name manually.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/IsDisplayNameTracking.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/IsDisplayNameTracking.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/IsDisplayNameTracking.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/IsDisplayNameTracking.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1793,9 +1791,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of Description domain property.
 		/// The description of this item displayed to the user.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Description.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Description.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/Description.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Description.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Description.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/Description.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("62c5e1fa-d334-4235-9702-0af58b7f07e6")]
 		public global::System.String Description
 		{
@@ -1876,8 +1874,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of IsInheritedFromBase domain property.
 		/// Whether the element is derived from a base variability model definition.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/IsInheritedFromBase.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema/IsInheritedFromBase.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/IsInheritedFromBase.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema/IsInheritedFromBase.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -1933,15 +1931,15 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// DomainClass DesignElement
 	/// An element used for realization.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.DesignElement.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignElement.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("865cf412-cfa1-4e9f-b6ec-bf02f69bea74")]
 	public abstract partial class DesignElement : NamedElementSchema
@@ -1979,9 +1977,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Design notes for this element.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(System.ComponentModel.Design.MultilineStringEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/DesignNotes.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/DesignNotes.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/DesignNotes.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.DesignElement/DesignNotes.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.DesignElement/DesignNotes.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignElement/DesignNotes.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("395aba29-4372-4244-8b5f-df13caa40432")]
 		public global::System.String DesignNotes
 		{
@@ -2068,9 +2066,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Whether to ignore this item. Ignored items will not be considered part of the
 		/// current design.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/IsIgnored.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/IsIgnored.Category", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignElement/IsIgnored.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.DesignElement/IsIgnored.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Authoring.WorkflowDesign.DesignElement/IsIgnored.Category", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignElement/IsIgnored.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("3c5e96bf-d2ae-4b91-9df1-00a4ead60049")]
 		public global::System.Boolean IsIgnored
 		{

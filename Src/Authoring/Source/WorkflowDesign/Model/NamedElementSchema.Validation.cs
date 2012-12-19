@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Modeling.Validation;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Customizations for the NamedElementSchema class.

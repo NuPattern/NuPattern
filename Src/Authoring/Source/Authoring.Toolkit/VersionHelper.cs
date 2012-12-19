@@ -1,15 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
-using Microsoft.VisualStudio.Patterning.Authoring.Authoring.Properties;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using System.Collections.Generic;
 using Microsoft.VisualStudio.ExtensionManager;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Authoring.Authoring.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
     /// <summary>
     /// Helper for toolkit versioning.

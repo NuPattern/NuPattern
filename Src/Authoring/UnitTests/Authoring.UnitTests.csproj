@@ -7,8 +7,8 @@
     <ProjectGuid>{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Authoring.UnitTests</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.UnitTests</AssemblyName>
+    <RootNamespace>NuPattern.Authoring.UnitTests</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.UnitTests</AssemblyName>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -19,12 +19,12 @@
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
     <!---->
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Interfaces">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Moq">

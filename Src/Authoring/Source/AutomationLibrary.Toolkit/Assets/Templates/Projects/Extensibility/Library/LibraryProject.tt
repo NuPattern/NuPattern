@@ -61,20 +61,20 @@
 		<Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=<#=VersionInfo.TargetVsVersion#>.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
 		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.<#=VersionInfo.TargetVsVersion#>, Version=<#=VersionInfo.TargetVsVersion#>.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
 		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.<#=VersionInfo.TargetVsVersion#>, Version=<#=VersionInfo.TargetVsVersion#>.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-		<Reference Include="Microsoft.VisualStudio.Patterning.Library">
-			<HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>
+		<Reference Include="NuPattern.Library">
+			<HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
 			<Private>false</Private>
 		</Reference>
-		<Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
-			<HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+		<Reference Include="NuPattern.Runtime.Interfaces">
+			<HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
 			<Private>false</Private>
 		</Reference>
-		<Reference Include="Microsoft.VisualStudio.Patterning.Common.Presentation">
-			<HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Common.Presentation.dll</HintPath>
+		<Reference Include="NuPattern.Common.Presentation">
+			<HintPath>$(PatternToolkitRuntime)\NuPattern.Common.Presentation.dll</HintPath>
 			<Private>false</Private>
 		</Reference>
-		<Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
-			<HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
+		<Reference Include="NuPattern.Extensibility">
+			<HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
 			<Private>false</Private>
 		</Reference>
 		<Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">

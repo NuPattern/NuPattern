@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.UriProviders
+namespace NuPattern.Authoring.Automation.UriProviders
 {
     /// <summary>
     /// Defines a URI provider for Views

@@ -5,7 +5,7 @@ public static class VsixInfo
 	public static class PatternToolkitRuntime
 	{
 		public const string Name = "NuPattern Toolkit Manager";
-		public const string Description = "Includes the 'Solution Builder' window, and automation framework for accelerating solution development using NuPattern Toolkit extensions.";
+		public const string Description = "Includes the 'Solution Builder' window, and the automation framework for accelerating solution development using NuPattern Toolkits.";
 		public const string Author = "NuPattern";
 		public const string Version = "1.3.20.0";
 		public const string Identifier = "c869918e-f94e-4e7a-ab25-b076ff4e751b";
@@ -18,7 +18,7 @@ public static class VsixInfo
 	public static class PatternToolkitBuilder
 	{
 		public const string Name = "NuPattern Toolkit Builder VS2012";
-		public const string Description = "An extension for designing and building NuPattern Toolkit projects, that combine automation and guidance with design patterns for repeatable solution development.";
+		public const string Description = "An extension for building NuPattern Toolkits, which automate design patterns for rapid and consistent custom solution development.";
 		public const string Author = "NuPattern";
 		public const string Version = "1.3.20.0";
 		public const string Identifier = "84031a32-b20f-479c-a620-beacd982ea13";
@@ -29,7 +29,7 @@ public static class VsixInfo
 	public static class PatternToolkitLibrary
 	{
 		public const string Name = "NuPattern Toolkit Library";
-		public const string Description = "An extension for creating shared libraries for NuPattern Toolkit projects.";
+		public const string Description = "An extension for creating shared automation libraries for NuPattern Toolkits.";
 		public const string Author = "NuPattern";
 		public const string Version = "1.3.20.0";
 		public const string Identifier = "080eb0ef-518d-4807-9b5c-aa32d0032e0b";
@@ -40,7 +40,7 @@ public static class VsixInfo
 	public static class PatternToolkitHol
 	{
 		public const string Name = "NuPattern Toolkit Builder HOL VS2012";
-		public const string Description = "A Hands-On Lab for creating NuPattern Toolkit projects.";
+		public const string Description = "A Hands-On Lab for creating and customizing NuPattern Toolkit projects.";
 		public const string Author = "NuPattern";
 		public const string Version = "1.3.20.0";
 		public const string Identifier = "5413c755-6024-4c41-ba0c-9aa3d6fd9caf";

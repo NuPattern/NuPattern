@@ -1,13 +1,13 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Authoring.Automation.Properties;
+using NuPattern.Extensibility;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.ValueProviders
+namespace NuPattern.Authoring.Automation.ValueProviders
 {
     /// <summary>
     /// Provides the full path to the associated guidance document.

@@ -1,7 +1,7 @@
 ﻿using System.Drawing.Drawing2D;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
     /// <summary>
     /// A custom geometric shape, based upon the rounded rectangle that replaces right and left sides with arrows pointing to the right.

@@ -16,18 +16,18 @@
   "ValueProvider": null
 }</targetPath>
     </templateSettings>
-    <eventSettings Id="84fd62af-32f7-494c-abfa-cb170648be73" commandId="63205580-568f-4358-8ca8-5f9cb820b3d7" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementPropertyChangedEvent" filterForCurrentElement="true" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="84fd62af-32f7-494c-abfa-cb170648be73" commandId="63205580-568f-4358-8ca8-5f9cb820b3d7" eventId="NuPattern.Library.Events.IOnElementPropertyChangedEvent" filterForCurrentElement="true" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3d9167ef-4848-4b0c-b540-3c437abafd47" />
       </extendedElement>
       <conditions>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.EventSenderMatchesElementCondition",
+    "TypeId": "NuPattern.Library.Conditions.EventSenderMatchesElementCondition",
     "Properties": []
   }
 ]</conditions>
     </eventSettings>
-    <commandSettings Id="63205580-568f-4358-8ca8-5f9cb820b3d7" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.SynchArtifactNameCommand">
+    <commandSettings Id="63205580-568f-4358-8ca8-5f9cb820b3d7" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="41a46a03-57ca-43fa-9e9b-701910b00b59" />
       </extendedElement>

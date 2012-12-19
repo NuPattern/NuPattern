@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace $rootnamespace$

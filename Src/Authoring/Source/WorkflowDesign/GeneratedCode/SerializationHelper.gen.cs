@@ -12,7 +12,7 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	
 	partial class WorkflowDesignDomainModel
@@ -302,7 +302,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 }
 
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	
 	partial class WorkflowDesignSerializationHelperBase
@@ -1267,7 +1267,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <param name="modelRoot">Root instance to be saved.</param>
 		/// <param name="encoding">Encoding to use when saving the root instance.</param>
 		/// <returns>Model in XML form</returns>
-		public virtual string GetSerializedModelString(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design modelRoot, global::System.Text.Encoding encoding)
+		public virtual string GetSerializedModelString(global::NuPattern.Authoring.WorkflowDesign.Design modelRoot, global::System.Text.Encoding encoding)
 		{
 			string result = string.Empty;
 			if (modelRoot == null)
@@ -1467,7 +1467,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public partial class Design

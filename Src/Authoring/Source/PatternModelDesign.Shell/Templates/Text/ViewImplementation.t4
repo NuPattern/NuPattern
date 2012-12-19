@@ -3,11 +3,11 @@
 <#@ Assembly Name="System.Core.dll" #>
 <#@ Assembly Name="System.ComponentModel.Composition" #>
 <#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Shell.dll" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Extensibility.dll" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Extensibility" #>
+<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="NuPattern.Authoring.Toolkit.Shell.dll" #>
+<#@ Assembly Name="NuPattern.Extensibility.dll" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Extensibility" #>
 <#@ Assembly Name="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
 <#@ Import Namespace="System.ComponentModel" #>
 <#@ Import Namespace="System.Linq" #>
@@ -32,7 +32,7 @@ namespace <#= RootNamespace #>
 	using System.ComponentModel;
 	using System.ComponentModel.Composition;
 	using System.Collections.Generic;
-	using Microsoft.VisualStudio.Patterning.Runtime;
+	using NuPattern.Runtime;
 
 	<#GenerateFactoryProxyAttributes(view); #>
 	public partial class <#=view.CodeIdentifier#> : I<#=view.CodeIdentifier#>

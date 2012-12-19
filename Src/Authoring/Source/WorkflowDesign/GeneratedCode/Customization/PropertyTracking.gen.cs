@@ -13,9 +13,9 @@ using System.Linq;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using Microsoft.VisualStudio.Patterning.Extensibility;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
     /// <summary>
     /// Customizations for the WorkflowDesignSerializationHelper class.

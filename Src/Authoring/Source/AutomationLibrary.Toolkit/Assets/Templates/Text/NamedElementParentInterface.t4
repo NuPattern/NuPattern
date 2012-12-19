@@ -1,5 +1,5 @@
 ﻿<#+
-private void GenerateParentProperty(Microsoft.VisualStudio.Patterning.Runtime.INamedElementInfo infoElement)
+private void GenerateParentProperty(NuPattern.Runtime.INamedElementInfo infoElement)
 {
     if (infoElement.Parent != null)
     {

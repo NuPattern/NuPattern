@@ -1,5 +1,5 @@
 ﻿
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
     /// <summary>
     /// Information about the toolkit

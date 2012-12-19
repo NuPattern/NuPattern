@@ -2372,14 +2372,14 @@ style=3D'color:#A31515'>WizardExtension</span><span style=3D'color:blue'>&g=
 t;</span><br>
 <span style=3D'color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span
 style=3D'color:#A31515'>Assembly</span><span style=3D'color:blue'>&gt;</spa=
-n>Microsoft.VisualStudio.Patterning.Library,&nbsp;Version=3Dx.x.x.x,&nbsp;C=
+n>NuPattern.Library,&nbsp;Version=3Dx.x.x.x,&nbsp;C=
 ulture=3Dneutral,&nbsp;PublicKeyToken=3D31bf3856ad364e35<span
 style=3D'color:blue'>&lt;/</span><span style=3D'color:#A31515'>Assembly</sp=
 an><span
 style=3D'color:blue'>&gt;</span><br>
 <span style=3D'color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span
 style=3D'color:#A31515'>FullClassName</span><span style=3D'color:blue'>&gt;=
-</span>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacem=
+</span>NuPattern.Library.Automation.ElementReplacem=
 entsWizard<span
 style=3D'color:blue'>&lt;/</span><span style=3D'color:#A31515'>FullClassNam=
 e</span><span
@@ -2394,14 +2394,14 @@ style=3D'color:#A31515'>WizardExtension</span><span style=3D'color:blue'>&g=
 t;</span><br>
 <span style=3D'color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span
 style=3D'color:#A31515'>Assembly</span><span style=3D'color:blue'>&gt;</spa=
-n>Microsoft.VisualStudio.Patterning.Library,&nbsp;Version=3Dx.x.x.x,&nbsp;C=
+n>NuPattern.Library,&nbsp;Version=3Dx.x.x.x,&nbsp;C=
 ulture=3Dneutral,&nbsp;PublicKeyToken=3D31bf3856ad364e35<span
 style=3D'color:blue'>&lt;/</span><span style=3D'color:#A31515'>Assembly</sp=
 an><span
 style=3D'color:blue'>&gt;</span><br>
 <span style=3D'color:blue'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;</span><span
 style=3D'color:#A31515'>FullClassName</span><span style=3D'color:blue'>&gt;=
-</span>Microsoft.VisualStudio.Patterning.Library.Automation.InstantiationTe=
+</span>NuPattern.Library.Automation.InstantiationTe=
 mplateWizard<span
 style=3D'color:blue'>&lt;/</span><span style=3D'color:#A31515'>FullClassNam=
 e</span><span

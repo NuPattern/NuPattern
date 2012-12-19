@@ -1,5 +1,5 @@
 ﻿
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
 	/// <summary>
 	/// Defines the constants used in the Runtime.Shell package.

@@ -2174,21 +2174,21 @@ ses a
 Triad pattern specifically designed for T4. (notes below)<o:p></o:p></p>
 
 <p class=3DSourceCodeCxSpFirst>&lt;#@ Template
-Inherits=3D&quot;Microsoft.VisualStudio.Patterning.Library.ModelElementText=
+Inherits=3D&quot;NuPattern.Library.ModelElementText=
 Transformation&quot;
 HostSpecific=3D&quot;True&quot; Debug=3D&quot;True&quot; #&gt;<o:p></o:p></=
 p>
 
 <p class=3DSourceCodeCxSpMiddle>&lt;#@ ModelElement
-Type=3D&quot;Microsoft.VisualStudio.Patterning.Runtime.IProductElement&quot;
+Type=3D&quot;NuPattern.Runtime.IProductElement&quot;
 Processor=3D&quot;ModelElementProcessor&quot; #&gt;<o:p></o:p></p>
 
 <p class=3DSourceCodeCxSpMiddle>&lt;#@ Assembly
-Name=3D&quot;Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll&quot;=
+Name=3D&quot;NuPattern.Runtime.Interfaces.dll&quot;=
  #&gt;<o:p></o:p></p>
 
 <p class=3DSourceCodeCxSpMiddle>&lt;#@ Import
-Namespace=3D&quot;Microsoft.VisualStudio.Patterning.Runtime&quot; #&gt;<o:p=
+Namespace=3D&quot;NuPattern.Runtime&quot; #&gt;<o:p=
 ></o:p></p>
 
 <p class=3DSourceCodeCxSpMiddle>&lt;#@ Assembly

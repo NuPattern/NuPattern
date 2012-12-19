@@ -1,10 +1,10 @@
 ﻿//using System;
-//using Microsoft.VisualStudio.Patterning.Authoring.Authoring.Automation.Commands;
-//using Microsoft.VisualStudio.Patterning.Runtime;
+//using NuPattern.Authoring.Authoring.Automation.Commands;
+//using NuPattern.Runtime;
 //using Microsoft.VisualStudio.TestTools.UnitTesting;
 //using Moq;
 
-//namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests.Toolkit.Automation.Commands
+//namespace NuPattern.Authoring.UnitTests.Toolkit.Automation.Commands
 //{
 //    [TestClass]
 //    public class CreateAutomationLibraryExtensionCommandSpec

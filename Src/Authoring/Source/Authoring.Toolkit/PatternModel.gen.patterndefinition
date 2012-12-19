@@ -16,48 +16,48 @@
   "ValueProvider": null
 }</targetPath>
     </templateSettings>
-    <eventSettings Id="284cd552-88c7-4bd6-8c53-510f57063c60" commandId="b5a0762e-07e6-493a-a8f4-5a7c6e634bd7" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="284cd552-88c7-4bd6-8c53-510f57063c60" commandId="b5a0762e-07e6-493a-a8f4-5a7c6e634bd7" eventId="NuPattern.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="71a81d5f-ad0c-4825-a756-1bdd47289d9a" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="e4c51aef-5895-4515-b4e6-2455103c931f" commandId="0ce3faef-945e-4d35-8d9c-6fad10c26823" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="e4c51aef-5895-4515-b4e6-2455103c931f" commandId="0ce3faef-945e-4d35-8d9c-6fad10c26823" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b744f760-70ef-4148-afef-fb3802107dd1" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="fb815fef-e026-4762-a338-d0bed905c37a" commandId="adbfc026-9959-4793-a877-0a52ded3c3d1" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="fb815fef-e026-4762-a338-d0bed905c37a" commandId="adbfc026-9959-4793-a877-0a52ded3c3d1" eventId="NuPattern.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="9e53618f-826a-4c3a-aa0e-70da1bff9d5b" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="efe9ffcc-d328-475c-8189-8237a03126ef" commandId="6ddf673a-92e9-479a-91b1-e183ed1bcc7e" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="efe9ffcc-d328-475c-8189-8237a03126ef" commandId="6ddf673a-92e9-479a-91b1-e183ed1bcc7e" eventId="NuPattern.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="8bd03c39-5794-40c6-ac75-91c9a795c7dc" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="1e85000c-b61f-46a7-b958-169a0637569a" commandId="f9a86aec-5e67-4059-a030-fbab5e75ae8d" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="1e85000c-b61f-46a7-b958-169a0637569a" commandId="f9a86aec-5e67-4059-a030-fbab5e75ae8d" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b57b778e-95e5-4d37-ba50-44d9f417be71" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="98241efe-c034-4ad6-8c92-a039d36e2402" commandId="07cf58a3-12f4-41d9-9b9e-d74a46e73d88" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="98241efe-c034-4ad6-8c92-a039d36e2402" commandId="07cf58a3-12f4-41d9-9b9e-d74a46e73d88" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="5fcd5b7e-d297-44b3-bb3d-3917a11a81bf" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="c861d016-fd92-419d-b00f-267852cdec36" commandId="45cf3a4f-9fe7-4ace-a35d-f4004cf0f15d" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="c861d016-fd92-419d-b00f-267852cdec36" commandId="45cf3a4f-9fe7-4ace-a35d-f4004cf0f15d" eventId="NuPattern.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="968e66b8-eb7d-4ff1-8cde-7af04243c9e5" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="0e6b1a8f-037b-4608-acb0-2056652c3ac2" commandId="f55383be-22ca-4142-ad04-a192b61c5641" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="0e6b1a8f-037b-4608-acb0-2056652c3ac2" commandId="f55383be-22ca-4142-ad04-a192b61c5641" eventId="NuPattern.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="ba6240b2-ff18-4568-8ee1-c062e023d9b8" />
       </extendedElement>
       <conditions>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.StringValueEqualsCondition",
+    "TypeId": "NuPattern.Library.Conditions.StringValueEqualsCondition",
     "Properties": [
       {
         "Name": "ComparisonKind",
@@ -68,7 +68,7 @@
         "Name": "LeftValue",
         "Value": null,
         "ValueProvider": {
-          "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValueProviders.ElementPropertyValueProvider",
+          "TypeId": "NuPattern.Library.ValueProviders.ElementPropertyValueProvider",
           "Properties": [
             {
               "Name": "PropertyName",
@@ -87,78 +87,78 @@
   }
 ]</conditions>
     </eventSettings>
-    <eventSettings Id="6e6042b3-962a-484c-80a7-3006c95a245e" commandId="2068fc51-98dd-4a87-a886-5e8cb1ef114c" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="6e6042b3-962a-484c-80a7-3006c95a245e" commandId="2068fc51-98dd-4a87-a886-5e8cb1ef114c" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d3d0a184-7dbe-4115-b43a-84674b9cdd9a" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="1d00f50d-6adf-4094-a225-a113556b59e6" commandId="24f6b63c-c819-474b-ba22-c56f24b3ca60" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="1d00f50d-6adf-4094-a225-a113556b59e6" commandId="24f6b63c-c819-474b-ba22-c56f24b3ca60" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="0dde5365-e278-406b-a3e1-a06a7b7703f0" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="18ff455e-dd8a-432b-aaeb-0c53444fc283" commandId="b119f2da-1680-4ffe-b676-394e7800195d" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="18ff455e-dd8a-432b-aaeb-0c53444fc283" commandId="b119f2da-1680-4ffe-b676-394e7800195d" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="c15bbcb6-bbdd-41ec-827d-bcb86c844e04" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="f3410b5b-73b9-4e43-878e-c0e188ef1849" commandId="5639f255-6a98-47a2-9aa0-a42837719991" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="f3410b5b-73b9-4e43-878e-c0e188ef1849" commandId="5639f255-6a98-47a2-9aa0-a42837719991" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3d5fb5df-44f8-4078-aa99-1c27aae61e14" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="bad3d34f-7f23-495c-a416-1b235d810bfd" commandId="9ff7f358-d1fb-49c8-a8ca-577d1825b7ef" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="bad3d34f-7f23-495c-a416-1b235d810bfd" commandId="9ff7f358-d1fb-49c8-a8ca-577d1825b7ef" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="8aa3a0ec-cf14-453a-b523-ff7071d92673" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="dffe9feb-4f70-4cd8-8543-4f40e3e33183" commandId="c83e1094-77c2-4c10-b6c8-baea86f146b8" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="dffe9feb-4f70-4cd8-8543-4f40e3e33183" commandId="c83e1094-77c2-4c10-b6c8-baea86f146b8" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3b7f8beb-ac50-4f22-9d4b-a9b48435978b" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="e9c949dd-b0c3-442b-871c-0776960ea344" commandId="419b51a5-d552-4d15-bc67-0368cdee105b" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="e9c949dd-b0c3-442b-871c-0776960ea344" commandId="419b51a5-d552-4d15-bc67-0368cdee105b" eventId="NuPattern.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="34b1c94e-5e77-4e22-8888-338e06bbd3cd" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="2ce76598-76fe-4f63-bc97-fe4a18070a16" commandId="19a18c3a-2e35-41b5-801a-3632d0c7c0d4" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="2ce76598-76fe-4f63-bc97-fe4a18070a16" commandId="19a18c3a-2e35-41b5-801a-3632d0c7c0d4" eventId="NuPattern.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="5fea2531-257f-49e3-b7e0-bce2831fa3be" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="9f436bec-dd7d-490d-9235-78a4bd0b959d" commandId="2e00fd3b-2b8f-40e4-ac67-bf0ceef140a6" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="9f436bec-dd7d-490d-9235-78a4bd0b959d" commandId="2e00fd3b-2b8f-40e4-ac67-bf0ceef140a6" eventId="NuPattern.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="9faefff7-913f-4876-9cc1-c4877041ea7e" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="a02f03c5-cd50-40ab-85e0-adf0ccd7d3da" commandId="3ff5c4dd-f7ec-4ee3-a3e1-fe12d70120c3" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="a02f03c5-cd50-40ab-85e0-adf0ccd7d3da" commandId="3ff5c4dd-f7ec-4ee3-a3e1-fe12d70120c3" eventId="NuPattern.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="8133befc-5deb-4f4f-8eb2-5883e39d34dc" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="d8b9b8f3-407f-46bf-9fef-61983716cb3b" commandId="a3b93464-fee6-4066-9eae-8292b5a0201d" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="d8b9b8f3-407f-46bf-9fef-61983716cb3b" commandId="a3b93464-fee6-4066-9eae-8292b5a0201d" eventId="NuPattern.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="96b61b7e-e748-4eea-a2b2-d1a73307369b" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="10d8c659-3fd2-49b0-9f3d-dabf5982cac1" commandId="e158f25c-3cd1-40e7-8ecc-bec3b1c8f7b3" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="10d8c659-3fd2-49b0-9f3d-dabf5982cac1" commandId="e158f25c-3cd1-40e7-8ecc-bec3b1c8f7b3" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="994d93a8-52e4-48e8-8705-501174363a82" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="620cba55-597e-407c-8a40-04ad7ef24cdb" commandId="c1b597ef-af8a-42d3-95b6-e31a11a4c97f" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="620cba55-597e-407c-8a40-04ad7ef24cdb" commandId="c1b597ef-af8a-42d3-95b6-e31a11a4c97f" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b108b43c-83d7-48d9-9b28-1471c39c6d14" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="673e6183-13c8-49c0-a5ad-b3380ea65005" commandId="81b55886-5224-47e2-bc99-a5d9fb2c36cb" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="673e6183-13c8-49c0-a5ad-b3380ea65005" commandId="81b55886-5224-47e2-bc99-a5d9fb2c36cb" eventId="NuPattern.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="69961b0d-cf2b-462d-a47a-6ecc95b62de8" />
       </extendedElement>
       <conditions>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.PropertyChangedEventArgsMatchesPropertyNameCondition",
+    "TypeId": "NuPattern.Library.Conditions.PropertyChangedEventArgsMatchesPropertyNameCondition",
     "Properties": [
       {
         "Name": "PropertyName",
@@ -169,23 +169,23 @@
   }
 ]</conditions>
     </eventSettings>
-    <eventSettings Id="a28c69ce-608e-4f49-b2e1-765b77d56140" commandId="2117689e-fec7-4f36-94ad-ec14f0184428" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="a28c69ce-608e-4f49-b2e1-765b77d56140" commandId="2117689e-fec7-4f36-94ad-ec14f0184428" eventId="NuPattern.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="efb2b684-ac9b-4d4d-b661-a2b56178f535" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="3dce78f2-0f3d-4483-af86-ff8fa790b45f" commandId="1e2712eb-50e7-404a-8360-42d04f5126f9" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="3dce78f2-0f3d-4483-af86-ff8fa790b45f" commandId="1e2712eb-50e7-404a-8360-42d04f5126f9" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="0df04926-75e2-424b-8693-1f7db52e65e7" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="809f1b80-8375-427f-9c33-5799fc73a478" commandId="dc5c415e-e06b-49d5-aa77-044879bc0714" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnBuildFinishedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="809f1b80-8375-427f-9c33-5799fc73a478" commandId="dc5c415e-e06b-49d5-aa77-044879bc0714" eventId="NuPattern.Library.Events.IOnBuildFinishedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="44a5a23c-3de0-4df1-966c-a8dcd10aa640" />
       </extendedElement>
       <conditions>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.StringValueEqualsCondition",
+    "TypeId": "NuPattern.Library.Conditions.StringValueEqualsCondition",
     "Properties": [
       {
         "Name": "ComparisonKind",
@@ -196,7 +196,7 @@
         "Name": "LeftValue",
         "Value": null,
         "ValueProvider": {
-          "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValueProviders.ElementPropertyValueProvider",
+          "TypeId": "NuPattern.Library.ValueProviders.ElementPropertyValueProvider",
           "Properties": [
             {
               "Name": "PropertyName",
@@ -215,28 +215,28 @@
   }
 ]</conditions>
     </eventSettings>
-    <eventSettings Id="8ad9c849-898f-4264-8612-e9ee9a67aeda" commandId="90291e86-b780-4adf-b500-5c11c868c3fd" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="8ad9c849-898f-4264-8612-e9ee9a67aeda" commandId="90291e86-b780-4adf-b500-5c11c868c3fd" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="41df7e33-6cce-467d-8e3a-80e78914f0c7" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="b5e376d2-c63d-4dd0-8dfb-85fbcc5cc361" commandId="16edcd41-7f26-4332-afbc-db279696a30f" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="b5e376d2-c63d-4dd0-8dfb-85fbcc5cc361" commandId="16edcd41-7f26-4332-afbc-db279696a30f" eventId="NuPattern.Library.Events.IOnElementActivatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="9a2ebb0f-ec7b-4879-9f89-55914008b6fa" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="5998d7e5-7f72-4f6b-9f0c-98100fc61352" commandId="add1e759-dac1-42ed-a26e-586cf883975b" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="5998d7e5-7f72-4f6b-9f0c-98100fc61352" commandId="add1e759-dac1-42ed-a26e-586cf883975b" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="31f7c469-2c03-4169-8bd0-41f9e43ee518" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="241af1a5-d726-4e3f-b6bc-82706101df55" commandId="d321df0a-d467-45d6-944f-ccd9b82225fe" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="241af1a5-d726-4e3f-b6bc-82706101df55" commandId="d321df0a-d467-45d6-944f-ccd9b82225fe" eventId="NuPattern.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3dbe232e-84ae-4c48-970e-f21503559286" />
       </extendedElement>
       <conditions>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.StringValueEqualsCondition",
+    "TypeId": "NuPattern.Library.Conditions.StringValueEqualsCondition",
     "Properties": [
       {
         "Name": "ComparisonKind",
@@ -247,7 +247,7 @@
         "Name": "LeftValue",
         "Value": null,
         "ValueProvider": {
-          "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValueProviders.ExpressionValueProvider",
+          "TypeId": "NuPattern.Library.ValueProviders.ExpressionValueProvider",
           "Properties": [
             {
               "Name": "Expression",
@@ -266,32 +266,32 @@
   }
 ]</conditions>
     </eventSettings>
-    <eventSettings Id="83bdd446-8109-4e3b-849b-7f444f8fcb70" commandId="17b73407-0787-41ce-ac50-a2336771cc12" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="83bdd446-8109-4e3b-849b-7f444f8fcb70" commandId="17b73407-0787-41ce-ac50-a2336771cc12" eventId="NuPattern.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="2072bf02-ed43-4272-89ce-6e4df7c4ecf4" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="d19a3ca8-9b8e-4db3-b858-cc76f2d33dff" commandId="f412f567-aca1-49fb-9a69-38bf49e01c99" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="d19a3ca8-9b8e-4db3-b858-cc76f2d33dff" commandId="f412f567-aca1-49fb-9a69-38bf49e01c99" eventId="NuPattern.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="7966d0b4-f2b4-4423-8c7a-6a9b0d0a5d9d" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="344d6c79-5915-470e-b415-d2a394b92208" commandId="62fa0899-836e-47a3-b8cd-66d4b01af60a" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="344d6c79-5915-470e-b415-d2a394b92208" commandId="62fa0899-836e-47a3-b8cd-66d4b01af60a" eventId="NuPattern.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="71046858-7e40-4c2f-8677-934f8c87b1dc" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="ce22eb18-841f-4712-8165-29530077de8b" commandId="bcc1d8b7-86bf-4c5b-a182-a2cc806f69a6" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="ce22eb18-841f-4712-8165-29530077de8b" commandId="bcc1d8b7-86bf-4c5b-a182-a2cc806f69a6" eventId="NuPattern.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="162883a2-ff78-41e5-86fd-f174100a17ba" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="6bb842b2-ba03-4c73-9faa-ebeee62f91ae" commandId="97178f1c-d168-4caf-9933-a24a576cf6f1" eventId="Microsoft.VisualStudio.Patterning.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="6bb842b2-ba03-4c73-9faa-ebeee62f91ae" commandId="97178f1c-d168-4caf-9933-a24a576cf6f1" eventId="NuPattern.Library.Events.IOnElementPropertyChangedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="535ea2ed-01a2-4108-b53a-c7ee81ac5899" />
       </extendedElement>
     </eventSettings>
-    <commandSettings Id="0ce3faef-945e-4d35-8d9c-6fad10c26823" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.InstantiateFeatureCommand">
+    <commandSettings Id="0ce3faef-945e-4d35-8d9c-6fad10c26823" typeId="NuPattern.Library.Commands.InstantiateFeatureCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="637a727b-f99f-48de-8bae-aef51fd397fb" />
       </extendedElement>
@@ -302,12 +302,12 @@
         <propertySettings Id="0aa96877-2bf9-47cf-a97f-58e0f4c2afc5" value="True" name="ActivateOnInstantiation" />
       </properties>
     </commandSettings>
-    <commandSettings Id="049e298a-8525-40a8-9fe8-f74fe455c307" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateFeatureCommand">
+    <commandSettings Id="049e298a-8525-40a8-9fe8-f74fe455c307" typeId="NuPattern.Library.Commands.ActivateFeatureCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="0df1ff5d-f42d-4710-ac58-bda597245f1e" />
       </extendedElement>
     </commandSettings>
-    <commandSettings Id="adbfc026-9959-4793-a877-0a52ded3c3d1" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ValidateElementCommand">
+    <commandSettings Id="adbfc026-9959-4793-a877-0a52ded3c3d1" typeId="NuPattern.Library.Commands.ValidateElementCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="71dd5a90-e8b9-4d73-92bf-cbe0e20865b9" />
       </extendedElement>
@@ -315,7 +315,7 @@
         <propertySettings Id="350b1f41-9b43-4c53-9975-c7307745c717" value="True" name="ValidateDescendants" />
       </properties>
     </commandSettings>
-    <commandSettings Id="eadcd298-57cf-423b-9c1b-3d515413c77f" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="eadcd298-57cf-423b-9c1b-3d515413c77f" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="ae1ded6c-2c88-4437-818e-e7db23243597" />
       </extendedElement>
@@ -323,7 +323,7 @@
         <propertySettings Id="9509a557-1baf-4a01-a590-76f466a6dc3d" value="False" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="6ddf673a-92e9-479a-91b1-e183ed1bcc7e" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="6ddf673a-92e9-479a-91b1-e183ed1bcc7e" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3d053cef-8144-4b9d-9ce2-83791652814d" />
       </extendedElement>
@@ -331,7 +331,7 @@
         <propertySettings Id="cbc59f50-2518-447e-885a-61f9b6c18bff" value="True" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="b5a0762e-07e6-493a-a8f4-5a7c6e634bd7" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="b5a0762e-07e6-493a-a8f4-5a7c6e634bd7" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d9d5fd97-f7fc-4acf-b3bc-4503cc1027b9" />
       </extendedElement>
@@ -339,7 +339,7 @@
         <propertySettings Id="e6ca785b-300f-49d1-b616-5ff34dc5dfc5" value="False" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="e2d14d50-dc8f-4a40-bf60-10e2a7ac9f89" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.UnfoldVsTemplateCommand">
+    <commandSettings Id="e2d14d50-dc8f-4a40-bf60-10e2a7ac9f89" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="1176089f-d5ac-49a2-9d26-c4c1e1473614" />
       </extendedElement>
@@ -352,7 +352,7 @@
         <propertySettings Id="03487753-f7ed-494a-9f02-af9b647d7b04" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
-    <commandSettings Id="cca56d5e-ebff-4f89-8ea8-95acc2bc62da" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="cca56d5e-ebff-4f89-8ea8-95acc2bc62da" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="98fd0624-85df-4b3c-b4c1-3e3b300c14c8" />
       </extendedElement>
@@ -360,7 +360,7 @@
         <propertySettings Id="20b94e94-9040-422d-bd45-4ab3fb8d73f6" value="False" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="45cf3a4f-9fe7-4ace-a35d-f4004cf0f15d" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="45cf3a4f-9fe7-4ace-a35d-f4004cf0f15d" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b4589ec5-f7f1-4784-a5eb-1261f00e6f5b" />
       </extendedElement>
@@ -368,7 +368,7 @@
         <propertySettings Id="eb7fb117-3966-4e94-b6d8-a76ece692287" value="True" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="f55383be-22ca-4142-ad04-a192b61c5641" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.TransformTemplatesCommand">
+    <commandSettings Id="f55383be-22ca-4142-ad04-a192b61c5641" typeId="NuPattern.Library.Commands.TransformTemplatesCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="48339eab-5572-4ef7-b280-d3b6512ddc34" />
       </extendedElement>
@@ -376,7 +376,7 @@
         <propertySettings Id="b5edb221-e9e8-4c30-bacb-3419e6771243" name="TargetPath" />
       </properties>
     </commandSettings>
-    <commandSettings Id="2068fc51-98dd-4a87-a886-5e8cb1ef114c" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.GenerateProductCodeCommand">
+    <commandSettings Id="2068fc51-98dd-4a87-a886-5e8cb1ef114c" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="996e376a-e2bd-40c5-92bc-ae8d1b48a227" />
       </extendedElement>
@@ -392,7 +392,7 @@
         <propertySettings Id="d2e6ba74-cc08-44fd-bada-65be78730a3f" value="DoNotCopy" name="TargetCopyToOutput" />
       </properties>
     </commandSettings>
-    <commandSettings Id="24f6b63c-c819-474b-ba22-c56f24b3ca60" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.UnfoldVsTemplateCommand">
+    <commandSettings Id="24f6b63c-c819-474b-ba22-c56f24b3ca60" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d217f4c3-5876-4b35-ac67-3d5daab4e575" />
       </extendedElement>
@@ -405,7 +405,7 @@
         <propertySettings Id="f528e04a-edf9-4e55-beeb-884226c4b37f" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
-    <commandSettings Id="b119f2da-1680-4ffe-b676-394e7800195d" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.UnfoldVsTemplateCommand">
+    <commandSettings Id="b119f2da-1680-4ffe-b676-394e7800195d" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="4e38487f-cf56-4bad-a884-ffc7dd61152d" />
       </extendedElement>
@@ -418,7 +418,7 @@
         <propertySettings Id="94fc4326-c1e1-46bc-9a66-388e7165ea7f" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
-    <commandSettings Id="5639f255-6a98-47a2-9aa0-a42837719991" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.UnfoldVsTemplateCommand">
+    <commandSettings Id="5639f255-6a98-47a2-9aa0-a42837719991" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="41abb338-95cc-4b57-8c97-124ea6194864" />
       </extendedElement>
@@ -431,7 +431,7 @@
         <propertySettings Id="2e65920d-7007-4e99-8224-acf7c61a6196" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
-    <commandSettings Id="9ff7f358-d1fb-49c8-a8ca-577d1825b7ef" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.UnfoldVsTemplateCommand">
+    <commandSettings Id="9ff7f358-d1fb-49c8-a8ca-577d1825b7ef" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="1599bc51-f0a5-498f-8957-609113265ffe" />
       </extendedElement>
@@ -444,7 +444,7 @@
         <propertySettings Id="2caf7f71-eda4-473b-ac7e-12643e88f52e" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
-    <commandSettings Id="c83e1094-77c2-4c10-b6c8-baea86f146b8" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.UnfoldVsTemplateCommand">
+    <commandSettings Id="c83e1094-77c2-4c10-b6c8-baea86f146b8" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3b2e0366-e7be-44b5-a9e3-c653ebfd4372" />
       </extendedElement>
@@ -457,7 +457,7 @@
         <propertySettings Id="f30992b4-ed29-42f9-badb-afc2389ab878" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
-    <commandSettings Id="419b51a5-d552-4d15-bc67-0368cdee105b" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="419b51a5-d552-4d15-bc67-0368cdee105b" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="e77de6ed-feb2-4e6f-8432-e522847f8774" />
       </extendedElement>
@@ -465,7 +465,7 @@
         <propertySettings Id="8fb207ff-5c43-4d4b-a528-a7ad2185f79b" value="True" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="831ca27a-01ac-4862-bf3a-5e8908ed1f67" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="831ca27a-01ac-4862-bf3a-5e8908ed1f67" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f2bc5f3d-ab59-4b85-9b7f-c40f36514e27" />
       </extendedElement>
@@ -473,7 +473,7 @@
         <propertySettings Id="e4b8449d-09c4-433c-a257-61d0626b29e8" value="False" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="19a18c3a-2e35-41b5-801a-3632d0c7c0d4" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="19a18c3a-2e35-41b5-801a-3632d0c7c0d4" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3b3743a8-d637-4bd8-a235-545d6a670af6" />
       </extendedElement>
@@ -481,7 +481,7 @@
         <propertySettings Id="ebfd2ad5-d170-4367-adec-1f908a0b379d" value="True" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="e07b4470-a2d3-4749-ad5a-6d276a32b515" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="e07b4470-a2d3-4749-ad5a-6d276a32b515" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="998a67f2-fa9e-428f-a703-af1f30dcd352" />
       </extendedElement>
@@ -489,7 +489,7 @@
         <propertySettings Id="c8e5cd93-a3ad-4d7b-a345-e2974dde02ba" value="False" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="2e00fd3b-2b8f-40e4-ac67-bf0ceef140a6" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="2e00fd3b-2b8f-40e4-ac67-bf0ceef140a6" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="1fce269e-51dc-4548-aaa3-ef3e35285297" />
       </extendedElement>
@@ -497,7 +497,7 @@
         <propertySettings Id="a49c4b0f-1f69-47bb-8374-7a6f5ef12287" value="True" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="397b704f-685b-4469-8dcb-dcf3c952fef4" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="397b704f-685b-4469-8dcb-dcf3c952fef4" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="7c585a13-3418-4a6a-b647-d49de0ce1755" />
       </extendedElement>
@@ -505,7 +505,7 @@
         <propertySettings Id="6246b39a-a83f-4128-b6b5-80e923714678" value="False" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="3ff5c4dd-f7ec-4ee3-a3e1-fe12d70120c3" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="3ff5c4dd-f7ec-4ee3-a3e1-fe12d70120c3" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3f768261-42d7-4cb5-8325-3aaec6a4953a" />
       </extendedElement>
@@ -513,7 +513,7 @@
         <propertySettings Id="bae08663-40e4-4308-99f7-b52fa38d5c2b" value="True" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="c3cc82f1-62d0-4f8b-895c-e2e2fb5695a2" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="c3cc82f1-62d0-4f8b-895c-e2e2fb5695a2" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="a12c8796-b824-4e57-a6b9-2f3a36050e93" />
       </extendedElement>
@@ -521,7 +521,7 @@
         <propertySettings Id="07678f71-4b47-4936-b02b-03aa838b9971" value="False" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="a3b93464-fee6-4066-9eae-8292b5a0201d" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="a3b93464-fee6-4066-9eae-8292b5a0201d" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="653e1252-90ac-42f9-962f-90ddcec425fe" />
       </extendedElement>
@@ -529,7 +529,7 @@
         <propertySettings Id="b1456be7-4efd-4c84-881e-ea487031af69" value="True" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="18e244c7-76ad-4430-a987-c37c609452dc" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="18e244c7-76ad-4430-a987-c37c609452dc" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="bcba6d1c-ce33-48da-867e-02f280884e2b" />
       </extendedElement>
@@ -537,7 +537,7 @@
         <propertySettings Id="f544dfcb-31cf-4f94-9927-0f220988cbe5" value="False" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="e158f25c-3cd1-40e7-8ecc-bec3b1c8f7b3" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.GenerateProductCodeCommand">
+    <commandSettings Id="e158f25c-3cd1-40e7-8ecc-bec3b1c8f7b3" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="120460b7-86d2-448c-ba9c-c6582cd4453b" />
       </extendedElement>
@@ -553,37 +553,37 @@
         <propertySettings Id="bb5720c4-5529-4d9c-bcf8-45aa10d1c6dc" value="DoNotCopy" name="TargetCopyToOutput" />
       </properties>
     </commandSettings>
-    <commandSettings Id="d4ebc0c4-7992-4304-b462-b4155a54c25f" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.SetAsDefaultViewCommand">
+    <commandSettings Id="d4ebc0c4-7992-4304-b462-b4155a54c25f" typeId="NuPattern.Authoring.Automation.Commands.SetAsDefaultViewCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d8bb7be3-2e7c-4116-a709-1c6b21fdf069" />
       </extendedElement>
     </commandSettings>
-    <commandSettings Id="2117689e-fec7-4f36-94ad-ec14f0184428" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.ShowViewCommand">
+    <commandSettings Id="2117689e-fec7-4f36-94ad-ec14f0184428" typeId="NuPattern.Authoring.Automation.Commands.ShowViewCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f73574f5-0a3e-400e-9da7-40ad65596c4a" />
       </extendedElement>
     </commandSettings>
-    <commandSettings Id="c1b597ef-af8a-42d3-95b6-e31a11a4c97f" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.AddViewCommand">
+    <commandSettings Id="c1b597ef-af8a-42d3-95b6-e31a11a4c97f" typeId="NuPattern.Authoring.Automation.Commands.AddViewCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="0ffb91f0-31de-4255-9ac6-bc53e62923c9" />
       </extendedElement>
     </commandSettings>
-    <commandSettings Id="9bc322d7-21fd-4794-96aa-64034f87f2bd" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.DeleteViewCommand">
+    <commandSettings Id="9bc322d7-21fd-4794-96aa-64034f87f2bd" typeId="NuPattern.Authoring.Automation.Commands.DeleteViewCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d533be90-01be-4dd6-af4a-6c88a2dd7e9e" />
       </extendedElement>
     </commandSettings>
-    <commandSettings Id="81b55886-5224-47e2-bc99-a5d9fb2c36cb" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.SynchViewNameCommand">
+    <commandSettings Id="81b55886-5224-47e2-bc99-a5d9fb2c36cb" typeId="NuPattern.Authoring.Automation.Commands.SynchViewNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="1235076b-4fc8-4516-b310-8af5ed6a768f" />
       </extendedElement>
     </commandSettings>
-    <commandSettings Id="1e2712eb-50e7-404a-8360-42d04f5126f9" typeId="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.Commands.CreateAutomationLibraryExtensionCommand">
+    <commandSettings Id="1e2712eb-50e7-404a-8360-42d04f5126f9" typeId="NuPattern.Authoring.Toolkit.Automation.Commands.CreateAutomationLibraryExtensionCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="cf0d6ba4-3341-4e3a-adb9-c7ce15fadaba" />
       </extendedElement>
     </commandSettings>
-    <commandSettings Id="e52d1228-39f9-422d-b667-1e6f26249aa0" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.GenerateProductCodeCommand">
+    <commandSettings Id="e52d1228-39f9-422d-b667-1e6f26249aa0" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="e584cf89-312d-4698-b57d-ea003e4bf5f4" />
       </extendedElement>
@@ -599,7 +599,7 @@
         <propertySettings Id="3fd06cbf-2628-45ed-a46e-a24c1498cdd6" value="DoNotCopy" name="TargetCopyToOutput" />
       </properties>
     </commandSettings>
-    <commandSettings Id="f9a86aec-5e67-4059-a030-fbab5e75ae8d" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.AggregatorCommand">
+    <commandSettings Id="f9a86aec-5e67-4059-a030-fbab5e75ae8d" typeId="NuPattern.Library.Commands.AggregatorCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="31f96dca-d0a6-4a52-9ae5-4f10a689e597" />
       </extendedElement>
@@ -607,12 +607,12 @@
         <propertySettings Id="f31e4661-d780-4c5b-b65c-6f90fea5b88d" value="e52d1228-39f9-422d-b667-1e6f26249aa0;9434ad4c-395d-4fd9-bec4-a3d9fac0e111;3c8b1aaa-68b2-49aa-9bc4-26516cbd5509;c18e93e0-d2eb-4b30-a560-a62b6f4728f6;4a0bf7de-d568-4076-ab02-e62138bc3e41" name="CommandReferenceList" />
       </properties>
     </commandSettings>
-    <commandSettings Id="c18e93e0-d2eb-4b30-a560-a62b6f4728f6" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.CreateViewElementsCommand">
+    <commandSettings Id="c18e93e0-d2eb-4b30-a560-a62b6f4728f6" typeId="NuPattern.Authoring.Automation.Commands.CreateViewElementsCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="7787abf0-29b6-4d70-8523-ec9eb58c0a8b" />
       </extendedElement>
     </commandSettings>
-    <commandSettings Id="3c8b1aaa-68b2-49aa-9bc4-26516cbd5509" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="3c8b1aaa-68b2-49aa-9bc4-26516cbd5509" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="77e7e003-db91-4747-9f3e-4088009f1c6f" />
       </extendedElement>
@@ -620,12 +620,12 @@
         <propertySettings Id="ef64bf68-9e70-4b50-8929-cad63a07ae6e" value="True" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="4a0bf7de-d568-4076-ab02-e62138bc3e41" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.SaveArtifactCommand">
+    <commandSettings Id="4a0bf7de-d568-4076-ab02-e62138bc3e41" typeId="NuPattern.Library.Commands.SaveArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="4ae817be-a228-4034-8ded-853f824127f1" />
       </extendedElement>
     </commandSettings>
-    <commandSettings Id="9434ad4c-395d-4fd9-bec4-a3d9fac0e111" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.SetBuildActionCommand">
+    <commandSettings Id="9434ad4c-395d-4fd9-bec4-a3d9fac0e111" typeId="NuPattern.Library.Commands.SetBuildActionCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="c4d75b79-128e-4a5e-b7d7-46b4c6feec3e" />
       </extendedElement>
@@ -634,7 +634,7 @@
         <propertySettings Id="58f52bd6-65bf-44e1-8e1d-f5d4c1931fa6" name="TargetPath" />
       </properties>
     </commandSettings>
-    <commandSettings Id="dc5c415e-e06b-49d5-aa77-044879bc0714" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.ValidatePatternModelCommand">
+    <commandSettings Id="dc5c415e-e06b-49d5-aa77-044879bc0714" typeId="NuPattern.Authoring.Automation.Commands.ValidatePatternModelCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="0aeb8219-d178-48cf-b2e3-9a58c2cb406b" />
       </extendedElement>
@@ -642,7 +642,7 @@
         <propertySettings Id="ef1dd957-4002-4cdf-bb12-82d3783e4ee4" name="TargetPath" />
       </properties>
     </commandSettings>
-    <commandSettings Id="90291e86-b780-4adf-b500-5c11c868c3fd" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.GenerateProductCodeCommand">
+    <commandSettings Id="90291e86-b780-4adf-b500-5c11c868c3fd" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="bce7bc48-3436-4ff0-ba05-8f06bfe62b58" />
       </extendedElement>
@@ -658,7 +658,7 @@
         <propertySettings Id="e5d7eb5c-07d5-42de-8d44-ce927b8a20d3" value="DoNotCopy" name="TargetCopyToOutput" />
       </properties>
     </commandSettings>
-    <commandSettings Id="50c8adef-76cc-44a0-80c3-ac8aef6c4513" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.GenerateProductCodeCommand">
+    <commandSettings Id="50c8adef-76cc-44a0-80c3-ac8aef6c4513" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="c6833ee4-743a-4358-a10b-f76a0d6328d8" />
       </extendedElement>
@@ -674,7 +674,7 @@
         <propertySettings Id="3b5688b0-62b2-4718-b205-57f7feb78e72" value="DoNotCopy" name="TargetCopyToOutput" />
       </properties>
     </commandSettings>
-    <commandSettings Id="16edcd41-7f26-4332-afbc-db279696a30f" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="16edcd41-7f26-4332-afbc-db279696a30f" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f07136e6-e7f0-41df-b316-50ca17104986" />
       </extendedElement>
@@ -682,7 +682,7 @@
         <propertySettings Id="ea8a7432-90d9-4e12-a901-84a3d77aa5bd" value="True" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="fa8be218-d6de-4ed7-a197-7b42f127db4b" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.ActivateArtifactCommand">
+    <commandSettings Id="fa8be218-d6de-4ed7-a197-7b42f127db4b" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="7522d045-c877-4e72-bc9c-5a987fb784aa" />
       </extendedElement>
@@ -690,7 +690,7 @@
         <propertySettings Id="5cea6618-ce3f-40e9-ac84-99265de4f2e6" value="False" name="Open" />
       </properties>
     </commandSettings>
-    <commandSettings Id="5a814601-5260-42a6-94fd-1e8a7a178ace" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.AggregatorCommand">
+    <commandSettings Id="5a814601-5260-42a6-94fd-1e8a7a178ace" typeId="NuPattern.Library.Commands.AggregatorCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="cae00472-8a7e-43db-8ca6-c4e01c8355be" />
       </extendedElement>
@@ -698,12 +698,12 @@
         <propertySettings Id="5d4a15ac-a0ac-4e0e-bca3-35efd1a5455d" value="caf296ed-c384-4491-8169-6c1539c98180;50c8adef-76cc-44a0-80c3-ac8aef6c4513" name="CommandReferenceList" />
       </properties>
     </commandSettings>
-    <commandSettings Id="caf296ed-c384-4491-8169-6c1539c98180" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.CreateGuidanceDocumentsCommand">
+    <commandSettings Id="caf296ed-c384-4491-8169-6c1539c98180" typeId="NuPattern.Authoring.Automation.Commands.CreateGuidanceDocumentsCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b920c776-ac6c-42fd-a058-cc56b0dc1c94" />
       </extendedElement>
     </commandSettings>
-    <commandSettings Id="33b932d3-2554-4e59-ba10-64d46ee6e396" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.GenerateProductCodeCommand">
+    <commandSettings Id="33b932d3-2554-4e59-ba10-64d46ee6e396" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b77d9219-672c-46af-8ad1-1bafe3725738" />
       </extendedElement>
@@ -716,7 +716,7 @@
           <propertySettings Id="6041f199-728a-4416-9750-031d0fec66b6" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/df833f58-85c6-45f7-afc9-834c0217473d" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
-    <commandSettings Id="e7f46324-a7e5-434d-a3bc-d25c7bbe4e18" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.SetBuildActionCommand">
+    <commandSettings Id="e7f46324-a7e5-434d-a3bc-d25c7bbe4e18" typeId="NuPattern.Library.Commands.SetBuildActionCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b41e8ff4-9832-4df7-9b14-30adbd15255c" />
       </extendedElement>
@@ -725,7 +725,7 @@
         <propertySettings Id="9a3860c0-f836-4ef6-b608-5e2c88df2d82" value="..\~\..\source.extension.tt\source.extension.vsixmanifest" name="TargetPath" />
       </properties>
     </commandSettings>
-    <commandSettings Id="d321df0a-d467-45d6-944f-ccd9b82225fe" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.GenerateProductCodeCommand">
+    <commandSettings Id="d321df0a-d467-45d6-944f-ccd9b82225fe" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="aa38025e-adcf-4664-83f5-844cdbfe29f2" />
       </extendedElement>
@@ -738,7 +738,7 @@
         <propertySettings Id="b51a1f8b-c9d9-4273-9ff3-9d433e9c6115" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/d93786b4-73bd-4850-8a9b-dc71b0c85d79" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
-    <commandSettings Id="add1e759-dac1-42ed-a26e-586cf883975b" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.AggregatorCommand">
+    <commandSettings Id="add1e759-dac1-42ed-a26e-586cf883975b" typeId="NuPattern.Library.Commands.AggregatorCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="4e34f6c5-3b8e-4374-9b71-0284f1757994" />
       </extendedElement>
@@ -746,7 +746,7 @@
         <propertySettings Id="69b46bae-1824-4d8d-90b6-745fc850689d" value="33b932d3-2554-4e59-ba10-64d46ee6e396;d321df0a-d467-45d6-944f-ccd9b82225fe;e7f46324-a7e5-434d-a3bc-d25c7bbe4e18;32796c01-8e80-4981-948d-1cc707d12eb2;60bf8de3-2170-40f4-8dd6-56997f0cec65" name="CommandReferenceList" />
       </properties>
     </commandSettings>
-    <commandSettings Id="098b6414-ce54-4513-999b-4c237fe3079c" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
+    <commandSettings Id="098b6414-ce54-4513-999b-4c237fe3079c" typeId="NuPattern.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f0d75646-5479-4c39-9019-9ff5cb1a343c" />
       </extendedElement>
@@ -756,7 +756,7 @@
         <propertySettings Id="822237ca-78c4-47ad-ab3d-b537039e3575" value="True" name="SyncName" />
       </properties>
     </commandSettings>
-    <commandSettings Id="c0d65b6f-6b41-4cd4-bf20-23e30ec3e9c3" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
+    <commandSettings Id="c0d65b6f-6b41-4cd4-bf20-23e30ec3e9c3" typeId="NuPattern.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="8765ef5b-572f-4825-a259-2a6cbbebd89f" />
       </extendedElement>
@@ -766,7 +766,7 @@
         <propertySettings Id="1f22477f-ac4f-4145-b2ba-b58bb3ab64db" value="True" name="SyncName" />
       </properties>
     </commandSettings>
-    <commandSettings Id="6d7b67f7-0256-4717-b3aa-b651d89f1d83" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
+    <commandSettings Id="6d7b67f7-0256-4717-b3aa-b651d89f1d83" typeId="NuPattern.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="be717b25-b909-4a5a-9d32-b10b02c4fb6e" />
       </extendedElement>
@@ -776,7 +776,7 @@
         <propertySettings Id="5afeacff-756b-4875-8499-bc875aaeae9c" value="True" name="SyncName" />
       </properties>
     </commandSettings>
-    <commandSettings Id="d741af5f-7781-44fa-b46d-2dd75e08d069" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
+    <commandSettings Id="d741af5f-7781-44fa-b46d-2dd75e08d069" typeId="NuPattern.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="8b816c0f-9a05-46a1-a2fc-6bc9de3f1e54" />
       </extendedElement>
@@ -786,7 +786,7 @@
         <propertySettings Id="ab90d6e5-92a1-4e86-add3-17e433a6305b" value="True" name="SyncName" />
       </properties>
     </commandSettings>
-    <commandSettings Id="951e1ef4-5d78-4acb-85b4-535a3a804f25" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
+    <commandSettings Id="951e1ef4-5d78-4acb-85b4-535a3a804f25" typeId="NuPattern.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="50f11fcc-61d1-420b-a068-908ca54b6673" />
       </extendedElement>
@@ -796,7 +796,7 @@
         <propertySettings Id="e0ac118f-aa71-4273-971d-ee5e4781af9c" value="True" name="SyncName" />
       </properties>
     </commandSettings>
-    <commandSettings Id="17b73407-0787-41ce-ac50-a2336771cc12" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.SynchArtifactNameCommand">
+    <commandSettings Id="17b73407-0787-41ce-ac50-a2336771cc12" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="447cd057-b97a-424b-a64e-c7dfcf84fd08" />
       </extendedElement>
@@ -804,7 +804,7 @@
         <propertySettings Id="b63435dd-9134-4159-9d40-c68420d494f2" value="FilteredByTag" name="ReferenceTag" />
       </properties>
     </commandSettings>
-    <commandSettings Id="f412f567-aca1-49fb-9a69-38bf49e01c99" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.SynchArtifactNameCommand">
+    <commandSettings Id="f412f567-aca1-49fb-9a69-38bf49e01c99" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="62b581ac-368c-45ed-a9c0-dbf1e70fa42f" />
       </extendedElement>
@@ -812,7 +812,7 @@
         <propertySettings Id="f2dfe3aa-8f7a-4461-a1ff-c962ab383421" value="FilteredByTag" name="ReferenceTag" />
       </properties>
     </commandSettings>
-    <commandSettings Id="62fa0899-836e-47a3-b8cd-66d4b01af60a" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.SynchArtifactNameCommand">
+    <commandSettings Id="62fa0899-836e-47a3-b8cd-66d4b01af60a" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="713072e7-4d10-4bb2-a625-524d74aed892" />
       </extendedElement>
@@ -820,7 +820,7 @@
         <propertySettings Id="a2700258-781f-4950-b7e0-51ec1049b256" value="FilteredByTag" name="ReferenceTag" />
       </properties>
     </commandSettings>
-    <commandSettings Id="bcc1d8b7-86bf-4c5b-a182-a2cc806f69a6" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.SynchArtifactNameCommand">
+    <commandSettings Id="bcc1d8b7-86bf-4c5b-a182-a2cc806f69a6" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f79c99fc-8c93-493e-ab43-cdda1576fa79" />
       </extendedElement>
@@ -828,7 +828,7 @@
         <propertySettings Id="3f5f310c-a8e6-4505-a226-0fe56190b9f1" value="FilteredByTag" name="ReferenceTag" />
       </properties>
     </commandSettings>
-    <commandSettings Id="97178f1c-d168-4caf-9933-a24a576cf6f1" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.SynchArtifactNameCommand">
+    <commandSettings Id="97178f1c-d168-4caf-9933-a24a576cf6f1" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="706fbb48-7fed-410f-958c-55cd0cae4dbc" />
       </extendedElement>
@@ -836,12 +836,12 @@
         <propertySettings Id="7a857542-af33-4a6e-ac7c-63225d1c4606" value="FilteredByTag" name="ReferenceTag" />
       </properties>
     </commandSettings>
-    <commandSettings Id="32796c01-8e80-4981-948d-1cc707d12eb2" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.SetManifestMSBuildCommand">
+    <commandSettings Id="32796c01-8e80-4981-948d-1cc707d12eb2" typeId="NuPattern.Authoring.Automation.Commands.SetManifestMSBuildCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="2dd9112c-6a2c-46d4-80c3-acf75ffa1cdd" />
       </extendedElement>
     </commandSettings>
-    <commandSettings Id="60bf8de3-2170-40f4-8dd6-56997f0cec65" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.TransformTemplatesCommand">
+    <commandSettings Id="60bf8de3-2170-40f4-8dd6-56997f0cec65" typeId="NuPattern.Library.Commands.TransformTemplatesCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="e1234322-7a52-400b-a4cb-a3480c6d95da" />
       </extendedElement>
@@ -849,7 +849,7 @@
         <propertySettings Id="de6815dc-7adb-4a58-aff2-b959e00309f1" name="TargetPath" />
       </properties>
     </commandSettings>
-    <commandSettings Id="da42779a-bd4a-4f9e-b727-6c916652402f" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.AddFromDroppedVSTemplateCommand">
+    <commandSettings Id="da42779a-bd4a-4f9e-b727-6c916652402f" typeId="NuPattern.Authoring.Automation.Commands.AddFromDroppedVSTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f38183c1-bade-40d8-ac93-15e8fb236161" />
       </extendedElement>
@@ -859,7 +859,7 @@
         <propertySettings Id="eef8167e-4f8f-4ff9-95c8-5f6dfd135b9b" value="True" name="SyncName" />
       </properties>
     </commandSettings>
-    <commandSettings Id="4beb6753-29d1-4fac-bf97-e17f6ef4995e" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.AddFromDroppedVSTemplateCommand">
+    <commandSettings Id="4beb6753-29d1-4fac-bf97-e17f6ef4995e" typeId="NuPattern.Authoring.Automation.Commands.AddFromDroppedVSTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="c6b2cf00-6285-4ff1-b10f-62222328d7a3" />
       </extendedElement>
@@ -869,7 +869,7 @@
         <propertySettings Id="5bc8089c-db58-43f6-a092-ec79fe360351" value="True" name="SyncName" />
       </properties>
     </commandSettings>
-    <commandSettings Id="95a51e75-adab-4725-9345-7a788483cffb" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.ImportVSTemplateCommand">
+    <commandSettings Id="95a51e75-adab-4725-9345-7a788483cffb" typeId="NuPattern.Authoring.Automation.Commands.ImportVSTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b3ac4bfe-8277-489f-8898-f8ec8806c5b4" />
       </extendedElement>
@@ -881,7 +881,7 @@
         <propertySettings Id="bd3f284a-bf70-4565-b15a-4505416fe777" value="True" name="SyncName" />
       </properties>
     </commandSettings>
-    <commandSettings Id="1463a6c5-005f-4e68-80d9-c595d20a0a94" typeId="Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands.ImportVSTemplateCommand">
+    <commandSettings Id="1463a6c5-005f-4e68-80d9-c595d20a0a94" typeId="NuPattern.Authoring.Automation.Commands.ImportVSTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="ff12ec5c-fbbe-4d27-b83f-c28f3feeb514" />
       </extendedElement>
@@ -893,7 +893,7 @@
         <propertySettings Id="c5d1b66c-73a9-4410-9d6a-c691f642e00e" value="True" name="SyncName" />
       </properties>
     </commandSettings>
-    <commandSettings Id="acf616d7-278f-41a0-87bf-580ce8d3cdae" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.CollapseSolutionItemsCommand">
+    <commandSettings Id="acf616d7-278f-41a0-87bf-580ce8d3cdae" typeId="NuPattern.Library.Commands.CollapseSolutionItemsCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="96fe3ac7-3714-4b5c-b1a6-a1ad76878a3f" />
       </extendedElement>
@@ -901,7 +901,7 @@
         <propertySettings Id="157b902c-c2fa-4c12-8f11-fa9ee037633d" value="False" name="IncludeProjects" />
       </properties>
     </commandSettings>
-    <commandSettings Id="07cf58a3-12f4-41d9-9b9e-d74a46e73d88" typeId="Microsoft.VisualStudio.Patterning.Library.Commands.AggregatorCommand">
+    <commandSettings Id="07cf58a3-12f4-41d9-9b9e-d74a46e73d88" typeId="NuPattern.Library.Commands.AggregatorCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="ea24d5af-cb2e-44dc-a9e2-a906c998a152" />
       </extendedElement>
@@ -920,11 +920,11 @@
 		[
 			{
 				"Name":"Kind",
-				"Value":"Microsoft.VisualStudio.Patterning.Extensibility.References.GuidanceReference",
+				"Value":"NuPattern.Extensibility.References.GuidanceReference",
 				"ValueProvider":null
 			}
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ElementReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ElementReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -946,7 +946,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -963,7 +963,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -980,7 +980,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -997,7 +997,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1014,7 +1014,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1031,7 +1031,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1048,7 +1048,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1065,7 +1065,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1082,7 +1082,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1099,7 +1099,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1116,7 +1116,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1133,7 +1133,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1150,7 +1150,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1167,7 +1167,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1184,7 +1184,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1206,7 +1206,7 @@
       <conditions>
 [
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Authoring.Automation.Conditions.LastViewCondition",
+    "TypeId": "NuPattern.Authoring.Automation.Conditions.LastViewCondition",
     "Properties": []
   }
 ]
@@ -1224,7 +1224,7 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
@@ -1241,17 +1241,17 @@
 		[
 			
 		],
-		"TypeId":"Microsoft.VisualStudio.Patterning.Library.Conditions.ArtifactReferenceExistsCondition"
+		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
 	}
 ]
 </conditions>
     </menuSettings>
-    <menuSettings Id="50cbb339-338b-4276-9e58-93567a64f2a7" text="Build Guidance" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/CommandBuildGuidance.png" commandId="5a814601-5260-42a6-94fd-1e8a7a178ace" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="50cbb339-338b-4276-9e58-93567a64f2a7" text="Build Guidance" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/CommandBuildGuidance.png" commandId="5a814601-5260-42a6-94fd-1e8a7a178ace" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="14427d95-ca80-4c2f-9f81-218266b07247" />
       </extendedElement>
     </menuSettings>
-    <menuSettings Id="1f354ebc-ded5-41c3-a17b-6c0963071dc7" text="Transform Templates" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/CommandTransformTemplates.png" commandId="f55383be-22ca-4142-ad04-a192b61c5641" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="1f354ebc-ded5-41c3-a17b-6c0963071dc7" text="Transform Templates" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/CommandTransformTemplates.png" commandId="f55383be-22ca-4142-ad04-a192b61c5641" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="316d3345-6833-43de-96e4-fb22875205a6" />
       </extendedElement>
@@ -1261,7 +1261,7 @@
         <automationSettingsSchemaMoniker Id="4ad531e4-1a31-4420-a74e-cb7e1dfe9649" />
       </extendedElement>
     </menuSettings>
-    <menuSettings Id="06eeafa3-2e89-449d-827c-c812099783a9" text="Transform Toolkit Info" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/CommandTransformTemplates.png" commandId="d321df0a-d467-45d6-944f-ccd9b82225fe" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="06eeafa3-2e89-449d-827c-c812099783a9" text="Transform Toolkit Info" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/CommandTransformTemplates.png" commandId="d321df0a-d467-45d6-944f-ccd9b82225fe" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="2a86c145-aae7-46df-bcf5-7acb52f312d3" />
       </extendedElement>
@@ -1381,7 +1381,7 @@
         <elementSchemaMoniker Id="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" />
       </extendedElement>
     </guidanceExtension>
-    <wizardSettings Id="89961330-d06d-4447-8015-1198ef9af6ea" typeName="Microsoft.VisualStudio.Patterning.Authoring.Authoring.Assets.Wizards.ToolkitCreationWizard, Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit">
+    <wizardSettings Id="89961330-d06d-4447-8015-1198ef9af6ea" typeName="NuPattern.Authoring.Authoring.Assets.Wizards.ToolkitCreationWizard, NuPattern.Authoring.Authoring.Toolkit">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="6bf40086-559a-48d8-8aa5-67a7b026968c" />
       </extendedElement>
@@ -1502,7 +1502,7 @@
       </extendedElement>
       <dropConditions>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.DropSolutionItemCondition",
+    "TypeId": "NuPattern.Library.Conditions.DropSolutionItemCondition",
     "Properties": [
       {
         "Name": "Extension",
@@ -1520,7 +1520,7 @@
       <dropConditions>
 [
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.DropSolutionItemCondition",
+    "TypeId": "NuPattern.Library.Conditions.DropSolutionItemCondition",
     "Properties": [
       {
         "Name": "Extension",
@@ -1539,7 +1539,7 @@
       <dropConditions>
 [
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.DropSolutionItemCondition",
+    "TypeId": "NuPattern.Library.Conditions.DropSolutionItemCondition",
     "Properties": [
       {
         "Name": "Extension",
@@ -1558,7 +1558,7 @@
       <dropConditions>
 [
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.DropSolutionItemCondition",
+    "TypeId": "NuPattern.Library.Conditions.DropSolutionItemCondition",
     "Properties": [
       {
         "Name": "Extension",
@@ -1577,7 +1577,7 @@
       <dropConditions>
 [
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.DropSolutionItemCondition",
+    "TypeId": "NuPattern.Library.Conditions.DropSolutionItemCondition",
     "Properties": [
       {
         "Name": "Extension",
@@ -1596,7 +1596,7 @@
       <dropConditions>
 [
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.DropSolutionItemCondition",
+    "TypeId": "NuPattern.Library.Conditions.DropSolutionItemCondition",
     "Properties": [
       {
         "Name": "Extension",
@@ -1615,7 +1615,7 @@
       <dropConditions>
 [
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.Conditions.DropSolutionItemCondition",
+    "TypeId": "NuPattern.Library.Conditions.DropSolutionItemCondition",
     "Properties": [
       {
         "Name": "Extension",
@@ -1628,7 +1628,7 @@
 </dropConditions>
     </dragDropSettings>
   </dm0:extensions>
-  <pattern Id="c034429e-01f9-48dd-a478-0321fb708dd3" name="PatternToolkit" displayName="Pattern Toolkit" description="A Pattern Toolkit for capturing and delivering a design pattern." codeIdentifier="PatternToolkit" isCustomizable="True" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/PatternNodeAuthoring.png" currentDiagramId="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8" patternLink="patternmanager://eba0a4b0-d271-4785-8691-5963645ed0bd">
+  <pattern Id="c034429e-01f9-48dd-a478-0321fb708dd3" name="PatternToolkit" displayName="Pattern Toolkit" description="A Pattern Toolkit which captures and automates a design pattern for rapid and consistent custom solution development." codeIdentifier="PatternToolkit" isCustomizable="True" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/PatternNodeAuthoring.png" currentDiagramId="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8" patternLink="patternmanager://eba0a4b0-d271-4785-8691-5963645ed0bd">
     <customizationPolicy>
       <settings>
         <setting propertyId="DisplayName" />
@@ -1638,7 +1638,7 @@
       </settings>
     </customizationPolicy>
     <properties>
-      <property Id="7ce5ad5a-88c2-4336-b038-e4998aa02b03" name="TransformOnBuild" displayName="Transform On Build" description="When to transform all code generation templates in this toolkit, to ensure that all toolkit artifacts are up to date." codeIdentifier="TransformOnBuild" category="Code Generation" typeConverterTypeName="Microsoft.VisualStudio.Patterning.Extensibility.TransformOnBuildConverter, Microsoft.VisualStudio.Patterning.Extensibility">
+      <property Id="7ce5ad5a-88c2-4336-b038-e4998aa02b03" name="TransformOnBuild" displayName="Transform On Build" description="When to transform all code generation templates in this toolkit, to ensure that all toolkit artifacts are up to date." codeIdentifier="TransformOnBuild" category="Code Generation" typeConverterTypeName="NuPattern.Extensibility.TransformOnBuildConverter, NuPattern.Extensibility">
         <customizationPolicy name="CustomizationPolicySchema1">
           <settings>
             <setting propertyId="DisplayName" />
@@ -1687,7 +1687,7 @@
 }</defaultValue>
         <validationRules>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValidationRules.PropertyRequiredValidationRule",
+    "TypeId": "NuPattern.Library.ValidationRules.PropertyRequiredValidationRule",
     "Properties": [
       {
         "Name": "ErrorMessage",
@@ -1763,7 +1763,7 @@
           </settings>
         </customizationPolicy>
         <valueProvider>{
-  "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValueProviders.SolutionNameValueProvider",
+  "TypeId": "NuPattern.Library.ValueProviders.SolutionNameValueProvider",
   "Properties": []
 }</valueProvider>
       </property>
@@ -1783,7 +1783,7 @@
           </settings>
         </customizationPolicy>
         <valueProvider>{
-  "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValueProviders.RootNamespaceValueProvider",
+  "TypeId": "NuPattern.Library.ValueProviders.RootNamespaceValueProvider",
   "Properties": [
     {
       "Name": "ProjectPath",
@@ -1809,7 +1809,7 @@
           </settings>
         </customizationPolicy>
         <valueProvider>{
-  "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValueProviders.AssemblyNameValueProvider",
+  "TypeId": "NuPattern.Library.ValueProviders.AssemblyNameValueProvider",
   "Properties": [
     {
       "Name": "ProjectPath",
@@ -2082,7 +2082,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="7475fa2d-8033-461c-a460-7e0793491874" name="ItemTemplate" displayName="Item Template" description="A Visual Studio item template." codeIdentifier="ItemTemplate" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeVsTemplate.png">
+                      <element Id="7475fa2d-8033-461c-a460-7e0793491874" name="ItemTemplate" displayName="Item Template" description="A Visual Studio item template." codeIdentifier="ItemTemplate" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeVsTemplate.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2265,7 +2265,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="f03d48a2-2377-4e56-a2c4-ae24d34302d3" name="ProjectTemplate" displayName="Project Template" description="A Visual Studio project template" codeIdentifier="ProjectTemplate" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeVsTemplate.png">
+                      <element Id="f03d48a2-2377-4e56-a2c4-ae24d34302d3" name="ProjectTemplate" displayName="Project Template" description="A Visual Studio project template" codeIdentifier="ProjectTemplate" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeVsTemplate.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2412,7 +2412,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="c6a0f8d4-59df-4dad-b92e-c6a1e54be5e2" name="TextTemplate" displayName="Text Template" description="A custom T4 text template." codeIdentifier="TextTemplate" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeT4Template.png">
+                      <element Id="c6a0f8d4-59df-4dad-b92e-c6a1e54be5e2" name="TextTemplate" displayName="Text Template" description="A custom T4 text template." codeIdentifier="TextTemplate" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeT4Template.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2543,7 +2543,7 @@
                   </automationSettings>
                 </automationSettings>
                 <childElement cardinality="ZeroToMany" autoCreate="false">
-                  <element Id="b013c2ba-e9e0-484d-a0bc-e821c38c192b" name="Wizard" displayName="Wizard" description="A custom wizard." codeIdentifier="Wizard" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeWizard.png">
+                  <element Id="b013c2ba-e9e0-484d-a0bc-e821c38c192b" name="Wizard" displayName="Wizard" description="A custom wizard." codeIdentifier="Wizard" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeWizard.png">
                     <customizationPolicy name="CustomizationPolicySchema1">
                       <settings>
                         <setting propertyId="DisplayName" />
@@ -2670,7 +2670,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="93ee656b-6308-42d1-a5d7-e10fcea47ee7" name="WizardPage" displayName="Wizard Page" description="A custom wizard page" codeIdentifier="WizardPage" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeWizardPage.png">
+                      <element Id="93ee656b-6308-42d1-a5d7-e10fcea47ee7" name="WizardPage" displayName="Wizard Page" description="A custom wizard page" codeIdentifier="WizardPage" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeWizardPage.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2770,7 +2770,7 @@
               </collection>
             </childElement>
             <childElement>
-              <element Id="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" name="Guidance" displayName="Guidance" description="Guidance for the toolkit." codeIdentifier="Guidance" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeGuidance.png">
+              <element Id="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" name="Guidance" displayName="Guidance" description="Guidance for the toolkit." codeIdentifier="Guidance" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeGuidance.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -2822,7 +2822,7 @@
                       </settings>
                     </customizationPolicy>
                     <valueProvider>{
-  "TypeId": "Microsoft.VisualStudio.Patterning.Authoring.Automation.ValueProviders.GuidanceDocumentPathProvider",
+  "TypeId": "NuPattern.Authoring.Automation.ValueProviders.GuidanceDocumentPathProvider",
   "Properties": []
 }</valueProvider>
                   </property>
@@ -3026,7 +3026,7 @@
           </collection>
         </elements>
         <elements>
-          <element Id="5da53e5a-0ba8-48f8-a922-1712244c388c" name="PatternModel" displayName="Pattern Model" description="The definition of the pattern." codeIdentifier="PatternModel" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodePatternModel.png">
+          <element Id="5da53e5a-0ba8-48f8-a922-1712244c388c" name="PatternModel" displayName="Pattern Model" description="The definition of the pattern." codeIdentifier="PatternModel" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodePatternModel.png">
             <customizationPolicy name="CustomizationPolicySchema1">
               <settings>
                 <setting propertyId="DisplayName" />
@@ -3037,7 +3037,7 @@
               </settings>
             </customizationPolicy>
             <properties>
-              <property Id="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" name="ValidateOnBuild" displayName="Validate On Build" description="When to validate the pattern model, to ensure that its configuration is valid and up to date." codeIdentifier="ValidateOnBuild" typeConverterTypeName="Microsoft.VisualStudio.Patterning.Extensibility.ValidateOnBuildConverter, Microsoft.VisualStudio.Patterning.Extensibility">
+              <property Id="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" name="ValidateOnBuild" displayName="Validate On Build" description="When to validate the pattern model, to ensure that its configuration is valid and up to date." codeIdentifier="ValidateOnBuild" typeConverterTypeName="NuPattern.Extensibility.ValidateOnBuildConverter, NuPattern.Extensibility">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -3079,7 +3079,7 @@
                 </customizationPolicy>
                 <valueProvider>
                   {
-                  "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValueProviders.ReferencedSolutionItemPathValueProvider",
+                  "TypeId": "NuPattern.Library.ValueProviders.ReferencedSolutionItemPathValueProvider",
                   "Properties": [
                   {
                   "Name": "Extension",
@@ -3240,7 +3240,7 @@
                   </settings>
                 </customizationPolicy>
                 <childElement cardinality="ZeroToMany" autoCreate="false">
-                  <element Id="6a596dea-529b-4cd5-9eea-7e856a2b332c" name="View" displayName="View" description="A view or aspect of the pattern." codeIdentifier="ViewModel" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeView.png">
+                  <element Id="6a596dea-529b-4cd5-9eea-7e856a2b332c" name="View" displayName="View" description="A view or aspect of the pattern." codeIdentifier="ViewModel" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeView.png">
                     <customizationPolicy name="CustomizationPolicySchema1">
                       <settings>
                         <setting propertyId="DisplayName" />
@@ -3358,7 +3358,7 @@
           </element>
         </elements>
         <elements>
-          <element Id="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" name="ToolkitInfo" displayName="Toolkit Info" description="Information for packaging the toolkit as a VSIX extension." codeIdentifier="PatternToolkitInfo" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeToolkitInfo.png">
+          <element Id="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" name="ToolkitInfo" displayName="Toolkit Info" description="Information for packaging the toolkit as a VSIX extension." codeIdentifier="PatternToolkitInfo" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeToolkitInfo.png">
             <customizationPolicy name="CustomizationPolicySchema1">
               <settings>
                 <setting propertyId="DisplayName" />
@@ -3391,7 +3391,7 @@
 }</defaultValue>
                 <validationRules>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValidationRules.PropertyRequiredValidationRule",
+    "TypeId": "NuPattern.Library.ValidationRules.PropertyRequiredValidationRule",
     "Properties": [
       {
         "Name": "ErrorMessage",
@@ -3425,13 +3425,13 @@
   "Name": "DefaultValue",
   "Value": "",
   "ValueProvider": {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValueProviders.RegisteredMachineUserValueProvider",
+    "TypeId": "NuPattern.Library.ValueProviders.RegisteredMachineUserValueProvider",
     "Properties": []
   }
 }</defaultValue>
                 <validationRules>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValidationRules.PropertyRequiredValidationRule",
+    "TypeId": "NuPattern.Library.ValidationRules.PropertyRequiredValidationRule",
     "Properties": [
       {
         "Name": "ErrorMessage",
@@ -3468,7 +3468,7 @@
 }</defaultValue>
                 <validationRules>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValidationRules.PropertyRequiredValidationRule",
+    "TypeId": "NuPattern.Library.ValidationRules.PropertyRequiredValidationRule",
     "Properties": [
       {
         "Name": "ErrorMessage",
@@ -3505,7 +3505,7 @@
 }</defaultValue>
                 <validationRules>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValidationRules.PropertyRequiredValidationRule",
+    "TypeId": "NuPattern.Library.ValidationRules.PropertyRequiredValidationRule",
     "Properties": [
       {
         "Name": "ErrorMessage",
@@ -3515,7 +3515,7 @@
     ]
   },
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValidationRules.PropertyRegularExpressionValidationRule",
+    "TypeId": "NuPattern.Library.ValidationRules.PropertyRegularExpressionValidationRule",
     "Properties": [
       {
         "Name": "ErrorMessage",
@@ -3554,13 +3554,13 @@
   "Name": "DefaultValue",
   "Value": "",
   "ValueProvider": {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValueProviders.RandomGuidValueProvider",
+    "TypeId": "NuPattern.Library.ValueProviders.RandomGuidValueProvider",
     "Properties": []
   }
 }</defaultValue>
                 <validationRules>[
   {
-    "TypeId": "Microsoft.VisualStudio.Patterning.Library.ValidationRules.PropertyRequiredValidationRule",
+    "TypeId": "NuPattern.Library.ValidationRules.PropertyRequiredValidationRule",
     "Properties": [
       {
         "Name": "ErrorMessage",
@@ -3575,7 +3575,7 @@
   "Properties": []
 }</valueProvider>
               </property>
-              <property Id="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" name="Icon" displayName="Icon" description="An optional icon for the toolkit." codeIdentifier="Icon" category="Identification" typeConverterTypeName="Microsoft.VisualStudio.Patterning.Extensibility.ItemRelativePathConverter, Microsoft.VisualStudio.Patterning.Extensibility" editorTypeName="Microsoft.VisualStudio.Patterning.Extensibility.IconEditor, Microsoft.VisualStudio.Patterning.Extensibility">
+              <property Id="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" name="Icon" displayName="Icon" description="An optional icon for the toolkit." codeIdentifier="Icon" category="Identification" typeConverterTypeName="NuPattern.Extensibility.ItemRelativePathConverter, NuPattern.Extensibility" editorTypeName="NuPattern.Extensibility.IconEditor, NuPattern.Extensibility">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -3600,7 +3600,7 @@
   "Properties": []
 }</valueProvider>
               </property>
-              <property Id="c9e003d7-cb45-4865-a511-de29c04b5b2d" name="Eula" displayName="Eula" description="The license terms governing the use and distribution of this toolkit." codeIdentifier="Eula" category="Identification" typeConverterTypeName="Microsoft.VisualStudio.Patterning.Extensibility.ItemRelativePathConverter, Microsoft.VisualStudio.Patterning.Extensibility" editorTypeName="Microsoft.VisualStudio.Patterning.Extensibility.SolutionItemEditor, Microsoft.VisualStudio.Patterning.Extensibility">
+              <property Id="c9e003d7-cb45-4865-a511-de29c04b5b2d" name="Eula" displayName="Eula" description="The license terms governing the use and distribution of this toolkit." codeIdentifier="Eula" category="Identification" typeConverterTypeName="NuPattern.Extensibility.ItemRelativePathConverter, NuPattern.Extensibility" editorTypeName="NuPattern.Extensibility.SolutionItemEditor, NuPattern.Extensibility">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -3717,7 +3717,7 @@
           </settings>
         </customizationPolicy>
         <elements>
-          <element Id="9291502b-fefc-4ef8-afc0-4c6914f0d2d1" name="ProductionTooling" displayName="Production Tooling" description="The design of the tooling of the toolkit." codeIdentifier="ProductionTooling" icon="pack://application:,,,/Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit;component/Resources/NodeProductionTooling.png">
+          <element Id="9291502b-fefc-4ef8-afc0-4c6914f0d2d1" name="ProductionTooling" displayName="Production Tooling" description="The design of the tooling of the toolkit." codeIdentifier="ProductionTooling" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeProductionTooling.png">
             <customizationPolicy name="CustomizationPolicySchema1">
               <settings>
                 <setting propertyId="DisplayName" />

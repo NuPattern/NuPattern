@@ -2,10 +2,10 @@
 <#@ Include File="..\..\MasterVSIXInfo.gen.ttinclude" #>
 using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.IntegrationTests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.IntegrationTests;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
+namespace NuPattern.Authoring.IntegrationTests
 {
     [TestClass]
     public class AutomationLibraryVsixPackagingSpec
@@ -153,7 +153,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                             "LICENSE.txt",
 
                             //Library Assemblies
-                            "Microsoft.VisualStudio.Patterning.Authoring.Library.Toolkit.dll",
+                            "NuPattern.Authoring.Library.Toolkit.dll",
                         }));
             }
         }

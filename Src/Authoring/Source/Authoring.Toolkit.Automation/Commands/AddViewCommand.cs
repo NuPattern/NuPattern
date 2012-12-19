@@ -6,18 +6,18 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.Shell;
-using Microsoft.VisualStudio.Patterning.Authoring.Authoring;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Properties;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.UriProviders;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Authoring.Authoring;
+using NuPattern.Authoring.Automation.Properties;
+using NuPattern.Authoring.Automation.UriProviders;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.References;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Schema;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
+namespace NuPattern.Authoring.Automation.Commands
 {
     /// <summary>
     /// Command to add a new view

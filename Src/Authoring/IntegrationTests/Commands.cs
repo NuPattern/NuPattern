@@ -3,7 +3,7 @@ using System.ComponentModel.Design;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Shell;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
+namespace NuPattern.Authoring.IntegrationTests
 {
 	[CLSCompliant(false)]
 	public class Commands : CommandSet

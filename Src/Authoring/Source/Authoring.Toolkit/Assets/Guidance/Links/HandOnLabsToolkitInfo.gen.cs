@@ -1,6 +1,5 @@
-﻿using System;
-
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance.Links
+﻿
+namespace NuPattern.Authoring.Authoring.Guidance.Links
 {
 	/// <summary>
 	/// Definitions for the HandsOnLabs.Toolkit toolkit project
@@ -15,7 +14,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance.Links
 		/// <summary>
 		/// Gets the VSIX name of this toolkit.
 		/// </summary>
-		public static string RegistrationName = "Pattern Toolkit Builder HOL VS2012";
+		public static string RegistrationName = "NuPattern Toolkit Builder HOL VS2012";
 	}
 }
 

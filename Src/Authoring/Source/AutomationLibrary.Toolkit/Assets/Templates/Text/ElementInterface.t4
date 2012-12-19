@@ -1,18 +1,18 @@
-﻿<#@ Template Inherits="Microsoft.VisualStudio.Patterning.Library.ModelElementTextTransformation" HostSpecific="True"#>
-<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" #>
+﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True"#>
+<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ output extension=".cs" #>
 <#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Schema.dll" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.dll" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Extensibility.dll" #>
+<#@ Assembly Name="NuPattern.Runtime.Schema.dll" #>
+<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="NuPattern.Authoring.Toolkit.Automation.dll" #>
+<#@ Assembly Name="NuPattern.Extensibility.dll" #>
 <#@ Assembly Name="System.ComponentModel.Composition" #>
 <#@ Assembly Name="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
 <#@ Import Namespace="Microsoft.VisualStudio.Modeling" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime.Schema" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Extensibility" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Authoring.Library" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Runtime.Schema" #>
+<#@ Import Namespace="NuPattern.Extensibility" #>
+<#@ Import Namespace="NuPattern.Authoring.Library" #>
 <#@ Import Namespace="System.Linq" #>
 <#@ Import Namespace="System.Collections.Generic" #>
 <#@ Import Namespace="System.ComponentModel" #>
@@ -25,8 +25,8 @@
 <#@ Include File="ElementContainerInterface.t4" #>
 <#@ Include File="ProductElementInterface.t4" #>
 <#
-var library = this.Element.As<IAutomationLibrary>();
-var developmentView = this.Element.Parent.Parent.As<Microsoft.VisualStudio.Patterning.Authoring.Authoring.IDevelopment>();
+var library = this.Element.As<IPatternToolkitLibrary>();
+var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.Authoring.IDevelopment>();
 var toolkitInfo = developmentView.PatternToolkitInfo;
 
 if(toolkitInfo == null)

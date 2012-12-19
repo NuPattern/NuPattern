@@ -9,8 +9,8 @@
     <ProjectGuid>{0216A624-C5C5-4335-8361-F640B91B4DEA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Authoring.Authoring</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit</AssemblyName>
+    <RootNamespace>NuPattern.Authoring.Authoring</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.Authoring.Toolkit</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Authoring\</SolutionDir>
@@ -20,28 +20,26 @@
     <BranchRoot>..\..\..\</BranchRoot>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
-  <PropertyGroup>
-    <TargetVsixContainerName>PatternToolkitBuilder.$(TargetVsVersion).vsix</TargetVsixContainerName>
-  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Library">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>
+    <Reference Include="NuPattern.Library">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Schema">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Schema.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Schema">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Interfaces">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Common.Presentation">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Common.Presentation.dll</HintPath>
+    <Reference Include="NuPattern.Common.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.Presentation.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="System" />
@@ -233,9 +231,9 @@
     <Content Include="GeneratedCode\Guidance\Content\WhatareVSTemplates.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\Common\Source\Versioning\Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.gen.targets">
-      <Link>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.gen.targets</Link>
-      <IncludeInVSIXAs>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkit.targets</IncludeInVSIXAs>
+    <Content Include="..\..\..\Common\Source\Versioning\NuPattern.Authoring.PatternToolkit.gen.targets">
+      <Link>NuPattern.Authoring.PatternToolkit.gen.targets</Link>
+      <IncludeInVSIXAs>NuPattern.Authoring.PatternToolkit.targets</IncludeInVSIXAs>
       <SubType>Designer</SubType>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\ArrangingShapesonPatternModel.mht">
@@ -260,10 +258,10 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="AuthoringTargets.ttinclude" />
-    <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.gen.targets">
+    <None Include="NuPattern.Authoring.PatternToolkitVersion.gen.targets">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.tt</DependentUpon>
+      <DependentUpon>NuPattern.Authoring.PatternToolkitVersion.tt</DependentUpon>
       <SubType>Designer</SubType>
     </None>
     <Content Include="GeneratedCode\Guidance\Content\WhatareAutomationAssets.mht">
@@ -839,14 +837,14 @@
     <Content Include="GeneratedCode\Guidance\Content\Errorbuildingguidancewith64bitversionsofMicrosoftWord.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.tt">
+    <None Include="NuPattern.Authoring.PatternToolkitVersion.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Microsoft.VisualStudio.Patterning.Authoring.PatternToolkitVersion.gen.targets</LastGenOutput>
+      <LastGenOutput>NuPattern.Authoring.PatternToolkitVersion.gen.targets</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="source.include.t4">
       <DependentUpon>source.extension.tt</DependentUpon>
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Element/C:\Projects\Platu\Main\Src\Authoring\Authoring.patternstate%252f875cc557-a93c-4b12-b9ea-54a732b9c242</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\Platu\Main\Src\Authoring\Authoring.patternstate%252f875cc557-a93c-4b12-b9ea-54a732b9c242</SourceModelReference>
       <ItemGuid>13058dda-d9fb-4b59-b5ca-bde04f01b2ae</ItemGuid>
     </None>
     <ItemTemplate Include="Assets\Templates\Items\Extensibility\PatternTooling\PatternTooling.gen.vstemplate">
@@ -945,7 +943,7 @@
       <DependentUpon>ToolkitCreationWizard.xaml</DependentUpon>
     </Compile>
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Authoring/Element/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252fb05cc972-cb01-4a17-9627-cf110c7b376c</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252fb05cc972-cb01-4a17-9627-cf110c7b376c</SourceModelReference>
       <ItemGuid>963aeb3b-af3f-4a89-ad89-63a71b77335f</ItemGuid>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
@@ -1199,16 +1197,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
-    <Content Include="..\..\..\Binaries\PatternToolkitManager.$(TargetVsVersion).vsix">
+    <Content Include="..\..\..\Binaries\$(RuntimeShellVsixFileName)">
       <Visible>true</Visible>
-      <Link>PatternToolkitManager.$(TargetVsVersion).vsix</Link>
+      <Link>$(RuntimeShellVsixFileName)</Link>
       <FixedLink>
       </FixedLink>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\Binaries\PatternToolkitAutomationLibrary.$(TargetVsVersion).vsix">
+    <Content Include="..\..\..\Binaries\$(AutomationLibraryToolkitVsixFileName)">
       <Visible>true</Visible>
-      <Link>PatternToolkitAutomationLibrary.$(TargetVsVersion).vsix</Link>
+      <Link>$(AutomationLibraryToolkitVsixFileName)</Link>
       <FixedLink>
       </FixedLink>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -1350,14 +1348,16 @@
   <ItemGroup>
     <Folder Include="Assets\Templates\Projects\Extensibility\Authoring\Assets\" />
   </ItemGroup>
+  <PropertyGroup>
+    <TargetVsixContainerName>$(AuthoringToolkitVsixFileName)</TargetVsixContainerName>
+  </PropertyGroup>
   <!-- Properties for Toolkit Targets -->
   <PropertyGroup>
     <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' == '' ">$(SolutionDir)..\Binaries</CopyVsixToFolder>
     <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\Platu\Projects\Src\Binaries</CopyVsixToFolder>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
-  <Import Project="$(VsxTargetsPath)\Microsoft.VsSDK.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.targets" />
   <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.gen.targets" />
   <!-- Properties for VSSDK/DSL Targets -->
   <PropertyGroup>

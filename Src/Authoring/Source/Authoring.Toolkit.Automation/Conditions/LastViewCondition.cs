@@ -2,12 +2,12 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Authoring.Authoring;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Authoring.Authoring;
+using NuPattern.Authoring.Automation.Properties;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Conditions
+namespace NuPattern.Authoring.Automation.Conditions
 {
     /// <summary>
     /// A condition that evaluates if the View has more than one element

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.

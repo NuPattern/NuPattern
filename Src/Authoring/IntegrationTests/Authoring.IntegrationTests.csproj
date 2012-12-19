@@ -7,8 +7,8 @@
     <ProjectGuid>{4D526080-A897-4A58-B12A-87974ADC11EB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests</AssemblyName>
+    <RootNamespace>NuPattern.Authoring.IntegrationTests</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.IntegrationTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Authoring\</SolutionDir>
@@ -18,21 +18,22 @@
     <BranchRoot>..\..\</BranchRoot>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Library">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>
+    <Reference Include="NuPattern.Library">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Interfaces">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Schema">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Schema.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Schema">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="Moq">
@@ -166,12 +167,12 @@
     <Content Include="VersionTargetsSpec\SimpleLibrarySolution.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="..\..\Binaries\PatternToolkitAutomationLibrary.$(TargetVsVersion).vsix">
-      <Link>Authoring.IntegrationTests.Content\PatternToolkitAutomationLibrary.$(TargetVsVersion).vsix</Link>
+    <None Include="..\..\Binaries\$(AutomationLibraryToolkitVsixFileName)">
+      <Link>Authoring.IntegrationTests.Content\$(AutomationLibraryToolkitVsixFileName)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\..\Binaries\PatternToolkitBuilder.$(TargetVsVersion).vsix">
-      <Link>Authoring.IntegrationTests.Content\PatternToolkitBuilder.$(TargetVsVersion).vsix</Link>
+    <None Include="..\..\Binaries\$(AuthoringToolkitVsixFileName)">
+      <Link>Authoring.IntegrationTests.Content\$(AuthoringToolkitVsixFileName)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="AutomationLibraryVsixPackagingSpec.tt">

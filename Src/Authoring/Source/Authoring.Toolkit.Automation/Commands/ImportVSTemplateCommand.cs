@@ -1,13 +1,13 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Authoring.Automation.Properties;
+using NuPattern.Extensibility;
+using NuPattern.Library;
+using NuPattern.Library.Commands;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
+namespace NuPattern.Authoring.Automation.Commands
 {
     /// <summary>
     /// Creates a new instance of a child element for each imported VS template file.

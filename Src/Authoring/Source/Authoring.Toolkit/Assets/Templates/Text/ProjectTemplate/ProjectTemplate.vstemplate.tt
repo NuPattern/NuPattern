@@ -1,12 +1,12 @@
 ﻿<#@ output extension=".gen.t4" #>
 <#@ Include File="..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
-\<#@ Template Inherits="Microsoft.VisualStudio.Patterning.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" \#>
-\<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
+\<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" \#>
+\<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
 \<#@ Output extension=".vstemplate" \#>
-\<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" \#>
-\<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.dll" \#>
-\<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" \#>
-\<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Authoring.Authoring" \#>
+\<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" \#>
+\<#@ Assembly Name="NuPattern.Authoring.Toolkit.Automation.dll" \#>
+\<#@ Import Namespace="NuPattern.Runtime" \#>
+\<#@ Import Namespace="NuPattern.Authoring.Authoring" \#>
 \<#@ Import Namespace="System.Linq" \#>
 \<#
     IProjectTemplate template = ((IProductElement)this.Element).As<IProjectTemplate>();
@@ -37,7 +37,7 @@
 		</Project>
     </TemplateContent>
     <WizardExtension>
-      <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-      <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+      <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+      <FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
     </WizardExtension>
 </VSTemplate>

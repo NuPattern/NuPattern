@@ -8,28 +8,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Library
+namespace NuPattern.Authoring.Library
 {
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
-	///	Description for AutomationLibrary.Development
+	///	Description for PatternToolkitLibrary.Development
 	///	</summary>
-	[Description("Description for AutomationLibrary.Development")]
+	[Description("Description for PatternToolkitLibrary.Development")]
 	[ToolkitInterface(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "e0779d33-8f19-4025-9a57-e75bc53a03ff", ProxyType = typeof(Development))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	public partial interface IDevelopment : IToolkitInterface
 	{ 
 		/// <summary>
 		/// Gets the parent element.
 		/// </summary>
-		IAutomationLibrary Parent { get; }
+		IPatternToolkitLibrary Parent { get; }
 		
 		/// <summary>
 		/// Gets the <see cref="ICommands"/> contained in this element.

@@ -1,9 +1,8 @@
 ﻿using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Modeling.Validation;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.

@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// A field for the title of the diagram.

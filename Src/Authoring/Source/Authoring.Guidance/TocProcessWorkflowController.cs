@@ -2,7 +2,7 @@
 using System.Globalization;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance
+namespace NuPattern.Authoring.Guidance
 {
 	/// <summary>
 	/// A text template controller for transforming a Word guidance document into a feature extension TOC guidance workflow.

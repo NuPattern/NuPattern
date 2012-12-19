@@ -2,16 +2,16 @@
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.Zip;
 using Microsoft.Win32;
+using NuPattern.Authoring.Automation.Properties;
+using NuPattern.Extensibility;
+using NuPattern.Library.Commands;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands
+namespace NuPattern.Authoring.Automation.Commands
 {
     /// <summary>
     /// Performs the importing of the given files.

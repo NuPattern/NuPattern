@@ -7,7 +7,7 @@ using System.IO;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
     /// <summary>
     /// The package class for this extension.

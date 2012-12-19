@@ -8,24 +8,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Extensibility;
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Extensibility;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
-	///	A Pattern Toolkit for capturing and delivering a design pattern.
+	///	A Pattern Toolkit which captures and automates a design pattern for rapid and consistent custom solution development.
 	///	</summary>
-	[Description("A Pattern Toolkit for capturing and delivering a design pattern.")]
+	[Description("A Pattern Toolkit which captures and automates a design pattern for rapid and consistent custom solution development.")]
 	[ToolkitInterfaceProxy(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "c034429e-01f9-48dd-a478-0321fb708dd3", ProxyType = typeof(PatternToolkit))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class PatternToolkit : IPatternToolkit
 	{

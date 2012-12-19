@@ -8,8 +8,8 @@
     <ProjectGuid>{B29AC5FA-1276-46C3-A6F5-C0F8D2F8914A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign</AssemblyName>
+    <RootNamespace>NuPattern.Authoring.WorkflowDesign</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.WorkflowDesign</AssemblyName>
     <GacTargetOutput>false</GacTargetOutput>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -19,12 +19,12 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Interfaces">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">

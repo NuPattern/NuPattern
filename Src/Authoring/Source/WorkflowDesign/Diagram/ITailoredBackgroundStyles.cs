@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Defines styles for tailored backgrounds.

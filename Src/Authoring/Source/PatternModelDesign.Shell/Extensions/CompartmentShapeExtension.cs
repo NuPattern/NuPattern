@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Extension methods over <see cref="CompartmentShape"/>

@@ -4,7 +4,7 @@
 <#@ Import Namespace="System.ComponentModel" #>
 <#@ Import Namespace="System.Reflection" #>
 <#@ Import Namespace="System.IO" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
 <#@ Include File="Helpers.t4" #><#+
 
 private void GenerateProperties<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, TInfo element)

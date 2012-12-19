@@ -18,34 +18,34 @@ using System.Drawing.Design;
 using System.Linq;
 using System.Windows.Forms;
 	
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
 	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\11.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
-	[VSShell::ProvideStaticToolboxGroup("@Pattern Model DesignerToolboxTab;Microsoft.VisualStudio.Patterning.Runtime.Schema.dll", "Microsoft.VisualStudio.Patterning.Runtime.Schema.Pattern Model DesignerToolboxTab")]
-	[VSShell::ProvideStaticToolboxItem("Microsoft.VisualStudio.Patterning.Runtime.Schema.Pattern Model DesignerToolboxTab",
-					"@CollectionToolboxItem;Microsoft.VisualStudio.Patterning.Runtime.Schema.dll", 
-					"Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionToolboxItem", 
+	[VSShell::ProvideStaticToolboxGroup("@Pattern Model DesignerToolboxTab;NuPattern.Runtime.Schema.dll", "NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab",
+					"@CollectionToolboxItem;NuPattern.Runtime.Schema.dll", 
+					"NuPattern.Runtime.Schema.CollectionToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Collection", 
-					"@CollectionToolboxBitmap;Microsoft.VisualStudio.Patterning.Runtime.Schema.dll", 
+					"@CollectionToolboxBitmap;NuPattern.Runtime.Schema.dll", 
 					0xff00ff)]
-	[VSShell::ProvideStaticToolboxItem("Microsoft.VisualStudio.Patterning.Runtime.Schema.Pattern Model DesignerToolboxTab",
-					"@ElementToolboxItem;Microsoft.VisualStudio.Patterning.Runtime.Schema.dll", 
-					"Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementToolboxItem", 
+	[VSShell::ProvideStaticToolboxItem("NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab",
+					"@ElementToolboxItem;NuPattern.Runtime.Schema.dll", 
+					"NuPattern.Runtime.Schema.ElementToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Element", 
-					"@ElementToolboxBitmap;Microsoft.VisualStudio.Patterning.Runtime.Schema.dll", 
+					"@ElementToolboxBitmap;NuPattern.Runtime.Schema.dll", 
 					0xff00ff)]
-	[VSShell::ProvideStaticToolboxItem("Microsoft.VisualStudio.Patterning.Runtime.Schema.Pattern Model DesignerToolboxTab",
-					"@ExtensionPointToolboxItem;Microsoft.VisualStudio.Patterning.Runtime.Schema.dll", 
-					"Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointToolboxItem", 
+	[VSShell::ProvideStaticToolboxItem("NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab",
+					"@ExtensionPointToolboxItem;NuPattern.Runtime.Schema.dll", 
+					"NuPattern.Runtime.Schema.ExtensionPointToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ExtensionPoint", 
-					"@ExtensionPointToolboxBitmap;Microsoft.VisualStudio.Patterning.Runtime.Schema.dll", 
+					"@ExtensionPointToolboxBitmap;NuPattern.Runtime.Schema.dll", 
 					0xff00ff)]
 	[VSShell::ProvideEditorFactory(typeof(PatternModelEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(PatternModelEditorFactory), "." + Constants.DesignerFileExtension, 50)]
@@ -63,7 +63,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 
 	internal abstract partial class PatternModelPackageBase : DslShell::ModelingPackage
 	{
-		protected global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelToolboxHelper toolboxHelper;	
+		protected global::NuPattern.Runtime.Schema.PatternModelToolboxHelper toolboxHelper;	
 		
 		/// <summary>
 		/// Initialization method called by the package base class when this package is loaded.
@@ -76,7 +76,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			this.RegisterEditorFactory(new PatternModelEditorFactory(this));
 			
 			// Initialize the toolbox helper
-			toolboxHelper = new global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelToolboxHelper(this);
+			toolboxHelper = new global::NuPattern.Runtime.Schema.PatternModelToolboxHelper(this);
 
 			// Create the command set that handles menu commands provided by this package.
 			PatternModelCommandSet commandSet = new PatternModelCommandSet(this);
@@ -138,7 +138,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 //
 // Package attributes which may need to change are placed on the partial class below, rather than in the main include file.
 //
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.
@@ -154,7 +154,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
         DebuggingLogicalViewEditor = Constants.PatternModelEditorFactoryId,
         DesignerLogicalViewEditor = Constants.PatternModelEditorFactoryId,
         TextLogicalViewEditor = Constants.PatternModelEditorFactoryId)]
-	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDirectiveProcessor), global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDirectiveProcessor.PatternModelDirectiveProcessorName, "A directive processor that provides access to PatternModel files")]
+	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::NuPattern.Runtime.Schema.PatternModelDirectiveProcessor), global::NuPattern.Runtime.Schema.PatternModelDirectiveProcessor.PatternModelDirectiveProcessorName, "A directive processor that provides access to PatternModel files")]
 	[global::System.Runtime.InteropServices.Guid(Constants.PatternModelPackageId)]
 	internal sealed partial class PatternModelPackage : PatternModelPackageBase
 	{

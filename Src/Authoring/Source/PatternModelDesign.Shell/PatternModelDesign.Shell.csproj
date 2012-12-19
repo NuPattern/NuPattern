@@ -9,10 +9,9 @@
     <ProjectGuid>{A999A0EB-246C-4B63-8BC1-405020026CAB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime.Schema</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.PatternModelDesign.Shell</AssemblyName>
+    <RootNamespace>NuPattern.Runtime.Schema</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.PatternModelDesign.Shell</AssemblyName>
     <ClearToolboxCacheInExpHive>true</ClearToolboxCacheInExpHive>
-    <TargetVsixContainerName>Microsoft.VisualStudio.Patterning.Authoring.PatternModelDesign.vsix</TargetVsixContainerName>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>
     <DeployExtension>False</DeployExtension>
@@ -23,24 +22,24 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Library">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>
+    <Reference Include="NuPattern.Library">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Interfaces">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Schema">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Schema.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Schema">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Common.Presentation">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Common.Presentation.dll</HintPath>
+    <Reference Include="NuPattern.Common.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.Presentation.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="EnvDTE">

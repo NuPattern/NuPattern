@@ -38,7 +38,7 @@ public static class VsixInfo
 	public static class PatternToolkitRuntime
 	{
 		public const string Name = "NuPattern Toolkit Manager";
-		public const string Description = "Includes the 'Solution Builder' window, and automation framework for accelerating solution development using NuPattern Toolkit extensions.";
+		public const string Description = "Includes the 'Solution Builder' window, and the automation framework for accelerating solution development using NuPattern Toolkits.";
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.RuntimeVSIXVersion#>";
 		public const string Identifier = "<#=runtimeVsixId#>";
@@ -51,7 +51,7 @@ public static class VsixInfo
 	public static class PatternToolkitBuilder
 	{
 		public const string Name = "NuPattern Toolkit Builder VS<#=vsixNameVersionSuffix#>";
-		public const string Description = "An extension for designing and building NuPattern Toolkit projects, that combine automation and guidance with design patterns for repeatable solution development.";
+		public const string Description = "An extension for building NuPattern Toolkits, which automate design patterns for rapid and consistent custom solution development.";
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.AuthoringVSIXVersion#>";
 		public const string Identifier = "<#=authoringVsixId#>";
@@ -62,7 +62,7 @@ public static class VsixInfo
 	public static class PatternToolkitLibrary
 	{
 		public const string Name = "NuPattern Toolkit Library";
-		public const string Description = "An extension for creating shared libraries for NuPattern Toolkit projects.";
+		public const string Description = "An extension for creating shared automation libraries for NuPattern Toolkits.";
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.AuthoringVSIXVersion#>";
 		public const string Identifier = "<#=automationLibraryVsixId#>";
@@ -73,7 +73,7 @@ public static class VsixInfo
 	public static class PatternToolkitHol
 	{
 		public const string Name = "NuPattern Toolkit Builder HOL VS<#=vsixNameVersionSuffix#>";
-		public const string Description = "A Hands-On Lab for creating NuPattern Toolkit projects.";
+		public const string Description = "A Hands-On Lab for creating and customizing NuPattern Toolkit projects.";
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.AuthoringVSIXVersion#>";
 		public const string Identifier = "<#=holVsixId#>";

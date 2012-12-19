@@ -5,11 +5,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
+using NuPattern.Extensibility;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Assets.Wizards.Pages
+namespace NuPattern.Authoring.Authoring.Assets.Wizards.Pages
 {
     /// <summary>
     /// A custom wizard page that edits the properties of the current element.

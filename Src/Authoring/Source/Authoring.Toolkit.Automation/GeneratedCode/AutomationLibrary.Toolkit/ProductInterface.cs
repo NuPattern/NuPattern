@@ -8,24 +8,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Library
+namespace NuPattern.Authoring.Library
 {
-	using global::Microsoft.VisualStudio.Patterning.Extensibility;
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Extensibility;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
-	///	A library containing custom automation for a pattern toolkit.
+	///	A library that contains reusable automation types for sharing between Pattern Toolkit projects.
 	///	</summary>
-	[Description("A library containing custom automation for a pattern toolkit.")]
-	[ToolkitInterface(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "d6139b37-9971-4834-a9dc-2b3daef962cf", ProxyType = typeof(AutomationLibrary))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
-	public partial interface IAutomationLibrary : IToolkitInterface
+	[Description("A library that contains reusable automation types for sharing between Pattern Toolkit projects.")]
+	[ToolkitInterface(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "d6139b37-9971-4834-a9dc-2b3daef962cf", ProxyType = typeof(PatternToolkitLibrary))]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+	public partial interface IPatternToolkitLibrary : IToolkitInterface
 	{ 
 		///	<summary>
 		///	When to transform all code generation templates in this library, to ensure that all library artifacts are up to date.
@@ -108,9 +108,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Library
 		Boolean IsSerializing { get;  }
 
 		///	<summary>
-		///	Description for AutomationLibrary.Development
+		///	Description for PatternToolkitLibrary.Development
 		///	</summary>
-		[Description("Description for AutomationLibrary.Development")]
+		[Description("Description for PatternToolkitLibrary.Development")]
 		IDevelopment Development { get; }
 		
 		///	<summary>

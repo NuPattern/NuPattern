@@ -18,41 +18,41 @@ using System.Drawing.Design;
 using System.Linq;
 using System.Windows.Forms;
 	
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
 	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\11.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
-	[VSShell::ProvideStaticToolboxGroup("@Production ToolingToolboxTab;Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll", "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Production ToolingToolboxTab")]
-	[VSShell::ProvideStaticToolboxItem("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Production ToolingToolboxTab",
-					"@SuppliedAssetToolboxItem;Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll", 
-					"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetToolboxItem", 
+	[VSShell::ProvideStaticToolboxGroup("@Production ToolingToolboxTab;NuPattern.Authoring.WorkflowDesign.dll", "NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab",
+					"@SuppliedAssetToolboxItem;NuPattern.Authoring.WorkflowDesign.dll", 
+					"NuPattern.Authoring.WorkflowDesign.SuppliedAssetToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"SuppliedAsset", 
-					"@SuppliedAssetToolboxBitmap;Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll", 
+					"@SuppliedAssetToolboxBitmap;NuPattern.Authoring.WorkflowDesign.dll", 
 					0xff00ff)]
-	[VSShell::ProvideStaticToolboxItem("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Production ToolingToolboxTab",
-					"@ProductionToolToolboxItem;Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll", 
-					"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolToolboxItem", 
+	[VSShell::ProvideStaticToolboxItem("NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab",
+					"@ProductionToolToolboxItem;NuPattern.Authoring.WorkflowDesign.dll", 
+					"NuPattern.Authoring.WorkflowDesign.ProductionToolToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ProductionTool", 
-					"@ProductionToolToolboxBitmap;Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll", 
+					"@ProductionToolToolboxBitmap;NuPattern.Authoring.WorkflowDesign.dll", 
 					0xff00ff)]
-	[VSShell::ProvideStaticToolboxItem("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Production ToolingToolboxTab",
-					"@ProducedAssetToolboxItem;Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll", 
-					"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetToolboxItem", 
+	[VSShell::ProvideStaticToolboxItem("NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab",
+					"@ProducedAssetToolboxItem;NuPattern.Authoring.WorkflowDesign.dll", 
+					"NuPattern.Authoring.WorkflowDesign.ProducedAssetToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ProducedAsset", 
-					"@ProducedAssetToolboxBitmap;Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll", 
+					"@ProducedAssetToolboxBitmap;NuPattern.Authoring.WorkflowDesign.dll", 
 					0xff00ff)]
-	[VSShell::ProvideStaticToolboxItem("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Production ToolingToolboxTab",
-					"@ProductionWorkflowConnectorToolboxItem;Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll", 
-					"Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionWorkflowConnectorToolboxItem", 
+	[VSShell::ProvideStaticToolboxItem("NuPattern.Authoring.WorkflowDesign.Production ToolingToolboxTab",
+					"@ProductionWorkflowConnectorToolboxItem;NuPattern.Authoring.WorkflowDesign.dll", 
+					"NuPattern.Authoring.WorkflowDesign.ProductionWorkflowConnectorToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ProductionWorkflowConnector", 
-					"@ProductionWorkflowConnectorToolboxBitmap;Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.dll", 
+					"@ProductionWorkflowConnectorToolboxBitmap;NuPattern.Authoring.WorkflowDesign.dll", 
 					0xff00ff)]
 	[VSShell::ProvideEditorFactory(typeof(WorkflowDesignEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(WorkflowDesignEditorFactory), "." + Constants.DesignerFileExtension, 50)]
@@ -70,7 +70,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 
 	internal abstract partial class WorkflowDesignPackageBase : DslShell::ModelingPackage
 	{
-		protected global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper toolboxHelper;	
+		protected global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper toolboxHelper;	
 		
 		/// <summary>
 		/// Initialization method called by the package base class when this package is loaded.
@@ -83,7 +83,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			this.RegisterEditorFactory(new WorkflowDesignEditorFactory(this));
 			
 			// Initialize the toolbox helper
-			toolboxHelper = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper(this);
+			toolboxHelper = new global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper(this);
 
 			// Create the command set that handles menu commands provided by this package.
 			WorkflowDesignCommandSet commandSet = new WorkflowDesignCommandSet(this);
@@ -145,7 +145,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 //
 // Package attributes which may need to change are placed on the partial class below, rather than in the main include file.
 //
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.
@@ -161,7 +161,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		DebuggingLogicalViewEditor = Constants.WorkflowDesignEditorFactoryId,
 		DesignerLogicalViewEditor = Constants.WorkflowDesignEditorFactoryId,
 		TextLogicalViewEditor = Constants.WorkflowDesignEditorFactoryId)]
-	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDirectiveProcessor), global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDirectiveProcessor.WorkflowDesignDirectiveProcessorName, "A directive processor that provides access to WorkflowDesign files")]
+	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDirectiveProcessor), global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDirectiveProcessor.WorkflowDesignDirectiveProcessorName, "A directive processor that provides access to WorkflowDesign files")]
 	[global::System.Runtime.InteropServices.Guid(Constants.WorkflowDesignPackageId)]
 	internal sealed partial class WorkflowDesignPackage : WorkflowDesignPackageBase
 	{

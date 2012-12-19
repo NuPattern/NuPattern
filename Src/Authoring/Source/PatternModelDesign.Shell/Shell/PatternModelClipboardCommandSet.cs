@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.Design;
 using System.Linq;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	internal partial class PatternModelClipboardCommandSet
 	{

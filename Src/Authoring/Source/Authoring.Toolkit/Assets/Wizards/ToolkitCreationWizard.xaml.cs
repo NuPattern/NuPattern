@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Common.Presentation;
+using NuPattern.Common.Presentation;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Assets.Wizards
+namespace NuPattern.Authoring.Authoring.Assets.Wizards
 {
 	/// <summary>
 	/// A wizard for displaying pages to configure the current element.

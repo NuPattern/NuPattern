@@ -1,5 +1,5 @@
 ﻿
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
     /// <summary>
     /// Customizations for the <see cref="Asset"/> class.

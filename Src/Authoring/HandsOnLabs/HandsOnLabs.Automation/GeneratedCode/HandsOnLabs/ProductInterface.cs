@@ -8,22 +8,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.Patterning.HandsOnLabs
+namespace NuPattern.HandsOnLabs
 {
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
-	///	Hands on Labs for Creating Pattern Toolkits
+	///	Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.
 	///	</summary>
-	[Description("Hands on Labs for Creating Pattern Toolkits")]
+	[Description("Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.")]
 	[ToolkitInterface(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "71309920-c4ac-4283-b6bf-3cec975eca86", ProxyType = typeof(PatternToolkitHOLs))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	public partial interface IPatternToolkitHOLs : IToolkitInterface
 	{ 
 		///	<summary>

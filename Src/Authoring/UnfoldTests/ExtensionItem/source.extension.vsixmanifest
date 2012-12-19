@@ -2,7 +2,7 @@
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
   <Identifier Id="8b378a9d-d437-4ca7-8dd3-318c38dc0969">
     <Name>ExtensionItem</Name>
-    <Author>Outercurve</Author>
+    <Author>NuPattern</Author>
     <Version>1.0</Version>
     <Description xml:space="preserve">Description of ExtensionItem</Description>
     <Locale>1033</Locale>
@@ -21,7 +21,7 @@
   </Identifier>
   <References>
     <Reference Id="c869918e-f94e-4e7a-ab25-b076ff4e751b">
-      <Name>Pattern Toolkit Manager</Name>
+      <Name>NuPattern Toolkit Manager</Name>
     </Reference>
   </References>
   <Content>

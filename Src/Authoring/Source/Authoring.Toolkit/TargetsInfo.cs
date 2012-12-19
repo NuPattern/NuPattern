@@ -1,6 +1,6 @@
 ﻿
 using System.Collections.Generic;
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
     /// <summary>
     /// Info defined in the version independent TARGETS file

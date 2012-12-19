@@ -7,13 +7,13 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.VisualStudio.Patterning.Authoring.Guidance.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Authoring.Guidance.Properties;
 using DataAnnotations = System.ComponentModel.DataAnnotations;
 using Word = Microsoft.Office.Interop.Word;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance
+namespace NuPattern.Authoring.Guidance
 {
     /// <summary>
     /// Processes table of content guidance documents

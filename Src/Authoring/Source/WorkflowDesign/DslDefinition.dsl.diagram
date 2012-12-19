@@ -1,74 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <microsoft.VisualStudio.Modeling.DslDesigner.DslDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 32.000638178288938, 25.766873372395846" isCompleteView="false" name="DslDefinition">
-  <DslMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/WorkflowDesign" />
+  <DslMoniker Name="/NuPattern.Authoring.WorkflowDesign/WorkflowDesign" />
   <nestedChildShapes>
     <microsoft.VisualStudio.Modeling.DslDesigner.DomainModelElements Id="4fb54747-69b8-469f-80a4-51e436af39be" absoluteBounds="0, 0, 9.6854166716337211, 25.766873372395846">
       <nestedChildShapes>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="5aacdbb4-9f58-4ec1-9c42-d2d59ba46232" isExpanded="false" absoluteBounds="4.95, 2.9833821614583336, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ProductionToolReferencesVariabilityRequirements" />
+          <DomainRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/ProductionToolReferencesVariabilityRequirements" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="3bd4285f-5ef3-49b7-99d6-aaddab71b1cc" absoluteBounds="4.95, 2.9833821614583336, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="36b65435-9a08-42df-9288-68f6abbfd790" isExpanded="false" absoluteBounds="4.95, 3.6733821614583335, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ProductionToolProducesProducedAssets" />
+          <DomainRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/ProductionToolProducesProducedAssets" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="4c6cbe12-a5e4-405b-b8c0-47037dc7e71a" absoluteBounds="4.95, 3.6733821614583331, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="a3ba4eff-10c5-4df2-b06c-8479215bc487" isExpanded="false" absoluteBounds="5.5500000000000007, 8.4730582682291669, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ProducedAssetSuppliesProductionTools" />
+          <DomainRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/ProducedAssetSuppliesProductionTools" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="afbde6c5-4b92-491e-a5fc-fa3e8996cd4c" absoluteBounds="5.5500000000000007, 8.4730582682291669, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="2504e399-f138-48b8-8120-f2533ed5fefc" isExpanded="false" absoluteBounds="5.5500000000000007, 11.14874186197917, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/SuppliedAssetCopiesToProducedAssets" />
+          <DomainRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/SuppliedAssetCopiesToProducedAssets" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="472ccccb-7778-42de-8ff2-b7dff6ad833a" absoluteBounds="5.5500000000000007, 11.14874186197917, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="e6efed06-a5de-4718-8d2e-2482841b8619" isExpanded="false" absoluteBounds="5.5500000000000007, 11.838741861979171, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/SuppliedAssetSuppliesProductionTools" />
+          <DomainRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/SuppliedAssetSuppliesProductionTools" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="2be0c69a-2dc3-4ee9-a65b-d3e514b1a3b5" absoluteBounds="5.5500000000000007, 11.838741861979171, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="65dcf0aa-d199-4a4a-a158-d269a4e39aff" isExpanded="false" absoluteBounds="4.95, 5.7973746744791663, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/AssetSuppliesAllProducingTools" />
+          <DomainRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/AssetSuppliesAllProducingTools" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="06f70459-75ae-4acf-b109-ab2e766cdcdb" absoluteBounds="4.95, 5.7973746744791663, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="d2e6311f-2990-4ac4-abec-ecc0ffa6120a" isExpanded="false" absoluteBounds="1.6, 1.5493896484375, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/DesignHasProductionTools" />
+          <DomainRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/DesignHasProductionTools" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="069080c7-e2ef-4b17-84b7-05269e94e3f4" absoluteBounds="1.6, 1.5493896484375, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="c2d10748-5e49-404c-a172-260d29741961" isExpanded="false" absoluteBounds="1.6, 4.3633821614583335, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/DesignHasAssets" />
+          <DomainRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/DesignHasAssets" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="a9bd9f11-db2a-42b0-a743-8e80a8dc3a7c" absoluteBounds="1.6, 4.3633821614583335, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="2d59de4c-515b-414b-9947-ff53993b9e35" isExpanded="false" absoluteBounds="1.6, 12.528741861979173, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/DesignHasVariabilityRequirements" />
+          <DomainRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/DesignHasVariabilityRequirements" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="7732fe54-e154-4a5a-a1e0-da165a8b8717" absoluteBounds="1.6, 12.528741861979173, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="82323cd5-f562-4d0f-89da-62d5183c58dc" isExpanded="false" absoluteBounds="4.95, 13.770432942708339, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ParentVariabilityRequirementHasParentVariabilityRequirements" />
+          <DomainRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/ParentVariabilityRequirementHasParentVariabilityRequirements" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="65257d64-35ae-4b55-b191-ebd73731e2ba" absoluteBounds="4.95, 13.770432942708339, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
@@ -548,109 +548,109 @@
           <Roots>
             <RootNode Id="b6c4688c-0957-4a65-876a-5a11e0492fcf">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/Design" />
+                <DomainClassMoniker Name="/NuPattern.Authoring.WorkflowDesign/Design" />
               </Class>
             </RootNode>
             <RootNode Id="d1c7c86f-7e15-498a-8c7c-a358a784ca37" IsInheritanceTreeExpanded="false">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/NamedElementSchema" />
+                <DomainClassMoniker Name="/NuPattern.Authoring.WorkflowDesign/NamedElementSchema" />
               </Class>
             </RootNode>
             <RootNode Id="14eb2225-0c94-48fa-bc72-bdab571b1e43" IsInheritanceTreeExpanded="false">
               <Class>
-                <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/AssetSuppliesAllProducingTools" />
+                <DomainRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/AssetSuppliesAllProducingTools" />
               </Class>
             </RootNode>
           </Roots>
           <Arcs>
             <InheritanceNode Id="5660ce4a-3f59-42af-b864-5f9720da7c5f">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ProducedAsset" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Authoring.WorkflowDesign/ProducedAsset" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="05b31cd4-5dd9-44c8-8d39-624c83796f51">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/SuppliedAsset" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Authoring.WorkflowDesign/SuppliedAsset" />
               </InheritanceLink>
             </InheritanceNode>
             <SourceRoleNode Id="9abbd78d-18cb-43bd-89f0-7ed0c537ce4e" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ProductionToolReferencesVariabilityRequirements/ProductionTool" />
+                <DomainRoleMoniker Name="/NuPattern.Authoring.WorkflowDesign/ProductionToolReferencesVariabilityRequirements/ProductionTool" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="e65f76f5-0c55-47e3-b6cc-ee6937846f33" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ProductionToolProducesProducedAssets/ProductionTool" />
+                <DomainRoleMoniker Name="/NuPattern.Authoring.WorkflowDesign/ProductionToolProducesProducedAssets/ProductionTool" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="059f3ba4-2d84-4fd4-8954-7d967c265045" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ProducedAssetSuppliesProductionTools/ProducedAsset" />
+                <DomainRoleMoniker Name="/NuPattern.Authoring.WorkflowDesign/ProducedAssetSuppliesProductionTools/ProducedAsset" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="61d5fbce-89c3-4aab-90bf-683f03f629b7" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/SuppliedAssetCopiesToProducedAssets/SuppliedAsset" />
+                <DomainRoleMoniker Name="/NuPattern.Authoring.WorkflowDesign/SuppliedAssetCopiesToProducedAssets/SuppliedAsset" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="9006ee5b-80bc-4137-a133-98a22926fadb" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/SuppliedAssetSuppliesProductionTools/SuppliedAsset" />
+                <DomainRoleMoniker Name="/NuPattern.Authoring.WorkflowDesign/SuppliedAssetSuppliesProductionTools/SuppliedAsset" />
               </Role>
             </SourceRoleNode>
             <InheritanceNode Id="bd275b65-c5da-4e7c-a433-f8bca188b191">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/DesignElement" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Authoring.WorkflowDesign/DesignElement" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="02285dba-5cb6-4455-ba05-e439ee78945b" IsLeaf="true">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ProductionTool" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Authoring.WorkflowDesign/ProductionTool" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="3ab95829-29fd-408e-89db-197b3d8e828a" IsLeaf="true">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/Asset" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Authoring.WorkflowDesign/Asset" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="725eeb72-75e1-4997-8bac-4dd72fae569c" IsLeaf="true">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/VariabilityRequirement" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Authoring.WorkflowDesign/VariabilityRequirement" />
               </InheritanceLink>
             </InheritanceNode>
             <SourceRoleNode Id="ac172a46-1349-4773-8aaf-e2422e718648" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/AssetSuppliesAllProducingTools/Asset" />
+                <DomainRoleMoniker Name="/NuPattern.Authoring.WorkflowDesign/AssetSuppliesAllProducingTools/Asset" />
               </Role>
             </SourceRoleNode>
             <InheritanceNode Id="fa80906b-bd9f-4550-be56-4d00d2cfa774">
               <InheritanceLink>
-                <RelationshipHasBaseRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/SuppliedAssetSuppliesProductionTools" />
+                <RelationshipHasBaseRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/SuppliedAssetSuppliesProductionTools" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="9f2eb42b-1142-46f5-b804-1e646cb0f187">
               <InheritanceLink>
-                <RelationshipHasBaseRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ProducedAssetSuppliesProductionTools" />
+                <RelationshipHasBaseRelationshipMoniker Name="/NuPattern.Authoring.WorkflowDesign/ProducedAssetSuppliesProductionTools" />
               </InheritanceLink>
             </InheritanceNode>
             <SourceRoleNode Id="9c2379c3-bd54-45e5-bacb-a0d64ec8784f">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/DesignHasProductionTools/Design" />
+                <DomainRoleMoniker Name="/NuPattern.Authoring.WorkflowDesign/DesignHasProductionTools/Design" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="00727009-7ebc-41cb-89ad-efe0c9b4dfc3">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/DesignHasAssets/Design" />
+                <DomainRoleMoniker Name="/NuPattern.Authoring.WorkflowDesign/DesignHasAssets/Design" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="296c5b05-44de-43bc-ad33-4efeca07e04a">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/DesignHasVariabilityRequirements/Design" />
+                <DomainRoleMoniker Name="/NuPattern.Authoring.WorkflowDesign/DesignHasVariabilityRequirements/Design" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="e3c9f0f0-ad91-4db7-a6ee-5bb1484eec92" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ParentVariabilityRequirementHasParentVariabilityRequirements/SourceVariabilityRequirement" />
+                <DomainRoleMoniker Name="/NuPattern.Authoring.WorkflowDesign/ParentVariabilityRequirementHasParentVariabilityRequirements/SourceVariabilityRequirement" />
               </Role>
             </SourceRoleNode>
           </Arcs>
@@ -661,44 +661,44 @@
           <Roots>
             <RootNode Id="5add311e-4bba-46b7-a6a3-f91c2516d5a9">
               <Class>
-                <DiagramMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/WorkflowDesignDiagram" />
+                <DiagramMoniker Name="/NuPattern.Authoring.WorkflowDesign/WorkflowDesignDiagram" />
               </Class>
             </RootNode>
             <RootNode Id="8818a151-4fd9-49a1-aaef-0ac5f69dac47">
               <Class>
-                <ConnectorMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/DesignConnector" />
+                <ConnectorMoniker Name="/NuPattern.Authoring.WorkflowDesign/DesignConnector" />
               </Class>
             </RootNode>
             <RootNode Id="43997d13-974c-40ca-a2d4-c6fe610c6f2d">
               <Class>
-                <GeometryShapeMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ProductionToolShape" />
+                <GeometryShapeMoniker Name="/NuPattern.Authoring.WorkflowDesign/ProductionToolShape" />
               </Class>
             </RootNode>
             <RootNode Id="ec6b5bfc-9b7f-444a-83f9-45ce24765376">
               <Class>
-                <GeometryShapeMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ProducedAssetShape" />
+                <GeometryShapeMoniker Name="/NuPattern.Authoring.WorkflowDesign/ProducedAssetShape" />
               </Class>
             </RootNode>
             <RootNode Id="c527d166-bb6f-42e6-a51c-52670146eb36">
               <Class>
-                <GeometryShapeMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/SuppliedAssetShape" />
+                <GeometryShapeMoniker Name="/NuPattern.Authoring.WorkflowDesign/SuppliedAssetShape" />
               </Class>
             </RootNode>
           </Roots>
           <Arcs>
             <InheritanceNode Id="5bc56bd6-333d-4891-857c-61b6a611f979">
               <InheritanceLink>
-                <ConnectorHasBaseConnectorMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ToolInputConnector" />
+                <ConnectorHasBaseConnectorMoniker Name="/NuPattern.Authoring.WorkflowDesign/ToolInputConnector" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="f7a693e6-0da3-4dfb-9755-c2f0a0ad4358">
               <InheritanceLink>
-                <ConnectorHasBaseConnectorMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ToolOutputConnector" />
+                <ConnectorHasBaseConnectorMoniker Name="/NuPattern.Authoring.WorkflowDesign/ToolOutputConnector" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="4c6a46ed-85b0-4bd1-ad8b-62c814b81924">
               <InheritanceLink>
-                <ConnectorHasBaseConnectorMoniker Name="/Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign/ToolCopyConnector" />
+                <ConnectorHasBaseConnectorMoniker Name="/NuPattern.Authoring.WorkflowDesign/ToolCopyConnector" />
               </InheritanceLink>
             </InheritanceNode>
           </Arcs>

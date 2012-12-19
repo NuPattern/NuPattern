@@ -40,7 +40,7 @@ void Delete();
 <#+
 	}
 
-	private void GenerateToolkitCommentsAndAttributes(AttributeTargets target, Microsoft.VisualStudio.Patterning.Authoring.Library.IAutomationLibrary library, Microsoft.VisualStudio.Patterning.Authoring.Authoring.IPatternToolkitInfo toolkitInfo, INamedElementInfo element)
+	private void GenerateToolkitCommentsAndAttributes(AttributeTargets target, NuPattern.Authoring.Library.IPatternToolkitLibrary library, NuPattern.Authoring.Authoring.IPatternToolkitInfo toolkitInfo, INamedElementInfo element)
 	{
 		PushIndent("\t");
 		GenerateDescription(element);
@@ -67,7 +67,7 @@ void Delete();
 		PopIndent();
 	}
 
-	private void GenerateCodeGenAttributes(Microsoft.VisualStudio.Patterning.Authoring.Library.IAutomationLibrary library, AttributeTargets target)
+	private void GenerateCodeGenAttributes(NuPattern.Authoring.Library.IPatternToolkitLibrary library, AttributeTargets target)
 	{
 		var excludeFromCodeCoverage = library.ExcludeFromCodeCoverage;
 
@@ -159,11 +159,11 @@ void Delete();
 <#+
 		}
 #>
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 <#+
 	}
 
-	private void GenerateCLSAttributes(Microsoft.VisualStudio.Patterning.Runtime.INamedElementInfo element)
+	private void GenerateCLSAttributes(NuPattern.Runtime.INamedElementInfo element)
 	{
 		// Find all variable properties in the model
 	var properties = element.GetProduct().GetAllProperties();

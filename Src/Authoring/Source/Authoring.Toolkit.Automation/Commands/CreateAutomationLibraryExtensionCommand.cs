@@ -3,14 +3,14 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Authoring.Authoring;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Commands;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Authoring.Authoring;
+using NuPattern.Authoring.Automation.Commands;
+using NuPattern.Authoring.Automation.Properties;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.Commands
+namespace NuPattern.Authoring.Toolkit.Automation.Commands
 {
     /// <summary>
     /// Creates the initial instances of descendant elements in the pattern.

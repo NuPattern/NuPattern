@@ -10,7 +10,7 @@
 using VSShellInterop = global::Microsoft.VisualStudio.Shell.Interop;
 using DslShell = global::Microsoft.VisualStudio.Modeling.Shell;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived class to allow easier code customization.

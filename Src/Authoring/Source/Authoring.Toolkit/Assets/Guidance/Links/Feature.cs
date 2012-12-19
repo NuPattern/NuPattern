@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance.Links;
-using Microsoft.VisualStudio.Patterning.Authoring.Authoring.Properties;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Authoring.Authoring.Guidance.Links;
+using NuPattern.Authoring.Authoring.Properties;
+using NuPattern.Library.Commands;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance
+namespace NuPattern.Authoring.Authoring.Guidance
 {
     public partial class Feature
     {

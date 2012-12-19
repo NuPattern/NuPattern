@@ -3,9 +3,9 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Extensibility;
+using NuPattern;
+using NuPattern.Runtime;
+using NuPattern.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 

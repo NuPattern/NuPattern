@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.IntegrationTests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.IntegrationTests;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
+namespace NuPattern.Authoring.IntegrationTests
 {
     [TestClass]
     public class AutomationLibraryVsixPackagingSpec
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Authoring.IntegrationTests.Content";
-        private const string DeployedVsixItem = DeployedContentDirectory + "\\PatternToolkitAutomationLibrary.11.0.vsix";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\NuPatternToolkitLibrary.11.0.vsix";
 
         [TestClass]
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]
@@ -32,17 +32,17 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
             {
                 //Identifier, Name, Author, Version
                 Assert.Equal(@"080eb0ef-518d-4807-9b5c-aa32d0032e0b", this.VsixInfo.Header.Identifier);
-                Assert.Equal(@"Pattern Toolkit Automation Library", this.VsixInfo.Header.Name);
-                Assert.Equal(@"An extension for creating shared automation libraries for Pattern Toolkit extensions.", this.VsixInfo.Header.Description);
-                Assert.Equal(@"Outercurve", this.VsixInfo.Header.Author);
+                Assert.Equal(@"NuPattern Toolkit Library", this.VsixInfo.Header.Name);
+                Assert.Equal(@"An extension for creating shared automation libraries for NuPattern Toolkits.", this.VsixInfo.Header.Description);
+                Assert.Equal(@"NuPattern", this.VsixInfo.Header.Author);
                 Assert.Equal("1.3.20.0", this.VsixInfo.Header.Version.ToString());
 				
 				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
 				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
 				Assert.Equal(@"Resources\VsixIconAutomationLibrary.png", this.VsixInfo.Header.Icon);
 				Assert.Equal(@"Resources\VsixPreviewAutomationLibrary.png", this.VsixInfo.Header.PreviewImage);
-				Assert.Equal(new Uri(@"http://vspat.codeplex.com"), this.VsixInfo.Header.MoreInfoUrl);
-				Assert.Equal(new Uri(@"http://vspat.codeplex.com/wikipage?title=Getting%20Started"), this.VsixInfo.Header.GettingStartedGuide);
+				Assert.Equal(new Uri(@"http://nupattern.codeplex.com"), this.VsixInfo.Header.MoreInfoUrl);
+				Assert.Equal(new Uri(@"http://nupattern.codeplex.com/wikipage?title=Getting%20Started"), this.VsixInfo.Header.GettingStartedGuide);
 
 #if VSVER10
 				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMinVersion.ToString());
@@ -151,7 +151,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
                             "LICENSE.txt",
 
                             //Library Assemblies
-                            "Microsoft.VisualStudio.Patterning.Authoring.Library.Toolkit.dll",
+                            "NuPattern.Authoring.Library.Toolkit.dll",
                         }));
             }
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Extensibility.UI;
+using NuPattern.Extensibility.UI;
 
 namespace $rootnamespace$
 {

@@ -11,16 +11,16 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-[module: global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Scope = "type", Target = "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram")]
+[module: global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Scope = "type", Target = "NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram")]
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass WorkflowDesignDiagram
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("1e053907-f125-4a0f-bc82-0cfe32cb32d6")]
 	public abstract partial class WorkflowDesignDiagramBase : DslDiagrams::Diagram
@@ -60,7 +60,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		#endregion
 		#region Toolbox filters
 		private static global::System.ComponentModel.ToolboxItemFilterAttribute[] toolboxFilters = new global::System.ComponentModel.ToolboxItemFilterAttribute[] {
-					new global::System.ComponentModel.ToolboxItemFilterAttribute(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignToolboxHelperBase.ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) };
+					new global::System.ComponentModel.ToolboxItemFilterAttribute(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignToolboxHelperBase.ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) };
 		
 		/// <summary>
 		/// Toolbox item filter attributes for this diagram.
@@ -194,7 +194,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 			if (connector == null)
 				throw new global::System.ArgumentNullException("connector");
 			#endregion
-			if (connector.GetType() == typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignConnector))
+			if (connector.GetType() == typeof(global::NuPattern.Authoring.WorkflowDesign.DesignConnector))
 				return false;
 			return base.IsConnectorMappedToLink(connector);
 		}
@@ -206,42 +206,42 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset)
+			if(element is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
 			{
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape newShape = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape(this.Partition);
+				global::NuPattern.Authoring.WorkflowDesign.ProducedAssetShape newShape = new global::NuPattern.Authoring.WorkflowDesign.ProducedAssetShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset)
+			if(element is global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset)
 			{
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape newShape = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape(this.Partition);
+				global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape newShape = new global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool)
+			if(element is global::NuPattern.Authoring.WorkflowDesign.ProductionTool)
 			{
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolShape newShape = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolShape(this.Partition);
+				global::NuPattern.Authoring.WorkflowDesign.ProductionToolShape newShape = new global::NuPattern.Authoring.WorkflowDesign.ProductionToolShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools)
+			if(element is global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools)
 			{
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolInputConnector newShape = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolInputConnector(this.Partition);
+				global::NuPattern.Authoring.WorkflowDesign.ToolInputConnector newShape = new global::NuPattern.Authoring.WorkflowDesign.ToolInputConnector(this.Partition);
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools)
+			if(element is global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools)
 			{
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolInputConnector newShape = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolInputConnector(this.Partition);
+				global::NuPattern.Authoring.WorkflowDesign.ToolInputConnector newShape = new global::NuPattern.Authoring.WorkflowDesign.ToolInputConnector(this.Partition);
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets)
+			if(element is global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets)
 			{
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolCopyConnector newShape = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolCopyConnector(this.Partition);
+				global::NuPattern.Authoring.WorkflowDesign.ToolCopyConnector newShape = new global::NuPattern.Authoring.WorkflowDesign.ToolCopyConnector(this.Partition);
 				return newShape;
 			}
-			if(element is global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets)
+			if(element is global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets)
 			{
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolOutputConnector newShape = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolOutputConnector(this.Partition);
+				global::NuPattern.Authoring.WorkflowDesign.ToolOutputConnector newShape = new global::NuPattern.Authoring.WorkflowDesign.ToolOutputConnector(this.Partition);
 				return newShape;
 			}
 			return base.CreateChildShape(element);
@@ -255,9 +255,9 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolShape.DecoratorsInitialized += ProductionToolShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape.DecoratorsInitialized += ProducedAssetShapeDecoratorMap.OnDecoratorsInitialized;
-			global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape.DecoratorsInitialized += SuppliedAssetShapeDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Authoring.WorkflowDesign.ProductionToolShape.DecoratorsInitialized += ProductionToolShapeDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Authoring.WorkflowDesign.ProducedAssetShape.DecoratorsInitialized += ProducedAssetShapeDecoratorMap.OnDecoratorsInitialized;
+			global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape.DecoratorsInitialized += SuppliedAssetShapeDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -273,14 +273,14 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Authoring.WorkflowDesign.NamedElementSchema.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool.IsSatisfyingVariabilityDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Authoring.WorkflowDesign.ProductionTool.IsSatisfyingVariabilityDomainPropertyId);
 				propertyInfo.FilteringValues.Add("False");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "IsNotSatisfyingVariabilityDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 		
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool.IsSatisfyingVariabilityDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Authoring.WorkflowDesign.ProductionTool.IsSatisfyingVariabilityDomainPropertyId);
 				propertyInfo.FilteringValues.Add("True");
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "IsSatisfyingVariabilityDecorator").AssociateVisibilityWith(shape.Store, propertyInfo);
 			}
@@ -299,7 +299,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Authoring.WorkflowDesign.NamedElementSchema.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
@@ -317,17 +317,17 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Authoring.WorkflowDesign.NamedElementSchema.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape.StereotypeTextDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape.StereotypeTextDomainPropertyId);
 				propertyInfo.IsShapeProperty = true;
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "StereotypeDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.NamedElementSchema.NameDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Authoring.WorkflowDesign.NamedElementSchema.NameDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "NameDecorator").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape.StereotypeTextDomainPropertyId);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape.StereotypeTextDomainPropertyId);
 				propertyInfo.IsShapeProperty = true;
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "StereotypeDecorator").AssociateValueWith(shape.Store, propertyInfo);
 			}
@@ -389,10 +389,10 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		
 		#region Toolbox actions
 		private bool changingMouseAction;
-		private global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCreateAction suppliedAssetCreateAction;
-		private global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolCreateAction productionToolCreateAction;
-		private global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetCreateAction producedAssetCreateAction;
-		private global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionWorkflowConnectorConnectAction productionWorkflowConnectorConnectAction;
+		private global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCreateAction suppliedAssetCreateAction;
+		private global::NuPattern.Authoring.WorkflowDesign.ProductionToolCreateAction productionToolCreateAction;
+		private global::NuPattern.Authoring.WorkflowDesign.ProducedAssetCreateAction producedAssetCreateAction;
+		private global::NuPattern.Authoring.WorkflowDesign.ProductionWorkflowConnectorConnectAction productionWorkflowConnectorConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -427,41 +427,41 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 				}
 		
 				DslDiagrams::MouseAction action = null;
-				if (SelectedToolboxItemSupportsFilterString(activeView, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper.SuppliedAssetFilterString))
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper.SuppliedAssetFilterString))
 				{
 					if (this.suppliedAssetCreateAction == null)
 					{
-						this.suppliedAssetCreateAction = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCreateAction(this);
+						this.suppliedAssetCreateAction = new global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCreateAction(this);
 						this.suppliedAssetCreateAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnToolboxActionDeactivated);
 					}
 					this.suppliedAssetCreateAction.StickyMode = stickyMode;
 					action = this.suppliedAssetCreateAction;
 				}
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper.ProductionToolFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper.ProductionToolFilterString))
 				{
 					if (this.productionToolCreateAction == null)
 					{
-						this.productionToolCreateAction = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolCreateAction(this);
+						this.productionToolCreateAction = new global::NuPattern.Authoring.WorkflowDesign.ProductionToolCreateAction(this);
 						this.productionToolCreateAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnToolboxActionDeactivated);
 					}
 					this.productionToolCreateAction.StickyMode = stickyMode;
 					action = this.productionToolCreateAction;
 				}
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper.ProducedAssetFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper.ProducedAssetFilterString))
 				{
 					if (this.producedAssetCreateAction == null)
 					{
-						this.producedAssetCreateAction = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetCreateAction(this);
+						this.producedAssetCreateAction = new global::NuPattern.Authoring.WorkflowDesign.ProducedAssetCreateAction(this);
 						this.producedAssetCreateAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnToolboxActionDeactivated);
 					}
 					this.producedAssetCreateAction.StickyMode = stickyMode;
 					action = this.producedAssetCreateAction;
 				}
-				else if (SelectedToolboxItemSupportsFilterString(activeView, global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper.ProductionWorkflowConnectorFilterString))
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignToolboxHelper.ProductionWorkflowConnectorFilterString))
 				{
 					if (this.productionWorkflowConnectorConnectAction == null)
 					{
-						this.productionWorkflowConnectorConnectAction = new global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionWorkflowConnectorConnectAction(this);
+						this.productionWorkflowConnectorConnectAction = new global::NuPattern.Authoring.WorkflowDesign.ProductionWorkflowConnectorConnectAction(this);
 						this.productionWorkflowConnectorConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnToolboxActionDeactivated);
 					}
 					this.productionWorkflowConnectorConnectAction.StickyMode = stickyMode;
@@ -583,8 +583,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of AuthoringGradientColor domain property.
 		/// The color of the gradient in the title of the background.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringGradientColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringGradientColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringGradientColor.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringGradientColor.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "WhiteSmoke")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -672,10 +672,11 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets or sets the value of AuthoringBackgroundColor domain property.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram.Authoring Background Color
+		/// NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.Authoring Background
+		/// Color
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringBackgroundColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringBackgroundColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringBackgroundColor.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringBackgroundColor.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "White")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -764,8 +765,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of AuthoringTitleTextColor domain property.
 		/// The color of the text of the diagram title.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringTitleTextColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringTitleTextColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringTitleTextColor.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/AuthoringTitleTextColor.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "DarkGray")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -854,8 +855,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of TailoringGradientColor domain property.
 		/// The color of the gradient in the title of the background.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringGradientColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringGradientColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringGradientColor.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringGradientColor.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "WhiteSmoke")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -943,10 +944,11 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Gets or sets the value of TailoringBackgroundColor domain property.
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram.Tailoring Background Color
+		/// NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.Tailoring Background
+		/// Color
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringBackgroundColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringBackgroundColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringBackgroundColor.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringBackgroundColor.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "204, 204, 204")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1035,8 +1037,8 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// Gets or sets the value of TailoringTitleTextColor domain property.
 		/// The color of the text of the diagram title.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringTitleTextColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringTitleTextColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringTitleTextColor.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram/TailoringTitleTextColor.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "DarkGray")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1112,8 +1114,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 	}
 	/// <summary>
 	/// DomainClass WorkflowDesignDiagram
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram
+	/// Description for NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 			
@@ -1142,7 +1143,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	
 		/// <summary>
@@ -1160,13 +1161,13 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.ProducedAsset), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.ProductionTool), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -1182,17 +1183,17 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 				{
 					parentElement = GetParentForRelationship((DslModeling::ElementLink)childElement);
 				} else
-				if(childElement is global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset)
+				if(childElement is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
 				{
-					parentElement = GetParentForProducedAsset((global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAsset)childElement);
+					parentElement = GetParentForProducedAsset((global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)childElement);
 				} else
-				if(childElement is global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset)
+				if(childElement is global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset)
 				{
-					parentElement = GetParentForSuppliedAsset((global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAsset)childElement);
+					parentElement = GetParentForSuppliedAsset((global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset)childElement);
 				} else
-				if(childElement is global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool)
+				if(childElement is global::NuPattern.Authoring.WorkflowDesign.ProductionTool)
 				{
-					parentElement = GetParentForProductionTool((global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool)childElement);
+					parentElement = GetParentForProductionTool((global::NuPattern.Authoring.WorkflowDesign.ProductionTool)childElement);
 				} else
 				{
 					parentElement = null;
@@ -1203,24 +1204,24 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 					DslDiagrams::Diagram.FixUpDiagram(parentElement, childElement);
 				}
 			}
-			public static global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design GetParentForProductionTool( global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionTool root )
+			public static global::NuPattern.Authoring.WorkflowDesign.Design GetParentForProductionTool( global::NuPattern.Authoring.WorkflowDesign.ProductionTool root )
 			{
 				// Segments 0 and 1
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design result = root.Design;
+				global::NuPattern.Authoring.WorkflowDesign.Design result = root.Design;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design GetParentForProducedAsset( global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset root )
+			public static global::NuPattern.Authoring.WorkflowDesign.Design GetParentForProducedAsset( global::NuPattern.Authoring.WorkflowDesign.Asset root )
 			{
 				// Segments 0 and 1
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design result = root.Design;
+				global::NuPattern.Authoring.WorkflowDesign.Design result = root.Design;
 				if ( result == null ) return null;
 				return result;
 			}
-			public static global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design GetParentForSuppliedAsset( global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Asset root )
+			public static global::NuPattern.Authoring.WorkflowDesign.Design GetParentForSuppliedAsset( global::NuPattern.Authoring.WorkflowDesign.Asset root )
 			{
 				// Segments 0 and 1
-				global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Design result = root.Design;
+				global::NuPattern.Authoring.WorkflowDesign.Design result = root.Design;
 				if ( result == null ) return null;
 				return result;
 			}
@@ -1313,10 +1314,10 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 		/// <summary>
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>
@@ -1333,7 +1334,7 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
 					DslDiagrams::BinaryLinkShape linkShape = connectorLink.Presentation as DslDiagrams::BinaryLinkShape;
 					if (linkShape != null)
 					{
-						global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram diagram = linkShape.Diagram as global::Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram;
+						global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram diagram = linkShape.Diagram as global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram;
 						if (diagram != null)
 						{
 							if (e.NewRolePlayer != null)

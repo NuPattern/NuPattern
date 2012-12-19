@@ -1,8 +1,7 @@
 ﻿<#@ output extension=".gen.cs" #>
 <#@ Include File="..\..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
-using System;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring.Guidance.Links
+namespace NuPattern.Authoring.Authoring.Guidance.Links
 {
 	/// <summary>
 	/// Definitions for the HandsOnLabs.Toolkit toolkit project

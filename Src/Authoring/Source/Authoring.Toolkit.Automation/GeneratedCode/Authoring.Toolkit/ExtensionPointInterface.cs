@@ -8,22 +8,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
 	///	The automation library containing the automation for the toolkit.
 	///	</summary>
 	[Description("The automation library containing the automation for the toolkit.")]
 	[ToolkitInterface(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "fcfa4452-7e09-4f57-b35b-b9f1ee6179ca", ProxyType = typeof(AutomationLibrary))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	public partial interface IAutomationLibrary : IToolkitInterface
 	{ 
 		///	<summary>

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Authoring.Automation.Properties;
+using NuPattern.Extensibility.References;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation
+namespace NuPattern.Authoring.Automation
 {
 	/// <summary>
 	/// Helper class for automation of the guidance capabilities.

@@ -1,10 +1,10 @@
-﻿<#@ Template Inherits="Microsoft.VisualStudio.Patterning.Library.ModelElementTextTransformation" HostSpecific="True" #>
-<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" #>
+﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" #>
+<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ output extension=".t4" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.dll" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Authoring.Authoring" #>
+<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="NuPattern.Authoring.Toolkit.Automation.dll" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Authoring.Authoring" #>
 <#
 	var toolkitInfo = this.Element.As<IPatternToolkitInfo>();
 	var product = toolkitInfo.Parent.Parent;

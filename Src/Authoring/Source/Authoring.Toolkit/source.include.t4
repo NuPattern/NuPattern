@@ -8,8 +8,8 @@
 	public const string icon = @"Ignore";
 
 	public const string productName = "Authoring.Toolkit";
-	public const string rootNamespace = "Microsoft.VisualStudio.Patterning.Authoring.Authoring";
-	public const string assemblyName = "Microsoft.VisualStudio.Patterning.Authoring.Authoring.Toolkit";
+	public const string rootNamespace = "NuPattern.Authoring.Authoring";
+	public const string assemblyName = "NuPattern.Authoring.Authoring.Toolkit";
 
 	public bool HasValue(string value)
 	{

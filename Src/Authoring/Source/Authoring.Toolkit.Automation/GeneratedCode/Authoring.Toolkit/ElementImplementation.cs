@@ -8,23 +8,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
 	///	A Visual Studio item template.
 	///	</summary>
 	[Description("A Visual Studio item template.")]
 	[ToolkitInterfaceProxy(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "7475fa2d-8033-461c-a460-7e0793491874", ProxyType = typeof(ItemTemplate))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class ItemTemplate : IItemTemplate
 	{
@@ -142,23 +142,23 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
 	///	A Visual Studio project template
 	///	</summary>
 	[Description("A Visual Studio project template")]
 	[ToolkitInterfaceProxy(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "f03d48a2-2377-4e56-a2c4-ae24d34302d3", ProxyType = typeof(ProjectTemplate))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class ProjectTemplate : IProjectTemplate
 	{
@@ -276,23 +276,23 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
 	///	A custom T4 text template.
 	///	</summary>
 	[Description("A custom T4 text template.")]
 	[ToolkitInterfaceProxy(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "c6a0f8d4-59df-4dad-b92e-c6a1e54be5e2", ProxyType = typeof(TextTemplate))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class TextTemplate : ITextTemplate
 	{
@@ -410,23 +410,23 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
 	///	A custom wizard.
 	///	</summary>
 	[Description("A custom wizard.")]
 	[ToolkitInterfaceProxy(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "b013c2ba-e9e0-484d-a0bc-e821c38c192b", ProxyType = typeof(Wizard))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class Wizard : IWizard
 	{
@@ -544,23 +544,23 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
 	///	A custom wizard page
 	///	</summary>
 	[Description("A custom wizard page")]
 	[ToolkitInterfaceProxy(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "93ee656b-6308-42d1-a5d7-e10fcea47ee7", ProxyType = typeof(WizardPage))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class WizardPage : IWizardPage
 	{
@@ -678,23 +678,23 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
 	///	Guidance for the toolkit.
 	///	</summary>
 	[Description("Guidance for the toolkit.")]
 	[ToolkitInterfaceProxy(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "c3d66aa5-3199-44ad-b7d7-f375a9ab16d3", ProxyType = typeof(Guidance))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class Guidance : IGuidance
 	{
@@ -848,24 +848,24 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Extensibility;
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Extensibility;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
 	///	The definition of the pattern.
 	///	</summary>
 	[Description("The definition of the pattern.")]
 	[ToolkitInterfaceProxy(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "5da53e5a-0ba8-48f8-a922-1712244c388c", ProxyType = typeof(PatternModel))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class PatternModel : IPatternModel
 	{
@@ -1026,23 +1026,23 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
 	///	A view or aspect of the pattern.
 	///	</summary>
 	[Description("A view or aspect of the pattern.")]
 	[ToolkitInterfaceProxy(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "6a596dea-529b-4cd5-9eea-7e856a2b332c", ProxyType = typeof(ViewModel))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class ViewModel : IViewModel
 	{
@@ -1160,24 +1160,24 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Extensibility;
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Extensibility;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
 	///	Information for packaging the toolkit as a VSIX extension.
 	///	</summary>
 	[Description("Information for packaging the toolkit as a VSIX extension.")]
 	[ToolkitInterfaceProxy(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e", ProxyType = typeof(PatternToolkitInfo))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class PatternToolkitInfo : IPatternToolkitInfo
 	{
@@ -1383,23 +1383,23 @@ namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Authoring
+namespace NuPattern.Authoring.Authoring
 {
-	using global::Microsoft.VisualStudio.Patterning.Runtime;
+	using global::NuPattern.Runtime;
 	using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
 	using global::System.ComponentModel.Design;
 	using global::System.Drawing.Design;
-	using Runtime = global::Microsoft.VisualStudio.Patterning.Runtime;
+	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
 	///	The design of the tooling of the toolkit.
 	///	</summary>
 	[Description("The design of the tooling of the toolkit.")]
 	[ToolkitInterfaceProxy(ExtensionId ="84031a32-b20f-479c-a620-beacd982ea13", DefinitionId = "9291502b-fefc-4ef8-afc0-4c6914f0d2d1", ProxyType = typeof(ProductionTooling))]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Automation Library", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal partial class ProductionTooling : IProductionTooling
 	{

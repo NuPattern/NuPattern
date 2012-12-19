@@ -8,11 +8,11 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Modeling.Shell;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Add automation extension command.

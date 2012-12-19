@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
-using Microsoft.VisualStudio.Patterning.Extensibility;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Layout diagram command.

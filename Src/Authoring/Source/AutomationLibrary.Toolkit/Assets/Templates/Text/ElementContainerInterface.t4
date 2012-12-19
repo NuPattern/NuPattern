@@ -28,7 +28,7 @@ private void GenerateContainedElementCreate(PluralizationService pluralizer, ICo
 #>
 
 /// <summary>
-///	Creates a new <see cref="I<#=element.CodeIdentifier#>"/> <#+if (element.Cardinality == Microsoft.VisualStudio.Patterning.Runtime.Cardinality.OneToMany || element.Cardinality == Microsoft.VisualStudio.Patterning.Runtime.Cardinality.ZeroToMany) { #> and adds it to the <see cref="<#=name#>"/> collection, <#+}#> 
+///	Creates a new <see cref="I<#=element.CodeIdentifier#>"/> <#+if (element.Cardinality == NuPattern.Runtime.Cardinality.OneToMany || element.Cardinality == NuPattern.Runtime.Cardinality.ZeroToMany) { #> and adds it to the <see cref="<#=name#>"/> collection, <#+}#> 
 /// executing the optional <paramref name="initializer"/> if not <see langword="null"/>.
 ///	</summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
@@ -42,7 +42,7 @@ private void GenerateContainedExtensionCreate(PluralizationService pluralizer, I
 #>
 
 /// <summary>
-///	Creates a new <see cref="I<#=element.CodeIdentifier#>"/> <#+if (element.Cardinality == Microsoft.VisualStudio.Patterning.Runtime.Cardinality.OneToMany || element.Cardinality == Microsoft.VisualStudio.Patterning.Runtime.Cardinality.ZeroToMany) { #> and adds it to the <see cref="<#=name#>"/> collection, <#+}#> 
+///	Creates a new <see cref="I<#=element.CodeIdentifier#>"/> <#+if (element.Cardinality == NuPattern.Runtime.Cardinality.OneToMany || element.Cardinality == NuPattern.Runtime.Cardinality.ZeroToMany) { #> and adds it to the <see cref="<#=name#>"/> collection, <#+}#> 
 /// executing the optional <paramref name="initializer"/> if not <see langword="null"/>.
 ///	</summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
@@ -52,8 +52,8 @@ I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(string name, Guid
 
 private void GenerateContainedElementProperty(PluralizationService pluralizer, IContainedElementInfo element)
 {
-	if (element.Cardinality == Microsoft.VisualStudio.Patterning.Runtime.Cardinality.ZeroToOne ||
-		element.Cardinality == Microsoft.VisualStudio.Patterning.Runtime.Cardinality.OneToOne)
+	if (element.Cardinality == NuPattern.Runtime.Cardinality.ZeroToOne ||
+		element.Cardinality == NuPattern.Runtime.Cardinality.OneToOne)
 	{
 #>
 

@@ -4,7 +4,7 @@
 <VSTemplate Type="ProjectGroup" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
     <Name>Pattern Toolkit Hands-On Labs</Name>
-    <Description>Hands on Labs for Creating Pattern Toolkits</Description>
+    <Description>Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.</Description>
     <TemplateID>c3c73531a152-PatternToolkitHOLs</TemplateID>
     <Icon>VsTemplateIconHOLProject.ico</Icon>
     <ProjectType>CSharp</ProjectType>
@@ -20,11 +20,11 @@
     <ProjectItem />
   </TemplateContent>
   <WizardExtension>
-    <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-    <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.InstantiationTemplateWizard</FullClassName>
+    <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+    <FullClassName>NuPattern.Library.Automation.InstantiationTemplateWizard</FullClassName>
   </WizardExtension>
   <WizardExtension>
-    <Assembly>Microsoft.VisualStudio.Patterning.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-    <FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+    <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+    <FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

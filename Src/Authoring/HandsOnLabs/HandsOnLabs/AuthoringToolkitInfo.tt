@@ -1,7 +1,7 @@
 ﻿<#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ output extension=".gen.cs" #>
 
-namespace Microsoft.VisualStudio.Patterning.HandsOnLabs
+namespace NuPattern.HandsOnLabs
 {
     /// <summary>
     /// Information about the toolkit

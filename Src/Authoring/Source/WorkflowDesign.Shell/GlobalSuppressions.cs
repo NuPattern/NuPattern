@@ -8,8 +8,8 @@
 // "In Project Suppression File".
 // You do not need to add suppressions to this file manually.
 
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Constants.#WorkflowDesignExplorerMenu")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.Constants.#ViewWorkflowDesignExplorerCommand")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDocDataBase.#GetDiagramPartition()")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDocDataBase.#SaveSubordinateFile(Microsoft.VisualStudio.Modeling.Shell.DocData,System.String)")]
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1812:AvoidUninstantiatedInternalClasses", Scope = "type", Target = "Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignPackage")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Scope = "member", Target = "NuPattern.Authoring.WorkflowDesign.Constants.#WorkflowDesignExplorerMenu")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Scope = "member", Target = "NuPattern.Authoring.WorkflowDesign.Constants.#ViewWorkflowDesignExplorerCommand")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Scope = "member", Target = "NuPattern.Authoring.WorkflowDesign.WorkflowDesignDocDataBase.#GetDiagramPartition()")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "NuPattern.Authoring.WorkflowDesign.WorkflowDesignDocDataBase.#SaveSubordinateFile(Microsoft.VisualStudio.Modeling.Shell.DocData,System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1812:AvoidUninstantiatedInternalClasses", Scope = "type", Target = "NuPattern.Authoring.WorkflowDesign.WorkflowDesignPackage")]

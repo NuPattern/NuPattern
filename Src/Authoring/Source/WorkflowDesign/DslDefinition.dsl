@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c0712d75-bf72-45f5-9b7b-bf7ad51c42c8" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesign" Name="WorkflowDesign" DisplayName="WorkflowDesign" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" MinorVersion="2" ProductName="WorkflowDesign" CompanyName="The Outercurve Foundation" PackageGuid="6370b1db-500b-44d0-82dd-a61eb6db992a" PackageNamespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
+<Dsl xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c0712d75-bf72-45f5-9b7b-bf7ad51c42c8" Description="Description for NuPattern.Authoring.WorkflowDesign.WorkflowDesign" Name="WorkflowDesign" DisplayName="WorkflowDesign" Namespace="NuPattern.Authoring.WorkflowDesign" MinorVersion="2" ProductName="WorkflowDesign" CompanyName="NuPattern" PackageGuid="6370b1db-500b-44d0-82dd-a61eb6db992a" PackageNamespace="NuPattern.Authoring.WorkflowDesign" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
-    <DomainClass Id="19c7bdb0-d161-487c-bd32-38fb3f9bb023" Description="A requirement for a point of variability in the product line." Name="VariabilityRequirement" DisplayName="Variability Requirement" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainClass Id="19c7bdb0-d161-487c-bd32-38fb3f9bb023" Description="A requirement for a point of variability in the product line." Name="VariabilityRequirement" DisplayName="Variability Requirement" Namespace="NuPattern.Authoring.WorkflowDesign">
       <BaseClass>
         <DomainClassMoniker Name="DesignElement" />
       </BaseClass>
@@ -23,7 +23,7 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="82cf2129-d420-41dc-8b95-12a99a5d20c9" Description="An asset that is produced by a production tool." Name="ProducedAsset" DisplayName="Produced Asset" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainClass Id="82cf2129-d420-41dc-8b95-12a99a5d20c9" Description="An asset that is produced by a production tool." Name="ProducedAsset" DisplayName="Produced Asset" Namespace="NuPattern.Authoring.WorkflowDesign">
       <BaseClass>
         <DomainClassMoniker Name="Asset" />
       </BaseClass>
@@ -35,7 +35,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="67726e9a-a7da-4c26-b642-b4065710cee0" Description="A tool that is supplied assets that produces more assets." Name="ProductionTool" DisplayName="Production Tool" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainClass Id="67726e9a-a7da-4c26-b642-b4065710cee0" Description="A tool that is supplied assets that produces more assets." Name="ProductionTool" DisplayName="Production Tool" Namespace="NuPattern.Authoring.WorkflowDesign">
       <BaseClass>
         <DomainClassMoniker Name="DesignElement" />
       </BaseClass>
@@ -52,7 +52,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="a395e79e-1a6d-4132-9724-671c4413ddab" Description="An asset that is supplied to a production tool." Name="SuppliedAsset" DisplayName="Supplied Asset" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainClass Id="a395e79e-1a6d-4132-9724-671c4413ddab" Description="An asset that is supplied to a production tool." Name="SuppliedAsset" DisplayName="Supplied Asset" Namespace="NuPattern.Authoring.WorkflowDesign">
       <BaseClass>
         <DomainClassMoniker Name="Asset" />
       </BaseClass>
@@ -64,7 +64,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="245abfec-9096-464a-a73b-358748042100" Description="A supplied or fabricated asset in the product line." Name="Asset" DisplayName="Asset" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainClass Id="245abfec-9096-464a-a73b-358748042100" Description="A supplied or fabricated asset in the product line." Name="Asset" DisplayName="Asset" InheritanceModifier="Abstract" Namespace="NuPattern.Authoring.WorkflowDesign">
       <BaseClass>
         <DomainClassMoniker Name="DesignElement" />
       </BaseClass>
@@ -81,7 +81,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="fedd3e36-d9ec-4f70-85b9-16728700f201" Description="A production line design." Name="Design" DisplayName="Design" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainClass Id="fedd3e36-d9ec-4f70-85b9-16728700f201" Description="A production line design." Name="Design" DisplayName="Design" Namespace="NuPattern.Authoring.WorkflowDesign">
       <ElementMergeDirectives>
         <ElementMergeDirective>
           <Index>
@@ -109,7 +109,7 @@
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="6665aba9-d5b1-4412-9757-e5172874d63b" Description="An element that has a unique name." Name="NamedElementSchema" DisplayName="Named Element Schema" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainClass Id="6665aba9-d5b1-4412-9757-e5172874d63b" Description="An element that has a unique name." Name="NamedElementSchema" DisplayName="Named Element Schema" InheritanceModifier="Abstract" Namespace="NuPattern.Authoring.WorkflowDesign">
       <Properties>
         <DomainProperty Id="1264ecd0-db3c-4300-b15e-7cda16874ea4" Description="The well-known name of this item in this model." Name="Name" DisplayName="Name" Category="General" IsElementName="true">
           <Type>
@@ -143,7 +143,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="865cf412-cfa1-4e9f-b6ec-bf02f69bea74" Description="An element used for realization." Name="DesignElement" DisplayName="Design Element" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainClass Id="865cf412-cfa1-4e9f-b6ec-bf02f69bea74" Description="An element used for realization." Name="DesignElement" DisplayName="Design Element" InheritanceModifier="Abstract" Namespace="NuPattern.Authoring.WorkflowDesign">
       <BaseClass>
         <DomainClassMoniker Name="NamedElementSchema" />
       </BaseClass>
@@ -170,166 +170,166 @@
     </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="91409b5f-6b3a-4a3d-a8b7-e347eccee8a6" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements" Name="ProductionToolReferencesVariabilityRequirements" DisplayName="Production Tool References Variability Requirements" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainRelationship Id="91409b5f-6b3a-4a3d-a8b7-e347eccee8a6" Description="Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements" Name="ProductionToolReferencesVariabilityRequirements" DisplayName="Production Tool References Variability Requirements" Namespace="NuPattern.Authoring.WorkflowDesign">
       <Source>
-        <DomainRole Id="4c5bf749-6e50-4f84-9f9a-fd4329f1a2dc" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="VariabilityRequirements" PropertyDisplayName="Variability Requirements">
+        <DomainRole Id="4c5bf749-6e50-4f84-9f9a-fd4329f1a2dc" Description="Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="VariabilityRequirements" PropertyDisplayName="Variability Requirements">
           <RolePlayer>
             <DomainClassMoniker Name="ProductionTool" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="f42ef571-400e-416c-8e44-66a92e1a0afd" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirement" Name="VariabilityRequirement" DisplayName="Variability Requirement" PropertyName="ProductionTools" PropertyDisplayName="Production Tools">
+        <DomainRole Id="f42ef571-400e-416c-8e44-66a92e1a0afd" Description="Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirement" Name="VariabilityRequirement" DisplayName="Variability Requirement" PropertyName="ProductionTools" PropertyDisplayName="Production Tools">
           <RolePlayer>
             <DomainClassMoniker Name="VariabilityRequirement" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="4e0787f5-1b90-4962-af22-34b462ca1993" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets" Name="ProductionToolProducesProducedAssets" DisplayName="Production Tool Produces Produced Assets" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainRelationship Id="4e0787f5-1b90-4962-af22-34b462ca1993" Description="Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets" Name="ProductionToolProducesProducedAssets" DisplayName="Production Tool Produces Produced Assets" Namespace="NuPattern.Authoring.WorkflowDesign">
       <Source>
-        <DomainRole Id="a410ff8e-d1ac-468f-927a-a97dbd2f981c" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="ProducedProducedAssets" PropertyDisplayName="Produced Produced Assets">
+        <DomainRole Id="a410ff8e-d1ac-468f-927a-a97dbd2f981c" Description="Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="ProducedProducedAssets" PropertyDisplayName="Produced Produced Assets">
           <RolePlayer>
             <DomainClassMoniker Name="ProductionTool" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="ea75f6de-6b2d-4b7b-9c5a-081104bf2fbd" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAsset" Name="ProducedAsset" DisplayName="Produced Asset" PropertyName="ProducingProductionTools" PropertyDisplayName="Producing Production Tools">
+        <DomainRole Id="ea75f6de-6b2d-4b7b-9c5a-081104bf2fbd" Description="Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAsset" Name="ProducedAsset" DisplayName="Produced Asset" PropertyName="ProducingProductionTools" PropertyDisplayName="Producing Production Tools">
           <RolePlayer>
             <DomainClassMoniker Name="ProducedAsset" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="b7c9e653-7d6f-4370-9ae1-d86964397b7d" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools" Name="ProducedAssetSuppliesProductionTools" DisplayName="Produced Asset Supplies Production Tools" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainRelationship Id="b7c9e653-7d6f-4370-9ae1-d86964397b7d" Description="Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools" Name="ProducedAssetSuppliesProductionTools" DisplayName="Produced Asset Supplies Production Tools" Namespace="NuPattern.Authoring.WorkflowDesign">
       <BaseRelationship>
         <DomainRelationshipMoniker Name="AssetSuppliesAllProducingTools" />
       </BaseRelationship>
       <Source>
-        <DomainRole Id="41648a11-e24d-4726-a802-1e31e2e2d526" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAsset" Name="ProducedAsset" DisplayName="Produced Asset" PropertyName="ProductionTools" PropertyDisplayName="Production Tools">
+        <DomainRole Id="41648a11-e24d-4726-a802-1e31e2e2d526" Description="Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAsset" Name="ProducedAsset" DisplayName="Produced Asset" PropertyName="ProductionTools" PropertyDisplayName="Production Tools">
           <RolePlayer>
             <DomainClassMoniker Name="ProducedAsset" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="c7d26b7c-5f73-404f-9f97-dbe3e98bcf71" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="SuppliedProducedAssets" PropertyDisplayName="Supplied Produced Assets">
+        <DomainRole Id="c7d26b7c-5f73-404f-9f97-dbe3e98bcf71" Description="Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="SuppliedProducedAssets" PropertyDisplayName="Supplied Produced Assets">
           <RolePlayer>
             <DomainClassMoniker Name="ProductionTool" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="6103e751-0edc-4bde-9870-bcb0af30910b" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets" Name="SuppliedAssetCopiesToProducedAssets" DisplayName="Supplied Asset Copies To Produced Assets" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainRelationship Id="6103e751-0edc-4bde-9870-bcb0af30910b" Description="Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets" Name="SuppliedAssetCopiesToProducedAssets" DisplayName="Supplied Asset Copies To Produced Assets" Namespace="NuPattern.Authoring.WorkflowDesign">
       <Source>
-        <DomainRole Id="e16620b7-aae0-44a0-9b84-fcbc5a275f2d" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAsset" Name="SuppliedAsset" DisplayName="Supplied Asset" PropertyName="ProducedAssets" PropertyDisplayName="Produced Assets">
+        <DomainRole Id="e16620b7-aae0-44a0-9b84-fcbc5a275f2d" Description="Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAsset" Name="SuppliedAsset" DisplayName="Supplied Asset" PropertyName="ProducedAssets" PropertyDisplayName="Produced Assets">
           <RolePlayer>
             <DomainClassMoniker Name="SuppliedAsset" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="202d77ab-7b4e-4139-b3d8-89167ee1b327" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAsset" Name="ProducedAsset" DisplayName="Produced Asset" PropertyName="SuppliedAssets" PropertyDisplayName="Supplied Assets">
+        <DomainRole Id="202d77ab-7b4e-4139-b3d8-89167ee1b327" Description="Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAsset" Name="ProducedAsset" DisplayName="Produced Asset" PropertyName="SuppliedAssets" PropertyDisplayName="Supplied Assets">
           <RolePlayer>
             <DomainClassMoniker Name="ProducedAsset" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="c884ef2a-69d3-4df7-9595-b270b3a54a5b" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools" Name="SuppliedAssetSuppliesProductionTools" DisplayName="Supplied Asset Supplies Production Tools" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainRelationship Id="c884ef2a-69d3-4df7-9595-b270b3a54a5b" Description="Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools" Name="SuppliedAssetSuppliesProductionTools" DisplayName="Supplied Asset Supplies Production Tools" Namespace="NuPattern.Authoring.WorkflowDesign">
       <BaseRelationship>
         <DomainRelationshipMoniker Name="AssetSuppliesAllProducingTools" />
       </BaseRelationship>
       <Source>
-        <DomainRole Id="9f26c80d-04ab-4b84-adfa-672fc88246d6" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAsset" Name="SuppliedAsset" DisplayName="Supplied Asset" PropertyName="ProductionTools" PropertyDisplayName="Production Tools">
+        <DomainRole Id="9f26c80d-04ab-4b84-adfa-672fc88246d6" Description="Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAsset" Name="SuppliedAsset" DisplayName="Supplied Asset" PropertyName="ProductionTools" PropertyDisplayName="Production Tools">
           <RolePlayer>
             <DomainClassMoniker Name="SuppliedAsset" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="8d8cfed6-33f9-45b1-8132-6b8791cfc218" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="SuppliedSuppliedAssets" PropertyDisplayName="Supplied Supplied Assets">
+        <DomainRole Id="8d8cfed6-33f9-45b1-8132-6b8791cfc218" Description="Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="SuppliedSuppliedAssets" PropertyDisplayName="Supplied Supplied Assets">
           <RolePlayer>
             <DomainClassMoniker Name="ProductionTool" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="dc20e99c-5f1d-4a9c-81af-eec621f4c3ec" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools" Name="AssetSuppliesAllProducingTools" DisplayName="Asset Supplies All Producing Tools" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+    <DomainRelationship Id="dc20e99c-5f1d-4a9c-81af-eec621f4c3ec" Description="Description for NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools" Name="AssetSuppliesAllProducingTools" DisplayName="Asset Supplies All Producing Tools" InheritanceModifier="Abstract" Namespace="NuPattern.Authoring.WorkflowDesign">
       <Source>
-        <DomainRole Id="6fe991a6-e1b0-4fc3-b36a-810bfefd791e" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset" Name="Asset" DisplayName="Asset" PropertyName="AllProducingTools" PropertyDisplayName="All Producing Tools">
+        <DomainRole Id="6fe991a6-e1b0-4fc3-b36a-810bfefd791e" Description="Description for NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset" Name="Asset" DisplayName="Asset" PropertyName="AllProducingTools" PropertyDisplayName="All Producing Tools">
           <RolePlayer>
             <DomainClassMoniker Name="Asset" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="09210d13-2037-4f79-aeda-2e04e49ba3ca" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.ComponentModel.AssetSuppliesAllProducingTools.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="AllSuppliedAssets" PropertyDisplayName="All Supplied Assets">
+        <DomainRole Id="09210d13-2037-4f79-aeda-2e04e49ba3ca" Description="Description for NuPattern.Authoring.ComponentModel.AssetSuppliesAllProducingTools.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="AllSuppliedAssets" PropertyDisplayName="All Supplied Assets">
           <RolePlayer>
             <DomainClassMoniker Name="ProductionTool" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="80b044c8-3478-4387-8ae4-b1f78fbd6475" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools" Name="DesignHasProductionTools" DisplayName="Design Has Production Tools" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" IsEmbedding="true">
+    <DomainRelationship Id="80b044c8-3478-4387-8ae4-b1f78fbd6475" Description="Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools" Name="DesignHasProductionTools" DisplayName="Design Has Production Tools" Namespace="NuPattern.Authoring.WorkflowDesign" IsEmbedding="true">
       <Source>
-        <DomainRole Id="c5ee3106-0130-492a-86d8-0c3ef3532520" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.Design" Name="Design" DisplayName="Design" PropertyName="ProductionTools" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Production Tools">
+        <DomainRole Id="c5ee3106-0130-492a-86d8-0c3ef3532520" Description="Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.Design" Name="Design" DisplayName="Design" PropertyName="ProductionTools" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Production Tools">
           <RolePlayer>
             <DomainClassMoniker Name="Design" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="3f6e20bf-ff82-4b55-aafe-8f4930e47800" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="Design" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Design">
+        <DomainRole Id="3f6e20bf-ff82-4b55-aafe-8f4930e47800" Description="Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionTool" Name="ProductionTool" DisplayName="Production Tool" PropertyName="Design" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Design">
           <RolePlayer>
             <DomainClassMoniker Name="ProductionTool" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="425ce70d-ec0b-4add-ab06-0368a05904e4" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets" Name="DesignHasAssets" DisplayName="Design Has Assets" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" IsEmbedding="true">
+    <DomainRelationship Id="425ce70d-ec0b-4add-ab06-0368a05904e4" Description="Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets" Name="DesignHasAssets" DisplayName="Design Has Assets" Namespace="NuPattern.Authoring.WorkflowDesign" IsEmbedding="true">
       <Source>
-        <DomainRole Id="915f6d0f-3ba1-4216-a0bf-37f21f50fcbf" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.Design" Name="Design" DisplayName="Design" PropertyName="Assets" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Assets">
+        <DomainRole Id="915f6d0f-3ba1-4216-a0bf-37f21f50fcbf" Description="Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Design" Name="Design" DisplayName="Design" PropertyName="Assets" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Assets">
           <RolePlayer>
             <DomainClassMoniker Name="Design" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="826f0f43-41df-4f3e-b574-faf6d13b69b6" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasAssets.Asset" Name="Asset" DisplayName="Asset" PropertyName="Design" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Design">
+        <DomainRole Id="826f0f43-41df-4f3e-b574-faf6d13b69b6" Description="Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Asset" Name="Asset" DisplayName="Asset" PropertyName="Design" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Design">
           <RolePlayer>
             <DomainClassMoniker Name="Asset" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="0c15cee8-4ab6-4fe8-8218-6ffca2d22dc9" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements" Name="DesignHasVariabilityRequirements" DisplayName="Design Has Variability Requirements" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" IsEmbedding="true">
+    <DomainRelationship Id="0c15cee8-4ab6-4fe8-8218-6ffca2d22dc9" Description="Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements" Name="DesignHasVariabilityRequirements" DisplayName="Design Has Variability Requirements" Namespace="NuPattern.Authoring.WorkflowDesign" IsEmbedding="true">
       <Source>
-        <DomainRole Id="341c3a81-81ad-485d-82b4-17d5472f56e3" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Design" Name="Design" DisplayName="Design" PropertyName="VariabilityRequirements" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Variability Requirements">
+        <DomainRole Id="341c3a81-81ad-485d-82b4-17d5472f56e3" Description="Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Design" Name="Design" DisplayName="Design" PropertyName="VariabilityRequirements" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Variability Requirements">
           <RolePlayer>
             <DomainClassMoniker Name="Design" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="bf7f9257-8bf9-470d-adef-a9922c3a93d5" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirement" Name="VariabilityRequirement" DisplayName="Variability Requirement" PropertyName="Design" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Design">
+        <DomainRole Id="bf7f9257-8bf9-470d-adef-a9922c3a93d5" Description="Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirement" Name="VariabilityRequirement" DisplayName="Variability Requirement" PropertyName="Design" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Design">
           <RolePlayer>
             <DomainClassMoniker Name="VariabilityRequirement" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="60c1f1f1-e7cf-4ab5-927f-9864d9ba40e9" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements" Name="ParentVariabilityRequirementHasParentVariabilityRequirements" DisplayName="Parent Variability Requirement Has Parent Variability Requirements" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" IsEmbedding="true">
+    <DomainRelationship Id="60c1f1f1-e7cf-4ab5-927f-9864d9ba40e9" Description="Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements" Name="ParentVariabilityRequirementHasParentVariabilityRequirements" DisplayName="Parent Variability Requirement Has Parent Variability Requirements" Namespace="NuPattern.Authoring.WorkflowDesign" IsEmbedding="true">
       <Source>
-        <DomainRole Id="d938a687-573c-4f75-b7de-f8b2a6ecc53c" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirement" Name="SourceVariabilityRequirement" DisplayName="Source Variability Requirement" PropertyName="VariabilityRequirements" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Variability Requirements">
+        <DomainRole Id="d938a687-573c-4f75-b7de-f8b2a6ecc53c" Description="Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirement" Name="SourceVariabilityRequirement" DisplayName="Source Variability Requirement" PropertyName="VariabilityRequirements" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Variability Requirements">
           <RolePlayer>
             <DomainClassMoniker Name="VariabilityRequirement" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="216e3b31-177b-40b6-b217-697beb5799f3" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirement" Name="TargetVariabilityRequirement" DisplayName="Target Variability Requirement" PropertyName="ParentVariabilityRequirement" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Parent Variability Requirement">
+        <DomainRole Id="216e3b31-177b-40b6-b217-697beb5799f3" Description="Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirement" Name="TargetVariabilityRequirement" DisplayName="Target Variability Requirement" PropertyName="ParentVariabilityRequirement" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Parent Variability Requirement">
           <RolePlayer>
             <DomainClassMoniker Name="VariabilityRequirement" />
           </RolePlayer>
@@ -356,7 +356,7 @@
     <ExternalType Name="Color" Namespace="System.Drawing" />
   </Types>
   <Shapes>
-    <GeometryShape Id="38a6bf9c-4b83-43e7-b028-30eaa21d1ee8" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProductionToolShape" Name="ProductionToolShape" DisplayName="Production Tool Shape" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" GeneratesDoubleDerived="true" FixedTooltipText="Production Tool" TextColor="White" FillColor="95, 167, 216" OutlineColor="White" InitialWidth="2" InitialHeight="0.6" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="38a6bf9c-4b83-43e7-b028-30eaa21d1ee8" Description="Description for NuPattern.Authoring.WorkflowDesign.ProductionToolShape" Name="ProductionToolShape" DisplayName="Production Tool Shape" Namespace="NuPattern.Authoring.WorkflowDesign" GeneratesDoubleDerived="true" FixedTooltipText="Production Tool" TextColor="White" FillColor="95, 167, 216" OutlineColor="White" InitialWidth="2" InitialHeight="0.6" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0.6" VerticalOffset="0.2">
         <TextDecorator Name="StereotypeDecorator" DisplayName="Stereotype Decorator" DefaultText="Production Tool" FontSize="7" />
       </ShapeHasDecorators>
@@ -373,7 +373,7 @@
         <IconDecorator Name="IndicatorBackgroundDecorator" DisplayName="Indicator Background Decorator" DefaultIcon="..\..\..\Images\IndicatorBackground.png" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="a2bcd210-b675-4fac-aa78-d57e942ad65d" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ProducedAssetShape" Name="ProducedAssetShape" DisplayName="Produced Asset Shape" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" GeneratesDoubleDerived="true" FixedTooltipText="Produced Asset" TextColor="White" FillColor="153, 102, 153" OutlineColor="White" InitialWidth="1.8" InitialHeight="0.6" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="a2bcd210-b675-4fac-aa78-d57e942ad65d" Description="Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetShape" Name="ProducedAssetShape" DisplayName="Produced Asset Shape" Namespace="NuPattern.Authoring.WorkflowDesign" GeneratesDoubleDerived="true" FixedTooltipText="Produced Asset" TextColor="White" FillColor="153, 102, 153" OutlineColor="White" InitialWidth="1.8" InitialHeight="0.6" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
       <Properties>
         <DomainProperty Id="0ef25a03-abb8-49c9-a8bc-cd708055217c" Description="The color of a deliverable asset." Name="IsFinalColor" DisplayName="Is Final Color" DefaultValue="0, 52, 0" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
           <Notes>The color of the shape when final.</Notes>
@@ -395,7 +395,7 @@
         <TextDecorator Name="NameDecorator" DisplayName="Name Decorator" DefaultText="NameDecorator" FontStyle="Bold" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="b9afa446-5e10-4f35-9489-7bdd0cf307d7" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.SuppliedAssetShape" Name="SuppliedAssetShape" DisplayName="Supplied Asset Shape" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" GeneratesDoubleDerived="true" FixedTooltipText="Supplied Asset" TextColor="White" FillColor="255, 105, 55" OutlineColor="White" InitialHeight="0.6" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
+    <GeometryShape Id="b9afa446-5e10-4f35-9489-7bdd0cf307d7" Description="Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape" Name="SuppliedAssetShape" DisplayName="Supplied Asset Shape" Namespace="NuPattern.Authoring.WorkflowDesign" GeneratesDoubleDerived="true" FixedTooltipText="Supplied Asset" TextColor="White" FillColor="255, 105, 55" OutlineColor="White" InitialHeight="0.6" OutlineThickness="0.03" FillGradientMode="None" Geometry="RoundedRectangle">
       <Properties>
         <DomainProperty Id="65925450-d8e9-4144-a4c2-afa169b96fff" Description="The color of a user supplied asset." Name="IsUserSuppliedColor" DisplayName="Is User Supplied Color" DefaultValue="0, 51, 52" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
           <Notes>The color of the shape when final.</Notes>
@@ -434,8 +434,8 @@
     </GeometryShape>
   </Shapes>
   <Connectors>
-    <Connector Id="1a58d220-af4d-465b-8aff-a62573131fd1" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.DesignConnector" Name="DesignConnector" DisplayName="Design Connector" InheritanceModifier="Abstract" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" FixedTooltipText="Design Connector" TextColor="102, 102, 102" Color="102, 102, 102" TargetEndStyle="EmptyArrow" Thickness="0.03" />
-    <Connector Id="a1da0e63-fd65-4168-b144-9e9d9ef08824" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolInputConnector" Name="ToolInputConnector" DisplayName="Tool Input Connector" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" FixedTooltipText="Tool Input Connector">
+    <Connector Id="1a58d220-af4d-465b-8aff-a62573131fd1" Description="Description for NuPattern.Authoring.WorkflowDesign.DesignConnector" Name="DesignConnector" DisplayName="Design Connector" InheritanceModifier="Abstract" Namespace="NuPattern.Authoring.WorkflowDesign" FixedTooltipText="Design Connector" TextColor="102, 102, 102" Color="102, 102, 102" TargetEndStyle="EmptyArrow" Thickness="0.03" />
+    <Connector Id="a1da0e63-fd65-4168-b144-9e9d9ef08824" Description="Description for NuPattern.Authoring.WorkflowDesign.ToolInputConnector" Name="ToolInputConnector" DisplayName="Tool Input Connector" Namespace="NuPattern.Authoring.WorkflowDesign" FixedTooltipText="Tool Input Connector">
       <BaseConnector>
         <ConnectorMoniker Name="DesignConnector" />
       </BaseConnector>
@@ -443,7 +443,7 @@
         <TextDecorator Name="ActionDecorator" DisplayName="Action Decorator" DefaultText="Supplies Input" />
       </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="bfe9b906-3fdc-4c62-9e64-27567c7a82a1" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolOutputConnector" Name="ToolOutputConnector" DisplayName="Tool Output Connector" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" FixedTooltipText="Tool Output Connector">
+    <Connector Id="bfe9b906-3fdc-4c62-9e64-27567c7a82a1" Description="Description for NuPattern.Authoring.WorkflowDesign.ToolOutputConnector" Name="ToolOutputConnector" DisplayName="Tool Output Connector" Namespace="NuPattern.Authoring.WorkflowDesign" FixedTooltipText="Tool Output Connector">
       <BaseConnector>
         <ConnectorMoniker Name="DesignConnector" />
       </BaseConnector>
@@ -451,7 +451,7 @@
         <TextDecorator Name="ActionDecorator" DisplayName="Action Decorator" DefaultText="Produces" />
       </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="d5a4626d-0dd7-4d2b-8a95-7f4e9e14bec4" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.ToolCopyConnector" Name="ToolCopyConnector" DisplayName="Tool Copy Connector" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" FixedTooltipText="Tool Copy Connector">
+    <Connector Id="d5a4626d-0dd7-4d2b-8a95-7f4e9e14bec4" Description="Description for NuPattern.Authoring.WorkflowDesign.ToolCopyConnector" Name="ToolCopyConnector" DisplayName="Tool Copy Connector" Namespace="NuPattern.Authoring.WorkflowDesign" FixedTooltipText="Tool Copy Connector">
       <BaseConnector>
         <ConnectorMoniker Name="DesignConnector" />
       </BaseConnector>
@@ -460,7 +460,7 @@
       </ConnectorHasDecorators>
     </Connector>
   </Connectors>
-  <XmlSerializationBehavior Name="WorkflowDesignSerializationBehavior" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign">
+  <XmlSerializationBehavior Name="WorkflowDesignSerializationBehavior" Namespace="NuPattern.Authoring.WorkflowDesign">
     <ClassData>
       <XmlClassData TypeName="WorkflowDesignDiagram" MonikerAttributeName="" SerializeId="true" MonikerElementName="workflowDesignDiagramMoniker" ElementName="workflowDesignDiagram" MonikerTypeName="WorkflowDesignDiagramMoniker">
         <DiagramMoniker Name="WorkflowDesignDiagram" />
@@ -768,14 +768,14 @@
       </LinkConnectDirective>
     </ConnectionBuilder>
   </ConnectionBuilders>
-  <Diagram Id="1e053907-f125-4a0f-bc82-0cfe32cb32d6" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram" Name="WorkflowDesignDiagram" DisplayName="WorkflowDesignDiagram" Namespace="Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign" GeneratesDoubleDerived="true">
+  <Diagram Id="1e053907-f125-4a0f-bc82-0cfe32cb32d6" Description="Description for NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram" Name="WorkflowDesignDiagram" DisplayName="WorkflowDesignDiagram" Namespace="NuPattern.Authoring.WorkflowDesign" GeneratesDoubleDerived="true">
     <Properties>
       <DomainProperty Id="62daca27-748c-4918-9f33-938eefbf5361" Description="The color of the gradient in the title of the background." Name="AuthoringGradientColor" DisplayName="Authoring Gradient Color" DefaultValue="WhiteSmoke" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
         <Type>
           <ExternalTypeMoniker Name="/System.Drawing/Color" />
         </Type>
       </DomainProperty>
-      <DomainProperty Id="5f31d4ab-e4f7-4a1e-a2fb-ccc547948537" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram.Authoring Background Color" Name="AuthoringBackgroundColor" DisplayName="Authoring Background Color" DefaultValue="White" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
+      <DomainProperty Id="5f31d4ab-e4f7-4a1e-a2fb-ccc547948537" Description="Description for NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.Authoring Background Color" Name="AuthoringBackgroundColor" DisplayName="Authoring Background Color" DefaultValue="White" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
         <Type>
           <ExternalTypeMoniker Name="/System.Drawing/Color" />
         </Type>
@@ -790,7 +790,7 @@
           <ExternalTypeMoniker Name="/System.Drawing/Color" />
         </Type>
       </DomainProperty>
-      <DomainProperty Id="7e3a2258-2ee4-49fc-9afe-96310c5ed58d" Description="Description for Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign.WorkflowDesignDiagram.Tailoring Background Color" Name="TailoringBackgroundColor" DisplayName="Tailoring Background Color" DefaultValue="204, 204, 204" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
+      <DomainProperty Id="7e3a2258-2ee4-49fc-9afe-96310c5ed58d" Description="Description for NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.Tailoring Background Color" Name="TailoringBackgroundColor" DisplayName="Tailoring Background Color" DefaultValue="204, 204, 204" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
         <Type>
           <ExternalTypeMoniker Name="/System.Drawing/Color" />
         </Type>

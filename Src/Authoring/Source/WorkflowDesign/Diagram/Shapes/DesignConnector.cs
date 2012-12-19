@@ -1,5 +1,5 @@
 ﻿
-namespace Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	/// <summary>
 	/// Customizations to the <see cref="DesignConnector"/> class.

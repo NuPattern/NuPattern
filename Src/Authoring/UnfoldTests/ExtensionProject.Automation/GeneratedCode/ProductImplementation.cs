@@ -14,7 +14,7 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
 namespace ExtensionProject.Automation.GeneratedCode
 {
@@ -64,9 +64,9 @@ namespace ExtensionProject.Automation.GeneratedCode
 		}
 
 		///	<summary>
-		///	Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ProductElement
+		///	Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement
 		///	</summary>
-		[Description("Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ProductElement")]
+		[Description("Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement")]
 		public IEnumerable<IReference> References
 		{
 			get { return this.proxy.GetValue(() => this.References); }

@@ -1,10 +1,10 @@
-﻿<#@ Template Inherits="Microsoft.VisualStudio.Patterning.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" #>
-<#@ ModelElement Type="Microsoft.VisualStudio.Patterning.Runtime.IProductElement" Processor="ModelElementProcessor" #>
+﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" #>
+<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ Output extension=".vstemplate" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Patterning.Authoring.Toolkit.Automation.dll" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Runtime" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Patterning.Authoring.Authoring" #>
+<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="NuPattern.Authoring.Toolkit.Automation.dll" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Authoring.Authoring" #>
 <#@ Import Namespace="System.Linq" #>
 <#
 	IItemTemplate template = ((IProductElement)this.Element).As<IItemTemplate>();
@@ -25,7 +25,7 @@
 		<ProjectItem TargetFileName="$fileinputname$.cs" ReplaceParameters="true">Content.cs</ProjectItem>
 	</TemplateContent>
 	<WizardExtension>
-		<Assembly>Microsoft.VisualStudio.Patterning.Library, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-		<FullClassName>Microsoft.VisualStudio.Patterning.Library.Automation.ElementReplacementsWizard</FullClassName>
+		<Assembly>NuPattern.Library, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
 	</WizardExtension>
 </VSTemplate>

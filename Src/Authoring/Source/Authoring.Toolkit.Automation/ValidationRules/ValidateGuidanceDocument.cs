@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Authoring.Authoring;
-using Microsoft.VisualStudio.Patterning.Authoring.Automation.Properties;
-using Microsoft.VisualStudio.Patterning.Authoring.Guidance;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Authoring.Authoring;
+using NuPattern.Authoring.Automation.Properties;
+using NuPattern.Authoring.Guidance;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Automation.ValidationRules
+namespace NuPattern.Authoring.Automation.ValidationRules
 {
     /// <summary>
     /// A custom validation rule that verifies values of properties or instances of elements.
