@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
@@ -19,7 +20,7 @@ namespace NuPattern.HandsOnLabs.Guidance
 	/// </summary>
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2012", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
 	public partial class ProcessWorkflow : GuidanceWorkflow
 	{
 		/// <summary>
@@ -682,7 +683,7 @@ namespace NuPattern.HandsOnLabs.Guidance
 	[PartCreationPolicy(CreationPolicy.NonShared)]
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2012", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
 	public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
 	{
 		/// <summary>
