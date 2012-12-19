@@ -20,7 +20,7 @@ namespace NuPattern.Authoring.Authoring.Guidance
 	/// </summary>
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2012", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
 	public partial class ProcessWorkflow : GuidanceWorkflow
 	{
 		/// <summary>
@@ -61,7 +61,7 @@ namespace NuPattern.Authoring.Authoring.Guidance
 			var fork2 = new Fork
 			{
 				Name = "First Time Users",
-				Description = "These topics are aimed at the first time users and first time authors of Pattern Toolkits.",
+				Description = "These topics are aimed at the first time users, and first time authors, of Pattern Toolkits.",
 			};
 			initial1.ConnectTo(fork2);
 			var fork3 = new Fork
@@ -72,8 +72,8 @@ namespace NuPattern.Authoring.Authoring.Guidance
 			fork2.ConnectTo(fork3);
 			var guidanceaction4 = new GuidanceAction
 			{
-				Name = "What is the Pattern Automation Toolkit?",
-				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisthePatternAutomationToolkit.mht",
+				Name = "What is NuPattern?",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/WhatisNuPattern.mht",
 			};
 			fork3.ConnectTo(guidanceaction4);
 			var fork5 = new Fork
@@ -194,8 +194,8 @@ namespace NuPattern.Authoring.Authoring.Guidance
 			fork23.ConnectTo(guidanceaction24);
 			var guidanceaction25 = new GuidanceAction
 			{
-				Name = "Installing the Pattern Automation Toolkit",
-				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/InstallingthePatternAutomationToolkit.mht",
+				Name = "Installing NuPattern",
+				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/InstallingNuPattern.mht",
 			};
 			guidanceaction24.ConnectTo(guidanceaction25);
 			var guidanceaction26 = new GuidanceAction
@@ -1748,75 +1748,69 @@ namespace NuPattern.Authoring.Authoring.Guidance
 				Name = "Join40",
 			};
 			guidanceaction292.ConnectTo(join293);
-			var guidanceaction294 = new GuidanceAction
-			{
-				Name = "Feature Builder Power Tool",
-				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/FeatureBuilderPowerTool.mht",
-			};
-			join293.ConnectTo(guidanceaction294);
-			var join295 = new Join
+			var join294 = new Join
 			{
 				Name = "Join41",
 			};
-			guidanceaction294.ConnectTo(join295);
-			var guidanceaction296 = new GuidanceAction
+			join293.ConnectTo(join294);
+			var guidanceaction295 = new GuidanceAction
 			{
 				Name = "More Information",
 				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/MoreInformation.mht",
 			};
-			join295.ConnectTo(guidanceaction296);
-			var fork297 = new Fork
+			join294.ConnectTo(guidanceaction295);
+			var fork296 = new Fork
 			{
 				Name = "Known Issues",
-				Description = "This is a list of the critical known issues in the current version of the ‘Pattern Automation Toolkit’.",
+				Description = "This is a list of the critical known issues in the current version of NuPattern.",
 			};
-			guidanceaction296.ConnectTo(fork297);
-			var guidanceaction298 = new GuidanceAction
+			guidanceaction295.ConnectTo(fork296);
+			var guidanceaction297 = new GuidanceAction
 			{
 				Name = "Error when opening a pattern toolkit solution file",
 				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Errorwhenopeningapatterntoolkitsolutionfile.mht",
 			};
-			fork297.ConnectTo(guidanceaction298);
-			var guidanceaction299 = new GuidanceAction
+			fork296.ConnectTo(guidanceaction297);
+			var guidanceaction298 = new GuidanceAction
 			{
 				Name = "Corruption of pattern model when performing an Undo",
 				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/CorruptionofpatternmodelwhenperforminganUndo.mht",
 			};
-			guidanceaction298.ConnectTo(guidanceaction299);
-			var guidanceaction300 = new GuidanceAction
+			guidanceaction297.ConnectTo(guidanceaction298);
+			var guidanceaction299 = new GuidanceAction
 			{
 				Name = "Error in Text Templates when using the Visual T4 Editor",
 				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/ErrorinTextTemplateswhenusingtheVisualT4Editor.mht",
 			};
-			guidanceaction299.ConnectTo(guidanceaction300);
-			var guidanceaction301 = new GuidanceAction
+			guidanceaction298.ConnectTo(guidanceaction299);
+			var guidanceaction300 = new GuidanceAction
 			{
 				Name = "Build error: “store must be open for this operation”",
 				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Builderrorstoremustbeopenforthisoperation.mht",
 			};
-			guidanceaction300.ConnectTo(guidanceaction301);
-			var guidanceaction302 = new GuidanceAction
+			guidanceaction299.ConnectTo(guidanceaction300);
+			var guidanceaction301 = new GuidanceAction
 			{
 				Name = "Error, building guidance with 64bit versions of Microsoft Word.",
 				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Errorbuildingguidancewith64bitversionsofMicrosoftWord.mht",
 			};
-			guidanceaction301.ConnectTo(guidanceaction302);
-			var join303 = new Join
+			guidanceaction300.ConnectTo(guidanceaction301);
+			var join302 = new Join
 			{
 				Name = "Join42",
 			};
-			guidanceaction302.ConnectTo(join303);
-			var guidanceaction304 = new GuidanceAction
+			guidanceaction301.ConnectTo(join302);
+			var guidanceaction303 = new GuidanceAction
 			{
 				Name = "Feedback",
 				Link = "content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidance/Content/Feedback.mht",
 			};
-			join303.ConnectTo(guidanceaction304);
-			var final305 = new Final
+			join302.ConnectTo(guidanceaction303);
+			var final304 = new Final
 			{
 				Name = "ActivityFinal1",
 			};
-			guidanceaction304.ConnectTo(final305);
+			guidanceaction303.ConnectTo(final304);
 
 			this.OnPostInitialize();
 		}
@@ -1832,7 +1826,7 @@ namespace NuPattern.Authoring.Authoring.Guidance
 	[PartCreationPolicy(CreationPolicy.NonShared)]
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2012", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
 	public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
 	{
 		/// <summary>

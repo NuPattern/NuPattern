@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CCFA64.34861DA0"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDDE4E.356A0B90"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CCFA64.34861DA0
+------=_NextPart_01CDDE4E.356A0B90
 Content-Location: file:///C:/26F25D13/HowToWritingTextTemplates.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -36,15 +36,14 @@ w\:* {behavior:url(#default#VML);}
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-03-05T09:09:00Z</o:Created>
-  <o:LastSaved>2012-03-05T09:09:00Z</o:LastSaved>
+  <o:Created>2012-12-19T12:06:00Z</o:Created>
+  <o:LastSaved>2012-12-19T12:06:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>932</o:Words>
-  <o:Characters>5315</o:Characters>
-  <o:Company>Microsoft Corporation</o:Company>
-  <o:Lines>44</o:Lines>
+  <o:Words>917</o:Words>
+  <o:Characters>5229</o:Characters>
+  <o:Lines>43</o:Lines>
   <o:Paragraphs>12</o:Paragraphs>
-  <o:CharactersWithSpaces>6235</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>6134</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -366,20 +365,12 @@ n"/>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:1;
-	mso-generic-font-family:roman;
-	mso-font-format:other;
-	mso-font-pitch:variable;
-	mso-font-signature:0 0 0 0 0 0;}
-@font-face
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;
 	mso-font-charset:0;
 	mso-generic-font-family:swiss;
 	mso-font-pitch:variable;
-	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
 @font-face
 	{font-family:Tahoma;
 	panose-1:2 11 6 4 3 5 4 4 2 4;
@@ -2117,9 +2108,7 @@ ul
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-hansi-theme-font:minor-latin;}
 table.MsoTableGrid
 	{mso-style-name:"Table Grid";
 	mso-tstyle-rowband-size:0;
@@ -2139,9 +2128,7 @@ table.MsoTableGrid
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-hansi-theme-font:minor-latin;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext=3D"edit" spidmax=3D"1027"/>
@@ -2169,7 +2156,7 @@ margin-left:0in;mso-add-space:auto;background:#D6E3BC;mso-background-themec=
 olor:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
 al'>Tip</b>:
-By default, Visual Studio 2010 does not support color syntax coding of text
+By default, Visual Studio does not support color syntax coding of text
 templates. You are strongly recommended to obtain 3<sup>rd</sup> party tools
 (i.e. <a href=3D"http://www.visualt4.com/">Visual T4</a>) to edit text temp=
 lates.
@@ -2226,16 +2213,15 @@ do, how they work and how they can be changed for individual text templates=
 <p class=3DSourceCode><span style=3D'background:gold'>&lt;#@</span>&nbsp;<b=
 ><span
 style=3D'color:brown'>Template</span></b>&nbsp;<span style=3D'color:red'>In=
-herits</span>=3D&quot;NuPattern.Library.ModelElemen=
-tTextTransformation&quot;&nbsp;<span
+herits</span>=3D&quot;NuPattern.Library.ModelElementTextTransformation&quot=
+;&nbsp;<span
 style=3D'color:red'>HostSpecific</span>=3D&quot;True&quot;&nbsp;<span
 style=3D'color:red'>Debug</span>=3D&quot;True&quot;&nbsp;<span style=3D'bac=
 kground:
 gold'>#&gt;</span><span style=3D'color:olive;background:white'><br>
 </span><span style=3D'background:gold'>&lt;#@</span>&nbsp;<b><span
 style=3D'color:brown'>ModelElement</span></b>&nbsp;<span style=3D'color:red=
-'>Type</span>=3D&quot;NuPattern.Runtime.IProductEle=
-ment&quot;&nbsp;<span
+'>Type</span>=3D&quot;NuPattern.Runtime.IProductElement&quot;&nbsp;<span
 style=3D'color:red'>Processor</span>=3D&quot;ModelElementProcessor&quot;&nb=
 sp;<span
 style=3D'background:gold'>#&gt;</span><b style=3D'mso-bidi-font-weight:norm=
@@ -2267,7 +2253,7 @@ margin-left:.4in;margin-right:.4in'>
 pt;
 margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
-normal'>Note</b>: <span style=3D'mso-spacerun:yes'> </span>In the ‘Initiali=
+normal'>Note</b>:<span style=3D'mso-spacerun:yes'>  </span>In the ‘Initiali=
 zers’
 section below, the type is then cast to the specific type in the pattern mo=
 del,
@@ -2280,14 +2266,12 @@ to access it programmatically.<o:p></o:p></p>
 <p class=3DSourceCode><span style=3D'background:gold'>&lt;#@</span>&nbsp;<b=
 ><span
 style=3D'color:brown'>Assembly</span></b>&nbsp;<span style=3D'color:red'>Na=
-me</span>=3D&quot;NuPattern.Runtime.Interfaces.dll&=
-quot;&nbsp;<span
+me</span>=3D&quot;NuPattern.Runtime.Interfaces.dll&quot;&nbsp;<span
 style=3D'background:gold'>#&gt;</span><span style=3D'color:olive;background=
 :white'><br>
 </span><span style=3D'background:gold'>&lt;#@</span>&nbsp;<b><span
 style=3D'color:brown'>Import</span></b>&nbsp;<span style=3D'color:red'>Name=
-space</span>=3D&quot;NuPattern.Runtime&quot;&nbsp;<=
-span
+space</span>=3D&quot;NuPattern.Runtime&quot;&nbsp;<span
 style=3D'background:gold'>#&gt;</span><span style=3D'color:olive;background=
 :white'><br>
 </span><span style=3D'background:gold'>&lt;#@</span>&nbsp;<b><span
@@ -2374,8 +2358,9 @@ margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 normal'>Note</b>: The T4 code generation automation command that commonly is
 used to execute the text template allows you to override this directive by
 specifying the file name and extension in the command settings. However, if
-only a filename is provided with no extension then the extension from this
-directive is used.<o:p></o:p></p>
+only a filename is provided with no extension then the extension from this =
+directive
+is used.<o:p></o:p></p>
 
 </div>
 
@@ -2520,7 +2505,7 @@ and Text Templates</a> for references to writing text templates in general.=
 
 </html>
 
-------=_NextPart_01CCFA64.34861DA0
+------=_NextPart_01CDDE4E.356A0B90
 Content-Location: file:///C:/26F25D13/HowToWritingTextTemplates_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2581,7 +2566,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CCFA64.34861DA0
+------=_NextPart_01CDDE4E.356A0B90
 Content-Location: file:///C:/26F25D13/HowToWritingTextTemplates_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2591,7 +2576,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CCFA64.34861DA0
+------=_NextPart_01CDDE4E.356A0B90
 Content-Location: file:///C:/26F25D13/HowToWritingTextTemplates_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3054,7 +3039,7 @@ vbBt2zYxLflX/u9X/h9Y/k9YftB4UGP1fma0loxj6cAdtGOpIJYsX4j9M85mzZrFM850HLJVKiOC
 juUbKS2O9Zvc+UFzWlDmEE1nypiWErLtY429bBOImThWTtwrk4myK59nEsvWNf07yvIyue9GZpOe
 lWC8XDIpmrVz507RLPmtRrN8Gznhzuj/AFEsf0zv4f3hAAAAAElFTkSuQmCC
 
-------=_NextPart_01CCFA64.34861DA0
+------=_NextPart_01CDDE4E.356A0B90
 Content-Location: file:///C:/26F25D13/HowToWritingTextTemplates_files/image002.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -3069,125 +3054,125 @@ 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
-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
-8R/32KWacRf3QB3Y4FQfb/8Aah/76P8AhWcqsIu0pJfMpRk9kT75v+eA/wC+6RBI0+90CgLj72e9
-Q/b/APah/wC+j/hR9v8A9qH/AL6P+FL29L+Zfeg5Jdi7RVL7cT90ROf7ocgn6ZFWopVmTcufQgjB
-B9DVxnGesXcTTW4+iiiqEFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
-RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABWM/8AyOkX/YPf/wBGLWzXPahYxX/i
-2COV5kAsXbMUrRn769waANm5geWSB08vMb7iWGT0I4/OkWCX7cJ2MWPLKHAIJ5zVH/hGrT/nvf8A
-/gZJ/jR/wjVp/wA97/8A8DJP8aAH6lnzEHsf51Sqae0jskjhiaVlGTmWQuevqea5TTNY1G3v7fTt
-WhJnuJHIcchVHTkcV87iqbnXm10/yO+lJKCuaU9zqKFxDbl2LkDcoAUdsHPP4/Smi91RkGdPCNkg
-gnORk4weg7fnUMl1rMUr+XatKTOy4YARrHn5SpBzyOpPT0qpaX3idFK3NhG467yBuxx0CnHHJwet
-YqF10Kb9Tasp7uYt9qtlhXHykHk/Udq1YL1ojll3nGM5wf8A69cpFe+Io5nV7FJk3na5UJkbjjjP
-Hy4OTnpjHNWtPudWlu7f7fb+UjRyeYEQbQ3y7TnJI43DHtThKpSlzQaQnyyVpI6n+1R/zyP/AH1R
-/ao/55H/AL6rOoq/7QxH834IPYU+xof2sB/yy/8AHqWPVkkYKFC575zis1hkdM4IOPWo4VcOd7M+
-ZCyls/KvYck+vTpXVRxVSVOU5VLNbKy1Mp00pJKJ0EE3mhgwwynBFTVUtf8Aj5n/AN41br2jkCii
-igAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKK
-ACiiigAooooAKx3/AORyi/68H/8ARi1sVjv/AMjlF/14P/6MWgDYooooAzL/AGFv3j+WV6MRkEVn
-m4tAcG8i/wC+W/wrfkhjlHzqDUX9n23/ADxWuSrgqNWXPJamsa04qyMT7TZ/8/kX/fLf4UfabP8A
-5/Iv++W/wrb+wW3/ADyWj7Bbf88lrP8As6h2/Ef1iZifabP/AJ/Iv++W/wAKig1HT7lGaK+iYKxU
-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
+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
 
-------=_NextPart_01CCFA64.34861DA0
+------=_NextPart_01CDDE4E.356A0B90
 Content-Location: file:///C:/26F25D13/HowToWritingTextTemplates_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -3200,4 +3185,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image002.jpg"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CCFA64.34861DA0--
+------=_NextPart_01CDDE4E.356A0B90--

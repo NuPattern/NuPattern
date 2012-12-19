@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CCFA64.45EF0E30"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDDE4F.150A9490"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CCFA64.45EF0E30
+------=_NextPart_01CDDE4F.150A9490
 Content-Location: file:///C:/A5081224/HowToCreatinganImportingCommand.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -28,15 +28,14 @@ t.xml">
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-03-05T09:09:00Z</o:Created>
-  <o:LastSaved>2012-03-05T09:09:00Z</o:LastSaved>
+  <o:Created>2012-12-19T12:12:00Z</o:Created>
+  <o:LastSaved>2012-12-19T12:12:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>982</o:Words>
-  <o:Characters>5604</o:Characters>
-  <o:Company>Microsoft Corporation</o:Company>
+  <o:Words>979</o:Words>
+  <o:Characters>5583</o:Characters>
   <o:Lines>46</o:Lines>
   <o:Paragraphs>13</o:Paragraphs>
-  <o:CharactersWithSpaces>6573</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>6549</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -365,20 +364,19 @@ n"/>
 	mso-font-pitch:variable;
 	mso-font-signature:0 268435456 0 0 -2147483648 0;}
 @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:1;
-	mso-generic-font-family:roman;
-	mso-font-format:other;
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
 	mso-font-pitch:variable;
-	mso-font-signature:0 0 0 0 0 0;}
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
 @font-face
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;
 	mso-font-charset:0;
 	mso-generic-font-family:swiss;
 	mso-font-pitch:variable;
-	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
 @font-face
 	{font-family:Tahoma;
 	panose-1:2 11 6 4 3 5 4 4 2 4;
@@ -2240,9 +2238,7 @@ ul
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-hansi-theme-font:minor-latin;}
 table.MsoTableGrid
 	{mso-style-name:"Table Grid";
 	mso-tstyle-rowband-size:0;
@@ -2262,9 +2258,7 @@ table.MsoTableGrid
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-hansi-theme-font:minor-latin;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026"/>
@@ -2319,9 +2313,9 @@ automation to execute. Instead, these kinds of commands should suppress tho=
 se
 events, and create the elements ‘silently’. This is necessary because, most=
  of
-the automation that is triggered by the ‘IOnElementInstantiated’ event, not
-only presumes the element is brand new and not initialized, but in many cas=
-es
+the automation that is triggered by the ‘IOnElementInstantiated’ event, not=
+ only
+presumes the element is brand new and not initialized, but in many cases
 executes automation (unfolding templates etc.) that creates newly related
 artifacts for the element. This automation must be suppressed if the artifa=
 cts
@@ -2347,9 +2341,10 @@ style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
 '><span
 style=3D'mso-list:Ignore'>2.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>When invoked, an ‘Import’ wizard may be
-displayed, and the user is guided to select, sort, filter values to be
-imported.<o:p></o:p></p>
+</span></span></span><![endif]>When invoked, an ‘Import’ wizard may be disp=
+layed,
+and the user is guided to select, sort, filter values to be imported.<o:p><=
+/o:p></p>
 
 <p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
 l1 level1 lfo3'><![if !supportLists]><span
@@ -2446,8 +2441,8 @@ mily:
 Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
 ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>Where the first parameter is an optional
-initializer used to set initial properties on the created element/collectio=
-n/extension.<o:p></o:p></p>
+initializer used to set initial properties on the created
+element/collection/extension.<o:p></o:p></p>
 
 <p class=3DMsoListParagraphCxSpLast style=3D'margin-left:1.0in;mso-add-spac=
 e:auto;
@@ -2469,9 +2464,8 @@ pt;
 margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: In regular commands that create new solution elements, the
-second parameter is typically omitted or left true, so that the correct ins=
-tantiation
-events are fired.<o:p></o:p></p>
+second parameter is typically omitted or left true, so that the correct
+instantiation events are fired.<o:p></o:p></p>
 
 </div>
 
@@ -2496,8 +2490,8 @@ handle many uncommon cases.<o:p></o:p></p>
 responsibilities are. Select the base class that suits your needs best.<o:p=
 ></o:p></p>
 
-<p class=3DMsoNormal>namespace <i style=3D'mso-bidi-font-style:normal'>Micr=
-osoft.VisualStudio.Patterning.Library.Commands</i>:<b
+<p class=3DMsoNormal>namespace <i style=3D'mso-bidi-font-style:normal'>NuPa=
+ttern.Library.Commands</i>:<b
 style=3D'mso-bidi-font-weight:normal'><o:p></o:p></b></p>
 
 <p class=3DMsoNormal><b style=3D'mso-bidi-font-weight:normal'>CreateElement=
@@ -2605,9 +2599,8 @@ margin-left:0in;mso-add-space:auto;background:#D6E3BC;mso-background-themec=
 olor:
 accent3;mso-background-themetint:102'>Derive a custom command class from th=
 is
-class and provide your own ‘FileImporter’ to process files selected from ‘W=
-indows
-Explorer’.<o:p></o:p></p>
+class and provide your own ‘FileImporter’ to process files selected from
+‘Windows Explorer’.<o:p></o:p></p>
 
 </div>
 
@@ -2634,7 +2627,7 @@ a Command</a>.<o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CCFA64.45EF0E30
+------=_NextPart_01CDDE4F.150A9490
 Content-Location: file:///C:/A5081224/HowToCreatinganImportingCommand_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2695,7 +2688,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CCFA64.45EF0E30
+------=_NextPart_01CDDE4F.150A9490
 Content-Location: file:///C:/A5081224/HowToCreatinganImportingCommand_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2705,7 +2698,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CCFA64.45EF0E30
+------=_NextPart_01CDDE4F.150A9490
 Content-Location: file:///C:/A5081224/HowToCreatinganImportingCommand_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -2716,4 +2709,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"colorschememapping.xml"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CCFA64.45EF0E30--
+------=_NextPart_01CDDE4F.150A9490--

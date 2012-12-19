@@ -144,6 +144,12 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AuthoringToolkitInfo.gen.cs</LastGenOutput>
     </None>
+    <Content Include="GeneratedCode\Guidance\Content\InstallingNuPattern.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatisNuPattern.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="RuntimeShellInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RuntimeShellInfo.gen.cs</LastGenOutput>
@@ -300,13 +306,7 @@
     <Content Include="GeneratedCode\Guidance\Content\WhatistheGuidanceExplorer.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisthePatternAutomationToolkit.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="GeneratedCode\Guidance\Content\WhyWouldIWanttoUseaPatternToolkit.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\InstallingthePatternAutomationToolkit.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\MoreInformation.mht">
@@ -322,9 +322,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\ExtensionManager.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\FeatureBuilderPowerTool.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\HowToAutomationDesignGuidelines.mht">
