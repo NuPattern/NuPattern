@@ -107,15 +107,15 @@
       <Project>{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}</Project>
       <Name>Authoring.Toolkit.Automation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\PatternModelDesign.Shell\PatternModelDesign.Shell.csproj">
+    <ProjectReference Include="..\Source\Authoring.PatternModelDesign.Shell\Authoring.PatternModelDesign.Shell.csproj">
       <Project>{A999A0EB-246C-4B63-8BC1-405020026CAB}</Project>
       <Name>PatternModelDesign.Shell</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\WorkflowDesign.Interfaces\WorkflowDesign.Interfaces.csproj">
+    <ProjectReference Include="..\Source\Authoring.WorkflowDesign.Interfaces\Authoring.WorkflowDesign.Interfaces.csproj">
       <Project>{A55CFA2E-1519-4719-BAFB-D67F3C67E375}</Project>
       <Name>WorkflowDesign.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\WorkflowDesign\WorkflowDesign.csproj">
+    <ProjectReference Include="..\Source\Authoring.WorkflowDesign\Authoring.WorkflowDesign.csproj">
       <Project>{B29AC5FA-1276-46C3-A6F5-C0F8D2F8914A}</Project>
       <Name>WorkflowDesign</Name>
     </ProjectReference>

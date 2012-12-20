@@ -1,0 +1,23 @@
+﻿<p:WizardWindow
+    x:Class="NuPattern.Authoring.PatternToolkit.Assets.Wizards.ToolkitCreationWizard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://schemas.microsoft.com/visualstudiopatterning/2010/xaml/"
+    xmlns:l="clr-namespace:NuPattern.Authoring.Authoring.Assets.Wizards.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="467" Width="700"
+    Title="New Pattern Toolkit">
+    <p:WizardWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </p:WizardWindow.Resources>
+    
+    <p:WizardWindow.Pages>
+        <l:ToolkitType />
+        <l:ToolkitInfo />
+    </p:WizardWindow.Pages>
+</p:WizardWindow>

@@ -1,0 +1,118 @@
+﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True"#>
+<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
+<#@ Assembly Name="NuPattern.Runtime.Schema.dll" #>
+<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="NuPattern.Authoring.Toolkit.Automation.dll" #>
+<#@ Assembly Name="NuPattern.Extensibility.dll" #>
+<#@ Assembly Name="System.ComponentModel.Composition" #>
+<#@ Assembly Name="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
+<#@ Import Namespace="Microsoft.VisualStudio.Modeling" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Runtime.Schema" #>
+<#@ Import Namespace="NuPattern.Extensibility" #>
+<#@ Import Namespace="NuPattern.Authoring.Library" #>
+<#@ Import Namespace="System.Linq" #>
+<#@ Import Namespace="System.Collections.Generic" #>
+<#@ Import Namespace="System.ComponentModel" #>
+<#@ Import Namespace="System.Reflection" #>
+<#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
+<#@ Include File="Constants.t4" #>
+<#@ Include File="Helpers.t4" #>
+<#@ Include File="Header.t4" #>
+<#@ Include File="NamedElementParentImplementation.t4" #>
+<#@ Include File="ElementContainerImplementation.t4" #>
+<#@ Include File="ProductElementImplementation.t4" #>
+<#
+var library = this.Element.As<IPatternToolkitLibrary>();
+var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.Authoring.IDevelopment>();
+var toolkitInfo = developmentView.PatternToolkitInfo;
+
+if (toolkitInfo == null)
+    throw new Exception("ToolkitInfo element not found");
+
+var patternModel = developmentView.PatternModel;
+var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
+var store = pattern.Store;
+
+// The pluralizer in .NET 4.0 only supports English.
+var pluralizer = PluralizationService.CreateService(new System.Globalization.CultureInfo("en-US"));
+
+foreach (var element in store.DefaultPartition.ElementDirectory.AllElements.OfType<IElementInfo>())
+{
+    var codegen = new ProductCodeGeneration<IElementInfo, IElement>(element);
+    codegen.AddType(typeof(Action));
+    codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
+    codegen.EndInit();
+#>
+namespace <#=library.ToolkitProjectRootNamespace #>
+{
+<#GenerateUsings(codegen);#>
+
+	<#GenerateToolkitCommentsAndAttributes(AttributeTargets.Class, library, toolkitInfo, element); #>
+	internal partial class <#=element.CodeIdentifier #> : I<#=element.CodeIdentifier #>
+	{
+		private Runtime.IAbstractElement target;
+		private Runtime.IAbstractElementProxy<I<#=element.CodeIdentifier #>> proxy;
+
+		/// <summary>
+		/// For MEF.
+		/// </summary>
+		[ImportingConstructor]
+		private <#=element.CodeIdentifier#>() { }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="<#=element.CodeIdentifier #>"/> class.
+		/// </summary>
+		public <#=element.CodeIdentifier #>(Runtime.IAbstractElement target)
+		{
+			this.target = target;
+			this.proxy = target.ProxyFor<I<#=element.CodeIdentifier #>>();
+			OnCreated();
+		}	
+
+		partial void OnCreated();
+
+<#GenerateParentProperty(element); #>
+
+		/// <summary>
+		/// Gets the generic <see cref="Runtime.IElement"/> underlying element.
+		/// </summary>
+		public virtual Runtime.IElement AsElement()
+		{
+			return this.As<Runtime.IElement>();
+		}
+
+		/// <summary>
+		/// Gets the generic underlying element as the given type if possible.
+		/// </summary>
+		public virtual TRuntimeInterface As<TRuntimeInterface>()
+			where TRuntimeInterface : class
+		{
+			return this.target as TRuntimeInterface;
+		}
+<#GenerateProperties(codegen, element); #>
+<#
+PushIndent("\t");
+PushIndent("\t");
+
+GenerateContainedElements(pluralizer, element);
+
+PopIndent();
+PopIndent();
+#>
+
+		/// <summary>
+		/// Deletes this instance.
+		/// </summary>
+		public virtual void Delete()
+		{
+			this.target.Delete();
+		}
+	}
+}
+
+<#
+}
+#>

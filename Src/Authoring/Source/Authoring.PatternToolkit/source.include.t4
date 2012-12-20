@@ -1,0 +1,18 @@
+﻿<#+
+	public const string identifier = "Ignore";
+	public const string toolkitName = "Ignore";
+	public const string author = "Ignore";
+	public const string version = "1.0";
+	public const string description = "Ignore";
+	public const string eula = @"Ignore";
+	public const string icon = @"Ignore";
+
+	public const string productName = "Authoring.Toolkit";
+	public const string rootNamespace = "NuPattern.Authoring.Authoring";
+	public const string assemblyName = "NuPattern.Authoring.Authoring.Toolkit";
+
+	public bool HasValue(string value)
+	{
+		return !string.IsNullOrEmpty(value);
+	}
+#>
