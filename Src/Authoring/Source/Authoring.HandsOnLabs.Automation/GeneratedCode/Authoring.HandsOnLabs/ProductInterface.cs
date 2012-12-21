@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.HandsOnLabs
+namespace NuPattern.Authoring.HandsOnLabs
 {
 	using global::NuPattern.Runtime;
 	using global::System;
@@ -22,9 +22,9 @@ namespace NuPattern.HandsOnLabs
 	///	Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.
 	///	</summary>
 	[Description("Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.")]
-	[ToolkitInterface(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "71309920-c4ac-4283-b6bf-3cec975eca86", ProxyType = typeof(PatternToolkitHOLs))]
+	[ToolkitInterface(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "71309920-c4ac-4283-b6bf-3cec975eca86", ProxyType = typeof(PatternToolkitHandsOnLabs))]
 	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
-	public partial interface IPatternToolkitHOLs : IToolkitInterface
+	public partial interface IPatternToolkitHandsOnLabs : IToolkitInterface
 	{ 
 		///	<summary>
 		///	The ToolkitInfo.
@@ -74,9 +74,9 @@ namespace NuPattern.HandsOnLabs
 		Boolean IsSerializing { get;  }
 
 		///	<summary>
-		///	Description for PatternToolkitHOLs.DefaultView
+		///	Description for PatternToolkitHandsOnLabs.DefaultView
 		///	</summary>
-		[Description("Description for PatternToolkitHOLs.DefaultView")]
+		[Description("Description for PatternToolkitHandsOnLabs.DefaultView")]
 		IDefaultView DefaultView { get; }
 		
 		///	<summary>

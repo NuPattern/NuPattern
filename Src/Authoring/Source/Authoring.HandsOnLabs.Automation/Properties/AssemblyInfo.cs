@@ -2,7 +2,7 @@
 using System.Reflection;
 using Microsoft.VisualStudio.ExtensibilityHosting;
 
-[assembly: AssemblyTitle("HandsOnLabs.Automation")]
+[assembly: AssemblyTitle("Authoring.HandsOnLabs.Automation")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 

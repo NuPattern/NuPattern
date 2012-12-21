@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.HandsOnLabs
+namespace NuPattern.Authoring.HandsOnLabs
 {
 	using global::NuPattern.Runtime;
 	using global::System;
@@ -23,27 +23,27 @@ namespace NuPattern.HandsOnLabs
 	///	Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.
 	///	</summary>
 	[Description("Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.")]
-	[ToolkitInterfaceProxy(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "71309920-c4ac-4283-b6bf-3cec975eca86", ProxyType = typeof(PatternToolkitHOLs))]
+	[ToolkitInterfaceProxy(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "71309920-c4ac-4283-b6bf-3cec975eca86", ProxyType = typeof(PatternToolkitHandsOnLabs))]
 	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	internal partial class PatternToolkitHOLs : IPatternToolkitHOLs
+	internal partial class PatternToolkitHandsOnLabs : IPatternToolkitHandsOnLabs
 	{
 		private Runtime.IProduct target;
-		private Runtime.IProductProxy<IPatternToolkitHOLs> proxy;
+		private Runtime.IProductProxy<IPatternToolkitHandsOnLabs> proxy;
 
 		/// <summary>
 		/// For MEF.
 		/// </summary>
 		[ImportingConstructor]
-		private PatternToolkitHOLs() { }
+		private PatternToolkitHandsOnLabs() { }
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="PatternToolkitHOLs"/> class.
+		/// Initializes a new instance of the <see cref="PatternToolkitHandsOnLabs"/> class.
 		/// </summary>
-		public PatternToolkitHOLs(Runtime.IProduct target)
+		public PatternToolkitHandsOnLabs(Runtime.IProduct target)
 		{
 			this.target = target;
-			this.proxy = target.ProxyFor<IPatternToolkitHOLs>();
+			this.proxy = target.ProxyFor<IPatternToolkitHandsOnLabs>();
 			OnCreated();
 		}	
 
@@ -125,9 +125,9 @@ namespace NuPattern.HandsOnLabs
 		}
 
 		///	<summary>
-		///	Description for PatternToolkitHOLs.DefaultView
+		///	Description for PatternToolkitHandsOnLabs.DefaultView
 		///	</summary>
-		[Description("Description for PatternToolkitHOLs.DefaultView")]
+		[Description("Description for PatternToolkitHandsOnLabs.DefaultView")]
 		public virtual IDefaultView DefaultView
 		{ 
 			get { return this.proxy.GetView(() => this.DefaultView, view => new DefaultView(view)); }

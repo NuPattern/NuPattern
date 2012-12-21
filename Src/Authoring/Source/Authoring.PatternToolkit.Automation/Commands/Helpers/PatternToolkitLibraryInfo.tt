@@ -5,7 +5,7 @@ using System;
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 {
 	/// <summary>
-	/// Definitions for the AutomationLibrary.Toolkit toolkit project
+	/// Definitions for the PatternToolkitLibrary toolkit project
 	/// </summary>
 	internal class AutomationLibraryToolkitInfo
 	{

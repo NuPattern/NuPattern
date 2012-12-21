@@ -1,4 +1,4 @@
-﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\..\..\..\..\WorkflowDesign\DslDefinition.dsl'" #>
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\..\..\..\..\Authoring.WorkflowDesign\DslDefinition.dsl'" #>
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ Include File="..\..\..\..\..\..\..\..\Common\Helpers\DslVersion.tt" #>
 <#@ output extension=".gen.vstemplate" #>

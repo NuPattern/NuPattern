@@ -1,5 +1,5 @@
 ﻿
-namespace NuPattern.HandsOnLabs
+namespace NuPattern.Authoring.HandsOnLabs
 {
     /// <summary>
     /// Information about the toolkit

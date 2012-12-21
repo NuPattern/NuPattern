@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using Microsoft.VisualStudio.ExtensibilityHosting;
 
-[assembly: AssemblyTitle(@"NuPattern.Authoring.Toolkit")]
+[assembly: AssemblyTitle(@"NuPattern.Authoring.PatternToolkit")]
 [assembly: AssemblyDescription(@"")]
 [assembly: AssemblyConfiguration("")]
 

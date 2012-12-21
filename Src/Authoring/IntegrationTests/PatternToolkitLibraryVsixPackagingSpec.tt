@@ -8,7 +8,7 @@ using NuPattern.IntegrationTests;
 namespace NuPattern.Authoring.IntegrationTests
 {
     [TestClass]
-    public class AutomationLibraryVsixPackagingSpec
+    public class PatternToolkitLibraryVsixPackagingSpec
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Authoring.IntegrationTests.Content";
@@ -41,8 +41,8 @@ namespace NuPattern.Authoring.IntegrationTests
 				
 				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
 				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
-				Assert.Equal(@"Resources\VsixIconAutomationLibrary.png", this.VsixInfo.Header.Icon);
-				Assert.Equal(@"Resources\VsixPreviewAutomationLibrary.png", this.VsixInfo.Header.PreviewImage);
+				Assert.Equal(@"Resources\VsixIconPatternToolkitLibrary.png", this.VsixInfo.Header.Icon);
+				Assert.Equal(@"Resources\VsixPreviewPatternToolkitLibrary.png", this.VsixInfo.Header.PreviewImage);
 				Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitLibrary.MoreInfoUrl#>"), this.VsixInfo.Header.MoreInfoUrl);
 				Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitLibrary.GettingStartedUrl#>"), this.VsixInfo.Header.GettingStartedGuide);
 
@@ -136,8 +136,8 @@ namespace NuPattern.Authoring.IntegrationTests
                 Assert.True(this.FolderContainsExclusive(@"Resources",
                     new[]
                         {
-                            "VsixIconAutomationLibrary.png",
-                            "VsixPreviewAutomationLibrary.png",
+                            "VsixIconPatternToolkitLibrary.png",
+                            "VsixPreviewPatternToolkitLibrary.png",
                         }));
 			}
 
@@ -153,7 +153,7 @@ namespace NuPattern.Authoring.IntegrationTests
                             "LICENSE.txt",
 
                             //Library Assemblies
-                            "NuPattern.Authoring.Library.Toolkit.dll",
+                            "NuPattern.Authoring.PatternToolkitLibrary.dll",
                         }));
             }
         }

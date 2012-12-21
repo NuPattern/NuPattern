@@ -24,7 +24,7 @@
 				<ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
 			</Folder>
 			<Folder Name="Resources">
-				<ProjectItem ReplaceParameters="false" TargetFileName="ToolkitIcon.png">VsixIconAuthoringProjectTemplate.png</ProjectItem>
+				<ProjectItem ReplaceParameters="false" TargetFileName="ToolkitIcon.png">VsixIconPatternToolkitProjectTemplate.png</ProjectItem>
 				<ProjectItem ReplaceParameters="false" TargetFileName="PatternIcon.png">PatternNodeDefault.png</ProjectItem>
 			</Folder>
 		</Project>

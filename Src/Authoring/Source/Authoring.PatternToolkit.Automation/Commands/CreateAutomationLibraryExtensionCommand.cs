@@ -10,7 +10,7 @@ using NuPattern.Authoring.PatternToolkit.Automation.Commands;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.Extensibility;
 
-namespace NuPattern.Authoring.Toolkit.Automation.Commands
+namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 {
     /// <summary>
     /// Creates the initial instances of descendant elements in the pattern.

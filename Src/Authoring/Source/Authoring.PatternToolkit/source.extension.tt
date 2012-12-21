@@ -11,10 +11,10 @@
 		<Description xml:space="preserve"><#=VsixInfo.PatternToolkitBuilder.Description#></Description>
 		<Locale>1033</Locale>
 		<License>LICENSE.txt</License>
-		<Icon>Resources\VsixIconAuthoring.png</Icon>
+		<Icon>Resources\VsixIconPatternToolkit.png</Icon>
 		<MoreInfoUrl><#=VsixInfo.PatternToolkitBuilder.MoreInfoUrl#></MoreInfoUrl>
 		<GettingStartedGuide><#=VsixInfo.PatternToolkitBuilder.GettingStartedUrl#></GettingStartedGuide>
-		<PreviewImage>Resources\VsixPreviewAuthoring.png</PreviewImage>
+		<PreviewImage>Resources\VsixPreviewPatternToolkit.png</PreviewImage>
 		<SupportedProducts>
 		  <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
 			<Edition>Pro</Edition>
@@ -52,12 +52,12 @@ else
 	<Content>
 		<VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
 		<MefComponent>|%CurrentProject%|</MefComponent>
-		<VsPackage>|WorkflowDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
-		<MefComponent>|WorkflowDesign.Shell|</MefComponent>
-		<MefComponent>|WorkflowDesign|</MefComponent>
-		<VsPackage>|PatternModelDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
-		<MefComponent>|PatternModelDesign.Shell|</MefComponent>
-		<MefComponent>|Authoring.Toolkit.Automation|</MefComponent>
+		<VsPackage>|Authoring.WorkflowDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
+		<MefComponent>|Authoring.WorkflowDesign.Shell|</MefComponent>
+		<MefComponent>|Authoring.WorkflowDesign|</MefComponent>
+		<VsPackage>|Authoring.PatternModelDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
+		<MefComponent>|Authoring.PatternModelDesign.Shell|</MefComponent>
+		<MefComponent>|Authoring.PatternToolkit.Automation|</MefComponent>
 		<CustomExtension Type="PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternModel.gen.patterndefinition</CustomExtension>
 		<CustomExtension Type="ToolkitCategory" Category="Authoring"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>

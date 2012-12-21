@@ -2,7 +2,7 @@
 using System.Reflection;
 using Microsoft.VisualStudio.ExtensibilityHosting;
 
-[assembly: AssemblyTitle("AutomationLibrary.Toolkit")]
+[assembly: AssemblyTitle("Authoring.PatternToolkitLibrary")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 

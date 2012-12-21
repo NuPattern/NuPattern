@@ -4,7 +4,7 @@
 <#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
 <#@ Assembly Name="NuPattern.Authoring.Toolkit.Automation.dll" #>
 <#@ Import Namespace="NuPattern.Runtime" #>
-<#@ Import Namespace="NuPattern.Authoring.Authoring" #>
+<#@ Import Namespace="NuPattern.Authoring.PatternToolkit" #>
 <#
 	var toolkitInfo = this.Element.As<IPatternToolkitInfo>();
 	var product = toolkitInfo.Parent.Parent;

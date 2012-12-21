@@ -1,5 +1,5 @@
 ﻿//using System;
-//using NuPattern.Authoring.Authoring.Automation.Commands;
+//using NuPattern.Authoring.PatternToolkit.Automation.Commands;
 //using NuPattern.Runtime;
 //using Microsoft.VisualStudio.TestTools.UnitTesting;
 //using Moq;

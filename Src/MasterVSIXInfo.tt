@@ -42,7 +42,7 @@ public static class VsixInfo
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.RuntimeVSIXVersion#>";
 		public const string Identifier = "<#=runtimeVsixId#>";
-		public const string VsixFileName = "NuPatternToolkitManager.<#=VersionInfo.TargetVsVersion#>.vsix"; // Should reflect <TargetVsixContainerName> value in Runtime.Shell.csproj
+		public const string VsixFileName = "NuPatternToolkitManager.<#=VersionInfo.TargetVsVersion#>.vsix";
 		public const string MoreInfoUrl = "http://nupattern.codeplex.com";
 		public const string GettingStartedUrl = "http://nupattern.codeplex.com/wikipage?title=Getting%20Started";
 		public const string SettingsName = "NuPatternToolkitManager";
@@ -55,7 +55,7 @@ public static class VsixInfo
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.AuthoringVSIXVersion#>";
 		public const string Identifier = "<#=authoringVsixId#>";
-		public const string VsixFileName = "NuPatternToolkitBuilder.<#=VersionInfo.TargetVsVersion#>.vsix"; // Should reflect <TargetVsixContainerName> value in Authoring.Toolkit.csproj
+		public const string VsixFileName = "NuPatternToolkitBuilder.<#=VersionInfo.TargetVsVersion#>.vsix";
 		public const string MoreInfoUrl = "http://nupattern.codeplex.com";
 		public const string GettingStartedUrl = "http://nupattern.codeplex.com/wikipage?title=Getting%20Started";
 	}
@@ -66,7 +66,7 @@ public static class VsixInfo
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.AuthoringVSIXVersion#>";
 		public const string Identifier = "<#=automationLibraryVsixId#>";
-		public const string VsixFileName = "NuPatternToolkitLibrary.<#=VersionInfo.TargetVsVersion#>.vsix"; // Should reflect <TargetVsixContainerName> value in AutomationLibrary.Toolkit.csproj
+		public const string VsixFileName = "NuPatternToolkitLibrary.<#=VersionInfo.TargetVsVersion#>.vsix";
 		public const string MoreInfoUrl = "http://nupattern.codeplex.com";
 		public const string GettingStartedUrl = "http://nupattern.codeplex.com/wikipage?title=Getting%20Started";
 	}
@@ -77,7 +77,7 @@ public static class VsixInfo
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.AuthoringVSIXVersion#>";
 		public const string Identifier = "<#=holVsixId#>";
-		public const string VsixFileName = "NuPatternToolkitBuilderLabs.<#=VersionInfo.TargetVsVersion#>.vsix"; // Should reflect <TargetVsixContainerName> value in HandsOnLabs.csproj
+		public const string VsixFileName = "NuPatternToolkitBuilderLabs.<#=VersionInfo.TargetVsVersion#>.vsix";
 		public const string MoreInfoUrl = "http://nupattern.codeplex.com";
 		public const string GettingStartedUrl = "http://nupattern.codeplex.com/wikipage?title=Getting%20Started";
 	}

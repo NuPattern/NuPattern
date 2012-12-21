@@ -3,7 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:p="http://schemas.microsoft.com/visualstudiopatterning/2010/xaml/"
-    xmlns:l="clr-namespace:NuPattern.Authoring.Authoring.Assets.Wizards.Pages"
+    xmlns:l="clr-namespace:NuPattern.Authoring.PatternToolkit.Assets.Wizards.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Height="467" Width="700"

@@ -40,7 +40,7 @@ void Delete();
 <#+
 	}
 
-	private void GenerateToolkitCommentsAndAttributes(AttributeTargets target, NuPattern.Authoring.Library.IPatternToolkitLibrary library, NuPattern.Authoring.Authoring.IPatternToolkitInfo toolkitInfo, INamedElementInfo element)
+	private void GenerateToolkitCommentsAndAttributes(AttributeTargets target, NuPattern.Authoring.Library.IPatternToolkitLibrary library, NuPattern.Authoring.PatternToolkit.IPatternToolkitInfo toolkitInfo, INamedElementInfo element)
 	{
 		PushIndent("\t");
 		GenerateDescription(element);

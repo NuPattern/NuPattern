@@ -224,8 +224,8 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>LibraryProject.gen.csproj</LastGenOutput>
     </None>
-    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsTemplateIconAutomationLibraryProject.ico">
-      <Link>Assets\Templates\Projects\Extensibility\Library\VsTemplateIconAutomationLibraryProject.ico</Link>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsTemplateIconPatternToolkitLibraryProject.ico">
+      <Link>Assets\Templates\Projects\Extensibility\Library\VsTemplateIconPatternToolkitLibraryProject.ico</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="9be0eaf7-8717-414f-97fe-58c0c97be587.gen.patterndefinition.diagram">
@@ -398,19 +398,19 @@
     <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandTransformTemplates.png">
       <Link>Resources\CommandTransformTemplates.png</Link>
     </Resource>
-    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\PatternNodeAutomationLibrary.png">
-      <Link>Resources\PatternNodeAutomationLibrary.png</Link>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\PatternNodePatternToolkitLibrary.png">
+      <Link>Resources\PatternNodePatternToolkitLibrary.png</Link>
     </Resource>
     <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\NodeCustomAutomationClass.png">
       <Link>Resources\NodeCustomAutomationClass.png</Link>
     </Resource>
-    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixIconAutomationLibrary.png">
-      <Link>Resources\VsixIconAutomationLibrary.png</Link>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixIconPatternToolkitLibrary.png">
+      <Link>Resources\VsixIconPatternToolkitLibrary.png</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixPreviewAutomationLibrary.png">
-      <Link>Resources\VsixPreviewAutomationLibrary.png</Link>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixPreviewPatternToolkitLibrary.png">
+      <Link>Resources\VsixPreviewPatternToolkitLibrary.png</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -430,7 +430,7 @@
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
-    <TargetVsixContainerName>$(AutomationLibraryToolkitVsixFileName)</TargetVsixContainerName>
+    <TargetVsixContainerName>$(PatternToolkitLibraryVsixFileName)</TargetVsixContainerName>
   </PropertyGroup>
   <!-- Properties for Toolkit Targets -->
   <PropertyGroup>

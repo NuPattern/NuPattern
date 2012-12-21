@@ -12,7 +12,6 @@ using VSShell = global::Microsoft.VisualStudio.Shell;
 using DslShell = global::Microsoft.VisualStudio.Modeling.Shell;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
-using VSTextTemplatingHost = global::Microsoft.VisualStudio.TextTemplating.VSHost;
 using System;
 using System.Diagnostics;
 using System.Drawing.Design;
@@ -24,7 +23,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// This class implements the VS package that integrates this DSL into Visual Studio.
 	/// </summary>
-	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\10.0")]
+	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\11.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
 	[VSShell::ProvideStaticToolboxGroup("@Pattern Model DesignerToolboxTab;NuPattern.Runtime.Schema.dll", "NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab",
@@ -50,6 +49,7 @@ namespace NuPattern.Runtime.Schema
 					0xff00ff)]
 	[VSShell::ProvideEditorFactory(typeof(PatternModelEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(PatternModelEditorFactory), "." + Constants.DesignerFileExtension, 50)]
+	[VSShell::ProvideEditorLogicalView(typeof(PatternModelEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
 	[DslShell::ProvideRelatedFile("." + Constants.DesignerFileExtension, Constants.DefaultDiagramExtension,
 		ProjectSystem = DslShell::ProvideRelatedFileAttribute.CSharpProjectGuid,
 		FileOptions = DslShell::RelatedFileType.FileName)]
@@ -60,6 +60,7 @@ namespace NuPattern.Runtime.Schema
 	[global::System.Runtime.InteropServices.ComVisible(true)]
 	[DslShell::ProvideBindingPath]
 	[DslShell::ProvideXmlEditorChooserBlockSxSWithXmlEditor(@"PatternModel", typeof(PatternModelEditorFactory))]
+
 	internal abstract partial class PatternModelPackageBase : DslShell::ModelingPackage
 	{
 		protected global::NuPattern.Runtime.Schema.PatternModelToolboxHelper toolboxHelper;	

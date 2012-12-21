@@ -6,9 +6,10 @@
   <!-- VSIX file name overrides -->
   <PropertyGroup>
     <RuntimeShellVsixFileName><#=VsixInfo.PatternToolkitRuntime.VsixFileName #></RuntimeShellVsixFileName>
-    <AuthoringToolkitVsixFileName><#=VsixInfo.PatternToolkitBuilder.VsixFileName #></AuthoringToolkitVsixFileName>
-    <AutomationLibraryToolkitVsixFileName><#=VsixInfo.PatternToolkitLibrary.VsixFileName #></AutomationLibraryToolkitVsixFileName>
+    <PatternToolkitVsixFileName><#=VsixInfo.PatternToolkitBuilder.VsixFileName #></PatternToolkitVsixFileName>
+    <PatternToolkitLibraryVsixFileName><#=VsixInfo.PatternToolkitLibrary.VsixFileName #></PatternToolkitLibraryVsixFileName>
     <HandsOnLabsVsixFileName><#=VsixInfo.PatternToolkitHol.VsixFileName #></HandsOnLabsVsixFileName>
-  </PropertyGroup>
+  
+</PropertyGroup>
   
 </Project>

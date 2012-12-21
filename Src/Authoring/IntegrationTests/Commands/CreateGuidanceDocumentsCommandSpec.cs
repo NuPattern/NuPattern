@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Authoring.Authoring;
-using NuPattern.Authoring.Automation.Commands;
+using NuPattern.Authoring.PatternToolkit;
+using NuPattern.Authoring.PatternToolkit.Automation.Commands;
 using NuPattern.Authoring.Guidance;
 
 namespace NuPattern.Authoring.IntegrationTests

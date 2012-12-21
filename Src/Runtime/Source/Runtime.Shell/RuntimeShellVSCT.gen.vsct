@@ -29,7 +29,7 @@
 			</Button>
 		</Buttons>
 		<Bitmaps>
-			<Bitmap guid="guidOpenSolutionBuilderBitmap" href="..\..\..\Images\11.0\ToolWindowSolutionBuilder.bmp" usedList="bmpPic1" />
+			<Bitmap guid="guidOpenSolutionBuilderBitmap" href="..\..\..\Images\10.0\ToolWindowSolutionBuilder.bmp" usedList="bmpPic1" />
       </Bitmaps>
 	</Commands>
 	<CommandPlacements>

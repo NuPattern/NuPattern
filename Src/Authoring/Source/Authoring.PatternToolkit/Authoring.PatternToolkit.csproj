@@ -140,9 +140,9 @@
       <DependentUpon>source.extension.tt</DependentUpon>
       <IncludeInVSIXAs>source.extension.t4</IncludeInVSIXAs>
     </Content>
-    <None Include="AuthoringPatternToolkitInfo.tt">
+    <None Include="PatternToolkitInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AuthoringPatternToolkitInfo.gen.cs</LastGenOutput>
+      <LastGenOutput>PatternToolkitInfo.gen.cs</LastGenOutput>
     </None>
     <Content Include="GeneratedCode\Guidance\Content\InstallingNuPattern.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -163,10 +163,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AuthoringPackage.tt</DependentUpon>
     </Compile>
-    <Compile Include="AuthoringPatternToolkitInfo.gen.cs">
+    <Compile Include="PatternToolkitInfo.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AuthoringPatternToolkitInfo.tt</DependentUpon>
+      <DependentUpon>PatternToolkitInfo.tt</DependentUpon>
     </Compile>
     <Compile Include="RuntimeShellInfo.gen.cs">
       <AutoGen>True</AutoGen>
@@ -206,8 +206,8 @@
       <Link>Assets\Templates\Projects\Extensibility\Authoring\Resources\PatternNodeDefault.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixIconAuthoringProjectTemplate.png">
-      <Link>Assets\Templates\Projects\Extensibility\Authoring\Resources\VsixIconAuthoringProjectTemplate.png</Link>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixIconPatternToolkitProjectTemplate.png">
+      <Link>Assets\Templates\Projects\Extensibility\Authoring\Resources\VsixIconPatternToolkitProjectTemplate.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -1019,8 +1019,8 @@
       <LastGenOutput>ToolkitGuidance.gen.t4</LastGenOutput>
     </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsTemplateIconAuthoringProject.ico">
-      <Link>Assets\Templates\Projects\Extensibility\Authoring\VsTemplateIconAuthoringProject.ico</Link>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsTemplateIconPatternToolkitProject.ico">
+      <Link>Assets\Templates\Projects\Extensibility\Authoring\VsTemplateIconPatternToolkitProject.ico</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Assets\Templates\Projects\Extensibility\Authoring\AuthoringProject.tt">
@@ -1144,7 +1144,7 @@
       <FixedLink>
       </FixedLink>
     </Content>
-    <Content Include="..\WorkflowDesign\GeneratedCode\WorkflowDesignSchema.gen.xsd">
+    <Content Include="..\Authoring.WorkflowDesign\GeneratedCode\WorkflowDesignSchema.gen.xsd">
       <Visible>true</Visible>
       <Link>GeneratedCode\WorkflowDesignSchema.gen.xsd</Link>
       <FixedLink>
@@ -1201,17 +1201,17 @@
       </FixedLink>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\Binaries\$(AutomationLibraryToolkitVsixFileName)">
+    <Content Include="..\..\..\Binaries\$(PatternToolkitLibraryVsixFileName)">
       <Visible>true</Visible>
-      <Link>$(AutomationLibraryToolkitVsixFileName)</Link>
+      <Link>$(PatternToolkitLibraryVsixFileName)</Link>
       <FixedLink>
       </FixedLink>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\PatternNodeAuthoring.png">
-      <Link>Resources\PatternNodeAuthoring.png</Link>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\PatternNodePatternToolkit.png">
+      <Link>Resources\PatternNodePatternToolkit.png</Link>
     </Resource>
     <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixIconDefault.png">
       <Link>Resources\VsixIconDefault.png</Link>
@@ -1249,13 +1249,13 @@
     <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\NodeToolkitInfo.png">
       <Link>Resources\NodeToolkitInfo.png</Link>
     </Resource>
-    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixIconAuthoring.png">
-      <Link>Resources\VsixIconAuthoring.png</Link>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixIconPatternToolkit.png">
+      <Link>Resources\VsixIconPatternToolkit.png</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixPreviewAuthoring.png">
-      <Link>Resources\VsixPreviewAuthoring.png</Link>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixPreviewPatternToolkit.png">
+      <Link>Resources\VsixPreviewPatternToolkit.png</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -1346,7 +1346,7 @@
     <Folder Include="Assets\Templates\Projects\Extensibility\Authoring\Assets\" />
   </ItemGroup>
   <PropertyGroup>
-    <TargetVsixContainerName>$(AuthoringToolkitVsixFileName)</TargetVsixContainerName>
+    <TargetVsixContainerName>$(PatternToolkitVsixFileName)</TargetVsixContainerName>
   </PropertyGroup>
   <!-- Properties for Toolkit Targets -->
   <PropertyGroup>

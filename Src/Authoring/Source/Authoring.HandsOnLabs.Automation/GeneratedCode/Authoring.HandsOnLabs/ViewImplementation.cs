@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.HandsOnLabs
+namespace NuPattern.Authoring.HandsOnLabs
 {
 	using global::NuPattern.Runtime;
 	using global::System;
@@ -20,9 +20,9 @@ namespace NuPattern.HandsOnLabs
 	using Runtime = global::NuPattern.Runtime;
 
 	///	<summary>
-	///	Description for PatternToolkitHOLs.DefaultView
+	///	Description for PatternToolkitHandsOnLabs.DefaultView
 	///	</summary>
-	[Description("Description for PatternToolkitHOLs.DefaultView")]
+	[Description("Description for PatternToolkitHandsOnLabs.DefaultView")]
 	[ToolkitInterfaceProxy(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "ac1fde3b-bfa2-4fcf-a1c5-50167323063d", ProxyType = typeof(DefaultView))]
 	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -52,9 +52,9 @@ namespace NuPattern.HandsOnLabs
 		/// <summary>
 		/// Gets the parent element.
 		/// </summary>
-		public virtual IPatternToolkitHOLs Parent
+		public virtual IPatternToolkitHandsOnLabs Parent
 		{ 
-			get { return this.target.Parent.As<IPatternToolkitHOLs>(); }
+			get { return this.target.Parent.As<IPatternToolkitHandsOnLabs>(); }
 		}
 
 		/// <summary>

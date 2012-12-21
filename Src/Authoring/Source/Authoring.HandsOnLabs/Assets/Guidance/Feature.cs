@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace NuPattern.HandsOnLabs.Guidance
+namespace NuPattern.Authoring.HandsOnLabs.Guidance
 {
     public partial class Feature
     {

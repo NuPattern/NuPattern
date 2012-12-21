@@ -296,7 +296,7 @@
         <automationSettingsSchemaMoniker Id="637a727b-f99f-48de-8bae-aef51fd397fb" />
       </extendedElement>
       <properties>
-        <propertySettings Id="7ff775e2-101a-40c8-8b14-484068f278d0" value="9f6dc301-6f66-4d21-9f9c-b37412b162f6" name="FeatureId" />
+        <propertySettings Id="7ff775e2-101a-40c8-8b14-484068f278d0" value="84031a32-b20f-479c-a620-beacd982ea13" name="FeatureId" />
         <propertySettings Id="73101b02-5c04-483e-9ffc-506a09c6d143" value="Creating Pattern Toolkits" name="DefaultInstanceName" />
         <propertySettings Id="92ab3cc1-23ee-45d5-85e5-a045f5b439d3" value="True" name="SharedInstance" />
         <propertySettings Id="0aa96877-2bf9-47cf-a97f-58e0f4c2afc5" value="True" name="ActivateOnInstantiation" />
@@ -383,7 +383,7 @@
       <properties>
         <propertySettings Id="a558019e-b880-4d38-a026-53602d3d08c8" value="{InstanceName}" name="TargetFileName" />
         <propertySettings Id="586c62cc-816b-47f3-9d6d-7c0243a51160" value="..\..\..\..\~\Assets\Templates\Items\{InstanceName}" name="TargetPath" />
-        <propertySettings Id="1010eb7c-f1d8-4cb5-a49f-fa4f9458ca73" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/ItemTemplate/ItemTemplate.vstemplate.t4" name="TemplateUri" />
+        <propertySettings Id="1010eb7c-f1d8-4cb5-a49f-fa4f9458ca73" value="t4://extension/84031a32-b20f-479c-a620-beacd982ea13/Assets/Templates/Text/ItemTemplate/ItemTemplate.vstemplate.t4" name="TemplateUri" />
           <propertySettings Id="7301b8d3-dc2f-42b2-8615-47bf3092d4e6" value="True" name="SanitizeName" />
         <propertySettings Id="4e791890-f969-45d6-b6ce-301f48745968" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/ee377e53-72e7-4715-a1f2-0a6c8e89e89b" name="TemplateAuthoringUri" />
         <propertySettings Id="c84af3f9-7226-4792-93ca-6571d2e4923d" value="False" name="SyncName" />
@@ -544,7 +544,7 @@
       <properties>
         <propertySettings Id="2b8fe33b-aa80-40b0-945f-7caa2a84199d" value="{InstanceName}" name="TargetFileName" />
         <propertySettings Id="aec14cf0-f9ba-48ca-ac18-c1cefdb9d62e" value="..\..\..\..\~\Assets\Templates\Projects\{InstanceName}" name="TargetPath" />
-        <propertySettings Id="04899ce1-199a-4935-929c-9f29025d57a3" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/ProjectTemplate/ProjectTemplate.vstemplate.t4" name="TemplateUri" />
+        <propertySettings Id="04899ce1-199a-4935-929c-9f29025d57a3" value="t4://extension/84031a32-b20f-479c-a620-beacd982ea13/Assets/Templates/Text/ProjectTemplate/ProjectTemplate.vstemplate.t4" name="TemplateUri" />
           <propertySettings Id="2b1c2f8f-deda-4a79-a820-e726d1802405" value="True" name="SanitizeName" />
         <propertySettings Id="5f6e184e-ac88-41f3-8a0a-571698911527" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/736354eb-f066-475f-8a43-b78cf07a135d" name="TemplateAuthoringUri" />
         <propertySettings Id="984aba49-0154-4688-8b9f-eca44a95851c" value="False" name="SyncName" />
@@ -588,7 +588,7 @@
         <automationSettingsSchemaMoniker Id="e584cf89-312d-4698-b57d-ea003e4bf5f4" />
       </extendedElement>
       <properties>
-        <propertySettings Id="02392644-0bc8-41ce-9184-7777b02b41cf" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/PatternModel/PatternModel.patterndefinition.t4" name="TemplateUri" />
+        <propertySettings Id="02392644-0bc8-41ce-9184-7777b02b41cf" value="t4://extension/84031a32-b20f-479c-a620-beacd982ea13/Assets/Templates/Text/PatternModel/PatternModel.patterndefinition.t4" name="TemplateUri" />
           <propertySettings Id="c7f6e88f-f951-437f-9344-e5f66959948e" value="..\~" name="TargetPath" />
         <propertySettings Id="4a729bce-b240-4094-82ca-7c64c4a4dce5" value="PatternModel.patterndefinition" name="TargetFileName" />
         <propertySettings Id="32796853-4a49-4c20-b544-aa03d720a17f" value="True" name="SanitizeName" />
@@ -651,7 +651,7 @@
         <propertySettings Id="faf6c896-5b22-4702-b77c-956c6ee8216e" value="..\..\~\Assets\Guidance" name="TargetPath" />
         <propertySettings Id="d454ff47-921f-44ca-9297-160f80c0219b" value="True" name="SanitizeName" />
         <propertySettings Id="a6561caa-9717-45d8-9935-d851807f5936" value="False" name="SyncName" />
-        <propertySettings Id="4d82b5e8-e719-4ca5-b7a1-710dbb12a8db" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/Guidance/ToolkitGuidance.t4" name="TemplateUri" />
+        <propertySettings Id="4d82b5e8-e719-4ca5-b7a1-710dbb12a8db" value="t4://extension/84031a32-b20f-479c-a620-beacd982ea13/Assets/Templates/Text/Guidance/ToolkitGuidance.t4" name="TemplateUri" />
           <propertySettings Id="af1bd1e1-3a18-452e-81e9-8be1131d16bd" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/deddac25-042a-4a6d-92b1-8cb2b4beb60a" name="TemplateAuthoringUri" />
         <propertySettings Id="b6b6d1a1-14e8-4156-b3a8-5b48daba9b0a" name="Tag" />
         <propertySettings Id="0377a1ef-edc9-470b-ae59-5bd035f693cc" name="TargetBuildAction" />
@@ -667,7 +667,7 @@
         <propertySettings Id="a571e9f8-c756-4e66-80de-5535bd1724ec" value="..\..\~\GeneratedCode\Guidance" name="TargetPath" />
         <propertySettings Id="99a78b06-2175-4237-a5b3-cc3cc535542f" value="True" name="SanitizeName" />
         <propertySettings Id="7f16834e-1509-49ea-9700-2df8d52cac3a" value="False" name="SyncName" />
-        <propertySettings Id="2842b2fc-ec6e-4302-86d9-70d3bd9eaf2c" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/Guidance/GuidanceWorkflow.t4" name="TemplateUri" />
+        <propertySettings Id="2842b2fc-ec6e-4302-86d9-70d3bd9eaf2c" value="t4://extension/84031a32-b20f-479c-a620-beacd982ea13/Assets/Templates/Text/Guidance/GuidanceWorkflow.t4" name="TemplateUri" />
           <propertySettings Id="880cc1f9-83ed-44df-aaab-62cb7e550e91" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/0891b2f7-6a6a-4a7f-8d9d-7320d1884b1c" name="TemplateAuthoringUri" />
         <propertySettings Id="d413ae36-b9fc-47c5-8283-c33d69301134" name="Tag" />
         <propertySettings Id="768fa27b-7e82-4410-ad17-e832b9e6b318" name="TargetBuildAction" />
@@ -712,7 +712,7 @@
         <propertySettings Id="2b65efb1-f568-455f-ba2a-ba5f8e158025" value="False" name="SyncName" />
         <propertySettings Id="eb004004-3f68-4c6b-b494-68d89e850cec" value="source.extension.tt" name="TargetFileName" />
         <propertySettings Id="99d70c98-3f40-4123-a75c-35741a94f9ad" name="TargetPath" />
-        <propertySettings Id="c4eb1e35-133c-4706-b740-ce8036b39e0b" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.extension.t4" name="TemplateUri" />
+        <propertySettings Id="c4eb1e35-133c-4706-b740-ce8036b39e0b" value="t4://extension/84031a32-b20f-479c-a620-beacd982ea13/Assets/Templates/Text/VsixManifest/source.extension.t4" name="TemplateUri" />
           <propertySettings Id="6041f199-728a-4416-9750-031d0fec66b6" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/df833f58-85c6-45f7-afc9-834c0217473d" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
@@ -734,7 +734,7 @@
         <propertySettings Id="603da6ad-d0dc-407d-b70a-e80d45847766" value="False" name="SyncName" />
         <propertySettings Id="6a50e599-74ea-41cb-9d37-d792daa5d778" value="source.include.t4" name="TargetFileName" />
         <propertySettings Id="6f24c4cb-4567-4ab9-a3a8-a74d1b9cd61c" name="TargetPath" />
-        <propertySettings Id="1943c55e-ad1f-401d-a092-ee5a77111a2e" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.include.t4" name="TemplateUri" />
+        <propertySettings Id="1943c55e-ad1f-401d-a092-ee5a77111a2e" value="t4://extension/84031a32-b20f-479c-a620-beacd982ea13/Assets/Templates/Text/VsixManifest/source.include.t4" name="TemplateUri" />
         <propertySettings Id="b51a1f8b-c9d9-4273-9ff3-9d433e9c6115" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/d93786b4-73bd-4850-8a9b-dc71b0c85d79" name="TemplateAuthoringUri" />
       </properties>
     </commandSettings>
@@ -1246,12 +1246,12 @@
 ]
 </conditions>
     </menuSettings>
-    <menuSettings Id="50cbb339-338b-4276-9e58-93567a64f2a7" text="Build Guidance" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/CommandBuildGuidance.png" commandId="5a814601-5260-42a6-94fd-1e8a7a178ace" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="50cbb339-338b-4276-9e58-93567a64f2a7" text="Build Guidance" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/CommandBuildGuidance.png" commandId="5a814601-5260-42a6-94fd-1e8a7a178ace" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="14427d95-ca80-4c2f-9f81-218266b07247" />
       </extendedElement>
     </menuSettings>
-    <menuSettings Id="1f354ebc-ded5-41c3-a17b-6c0963071dc7" text="Transform Templates" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/CommandTransformTemplates.png" commandId="f55383be-22ca-4142-ad04-a192b61c5641" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="1f354ebc-ded5-41c3-a17b-6c0963071dc7" text="Transform Templates" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/CommandTransformTemplates.png" commandId="f55383be-22ca-4142-ad04-a192b61c5641" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="316d3345-6833-43de-96e4-fb22875205a6" />
       </extendedElement>
@@ -1261,7 +1261,7 @@
         <automationSettingsSchemaMoniker Id="4ad531e4-1a31-4420-a74e-cb7e1dfe9649" />
       </extendedElement>
     </menuSettings>
-    <menuSettings Id="06eeafa3-2e89-449d-827c-c812099783a9" text="Transform Toolkit Info" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/CommandTransformTemplates.png" commandId="d321df0a-d467-45d6-944f-ccd9b82225fe" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="06eeafa3-2e89-449d-827c-c812099783a9" text="Transform Toolkit Info" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/CommandTransformTemplates.png" commandId="d321df0a-d467-45d6-944f-ccd9b82225fe" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="2a86c145-aae7-46df-bcf5-7acb52f312d3" />
       </extendedElement>
@@ -1276,7 +1276,7 @@
         <automationSettingsSchemaMoniker Id="d54ddb1d-1b07-4d99-aed4-d70afa944dfb" />
       </extendedElement>
     </menuSettings>
-    <guidanceExtension Id="26f05e22-b518-494a-9287-de75ed5499c5" guidanceInstanceName="Creating Pattern Toolkits" guidanceFeatureId="9f6dc301-6f66-4d21-9f9c-b37412b162f6" guidanceSharedInstance="true">
+    <guidanceExtension Id="26f05e22-b518-494a-9287-de75ed5499c5" guidanceInstanceName="Creating Pattern Toolkits" guidanceFeatureId="84031a32-b20f-479c-a620-beacd982ea13" guidanceSharedInstance="true">
       <extendedElement>
         <patternSchemaMoniker Id="c034429e-01f9-48dd-a478-0321fb708dd3" />
       </extendedElement>
@@ -1381,7 +1381,7 @@
         <elementSchemaMoniker Id="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" />
       </extendedElement>
     </guidanceExtension>
-    <wizardSettings Id="89961330-d06d-4447-8015-1198ef9af6ea" typeName="NuPattern.Authoring.Authoring.Assets.Wizards.ToolkitCreationWizard, NuPattern.Authoring.Authoring.Toolkit">
+    <wizardSettings Id="89961330-d06d-4447-8015-1198ef9af6ea" typeName="NuPattern.Authoring.PatternToolkit.Assets.Wizards.ToolkitCreationWizard, NuPattern.Authoring.PatternToolkit.Toolkit">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="6bf40086-559a-48d8-8aa5-67a7b026968c" />
       </extendedElement>
@@ -1628,7 +1628,7 @@
 </dropConditions>
     </dragDropSettings>
   </dm0:extensions>
-  <pattern Id="c034429e-01f9-48dd-a478-0321fb708dd3" name="PatternToolkit" displayName="Pattern Toolkit" description="A Pattern Toolkit which captures and automates a design pattern for rapid and consistent custom solution development." codeIdentifier="PatternToolkit" isCustomizable="True" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/PatternNodeAuthoring.png" currentDiagramId="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8" patternLink="patternmanager://eba0a4b0-d271-4785-8691-5963645ed0bd">
+  <pattern Id="c034429e-01f9-48dd-a478-0321fb708dd3" name="PatternToolkit" displayName="Pattern Toolkit" description="A Pattern Toolkit which captures and automates a design pattern for rapid and consistent custom solution development." codeIdentifier="PatternToolkit" isCustomizable="True" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/PatternNodeAuthoring.png" currentDiagramId="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8" patternLink="patternmanager://eba0a4b0-d271-4785-8691-5963645ed0bd">
     <customizationPolicy>
       <settings>
         <setting propertyId="DisplayName" />
@@ -2082,7 +2082,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="7475fa2d-8033-461c-a460-7e0793491874" name="ItemTemplate" displayName="Item Template" description="A Visual Studio item template." codeIdentifier="ItemTemplate" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeVsTemplate.png">
+                      <element Id="7475fa2d-8033-461c-a460-7e0793491874" name="ItemTemplate" displayName="Item Template" description="A Visual Studio item template." codeIdentifier="ItemTemplate" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/NodeVsTemplate.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2265,7 +2265,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="f03d48a2-2377-4e56-a2c4-ae24d34302d3" name="ProjectTemplate" displayName="Project Template" description="A Visual Studio project template" codeIdentifier="ProjectTemplate" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeVsTemplate.png">
+                      <element Id="f03d48a2-2377-4e56-a2c4-ae24d34302d3" name="ProjectTemplate" displayName="Project Template" description="A Visual Studio project template" codeIdentifier="ProjectTemplate" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/NodeVsTemplate.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2412,7 +2412,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="c6a0f8d4-59df-4dad-b92e-c6a1e54be5e2" name="TextTemplate" displayName="Text Template" description="A custom T4 text template." codeIdentifier="TextTemplate" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeT4Template.png">
+                      <element Id="c6a0f8d4-59df-4dad-b92e-c6a1e54be5e2" name="TextTemplate" displayName="Text Template" description="A custom T4 text template." codeIdentifier="TextTemplate" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/NodeT4Template.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2543,7 +2543,7 @@
                   </automationSettings>
                 </automationSettings>
                 <childElement cardinality="ZeroToMany" autoCreate="false">
-                  <element Id="b013c2ba-e9e0-484d-a0bc-e821c38c192b" name="Wizard" displayName="Wizard" description="A custom wizard." codeIdentifier="Wizard" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeWizard.png">
+                  <element Id="b013c2ba-e9e0-484d-a0bc-e821c38c192b" name="Wizard" displayName="Wizard" description="A custom wizard." codeIdentifier="Wizard" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/NodeWizard.png">
                     <customizationPolicy name="CustomizationPolicySchema1">
                       <settings>
                         <setting propertyId="DisplayName" />
@@ -2670,7 +2670,7 @@
                       </automationSettings>
                     </automationSettings>
                     <childElement cardinality="ZeroToMany" autoCreate="false">
-                      <element Id="93ee656b-6308-42d1-a5d7-e10fcea47ee7" name="WizardPage" displayName="Wizard Page" description="A custom wizard page" codeIdentifier="WizardPage" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeWizardPage.png">
+                      <element Id="93ee656b-6308-42d1-a5d7-e10fcea47ee7" name="WizardPage" displayName="Wizard Page" description="A custom wizard page" codeIdentifier="WizardPage" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/NodeWizardPage.png">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />
@@ -2770,7 +2770,7 @@
               </collection>
             </childElement>
             <childElement>
-              <element Id="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" name="Guidance" displayName="Guidance" description="Guidance for the toolkit." codeIdentifier="Guidance" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeGuidance.png">
+              <element Id="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" name="Guidance" displayName="Guidance" description="Guidance for the toolkit." codeIdentifier="Guidance" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/NodeGuidance.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -3026,7 +3026,7 @@
           </collection>
         </elements>
         <elements>
-          <element Id="5da53e5a-0ba8-48f8-a922-1712244c388c" name="PatternModel" displayName="Pattern Model" description="The definition of the pattern." codeIdentifier="PatternModel" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodePatternModel.png">
+          <element Id="5da53e5a-0ba8-48f8-a922-1712244c388c" name="PatternModel" displayName="Pattern Model" description="The definition of the pattern." codeIdentifier="PatternModel" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/NodePatternModel.png">
             <customizationPolicy name="CustomizationPolicySchema1">
               <settings>
                 <setting propertyId="DisplayName" />
@@ -3240,7 +3240,7 @@
                   </settings>
                 </customizationPolicy>
                 <childElement cardinality="ZeroToMany" autoCreate="false">
-                  <element Id="6a596dea-529b-4cd5-9eea-7e856a2b332c" name="View" displayName="View" description="A view or aspect of the pattern." codeIdentifier="ViewModel" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeView.png">
+                  <element Id="6a596dea-529b-4cd5-9eea-7e856a2b332c" name="View" displayName="View" description="A view or aspect of the pattern." codeIdentifier="ViewModel" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/NodeView.png">
                     <customizationPolicy name="CustomizationPolicySchema1">
                       <settings>
                         <setting propertyId="DisplayName" />
@@ -3358,7 +3358,7 @@
           </element>
         </elements>
         <elements>
-          <element Id="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" name="ToolkitInfo" displayName="Toolkit Info" description="Information for packaging the toolkit as a VSIX extension." codeIdentifier="PatternToolkitInfo" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeToolkitInfo.png">
+          <element Id="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" name="ToolkitInfo" displayName="Toolkit Info" description="Information for packaging the toolkit as a VSIX extension." codeIdentifier="PatternToolkitInfo" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/NodeToolkitInfo.png">
             <customizationPolicy name="CustomizationPolicySchema1">
               <settings>
                 <setting propertyId="DisplayName" />
@@ -3717,7 +3717,7 @@
           </settings>
         </customizationPolicy>
         <elements>
-          <element Id="9291502b-fefc-4ef8-afc0-4c6914f0d2d1" name="ProductionTooling" displayName="Production Tooling" description="The design of the tooling of the toolkit." codeIdentifier="ProductionTooling" icon="pack://application:,,,/NuPattern.Authoring.Authoring.Toolkit;component/Resources/NodeProductionTooling.png">
+          <element Id="9291502b-fefc-4ef8-afc0-4c6914f0d2d1" name="ProductionTooling" displayName="Production Tooling" description="The design of the tooling of the toolkit." codeIdentifier="ProductionTooling" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit.Toolkit;component/Resources/NodeProductionTooling.png">
             <customizationPolicy name="CustomizationPolicySchema1">
               <settings>
                 <setting propertyId="DisplayName" />

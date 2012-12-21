@@ -11,10 +11,10 @@
 		<Description xml:space="preserve"><#=VsixInfo.PatternToolkitLibrary.Description#></Description>
 		<Locale>1033</Locale>
 		<License>LICENSE.txt</License>
-		<Icon>Resources\VsixIconAutomationLibrary.png</Icon>
+		<Icon>Resources\VsixIconPatternToolkitLibrary.png</Icon>
 		<MoreInfoUrl><#=VsixInfo.PatternToolkitLibrary.MoreInfoUrl#></MoreInfoUrl>
 		<GettingStartedGuide><#=VsixInfo.PatternToolkitLibrary.GettingStartedUrl#></GettingStartedGuide>
-		<PreviewImage>Resources\VsixPreviewAutomationLibrary.png</PreviewImage>
+		<PreviewImage>Resources\VsixPreviewPatternToolkitLibrary.png</PreviewImage>
 		<SupportedProducts>
 		  <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
 			<Edition>Pro</Edition>
@@ -38,8 +38,8 @@ else
 	<References>
 	</References>
 	<Content>
-		<MefComponent>|AutomationLibrary.Toolkit|</MefComponent>
-		<MefComponent>|Authoring.Toolkit.Automation|</MefComponent>
+		<MefComponent>|%CurrentProject%|</MefComponent>
+		<MefComponent>|Authoring.PatternToolkit.Automation|</MefComponent>
 		<CustomExtension Type="PatternModel" AssemblyFile="<#= assemblyName #>.dll"><#= rootNamespace #>.PatternModel.gen.patterndefinition</CustomExtension>
 		<CustomExtension Type="ToolkitCategory" Category="Authoring"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>

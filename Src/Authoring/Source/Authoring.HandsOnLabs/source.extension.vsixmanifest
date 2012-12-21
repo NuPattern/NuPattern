@@ -24,9 +24,9 @@
 		</Reference>
 	</References>
 	<Content>
-		<MefComponent>|HandsOnLabs|</MefComponent>
-		<MefComponent>|HandsOnLabs.Automation|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="NuPattern.HandsOnLabs.dll">NuPattern.HandsOnLabs.PatternTool.patterndefinition</CustomExtension>
+		<MefComponent>|%CurrentProject%|</MefComponent>
+		<MefComponent>|Authoring.HandsOnLabs.Automation|</MefComponent>
+		<CustomExtension Type="PatternModel" AssemblyFile="NuPattern.Authoring.HandsOnLabs.dll">NuPattern.Authoring.HandsOnLabs.PatternTool.patterndefinition</CustomExtension>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>

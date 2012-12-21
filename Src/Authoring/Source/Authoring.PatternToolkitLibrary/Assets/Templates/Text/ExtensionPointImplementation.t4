@@ -25,7 +25,7 @@
 <#@ Include File="ProductElementImplementation.t4" #>
 <#
 var library = this.Element.As<IPatternToolkitLibrary>();
-var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.Authoring.IDevelopment>();
+var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
 var toolkitInfo = developmentView.PatternToolkitInfo;
 
 if (toolkitInfo == null)

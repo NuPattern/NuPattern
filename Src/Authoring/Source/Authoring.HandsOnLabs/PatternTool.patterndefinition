@@ -70,7 +70,7 @@
       </extendedElement>
     </validationExtension>
   </dm0:extensions>
-  <pattern Id="71309920-c4ac-4283-b6bf-3cec975eca86" name="PatternToolkitHOLs" displayName="Pattern Toolkit Hands-On Labs" description="Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project." codeIdentifier="PatternToolkitHOLs" isCustomizable="True" icon="pack://application:,,,/NuPattern.HandsOnLabs;component/Resources/PatternNodeHOL.png" currentDiagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713" patternLink="patternmanager://92131a71-f4c2-42ef-9a66-efe53b0ca4d8">
+  <pattern Id="71309920-c4ac-4283-b6bf-3cec975eca86" name="PatternToolkitHandsOnLabs" displayName="Pattern Toolkit Hands-On Labs" description="Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project." codeIdentifier="PatternToolkitHandsOnLabs" isCustomizable="True" icon="pack://application:,,,/NuPattern.HandsOnLabs;component/Resources/PatternNodeHOL.png" currentDiagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713" patternLink="patternmanager://92131a71-f4c2-42ef-9a66-efe53b0ca4d8">
     <customizationPolicy name="CustomizationPolicySchema1">
       <settings>
         <setting propertyId="DisplayName" />
@@ -127,7 +127,7 @@
       </automationSettings>
     </automationSettings>
     <views>
-      <view Id="ac1fde3b-bfa2-4fcf-a1c5-50167323063d" name="DefaultView" displayName="Default View" description="Description for PatternToolkitHOLs.DefaultView" codeIdentifier="DefaultView" isDefault="true" diagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713">
+      <view Id="ac1fde3b-bfa2-4fcf-a1c5-50167323063d" name="DefaultView" displayName="Default View" description="Description for PatternToolkitHandsOnLabs.DefaultView" codeIdentifier="DefaultView" isDefault="true" diagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713">
         <customizationPolicy name="CustomizationPolicySchema1">
           <settings>
             <setting propertyId="DisplayName" />

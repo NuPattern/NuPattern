@@ -599,4 +599,7 @@ Global
 		{67257A67-4ECB-4D70-92EE-445835343670} = {D283BB26-C5A2-46E1-AA9D-799FF3F16445}
 		{63F04D57-AC8A-4813-A98F-9927AA7C3C6C} = {D283BB26-C5A2-46E1-AA9D-799FF3F16445}
 	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Features = 84031a32-b20f-479c-a620-beacd982ea13:Creating Pattern Toolkits:1.3.20.0
+	EndGlobalSection
 EndGlobal

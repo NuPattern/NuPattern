@@ -118,10 +118,10 @@
     <Compile Include="Commands\CreateViewElementsCommand.cs">
       <ItemGuid>d36159cf-7425-4b2c-a2d9-08282301b2c7</ItemGuid>
     </Compile>
-    <Compile Include="Commands\Helpers\AutomationLibraryToolkitInfo.gen.cs">
+    <Compile Include="Commands\Helpers\PatternToolkitLibraryInfo.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AutomationLibraryToolkitInfo.tt</DependentUpon>
+      <DependentUpon>PatternToolkitLibraryInfo.tt</DependentUpon>
     </Compile>
     <Compile Include="Commands\CreateAutomationLibraryExtensionCommand.cs">
       <ItemGuid>a9694e9c-126b-4e70-8ae9-bd776b4f590c</ItemGuid>
@@ -145,83 +145,83 @@
     <Compile Include="Conditions\LastViewCondition.cs">
       <ItemGuid>5a57eeb5-a8c7-47a8-ab36-837bba1e120e</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\Authoring.Toolkit\CollectionImplementation.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkit\CollectionImplementation.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f994ad7c1-20d3-4b83-a06c-70caedc6cf91</SourceModelReference>
       <ItemGuid>f029fbc4-705c-4c0b-9290-cfbd91c3a2c1</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\Authoring.Toolkit\CollectionInterface.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkit\CollectionInterface.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f994ad7c1-20d3-4b83-a06c-70caedc6cf91</SourceModelReference>
       <ItemGuid>846dd50a-23a0-49f6-867b-9ab67c5263a2</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\Authoring.Toolkit\ElementImplementation.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkit\ElementImplementation.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f994ad7c1-20d3-4b83-a06c-70caedc6cf91</SourceModelReference>
       <ItemGuid>e02e7a6b-9eca-4f83-ae53-7fcec6ca0c3a</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\Authoring.Toolkit\ElementInterface.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkit\ElementInterface.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f994ad7c1-20d3-4b83-a06c-70caedc6cf91</SourceModelReference>
       <ItemGuid>fe1fd03e-fdd4-4bd4-a27c-e5beaa465fb2</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\Authoring.Toolkit\ExtensionPointImplementation.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkit\ExtensionPointImplementation.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f994ad7c1-20d3-4b83-a06c-70caedc6cf91</SourceModelReference>
       <ItemGuid>d5c47992-b48d-4c9c-b0e5-e071313e24dc</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\Authoring.Toolkit\ExtensionPointInterface.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkit\ExtensionPointInterface.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f994ad7c1-20d3-4b83-a06c-70caedc6cf91</SourceModelReference>
       <ItemGuid>35750b6f-9d8a-4352-bc6e-89454901f6b0</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\Authoring.Toolkit\ProductImplementation.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkit\ProductImplementation.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f994ad7c1-20d3-4b83-a06c-70caedc6cf91</SourceModelReference>
       <ItemGuid>11633d78-89a5-47b8-95f7-30158a9263ec</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\Authoring.Toolkit\ProductInterface.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkit\ProductInterface.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f994ad7c1-20d3-4b83-a06c-70caedc6cf91</SourceModelReference>
       <ItemGuid>b780cd5f-4eff-428e-8729-a6b3d4a29d3a</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\Authoring.Toolkit\ViewImplementation.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkit\ViewImplementation.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f994ad7c1-20d3-4b83-a06c-70caedc6cf91</SourceModelReference>
       <ItemGuid>3ea5491e-f72a-4e88-85eb-3accf814546c</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\Authoring.Toolkit\ViewInterface.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkit\ViewInterface.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f994ad7c1-20d3-4b83-a06c-70caedc6cf91</SourceModelReference>
       <ItemGuid>4761ad9a-e077-434a-8566-b84cf2bbb596</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\CollectionImplementation.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkitLibrary\CollectionImplementation.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>556691bd-2eda-416e-bd83-fc6bf3660688</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\CollectionInterface.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkitLibrary\CollectionInterface.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>b63472f0-6f42-48ca-b623-0694f681a1e0</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ElementImplementation.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkitLibrary\ElementImplementation.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>595d79e1-65b5-46c3-b34b-e8af5d82d290</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ElementInterface.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkitLibrary\ElementInterface.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>7817736b-848a-4802-964a-935794dde061</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ExtensionPointImplementation.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkitLibrary\ExtensionPointImplementation.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>e54004a9-a19f-4e48-befc-f4786c2a83d8</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ExtensionPointInterface.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkitLibrary\ExtensionPointInterface.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>ee0129c1-5066-4122-a504-1c940f2a6435</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ProductImplementation.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkitLibrary\ProductImplementation.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>b5bd3141-7dd6-4aa4-8f4d-fc8b178768f9</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ProductInterface.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkitLibrary\ProductInterface.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>afb82b47-9d2f-49c8-8edc-fea6c9ac4490</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ViewImplementation.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkitLibrary\ViewImplementation.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>099660a7-5227-4dce-9aa5-9811026e8b0d</ItemGuid>
     </Compile>
-    <Compile Include="GeneratedCode\AutomationLibrary.Toolkit\ViewInterface.cs">
+    <Compile Include="GeneratedCode\Authoring.PatternToolkitLibrary\ViewInterface.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Product/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f6defbb92-8435-4e41-bd89-8b30a73ca42b</SourceModelReference>
       <ItemGuid>a381b1cb-8c14-460f-912e-55215d67f78b</ItemGuid>
     </Compile>
@@ -244,9 +244,9 @@
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Commands\Helpers\AutomationLibraryToolkitInfo.tt">
+    <None Include="Commands\Helpers\PatternToolkitLibraryInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AutomationLibraryToolkitInfo.gen.cs</LastGenOutput>
+      <LastGenOutput>PatternToolkitLibraryInfo.gen.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

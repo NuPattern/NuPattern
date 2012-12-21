@@ -41,7 +41,7 @@ else
 		</Reference>
 	</References>
 	<Content>
-		<MefComponent>|<#=productName #>|</MefComponent>
+		<MefComponent>|%CurrentProject%|</MefComponent>
 		<MefComponent>|<#=productName #>.Automation|</MefComponent>
 		<CustomExtension Type="PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternTool.patterndefinition</CustomExtension>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>

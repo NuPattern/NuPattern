@@ -2,7 +2,7 @@
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace NuPattern.HandsOnLabs.Guidance
+namespace NuPattern.Authoring.HandsOnLabs.Guidance
 {
     /// <summary>
     /// Link launch point for instantiating the Hands-On Lab guidance.

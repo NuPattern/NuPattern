@@ -9,8 +9,8 @@
     <ProjectGuid>{FB67BCAD-DFB0-40B1-9E02-CE4D8DA5BE9D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NuPattern.HandsOnLabs</RootNamespace>
-    <AssemblyName>NuPattern.HandsOnLabs</AssemblyName>
+    <RootNamespace>NuPattern.Authoring.HandsOnLabs</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.HandsOnLabs</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Authoring\</SolutionDir>
@@ -414,8 +414,8 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HandsOnLabs.Automation\HandsOnLabs.Automation.csproj">
-      <Name>HandsOnLabs.Automation</Name>
+    <ProjectReference Include="..\Authoring.HandsOnLabs.Automation\Authoring.HandsOnLabs.Automation.csproj">
+      <Name>Authoring.HandsOnLabs.Automation</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
