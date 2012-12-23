@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.IntegrationTests
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Runtime.IntegrationTests.Content";
-        private const string DeployedVsixItem = DeployedContentDirectory + "\\NuPatternToolkitManager.10.0.vsix";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\NuPatternToolkitManager.11.0.vsix";
 
         [TestClass]
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]
@@ -31,7 +31,7 @@ namespace NuPattern.Runtime.IntegrationTests
             public void ThenVsixInfoCorrect()
             {
                 //Identifier, Name, Author, Version
-                Assert.Equal(@"93373818-600f-414b-8181-3a0cb79fa785", this.VsixInfo.Header.Identifier);
+                Assert.Equal(@"c869918e-f94e-4e7a-ab25-b076ff4e751b", this.VsixInfo.Header.Identifier);
                 Assert.Equal(@"NuPattern Toolkit Manager", this.VsixInfo.Header.Name);
                 Assert.Equal(@"Includes the 'Solution Builder' window, and the automation framework for accelerating solution development using NuPattern Toolkits.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"NuPattern", this.VsixInfo.Header.Author);

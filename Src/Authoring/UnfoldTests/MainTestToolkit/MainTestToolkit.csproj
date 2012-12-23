@@ -53,7 +53,6 @@
       <DependentUpon>source.extension.tt</DependentUpon>
     </None>
     <None Include="Assets\Templates\Projects\Console\ConsoleApplicationProject.tt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>false</IncludeInVSIX>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ConsoleApplicationProject.gen.csproj</LastGenOutput>
