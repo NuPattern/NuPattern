@@ -8,8 +8,8 @@
 	public const string icon = @"Ignore";
 
 	public const string productName = "AutomationLibrary.Toolkit";
-	public const string rootNamespace = "NuPattern.Authoring.Library";
-	public const string assemblyName = "NuPattern.Authoring.Library.Toolkit";
+	public const string rootNamespace = "NuPattern.Authoring.PatternToolkitLibrary";
+	public const string assemblyName = "NuPattern.Authoring.PatternToolkitLibrary";
 
 	public bool HasValue(string value)
 	{

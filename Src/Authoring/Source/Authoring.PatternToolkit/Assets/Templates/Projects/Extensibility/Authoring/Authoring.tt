@@ -14,7 +14,7 @@
 		<ProvideDefaultName>true</ProvideDefaultName>
 		<LocationField>Enabled</LocationField>
 		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
-		<Icon>VsTemplateIconAuthoringProject.ico</Icon>
+		<Icon>VsTemplateIconPatternToolkitProject.ico</Icon>
     <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
 		<Hidden>false</Hidden>
 	</TemplateData>

@@ -40,7 +40,7 @@ void Delete();
 <#+
 	}
 
-	private void GenerateToolkitCommentsAndAttributes(AttributeTargets target, NuPattern.Authoring.Library.IPatternToolkitLibrary library, NuPattern.Authoring.PatternToolkit.IPatternToolkitInfo toolkitInfo, INamedElementInfo element)
+	private void GenerateToolkitCommentsAndAttributes(AttributeTargets target, NuPattern.Authoring.PatternToolkitLibrary.IPatternToolkitLibrary library, NuPattern.Authoring.PatternToolkit.IPatternToolkitInfo toolkitInfo, INamedElementInfo element)
 	{
 		PushIndent("\t");
 		GenerateDescription(element);
@@ -67,7 +67,7 @@ void Delete();
 		PopIndent();
 	}
 
-	private void GenerateCodeGenAttributes(NuPattern.Authoring.Library.IPatternToolkitLibrary library, AttributeTargets target)
+	private void GenerateCodeGenAttributes(NuPattern.Authoring.PatternToolkitLibrary.IPatternToolkitLibrary library, AttributeTargets target)
 	{
 		var excludeFromCodeCoverage = library.ExcludeFromCodeCoverage;
 

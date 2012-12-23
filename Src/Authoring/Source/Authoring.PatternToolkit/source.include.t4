@@ -9,7 +9,7 @@
 
 	public const string productName = "Authoring.Toolkit";
 	public const string rootNamespace = "NuPattern.Authoring.PatternToolkit";
-	public const string assemblyName = "NuPattern.Authoring.PatternToolkit.Toolkit";
+	public const string assemblyName = "NuPattern.Authoring.PatternToolkit";
 
 	public bool HasValue(string value)
 	{

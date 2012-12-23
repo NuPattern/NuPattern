@@ -23,7 +23,7 @@
 	<Content>
 		<MefComponent>|%CurrentProject%|</MefComponent>
 		<MefComponent>|Authoring.PatternToolkit.Automation|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="NuPattern.Authoring.Library.Toolkit.dll">NuPattern.Authoring.Library.PatternModel.gen.patterndefinition</CustomExtension>
+		<CustomExtension Type="PatternModel" AssemblyFile="NuPattern.Authoring.PatternToolkitLibrary.dll">NuPattern.Authoring.PatternToolkitLibrary.PatternModel.gen.patterndefinition</CustomExtension>
 		<CustomExtension Type="ToolkitCategory" Category="Authoring"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>

@@ -88,7 +88,7 @@
       <ProjName>Authoring.Toolkit</ProjName>
     </ProjBinary>
     <ProjBinary>
-      <Path>C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit.Automation\obj\Debug\NuPattern.Authoring.Toolkit.Automation.dll</Path>
+      <Path>C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit.Automation\obj\Debug\NuPattern.Authoring.PatternToolkit.Automation.dll</Path>
       <TargetCLRVersion>Automatic</TargetCLRVersion>
       <ArgumentTimestamp>01/01/2012 01:21:16</ArgumentTimestamp>
       <Instrument>true</Instrument>
@@ -114,7 +114,7 @@
       </PreinstrumentEvent>
       <PostinstrumentEvent>
         <InstrEventProgram>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe</InstrEventProgram>
-        <InstrEventArguments>  -Ra "C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit.Automation\obj\Debug\NuPattern.Authoring.Toolkit.Automation.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
+        <InstrEventArguments>  -Ra "C:\Projects\Platu\Main\Src\Authoring\Source\Authoring.Toolkit.Automation\obj\Debug\NuPattern.Authoring.PatternToolkit.Automation.dll" "C:\Projects\Platu\Main\Src\NuPattern.snk"</InstrEventArguments>
         <InstrEventDescription>Sign Assembly</InstrEventDescription>
         <InstrEventExclude>false</InstrEventExclude>
       </PostinstrumentEvent>

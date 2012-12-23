@@ -250,7 +250,7 @@
                   <elements>
                     <element Id="5dfdae46-5d8f-42b8-bf0f-ad6cc4868d21" definitionId="6a596dea-529b-4cd5-9eea-7e856a2b332c" definitionName="View" instanceName="Development">
                       <references>
-                        <reference Id="94f074c1-706f-4be4-9d35-541b71ac13a7" value="view://e0779d33-8f19-4025-9a57-e75bc53a03ff/" kind="NuPattern.Authoring.Toolkit.Automation.UriProviders.ViewArtifactLinkReference" />
+                        <reference Id="94f074c1-706f-4be4-9d35-541b71ac13a7" value="view://e0779d33-8f19-4025-9a57-e75bc53a03ff/" kind="NuPattern.Authoring.PatternToolkit.Automation.UriProviders.ViewArtifactLinkReference" />
                       </references>
                     </element>
                   </elements>
@@ -381,7 +381,7 @@
                   <elements>
                     <element Id="cebfe698-0471-45bd-a916-64a9cc2e72e3" definitionId="6a596dea-529b-4cd5-9eea-7e856a2b332c" definitionName="View" instanceName="Development">
                       <references>
-                        <reference Id="d77a5d7b-c043-492c-bdef-37c93e2ad850" value="view://e0779d33-8f19-4025-9a57-e75bc53a03ff/" kind="NuPattern.Authoring.Toolkit.Automation.UriProviders.ViewArtifactLinkReference" />
+                        <reference Id="d77a5d7b-c043-492c-bdef-37c93e2ad850" value="view://e0779d33-8f19-4025-9a57-e75bc53a03ff/" kind="NuPattern.Authoring.PatternToolkit.Automation.UriProviders.ViewArtifactLinkReference" />
                       </references>
                     </element>
                   </elements>

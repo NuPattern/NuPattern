@@ -961,7 +961,7 @@
 ]
 </conditions>
     </menuSettings>
-    <menuSettings Id="78bb206d-844b-40d1-9e8d-a3214b231ea6" text="Transform Templates" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/CommandTransformTemplates.png" commandId="cb5cf99a-4eb4-4f8f-b83a-2022084e3f79" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="78bb206d-844b-40d1-9e8d-a3214b231ea6" text="Transform Templates" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/CommandTransformTemplates.png" commandId="cb5cf99a-4eb4-4f8f-b83a-2022084e3f79" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="57cbcf2c-7d53-4873-b132-d5f33abec89c" />
       </extendedElement>
@@ -1380,7 +1380,7 @@
 ]</dropConditions>
     </dragDropSettings>
   </dm0:extensions>
-  <pattern Id="d6139b37-9971-4834-a9dc-2b3daef962cf" name="PatternToolkitLibrary" displayName="Pattern Toolkit Library" description="A library that contains reusable automation types for sharing between Pattern Toolkit projects." codeIdentifier="PatternToolkitLibrary" isCustomizable="True" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/PatternNodeAutomationLibrary.png" currentDiagramId="9be0eaf7-8717-414f-97fe-58c0c97be587" patternLink="patternmanager://116b0a90-24bd-405d-b94f-301c1d1661e9">
+  <pattern Id="d6139b37-9971-4834-a9dc-2b3daef962cf" name="PatternToolkitLibrary" displayName="Pattern Toolkit Library" description="A library that contains reusable automation types for sharing between Pattern Toolkit projects." codeIdentifier="PatternToolkitLibrary" isCustomizable="True" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/PatternNodeAutomationLibrary.png" currentDiagramId="9be0eaf7-8717-414f-97fe-58c0c97be587" patternLink="patternmanager://116b0a90-24bd-405d-b94f-301c1d1661e9">
     <customizationPolicy>
       <settings>
         <setting propertyId="DisplayName" />
@@ -1696,7 +1696,7 @@
               </automationSettings>
             </automationSettings>
             <childElement cardinality="ZeroToMany" autoCreate="false">
-              <element Id="5a6b3a47-aabf-4f51-bd30-0737f6d4bbbe" name="Command" displayName="Command" description="A custom automation command that executes some automation." codeIdentifier="Command" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/NodeCustomAutomationClass.png">
+              <element Id="5a6b3a47-aabf-4f51-bd30-0737f6d4bbbe" name="Command" displayName="Command" description="A custom automation command that executes some automation." codeIdentifier="Command" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/NodeCustomAutomationClass.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -1825,7 +1825,7 @@
               </automationSettings>
             </automationSettings>
             <childElement cardinality="ZeroToMany" autoCreate="false">
-              <element Id="2d022abe-eaf9-4366-843a-a9d262ef4b00" name="Condition" displayName="Condition" description="A custom condition that is evaluated to determine if automation executes." codeIdentifier="Condition" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/NodeCustomAutomationClass.png">
+              <element Id="2d022abe-eaf9-4366-843a-a9d262ef4b00" name="Condition" displayName="Condition" description="A custom condition that is evaluated to determine if automation executes." codeIdentifier="Condition" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/NodeCustomAutomationClass.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -1954,7 +1954,7 @@
               </automationSettings>
             </automationSettings>
             <childElement cardinality="ZeroToMany" autoCreate="false">
-              <element Id="d937c559-01f8-43ad-bac8-f580013fdd8a" name="Event" displayName="Event" description="A custom event that can trigger some automation." codeIdentifier="Event" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/NodeCustomAutomationClass.png">
+              <element Id="d937c559-01f8-43ad-bac8-f580013fdd8a" name="Event" displayName="Event" description="A custom event that can trigger some automation." codeIdentifier="Event" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/NodeCustomAutomationClass.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -2065,7 +2065,7 @@
               </automationSettings>
             </automationSettings>
             <childElement cardinality="ZeroToMany" autoCreate="false">
-              <element Id="8d45d1e8-2551-4539-8449-ff3e0962d5f5" name="EnumTypeConverter" displayName="Enum Type Converter" description="A custom type converter that can be used to define a dropdown of values for a variable property." codeIdentifier="EnumTypeConverter" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/NodeCustomAutomationClass.png">
+              <element Id="8d45d1e8-2551-4539-8449-ff3e0962d5f5" name="EnumTypeConverter" displayName="Enum Type Converter" description="A custom type converter that can be used to define a dropdown of values for a variable property." codeIdentifier="EnumTypeConverter" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/NodeCustomAutomationClass.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -2161,7 +2161,7 @@
               </element>
             </childElement>
             <childElement cardinality="ZeroToMany" autoCreate="false">
-              <element Id="4caa371c-0404-4dcd-ba61-457962baaa53" name="DataTypeConverter" displayName="Data Type Converter" description="Description for PatternToolkitLibrary.Development.TypeConverters.DataTypeConverter" codeIdentifier="DataTypeConverter" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/NodeCustomAutomationClass.png">
+              <element Id="4caa371c-0404-4dcd-ba61-457962baaa53" name="DataTypeConverter" displayName="Data Type Converter" description="Description for PatternToolkitLibrary.Development.TypeConverters.DataTypeConverter" codeIdentifier="DataTypeConverter" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/NodeCustomAutomationClass.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -2227,7 +2227,7 @@
               </automationSettings>
             </automationSettings>
             <childElement cardinality="ZeroToMany" autoCreate="false">
-              <element Id="4a6d1cc8-3845-4b08-b2b1-e27a1a6e9c9f" name="TypePickerEditor" displayName="Type Picker Editor" description="A custom type picker editor that displays a filtered list of types found in the current solution." codeIdentifier="TypePickerEditor" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/NodeCustomAutomationClass.png">
+              <element Id="4a6d1cc8-3845-4b08-b2b1-e27a1a6e9c9f" name="TypePickerEditor" displayName="Type Picker Editor" description="A custom type picker editor that displays a filtered list of types found in the current solution." codeIdentifier="TypePickerEditor" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/NodeCustomAutomationClass.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -2323,7 +2323,7 @@
               </element>
             </childElement>
             <childElement cardinality="ZeroToMany" autoCreate="false">
-              <element Id="27b16755-4f3e-43a6-80ee-38cad4dec8ab" name="UIEditor" displayName="UI Editor" description="A custom editor that provides a custom GUI to configure the value of a variable property." codeIdentifier="UIEditor" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/NodeCustomAutomationClass.png">
+              <element Id="27b16755-4f3e-43a6-80ee-38cad4dec8ab" name="UIEditor" displayName="UI Editor" description="A custom editor that provides a custom GUI to configure the value of a variable property." codeIdentifier="UIEditor" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/NodeCustomAutomationClass.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -2452,7 +2452,7 @@
               </automationSettings>
             </automationSettings>
             <childElement cardinality="ZeroToMany" autoCreate="false">
-              <element Id="ab7af436-f1f6-4d3e-b78d-f90a5f81d636" name="ElementValidationRule" displayName="Element Validation Rule" description="A custom element validation rule for verifying an element." codeIdentifier="ElementValidationRule" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/NodeCustomAutomationClass.png">
+              <element Id="ab7af436-f1f6-4d3e-b78d-f90a5f81d636" name="ElementValidationRule" displayName="Element Validation Rule" description="A custom element validation rule for verifying an element." codeIdentifier="ElementValidationRule" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/NodeCustomAutomationClass.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -2548,7 +2548,7 @@
               </element>
             </childElement>
             <childElement cardinality="ZeroToMany" autoCreate="false">
-              <element Id="ffa532c8-f334-4bda-b9de-cb208f6d2a81" name="PropertyValidationRule" displayName="Property Validation Rule" description="A custom property validation rule for verifying a property." codeIdentifier="PropertyValidationRule" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/NodeCustomAutomationClass.png">
+              <element Id="ffa532c8-f334-4bda-b9de-cb208f6d2a81" name="PropertyValidationRule" displayName="Property Validation Rule" description="A custom property validation rule for verifying a property." codeIdentifier="PropertyValidationRule" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/NodeCustomAutomationClass.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -2659,7 +2659,7 @@
               </automationSettings>
             </automationSettings>
             <childElement cardinality="ZeroToMany" autoCreate="false">
-              <element Id="835cd8dc-4fb1-4d60-94a9-c73342788a16" name="ValueProvider" displayName="Value Provider" description="A custom value provider that returns the calculated value for a variable property." codeIdentifier="ValueProvider" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/NodeCustomAutomationClass.png">
+              <element Id="835cd8dc-4fb1-4d60-94a9-c73342788a16" name="ValueProvider" displayName="Value Provider" description="A custom value provider that returns the calculated value for a variable property." codeIdentifier="ValueProvider" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/NodeCustomAutomationClass.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -2788,7 +2788,7 @@
               </automationSettings>
             </automationSettings>
             <childElement cardinality="ZeroToMany" autoCreate="false">
-              <element Id="001bcf68-8971-4b8a-8a5a-68fc41fec446" name="ElementOrderingComparer" displayName="Element Ordering Comparer" description="A custom comparer used for ordering elements." codeIdentifier="ElementOrderingComparer" icon="pack://application:,,,/NuPattern.Authoring.Library.Toolkit;component/Resources/NodeCustomAutomationClass.png">
+              <element Id="001bcf68-8971-4b8a-8a5a-68fc41fec446" name="ElementOrderingComparer" displayName="Element Ordering Comparer" description="A custom comparer used for ordering elements." codeIdentifier="ElementOrderingComparer" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/NodeCustomAutomationClass.png">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
