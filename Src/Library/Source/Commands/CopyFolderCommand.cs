@@ -6,13 +6,13 @@ using System.Drawing.Design;
 using System.IO;
 using System.Windows.Forms.Design;
 using Microsoft.VisualBasic.FileIO;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Library.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Activates (opens or selects) the linked artifacts associated to current element.

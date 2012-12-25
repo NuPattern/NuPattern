@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Manages weak references to <see cref="INotifyPropertyChanged"/> 

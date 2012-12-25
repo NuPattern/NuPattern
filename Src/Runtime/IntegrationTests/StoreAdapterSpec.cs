@@ -1,14 +1,14 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.Modeling.Integration;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Runtime.Store;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests
 {
     [TestClass]
     [CLSCompliant(false)]

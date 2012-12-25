@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Runtime.Store.Properties;
+using NuPattern.Runtime.Store.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Custom descriptor for properties that don't have a corresponding information schema.

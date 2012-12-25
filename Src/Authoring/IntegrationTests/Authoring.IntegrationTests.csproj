@@ -7,8 +7,8 @@
     <ProjectGuid>{4D526080-A897-4A58-B12A-87974ADC11EB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests</AssemblyName>
+    <RootNamespace>NuPattern.Authoring.IntegrationTests</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.IntegrationTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Authoring\</SolutionDir>
@@ -18,21 +18,22 @@
     <BranchRoot>..\..\</BranchRoot>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Library">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Library.dll</HintPath>
+    <Reference Include="NuPattern.Library">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Interfaces">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Schema">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Schema.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Schema">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="Moq">
@@ -137,16 +138,16 @@
     </Compile>
     <Compile Include="Commands.cs" />
     <Compile Include="Commands\CreateGuidanceDocumentsCommandSpec.cs" />
-    <Compile Include="AutomationLibraryVsixPackagingSpec.gen.cs">
-      <DependentUpon>AutomationLibraryVsixPackagingSpec.tt</DependentUpon>
+    <Compile Include="PatternToolkitLibraryVsixPackagingSpec.gen.cs">
+      <DependentUpon>PatternToolkitLibraryVsixPackagingSpec.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="CreateOnUnfoldSpec.cs" />
-    <Compile Include="AuthoringVsixPackagingSpec.gen.cs">
+    <Compile Include="PatternToolkitVsixPackagingSpec.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AuthoringVsixPackagingSpec.tt</DependentUpon>
+      <DependentUpon>PatternToolkitVsixPackagingSpec.tt</DependentUpon>
     </Compile>
     <Compile Include="VersionHelperSpec.cs" />
     <Content Include="VersionTargetsSpec\ClassLibrary1\Class1.cs">
@@ -166,22 +167,22 @@
     <Content Include="VersionTargetsSpec\SimpleLibrarySolution.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="..\..\Binaries\PatternToolkitAutomationLibrary.$(TargetVsVersion).vsix">
-      <Link>Authoring.IntegrationTests.Content\PatternToolkitAutomationLibrary.$(TargetVsVersion).vsix</Link>
+    <None Include="..\..\Binaries\$(PatternToolkitLibraryVsixFileName)">
+      <Link>Authoring.IntegrationTests.Content\$(PatternToolkitLibraryVsixFileName)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\..\Binaries\PatternToolkitBuilder.$(TargetVsVersion).vsix">
-      <Link>Authoring.IntegrationTests.Content\PatternToolkitBuilder.$(TargetVsVersion).vsix</Link>
+    <None Include="..\..\Binaries\$(PatternToolkitVsixFileName)">
+      <Link>Authoring.IntegrationTests.Content\$(PatternToolkitVsixFileName)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="AutomationLibraryVsixPackagingSpec.tt">
+    <None Include="PatternToolkitLibraryVsixPackagingSpec.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AutomationLibraryVsixPackagingSpec.gen.cs</LastGenOutput>
+      <LastGenOutput>PatternToolkitLibraryVsixPackagingSpec.gen.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="AuthoringVsixPackagingSpec.tt">
+    <None Include="PatternToolkitVsixPackagingSpec.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AuthoringVsixPackagingSpec.gen.cs</LastGenOutput>
+      <LastGenOutput>PatternToolkitVsixPackagingSpec.gen.cs</LastGenOutput>
     </None>
     <None Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Assets\Templates\Projects\Customization\Customization.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -393,13 +394,13 @@
       <Project>{67257A67-4ECB-4D70-92EE-445835343670}</Project>
       <Name>Authoring.Guidance</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\Authoring.Toolkit.Automation\Authoring.Toolkit.Automation.csproj">
+    <ProjectReference Include="..\Source\Authoring.PatternToolkit.Automation\Authoring.PatternToolkit.Automation.csproj">
       <Project>{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}</Project>
-      <Name>Authoring.Toolkit.Automation</Name>
+      <Name>Authoring.PatternToolkit.Automation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\Authoring.Toolkit\Authoring.Toolkit.csproj">
+    <ProjectReference Include="..\Source\Authoring.PatternToolkit\Authoring.PatternToolkit.csproj">
       <Project>{0216A624-C5C5-4335-8361-F640B91B4DEA}</Project>
-      <Name>Authoring.Toolkit</Name>
+      <Name>Authoring.PatternToolkit</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

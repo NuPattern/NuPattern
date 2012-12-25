@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Runtime.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Adapter class that exposes installed toolkits from the <see cref="IVsExtensionManager"/> 
@@ -66,7 +66,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
             }
             catch (Exception ex)
             {
-                if (ErrorHandler.IsCriticalException(ex))
+                if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(ex))
                     throw;
 
                 tracer.TraceWarning(Resources.InstalledToolkitAdapter_FailedToCreateRegistration, extension.InstallPath);

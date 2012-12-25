@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <content>
     /// Adds the implementation of <see cref="IPropertyBindingSettings"/>.

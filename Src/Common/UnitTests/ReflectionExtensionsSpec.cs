@@ -1,8 +1,8 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
+namespace NuPattern.Common.UnitTests
 {
 	[TestClass]
 	public class ReflectionExtensionsSpec

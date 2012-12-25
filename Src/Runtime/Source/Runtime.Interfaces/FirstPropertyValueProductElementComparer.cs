@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// A comparer that compares the string value of the first property of an element. 

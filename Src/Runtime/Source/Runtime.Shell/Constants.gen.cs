@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
 	/// <summary>
 	/// Defines the constants used in this package.
@@ -44,11 +44,16 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 		/// <summary>
 		/// The product name.
 		/// </summary>
-		public const string ProductName = "Pattern Toolkit Manager";
+		public const string ProductName = "NuPattern Toolkit Manager";
 
 		/// <summary>
 		/// The name for storing settings for this package.
 		/// </summary>
-		public const string SettingsName = "PatternToolkitExtensions";
+		public const string SettingsName = "NuPatternToolkitManager";
+
+		/// <summary>
+		/// The name of the output window used for tracing.
+		/// </summary>
+		public const string OutputWindowTitle = "NuPattern Toolkit Extensions";
 	}
 }

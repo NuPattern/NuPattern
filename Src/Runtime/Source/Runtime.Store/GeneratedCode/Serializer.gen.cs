@@ -9,7 +9,7 @@
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ProductStateSerializer for DomainClass ProductState.
@@ -780,7 +780,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer PropertySerializer for DomainClass Property.
@@ -1409,7 +1409,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer CollectionSerializer for DomainClass Collection.
@@ -1972,7 +1972,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ElementSerializer for DomainClass Element.
@@ -2535,7 +2535,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ProductElementSerializer for DomainClass ProductElement.
@@ -3286,7 +3286,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ProductSerializer for DomainClass Product.
@@ -4182,7 +4182,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ViewSerializer for DomainClass View.
@@ -5013,7 +5013,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer AbstractElementSerializer for DomainClass AbstractElement.
@@ -5698,7 +5698,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer InstanceBaseSerializer for DomainClass InstanceBase.
@@ -6235,7 +6235,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ReferenceSerializer for DomainClass Reference.
@@ -6957,7 +6957,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ProductElementHasPropertiesSerializer for DomainClass ProductElementHasProperties.
@@ -7628,7 +7628,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ProductHasViewsSerializer for DomainClass ProductHasViews.
@@ -8299,7 +8299,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ViewHasElementsSerializer for DomainClass ViewHasElements.
@@ -8970,7 +8970,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ElementHasChildElementsSerializer for DomainClass ElementHasChildElements.
@@ -9641,7 +9641,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ProductStateHasProductsSerializer for DomainClass ProductStateHasProducts.
@@ -10312,7 +10312,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ElementHasExtensionsSerializer for DomainClass ElementHasExtensions.
@@ -10983,7 +10983,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ViewHasExtensionProductsSerializer for DomainClass ViewHasExtensionProducts.
@@ -11654,7 +11654,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Serializer ProductElementHasReferencesSerializer for DomainClass ProductElementHasReferences.
@@ -12386,7 +12386,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// A DomainXmlSerializationBehavior implementation for defined behavior ProductStateStoreSerializationBehavior.
@@ -12493,7 +12493,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 				if (ProductStateStoreSerializationBehavior.namespaceEntries == null)
 				{
 					ProductStateStoreSerializationBehavior.namespaceEntries = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerNamespaceEntry>();
-					ProductStateStoreSerializationBehavior.namespaceEntries.Add(new DslModeling::DomainXmlSerializerNamespaceEntry(DomainModelXmlNamespace, typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel)));
+					ProductStateStoreSerializationBehavior.namespaceEntries.Add(new DslModeling::DomainXmlSerializerNamespaceEntry(DomainModelXmlNamespace, typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel)));
 				}
 				return ProductStateStoreSerializationBehavior.namespaceEntries.AsReadOnly();
 			}
@@ -12537,7 +12537,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Moniker resolver for serialization behavior ProductStateStoreSerializationBehavior.
@@ -12676,7 +12676,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Utility class to provide serialization messages
@@ -13236,7 +13236,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Provides an implementation of the IDomainModelSerializer interface
@@ -13245,7 +13245,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	/// <remarks>Double-derived class - the default implementation is in ProductStateStoreDomainModelSerializerBase.
 	/// This class exist so users can customize behavior easily.</remarks>
 	[global::System.ComponentModel.Composition.Export(typeof(DslModeling::IDomainModelSerializer))]
-	[DslModeling::DomainModelSerializer(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel), global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreSerializationBehavior.DomainModelXmlNamespace, "slnbldr")]
+	[DslModeling::DomainModelSerializer(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), global::NuPattern.Runtime.Store.ProductStateStoreSerializationBehavior.DomainModelXmlNamespace, "slnbldr")]
 	public partial class ProductStateStoreDomainModelSerializer : ProductStateStoreDomainModelSerializerBase
 	{
 	}
@@ -13265,7 +13265,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		public virtual string DomainModelNamespace
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreSerializationBehavior.DomainModelXmlNamespace; }
+			get { return global::NuPattern.Runtime.Store.ProductStateStoreSerializationBehavior.DomainModelXmlNamespace; }
 		}
 	
 		/// <summary>
@@ -13283,7 +13283,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 		public virtual global::System.Type DomainModelType
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel); }
+			get { return typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel); }
 		}
 	
 		/// <summary>
@@ -13338,11 +13338,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			if (modelRoot == null) { throw new global::System.ArgumentNullException("modelRoot"); }
 			if (string.IsNullOrEmpty("fileName")) { throw new global::System.ArgumentNullException("fileName"); }
 	
-			global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductState rootElement = modelRoot as global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductState;
+			global::NuPattern.Runtime.Store.ProductState rootElement = modelRoot as global::NuPattern.Runtime.Store.ProductState;
 			if (rootElement == null)
 			{
 				string errorMessage = string.Format(global::System.Globalization.CultureInfo.CurrentCulture,
-					global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel.SingletonResourceManager.GetString("InvalidSaveRootElementType"),
+					global::NuPattern.Runtime.Store.ProductStateStoreDomainModel.SingletonResourceManager.GetString("InvalidSaveRootElementType"),
 					modelRoot.GetType().ToString());
 	
 				throw new global::System.ArgumentException(errorMessage, "modelRoot");

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Extensibility.References;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
+namespace NuPattern.Library.IntegrationTests
 {
 	[TestClass]
 	[CLSCompliant(false)]

@@ -3,10 +3,10 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.Win32;
+using NuPattern.Extensibility.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
     /// <summary>
     /// Extensions to <see cref="EnvDTE.DTE"/> class.

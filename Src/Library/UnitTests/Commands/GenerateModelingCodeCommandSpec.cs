@@ -3,15 +3,15 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Integration;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
+using NuPattern.Library.Commands;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Store;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
+namespace NuPattern.Library.UnitTests.Commands
 {
     public class GenerateModelingCodeCommandSpec
     {
@@ -60,7 +60,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                     TemplateUri = new Uri("t4://foo.tt"),
                     UriService = this.uriService.Object,
                     ModelElement = (ModelElement)this.product,
-                    ModelFile = "C:\\Temp\\foo" + Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension,
+                    ModelFile = "C:\\Temp\\foo" + NuPattern.Runtime.Constants.RuntimeStoreExtension,
                     ServiceProvider = this.serviceProvider.Object,
                     Solution = this.solution,
                 };

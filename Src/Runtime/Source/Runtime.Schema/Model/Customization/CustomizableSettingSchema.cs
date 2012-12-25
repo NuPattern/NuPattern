@@ -3,9 +3,9 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Extensibility;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Customizations to the CustomizableSettings domain class.

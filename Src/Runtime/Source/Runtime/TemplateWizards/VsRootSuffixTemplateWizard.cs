@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Properties;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Custom template wizard extension that adds the root suffix of the 

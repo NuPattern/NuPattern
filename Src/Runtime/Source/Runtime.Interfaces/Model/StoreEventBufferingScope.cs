@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Runtime.Interfaces;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Runtime.Interfaces;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
     /// Scope for buffering <see cref="T:Store.ProductState"/> events. Use when you need to delay the raising of the events.

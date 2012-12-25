@@ -8,8 +8,8 @@
     <ProjectGuid>{79A7E018-1A92-47F4-A478-17BCC57CC7AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime</AssemblyName>
+    <RootNamespace>NuPattern.Runtime</RootNamespace>
+    <AssemblyName>NuPattern.Runtime</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>

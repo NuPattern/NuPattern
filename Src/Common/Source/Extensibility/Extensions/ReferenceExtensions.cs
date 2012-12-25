@@ -1,8 +1,8 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Extension methods for the <see cref="IReference"/> class.

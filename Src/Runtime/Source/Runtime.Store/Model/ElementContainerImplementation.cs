@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Globalization;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Store.Properties;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Store.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
     /// <summary>
     /// Provides a consistent implementation of <see cref="IElementContainer"/> which is the 

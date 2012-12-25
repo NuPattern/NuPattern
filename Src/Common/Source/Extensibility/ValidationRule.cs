@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Defines a <see cref="ValidationRule"/> that is in the dependency injection container.

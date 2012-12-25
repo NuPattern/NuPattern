@@ -1,10 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.Extensibility.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
+namespace NuPattern.Extensibility.Binding
 {
     /// <summary>
     /// Property descriptor for the Value property of a <see cref="DesignProperty"/>.

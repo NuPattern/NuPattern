@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     /// <summary>
     /// Converts a <see cref="DataTable"/> to and from JSON.

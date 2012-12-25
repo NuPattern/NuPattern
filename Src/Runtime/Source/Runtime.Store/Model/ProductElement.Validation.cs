@@ -5,10 +5,10 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Store.Properties;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Store.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// A ProductElement.

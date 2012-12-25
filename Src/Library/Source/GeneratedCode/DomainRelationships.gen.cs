@@ -9,16 +9,15 @@
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// DomainRelationship PropertySettingsHasValueProvider
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider
+	/// Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.PropertySettingsHasValueProvider.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Library.Automation.PropertySettingsHasValueProvider.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("da7276bc-f8a3-471d-9c13-2272264c49be")]
@@ -95,11 +94,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// <summary>
 		/// DomainRole PropertySettings
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.PropertySettings
+		/// NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettings
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ValueProvider", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ValueProvider", PropertyDisplayNameKey="NuPattern.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("d6ca83ae-f203-48a8-a5a0-534c7a8847cd")]
 		public virtual PropertySettings PropertySettings
 		{
@@ -147,11 +146,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// <summary>
 		/// DomainRole ValueProviderSettings
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettings
+		/// NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettings
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "OwnerProperty", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "OwnerProperty", PropertyDisplayNameKey="NuPattern.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("605c7185-04d8-4233-a865-69f2e521667e")]
 		public virtual ValueProviderSettings ValueProviderSettings
 		{
@@ -195,9 +194,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider GetLinkToValueProvider (global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings propertySettingsInstance)
+		public static global::NuPattern.Library.Automation.PropertySettingsHasValueProvider GetLinkToValueProvider (global::NuPattern.Library.Automation.PropertySettings propertySettingsInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider>(propertySettingsInstance, global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.PropertySettingsDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Library.Automation.PropertySettingsHasValueProvider> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.PropertySettingsHasValueProvider>(propertySettingsInstance, global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettingsDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of PropertySettings not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -215,9 +214,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider GetLinkToOwnerProperty (global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings valueProviderSettingsInstance)
+		public static global::NuPattern.Library.Automation.PropertySettingsHasValueProvider GetLinkToOwnerProperty (global::NuPattern.Library.Automation.ValueProviderSettings valueProviderSettingsInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider>(valueProviderSettingsInstance, global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettingsDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Library.Automation.PropertySettingsHasValueProvider> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.PropertySettingsHasValueProvider>(valueProviderSettingsInstance, global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettingsDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ValueProviderSettings not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -236,11 +235,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider> GetLinks( global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings source, global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Library.Automation.PropertySettingsHasValueProvider> GetLinks( global::NuPattern.Library.Automation.PropertySettings source, global::NuPattern.Library.Automation.ValueProviderSettings target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider>(source, global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.PropertySettingsDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Library.Automation.PropertySettingsHasValueProvider> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Library.Automation.PropertySettingsHasValueProvider>();
+			global::System.Collections.Generic.IList<global::NuPattern.Library.Automation.PropertySettingsHasValueProvider> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.PropertySettingsHasValueProvider>(source, global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettingsDomainRoleId);
+			foreach ( global::NuPattern.Library.Automation.PropertySettingsHasValueProvider link in links )
 			{
 				if ( target.Equals(link.ValueProviderSettings) )
 				{
@@ -254,10 +253,10 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider GetLink( global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings source, global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings target )
+		public static global::NuPattern.Library.Automation.PropertySettingsHasValueProvider GetLink( global::NuPattern.Library.Automation.PropertySettings source, global::NuPattern.Library.Automation.ValueProviderSettings target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider>(source, global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.PropertySettingsDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Library.Automation.PropertySettingsHasValueProvider> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.PropertySettingsHasValueProvider>(source, global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettingsDomainRoleId);
+			foreach ( global::NuPattern.Library.Automation.PropertySettingsHasValueProvider link in links )
 			{
 				if ( target.Equals(link.ValueProviderSettings) )
 				{
@@ -270,16 +269,16 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// DomainRelationship ValueProviderSettingsReferencesProperties
 	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties
+	/// NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
 	[DslModeling::DomainObjectId("f1c21f7d-ff90-42a2-bacf-deef2c7411f0")]
@@ -356,11 +355,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// <summary>
 		/// DomainRole ValueProviderSettings
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettings
+		/// NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettings
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Properties", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Properties", PropertyDisplayNameKey="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("f544718c-e9c6-49f6-bc0e-ab01878c0c2e")]
 		public virtual ValueProviderSettings ValueProviderSettings
 		{
@@ -408,11 +407,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// <summary>
 		/// DomainRole PropertySettings
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettings
+		/// NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettings
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ParentProvider", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ParentProvider", PropertyDisplayNameKey="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("e1bda564-c196-48d6-b8ed-0d0bb1dd82d9")]
 		public virtual PropertySettings PropertySettings
 		{
@@ -446,9 +445,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties> GetLinksToProperties ( global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings valueProviderSettingsInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties> GetLinksToProperties ( global::NuPattern.Library.Automation.ValueProviderSettings valueProviderSettingsInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties>(valueProviderSettingsInstance, global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettingsDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties>(valueProviderSettingsInstance, global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettingsDomainRoleId);
 		}
 		#endregion
 		#region PropertySettings link accessor
@@ -457,9 +456,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties GetLinkToParentProvider (global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings propertySettingsInstance)
+		public static global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties GetLinkToParentProvider (global::NuPattern.Library.Automation.PropertySettings propertySettingsInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties>(propertySettingsInstance, global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettingsDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties>(propertySettingsInstance, global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettingsDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of PropertySettings not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -478,11 +477,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties> GetLinks( global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings source, global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties> GetLinks( global::NuPattern.Library.Automation.ValueProviderSettings source, global::NuPattern.Library.Automation.PropertySettings target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties>(source, global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettingsDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties>();
+			global::System.Collections.Generic.IList<global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties>(source, global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettingsDomainRoleId);
+			foreach ( global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties link in links )
 			{
 				if ( target.Equals(link.PropertySettings) )
 				{
@@ -496,10 +495,10 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties GetLink( global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings source, global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings target )
+		public static global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties GetLink( global::NuPattern.Library.Automation.ValueProviderSettings source, global::NuPattern.Library.Automation.PropertySettings target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties>(source, global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettingsDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties>(source, global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettingsDomainRoleId);
+			foreach ( global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties link in links )
 			{
 				if ( target.Equals(link.PropertySettings) )
 				{
@@ -512,16 +511,15 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// DomainRelationship CommandSettingsHasProperties
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties
+	/// Description for NuPattern.Library.Automation.CommandSettingsHasProperties
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.CommandSettingsHasProperties.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Library.Automation.CommandSettingsHasProperties.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("a6a80f96-3fb8-4523-b9f0-a57bcceda592")]
@@ -598,11 +596,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// <summary>
 		/// DomainRole CommandSettings
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.CommandSettings
+		/// NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettings
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/CommandSettings.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/CommandSettings.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Properties", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/CommandSettings.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.CommandSettingsHasProperties/CommandSettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.CommandSettingsHasProperties/CommandSettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Properties", PropertyDisplayNameKey="NuPattern.Library.Automation.CommandSettingsHasProperties/CommandSettings.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("b78a78b0-9e86-4825-90d5-c67b36b15752")]
 		public virtual CommandSettings CommandSettings
 		{
@@ -650,11 +648,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// <summary>
 		/// DomainRole PropertySettings
 		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.PropertySettings
+		/// NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettings
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/PropertySettings.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/PropertySettings.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "CommandSettings", PropertyDisplayNameKey="Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties/PropertySettings.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.CommandSettingsHasProperties/PropertySettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.CommandSettingsHasProperties/PropertySettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "CommandSettings", PropertyDisplayNameKey="NuPattern.Library.Automation.CommandSettingsHasProperties/PropertySettings.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("7e084d9a-d60a-45b2-807b-5cfa2d8b728a")]
 		public virtual PropertySettings PropertySettings
 		{
@@ -688,9 +686,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties> GetLinksToProperties ( global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettings commandSettingsInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Library.Automation.CommandSettingsHasProperties> GetLinksToProperties ( global::NuPattern.Library.Automation.CommandSettings commandSettingsInstance )
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties>(commandSettingsInstance, global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.CommandSettingsDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.CommandSettingsHasProperties>(commandSettingsInstance, global::NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettingsDomainRoleId);
 		}
 		#endregion
 		#region PropertySettings link accessor
@@ -699,9 +697,9 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties GetLinkToCommandSettings (global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings propertySettingsInstance)
+		public static global::NuPattern.Library.Automation.CommandSettingsHasProperties GetLinkToCommandSettings (global::NuPattern.Library.Automation.PropertySettings propertySettingsInstance)
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties>(propertySettingsInstance, global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.PropertySettingsDomainRoleId);
+			global::System.Collections.Generic.IList<global::NuPattern.Library.Automation.CommandSettingsHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.CommandSettingsHasProperties>(propertySettingsInstance, global::NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettingsDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of PropertySettings not obeyed.");
 			if ( links.Count == 0 )
 			{
@@ -720,11 +718,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties> GetLinks( global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettings source, global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings target )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Library.Automation.CommandSettingsHasProperties> GetLinks( global::NuPattern.Library.Automation.CommandSettings source, global::NuPattern.Library.Automation.PropertySettings target )
 		{
-			global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties> outLinks = new global::System.Collections.Generic.List<global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties>();
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties>(source, global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.CommandSettingsDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties link in links )
+			global::System.Collections.Generic.List<global::NuPattern.Library.Automation.CommandSettingsHasProperties> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Library.Automation.CommandSettingsHasProperties>();
+			global::System.Collections.Generic.IList<global::NuPattern.Library.Automation.CommandSettingsHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.CommandSettingsHasProperties>(source, global::NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettingsDomainRoleId);
+			foreach ( global::NuPattern.Library.Automation.CommandSettingsHasProperties link in links )
 			{
 				if ( target.Equals(link.PropertySettings) )
 				{
@@ -738,10 +736,10 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties GetLink( global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettings source, global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings target )
+		public static global::NuPattern.Library.Automation.CommandSettingsHasProperties GetLink( global::NuPattern.Library.Automation.CommandSettings source, global::NuPattern.Library.Automation.PropertySettings target )
 		{
-			global::System.Collections.Generic.IList<global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties>(source, global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.CommandSettingsDomainRoleId);
-			foreach ( global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties link in links )
+			global::System.Collections.Generic.IList<global::NuPattern.Library.Automation.CommandSettingsHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Library.Automation.CommandSettingsHasProperties>(source, global::NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettingsDomainRoleId);
+			foreach ( global::NuPattern.Library.Automation.CommandSettingsHasProperties link in links )
 			{
 				if ( target.Equals(link.PropertySettings) )
 				{

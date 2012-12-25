@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Exposes Visual Studio shell events.

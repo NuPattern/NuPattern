@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Runtime
+﻿namespace NuPattern.Runtime
 {
     /// <summary>
     /// Interface implemented by elements that are contained by a parent element.

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Provides a <see cref="IServiceProvider"/> that wraps another and allow add and remove local services.

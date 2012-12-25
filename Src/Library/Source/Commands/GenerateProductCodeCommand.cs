@@ -6,18 +6,18 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.References;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 using Dsl = Microsoft.VisualStudio.Modeling.Design;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// A command that generates code from text templates.
@@ -77,15 +77,15 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [DefaultValue(DefaultSyncName)]
         [DesignOnly(true)]
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SyncName.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SyncName.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/SyncName.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/SyncName.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
         public bool SyncName { get; set; }
 
         /// <summary>
         /// An optional value to atg the generated reference for the generated file.
         /// </summary>
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/Tag.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/Tag.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
         [DefaultValue(DefaultTag)]
         public string Tag { get; set; }
 

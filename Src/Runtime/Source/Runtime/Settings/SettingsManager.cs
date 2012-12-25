@@ -2,13 +2,13 @@
 using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.IO;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.Settings;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Settings;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Runtime.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Default implementation of <see cref="ISettingsManager"/> which uses <see cref="ShellSettingsManager"/>.

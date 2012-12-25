@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.Extensibility.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Type converter thats shows list of installed feature extensions.

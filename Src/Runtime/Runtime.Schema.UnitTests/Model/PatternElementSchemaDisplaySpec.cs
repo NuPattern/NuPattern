@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
+namespace NuPattern.Runtime.Schema.UnitTests
 {
     [TestClass]
     public class PatternElementSchemaDisplaySpec

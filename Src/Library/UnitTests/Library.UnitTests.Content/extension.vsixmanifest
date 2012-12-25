@@ -2,7 +2,7 @@
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
 	<Identifier Id="ef4561f7-a3ea-4666-a080-bc2f195451e3">
 		<Name>Toolkit1</Name>
-		<Author>Outercurve</Author>
+		<Author>NuPattern</Author>
 		<Version>1.0</Version>
 		<Description xml:space="preserve">Description of the Toolkit1.</Description>
 		<Locale>1033</Locale>

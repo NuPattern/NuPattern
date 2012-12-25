@@ -4,12 +4,12 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	///  Manages the output of trace messages to an output window pane.
@@ -117,7 +117,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 
 			if (!string.IsNullOrEmpty(tempLog))
 			{
-				ErrorHandler.ThrowOnFailure(this.outputWindowPane.OutputStringThreadSafe(this.temporaryWriter.ToString()));
+                Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.outputWindowPane.OutputStringThreadSafe(this.temporaryWriter.ToString()));
 			}
 
 			this.temporaryWriter = null;
@@ -154,8 +154,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 				var outputWindow = (IVsOutputWindow)this.serviceProvider.GetService(typeof(SVsOutputWindow));
 				tracer.ShieldUI(() =>
 				{
-					ErrorHandler.ThrowOnFailure(outputWindow.CreatePane(ref this.outputPaneGuid, this.outputPaneTitle, 1, 1));
-					ErrorHandler.ThrowOnFailure(outputWindow.GetPane(ref this.outputPaneGuid, out this.outputWindowPane));
+                    Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(outputWindow.CreatePane(ref this.outputPaneGuid, this.outputPaneTitle, 1, 1));
+                    Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(outputWindow.GetPane(ref this.outputPaneGuid, out this.outputWindowPane));
 				},
 				Resources.TraceOutput_FailedToCreateOutputWindow);
 			}

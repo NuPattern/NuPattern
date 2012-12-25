@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.Patterning.Runtime;
+﻿using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Adds the <see cref="IBindingSettings"/> implementation to the interface.

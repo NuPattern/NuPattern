@@ -5,7 +5,7 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
+namespace NuPattern.Extensibility.Binding
 {
 	/// <summary>
 	/// Custom type description provider that can be associated with a binding settings class 

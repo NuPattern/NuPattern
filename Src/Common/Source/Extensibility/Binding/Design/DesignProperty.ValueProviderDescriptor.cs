@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
+namespace NuPattern.Extensibility.Binding
 {
     /// <summary>
     /// Property descriptor for the ValueProvider property of a <see cref="DesignProperty"/>.

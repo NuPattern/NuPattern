@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     /// <summary>
     /// Converts a <see cref="DateTime"/> to and from the ISO 8601 date format (e.g. 2008-04-12T12:53Z).

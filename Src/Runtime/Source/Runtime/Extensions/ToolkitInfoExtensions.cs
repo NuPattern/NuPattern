@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.ExtensionManager;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Provides helper methods for dealing with <see cref="IToolkitInfo"/> instances.

@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
     /// <summary>
     /// Defines extension methods related to Project.
@@ -34,21 +34,21 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
                         {
                             IVsHierarchy hierarchy;
 
-                            if (ErrorHandler.Succeeded(solution.GetProjectOfUniqueName(project.FullName, out hierarchy)) && hierarchy != null)
+                            if (Microsoft.VisualStudio.ErrorHandler.Succeeded(solution.GetProjectOfUniqueName(project.FullName, out hierarchy)) && hierarchy != null)
                             {
                                 object hier = null;
 
-                                if (ErrorHandler.Succeeded(hierarchy.GetProperty(VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_ParentHierarchy, out hier)) && hier != null)
+                                if (Microsoft.VisualStudio.ErrorHandler.Succeeded(hierarchy.GetProperty(Microsoft.VisualStudio.VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_ParentHierarchy, out hier)) && hier != null)
                                 {
                                     object itemId = null;
 
-                                    if (ErrorHandler.Succeeded(hierarchy.GetProperty(VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_ParentHierarchyItemid, out itemId)) && itemId != null)
+                                    if (Microsoft.VisualStudio.ErrorHandler.Succeeded(hierarchy.GetProperty(Microsoft.VisualStudio.VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_ParentHierarchyItemid, out itemId)) && itemId != null)
                                     {
                                         var persistHierarchy = hier as IVsPersistHierarchyItem2;
 
                                         if (persistHierarchy != null)
                                         {
-                                            ErrorHandler.ThrowOnFailure(persistHierarchy.ReloadItem((uint)(int)itemId, 0));
+                                            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(persistHierarchy.ReloadItem((uint)(int)itemId, 0));
                                         }
                                     }
                                 }

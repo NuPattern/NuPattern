@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
+using NuPattern.Library.Automation;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Design
+namespace NuPattern.Library.Design
 {
     /// <summary>
     /// Command references type converter

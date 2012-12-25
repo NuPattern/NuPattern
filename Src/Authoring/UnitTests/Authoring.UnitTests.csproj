@@ -7,8 +7,8 @@
     <ProjectGuid>{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Authoring.UnitTests</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Authoring.UnitTests</AssemblyName>
+    <RootNamespace>NuPattern.Authoring.UnitTests</RootNamespace>
+    <AssemblyName>NuPattern.Authoring.UnitTests</AssemblyName>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -19,12 +19,12 @@
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
     <!---->
-    <Reference Include="Microsoft.VisualStudio.Patterning.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Interfaces">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Patterning.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\Microsoft.VisualStudio.Patterning.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Moq">
@@ -103,21 +103,21 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Source\Authoring.Toolkit.Automation\Authoring.Toolkit.Automation.csproj">
+    <ProjectReference Include="..\Source\Authoring.PatternToolkit.Automation\Authoring.PatternToolkit.Automation.csproj">
       <Project>{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}</Project>
-      <Name>Authoring.Toolkit.Automation</Name>
+      <Name>Authoring.PatternToolkit.Automation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\PatternModelDesign.Shell\PatternModelDesign.Shell.csproj">
+    <ProjectReference Include="..\Source\Authoring.PatternModelDesign.Shell\Authoring.PatternModelDesign.Shell.csproj">
       <Project>{A999A0EB-246C-4B63-8BC1-405020026CAB}</Project>
-      <Name>PatternModelDesign.Shell</Name>
+      <Name>Authoring.PatternModelDesign.Shell</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\WorkflowDesign.Interfaces\WorkflowDesign.Interfaces.csproj">
+    <ProjectReference Include="..\Source\Authoring.WorkflowDesign.Interfaces\Authoring.WorkflowDesign.Interfaces.csproj">
       <Project>{A55CFA2E-1519-4719-BAFB-D67F3C67E375}</Project>
-      <Name>WorkflowDesign.Interfaces</Name>
+      <Name>Authoring.WorkflowDesign.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\WorkflowDesign\WorkflowDesign.csproj">
+    <ProjectReference Include="..\Source\Authoring.WorkflowDesign\Authoring.WorkflowDesign.csproj">
       <Project>{B29AC5FA-1276-46C3-A6F5-C0F8D2F8914A}</Project>
-      <Name>WorkflowDesign</Name>
+      <Name>Authoring.WorkflowDesign</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

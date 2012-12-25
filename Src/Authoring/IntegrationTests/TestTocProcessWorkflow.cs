@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Microsoft.VisualStudio.Patterning.Authoring.Guidance;
+using NuPattern.Authoring.Guidance;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.IntegrationTests
+namespace NuPattern.Authoring.IntegrationTests
 {
 	internal class TestTocProcessWorkflow : TocProcessWorkflowTextTransformation
 	{

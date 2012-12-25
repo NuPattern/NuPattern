@@ -9,14 +9,14 @@
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass PatternModelSchema
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("76e57dce-a400-4ed1-bbba-00e7d337f5ad")]
 	public abstract partial class PatternModelSchemaBase : DslModeling::ModelElement
@@ -53,9 +53,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of BaseVersion domain property.
 		/// The version of the base pattern line that this pattern line derives from.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema/BaseVersion.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema/BaseVersion.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema/BaseVersion.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchema/BaseVersion.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PatternModelSchema/BaseVersion.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchema/BaseVersion.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("adc27259-7812-4979-b334-3b4923fb7763")]
 		public global::System.String BaseVersion
@@ -163,9 +163,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// The unique identifier of the base pattern line that this pattern line derives
 		/// from.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema/BaseId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema/BaseId.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema/BaseId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchema/BaseId.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PatternModelSchema/BaseId.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchema/BaseId.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[DslModeling::DomainObjectId("d02ca418-3c63-46b4-a3ed-1cc36322ffcd")]
 		public global::System.String BaseId
@@ -266,12 +266,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId) as PatternSchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId) as PatternSchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -295,7 +295,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.PatternSchema.DomainClassId)) 
 				{
 					// Check that creating a link with this path doesn't cause multiplicity overflow: PatternModelHasPattern.Pattern
 					if (this.Pattern != null)
@@ -329,7 +329,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema sourcePatternSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema;
+			global::NuPattern.Runtime.Schema.PatternSchema sourcePatternSchema1 = sourceElement as global::NuPattern.Runtime.Schema.PatternSchema;
 			if (sourcePatternSchema1 != null)
 			{
 				// Create link for path PatternModelHasPattern.Pattern
@@ -360,15 +360,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema sourcePatternSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema;
+			global::NuPattern.Runtime.Schema.PatternSchema sourcePatternSchema1 = sourceElement as global::NuPattern.Runtime.Schema.PatternSchema;
 			if (sourcePatternSchema1 != null)
 			{
 				// Delete link for path PatternModelHasPattern.Pattern
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema)this, sourcePatternSchema1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.PatternModelHasPattern.GetLinks((global::NuPattern.Runtime.Schema.PatternModelSchema)this, sourcePatternSchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.PatternSchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternSchemaDomainRoleId);
 				}
 
 				return;
@@ -409,15 +409,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass PatternSchema
 	/// The definition of the pattern.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("15a27251-8feb-4fae-b6d8-703a5697d3eb")]
 	public partial class PatternSchema : PatternElementSchema
@@ -459,9 +459,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of ExtensionId domain property.
 		/// The identifier of the Visual Studio extension that deploys this pattern.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema/ExtensionId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema/ExtensionId.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema/ExtensionId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternSchema/ExtensionId.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PatternSchema/ExtensionId.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternSchema/ExtensionId.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.CustomStorage)]
@@ -576,8 +576,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of CurrentDiagramId domain property.
 		/// Gets the currently opened diagram identifier.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema/CurrentDiagramId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema/CurrentDiagramId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternSchema/CurrentDiagramId.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternSchema/CurrentDiagramId.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("1678920d-c2ac-4160-8ae6-bb643e52f2cd")]
@@ -685,8 +685,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of PatternLink domain property.
 		/// The identifier of the instance of this pattern.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema/PatternLink.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema/PatternLink.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternSchema/PatternLink.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternSchema/PatternLink.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("97c8fce3-87a7-45d6-8c3b-dbb0d68b0f1f")]
@@ -788,12 +788,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.PatternSchemaDomainRoleId) as PatternModelSchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternSchemaDomainRoleId) as PatternModelSchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelHasPattern.PatternSchemaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternSchemaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -808,7 +808,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ViewSchema>, ViewSchema>(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ViewSchema>, ViewSchema>(global::NuPattern.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId);
 			}
 		}
 		#endregion
@@ -823,7 +823,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ProvidedExtensionPointSchema>, ProvidedExtensionPointSchema>(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ProvidedExtensionPointSchema>, ProvidedExtensionPointSchema>(global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId);
 			}
 		}
 		#endregion
@@ -847,12 +847,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.ViewSchema.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema.DomainClassId)) 
 				{
 					return true;
 				}
@@ -881,7 +881,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema sourceViewSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema;
+			global::NuPattern.Runtime.Schema.ViewSchema sourceViewSchema1 = sourceElement as global::NuPattern.Runtime.Schema.ViewSchema;
 			if (sourceViewSchema1 != null)
 			{
 				// Create link for path PatternHasViews.Views
@@ -890,7 +890,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema sourceProvidedExtensionPointSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema;
+			global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema sourceProvidedExtensionPointSchema2 = sourceElement as global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema;
 			if (sourceProvidedExtensionPointSchema2 != null)
 			{
 				// Create link for path PatternHasProvidedExtensionPoints.ProvidedExtensionPoints
@@ -921,29 +921,29 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema sourceViewSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema;
+			global::NuPattern.Runtime.Schema.ViewSchema sourceViewSchema1 = sourceElement as global::NuPattern.Runtime.Schema.ViewSchema;
 			if (sourceViewSchema1 != null)
 			{
 				// Delete link for path PatternHasViews.Views
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema)this, sourceViewSchema1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.PatternHasViews.GetLinks((global::NuPattern.Runtime.Schema.PatternSchema)this, sourceViewSchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.ViewSchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId, global::NuPattern.Runtime.Schema.PatternHasViews.ViewSchemaDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema sourceProvidedExtensionPointSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema;
+			global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema sourceProvidedExtensionPointSchema2 = sourceElement as global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema;
 			if (sourceProvidedExtensionPointSchema2 != null)
 			{
 				// Delete link for path PatternHasProvidedExtensionPoints.ProvidedExtensionPoints
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema)this, sourceProvidedExtensionPointSchema2))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.GetLinks((global::NuPattern.Runtime.Schema.PatternSchema)this, sourceProvidedExtensionPointSchema2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.ProvidedExtensionPointSchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId, global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.ProvidedExtensionPointSchemaDomainRoleId);
 				}
 
 				return;
@@ -954,15 +954,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass NamedElementSchema
 	/// An element that has a unique name.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("50bd80bb-6516-4bfc-a5e5-8ce26fc23224")]
@@ -1000,9 +1000,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of Name domain property.
 		/// The well-known name of this item in this model.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/Name.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/Name.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/Name.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema/Name.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.NamedElementSchema/Name.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema/Name.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::ElementName(typeof(NamedElementSchemaNameProvider))]
 		[DslModeling::DomainObjectId("3e893411-e795-45d4-89b4-1d6d8beef0ec")]
 		public global::System.String Name
@@ -1109,8 +1109,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of BaseId domain property.
 		/// The identifier of the inherited variability model.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/BaseId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/BaseId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema/BaseId.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema/BaseId.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("143d5d67-86e6-4506-9370-e9f05fbcfd9f")]
@@ -1214,10 +1214,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// The name used for instances of this item, as seen by the user. Also used to name
 		/// associated artifacts/configuration created for this item.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/DisplayName.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/DisplayName.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/DisplayName.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema/DisplayName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.NamedElementSchema/DisplayName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema/DisplayName.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.CustomStorage)]
 		[DslModeling::DomainObjectId("3cf4da77-3984-4048-913f-1014118cee9f")]
 		public global::System.String DisplayName
@@ -1330,9 +1330,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsDisplayNameTracking domain property.
 		/// Used to track whether the user changed the display name manually.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsDisplayNameTracking.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsDisplayNameTracking.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsDisplayNameTracking.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema/IsDisplayNameTracking.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.NamedElementSchema/IsDisplayNameTracking.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema/IsDisplayNameTracking.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1436,10 +1436,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of Description domain property.
 		/// The description of this item displayed to the user.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/Description.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/Description.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/Description.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema/Description.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.NamedElementSchema/Description.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema/Description.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.CustomStorage)]
 		[DslModeling::DomainObjectId("d60b22b2-540e-4024-9a15-6a66fc3719ba")]
 		public global::System.String Description
@@ -1552,9 +1552,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsDescriptionTracking domain property.
 		/// Used to track whether the user changed the description manually.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsDescriptionTracking.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsDescriptionTracking.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsDescriptionTracking.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema/IsDescriptionTracking.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.NamedElementSchema/IsDescriptionTracking.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema/IsDescriptionTracking.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1658,8 +1658,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsInheritedFromBase domain property.
 		/// Whether the element is derived from a base variability model definition.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsInheritedFromBase.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsInheritedFromBase.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema/IsInheritedFromBase.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema/IsInheritedFromBase.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -1724,9 +1724,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of SchemaPath domain property.
 		/// The path of this element in the variability model.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/SchemaPath.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/SchemaPath.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/SchemaPath.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema/SchemaPath.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.NamedElementSchema/SchemaPath.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema/SchemaPath.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -1797,9 +1797,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Whether this element is hidden from the design-view. Used by automation
 		/// extensions.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsSystem.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsSystem.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsSystem.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema/IsSystem.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.NamedElementSchema/IsSystem.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema/IsSystem.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("d749fd5a-8b9d-4925-acb6-2eea03c3b6d0")]
 		public global::System.Boolean IsSystem
@@ -1902,9 +1902,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// The identifier used for naming generating code artifacts that represent this
 		/// element. This identifier must be unique across the whole model.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/CodeIdentifier.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/CodeIdentifier.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/CodeIdentifier.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema/CodeIdentifier.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.NamedElementSchema/CodeIdentifier.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema/CodeIdentifier.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.CustomStorage)]
 		[DslModeling::DomainObjectId("048d7d20-3602-4ada-857c-3709e6701460")]
 		public global::System.String CodeIdentifier
@@ -2017,8 +2017,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsCodeIdentifierTracking domain property.
 		/// Used to track whether the user changed the  code identifier manually.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsCodeIdentifierTracking.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema/IsCodeIdentifierTracking.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema/IsCodeIdentifierTracking.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema/IsCodeIdentifierTracking.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -2113,15 +2113,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass PatternElementSchema
 	/// A container of properties and automation.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("dbe13a31-7dcd-4fbd-a601-18ca765e264e")]
 	public abstract partial class PatternElementSchema : CustomizableElementSchema
@@ -2158,10 +2158,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of ValidationRules domain property.
 		/// The validation rules applied to this element.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema/ValidationRules.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema/ValidationRules.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema/ValidationRules.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementSchema/ValidationRules.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PatternElementSchema/ValidationRules.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementSchema/ValidationRules.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("009e8fbb-1e3a-4fd4-98ba-3e20e2507428")]
 		public global::System.String ValidationRules
 		{
@@ -2267,12 +2267,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of Icon domain property.
 		/// The icon for this item displayed to the user.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Extensibility.ImageFilter(Microsoft.VisualStudio.Patterning.Extensibility.ImageKind.Image )]
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.Patterning.Extensibility.ImageUriEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema/Icon.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema/Icon.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema/Icon.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Extensibility.ImageFilter(NuPattern.Extensibility.ImageKind.Image )]
+		[System.ComponentModel.Editor(typeof(NuPattern.Extensibility.ImageUriEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementSchema/Icon.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PatternElementSchema/Icon.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementSchema/Icon.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("036d59f2-87d1-49f3-aee4-4e73b3566b2e")]
 		public global::System.String Icon
 		{
@@ -2373,7 +2373,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<PropertySchema>, PropertySchema>(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<PropertySchema>, PropertySchema>(global::NuPattern.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId);
 			}
 		}
 		#endregion
@@ -2388,7 +2388,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<AutomationSettingsSchema>, AutomationSettingsSchema>(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AutomationSettingsSchema>, AutomationSettingsSchema>(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId);
 			}
 		}
 		#endregion
@@ -2412,12 +2412,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.PropertySchema.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.AutomationSettingsSchema.DomainClassId)) 
 				{
 					return true;
 				}
@@ -2446,7 +2446,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema sourcePropertySchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema;
+			global::NuPattern.Runtime.Schema.PropertySchema sourcePropertySchema1 = sourceElement as global::NuPattern.Runtime.Schema.PropertySchema;
 			if (sourcePropertySchema1 != null)
 			{
 				// Create link for path PatternElementHasProperties.Properties
@@ -2455,7 +2455,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema;
+			global::NuPattern.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema2 = sourceElement as global::NuPattern.Runtime.Schema.AutomationSettingsSchema;
 			if (sourceAutomationSettingsSchema2 != null)
 			{
 				// Create link for path PatternElementHasAutomationSettings.AutomationSettings
@@ -2486,29 +2486,29 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema sourcePropertySchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema;
+			global::NuPattern.Runtime.Schema.PropertySchema sourcePropertySchema1 = sourceElement as global::NuPattern.Runtime.Schema.PropertySchema;
 			if (sourcePropertySchema1 != null)
 			{
 				// Delete link for path PatternElementHasProperties.Properties
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)this, sourcePropertySchema1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.PatternElementHasProperties.GetLinks((global::NuPattern.Runtime.Schema.PatternElementSchema)this, sourcePropertySchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema;
+			global::NuPattern.Runtime.Schema.AutomationSettingsSchema sourceAutomationSettingsSchema2 = sourceElement as global::NuPattern.Runtime.Schema.AutomationSettingsSchema;
 			if (sourceAutomationSettingsSchema2 != null)
 			{
 				// Delete link for path PatternElementHasAutomationSettings.AutomationSettings
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)this, sourceAutomationSettingsSchema2))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.GetLinks((global::NuPattern.Runtime.Schema.PatternElementSchema)this, sourceAutomationSettingsSchema2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId);
 				}
 
 				return;
@@ -2519,15 +2519,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass PropertySchema
 	/// A property of an element.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("079a705a-0fc2-4c40-b0ba-c8b76fc60f7c")]
 	public partial class PropertySchema : CustomizableElementSchema
@@ -2574,10 +2574,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of RawDefaultValue domain property.
 		/// The initial value of this property when created.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/RawDefaultValue.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/RawDefaultValue.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/RawDefaultValue.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/RawDefaultValue.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/RawDefaultValue.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema/RawDefaultValue.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("df11ede4-3da1-4416-9f7d-cfb840e28bb3")]
 		public global::System.String RawDefaultValue
@@ -2685,9 +2685,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// The data type of this property, which determines the type of its value.
 		/// </summary>
 		[System.ComponentModel.RefreshProperties(System.ComponentModel.RefreshProperties.All)]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/Type.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/Type.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/Type.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/Type.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/Type.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema/Type.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue("System.String")]
 		[DslModeling::DomainObjectId("112c82d2-866f-4f9f-8f32-9cb0cc636fac")]
 		public global::System.String Type
@@ -2794,10 +2794,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsVisible domain property.
 		/// Whether this property is shown to the user.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/IsVisible.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/IsVisible.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/IsVisible.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/IsVisible.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/IsVisible.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema/IsVisible.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[DslModeling::DomainObjectId("97ced30c-61bc-44ad-9041-00945076d37d")]
 		public global::System.Boolean IsVisible
@@ -2904,10 +2904,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsReadOnly domain property.
 		/// Whether this property is read-only to the user.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/IsReadOnly.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/IsReadOnly.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/IsReadOnly.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/IsReadOnly.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/IsReadOnly.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema/IsReadOnly.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("452d1740-162b-4911-874a-a45ca1018e97")]
 		public global::System.Boolean IsReadOnly
 		{
@@ -3014,10 +3014,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// The category for this property, used to organize similar properties shown in the
 		/// Properties Window.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/Category.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/Category.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/Category.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/Category.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/Category.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema/Category.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue("General")]
 		[DslModeling::DomainObjectId("93af01ae-05ca-44fd-9e8b-8230c5662415")]
 		public global::System.String Category
@@ -3118,20 +3118,20 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Storage for PropertyUsage
 		/// </summary>
-		private global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages propertyUsagePropertyStorage = DslModeling::SerializationUtilities.GetValue<global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages>("General");
+		private global::NuPattern.Runtime.PropertyUsages propertyUsagePropertyStorage = DslModeling::SerializationUtilities.GetValue<global::NuPattern.Runtime.PropertyUsages>("General");
 		
 		/// <summary>
 		/// Gets or sets the value of PropertyUsage domain property.
 		/// The primary usage of this property,
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/PropertyUsage.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/PropertyUsage.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/PropertyUsage.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[global::System.ComponentModel.DefaultValue(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages), "General")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/PropertyUsage.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/PropertyUsage.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema/PropertyUsage.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[global::System.ComponentModel.DefaultValue(typeof(global::NuPattern.Runtime.PropertyUsages), "General")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("b6c1c888-82c5-4619-8e2b-e69e1cf975aa")]
-		public global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages PropertyUsage
+		public global::NuPattern.Runtime.PropertyUsages PropertyUsage
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3147,7 +3147,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Value handler for the PropertySchema.PropertyUsage domain property.
 		/// </summary>
-		internal sealed partial class PropertyUsagePropertyHandler : DslModeling::DomainPropertyValueHandler<PropertySchema, global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages>
+		internal sealed partial class PropertyUsagePropertyHandler : DslModeling::DomainPropertyValueHandler<PropertySchema, global::NuPattern.Runtime.PropertyUsages>
 		{
 			private PropertyUsagePropertyHandler() { }
 		
@@ -3173,7 +3173,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages GetValue(PropertySchema element)
+			public override sealed global::NuPattern.Runtime.PropertyUsages GetValue(PropertySchema element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.propertyUsagePropertyStorage;
@@ -3184,14 +3184,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(PropertySchema element, global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages newValue)
+			public override sealed void SetValue(PropertySchema element, global::NuPattern.Runtime.PropertyUsages newValue)
 			{
 				if (element == null)
 				{
 					throw new global::System.ArgumentNullException("element");
 				}
 		
-				global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages oldValue = GetValue(element);
+				global::NuPattern.Runtime.PropertyUsages oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
@@ -3209,7 +3209,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				}
 			}
 		
-			private void SetValue(PropertySchema element, global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages oldValue, global::Microsoft.VisualStudio.Patterning.Runtime.PropertyUsages newValue)
+			private void SetValue(PropertySchema element, global::NuPattern.Runtime.PropertyUsages oldValue, global::NuPattern.Runtime.PropertyUsages newValue)
 			{
 				this.ValueChanging(element, oldValue, newValue);
 				element.propertyUsagePropertyStorage = newValue;
@@ -3239,11 +3239,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// acceptable values.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter<System.ComponentModel.TypeConverter>))]
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/TypeConverterTypeName.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/TypeConverterTypeName.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/TypeConverterTypeName.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.ComponentModel.TypeConverter>))]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/TypeConverterTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/TypeConverterTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema/TypeConverterTypeName.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("19df1177-f0a6-4540-bd5b-7b350441bee6")]
 		public global::System.String TypeConverterTypeName
 		{
@@ -3351,11 +3351,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// value of this property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter<System.Drawing.Design.UITypeEditor>))]
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/EditorTypeName.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/EditorTypeName.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/EditorTypeName.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.Drawing.Design.UITypeEditor>))]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/EditorTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/EditorTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema/EditorTypeName.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("377771ed-e31c-4d13-bd13-920a33d7c0b0")]
 		public global::System.String EditorTypeName
 		{
@@ -3461,10 +3461,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of RawValidationRules domain property.
 		/// The validation rules applied to this element.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/RawValidationRules.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/RawValidationRules.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/RawValidationRules.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/RawValidationRules.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/RawValidationRules.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema/RawValidationRules.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("e9070cd0-3aa5-4e07-8504-a735f40a8be4")]
 		public global::System.String RawValidationRules
 		{
@@ -3570,11 +3570,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of RawValueProvider domain property.
 		/// A value provider that calculates the value of this property dynamically.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Extensibility.PropertyDescriptor(typeof(Microsoft.VisualStudio.Patterning.Extensibility.Binding.BindingPropertyDescriptor<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider>))]
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/RawValueProvider.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/RawValueProvider.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema/RawValueProvider.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Extensibility.PropertyDescriptor(typeof(NuPattern.Extensibility.Binding.BindingPropertyDescriptor<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider>))]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/RawValueProvider.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/RawValueProvider.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema/RawValueProvider.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("e6d6779f-b6b9-4db4-9bf3-04e864a4c58e")]
 		public global::System.String RawValueProvider
 		{
@@ -3674,25 +3674,25 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId) as PatternElementSchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId) as PatternElementSchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId, value);
 			}
 		}
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass ViewSchema
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("14b6f5ec-0468-4380-9210-07c2fdbda012")]
 	public abstract partial class ViewSchemaBase : CustomizableElementSchema
@@ -3729,10 +3729,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsVisible domain property.
 		/// Whether this view is shown to the user.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema/IsVisible.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema/IsVisible.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema/IsVisible.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewSchema/IsVisible.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewSchema/IsVisible.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewSchema/IsVisible.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[DslModeling::DomainObjectId("5812d2f0-206f-4356-a12f-b2419cc11082")]
 		public global::System.Boolean IsVisible
@@ -3839,10 +3839,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsDefault domain property.
 		/// Whether this is the default view
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema/IsDefault.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema/IsDefault.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema/IsDefault.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewSchema/IsDefault.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewSchema/IsDefault.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewSchema/IsDefault.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("0e03dbb8-03d7-44b6-9583-6ce62b8df519")]
 		public global::System.Boolean IsDefault
 		{
@@ -3947,8 +3947,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Gets or sets the value of DiagramId domain property.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema/DiagramId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema/DiagramId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewSchema/DiagramId.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewSchema/DiagramId.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("2eb831f0-0ef8-46a7-937b-0c6c6d64a77b")]
@@ -4050,9 +4050,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Gets or sets the value of Caption domain property.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema/Caption.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema/Caption.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema/Caption.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewSchema/Caption.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewSchema/Caption.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewSchema/Caption.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -4116,12 +4116,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.ViewSchemaDomainRoleId) as PatternSchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternHasViews.ViewSchemaDomainRoleId) as PatternSchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasViews.ViewSchemaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternHasViews.ViewSchemaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -4136,7 +4136,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<AbstractElementSchema>, AbstractElementSchema>(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AbstractElementSchema>, AbstractElementSchema>(global::NuPattern.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId);
 			}
 		}
 		#endregion
@@ -4151,7 +4151,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ExtensionPointSchema>, ExtensionPointSchema>(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ExtensionPointSchema>, ExtensionPointSchema>(global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId);
 			}
 		}
 		#endregion
@@ -4175,12 +4175,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
 				{
 					return true;
 				}
@@ -4209,7 +4209,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
+			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
 			if (sourceAbstractElementSchema1 != null)
 			{
 				// Create link for path ViewHasElements.Elements
@@ -4218,7 +4218,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
+			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
 			if (sourceExtensionPointSchema2 != null)
 			{
 				// Create link for path ViewHasExtensionPoints.ExtensionPoints
@@ -4249,29 +4249,29 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
+			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
 			if (sourceAbstractElementSchema1 != null)
 			{
 				// Delete link for path ViewHasElements.Elements
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema)this, sourceAbstractElementSchema1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ViewHasElements.GetLinks((global::NuPattern.Runtime.Schema.ViewSchema)this, sourceAbstractElementSchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId, global::NuPattern.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
+			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
 			if (sourceExtensionPointSchema2 != null)
 			{
 				// Delete link for path ViewHasExtensionPoints.ExtensionPoints
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewSchema)this, sourceExtensionPointSchema2))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.GetLinks((global::NuPattern.Runtime.Schema.ViewSchema)this, sourceExtensionPointSchema2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId);
 				}
 
 				return;
@@ -4312,16 +4312,16 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass CollectionSchema
 	/// A child collection element.
 	/// </summary>
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1501:AvoidExcessiveInheritance", Justification = "Generated code.")]
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CollectionSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CollectionSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("5c399883-85a3-4863-90dd-470b20576f61")]
 	public partial class CollectionSchema : AbstractElementSchema
@@ -4354,16 +4354,16 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass ElementSchema
 	/// A child element.
 	/// </summary>
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1501:AvoidExcessiveInheritance", Justification = "Generated code.")]
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("18de646e-e001-4e6b-b78b-59086f74d429")]
 	public partial class ElementSchema : AbstractElementSchema
@@ -4396,14 +4396,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass CustomizableElementSchema
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("129120e9-f7e2-4154-805e-16bf6890f67a")]
 	public abstract partial class CustomizableElementSchemaBase : NamedElementSchema
@@ -4436,13 +4436,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Whether customization is permitted for this element, all its policy settings,
 		/// and any child elements.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizable.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizable.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizable.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[global::System.ComponentModel.DefaultValue(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState), "Inherited")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizable.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizable.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizable.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[global::System.ComponentModel.DefaultValue(typeof(global::NuPattern.Runtime.CustomizationState), "Inherited")]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.CustomStorage)]
 		[DslModeling::DomainObjectId("0bc1eb0c-b224-4d81-871c-bfda75e94ba5")]
-		public global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState IsCustomizable
+		public global::NuPattern.Runtime.CustomizationState IsCustomizable
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -4458,7 +4458,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Value handler for the CustomizableElementSchema.IsCustomizable domain property.
 		/// </summary>
-		internal sealed partial class IsCustomizablePropertyHandler : DslModeling::DomainPropertyValueHandler<CustomizableElementSchemaBase, global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState>
+		internal sealed partial class IsCustomizablePropertyHandler : DslModeling::DomainPropertyValueHandler<CustomizableElementSchemaBase, global::NuPattern.Runtime.CustomizationState>
 		{
 			private IsCustomizablePropertyHandler() { }
 		
@@ -4484,7 +4484,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState GetValue(CustomizableElementSchemaBase element)
+			public override sealed global::NuPattern.Runtime.CustomizationState GetValue(CustomizableElementSchemaBase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				// There is no storage for IsCustomizable because its Kind is
@@ -4498,14 +4498,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(CustomizableElementSchemaBase element, global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState newValue)
+			public override sealed void SetValue(CustomizableElementSchemaBase element, global::NuPattern.Runtime.CustomizationState newValue)
 			{
 				if (element == null)
 				{
 					throw new global::System.ArgumentNullException("element");
 				}
 		
-				global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState oldValue = GetValue(element);
+				global::NuPattern.Runtime.CustomizationState oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
@@ -4523,7 +4523,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				}
 			}
 		
-			private void SetValue(CustomizableElementSchemaBase element, global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState oldValue, global::Microsoft.VisualStudio.Patterning.Runtime.CustomizationState newValue)
+			private void SetValue(CustomizableElementSchemaBase element, global::NuPattern.Runtime.CustomizationState oldValue, global::NuPattern.Runtime.CustomizationState newValue)
 			{
 				this.ValueChanging(element, oldValue, newValue);
 				// There is no storage for IsCustomizable because its Kind is
@@ -4552,9 +4552,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsCustomizationEnabled domain property.
 		/// Whether customization is enabled for the tailor.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabled.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabled.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabled.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabled.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabled.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabled.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -4658,9 +4658,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsCustomizationPolicyModifyable domain property.
 		/// Whether the policy can be modified.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizationPolicyModifyable.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizationPolicyModifyable.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizationPolicyModifyable.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationPolicyModifyable.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationPolicyModifyable.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationPolicyModifyable.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -4725,9 +4725,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsCustomizationEnabledState domain property.
 		/// The combined state of IsEnabled and IsCustomizable state of the element.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabledState.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabledState.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabledState.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabledState.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabledState.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabledState.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -4791,12 +4791,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId) as CustomizationPolicySchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId) as CustomizationPolicySchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -4820,7 +4820,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.CustomizationPolicySchema.DomainClassId)) 
 				{
 					// Check that creating a link with this path doesn't cause multiplicity overflow: CustomizableElementHasPolicy.Policy
 					if (this.Policy != null)
@@ -4854,7 +4854,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema sourceCustomizationPolicySchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema;
+			global::NuPattern.Runtime.Schema.CustomizationPolicySchema sourceCustomizationPolicySchema1 = sourceElement as global::NuPattern.Runtime.Schema.CustomizationPolicySchema;
 			if (sourceCustomizationPolicySchema1 != null)
 			{
 				// Create link for path CustomizableElementHasPolicy.Policy
@@ -4885,15 +4885,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema sourceCustomizationPolicySchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema;
+			global::NuPattern.Runtime.Schema.CustomizationPolicySchema sourceCustomizationPolicySchema1 = sourceElement as global::NuPattern.Runtime.Schema.CustomizationPolicySchema;
 			if (sourceCustomizationPolicySchema1 != null)
 			{
 				// Delete link for path CustomizableElementHasPolicy.Policy
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementSchema)this, sourceCustomizationPolicySchema1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.GetLinks((global::NuPattern.Runtime.Schema.CustomizableElementSchema)this, sourceCustomizationPolicySchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.CustomizationPolicySchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizationPolicySchemaDomainRoleId);
 				}
 
 				return;
@@ -4924,15 +4924,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass AbstractElementSchema
 	/// A child element or collection of the pattern.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.AbstractElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.AbstractElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a022a552-666a-4f23-b829-4edf1cea0971")]
 	public abstract partial class AbstractElementSchema : PatternElementSchema
@@ -4969,10 +4969,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsVisible domain property.
 		/// Whether this item is shown to the user.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema/IsVisible.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema/IsVisible.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema/IsVisible.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.AbstractElementSchema/IsVisible.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.AbstractElementSchema/IsVisible.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.AbstractElementSchema/IsVisible.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[DslModeling::DomainObjectId("18d96656-8bab-4ce0-b8fa-2eb9edaf26cc")]
 		public global::System.Boolean IsVisible
@@ -5073,12 +5073,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId) as ViewSchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId) as ViewSchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -5093,7 +5093,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<AbstractElementSchema>, AbstractElementSchema>(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<AbstractElementSchema>, AbstractElementSchema>(global::NuPattern.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId);
 			}
 		}
 		#endregion
@@ -5107,12 +5107,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId) as AbstractElementSchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId) as AbstractElementSchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -5127,7 +5127,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<ExtensionPointSchema>, ExtensionPointSchema>(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ExtensionPointSchema>, ExtensionPointSchema>(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId);
 			}
 		}
 		#endregion
@@ -5151,12 +5151,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.AbstractElementSchema.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.ExtensionPointSchema.DomainClassId)) 
 				{
 					return true;
 				}
@@ -5185,7 +5185,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
+			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
 			if (sourceAbstractElementSchema1 != null)
 			{
 				// Create link for path ElementHasElements.Elements
@@ -5194,7 +5194,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
+			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
 			if (sourceExtensionPointSchema2 != null)
 			{
 				// Create link for path ElementHasExtensionPoints.ExtensionPoints
@@ -5225,29 +5225,29 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema;
+			global::NuPattern.Runtime.Schema.AbstractElementSchema sourceAbstractElementSchema1 = sourceElement as global::NuPattern.Runtime.Schema.AbstractElementSchema;
 			if (sourceAbstractElementSchema1 != null)
 			{
 				// Delete link for path ElementHasElements.Elements
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema)this, sourceAbstractElementSchema1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ElementHasElements.GetLinks((global::NuPattern.Runtime.Schema.AbstractElementSchema)this, sourceAbstractElementSchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId, global::NuPattern.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema;
+			global::NuPattern.Runtime.Schema.ExtensionPointSchema sourceExtensionPointSchema2 = sourceElement as global::NuPattern.Runtime.Schema.ExtensionPointSchema;
 			if (sourceExtensionPointSchema2 != null)
 			{
 				// Delete link for path ElementHasExtensionPoints.ExtensionPoints
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AbstractElementSchema)this, sourceExtensionPointSchema2))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.GetLinks((global::NuPattern.Runtime.Schema.AbstractElementSchema)this, sourceExtensionPointSchema2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId);
 				}
 
 				return;
@@ -5258,15 +5258,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass CustomizationPolicySchema
 	/// </summary>
-	[Microsoft.VisualStudio.Patterning.Extensibility.CategoryResource("CustomizationCategory", typeof(Microsoft.VisualStudio.Patterning.Runtime.Schema.Properties.Resources))]
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[NuPattern.Extensibility.CategoryResource("CustomizationCategory", typeof(NuPattern.Runtime.Schema.Properties.Resources))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizationPolicySchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizationPolicySchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("c9fbbae3-628d-46f1-860e-5e80fc1b6211")]
@@ -5300,9 +5300,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Whether any of the settings in the policy have been modified from their default
 		/// values.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema/IsModified.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema/IsModified.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema/IsModified.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizationPolicySchema/IsModified.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizationPolicySchema/IsModified.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizationPolicySchema/IsModified.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -5367,15 +5367,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of CustomizationLevel domain property.
 		/// The extent to which settings have been customized.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema/CustomizationLevel.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema/CustomizationLevel.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema/CustomizationLevel.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[global::System.ComponentModel.DefaultValue(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.CustomizedLevel), "None")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizationPolicySchema/CustomizationLevel.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizationPolicySchema/CustomizationLevel.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizationPolicySchema/CustomizationLevel.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[global::System.ComponentModel.DefaultValue(typeof(global::NuPattern.Runtime.CustomizedLevel), "None")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
 		[DslModeling::DomainObjectId("9c519261-d0f9-4433-bcb4-7593c4ca6548")]
-		public global::Microsoft.VisualStudio.Patterning.Runtime.CustomizedLevel CustomizationLevel
+		public global::NuPattern.Runtime.CustomizedLevel CustomizationLevel
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -5386,7 +5386,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Value handler for the CustomizationPolicySchema.CustomizationLevel domain property.
 		/// </summary>
-		internal sealed partial class CustomizationLevelPropertyHandler : DslModeling::CalculatedPropertyValueHandler<CustomizationPolicySchemaBase, global::Microsoft.VisualStudio.Patterning.Runtime.CustomizedLevel>
+		internal sealed partial class CustomizationLevelPropertyHandler : DslModeling::CalculatedPropertyValueHandler<CustomizationPolicySchemaBase, global::NuPattern.Runtime.CustomizedLevel>
 		{
 			private CustomizationLevelPropertyHandler() { }
 		
@@ -5412,7 +5412,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::Microsoft.VisualStudio.Patterning.Runtime.CustomizedLevel GetValue(CustomizationPolicySchemaBase element)
+			public override sealed global::NuPattern.Runtime.CustomizedLevel GetValue(CustomizationPolicySchemaBase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				// There is no storage for CustomizationLevel because its Kind is
@@ -5438,11 +5438,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		
 		/// <summary>
 		/// Gets or sets the value of Name domain property.
-		/// Description for
-		/// Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema.Name
+		/// Description for NuPattern.Runtime.Schema.CustomizationPolicySchema.Name
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema/Name.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema/Name.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizationPolicySchema/Name.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizationPolicySchema/Name.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::ElementName]
@@ -5546,7 +5545,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<CustomizableSettingSchema>, CustomizableSettingSchema>(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<CustomizableSettingSchema>, CustomizableSettingSchema>(global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId);
 			}
 		}
 		#endregion
@@ -5560,12 +5559,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.CustomizationPolicySchemaDomainRoleId) as CustomizableElementSchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizationPolicySchemaDomainRoleId) as CustomizableElementSchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementHasPolicy.CustomizationPolicySchemaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizationPolicySchemaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -5589,7 +5588,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Runtime.Schema.CustomizableSettingSchema.DomainClassId)) 
 				{
 					return true;
 				}
@@ -5618,7 +5617,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema sourceCustomizableSettingSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema;
+			global::NuPattern.Runtime.Schema.CustomizableSettingSchema sourceCustomizableSettingSchema1 = sourceElement as global::NuPattern.Runtime.Schema.CustomizableSettingSchema;
 			if (sourceCustomizableSettingSchema1 != null)
 			{
 				// Create link for path PolicyHasSettings.Settings
@@ -5649,15 +5648,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema sourceCustomizableSettingSchema1 = sourceElement as global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema;
+			global::NuPattern.Runtime.Schema.CustomizableSettingSchema sourceCustomizableSettingSchema1 = sourceElement as global::NuPattern.Runtime.Schema.CustomizableSettingSchema;
 			if (sourceCustomizableSettingSchema1 != null)
 			{
 				// Delete link for path PolicyHasSettings.Settings
 				
-				foreach (DslModeling::ElementLink link in global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.GetLinks((global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizationPolicySchema)this, sourceCustomizableSettingSchema1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Runtime.Schema.PolicyHasSettings.GetLinks((global::NuPattern.Runtime.Schema.CustomizationPolicySchema)this, sourceCustomizableSettingSchema1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.CustomizableSettingSchemaDomainRoleId);
+					link.Delete(global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId, global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizableSettingSchemaDomainRoleId);
 				}
 
 				return;
@@ -5698,14 +5697,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass CustomizableSettingSchema
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a8991222-7d76-4467-b4d4-663daec5050d")]
 	public abstract partial class CustomizableSettingSchemaBase : DslModeling::ModelElement
@@ -5742,9 +5741,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsEnabled domain property.
 		/// Whether this setting can be further customized by a tailor.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/IsEnabled.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/IsEnabled.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/IsEnabled.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/IsEnabled.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/IsEnabled.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/IsEnabled.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -5848,9 +5847,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of Caption domain property.
 		/// The displayed caption shown to the user.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/Caption.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/Caption.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/Caption.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/Caption.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/Caption.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/Caption.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -5920,9 +5919,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of CaptionFormatter domain property.
 		/// The formatter used for the caption.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/CaptionFormatter.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/CaptionFormatter.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/CaptionFormatter.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/CaptionFormatter.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/CaptionFormatter.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/CaptionFormatter.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue("Modify '{0}'")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -6026,9 +6025,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsModified domain property.
 		/// Whether the settings has been modified from its default value.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/IsModified.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/IsModified.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/IsModified.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/IsModified.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/IsModified.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/IsModified.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -6093,9 +6092,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of DefaultValue domain property.
 		/// Whether this setting can be customized by a tailor by default.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/DefaultValue.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/DefaultValue.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/DefaultValue.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/DefaultValue.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/DefaultValue.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/DefaultValue.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -6206,9 +6205,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of Value domain property.
 		/// Whether this setting can be customized by a tailor.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/Value.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/Value.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/Value.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/Value.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/Value.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/Value.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.CustomStorage)]
 		[DslModeling::DomainObjectId("6a4707d5-4843-412f-9fd2-141916c04e91")]
@@ -6322,9 +6321,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of PropertyId domain property.
 		/// The associated property name for the setting.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/PropertyId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/PropertyId.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/PropertyId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/PropertyId.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/PropertyId.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/PropertyId.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue("")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -6433,9 +6432,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of DescriptionFormatter domain property.
 		/// The formatter used for the description.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/DescriptionFormatter.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/DescriptionFormatter.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/DescriptionFormatter.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/DescriptionFormatter.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/DescriptionFormatter.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/DescriptionFormatter.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue("Whether the '{0}' property of this element is customizable or not.")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -6539,9 +6538,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of Description domain property.
 		/// The displayed description shown to the user.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/Description.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/Description.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/Description.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/Description.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/Description.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/Description.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -6606,9 +6605,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of DomainElementSettingType domain property.
 		/// The type of domain element that this setting applies to.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/DomainElementSettingType.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/DomainElementSettingType.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableSettingSchema/DomainElementSettingType.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/DomainElementSettingType.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/DomainElementSettingType.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema/DomainElementSettingType.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
@@ -6672,12 +6671,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.CustomizableSettingSchemaDomainRoleId) as CustomizationPolicySchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizableSettingSchemaDomainRoleId) as CustomizationPolicySchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PolicyHasSettings.CustomizableSettingSchemaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizableSettingSchemaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -6713,15 +6712,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass AutomationSettingsSchema
 	/// The settings for an automation extension.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.AutomationSettingsSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.AutomationSettingsSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a997feca-f406-49ad-82ae-fc1f53d31527")]
 	public partial class AutomationSettingsSchema : CustomizableElementSchema
@@ -6768,9 +6767,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of AutomationType domain property.
 		/// The name of this type of automation.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema/AutomationType.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema/AutomationType.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema/AutomationType.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/AutomationType.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/AutomationType.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/AutomationType.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("8f400f8b-1c99-4793-8713-4739e1c13afb")]
 		public global::System.String AutomationType
@@ -6877,11 +6876,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of Settings domain property.
 		/// The specific settings for this Automation Type.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[System.ComponentModel.TypeConverter(typeof(AutomationSettingsTypeConverter))]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema/Settings.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema/Settings.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema/Settings.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/Settings.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/Settings.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/Settings.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("f7ec96b2-44eb-4a19-8fd2-77a695f34e08")]
 		internal global::System.String Settings
@@ -6982,20 +6981,20 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Storage for Classification
 		/// </summary>
-		private global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification classificationPropertyStorage = DslModeling::SerializationUtilities.GetValue<global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification>("General");
+		private global::NuPattern.Runtime.AutomationSettingsClassification classificationPropertyStorage = DslModeling::SerializationUtilities.GetValue<global::NuPattern.Runtime.AutomationSettingsClassification>("General");
 		
 		/// <summary>
 		/// Gets or sets the value of Classification domain property.
 		/// The classification of this automation.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema/Classification.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema/Classification.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema/Classification.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[global::System.ComponentModel.DefaultValue(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification), "General")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/Classification.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/Classification.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/Classification.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[global::System.ComponentModel.DefaultValue(typeof(global::NuPattern.Runtime.AutomationSettingsClassification), "General")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("a1d81216-30bc-43a9-aa6d-ae06a58f5490")]
-		public global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification Classification
+		public global::NuPattern.Runtime.AutomationSettingsClassification Classification
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -7011,7 +7010,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Value handler for the AutomationSettingsSchema.Classification domain property.
 		/// </summary>
-		internal sealed partial class ClassificationPropertyHandler : DslModeling::DomainPropertyValueHandler<AutomationSettingsSchema, global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification>
+		internal sealed partial class ClassificationPropertyHandler : DslModeling::DomainPropertyValueHandler<AutomationSettingsSchema, global::NuPattern.Runtime.AutomationSettingsClassification>
 		{
 			private ClassificationPropertyHandler() { }
 		
@@ -7037,7 +7036,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification GetValue(AutomationSettingsSchema element)
+			public override sealed global::NuPattern.Runtime.AutomationSettingsClassification GetValue(AutomationSettingsSchema element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.classificationPropertyStorage;
@@ -7048,14 +7047,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(AutomationSettingsSchema element, global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification newValue)
+			public override sealed void SetValue(AutomationSettingsSchema element, global::NuPattern.Runtime.AutomationSettingsClassification newValue)
 			{
 				if (element == null)
 				{
 					throw new global::System.ArgumentNullException("element");
 				}
 		
-				global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification oldValue = GetValue(element);
+				global::NuPattern.Runtime.AutomationSettingsClassification oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
@@ -7073,7 +7072,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				}
 			}
 		
-			private void SetValue(AutomationSettingsSchema element, global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification oldValue, global::Microsoft.VisualStudio.Patterning.Runtime.AutomationSettingsClassification newValue)
+			private void SetValue(AutomationSettingsSchema element, global::NuPattern.Runtime.AutomationSettingsClassification oldValue, global::NuPattern.Runtime.AutomationSettingsClassification newValue)
 			{
 				this.ValueChanging(element, oldValue, newValue);
 				element.classificationPropertyStorage = newValue;
@@ -7093,26 +7092,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId) as PatternElementSchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId) as PatternElementSchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId, value);
 			}
 		}
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass ProvidedExtensionPointSchema
 	/// The extension points that this pattern provides.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ProvidedExtensionPointSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ProvidedExtensionPointSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (ExtensionPointId = {extensionPointIdPropertyStorage})")]
 	[DslModeling::DomainObjectId("14956bbf-ded7-4762-9ade-ced0cc89683c")]
@@ -7160,9 +7159,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of ExtensionPointId domain property.
 		/// The extension point provided by this pattern.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema/ExtensionPointId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema/ExtensionPointId.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ProvidedExtensionPointSchema/ExtensionPointId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ProvidedExtensionPointSchema/ExtensionPointId.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ProvidedExtensionPointSchema/ExtensionPointId.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ProvidedExtensionPointSchema/ExtensionPointId.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::ElementName]
 		[DslModeling::DomainObjectId("9e6b27e9-f683-444d-a1ab-2b3b384f51de")]
 		public global::System.String ExtensionPointId
@@ -7263,26 +7262,26 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.ProvidedExtensionPointSchemaDomainRoleId) as PatternSchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.ProvidedExtensionPointSchemaDomainRoleId) as PatternSchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternHasProvidedExtensionPoints.ProvidedExtensionPointSchemaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.ProvidedExtensionPointSchemaDomainRoleId, value);
 			}
 		}
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass ExtensionPointSchema
 	/// A child extension to the pattern, provided by a pattern of another toolkit.
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ExtensionPointSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ExtensionPointSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("889fcf39-249f-4484-a7e8-2bf14320962f")]
 	public partial class ExtensionPointSchema : PatternElementSchema
@@ -7325,9 +7324,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// The unique type of this extension point, that other patterns would provide
 		/// extensions to.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema/RequiredExtensionPointId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema/RequiredExtensionPointId.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema/RequiredExtensionPointId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ExtensionPointSchema/RequiredExtensionPointId.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ExtensionPointSchema/RequiredExtensionPointId.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ExtensionPointSchema/RequiredExtensionPointId.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
 		[DslModeling::DomainObjectId("828924e1-deaf-4cca-bcc7-47889b27ac06")]
@@ -7397,10 +7396,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// The constraints that determine which patterns from other toolkits can extend
 		/// this model.
 		/// </summary>
-		[Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema/Conditions.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema/Conditions.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema/Conditions.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ExtensionPointSchema/Conditions.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ExtensionPointSchema/Conditions.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ExtensionPointSchema/Conditions.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("a0a863a2-8c90-474f-b2ee-0a7f34037241")]
 		public global::System.String Conditions
 		{
@@ -7506,9 +7505,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of RepresentedExtensionPointId domain property.
 		/// An extension point of a pattern represented by this extension point.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema/RepresentedExtensionPointId.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema/RepresentedExtensionPointId.Category", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema/RepresentedExtensionPointId.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ExtensionPointSchema/RepresentedExtensionPointId.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ExtensionPointSchema/RepresentedExtensionPointId.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ExtensionPointSchema/RepresentedExtensionPointId.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("26995a2e-7740-4fe4-9721-78db15026552")]
 		internal global::System.String RepresentedExtensionPointId
@@ -7609,12 +7608,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId) as AbstractElementSchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId) as AbstractElementSchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -7628,12 +7627,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId) as ViewSchema;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId) as ViewSchema;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId, value);
 			}
 		}
 		#endregion

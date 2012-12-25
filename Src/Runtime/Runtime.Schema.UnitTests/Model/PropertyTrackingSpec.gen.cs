@@ -6,10 +6,10 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests
+namespace NuPattern.Runtime.Schema.UnitTests
 {
     public partial class NamedElementSchemaSpec
     {

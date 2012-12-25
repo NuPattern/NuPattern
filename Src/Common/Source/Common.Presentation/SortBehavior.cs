@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation
+namespace NuPattern.Common.Presentation
 {
 	/// <summary>
 	/// Allows to define sorting behavior for a <see cref="ListView"/>.

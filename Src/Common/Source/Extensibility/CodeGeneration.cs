@@ -5,10 +5,10 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Extensibility.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Base class with general-purpose methods useful for code generation.

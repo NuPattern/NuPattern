@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
+namespace NuPattern.Runtime.UI.UnitTests
 {
     [TestClass]
     [CLSCompliant(false)]

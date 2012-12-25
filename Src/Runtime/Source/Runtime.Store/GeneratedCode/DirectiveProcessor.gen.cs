@@ -6,7 +6,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	#region Using directives
 	using DslModeling = global::Microsoft.VisualStudio.Modeling;
@@ -163,13 +163,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 					// Create a field to store the model once it is loaded
 					global::System.CodeDom.CodeMemberField rootElement = new global::System.CodeDom.CodeMemberField();
 					rootElement.Name = providesArguments[providesModelParameter].ToLower(global::System.Globalization.CultureInfo.InvariantCulture) + "Value";
-					rootElement.Type = new global::System.CodeDom.CodeTypeReference(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductState));
+					rootElement.Type = new global::System.CodeDom.CodeTypeReference(typeof(global::NuPattern.Runtime.Store.ProductState));
 					rootElement.Attributes = global::System.CodeDom.MemberAttributes.Private;
 	
 					// Create a property for the Model that delay-loads the model
 					global::System.CodeDom.CodeMemberProperty rootElementProperty = new global::System.CodeDom.CodeMemberProperty();
 					rootElementProperty.Name = providesArguments[providesModelParameter];
-					rootElementProperty.Type = new global::System.CodeDom.CodeTypeReference(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Store.ProductState));
+					rootElementProperty.Type = new global::System.CodeDom.CodeTypeReference(typeof(global::NuPattern.Runtime.Store.ProductState));
 					rootElementProperty.Attributes = global::System.CodeDom.MemberAttributes.Private;
 					rootElementProperty.HasSet = false;
 					rootElementProperty.HasGet = true;
@@ -235,7 +235,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 				if (languageProvider != null)
 				{
 					string[] domainModels = {
-						"Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel",
+						"NuPattern.Runtime.Store.ProductStateStoreDomainModel",
 					};
 	
 					global::System.CodeDom.Compiler.CodeGeneratorOptions options = new global::System.CodeDom.Compiler.CodeGeneratorOptions();
@@ -361,7 +361,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 	
 			imports.Add("Microsoft.VisualStudio.Modeling");
 			imports.Add("System.CodeDom.Compiler");
-			imports.Add("Microsoft.VisualStudio.Patterning.Runtime.Store");
+			imports.Add("NuPattern.Runtime.Store");
 	
 			return imports.ToArray();
 		}

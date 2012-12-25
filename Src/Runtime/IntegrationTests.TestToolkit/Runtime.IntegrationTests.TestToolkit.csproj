@@ -9,8 +9,8 @@
     <ProjectGuid>{CB2872D6-F4B1-493C-BE4E-B590C03F5FEF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit</AssemblyName>
+    <RootNamespace>NuPattern.Runtime.IntegrationTests.TestToolkit</RootNamespace>
+    <AssemblyName>NuPattern.Runtime.IntegrationTests.TestToolkit</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Runtime\</SolutionDir>

@@ -9,7 +9,7 @@
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer TemplateSettingsSerializer for DomainClass TemplateSettings.
@@ -1022,7 +1022,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer EventSettingsSerializer for DomainClass EventSettings.
@@ -1857,7 +1857,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer PropertySettingsSerializer for DomainClass PropertySettings.
@@ -2691,7 +2691,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer ValueProviderSettingsSerializer for DomainClass ValueProviderSettings.
@@ -3496,7 +3496,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer CommandSettingsSerializer for DomainClass CommandSettings.
@@ -4299,7 +4299,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer MenuSettingsSerializer for DomainClass MenuSettings.
@@ -5190,7 +5190,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer GuidanceExtensionSerializer for DomainClass GuidanceExtension.
@@ -5935,7 +5935,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer WizardSettingsSerializer for DomainClass WizardSettings.
@@ -6564,7 +6564,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer ArtifactExtensionSerializer for DomainClass ArtifactExtension.
@@ -7223,7 +7223,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer ValidationExtensionSerializer for DomainClass ValidationExtension.
@@ -7971,7 +7971,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer DragDropSettingsSerializer for DomainClass DragDropSettings.
@@ -8776,7 +8776,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer PropertySettingsHasValueProviderSerializer for DomainClass PropertySettingsHasValueProvider.
@@ -9447,7 +9447,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer ValueProviderSettingsReferencesPropertiesSerializer for DomainClass ValueProviderSettingsReferencesProperties.
@@ -10207,7 +10207,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Serializer CommandSettingsHasPropertiesSerializer for DomainClass CommandSettingsHasProperties.
@@ -10878,7 +10878,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// A DomainXmlSerializationBehavior implementation for defined behavior LibrarySerializationBehavior.
@@ -10981,7 +10981,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 				if (LibrarySerializationBehavior.namespaceEntries == null)
 				{
 					LibrarySerializationBehavior.namespaceEntries = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerNamespaceEntry>();
-					LibrarySerializationBehavior.namespaceEntries.Add(new DslModeling::DomainXmlSerializerNamespaceEntry(DomainModelXmlNamespace, typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel)));
+					LibrarySerializationBehavior.namespaceEntries.Add(new DslModeling::DomainXmlSerializerNamespaceEntry(DomainModelXmlNamespace, typeof(global::NuPattern.Library.Automation.LibraryDomainModel)));
 				}
 				return LibrarySerializationBehavior.namespaceEntries.AsReadOnly();
 			}
@@ -11025,7 +11025,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Moniker resolver for serialization behavior LibrarySerializationBehavior.
@@ -11164,7 +11164,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Utility class to provide serialization messages
@@ -11724,7 +11724,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Provides an implementation of the IDomainModelSerializer interface
@@ -11733,7 +11733,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <remarks>Double-derived class - the default implementation is in LibraryDomainModelSerializerBase.
 	/// This class exist so users can customize behavior easily.</remarks>
 	[global::System.ComponentModel.Composition.Export(typeof(DslModeling::IDomainModelSerializer))]
-	[DslModeling::DomainModelSerializer(typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), global::Microsoft.VisualStudio.Patterning.Library.Automation.LibrarySerializationBehavior.DomainModelXmlNamespace, null)]
+	[DslModeling::DomainModelSerializer(typeof(global::NuPattern.Library.Automation.LibraryDomainModel), global::NuPattern.Library.Automation.LibrarySerializationBehavior.DomainModelXmlNamespace, null)]
 	public partial class LibraryDomainModelSerializer : LibraryDomainModelSerializerBase
 	{
 	}
@@ -11751,7 +11751,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		public virtual string DomainModelNamespace
 		{
-			get { return global::Microsoft.VisualStudio.Patterning.Library.Automation.LibrarySerializationBehavior.DomainModelXmlNamespace; }
+			get { return global::NuPattern.Library.Automation.LibrarySerializationBehavior.DomainModelXmlNamespace; }
 		}
 	
 		/// <summary>
@@ -11759,7 +11759,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// </summary>
 		public virtual global::System.Type DomainModelType
 		{
-			get { return typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel); }
+			get { return typeof(global::NuPattern.Library.Automation.LibraryDomainModel); }
 		}
 	
 		/// <summary>

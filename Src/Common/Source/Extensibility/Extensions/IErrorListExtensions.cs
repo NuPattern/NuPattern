@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Extension methods for an Error List.
@@ -26,7 +26,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 
 			if (results != null)
 			{
-				results.ForEach(r => errorList.AddMessage(r.ErrorMessage, document, Shell.TaskErrorCategory.Error));
+				results.ForEach(r => errorList.AddMessage(r.ErrorMessage, document, Microsoft.VisualStudio.Shell.TaskErrorCategory.Error));
 			}
 		}
 	}

@@ -11,16 +11,15 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass ViewHasElementsConnector
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElementsConnector
+	/// Description for NuPattern.Runtime.Schema.ViewHasElementsConnector
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElementsConnector.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasElementsConnector.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElementsConnector.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElementsConnector.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("4ab6824f-a9cf-45a6-9ac6-5a65b60fe5a0")]
 	public partial class ViewHasElementsConnector : PatternElementConnector
@@ -179,16 +178,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass ElementHasElementsConnector
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElementsConnector
+	/// Description for NuPattern.Runtime.Schema.ElementHasElementsConnector
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElementsConnector.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasElementsConnector.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElementsConnector.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElementsConnector.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("d880db25-406b-41e8-b8ec-0a0de1e3ac5d")]
 	public partial class ElementHasElementsConnector : PatternElementConnector
@@ -347,14 +345,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass PatternElementConnector
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementConnector.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementConnector.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementConnector.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementConnector.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("147c9db8-7ff8-4426-a8f7-2ffa38cc6bad")]
 	public abstract partial class PatternElementConnectorBase : DslDiagrams::BinaryLinkShape
@@ -428,8 +426,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringOutlineColor domain property.
 		/// The color of the connector, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementConnector/TailoringOutlineColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementConnector/TailoringOutlineColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementConnector/TailoringOutlineColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementConnector/TailoringOutlineColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "178,178,178")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -518,8 +516,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringTextColor domain property.
 		/// The color of the connector text, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementConnector/TailoringTextColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementConnector/TailoringTextColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementConnector/TailoringTextColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementConnector/TailoringTextColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "137,137,137")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -595,8 +593,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 	/// <summary>
 	/// DomainClass PatternElementConnector
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementConnector
+	/// Description for NuPattern.Runtime.Schema.PatternElementConnector
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 			
@@ -615,16 +612,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass ElementHasExtensionPointsConnector
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPointsConnector
+	/// Description for NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPointsConnector.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementHasExtensionPointsConnector.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("5ff64aa7-63bd-4ae6-8395-fc955f077c42")]
 	public partial class ElementHasExtensionPointsConnector : PatternElementConnector
@@ -783,16 +779,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass ViewHasExtensionPointsConnector
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPointsConnector
+	/// Description for NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPointsConnector.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewHasExtensionPointsConnector.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("54c171e1-89d9-4023-89a6-8cddb13bda44")]
 	public partial class ViewHasExtensionPointsConnector : PatternElementConnector

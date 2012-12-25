@@ -4,9 +4,8 @@
 <#@ Include File="..\..\..\Common\Helpers\DslVersion.tt" #>
 <#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 using System;
-using System.Diagnostics.CodeAnalysis;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Defines constant values for the runtime.

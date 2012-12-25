@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition.Primitives;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
+namespace NuPattern.Extensibility.Binding
 {
     /// <summary>
     /// Implements a <see cref="IFeatureCompositionService"/> that delegates 

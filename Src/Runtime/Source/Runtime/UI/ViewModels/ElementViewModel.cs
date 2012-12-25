@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Defines a view model for a <see cref="IAbstractElement"/>.

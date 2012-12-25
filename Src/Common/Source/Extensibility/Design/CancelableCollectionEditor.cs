@@ -6,7 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// A simple collection editor that supports cancelling of editing.

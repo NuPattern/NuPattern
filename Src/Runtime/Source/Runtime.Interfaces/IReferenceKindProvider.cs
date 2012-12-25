@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Runtime
+﻿namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Defines the interface for a type that provides reference kind information.

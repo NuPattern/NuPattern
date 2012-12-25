@@ -9,11 +9,9 @@
 
 namespace ExtensionItem.Automation.GeneratedCode
 {
-	using System;
-	using System.ComponentModel;
+    using System.ComponentModel;
 	using System.ComponentModel.Composition;
-	using System.Collections.Generic;
-	using Microsoft.VisualStudio.Patterning.Runtime;
+    using NuPattern.Runtime;
 
 	///	<summary>
 	///	Description for ExtensionItem.DefaultView

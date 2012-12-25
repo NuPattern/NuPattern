@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Defines the basic extension information for a toolkit.

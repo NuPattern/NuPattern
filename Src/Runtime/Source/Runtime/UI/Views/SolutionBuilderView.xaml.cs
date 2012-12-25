@@ -8,11 +8,11 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Common.Presentation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Shell;
+using NuPattern.Common.Presentation;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Interaction logic for SolutionBuilderView.xaml.

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
 using Dsl = Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store.UnitTests
+namespace NuPattern.Runtime.Store.UnitTests
 {
     public class ViewAddRuleSpec
     {

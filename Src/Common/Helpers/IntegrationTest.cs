@@ -1,8 +1,8 @@
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 /// <summary>
 /// Base class for integration tests that need to deploy content.

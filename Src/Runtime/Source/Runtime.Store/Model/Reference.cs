@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.Patterning.Extensibility;
+﻿using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Customizations for the Reference class.

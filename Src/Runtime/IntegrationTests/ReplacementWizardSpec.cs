@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using System.Xml.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests
 {
 	[TestClass]
 	[DeploymentItem(@"Runtime.IntegrationTests.Content\TestTemplate.zip")]

@@ -8,4 +8,4 @@
 // "In Project Suppression File".
 // You do not need to add suppressions to this file manually.
 
-[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "foo", Scope = "member", Target = "Microsoft.VisualStudio.Patterning.Library.IntegrationTests.MenuSettingsValidationSpec+GivenMenuSettings.#WhenMenuIdIsNotEmpty_ThenValidateMenuIdIsNotEmptySucceeds()")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "foo", Scope = "member", Target = "NuPattern.Library.IntegrationTests.MenuSettingsValidationSpec+GivenMenuSettings.#WhenMenuIdIsNotEmpty_ThenValidateMenuIdIsNotEmptySucceeds()")]

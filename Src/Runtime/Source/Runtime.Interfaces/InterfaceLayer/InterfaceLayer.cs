@@ -5,10 +5,10 @@ using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using Microsoft.VisualStudio.Patterning.Runtime.Interfaces;
+using NuPattern.Runtime.Interfaces;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Provides extension methods to <see cref="IProduct"/>, <see cref="IView"/> and 

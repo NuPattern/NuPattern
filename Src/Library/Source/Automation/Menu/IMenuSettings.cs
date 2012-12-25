@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	public partial interface IMenuSettings
 	{

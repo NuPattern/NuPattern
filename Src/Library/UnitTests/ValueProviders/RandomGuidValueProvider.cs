@@ -1,8 +1,8 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Library.ValueProviders;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Library.ValueProviders;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
+namespace NuPattern.Library.UnitTests.ValueProviders
 {
 	[TestClass]
 	public class RandomGuidValueProviderSpec

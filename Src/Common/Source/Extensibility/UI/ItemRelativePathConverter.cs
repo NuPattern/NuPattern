@@ -2,11 +2,11 @@
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// IItem relative path type converter

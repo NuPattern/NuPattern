@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.Patterning.Extensibility;
+﻿using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Extensions ot the <see cref="CustomizableElementSchema"/> class.

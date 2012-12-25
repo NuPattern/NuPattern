@@ -10,7 +10,7 @@
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public partial class Product
@@ -26,13 +26,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Store
 			{
 				context.LogViolation(DslValidation::ViolationType.Error,
 					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
-						Microsoft.VisualStudio.Patterning.Runtime.Store.ProductStateStoreDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						NuPattern.Runtime.Store.ProductStateStoreDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
 						"Product", this.DefinitionName, "Views"),
 						"DSL0001", this);
 			}
 		} // ValidateProductMultiplicity
 	} // class Product
-} // Microsoft.VisualStudio.Patterning.Runtime.Store
+} // NuPattern.Runtime.Store
 
 	
  

@@ -1,81 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <microsoft.VisualStudio.Modeling.DslDesigner.DslDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 34.0919535908103, 59.20032552083331" isCompleteView="false" name="DslDefinition">
-  <DslMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternModel" />
+  <DslMoniker Name="/NuPattern.Runtime.Schema/PatternModel" />
   <nestedChildShapes>
     <microsoft.VisualStudio.Modeling.DslDesigner.DomainModelElements Id="6f978b06-3dc6-4d5c-b8f9-4736b70102cb" absoluteBounds="0, 0, 12.669274327158929, 59.20032552083331">
       <nestedChildShapes>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="a1d19465-5da8-4e54-b00f-f0eba5a455f0" isExpanded="false" absoluteBounds="1.6, 1.9339925130208335, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternModelHasPattern" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Schema/PatternModelHasPattern" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="10784906-ef16-420a-8344-7d03d1741bf8" absoluteBounds="1.615, 2.1939925130208335, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="f18c4e8c-51d0-45ce-a3aa-ab48cf7cecae" isExpanded="false" absoluteBounds="2.8000000000000003, 27.675651041666672, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternElementHasProperties" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Schema/PatternElementHasProperties" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="8b658023-5d9b-41d4-acfa-06451ced3332" absoluteBounds="2.8150000000000004, 27.93565104166667, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="e46d3311-016d-4f7a-8ad6-c6a43b8665db" isExpanded="false" absoluteBounds="4.95, 3.5602864583333336, 1.3500000000000005, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternHasViews" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Schema/PatternHasViews" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="f379bbe2-92f3-44d4-8ac7-04855c04c307" absoluteBounds="4.965, 3.8202864583333329, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="291fde58-6ee6-4fb7-9602-28f3f3e1631d" absoluteBounds="8.3, 5.3788818359375, 1.3499999999999996, 1.7631982421874994">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ViewHasElements" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Schema/ViewHasElements" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="fd054e4d-d6a3-4409-b976-55f54c450a37" absoluteBounds="8.3150000000000013, 5.6388818359375, 1.3200000000000003, 1.4031982421875" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="ea9202ec-2b5f-438c-b6ed-3e4a05c3eaf8" isExpanded="false" absoluteBounds="5.5500000000000007, 16.851961263020836, 1.3499999999999996, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PolicyHasSettings" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Schema/PolicyHasSettings" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="51df814f-3d0f-41b3-8c44-a850433baa40" absoluteBounds="5.565, 17.111961263020842, 1.3200000000000003, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="6b2b303d-dffa-4c23-987e-b7858980b998" isExpanded="false" absoluteBounds="2.2, 15.225667317708336, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/CustomizableElementHasPolicy" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Schema/CustomizableElementHasPolicy" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="6c05f760-d190-43e0-a7ba-56fefdf29113" absoluteBounds="2.2, 15.225667317708336, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="450c7a62-8247-4420-a245-f1dff7b6e392" absoluteBounds="3.4000000000000004, 31.92363606770834, 1.3499999999999996, 1.763198242187503">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ElementHasElements" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Schema/ElementHasElements" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="39e789dd-3b25-4f53-a31d-173ed6aedf90" absoluteBounds="3.4150000000000009, 32.183636067708349, 1.3199999999999998, 1.4031982421875" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="ad4af846-a155-40e1-8e7e-44dfb5c7e431" isExpanded="false" absoluteBounds="4.95, 9.1206754557291667, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternHasProvidedExtensionPoints" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Schema/PatternHasProvidedExtensionPoints" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="1a0a3095-1df7-4587-bb73-c79ec42cec9c" absoluteBounds="4.95, 9.1206754557291667, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="d6b77b6f-5785-4278-b008-f518c85a8f26" absoluteBounds="3.4000000000000004, 33.986834309895841, 1.3499999999999996, 1.3785953776041637">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ElementHasExtensionPoints" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Schema/ElementHasExtensionPoints" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="b913860e-5de1-4d5e-9ad2-1c5ae31994f4" absoluteBounds="3.415, 34.246834309895839, 1.3200000000000003, 1.0185953776041665" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="8e9f6410-8e48-43d8-b8a4-126b6fd049f4" absoluteBounds="8.3, 7.442080078125, 1.3499999999999996, 1.3785953776041664">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ViewHasExtensionPoints" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Schema/ViewHasExtensionPoints" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="9ab1ce88-c9ac-47a9-9db5-609429dd1197" absoluteBounds="8.3150000000000013, 7.702080078125, 1.3200000000000003, 1.0185953776041665" name="Properties" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape>
         <microsoft.VisualStudio.Modeling.DslDesigner.RelationshipShape Id="dcd57dd6-8c04-4773-bc7d-2b7b2e130581" isExpanded="false" absoluteBounds="2.8000000000000003, 28.365651041666673, 1.35, 0.25">
-          <DomainRelationshipMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternElementHasAutomationSettings" />
+          <DomainRelationshipMoniker Name="/NuPattern.Runtime.Schema/PatternElementHasAutomationSettings" />
           <relativeChildShapes />
           <nestedChildShapes>
             <elementListCompartment Id="70c5d53d-95bf-48fd-848f-10993cc6af11" absoluteBounds="2.8000000000000003, 28.365651041666673, 0.125, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
@@ -670,119 +670,119 @@
           <Roots>
             <RootNode Id="c1e6a656-87b4-4ba6-86aa-09cf706c5c6a">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternModelSchema" />
+                <DomainClassMoniker Name="/NuPattern.Runtime.Schema/PatternModelSchema" />
               </Class>
             </RootNode>
             <RootNode Id="6ad04174-b80e-405b-abaf-981a9166eb71">
               <Class>
-                <DomainClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/NamedElementSchema" />
+                <DomainClassMoniker Name="/NuPattern.Runtime.Schema/NamedElementSchema" />
               </Class>
             </RootNode>
           </Roots>
           <Arcs>
             <SourceRoleNode Id="c8d40d36-d841-46a6-83d5-3a12294d9c32">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternModelHasPattern/PatternModelSchema" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Schema/PatternModelHasPattern/PatternModelSchema" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="d3ead3d9-eade-4254-b8e0-d88a107cb4cc">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternElementHasProperties/PatternElementSchema" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Schema/PatternElementHasProperties/PatternElementSchema" />
               </Role>
             </SourceRoleNode>
             <InheritanceNode Id="e5d372cb-b88a-4c6c-9a87-a723ae0db5c3" IsLeaf="true">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PropertySchema" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Schema/PropertySchema" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="3297a47c-0a78-4804-b92e-5ea111227521" IsLeaf="true">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternSchema" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Schema/PatternSchema" />
               </InheritanceLink>
             </InheritanceNode>
             <SourceRoleNode Id="fc27bc14-3be3-4343-9428-da74365997d9">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternHasViews/PatternSchema" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Schema/PatternHasViews/PatternSchema" />
               </Role>
             </SourceRoleNode>
             <InheritanceNode Id="df46baa2-84a1-40d7-8ddf-ccd36f84bc1c">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/CustomizableElementSchema" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Schema/CustomizableElementSchema" />
               </InheritanceLink>
             </InheritanceNode>
             <SourceRoleNode Id="ee45cab2-3d91-43c3-b80d-61f668775401" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ViewHasElements/ViewSchema" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Schema/ViewHasElements/ViewSchema" />
               </Role>
             </SourceRoleNode>
             <InheritanceNode Id="55c751d4-9cd2-4193-a57c-2240547c5580">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/AbstractElementSchema" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Schema/AbstractElementSchema" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="a3d7b581-61a5-4f60-8152-9c3a614229a4">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/CollectionSchema" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Schema/CollectionSchema" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="ce10a17f-e180-46ab-a472-0c7b0850ce52">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ElementSchema" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Schema/ElementSchema" />
               </InheritanceLink>
             </InheritanceNode>
             <SourceRoleNode Id="199628f3-9a8d-4802-9017-1a3ef8cd0d70">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PolicyHasSettings/CustomizationPolicySchema" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Schema/PolicyHasSettings/CustomizationPolicySchema" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="a8270b98-d400-4d62-921b-d8328798a215">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/CustomizableElementHasPolicy/CustomizableElementSchema" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Schema/CustomizableElementHasPolicy/CustomizableElementSchema" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="196d937a-b3ac-4ba3-a6ec-9b473fe6282b" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ElementHasElements/ParentElement" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Schema/ElementHasElements/ParentElement" />
               </Role>
             </SourceRoleNode>
             <InheritanceNode Id="9f58e614-6ea0-4db9-bce5-0c140025b360" IsLeaf="true">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/AutomationSettingsSchema" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Schema/AutomationSettingsSchema" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="d98e811d-7bb4-47f9-a2ed-77a9d3add223">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternElementSchema" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Schema/PatternElementSchema" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="8a979e87-3487-492c-be20-5509d6309cd8" IsLeaf="true">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ViewSchema" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Schema/ViewSchema" />
               </InheritanceLink>
             </InheritanceNode>
             <SourceRoleNode Id="9680a85b-be97-47aa-af2b-19b4851304ea">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternHasProvidedExtensionPoints/PatternSchema" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Schema/PatternHasProvidedExtensionPoints/PatternSchema" />
               </Role>
             </SourceRoleNode>
             <InheritanceNode Id="5b5c96a4-91eb-4172-a6c7-036a4856bcd1" IsLeaf="true">
               <InheritanceLink>
-                <ClassHasBaseClassMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ExtensionPointSchema" />
+                <ClassHasBaseClassMoniker Name="/NuPattern.Runtime.Schema/ExtensionPointSchema" />
               </InheritanceLink>
             </InheritanceNode>
             <SourceRoleNode Id="0f73813e-4edd-428c-9742-28ff887c1882" IsLeaf="true">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ElementHasExtensionPoints/ParentElement" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Schema/ElementHasExtensionPoints/ParentElement" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="53afc6fd-2d03-4ee2-8583-0435f8ed4f67">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ViewHasExtensionPoints/ViewSchema" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Schema/ViewHasExtensionPoints/ViewSchema" />
               </Role>
             </SourceRoleNode>
             <SourceRoleNode Id="88cafa1a-7e1b-4ef6-a85c-a68d9523e7b5">
               <Role>
-                <DomainRoleMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternElementHasAutomationSettings/PatternElementSchema" />
+                <DomainRoleMoniker Name="/NuPattern.Runtime.Schema/PatternElementHasAutomationSettings/PatternElementSchema" />
               </Role>
             </SourceRoleNode>
           </Arcs>
@@ -793,64 +793,64 @@
           <Roots>
             <RootNode Id="885f2770-d1d3-4cbf-8594-e679e55f883b">
               <Class>
-                <DiagramMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternModelSchemaDiagram" />
+                <DiagramMoniker Name="/NuPattern.Runtime.Schema/PatternModelSchemaDiagram" />
               </Class>
             </RootNode>
             <RootNode Id="d52920b4-48d5-42df-b870-e50d5c4dc19e">
               <Class>
-                <CompartmentShapeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/CustomizableElementShape" />
+                <CompartmentShapeMoniker Name="/NuPattern.Runtime.Schema/CustomizableElementShape" />
               </Class>
             </RootNode>
             <RootNode Id="fb321963-132e-4880-ae01-7626f3508920">
               <Class>
-                <PortMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ViewShape" />
+                <PortMoniker Name="/NuPattern.Runtime.Schema/ViewShape" />
               </Class>
             </RootNode>
             <RootNode Id="b75ccdfe-de5e-4703-b69b-953b9325fcb2">
               <Class>
-                <ConnectorMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternElementConnector" />
+                <ConnectorMoniker Name="/NuPattern.Runtime.Schema/PatternElementConnector" />
               </Class>
             </RootNode>
           </Roots>
           <Arcs>
             <InheritanceNode Id="c4dc0f30-2924-48da-a1d0-50b58c8e6aeb">
               <InheritanceLink>
-                <CompartmentShapeHasBaseCompartmentShapeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/PatternShape" />
+                <CompartmentShapeHasBaseCompartmentShapeMoniker Name="/NuPattern.Runtime.Schema/PatternShape" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="a6f33fe4-d6a5-4ad6-9929-96aa0f0e8ca0">
               <InheritanceLink>
-                <CompartmentShapeHasBaseCompartmentShapeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/CollectionShape" />
+                <CompartmentShapeHasBaseCompartmentShapeMoniker Name="/NuPattern.Runtime.Schema/CollectionShape" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="91f99b5f-acd7-478d-90c5-7b9bc1184d1a">
               <InheritanceLink>
-                <CompartmentShapeHasBaseCompartmentShapeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ElementShape" />
+                <CompartmentShapeHasBaseCompartmentShapeMoniker Name="/NuPattern.Runtime.Schema/ElementShape" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="5c543957-c478-4534-9bbd-95e9bfd2fd35">
               <InheritanceLink>
-                <ConnectorHasBaseConnectorMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ViewHasElementsConnector" />
+                <ConnectorHasBaseConnectorMoniker Name="/NuPattern.Runtime.Schema/ViewHasElementsConnector" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="8f24aa06-5483-42de-ac81-58b67d8aecb5">
               <InheritanceLink>
-                <ConnectorHasBaseConnectorMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ElementHasElementsConnector" />
+                <ConnectorHasBaseConnectorMoniker Name="/NuPattern.Runtime.Schema/ElementHasElementsConnector" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="d5f59c25-fc0e-46e1-9194-54c6a997c9ff">
               <InheritanceLink>
-                <CompartmentShapeHasBaseCompartmentShapeMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ExtensionPointShape" />
+                <CompartmentShapeHasBaseCompartmentShapeMoniker Name="/NuPattern.Runtime.Schema/ExtensionPointShape" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="4d7fbb17-40a9-4022-b1fe-c8d71d513955">
               <InheritanceLink>
-                <ConnectorHasBaseConnectorMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ElementHasExtensionPointsConnector" />
+                <ConnectorHasBaseConnectorMoniker Name="/NuPattern.Runtime.Schema/ElementHasExtensionPointsConnector" />
               </InheritanceLink>
             </InheritanceNode>
             <InheritanceNode Id="03f14bb4-5d95-4033-a7f3-469acde41ec5">
               <InheritanceLink>
-                <ConnectorHasBaseConnectorMoniker Name="/Microsoft.VisualStudio.Patterning.Runtime.Schema/ViewHasExtensionPointsConnector" />
+                <ConnectorHasBaseConnectorMoniker Name="/NuPattern.Runtime.Schema/ViewHasExtensionPointsConnector" />
               </InheritanceLink>
             </InheritanceNode>
           </Arcs>

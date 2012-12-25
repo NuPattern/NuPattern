@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests
 {
 	[TestClass]
 	public class OnlineExtensionManagerRepositorySpec : IntegrationTest

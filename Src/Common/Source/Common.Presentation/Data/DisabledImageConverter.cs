@@ -5,14 +5,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.VisualStudio.PlatformUI;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation.Data
+namespace NuPattern.Common.Presentation.Data
 {
 #if VSVER10
 	/// <summary>
 	/// Converts an image <see cref="BitmapSource"/> into a disabled version of the same image as an <see cref="Image"/>.
 	/// </summary>
 	[ValueConversion(typeof(BitmapImage), typeof(Image))]
-	public sealed class DisabledImageConverter : PlatformUI.GrayscaleImageConverter
+	public sealed class DisabledImageConverter : Microsoft.VisualStudio.PlatformUI.GrayscaleImageConverter
     {	}
 #endif
 #if VSVER11

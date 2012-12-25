@@ -1,0 +1,50 @@
+﻿<#@ output extension=".vsixmanifest" #>
+<#@ Include  File="source.include.t4"#>
+<#@ Include  File="..\..\..\MasterVSIXInfo.gen.ttinclude"#>
+<#@ Include  File="..\..\..\MasterVersion.gen.ttinclude"#>
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+	<Identifier Id="<#=VsixInfo.PatternToolkitHol.Identifier#>">
+		<Name><#=VsixInfo.PatternToolkitHol.Name#></Name>
+		<Author><#=VsixInfo.PatternToolkitHol.Author#></Author>
+		<Version><#=VsixInfo.PatternToolkitHol.Version#></Version>
+		<Description xml:space="preserve"><#=VsixInfo.PatternToolkitHol.Description#></Description>
+		<Locale>1033</Locale>
+		<License>LICENSE.txt</License>
+		<Icon>Resources\VsixIconHOL.png</Icon>
+		<MoreInfoUrl><#=VsixInfo.PatternToolkitHol.MoreInfoUrl#></MoreInfoUrl>
+		<GettingStartedGuide><#=VsixInfo.PatternToolkitHol.GettingStartedUrl#></GettingStartedGuide>
+		<PreviewImage>Resources\VsixPreviewHOL.png</PreviewImage>
+		<SupportedProducts>
+		  <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
+			<Edition>Pro</Edition>
+		  </VisualStudio>
+		</SupportedProducts>
+<# 
+if (VersionInfo.TargetVsVersion == "11.0")
+{ 
+#>
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
+<# 
+} 
+else
+{
+#>
+		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0"/>
+<#
+}
+#>
+	</Identifier>
+	<References>
+		<Reference Id="<#=VsixInfo.PatternToolkitBuilder.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitBuilder.Version #>">
+			<Name><#=VsixInfo.PatternToolkitBuilder.Name #></Name>
+		</Reference>
+	</References>
+	<Content>
+		<MefComponent>|%CurrentProject%|</MefComponent>
+		<MefComponent>|<#=productName #>.Automation|</MefComponent>
+		<CustomExtension Type="PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternTool.patterndefinition</CustomExtension>
+		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
+		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
+	</Content>
+</Vsix>

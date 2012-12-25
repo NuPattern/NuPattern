@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <productState xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.2.0.0" Id="db8f61bf-1db6-415b-abde-788bdeb823f6" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/productstate">
   <products>
-    <product Id="3c8a1973-ddd3-4367-ba7c-e99585cdd559" definitionId="c034429e-01f9-48dd-a478-0321fb708dd3" definitionName="PatternToolkit" instanceName="Runtime.Shell" extensionId="84031a32-b20f-479c-a620-beacd982ea13" extensionName="Pattern Toolkit Builder" author="Microsoft" version="1.3.20.0">
+    <product Id="3c8a1973-ddd3-4367-ba7c-e99585cdd559" definitionId="c034429e-01f9-48dd-a478-0321fb708dd3" definitionName="PatternToolkit" instanceName="Runtime.Shell" extensionId="84031a32-b20f-479c-a620-beacd982ea13" extensionName="NuPattern Toolkit Builder" author="Microsoft" version="1.3.20.0">
       <properties>
         <property Id="6a3e62bf-a322-45c7-8bce-bd651137b532" definitionId="7ce5ad5a-88c2-4336-b038-e4998aa02b03" definitionName="TransformOnBuild" rawValue="Never" />
         <property Id="97649644-bcb9-4567-ae24-4224e0b14320" definitionId="293802b7-0b69-440e-be60-927f07f4e636" definitionName="PatternName" rawValue="MyPattern" />
         <property Id="940b0356-066e-4526-ac13-3ca47b6f890e" definitionId="710634cd-4863-4314-9785-dc33f6501903" definitionName="PatternDescription" rawValue="A Description of MyPattern" />
         <property Id="bea5e842-e950-4abb-895a-85f25d292027" definitionId="00123e2b-3459-4924-9f18-628406735664" definitionName="ExistingToolkitId" />
         <property Id="edde12f7-2581-48dc-9f49-fbbaf52df5d0" definitionId="5976c04c-d8ad-433f-9794-22e9cd55ac41" definitionName="SolutionName" rawValue="Runtime.vs2012" />
-        <property Id="eb984bf2-6101-4510-ba06-8335c8992524" definitionId="e73753b6-45e3-479f-b953-1c9ab6836362" definitionName="ProjectRootNamespace" rawValue="Microsoft.VisualStudio.Patterning.Runtime.Shell" />
-        <property Id="74721404-3868-4d5b-b462-bea439b2a32e" definitionId="4b4b1fdf-ea6d-4ea4-b142-c2f1685c0091" definitionName="ProjectAssemblyName" rawValue="Microsoft.VisualStudio.Patterning.Runtime.Shell" />
+        <property Id="eb984bf2-6101-4510-ba06-8335c8992524" definitionId="e73753b6-45e3-479f-b953-1c9ab6836362" definitionName="ProjectRootNamespace" rawValue="NuPattern.Runtime.Shell" />
+        <property Id="74721404-3868-4d5b-b462-bea439b2a32e" definitionId="4b4b1fdf-ea6d-4ea4-b142-c2f1685c0091" definitionName="ProjectAssemblyName" rawValue="NuPattern.Runtime.Shell" />
         <property Id="f438170e-7a16-4b62-bc9c-4f4b3251d822" definitionId="4121d8f0-87a2-4757-a6d4-6f28d9fa8728" definitionName="ExcludeFromCodeCoverage" rawValue="True" />
       </properties>
       <references>
-        <reference Id="900fad07-bd95-4195-9d1c-0e216f870f11" value="solution://d3e93083-99c9-4186-95b5-339a822c63ee/" kind="Microsoft.VisualStudio.Patterning.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: null,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;&#xD;&#xA;}" />
+        <reference Id="900fad07-bd95-4195-9d1c-0e216f870f11" value="solution://d3e93083-99c9-4186-95b5-339a822c63ee/" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: null,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;&#xD;&#xA;}" />
       </references>
       <views>
         <view Id="182cccee-7b23-442f-928f-f15b512a49ff" definitionId="e4f9702a-3b97-4b11-bb76-037a32de07c7" definitionName="Development">
@@ -51,8 +51,8 @@
                     <property Id="64cf70d9-0d22-4696-948f-d96f8af287cd" definitionId="81c7a831-97e3-4067-9d15-8d7fb671a755" definitionName="DefaultInstanceName" rawValue="Using Patterns in Solution Development" />
                   </properties>
                   <references>
-                    <reference Id="74b99852-55db-4e71-aef1-d462714a950f" value="solution://d3e93083-99c9-4186-95b5-339a822c63ee/02990d34-46b5-4617-82f9-cc74c83c5666" kind="Microsoft.VisualStudio.Patterning.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;RuntimeGuidance.doc&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;90291e86-b780-4adf-b500-5c11c868c3fd&quot;&#xD;&#xA;}" />
-                    <reference Id="b823f094-74d0-4356-9d8d-6096ccb76b1b" value="solution://d3e93083-99c9-4186-95b5-339a822c63ee/ae551abf-1da3-405b-8d82-c2ccb986c7f8" kind="Microsoft.VisualStudio.Patterning.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;GuidanceWorkflow&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;50c8adef-76cc-44a0-80c3-ac8aef6c4513&quot;&#xD;&#xA;}" />
+                    <reference Id="74b99852-55db-4e71-aef1-d462714a950f" value="solution://d3e93083-99c9-4186-95b5-339a822c63ee/02990d34-46b5-4617-82f9-cc74c83c5666" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;RuntimeGuidance.doc&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;90291e86-b780-4adf-b500-5c11c868c3fd&quot;&#xD;&#xA;}" />
+                    <reference Id="b823f094-74d0-4356-9d8d-6096ccb76b1b" value="solution://d3e93083-99c9-4186-95b5-339a822c63ee/ae551abf-1da3-405b-8d82-c2ccb986c7f8" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;GuidanceWorkflow&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;50c8adef-76cc-44a0-80c3-ac8aef6c4513&quot;&#xD;&#xA;}" />
                   </references>
                 </element>
                 <collection Id="5dcc470a-ec3b-44da-9364-5428235eab20" definitionId="f53b1915-e5c9-47f0-b33f-64487813d87c" definitionName="Templates" instanceName="Templates">

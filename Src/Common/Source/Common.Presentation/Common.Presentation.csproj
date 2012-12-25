@@ -8,8 +8,8 @@
     <ProjectGuid>{72CC87F3-2860-45CC-8712-00621F868D60}</ProjectGuid>
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Common.Presentation</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Common.Presentation</AssemblyName>
+    <RootNamespace>NuPattern.Common.Presentation</RootNamespace>
+    <AssemblyName>NuPattern.Common.Presentation</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>

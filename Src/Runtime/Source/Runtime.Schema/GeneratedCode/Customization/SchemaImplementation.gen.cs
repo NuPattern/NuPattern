@@ -14,17 +14,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Extensibility;
+using NuPattern.Runtime;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// The definition of the pattern in this toolkit..
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class PatternModelSchemaBase
 	{
 		private PropertyChangeManager propertyChanges;
@@ -90,7 +90,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// The definition of the pattern in this toolkit.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class PatternModelSchema : IPatternModelSchema, IPatternModelInfo
 	{ 
 		/// <summary>
@@ -172,7 +172,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// The definition of the pattern..
@@ -217,7 +217,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// The definition of the pattern.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class PatternSchema : IPatternSchema, IPatternInfo
 	{ 
 		/// <summary>
@@ -362,7 +362,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// An element that has a unique name..
@@ -425,7 +425,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// An element that has a unique name.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class NamedElementSchema : INamedElementSchema, INamedElementInfo
 	{ 
 		/// <summary>
@@ -446,7 +446,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// A container of properties and automation..
@@ -491,7 +491,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// A container of properties and automation.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class PatternElementSchema : IPatternElementSchema, IPatternElementInfo
 	{ 
 		/// <summary>
@@ -619,7 +619,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// A property of an element..
@@ -664,11 +664,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// A property of an element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class PropertySchema : IPropertySchema, IPropertyInfo
 	{ }
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// A distinct view of the pattern..
@@ -713,7 +713,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// A distinct view of the pattern.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class ViewSchema : IViewSchema, IViewInfo
 	{ 
 		/// <summary>
@@ -866,7 +866,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// A child collection element..
@@ -911,11 +911,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// A child collection element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class CollectionSchema : ICollectionSchema, ICollectionInfo
 	{ }
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// A child element..
@@ -960,11 +960,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// A child element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class ElementSchema : IElementSchema, IElementInfo
 	{ }
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// An element that supports customization of its properties..
@@ -1009,7 +1009,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// An element that supports customization of its properties.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class CustomizableElementSchema : ICustomizableElementSchema, ICustomizableElementInfo
 	{ 
 		/// <summary>
@@ -1074,7 +1074,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// A child element or collection of the pattern..
@@ -1119,7 +1119,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// A child element or collection of the pattern.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class AbstractElementSchema : IAbstractElementSchema, IAbstractElementInfo
 	{ 
 		/// <summary>
@@ -1255,12 +1255,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// The policy that controls what properties are customizable on an element..
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class CustomizationPolicySchemaBase
 	{
 		private PropertyChangeManager propertyChanges;
@@ -1326,7 +1326,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// The policy that controls what properties are customizable on an element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class CustomizationPolicySchema : ICustomizationPolicySchema, ICustomizationPolicyInfo
 	{ 
 		/// <summary>
@@ -1426,12 +1426,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// The settings for a customizable property..
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class CustomizableSettingSchemaBase
 	{
 		private PropertyChangeManager propertyChanges;
@@ -1497,7 +1497,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// The settings for a customizable property.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class CustomizableSettingSchema : ICustomizableSettingSchema, ICustomizableSettingInfo
 	{ 
 		/// <summary>
@@ -1535,7 +1535,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// The settings for an automation extension..
@@ -1580,11 +1580,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// The settings for an automation extension.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class AutomationSettingsSchema : IAutomationSettingsSchema, IAutomationSettingsInfo
 	{ }
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// The extension points that this pattern provides..
@@ -1647,7 +1647,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// The extension points that this pattern provides.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class ProvidedExtensionPointSchema : IProvidedExtensionPointSchema, IProvidedExtensionPointInfo
 	{ 
 		/// <summary>
@@ -1685,7 +1685,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		}
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// A child extension to the pattern, provided by a pattern of another toolkit..
@@ -1730,7 +1730,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	/// <summary>
 	/// A child extension to the pattern, provided by a pattern of another toolkit.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
 	public partial class ExtensionPointSchema : IExtensionPointSchema, IExtensionPointInfo
 	{ 
 		/// <summary>

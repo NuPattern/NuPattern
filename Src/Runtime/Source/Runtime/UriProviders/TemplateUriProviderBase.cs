@@ -3,11 +3,11 @@ using System.Globalization;
 using System.IO;
 using EnvDTE;
 using EnvDTE80;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Defines the base class for all URI reference providers based in templates.

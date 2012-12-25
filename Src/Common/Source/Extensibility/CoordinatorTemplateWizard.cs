@@ -6,14 +6,14 @@ using System.Reflection;
 using System.Xml;
 using EnvDTE;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Extensibility.Properties;
+using NuPattern.Runtime;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// A template wizard that coordinates the execution of other wizards.
@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 		/// <summary>
 		/// Executes when the wizard starts.
 		/// </summary>
-		public override void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, VisualStudio.TemplateWizard.WizardRunKind runKind, object[] customParams)
+		public override void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, Microsoft.VisualStudio.TemplateWizard.WizardRunKind runKind, object[] customParams)
 		{
 			base.RunStarted(automationObject, replacementsDictionary, runKind, customParams);
 
@@ -156,7 +156,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 			}
 		}
 
-		private void LoadWizards(VisualStudio.TeamArchitect.PowerTools.Features.IVsTemplateWizardData wizardData)
+		private void LoadWizards(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IVsTemplateWizardData wizardData)
 		{
 			var wizardElements = from coordinator in wizardData.Elements
 								 where coordinator.Name.Equals("CoordinatedWizards", StringComparison.OrdinalIgnoreCase)

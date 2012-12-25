@@ -1,9 +1,9 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests.Model
+namespace NuPattern.Runtime.Schema.UnitTests.Model
 {
     public class PropertySchemaDefaultValueDescriptorSpec
     {

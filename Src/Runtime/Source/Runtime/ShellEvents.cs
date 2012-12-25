@@ -3,7 +3,7 @@ using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Default implementation of <see cref="IShellEvents"/>.
@@ -26,7 +26,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 
 			this.shellService = serviceProvider.GetService<SVsShell, IVsShell>();
 
-			ErrorHandler.ThrowOnFailure(
+			Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(
 				this.shellService.AdviseShellPropertyChanges(this, out this.shellCookie));
 		}
 
@@ -43,7 +43,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			get
 			{
 				object zombied;
-				ErrorHandler.ThrowOnFailure(this.shellService.GetProperty((int)__VSSPROPID.VSSPROPID_Zombie, out zombied));
+                Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.shellService.GetProperty((int)__VSSPROPID.VSSPROPID_Zombie, out zombied));
 				return !(bool)zombied;
 			}
 		}
@@ -57,12 +57,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			{
 				if (this.shellCookie != 0)
 				{
-					ErrorHandler.ThrowOnFailure(this.shellService.UnadviseShellPropertyChanges(this.shellCookie));
+                    Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.shellService.UnadviseShellPropertyChanges(this.shellCookie));
 				}
 			}
 			catch (Exception ex)
 			{
-				if (ErrorHandler.IsCriticalException(ex))
+                if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(ex))
 				{
 					throw;
 				}
@@ -81,14 +81,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			{
 				if ((bool)var == false)
 				{
-					ErrorHandler.ThrowOnFailure(this.shellService.UnadviseShellPropertyChanges(this.shellCookie));
+                    Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.shellService.UnadviseShellPropertyChanges(this.shellCookie));
 					this.shellCookie = 0;
 
 					this.ShellInitialized(this, EventArgs.Empty);
 				}
 			}
 
-			return VSConstants.S_OK;
+            return Microsoft.VisualStudio.VSConstants.S_OK;
 		}
 	}
 }

@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.Properties;
+using NuPattern.Extensibility.References;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
+namespace NuPattern.Common.UnitTests
 {
     [TestClass]
     public class PathResolverSpec

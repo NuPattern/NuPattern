@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="NuPattern.Authoring.PatternToolkit.Assets.Wizards.Pages.ToolkitInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://schemas.microsoft.com/visualstudiopatterning/2010/xaml/"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignHeight="467" d:DesignWidth="660"
+    Title="Toolkit Information" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="260"/>
+        </Grid.ColumnDefinitions>
+
+		<Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" FontWeight="Bold">Toolkit Information</Label>
+		<Label FontStyle="Italic" Grid.Row="1" Grid.ColumnSpan="2" Margin="20,0,-308,0">This information describes the toolkit packaging (VSIX extension), which is built for you and deploys your pattern.</Label>
+		<Label Grid.Column="0" Grid.Row="2">Name:</Label>
+		<TextBox Name="ToolkitNameEditor" Text="{Binding InstanceName}" IsEnabled="False" Grid.Column="1" Grid.Row="2" />
+		<Label Grid.Column="0" Grid.Row="3">Description:</Label>
+		<p:ValueEditor Name="ToolkitDescriptionEditor" Value="{Binding ToolkitInfo.Description, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="3" Margin="0,0,-268,0" />
+		<Label Grid.Column="0" Grid.Row="4">Author:</Label>
+		<p:ValueEditor Name="ToolkitAuthorNameEditor" Value="{Binding ToolkitInfo.Author, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="4"/>
+		<Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" FontWeight="Bold" VerticalAlignment="Bottom">Pattern Information</Label>
+		<Label FontStyle="Italic" Grid.Row="6" Grid.ColumnSpan="2" Margin="20,0,-308,0">This information describes the pattern that you are designing and developing.</Label>
+		<Label Grid.Column="0" Grid.Row="7">Name:</Label>
+		<p:ValueEditor Name="PatternNameEditor" Value="{Binding PatternName, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="7"/>
+		<Label Grid.Column="0" Grid.Row="8">Description:</Label>
+		<p:ValueEditor Name="PatternDescriptionEditor" Value="{Binding PatternDescription, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="8" Margin="0,0,-268,0" />
+	</Grid>
+</Page>

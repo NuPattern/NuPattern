@@ -9,14 +9,14 @@
 
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// DomainModel LibraryDomainModel
 	/// Library
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.LibraryDomainModel.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Library.Automation.LibraryDomainModel.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.CoreDomainModel))]
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
@@ -190,7 +190,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 				// construct exception error message		
 				string exceptionError = string.Format(
 								global::System.Globalization.CultureInfo.CurrentCulture,
-								global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel.SingletonResourceManager.GetString("UnrecognizedElementType"),
+								global::NuPattern.Library.Automation.LibraryDomainModel.SingletonResourceManager.GetString("UnrecognizedElementType"),
 								elementType.Name);
 				throw new global::System.ArgumentException(exceptionError, "elementType");
 			}
@@ -240,7 +240,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 				// construct exception error message
 				string exceptionError = string.Format(
 								global::System.Globalization.CultureInfo.CurrentCulture,
-								global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel.SingletonResourceManager.GetString("UnrecognizedElementLinkType"),
+								global::NuPattern.Library.Automation.LibraryDomainModel.SingletonResourceManager.GetString("UnrecognizedElementLinkType"),
 								elementLinkType.Name);
 				throw new global::System.ArgumentException(exceptionError, "elementLinkType");
 			
@@ -261,7 +261,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// <summary>
 		/// The base name of this model's resources.
 		/// </summary>
-		public const string ResourceBaseName = "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen";
+		public const string ResourceBaseName = "NuPattern.Library.GeneratedCode.DomainModelResx.gen";
 		
 		/// <summary>
 		/// Gets the DomainModel's ResourceManager. If the ResourceManager does not already exist, then it is created.
@@ -389,8 +389,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		public LibraryDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettingsDomainRoleId, true);
-			DomainRoles.Add(global::Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.PropertySettingsDomainRoleId, true);
+			DomainRoles.Add(global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettingsDomainRoleId, true);
+			DomainRoles.Add(global::NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettingsDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>
@@ -465,12 +465,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	#endregion
 		
 }
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// DomainEnumeration: ArtifactActivatedAction
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactActivatedAction
+	/// Description for NuPattern.Library.Automation.ArtifactActivatedAction
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 	public enum ArtifactActivatedAction
@@ -479,19 +478,19 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		/// None
 		/// No action is performed, activated items are neither opened nor selected.
 		/// </summary>
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactActivatedAction/None.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactActivatedAction/None.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		None,
 		/// <summary>
 		/// Open
 		/// Associated artifacts are opened, in their default view.
 		/// </summary>
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactActivatedAction/Open.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactActivatedAction/Open.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		Open,
 		/// <summary>
 		/// Select
 		/// Associated artifacts are selected in Solution Explorer.
 		/// </summary>
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactActivatedAction/Select.Description", typeof(global::Microsoft.VisualStudio.Patterning.Library.Automation.LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactActivatedAction/Select.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		Select,
 	}
 }

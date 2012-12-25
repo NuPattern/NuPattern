@@ -1,12 +1,12 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.Globalization;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// A <see cref="IFxrUriReferenceProvider"/> that resolves and creates Uris from 

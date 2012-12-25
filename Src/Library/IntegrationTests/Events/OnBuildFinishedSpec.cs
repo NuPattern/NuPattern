@@ -1,11 +1,11 @@
 ﻿using System.Threading;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Library.Events;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Library.Events;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Events
+namespace NuPattern.Library.IntegrationTests.Events
 {
 	public class OnBuildFinishedSpec
 	{

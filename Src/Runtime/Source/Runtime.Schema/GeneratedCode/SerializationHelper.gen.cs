@@ -13,7 +13,7 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	
 	partial class PatternModelDomainModel
@@ -303,7 +303,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 }
 
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	
 	partial class PatternModelSerializationHelperBase
@@ -1268,7 +1268,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <param name="modelRoot">Root instance to be saved.</param>
 		/// <param name="encoding">Encoding to use when saving the root instance.</param>
 		/// <returns>Model in XML form</returns>
-		public virtual string GetSerializedModelString(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelSchema modelRoot, global::System.Text.Encoding encoding)
+		public virtual string GetSerializedModelString(global::NuPattern.Runtime.Schema.PatternModelSchema modelRoot, global::System.Text.Encoding encoding)
 		{
 			string result = string.Empty;
 			if (modelRoot == null)
@@ -1468,7 +1468,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	
 }
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
 	public abstract partial class PatternModelSchemaBase

@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	///  Defines a view in a model element.

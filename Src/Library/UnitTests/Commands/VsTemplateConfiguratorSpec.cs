@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
+using NuPattern.Library.Commands;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
+namespace NuPattern.Library.UnitTests.Commands
 {
     [DeploymentItem("Library.UnitTests.Content\\VsTemplateConfigurator-Project.vstemplate", ".")]
     [DeploymentItem("Library.UnitTests.Content\\VsTemplateConfigurator-Item.vstemplate", ".")]

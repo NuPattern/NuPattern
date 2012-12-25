@@ -2,11 +2,11 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Extensibility.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
     //[CLSCompliant(false)]
     internal static class ComponentMetadataExtensions

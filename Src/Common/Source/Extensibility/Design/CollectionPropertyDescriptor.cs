@@ -4,10 +4,10 @@ using System.ComponentModel;
 using System.Drawing.Design;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
+using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Provides a <see cref="PropertyDescriptor"/> that allows to state a collection serialized with JSON.

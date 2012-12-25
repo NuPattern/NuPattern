@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Library.ValueProviders;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Library.ValueProviders;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.ValueProviders
+namespace NuPattern.Library.UnitTests.ValueProviders
 {
     [TestClass]
     public class ElementPropertyValueProviderSpec

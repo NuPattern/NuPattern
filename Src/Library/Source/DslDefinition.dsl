@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DslLibrary xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="47c59fea-739b-4a85-8f6f-e9e260340928" Description="Library" Name="Library" DisplayName="Library" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation" MinorVersion="2" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
+<DslLibrary xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="47c59fea-739b-4a85-8f6f-e9e260340928" Description="Library" Name="Library" DisplayName="Library" Namespace="NuPattern.Library.Automation" MinorVersion="2" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
-    <DomainClass Id="1d522a01-5d23-4d87-8493-dfcbe3d05a9b" Description="Configures the settings for adding a project or item template to unfold, and execute other automation on this element." Name="TemplateSettings" DisplayName="VS Template Launch Point" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainClass Id="1d522a01-5d23-4d87-8493-dfcbe3d05a9b" Description="Configures the settings for adding a project or item template to unfold, and execute other automation on this element." Name="TemplateSettings" DisplayName="VS Template Launch Point" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
@@ -11,7 +11,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Library.TypeEditors.TemplateUriEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.TypeEditors.TemplateUriEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -57,9 +57,9 @@
         </DomainProperty>
         <DomainProperty Id="d8c350bd-ff83-4000-95c4-961befdb289f" Description="The name of the unfolded artifact. For an item template, if no extension is provided, it is taken from the vstemplate file. This property supports property value substitution from properties on the current element. (e.g. {InstanceName} or {VariablePropertyName}). See guidance documentation for details." Name="RawTargetFileName" DisplayName="Target File Name">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Extensibility.PropertyDescriptor">
+            <ClrAttribute Name="NuPattern.Extensibility.PropertyDescriptor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.Binding.PropertyBindingDescriptor)" />
+                <AttributeParameter Value="typeof(NuPattern.Extensibility.Binding.PropertyBindingDescriptor)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -69,9 +69,9 @@
         </DomainProperty>
         <DomainProperty Id="e258cc61-f5b7-43fe-a9a9-e08c733c5c40" Description="The path to the target file, project, folder or solution folder in the current solution where the artifact is to be unfolded. Folders that don't currently exist are created automatically. i.e. ..\~\GeneratedCode, navigates up to the parent element, and traverses the first artifact link found on the parent element and into the 'GeneratedCode' sub-folder of that container (project or folder).  See guidance documentation for more example paths and details." Name="RawTargetPath" DisplayName="Target Path">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Extensibility.PropertyDescriptor">
+            <ClrAttribute Name="NuPattern.Extensibility.PropertyDescriptor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.Binding.PropertyBindingDescriptor)" />
+                <AttributeParameter Value="typeof(NuPattern.Extensibility.Binding.PropertyBindingDescriptor)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -86,7 +86,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="d7fce310-a0b0-424c-b439-6e94222544e6" Description="Configures the settings for handling an event for executing other automation on this element." Name="EventSettings" DisplayName="Event Launch Point" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainClass Id="d7fce310-a0b0-424c-b439-6e94222544e6" Description="Configures the settings for handling an event for executing other automation on this element." Name="EventSettings" DisplayName="Event Launch Point" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
@@ -96,7 +96,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.FeatureComponentTypeConverter&lt;Microsoft.VisualStudio.Patterning.Runtime.IObservableEvent&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Extensibility.FeatureComponentTypeConverter&lt;NuPattern.Runtime.IObservableEvent&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -133,7 +133,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="7f53ba11-b54c-4157-945c-eb7963a5066b" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettings" Name="PropertySettings" DisplayName="Property" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainClass Id="7f53ba11-b54c-4157-945c-eb7963a5066b" Description="Description for NuPattern.Library.Automation.PropertySettings" Name="PropertySettings" DisplayName="Property" Namespace="NuPattern.Library.Automation">
       <Notes>Skip=true
 Interface=PropertyBindingSettings</Notes>
       <Properties>
@@ -159,7 +159,7 @@ Interface=PropertyBindingSettings</Notes>
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="3f9e25f8-1c05-4ef9-86da-16b4590e29ac" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettings" Name="ValueProviderSettings" DisplayName="Value Provider Settings" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainClass Id="3f9e25f8-1c05-4ef9-86da-16b4590e29ac" Description="Description for NuPattern.Library.Automation.ValueProviderSettings" Name="ValueProviderSettings" DisplayName="Value Provider Settings" Namespace="NuPattern.Library.Automation">
       <Notes>Skip=true
 Interface=ValueProviderBindingSettings</Notes>
       <Properties>
@@ -170,7 +170,7 @@ Interface=ValueProviderBindingSettings</Notes>
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="63e8eaf8-6f53-45ea-96f9-b6d8af7276e2" Description="Configures the settings for adding a command that can be executed on this element." Name="CommandSettings" DisplayName="Command" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainClass Id="63e8eaf8-6f53-45ea-96f9-b6d8af7276e2" Description="Configures the settings for adding a command that can be executed on this element." Name="CommandSettings" DisplayName="Command" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
@@ -180,7 +180,7 @@ Interface=ValueProviderBindingSettings</Notes>
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.FeatureComponentTypeConverter&lt;Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Extensibility.FeatureComponentTypeConverter&lt;Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -206,7 +206,7 @@ Interface=ValueProviderBindingSettings</Notes>
         </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
-    <DomainClass Id="29b8619f-8cba-4cdc-98ec-7035d9d2c3f8" Description="Configures the settings for adding a context menu item for executing other automation on this element." Name="MenuSettings" DisplayName="ContextMenu Launch Point" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainClass Id="29b8619f-8cba-4cdc-98ec-7035d9d2c3f8" Description="Configures the settings for adding a context menu item for executing other automation on this element." Name="MenuSettings" DisplayName="ContextMenu Launch Point" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
@@ -225,14 +225,14 @@ Interface=ValueProviderBindingSettings</Notes>
         </DomainProperty>
         <DomainProperty Id="4b76d211-4350-4cc8-8bde-c495be238113" Description="The icon that is displayed on the menu to the user." Name="Icon" DisplayName="Icon">
           <Attributes>
-            <ClrAttribute Name="Microsoft.VisualStudio.Patterning.Extensibility.ImageFilter">
+            <ClrAttribute Name="NuPattern.Extensibility.ImageFilter">
               <Parameters>
-                <AttributeParameter Value="Microsoft.VisualStudio.Patterning.Extensibility.ImageKind.Image " />
+                <AttributeParameter Value="NuPattern.Extensibility.ImageKind.Image " />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.ImageUriEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.Extensibility.ImageUriEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -250,7 +250,7 @@ Interface=ValueProviderBindingSettings</Notes>
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.FeatureComponentTypeConverter&lt;Microsoft.VisualStudio.Patterning.Runtime.ICommandStatus&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Extensibility.FeatureComponentTypeConverter&lt;NuPattern.Runtime.ICommandStatus&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -276,7 +276,7 @@ Interface=ValueProviderBindingSettings</Notes>
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="99460d09-2d87-47d5-a6b5-56cbf5d299fd" Description="Configures the settings for associating guidance to this element." Name="GuidanceExtension" DisplayName="Guidance Extension" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainClass Id="99460d09-2d87-47d5-a6b5-56cbf5d299fd" Description="Configures the settings for associating guidance to this element." Name="GuidanceExtension" DisplayName="Guidance Extension" Namespace="NuPattern.Library.Automation">
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
       </BaseClass>
@@ -285,7 +285,7 @@ Interface=ValueProviderBindingSettings</Notes>
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Library.Automation.AssociatedGuidanceTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.Automation.AssociatedGuidanceTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -315,7 +315,7 @@ Interface=ValueProviderBindingSettings</Notes>
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="765329ab-9384-4a2c-b5c2-e2c4b60912f5" Description="Configures the settings for adding a wizard to gather and initialize data for properties on this element." Name="WizardSettings" DisplayName="Wizard" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainClass Id="765329ab-9384-4a2c-b5c2-e2c4b60912f5" Description="Configures the settings for adding a wizard to gather and initialize data for properties on this element." Name="WizardSettings" DisplayName="Wizard" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
@@ -331,7 +331,7 @@ Interface=ValueProviderBindingSettings</Notes>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.FullTypeTypeConverter&lt;System.Windows.Window&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Extensibility.FullTypeTypeConverter&lt;System.Windows.Window&gt;)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -341,7 +341,7 @@ Interface=ValueProviderBindingSettings</Notes>
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="18f556f4-beef-476c-89dc-f7e63f9dbf48" Description="Configures settings for managing associated artifacts to this element." Name="ArtifactExtension" DisplayName="Artifact Extension" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainClass Id="18f556f4-beef-476c-89dc-f7e63f9dbf48" Description="Configures settings for managing associated artifacts to this element." Name="ArtifactExtension" DisplayName="Artifact Extension" Namespace="NuPattern.Library.Automation">
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
       </BaseClass>
@@ -350,7 +350,7 @@ Interface=ValueProviderBindingSettings</Notes>
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Library.Automation.AssociatedArtifactsTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.Automation.AssociatedArtifactsTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -365,7 +365,7 @@ Interface=ValueProviderBindingSettings</Notes>
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="8aceddb6-1e3a-4d8b-9703-43348f695c8e" Description="Configures settings for managing validation of this element." Name="ValidationExtension" DisplayName="Validation Extension" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainClass Id="8aceddb6-1e3a-4d8b-9703-43348f695c8e" Description="Configures settings for managing validation of this element." Name="ValidationExtension" DisplayName="Validation Extension" Namespace="NuPattern.Library.Automation">
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
       </BaseClass>
@@ -374,7 +374,7 @@ Interface=ValueProviderBindingSettings</Notes>
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Library.Automation.ValidationExecutionTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.Automation.ValidationExecutionTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -401,7 +401,7 @@ Interface=ValueProviderBindingSettings</Notes>
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.Patterning.Extensibility.FeatureComponentTypeConverter&lt;Microsoft.VisualStudio.Patterning.Runtime.IObservableEvent&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Extensibility.FeatureComponentTypeConverter&lt;NuPattern.Runtime.IObservableEvent&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -417,7 +417,7 @@ Interface=ValueProviderBindingSettings</Notes>
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="4aed72c0-e518-4835-9d56-04f3d4e7bc58" Description="Configures settings for handling a drag drop operations on this element." Name="DragDropSettings" DisplayName="Drag Drop Launch Point" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainClass Id="4aed72c0-e518-4835-9d56-04f3d4e7bc58" Description="Configures settings for handling a drag drop operations on this element." Name="DragDropSettings" DisplayName="Drag Drop Launch Point" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
@@ -448,48 +448,48 @@ Interface=ValueProviderBindingSettings</Notes>
     </DomainClass>
   </Classes>
   <Relationships>
-    <DomainRelationship Id="da7276bc-f8a3-471d-9c13-2272264c49be" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider" Name="PropertySettingsHasValueProvider" DisplayName="Property Settings Has Value Provider" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation" IsEmbedding="true">
+    <DomainRelationship Id="da7276bc-f8a3-471d-9c13-2272264c49be" Description="Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider" Name="PropertySettingsHasValueProvider" DisplayName="Property Settings Has Value Provider" Namespace="NuPattern.Library.Automation" IsEmbedding="true">
       <Source>
-        <DomainRole Id="d6ca83ae-f203-48a8-a5a0-534c7a8847cd" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.PropertySettings" Name="PropertySettings" DisplayName="Property Settings" PropertyName="ValueProvider" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Value Provider">
+        <DomainRole Id="d6ca83ae-f203-48a8-a5a0-534c7a8847cd" Description="Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettings" Name="PropertySettings" DisplayName="Property Settings" PropertyName="ValueProvider" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Value Provider">
           <RolePlayer>
             <DomainClassMoniker Name="PropertySettings" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="605c7185-04d8-4233-a865-69f2e521667e" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettings" Name="ValueProviderSettings" DisplayName="Value Provider Settings" PropertyName="OwnerProperty" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Owner Property">
+        <DomainRole Id="605c7185-04d8-4233-a865-69f2e521667e" Description="Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettings" Name="ValueProviderSettings" DisplayName="Value Provider Settings" PropertyName="OwnerProperty" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Owner Property">
           <RolePlayer>
             <DomainClassMoniker Name="ValueProviderSettings" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="f1c21f7d-ff90-42a2-bacf-deef2c7411f0" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties" Name="ValueProviderSettingsReferencesProperties" DisplayName="Value Provider Settings References Properties" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+    <DomainRelationship Id="f1c21f7d-ff90-42a2-bacf-deef2c7411f0" Description="Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties" Name="ValueProviderSettingsReferencesProperties" DisplayName="Value Provider Settings References Properties" Namespace="NuPattern.Library.Automation">
       <Source>
-        <DomainRole Id="f544718c-e9c6-49f6-bc0e-ab01878c0c2e" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettings" Name="ValueProviderSettings" DisplayName="Value Provider Settings" PropertyName="Properties" PropertyDisplayName="Properties">
+        <DomainRole Id="f544718c-e9c6-49f6-bc0e-ab01878c0c2e" Description="Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettings" Name="ValueProviderSettings" DisplayName="Value Provider Settings" PropertyName="Properties" PropertyDisplayName="Properties">
           <RolePlayer>
             <DomainClassMoniker Name="ValueProviderSettings" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="e1bda564-c196-48d6-b8ed-0d0bb1dd82d9" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettings" Name="PropertySettings" DisplayName="Property Settings" PropertyName="ParentProvider" Multiplicity="ZeroOne" PropertyDisplayName="Parent Provider">
+        <DomainRole Id="e1bda564-c196-48d6-b8ed-0d0bb1dd82d9" Description="Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettings" Name="PropertySettings" DisplayName="Property Settings" PropertyName="ParentProvider" Multiplicity="ZeroOne" PropertyDisplayName="Parent Provider">
           <RolePlayer>
             <DomainClassMoniker Name="PropertySettings" />
           </RolePlayer>
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="a6a80f96-3fb8-4523-b9f0-a57bcceda592" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties" Name="CommandSettingsHasProperties" DisplayName="Command Settings Has Properties" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation" IsEmbedding="true">
+    <DomainRelationship Id="a6a80f96-3fb8-4523-b9f0-a57bcceda592" Description="Description for NuPattern.Library.Automation.CommandSettingsHasProperties" Name="CommandSettingsHasProperties" DisplayName="Command Settings Has Properties" Namespace="NuPattern.Library.Automation" IsEmbedding="true">
       <Source>
-        <DomainRole Id="b78a78b0-9e86-4825-90d5-c67b36b15752" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.CommandSettings" Name="CommandSettings" DisplayName="Command Settings" PropertyName="Properties" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Properties">
+        <DomainRole Id="b78a78b0-9e86-4825-90d5-c67b36b15752" Description="Description for NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettings" Name="CommandSettings" DisplayName="Command Settings" PropertyName="Properties" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Properties">
           <RolePlayer>
             <DomainClassMoniker Name="CommandSettings" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="7e084d9a-d60a-45b2-807b-5cfa2d8b728a" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.PropertySettings" Name="PropertySettings" DisplayName="Property Settings" PropertyName="CommandSettings" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Command Settings">
+        <DomainRole Id="7e084d9a-d60a-45b2-807b-5cfa2d8b728a" Description="Description for NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettings" Name="PropertySettings" DisplayName="Property Settings" PropertyName="CommandSettings" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Command Settings">
           <RolePlayer>
             <DomainClassMoniker Name="PropertySettings" />
           </RolePlayer>
@@ -513,7 +513,7 @@ Interface=ValueProviderBindingSettings</Notes>
     <ExternalType Name="Guid" Namespace="System" />
     <ExternalType Name="Boolean" Namespace="System" />
     <ExternalType Name="Char" Namespace="System" />
-    <DomainEnumeration Name="ArtifactActivatedAction" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation" Description="Description for Microsoft.VisualStudio.Patterning.Library.Automation.ArtifactActivatedAction">
+    <DomainEnumeration Name="ArtifactActivatedAction" Namespace="NuPattern.Library.Automation" Description="Description for NuPattern.Library.Automation.ArtifactActivatedAction">
       <Literals>
         <EnumerationLiteral Description="No action is performed, activated items are neither opened nor selected." Name="None" Value="" />
         <EnumerationLiteral Description="Associated artifacts are opened, in their default view." Name="Open" Value="" />
@@ -521,7 +521,7 @@ Interface=ValueProviderBindingSettings</Notes>
       </Literals>
     </DomainEnumeration>
   </Types>
-  <XmlSerializationBehavior Name="LibrarySerializationBehavior" Namespace="Microsoft.VisualStudio.Patterning.Library.Automation">
+  <XmlSerializationBehavior Name="LibrarySerializationBehavior" Namespace="NuPattern.Library.Automation">
     <ClassData>
       <XmlClassData TypeName="TemplateSettings" MonikerAttributeName="" SerializeId="true" MonikerElementName="templateSettingsMoniker" ElementName="templateSettings" MonikerTypeName="TemplateSettingsMoniker">
         <DomainClassMoniker Name="TemplateSettings" />

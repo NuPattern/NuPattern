@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility.Binding;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
+namespace NuPattern.Extensibility.UnitTests.Binding
 {
 	[TestClass]
 	public class PropertyBindingSettingsExtensionsSpec

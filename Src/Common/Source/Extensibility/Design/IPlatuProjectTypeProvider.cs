@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Same as IProjectTypeProvider from Feature Builder, but allow as to reexport.

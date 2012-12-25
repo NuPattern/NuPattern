@@ -2,12 +2,12 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Primitives;
 using System.Diagnostics.CodeAnalysis;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility.Binding;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
+namespace NuPattern.Extensibility.UnitTests
 {
 	[TestClass]
 	public class DelegatingCompositionServiceSpec

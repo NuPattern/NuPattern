@@ -1,0 +1,40 @@
+﻿<#@ output extension=".gen.vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Wizard Page Asset</Name>
+		<Description>Creates a custom wizard page asset.</Description>
+		<TemplateID>540bca8f8397-.Development.Assets.Wizards.WizardPages.WizardPage</TemplateID>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>Extensibility</ProjectSubType>
+		<SortOrder>10</SortOrder>
+		<Icon></Icon>
+		<DefaultName>WizardPage</DefaultName>
+		<Hidden>true</Hidden>
+	</TemplateData>
+    <TemplateContent>
+        <References />
+        <ProjectItem TargetFileName="$fileinputname$.xaml" ReplaceParameters="true">WizardPage.xaml</ProjectItem>
+        <ProjectItem TargetFileName="$fileinputname$.xaml.cs" ReplaceParameters="true">WizardPage.xaml.cs</ProjectItem>
+    </TemplateContent>
+	<WizardExtension>
+		<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>NuPattern.Runtime.GuidGeneratorTemplateWizard</FullClassName>
+	</WizardExtension>
+	<WizardExtension>
+		<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>NuPattern.Runtime.ReplacementTemplateWizard</FullClassName>
+	</WizardExtension>
+    <WizardExtension>
+      <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+      <FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
+    </WizardExtension>
+	<WizardData>
+		<NewGuid Key="$guid11$" />
+		<NewGuid Key="$guid12$" />
+		<NewGuid Key="$guid13$" />
+		<NewGuid Key="$guid14$" />
+		<NewGuid Key="$guid15$" />
+	</WizardData>
+</VSTemplate>

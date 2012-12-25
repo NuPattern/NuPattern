@@ -152,7 +152,4 @@ To remedy this problem, open the 'Extension Manager' window in Visual Studio (To
   <data name="TraceOptionsPageControl_SourceNameTitle" xml:space="preserve">
     <value>Source Name</value>
   </data>
-  <data name="TraceOutput_WindowTitle" xml:space="preserve">
-    <value>Pattern Toolkit Extensions</value>
-  </data>
 </root>

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters;
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     /// <summary>
     /// Specifies the settings on a <see cref="JsonSerializer"/> object.

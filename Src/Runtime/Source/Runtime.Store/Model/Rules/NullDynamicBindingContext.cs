@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.Composition;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	internal class NullDynamicBindingContext : IDynamicBindingContext
 	{

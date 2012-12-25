@@ -8,8 +8,8 @@
     <ProjectGuid>{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.SampleVsix</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.SampleVsix</AssemblyName>
+    <RootNamespace>NuPattern.Runtime.IntegrationTests.SampleVsix</RootNamespace>
+    <AssemblyName>NuPattern.Runtime.IntegrationTests.SampleVsix</AssemblyName>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <!--<IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
     <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
     /// <summary>
     ///  TransformOnBuild Typeconverter

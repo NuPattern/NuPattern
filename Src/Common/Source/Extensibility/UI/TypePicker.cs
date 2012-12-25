@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Design;
 using Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ComponentModel.Editors;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UI
+namespace NuPattern.Extensibility.UI
 {
     /// <summary>
     /// Defines a picker editor for selecting types discoverd in the current solution.

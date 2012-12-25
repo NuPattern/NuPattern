@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Defines extension methods related to <see cref="IServiceProvider"/>.

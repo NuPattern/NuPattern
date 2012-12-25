@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.Patterning.Authoring.WorkflowDesign;
+using NuPattern.Authoring.WorkflowDesign;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.UnitTests
+namespace NuPattern.Authoring.UnitTests
 {
 	[TestClass]
 	public class ProductionToolSpec

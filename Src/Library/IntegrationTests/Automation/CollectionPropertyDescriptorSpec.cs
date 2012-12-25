@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
 
-namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
+namespace NuPattern.Library.IntegrationTests
 {
 	public class CollectionPropertyDescriptorSpec
 	{

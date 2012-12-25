@@ -7,7 +7,7 @@ using System.Globalization;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     internal static class DynamicUtils
     {

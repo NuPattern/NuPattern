@@ -21,7 +21,7 @@ using Microsoft.VisualStudio.Modeling.Validation;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	public sealed partial class PatternModelSerializationHelper
 	{

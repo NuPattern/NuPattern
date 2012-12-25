@@ -1,9 +1,9 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
-using Microsoft.VisualStudio.Patterning.Extensibility.Serialization;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Extensibility.Properties;
+using NuPattern.Extensibility.Serialization;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
+namespace NuPattern.Extensibility.Binding
 {
     /// <summary>
     /// Provides simple Json serialization of a serializable object or 

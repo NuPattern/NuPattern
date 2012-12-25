@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Reflection;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     internal static class CollectionUtils
     {

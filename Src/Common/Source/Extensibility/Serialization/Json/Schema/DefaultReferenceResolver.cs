@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     internal class DefaultReferenceResolver : IReferenceResolver
     {

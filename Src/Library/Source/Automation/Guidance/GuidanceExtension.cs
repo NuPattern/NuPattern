@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Library.Conditions;
-using Microsoft.VisualStudio.Patterning.Library.Events;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Bindings = Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.References;
+using NuPattern.Library.Commands;
+using NuPattern.Library.Conditions;
+using NuPattern.Library.Events;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using Bindings = NuPattern.Extensibility.Binding;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Customizations for the <see cref="GuidanceExtension"/> class.

@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.OptionPages
+﻿namespace NuPattern.Runtime.Shell.OptionPages
 {
 	partial class TraceOptionsPageControl
 	{

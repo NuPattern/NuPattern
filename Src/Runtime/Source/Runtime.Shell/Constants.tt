@@ -3,7 +3,7 @@
 <#@ output extension=".gen.cs" #>
 using System;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
 	/// <summary>
 	/// Defines the constants used in this package.
@@ -53,5 +53,10 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 		/// The name for storing settings for this package.
 		/// </summary>
 		public const string SettingsName = "<#=VsixInfo.PatternToolkitRuntime.SettingsName#>";
+
+		/// <summary>
+		/// The name of the output window used for tracing.
+		/// </summary>
+		public const string OutputWindowTitle = "<#=RuntimeShellPackageInfo.OutputWindowTitle#>";
 	}
 }

@@ -9,8 +9,8 @@
     <ProjectGuid>{446F0156-39D1-4B11-9B15-BE9637CB057F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.Interfaces</AssemblyName>
+    <RootNamespace>NuPattern.Runtime</RootNamespace>
+    <AssemblyName>NuPattern.Runtime.Interfaces</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -262,7 +262,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>Microsoft.VisualStudio.Patterning.Runtime.Interfaces</CustomToolNamespace>
+      <CustomToolNamespace>NuPattern.Runtime.Interfaces</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

@@ -4,10 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Runtime.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Default implementation of a <see cref="ISchemaResource"/> 
@@ -29,8 +29,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
         /// <param name="content">The content.</param>
         public SchemaResource(string extensionPath, IExtensionContent content)
         {
-            Microsoft.VisualStudio.Patterning.Guard.NotNullOrEmpty(() => extensionPath, extensionPath);
-            Microsoft.VisualStudio.Patterning.Guard.NotNull(() => content, content);
+            NuPattern.Guard.NotNullOrEmpty(() => extensionPath, extensionPath);
+            NuPattern.Guard.NotNull(() => content, content);
 
             string assemblyFile = null;
             if (content.Attributes == null || !content.Attributes.TryGetValue(AssemblyFileProperty, out assemblyFile))

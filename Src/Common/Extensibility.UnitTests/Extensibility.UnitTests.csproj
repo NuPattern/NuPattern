@@ -8,8 +8,8 @@
     <ProjectGuid>{87E50B58-FF4A-434F-A800-5455E86BEBDD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Extensibility.UnitTests</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Extensibility.UnitTests</AssemblyName>
+    <RootNamespace>NuPattern.Extensibility.UnitTests</RootNamespace>
+    <AssemblyName>NuPattern.Extensibility.UnitTests</AssemblyName>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Runtime\</SolutionDir>

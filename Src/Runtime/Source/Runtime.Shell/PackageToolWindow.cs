@@ -1,9 +1,9 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties;
+using NuPattern.Runtime.Shell.Properties;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
     /// <summary>
     /// Represents a service to show the tool windows hosted in this package.
@@ -33,7 +33,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
         public T ShowWindow<T>() where T : ToolWindowPane
         {
             var window = FindWindow<T>();
-            ErrorHandler.ThrowOnFailure(((IVsWindowFrame)window.Frame).Show());
+            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(((IVsWindowFrame)window.Frame).Show());
             return window;
         }
 
@@ -49,7 +49,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 
             if (frame.IsVisible() == 0)
             {
-                ErrorHandler.ThrowOnFailure(frame.Hide());
+                Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(frame.Hide());
             }
         }
 

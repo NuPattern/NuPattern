@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.Design;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Define extension methods related to <see cref="IMenuCommandService"/>.

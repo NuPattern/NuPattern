@@ -1,10 +1,10 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.Windows;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI.Events
+namespace NuPattern.Runtime.UI.Events
 {
     /// <summary>
     /// Assumes there can only be one state opened at any given time.

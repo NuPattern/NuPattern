@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Globalization;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.Runtime.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UriProviders
+namespace NuPattern.Runtime.UriProviders
 {
 	/// <summary>
 	/// Provides usability methods for uri provider consumers and authors.

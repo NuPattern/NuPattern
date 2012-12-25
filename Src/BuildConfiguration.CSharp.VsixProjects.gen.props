@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- VSIX file name overrides -->
+  <PropertyGroup>
+    <RuntimeShellVsixFileName>NuPatternToolkitManager.11.0.vsix</RuntimeShellVsixFileName>
+    <PatternToolkitVsixFileName>NuPatternToolkitBuilder.11.0.vsix</PatternToolkitVsixFileName>
+    <PatternToolkitLibraryVsixFileName>NuPatternToolkitLibrary.11.0.vsix</PatternToolkitLibraryVsixFileName>
+    <HandsOnLabsVsixFileName>NuPatternToolkitBuilderLabs.11.0.vsix</HandsOnLabsVsixFileName>
+  
+</PropertyGroup>
+  
+</Project>

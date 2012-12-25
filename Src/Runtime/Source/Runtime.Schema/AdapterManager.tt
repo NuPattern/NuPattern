@@ -2,11 +2,11 @@
 <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='DslDefinition.dsl'" #>
 <#@ Output Extension=".gen.cs" #>
 <#@ Include File="..\..\..\Common\Helpers\Helpers.tt" #>
-<#string dslName = this.Dsl.Name; #>
-using System;
+<#
+	string dslName = this.Dsl.Name; 
+#>
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Modeling.Integration;
 
 namespace <#=CodeGenerationUtilities.GetPackageNamespace(this.Dsl)#>

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.Composition;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.SampleVsix
+namespace NuPattern.Runtime.IntegrationTests.SampleVsix
 {
 	/// <summary>
 	/// Sample event source.

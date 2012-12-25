@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation
+namespace NuPattern.Common.Presentation
 {
     /// <summary>
     /// This is a base class for all XAML controls.

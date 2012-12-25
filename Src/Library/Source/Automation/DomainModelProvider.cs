@@ -2,7 +2,7 @@
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// DomainModel Provider extension MEF registration.

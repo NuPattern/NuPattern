@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation.Vs
+namespace NuPattern.Common.Presentation.Vs
 {
     /// <summary>
     /// The VS EnvironmentRenderCapabilities control.
@@ -38,7 +38,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.Presentation.Vs
             if (service != null)
             {
                 object obj2;
-                if (ErrorHandler.Succeeded(service.GetProperty(-9061, out obj2)))
+                if (Microsoft.VisualStudio.ErrorHandler.Succeeded(service.GetProperty(-9061, out obj2)))
                 {
                     this.VisualEffectsAllowed = (int)obj2;
                 }

@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Media;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation
+namespace NuPattern.Common.Presentation
 {
 	/// <summary>
 	/// Helper methods for <see cref="DependencyObject"/>.

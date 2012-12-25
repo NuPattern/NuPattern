@@ -2,9 +2,9 @@
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Attribute to export automation extensions to MEF

@@ -7,8 +7,8 @@
     <ProjectGuid>{727AFA69-15BC-4899-95CD-920B466BF9C1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests</AssemblyName>
+    <RootNamespace>NuPattern.Runtime.IntegrationTests</RootNamespace>
+    <AssemblyName>NuPattern.Runtime.IntegrationTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Runtime\</SolutionDir>
@@ -255,8 +255,8 @@
     <Folder Include="Runtime.IntegrationTests.Content\Projects\Sample\SolutionFolder\Library\Folder\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Binaries\PatternToolkitManager.$(TargetVSVersion).vsix">
-      <Link>Runtime.IntegrationTests.Content\PatternToolkitManager.$(TargetVSVersion).vsix</Link>
+    <None Include="..\..\Binaries\NuPatternToolkitManager.$(TargetVSVersion).vsix">
+      <Link>Runtime.IntegrationTests.Content\NuPatternToolkitManager.$(TargetVSVersion).vsix</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />

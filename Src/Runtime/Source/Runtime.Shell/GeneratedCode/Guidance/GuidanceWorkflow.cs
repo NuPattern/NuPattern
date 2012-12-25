@@ -13,14 +13,14 @@ using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Guidance
+namespace NuPattern.Runtime.Shell.Guidance
 {
 	/// <summary>
 	/// Defines a base class for the guidance workflow for this feature.
 	/// </summary>
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2012", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
 	public partial class ProcessWorkflow : GuidanceWorkflow
 	{
 		/// <summary>
@@ -61,7 +61,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Guidance
 			var fork2 = new Fork
 			{
 				Name = "First Time Users",
-				Description = "These topics are aimed at the first time users and first time authors of Pattern Toolkits.",
+				Description = "These topics are aimed at the first time users, and first time authors, of Pattern Toolkits.",
 			};
 			initial1.ConnectTo(fork2);
 			var fork3 = new Fork
@@ -72,8 +72,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Guidance
 			fork2.ConnectTo(fork3);
 			var guidanceaction4 = new GuidanceAction
 			{
-				Name = "What is the Pattern Automation Toolkit?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisthePatternAutomationToolkit.mht",
+				Name = "What is NuPattern?",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisNuPattern.mht",
 			};
 			fork3.ConnectTo(guidanceaction4);
 			var fork5 = new Fork
@@ -194,8 +194,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Guidance
 			fork23.ConnectTo(guidanceaction24);
 			var guidanceaction25 = new GuidanceAction
 			{
-				Name = "Installing the Pattern Automation Toolkit",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/InstallingthePatternAutomationToolkit.mht",
+				Name = "Installing NuPattern",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/InstallingNuPattern.mht",
 			};
 			guidanceaction24.ConnectTo(guidanceaction25);
 			var guidanceaction26 = new GuidanceAction
@@ -1000,86 +1000,69 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Guidance
 				Name = "Join24",
 			};
 			guidanceaction163.ConnectTo(join164);
-			var guidanceaction165 = new GuidanceAction
-			{
-				Name = "Feature Builder Power Tool",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/FeatureBuilderPowerTool.mht",
-			};
-			join164.ConnectTo(guidanceaction165);
-			var join166 = new Join
+			var join165 = new Join
 			{
 				Name = "Join25",
 			};
-			guidanceaction165.ConnectTo(join166);
-			var guidanceaction167 = new GuidanceAction
+			join164.ConnectTo(join165);
+			var guidanceaction166 = new GuidanceAction
 			{
 				Name = "More Information",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/MoreInformation.mht",
 			};
-			join166.ConnectTo(guidanceaction167);
-			var fork168 = new Fork
+			join165.ConnectTo(guidanceaction166);
+			var fork167 = new Fork
 			{
 				Name = "Known Issues",
-				Description = "This is a list of the critical known issues in the current version of the ‘Pattern Automation Toolkit’.",
+				Description = "This is a list of the critical known issues in the current version of NuPattern.",
 			};
-			guidanceaction167.ConnectTo(fork168);
-			var guidanceaction169 = new GuidanceAction
+			guidanceaction166.ConnectTo(fork167);
+			var guidanceaction168 = new GuidanceAction
 			{
 				Name = "Error when opening a pattern toolkit solution file",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Errorwhenopeningapatterntoolkitsolutionfile.mht",
 			};
-			fork168.ConnectTo(guidanceaction169);
-			var guidanceaction170 = new GuidanceAction
+			fork167.ConnectTo(guidanceaction168);
+			var guidanceaction169 = new GuidanceAction
 			{
 				Name = "Corruption of pattern model when performing an Undo",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/CorruptionofpatternmodelwhenperforminganUndo.mht",
 			};
-			guidanceaction169.ConnectTo(guidanceaction170);
-			var guidanceaction171 = new GuidanceAction
+			guidanceaction168.ConnectTo(guidanceaction169);
+			var guidanceaction170 = new GuidanceAction
 			{
 				Name = "Error in Text Templates when using the Visual T4 Editor",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ErrorinTextTemplateswhenusingtheVisualT4Editor.mht",
 			};
-			guidanceaction170.ConnectTo(guidanceaction171);
-			var guidanceaction172 = new GuidanceAction
+			guidanceaction169.ConnectTo(guidanceaction170);
+			var guidanceaction171 = new GuidanceAction
 			{
 				Name = "Build error: “store must be open for this operation”",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Builderrorstoremustbeopenforthisoperation.mht",
 			};
-			guidanceaction171.ConnectTo(guidanceaction172);
-			var guidanceaction173 = new GuidanceAction
+			guidanceaction170.ConnectTo(guidanceaction171);
+			var guidanceaction172 = new GuidanceAction
 			{
 				Name = "Error, building guidance with 64bit versions of Microsoft Word.",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Errorbuildingguidancewith64bitversionsofMicrosoftWord.mht",
 			};
-			guidanceaction172.ConnectTo(guidanceaction173);
-			var join174 = new Join
+			guidanceaction171.ConnectTo(guidanceaction172);
+			var join173 = new Join
 			{
 				Name = "Join26",
 			};
-			guidanceaction173.ConnectTo(join174);
-			var fork175 = new Fork
+			guidanceaction172.ConnectTo(join173);
+			var guidanceaction174 = new GuidanceAction
 			{
 				Name = "Feedback",
-				Description = "Feedback",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Feedback.mht",
 			};
-			join174.ConnectTo(fork175);
-			var guidanceaction176 = new GuidanceAction
-			{
-				Name = "(Placeholder) Feedback",
-				Description = "Feedback",
-			};
-			fork175.ConnectTo(guidanceaction176);
-			var join177 = new Join
-			{
-				Name = "Join27",
-			};
-			guidanceaction176.ConnectTo(join177);
-			var final178 = new Final
+			join173.ConnectTo(guidanceaction174);
+			var final175 = new Final
 			{
 				Name = "ActivityFinal1",
 			};
-			join177.ConnectTo(final178);
+			guidanceaction174.ConnectTo(final175);
 
 			this.OnPostInitialize();
 		}
@@ -1095,7 +1078,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Guidance
 	[PartCreationPolicy(CreationPolicy.NonShared)]
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("Pattern Toolkit Builder VS2012", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
 	public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
 	{
 		/// <summary>

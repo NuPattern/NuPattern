@@ -1,9 +1,9 @@
 ﻿<cp:CommonDialogWindow
-	x:Class="Microsoft.VisualStudio.Patterning.Runtime.UI.AddNewNodeView"
+	x:Class="NuPattern.Runtime.UI.AddNewNodeView"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation.Vs;assembly=Microsoft.VisualStudio.Patterning.Common.Presentation"
-    xmlns:cp="clr-namespace:Microsoft.VisualStudio.Patterning.Common.Presentation;assembly=Microsoft.VisualStudio.Patterning.Common.Presentation"
+	xmlns:vsfx="clr-namespace:NuPattern.Common.Presentation.Vs;assembly=NuPattern.Common.Presentation"
+    xmlns:cp="clr-namespace:NuPattern.Common.Presentation;assembly=NuPattern.Common.Presentation"
 	Name="addNode"
 	Title="{Binding DialogTitle}"
 	Width="301"
@@ -16,7 +16,7 @@
 	<vsfx:VsDialogWindow.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
-				<ResourceDictionary Source="/Microsoft.VisualStudio.Patterning.Common.Presentation;component/Resources/CommonStyles.xaml" />
+				<ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommonStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</vsfx:VsDialogWindow.Resources>

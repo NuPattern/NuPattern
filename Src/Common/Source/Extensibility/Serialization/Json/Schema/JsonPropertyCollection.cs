@@ -4,7 +4,7 @@ using System.Text;
 using System.Collections.ObjectModel;
 using System.Globalization;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
   /// <summary>
   /// A collection of <see cref="JsonProperty"/> objects.

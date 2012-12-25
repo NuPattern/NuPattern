@@ -12,7 +12,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TextTemplating;
 using Microsoft.VisualStudio.TextTemplating.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
+namespace NuPattern.Library.UnitTests
 {
 	[TestClass]
 	public class ModelElementDirectiveProcessorSpec

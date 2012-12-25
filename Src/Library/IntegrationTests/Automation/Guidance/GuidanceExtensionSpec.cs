@@ -2,21 +2,21 @@
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Library.Conditions;
-using Microsoft.VisualStudio.Patterning.Library.Events;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.References;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Commands;
+using NuPattern.Library.Conditions;
+using NuPattern.Library.Events;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Schema;
 
-namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.Guidance
+namespace NuPattern.Library.IntegrationTests.Automation.Guidance
 {
     [TestClass]
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
@@ -140,19 +140,19 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
                     Assert.Equal(commandSettings.TypeId, typeof(InstantiateFeatureCommand).FullName);
 
                     var featureIdProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.FeatureId).Name]
-                        .GetValue(commandSettings) as Microsoft.VisualStudio.Patterning.Library.Automation.DesignProperty;
+                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
                     Assert.Equal(this.guidanceExtension.GuidanceFeatureId, featureIdProperty.Value);
 
                     var defaultInstanceProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.DefaultInstanceName).Name]
-                        .GetValue(commandSettings) as Microsoft.VisualStudio.Patterning.Library.Automation.DesignProperty;
+                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
                     Assert.Equal(this.guidanceExtension.GuidanceInstanceName, defaultInstanceProperty.Value);
 
                     var focusOnInstantiationProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.ActivateOnInstantiation).Name]
-                        .GetValue(commandSettings) as Microsoft.VisualStudio.Patterning.Library.Automation.DesignProperty;
+                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
                     Assert.Equal(this.guidanceExtension.GuidanceActivateOnCreation, focusOnInstantiationProperty.Value);
 
                     var sharedInstanceProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.SharedInstance).Name]
-                        .GetValue(commandSettings) as Microsoft.VisualStudio.Patterning.Library.Automation.DesignProperty;
+                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
                     Assert.Equal(this.guidanceExtension.GuidanceSharedInstance, sharedInstanceProperty.Value);
                 }
 

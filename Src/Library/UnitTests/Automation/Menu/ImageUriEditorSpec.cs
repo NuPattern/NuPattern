@@ -4,14 +4,14 @@ using System.Diagnostics.CodeAnalysis;
 using System.Drawing.Design;
 using System.Windows;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.UriProviders;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
+using NuPattern.Runtime;
+using NuPattern.Runtime.UriProviders;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Menu
+namespace NuPattern.Library.UnitTests.Automation.Menu
 {
     [TestClass]
     public class ImageUriEditorSpec

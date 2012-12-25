@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Provides a listener to general events in the solution.
@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			this.serviceProvider = serviceProvider;
 			this.solution = serviceProvider.GetService<SVsSolution, IVsSolution>();
 			this.solutionEvents = new VsSolutionEvents(this);
-			ErrorHandler.ThrowOnFailure(this.solution.AdviseSolutionEvents(this.solutionEvents, out this.solutionEventsCookie));
+            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.solution.AdviseSolutionEvents(this.solutionEvents, out this.solutionEventsCookie));
 		}
 
 		/// <summary>
@@ -79,7 +79,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 					if (disposing && (this.solutionEventsCookie != 0))
 					{
 						var result = this.solution.UnadviseSolutionEvents(this.solutionEventsCookie);
-						if (result != VSConstants.S_OK)
+						if (result != Microsoft.VisualStudio.VSConstants.S_OK)
 						{
 							Marshal.ThrowExceptionForHR(result);
 						}
@@ -116,7 +116,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			{
 				this.events.IsSolutionOpened = false;
 				this.events.SolutionClosed(this.events, new SolutionEventArgs(null));
-				return VSConstants.S_OK;
+                return Microsoft.VisualStudio.VSConstants.S_OK;
 			}
 
 			/// <summary>
@@ -127,7 +127,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			/// <returns>Not implemented.</returns>
 			int IVsSolutionEvents.OnAfterLoadProject(IVsHierarchy stubHierarchy, IVsHierarchy realHierarchy)
 			{
-				return VSConstants.S_OK;
+				return Microsoft.VisualStudio.VSConstants.S_OK;
 			}
 
 			/// <summary>
@@ -138,7 +138,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			/// <returns>Not implemented.</returns>
 			int IVsSolutionEvents.OnAfterOpenProject(IVsHierarchy hierarchy, int added)
 			{
-				return VSConstants.S_OK;
+				return Microsoft.VisualStudio.VSConstants.S_OK;
 			}
 
 			/// <summary>
@@ -151,7 +151,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			{
 				this.events.IsSolutionOpened = true;
 				this.events.SolutionOpened(this.events, new SolutionEventArgs(this.events.serviceProvider.GetService<ISolution>()));
-				return VSConstants.S_OK;
+				return Microsoft.VisualStudio.VSConstants.S_OK;
 			}
 
 			/// <summary>
@@ -162,7 +162,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			/// <returns>Not implemented.</returns>
 			int IVsSolutionEvents.OnBeforeCloseProject(IVsHierarchy hierarchy, int removed)
 			{
-				return VSConstants.S_OK;
+				return Microsoft.VisualStudio.VSConstants.S_OK;
 			}
 
 			/// <summary>
@@ -174,7 +174,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			{
 				this.events.SolutionClosing(this.events, new SolutionEventArgs(null));
 
-				return VSConstants.S_OK;
+				return Microsoft.VisualStudio.VSConstants.S_OK;
 			}
 
 			/// <summary>
@@ -185,7 +185,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			/// <returns>Not implemented.</returns>
 			int IVsSolutionEvents.OnBeforeUnloadProject(IVsHierarchy realHierarchy, IVsHierarchy stubHierarchy)
 			{
-				return VSConstants.S_OK;
+				return Microsoft.VisualStudio.VSConstants.S_OK;
 			}
 
 			/// <summary>
@@ -197,7 +197,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			/// <returns>Not implemented.</returns>
 			int IVsSolutionEvents.OnQueryCloseProject(IVsHierarchy hierarchy, int removing, ref int cancel)
 			{
-				return VSConstants.S_OK;
+				return Microsoft.VisualStudio.VSConstants.S_OK;
 			}
 
 			/// <summary>
@@ -208,7 +208,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			/// <returns>Not implemented.</returns>
 			int IVsSolutionEvents.OnQueryCloseSolution(object unkReserved, ref int cancel)
 			{
-				return VSConstants.S_OK;
+				return Microsoft.VisualStudio.VSConstants.S_OK;
 			}
 
 			/// <summary>
@@ -219,7 +219,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 			/// <returns>Not implemented.</returns>
 			int IVsSolutionEvents.OnQueryUnloadProject(IVsHierarchy realHierarchy, ref int cancel)
 			{
-				return VSConstants.S_OK;
+				return Microsoft.VisualStudio.VSConstants.S_OK;
 			}
 		}
 	}

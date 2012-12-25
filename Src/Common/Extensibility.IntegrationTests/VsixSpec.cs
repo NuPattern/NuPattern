@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.IntegrationTests
+namespace NuPattern.Extensibility.IntegrationTests
 {
 	public class VsixSpec
 	{

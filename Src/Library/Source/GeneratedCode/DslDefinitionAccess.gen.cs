@@ -6,7 +6,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	// Partial implementation of the DomainModel class enabling access to the DslDefinition for this library.
 	partial class LibraryDomainModel
@@ -26,7 +26,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 			{
 				if (dslDefinition == null)
 				{
-					global::System.IO.Stream dslDefinitionResourceStream = typeof(LibraryDomainModel).Assembly.GetManifestResourceStream("Microsoft.VisualStudio.Patterning.Library.Automation.DslDefinition.dsl");
+					global::System.IO.Stream dslDefinitionResourceStream = typeof(LibraryDomainModel).Assembly.GetManifestResourceStream("NuPattern.Library.Automation.DslDefinition.dsl");
 					if (dslDefinitionResourceStream != null)
 					{
 						using (dslDefinitionResourceStream)

@@ -1,5 +1,5 @@
 ﻿
-namespace Microsoft.VisualStudio.Patterning.Extensibility.References
+namespace NuPattern.Extensibility.References
 {
     /// <summary>
     /// Constants for reference kinds.

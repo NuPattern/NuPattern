@@ -1,11 +1,9 @@
 ﻿
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Modeling.Integration;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	[System.CodeDom.Compiler.GeneratedCode("T4", "1.0")]
 	public partial class AdapterManager

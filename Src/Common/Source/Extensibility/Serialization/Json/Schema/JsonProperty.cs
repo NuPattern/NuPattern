@@ -1,6 +1,6 @@
 using System;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     /// <summary>
     /// Maps a JSON property to a .NET member or constructor parameter.

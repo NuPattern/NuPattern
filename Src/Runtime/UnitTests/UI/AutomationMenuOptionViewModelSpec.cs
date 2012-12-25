@@ -1,8 +1,8 @@
-﻿using Microsoft.VisualStudio.Patterning.Runtime.UI;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Runtime.UI;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.UI
+namespace NuPattern.Runtime.UnitTests.UI
 {
 	public class AutomationMenuOptionViewModelSpec
 	{

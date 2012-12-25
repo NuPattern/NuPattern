@@ -15,12 +15,11 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using NuPattern.Runtime;
 
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 { 
 	/// <summary>
 	/// Configures the settings for adding a project or item template to unfold, and execute other automation on this element..
@@ -67,7 +66,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a project or item template to unfold, and execute other automation on this element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class TemplateSettings : ITemplateSettings 
 	{ 
 		/// <summary>
@@ -96,7 +95,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 { 
 	/// <summary>
 	/// Configures the settings for handling an event for executing other automation on this element..
@@ -143,7 +142,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Configures the settings for handling an event for executing other automation on this element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class EventSettings : IEventSettings 
 	{ 
 		/// <summary>
@@ -172,7 +171,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 { 
 	/// <summary>
 	/// Configures the settings for adding a command that can be executed on this element..
@@ -219,11 +218,11 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a command that can be executed on this element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class CommandSettings : ICommandSettings 
 	{ 
 		/// <summary>
-		/// Description for Microsoft.VisualStudio.Patterning.Library.Automation.CommandSettingsHasProperties.CommandSettings
+		/// Description for NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettings
 		/// </summary>
 		IEnumerable<IPropertyBindingSettings> ICommandSettings.Properties
 		{
@@ -287,7 +286,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 { 
 	/// <summary>
 	/// Configures the settings for adding a context menu item for executing other automation on this element..
@@ -334,7 +333,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a context menu item for executing other automation on this element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class MenuSettings : IMenuSettings 
 	{ 
 		/// <summary>
@@ -363,7 +362,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 { 
 	/// <summary>
 	/// Configures the settings for associating guidance to this element..
@@ -410,12 +409,12 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Configures the settings for associating guidance to this element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class GuidanceExtension : IGuidanceExtension 
 	{ }
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 { 
 	/// <summary>
 	/// Configures the settings for adding a wizard to gather and initialize data for properties on this element..
@@ -462,7 +461,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a wizard to gather and initialize data for properties on this element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class WizardSettings : IWizardSettings 
 	{ 
 		/// <summary>
@@ -491,7 +490,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	}
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 { 
 	/// <summary>
 	/// Configures settings for managing associated artifacts to this element..
@@ -538,12 +537,12 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Configures settings for managing associated artifacts to this element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class ArtifactExtension : IArtifactExtension 
 	{ }
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 { 
 	/// <summary>
 	/// Configures settings for managing validation of this element..
@@ -590,12 +589,12 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Configures settings for managing validation of this element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class ValidationExtension : IValidationExtension 
 	{ }
 }
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 { 
 	/// <summary>
 	/// Configures settings for handling a drag drop operations on this element..
@@ -642,7 +641,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 	/// <summary>
 	/// Configures settings for handling a drag drop operations on this element.
 	/// </summary>
-	[GeneratedCode("Microsoft.VisualStudio.Patterning", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial class DragDropSettings : IDragDropSettings 
 	{ 
 		/// <summary>

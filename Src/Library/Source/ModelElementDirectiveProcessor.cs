@@ -6,10 +6,10 @@ using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
 using Microsoft.VisualStudio.TextTemplating;
+using NuPattern.Library.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Library
+namespace NuPattern.Library
 {
 	/// <summary>
 	/// A directive processor for the <see cref="DirectiveName"/> directive, which

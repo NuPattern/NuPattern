@@ -199,7 +199,7 @@
     <value>Validation rule '{0}' failed.</value>
   </data>
   <data name="ProductElement_BindingExceptionDescription" xml:space="preserve">
-    <value>Validation Rule Failure: {0} See the Output Window ('Pattern Toolkit Extensions' pane) for more information about the cause of this error.</value>
+    <value>Validation Rule Failure: {0} See the Output Window ('NuPattern Toolkit Extensions' pane) for more information about the cause of this error.</value>
   </data>
   <data name="Product_ToolkitInfoIsNull" xml:space="preserve">
     <value>The toolkit info proxy is null.</value>

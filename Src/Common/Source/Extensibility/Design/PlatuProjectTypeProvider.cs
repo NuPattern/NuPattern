@@ -8,15 +8,15 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows.Input;
 using EnvDTE;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Design;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Runtime;
 using VSLangProj;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	[PartCreationPolicy(CreationPolicy.Shared)]
 	[Export(typeof(IPlatuProjectTypeProvider))]
@@ -51,7 +51,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 				IVsMultiItemSelect ppMIS;
 				ISelectionContainer ppSC;
 
-				if (selection.GetCurrentSelection(out sourceProject, out pitemid, out ppMIS, out ppSC) == VSConstants.S_OK)
+				if (selection.GetCurrentSelection(out sourceProject, out pitemid, out ppMIS, out ppSC) == Microsoft.VisualStudio.VSConstants.S_OK)
 				{
 					if (sourceProject != null)
 					{
@@ -75,7 +75,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 							Ole.IServiceProvider olesp;
 							// The design-time assembly resolution (DTAR) must be retrieved from a 
 							// local service provider for the project. This is the magic goo.
-							if (vsProject.GetItemContext(VSConstants.VSITEMID_ROOT, out olesp) == VSConstants.S_OK)
+							if (vsProject.GetItemContext(Microsoft.VisualStudio.VSConstants.VSITEMID_ROOT, out olesp) == Microsoft.VisualStudio.VSConstants.S_OK)
 							{
 								var localservices = new ServiceProvider(olesp);
 								var openScope = this.serviceProvider.GetService(typeof(SVsSmartOpenScope)) as IVsSmartOpenScope;

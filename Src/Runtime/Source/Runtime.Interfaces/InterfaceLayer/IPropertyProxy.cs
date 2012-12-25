@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Proxy interface for property container elements such as a product or element.

@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization
+namespace NuPattern.Extensibility.Serialization
 {
     /// <summary>
     /// A custom converter for creating Json objects.

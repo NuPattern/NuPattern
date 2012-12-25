@@ -1,8 +1,8 @@
-﻿using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
+namespace NuPattern.Extensibility.UnitTests
 {
 	[TestClass]
 	public class DynamicBindingContextExtensionsSpec

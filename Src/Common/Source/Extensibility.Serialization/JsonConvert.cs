@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization
+namespace NuPattern.Extensibility.Serialization
 {
     /// <summary>
     /// A conversion class for serializing objects in Json.

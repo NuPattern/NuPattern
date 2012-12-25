@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
+namespace NuPattern.Runtime.UnitTests.Events
 {
 	[TestClass]
 	public class AnonymousDisposableSpec

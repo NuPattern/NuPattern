@@ -11,14 +11,14 @@ using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass PatternShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("6d4c3263-f5e1-49e0-b1be-d7188c1157eb")]
 	public abstract partial class PatternShapeBase : CustomizableElementShape
@@ -171,7 +171,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("PatternShapeNameDecoratorDefaultText");
+			field1.DefaultText = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("PatternShapeNameDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -181,7 +181,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			shapeFields.Add(field1);
 			
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("StereotypeDecorator");
-			field2.DefaultText = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("PatternShapeStereotypeDecoratorDefaultText");
+			field2.DefaultText = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("PatternShapeStereotypeDecoratorDefaultText");
 			field2.DefaultFocusable = true;
 			field2.DefaultAutoSize = true;
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -196,7 +196,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			shapeFields.Add(field3);
 			
 			DslDiagrams::ImageField field4 = new DslDiagrams::ImageField("InheritedFromBaseDecorator");
-			field4.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("PatternShapeInheritedFromBaseDecoratorDefaultImage"));
+			field4.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("PatternShapeInheritedFromBaseDecoratorDefaultImage"));
 			shapeFields.Add(field4);
 			
 		}
@@ -266,7 +266,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					baseCompartmentDescriptions.CopyTo(compartmentDescriptions, 0);	
 				}
 				{
-					string title = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("PatternShapePropertiesTitle");
+					string title = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("PatternShapePropertiesTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("Properties", title, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
@@ -275,7 +275,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
 				}
 				{
-					string title = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("PatternShapeLaunchPointsTitle");
+					string title = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("PatternShapeLaunchPointsTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("LaunchPoints", title, 
 						global::System.Drawing.Color.FromArgb(255, 234, 234, 234), false, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
@@ -284,7 +284,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
 				}
 				{
-					string title = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("PatternShapeAutomationTitle");
+					string title = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("PatternShapeAutomationTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("Automation", title, 
 						global::System.Drawing.Color.FromArgb(255, 234, 234, 234), false, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
@@ -318,7 +318,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				{
 					// First we get the mappings defined for the base shape, and add on any mappings defined for this
 					// shape. 
-					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema));
+					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::NuPattern.Runtime.Schema.PatternSchema));
 					int localCompartmentMappingsOffset = 0;
 					if(baseMappings!=null)
 					{
@@ -332,29 +332,29 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					}
 					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
 																				"Properties", 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.DomainClassId, 
+																				global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
+																				global::NuPattern.Runtime.Schema.PropertySchema.DomainClassId, 
 																				GetElementsFromPatternSchemaForProperties,
 																				null,
 																				null,
 																				null);
 					mappings[localCompartmentMappingsOffset+1] = new DslDiagrams::ElementListCompartmentMapping(
 																				"Automation", 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
+																				global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
+																				global::NuPattern.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
 																				GetElementsFromPatternSchemaForAutomation,
 																				null,
 																				null,
 																				null);
 					mappings[localCompartmentMappingsOffset+2] = new DslDiagrams::ElementListCompartmentMapping(
 																				"LaunchPoints", 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
+																				global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
+																				global::NuPattern.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
 																				GetElementsFromPatternSchemaForLaunchPoints,
 																				null,
 																				null,
 																				null);
-					compartmentMappings.Add(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternSchema), mappings);
+					compartmentMappings.Add(typeof(global::NuPattern.Runtime.Schema.PatternSchema), mappings);
 				}
 			}
 			
@@ -385,9 +385,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
 			internal static global::System.Collections.IList GetElementsFromPatternSchemaForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
+				global::NuPattern.Runtime.Schema.PatternElementSchema root = (global::NuPattern.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema> result = root.Properties;
+					DslModeling::LinkedElementCollection<global::NuPattern.Runtime.Schema.PropertySchema> result = root.Properties;
 				
 				////////
 				// CompartmentMap.UsesCustomFilter==true
@@ -399,9 +399,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			}
 			internal static global::System.Collections.IList GetElementsFromPatternSchemaForAutomation(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
+				global::NuPattern.Runtime.Schema.PatternElementSchema root = (global::NuPattern.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
+					DslModeling::LinkedElementCollection<global::NuPattern.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
 				////////
 				// CompartmentMap.UsesCustomFilter==true
@@ -413,9 +413,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			}
 			internal static global::System.Collections.IList GetElementsFromPatternSchemaForLaunchPoints(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
+				global::NuPattern.Runtime.Schema.PatternElementSchema root = (global::NuPattern.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
+					DslModeling::LinkedElementCollection<global::NuPattern.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
 				////////
 				// CompartmentMap.UsesCustomFilter==true
@@ -460,8 +460,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringFillColor domain property.
 		/// The color of the shape fill, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape/TailoringFillColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape/TailoringFillColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternShape/TailoringFillColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternShape/TailoringFillColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "White")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -550,8 +550,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringTextColor domain property.
 		/// The color of the shape text, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape/TailoringTextColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape/TailoringTextColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternShape/TailoringTextColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternShape/TailoringTextColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "DimGray")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -640,8 +640,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringOutlineColor domain property.
 		/// The color of the shape outline, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape/TailoringOutlineColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape/TailoringOutlineColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternShape/TailoringOutlineColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternShape/TailoringOutlineColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "DarkGray")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -717,7 +717,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 	/// <summary>
 	/// DomainClass PatternShape
-	/// Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternShape
+	/// Description for NuPattern.Runtime.Schema.PatternShape
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 			
@@ -746,14 +746,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass ElementShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("c5328ad8-6b7c-4688-97aa-dd2e25d8b1fc")]
 	public abstract partial class ElementShapeBase : CustomizableElementShape
@@ -921,7 +921,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ElementShapeNameDecoratorDefaultText");
+			field1.DefaultText = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ElementShapeNameDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -931,7 +931,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			shapeFields.Add(field1);
 			
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("StereotypeDecorator");
-			field2.DefaultText = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ElementShapeStereotypeDecoratorDefaultText");
+			field2.DefaultText = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ElementShapeStereotypeDecoratorDefaultText");
 			field2.DefaultFocusable = true;
 			field2.DefaultAutoSize = true;
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -941,7 +941,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			shapeFields.Add(field2);
 			
 			DslDiagrams::ImageField field3 = new DslDiagrams::ImageField("InheritedFromBaseDecorator");
-			field3.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ElementShapeInheritedFromBaseDecoratorDefaultImage"));
+			field3.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ElementShapeInheritedFromBaseDecoratorDefaultImage"));
 			shapeFields.Add(field3);
 			
 			DslDiagrams::ChevronButtonField field4 = new DslDiagrams::ChevronButtonField("ExpandCollapseDecorator");
@@ -1016,7 +1016,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					baseCompartmentDescriptions.CopyTo(compartmentDescriptions, 0);	
 				}
 				{
-					string title = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ElementShapePropertiesTitle");
+					string title = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ElementShapePropertiesTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("Properties", title, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
@@ -1025,7 +1025,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
 				}
 				{
-					string title = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ElementShapeLaunchPointsTitle");
+					string title = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ElementShapeLaunchPointsTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("LaunchPoints", title, 
 						global::System.Drawing.Color.FromArgb(255, 234, 234, 234), false, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
@@ -1034,7 +1034,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
 				}
 				{
-					string title = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ElementShapeAutomationTitle");
+					string title = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ElementShapeAutomationTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("Automation", title, 
 						global::System.Drawing.Color.FromArgb(255, 234, 234, 234), false, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
@@ -1068,7 +1068,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				{
 					// First we get the mappings defined for the base shape, and add on any mappings defined for this
 					// shape. 
-					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementSchema));
+					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::NuPattern.Runtime.Schema.ElementSchema));
 					int localCompartmentMappingsOffset = 0;
 					if(baseMappings!=null)
 					{
@@ -1082,29 +1082,29 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					}
 					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
 																				"Properties", 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.DomainClassId, 
+																				global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
+																				global::NuPattern.Runtime.Schema.PropertySchema.DomainClassId, 
 																				GetElementsFromElementSchemaForProperties,
 																				null,
 																				null,
 																				null);
 					mappings[localCompartmentMappingsOffset+1] = new DslDiagrams::ElementListCompartmentMapping(
 																				"Automation", 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
+																				global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
+																				global::NuPattern.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
 																				GetElementsFromElementSchemaForAutomation,
 																				null,
 																				null,
 																				null);
 					mappings[localCompartmentMappingsOffset+2] = new DslDiagrams::ElementListCompartmentMapping(
 																				"LaunchPoints", 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
+																				global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
+																				global::NuPattern.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
 																				GetElementsFromElementSchemaForLaunchPoints,
 																				null,
 																				null,
 																				null);
-					compartmentMappings.Add(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementSchema), mappings);
+					compartmentMappings.Add(typeof(global::NuPattern.Runtime.Schema.ElementSchema), mappings);
 				}
 			}
 			
@@ -1135,9 +1135,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
 			internal static global::System.Collections.IList GetElementsFromElementSchemaForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
+				global::NuPattern.Runtime.Schema.PatternElementSchema root = (global::NuPattern.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema> result = root.Properties;
+					DslModeling::LinkedElementCollection<global::NuPattern.Runtime.Schema.PropertySchema> result = root.Properties;
 				
 				////////
 				// CompartmentMap.UsesCustomFilter==true
@@ -1149,9 +1149,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			}
 			internal static global::System.Collections.IList GetElementsFromElementSchemaForAutomation(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
+				global::NuPattern.Runtime.Schema.PatternElementSchema root = (global::NuPattern.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
+					DslModeling::LinkedElementCollection<global::NuPattern.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
 				////////
 				// CompartmentMap.UsesCustomFilter==true
@@ -1163,9 +1163,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			}
 			internal static global::System.Collections.IList GetElementsFromElementSchemaForLaunchPoints(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
+				global::NuPattern.Runtime.Schema.PatternElementSchema root = (global::NuPattern.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
+					DslModeling::LinkedElementCollection<global::NuPattern.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
 				////////
 				// CompartmentMap.UsesCustomFilter==true
@@ -1210,8 +1210,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringFillColor domain property.
 		/// The color of the shape fill, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape/TailoringFillColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape/TailoringFillColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementShape/TailoringFillColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementShape/TailoringFillColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "211, 221, 210")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1300,8 +1300,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringTextColor domain property.
 		/// The color of the shape text, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape/TailoringTextColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape/TailoringTextColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementShape/TailoringTextColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementShape/TailoringTextColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "DimGray")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1390,8 +1390,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringOutlineColor domain property.
 		/// The color of the shape outline, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape/TailoringOutlineColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape/TailoringOutlineColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementShape/TailoringOutlineColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementShape/TailoringOutlineColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "226, 226, 226")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1467,7 +1467,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 	/// <summary>
 	/// DomainClass ElementShape
-	/// Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ElementShape
+	/// Description for NuPattern.Runtime.Schema.ElementShape
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 			
@@ -1496,14 +1496,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass ViewShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("bc4bc41e-9104-45be-b98b-ee0caf55331f")]
 	public abstract partial class ViewShapeBase : DslDiagrams::Port
@@ -1668,7 +1668,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ViewShapeNameDecoratorDefaultText");
+			field1.DefaultText = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ViewShapeNameDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -1678,31 +1678,31 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			shapeFields.Add(field1);
 			
 			DslDiagrams::ImageField field2 = new DslDiagrams::ImageField("InheritedFromBaseDecorator");
-			field2.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeInheritedFromBaseDecoratorDefaultImage"));
+			field2.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeInheritedFromBaseDecoratorDefaultImage"));
 			shapeFields.Add(field2);
 			
 			DslDiagrams::ImageField field3 = new DslDiagrams::ImageField("CustomizationTrueEnabledDecorator");
-			field3.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationTrueEnabledDecoratorDefaultImage"));
+			field3.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationTrueEnabledDecoratorDefaultImage"));
 			shapeFields.Add(field3);
 			
 			DslDiagrams::ImageField field4 = new DslDiagrams::ImageField("CustomizationTrueDisabledDecorator");
-			field4.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationTrueDisabledDecoratorDefaultImage"));
+			field4.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationTrueDisabledDecoratorDefaultImage"));
 			shapeFields.Add(field4);
 			
 			DslDiagrams::ImageField field5 = new DslDiagrams::ImageField("CustomizationFalseEnabledDecorator");
-			field5.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationFalseEnabledDecoratorDefaultImage"));
+			field5.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationFalseEnabledDecoratorDefaultImage"));
 			shapeFields.Add(field5);
 			
 			DslDiagrams::ImageField field6 = new DslDiagrams::ImageField("CustomizationFalseDisabledDecorator");
-			field6.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationFalseDisabledDecoratorDefaultImage"));
+			field6.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationFalseDisabledDecoratorDefaultImage"));
 			shapeFields.Add(field6);
 			
 			DslDiagrams::ImageField field7 = new DslDiagrams::ImageField("CustomizationInheritedEnabledDecorator");
-			field7.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationInheritedEnabledDecoratorDefaultImage"));
+			field7.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationInheritedEnabledDecoratorDefaultImage"));
 			shapeFields.Add(field7);
 			
 			DslDiagrams::ImageField field8 = new DslDiagrams::ImageField("CustomizationInheritedDisabledDecorator");
-			field8.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationInheritedDisabledDecoratorDefaultImage"));
+			field8.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ViewShapeCustomizationInheritedDisabledDecoratorDefaultImage"));
 			shapeFields.Add(field8);
 			
 		}
@@ -1802,8 +1802,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringFillColor domain property.
 		/// The color of the shape fill, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape/TailoringFillColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape/TailoringFillColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewShape/TailoringFillColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewShape/TailoringFillColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "WhiteSmoke")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1892,8 +1892,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringTextColor domain property.
 		/// The color of the shape text, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape/TailoringTextColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape/TailoringTextColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewShape/TailoringTextColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewShape/TailoringTextColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "DarkGray")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -1982,8 +1982,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringOutlineColor domain property.
 		/// The color of the shape outline, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape/TailoringOutlineColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape/TailoringOutlineColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewShape/TailoringOutlineColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewShape/TailoringOutlineColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "DarkGray")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -2072,8 +2072,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of IsLayoutInitialized domain property.
 		/// Whether the layout of the view initialized the very first time.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape/IsLayoutInitialized.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape/IsLayoutInitialized.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewShape/IsLayoutInitialized.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewShape/IsLayoutInitialized.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
 		[DslModeling::DomainObjectId("d8291028-a419-457b-aa23-6b3244ed9f5f")]
@@ -2148,7 +2148,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 	/// <summary>
 	/// DomainClass ViewShape
-	/// Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.ViewShape
+	/// Description for NuPattern.Runtime.Schema.ViewShape
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 			
@@ -2177,14 +2177,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass CollectionShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CollectionShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CollectionShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("33005d46-3de2-402a-bca3-9b7e89fa8486")]
 	public abstract partial class CollectionShapeBase : CustomizableElementShape
@@ -2357,7 +2357,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			shapeFields.Add(field1);
 			
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("NameDecorator");
-			field2.DefaultText = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CollectionShapeNameDecoratorDefaultText");
+			field2.DefaultText = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CollectionShapeNameDecoratorDefaultText");
 			field2.DefaultFocusable = true;
 			field2.DefaultAutoSize = true;
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -2367,7 +2367,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			shapeFields.Add(field2);
 			
 			DslDiagrams::TextField field3 = new DslDiagrams::TextField("StereotypeDecorator");
-			field3.DefaultText = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CollectionShapeStereotypeDecoratorDefaultText");
+			field3.DefaultText = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CollectionShapeStereotypeDecoratorDefaultText");
 			field3.DefaultFocusable = true;
 			field3.DefaultAutoSize = true;
 			field3.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -2377,7 +2377,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			shapeFields.Add(field3);
 			
 			DslDiagrams::ImageField field4 = new DslDiagrams::ImageField("InheritedFromBaseDecorator");
-			field4.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CollectionShapeInheritedFromBaseDecoratorDefaultImage"));
+			field4.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CollectionShapeInheritedFromBaseDecoratorDefaultImage"));
 			shapeFields.Add(field4);
 			
 		}
@@ -2447,7 +2447,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					baseCompartmentDescriptions.CopyTo(compartmentDescriptions, 0);	
 				}
 				{
-					string title = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CollectionShapePropertiesTitle");
+					string title = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CollectionShapePropertiesTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("Properties", title, 
 						global::System.Drawing.Color.FromArgb(255, 234, 234, 234), false, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
@@ -2456,7 +2456,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					compartmentDescriptions[localCompartmentsOffset+0] = descriptor;
 				}
 				{
-					string title = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CollectionShapeLaunchPointsTitle");
+					string title = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CollectionShapeLaunchPointsTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("LaunchPoints", title, 
 						global::System.Drawing.Color.FromArgb(255, 234, 234, 234), false, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
@@ -2465,7 +2465,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					compartmentDescriptions[localCompartmentsOffset+1] = descriptor;
 				}
 				{
-					string title = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CollectionShapeAutomationTitle");
+					string title = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("CollectionShapeAutomationTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("Automation", title, 
 						global::System.Drawing.Color.FromArgb(255, 234, 234, 234), false, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
@@ -2499,7 +2499,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				{
 					// First we get the mappings defined for the base shape, and add on any mappings defined for this
 					// shape. 
-					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionSchema));
+					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::NuPattern.Runtime.Schema.CollectionSchema));
 					int localCompartmentMappingsOffset = 0;
 					if(baseMappings!=null)
 					{
@@ -2513,29 +2513,29 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					}
 					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
 																				"LaunchPoints", 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
+																				global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
+																				global::NuPattern.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
 																				GetElementsFromCollectionSchemaForLaunchPoints,
 																				null,
 																				null,
 																				null);
 					mappings[localCompartmentMappingsOffset+1] = new DslDiagrams::ElementListCompartmentMapping(
 																				"Properties", 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.DomainClassId, 
+																				global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
+																				global::NuPattern.Runtime.Schema.PropertySchema.DomainClassId, 
 																				GetElementsFromCollectionSchemaForProperties,
 																				null,
 																				null,
 																				null);
 					mappings[localCompartmentMappingsOffset+2] = new DslDiagrams::ElementListCompartmentMapping(
 																				"Automation", 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
+																				global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
+																				global::NuPattern.Runtime.Schema.AutomationSettingsSchema.DomainClassId, 
 																				GetElementsFromCollectionSchemaForAutomation,
 																				null,
 																				null,
 																				null);
-					compartmentMappings.Add(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionSchema), mappings);
+					compartmentMappings.Add(typeof(global::NuPattern.Runtime.Schema.CollectionSchema), mappings);
 				}
 			}
 			
@@ -2566,9 +2566,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
 			internal static global::System.Collections.IList GetElementsFromCollectionSchemaForLaunchPoints(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
+				global::NuPattern.Runtime.Schema.PatternElementSchema root = (global::NuPattern.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
+					DslModeling::LinkedElementCollection<global::NuPattern.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
 				////////
 				// CompartmentMap.UsesCustomFilter==true
@@ -2580,9 +2580,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			}
 			internal static global::System.Collections.IList GetElementsFromCollectionSchemaForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
+				global::NuPattern.Runtime.Schema.PatternElementSchema root = (global::NuPattern.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema> result = root.Properties;
+					DslModeling::LinkedElementCollection<global::NuPattern.Runtime.Schema.PropertySchema> result = root.Properties;
 				
 				////////
 				// CompartmentMap.UsesCustomFilter==true
@@ -2594,9 +2594,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			}
 			internal static global::System.Collections.IList GetElementsFromCollectionSchemaForAutomation(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
+				global::NuPattern.Runtime.Schema.PatternElementSchema root = (global::NuPattern.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
+					DslModeling::LinkedElementCollection<global::NuPattern.Runtime.Schema.AutomationSettingsSchema> result = root.AutomationSettings;
 				
 				////////
 				// CompartmentMap.UsesCustomFilter==true
@@ -2643,8 +2643,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringFillColor domain property.
 		/// The color of the shape fill, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape/TailoringFillColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape/TailoringFillColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CollectionShape/TailoringFillColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CollectionShape/TailoringFillColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "255, 233, 164")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -2733,8 +2733,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringTextColor domain property.
 		/// The color of the shape text, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape/TailoringTextColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape/TailoringTextColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CollectionShape/TailoringTextColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CollectionShape/TailoringTextColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "DimGray")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -2823,8 +2823,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringOutlineColor domain property.
 		/// The color of the shape outline, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape/TailoringOutlineColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape/TailoringOutlineColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CollectionShape/TailoringOutlineColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CollectionShape/TailoringOutlineColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "234, 234, 234")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -2900,7 +2900,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 	/// <summary>
 	/// DomainClass CollectionShape
-	/// Description for Microsoft.VisualStudio.Patterning.Runtime.Schema.CollectionShape
+	/// Description for NuPattern.Runtime.Schema.CollectionShape
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 			
@@ -2929,16 +2929,15 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// DomainClass CustomizableElementShape
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementShape
+	/// Description for NuPattern.Runtime.Schema.CustomizableElementShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementShape.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.CustomizableElementShape.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("c7199c01-4aad-496c-b124-f7016fba3749")]
 	public abstract partial class CustomizableElementShape : DslDiagrams::CompartmentShape
@@ -2987,27 +2986,27 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::ImageField field1 = new DslDiagrams::ImageField("CustomizationTrueEnabledDecorator");
-			field1.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationTrueEnabledDecoratorDefaultImage"));
+			field1.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationTrueEnabledDecoratorDefaultImage"));
 			shapeFields.Add(field1);
 			
 			DslDiagrams::ImageField field2 = new DslDiagrams::ImageField("CustomizationTrueDisabledDecorator");
-			field2.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationTrueDisabledDecoratorDefaultImage"));
+			field2.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationTrueDisabledDecoratorDefaultImage"));
 			shapeFields.Add(field2);
 			
 			DslDiagrams::ImageField field3 = new DslDiagrams::ImageField("CustomizationFalseEnabledDecorator");
-			field3.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationFalseEnabledDecoratorDefaultImage"));
+			field3.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationFalseEnabledDecoratorDefaultImage"));
 			shapeFields.Add(field3);
 			
 			DslDiagrams::ImageField field4 = new DslDiagrams::ImageField("CustomizationFalseDisabledDecorator");
-			field4.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationFalseDisabledDecoratorDefaultImage"));
+			field4.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationFalseDisabledDecoratorDefaultImage"));
 			shapeFields.Add(field4);
 			
 			DslDiagrams::ImageField field5 = new DslDiagrams::ImageField("CustomizationInheritedEnabledDecorator");
-			field5.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationInheritedEnabledDecoratorDefaultImage"));
+			field5.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationInheritedEnabledDecoratorDefaultImage"));
 			shapeFields.Add(field5);
 			
 			DslDiagrams::ImageField field6 = new DslDiagrams::ImageField("CustomizationInheritedDisabledDecorator");
-			field6.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationInheritedDisabledDecoratorDefaultImage"));
+			field6.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("CustomizableElementShapeCustomizationInheritedDisabledDecoratorDefaultImage"));
 			shapeFields.Add(field6);
 			
 		}
@@ -3174,14 +3173,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		#endregion
 	}
 }
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Double-derived base class for DomainClass ExtensionPointShape
 	/// </summary>
-	[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel))]
+	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ExtensionPointShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ExtensionPointShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("268f9015-d395-4b5c-bc4f-2f671b82e04d")]
 	public abstract partial class ExtensionPointShapeBase : CustomizableElementShape
@@ -3349,7 +3348,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		{
 			base.InitializeShapeFields(shapeFields);
 			DslDiagrams::TextField field1 = new DslDiagrams::TextField("NameDecorator");
-			field1.DefaultText = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ExtensionPointShapeNameDecoratorDefaultText");
+			field1.DefaultText = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ExtensionPointShapeNameDecoratorDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -3359,7 +3358,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			shapeFields.Add(field1);
 			
 			DslDiagrams::TextField field2 = new DslDiagrams::TextField("StereotypeDecorator");
-			field2.DefaultText = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ExtensionPointShapeStereotypeDecoratorDefaultText");
+			field2.DefaultText = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ExtensionPointShapeStereotypeDecoratorDefaultText");
 			field2.DefaultFocusable = true;
 			field2.DefaultAutoSize = true;
 			field2.AnchoringBehavior.MinimumHeightInLines = 1;
@@ -3369,7 +3368,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			shapeFields.Add(field2);
 			
 			DslDiagrams::ImageField field3 = new DslDiagrams::ImageField("InheritedFromBaseDecorator");
-			field3.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ExtensionPointShapeInheritedFromBaseDecoratorDefaultImage"));
+			field3.DefaultImage = DslDiagrams::ImageHelper.GetImage(global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetObject("ExtensionPointShapeInheritedFromBaseDecoratorDefaultImage"));
 			shapeFields.Add(field3);
 			
 			DslDiagrams::ChevronButtonField field4 = new DslDiagrams::ChevronButtonField("ExpandCollapseDecorator");
@@ -3444,7 +3443,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					baseCompartmentDescriptions.CopyTo(compartmentDescriptions, 0);	
 				}
 				{
-					string title = global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ExtensionPointShapePropertiesTitle");
+					string title = global::NuPattern.Runtime.Schema.PatternModelDomainModel.SingletonResourceManager.GetString("ExtensionPointShapePropertiesTitle");
 					DslDiagrams::ElementListCompartmentDescription descriptor = new DslDiagrams::ElementListCompartmentDescription("Properties", title, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.LightGray), false, 
 						global::System.Drawing.Color.FromKnownColor(global::System.Drawing.KnownColor.White), false,
@@ -3478,7 +3477,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 				{
 					// First we get the mappings defined for the base shape, and add on any mappings defined for this
 					// shape. 
-					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema));
+					DslDiagrams::CompartmentMapping[] baseMappings = base.GetCompartmentMappings(typeof(global::NuPattern.Runtime.Schema.ExtensionPointSchema));
 					int localCompartmentMappingsOffset = 0;
 					if(baseMappings!=null)
 					{
@@ -3492,13 +3491,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 					}
 					mappings[localCompartmentMappingsOffset+0] = new DslDiagrams::ElementListCompartmentMapping(
 																				"Properties", 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
-																				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema.DomainClassId, 
+																				global::NuPattern.Runtime.Schema.NamedElementSchema.NameDomainPropertyId, 
+																				global::NuPattern.Runtime.Schema.PropertySchema.DomainClassId, 
 																				GetElementsFromExtensionPointSchemaForProperties,
 																				null,
 																				null,
 																				null);
-					compartmentMappings.Add(typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointSchema), mappings);
+					compartmentMappings.Add(typeof(global::NuPattern.Runtime.Schema.ExtensionPointSchema), mappings);
 				}
 			}
 			
@@ -3529,9 +3528,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 			#region DomainPath traversal methods to get the list of elements to display in a compartment.
 			internal static global::System.Collections.IList GetElementsFromExtensionPointSchemaForProperties(DslModeling::ModelElement rootElement)
 			{
-				global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema root = (global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternElementSchema)rootElement;
+				global::NuPattern.Runtime.Schema.PatternElementSchema root = (global::NuPattern.Runtime.Schema.PatternElementSchema)rootElement;
 					// Segments 0 and 1
-					DslModeling::LinkedElementCollection<global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PropertySchema> result = root.Properties;
+					DslModeling::LinkedElementCollection<global::NuPattern.Runtime.Schema.PropertySchema> result = root.Properties;
 				
 				////////
 				// CompartmentMap.UsesCustomFilter==true
@@ -3576,8 +3575,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringFillColor domain property.
 		/// The color of the shape fill, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape/TailoringFillColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape/TailoringFillColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ExtensionPointShape/TailoringFillColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ExtensionPointShape/TailoringFillColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "168, 186, 186")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -3666,8 +3665,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringTextColor domain property.
 		/// The color of the shape text, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape/TailoringTextColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape/TailoringTextColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ExtensionPointShape/TailoringTextColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ExtensionPointShape/TailoringTextColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "DimGray")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -3756,8 +3755,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// Gets or sets the value of TailoringOutlineColor domain property.
 		/// The color of the shape outline, in tailoring mode.
 		/// </summary>
-		[DslDesign::DisplayNameResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape/TailoringOutlineColor.DisplayName", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape/TailoringOutlineColor.Description", typeof(global::Microsoft.VisualStudio.Patterning.Runtime.Schema.PatternModelDomainModel), "Microsoft.VisualStudio.Patterning.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ExtensionPointShape/TailoringOutlineColor.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ExtensionPointShape/TailoringOutlineColor.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.DefaultValue(typeof(global::System.Drawing.Color), "226, 226, 226")]
 		[global::System.ComponentModel.Browsable(false)]
 		[global::System.ComponentModel.ReadOnly(true)]
@@ -3833,8 +3832,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 	}
 	/// <summary>
 	/// DomainClass ExtensionPointShape
-	/// Description for
-	/// Microsoft.VisualStudio.Patterning.Runtime.Schema.ExtensionPointShape
+	/// Description for NuPattern.Runtime.Schema.ExtensionPointShape
 	/// </summary>
 	[global::System.CLSCompliant(true)]
 			

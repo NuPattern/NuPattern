@@ -20,6 +20,7 @@
     <BranchRoot>..\..\..\</BranchRoot>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -36,8 +37,8 @@
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <Content Include="..\..\..\Binaries\PatternToolkitManager.$(TargetVsVersion).vsix">
-      <Link>PatternToolkitManager.$(TargetVsVersion).vsix</Link>
+    <Content Include="..\..\..\Binaries\$(RuntimeShellVsixFileName)">
+      <Link>$(RuntimeShellVsixFileName)</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="source.extension.vsixmanifest">
@@ -50,7 +51,7 @@
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
     </None>
     <EmbeddedResource Include="PatternModel.patterndefinition">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/MainTestToolkit/Element/c:\users\joj\documents\visual studio 2010\Projects\MainTestToolkit\MainTestToolkit.patternstate%252fd283ce73-5e49-4e3f-8dac-1e8bd82686c5</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/MainTestToolkit/Element/c:\users\joj\documents\visual studio 2010\Projects\MainTestToolkit\MainTestToolkit.patternstate%252fd283ce73-5e49-4e3f-8dac-1e8bd82686c5</SourceModelReference>
       <ItemGuid>eb858d93-fc73-41ec-9aae-c04048cffb63</ItemGuid>
       <SubType>Designer</SubType>
     </EmbeddedResource>

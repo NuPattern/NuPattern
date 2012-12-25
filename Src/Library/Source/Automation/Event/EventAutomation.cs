@@ -6,14 +6,14 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Input;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Events;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Events;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Implements the runtime behavior of the event handler launch point.
@@ -92,7 +92,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 				catch (Exception e)
 				{
 					tracer.TraceError(e, Resources.EventAutomation_FailedToParseConditions, this.Name);
-					if (ErrorHandler.IsCriticalException(e))
+                    if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(e))
 					{
 						throw;
 					}

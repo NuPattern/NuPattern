@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests.Events
+namespace NuPattern.Runtime.UnitTests.Events
 {
 	[TestClass]
 	public class ObservableEventExtensionsSpec

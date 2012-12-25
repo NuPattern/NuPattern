@@ -3,9 +3,9 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Extensibility;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Customizations for the NamedElementSchema class.

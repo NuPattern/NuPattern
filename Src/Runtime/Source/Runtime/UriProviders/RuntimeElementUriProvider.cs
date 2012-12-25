@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UriProviders
+namespace NuPattern.Runtime.UriProviders
 {
 	/// <summary>
 	/// Uri provider that resolves runtime state element.

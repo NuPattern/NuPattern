@@ -1,10 +1,10 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility.Binding;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding.Design
+namespace NuPattern.Extensibility.UnitTests.Binding.Design
 {
     public class DesignPropertySpec
     {

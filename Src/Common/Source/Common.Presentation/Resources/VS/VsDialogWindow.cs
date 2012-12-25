@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.PlatformUI;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation.Vs
+namespace NuPattern.Common.Presentation.Vs
 {
     /// <summary>
     /// The VS DialogWindow control.

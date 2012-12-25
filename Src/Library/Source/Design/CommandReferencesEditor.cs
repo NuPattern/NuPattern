@@ -1,8 +1,8 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
+using NuPattern.Extensibility;
+using NuPattern.Library.Automation;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Design
+namespace NuPattern.Library.Design
 {
     /// <summary>
     /// Command references type editor

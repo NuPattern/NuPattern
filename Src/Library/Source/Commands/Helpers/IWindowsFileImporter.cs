@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
-namespace Microsoft.VisualStudio.Patterning.Library
+namespace NuPattern.Library
 {
     /// <summary>
     /// Defines an interface fo a file importer.

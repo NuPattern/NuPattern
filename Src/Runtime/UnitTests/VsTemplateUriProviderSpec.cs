@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
+namespace NuPattern.Runtime.UnitTests
 {
 	[TestClass]
 	public class VsTemplateUriProviderSpec

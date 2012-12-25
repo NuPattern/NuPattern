@@ -223,7 +223,7 @@
     <value>The folder path '{0}' already exists.</value>
   </data>
   <data name="SeeDiagnosticsWindow" xml:space="preserve">
-    <value>Please see the Output Window ('Pattern Toolkit Extensions' pane) for more information..</value>
+    <value>Please see the Output Window ('NuPattern Toolkit Extensions' pane) for more information..</value>
   </data>
   <data name="ElementNameNotSupported" xml:space="preserve">
     <value>The domain class {0} doesn't have a Name domain property</value>

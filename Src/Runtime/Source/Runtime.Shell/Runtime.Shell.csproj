@@ -7,8 +7,8 @@
     <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime.Shell</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.Shell</AssemblyName>
+    <RootNamespace>NuPattern.Runtime.Shell</RootNamespace>
+    <AssemblyName>NuPattern.Runtime.Shell</AssemblyName>
     <ProjectGuid>{D3E93083-99C9-4186-95B5-339A822C63EE}</ProjectGuid>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -17,9 +17,7 @@
     <BranchRoot>..\..\..\</BranchRoot>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
-  <PropertyGroup>
-    <TargetVsixContainerName>PatternToolkitManager.$(TargetVsVersion).vsix</TargetVsixContainerName>
-  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
     <Reference Include="EnvDTE">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -155,7 +153,7 @@
     <Compile Include="Events\ItemEvents.cs" />
     <Compile Include="Extensions\IPatternManagerExtensions.cs" />
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.cs">
-      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/Runtime/Element/C:\Projects\VSPAT\sprint20\Src\Runtime\Runtime.slnbldr%252f29623964-bb7b-4778-b7d4-d79652ac5a5e</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Runtime/Element/C:\Projects\VSPAT\sprint20\Src\Runtime\Runtime.slnbldr%252f29623964-bb7b-4778-b7d4-d79652ac5a5e</SourceModelReference>
       <ItemGuid>ae551abf-1da3-405b-8d82-c2ccb986c7f8</ItemGuid>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
@@ -214,6 +212,15 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIXAs>LibrarySchema.xsd</IncludeInVSIXAs>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\Feedback.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\InstallingNuPattern.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatisNuPattern.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="VSPackage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -327,9 +334,6 @@
     <Content Include="GeneratedCode\Guidance\Content\ExtensionManager.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="GeneratedCode\Guidance\Content\FeatureBuilderPowerTool.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="GeneratedCode\Guidance\Content\GuidanceWorkflowExplorer.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -376,9 +380,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\InstallingaPatternToolkit.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\InstallingthePatternAutomationToolkit.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\MoreInformation.mht">
@@ -525,9 +526,6 @@
     <Content Include="GeneratedCode\Guidance\Content\WhatistheGuidanceExplorer.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisthePatternAutomationToolkit.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="GeneratedCode\Guidance\Content\WhatisthePatternModelDesigner.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -658,7 +656,7 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="Guidance\RuntimeInterfaces.cd" />
-    <None Include="Microsoft.VisualStudio.Patterning.Runtime.Shell.targets">
+    <None Include="NuPattern.Runtime.Shell.targets">
       <SubType>Designer</SubType>
     </None>
     <None Include="source.extension.tt">
@@ -741,13 +739,9 @@
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
-    <!--
-    To specify a different registry root to register your package, uncomment the TargetRegistryRoot
-    tag and specify a registry root in it.
-    <TargetRegistryRoot></TargetRegistryRoot>
-    -->
-    <RegisterOutputPackage>true</RegisterOutputPackage>
-    <RegisterWithCodebase>true</RegisterWithCodebase>
+    <DeployVSTemplates>false</DeployVSTemplates>
+    <TargetVsixContainerName>$(RuntimeShellVsixFileName)</TargetVsixContainerName>
+    <IncludeDocFilesInVSIXContainer>false</IncludeDocFilesInVSIXContainer>
   </PropertyGroup>
   <!-- Properties for Toolkit Targets -->
   <PropertyGroup>
@@ -755,16 +749,13 @@
     <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\Platu\Projects\Src\Binaries</CopyVsixToFolder>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
-  <Import Project="$(VsxTargetsPath)\Microsoft.VsSDK.targets" />
-  <Import Project="Microsoft.VisualStudio.Patterning.Runtime.Shell.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.targets" />
+  <Import Project="NuPattern.Runtime.Shell.targets" />
   <!-- Properties for VSSDK/DSL Targets -->
   <PropertyGroup>
     <RegisterOutputPackage>true</RegisterOutputPackage>
     <RegisterWithCodebase>true</RegisterWithCodebase>
     <GacTargetOutput>false</GacTargetOutput>
-    <DeployVSTemplates>false</DeployVSTemplates>
-    <IncludeDocFilesInVSIXContainer>false</IncludeDocFilesInVSIXContainer>
   </PropertyGroup>
   <PropertyGroup>
     <GetVsixSourceItemsDependsOn>$(GetVsixSourceItemsDependsOn);IncludeTemplatesInVsix</GetVsixSourceItemsDependsOn>

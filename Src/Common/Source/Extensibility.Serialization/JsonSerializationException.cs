@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization
+namespace NuPattern.Extensibility.Serialization
 {
     /// <summary>
     /// A Json serialization exception
