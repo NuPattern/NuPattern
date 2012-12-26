@@ -1630,7 +1630,7 @@
 </dropConditions>
     </dragDropSettings>
   </dm0:extensions>
-  <pattern Id="c034429e-01f9-48dd-a478-0321fb708dd3" name="PatternToolkit" displayName="Pattern Toolkit" description="A Pattern Toolkit which captures and automates a design pattern for rapid and consistent custom solution development." codeIdentifier="PatternToolkit" isCustomizable="True" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit;component/Resources/PatternNodeAuthoring.png" currentDiagramId="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8" patternLink="patternmanager://eba0a4b0-d271-4785-8691-5963645ed0bd">
+  <pattern Id="c034429e-01f9-48dd-a478-0321fb708dd3" name="PatternToolkit" displayName="Pattern Toolkit" description="A Pattern Toolkit which captures and automates a design pattern for rapid and consistent custom solution development." codeIdentifier="PatternToolkit" isCustomizable="True" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit;component/Resources/PatternNodePatternToolkit.png" currentDiagramId="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8" patternLink="patternmanager://eba0a4b0-d271-4785-8691-5963645ed0bd">
     <customizationPolicy>
       <settings>
         <setting propertyId="DisplayName" />
