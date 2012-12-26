@@ -30,7 +30,7 @@
 
 		<StackPanel Style="{DynamicResource CommandBar.Panel}">
 			<StackPanel Orientation="Horizontal" Margin="2">
-				<Button ToolTip="Add a New Solution Element" Command="{Binding AddNewProductCommand}" Focusable="false">
+				<Button ToolTip="New Solution Element" Command="{Binding AddNewProductCommand}" Focusable="false">
 					<BitmapImage UriSource="../../Resources/CommandAddNewProduct.png" />
 				</Button>
 				<Button ToolTip="Save All" Command="{Binding SaveCommand}" Focusable="false">
@@ -44,7 +44,7 @@
 					<BitmapImage UriSource="../../Resources/CommandCollapseAll.png" />
 				</Button>
 				<Separator />
-				<Button ToolTip="Getting Started with Solution Builder" Command="{Binding GuidanceCommand}" Focusable="false">
+				<Button ToolTip="Help for Getting Started" Command="{Binding GuidanceCommand}" Focusable="false">
 					<BitmapImage UriSource="../../Resources/CommandShowGuidance.png" />
 				</Button>
 			</StackPanel>
@@ -88,31 +88,45 @@
 								<Setter.Value>
 									<ControlTemplate TargetType="TreeView">
 										<Border Background="{DynamicResource VsBrush.DesignerBackground}">
-											<ContentControl x:Name="text" Background="{x:Null}" Margin="10" VerticalAlignment="Center">
-												<TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Foreground="DarkGray">
-													<Run Text="There are no solution elements in the current solution." />
-													<LineBreak />
-													<LineBreak />
-													<Hyperlink Command="{Binding AddNewProductCommand}" Focusable="false">Add a new solution element.</Hyperlink>
-                                                    <LineBreak />
-													<LineBreak />
-													<Hyperlink Command="{Binding GuidanceCommand}" Focusable="false">Getting started with Solution Builder.</Hyperlink>
-												</TextBlock>
-											</ContentControl>
+											<ContentControl x:Name="text" Background="{x:Null}" Margin="10" Focusable="False">
+                                                <DockPanel Focusable="False">
+                                                    <TextBlock DockPanel.Dock="Bottom" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment="Bottom"  Foreground="{DynamicResource VsBrush.GrayText}">
+                                                        <Run Text="Solution elements in this window are provided by pattern toolkits, built with NuPattern"/>
+                                                        <Hyperlink Command="{Binding HomePageCommand}" Focusable="False">learn more...</Hyperlink>
+                                                    </TextBlock>
+                                                    <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource VsBrush.GrayText}">
+													    <Run Text="There are no solution elements in the current solution to view in this window. " />
+                                                        <LineBreak/>
+                                                        <LineBreak/>
+                                                        <Run Text="Add a"/>
+                                                        <Hyperlink Command="{Binding AddNewProductCommand}" Focusable="false">New Solution Element</Hyperlink>
+                                                        <Run Text="to the current solution, or browse the"/>
+													    <Hyperlink Command="{Binding GuidanceCommand}" Focusable="false">Help for Getting Started</Hyperlink>
+                                                        <Run Text="with the Solution Builder window."/>
+                                                    </TextBlock>
+                                                </DockPanel>
+                                            </ContentControl>
 										</Border>
 										<ControlTemplate.Triggers>
 											<DataTrigger Binding="{Binding IsSolutionOpened}" Value="False">
 												<Setter TargetName="text" Property="Content">
 													<Setter.Value>
-														<TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" Foreground="DarkGray">
-															<Run Text="A solution must be open in order to create or view solution elements." />
-															<LineBreak />
-															<LineBreak />
-															<Hyperlink Command="{Binding CreateNewSolutionCommand}" Focusable="false">Create a new empty solution.</Hyperlink>
-															<LineBreak />
-															<LineBreak />
-															<Hyperlink Command="{Binding GuidanceCommand}" Focusable="false">Getting started with Solution Builder.</Hyperlink>
-                                                        </TextBlock>
+                                                        <DockPanel Focusable="False">
+                                                            <TextBlock DockPanel.Dock="Bottom" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment="Bottom"  Foreground="{DynamicResource VsBrush.GrayText}">
+                                                                <Run Text="Solution elements in this window are provided by pattern toolkits, built with NuPattern"/>
+                                                                <Hyperlink Command="{Binding HomePageCommand}" Focusable="False">learn more...</Hyperlink>
+                                                            </TextBlock>
+                                                            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource VsBrush.GrayText}">
+															    <Run Text="A solution must be open to view or create elements in this window. " />
+                                                                <LineBreak/>
+                                                                <LineBreak/>
+                                                                <Run Text="Create a"/>
+															    <Hyperlink Command="{Binding CreateNewSolutionCommand}" Focusable="false">New Empty Solution</Hyperlink>
+                                                                <Run Text=", or browse the"/>
+													            <Hyperlink Command="{Binding GuidanceCommand}" Focusable="false">Help for Getting Started</Hyperlink>
+                                                                <Run Text="with the Solution Builder window."/>
+                                                            </TextBlock>
+                                                        </DockPanel>
                                                     </Setter.Value>
 												</Setter>
 											</DataTrigger>

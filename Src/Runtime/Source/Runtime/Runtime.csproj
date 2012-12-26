@@ -165,6 +165,24 @@
       <DependentUpon>SolutionPicker.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\UserMessageService.cs" />
+    <None Include="UI\ViewModels\AddNewProductViewModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AddNewProductViewModel.gen.cs</LastGenOutput>
+    </None>
+    <None Include="UI\ViewModels\SolutionBuilderViewModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SolutionBuilderViewModel.gen.cs</LastGenOutput>
+    </None>
+    <Compile Include="UI\ViewModels\AddNewProductViewModel.gen.cs">
+      <DependentUpon>AddNewProductViewModel.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\ViewModels\SolutionBuilderViewModel.gen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SolutionBuilderViewModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="UI\ViewModels\ValidationViewModel.cs" />
     <Compile Include="UI\ViewModels\AddNewNodeViewModel.cs" />
     <Compile Include="UI\ViewModels\AddNewProductViewModel.cs" />

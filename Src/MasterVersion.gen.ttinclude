@@ -22,6 +22,7 @@ public static class VersionInfo
     public const string VsixAuthor = "NuPattern";
 	public const string AssemblyAuthor = "NuPattern";
 	public const string AssemblyCopyright = "Copyright 2012, NuPattern under Apache 2.0 license.";
+	public const string ProjectHomePage = @"http://www.nupattern.org/";
 	
 	// Assembly Identity
 	public const string AssemblyProductName = "NuPattern";

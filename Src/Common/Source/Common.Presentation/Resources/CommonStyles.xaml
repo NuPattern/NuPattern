@@ -18,4 +18,8 @@
         <Setter Property="Foreground" Value="{DynamicResource VsVersion.Controls.Text}" />
     </Style>
 
+    <Style TargetType="TextBlock">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Foreground" Value="{DynamicResource VsVersion.Controls.Text}" />
+    </Style>
 </ResourceDictionary>

@@ -13,7 +13,7 @@ namespace NuPattern.Runtime.UI
     /// Provides a view model to create a new pattern.
     /// </summary>
     [CLSCompliant(false)]
-    public class AddNewProductViewModel : ValidationViewModel
+    public partial class AddNewProductViewModel : ValidationViewModel
     {
         private string productName;
         private IInstalledToolkitInfo currentToolkit;
@@ -88,8 +88,12 @@ namespace NuPattern.Runtime.UI
         /// <summary>
         /// Gets the select toolkit command.
         /// </summary>
-        /// <value>The select toolkit command.</value>
         public System.Windows.Input.ICommand SelectToolkitCommand { get; private set; }
+
+        /// <summary>
+        /// Gets the homepage command.
+        /// </summary>
+        public System.Windows.Input.ICommand HomePageCommand { get; private set; }
 
         private void CloseDialog(IDialogWindow dialog)
         {
@@ -110,6 +114,7 @@ namespace NuPattern.Runtime.UI
         private void InitializeCommands()
         {
             this.SelectToolkitCommand = new RelayCommand<IDialogWindow>(dialog => this.CloseDialog(dialog), dialog => this.IsValid);
+            this.HomePageCommand = new RelayCommand(this.NavigateToHomePage, () => true);
         }
 
         private void SetProductName(string value, bool isUserAssigned)
@@ -120,6 +125,11 @@ namespace NuPattern.Runtime.UI
                 this.OnPropertyChanged(() => this.ProductName);
                 this.wasUserAssigned = !string.IsNullOrEmpty(value) && isUserAssigned;
             }
+        }
+
+        private void NavigateToHomePage()
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(HomePageUrl));
         }
     }
 }

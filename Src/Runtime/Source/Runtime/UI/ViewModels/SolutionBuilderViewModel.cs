@@ -15,7 +15,7 @@ namespace NuPattern.Runtime.UI
     /// Provides a view model for the solution builder
     /// </summary>
     [CLSCompliant(false)]
-    public class SolutionBuilderViewModel : ViewModel
+    public partial class SolutionBuilderViewModel : ViewModel
     {
         private const string NewSolutionNamePrefix = "Solution";
 
@@ -126,6 +126,11 @@ namespace NuPattern.Runtime.UI
         /// Gets the save command.
         /// </summary>
         public System.Windows.Input.ICommand SaveCommand { get; private set; }
+
+        /// <summary>
+        /// Gets the homepage command.
+        /// </summary>
+        public System.Windows.Input.ICommand HomePageCommand { get; private set; }
 
         /// <summary>
         /// Gets the current node in the pattern explorer tree view.
@@ -347,6 +352,7 @@ namespace NuPattern.Runtime.UI
             this.ExpandAllCommand = new RelayCommand(() => this.ChangeIsExpanded(true), () => this.Nodes.Count > 0);
             this.CollapseAllCommand = new RelayCommand(() => this.ChangeIsExpanded(false), () => this.Nodes.Count > 0);
             this.CreateNewSolutionCommand = new RelayCommand(this.CreateNewSolution, this.CanShowCreateNewSolution);
+            this.HomePageCommand = new RelayCommand(this.NavigateToHomePage, () => true);
 
             this.ActivateCommand = new RelayCommand(this.ActivateNode, () => this.currentNode != null);
             this.DeleteCommand = new RelayCommand(this.DeleteNode, this.CanDeleteNode);
@@ -480,6 +486,11 @@ namespace NuPattern.Runtime.UI
             {
                 dte.CreateBlankSolution();
             }
+        }
+
+        private void NavigateToHomePage()
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(HomePageUrl));
         }
     }
 }

@@ -68,7 +68,7 @@
 
 	<Style TargetType="ListView">
 		<Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Background" Value="{DynamicResource VsVersion.Controls.Fill}"/>
+        <Setter Property="Background" Value="{DynamicResource VsVersion.ListView.Fill}"/>
         <Setter Property="Foreground" Value="{DynamicResource VsVersion.Controls.Text}"/>
     </Style>
 
