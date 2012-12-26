@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Linq;
+using System.Windows.Input;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -103,8 +104,8 @@ namespace NuPattern.Authoring.UserTests
                 Assert.NotNull(solution);
 
                 // Verify projects are created
-                Assert.NotNull(solution.Find<IProject>(projectName));
-                Assert.NotNull(solution.Find<IProject>(projectName + ".Automation"));
+                Assert.NotNull(solution.Find<IProject>(projectName).FirstOrDefault());
+                Assert.NotNull(solution.Find<IProject>(projectName + ".Automation").FirstOrDefault());
 
                 //Switch to Solution Builder
                 Keyboard.SendKeys("WH", ModifierKeys.Control);
@@ -136,7 +137,7 @@ namespace NuPattern.Authoring.UserTests
                 Assert.NotNull(solution);
 
                 // Verify projects are created
-                Assert.NotNull(solution.Find<IProject>(projectName));
+                Assert.NotNull(solution.Find<IProject>(projectName).FirstOrDefault());
 
                 //Switch to Solution Builder
                 Keyboard.SendKeys("WH", ModifierKeys.Control);

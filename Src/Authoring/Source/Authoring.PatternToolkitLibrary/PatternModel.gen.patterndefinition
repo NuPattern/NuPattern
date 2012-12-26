@@ -1380,7 +1380,7 @@
 ]</dropConditions>
     </dragDropSettings>
   </dm0:extensions>
-  <pattern Id="d6139b37-9971-4834-a9dc-2b3daef962cf" name="PatternToolkitLibrary" displayName="Pattern Toolkit Library" description="A library that contains reusable automation types for sharing between Pattern Toolkit projects." codeIdentifier="PatternToolkitLibrary" isCustomizable="True" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/PatternNodeAutomationLibrary.png" currentDiagramId="9be0eaf7-8717-414f-97fe-58c0c97be587" patternLink="patternmanager://116b0a90-24bd-405d-b94f-301c1d1661e9">
+  <pattern Id="d6139b37-9971-4834-a9dc-2b3daef962cf" name="PatternToolkitLibrary" displayName="Pattern Toolkit Library" description="A library that contains reusable automation types for sharing between Pattern Toolkit projects." codeIdentifier="PatternToolkitLibrary" isCustomizable="True" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkitLibrary;component/Resources/PatternNodePatternToolkitLibrary.png" currentDiagramId="9be0eaf7-8717-414f-97fe-58c0c97be587" patternLink="patternmanager://116b0a90-24bd-405d-b94f-301c1d1661e9">
     <customizationPolicy>
       <settings>
         <setting propertyId="DisplayName" />

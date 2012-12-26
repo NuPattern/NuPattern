@@ -51,8 +51,10 @@ namespace NuPattern.Authoring.UserTests
         public UIVsMainWindow()
         {
             #region Search Criteria
+#if VSVER11
             this.SearchProperties[WpfTitleBar.PropertyNames.AutomationId] = "VisualStudioMainWindow";
-            this.SearchProperties[WpfWindow.PropertyNames.Name] = "Start Page - Microsoft Visual Studio - Experimental Instance";
+#endif
+            this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.Name, "- Microsoft Visual Studio - Experimental Instance", PropertyExpressionOperator.Contains));
             this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
             this.WindowTitles.Add("Start Page - Microsoft Visual Studio - Experimental Instance");
             #endregion
