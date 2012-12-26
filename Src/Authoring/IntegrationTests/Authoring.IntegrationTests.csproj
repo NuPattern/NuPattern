@@ -238,7 +238,6 @@
     <Content Include="SampleFactory\Base\SampleFactory\Assets\Templates\Projects\Customization\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="ProjectUnfoldingSpec.cs" />
     <Content Include="SampleGuidanceDocs\EmptyDocument.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

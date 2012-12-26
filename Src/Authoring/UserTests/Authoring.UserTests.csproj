@@ -15,6 +15,8 @@
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Authoring\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <IsCodedUITest>True</IsCodedUITest>
+    <TestProjectType>CodedUITest</TestProjectType>
   </PropertyGroup>
   <PropertyGroup>
     <BranchRoot>..\..\</BranchRoot>
@@ -23,6 +25,14 @@
   <ItemGroup>
     <Reference Include="NuPattern.Extensibility">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuPattern.Runtime">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuPattern.Runtime.Interfaces">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -47,6 +57,12 @@
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -101,31 +117,24 @@
     <Compile Include="..\..\Common\Helpers\Assertions.cs">
       <Link>Assertions.cs</Link>
     </Compile>
-    <Compile Include="..\..\Common\Helpers\CodedUITest.cs">
-      <Link>CodedUITest.cs</Link>
-    </Compile>
     <Compile Include="..\..\Common\Helpers\IntegrationTest.cs">
       <Link>IntegrationTest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\Helpers\UserTest.cs">
+      <Link>UserTest.cs</Link>
     </Compile>
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="AddNewProjectTest.cs" />
     <Compile Include="ProjectUnfoldingSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UIMap.cs">
-      <DependentUpon>UIMap.uitest</DependentUpon>
-    </Compile>
-    <Compile Include="UIMap.Designer.cs">
-      <DependentUpon>UIMap.uitest</DependentUpon>
-    </Compile>
+    <Compile Include="VsUIMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="UIMap.uitest" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Source\Authoring.PatternToolkit\Authoring.PatternToolkit.csproj">

@@ -1,67 +1,151 @@
-﻿using Microsoft.VisualStudio.TestTools.UITesting;
+﻿using System.Windows.Input;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using NuPattern.Extensibility;
+using NuPattern.Runtime;
 
 namespace NuPattern.Authoring.UserTests
 {
     public class ProjectUnfoldingSpec
     {
-        internal static readonly IAssertion Assert = new Assertion();
-
         [CodedUITest]
-        public class GivenNoSolution: CodedUITest
+        public class GivenAllProjectTemplates: AddNewProjectTest
         {
-            private ISolution solution;
-            private ITemplate templateToUnfold;
-            private IProject unfoldedProject;
-
-            public UIMap UIMap
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("User Interactive")]
+            public void ThenPatternToolkitProjectTemplateInstalled()
             {
-                get
-                {
-                    if ((this.map == null))
-                    {
-                        this.map = new UIMap();
-                    }
+                this.SearchForProjectTemplate("Pattern Toolkit");
+                this.AssertProjectTemplateSelected("PatternToolkit");
 
-                    return this.map;
-                }
-            }
-
-            private UIMap map;
-
-            [TestInitialize]
-            public override void InitializeContext()
-            {
-                base.InitializeContext();
-
-                this.SelectProjectTemplate("Pattern Toolkit");
-            }
-
-            [TestCleanup]
-            public void Cleanup()
-            {
-                base.Cleanup();
+                // Close the dialog
+                Assert.True(this.UIMap.UINewProjectWindow.UICancelButton.Enabled);
+                Mouse.Click(this.UIMap.UINewProjectWindow.UICancelButton);
             }
 
             [HostType("VS IDE")]
             [TestMethod, TestCategory("User Interactive")]
-            public void WhenCreateNewPatternToolkitProject_ThenCreated()
+            public void ThenPatternToolkitLibraryProjectTemplateInstalled()
             {
-                this.CreateNewProject("PatternToolkit1");
+                this.SearchForProjectTemplate("Pattern Toolkit Library");
+                this.AssertProjectTemplateSelected("PatternToolkitLibrary");
 
-                // Psuedo Assertions
-                //Assert.True(Toolkit Project is created);
-                //Assert.True(ToolkitLibrary Project is created);
-                //Assert.True(Solution Builder contains toolkitproject node);
-                //Assert.True(Solution Builder contains toolkitprojectlibrary node);
-                //Assert.True(toolkitproject node is called same as toolkit project);
-                //Assert.True(toolkitprojectlibrary node is called same as library project);
+                // Close the dialog
+                Assert.True(this.UIMap.UINewProjectWindow.UICancelButton.Enabled);
+                Mouse.Click(this.UIMap.UINewProjectWindow.UICancelButton);
+            }
 
-                //this.UIMap.UnfoldPatternToolkitProject();
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("User Interactive")]
+            public void WhenCreateNewPatternToolkitProject_ThenWizardDisplayed()
+            {
+                this.SearchForProjectTemplate("Pattern Toolkit");
+                var projectName = this.CreateNewProjectFromSelectedTemplate();
 
+                Assert.NotNull(this.UIMap.UINewPatternToolkitWindow);
+
+                // Dismiss Wizard
+                Assert.True(this.UIMap.UINewPatternToolkitWindow.UICancelButton.Enabled);
+                Mouse.Click(this.UIMap.UINewPatternToolkitWindow.UICancelButton);
+            }
+
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("User Interactive")]
+            public void WhenCreateNewPatternToolkitProject_ThenWizardPopulated()
+            {
+                this.SearchForProjectTemplate("Pattern Toolkit");
+                var projectName = this.CreateNewProjectFromSelectedTemplate();
+
+                Assert.Equal(true, this.UIMap.UINewPatternToolkitWindow.UICreateanewtoolkitRadioButton.Selected);
+
+                // Move to next page
+                Assert.True(this.UIMap.UINewPatternToolkitWindow.UINextButton.Enabled);
+                Mouse.Click(this.UIMap.UINewPatternToolkitWindow.UINextButton);
+
+                Assert.Equal(projectName, this.UIMap.UINewPatternToolkitWindow.UIToolkitNameEditorEdit.Text);
+                Assert.Equal("A description of the toolkit.", this.UIMap.UINewPatternToolkitWindow.UIPART_EditEdit.Text);
+                Assert.Equal("Unknown", this.UIMap.UINewPatternToolkitWindow.UIPART_EditEdit1.Text);
+                Assert.Equal("MyPattern", this.UIMap.UINewPatternToolkitWindow.UIPART_EditEdit2.Text);
+                Assert.Equal("A Description of MyPattern", this.UIMap.UINewPatternToolkitWindow.UIPART_EditEdit3.Text);
+
+                // Dismiss Wizard
+                Assert.True(this.UIMap.UINewPatternToolkitWindow.UICancelButton.Enabled);
+                Mouse.Click(this.UIMap.UINewPatternToolkitWindow.UICancelButton);
+            }
+
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("User Interactive")]
+            public void WhenCreateNewPatternToolkitProject_ThenNewPatternToolkitProjectCreated()
+            {
+                this.SearchForProjectTemplate("Pattern Toolkit");
+                var projectName = this.CreateNewProjectFromSelectedTemplate();
+
+                // Complete Wizard
+                Assert.True(this.UIMap.UINewPatternToolkitWindow.UINextButton.Enabled);
+                Mouse.Click(this.UIMap.UINewPatternToolkitWindow.UINextButton);
+                Assert.True(this.UIMap.UINewPatternToolkitWindow.UIFinishButton.Enabled);
+                Mouse.Click(this.UIMap.UINewPatternToolkitWindow.UIFinishButton);
+
+                // Wait until project finishes being created
+                this.UIMap.UIVsMainWindow.WaitForControlReady(30000);
+
+                var dte = (EnvDTE.DTE)VsIdeTestHostContext.ServiceProvider.GetService(typeof(EnvDTE.DTE));
+                Assert.NotNull(dte);
+
+                // Verify active document is the PatternModel
+                Assert.Equal("PatternModel.patterndefinition", dte.ActiveDocument.Name);
+
+                // Switch to Solution Explorer
+                Keyboard.SendKeys("WS", ModifierKeys.Control);
+
+                var solution = (ISolution)VsIdeTestHostContext.ServiceProvider.GetService(typeof(ISolution));
+                Assert.NotNull(solution);
+
+                // Verify projects are created
+                Assert.NotNull(solution.Find<IProject>(projectName));
+                Assert.NotNull(solution.Find<IProject>(projectName + ".Automation"));
+
+                //Switch to Solution Builder
+                Keyboard.SendKeys("WH", ModifierKeys.Control);
+
+                var patternManager = (IPatternManager)VsIdeTestHostContext.ServiceProvider.GetService(typeof(IPatternManager));
+                Assert.NotNull(patternManager);
+
+                // Verify solution elements created
+                Assert.NotNull(patternManager.Find(projectName));
+            }
+
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("User Interactive")]
+            public void WhenCreateNewPatternToolkitProject_ThenNewPatternToolkitLibraryProjectCreated()
+            {
+                this.SearchForProjectTemplate("Pattern Toolkit Library");
+                var projectName = this.CreateNewProjectFromSelectedTemplate();
+
+                // Wait until project finishes being created
+                this.UIMap.UIVsMainWindow.WaitForControlReady(30000);
+
+                var dte = (EnvDTE.DTE)VsIdeTestHostContext.ServiceProvider.GetService(typeof(EnvDTE.DTE));
+                Assert.NotNull(dte);
+
+                // Switch to Solution Explorer
+                Keyboard.SendKeys("WS", ModifierKeys.Control);
+
+                var solution = (ISolution)VsIdeTestHostContext.ServiceProvider.GetService(typeof(ISolution));
+                Assert.NotNull(solution);
+
+                // Verify projects are created
+                Assert.NotNull(solution.Find<IProject>(projectName));
+
+                //Switch to Solution Builder
+                Keyboard.SendKeys("WH", ModifierKeys.Control);
+
+                var patternManager = (IPatternManager)VsIdeTestHostContext.ServiceProvider.GetService(typeof(IPatternManager));
+                Assert.NotNull(patternManager);
+
+                // Verify solution elements created
+                Assert.NotNull(patternManager.Find(projectName));
             }
         }
     }
