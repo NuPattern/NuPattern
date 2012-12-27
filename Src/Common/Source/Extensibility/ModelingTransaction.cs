@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Default implementation of a transaction that wraps the DSL transaction.

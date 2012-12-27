@@ -2,11 +2,11 @@ using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq.Expressions;
-using Microsoft.VisualStudio.Patterning.Runtime.Interfaces;
+using NuPattern.Runtime.Interfaces;
 
 //// DO NOT CHANGE: this root namespace is on purpose one level up from the runtime, 
 //// as it's used by the TracingSettings class to specify the root for all logging.
-namespace Microsoft.VisualStudio.Patterning
+namespace NuPattern
 {
     /// <summary>
     /// Validates common arguments.

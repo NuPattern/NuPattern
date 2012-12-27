@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
 	/// <summary>
 	/// Defines the needed classes for the <see cref="SolutionBuilderViewModel"/>.

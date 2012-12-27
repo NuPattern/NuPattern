@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Runtime.Remoting.Messaging;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
+using NuPattern.Library.Automation;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Shell;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
 	/// <summary>
 	/// Holds state related to the current template execution and unfolding 
@@ -30,7 +30,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
 		/// <summary>
 		/// Gets the template automation.
 		/// </summary>
-		public Microsoft.VisualStudio.Patterning.Library.Automation.TemplateAutomation Automation { get; internal set; }
+		public NuPattern.Library.Automation.TemplateAutomation Automation { get; internal set; }
 
 		/// <summary>
 		/// Gets the current unfold kind in effect, or <see cref="UnfoldKind.None"/> 

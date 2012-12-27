@@ -6,14 +6,14 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Properties;
+using NuPattern.Runtime.Store;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     using ElementFactory = Func<IElementContainer, IPatternElementInfo, string, IProductElement>;
     using ViewModelFactory = Func<IProductElement, SolutionBuilderContext, ProductElementViewModel>;
@@ -25,8 +25,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
     public abstract class ProductElementViewModel : ViewModel<IProductElement>, IEditableObject
     {
         private static readonly string assemblyName = typeof(ProductElementViewModel).Assembly.GetName().Name;
-        private static readonly string deleteIconPath = "pack://application:,,,/" + assemblyName + ";component/Resources/Remove.png";
-        private static readonly string propertiesIconPath = "pack://application:,,,/" + assemblyName + ";component/Resources/Properties.png";
+        private static readonly string deleteIconPath = "pack://application:,,,/" + assemblyName + ";component/Resources/CommandRemove.png";
+        private static readonly string propertiesIconPath = "pack://application:,,,/" + assemblyName + ";component/Resources/CommandProperties.png";
 
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductElementViewModel>();
 

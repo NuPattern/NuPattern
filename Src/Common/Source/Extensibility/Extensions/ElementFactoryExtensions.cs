@@ -2,7 +2,7 @@
 using System.Reflection;
 using Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
     /// <summary>
     /// Provides helper methods over <see cref="ElementFactory"/>.

@@ -1,11 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.Win32;
+using NuPattern.Extensibility;
+using NuPattern.Library.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
+namespace NuPattern.Library.ValueProviders
 {
     /// <summary>
     /// A <see cref=" ValueProvider"/> that returns the registered user of the current machine.
@@ -16,10 +16,32 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
     [CLSCompliant(false)]
     public class RegisteredMachineUserValueProvider : ValueProvider
     {
+        internal const string UnknownOrganization = "Unknown";
         private const string RegKey = @"SOFTWARE\Microsoft\Windows NT\CurrentVersion";
         private const string RegKeyValue = @"RegisteredOrganization";
 
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<RegisteredMachineUserValueProvider>();
+        private IRegistryReader reader;
+
+        /// <summary>
+        /// Creates a new instance of the <see cref="RegisteredMachineUserValueProvider"/> class.
+        /// </summary>
+        public RegisteredMachineUserValueProvider() : this(null)
+        {
+            if (this.reader == null)
+            {
+                this.reader = new RegistryReader(Registry.LocalMachine, RegKey, RegKeyValue);
+            }
+        }
+
+        /// <summary>
+        /// Creates a new instance of the <see cref="RegisteredMachineUserValueProvider"/> class.
+        /// </summary>
+        internal RegisteredMachineUserValueProvider(IRegistryReader reader) : base()
+        {
+            this.reader = reader;
+        }
+
 
         /// <summary>
         /// Evaluates this provider.
@@ -31,21 +53,27 @@ namespace Microsoft.VisualStudio.Patterning.Library.ValueProviders
             tracer.TraceInformation(
                 Resources.RegisteredMachineUserValueProvider_TraceInitial, RegKey, RegKeyValue);
 
-            using (RegistryKey key = Registry.LocalMachine.OpenSubKey(RegKey, false))
+            var value = this.reader.ReadValue();
+            if (value == null)
             {
-                object value = key.GetValue(RegKeyValue);
-                if (value == null)
+                tracer.TraceWarning(
+                    Resources.RegisteredMachineUserValueProvider_TraceNoValue, RegKey, RegKeyValue);
+                return string.Empty;
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(value.ToString()))
                 {
-                    tracer.TraceWarning(
-                        Resources.RegisteredMachineUserValueProvider_TraceNoValue, RegKey, RegKeyValue);
-                    return string.Empty;
+                    value = UnknownOrganization;
                 }
                 else
                 {
-                    tracer.TraceInformation(
-                        Resources.RegisteredMachineUserValueProvider_TraceEvaluation, RegKey, RegKeyValue, value);
-                    return value.ToString();
+                    value = value.ToString();
                 }
+
+                tracer.TraceInformation(
+                    Resources.RegisteredMachineUserValueProvider_TraceEvaluation, RegKey, RegKeyValue, value);
+                return value.ToString();
             }
         }
     }

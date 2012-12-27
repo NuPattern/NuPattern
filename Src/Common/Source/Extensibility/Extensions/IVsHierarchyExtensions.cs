@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Helper methods for <see cref="IVsHierarchy"/>.
@@ -20,14 +20,14 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 			var itemId = uint.MaxValue;
 			IVsHierarchy tempHierarchy;
 
-			var succeeded = ErrorHandler.Succeeded(hierarchy.GetProperty(VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_BrowseObject, out extObject));
+			var succeeded = Microsoft.VisualStudio.ErrorHandler.Succeeded(hierarchy.GetProperty(Microsoft.VisualStudio.VSConstants.VSITEMID_ROOT, (int)__VSHPROPID.VSHPROPID_BrowseObject, out extObject));
 
 			if (succeeded)
 			{
 				var browseObject = extObject as IVsBrowseObject;
 				if (browseObject != null)
 				{
-					succeeded = ErrorHandler.Succeeded(browseObject.GetProjectItem(out tempHierarchy, out itemId));
+					succeeded = Microsoft.VisualStudio.ErrorHandler.Succeeded(browseObject.GetProjectItem(out tempHierarchy, out itemId));
 					if (succeeded)
 					{
 						return itemId;

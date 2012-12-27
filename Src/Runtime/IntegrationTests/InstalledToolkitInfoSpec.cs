@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests
 {
     [TestClass]
     public class InstalledToolkitInfoSpec
@@ -33,7 +29,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
                 this.patternManager = VsIdeTestHostContext.ServiceProvider.GetService<IPatternManager>();
 
                 this.toolkit = patternManager.InstalledToolkits
-                    .SingleOrDefault(t => t.Id == "Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit");
+                    .SingleOrDefault(t => t.Id == "NuPattern.Runtime.IntegrationTests.TestToolkit");
             }
 
             [HostType("VS IDE")]
@@ -41,9 +37,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             public void ThenTemplatesReturned()
             {
                 Assert.Equal(3, this.toolkit.Templates.Count());
-                Assert.Equal("DataContract", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "DataContract.vstemplate").TemplateData.Name.Value);
-                Assert.Equal("MyTemplate1", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "MyTemplate1.vstemplate").TemplateData.Name.Value);
-                Assert.Equal("MyTemplate2", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "MyTemplate2.vstemplate").TemplateData.Name.Value);
+                Assert.Equal("DataContract", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "DataContract.gen.vstemplate").TemplateData.Name.Value);
+                Assert.Equal("MyTemplate1", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "MyTemplate1.gen.vstemplate").TemplateData.Name.Value);
+                Assert.Equal("MyTemplate2", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "MyTemplate2.gen.vstemplate").TemplateData.Name.Value);
             }
         }
     }

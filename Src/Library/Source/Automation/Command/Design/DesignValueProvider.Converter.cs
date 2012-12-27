@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Defines a type converter over DesignValueProvider.
 	/// </summary>
 	public class DesignValueProviderTypeConverter : ExpandableObjectConverter
 	{
-		static IEnumerable<Lazy<TeamArchitect.PowerTools.Features.IValueProvider, IFeatureComponentMetadata>> ValueProviders { get; set; }
+		static IEnumerable<Lazy<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider, IFeatureComponentMetadata>> ValueProviders { get; set; }
 		static private IPlatuProjectTypeProvider ProjectTypeProvider { get; set; }
 
 		/// <summary>
@@ -143,7 +143,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 				{
 					var metadataComparer = new MetadataEqualityComparer();
 					var types = ProjectTypeProvider
-						.GetTypes<TeamArchitect.PowerTools.Features.IValueProvider>()
+						.GetTypes<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider>()
 						.Where(type => !type.IsAbstract)
 						.Select(type => type.AsProjectFeatureComponent());
 

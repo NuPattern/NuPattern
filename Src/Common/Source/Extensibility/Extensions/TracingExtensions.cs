@@ -3,11 +3,11 @@ using System.Diagnostics;
 using System.Globalization;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling.Shell;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
     /// <summary>
     /// Provides tracing extensions on top of <see cref="ITraceSource"/>.
@@ -94,7 +94,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
             }
             catch (Exception ex)
             {
-                if (ErrorHandler.IsCriticalException(ex))
+                if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(ex))
                 {
                     throw;
                 }

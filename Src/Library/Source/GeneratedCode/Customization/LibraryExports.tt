@@ -1,5 +1,5 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ Dsl processor="DslDirectiveProcessor"  requires="fileName='..\..\DslDefinition.dsl'" #>
 <#@ Assembly Name="System.Core" #>
 <#@ Import Namespace="System.Linq" #>
@@ -12,10 +12,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.CodeDom.Compiler;
-using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.Extensibility;
 
 namespace <#= this.DslLibrary.Namespace #>
 {
@@ -46,7 +43,7 @@ private void GenerateExportAttributes(DomainClass domainClass)
 /// <summary>
 /// Exports the '<#= domainClass.Name #>' extension element.
 /// </summary>
-[ExportedAutomation(ExportingType = typeof(<#= domainClass.Name #>), IconPath = "pack://application:,,,/Microsoft.VisualStudio.Patterning.Library;component/Resources/<#= domainClass.Name #>.png")]
+[ExportedAutomation(ExportingType = typeof(<#= domainClass.Name #>), IconPath = "pack://application:,,,/NuPattern.Library;component/Resources/AutomationSettings<#= domainClass.Name #>.png")]
 public partial class <#= domainClass.Name #>
 {
 }

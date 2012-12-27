@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Resources;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Represents the settings to send to the SolutionPicker when you are using with the <see cref="SolutionItemEditor"/>.

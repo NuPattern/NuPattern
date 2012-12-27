@@ -456,10 +456,4 @@ Would you like to automatically upgrade this file to the current version?</value
   <data name="ProductElementViewModel_RenameMenuText" xml:space="preserve">
     <value>Rename</value>
   </data>
-  <data name="SolutionBuilderViewModel_CreateNewSolution_FailedDirSearch" xml:space="preserve">
-    <value>Failed to create a new empty solution, the default save location for solutions could not be found.</value>
-  </data>
-  <data name="SolutionBuilderViewModel_CreateNewSolution_FailedCreate" xml:space="preserve">
-    <value>Failed to create a new empty solution, an error occurred creating and saving the new solution to '{0}'.</value>
-  </data>
 </root>

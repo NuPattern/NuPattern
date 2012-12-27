@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Library.Automation.Command
+﻿namespace NuPattern.Library.Automation.Command
 {
 	internal class CommandSettingsDescriptionContext
 	{

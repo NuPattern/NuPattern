@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
   /// <summary>
   /// Specifies how constructors are used when initializing objects during deserialization by the <see cref="JsonSerializer"/>.

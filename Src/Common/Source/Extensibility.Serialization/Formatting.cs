@@ -1,5 +1,5 @@
 ﻿
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization
+namespace NuPattern.Extensibility.Serialization
 {
     /// <summary>
     /// Json formatting

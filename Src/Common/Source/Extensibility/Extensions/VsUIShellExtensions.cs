@@ -2,10 +2,10 @@
 using System.Windows;
 using System.Windows.Interop;
 using Microsoft.Internal.VisualStudio.PlatformUI;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell.Interop;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Defines extension methods related to <see cref="IVsUIShell"/>.
@@ -18,7 +18,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 		public static Window GetMainWindow(this IVsUIShell shell)
 		{
 			IntPtr hwnd;
-			ErrorHandler.ThrowOnFailure(shell.GetDialogOwnerHwnd(out hwnd));
+			Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(shell.GetDialogOwnerHwnd(out hwnd));
 			return HwndSource.FromHwnd(hwnd).RootVisual as Window;
 		}
 
@@ -57,7 +57,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 			Guard.NotNull(() => message, message);
 
             int result;
-			ErrorHandler.ThrowOnFailure(shell.ShowMessageBox(0, new Guid(), title, message, null, 0,
+			Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(shell.ShowMessageBox(0, new Guid(), title, message, null, 0,
                 OLEMSGBUTTON.OLEMSGBUTTON_OK, OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST, OLEMSGICON.OLEMSGICON_WARNING, 1, out result));
 		}
 
@@ -73,7 +73,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 			Guard.NotNull(() => message, message);
 
             int result;
-			ErrorHandler.ThrowOnFailure(shell.ShowMessageBox(0, new Guid(), title, message, null, 0,
+			Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(shell.ShowMessageBox(0, new Guid(), title, message, null, 0,
                 OLEMSGBUTTON.OLEMSGBUTTON_OK, OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST, OLEMSGICON.OLEMSGICON_CRITICAL, 1, out result));
 		}
 
@@ -90,7 +90,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
             Guard.NotNull(() => message, message);
 
             int result;
-            ErrorHandler.ThrowOnFailure(shell.ShowMessageBox(0, new Guid(), title, message, null, 0,
+            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(shell.ShowMessageBox(0, new Guid(), title, message, null, 0,
                 OLEMSGBUTTON.OLEMSGBUTTON_YESNO, OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST, OLEMSGICON.OLEMSGICON_WARNING, 1, out result));
             if (result == DialogResult.Yes)
             {

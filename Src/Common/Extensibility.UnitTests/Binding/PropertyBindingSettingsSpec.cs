@@ -1,8 +1,8 @@
-﻿using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Extensibility.Binding;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
+namespace NuPattern.Extensibility.UnitTests.Binding
 {
     public class PropertyBindingSettingsSpec
     {

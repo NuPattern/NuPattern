@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.Conditions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Library.Conditions;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Conditions
+namespace NuPattern.Library.UnitTests.Conditions
 {
     [TestClass]
     public class DropSolutionItemConditionSpec

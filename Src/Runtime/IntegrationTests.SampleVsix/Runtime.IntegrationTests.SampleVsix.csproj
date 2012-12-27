@@ -8,8 +8,8 @@
     <ProjectGuid>{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.SampleVsix</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.SampleVsix</AssemblyName>
+    <RootNamespace>NuPattern.Runtime.IntegrationTests.SampleVsix</RootNamespace>
+    <AssemblyName>NuPattern.Runtime.IntegrationTests.SampleVsix</AssemblyName>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <!--<IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
     <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
@@ -24,8 +24,8 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="EventPublisher.cs" />
     <Compile Include="EventSource.cs" />
@@ -51,6 +51,10 @@
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.10.0" Condition="'$(TargetVsVersion)' == '10.0'">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(BranchReferencesPath)\VMSDK\10.0\Microsoft.VisualStudio.Modeling.Sdk.10.0.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />

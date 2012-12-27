@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Library.TypeEditors;
-using Microsoft.VisualStudio.Patterning.Runtime.UriProviders;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Library.TypeEditors;
+using NuPattern.Runtime.UriProviders;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests
+namespace NuPattern.Library.UnitTests
 {
 	public class TextTemplateUriEditorSpec
 	{

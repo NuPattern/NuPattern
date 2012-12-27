@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
+namespace NuPattern.Runtime.UnitTests
 {
 	[TestClass]
 	public class Misc
@@ -41,6 +41,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 			{
 				subscriber = null;
 				GC.Collect();
+                GC.WaitForFullGCApproach(-1);
 				GC.WaitForFullGCComplete(-1);
 
 				source.RaisePropertyChanged("Foo");

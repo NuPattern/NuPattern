@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VsSDK.IntegrationTestLibrary;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
 
-namespace Microsoft.VisualStudio.Patterning.Common.IntegrationTests
+namespace NuPattern.Common.IntegrationTests
 {
 	[TestClass]
 	public class Misc

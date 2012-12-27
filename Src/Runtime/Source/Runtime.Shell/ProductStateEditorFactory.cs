@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
     /// <summary>
     /// Provides opening behavior for pattern state files.
@@ -51,7 +51,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 
             this.patternManager.Open(pszMkDocument);
 
-            return VSConstants.S_OK;
+            return Microsoft.VisualStudio.VSConstants.S_OK;
         }
 
         #region Unused
@@ -62,7 +62,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
         /// <returns>The error result.</returns>
         public int Close()
         {
-            return VSConstants.S_OK;
+            return Microsoft.VisualStudio.VSConstants.S_OK;
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
         {
             pbstrPhysicalView = null;
 
-            return VSConstants.S_OK;
+            return Microsoft.VisualStudio.VSConstants.S_OK;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
         /// <returns>The error result.</returns>
         public int SetSite(Microsoft.VisualStudio.OLE.Interop.IServiceProvider psp)
         {
-            return VSConstants.S_OK;
+            return Microsoft.VisualStudio.VSConstants.S_OK;
         }
 
         #endregion

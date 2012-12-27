@@ -1,5 +1,5 @@
-<#@ output extension=".vstemplate" #>
-<#@ Include File="..\..\..\..\..\..\..\..\..\..\..\..\..\MasterVersion.ttinclude"#>
+<#@ output extension=".gen.vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\..\..\..\..\..\..\..\MasterVersion.gen.ttinclude"#>
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
 	<TemplateData>
@@ -20,7 +20,7 @@
 	<TemplateContent>
 		<Project File="ToolkitCustomization.csproj" ReplaceParameters="true">
 			<ProjectItem ReplaceParameters="true" TargetFileName="source.extension.vsixmanifest">source.vsixmanifest</ProjectItem>
-			<ProjectItem ReplaceParameters="true" OpenInEditor="true">PatternModel.patterndefinition</ProjectItem>
+			<ProjectItem  ReplaceParameters="true" OpenInEditor="true" TargetFileName="PatternModel.patterndefinition">PatternModel.gen.patterndefinition</ProjectItem>
 			<Folder Name="Properties">
 				<ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
 			</Folder>
@@ -28,7 +28,7 @@
 		</Project>
 	</TemplateContent>
 	<WizardExtension>
-		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=<#=assemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.ReplacementTemplateWizard</FullClassName>
+		<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>NuPattern.Runtime.ReplacementTemplateWizard</FullClassName>
 	</WizardExtension>
 </VSTemplate>

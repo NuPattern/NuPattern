@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties {
+namespace NuPattern.Runtime.Shell.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NuPattern.Runtime.Shell.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -75,6 +75,20 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties {
         internal static string ExplorerWindowTitle {
             get {
                 return ResourceManager.GetString("ExplorerWindowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The following extension is currently installed and enabled: 
+        ///    {0}.
+        ///
+        ///This extension is not compatible with the current version of the &apos;{1}&apos; extension. We recommend that you disable this extension for correct operation.
+        ///
+        ///To remedy this problem, open the &apos;Extension Manager&apos; window in Visual Studio (Tools menu), disable the listed extension above, and restart Visual Studio..
+        /// </summary>
+        internal static string RuntimeShellPackage_CheckFertInstalled_Enabled {
+            get {
+                return ResourceManager.GetString("RuntimeShellPackage_CheckFertInstalled_Enabled", resourceCulture);
             }
         }
         
@@ -138,15 +152,6 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties {
         internal static string TraceOptionsPageControl_SourceNameTitle {
             get {
                 return ResourceManager.GetString("TraceOptionsPageControl_SourceNameTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Pattern Toolkit Extensions.
-        /// </summary>
-        internal static string TraceOutput_WindowTitle {
-            get {
-                return ResourceManager.GetString("TraceOutput_WindowTitle", resourceCulture);
             }
         }
     }

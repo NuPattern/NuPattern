@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Initialization when a Customizable Element is added to the model.

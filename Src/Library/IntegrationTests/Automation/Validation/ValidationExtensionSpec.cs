@@ -2,19 +2,19 @@
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Library.Events;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Extensibility;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Commands;
+using NuPattern.Library.Events;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Schema;
 
-namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.Validation
+namespace NuPattern.Library.IntegrationTests.Automation.Validation
 {
     [TestClass]
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
@@ -141,7 +141,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
                     Assert.Equal(commandSettings.TypeId, typeof(ValidateElementCommand).FullName);
 
                     var descendantsProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<ValidateElementCommand>.GetPropertyName(c => c.ValidateDescendants)]
-                        .GetValue(commandSettings) as Microsoft.VisualStudio.Patterning.Library.Automation.DesignProperty;
+                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
                     Assert.Equal(true, descendantsProperty.Value);
                 }
 

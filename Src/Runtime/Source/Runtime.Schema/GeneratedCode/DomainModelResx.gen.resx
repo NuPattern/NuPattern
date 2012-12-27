@@ -1,0 +1,2179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NuPattern.Runtime.Schema.PatternModelDomainModel.Description" xml:space="preserve">
+    <value>The design of a pattern in a pattern toolkit</value>
+    <comment>Description for DslLibrary &apos;PatternModel&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelDomainModel.DisplayName" xml:space="preserve">
+    <value>Pattern Model Designer</value>
+    <comment>DisplayName for DslLibrary &apos;PatternModel&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchema.Description" xml:space="preserve">
+    <value>The definition of the pattern in this toolkit.</value>
+    <comment>Description for DomainClass &apos;PatternModelSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchema.DisplayName" xml:space="preserve">
+    <value>Pattern Model</value>
+    <comment>DisplayName for DomainClass &apos;PatternModelSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchema/BaseVersion.Description" xml:space="preserve">
+    <value>The version of the base pattern line that this pattern line derives from.</value>
+    <comment>Description for DomainProperty &apos;BaseVersion&apos; on DomainClass &apos;PatternModelSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchema/BaseVersion.DisplayName" xml:space="preserve">
+    <value>Base Version</value>
+    <comment>DisplayName for DomainProperty &apos;BaseVersion&apos; on DomainClass &apos;PatternModelSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchema/BaseVersion.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;BaseVersion&apos; on DomainClass &apos;PatternModelSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchema/BaseId.Description" xml:space="preserve">
+    <value>The unique identifier of the base pattern line that this pattern line derives from.</value>
+    <comment>Description for DomainProperty &apos;BaseId&apos; on DomainClass &apos;PatternModelSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchema/BaseId.DisplayName" xml:space="preserve">
+    <value>Base Identifier</value>
+    <comment>DisplayName for DomainProperty &apos;BaseId&apos; on DomainClass &apos;PatternModelSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchema/BaseId.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;BaseId&apos; on DomainClass &apos;PatternModelSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternSchema.Description" xml:space="preserve">
+    <value>The definition of the pattern.</value>
+    <comment>Description for DomainClass &apos;PatternSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternSchema.DisplayName" xml:space="preserve">
+    <value>Pattern</value>
+    <comment>DisplayName for DomainClass &apos;PatternSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternSchema/ExtensionId.Description" xml:space="preserve">
+    <value>The identifier of the Visual Studio extension that deploys this pattern.</value>
+    <comment>Description for DomainProperty &apos;ExtensionId&apos; on DomainClass &apos;PatternSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternSchema/ExtensionId.DisplayName" xml:space="preserve">
+    <value>Extension Id</value>
+    <comment>DisplayName for DomainProperty &apos;ExtensionId&apos; on DomainClass &apos;PatternSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternSchema/ExtensionId.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;ExtensionId&apos; on DomainClass &apos;PatternSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternSchema/CurrentDiagramId.Description" xml:space="preserve">
+    <value>Gets the currently opened diagram identifier.</value>
+    <comment>Description for DomainProperty &apos;CurrentDiagramId&apos; on DomainClass &apos;PatternSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternSchema/CurrentDiagramId.DisplayName" xml:space="preserve">
+    <value>Current Diagram Id</value>
+    <comment>DisplayName for DomainProperty &apos;CurrentDiagramId&apos; on DomainClass &apos;PatternSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternSchema/PatternLink.Description" xml:space="preserve">
+    <value>The identifier of the instance of this pattern.</value>
+    <comment>Description for DomainProperty &apos;PatternLink&apos; on DomainClass &apos;PatternSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternSchema/PatternLink.DisplayName" xml:space="preserve">
+    <value>Pattern Link</value>
+    <comment>DisplayName for DomainProperty &apos;PatternLink&apos; on DomainClass &apos;PatternSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema.Description" xml:space="preserve">
+    <value>An element that has a unique name.</value>
+    <comment>Description for DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema.DisplayName" xml:space="preserve">
+    <value>Named Element</value>
+    <comment>DisplayName for DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/Name.Description" xml:space="preserve">
+    <value>The well-known name of this item in this model.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/Name.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/BaseId.Description" xml:space="preserve">
+    <value>The identifier of the inherited variability model.</value>
+    <comment>Description for DomainProperty &apos;BaseId&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/BaseId.DisplayName" xml:space="preserve">
+    <value>Base Id</value>
+    <comment>DisplayName for DomainProperty &apos;BaseId&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/DisplayName.Description" xml:space="preserve">
+    <value>The name used for instances of this item, as seen by the user. Also used to name associated artifacts/configuration created for this item.</value>
+    <comment>Description for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/DisplayName.DisplayName" xml:space="preserve">
+    <value>Display Name</value>
+    <comment>DisplayName for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/DisplayName.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsDisplayNameTracking.Description" xml:space="preserve">
+    <value>Used to track whether the user changed the display name manually.</value>
+    <comment>Description for DomainProperty &apos;IsDisplayNameTracking&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsDisplayNameTracking.DisplayName" xml:space="preserve">
+    <value>Is Display Name Tracking</value>
+    <comment>DisplayName for DomainProperty &apos;IsDisplayNameTracking&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsDisplayNameTracking.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;IsDisplayNameTracking&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/Description.Description" xml:space="preserve">
+    <value>The description of this item displayed to the user.</value>
+    <comment>Description for DomainProperty &apos;Description&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/Description.DisplayName" xml:space="preserve">
+    <value>Description</value>
+    <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/Description.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;Description&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsDescriptionTracking.Description" xml:space="preserve">
+    <value>Used to track whether the user changed the description manually.</value>
+    <comment>Description for DomainProperty &apos;IsDescriptionTracking&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsDescriptionTracking.DisplayName" xml:space="preserve">
+    <value>Is Description Tracking</value>
+    <comment>DisplayName for DomainProperty &apos;IsDescriptionTracking&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsDescriptionTracking.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;IsDescriptionTracking&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsInheritedFromBase.Description" xml:space="preserve">
+    <value>Whether the element is derived from a base variability model definition.</value>
+    <comment>Description for DomainProperty &apos;IsInheritedFromBase&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsInheritedFromBase.DisplayName" xml:space="preserve">
+    <value>Is Inherited From Base</value>
+    <comment>DisplayName for DomainProperty &apos;IsInheritedFromBase&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/SchemaPath.Description" xml:space="preserve">
+    <value>The path of this element in the variability model.</value>
+    <comment>Description for DomainProperty &apos;SchemaPath&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/SchemaPath.DisplayName" xml:space="preserve">
+    <value>Schema Path</value>
+    <comment>DisplayName for DomainProperty &apos;SchemaPath&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/SchemaPath.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;SchemaPath&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsSystem.Description" xml:space="preserve">
+    <value>Whether this element is hidden from the design-view. Used by automation extensions.</value>
+    <comment>Description for DomainProperty &apos;IsSystem&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsSystem.DisplayName" xml:space="preserve">
+    <value>Is Hidden</value>
+    <comment>DisplayName for DomainProperty &apos;IsSystem&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsSystem.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;IsSystem&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/CodeIdentifier.Description" xml:space="preserve">
+    <value>The identifier used for naming generating code artifacts that represent this element. This identifier must be unique across the whole model.</value>
+    <comment>Description for DomainProperty &apos;CodeIdentifier&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/CodeIdentifier.DisplayName" xml:space="preserve">
+    <value>Code Identifier</value>
+    <comment>DisplayName for DomainProperty &apos;CodeIdentifier&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/CodeIdentifier.Category" xml:space="preserve">
+    <value>Generation</value>
+    <comment>Category for DomainProperty &apos;CodeIdentifier&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsCodeIdentifierTracking.Description" xml:space="preserve">
+    <value>Used to track whether the user changed the  code identifier manually.</value>
+    <comment>Description for DomainProperty &apos;IsCodeIdentifierTracking&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.NamedElementSchema/IsCodeIdentifierTracking.DisplayName" xml:space="preserve">
+    <value>Is Code Identifier Tracking</value>
+    <comment>DisplayName for DomainProperty &apos;IsCodeIdentifierTracking&apos; on DomainClass &apos;NamedElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementSchema.Description" xml:space="preserve">
+    <value>A container of properties and automation.</value>
+    <comment>Description for DomainClass &apos;PatternElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementSchema.DisplayName" xml:space="preserve">
+    <value>Pattern Element</value>
+    <comment>DisplayName for DomainClass &apos;PatternElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementSchema/ValidationRules.Description" xml:space="preserve">
+    <value>The validation rules applied to this element.</value>
+    <comment>Description for DomainProperty &apos;ValidationRules&apos; on DomainClass &apos;PatternElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementSchema/ValidationRules.DisplayName" xml:space="preserve">
+    <value>Validation Rules</value>
+    <comment>DisplayName for DomainProperty &apos;ValidationRules&apos; on DomainClass &apos;PatternElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementSchema/ValidationRules.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;ValidationRules&apos; on DomainClass &apos;PatternElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementSchema/Icon.Description" xml:space="preserve">
+    <value>The icon for this item displayed to the user.</value>
+    <comment>Description for DomainProperty &apos;Icon&apos; on DomainClass &apos;PatternElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementSchema/Icon.DisplayName" xml:space="preserve">
+    <value>Icon</value>
+    <comment>DisplayName for DomainProperty &apos;Icon&apos; on DomainClass &apos;PatternElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementSchema/Icon.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;Icon&apos; on DomainClass &apos;PatternElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema.Description" xml:space="preserve">
+    <value>A property of an element.</value>
+    <comment>Description for DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema.DisplayName" xml:space="preserve">
+    <value>Property</value>
+    <comment>DisplayName for DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/RawDefaultValue.Description" xml:space="preserve">
+    <value>The initial value of this property when created.</value>
+    <comment>Description for DomainProperty &apos;RawDefaultValue&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/RawDefaultValue.DisplayName" xml:space="preserve">
+    <value>Default Value</value>
+    <comment>DisplayName for DomainProperty &apos;RawDefaultValue&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/RawDefaultValue.Category" xml:space="preserve">
+    <value>Data</value>
+    <comment>Category for DomainProperty &apos;RawDefaultValue&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/Type.Description" xml:space="preserve">
+    <value>The data type of this property, which determines the type of its value.</value>
+    <comment>Description for DomainProperty &apos;Type&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/Type.DisplayName" xml:space="preserve">
+    <value>Type</value>
+    <comment>DisplayName for DomainProperty &apos;Type&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/Type.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;Type&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/IsVisible.Description" xml:space="preserve">
+    <value>Whether this property is shown to the user.</value>
+    <comment>Description for DomainProperty &apos;IsVisible&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/IsVisible.DisplayName" xml:space="preserve">
+    <value>Is Visible</value>
+    <comment>DisplayName for DomainProperty &apos;IsVisible&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/IsVisible.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;IsVisible&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/IsReadOnly.Description" xml:space="preserve">
+    <value>Whether this property is read-only to the user.</value>
+    <comment>Description for DomainProperty &apos;IsReadOnly&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/IsReadOnly.DisplayName" xml:space="preserve">
+    <value>Is Read Only</value>
+    <comment>DisplayName for DomainProperty &apos;IsReadOnly&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/IsReadOnly.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;IsReadOnly&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/Category.Description" xml:space="preserve">
+    <value>The category for this property, used to organize similar properties shown in the Properties Window.</value>
+    <comment>Description for DomainProperty &apos;Category&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/Category.DisplayName" xml:space="preserve">
+    <value>Category</value>
+    <comment>DisplayName for DomainProperty &apos;Category&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/Category.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;Category&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/PropertyUsage.Description" xml:space="preserve">
+    <value>The primary usage of this property,</value>
+    <comment>Description for DomainProperty &apos;PropertyUsage&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/PropertyUsage.DisplayName" xml:space="preserve">
+    <value>Property Usage</value>
+    <comment>DisplayName for DomainProperty &apos;PropertyUsage&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/PropertyUsage.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;PropertyUsage&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/TypeConverterTypeName.Description" xml:space="preserve">
+    <value>A System.ComponentModel.TypeConverter that converts from the string value of this property, that the user enters, to an instance of the Type of this property (and visa-versa). This Type Converter can also be used to provide a list of acceptable values.</value>
+    <comment>Description for DomainProperty &apos;TypeConverterTypeName&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/TypeConverterTypeName.DisplayName" xml:space="preserve">
+    <value>Type Converter</value>
+    <comment>DisplayName for DomainProperty &apos;TypeConverterTypeName&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/TypeConverterTypeName.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;TypeConverterTypeName&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/EditorTypeName.Description" xml:space="preserve">
+    <value>A System.Drawing.Design.UITypeEditor that provides a custom UI for editing the value of this property.</value>
+    <comment>Description for DomainProperty &apos;EditorTypeName&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/EditorTypeName.DisplayName" xml:space="preserve">
+    <value>Type Editor</value>
+    <comment>DisplayName for DomainProperty &apos;EditorTypeName&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/EditorTypeName.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;EditorTypeName&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/RawValidationRules.Description" xml:space="preserve">
+    <value>The validation rules applied to this element.</value>
+    <comment>Description for DomainProperty &apos;RawValidationRules&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/RawValidationRules.DisplayName" xml:space="preserve">
+    <value>Validation Rules</value>
+    <comment>DisplayName for DomainProperty &apos;RawValidationRules&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/RawValidationRules.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;RawValidationRules&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/RawValueProvider.Description" xml:space="preserve">
+    <value>A value provider that calculates the value of this property dynamically.</value>
+    <comment>Description for DomainProperty &apos;RawValueProvider&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/RawValueProvider.DisplayName" xml:space="preserve">
+    <value>Value Provider</value>
+    <comment>DisplayName for DomainProperty &apos;RawValueProvider&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PropertySchema/RawValueProvider.Category" xml:space="preserve">
+    <value>Data</value>
+    <comment>Category for DomainProperty &apos;RawValueProvider&apos; on DomainClass &apos;PropertySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema.Description" xml:space="preserve">
+    <value>A distinct view of the pattern.</value>
+    <comment>Description for DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema.DisplayName" xml:space="preserve">
+    <value>View</value>
+    <comment>DisplayName for DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema/IsVisible.Description" xml:space="preserve">
+    <value>Whether this view is shown to the user.</value>
+    <comment>Description for DomainProperty &apos;IsVisible&apos; on DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema/IsVisible.DisplayName" xml:space="preserve">
+    <value>Is Visible</value>
+    <comment>DisplayName for DomainProperty &apos;IsVisible&apos; on DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema/IsVisible.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;IsVisible&apos; on DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema/IsDefault.Description" xml:space="preserve">
+    <value>Whether this is the default view</value>
+    <comment>Description for DomainProperty &apos;IsDefault&apos; on DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema/IsDefault.DisplayName" xml:space="preserve">
+    <value>Is Default</value>
+    <comment>DisplayName for DomainProperty &apos;IsDefault&apos; on DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema/IsDefault.Category" xml:space="preserve">
+    <value>General</value>
+    <comment>Category for DomainProperty &apos;IsDefault&apos; on DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema/DiagramId.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainProperty &apos;DiagramId&apos; on DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema/DiagramId.DisplayName" xml:space="preserve">
+    <value>Diagram Id</value>
+    <comment>DisplayName for DomainProperty &apos;DiagramId&apos; on DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema/Caption.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainProperty &apos;Caption&apos; on DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema/Caption.DisplayName" xml:space="preserve">
+    <value>Caption</value>
+    <comment>DisplayName for DomainProperty &apos;Caption&apos; on DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewSchema/Caption.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;Caption&apos; on DomainClass &apos;ViewSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CollectionSchema.Description" xml:space="preserve">
+    <value>A child collection element.</value>
+    <comment>Description for DomainClass &apos;CollectionSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CollectionSchema.DisplayName" xml:space="preserve">
+    <value>Collection</value>
+    <comment>DisplayName for DomainClass &apos;CollectionSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementSchema.Description" xml:space="preserve">
+    <value>A child element.</value>
+    <comment>Description for DomainClass &apos;ElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementSchema.DisplayName" xml:space="preserve">
+    <value>Variable Element</value>
+    <comment>DisplayName for DomainClass &apos;ElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema.Description" xml:space="preserve">
+    <value>An element that supports customization of its properties.</value>
+    <comment>Description for DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema.DisplayName" xml:space="preserve">
+    <value>Customizable Element</value>
+    <comment>DisplayName for DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizable.Description" xml:space="preserve">
+    <value>Whether customization is permitted for this element, all its policy settings, and any child elements.</value>
+    <comment>Description for DomainProperty &apos;IsCustomizable&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizable.DisplayName" xml:space="preserve">
+    <value>Is Customizable</value>
+    <comment>DisplayName for DomainProperty &apos;IsCustomizable&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizable.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;IsCustomizable&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabled.Description" xml:space="preserve">
+    <value>Whether customization is enabled for the tailor.</value>
+    <comment>Description for DomainProperty &apos;IsCustomizationEnabled&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabled.DisplayName" xml:space="preserve">
+    <value>Is Customization Enabled</value>
+    <comment>DisplayName for DomainProperty &apos;IsCustomizationEnabled&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabled.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;IsCustomizationEnabled&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationPolicyModifyable.Description" xml:space="preserve">
+    <value>Whether the policy can be modified.</value>
+    <comment>Description for DomainProperty &apos;IsCustomizationPolicyModifyable&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationPolicyModifyable.DisplayName" xml:space="preserve">
+    <value>Is Policy Modifyable</value>
+    <comment>DisplayName for DomainProperty &apos;IsCustomizationPolicyModifyable&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationPolicyModifyable.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;IsCustomizationPolicyModifyable&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabledState.Description" xml:space="preserve">
+    <value>The combined state of IsEnabled and IsCustomizable state of the element.</value>
+    <comment>Description for DomainProperty &apos;IsCustomizationEnabledState&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabledState.DisplayName" xml:space="preserve">
+    <value>Is Customization Enabled State</value>
+    <comment>DisplayName for DomainProperty &apos;IsCustomizationEnabledState&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementSchema/IsCustomizationEnabledState.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;IsCustomizationEnabledState&apos; on DomainClass &apos;CustomizableElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AbstractElementSchema.Description" xml:space="preserve">
+    <value>A child element or collection of the pattern.</value>
+    <comment>Description for DomainClass &apos;AbstractElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AbstractElementSchema.DisplayName" xml:space="preserve">
+    <value>Abstract Element</value>
+    <comment>DisplayName for DomainClass &apos;AbstractElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AbstractElementSchema/IsVisible.Description" xml:space="preserve">
+    <value>Whether this item is shown to the user.</value>
+    <comment>Description for DomainProperty &apos;IsVisible&apos; on DomainClass &apos;AbstractElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AbstractElementSchema/IsVisible.DisplayName" xml:space="preserve">
+    <value>Is Visible</value>
+    <comment>DisplayName for DomainProperty &apos;IsVisible&apos; on DomainClass &apos;AbstractElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AbstractElementSchema/IsVisible.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;IsVisible&apos; on DomainClass &apos;AbstractElementSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationPolicySchema.Description" xml:space="preserve">
+    <value>The policy that controls what properties are customizable on an element.</value>
+    <comment>Description for DomainClass &apos;CustomizationPolicySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationPolicySchema.DisplayName" xml:space="preserve">
+    <value>Customization Policy</value>
+    <comment>DisplayName for DomainClass &apos;CustomizationPolicySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationPolicySchema/IsModified.Description" xml:space="preserve">
+    <value>Whether any of the settings in the policy have been modified from their default values.</value>
+    <comment>Description for DomainProperty &apos;IsModified&apos; on DomainClass &apos;CustomizationPolicySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationPolicySchema/IsModified.DisplayName" xml:space="preserve">
+    <value>Is Modified</value>
+    <comment>DisplayName for DomainProperty &apos;IsModified&apos; on DomainClass &apos;CustomizationPolicySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationPolicySchema/IsModified.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;IsModified&apos; on DomainClass &apos;CustomizationPolicySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationPolicySchema/CustomizationLevel.Description" xml:space="preserve">
+    <value>The extent to which settings have been customized.</value>
+    <comment>Description for DomainProperty &apos;CustomizationLevel&apos; on DomainClass &apos;CustomizationPolicySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationPolicySchema/CustomizationLevel.DisplayName" xml:space="preserve">
+    <value>Customization Level</value>
+    <comment>DisplayName for DomainProperty &apos;CustomizationLevel&apos; on DomainClass &apos;CustomizationPolicySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationPolicySchema/CustomizationLevel.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;CustomizationLevel&apos; on DomainClass &apos;CustomizationPolicySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationPolicySchema/Name.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.CustomizationPolicySchema.Name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;CustomizationPolicySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationPolicySchema/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;CustomizationPolicySchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema.Description" xml:space="preserve">
+    <value>The settings for a customizable property.</value>
+    <comment>Description for DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema.DisplayName" xml:space="preserve">
+    <value>Customizable Setting</value>
+    <comment>DisplayName for DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/IsEnabled.Description" xml:space="preserve">
+    <value>Whether this setting can be further customized by a tailor.</value>
+    <comment>Description for DomainProperty &apos;IsEnabled&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/IsEnabled.DisplayName" xml:space="preserve">
+    <value>Is Enabled</value>
+    <comment>DisplayName for DomainProperty &apos;IsEnabled&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/IsEnabled.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;IsEnabled&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/Caption.Description" xml:space="preserve">
+    <value>The displayed caption shown to the user.</value>
+    <comment>Description for DomainProperty &apos;Caption&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/Caption.DisplayName" xml:space="preserve">
+    <value>Caption</value>
+    <comment>DisplayName for DomainProperty &apos;Caption&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/Caption.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;Caption&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/CaptionFormatter.Description" xml:space="preserve">
+    <value>The formatter used for the caption.</value>
+    <comment>Description for DomainProperty &apos;CaptionFormatter&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/CaptionFormatter.DisplayName" xml:space="preserve">
+    <value>Caption Formatter</value>
+    <comment>DisplayName for DomainProperty &apos;CaptionFormatter&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/CaptionFormatter.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;CaptionFormatter&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/IsModified.Description" xml:space="preserve">
+    <value>Whether the settings has been modified from its default value.</value>
+    <comment>Description for DomainProperty &apos;IsModified&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/IsModified.DisplayName" xml:space="preserve">
+    <value>Is Modified</value>
+    <comment>DisplayName for DomainProperty &apos;IsModified&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/IsModified.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;IsModified&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/DefaultValue.Description" xml:space="preserve">
+    <value>Whether this setting can be customized by a tailor by default.</value>
+    <comment>Description for DomainProperty &apos;DefaultValue&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/DefaultValue.DisplayName" xml:space="preserve">
+    <value>Default Value</value>
+    <comment>DisplayName for DomainProperty &apos;DefaultValue&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/DefaultValue.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;DefaultValue&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/Value.Description" xml:space="preserve">
+    <value>Whether this setting can be customized by a tailor.</value>
+    <comment>Description for DomainProperty &apos;Value&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/Value.DisplayName" xml:space="preserve">
+    <value>Value</value>
+    <comment>DisplayName for DomainProperty &apos;Value&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/Value.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;Value&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/PropertyId.Description" xml:space="preserve">
+    <value>The associated property name for the setting.</value>
+    <comment>Description for DomainProperty &apos;PropertyId&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/PropertyId.DisplayName" xml:space="preserve">
+    <value>Property Id</value>
+    <comment>DisplayName for DomainProperty &apos;PropertyId&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/PropertyId.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;PropertyId&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/DescriptionFormatter.Description" xml:space="preserve">
+    <value>The formatter used for the description.</value>
+    <comment>Description for DomainProperty &apos;DescriptionFormatter&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/DescriptionFormatter.DisplayName" xml:space="preserve">
+    <value>Description Formatter</value>
+    <comment>DisplayName for DomainProperty &apos;DescriptionFormatter&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/DescriptionFormatter.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;DescriptionFormatter&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/Description.Description" xml:space="preserve">
+    <value>The displayed description shown to the user.</value>
+    <comment>Description for DomainProperty &apos;Description&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/Description.DisplayName" xml:space="preserve">
+    <value>Description</value>
+    <comment>DisplayName for DomainProperty &apos;Description&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/Description.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;Description&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/DomainElementSettingType.Description" xml:space="preserve">
+    <value>The type of domain element that this setting applies to.</value>
+    <comment>Description for DomainProperty &apos;DomainElementSettingType&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/DomainElementSettingType.DisplayName" xml:space="preserve">
+    <value>Domain Element Setting Type</value>
+    <comment>DisplayName for DomainProperty &apos;DomainElementSettingType&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableSettingSchema/DomainElementSettingType.Category" xml:space="preserve">
+    <value>Customization</value>
+    <comment>Category for DomainProperty &apos;DomainElementSettingType&apos; on DomainClass &apos;CustomizableSettingSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AutomationSettingsSchema.Description" xml:space="preserve">
+    <value>The settings for an automation extension.</value>
+    <comment>Description for DomainClass &apos;AutomationSettingsSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AutomationSettingsSchema.DisplayName" xml:space="preserve">
+    <value>Automation Settings</value>
+    <comment>DisplayName for DomainClass &apos;AutomationSettingsSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AutomationSettingsSchema/AutomationType.Description" xml:space="preserve">
+    <value>The name of this type of automation.</value>
+    <comment>Description for DomainProperty &apos;AutomationType&apos; on DomainClass &apos;AutomationSettingsSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AutomationSettingsSchema/AutomationType.DisplayName" xml:space="preserve">
+    <value>Automation Type</value>
+    <comment>DisplayName for DomainProperty &apos;AutomationType&apos; on DomainClass &apos;AutomationSettingsSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AutomationSettingsSchema/AutomationType.Category" xml:space="preserve">
+    <value>Automation</value>
+    <comment>Category for DomainProperty &apos;AutomationType&apos; on DomainClass &apos;AutomationSettingsSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AutomationSettingsSchema/Settings.Description" xml:space="preserve">
+    <value>The specific settings for this Automation Type.</value>
+    <comment>Description for DomainProperty &apos;Settings&apos; on DomainClass &apos;AutomationSettingsSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AutomationSettingsSchema/Settings.DisplayName" xml:space="preserve">
+    <value>Settings</value>
+    <comment>DisplayName for DomainProperty &apos;Settings&apos; on DomainClass &apos;AutomationSettingsSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AutomationSettingsSchema/Settings.Category" xml:space="preserve">
+    <value>Automation</value>
+    <comment>Category for DomainProperty &apos;Settings&apos; on DomainClass &apos;AutomationSettingsSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AutomationSettingsSchema/Classification.Description" xml:space="preserve">
+    <value>The classification of this automation.</value>
+    <comment>Description for DomainProperty &apos;Classification&apos; on DomainClass &apos;AutomationSettingsSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AutomationSettingsSchema/Classification.DisplayName" xml:space="preserve">
+    <value>Classification</value>
+    <comment>DisplayName for DomainProperty &apos;Classification&apos; on DomainClass &apos;AutomationSettingsSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.AutomationSettingsSchema/Classification.Category" xml:space="preserve">
+    <value>Automation</value>
+    <comment>Category for DomainProperty &apos;Classification&apos; on DomainClass &apos;AutomationSettingsSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ProvidedExtensionPointSchema.Description" xml:space="preserve">
+    <value>The extension points that this pattern provides.</value>
+    <comment>Description for DomainClass &apos;ProvidedExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ProvidedExtensionPointSchema.DisplayName" xml:space="preserve">
+    <value>Provided Extension Point Schema</value>
+    <comment>DisplayName for DomainClass &apos;ProvidedExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ProvidedExtensionPointSchema/ExtensionPointId.Description" xml:space="preserve">
+    <value>The extension point provided by this pattern.</value>
+    <comment>Description for DomainProperty &apos;ExtensionPointId&apos; on DomainClass &apos;ProvidedExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ProvidedExtensionPointSchema/ExtensionPointId.DisplayName" xml:space="preserve">
+    <value>Extension Point Id</value>
+    <comment>DisplayName for DomainProperty &apos;ExtensionPointId&apos; on DomainClass &apos;ProvidedExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ProvidedExtensionPointSchema/ExtensionPointId.Category" xml:space="preserve">
+    <value>Extensibility</value>
+    <comment>Category for DomainProperty &apos;ExtensionPointId&apos; on DomainClass &apos;ProvidedExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointSchema.Description" xml:space="preserve">
+    <value>A child extension to the pattern, provided by a pattern of another toolkit.</value>
+    <comment>Description for DomainClass &apos;ExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointSchema.DisplayName" xml:space="preserve">
+    <value>Extension Point</value>
+    <comment>DisplayName for DomainClass &apos;ExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointSchema/RequiredExtensionPointId.Description" xml:space="preserve">
+    <value>The unique type of this extension point, that other patterns would provide extensions to.</value>
+    <comment>Description for DomainProperty &apos;RequiredExtensionPointId&apos; on DomainClass &apos;ExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointSchema/RequiredExtensionPointId.DisplayName" xml:space="preserve">
+    <value>Extension Type Id</value>
+    <comment>DisplayName for DomainProperty &apos;RequiredExtensionPointId&apos; on DomainClass &apos;ExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointSchema/RequiredExtensionPointId.Category" xml:space="preserve">
+    <value>Extensibility</value>
+    <comment>Category for DomainProperty &apos;RequiredExtensionPointId&apos; on DomainClass &apos;ExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointSchema/Conditions.Description" xml:space="preserve">
+    <value>The constraints that determine which patterns from other toolkits can extend this model.</value>
+    <comment>Description for DomainProperty &apos;Conditions&apos; on DomainClass &apos;ExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointSchema/Conditions.DisplayName" xml:space="preserve">
+    <value>Constraints</value>
+    <comment>DisplayName for DomainProperty &apos;Conditions&apos; on DomainClass &apos;ExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointSchema/Conditions.Category" xml:space="preserve">
+    <value>Extensibility</value>
+    <comment>Category for DomainProperty &apos;Conditions&apos; on DomainClass &apos;ExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointSchema/RepresentedExtensionPointId.Description" xml:space="preserve">
+    <value>An extension point of a pattern represented by this extension point.</value>
+    <comment>Description for DomainProperty &apos;RepresentedExtensionPointId&apos; on DomainClass &apos;ExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointSchema/RepresentedExtensionPointId.DisplayName" xml:space="preserve">
+    <value>Representation Of</value>
+    <comment>DisplayName for DomainProperty &apos;RepresentedExtensionPointId&apos; on DomainClass &apos;ExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointSchema/RepresentedExtensionPointId.Category" xml:space="preserve">
+    <value>Extensibility</value>
+    <comment>Category for DomainProperty &apos;RepresentedExtensionPointId&apos; on DomainClass &apos;ExtensionPointSchema&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelHasPattern.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.PatternModelHasPattern</value>
+    <comment>Description for DomainClass &apos;PatternModelHasPattern&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelHasPattern.DisplayName" xml:space="preserve">
+    <value>Pattern Model Has Pattern</value>
+    <comment>DisplayName for DomainClass &apos;PatternModelHasPattern&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelHasPattern/PatternModelSchema.Description" xml:space="preserve">
+    <value>The pattern in this definition.</value>
+    <comment>Description for DomainRole &apos;PatternModelSchema&apos; on DomainRelationship &apos;PatternModelHasPattern&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelHasPattern/PatternModelSchema.DisplayName" xml:space="preserve">
+    <value>Pattern Model Schema</value>
+    <comment>DisplayName for DomainRole &apos;PatternModelSchema&apos; on DomainRelationship &apos;PatternModelHasPattern&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelHasPattern/PatternModelSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Pattern</value>
+    <comment>PropertyDisplayName for DomainRole &apos;PatternModelSchema&apos; on DomainRelationship &apos;PatternModelHasPattern&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelHasPattern/PatternSchema.Description" xml:space="preserve">
+    <value>The definition of the pattern.</value>
+    <comment>Description for DomainRole &apos;PatternSchema&apos; on DomainRelationship &apos;PatternModelHasPattern&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelHasPattern/PatternSchema.DisplayName" xml:space="preserve">
+    <value>Pattern Schema</value>
+    <comment>DisplayName for DomainRole &apos;PatternSchema&apos; on DomainRelationship &apos;PatternModelHasPattern&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelHasPattern/PatternSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Pattern Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;PatternSchema&apos; on DomainRelationship &apos;PatternModelHasPattern&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasProperties.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.PatternElementHasProperties</value>
+    <comment>Description for DomainClass &apos;PatternElementHasProperties&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasProperties.DisplayName" xml:space="preserve">
+    <value>Pattern Element Has Properties</value>
+    <comment>DisplayName for DomainClass &apos;PatternElementHasProperties&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasProperties/PatternElementSchema.Description" xml:space="preserve">
+    <value>The properties of this element.</value>
+    <comment>Description for DomainRole &apos;PatternElementSchema&apos; on DomainRelationship &apos;PatternElementHasProperties&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasProperties/PatternElementSchema.DisplayName" xml:space="preserve">
+    <value>Pattern Element Schema</value>
+    <comment>DisplayName for DomainRole &apos;PatternElementSchema&apos; on DomainRelationship &apos;PatternElementHasProperties&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasProperties/PatternElementSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;PatternElementSchema&apos; on DomainRelationship &apos;PatternElementHasProperties&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasProperties/PropertySchema.Description" xml:space="preserve">
+    <value>The owning element.</value>
+    <comment>Description for DomainRole &apos;PropertySchema&apos; on DomainRelationship &apos;PatternElementHasProperties&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasProperties/PropertySchema.DisplayName" xml:space="preserve">
+    <value>Property Schema</value>
+    <comment>DisplayName for DomainRole &apos;PropertySchema&apos; on DomainRelationship &apos;PatternElementHasProperties&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasProperties/PropertySchema.PropertyDisplayName" xml:space="preserve">
+    <value>Owner</value>
+    <comment>PropertyDisplayName for DomainRole &apos;PropertySchema&apos; on DomainRelationship &apos;PatternElementHasProperties&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasViews.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.PatternHasViews</value>
+    <comment>Description for DomainClass &apos;PatternHasViews&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasViews.DisplayName" xml:space="preserve">
+    <value>Pattern Has Views</value>
+    <comment>DisplayName for DomainClass &apos;PatternHasViews&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasViews/PatternSchema.Description" xml:space="preserve">
+    <value>The views of this pattern.</value>
+    <comment>Description for DomainRole &apos;PatternSchema&apos; on DomainRelationship &apos;PatternHasViews&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasViews/PatternSchema.DisplayName" xml:space="preserve">
+    <value>Pattern Schema</value>
+    <comment>DisplayName for DomainRole &apos;PatternSchema&apos; on DomainRelationship &apos;PatternHasViews&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasViews/PatternSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Views</value>
+    <comment>PropertyDisplayName for DomainRole &apos;PatternSchema&apos; on DomainRelationship &apos;PatternHasViews&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasViews/ViewSchema.Description" xml:space="preserve">
+    <value>The owning pattern.</value>
+    <comment>Description for DomainRole &apos;ViewSchema&apos; on DomainRelationship &apos;PatternHasViews&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasViews/ViewSchema.DisplayName" xml:space="preserve">
+    <value>View Schema</value>
+    <comment>DisplayName for DomainRole &apos;ViewSchema&apos; on DomainRelationship &apos;PatternHasViews&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasViews/ViewSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Pattern</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ViewSchema&apos; on DomainRelationship &apos;PatternHasViews&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.ViewHasElements</value>
+    <comment>Description for DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements.DisplayName" xml:space="preserve">
+    <value>View Has Elements</value>
+    <comment>DisplayName for DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/Cardinality.Description" xml:space="preserve">
+    <value>The number of instances of this collection/element, for this view.</value>
+    <comment>Description for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/Cardinality.DisplayName" xml:space="preserve">
+    <value>Cardinality</value>
+    <comment>DisplayName for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/Cardinality.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/CardinalityCaption.Description" xml:space="preserve">
+    <value>The displayed caption for the cardinality.</value>
+    <comment>Description for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/CardinalityCaption.DisplayName" xml:space="preserve">
+    <value>Cardinality Caption</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/CardinalityCaption.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/AutoCreate.Description" xml:space="preserve">
+    <value>Whether to automatically create the first instance of this collection/element when the view is created.</value>
+    <comment>Description for DomainProperty &apos;AutoCreate&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/AutoCreate.DisplayName" xml:space="preserve">
+    <value>Auto Create</value>
+    <comment>DisplayName for DomainProperty &apos;AutoCreate&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/AutoCreate.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;AutoCreate&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/AllowAddNew.Description" xml:space="preserve">
+    <value>Whether to allow UI (i.e. menus) for adding new instances of this collection/element manually.</value>
+    <comment>Description for DomainProperty &apos;AllowAddNew&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/AllowAddNew.DisplayName" xml:space="preserve">
+    <value>Allow Add New</value>
+    <comment>DisplayName for DomainProperty &apos;AllowAddNew&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/AllowAddNew.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;AllowAddNew&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/OrderGroup.Description" xml:space="preserve">
+    <value>The group in which instances of the element/collection will be ordered together, relative to instances of sibling elements/collections. By default, all instances of all sibling elements/collections are ordered together alphabetically by their &apos;InstanceName&apos; property.</value>
+    <comment>Description for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/OrderGroup.DisplayName" xml:space="preserve">
+    <value>Order Group</value>
+    <comment>DisplayName for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/OrderGroup.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.Description" xml:space="preserve">
+    <value>A System.Collections.IComparer class that determines how instances of all elements/collections in this &apos;Order Group&apos; are ordered together. If left blank, then instances of all elements/collections are ordered together alphabetically by their &apos;InstanceName&apos; property.</value>
+    <comment>Description for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.DisplayName" xml:space="preserve">
+    <value>Order Group Comparer</value>
+    <comment>DisplayName for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/ViewSchema.Description" xml:space="preserve">
+    <value>The child elements of the view.</value>
+    <comment>Description for DomainRole &apos;ViewSchema&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/ViewSchema.DisplayName" xml:space="preserve">
+    <value>View Schema</value>
+    <comment>DisplayName for DomainRole &apos;ViewSchema&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/ViewSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Elements</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ViewSchema&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/AbstractElementSchema.Description" xml:space="preserve">
+    <value>The owning view.</value>
+    <comment>Description for DomainRole &apos;AbstractElementSchema&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/AbstractElementSchema.DisplayName" xml:space="preserve">
+    <value>Abstract Element Schema</value>
+    <comment>DisplayName for DomainRole &apos;AbstractElementSchema&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElements/AbstractElementSchema.PropertyDisplayName" xml:space="preserve">
+    <value>View</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AbstractElementSchema&apos; on DomainRelationship &apos;ViewHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PolicyHasSettings.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.PolicyHasSettings</value>
+    <comment>Description for DomainClass &apos;PolicyHasSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PolicyHasSettings.DisplayName" xml:space="preserve">
+    <value>Policy Has Settings</value>
+    <comment>DisplayName for DomainClass &apos;PolicyHasSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PolicyHasSettings/CustomizationPolicySchema.Description" xml:space="preserve">
+    <value>The individual settings of the customization policy</value>
+    <comment>Description for DomainRole &apos;CustomizationPolicySchema&apos; on DomainRelationship &apos;PolicyHasSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PolicyHasSettings/CustomizationPolicySchema.DisplayName" xml:space="preserve">
+    <value>Customization Policy Schema</value>
+    <comment>DisplayName for DomainRole &apos;CustomizationPolicySchema&apos; on DomainRelationship &apos;PolicyHasSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PolicyHasSettings/CustomizationPolicySchema.PropertyDisplayName" xml:space="preserve">
+    <value>Settings</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CustomizationPolicySchema&apos; on DomainRelationship &apos;PolicyHasSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PolicyHasSettings/CustomizableSettingSchema.Description" xml:space="preserve">
+    <value>The owning policy.</value>
+    <comment>Description for DomainRole &apos;CustomizableSettingSchema&apos; on DomainRelationship &apos;PolicyHasSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PolicyHasSettings/CustomizableSettingSchema.DisplayName" xml:space="preserve">
+    <value>Customizable Setting Schema</value>
+    <comment>DisplayName for DomainRole &apos;CustomizableSettingSchema&apos; on DomainRelationship &apos;PolicyHasSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PolicyHasSettings/CustomizableSettingSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Policy</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CustomizableSettingSchema&apos; on DomainRelationship &apos;PolicyHasSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementHasPolicy.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.CustomizableElementHasPolicy</value>
+    <comment>Description for DomainClass &apos;CustomizableElementHasPolicy&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementHasPolicy.DisplayName" xml:space="preserve">
+    <value>Customizable Element Has Policy</value>
+    <comment>DisplayName for DomainClass &apos;CustomizableElementHasPolicy&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizableElementSchema.Description" xml:space="preserve">
+    <value>The customization policy that applies to the element.</value>
+    <comment>Description for DomainRole &apos;CustomizableElementSchema&apos; on DomainRelationship &apos;CustomizableElementHasPolicy&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizableElementSchema.DisplayName" xml:space="preserve">
+    <value>Customizable Element Schema</value>
+    <comment>DisplayName for DomainRole &apos;CustomizableElementSchema&apos; on DomainRelationship &apos;CustomizableElementHasPolicy&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizableElementSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Policy</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CustomizableElementSchema&apos; on DomainRelationship &apos;CustomizableElementHasPolicy&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizationPolicySchema.Description" xml:space="preserve">
+    <value>The owning element.</value>
+    <comment>Description for DomainRole &apos;CustomizationPolicySchema&apos; on DomainRelationship &apos;CustomizableElementHasPolicy&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizationPolicySchema.DisplayName" xml:space="preserve">
+    <value>Customization Policy Schema</value>
+    <comment>DisplayName for DomainRole &apos;CustomizationPolicySchema&apos; on DomainRelationship &apos;CustomizableElementHasPolicy&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizationPolicySchema.PropertyDisplayName" xml:space="preserve">
+    <value>Owner</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CustomizationPolicySchema&apos; on DomainRelationship &apos;CustomizableElementHasPolicy&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.ElementHasElements</value>
+    <comment>Description for DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements.DisplayName" xml:space="preserve">
+    <value>Element Has Elements</value>
+    <comment>DisplayName for DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/Cardinality.Description" xml:space="preserve">
+    <value>The number of instances of this element/collection, for each parent element.</value>
+    <comment>Description for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/Cardinality.DisplayName" xml:space="preserve">
+    <value>Cardinality</value>
+    <comment>DisplayName for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/Cardinality.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/CardinalityCaption.Description" xml:space="preserve">
+    <value>The displayed caption for the cardinality.</value>
+    <comment>Description for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/CardinalityCaption.DisplayName" xml:space="preserve">
+    <value>Cardinality Caption</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/CardinalityCaption.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/AutoCreate.Description" xml:space="preserve">
+    <value>Whether to automatically create the first instance of this collection/element when the parent element is created.</value>
+    <comment>Description for DomainProperty &apos;AutoCreate&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/AutoCreate.DisplayName" xml:space="preserve">
+    <value>Auto Create</value>
+    <comment>DisplayName for DomainProperty &apos;AutoCreate&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/AutoCreate.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;AutoCreate&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/AllowAddNew.Description" xml:space="preserve">
+    <value>Whether to allow UI (i.e. menus) for adding new instances of this collection/element manually.</value>
+    <comment>Description for DomainProperty &apos;AllowAddNew&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/AllowAddNew.DisplayName" xml:space="preserve">
+    <value>Allow Add New</value>
+    <comment>DisplayName for DomainProperty &apos;AllowAddNew&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/AllowAddNew.Category" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Category for DomainProperty &apos;AllowAddNew&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/OrderGroup.Description" xml:space="preserve">
+    <value>The group in which instances of the element/collection will be ordered together, relative to instances of sibling elements/collections. By default, all instances of all sibling elements/collections are ordered together alphabetically by their &apos;InstanceName&apos; property.</value>
+    <comment>Description for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/OrderGroup.DisplayName" xml:space="preserve">
+    <value>Order Group</value>
+    <comment>DisplayName for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/OrderGroup.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.Description" xml:space="preserve">
+    <value>A System.Collections.IComparer class that determines how instances of all elements/collections in this &apos;Order Group&apos; are ordered together. If left blank, then instances of all elements/collections are ordered together alphabetically by their &apos;InstanceName&apos; property.</value>
+    <comment>Description for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.DisplayName" xml:space="preserve">
+    <value>Order Group Comparer</value>
+    <comment>DisplayName for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/ParentElement.Description" xml:space="preserve">
+    <value>The child elemets of this element.</value>
+    <comment>Description for DomainRole &apos;ParentElement&apos; on DomainRelationship &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/ParentElement.DisplayName" xml:space="preserve">
+    <value>Parent Element</value>
+    <comment>DisplayName for DomainRole &apos;ParentElement&apos; on DomainRelationship &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/ParentElement.PropertyDisplayName" xml:space="preserve">
+    <value>Elements</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ParentElement&apos; on DomainRelationship &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/ChildElement.Description" xml:space="preserve">
+    <value>The owning element.</value>
+    <comment>Description for DomainRole &apos;ChildElement&apos; on DomainRelationship &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/ChildElement.DisplayName" xml:space="preserve">
+    <value>Child Element</value>
+    <comment>DisplayName for DomainRole &apos;ChildElement&apos; on DomainRelationship &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElements/ChildElement.PropertyDisplayName" xml:space="preserve">
+    <value>Owner</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ChildElement&apos; on DomainRelationship &apos;ElementHasElements&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints</value>
+    <comment>Description for DomainClass &apos;PatternHasProvidedExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.DisplayName" xml:space="preserve">
+    <value>Pattern Has Provided Extension Points</value>
+    <comment>DisplayName for DomainClass &apos;PatternHasProvidedExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/PatternSchema.Description" xml:space="preserve">
+    <value>The extension points of other patterns that this pattern extends.</value>
+    <comment>Description for DomainRole &apos;PatternSchema&apos; on DomainRelationship &apos;PatternHasProvidedExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/PatternSchema.DisplayName" xml:space="preserve">
+    <value>Pattern Schema</value>
+    <comment>DisplayName for DomainRole &apos;PatternSchema&apos; on DomainRelationship &apos;PatternHasProvidedExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/PatternSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Provided Extension Points</value>
+    <comment>PropertyDisplayName for DomainRole &apos;PatternSchema&apos; on DomainRelationship &apos;PatternHasProvidedExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/ProvidedExtensionPointSchema.Description" xml:space="preserve">
+    <value>The owning pattern.</value>
+    <comment>Description for DomainRole &apos;ProvidedExtensionPointSchema&apos; on DomainRelationship &apos;PatternHasProvidedExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/ProvidedExtensionPointSchema.DisplayName" xml:space="preserve">
+    <value>Provided Extension Point Schema</value>
+    <comment>DisplayName for DomainRole &apos;ProvidedExtensionPointSchema&apos; on DomainRelationship &apos;PatternHasProvidedExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/ProvidedExtensionPointSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Pattern</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ProvidedExtensionPointSchema&apos; on DomainRelationship &apos;PatternHasProvidedExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.ElementHasExtensionPoints</value>
+    <comment>Description for DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints.DisplayName" xml:space="preserve">
+    <value>Element Has Extension Points</value>
+    <comment>DisplayName for DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/Cardinality.Description" xml:space="preserve">
+    <value>The number of instances of this extension, for each parent element.</value>
+    <comment>Description for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/Cardinality.DisplayName" xml:space="preserve">
+    <value>Cardinality</value>
+    <comment>DisplayName for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/Cardinality.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/CardinalityCaption.Description" xml:space="preserve">
+    <value>The displayed caption for the cardinality.</value>
+    <comment>Description for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/CardinalityCaption.DisplayName" xml:space="preserve">
+    <value>Cardinality Caption</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/CardinalityCaption.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroup.Description" xml:space="preserve">
+    <value>The group in which instances of the element/collection will be ordered together, relative to instances of sibling elements/collections. By default, all instances of all sibling elements/collections are ordered together alphabetically by their &apos;InstanceName&apos; property.</value>
+    <comment>Description for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroup.DisplayName" xml:space="preserve">
+    <value>Order Group</value>
+    <comment>DisplayName for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroup.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.Description" xml:space="preserve">
+    <value>A System.Collections.IComparer class that determines how instances of all elements/collections in this &apos;Order Group&apos; are ordered together. If left blank, then instances of all elements/collections are ordered together alphabetically by their &apos;InstanceName&apos; property.</value>
+    <comment>Description for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.DisplayName" xml:space="preserve">
+    <value>Order Group Comparer</value>
+    <comment>DisplayName for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/ParentElement.Description" xml:space="preserve">
+    <value>The child extension points of this element.</value>
+    <comment>Description for DomainRole &apos;ParentElement&apos; on DomainRelationship &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/ParentElement.DisplayName" xml:space="preserve">
+    <value>Parent Element</value>
+    <comment>DisplayName for DomainRole &apos;ParentElement&apos; on DomainRelationship &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/ParentElement.PropertyDisplayName" xml:space="preserve">
+    <value>Extension Points</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ParentElement&apos; on DomainRelationship &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/ChildElement.Description" xml:space="preserve">
+    <value>The owning element.</value>
+    <comment>Description for DomainRole &apos;ChildElement&apos; on DomainRelationship &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/ChildElement.DisplayName" xml:space="preserve">
+    <value>Child Element</value>
+    <comment>DisplayName for DomainRole &apos;ChildElement&apos; on DomainRelationship &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPoints/ChildElement.PropertyDisplayName" xml:space="preserve">
+    <value>Owner</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ChildElement&apos; on DomainRelationship &apos;ElementHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.ViewHasExtensionPoints</value>
+    <comment>Description for DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints.DisplayName" xml:space="preserve">
+    <value>View Has Extension Points</value>
+    <comment>DisplayName for DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/Cardinality.Description" xml:space="preserve">
+    <value>The number of instances of this extension, for this view.</value>
+    <comment>Description for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/Cardinality.DisplayName" xml:space="preserve">
+    <value>Cardinality</value>
+    <comment>DisplayName for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/Cardinality.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;Cardinality&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/CardinalityCaption.Description" xml:space="preserve">
+    <value>The displayed caption for the cardinality.</value>
+    <comment>Description for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/CardinalityCaption.DisplayName" xml:space="preserve">
+    <value>Cardinality Caption</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/CardinalityCaption.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;CardinalityCaption&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroup.Description" xml:space="preserve">
+    <value>The group in which instances of the element/collection will be ordered together, relative to instances of sibling elements/collections. By default, all instances of all sibling elements/collections are ordered together alphabetically by their &apos;InstanceName&apos; property.</value>
+    <comment>Description for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroup.DisplayName" xml:space="preserve">
+    <value>Order Group</value>
+    <comment>DisplayName for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroup.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;OrderGroup&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.Description" xml:space="preserve">
+    <value>A System.Collections.IComparer class that determines how instances of all elements/collections in this &apos;Order Group&apos; are ordered together. If left blank, then instances of all elements/collections are ordered together alphabetically by their &apos;InstanceName&apos; property.</value>
+    <comment>Description for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.DisplayName" xml:space="preserve">
+    <value>Order Group Comparer</value>
+    <comment>DisplayName for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.Category" xml:space="preserve">
+    <value>Structure</value>
+    <comment>Category for DomainProperty &apos;OrderGroupComparerTypeName&apos; on DomainClass &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/ViewSchema.Description" xml:space="preserve">
+    <value>The child extension points of the view.</value>
+    <comment>Description for DomainRole &apos;ViewSchema&apos; on DomainRelationship &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/ViewSchema.DisplayName" xml:space="preserve">
+    <value>View Schema</value>
+    <comment>DisplayName for DomainRole &apos;ViewSchema&apos; on DomainRelationship &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/ViewSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Extension Points</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ViewSchema&apos; on DomainRelationship &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/ExtensionPointSchema.Description" xml:space="preserve">
+    <value>The owning view.</value>
+    <comment>Description for DomainRole &apos;ExtensionPointSchema&apos; on DomainRelationship &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/ExtensionPointSchema.DisplayName" xml:space="preserve">
+    <value>Extension Point Schema</value>
+    <comment>DisplayName for DomainRole &apos;ExtensionPointSchema&apos; on DomainRelationship &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPoints/ExtensionPointSchema.PropertyDisplayName" xml:space="preserve">
+    <value>View</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ExtensionPointSchema&apos; on DomainRelationship &apos;ViewHasExtensionPoints&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.PatternElementHasAutomationSettings</value>
+    <comment>Description for DomainClass &apos;PatternElementHasAutomationSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.DisplayName" xml:space="preserve">
+    <value>Pattern Element Has Automation Settings</value>
+    <comment>DisplayName for DomainClass &apos;PatternElementHasAutomationSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/PatternElementSchema.Description" xml:space="preserve">
+    <value>The automation settings of this element.</value>
+    <comment>Description for DomainRole &apos;PatternElementSchema&apos; on DomainRelationship &apos;PatternElementHasAutomationSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/PatternElementSchema.DisplayName" xml:space="preserve">
+    <value>Pattern Element Schema</value>
+    <comment>DisplayName for DomainRole &apos;PatternElementSchema&apos; on DomainRelationship &apos;PatternElementHasAutomationSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/PatternElementSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Automation Settings</value>
+    <comment>PropertyDisplayName for DomainRole &apos;PatternElementSchema&apos; on DomainRelationship &apos;PatternElementHasAutomationSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/AutomationSettingsSchema.Description" xml:space="preserve">
+    <value>The owning element.</value>
+    <comment>Description for DomainRole &apos;AutomationSettingsSchema&apos; on DomainRelationship &apos;PatternElementHasAutomationSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/AutomationSettingsSchema.DisplayName" xml:space="preserve">
+    <value>Automation Settings Schema</value>
+    <comment>DisplayName for DomainRole &apos;AutomationSettingsSchema&apos; on DomainRelationship &apos;PatternElementHasAutomationSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/AutomationSettingsSchema.PropertyDisplayName" xml:space="preserve">
+    <value>Owner</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AutomationSettingsSchema&apos; on DomainRelationship &apos;PatternElementHasAutomationSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/FalseEnabled.DisplayName" xml:space="preserve">
+    <value>FalseEnabled</value>
+    <comment>Display name for EnumerationLiteral &apos;FalseEnabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/FalseEnabled.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.CustomizationEnabledState.FalseEnabled</value>
+    <comment>Description for EnumerationLiteral &apos;FalseEnabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/FalseDisabled.DisplayName" xml:space="preserve">
+    <value>FalseDisabled</value>
+    <comment>Display name for EnumerationLiteral &apos;FalseDisabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/FalseDisabled.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.CustomizationEnabledState.FalseDisabled</value>
+    <comment>Description for EnumerationLiteral &apos;FalseDisabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/InheritedEnabled.DisplayName" xml:space="preserve">
+    <value>InheritedEnabled</value>
+    <comment>Display name for EnumerationLiteral &apos;InheritedEnabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/InheritedEnabled.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.CustomizationEnabledState.InheritedEnabled</value>
+    <comment>Description for EnumerationLiteral &apos;InheritedEnabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/TrueDisabled.DisplayName" xml:space="preserve">
+    <value>TrueDisabled</value>
+    <comment>Display name for EnumerationLiteral &apos;TrueDisabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/TrueDisabled.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.CustomizationEnabledState.TrueDisabled</value>
+    <comment>Description for EnumerationLiteral &apos;TrueDisabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/TrueEnabled.DisplayName" xml:space="preserve">
+    <value>TrueEnabled</value>
+    <comment>Display name for EnumerationLiteral &apos;TrueEnabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/TrueEnabled.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.CustomizationEnabledState.TrueEnabled</value>
+    <comment>Description for EnumerationLiteral &apos;TrueEnabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/InheritedDisabled.DisplayName" xml:space="preserve">
+    <value>InheritedDisabled</value>
+    <comment>Display name for EnumerationLiteral &apos;InheritedDisabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizationEnabledState/InheritedDisabled.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.CustomizationEnabledState.InheritedDisabled</value>
+    <comment>Description for EnumerationLiteral &apos;InheritedDisabled&apos; on DomainEnumeration &apos;CustomizationEnabledState&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingType/DomainProperty.DisplayName" xml:space="preserve">
+    <value>DomainProperty</value>
+    <comment>Display name for EnumerationLiteral &apos;DomainProperty&apos; on DomainEnumeration &apos;CustomizableDomainElementSettingType&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingType/DomainProperty.Description" xml:space="preserve">
+    <value>The domain property is customizable as a whole.</value>
+    <comment>Description for EnumerationLiteral &apos;DomainProperty&apos; on DomainEnumeration &apos;CustomizableDomainElementSettingType&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingType/DomainRole.DisplayName" xml:space="preserve">
+    <value>DomainRole</value>
+    <comment>Display name for EnumerationLiteral &apos;DomainRole&apos; on DomainEnumeration &apos;CustomizableDomainElementSettingType&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingType/DomainRole.Description" xml:space="preserve">
+    <value>The domain role, and all its child elements are customizable as a whole.</value>
+    <comment>Description for EnumerationLiteral &apos;DomainRole&apos; on DomainEnumeration &apos;CustomizableDomainElementSettingType&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternShape.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.PatternShape</value>
+    <comment>Description for DomainClass &apos;PatternShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternShape.DisplayName" xml:space="preserve">
+    <value>Pattern Shape</value>
+    <comment>DisplayName for DomainClass &apos;PatternShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternShape/TailoringFillColor.Description" xml:space="preserve">
+    <value>The color of the shape fill, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringFillColor&apos; on DomainClass &apos;PatternShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternShape/TailoringFillColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Fill Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringFillColor&apos; on DomainClass &apos;PatternShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternShape/TailoringTextColor.Description" xml:space="preserve">
+    <value>The color of the shape text, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;PatternShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternShape/TailoringTextColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;PatternShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternShape/TailoringOutlineColor.Description" xml:space="preserve">
+    <value>The color of the shape outline, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;PatternShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternShape/TailoringOutlineColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Outline Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;PatternShape&apos;</comment>
+  </data>
+  <data name="PatternShapePropertiesTitle" xml:space="preserve">
+    <value>Variable Properties</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="PatternShapeLaunchPointsTitle" xml:space="preserve">
+    <value>Launch Points</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="PatternShapeAutomationTitle" xml:space="preserve">
+    <value>Automation</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="PatternShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="PatternShapeStereotypeDecoratorDefaultText" xml:space="preserve">
+    <value>The Pattern</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementShape.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.ElementShape</value>
+    <comment>Description for DomainClass &apos;ElementShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementShape.DisplayName" xml:space="preserve">
+    <value>Element Shape</value>
+    <comment>DisplayName for DomainClass &apos;ElementShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementShape/TailoringFillColor.Description" xml:space="preserve">
+    <value>The color of the shape fill, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringFillColor&apos; on DomainClass &apos;ElementShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementShape/TailoringFillColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Fill Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringFillColor&apos; on DomainClass &apos;ElementShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementShape/TailoringTextColor.Description" xml:space="preserve">
+    <value>The color of the shape text, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;ElementShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementShape/TailoringTextColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;ElementShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementShape/TailoringOutlineColor.Description" xml:space="preserve">
+    <value>The color of the shape outline, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;ElementShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementShape/TailoringOutlineColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Outline Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;ElementShape&apos;</comment>
+  </data>
+  <data name="ElementShapePropertiesTitle" xml:space="preserve">
+    <value>Variable Properties</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ElementShapeLaunchPointsTitle" xml:space="preserve">
+    <value>Launch Points</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ElementShapeAutomationTitle" xml:space="preserve">
+    <value>Automation</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ElementShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ElementShapeStereotypeDecoratorDefaultText" xml:space="preserve">
+    <value>Element</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewShape.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.ViewShape</value>
+    <comment>Description for DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewShape.DisplayName" xml:space="preserve">
+    <value>View Shape</value>
+    <comment>DisplayName for DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewShape/TailoringFillColor.Description" xml:space="preserve">
+    <value>The color of the shape fill, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringFillColor&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewShape/TailoringFillColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Fill Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringFillColor&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewShape/TailoringTextColor.Description" xml:space="preserve">
+    <value>The color of the shape text, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewShape/TailoringTextColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewShape/TailoringOutlineColor.Description" xml:space="preserve">
+    <value>The color of the shape outline, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewShape/TailoringOutlineColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Outline Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewShape/IsLayoutInitialized.Description" xml:space="preserve">
+    <value>Whether the layout of the view initialized the very first time.</value>
+    <comment>Description for DomainProperty &apos;IsLayoutInitialized&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewShape/IsLayoutInitialized.DisplayName" xml:space="preserve">
+    <value>Is Layout Initialized</value>
+    <comment>DisplayName for DomainProperty &apos;IsLayoutInitialized&apos; on DomainClass &apos;ViewShape&apos;</comment>
+  </data>
+  <data name="ViewShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CollectionShape.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.CollectionShape</value>
+    <comment>Description for DomainClass &apos;CollectionShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CollectionShape.DisplayName" xml:space="preserve">
+    <value>Collection Shape</value>
+    <comment>DisplayName for DomainClass &apos;CollectionShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CollectionShape/TailoringFillColor.Description" xml:space="preserve">
+    <value>The color of the shape fill, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringFillColor&apos; on DomainClass &apos;CollectionShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CollectionShape/TailoringFillColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Fill Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringFillColor&apos; on DomainClass &apos;CollectionShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CollectionShape/TailoringTextColor.Description" xml:space="preserve">
+    <value>The color of the shape text, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;CollectionShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CollectionShape/TailoringTextColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;CollectionShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CollectionShape/TailoringOutlineColor.Description" xml:space="preserve">
+    <value>The color of the shape outline, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;CollectionShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CollectionShape/TailoringOutlineColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Outline Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;CollectionShape&apos;</comment>
+  </data>
+  <data name="CollectionShapePropertiesTitle" xml:space="preserve">
+    <value>Variable Properties</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="CollectionShapeLaunchPointsTitle" xml:space="preserve">
+    <value>Launch Points</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="CollectionShapeAutomationTitle" xml:space="preserve">
+    <value>Automation</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="CollectionShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="CollectionShapeStereotypeDecoratorDefaultText" xml:space="preserve">
+    <value>Collection</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementShape.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.CustomizableElementShape</value>
+    <comment>Description for DomainClass &apos;CustomizableElementShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.CustomizableElementShape.DisplayName" xml:space="preserve">
+    <value>Customizable Element Shape</value>
+    <comment>DisplayName for DomainClass &apos;CustomizableElementShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointShape.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.ExtensionPointShape</value>
+    <comment>Description for DomainClass &apos;ExtensionPointShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointShape.DisplayName" xml:space="preserve">
+    <value>Extension Point Shape</value>
+    <comment>DisplayName for DomainClass &apos;ExtensionPointShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointShape/TailoringFillColor.Description" xml:space="preserve">
+    <value>The color of the shape fill, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringFillColor&apos; on DomainClass &apos;ExtensionPointShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointShape/TailoringFillColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Fill Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringFillColor&apos; on DomainClass &apos;ExtensionPointShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointShape/TailoringTextColor.Description" xml:space="preserve">
+    <value>The color of the shape text, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;ExtensionPointShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointShape/TailoringTextColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;ExtensionPointShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointShape/TailoringOutlineColor.Description" xml:space="preserve">
+    <value>The color of the shape outline, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;ExtensionPointShape&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ExtensionPointShape/TailoringOutlineColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Outline Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;ExtensionPointShape&apos;</comment>
+  </data>
+  <data name="ExtensionPointShapePropertiesTitle" xml:space="preserve">
+    <value>Variable Properties</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ExtensionPointShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ExtensionPointShapeStereotypeDecoratorDefaultText" xml:space="preserve">
+    <value>Extension Point</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElementsConnector.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.ViewHasElementsConnector</value>
+    <comment>Description for DomainClass &apos;ViewHasElementsConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasElementsConnector.DisplayName" xml:space="preserve">
+    <value>View Has Elements Connector</value>
+    <comment>DisplayName for DomainClass &apos;ViewHasElementsConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElementsConnector.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.ElementHasElementsConnector</value>
+    <comment>Description for DomainClass &apos;ElementHasElementsConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasElementsConnector.DisplayName" xml:space="preserve">
+    <value>Element Has Elements Connector</value>
+    <comment>DisplayName for DomainClass &apos;ElementHasElementsConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementConnector.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.PatternElementConnector</value>
+    <comment>Description for DomainClass &apos;PatternElementConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementConnector.DisplayName" xml:space="preserve">
+    <value>Pattern Element Connector</value>
+    <comment>DisplayName for DomainClass &apos;PatternElementConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementConnector/TailoringOutlineColor.Description" xml:space="preserve">
+    <value>The color of the connector, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;PatternElementConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementConnector/TailoringOutlineColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Outline Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringOutlineColor&apos; on DomainClass &apos;PatternElementConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementConnector/TailoringTextColor.Description" xml:space="preserve">
+    <value>The color of the connector text, in tailoring mode.</value>
+    <comment>Description for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;PatternElementConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternElementConnector/TailoringTextColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringTextColor&apos; on DomainClass &apos;PatternElementConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector</value>
+    <comment>Description for DomainClass &apos;ElementHasExtensionPointsConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector.DisplayName" xml:space="preserve">
+    <value>Element Has Extension Points Connector</value>
+    <comment>DisplayName for DomainClass &apos;ElementHasExtensionPointsConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector</value>
+    <comment>Description for DomainClass &apos;ViewHasExtensionPointsConnector&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector.DisplayName" xml:space="preserve">
+    <value>View Has Extension Points Connector</value>
+    <comment>DisplayName for DomainClass &apos;ViewHasExtensionPointsConnector&apos;</comment>
+  </data>
+  <data name="FormatList" xml:space="preserve">
+    <value>Pattern Model Designer (*.patterndefinition)|*.patterndefinition</value>
+    <comment>A list of file format specifiers for the Save dialog box</comment>
+  </data>
+  <data name="ModelExplorerTitle" xml:space="preserve">
+    <value>Pattern Model Designer Explorer</value>
+    <comment>Model Explorer Toolwindow title</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram</value>
+    <comment>Description for DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram.DisplayName" xml:space="preserve">
+    <value>Pattern Model Schema Diagram</value>
+    <comment>DisplayName for DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringGradientColor.Description" xml:space="preserve">
+    <value>The color of the gradient in the title of the background.</value>
+    <comment>Description for DomainProperty &apos;AuthoringGradientColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringGradientColor.DisplayName" xml:space="preserve">
+    <value>Authoring Gradient Color</value>
+    <comment>DisplayName for DomainProperty &apos;AuthoringGradientColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringBackgroundColor.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram.Authoring Background Color</value>
+    <comment>Description for DomainProperty &apos;AuthoringBackgroundColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringBackgroundColor.DisplayName" xml:space="preserve">
+    <value>Authoring Background Color</value>
+    <comment>DisplayName for DomainProperty &apos;AuthoringBackgroundColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringTitleTextColor.Description" xml:space="preserve">
+    <value>The color of the text of the diagram title.</value>
+    <comment>Description for DomainProperty &apos;AuthoringTitleTextColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/AuthoringTitleTextColor.DisplayName" xml:space="preserve">
+    <value>Authoring Title Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;AuthoringTitleTextColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringGradientColor.Description" xml:space="preserve">
+    <value>The color of the gradient in the title of the background.</value>
+    <comment>Description for DomainProperty &apos;TailoringGradientColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringGradientColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Gradient Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringGradientColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringBackgroundColor.Description" xml:space="preserve">
+    <value>Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram.Tailoring Background Color</value>
+    <comment>Description for DomainProperty &apos;TailoringBackgroundColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringBackgroundColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Background Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringBackgroundColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringTitleTextColor.Description" xml:space="preserve">
+    <value>The color of the text of the diagram title.</value>
+    <comment>Description for DomainProperty &apos;TailoringTitleTextColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/TailoringTitleTextColor.DisplayName" xml:space="preserve">
+    <value>Tailoring Title Text Color</value>
+    <comment>DisplayName for DomainProperty &apos;TailoringTitleTextColor&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/ShowHiddenEntries.Description" xml:space="preserve">
+    <value>Whether to display the hidden items on this model.</value>
+    <comment>Description for DomainProperty &apos;ShowHiddenEntries&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/ShowHiddenEntries.DisplayName" xml:space="preserve">
+    <value>Show Hidden Items</value>
+    <comment>DisplayName for DomainProperty &apos;ShowHiddenEntries&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="NuPattern.Runtime.Schema.PatternModelSchemaDiagram/ShowHiddenEntries.Category" xml:space="preserve">
+    <value>Design</value>
+    <comment>Category for DomainProperty &apos;ShowHiddenEntries&apos; on DomainClass &apos;PatternModelSchemaDiagram&apos;</comment>
+  </data>
+  <data name="Pattern Model DesignerToolboxTab" xml:space="preserve">
+    <value>Pattern Model Designer</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="CollectionToolboxItem" xml:space="preserve">
+    <value>Collection</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="CollectionToolboxTooltip" xml:space="preserve">
+    <value>Add a Collection to add structure or grouping of other elements in the pattern.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ElementToolboxItem" xml:space="preserve">
+    <value>Element</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ElementToolboxTooltip" xml:space="preserve">
+    <value>Add an Element to define a set of variable elements in the pattern.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ExtensionPointToolboxItem" xml:space="preserve">
+    <value>Extension Point</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ExtensionPointToolboxTooltip" xml:space="preserve">
+    <value>Add an Extension Point to define an extension of your pattern, that will be provided by other pattern toolkits.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UnresolvedToolboxItem" xml:space="preserve">
+    <value>ToolboxItem {0} was not found</value>
+    <comment>Invalid toolId</comment>
+  </data>
+  <data name="UnsupportedToolboxFormat" xml:space="preserve">
+    <value>Unsupported toolbox format: {0}</value>
+    <comment>Unsupported format Id</comment>
+  </data>
+  <data name="UnrecognizedElementType" xml:space="preserve">
+    <value>ElementType {0} is not recognized as a type of domain class which belongs to this domain model.</value>
+    <comment>Incorrect ElementType passed in to Model.CreateElement method</comment>
+  </data>
+  <data name="UnrecognizedElementLinkType" xml:space="preserve">
+    <value>ElementLinkType {0} is not recognized as a type of domain relationship which belongs to this domain model.</value>
+    <comment>Incorrect ElementLinkType passed in to Model.CreateElementLink method</comment>
+  </data>
+  <data name="AmbiguousSchema" xml:space="preserve">
+    <value>More than one schema found for target namespace &apos;{0}&apos;, use the first one at &apos;{1}&apos;.</value>
+    <comment>Serialization Warning: AmbiguousSchema</comment>
+  </data>
+  <data name="ExpectingFullFormRelationship" xml:space="preserve">
+    <value>Element &apos;{0}&apos; is treated as the target role-player of a relationship &apos;{1}&apos; instance, which should be serialized in full-form.</value>
+    <comment>Serialization Warning: ExpectingFullFormRelationship</comment>
+  </data>
+  <data name="ExpectingShortFormRelationship" xml:space="preserve">
+    <value>Instances of relationship &apos;{0}&apos; should be serialized in short-form.</value>
+    <comment>Serialization Warning: ExpectingShortFormRelationship</comment>
+  </data>
+  <data name="IgnoredPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;, ignored.</value>
+    <comment>Serialization Warning: IgnoredPropertyValue</comment>
+  </data>
+  <data name="MissingId" xml:space="preserve">
+    <value>Missing &apos;Id&apos; attribute, a new Guid &apos;{0}&apos; is auto-generated.</value>
+    <comment>Serialization Warning: MissingId</comment>
+  </data>
+  <data name="MonikerResolvedToDuplicateLink" xml:space="preserve">
+    <value>Resolving moniker &apos;{0}&apos; causes a duplicate link to be created, so the link and the moniker are ignored.</value>
+    <comment>Serialization Warning: MonikerResolvedToDuplicateLink</comment>
+  </data>
+  <data name="NoSchema" xml:space="preserve">
+    <value>Cannot find a schema that defines target namespace &apos;{0}&apos;, schema validation skipped.</value>
+    <comment>Serialization Warning: NoSchema</comment>
+  </data>
+  <data name="UnexpectedXmlElement" xml:space="preserve">
+    <value>Unexpected XML element &apos;{0}&apos;, ignored.</value>
+    <comment>Serialization Warning: UnexpectedXmlElement</comment>
+  </data>
+  <data name="AmbiguousMoniker" xml:space="preserve">
+    <value>Ambiguous moniker &apos;{0}&apos; encountered. It is used for both &apos;{1}&apos; and &apos;{2}&apos;.</value>
+    <comment>Serialization Error: AmbiguousMoniker</comment>
+  </data>
+  <data name="CannotMonikerizeElement" xml:space="preserve">
+    <value>Instances of DomainClass &apos;{0}&apos; cannot be serialized as a moniker.
+A DomainClass can be serialized as a moniker only if 
+1) it has a defined/inherited DomainProperty marked as IsMonikerKey=true, or 
+2) it is marked/inherited with SerializeId=true.</value>
+    <comment>Serialization Error: CannotMonikerizeElement</comment>
+  </data>
+  <data name="CannotOpenDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotOpenDocument</comment>
+  </data>
+  <data name="CannotSaveDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotSaveDocument</comment>
+  </data>
+  <data name="DanglingRelationship" xml:space="preserve">
+    <value>Relationship &apos;{0}&apos; instance is missing target role-player.</value>
+    <comment>Serialization Error: DanglingRelationship</comment>
+  </data>
+  <data name="InvalidPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;.</value>
+    <comment>Serialization Error: InvalidPropertyValue</comment>
+  </data>
+  <data name="MissingMoniker" xml:space="preserve">
+    <value>Missing moniker. A moniker is expected in attribute &apos;{0}&apos;.</value>
+    <comment>Serialization Error: MissingMoniker</comment>
+  </data>
+  <data name="MissingTransaction" xml:space="preserve">
+    <value>This must be called within the context of an active transaction.</value>
+    <comment>Serialization Error: MissingTransaction</comment>
+  </data>
+  <data name="UnresolvedMoniker" xml:space="preserve">
+    <value>Cannot resolve moniker &apos;{0}&apos;.</value>
+    <comment>Serialization Error: UnresolvedMoniker</comment>
+  </data>
+  <data name="VersionMismatch" xml:space="preserve">
+    <value>Unsupported version &apos;{0}&apos;, can only support &apos;{1}&apos;.</value>
+    <comment>Serialization Error: VersionMismatch</comment>
+  </data>
+  <data name="CannotCloseExistingDiagramDocument" xml:space="preserve">
+    <value>Diagram file &apos;{0}&apos; cannot be closed.</value>
+    <comment>User cancel closing diagram file. Hence, the DSL model file cannot be opened</comment>
+  </data>
+  <data name="BindingErrorOccurred" xml:space="preserve">
+    <value>Extensions for this designer may not be found as a MEF binding error has occurred. The error that occurred was:
+{0}</value>
+    <comment>MEF binding error occurred - exception message being logged in the error window so the user is aware.</comment>
+  </data>
+  <data name="InvalidSaveRootElementType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid root element type.</value>
+    <comment>Exception message used if an invalid root element type is passed to IDomainModelSerializer.SaveModel / SaveModelAndDiagram</comment>
+  </data>
+  <data name="InvalidSaveDiagramType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid diagram type.</value>
+    <comment>Exception message used if an invalid diagram type is passed to IDomainModelSerializer.SaveModelAndDiagram</comment>
+  </data>
+  <data name="MinimumMultiplicityMissingLink" xml:space="preserve">
+    <value>{0} {1} has no {2}.</value>
+    <comment>Multiplicity underflow validation.</comment>
+  </data>
+  <data name="SaveOperationCancelled" xml:space="preserve">
+    <value>Save operation cancelled.</value>
+    <comment>Message when save is cancelled on validation errors</comment>
+  </data>
+  <data name="SaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors, continue save?</value>
+    <comment>Message when validation errors are found on save</comment>
+  </data>
+  <data name="UnloadableSaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
+    <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PatternShapeInheritedFromBaseDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\Inherited.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ElementShapeInheritedFromBaseDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\Inherited.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ViewShapeInheritedFromBaseDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\Inherited.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ViewShapeCustomizationTrueEnabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationTrueEnabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ViewShapeCustomizationTrueDisabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationTrueDisabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ViewShapeCustomizationFalseEnabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationFalseEnabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ViewShapeCustomizationFalseDisabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationFalseDisabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ViewShapeCustomizationInheritedEnabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationInheritedEnabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ViewShapeCustomizationInheritedDisabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationInheritedDisabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="CollectionShapeInheritedFromBaseDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\Inherited.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="CustomizableElementShapeCustomizationTrueEnabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationTrueEnabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="CustomizableElementShapeCustomizationTrueDisabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationTrueDisabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="CustomizableElementShapeCustomizationFalseEnabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationFalseEnabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="CustomizableElementShapeCustomizationFalseDisabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationFalseDisabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="CustomizableElementShapeCustomizationInheritedEnabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationInheritedEnabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="CustomizableElementShapeCustomizationInheritedDisabledDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CustomizationInheritedDisabled.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ExtensionPointShapeInheritedFromBaseDecoratorDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\Inherited.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="CollectionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\CollectionShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ElementToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\ElementShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ExtensionPointToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\Images\ExtensionPointToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+</root>
+
+

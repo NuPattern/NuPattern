@@ -1,7 +1,7 @@
 ﻿
 using System;
 using System.ComponentModel;
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
     //#if !SILVERLIGHT && !PocketPC && !NET20
     //  internal interface IMetadataTypeAttribute

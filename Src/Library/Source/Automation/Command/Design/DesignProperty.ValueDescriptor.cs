@@ -2,10 +2,10 @@
 using System.ComponentModel;
 using System.Drawing.Design;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Deefines a type descriptor over a design property value.
@@ -86,7 +86,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
         {
             get
             {
-                return Microsoft.VisualStudio.Patterning.Library.Properties.Resources.DesignValueProvider_ValueDescription;
+                return NuPattern.Library.Properties.Resources.DesignValueProvider_ValueDescription;
             }
         }
 
@@ -97,7 +97,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
         /// <returns>The name to display for the member.</returns>
         public override string DisplayName
         {
-            get { return Microsoft.VisualStudio.Patterning.Library.Properties.Resources.DesignValueProvider_ValueDisplayName; }
+            get { return NuPattern.Library.Properties.Resources.DesignValueProvider_ValueDisplayName; }
         }
 
         /// <summary>

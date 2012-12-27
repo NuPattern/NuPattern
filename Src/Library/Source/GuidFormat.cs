@@ -1,5 +1,5 @@
 ﻿
-namespace Microsoft.VisualStudio.Patterning.Library
+namespace NuPattern.Library
 {
 	/// <summary>
 	/// The formats of a GUID in string form.

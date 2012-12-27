@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Runtime.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
+namespace NuPattern.Runtime.UI.UnitTests
 {
     public class ProductViewModelSpec
     {
@@ -60,7 +60,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
 
                 var target = new ProductViewModel(product.Object, this.ctx);
 
-                Assert.Equal("../../Resources/Product.png", target.IconPath);
+                Assert.Equal("../../Resources/NodeProductDefault.png", target.IconPath);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -72,7 +72,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI.UnitTests
 
                 var target = new ProductViewModel(product, this.ctx);
 
-                Assert.Equal("../../Resources/ProductUninstalled.png", target.IconPath);
+                Assert.Equal("../../Resources/NodeProductVersionNotFound.png", target.IconPath);
             }
 
             [TestMethod, TestCategory("Unit")]

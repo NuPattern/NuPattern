@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Provides access to a toolkit schema.

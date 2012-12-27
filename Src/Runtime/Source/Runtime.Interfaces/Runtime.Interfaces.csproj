@@ -9,8 +9,8 @@
     <ProjectGuid>{446F0156-39D1-4B11-9B15-BE9637CB057F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.Interfaces</AssemblyName>
+    <RootNamespace>NuPattern.Runtime</RootNamespace>
+    <AssemblyName>NuPattern.Runtime.Interfaces</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -49,11 +49,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Bindings\IBindingCompositionService.cs" />
-    <Compile Include="Constants.cs">
+    <Compile Include="Constants.gen.cs">
       <DependentUpon>Constants.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -180,11 +180,10 @@
     <Compile Include="Model\Store\IAutomationExtension.cs" />
     <Compile Include="IToolkitInfo.cs" />
     <Compile Include="IInstalledToolkitInfo.cs" />
-    <Compile Include="GeneratedCode\InfoInterfaces.cs">
+    <Compile Include="GeneratedCode\InfoInterfaces.gen.cs">
       <DependentUpon>InfoInterfaces.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
     </Compile>
     <Compile Include="Model\Schema\CustomizationState.cs" />
     <Compile Include="Model\Schema\CustomizedLevel.cs" />
@@ -201,13 +200,11 @@
     </Compile>
     <Compile Include="Events\IEvent.cs">
       <SubType>Code</SubType>
-      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
     </Compile>
-    <Compile Include="GeneratedCode\SchemaInterfaces.cs">
+    <Compile Include="GeneratedCode\SchemaInterfaces.gen.cs">
       <DependentUpon>SchemaInterfaces.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
     </Compile>
     <Compile Include="ProductCollectionChangedEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -216,11 +213,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="GeneratedCode\RuntimeInterfaces.cs">
+    <Compile Include="GeneratedCode\RuntimeInterfaces.gen.cs">
       <DependentUpon>RuntimeInterfaces.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
     </Compile>
     <Compile Include="Events\WeakObservableEvent.cs" />
     <Compile Include="Events\WeakObserverEvent.cs" />
@@ -244,19 +240,19 @@
     </None>
     <None Include="Constants.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Constants.cs</LastGenOutput>
+      <LastGenOutput>Constants.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\InfoInterfaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>InfoInterfaces.cs</LastGenOutput>
+      <LastGenOutput>InfoInterfaces.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\SchemaInterfaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SchemaInterfaces.cs</LastGenOutput>
+      <LastGenOutput>SchemaInterfaces.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\RuntimeInterfaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RuntimeInterfaces.cs</LastGenOutput>
+      <LastGenOutput>RuntimeInterfaces.gen.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -266,11 +262,11 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>Microsoft.VisualStudio.Patterning.Runtime.Interfaces</CustomToolNamespace>
+      <CustomToolNamespace>NuPattern.Runtime.Interfaces</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.DslProjects.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

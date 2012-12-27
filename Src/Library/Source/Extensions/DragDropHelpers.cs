@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 
-namespace Microsoft.VisualStudio.Patterning.Library
+namespace NuPattern.Library
 {
     /// <summary>
     /// Extension for helping with Drag and Drop automation.

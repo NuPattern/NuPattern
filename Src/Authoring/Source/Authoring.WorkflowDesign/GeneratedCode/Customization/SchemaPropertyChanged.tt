@@ -1,0 +1,114 @@
+﻿<#+
+private void GeneratePropertyChanged(DomainClass domainClass)
+{
+	var className = domainClass.Name;
+
+	if (domainClass.GeneratesDoubleDerived && domainClass.BaseClass == null)
+	{
+		// This separation is needed because in the double-derived pattern, 
+		// the value change handler works with the base class.
+#>
+
+/// <summary>
+/// <#= domainClass.Description #>.
+/// </summary>
+[GeneratedCode("<#= domainClass.Namespace #>", "<#= this.DslVersion #>")]
+public partial class <#= className + "Base" #>
+{
+	private NuPattern.Runtime.PropertyChangeManager propertyChanges;
+
+	/// <summary>
+	/// Gets the manager for property change event subscriptions for this instance 
+	///	and any of its derived classes.
+	/// </summary>
+	protected NuPattern.Runtime.PropertyChangeManager PropertyChanges
+	{
+		get
+		{
+			if (this.propertyChanges == null)
+			{
+				this.propertyChanges = new NuPattern.Runtime.PropertyChangeManager(this);
+			}
+
+			return this.propertyChanges;
+		}
+	}
+}
+<#+
+	}
+#>
+
+/// <summary>
+/// <#= domainClass.Description #>.
+/// </summary>
+public partial class <#= className #> : INotifyPropertyChanged
+{ <#+
+	if (!domainClass.GeneratesDoubleDerived && domainClass.BaseClass == null)
+	{	
+#>
+	private NuPattern.Runtime.PropertyChangeManager propertyChanges;
+
+<#+
+	}
+#>
+
+	/// <summary>
+	/// Subscribes to changes in the property referenced in the given 
+	/// <paramref name="propertyExpression"/> with the given 
+	/// <paramref name="callbackAction"/> delegate.
+	/// </summary>
+	/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	IDisposable I<#= className #>.SubscribeChanged(Expression<Func<I<#= className #>, object>> propertyExpression, Action<I<#= className #>> callbackAction)
+	{
+		return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	}
+
+	/// <summary>
+	/// Subscribes to changes in the property referenced in the given 
+	/// <paramref name="propertyExpression"/> with the given 
+	/// <paramref name="callbackAction"/> delegate.
+	/// </summary>
+	/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	IDisposable I<#= ToInfo(className) #>.SubscribeChanged(Expression<Func<I<#= ToInfo(className) #>, object>> propertyExpression, Action<I<#= ToInfo(className) #>> callbackAction)
+	{
+		return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	}
+
+	/// <summary>
+	/// Exposes the property changed event.
+	/// </summary>
+	event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	{
+		add { this.PropertyChanges.AddHandler(value); }
+		remove { this.PropertyChanges.RemoveHandler(value); }
+	}
+
+<#+
+	if (!domainClass.GeneratesDoubleDerived && domainClass.BaseClass == null)
+	{	
+#>
+	/// <summary>
+	/// Gets the manager for property change event subscriptions for this instance 
+	///	and any of its derived classes.
+	/// </summary>
+	protected NuPattern.Runtime.PropertyChangeManager PropertyChanges
+	{
+		get
+		{
+			if (this.propertyChanges == null)
+			{
+				this.propertyChanges = new NuPattern.Runtime.PropertyChangeManager(this);
+			}
+
+			return this.propertyChanges;
+		}
+	}
+<#+
+	}
+#>
+}
+<#+
+}
+#>

@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Library.Commands
+﻿namespace NuPattern.Library.Commands
 {
 	/// <summary>
 	/// Validations for the <see cref="GenerateProductCodeCommand"/> command

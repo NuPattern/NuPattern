@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
+namespace NuPattern.Extensibility.Binding
 {
 	/// <summary>
 	/// Defines a value provider wrapper for the property grid.

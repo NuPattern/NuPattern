@@ -2,15 +2,15 @@
 using System.ComponentModel.Composition.Hosting;
 using System.Linq;
 using EnvDTE;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.ExtensibilityHosting;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests
 {
     [TestClass]
     public class PatternManagerSpec : IntegrationTest
@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
             this.solution.CreateInstance(this.DeploymentDirectory, "Blank");
 
             this.patternManager = VsIdeTestHostContext.ServiceProvider.GetService<IPatternManager>();
-            var toolkit = this.patternManager.InstalledToolkits.Single(f => f.Id == "Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit");
+            var toolkit = this.patternManager.InstalledToolkits.Single(f => f.Id == "NuPattern.Runtime.IntegrationTests.TestToolkit");
             UIThreadInvoker.Invoke(new Action(() => this.product = this.patternManager.CreateProduct(toolkit, "Foo")));
         }
 

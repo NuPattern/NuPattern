@@ -1,10 +1,10 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
+namespace NuPattern.Extensibility.UnitTests
 {
 	[TestClass]
 	public class ProductCodeGenerationSpec
@@ -25,7 +25,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 					{
 						Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.String"), 
 						Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.Boolean" && p.TypeConverterTypeName == "System.ComponentModel.StringConverter, System"), 
-						Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.Int32" && p.TypeConverterTypeName == "Microsoft.VisualStudio.Patterning.StringConverter, Microsoft"), 
+						Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.Int32" && p.TypeConverterTypeName == "NuPattern.StringConverter, Microsoft"), 
 						Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.Boolean" && p.EditorTypeName == "System.ComponentModel.UIEditor, System"), 
 					});
 
@@ -41,11 +41,11 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests
 				Assert.Equal("String", codegen.TypeNameMap["System.String"], "Unique type name should be in simple form.");
 				Assert.Equal("UIEditor", codegen.TypeNameMap["System.ComponentModel.UIEditor, System"], "Unique type name should be in simple form.");
 				Assert.Equal("System.ComponentModel.StringConverter", codegen.TypeNameMap["System.ComponentModel.StringConverter, System"], "Duplicated type name should exist in full form.");
-				Assert.Equal("Microsoft.VisualStudio.Patterning.StringConverter", codegen.TypeNameMap["Microsoft.VisualStudio.Patterning.StringConverter, Microsoft"], "Duplicated type name should exist in full form.");
+				Assert.Equal("NuPattern.StringConverter", codegen.TypeNameMap["NuPattern.StringConverter, Microsoft"], "Duplicated type name should exist in full form.");
 
 				Assert.True(codegen.SafeImports.Contains("System"));
 				Assert.True(codegen.SafeImports.Contains("System.ComponentModel"));
-				Assert.False(codegen.SafeImports.Contains("Microsoft.VisualStudio.Patterning"));
+				Assert.False(codegen.SafeImports.Contains("NuPattern"));
 			}
 
 			[TestMethod, TestCategory("Unit")]

@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Defines a view model for a <see cref="IAbstractElement"/>.
@@ -11,7 +11,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
     [CLSCompliant(false)]
     public class ElementViewModel : ProductElementViewModel
     {
-        private const string IconPathFormat = "../../Resources/{0}.png";
+        internal const string IconPathFormat = "../../Resources/" + "Node{0}.png"; // element images stored as resource with prefix
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ElementViewModel"/> class.
@@ -20,7 +20,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         public ElementViewModel(IAbstractElement element, SolutionBuilderContext context)
             : base(element, context)
         {
-            this.IconPath = string.Format(CultureInfo.CurrentCulture, IconPathFormat, element.GetType().Name);
+            // Initialize default value for icon path
+            this.IconPath = string.Format(CultureInfo.InvariantCulture, IconPathFormat, element.GetType().Name);
 
             if (element.Info != null)
             {

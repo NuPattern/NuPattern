@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Extensibility
+﻿namespace NuPattern.Extensibility
 {
 	partial class CollectionDropDown<TValue>
 	{

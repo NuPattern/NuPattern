@@ -1,24 +1,21 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Windows.Data;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Provides a view model for the solution builder
     /// </summary>
     [CLSCompliant(false)]
-    public class SolutionBuilderViewModel : ViewModel
+    public partial class SolutionBuilderViewModel : ViewModel
     {
         private const string NewSolutionNamePrefix = "Solution";
 
@@ -129,6 +126,11 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
         /// Gets the save command.
         /// </summary>
         public System.Windows.Input.ICommand SaveCommand { get; private set; }
+
+        /// <summary>
+        /// Gets the homepage command.
+        /// </summary>
+        public System.Windows.Input.ICommand HomePageCommand { get; private set; }
 
         /// <summary>
         /// Gets the current node in the pattern explorer tree view.
@@ -350,6 +352,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
             this.ExpandAllCommand = new RelayCommand(() => this.ChangeIsExpanded(true), () => this.Nodes.Count > 0);
             this.CollapseAllCommand = new RelayCommand(() => this.ChangeIsExpanded(false), () => this.Nodes.Count > 0);
             this.CreateNewSolutionCommand = new RelayCommand(this.CreateNewSolution, this.CanShowCreateNewSolution);
+            this.HomePageCommand = new RelayCommand(this.NavigateToHomePage, () => true);
 
             this.ActivateCommand = new RelayCommand(this.ActivateNode, () => this.currentNode != null);
             this.DeleteCommand = new RelayCommand(this.DeleteNode, this.CanDeleteNode);
@@ -481,42 +484,13 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
             var dte = this.serviceProvider.GetService<EnvDTE.DTE>();
             if (dte != null)
             {
-                //Close existing solution
-                if (dte.Solution.IsOpen)
-                {
-                    dte.Solution.Close(true);
-                }
-
-                // Determine next available solution directory
-                var defaultSaveLocation = dte.GetDefaultProjectSaveLocation();
-                if (string.IsNullOrEmpty(defaultSaveLocation))
-                {
-                    throw new InvalidOperationException(Resources.SolutionBuilderViewModel_CreateNewSolution_FailedDirSearch);
-                }
-
-                var existingSolutionFolders = Directory.GetDirectories(defaultSaveLocation).Select(dir => new DirectoryInfo(dir).Name);
-                var nextSolutionDir = UniqueNameGenerator.EnsureUnique(NewSolutionNamePrefix, existingSolutionFolders, true);
-
-                // Create solution directory
-                var solutionDir = Path.Combine(defaultSaveLocation, nextSolutionDir);
-                if (!Directory.Exists(solutionDir))
-                {
-                    Directory.CreateDirectory(solutionDir);
-                }
-
-                // Save and Open new solution
-                var solutionFullPath = Path.Combine(solutionDir, nextSolutionDir);
-                try
-                {
-                    dte.Solution.Create(solutionDir, nextSolutionDir);
-                    dte.Solution.SaveAs(solutionFullPath);
-                }
-                catch (COMException)
-                {
-                    throw new InvalidOperationException(string.Format(CultureInfo.CurrentCulture, 
-                        Resources.SolutionBuilderViewModel_CreateNewSolution_FailedCreate, solutionDir));
-                }
+                dte.CreateBlankSolution();
             }
+        }
+
+        private void NavigateToHomePage()
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(HomePageUrl));
         }
     }
 }

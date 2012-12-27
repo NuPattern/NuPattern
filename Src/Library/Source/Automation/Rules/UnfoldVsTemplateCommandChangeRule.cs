@@ -1,12 +1,12 @@
-﻿using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
+﻿using NuPattern.Extensibility;
+using NuPattern.Library.Commands;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation.Rules
+namespace NuPattern.Library.Automation.Rules
 {
 	[CommandChangeRule(typeof(UnfoldVsTemplateCommand))]
 	class UnfoldVsTemplateCommandChangeRule : ICommandChangeRule
 	{
-		public void Change(VisualStudio.Modeling.ElementPropertyChangedEventArgs e)
+		public void Change(Microsoft.VisualStudio.Modeling.ElementPropertyChangedEventArgs e)
 		{
 			Guard.NotNull(() => e, e);
 

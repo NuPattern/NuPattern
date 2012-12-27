@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics;
 using System.IO;
 using Microsoft.ComponentModel.Composition.Diagnostics;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.ComponentModelHost;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests
 {
 	/// <summary>
 	/// Use this helper to quickly dump MEF composition information to a file in %Temp%\mef.txt.

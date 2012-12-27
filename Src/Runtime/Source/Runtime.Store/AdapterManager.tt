@@ -1,8 +1,7 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='DslDefinition.dsl'" #>
-<#@ output extension=".Designer.cs" #>
+<#@ output extension=".gen.cs" #>
 <# string dslName = this.Dsl.Name; #>
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Integration;

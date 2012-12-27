@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Diagnostics.CodeAnalysis;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
+namespace NuPattern.Extensibility.Binding
 {
 	/// <summary>
 	/// Defines a factory to create <see cref="IDynamicBinding{T}"/>.
@@ -74,7 +74,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
 					bindings.Add(
 						new ValueProviderPropertyBinding(
 							property.Name,
-							new DynamicBinding<TeamArchitect.PowerTools.Features.IValueProvider>(
+							new DynamicBinding<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider>(
 								composition,
 								property.ValueProvider.TypeId,
 								this.GetPropertyBindings(property.ValueProvider.Properties, composition))));

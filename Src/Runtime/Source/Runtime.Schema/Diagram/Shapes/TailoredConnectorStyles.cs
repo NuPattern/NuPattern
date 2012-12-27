@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// Defines the styles for tailoring connectors.

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	internal class AbstractElementProxy<TInterface> : ContainerProxy<TInterface>, IAbstractElementProxy<TInterface>
 	{

@@ -5,17 +5,17 @@ using System.Drawing.Design;
 using System.Globalization;
 using System.Text;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.Properties;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Commands;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.TypeEditors
+namespace NuPattern.Library.TypeEditors
 {
 	/// <summary>
 	/// An editor that allows selection of a T4 template inside a VSIX project, 

@@ -1,5 +1,5 @@
 ﻿
-namespace Microsoft.VisualStudio.Patterning.Common.UnitTests
+namespace NuPattern.Common.UnitTests
 {
     public class ObjectValidatorSpec
     {

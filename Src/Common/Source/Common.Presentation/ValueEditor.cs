@@ -11,7 +11,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Markup;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation
+namespace NuPattern.Common.Presentation
 {
 	/// <summary>
 	/// Represents an editor control that abstract the way to edit a property containing a <c>TypeConverter</c> or <c>TypeUIEditor</c>.

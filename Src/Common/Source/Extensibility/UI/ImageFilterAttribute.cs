@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// ImageFilter attribute that is used from <see cref="ImageEditor"/> to filter and configure itself.
@@ -137,7 +137,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 			}
 			catch (Exception ex)
 			{
-				if (ErrorHandler.IsCriticalException(ex))
+				if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(ex))
 				{
 					throw;
 				}

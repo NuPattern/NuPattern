@@ -7,23 +7,23 @@ using System.Drawing.Design;
 using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Automation.Template;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Library.TypeEditors;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.References;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Automation.Template;
+using NuPattern.Library.Properties;
+using NuPattern.Library.TypeEditors;
+using NuPattern.Runtime;
 using Dsl = Microsoft.VisualStudio.Modeling.Design;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Commands
+namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Command that unfolds a VSTemplate.
@@ -66,8 +66,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         [Required]
         [DesignOnly(true)]
         [Editor(typeof(TemplateUriEditor), typeof(UITypeEditor))]
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/TemplateUri.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/TemplateUri.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/TemplateUri.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/TemplateUri.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
         public virtual Uri TemplateUri
         {
             get;
@@ -77,8 +77,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// <summary>
         /// Gets or sets the target path.
         /// </summary>
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetPath.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetPath.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/RawTargetPath.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/RawTargetPath.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
         public virtual string TargetPath
         {
             get;
@@ -89,8 +89,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// Gets or sets the name of the target.
         /// </summary>
         [DefaultValue("{InstanceName}")]
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetFileName.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/RawTargetFileName.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
         public virtual string TargetFileName
         {
             get;
@@ -102,8 +102,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [DefaultValue(DefaultSyncName)]
         [DesignOnly(true)]
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SyncName.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SyncName.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/SyncName.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/SyncName.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
         public virtual bool SyncName
         {
             get;
@@ -115,8 +115,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// </summary>
         [DefaultValue(DefaultSanitizeName)]
         [DesignOnly(true)]
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SanitizeName.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/SanitizeName.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/SanitizeName.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/SanitizeName.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
         public virtual bool SanitizeName
         {
             get;
@@ -126,8 +126,8 @@ namespace Microsoft.VisualStudio.Patterning.Library.Commands
         /// <summary>
         /// An optional value to atg the generated reference for the generated file.
         /// </summary>
-        [Dsl.DisplayNameResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("Microsoft.VisualStudio.Patterning.Library.Automation.TemplateSettings/Tag.Description", typeof(LibraryDomainModel), "Microsoft.VisualStudio.Patterning.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/Tag.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
         [DefaultValue(DefaultTag)]
         public string Tag { get; set; }
 

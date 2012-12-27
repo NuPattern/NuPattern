@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
@@ -11,35 +12,34 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using Microsoft.ComponentModel.Composition.Diagnostics;
 using Microsoft.VisualStudio.ComponentModelHost;
+using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Shell;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library;
-using Microsoft.VisualStudio.Patterning.Runtime.Shell.OptionPages;
-using Microsoft.VisualStudio.Patterning.Runtime.Shell.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
-using Microsoft.VisualStudio.Patterning.Runtime.UI;
-using Microsoft.VisualStudio.Settings;
+using NuPattern.Extensibility;
+using NuPattern.Library;
+using NuPattern.Runtime.Shell.OptionPages;
+using NuPattern.Runtime.Shell.Properties;
+using NuPattern.Runtime.Store;
+using NuPattern.Runtime.UI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.Shell.Settings;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
     /// <summary>
     /// Represents the VS package for this assembly.
     /// </summary>
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Disposed on package dispose.")]
-    [ProvideEditorExtension(typeof(ProductStateEditorFactory), Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension, 8, DefaultName = Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreEditorDescription)]
+    [ProvideEditorExtension(typeof(ProductStateEditorFactory), NuPattern.Runtime.Constants.RuntimeStoreExtension, 8, DefaultName = NuPattern.Runtime.Constants.RuntimeStoreEditorDescription)]
     [ProvideAutoLoad(UIContextGuids.NoSolution)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [ProvideToolWindow(typeof(SolutionBuilderToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed)]
     [ProvideDirectiveProcessor(typeof(ProductStateStoreDirectiveProcessor), ProductStateStoreDirectiveProcessor.ProductStateStoreDirectiveProcessorName, Constants.ProductStateStoreDirectiveProcessorDescription)]
-    [VisualStudio.Shell.ProvideBindingPath]
+    [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
     [ProvideService(typeof(IPlatuProjectTypeProvider), ServiceName = "IPlatuProjectTypeProvider")]
@@ -141,7 +141,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
             this.tracingMonitor = new TracingSettingsMonitor(this.SettingsManager);
 
             var sourceNames = GetConfiguredSourceNames(this.SettingsManager.Read());
-            this.traceOutputWindowManager = new TraceOutputWindowManager(this, this.ShellEvents, OutputPaneGuid, Resources.TraceOutput_WindowTitle, sourceNames.ToArray());
+            this.traceOutputWindowManager = new TraceOutputWindowManager(this, this.ShellEvents, OutputPaneGuid, Constants.OutputWindowTitle, sourceNames.ToArray());
 
             // Monitor setting changes to refresh output window.
             this.SettingsManager.SettingsChanged += this.OnSettingsChanged;
@@ -210,22 +210,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 
         internal void AutoOpenSolutionBuilder()
         {
-            var packageToolWindow = this.GetService<IPackageToolWindow>();
-
-            if (!packageToolWindow.IsWindowVisible<SolutionBuilderToolWindow>())
-            {
-                packageToolWindow.ShowWindow<SolutionBuilderToolWindow>();
-
-                var settingsManager = new ShellSettingsManager(this);
-                var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
-
-                if (!store.CollectionExists(Constants.SettingsName))
-                {
-                    store.CreateCollection(Constants.SettingsName);
-                }
-
-                store.SetString(Constants.SettingsName, "SolutionBuilderAutoOpened", bool.TrueString);
-            }
+            SolutionBuilderToolWindow.AutoOpenWindow(this);
         }
 
         private void AddServices()
@@ -244,42 +229,14 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 
         private void OnShellInitialized(object sender, EventArgs e)
         {
-            var settingsManager = new ShellSettingsManager(this);
-            var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
-            var packageToolWindow = this.GetService<IPackageToolWindow>();
+            CheckFertInstalled();
 
-            if (!(store.CollectionExists(Constants.SettingsName) &&
-                  store.PropertyExists(Constants.SettingsName, "FirstTimeInitialization")))
-            {
-                //First time after installation
-                packageToolWindow.ShowWindow<SolutionBuilderToolWindow>();
-
-                store.CreateCollection(Constants.SettingsName);
-                store.SetString(Constants.SettingsName, "FirstTimeInitialization", bool.FalseString);
-            }
-            else
-            {
-                // Afterwards, we load the toolwindow so that the drag&drop events can get access to the 
-                // toolwindow usercontrol that handles the operations.
-                // Querying visibility will automatically create the control.
-                packageToolWindow.IsWindowVisible<SolutionBuilderToolWindow>();
-            }
+            SolutionBuilderToolWindow.InitializeWindowVisibility(this);
         }
 
         private void OnSolutionClosed(object sender, SolutionEventArgs e)
         {
-            var settingsManager = new ShellSettingsManager(this);
-            var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
-
-            if (store.CollectionExists(Constants.SettingsName) &&
-                store.PropertyExists(Constants.SettingsName, "SolutionBuilderAutoOpened"))
-            {
-                var packageToolWindow = this.GetService<IPackageToolWindow>();
-
-                packageToolWindow.HideWindow<SolutionBuilderToolWindow>();
-
-                store.DeleteProperty(Constants.SettingsName, "SolutionBuilderAutoOpened");
-            }
+            SolutionBuilderToolWindow.AutoHideWindow(this);
         }
 
         private void OnSolutionOpened(object sender, SolutionEventArgs e)
@@ -336,6 +293,34 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
             if (menuCommandService != null)
             {
                 menuCommandService.AddCommand(new OpenSolutionBuilderMenuCommand(this.GetService<IPackageToolWindow>()));
+            }
+        }
+
+        /// <summary>
+        /// Checks to see if an older version of the Feature Extension Runtime extension is installed.
+        /// </summary>
+        /// <remarks>
+        /// Cannot tolerate either version of FERT being installed (i.e. FeatureExtensionUltimateRuntime or FeatureExtensionRuntime versions)
+        /// </remarks>
+        private void CheckFertInstalled()
+        {
+            var extensionManager = this.GetService<SVsExtensionManager, IVsExtensionManager>();
+            if (extensionManager != null)
+            {
+                var enabledExtensions = extensionManager.GetEnabledExtensions();
+                var fertExtension = enabledExtensions.FirstOrDefault(ext =>
+                        Constants.FertVsixIdentifiers.Contains(ext.Header.Identifier, StringComparer.OrdinalIgnoreCase));
+                if (fertExtension != null)
+                {
+                    //TODO: trace this to trace window
+
+                    //Prompt user to manuall uninstall the FERT extension
+                    this.UserMessageService.ShowWarning(
+                        string.Format(CultureInfo.CurrentCulture,
+                        Resources.RuntimeShellPackage_CheckFertInstalled_Enabled,
+                        fertExtension.Header.Name,
+                        Constants.ProductName));
+                }
             }
         }
     }

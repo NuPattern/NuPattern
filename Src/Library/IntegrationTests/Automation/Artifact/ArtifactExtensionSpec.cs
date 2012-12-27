@@ -2,21 +2,21 @@
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Library.Conditions;
-using Microsoft.VisualStudio.Patterning.Library.Events;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Schema;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Commands;
+using NuPattern.Library.Conditions;
+using NuPattern.Library.Events;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Schema;
 
-namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.Artifact
+namespace NuPattern.Library.IntegrationTests.Automation.Artifact
 {
     [TestClass]
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
@@ -138,7 +138,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
                     Assert.Equal(commandSettings.TypeId, typeof(ActivateArtifactCommand).FullName);
 
                     var openProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<ActivateArtifactCommand>.GetPropertyName(c => c.Open)]
-                        .GetValue(commandSettings) as Microsoft.VisualStudio.Patterning.Library.Automation.DesignProperty;
+                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
                     Assert.Equal(true, openProperty.Value);
                 }
 
@@ -186,7 +186,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests.Automation.
                     Assert.Equal(commandSettings.TypeId, typeof(ActivateArtifactCommand).FullName);
 
                     var openProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<ActivateArtifactCommand>.GetPropertyName(c => c.Open)]
-                        .GetValue(commandSettings) as Microsoft.VisualStudio.Patterning.Library.Automation.DesignProperty;
+                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
                     Assert.Equal(false, openProperty.Value);
                 }
 

@@ -2,12 +2,12 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Provides a view model for a pattern instance in the solution builder view.
@@ -15,8 +15,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UI
     [CLSCompliant(false)]
     public class ProductViewModel : ProductElementViewModel
     {
-        private const string IconEnabledPath = "../../Resources/Product.png";
-        private const string IconUninstalledPath = "../../Resources/ProductUninstalled.png";
+        private const string IconEnabledPath = "../../Resources/NodeProductDefault.png";
+        private const string IconUninstalledPath = "../../Resources/NodeProductVersionNotFound.png";
 
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductViewModel>();
 

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell.OptionPages
+namespace NuPattern.Runtime.Shell.OptionPages
 {
 	/// <summary>
 	/// Trace Options Page

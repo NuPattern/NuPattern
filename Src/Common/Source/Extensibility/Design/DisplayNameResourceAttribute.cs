@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Resources;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// An attribute that provides a localization from a resource file.

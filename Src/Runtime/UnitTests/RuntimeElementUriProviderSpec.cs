@@ -1,9 +1,9 @@
 ﻿using System;
-using Microsoft.VisualStudio.Patterning.Runtime.UriProviders;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Runtime.UriProviders;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests
 {
 	[TestClass]
 	public class RuntimeElementUriProviderSpec

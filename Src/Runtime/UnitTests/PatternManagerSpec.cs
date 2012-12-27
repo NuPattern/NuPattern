@@ -4,12 +4,12 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Runtime.Store;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
+namespace NuPattern.Runtime.UnitTests
 {
     public class PatternManagerSpec
     {
@@ -57,7 +57,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
         }
 
         [TestClass]
-        [DeploymentItem("Blank.slnbldr")]
+        [DeploymentItem(RuntimeStoreFilename)]
         [DeploymentItem("Invalid.slnbldr")]
         [DeploymentItem("InvalidVersion.slnbldr")]
         [DeploymentItem("OldVersion.slnbldr")]
@@ -65,6 +65,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
         public class GivenAConfiguredPatternManager
         {
             private static readonly string solutionItemsDir = Path.GetTempPath() + "\\Solution Items";
+            private const string RuntimeStoreFilename = "Blank.gen" + Constants.RuntimeStoreExtension;
             private Solution solution;
             private Mock<IShellEvents> shellEvents;
             private Mock<ISolutionEvents> solutionEvents;
@@ -178,7 +179,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingProduct_ThenRaisesElementInstantiatedEvent()
             {
-                this.manager.Open("Blank" + Constants.RuntimeStoreExtension);
+                this.manager.Open(RuntimeStoreFilename);
                 IProduct instantiatedProduct = null;
                 this.manager.ElementInstantiated += (sender, args) => instantiatedProduct = (IProduct)args.Value;
 
@@ -190,7 +191,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenSavingCreatedProduct_ThenRaisesStoreSavedEvent()
             {
-                this.manager.Open("Blank" + Constants.RuntimeStoreExtension);
+                this.manager.Open(RuntimeStoreFilename);
                 this.manager.CreateProduct(this.toolkitInfo.Object, "toolkit");
 
                 var managerSavedCalled = false;
@@ -208,7 +209,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingProduct_ThenDoesNotRaisePropertyChangedEvents()
             {
-                this.manager.Open("Blank" + Constants.RuntimeStoreExtension);
+                this.manager.Open(RuntimeStoreFilename);
                 bool changed = false;
                 this.manager.PropertyChanged += (sender, args) => changed = true;
 
@@ -224,7 +225,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 
                 this.manager.IsOpenChanged += (s, e) => changed = true;
 
-                this.manager.Open(new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName);
+                this.manager.Open(new FileInfo(RuntimeStoreFilename).FullName);
 
                 Assert.True(changed);
             }
@@ -234,7 +235,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             public void WhenOpeningStateFileAndAlreadyOpened_SavesExistingStateEvenIfNoSolutionIsOpened()
             {
                 var tempFile = Path.Combine(solutionItemsDir, Guid.NewGuid().ToString());
-                File.Copy(new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName, tempFile, true);
+                File.Copy(new FileInfo(RuntimeStoreFilename).FullName, tempFile, true);
 
                 this.manager.Open(tempFile);
 
@@ -242,7 +243,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
 
                 var product = this.manager.CreateProduct(this.toolkitInfo.Object, "Foo");
 
-                this.manager.Open(new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName);
+                this.manager.Open(new FileInfo(RuntimeStoreFilename).FullName);
 
                 Assert.True(File.ReadAllText(tempFile).Contains(product.Id.ToString()));
             }
@@ -332,7 +333,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenOpeningSolutionButShellNotInitialized_ThenWaitsForShellInitialized()
             {
-                var stateFile = new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName;
+                var stateFile = new FileInfo(RuntimeStoreFilename).FullName;
 
                 // Add the product state file to cause the auto-open behavior.
                 this.solution.Items.OfType<SolutionFolder>().First().Items.Add(new Item { PhysicalPath = stateFile });
@@ -356,7 +357,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenOpeningSolutionWithOneStateFile_ThenOpensItInManager()
             {
-                var stateFile = new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName;
+                var stateFile = new FileInfo(RuntimeStoreFilename).FullName;
 
                 this.solutionEvents.Raise(x => x.SolutionOpened += null, new SolutionEventArgs(new Solution
                 {
@@ -383,7 +384,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenOpeningSolutionWithStateFileUnderOtherFolder_ThenDoesNotOpenItInManager()
             {
-                var stateFile = new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName;
+                var stateFile = new FileInfo(RuntimeStoreFilename).FullName;
 
                 this.solutionEvents.Raise(x => x.SolutionOpened += null, new SolutionEventArgs(new Solution
                 {
@@ -410,12 +411,12 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenOpeningSolutionWithMultipleStateFiles_ThenOpensTheOneMatchingTheSolutionName()
             {
-                var stateFile = new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName;
+                var stateFile = new FileInfo(RuntimeStoreFilename).FullName;
 
                 this.solutionEvents.Raise(x => x.SolutionOpened += null, new SolutionEventArgs(new Solution
                 {
-                    Name = "Blank.sln",
-                    PhysicalPath = "Blank.sln",
+                    Name = "Blank.gen.sln",
+                    PhysicalPath = "Blank.gen.sln",
                     Items = 
 					{
 						new SolutionFolder
@@ -436,7 +437,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenOpeningSolutionWithMultipleStateFiles_ThenOpensFirstOneIfNoSolutionNameMatch()
             {
-                var stateFile = new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName;
+                var stateFile = new FileInfo(RuntimeStoreFilename).FullName;
 
                 this.solutionEvents.Raise(x => x.SolutionOpened += null, new SolutionEventArgs(new Solution
                 {
@@ -469,7 +470,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenClosingSolution_ThenClosesManagerIfOpened()
             {
-                this.manager.Open(new FileInfo("Blank" + Constants.RuntimeStoreExtension).FullName);
+                this.manager.Open(new FileInfo(RuntimeStoreFilename).FullName);
 
                 Assert.True(this.manager.IsOpen);
 

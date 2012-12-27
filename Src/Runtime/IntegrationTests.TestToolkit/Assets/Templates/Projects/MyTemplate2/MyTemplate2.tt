@@ -1,11 +1,11 @@
-<#@ output extension=".vstemplate" #>
-<#@ Include File="..\..\..\..\..\..\MasterVersion.ttinclude" #>
+<#@ output extension=".gen.vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
 	<TemplateData>
 		<Name>MyTemplate2</Name>
 		<Description>A test template.</Description>
-		<TemplateID>Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit.MyTemplate2</TemplateID>
+		<TemplateID>NuPattern.Runtime.IntegrationTests.TestToolkit.MyTemplate2</TemplateID>
 		<ProjectType>CSharp</ProjectType>
 		<ProjectSubType></ProjectSubType>
 		<SortOrder>1000</SortOrder>
@@ -18,7 +18,7 @@
 		<RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
 	</TemplateData>
 	<TemplateContent>
-		<Project File="MyTemplate2Project.csproj" ReplaceParameters="true">
+		<Project File="MyTemplate2Project.gen.csproj" TargetFileName="MyTemplate2.csproj" ReplaceParameters="true">
 			<ProjectItem ReplaceParameters="true">source.vsixmanifest</ProjectItem>
 			<Folder Name="Properties">
 				<ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
@@ -29,7 +29,7 @@
 		<Replacement Key="$schemaId$" Value="$guid3$" />
 	</WizardData>
 	<WizardExtension>
-		<Assembly>Microsoft.VisualStudio.Patterning.Runtime, Version=<#=assemblyVersion #>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-		<FullClassName>Microsoft.VisualStudio.Patterning.Runtime.ReplacementTemplateWizard</FullClassName>
+		<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion #>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>NuPattern.Runtime.ReplacementTemplateWizard</FullClassName>
 	</WizardExtension>
 </VSTemplate>

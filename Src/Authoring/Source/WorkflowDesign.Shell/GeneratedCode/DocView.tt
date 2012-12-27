@@ -1,2 +1,0 @@
-<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\WorkflowDesign\DslDefinition.dsl'" #>
-<#@ include file="DslPackage\DocView.tt" #>

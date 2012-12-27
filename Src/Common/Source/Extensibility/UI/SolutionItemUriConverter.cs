@@ -1,11 +1,11 @@
 using System;
 using System.ComponentModel;
 using System.Globalization;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Extensibility.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Converts an <see cref="string"/> URI to an <see cref="IItemContainer"/> in the solution.

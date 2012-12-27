@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Common.Presentation
+﻿namespace NuPattern.Common.Presentation
 {
 	/// <summary>
 	/// Represents the editor type to be shown to the user.

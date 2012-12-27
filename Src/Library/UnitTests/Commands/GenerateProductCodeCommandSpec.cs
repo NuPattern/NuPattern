@@ -3,21 +3,21 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Moq.Protected;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.References;
+using NuPattern.Library.Automation;
+using NuPattern.Library.Commands;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Store;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
+namespace NuPattern.Library.UnitTests.Commands
 {
     public class GenerateProductCodeCommandSpec
     {
@@ -132,7 +132,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
                 base.Initialize();
 
                 this.PatternManager.Setup(x => x.IsOpen).Returns(true);
-                this.PatternManager.Setup(x => x.StoreFile).Returns("C:\\Foo" + Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension);
+                this.PatternManager.Setup(x => x.StoreFile).Returns("C:\\Foo" + NuPattern.Runtime.Constants.RuntimeStoreExtension);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -151,7 +151,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Commands
             {
                 Command.Execute();
 
-                Assert.Equal("C:\\Foo" + Microsoft.VisualStudio.Patterning.Runtime.Constants.RuntimeStoreExtension, Command.ModelFile);
+                Assert.Equal("C:\\Foo" + NuPattern.Runtime.Constants.RuntimeStoreExtension, Command.ModelFile);
             }
 
             [TestMethod, TestCategory("Unit")]

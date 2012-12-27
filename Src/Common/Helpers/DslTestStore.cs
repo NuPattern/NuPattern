@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Moq;
 
-namespace Microsoft.VisualStudio.Patterning
+namespace NuPattern
 {
 	internal class DslTestStore<TDomainModel> : IDisposable
 	{

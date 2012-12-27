@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	// NOTE: this evaluator now has pattern-toolkit knowledge, so it will 
 	// never be removed from VSPAT. Maybe it should be renamed to PatternExpressionEvaluator or something.

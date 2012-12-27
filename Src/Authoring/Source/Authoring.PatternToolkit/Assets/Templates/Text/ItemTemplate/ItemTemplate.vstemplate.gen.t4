@@ -1,0 +1,31 @@
+﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" #>
+<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
+<#@ Output extension=".vstemplate" #>
+<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Authoring.PatternToolkit" #>
+<#@ Import Namespace="System.Linq" #>
+<#
+	IItemTemplate template = ((IProductElement)this.Element).As<IItemTemplate>();
+#><?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name><#=template.InstanceName #></Name>
+		<Description></Description>
+		<TemplateID><#= Guid.NewGuid()#></TemplateID>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType></ProjectSubType>
+		<SortOrder>10</SortOrder>
+		<Icon>__TemplateIcon.ico</Icon>
+		<DefaultName><#=template.InstanceName.Replace(" ", string.Empty) #></DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<References />
+		<ProjectItem TargetFileName="$fileinputname$.cs" ReplaceParameters="true">Content.cs</ProjectItem>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>NuPattern.Library, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>

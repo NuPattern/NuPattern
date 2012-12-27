@@ -1,18 +1,18 @@
-﻿using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
-using Microsoft.VisualStudio.Patterning.Library.Commands;
-using Microsoft.VisualStudio.Patterning.Library.Conditions;
-using Microsoft.VisualStudio.Patterning.Library.Events;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
+﻿using NuPattern.Extensibility.Binding;
+using NuPattern.Library.Commands;
+using NuPattern.Library.Conditions;
+using NuPattern.Library.Events;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Customizations for the <see cref="ArtifactExtension"/> class.
     /// </summary>
     public partial class ArtifactExtension
     {
-        private static readonly string navigateIconPath = ""; //"Resources/NavigateSolutionItemIcon.png";
+        private static readonly string navigateIconPath = ""; //"Resources/CommandNavigateSolutionItem.png";
 
         /// <summary>
         /// Ensures the associated commands and launchpoint automation are created and configured correctly.

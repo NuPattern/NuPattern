@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CCFA61.47939DD0"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDDE48.D852D090"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CCFA61.47939DD0
+------=_NextPart_01CDDE48.D852D090
 Content-Location: file:///C:/95393234/ConfiguringaTemplateLaunchPoint.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -37,12 +37,11 @@ w\:* {behavior:url(#default#VML);}
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-03-05T08:48:00Z</o:Created>
-  <o:LastSaved>2012-03-05T08:48:00Z</o:LastSaved>
+  <o:Created>2012-12-19T11:27:00Z</o:Created>
+  <o:LastSaved>2012-12-19T11:27:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>779</o:Words>
   <o:Characters>4443</o:Characters>
-  <o:Company>Microsoft Corporation</o:Company>
   <o:Lines>37</o:Lines>
   <o:Paragraphs>10</o:Paragraphs>
   <o:CharactersWithSpaces>5212</o:CharactersWithSpaces>
@@ -367,20 +366,12 @@ n"/>
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:1;
-	mso-generic-font-family:roman;
-	mso-font-format:other;
-	mso-font-pitch:variable;
-	mso-font-signature:0 0 0 0 0 0;}
-@font-face
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;
 	mso-font-charset:0;
 	mso-generic-font-family:swiss;
 	mso-font-pitch:variable;
-	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+	mso-font-signature:-536870145 1073786111 1 0 415 0;}
 @font-face
 	{font-family:Tahoma;
 	panose-1:2 11 6 4 3 5 4 4 2 4;
@@ -2165,9 +2156,7 @@ ul
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-hansi-theme-font:minor-latin;}
 table.MsoTableGrid
 	{mso-style-name:"Table Grid";
 	mso-tstyle-rowband-size:0;
@@ -2187,9 +2176,7 @@ table.MsoTableGrid
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-hansi-theme-font:minor-latin;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext=3D"edit" spidmax=3D"1027"/>
@@ -2280,11 +2267,11 @@ margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: When you select the *.vstemplate file from the template
 picker dialog, the contents of the *.vstemplate file are automatically
-re-configured, and synchronized with the values of the current element. All
-content files of the template are also configured so that when the solution=
- is
-built the VS template archive is automatically created and packaged in the
-toolkit.<o:p></o:p></p>
+re-configured, and synchronized with the values of the current element. All=
+ content
+files of the template are also configured so that when the solution is built
+the VS template archive is automatically created and packaged in the toolki=
+t.<o:p></o:p></p>
 
 </div>
 
@@ -2562,7 +2549,7 @@ execute a command after the template has unfolded.<o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CCFA61.47939DD0
+------=_NextPart_01CDDE48.D852D090
 Content-Location: file:///C:/95393234/ConfiguringaTemplateLaunchPoint_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2623,7 +2610,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CCFA61.47939DD0
+------=_NextPart_01CDDE48.D852D090
 Content-Location: file:///C:/95393234/ConfiguringaTemplateLaunchPoint_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2633,7 +2620,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CCFA61.47939DD0
+------=_NextPart_01CDDE48.D852D090
 Content-Location: file:///C:/95393234/ConfiguringaTemplateLaunchPoint_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -2685,7 +2672,7 @@ uwvWmk+fPr11+1ZLc0ssOqUWz7lS5TtD1PSHGgdsqldXV+/du3fnzp0Ql/MFWr8GlOjIra1YmL/E
 +ndyArkqzY6WnuPzVswc9QdPgLzFvj90HZaw+JnN7XZnfGfO3wBxH6TrwMAAtmmgqxdJaOEtqCFY
 NmDLALI864Tmg5izNX0/Nxjt0d8Pmqxv+RFA/C85bM3xycABVgAAAABJRU5ErkJggk==
 
-------=_NextPart_01CCFA61.47939DD0
+------=_NextPart_01CDDE48.D852D090
 Content-Location: file:///C:/95393234/ConfiguringaTemplateLaunchPoint_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -2697,4 +2684,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image001.png"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CCFA61.47939DD0--
+------=_NextPart_01CDDE48.D852D090--

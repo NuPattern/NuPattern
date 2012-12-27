@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Microsoft.VisualStudio.Modeling.Shell;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Image dialog to select an image file.
@@ -125,7 +125,7 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 			}
 			catch (Exception ex)
 			{
-				if (ErrorHandler.IsCriticalException(ex))
+				if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(ex))
 				{
 					throw;
 				}

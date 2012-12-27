@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using EnvDTE;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Runtime.Properties;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Extensibility;
+using NuPattern.Runtime.Properties;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Custom template wizard extension that fixes Include paths on linked project items.
@@ -47,9 +47,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 						foreach (var project in projects)
 						{
 							var fileInfo = new FileInfo(project.FullName);
-							var projectBuilder = Build.Construction.ProjectRootElement.Open(fileInfo.FullName);
-							var projectEvaluated = Build.Evaluation.ProjectCollection.GlobalProjectCollection.LoadedProjects
-								.FirstOrDefault<Build.Evaluation.Project>(p => p.FullPath.Equals(fileInfo.FullName, StringComparison.InvariantCultureIgnoreCase));
+							var projectBuilder = Microsoft.Build.Construction.ProjectRootElement.Open(fileInfo.FullName);
+							var projectEvaluated = Microsoft.Build.Evaluation.ProjectCollection.GlobalProjectCollection.LoadedProjects
+								.FirstOrDefault<Microsoft.Build.Evaluation.Project>(p => p.FullPath.Equals(fileInfo.FullName, StringComparison.InvariantCultureIgnoreCase));
 
 							if (projectBuilder != null && projectEvaluated != null)
 							{
@@ -65,7 +65,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 
 									if (fileChange != null)
 									{
-										ErrorHandler.ThrowOnFailure(fileChange.IgnoreFile(cookie, fileInfo.FullName, 1));
+                                        Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(fileChange.IgnoreFile(cookie, fileInfo.FullName, 1));
 									}
 
 									foreach (var item in items)
@@ -94,8 +94,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 									// Resume project file change notifications
 									if (fileChange != null)
 									{
-										ErrorHandler.ThrowOnFailure(fileChange.SyncFile(fileInfo.FullName));
-										ErrorHandler.ThrowOnFailure(fileChange.IgnoreFile(cookie, fileInfo.FullName, 0));
+                                        Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(fileChange.SyncFile(fileInfo.FullName));
+                                        Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(fileChange.IgnoreFile(cookie, fileInfo.FullName, 0));
 
 										project.ReloadProject();
 									}

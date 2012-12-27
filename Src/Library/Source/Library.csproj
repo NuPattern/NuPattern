@@ -8,8 +8,8 @@
     <ProjectGuid>{C6519E4A-2077-4E80-A280-E8BA90D53A3E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Library</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Library</AssemblyName>
+    <RootNamespace>NuPattern.Library</RootNamespace>
+    <AssemblyName>NuPattern.Library</AssemblyName>
     <GacTargetOutput>false</GacTargetOutput>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -52,7 +52,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop">
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -83,7 +83,7 @@
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
-      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
     </Reference>
     <Reference Include="VSLangProj">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -106,8 +106,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Automation\Artifact\ArtifactExtension.cs" />
     <Compile Include="Automation\Artifact\ArtifactReferencesValidation.cs" />
@@ -305,16 +305,15 @@
     <Compile Include="Events\OnBuildStartedEvent.cs" />
     <Compile Include="Extensions\CommandSettingExtensions.cs" />
     <Compile Include="Extensions\ProductElementExtensions.cs" />
-    <Compile Include="GeneratedCode\Customization\LibraryExports.cs">
+    <Compile Include="GeneratedCode\Customization\LibraryExports.gen.cs">
       <DependentUpon>LibraryExports.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="GeneratedCode\Customization\SettingsImplementation.cs">
+    <Compile Include="GeneratedCode\Customization\SettingsImplementation.gen.cs">
       <DependentUpon>SettingsImplementation.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Automation\Command\CommandSettings.cs" />
@@ -326,10 +325,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\Customization\SettingsInterfaces.cs">
+    <Compile Include="GeneratedCode\Customization\SettingsInterfaces.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <ExcludeFromSourceAnalysis>True</ExcludeFromSourceAnalysis>
       <DependentUpon>SettingsInterfaces.tt</DependentUpon>
     </Compile>
     <Compile Include="Automation\Rules\PatternElementSchemaAddRule.cs" />
@@ -379,89 +377,105 @@
     <None Include="GeneratedCode\Customization\DomainXmlSerializationBehavior.tt" />
     <None Include="GeneratedCode\Customization\LibraryExports.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>LibraryExports.cs</LastGenOutput>
+      <LastGenOutput>LibraryExports.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\Customization\LibraryGenerationUtilities.ttinclude" />
     <None Include="GeneratedCode\Customization\SettingsImplementation.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SettingsImplementation.cs</LastGenOutput>
+      <LastGenOutput>SettingsImplementation.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\DslDefinitionAccess.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DslDefinitionAccess.cs</LastGenOutput>
+      <LastGenOutput>DslDefinitionAccess.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\SerializationHelper.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SerializationHelper.cs</LastGenOutput>
+      <LastGenOutput>SerializationHelper.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="GeneratedCode\DslDefinitionAccess.cs">
+    <Compile Include="GeneratedCode\DslDefinitionAccess.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DslDefinitionAccess.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\DomainClasses.cs">
+    <Compile Include="GeneratedCode\DomainClasses.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DomainClasses.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\DomainRelationships.cs">
+    <Compile Include="GeneratedCode\DomainRelationships.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DomainRelationships.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\HelpKeywordHelper.cs">
+    <Compile Include="GeneratedCode\HelpKeywordHelper.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HelpKeywordHelper.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\MultiplicityValidation.cs">
+    <Compile Include="GeneratedCode\MultiplicityValidation.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MultiplicityValidation.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\PropertiesGrid.cs">
+    <Compile Include="GeneratedCode\PropertiesGrid.gen.cs">
       <DependentUpon>PropertiesGrid.tt</DependentUpon>
       <SubType>Code</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="GeneratedCode\SerializationHelper.cs">
+    <Compile Include="GeneratedCode\SerializationHelper.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SerializationHelper.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\Shapes.cs">
+    <Compile Include="GeneratedCode\Shapes.gen.cs">
       <DependentUpon>Shapes.tt</DependentUpon>
       <SubType>Code</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GeneratedCode\DomainModel.cs">
+    <Compile Include="GeneratedCode\DomainModel.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DomainModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\Serializer.cs">
+    <Compile Include="GeneratedCode\Serializer.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Serializer.tt</DependentUpon>
     </Compile>
     <None Include="GeneratedCode\Customization\SettingsInterfaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SettingsInterfaces.cs</LastGenOutput>
+      <LastGenOutput>SettingsInterfaces.gen.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\NavigateSolutionItemIcon.png" />
-    <Resource Include="Resources\ShowGuidanceIcon.png" />
-    <Resource Include="Resources\DragDropSettings.png" />
-    <Resource Include="Resources\TemplateSettings.png" />
-    <Resource Include="Resources\MenuSettings.png" />
-    <Resource Include="Resources\EventSettings.png" />
-    <Resource Include="Resources\WizardSettings.png" />
-    <Resource Include="Resources\CommandSettings.png" />
-    <EmbeddedResource Include="GeneratedCode\DomainModelResx.resx">
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandNavigateSolutionItem.png">
+      <Link>Resources\CommandNavigateSolutionItem.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandShowGuidance.png">
+      <Link>Resources\CommandShowGuidance.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsDragDropSettings.png">
+      <Link>Resources\AutomationSettingsDragDropSettings.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsTemplateSettings.png">
+      <Link>Resources\AutomationSettingsTemplateSettings.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsMenuSettings.png">
+      <Link>Resources\AutomationSettingsMenuSettings.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsEventSettings.png">
+      <Link>Resources\AutomationSettingsEventSettings.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsWizardSettings.png">
+      <Link>Resources\AutomationSettingsWizardSettings.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\AutomationSettingsCommandSettings.png">
+      <Link>Resources\AutomationSettingsCommandSettings.png</Link>
+    </Resource>
+    <EmbeddedResource Include="GeneratedCode\DomainModelResx.gen.resx">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DomainModelResx.tt</DependentUpon>
@@ -474,40 +488,40 @@
     </EmbeddedResource>
     <None Include="GeneratedCode\DomainRelationships.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DomainRelationships.cs</LastGenOutput>
+      <LastGenOutput>DomainRelationships.gen.cs</LastGenOutput>
     </None>
     <EmbeddedResource Include="DslDefinition.dsl">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="GeneratedCode\DomainClasses.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DomainClasses.cs</LastGenOutput>
+      <LastGenOutput>DomainClasses.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\DomainModelResx.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DomainModelResx.resx</LastGenOutput>
+      <LastGenOutput>DomainModelResx.gen.resx</LastGenOutput>
     </None>
     <None Include="GeneratedCode\HelpKeywordHelper.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>HelpKeywordHelper.cs</LastGenOutput>
+      <LastGenOutput>HelpKeywordHelper.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\MultiplicityValidation.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MultiplicityValidation.cs</LastGenOutput>
+      <LastGenOutput>MultiplicityValidation.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\PropertiesGrid.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PropertiesGrid.cs</LastGenOutput>
+      <LastGenOutput>PropertiesGrid.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\LibrarySchema.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>LibrarySchema.xsd</LastGenOutput>
+      <LastGenOutput>LibrarySchema.gen.xsd</LastGenOutput>
     </None>
     <None Include="GeneratedCode\DomainModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DomainModel.cs</LastGenOutput>
+      <LastGenOutput>DomainModel.gen.cs</LastGenOutput>
     </None>
-    <Content Include="GeneratedCode\LibrarySchema.xsd">
+    <Content Include="GeneratedCode\LibrarySchema.gen.xsd">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LibrarySchema.tt</DependentUpon>
@@ -516,11 +530,11 @@
     </Content>
     <None Include="GeneratedCode\Serializer.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Serializer.cs</LastGenOutput>
+      <LastGenOutput>Serializer.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\Shapes.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Shapes.cs</LastGenOutput>
+      <LastGenOutput>Shapes.gen.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -546,12 +560,7 @@
       <Name>Runtime</Name>
     </ProjectReference>
   </ItemGroup>
-  <PropertyGroup>
-    <TransformOnBuild>True</TransformOnBuild>
-  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
-  <!--<Import Project="$(DslTargetsPath)\Microsoft.DslTools.settings.targets" />-->
-  <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.DslProjects.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

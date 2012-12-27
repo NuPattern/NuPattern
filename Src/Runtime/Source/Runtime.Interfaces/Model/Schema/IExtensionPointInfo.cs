@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
     [CLSCompliant(false)]
     public partial interface IExtensionPointInfo : IContainedElementInfo

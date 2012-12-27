@@ -1,5 +1,5 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Runtime.Schema\DslDefinition.dsl'" #>
 <#@ Include File="..\..\..\..\Common\Helpers\DslVersion.tt" #>
 <#@ Include File="..\..\..\..\Common\Helpers\Helpers.tt" #>
@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq.Expressions;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 <#
 	foreach (var domainClass in this.DslLibrary.Classes)

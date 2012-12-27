@@ -6,11 +6,11 @@ using System.ComponentModel;
 using System.Drawing.Design;
 using System.Linq;
 using System.Runtime.Serialization;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.Extensibility.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
+namespace NuPattern.Extensibility.Binding
 {
     /// <summary>
     /// Default implementation of <see cref="IBindingSettings"/>.

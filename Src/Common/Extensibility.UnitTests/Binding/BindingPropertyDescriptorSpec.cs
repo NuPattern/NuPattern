@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility.Binding;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.UnitTests.Binding
+namespace NuPattern.Extensibility.UnitTests.Binding
 {
     public class BindingPropertyDescriptorSpec
     {

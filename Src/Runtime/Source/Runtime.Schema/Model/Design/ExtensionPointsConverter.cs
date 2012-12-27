@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// ExtensionPoints type converter

@@ -1,8 +1,8 @@
-﻿<#@ output extension=".targets" #>
-<#@ Include File="..\..\..\MasterVersion.ttinclude" #>
+﻿<#@ output extension=".gen.targets" #>
+<#@ Include File="..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PatternToolkitVersion><#=authoringVSIXVersion #></PatternToolkitVersion>
+    <PatternToolkitVersion><#=VersionInfo.AuthoringVSIXVersion #></PatternToolkitVersion>
   </PropertyGroup>
 </Project>

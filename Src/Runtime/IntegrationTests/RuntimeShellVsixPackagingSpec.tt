@@ -1,10 +1,11 @@
-﻿<#@ output extension=".cs" #>
-<#@ Include File="..\..\MasterVSIXInfo.ttinclude" #>
+﻿<#@ output extension=".gen.cs" #>
+<#@ Include File="..\..\MasterVSIXInfo.gen.ttinclude" #>
+using System;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.IntegrationTests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.IntegrationTests;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests
 {
     [TestClass]
     public class RuntimeShellVsixPackagingSpec
@@ -40,22 +41,23 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
 				
 				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
 				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
-				Assert.Equal(@"Resources\RunTimeVsix.png", this.VsixInfo.Header.Icon);
-				Assert.Equal(@"Resources\RunTimeVsixPreview.png", this.VsixInfo.Header.PreviewImage);
-				Assert.Equal(@"<#=VsixInfo.PatternToolkitRuntime.MoreInfoUrl#>", this.VsixInfo.Header.MoreInfoUrl.ToString());
-				Assert.Equal(@"<#=VsixInfo.PatternToolkitRuntime.MoreInfoUrl#>", this.VsixInfo.Header.GettingStartedGuide.ToString());
+				Assert.Equal(@"Resources\VsixIconRunTime.png", this.VsixInfo.Header.Icon);
+				Assert.Equal(@"Resources\VsixPreviewRunTime.png", this.VsixInfo.Header.PreviewImage);
+				Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitRuntime.MoreInfoUrl#>"), this.VsixInfo.Header.MoreInfoUrl);
+				Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitRuntime.GettingStartedUrl#>"), this.VsixInfo.Header.GettingStartedGuide);
 
                 //SupportedFrameworkRuntimeEdition
-				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
 #if VSVER10
-				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
+				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMinVersion.ToString());
+				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMaxVersion.ToString());
 #endif
 #if VSVER11
+				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
                 Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
 #endif
                 //SupportedProducts
 #if VSVER10
-                Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "10.0"));
+                Assert.Equal(1, this.VsixInfo.Header.SupportedVSVersions.Count(t => t.Major.ToString() + "." + t.Minor.ToString() == "10.0"));
 #endif
 #if VSVER11
                 Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
@@ -94,8 +96,8 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
                 Assert.True(this.FolderContainsExclusive(@"Resources",
                     new[]
                         {
-                            "RunTimeVsix.png",
-                            "RunTimeVsixPreview.png",
+                            "VsixIconRunTime.png",
+                            "VsixPreviewRunTime.png",
                         }));
 			}
 						
@@ -129,27 +131,27 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
                             "Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll",
 
                             //Runtime Assemblies
-                            "Microsoft.VisualStudio.Patterning.Common.Presentation.dll",
-                            "Microsoft.VisualStudio.Patterning.Extensibility.dll",
-                            "Microsoft.VisualStudio.Patterning.Extensibility.Serialization.dll",
-                            "Microsoft.VisualStudio.Patterning.Library.dll",
-                            "Microsoft.VisualStudio.Patterning.Runtime.dll",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Interfaces.dll",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Schema.dll",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Shell.dll",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Shell.pkgdef",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Store.dll",
+                            "NuPattern.Common.Presentation.dll",
+                            "NuPattern.Extensibility.dll",
+                            "NuPattern.Extensibility.Serialization.dll",
+                            "NuPattern.Library.dll",
+                            "NuPattern.Runtime.dll",
+                            "NuPattern.Runtime.Interfaces.dll",
+                            "NuPattern.Runtime.Schema.dll",
+                            "NuPattern.Runtime.Shell.dll",
+                            "NuPattern.Runtime.Shell.pkgdef",
+                            "NuPattern.Runtime.Store.dll",
 
 							// XML documentation
-                            //"Microsoft.VisualStudio.Patterning.Common.Presentation.xml",
-                            "Microsoft.VisualStudio.Patterning.Extensibility.xml",
-                            //"Microsoft.VisualStudio.Patterning.Extensibility.Serialization.xml",
-                            "Microsoft.VisualStudio.Patterning.Library.xml",
-                            "Microsoft.VisualStudio.Patterning.Runtime.xml",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Interfaces.xml",
-                            "Microsoft.VisualStudio.Patterning.Runtime.Schema.xml",
-                            //"Microsoft.VisualStudio.Patterning.Runtime.Shell.xml",
-                            //"Microsoft.VisualStudio.Patterning.Runtime.Store.xml",
+                            //"NuPattern.Common.Presentation.xml",
+                            "NuPattern.Extensibility.xml",
+                            //"NuPattern.Extensibility.Serialization.xml",
+                            "NuPattern.Library.xml",
+                            "NuPattern.Runtime.xml",
+                            "NuPattern.Runtime.Interfaces.xml",
+                            "NuPattern.Runtime.Schema.xml",
+                            //"NuPattern.Runtime.Shell.xml",
+                            //"NuPattern.Runtime.Store.xml",
                         }));
             }
         }

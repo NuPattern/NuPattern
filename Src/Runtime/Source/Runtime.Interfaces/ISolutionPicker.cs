@@ -2,7 +2,7 @@
 using System.Windows;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Defines a picker used for selecting filtered solution artifacts.

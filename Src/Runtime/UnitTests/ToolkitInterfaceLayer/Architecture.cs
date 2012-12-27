@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
 namespace Toolkit14
 {
@@ -9,7 +9,7 @@ namespace Toolkit14
 	///	Description for WebService.Architecture
 	///	</summary>
 	[Description("Description for WebService.Architecture")]
-    [ToolkitInterfaceProxy(ExtensionId = "The Outercurve Foundation", DefinitionId = "decb63d3-5dd6-488c-a606-65e01a232320")]
+    [ToolkitInterfaceProxy(ExtensionId = "NuPattern", DefinitionId = "decb63d3-5dd6-488c-a606-65e01a232320")]
 	public partial class Architecture : IArchitecture
 	{
 		private IView target;

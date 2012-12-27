@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Extensibility.References;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Runtime;
-using Microsoft.VisualStudio.Patterning.Runtime.Store;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using ModelElementExtensions = Microsoft.VisualStudio.Patterning.Extensibility.ModelElementExtensions;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.References;
+using NuPattern.Library.Automation;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Store;
+using ModelElementExtensions = NuPattern.Extensibility.ModelElementExtensions;
 
-namespace Microsoft.VisualStudio.Patterning.Library.UnitTests.Automation.Artifact
+namespace NuPattern.Library.UnitTests.Automation.Artifact
 {
     public class ArtifactReferenceValidationSpec
     {

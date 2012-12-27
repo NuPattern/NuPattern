@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle(@"Microsoft.VisualStudio.Patterning.Library.UnitTests")]
+[assembly: AssemblyTitle(@"NuPattern.Library.UnitTests")]
 [assembly: AssemblyDescription(@"")]
 [assembly: AssemblyConfiguration("")]
 

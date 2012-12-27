@@ -3,9 +3,9 @@
 			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 			Version="1.0.0"
 			xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-  <Identifier Id="Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.SampleVsix">
+  <Identifier Id="NuPattern.Runtime.IntegrationTests.SampleVsix">
     <Name>Runtime IntegrationTests SampleVsix</Name>
-    <Author>Outercurve</Author>
+    <Author>NuPattern</Author>
     <Version>1.0</Version>
     <Description xml:space="preserve">Provides support for runtime integration tests (publishing mef components, etc.)</Description>
     <Locale>1033</Locale>

@@ -5,5 +5,8 @@
 public static class RuntimeShellPackageInfo
 {
     public const string PackageGuid = "93373818-600f-414b-8181-3a0cb79fa785";
+	public const string OutputWindowTitle = "NuPattern Toolkit Extensions";
+	public const string OptionPageCategory = "NuPattern Toolkit Extensions";
+	public const string OptionPageSubCategoryTracing = "Tracing";
 }
 #>

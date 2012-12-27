@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Data;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.UI
+namespace NuPattern.Runtime.UI
 {
 	/// <summary>
 	/// Returns the element icon from NamedElementSchema or the default IconPath if the Icon doesn't exist

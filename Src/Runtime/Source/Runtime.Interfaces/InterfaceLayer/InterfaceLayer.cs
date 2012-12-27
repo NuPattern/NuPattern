@@ -5,10 +5,10 @@ using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using Microsoft.VisualStudio.Patterning.Runtime.Interfaces;
+using NuPattern.Runtime.Interfaces;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Provides extension methods to <see cref="IProduct"/>, <see cref="IView"/> and 
@@ -217,7 +217,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 
 		private static string GetDesignerOrThrow(Type type)
 		{
-			var designer = type.GetCustomAttribute<DesignerAttribute>();
+			var designer = ReflectionExtensions.GetCustomAttribute<DesignerAttribute>(type);
 			if (designer == null)
 				throw new NotSupportedException(string.Format(
 					CultureInfo.CurrentCulture,
@@ -241,7 +241,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime
 
 		private static Type GetProxyTypeOrThrow(Type type)
 		{
-			var designer = type.GetCustomAttribute<DesignerAttribute>();
+			var designer = ReflectionExtensions.GetCustomAttribute<DesignerAttribute>(type);
 			if (designer == null)
 				throw new NotSupportedException(string.Format(
 					CultureInfo.CurrentCulture,

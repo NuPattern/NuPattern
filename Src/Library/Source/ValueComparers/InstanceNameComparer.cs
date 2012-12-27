@@ -1,8 +1,8 @@
-﻿using Microsoft.VisualStudio.Patterning.Extensibility;
-using Microsoft.VisualStudio.Patterning.Library.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
+﻿using NuPattern.Extensibility;
+using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Comparers
+namespace NuPattern.Library.Comparers
 {
     /// <summary>
     /// Compares the <see cref="IProductElement.InstanceName"/> of two elements alphabetically.

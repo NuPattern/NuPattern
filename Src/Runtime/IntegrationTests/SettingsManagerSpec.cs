@@ -1,12 +1,12 @@
 ﻿using System.Diagnostics;
 using System.Linq;
-using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Settings;
 using Microsoft.VisualStudio.Shell.Settings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests
 {
     public class SettingsManagerSpec
     {
@@ -25,9 +25,9 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests
                 var manager = new ShellSettingsManager(VsIdeTestHostContext.ServiceProvider);
                 var store = manager.GetWritableSettingsStore(SettingsScope.UserSettings);
 
-                if (store.CollectionExists(Microsoft.VisualStudio.Patterning.Runtime.Constants.RegistrySettingsKeyName))
+                if (store.CollectionExists(NuPattern.Runtime.Constants.RegistrySettingsKeyName))
                 {
-                    store.DeleteCollection(Microsoft.VisualStudio.Patterning.Runtime.Constants.RegistrySettingsKeyName);
+                    store.DeleteCollection(NuPattern.Runtime.Constants.RegistrySettingsKeyName);
                 }
 
                 this.manager = components.GetService<ISettingsManager>();

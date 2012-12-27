@@ -4,7 +4,7 @@ using EnvDTE;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
+namespace NuPattern.Runtime.Shell
 {
 	[PartCreationPolicy(CreationPolicy.Shared)]
 	[Export(typeof(IItemEvents))]
@@ -53,7 +53,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Shell
 					}
 					catch (Exception ex)
 					{
-						if (ErrorHandler.IsCriticalException(ex))
+                        if (Microsoft.VisualStudio.ErrorHandler.IsCriticalException(ex))
 						{
 							throw;
 						}

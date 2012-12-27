@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
     [TypeDescriptionProvider(typeof(PatternSchemaTypeDescriptorProvider))]
     public partial class PatternSchema

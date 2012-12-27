@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Properties {
-    using System;
-    
-    
+namespace NuPattern.Runtime.Properties
+{
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -39,7 +39,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.VisualStudio.Patterning.Runtime.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NuPattern.Runtime.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -801,24 +801,6 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Properties {
         internal static string SolutionBuilder_ConfirmDelete {
             get {
                 return ResourceManager.GetString("SolutionBuilder_ConfirmDelete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to create a new empty solution, an error occurred creating and saving the new solution to &apos;{0}&apos;..
-        /// </summary>
-        internal static string SolutionBuilderViewModel_CreateNewSolution_FailedCreate {
-            get {
-                return ResourceManager.GetString("SolutionBuilderViewModel_CreateNewSolution_FailedCreate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to create a new empty solution, the default save location for solutions could not be found..
-        /// </summary>
-        internal static string SolutionBuilderViewModel_CreateNewSolution_FailedDirSearch {
-            get {
-                return ResourceManager.GetString("SolutionBuilderViewModel_CreateNewSolution_FailedDirSearch", resourceCulture);
             }
         }
         

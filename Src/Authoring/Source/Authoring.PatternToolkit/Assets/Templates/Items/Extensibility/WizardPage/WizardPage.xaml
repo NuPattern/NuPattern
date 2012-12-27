@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="$rootnamespace$.$safeitemname$"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://schemas.microsoft.com/visualstudiopatterning/2010/xaml/"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="600"
+    Title="$safeitemname$ Page" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="400"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Display the Name of the current element -->
+        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" FontWeight="Bold">General</Label>
+        <Label Grid.Column="0" Grid.Row="1">Name:</Label>
+		<p:ValueEditor Name="InstanceNameEditor" Value="{Binding InstanceName, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="1"/>
+		
+		<!-- Bind to your other variable properties, and other elements in your pattern model here -->
+		<!-- <Label Grid.Column="0" Grid.Row="1">Variable Property1:</Label>
+		<p:ValueEditor Name="VariableProperty1Editor" Value="{Binding VariableProperty1, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="1"/>-->
+	</Grid>
+</Page>

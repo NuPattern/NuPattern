@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.Modeling.Integration.Shell;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
+namespace NuPattern.Runtime.Schema
 {
 	/// <summary>
 	/// PatternModel bus adapter for the runtime state.
@@ -17,7 +17,7 @@ namespace Microsoft.VisualStudio.Patterning.Runtime.Schema
 		/// <summary>
 		/// Identifier for the runtime state adapter.
 		/// </summary>
-        public const string AdapterId = "Microsoft.VisualStudio.Patterning.Runtime.Schema";
+        public const string AdapterId = "NuPattern.Runtime.Schema";
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Adapter"/> class.

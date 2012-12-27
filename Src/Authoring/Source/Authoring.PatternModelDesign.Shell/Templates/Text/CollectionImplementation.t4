@@ -1,0 +1,106 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="System.ComponentModel.Composition" #>
+<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
+<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="NuPattern.Authoring.Toolkit.Shell.dll" #>
+<#@ Assembly Name="NuPattern.Extensibility.dll" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Extensibility" #>
+<#@ Assembly Name="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
+<#@ Import Namespace="System.Linq" #>
+<#@ Import Namespace="System.ComponentModel" #>
+<#@ Import Namespace="System.Reflection" #>
+<#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
+<#@ Include File="Header.t4" #>
+<#@ Include File="NamedElementParentImplementation.t4" #>
+<#@ Include File="ElementContainerImplementation.t4" #>
+<#@ Include File="ProductElementImplementation.t4" #>
+<# 
+var store = this.ProductLine.Store;
+    
+// The pluralizer in .NET 4.0 only supports English.
+var pluralizer = PluralizationService.CreateService(new System.Globalization.CultureInfo("en-US"));
+
+foreach (var collection in store.DefaultPartition.ElementDirectory.AllElements.OfType<ICollectionInfo>())
+{
+    var codegen = new ProductCodeGeneration<ICollectionInfo, ICollection>(collection);
+    codegen.AddType(typeof(Action));
+    codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
+    codegen.EndInit();
+#>
+namespace <#= RootNamespace #>
+{
+<# 
+	foreach (var ns in codegen.SafeImports)
+	{
+#>
+	using <#=ns #>;
+<#
+	}
+#>
+
+	<# GenerateFactoryProxyAttributes(collection); #>
+	internal partial class <#=collection.CodeIdentifier #> : I<#=collection.CodeIdentifier #>
+	{
+		private IAbstractElement target;
+		private IAbstractElementProxy<I<#=collection.CodeIdentifier #>> proxy;
+
+		/// <summary>
+		/// For MEF.
+		/// </summary>
+		[ImportingConstructor]
+		private <#=collection.CodeIdentifier#>() { }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="<#=collection.CodeIdentifier #>"/> class.
+		/// </summary>
+		public <#=collection.CodeIdentifier #>(IAbstractElement target)
+		{
+			this.target = target;
+			this.proxy = target.ProxyFor<I<#=collection.CodeIdentifier #>>();
+		}	
+
+<# GenerateParentProperty(collection); #>
+
+		/// <summary>
+		/// Gets the generic <see cref="ICollection"/> underlying element.
+		/// </summary>
+		public ICollection AsCollection()
+		{
+			return this.As<ICollection>();
+		}
+
+		/// <summary>
+		/// Gets the generic underlying element as the given type if possible.
+		/// </summary>
+		public TRuntimeInterface As<TRuntimeInterface>()
+			where TRuntimeInterface : class
+		{
+			return this.target as TRuntimeInterface;
+		}
+<# GenerateProperties(codegen, collection); #>
+<#
+PushIndent("\t");
+PushIndent("\t");
+
+GenerateContainedElements(pluralizer, collection);
+
+PopIndent();
+PopIndent();
+#>
+
+		/// <summary>
+		/// Deletes this instance.
+		/// </summary>
+		public void Delete()
+		{
+			this.target.Delete();
+		}
+	}
+}
+
+<#
+}
+#>

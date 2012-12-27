@@ -1,14 +1,14 @@
 ﻿using System;
 using System.ComponentModel.Composition.Primitives;
 using System.Linq;
-using Microsoft.VisualStudio.Patterning.Common.Presentation;
-using Microsoft.VisualStudio.Patterning.Library.Automation;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Common.Presentation;
+using NuPattern.Library.Automation;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Library.IntegrationTests
+namespace NuPattern.Library.IntegrationTests
 {
 	public class WizardAutomationSpec
 	{

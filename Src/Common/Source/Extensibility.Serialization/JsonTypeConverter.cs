@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization
+namespace NuPattern.Extensibility.Serialization
 {
     /// <summary>
     /// A type converter that converts to and from a Json string serialization of a value 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using DataAnnotations = System.ComponentModel.DataAnnotations;
 
-namespace Microsoft.VisualStudio.Patterning.Authoring.Guidance
+namespace NuPattern.Authoring.Guidance
 {
 	/// <summary>
 	/// Defines a guidance processor.

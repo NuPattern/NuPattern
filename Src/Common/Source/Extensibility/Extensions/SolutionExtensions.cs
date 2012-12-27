@@ -7,17 +7,17 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using EnvDTE;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Design;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.HierarchyNodes;
+using NuPattern.Extensibility.Properties;
+using NuPattern.Runtime;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
     /// <summary>
     /// Provides usability methods for working with <see cref="ISolution"/>.
@@ -509,10 +509,10 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
                         {
                             var solutionExplorer = StandardToolWindows.ProjectExplorer;
                             IVsWindowFrame frame;
-                            ErrorHandler.ThrowOnFailure(service.FindToolWindow((uint)__VSFINDTOOLWIN.FTW_fForceCreate, ref solutionExplorer, out frame));
+                            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(service.FindToolWindow((uint)__VSFINDTOOLWIN.FTW_fForceCreate, ref solutionExplorer, out frame));
                             if (frame != null)
                             {
-                                ErrorHandler.ThrowOnFailure(frame.Show());
+                                Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(frame.Show());
                             }
                         }
                     }
@@ -741,8 +741,8 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
             if (service != null)
             {
                 var rguidPersistenceSlot = new Guid(EnvDTE.Constants.vsWindowKindSolutionExplorer);
-                ErrorHandler.ThrowOnFailure(service.FindToolWindow(0x80000, ref rguidPersistenceSlot, out frame));
-                ErrorHandler.ThrowOnFailure(frame.GetProperty((int)__VSFPROPID.VSFPROPID_DocView, out obj2));
+                Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(service.FindToolWindow(0x80000, ref rguidPersistenceSlot, out frame));
+                Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(frame.GetProperty((int)__VSFPROPID.VSFPROPID_DocView, out obj2));
                 bool flag = true;
                 var window = obj2 as IVsUIHierarchyWindow;
 

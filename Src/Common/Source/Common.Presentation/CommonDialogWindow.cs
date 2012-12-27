@@ -1,7 +1,7 @@
-﻿using Microsoft.VisualStudio.PlatformUI;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+﻿using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Common.Presentation.Vs;
 
-namespace Microsoft.VisualStudio.Patterning.Common.Presentation
+namespace NuPattern.Common.Presentation
 {
     /// <summary>
     /// This is a base class for all XAML forms.
@@ -11,7 +11,7 @@ namespace Microsoft.VisualStudio.Patterning.Common.Presentation
     /// to derive from this base class to ensure that this assembly and its shared XAML resources are loaded in the same AppDomain
     /// as the assembly using the shared resources. This is a workaround to fix the intermittent XAML rsource missing exception.
     /// </remarks>
-    public class CommonDialogWindow : DialogWindow
+    public class CommonDialogWindow : VsDialogWindow
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor(typeof(CommonDialogWindow));
 

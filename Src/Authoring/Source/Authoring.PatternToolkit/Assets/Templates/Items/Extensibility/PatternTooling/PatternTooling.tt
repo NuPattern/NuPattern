@@ -1,0 +1,43 @@
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\..\..\..\..\Authoring.WorkflowDesign\DslDefinition.dsl'" #>
+<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ Include File="..\..\..\..\..\..\..\..\Common\Helpers\DslVersion.tt" #>
+<#@ output extension=".gen.vstemplate" #>
+<#@ Include File="..\..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Pattern Tooling Design</Name>
+		<Description>Creates a Pattern Toolkit tooling design.</Description>
+		<TemplateID>231bca8f8397-PatternToolkit.Design.ProductionTooling</TemplateID>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType>Extensibility</ProjectSubType>
+		<SortOrder>10</SortOrder>
+		<Icon></Icon>
+		<DefaultName>PatternTooling</DefaultName>
+		<Hidden>true</Hidden>
+	</TemplateData>
+    <TemplateContent>
+        <References />
+        <ProjectItem OpenInEditor="false" TargetFileName="PatternTooling.toolingdesign" ReplaceParameters="true">PatternTooling.toolingdesign</ProjectItem>
+    </TemplateContent>
+	<WizardExtension>
+		<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>NuPattern.Runtime.GuidGeneratorTemplateWizard</FullClassName>
+	</WizardExtension>
+	<WizardExtension>
+		<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+		<FullClassName>NuPattern.Runtime.ReplacementTemplateWizard</FullClassName>
+	</WizardExtension>
+    <WizardExtension>
+      <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+      <FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
+    </WizardExtension>
+	<WizardData>
+		<Replacement Key="$dslVersion$"  Value="<#=this.DslVersion #>" />
+      <NewGuid Key="$guid11$" />
+		<NewGuid Key="$guid12$" />
+		<NewGuid Key="$guid13$" />
+		<NewGuid Key="$guid14$" />
+		<NewGuid Key="$guid15$" />
+	</WizardData>
+</VSTemplate>

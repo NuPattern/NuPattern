@@ -3,7 +3,7 @@
 <#@ import namespace="System.Collections.ObjectModel" #>
 <#@ assembly name="System.Core" #>
 <#@ import namespace="System.Linq" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\DslDefinition.dsl'" #>
 <#@ include file="Dsl\Utilities.tt" #>
 //------------------------------------------------------------------------------

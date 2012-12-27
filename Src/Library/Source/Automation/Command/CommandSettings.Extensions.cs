@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq.Expressions;
-using Microsoft.VisualStudio.Patterning.Extensibility;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.Library.Automation
+namespace NuPattern.Library.Automation
 {
 	/// <summary>
 	/// Extensions for <see cref="CommandSettings"/>.
@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.Patterning.Library.Automation
 		public static void SetPropertyValue<TFeatureCommand, TProperty>(
 			this CommandSettings commandSettings,
 			Expression<Func<TFeatureCommand, TProperty>> expression,
-			object value) where TFeatureCommand : TeamArchitect.PowerTools.Features.IFeatureCommand
+			object value) where TFeatureCommand : Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand
 		{
 			var descriptors = TypeDescriptor.GetProperties(commandSettings);
 			var descriptor = descriptors[Reflector<TFeatureCommand>.GetPropertyName(expression)];

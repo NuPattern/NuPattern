@@ -2,10 +2,10 @@
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.Patterning.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Extensibility;
 
-namespace Microsoft.VisualStudio.Patterning.IntegrationTests
+namespace NuPattern.IntegrationTests
 {
     [TestClass]
     public class VsixPackagingSpec

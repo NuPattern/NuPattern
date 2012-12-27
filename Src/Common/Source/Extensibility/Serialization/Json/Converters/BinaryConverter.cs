@@ -5,7 +5,7 @@ using System.Data.SqlTypes;
 using System.Globalization;
 using System.Collections.Generic;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Serialization.Json
+namespace NuPattern.Extensibility.Serialization.Json
 {
 #if !SILVERLIGHT && !PocketPC && !NET20
     internal interface IBinary

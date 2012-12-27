@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Extensibility
+﻿namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Evaluates a property by name by probing the target object 

@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Extensibility
+﻿namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Interface for evaluator, used to mock it if needed.

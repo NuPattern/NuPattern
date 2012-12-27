@@ -1,4 +1,4 @@
-﻿namespace Microsoft.VisualStudio.Patterning.Extensibility
+﻿namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Image kind enum.

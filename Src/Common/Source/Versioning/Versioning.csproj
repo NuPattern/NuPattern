@@ -8,8 +8,8 @@
     <ProjectGuid>{AE530C9B-34B7-416F-8477-15B8257CDAC0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Versioning</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Versioning</AssemblyName>
+    <RootNamespace>NuPattern.Versioning</RootNamespace>
+    <AssemblyName>NuPattern.Versioning</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -25,18 +25,19 @@
     <None Include="..\..\..\..\Docs\Release Notes.docx">
       <Link>Docs\Release Notes.docx</Link>
     </None>
-    <None Include="..\..\..\GlobalAssemblyInfo.tt">
-      <Link>GlobalAssemblyInfo.tt</Link>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>GlobalAssemblyInfo.cs</LastGenOutput>
+    <None Include="..\..\..\BuildConfiguration.CSharp.VsixProjects.gen.props">
+      <Link>BuildConfiguration.CSharp.VsixProjects.gen.props</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildConfiguration.CSharp.VsixProjects.tt</DependentUpon>
     </None>
     <None Include="..\..\..\MasterVersion.tt">
       <Link>MasterVersion.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MasterVersion.ttinclude</LastGenOutput>
+      <LastGenOutput>MasterVersion.gen.ttinclude</LastGenOutput>
     </None>
-    <None Include="..\..\..\MasterVersion.ttinclude">
-      <Link>MasterVersion.ttinclude</Link>
+    <None Include="..\..\..\MasterVersion.gen.ttinclude">
+      <Link>MasterVersion.gen.ttinclude</Link>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MasterVersion.tt</DependentUpon>
@@ -44,14 +45,25 @@
     <None Include="..\..\..\MasterVSIXInfo.tt">
       <Link>MasterVSIXInfo.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MasterVSIXInfo.ttinclude</LastGenOutput>
+      <LastGenOutput>MasterVSIXInfo.gen.ttinclude</LastGenOutput>
     </None>
-    <None Include="..\..\..\MasterVSIXInfo.ttinclude">
-      <Link>MasterVSIXInfo.ttinclude</Link>
+    <None Include="..\..\..\MasterVSIXInfo.gen.ttinclude">
+      <Link>MasterVSIXInfo.gen.ttinclude</Link>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MasterVSIXInfo.tt</DependentUpon>
     </None>
+    <None Include="..\..\..\GlobalAssemblyInfo.tt">
+      <Link>GlobalAssemblyInfo.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GlobalAssemblyInfo.gen.cs</LastGenOutput>
+    </None>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>GlobalAssemblyInfo.gen.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalAssemblyInfo.tt</DependentUpon>
+    </Compile>
     <None Include="..\..\..\Outercurve.snk">
       <Link>SigningKeys\Outercurve.snk</Link>
     </None>
@@ -61,19 +73,40 @@
     <None Include="..\..\..\Versioning Instructions.docx">
       <Link>Docs\Versioning Instructions.docx</Link>
     </None>
+    <None Include="..\..\..\VSGalleryInfo.docx">
+      <Link>Docs\VSGalleryInfo.docx</Link>
+    </None>
+    <None Include="..\..\..\BuildConfiguration.CSharp.VsixProjects.tt">
+      <Link>BuildConfiguration.CSharp.VsixProjects.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BuildConfiguration.CSharp.VsixProjects.gen.props</LastGenOutput>
+    </None>
+    <None Include="Authoring.PatternToolkitVersion.gen.targets">
+      <DependentUpon>Authoring.PatternToolkitVersion.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
+    <None Include="Authoring.PatternToolkitVersion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Authoring.PatternToolkitVersion.gen.targets</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NuPattern.Authoring.PatternToolkit.gen.targets">
+      <DependentUpon>NuPattern.Authoring.PatternToolkit.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NuPattern.Authoring.PatternToolkit.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>NuPattern.Authoring.PatternToolkit.gen.targets</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\..\Signing Key Info.txt">
       <Link>SigningKeys\Signing Key Info.txt</Link>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\..\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GlobalAssemblyInfo.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />

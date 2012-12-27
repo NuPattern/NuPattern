@@ -1,0 +1,98 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="System.ComponentModel.Composition" #>
+<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
+<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="NuPattern.Authoring.Toolkit.Shell.dll" #>
+<#@ Assembly Name="NuPattern.Extensibility.dll" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Extensibility" #>
+<#@ Assembly Name="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
+<#@ Import Namespace="System.ComponentModel" #>
+<#@ Import Namespace="System.Linq" #>
+<#@ Import Namespace="System.Reflection" #>
+<#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
+<#@ Include File="Header.t4" #>
+<#@ Include File="NamedElementParentImplementation.t4" #>
+<#@ Include File="ElementContainerImplementation.t4" #>
+<#@ Include File="Helpers.t4" #>
+<# 
+var product = this.ProductLine.Product;
+    
+// The pluralizer in .NET 4.0 only supports English.
+var pluralizer = PluralizationService.CreateService(new System.Globalization.CultureInfo("en-US"));
+
+foreach(var view in product.Views)
+{
+#>
+namespace <#= RootNamespace #>
+{
+	using System;
+	using System.ComponentModel;
+	using System.ComponentModel.Composition;
+	using System.Collections.Generic;
+	using NuPattern.Runtime;
+
+	<#GenerateFactoryProxyAttributes(view); #>
+	public partial class <#=view.CodeIdentifier#> : I<#=view.CodeIdentifier#>
+	{
+		private IView target;
+		private IContainerProxy<I<#=view.CodeIdentifier#>> proxy;
+
+		/// <summary>
+		/// For MEF.
+		/// </summary>
+		[ImportingConstructor]
+		private <#=view.CodeIdentifier#>() { }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="Architecture"/> class.
+		/// </summary>
+		public <#=view.CodeIdentifier#>(IView target)
+		{
+			this.target = target;
+			this.proxy = target.ProxyFor<I<#=view.CodeIdentifier#>>();
+		}
+
+<#GenerateParentProperty(view); #>
+
+		/// <summary>
+		/// Gets the generic <see cref="IView"/> underlying element.
+		/// </summary>
+		public IView AsView()
+		{
+			return this.target;
+		}
+
+		/// <summary>
+		/// Gets the generic underlying element as the given type if possible.
+		/// </summary>
+		public TRuntimeInterface As<TRuntimeInterface>()
+			where TRuntimeInterface : class
+		{
+			return this.target as TRuntimeInterface;
+		}
+<#
+PushIndent("\t");
+PushIndent("\t");
+
+GenerateContainedElements(pluralizer, view);
+
+PopIndent();
+PopIndent();
+#>
+
+		/// <summary>
+		/// Deletes this instance.
+		/// </summary>
+		public void Delete()
+		{
+			this.target.Delete();
+		}
+	}
+}
+
+<#
+}
+#>

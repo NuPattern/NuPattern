@@ -1,5 +1,5 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" Debug="true" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ Dsl processor="DslDirectiveProcessor"  requires="fileName='..\..\DslDefinition.dsl'" #>
 <#@ Include File="..\..\..\..\Common\Helpers\Helpers.tt" #>
 <#@ Include File="..\..\..\..\Common\Helpers\PropertyChangedImplementation.tt" #>
@@ -19,9 +19,8 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.Patterning.Extensibility.Binding;
+using NuPattern.Runtime;
 
 <#
 // We do generate the implementation for the binding classes too.
@@ -110,7 +109,7 @@ public Version DslVersion
 
 public string ToolName
 {
-    get { return "Microsoft.VisualStudio.Patterning"; }
+    get { return "NuPattern"; }
 }
 
 private void GenerateProperty(DomainClass domainClass, DomainRole role)

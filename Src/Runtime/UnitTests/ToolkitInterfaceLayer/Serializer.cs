@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
-using Microsoft.VisualStudio.Patterning.Runtime;
+using NuPattern.Runtime;
 
 namespace Toolkit14
 {
@@ -11,7 +11,7 @@ namespace Toolkit14
 	///	Description for WebService.Architecture.Folder.DataContract.Serializer
 	///	</summary>
 	[Description("Description for WebService.Architecture.Folder.DataContract.Serializer")]
-    [ToolkitInterfaceProxy(ExtensionId = "The Outercurve Foundation", DefinitionId = "fe5452b1-427d-4295-8864-f021d6780785")]
+    [ToolkitInterfaceProxy(ExtensionId = "NuPattern", DefinitionId = "fe5452b1-427d-4295-8864-f021d6780785")]
 	internal partial class Serializer : ISerializer
 	{
 		private IProductProxy<ISerializer> proxy;
@@ -47,9 +47,9 @@ namespace Toolkit14
 		}
 
 		///	<summary>
-		///	Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ProductElement
+		///	Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement
 		///	</summary>
-		[Description("Description for Microsoft.VisualStudio.Patterning.Runtime.Store.ProductElementHasReferences.ProductElement")]
+		[Description("Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement")]
 		public IEnumerable<IReference> References
 		{
 			get { return this.proxy.GetValue(() => this.References); }

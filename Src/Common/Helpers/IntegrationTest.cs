@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -87,7 +88,14 @@ public class IntegrationTest
 				File.SetAttributes(file, FileAttributes.Normal);
 			}
 
-			Directory.Delete(this.DeploymentDirectory, true);
+            try
+            {
+                Directory.Delete(this.DeploymentDirectory, true);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                // Ignore and continue
+            }
 		}
 	}
 }

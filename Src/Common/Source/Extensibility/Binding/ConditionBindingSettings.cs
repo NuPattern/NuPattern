@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel;
 using System.Linq;
 using System.Runtime.Serialization;
-using Microsoft.VisualStudio.Patterning.Extensibility.Properties;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Extensibility.Properties;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility.Binding
+namespace NuPattern.Extensibility.Binding
 {
 	/// <summary>
 	/// Defines an <see cref="ICondition"/> implementation of <see cref="BindingSettings"/>.

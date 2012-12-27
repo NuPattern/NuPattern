@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Input;
-using Microsoft.VisualStudio.Patterning.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.Runtime;
 
-namespace Microsoft.VisualStudio.Patterning.Extensibility
+namespace NuPattern.Extensibility
 {
 	/// <summary>
 	/// Defines a <see cref="TypeConverter"/> that provides standard values for types accessible from 
@@ -68,9 +68,9 @@ namespace Microsoft.VisualStudio.Patterning.Extensibility
 
 		private static StandardValue CreateStandardValue(Type type)
 		{
-			var displayNameAttribute = type.GetCustomAttribute<DisplayNameAttribute>(false);
-			var descriptionAttribute = type.GetCustomAttribute<DescriptionAttribute>(false);
-			var categoryAttribute = type.GetCustomAttribute<CategoryAttribute>(false);
+            var displayNameAttribute = ReflectionExtensions.GetCustomAttribute<DisplayNameAttribute>(type, false);
+            var descriptionAttribute = ReflectionExtensions.GetCustomAttribute<DescriptionAttribute>(type, false);
+            var categoryAttribute = ReflectionExtensions.GetCustomAttribute<CategoryAttribute>(type, false);
 
 			return new StandardValue(
 				displayNameAttribute != null ? displayNameAttribute.DisplayName : type.FullName,

@@ -9,8 +9,8 @@
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests</RootNamespace>
-    <AssemblyName>Microsoft.VisualStudio.Patterning.Runtime.Schema.UnitTests</AssemblyName>
+    <RootNamespace>NuPattern.Runtime.Schema.UnitTests</RootNamespace>
+    <AssemblyName>NuPattern.Runtime.Schema.UnitTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -37,11 +37,31 @@
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Integration.10.0" Condition="'$(TargetVsVersion)' == '10.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VMSDK\10.0\Microsoft.VisualStudio.Modeling.Sdk.Integration.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.10.0" Condition="'$(TargetVsVersion)' == '10.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VMSDK\10.0\Microsoft.VisualStudio.Modeling.Sdk.Integration.Shell.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.10.0" Condition="'$(TargetVsVersion)' == '10.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.TextTemplating.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Modeling.10.0" Condition="'$(TargetVsVersion)' == '10.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.TextTemplating.Modeling.10.0.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
     </Reference>
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -62,8 +82,8 @@
     <Compile Include="..\..\Common\Helpers\FakeSolution.cs">
       <Link>FakeSolution.cs</Link>
     </Compile>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -97,7 +117,7 @@
     <Compile Include="Model\PropertySchemaDisplaySpec.cs" />
     <Compile Include="Model\PropertySchemaSpec.cs" />
     <Compile Include="Model\PropertySchemaValidationSpec.cs" />
-    <Compile Include="Model\PropertyTrackingSpec.cs">
+    <Compile Include="Model\PropertyTrackingSpec.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PropertyTrackingSpec.tt</DependentUpon>
@@ -134,7 +154,7 @@
     <Compile Include="Model\PropertySchemaDefaultValueDescriptorSpec.cs" />
     <None Include="Model\PropertyTrackingSpec.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PropertyTrackingSpec.cs</LastGenOutput>
+      <LastGenOutput>PropertyTrackingSpec.gen.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

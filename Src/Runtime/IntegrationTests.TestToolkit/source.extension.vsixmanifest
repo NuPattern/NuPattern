@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-	<Identifier Id="Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit">
+	<Identifier Id="NuPattern.Runtime.IntegrationTests.TestToolkit">
 		<Name>Runtime.IntegrationTests.TestToolkit</Name>
-		<Author>Outercurve</Author>
+		<Author>NuPattern</Author>
 		<Version>1.0</Version>
 		<Description xml:space="preserve">Runtime IntegrationTests Test Toolkit.</Description>
 		<Locale>1033</Locale>
@@ -19,7 +19,7 @@
 	<References />
 	<Content>
 		<MefComponent>|Runtime.IntegrationTests.TestToolkit|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit.dll">Microsoft.VisualStudio.Patterning.Runtime.IntegrationTests.TestToolkit.PatternModel.patterndefinition</CustomExtension>
+		<CustomExtension Type="PatternModel" AssemblyFile="NuPattern.Runtime.IntegrationTests.TestToolkit.dll">NuPattern.Runtime.IntegrationTests.TestToolkit.PatternModel.gen.patterndefinition</CustomExtension>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>

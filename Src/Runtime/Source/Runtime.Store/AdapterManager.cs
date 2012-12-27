@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.Modeling.Integration.Shell;
 using Microsoft.VisualStudio.TextTemplating.Modeling;
 
-namespace Microsoft.VisualStudio.Patterning.Runtime.Store
+namespace NuPattern.Runtime.Store
 {
 	/// <summary>
 	/// Adapter manager for the runtime state.
