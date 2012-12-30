@@ -190,20 +190,8 @@
     <Content Include="..\..\..\Common\Guidance\Feedback.xml">
       <Link>Guidance\Feedback.xml</Link>
     </Content>
-    <Content Include="..\..\..\Common\Guidance\First Time Users - Runtime.xml">
-      <Link>Guidance\First Time Users - Runtime.xml</Link>
-    </Content>
-    <Content Include="..\..\..\Common\Guidance\How To - Runtime.xml">
-      <Link>Guidance\How To - Runtime.xml</Link>
-    </Content>
-    <Content Include="..\..\..\Common\Guidance\Known Issues - Runtime.xml">
-      <Link>Guidance\Known Issues - Runtime.xml</Link>
-    </Content>
     <Content Include="..\..\..\Common\Guidance\More Information.xml">
       <Link>Guidance\More Information.xml</Link>
-    </Content>
-    <Content Include="..\..\..\Common\Guidance\Reference - Runtime.xml">
-      <Link>Guidance\Reference - Runtime.xml</Link>
     </Content>
     <Content Include="..\..\..\Common\Guidance\Troubleshooting Toolkits.xml">
       <Link>Guidance\Troubleshooting Toolkits.xml</Link>
@@ -303,9 +291,6 @@
     <Content Include="GeneratedCode\Guidance\Content\HowToNavigatetoorOpenSolutionItems.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToRunAutomation.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="GeneratedCode\Guidance\Content\HowToTroubleshootPatternProblems.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -345,9 +330,6 @@
     <Content Include="GeneratedCode\Guidance\Content\WhatareRelatedItems.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisaGuidanceDocument.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="GeneratedCode\Guidance\Content\WhatisaSolutionElement.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -358,6 +340,27 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\WhatisSolutionBuilder.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\AddNewSolutionElementDialog.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToRunAutomation.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatareArtifactLinks.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatarePatternToolkits.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatisaGuidanceDocument.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatisaGuidanceWorkflow.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatistheGuidanceExplorer.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\WhatistheGuidanceBrowser.mht">

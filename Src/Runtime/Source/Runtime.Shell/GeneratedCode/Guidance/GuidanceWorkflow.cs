@@ -78,7 +78,7 @@ namespace NuPattern.Runtime.Shell.Guidance
 			fork3.ConnectTo(guidanceaction4);
 			var fork5 = new Fork
 			{
-				Name = "The different types of solution elements in this window are installed by Pattern Toolkits. Pattern Toolkits are extensions that are installed into Visual Studio either using the ‘Extension Manager’ in Visual Studio or by obtaining pattern toolkits from toolkit authors, such as from the Visual Studio Gallery. Pattern Toolkits are built with NuPattern (see http://nupattern.org for more details.Using Pattern Toolkits",
+				Name = "Using Pattern Toolkits",
 			};
 			guidanceaction4.ConnectTo(fork5);
 			var guidanceaction6 = new GuidanceAction
@@ -140,8 +140,8 @@ namespace NuPattern.Runtime.Shell.Guidance
 			fork14.ConnectTo(guidanceaction15);
 			var guidanceaction16 = new GuidanceAction
 			{
-				Name = "Unless you enjoy writing (and presumably can afford to re-write) every component of your software from scratch, patterns are the most common reuse mechanism in software development today. They tend to be platform and language agnostic, but in that, tend also to have multiple possible implementations. Hundreds of hits on the web for any software development topic are evidence of this. One thing that tends to transcends patterns are best practices, but in order to be effective and efficient and practical all best practice implementation require some form of specificity of platform, language and technology. The end result is an implementation pattern that declares its platforms, languages and technologies. If you can specify those aspects of a best practice pattern, and a consumer can live within them, then the benefits of reuse become significant.Patterns can have unlimited scope. That is to say you can define a pattern from the smallest thing, like a line of code, to whole systems of software. But in general, larger patterns for complex software solution will almost certainly require narrower cases of reuse and smaller sets of parameters to be effective. As implementation scope increases, practical reuse tends to decrease. Keeping scope and parameters to a practical minimum aids in wider and more frequent reuse. One way to help manage larger scope is to break the pattern into smaller patterns that can be composed into larger software components and systems. What are Pattern Toolkits?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/UnlessyouenjoywritingandpresumablycanaffordtorewriteeverycomponentofyoursoftwarefromscratchpatternsarethemostcommonreusemechanisminsoftwaredevelopmenttodayTheytendtobeplatformandlanguageagnosticbutinthattendalsotohavemultiplepossibleimplementationsHundredsofhitsonthewebforanysoftwaredevelopmenttopicareevidenceofthisOnethingthattendstotranscendspatternsarebestpracticesbutinordertobeeffectiveandefficientandpracticalallbestpracticeimplementationrequiresomeformofspecificityofplatformlanguageandtechnologyTheendresultisanimplementationpatternthatdeclaresitsplatformslanguagesandtechnologiesIfyoucanspecifythoseaspectsofabestpracticepatternandaconsumercanlivewithinthemthenthebenefitsofreusebecomesignificantPatternscanhaveunlimitedscopeThatistosayyoucandefineapatternfromthesmallestthinglikealineofcodetowholesystemsofsoftwareButingenerallargerpatternsforcomplexsoftwaresolutionwillalmostcertainlyrequirenarrowercasesofreuseandsmallersetsofparameterstobeeffectiveAsimplementationscopeincreasespracticalreusetendstodecreaseKeepingscopeandparameterstoapracticalminimumaidsinwiderandmorefrequentreuseOnewaytohelpmanagelargerscopeistobreakthepatternintosmallerpatternsthatcanbecomposedintolargersoftwarecomponentsandsystemsWhatarePatternToolkits.mht",
+				Name = "What are Pattern Toolkits?",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatarePatternToolkits.mht",
 			};
 			guidanceaction15.ConnectTo(guidanceaction16);
 			var guidanceaction17 = new GuidanceAction
@@ -169,8 +169,8 @@ namespace NuPattern.Runtime.Shell.Guidance
 			fork19.ConnectTo(guidanceaction20);
 			var guidanceaction21 = new GuidanceAction
 			{
-				Name = "That guidance is composed of one or more a ‘Guidance Workflows’, each of which is a multi-pathed workflow of individual ‘Guidance Documents’ (topics), each of which has some browsable content, and each of which may or may not have state to indicate progress through it, and also contain links that automate some part of the described process.What is a Guidance Workflow?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ThatguidanceiscomposedofoneormoreaGuidanceWorkflowseachofwhichisamultipathedworkflowofindividualGuidanceDocumentstopicseachofwhichhassomebrowsablecontentandeachofwhichmayormaynothavestatetoindicateprogressthroughitandalsocontainlinksthatautomatesomepartofthedescribedprocessWhatisaGuidanceWorkflow.mht",
+				Name = "What is a Guidance Workflow?",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisaGuidanceWorkflow.mht",
 			};
 			guidanceaction20.ConnectTo(guidanceaction21);
 			var guidanceaction22 = new GuidanceAction
@@ -181,8 +181,8 @@ namespace NuPattern.Runtime.Shell.Guidance
 			guidanceaction21.ConnectTo(guidanceaction22);
 			var guidanceaction23 = new GuidanceAction
 			{
-				Name = "This document is viewed in the ‘Guidance Browser’ window in Visual Studio. That content can be static content as with MHT page or other textual page, or can be dynamic as with an online web, wiki page or community site page. Ultimately, the guidance document boils down to a URI to some accessible source.The content of this document is typically some form of HTML that can contain links to other documents within the guidance workflow, or link to external documentation and sites on the web. The content can further contain special automation links (content links) which execute automation commands. These commands can use the state of the current activity in the workflow to configure the command also, so that when a command executes it is contextualized to the work being done in the workflow.What is the Guidance Explorer?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ThisdocumentisviewedintheGuidanceBrowserwindowinVisualStudioThatcontentcanbestaticcontentaswithMHTpageorothertextualpageorcanbedynamicaswithanonlinewebwikipageorcommunitysitepageUltimatelytheguidancedocumentboilsdowntoaURItosomeaccessiblesourceThecontentofthisdocumentistypicallysomeformofHTMLthatcancontainlinkstootherdocumentswithintheguidanceworkfloworlinktoexternaldocumentationandsitesonthewebThecontentcanfurthercontainspecialautomationlinkscontentlinkswhichexecuteautomationcommandsThesecommandscanusethestateofthecurrentactivityintheworkflowtoconfigurethecommandalsosothatwhenacommandexecutesitiscontextualizedtotheworkbeingdoneintheworkflowWhatistheGuidanceExplorer.mht",
+				Name = "What is the Guidance Explorer?",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatistheGuidanceExplorer.mht",
 			};
 			guidanceaction22.ConnectTo(guidanceaction23);
 			var guidanceaction24 = new GuidanceAction
@@ -209,8 +209,8 @@ namespace NuPattern.Runtime.Shell.Guidance
 			fork26.ConnectTo(guidanceaction27);
 			var guidanceaction28 = new GuidanceAction
 			{
-				Name = "Without automation, and with guidance, a pattern toolkit could only instruct a user on what to do with its solution-based assets (such as frameworks, libraries and code samples). With automation however, a pattern toolkit can for example: automate the unfolding of project templates, generation of source code, validation of pattern models, support drag and drop, provide contextual menus, run custom tools, refactor code and configuration, synchronize the solution artifacts with the design, etc. There are many areas of a toolkit that leverage automation to make building a solution with them orders of magnitudes faster and cheaper than handcrafting solutions from scratch.What are Artifact Links?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WithoutautomationandwithguidanceapatterntoolkitcouldonlyinstructauseronwhattodowithitssolutionbasedassetssuchasframeworkslibrariesandcodesamplesWithautomationhoweverapatterntoolkitcanforexampleautomatetheunfoldingofprojecttemplatesgenerationofsourcecodevalidationofpatternmodelssupportdraganddropprovidecontextualmenusruncustomtoolsrefactorcodeandconfigurationsynchronizethesolutionartifactswiththedesignetcTherearemanyareasofatoolkitthatleverageautomationtomakebuildingasolutionwiththemordersofmagnitudesfasterandcheaperthanhandcraftingsolutionsfromscratchWhatareArtifactLinks.mht",
+				Name = "What are Artifact Links?",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareArtifactLinks.mht",
 			};
 			guidanceaction27.ConnectTo(guidanceaction28);
 			var join29 = new Join
@@ -365,8 +365,8 @@ namespace NuPattern.Runtime.Shell.Guidance
 			guidanceaction53.ConnectTo(guidanceaction54);
 			var guidanceaction55 = new GuidanceAction
 			{
-				Name = "Tip: Move and dock the tool window in a separate area of the main window of Visual Studio (i.e. on the opposite side of the window from 'Solution Explorer'), so that you can see both 'Solution Builder' and 'Solution Explorer' at the same time. This is useful for working on the solution using both these windows.Add New Solution Element Dialog",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/TipMoveanddockthetoolwindowinaseparateareaofthemainwindowofVisualStudioieontheoppositesideofthewindowfromSolutionExplorersothatyoucanseebothSolutionBuilderandSolutionExploreratthesametimeThisisusefulforworkingonthesolutionusingboththesewindowsAddNewSolutionElementDialog.mht",
+				Name = "Add New Solution Element Dialog",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddNewSolutionElementDialog.mht",
 			};
 			guidanceaction54.ConnectTo(guidanceaction55);
 			var guidanceaction56 = new GuidanceAction
