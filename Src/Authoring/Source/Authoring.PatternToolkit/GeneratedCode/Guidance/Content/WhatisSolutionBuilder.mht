@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDDE4D.1C4B2FF0"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDE6C2.0D530180"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDDE4D.1C4B2FF0
+------=_NextPart_01CDE6C2.0D530180
 Content-Location: file:///C:/70C79D12/WhatisSolutionBuilder.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -36,14 +36,14 @@ w\:* {behavior:url(#default#VML);}
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-19T11:58:00Z</o:Created>
-  <o:LastSaved>2012-12-19T11:58:00Z</o:LastSaved>
+  <o:Created>2012-12-30T06:15:00Z</o:Created>
+  <o:LastSaved>2012-12-30T06:15:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>195</o:Words>
-  <o:Characters>1114</o:Characters>
+  <o:Words>199</o:Words>
+  <o:Characters>1138</o:Characters>
   <o:Lines>9</o:Lines>
   <o:Paragraphs>2</o:Paragraphs>
-  <o:CharactersWithSpaces>1307</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>1335</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -2223,23 +2223,19 @@ table.MsoTableGrid
 
 <div class=3DWordSection1>
 
-<h4 style=3D'page-break-before:auto'>What is Solution Builder?<o:p></o:p></=
-h4>
+<h3 style=3D'page-break-before:auto'>What is Solution Builder?<o:p></o:p></=
+h3>
 
-<p class=3DMsoNormal><em><span style=3D'font-family:"Segoe UI","sans-serif";
-mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>Answ=
-er.
-‘Solution Builder’ is a new tool window in Visual Studio where you manage,
-create and configure elements of your solution.<o:p></o:p></span></em></p>
-
-<p class=3DMsoNormal>The ‘Solution Builder’ window is the place you go to v=
-iew,
-manage and configure the elements of your solution that are currently manag=
-ed
-by installed <a
+<p class=3DMsoNormal>The ‘Solution Builder’ window, (CTRL + W, H) is the ma=
+in
+window where you can view, manage and configure elements of your solution t=
+hat
+are provided by <a
 href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/WhatarePatternToolkits.mht">‘Pattern
-Toolkits’</a>. <o:p></o:p></p>
+Toolkit’</a> extensions. The elements displayed in this window automate the
+development and deployment of software in the current solution.<o:p></o:p><=
+/p>
 
 <p class=3DMsoNormal><span style=3D'mso-no-proof:yes'><!--[if gte vml 1]><v=
 :shapetype
@@ -2263,15 +2259,15 @@ Toolkits’</a>. <o:p></o:p></p>
  </v:formulas>
  <v:path o:extrusionok=3D"f" gradientshapeok=3D"t" o:connecttype=3D"rect"/>
  <o:lock v:ext=3D"edit" aspectratio=3D"t"/>
-</v:shapetype><v:shape id=3D"Picture_x0020_15" o:spid=3D"_x0000_i1025" type=
-=3D"#_x0000_t75"
+</v:shapetype><v:shape id=3D"Picture_x0020_317" o:spid=3D"_x0000_i1025" typ=
+e=3D"#_x0000_t75"
  style=3D'width:514.5pt;height:366.75pt;visibility:visible;mso-wrap-style:s=
 quare'>
  <v:imagedata src=3D"WhatisSolutionBuilder_files/image001.png" o:title=3D"S=
 NAGHTML2ce0b20b"/>
 </v:shape><![endif]--><![if !vml]><img border=3D0 width=3D686 height=3D489
 src=3D"WhatisSolutionBuilder_files/image002.png" v:shapes=3D"Picture_x0020_=
-15"><![endif]></span><o:p></o:p></p>
+317"><![endif]></span><o:p></o:p></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
@@ -2281,23 +2277,33 @@ margin-left:.4in;margin-right:.4in'>
 pt;
 margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
-normal'>Note:</b> <a
+normal'>Note:</b> The nodes shown in the ‘Solution Builder’ window are call=
+ed <a
 href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/WhatisaSolutionElement.mht">‘Solution
-Elements’</a> are what are being displayed in the ‘Solution Builder’ tool
-window, they are the abstract representations of one or more artifacts in t=
-he
-current solution scope, be those projects, files or other artifacts visible
-from the development environment.<o:p></o:p></p>
+Elements’</a>, they are the abstract representations of one or more artifac=
+ts
+in the current solution scope, whether they represent physical artifacts su=
+ch
+as projects, files or solutions, or data from other services in the develop=
+ment
+environment.<o:p></o:p></p>
 
 </div>
 
-<p class=3DMsoNormal>In the ‘Solution Builder’ window, you perform the foll=
-owing
-common activities:<o:p></o:p></p>
+<p class=3DMsoNormal>In the ‘Solution Builder’ window, you can perform the
+following common activities:<o:p></o:p></p>
 
 <p class=3DMsoListParagraphCxSpFirst style=3D'text-indent:-.25in;mso-list:l=
 1 level1 lfo2'><![if !supportLists]><span
+style=3D'font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-fa=
+mily:
+Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
+ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Create new solution elements.<o:p></o:p></p>
+
+<p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
+l1 level1 lfo2'><![if !supportLists]><span
 style=3D'font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-fa=
 mily:
 Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
@@ -2312,8 +2318,8 @@ style=3D'font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-fa=
 mily:
 Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
 ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Configure the solution elements.<o:p></o:p><=
-/p>
+</span></span></span><![endif]>Configure the properties of solution element=
+s. <o:p></o:p></p>
 
 <p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
 l1 level1 lfo2'><![if !supportLists]><span
@@ -2321,7 +2327,8 @@ style=3D'font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-fa=
 mily:
 Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
 ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Create new solution elements.<o:p></o:p></p>
+</span></span></span><![endif]>Compose new or existing solution elements to=
+gether.<o:p></o:p></p>
 
 <p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
 l1 level1 lfo2'><![if !supportLists]><span
@@ -2329,24 +2336,8 @@ style=3D'font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-fa=
 mily:
 Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
 ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Compose new or existing solution elements
-together.<o:p></o:p></p>
-
-<p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
-l1 level1 lfo2'><![if !supportLists]><span
-style=3D'font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-fa=
-mily:
-Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
-ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Invoke Automation.<o:p></o:p></p>
-
-<p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
-l1 level1 lfo2'><![if !supportLists]><span
-style=3D'font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-fa=
-mily:
-Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
-ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Navigate to other Related Artifacts in the
+</span></span></span><![endif]>Navigate to related artifacts elsewhere in t=
+he
 development environment.<o:p></o:p></p>
 
 <p class=3DMsoListParagraphCxSpLast style=3D'text-indent:-.25in;mso-list:l1=
@@ -2355,12 +2346,9 @@ style=3D'font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-fa=
 mily:
 Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
 ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Navigate to the Guidance that describes how =
+</span></span></span><![endif]>Navigate to the guidance that describes how =
 to
-use them.<o:p></o:p></p>
-
-<p class=3DMsoNormal>Note: In addition there is guidance for helping<o:p></=
-o:p></p>
+use and modify those solution elements.<o:p></o:p></p>
 
 <p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -2370,7 +2358,7 @@ o:p></p>
 
 </html>
 
-------=_NextPart_01CDDE4D.1C4B2FF0
+------=_NextPart_01CDE6C2.0D530180
 Content-Location: file:///C:/70C79D12/WhatisSolutionBuilder_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2431,7 +2419,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDDE4D.1C4B2FF0
+------=_NextPart_01CDE6C2.0D530180
 Content-Location: file:///C:/70C79D12/WhatisSolutionBuilder_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2441,7 +2429,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDDE4D.1C4B2FF0
+------=_NextPart_01CDE6C2.0D530180
 Content-Location: file:///C:/70C79D12/WhatisSolutionBuilder_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -6674,7 +6662,7 @@ EEAAAQQQQCAhBOhcTYjTzEEigAACCCCAAAIIIIAAAggggAACCCCAQEUL1LIJtlz7RUWnS3oIIIAA
 AggggAACCCCAAAIIIIAAAggggEC1Fqhhjq6oWh8hB4cAAggggAACCCCAAAIIIIAAAggggAACCFSC
 wP8DPjE2QgmasJsAAAAASUVORK5CYIJ=
 
-------=_NextPart_01CDDE4D.1C4B2FF0
+------=_NextPart_01CDE6C2.0D530180
 Content-Location: file:///C:/70C79D12/WhatisSolutionBuilder_files/image002.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -10547,7 +10535,7 @@ Vaut2plqWM3LktD66yfI/RFAAAEEEEAAgX8X0PAaY+wz6lh3dY9FLtdK5BaWfXDlQAABBBBAAAEE
 EEBgKgIWXO9VKom2vXK7ei91s5IuhKmsj3UggAACCCCAAAIIIPARSPSTgeZ8khcPOicqI11lfQAA
 AABJRU5ErkJggk==
 
-------=_NextPart_01CDDE4D.1C4B2FF0
+------=_NextPart_01CDE6C2.0D530180
 Content-Location: file:///C:/70C79D12/WhatisSolutionBuilder_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -10560,4 +10548,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image002.png"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDDE4D.1C4B2FF0--
+------=_NextPart_01CDE6C2.0D530180--

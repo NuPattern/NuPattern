@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDDE4D.17CF92E0"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDE6C2.0988B310"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDDE4D.17CF92E0
+------=_NextPart_01CDE6C2.0988B310
 Content-Location: file:///C:/2F745633/WhatarePatterns.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -27,14 +27,14 @@ xmlns=3D"http://www.w3.org/TR/REC-html40">
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-19T11:58:00Z</o:Created>
-  <o:LastSaved>2012-12-19T11:58:00Z</o:LastSaved>
+  <o:Created>2012-12-30T06:15:00Z</o:Created>
+  <o:LastSaved>2012-12-30T06:15:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>421</o:Words>
-  <o:Characters>2406</o:Characters>
-  <o:Lines>20</o:Lines>
+  <o:Words>416</o:Words>
+  <o:Characters>2376</o:Characters>
+  <o:Lines>19</o:Lines>
   <o:Paragraphs>5</o:Paragraphs>
-  <o:CharactersWithSpaces>2822</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>2787</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -2216,10 +2216,12 @@ table.MsoTableGrid
 
 <h3 style=3D'page-break-before:auto'>What are Patterns?<o:p></o:p></h3>
 
-<p class=3DMsoNormal><em><span style=3D'font-family:"Segoe UI","sans-serif";
-mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>Answ=
-er.
-&quot;A Pattern in the context of Pattern Toolkits is simply design or an
+<p class=3DMsoNormal><a name=3D"_What_are_Toolkits?"></a><a name=3D"_What_a=
+re_Pattern"></a><em><span
+style=3D'font-family:"Segoe UI","sans-serif";mso-bidi-font-family:"Times Ne=
+w Roman";
+mso-bidi-theme-font:minor-bidi'>Answer. &quot;A Pattern is simply design or=
+ an
 implementation pattern for implementing best practices in IT development and
 deployment. A pattern is not without some conceptual structure, an
 implementation, and some parameters.&quot;<o:p></o:p></span></em></p>
@@ -2235,8 +2237,8 @@ solutions) can focus on programming them to suit their needs in use. Typica=
 lly,
 these kinds of patterns manifest themselves in a set of API's that work
 together to solve a particular problem. Often, these patterns are formalized
-and documented. Often they are generalized to adapt to multiple contexts in=
- use.<o:p></o:p></p>
+and documented. Often they are generalized to adapt to multiple contexts in
+use.<o:p></o:p></p>
 
 <p class=3DMsoNormal>Patterns are most useful when they can be applied to a
 well-defined set of use cases or scenarios, and reused more than once. <o:p=
@@ -2317,7 +2319,7 @@ components and systems. <o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CDDE4D.17CF92E0
+------=_NextPart_01CDE6C2.0988B310
 Content-Location: file:///C:/2F745633/WhatarePatterns_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2378,7 +2380,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDDE4D.17CF92E0
+------=_NextPart_01CDE6C2.0988B310
 Content-Location: file:///C:/2F745633/WhatarePatterns_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2388,7 +2390,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDDE4D.17CF92E0
+------=_NextPart_01CDE6C2.0988B310
 Content-Location: file:///C:/2F745633/WhatarePatterns_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -2399,4 +2401,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"colorschememapping.xml"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDDE4D.17CF92E0--
+------=_NextPart_01CDE6C2.0988B310--

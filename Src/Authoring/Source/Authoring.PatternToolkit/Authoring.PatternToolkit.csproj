@@ -215,12 +215,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="..\..\..\Common\Guidance\CommonReferenceGuidance.doc">
-      <Link>Assets\Guidance\CommonReferenceGuidance.doc</Link>
-    </None>
-    <None Include="..\..\..\Common\Guidance\CommonUnderstandingGuidance.doc">
-      <Link>Assets\Guidance\CommonUnderstandingGuidance.doc</Link>
-    </None>
     <None Include="Assets\Templates\Text\Guidance\Substitution Notes for Guidance Document.txt" />
     <Content Include="GeneratedCode\Guidance\Content\WhatisCommonalityVariability.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -820,9 +814,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\ErrorinTextTemplateswhenusingtheVisualT4Editor.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Errorwhenopeningapatterntoolkitsolutionfile.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="GeneratedCode\Guidance\Content\HowToCreatingYourOwnDragConditions.mht">

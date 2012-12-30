@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDDE50.2D8BD0A0"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDE6C3.15E65440"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDDE50.2D8BD0A0
+------=_NextPart_01CDE6C3.15E65440
 Content-Location: file:///C:/9E4B5913/ImportingServicesintoAutomationClasses.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -28,8 +28,8 @@ href=3D"ImportingServicesintoAutomationClasses_files/filelist.xml">
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-19T12:20:00Z</o:Created>
-  <o:LastSaved>2012-12-19T12:20:00Z</o:LastSaved>
+  <o:Created>2012-12-30T06:23:00Z</o:Created>
+  <o:LastSaved>2012-12-30T06:23:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>613</o:Words>
   <o:Characters>3499</o:Characters>
@@ -2135,8 +2135,12 @@ table.MsoTableGrid
 
 <div class=3DWordSection1>
 
-<h4 style=3D'page-break-before:auto'>Importing Services into Automation Cla=
-sses<o:p></o:p></h4>
+<h4 style=3D'page-break-before:auto'><a name=3D"_Toc344469455"></a><a
+name=3D"_Toc344467682"></a><a name=3D"_Toc344467140"><span style=3D'mso-boo=
+kmark:
+_Toc344467682'><span style=3D'mso-bookmark:_Toc344469455'>Importing Service=
+s into
+Automation Classes</span></span></a><o:p></o:p></h4>
 
 <p class=3DMsoNormal>You declare imports to various services in Visual Stud=
 io
@@ -2241,8 +2245,7 @@ e-height:
   normal'>The current variable property, if the automation is set on a vari=
 able
   property in the pattern model. (i.e. for validation rules, value provider=
-s,
-  etc.)<o:p></o:p></p>
+s, etc.)<o:p></o:p></p>
   </td>
  </tr>
  <tr style=3D'mso-yfti-irow:2'>
@@ -2425,9 +2428,8 @@ text .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
 e-height:
-  normal'>The global service for managing guidance workflows (as seen in th=
-e Visual
-  Studio ‘Guidance Workflow Explorer’ window)<o:p></o:p></p>
+  normal'>The global service for managing guidance workflows (as seen in the
+  Visual Studio ‘Guidance Workflow Explorer’ window)<o:p></o:p></p>
   </td>
  </tr>
  <tr style=3D'mso-yfti-irow:9'>
@@ -2563,9 +2565,9 @@ ge
 <p class=3DMsoNormal>To import a service, define a public property on your
 automation class and decorate it with the [Import] attribute.<o:p></o:p></p>
 
-<p class=3DSourceCode><span style=3D'mso-tab-count:2'>              </span>=
-[<span
-style=3D'color:#2B91AF'>Import</span>(AllowDefault&nbsp;=3D&nbsp;<span
+<p class=3DSourceCode><span style=3D'mso-tab-count:1'>       </span><span
+style=3D'mso-tab-count:1'>       </span>[<span style=3D'color:#2B91AF'>Impo=
+rt</span>(AllowDefault&nbsp;=3D&nbsp;<span
 style=3D'color:blue'>true</span>)]<br>
 <span style=3D'mso-tab-count:2'>              </span><span style=3D'color:b=
 lue'>public</span>&nbsp;<span
@@ -2586,9 +2588,8 @@ its default value if not satisfied.<o:p></o:p></p>
 
 </div>
 
-<p class=3DMsoNormal>For imports that are required to be not null when the =
-automation
-is executed, use the [Required] attribute.<o:p></o:p></p>
+<p class=3DMsoNormal>For imports that are required to be not null when the
+automation is executed, use the [Required] attribute.<o:p></o:p></p>
 
 <p class=3DSourceCode><span style=3D'mso-tab-count:2'>              </span>=
 [<span
@@ -2654,7 +2655,7 @@ style=3D'color:blue'>get</span>;&nbsp;<span style=3D'color:blue'>set</span>=
 
 </html>
 
-------=_NextPart_01CDDE50.2D8BD0A0
+------=_NextPart_01CDE6C3.15E65440
 Content-Location: file:///C:/9E4B5913/ImportingServicesintoAutomationClasses_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2715,7 +2716,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDDE50.2D8BD0A0
+------=_NextPart_01CDE6C3.15E65440
 Content-Location: file:///C:/9E4B5913/ImportingServicesintoAutomationClasses_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2725,7 +2726,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDDE50.2D8BD0A0
+------=_NextPart_01CDE6C3.15E65440
 Content-Location: file:///C:/9E4B5913/ImportingServicesintoAutomationClasses_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -2736,4 +2737,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"colorschememapping.xml"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDDE50.2D8BD0A0--
+------=_NextPart_01CDE6C3.15E65440--

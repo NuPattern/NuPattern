@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDDE50.505C0410"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDE6C3.3B8A8F40"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDDE50.505C0410
+------=_NextPart_01CDE6C3.3B8A8F40
 Content-Location: file:///C:/604BB24E/MoreInformation.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -27,14 +27,14 @@ xmlns=3D"http://www.w3.org/TR/REC-html40">
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-19T12:21:00Z</o:Created>
-  <o:LastSaved>2012-12-19T12:21:00Z</o:LastSaved>
+  <o:Created>2012-12-30T06:24:00Z</o:Created>
+  <o:LastSaved>2012-12-30T06:24:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>85</o:Words>
-  <o:Characters>489</o:Characters>
-  <o:Lines>4</o:Lines>
+  <o:Words>80</o:Words>
+  <o:Characters>459</o:Characters>
+  <o:Lines>3</o:Lines>
   <o:Paragraphs>1</o:Paragraphs>
-  <o:CharactersWithSpaces>573</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>538</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -2049,13 +2049,21 @@ span.RecommendChar
 	margin-bottom:10.0pt;
 	line-height:115%;}
 @page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;
+	{size:11.0in 22.0in;
+	margin:.5in .5in .5in .5in;
 	mso-header-margin:.5in;
 	mso-footer-margin:.5in;
 	mso-paper-source:0;}
 div.WordSection1
 	{page:WordSection1;}
+@page WordSection2
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection2
+	{page:WordSection2;}
  /* List Definitions */
  @list l0
 	{mso-list-id:-119;
@@ -2134,15 +2142,22 @@ table.MsoTableGrid
 
 <h1 style=3D'page-break-before:auto'>More Information<o:p></o:p></h1>
 
-<p class=3DMsoListBulletCxSpFirst style=3D'mso-list:l0 level1 lfo1'><![if !=
-supportLists]><span
-style=3D'font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-fa=
-mily:
-Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
-ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Pattern Toolkits are compiled into Visual St=
-udio
-extensions which are packaged and deployed as VSIX files.<o:p></o:p></p>
+<p class=3DMsoListBulletCxSpFirst style=3D'margin-left:0in;mso-add-space:au=
+to;
+text-indent:0in;mso-list:none;tab-stops:.5in'>You can find more information=
+ at
+the NuPattern project site <a href=3D"http://nupattern.org">http://nupatter=
+n.org</a><o:p></o:p></p>
+
+<p class=3DMsoListBulletCxSpMiddle style=3D'margin-left:0in;mso-add-space:a=
+uto;
+text-indent:0in;mso-list:none;tab-stops:.5in'><o:p>&nbsp;</o:p></p>
+
+<p class=3DMsoListBulletCxSpMiddle style=3D'margin-left:0in;mso-add-space:a=
+uto;
+text-indent:0in;mso-list:none;tab-stops:.5in'>Pattern Toolkits are compiled
+into Visual Studio extensions which are packaged and deployed as VSIX files=
+.<o:p></o:p></p>
 
 <p class=3DMsoListBulletCxSpMiddle style=3D'margin-left:.5in;mso-add-space:=
 auto;
@@ -2167,8 +2182,8 @@ ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 href=3D"http://msdn.microsoft.com/en-us/library/dd393694.aspx">Visual Studio
 Extension Deployment</a><o:p></o:p></p>
 
-<p class=3DMsoListBulletCxSpMiddle style=3D'margin-left:.5in;mso-add-space:=
-auto;
+<p class=3DMsoListBulletCxSpLast style=3D'margin-left:.5in;mso-add-space:au=
+to;
 mso-list:l0 level1 lfo1;tab-stops:list .5in'><![if !supportLists]><span
 class=3DMsoHyperlink><span style=3D'font-family:Symbol;mso-fareast-font-fam=
 ily:
@@ -2178,18 +2193,24 @@ style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times New Roman"'>&nb=
 sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span></span><![endif]><a
 href=3D"http://msdn.microsoft.com/en-us/library/ff363239.aspx">VSIX Deploym=
-ent</a><span
-class=3DMsoHyperlink><o:p></o:p></span></p>
+ent</a><a
+name=3D"_Feedback"></a><span class=3DMsoHyperlink><o:p></o:p></span></p>
 
-<p class=3DMsoListBulletCxSpLast style=3D'mso-list:none;tab-stops:.5in'><sp=
-an
-class=3DMsoHyperlink><o:p><span style=3D'text-decoration:none'>&nbsp;</span=
-></o:p></span></p>
+<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=3DMsoNormal>You can find more information about NuPattern on the
-codeplex project site at <a href=3D"http://nupattern.codeplex.com">http://n=
-upattern.codeplex.com</a>
-<o:p></o:p></p>
+</div>
+
+<span style=3D'font-size:9.0pt;mso-bidi-font-size:11.0pt;line-height:115%;
+font-family:"Segoe UI","sans-serif";mso-fareast-font-family:Calibri;mso-far=
+east-theme-font:
+minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:mino=
+r-bidi;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'=
+><br
+clear=3Dall style=3D'page-break-before:always;mso-break-type:section-break'>
+</span>
+
+<div class=3DWordSection2>
 
 <p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -2199,7 +2220,7 @@ upattern.codeplex.com</a>
 
 </html>
 
-------=_NextPart_01CDDE50.505C0410
+------=_NextPart_01CDE6C3.3B8A8F40
 Content-Location: file:///C:/604BB24E/MoreInformation_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2260,7 +2281,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDDE50.505C0410
+------=_NextPart_01CDE6C3.3B8A8F40
 Content-Location: file:///C:/604BB24E/MoreInformation_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2270,7 +2291,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDDE50.505C0410
+------=_NextPart_01CDE6C3.3B8A8F40
 Content-Location: file:///C:/604BB24E/MoreInformation_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -2281,4 +2302,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"colorschememapping.xml"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDDE50.505C0410--
+------=_NextPart_01CDE6C3.3B8A8F40--
