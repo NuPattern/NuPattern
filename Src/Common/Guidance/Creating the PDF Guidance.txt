@@ -1,7 +1,8 @@
 ﻿1. Open the Guidance document in Word
 2. Expand all sub documents (Review | Outline | Show Subdocuments)
-3. At end of the title line, hit ENTER, insert a Table Of Contents
-4. Ensure you set for Level 4 topics
-5. Remove any unecessary whitespaces before the TOC
-6. Save as PDF file in same location and same name
-7. Close document an dont save.
+3. Hit CTRL+HOME to goto the first line of the document (the Title line)
+4. Hit END to goto the end of the first line
+5. Hit ENTER tocreate an empty paragraph
+6. Insert a standard Table Of Contents, ensure you set for Level 4 topics, you can choose the 'Simple' style, and choose dots for the separators
+7. Save as PDF file in same location, with the same name
+8. Close the document an DO NOT save.
