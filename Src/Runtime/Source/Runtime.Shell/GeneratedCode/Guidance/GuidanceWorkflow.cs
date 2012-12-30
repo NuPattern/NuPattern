@@ -55,1014 +55,412 @@ namespace NuPattern.Runtime.Shell.Guidance
 			this.Name = "GuidanceWorkflow";
 			var initial1 = new Initial
 			{
-				Name = "Solution Builder Guidance",
+				Name = "Solution Builder Guidance",
 			};
 			this.ConnectTo(initial1);
 			var fork2 = new Fork
 			{
 				Name = "First Time Users",
-				Description = "These topics are aimed at the first time users, and first time authors, of Pattern Toolkits.",
+				Description = "These topics are aimed at the first time users of Solution Builder.",
 			};
 			initial1.ConnectTo(fork2);
 			var fork3 = new Fork
 			{
 				Name = "Understanding",
-				Description = "This section helps you understand what Pattern Toolkits are, why they are useful, who should use them, and how to create them.",
+				Description = "This section helps you understand what Solution Builder is, what Pattern Toolkits are, why they are useful, and who should use them.",
 			};
 			fork2.ConnectTo(fork3);
 			var guidanceaction4 = new GuidanceAction
 			{
-				Name = "What is NuPattern?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisNuPattern.mht",
+				Name = "What is Solution Builder?",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisSolutionBuilder.mht",
 			};
 			fork3.ConnectTo(guidanceaction4);
 			var fork5 = new Fork
 			{
-				Name = "Why Would I Want to Use a Pattern Toolkit?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhyWouldIWanttoUseaPatternToolkit.mht",
+				Name = "The different types of solution elements in this window are installed by Pattern Toolkits. Pattern Toolkits are extensions that are installed into Visual Studio either using the ‘Extension Manager’ in Visual Studio or by obtaining pattern toolkits from toolkit authors, such as from the Visual Studio Gallery. Pattern Toolkits are built with NuPattern (see http://nupattern.org for more details.Using Pattern Toolkits",
 			};
 			guidanceaction4.ConnectTo(fork5);
 			var guidanceaction6 = new GuidanceAction
 			{
-				Name = "Benefits",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Benefits.mht",
+				Name = "Pre-requisites for Using Pattern Toolkits",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/PrerequisitesforUsingPatternToolkits.mht",
 			};
 			fork5.ConnectTo(guidanceaction6);
-			var join7 = new Join
-			{
-				Name = "Join1",
-			};
-			guidanceaction6.ConnectTo(join7);
-			var fork8 = new Fork
-			{
-				Name = "Why Would I Build a Pattern Toolkit?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhyWouldIBuildaPatternToolkit.mht",
-			};
-			join7.ConnectTo(fork8);
-			var guidanceaction9 = new GuidanceAction
-			{
-				Name = "Motivations",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Motivations.mht",
-			};
-			fork8.ConnectTo(guidanceaction9);
-			var join10 = new Join
-			{
-				Name = "Join2",
-			};
-			guidanceaction9.ConnectTo(join10);
-			var guidanceaction11 = new GuidanceAction
-			{
-				Name = "Can I Customize a Pattern Toolkit?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/CanICustomizeaPatternToolkit.mht",
-			};
-			join10.ConnectTo(guidanceaction11);
-			var guidanceaction12 = new GuidanceAction
-			{
-				Name = "How do Pattern Toolkits Work?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowdoPatternToolkitsWork.mht",
-			};
-			guidanceaction11.ConnectTo(guidanceaction12);
-			var join13 = new Join
-			{
-				Name = "Join3",
-			};
-			guidanceaction12.ConnectTo(join13);
-			var fork14 = new Fork
-			{
-				Name = "Working with Pattern Toolkits",
-				Description = "Find out how to use and create Pattern Toolkits.",
-			};
-			join13.ConnectTo(fork14);
-			var fork15 = new Fork
-			{
-				Name = "Using Patterns/Pattern Toolkits",
-				Description = "The tools and user interface  for using pattern toolkits enables you to: browse the installed patterns, view and create instances of those patterns called ‘Solution Elements’, and configure the solution elements to create projects in your solution.",
-			};
-			fork14.ConnectTo(fork15);
-			var guidanceaction16 = new GuidanceAction
-			{
-				Name = "Pre-requisites for Using",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/PrerequisitesforUsing.mht",
-			};
-			fork15.ConnectTo(guidanceaction16);
-			var guidanceaction17 = new GuidanceAction
+			var guidanceaction7 = new GuidanceAction
 			{
 				Name = "Installing a Pattern Toolkit",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/InstallingaPatternToolkit.mht",
 			};
-			guidanceaction16.ConnectTo(guidanceaction17);
-			var guidanceaction18 = new GuidanceAction
+			guidanceaction6.ConnectTo(guidanceaction7);
+			var guidanceaction8 = new GuidanceAction
 			{
 				Name = "Browsing & Managing Installed Pattern Toolkits",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/BrowsingManagingInstalledPatternToolkits.mht",
 			};
-			guidanceaction17.ConnectTo(guidanceaction18);
-			var guidanceaction19 = new GuidanceAction
+			guidanceaction7.ConnectTo(guidanceaction8);
+			var guidanceaction9 = new GuidanceAction
 			{
 				Name = "Using Pattern Toolkits",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/UsingPatternToolkits.mht",
 			};
-			guidanceaction18.ConnectTo(guidanceaction19);
-			var guidanceaction20 = new GuidanceAction
+			guidanceaction8.ConnectTo(guidanceaction9);
+			var guidanceaction10 = new GuidanceAction
 			{
 				Name = "Viewing & Configuring Solution Elements ",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ViewingConfiguringSolutionElements.mht",
 			};
-			guidanceaction19.ConnectTo(guidanceaction20);
-			var guidanceaction21 = new GuidanceAction
+			guidanceaction9.ConnectTo(guidanceaction10);
+			var guidanceaction11 = new GuidanceAction
 			{
 				Name = "Running Automation",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/RunningAutomation.mht",
 			};
-			guidanceaction20.ConnectTo(guidanceaction21);
-			var join22 = new Join
+			guidanceaction10.ConnectTo(guidanceaction11);
+			var join12 = new Join
 			{
-				Name = "Join4",
+				Name = "Join1",
 			};
-			guidanceaction21.ConnectTo(join22);
-			var fork23 = new Fork
+			guidanceaction11.ConnectTo(join12);
+			var join13 = new Join
 			{
-				Name = "Creating and Customizing Pattern Toolkits",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/CreatingandCustomizingPatternToolkits.mht",
+				Name = "Join2",
 			};
-			join22.ConnectTo(fork23);
-			var guidanceaction24 = new GuidanceAction
-			{
-				Name = "Pre-Requisites for Authoring",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/PreRequisitesforAuthoring.mht",
-			};
-			fork23.ConnectTo(guidanceaction24);
-			var guidanceaction25 = new GuidanceAction
-			{
-				Name = "Installing NuPattern",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/InstallingNuPattern.mht",
-			};
-			guidanceaction24.ConnectTo(guidanceaction25);
-			var guidanceaction26 = new GuidanceAction
-			{
-				Name = "Creating a Pattern Toolkit",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/CreatingaPatternToolkit.mht",
-			};
-			guidanceaction25.ConnectTo(guidanceaction26);
-			var guidanceaction27 = new GuidanceAction
-			{
-				Name = "The Development Cycle (Overview)",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/TheDevelopmentCycleOverview.mht",
-			};
-			guidanceaction26.ConnectTo(guidanceaction27);
-			var guidanceaction28 = new GuidanceAction
-			{
-				Name = "The Development Cycle (In Practice)",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/TheDevelopmentCycleInPractice.mht",
-			};
-			guidanceaction27.ConnectTo(guidanceaction28);
-			var guidanceaction29 = new GuidanceAction
-			{
-				Name = "The Development Process",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/TheDevelopmentProcess.mht",
-			};
-			guidanceaction28.ConnectTo(guidanceaction29);
-			var guidanceaction30 = new GuidanceAction
-			{
-				Name = "The Customization Process",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/TheCustomizationProcess.mht",
-			};
-			guidanceaction29.ConnectTo(guidanceaction30);
-			var join31 = new Join
-			{
-				Name = "Join5",
-			};
-			guidanceaction30.ConnectTo(join31);
-			var join32 = new Join
-			{
-				Name = "Join6",
-			};
-			join31.ConnectTo(join32);
-			var fork33 = new Fork
+			join12.ConnectTo(join13);
+			var fork14 = new Fork
 			{
 				Name = "Concepts",
-				Description = "This section identifies and explains the main concepts for: using, creating and customizing ‘Pattern Toolkits’.",
 			};
-			join32.ConnectTo(fork33);
-			var guidanceaction34 = new GuidanceAction
+			join13.ConnectTo(fork14);
+			var guidanceaction15 = new GuidanceAction
 			{
 				Name = "What are Patterns?",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatarePatterns.mht",
 			};
-			fork33.ConnectTo(guidanceaction34);
-			var guidanceaction35 = new GuidanceAction
+			fork14.ConnectTo(guidanceaction15);
+			var guidanceaction16 = new GuidanceAction
 			{
-				Name = "What are Pattern Toolkits?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatarePatternToolkits.mht",
+				Name = "Unless you enjoy writing (and presumably can afford to re-write) every component of your software from scratch, patterns are the most common reuse mechanism in software development today. They tend to be platform and language agnostic, but in that, tend also to have multiple possible implementations. Hundreds of hits on the web for any software development topic are evidence of this. One thing that tends to transcends patterns are best practices, but in order to be effective and efficient and practical all best practice implementation require some form of specificity of platform, language and technology. The end result is an implementation pattern that declares its platforms, languages and technologies. If you can specify those aspects of a best practice pattern, and a consumer can live within them, then the benefits of reuse become significant.Patterns can have unlimited scope. That is to say you can define a pattern from the smallest thing, like a line of code, to whole systems of software. But in general, larger patterns for complex software solution will almost certainly require narrower cases of reuse and smaller sets of parameters to be effective. As implementation scope increases, practical reuse tends to decrease. Keeping scope and parameters to a practical minimum aids in wider and more frequent reuse. One way to help manage larger scope is to break the pattern into smaller patterns that can be composed into larger software components and systems. What are Pattern Toolkits?",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/UnlessyouenjoywritingandpresumablycanaffordtorewriteeverycomponentofyoursoftwarefromscratchpatternsarethemostcommonreusemechanisminsoftwaredevelopmenttodayTheytendtobeplatformandlanguageagnosticbutinthattendalsotohavemultiplepossibleimplementationsHundredsofhitsonthewebforanysoftwaredevelopmenttopicareevidenceofthisOnethingthattendstotranscendspatternsarebestpracticesbutinordertobeeffectiveandefficientandpracticalallbestpracticeimplementationrequiresomeformofspecificityofplatformlanguageandtechnologyTheendresultisanimplementationpatternthatdeclaresitsplatformslanguagesandtechnologiesIfyoucanspecifythoseaspectsofabestpracticepatternandaconsumercanlivewithinthemthenthebenefitsofreusebecomesignificantPatternscanhaveunlimitedscopeThatistosayyoucandefineapatternfromthesmallestthinglikealineofcodetowholesystemsofsoftwareButingenerallargerpatternsforcomplexsoftwaresolutionwillalmostcertainlyrequirenarrowercasesofreuseandsmallersetsofparameterstobeeffectiveAsimplementationscopeincreasespracticalreusetendstodecreaseKeepingscopeandparameterstoapracticalminimumaidsinwiderandmorefrequentreuseOnewaytohelpmanagelargerscopeistobreakthepatternintosmallerpatternsthatcanbecomposedintolargersoftwarecomponentsandsystemsWhatarePatternToolkits.mht",
 			};
-			guidanceaction34.ConnectTo(guidanceaction35);
-			var guidanceaction36 = new GuidanceAction
-			{
-				Name = "What is Customization?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisCustomization.mht",
-			};
-			guidanceaction35.ConnectTo(guidanceaction36);
-			var fork37 = new Fork
-			{
-				Name = "Solution Builder",
-			};
-			guidanceaction36.ConnectTo(fork37);
-			var guidanceaction38 = new GuidanceAction
-			{
-				Name = "What is Solution Builder?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisSolutionBuilder.mht",
-			};
-			fork37.ConnectTo(guidanceaction38);
-			var guidanceaction39 = new GuidanceAction
+			guidanceaction15.ConnectTo(guidanceaction16);
+			var guidanceaction17 = new GuidanceAction
 			{
 				Name = "What is a Solution Element?",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisaSolutionElement.mht",
 			};
-			guidanceaction38.ConnectTo(guidanceaction39);
-			var join40 = new Join
-			{
-				Name = "Join7",
-			};
-			guidanceaction39.ConnectTo(join40);
-			var fork41 = new Fork
-			{
-				Name = "Pattern Model",
-			};
-			join40.ConnectTo(fork41);
-			var guidanceaction42 = new GuidanceAction
-			{
-				Name = "What is a Pattern Model?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisaPatternModel.mht",
-			};
-			fork41.ConnectTo(guidanceaction42);
-			var guidanceaction43 = new GuidanceAction
-			{
-				Name = "What is Commonality & Variability?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisCommonalityVariability.mht",
-			};
-			guidanceaction42.ConnectTo(guidanceaction43);
-			var guidanceaction44 = new GuidanceAction
-			{
-				Name = "What are Variability Views?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareVariabilityViews.mht",
-			};
-			guidanceaction43.ConnectTo(guidanceaction44);
-			var guidanceaction45 = new GuidanceAction
-			{
-				Name = "What are Variability Elements, Collections and Properties?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareVariabilityElementsCollectionsandProperties.mht",
-			};
-			guidanceaction44.ConnectTo(guidanceaction45);
-			var guidanceaction46 = new GuidanceAction
-			{
-				Name = "What are Extension Points?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareExtensionPoints.mht",
-			};
-			guidanceaction45.ConnectTo(guidanceaction46);
-			var guidanceaction47 = new GuidanceAction
-			{
-				Name = "What is the Pattern Model Designer?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisthePatternModelDesigner.mht",
-			};
-			guidanceaction46.ConnectTo(guidanceaction47);
-			var guidanceaction48 = new GuidanceAction
-			{
-				Name = "What is Cardinality?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisCardinality.mht",
-			};
-			guidanceaction47.ConnectTo(guidanceaction48);
-			var guidanceaction49 = new GuidanceAction
+			guidanceaction16.ConnectTo(guidanceaction17);
+			var guidanceaction18 = new GuidanceAction
 			{
 				Name = "What are Related Items?",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareRelatedItems.mht",
 			};
-			guidanceaction48.ConnectTo(guidanceaction49);
-			var join50 = new Join
-			{
-				Name = "Join8",
-			};
-			guidanceaction49.ConnectTo(join50);
-			var fork51 = new Fork
-			{
-				Name = "Assets",
-			};
-			join50.ConnectTo(fork51);
-			var guidanceaction52 = new GuidanceAction
-			{
-				Name = "What are Assets?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareAssets.mht",
-			};
-			fork51.ConnectTo(guidanceaction52);
-			var guidanceaction53 = new GuidanceAction
-			{
-				Name = "What are Solution Implementation Assets?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareSolutionImplementationAssets.mht",
-			};
-			guidanceaction52.ConnectTo(guidanceaction53);
-			var guidanceaction54 = new GuidanceAction
-			{
-				Name = "What are Automation Assets?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareAutomationAssets.mht",
-			};
-			guidanceaction53.ConnectTo(guidanceaction54);
-			var guidanceaction55 = new GuidanceAction
-			{
-				Name = "What are VS Templates?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareVSTemplates.mht",
-			};
-			guidanceaction54.ConnectTo(guidanceaction55);
-			var guidanceaction56 = new GuidanceAction
-			{
-				Name = "What are Text Templates?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareTextTemplates.mht",
-			};
-			guidanceaction55.ConnectTo(guidanceaction56);
-			var join57 = new Join
-			{
-				Name = "Join9",
-			};
-			guidanceaction56.ConnectTo(join57);
-			var fork58 = new Fork
+			guidanceaction17.ConnectTo(guidanceaction18);
+			var fork19 = new Fork
 			{
 				Name = "Guidance",
 			};
-			join57.ConnectTo(fork58);
-			var guidanceaction59 = new GuidanceAction
+			guidanceaction18.ConnectTo(fork19);
+			var guidanceaction20 = new GuidanceAction
 			{
 				Name = "What is Guidance?",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisGuidance.mht",
 			};
-			fork58.ConnectTo(guidanceaction59);
-			var guidanceaction60 = new GuidanceAction
+			fork19.ConnectTo(guidanceaction20);
+			var guidanceaction21 = new GuidanceAction
 			{
-				Name = "What is a Guidance Workflow?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisaGuidanceWorkflow.mht",
+				Name = "That guidance is composed of one or more a ‘Guidance Workflows’, each of which is a multi-pathed workflow of individual ‘Guidance Documents’ (topics), each of which has some browsable content, and each of which may or may not have state to indicate progress through it, and also contain links that automate some part of the described process.What is a Guidance Workflow?",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ThatguidanceiscomposedofoneormoreaGuidanceWorkflowseachofwhichisamultipathedworkflowofindividualGuidanceDocumentstopicseachofwhichhassomebrowsablecontentandeachofwhichmayormaynothavestatetoindicateprogressthroughitandalsocontainlinksthatautomatesomepartofthedescribedprocessWhatisaGuidanceWorkflow.mht",
 			};
-			guidanceaction59.ConnectTo(guidanceaction60);
-			var guidanceaction61 = new GuidanceAction
+			guidanceaction20.ConnectTo(guidanceaction21);
+			var guidanceaction22 = new GuidanceAction
 			{
 				Name = "What is a Guidance Document?",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisaGuidanceDocument.mht",
 			};
-			guidanceaction60.ConnectTo(guidanceaction61);
-			var guidanceaction62 = new GuidanceAction
+			guidanceaction21.ConnectTo(guidanceaction22);
+			var guidanceaction23 = new GuidanceAction
 			{
-				Name = "What is the Guidance Explorer?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatistheGuidanceExplorer.mht",
+				Name = "This document is viewed in the ‘Guidance Browser’ window in Visual Studio. That content can be static content as with MHT page or other textual page, or can be dynamic as with an online web, wiki page or community site page. Ultimately, the guidance document boils down to a URI to some accessible source.The content of this document is typically some form of HTML that can contain links to other documents within the guidance workflow, or link to external documentation and sites on the web. The content can further contain special automation links (content links) which execute automation commands. These commands can use the state of the current activity in the workflow to configure the command also, so that when a command executes it is contextualized to the work being done in the workflow.What is the Guidance Explorer?",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ThisdocumentisviewedintheGuidanceBrowserwindowinVisualStudioThatcontentcanbestaticcontentaswithMHTpageorothertextualpageorcanbedynamicaswithanonlinewebwikipageorcommunitysitepageUltimatelytheguidancedocumentboilsdowntoaURItosomeaccessiblesourceThecontentofthisdocumentistypicallysomeformofHTMLthatcancontainlinkstootherdocumentswithintheguidanceworkfloworlinktoexternaldocumentationandsitesonthewebThecontentcanfurthercontainspecialautomationlinkscontentlinkswhichexecuteautomationcommandsThesecommandscanusethestateofthecurrentactivityintheworkflowtoconfigurethecommandalsosothatwhenacommandexecutesitiscontextualizedtotheworkbeingdoneintheworkflowWhatistheGuidanceExplorer.mht",
 			};
-			guidanceaction61.ConnectTo(guidanceaction62);
-			var guidanceaction63 = new GuidanceAction
+			guidanceaction22.ConnectTo(guidanceaction23);
+			var guidanceaction24 = new GuidanceAction
 			{
 				Name = "What is the Guidance Browser?",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatistheGuidanceBrowser.mht",
 			};
-			guidanceaction62.ConnectTo(guidanceaction63);
-			var join64 = new Join
+			guidanceaction23.ConnectTo(guidanceaction24);
+			var join25 = new Join
 			{
-				Name = "Join10",
+				Name = "Join3",
 			};
-			guidanceaction63.ConnectTo(join64);
-			var fork65 = new Fork
+			guidanceaction24.ConnectTo(join25);
+			var fork26 = new Fork
 			{
 				Name = "Automation",
 			};
-			join64.ConnectTo(fork65);
-			var guidanceaction66 = new GuidanceAction
+			join25.ConnectTo(fork26);
+			var guidanceaction27 = new GuidanceAction
 			{
 				Name = "What is Automation?",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisAutomation.mht",
 			};
-			fork65.ConnectTo(guidanceaction66);
-			var guidanceaction67 = new GuidanceAction
+			fork26.ConnectTo(guidanceaction27);
+			var guidanceaction28 = new GuidanceAction
 			{
-				Name = "What are Automation Extensions?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareAutomationExtensions.mht",
+				Name = "Without automation, and with guidance, a pattern toolkit could only instruct a user on what to do with its solution-based assets (such as frameworks, libraries and code samples). With automation however, a pattern toolkit can for example: automate the unfolding of project templates, generation of source code, validation of pattern models, support drag and drop, provide contextual menus, run custom tools, refactor code and configuration, synchronize the solution artifacts with the design, etc. There are many areas of a toolkit that leverage automation to make building a solution with them orders of magnitudes faster and cheaper than handcrafting solutions from scratch.What are Artifact Links?",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WithoutautomationandwithguidanceapatterntoolkitcouldonlyinstructauseronwhattodowithitssolutionbasedassetssuchasframeworkslibrariesandcodesamplesWithautomationhoweverapatterntoolkitcanforexampleautomatetheunfoldingofprojecttemplatesgenerationofsourcecodevalidationofpatternmodelssupportdraganddropprovidecontextualmenusruncustomtoolsrefactorcodeandconfigurationsynchronizethesolutionartifactswiththedesignetcTherearemanyareasofatoolkitthatleverageautomationtomakebuildingasolutionwiththemordersofmagnitudesfasterandcheaperthanhandcraftingsolutionsfromscratchWhatareArtifactLinks.mht",
 			};
-			guidanceaction66.ConnectTo(guidanceaction67);
-			var guidanceaction68 = new GuidanceAction
+			guidanceaction27.ConnectTo(guidanceaction28);
+			var join29 = new Join
 			{
-				Name = "What are Launch Points?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareLaunchPoints.mht",
+				Name = "Join4",
 			};
-			guidanceaction67.ConnectTo(guidanceaction68);
-			var guidanceaction69 = new GuidanceAction
+			guidanceaction28.ConnectTo(join29);
+			var join30 = new Join
 			{
-				Name = "What are Events?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareEvents.mht",
+				Name = "Join5",
 			};
-			guidanceaction68.ConnectTo(guidanceaction69);
-			var guidanceaction70 = new GuidanceAction
+			join29.ConnectTo(join30);
+			var join31 = new Join
 			{
-				Name = "What are Commands?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareCommands.mht",
+				Name = "Join6",
 			};
-			guidanceaction69.ConnectTo(guidanceaction70);
-			var guidanceaction71 = new GuidanceAction
-			{
-				Name = "What are Wizards?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareWizards.mht",
-			};
-			guidanceaction70.ConnectTo(guidanceaction71);
-			var guidanceaction72 = new GuidanceAction
-			{
-				Name = "What are Conditions?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareConditions.mht",
-			};
-			guidanceaction71.ConnectTo(guidanceaction72);
-			var guidanceaction73 = new GuidanceAction
-			{
-				Name = "What are Value Providers?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareValueProviders.mht",
-			};
-			guidanceaction72.ConnectTo(guidanceaction73);
-			var guidanceaction74 = new GuidanceAction
-			{
-				Name = "What are Validation Rules?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareValidationRules.mht",
-			};
-			guidanceaction73.ConnectTo(guidanceaction74);
-			var guidanceaction75 = new GuidanceAction
-			{
-				Name = "What are Artifact Links?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatareArtifactLinks.mht",
-			};
-			guidanceaction74.ConnectTo(guidanceaction75);
-			var join76 = new Join
-			{
-				Name = "Join11",
-			};
-			guidanceaction75.ConnectTo(join76);
-			var fork77 = new Fork
-			{
-				Name = "Publishing",
-			};
-			join76.ConnectTo(fork77);
-			var guidanceaction78 = new GuidanceAction
-			{
-				Name = "What is Toolkit Info?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/WhatisToolkitInfo.mht",
-			};
-			fork77.ConnectTo(guidanceaction78);
-			var join79 = new Join
-			{
-				Name = "Join12",
-			};
-			guidanceaction78.ConnectTo(join79);
-			var fork80 = new Fork
-			{
-				Name = "Deployment",
-			};
-			join79.ConnectTo(fork80);
-			var guidanceaction81 = new GuidanceAction
-			{
-				Name = "How is a Pattern Toolkit Deployed?",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowisaPatternToolkitDeployed.mht",
-			};
-			fork80.ConnectTo(guidanceaction81);
-			var join82 = new Join
-			{
-				Name = "Join13",
-			};
-			guidanceaction81.ConnectTo(join82);
-			var join83 = new Join
-			{
-				Name = "Join14",
-			};
-			join82.ConnectTo(join83);
-			var join84 = new Join
-			{
-				Name = "Join15",
-			};
-			join83.ConnectTo(join84);
-			var fork85 = new Fork
+			join30.ConnectTo(join31);
+			var fork32 = new Fork
 			{
 				Name = "How To: Guides",
 				Description = "The ‘How To’ guides provide background information, tips and instructions for performing the most common activities with the Solution Builder tool window.",
 			};
-			join84.ConnectTo(fork85);
-			var fork86 = new Fork
+			join31.ConnectTo(fork32);
+			var fork33 = new Fork
 			{
 				Name = "Using",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Using.mht",
+				Description = "Installing and developing solutions with pattern toolkits using Solution Builder.",
 			};
-			fork85.ConnectTo(fork86);
-			var guidanceaction87 = new GuidanceAction
+			fork32.ConnectTo(fork33);
+			var guidanceaction34 = new GuidanceAction
 			{
 				Name = "Understanding: What are Pattern Toolkits?",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/UnderstandingWhatarePatternToolkits.mht",
 			};
-			fork86.ConnectTo(guidanceaction87);
-			var guidanceaction88 = new GuidanceAction
+			fork33.ConnectTo(guidanceaction34);
+			var guidanceaction35 = new GuidanceAction
 			{
 				Name = "How To: Install/Uninstall Pattern Toolkits",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToInstallUninstallPatternToolkits.mht",
 			};
-			guidanceaction87.ConnectTo(guidanceaction88);
-			var guidanceaction89 = new GuidanceAction
+			guidanceaction34.ConnectTo(guidanceaction35);
+			var guidanceaction36 = new GuidanceAction
 			{
 				Name = "How To: Use a Pattern",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToUseaPattern.mht",
 			};
-			guidanceaction88.ConnectTo(guidanceaction89);
-			var guidanceaction90 = new GuidanceAction
+			guidanceaction35.ConnectTo(guidanceaction36);
+			var guidanceaction37 = new GuidanceAction
 			{
 				Name = "How To: Add New Solution Elements",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToAddNewSolutionElements.mht",
 			};
-			guidanceaction89.ConnectTo(guidanceaction90);
-			var guidanceaction91 = new GuidanceAction
+			guidanceaction36.ConnectTo(guidanceaction37);
+			var guidanceaction38 = new GuidanceAction
 			{
 				Name = "How To: Control the display of Solution Elements",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToControlthedisplayofSolutionElements.mht",
 			};
-			guidanceaction90.ConnectTo(guidanceaction91);
-			var guidanceaction92 = new GuidanceAction
+			guidanceaction37.ConnectTo(guidanceaction38);
+			var guidanceaction39 = new GuidanceAction
 			{
 				Name = "How To: Work with Multiple Views",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToWorkwithMultipleViews.mht",
 			};
-			guidanceaction91.ConnectTo(guidanceaction92);
-			var guidanceaction93 = new GuidanceAction
+			guidanceaction38.ConnectTo(guidanceaction39);
+			var guidanceaction40 = new GuidanceAction
 			{
 				Name = "How To: Find the Guidance",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToFindtheGuidance.mht",
 			};
-			guidanceaction92.ConnectTo(guidanceaction93);
-			var guidanceaction94 = new GuidanceAction
+			guidanceaction39.ConnectTo(guidanceaction40);
+			var guidanceaction41 = new GuidanceAction
 			{
-				Name = "How To: Run the Automation",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToRuntheAutomation.mht",
+				Name = "How To: Run Automation",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToRunAutomation.mht",
 			};
-			guidanceaction93.ConnectTo(guidanceaction94);
-			var guidanceaction95 = new GuidanceAction
+			guidanceaction40.ConnectTo(guidanceaction41);
+			var guidanceaction42 = new GuidanceAction
 			{
 				Name = "How To: Use Drag and Drop",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToUseDragandDrop.mht",
 			};
-			guidanceaction94.ConnectTo(guidanceaction95);
-			var guidanceaction96 = new GuidanceAction
+			guidanceaction41.ConnectTo(guidanceaction42);
+			var guidanceaction43 = new GuidanceAction
 			{
 				Name = "How To: Navigate to or Open Solution Items",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToNavigatetoorOpenSolutionItems.mht",
 			};
-			guidanceaction95.ConnectTo(guidanceaction96);
-			var guidanceaction97 = new GuidanceAction
+			guidanceaction42.ConnectTo(guidanceaction43);
+			var guidanceaction44 = new GuidanceAction
 			{
 				Name = "How To: Validate Solution Elements",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToValidateSolutionElements.mht",
 			};
-			guidanceaction96.ConnectTo(guidanceaction97);
-			var guidanceaction98 = new GuidanceAction
+			guidanceaction43.ConnectTo(guidanceaction44);
+			var guidanceaction45 = new GuidanceAction
 			{
-				Name = "How To: Fix or Related Items",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToFixorRelatedItems.mht",
+				Name = "How To: Fix Related Items",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToFixRelatedItems.mht",
 			};
-			guidanceaction97.ConnectTo(guidanceaction98);
-			var guidanceaction99 = new GuidanceAction
+			guidanceaction44.ConnectTo(guidanceaction45);
+			var guidanceaction46 = new GuidanceAction
 			{
 				Name = "How To: Troubleshoot Pattern Problems",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/HowToTroubleshootPatternProblems.mht",
 			};
-			guidanceaction98.ConnectTo(guidanceaction99);
-			var join100 = new Join
+			guidanceaction45.ConnectTo(guidanceaction46);
+			var join47 = new Join
 			{
-				Name = "Join16",
+				Name = "Join7",
 			};
-			guidanceaction99.ConnectTo(join100);
-			var guidanceaction101 = new GuidanceAction
+			guidanceaction46.ConnectTo(join47);
+			var guidanceaction48 = new GuidanceAction
 			{
 				Name = "Authoring",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Authoring.mht",
 			};
-			join100.ConnectTo(guidanceaction101);
-			var join102 = new Join
+			join47.ConnectTo(guidanceaction48);
+			var join49 = new Join
 			{
-				Name = "Join17",
+				Name = "Join8",
 			};
-			guidanceaction101.ConnectTo(join102);
-			var fork103 = new Fork
+			guidanceaction48.ConnectTo(join49);
+			var fork50 = new Fork
 			{
 				Name = "Reference",
 			};
-			join102.ConnectTo(fork103);
-			var guidanceaction104 = new GuidanceAction
+			join49.ConnectTo(fork50);
+			var guidanceaction51 = new GuidanceAction
 			{
 				Name = "Troubleshooting Toolkits",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/TroubleshootingToolkits.mht",
 			};
-			fork103.ConnectTo(guidanceaction104);
-			var fork105 = new Fork
-			{
-				Name = "Authoring",
-				Description = "Designing and creating patterns, Pattern Toolkits, assets, automation.",
-			};
-			guidanceaction104.ConnectTo(fork105);
-			var fork106 = new Fork
-			{
-				Name = "Modeling",
-			};
-			fork105.ConnectTo(fork106);
-			var guidanceaction107 = new GuidanceAction
-			{
-				Name = "Adding a View",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddingaView.mht",
-			};
-			fork106.ConnectTo(guidanceaction107);
-			var guidanceaction108 = new GuidanceAction
-			{
-				Name = "Adding a Collection or an Element",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddingaCollectionoranElement.mht",
-			};
-			guidanceaction107.ConnectTo(guidanceaction108);
-			var guidanceaction109 = new GuidanceAction
-			{
-				Name = "Adding a Variable Property",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddingaVariableProperty.mht",
-			};
-			guidanceaction108.ConnectTo(guidanceaction109);
-			var guidanceaction110 = new GuidanceAction
-			{
-				Name = "Changing the Cardinality",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ChangingtheCardinality.mht",
-			};
-			guidanceaction109.ConnectTo(guidanceaction110);
-			var guidanceaction111 = new GuidanceAction
-			{
-				Name = "Changing the Ordering",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ChangingtheOrdering.mht",
-			};
-			guidanceaction110.ConnectTo(guidanceaction111);
-			var guidanceaction112 = new GuidanceAction
-			{
-				Name = "Showing ‘Hidden’ Elements",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ShowingHiddenElements.mht",
-			};
-			guidanceaction111.ConnectTo(guidanceaction112);
-			var guidanceaction113 = new GuidanceAction
-			{
-				Name = "Arranging Shapes on Pattern Model",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ArrangingShapesonPatternModel.mht",
-			};
-			guidanceaction112.ConnectTo(guidanceaction113);
-			var join114 = new Join
-			{
-				Name = "Join18",
-			};
-			guidanceaction113.ConnectTo(join114);
-			var fork115 = new Fork
-			{
-				Name = "Assets",
-			};
-			join114.ConnectTo(fork115);
-			var guidanceaction116 = new GuidanceAction
-			{
-				Name = "Adding a VS Template",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddingaVSTemplate.mht",
-			};
-			fork115.ConnectTo(guidanceaction116);
-			var guidanceaction117 = new GuidanceAction
-			{
-				Name = "Adding a Text Template",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddingaTextTemplate.mht",
-			};
-			guidanceaction116.ConnectTo(guidanceaction117);
-			var join118 = new Join
-			{
-				Name = "Join19",
-			};
-			guidanceaction117.ConnectTo(join118);
-			var fork119 = new Fork
-			{
-				Name = "Guidance",
-			};
-			join118.ConnectTo(fork119);
-			var guidanceaction120 = new GuidanceAction
-			{
-				Name = "Editing Guidance",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/EditingGuidance.mht",
-			};
-			fork119.ConnectTo(guidanceaction120);
-			var guidanceaction121 = new GuidanceAction
-			{
-				Name = "Building Guidance",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/BuildingGuidance.mht",
-			};
-			guidanceaction120.ConnectTo(guidanceaction121);
-			var join122 = new Join
-			{
-				Name = "Join20",
-			};
-			guidanceaction121.ConnectTo(join122);
-			var fork123 = new Fork
-			{
-				Name = "Automation",
-			};
-			join122.ConnectTo(fork123);
-			var guidanceaction124 = new GuidanceAction
-			{
-				Name = "Adding a Launch Point",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddingaLaunchPoint.mht",
-			};
-			fork123.ConnectTo(guidanceaction124);
-			var guidanceaction125 = new GuidanceAction
-			{
-				Name = "Configuring a Launch Point",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ConfiguringaLaunchPoint.mht",
-			};
-			guidanceaction124.ConnectTo(guidanceaction125);
-			var guidanceaction126 = new GuidanceAction
-			{
-				Name = "Configuring a Template Launch Point",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ConfiguringaTemplateLaunchPoint.mht",
-			};
-			guidanceaction125.ConnectTo(guidanceaction126);
-			var guidanceaction127 = new GuidanceAction
-			{
-				Name = "Configuring an Event Launch Point",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ConfiguringanEventLaunchPoint.mht",
-			};
-			guidanceaction126.ConnectTo(guidanceaction127);
-			var guidanceaction128 = new GuidanceAction
-			{
-				Name = "Configuring a Context Menu Launch Point",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ConfiguringaContextMenuLaunchPoint.mht",
-			};
-			guidanceaction127.ConnectTo(guidanceaction128);
-			var guidanceaction129 = new GuidanceAction
-			{
-				Name = "Configuring a Drag Drop Launch Point",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ConfiguringaDragDropLaunchPoint.mht",
-			};
-			guidanceaction128.ConnectTo(guidanceaction129);
-			var guidanceaction130 = new GuidanceAction
-			{
-				Name = "Adding a Command",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddingaCommand.mht",
-			};
-			guidanceaction129.ConnectTo(guidanceaction130);
-			var guidanceaction131 = new GuidanceAction
-			{
-				Name = "Configuring a Command",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ConfiguringaCommand.mht",
-			};
-			guidanceaction130.ConnectTo(guidanceaction131);
-			var guidanceaction132 = new GuidanceAction
-			{
-				Name = "Adding a Wizard",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddingaWizard.mht",
-			};
-			guidanceaction131.ConnectTo(guidanceaction132);
-			var guidanceaction133 = new GuidanceAction
-			{
-				Name = "Configuring a Wizard",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ConfiguringaWizard.mht",
-			};
-			guidanceaction132.ConnectTo(guidanceaction133);
-			var guidanceaction134 = new GuidanceAction
-			{
-				Name = "Common Automation Tasks",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/CommonAutomationTasks.mht",
-			};
-			guidanceaction133.ConnectTo(guidanceaction134);
-			var guidanceaction135 = new GuidanceAction
-			{
-				Name = "Adding Properties to Automation Classes",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddingPropertiestoAutomationClasses.mht",
-			};
-			guidanceaction134.ConnectTo(guidanceaction135);
-			var guidanceaction136 = new GuidanceAction
-			{
-				Name = "Importing Services into Automation Classes",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ImportingServicesintoAutomationClasses.mht",
-			};
-			guidanceaction135.ConnectTo(guidanceaction136);
-			var guidanceaction137 = new GuidanceAction
-			{
-				Name = "Importing the Current Element into Automation Classes",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ImportingtheCurrentElementintoAutomationClasses.mht",
-			};
-			guidanceaction136.ConnectTo(guidanceaction137);
-			var guidanceaction138 = new GuidanceAction
-			{
-				Name = "Navigating Pattern Models Programmatically (Generically)",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/NavigatingPatternModelsProgrammaticallyGenerically.mht",
-			};
-			guidanceaction137.ConnectTo(guidanceaction138);
-			var guidanceaction139 = new GuidanceAction
-			{
-				Name = "Navigating Pattern Models Programmatically (Typed)",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/NavigatingPatternModelsProgrammaticallyTyped.mht",
-			};
-			guidanceaction138.ConnectTo(guidanceaction139);
-			var guidanceaction140 = new GuidanceAction
-			{
-				Name = "Moving Between Generic and Typed Pattern Model Schemes",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/MovingBetweenGenericandTypedPatternModelSchemes.mht",
-			};
-			guidanceaction139.ConnectTo(guidanceaction140);
-			var guidanceaction141 = new GuidanceAction
-			{
-				Name = "Target Path Syntax",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/TargetPathSyntax.mht",
-			};
-			guidanceaction140.ConnectTo(guidanceaction141);
-			var guidanceaction142 = new GuidanceAction
-			{
-				Name = "Expression Syntax",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ExpressionSyntax.mht",
-			};
-			guidanceaction141.ConnectTo(guidanceaction142);
-			var join143 = new Join
-			{
-				Name = "Join21",
-			};
-			guidanceaction142.ConnectTo(join143);
-			var fork144 = new Fork
-			{
-				Name = "Provided Automation Types",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ProvidedAutomationTypes.mht",
-			};
-			join143.ConnectTo(fork144);
-			var guidanceaction145 = new GuidanceAction
-			{
-				Name = "Commands",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Commands.mht",
-			};
-			fork144.ConnectTo(guidanceaction145);
-			var guidanceaction146 = new GuidanceAction
-			{
-				Name = "Conditions",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Conditions.mht",
-			};
-			guidanceaction145.ConnectTo(guidanceaction146);
-			var guidanceaction147 = new GuidanceAction
-			{
-				Name = "Value Providers",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ValueProviders.mht",
-			};
-			guidanceaction146.ConnectTo(guidanceaction147);
-			var guidanceaction148 = new GuidanceAction
-			{
-				Name = "Validation Rules",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ValidationRules.mht",
-			};
-			guidanceaction147.ConnectTo(guidanceaction148);
-			var guidanceaction149 = new GuidanceAction
-			{
-				Name = "Events",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Events.mht",
-			};
-			guidanceaction148.ConnectTo(guidanceaction149);
-			var join150 = new Join
-			{
-				Name = "Join22",
-			};
-			guidanceaction149.ConnectTo(join150);
-			var join151 = new Join
-			{
-				Name = "Join23",
-			};
-			join150.ConnectTo(join151);
-			var fork152 = new Fork
+			fork50.ConnectTo(guidanceaction51);
+			var fork52 = new Fork
 			{
 				Name = "Environment",
 				Description = "The development and tooling environment for using, authoring and customizing Pattern Toolkits.",
 			};
-			join151.ConnectTo(fork152);
-			var guidanceaction153 = new GuidanceAction
+			guidanceaction51.ConnectTo(fork52);
+			var guidanceaction53 = new GuidanceAction
 			{
 				Name = "Visual Studio Experimental Instance",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/VisualStudioExperimentalInstance.mht",
 			};
-			fork152.ConnectTo(guidanceaction153);
-			var guidanceaction154 = new GuidanceAction
+			fork52.ConnectTo(guidanceaction53);
+			var guidanceaction54 = new GuidanceAction
 			{
 				Name = "Solution Builder",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/SolutionBuilder.mht",
 			};
-			guidanceaction153.ConnectTo(guidanceaction154);
-			var guidanceaction155 = new GuidanceAction
+			guidanceaction53.ConnectTo(guidanceaction54);
+			var guidanceaction55 = new GuidanceAction
 			{
-				Name = "Add New Solution Element Dialog",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddNewSolutionElementDialog.mht",
+				Name = "Tip: Move and dock the tool window in a separate area of the main window of Visual Studio (i.e. on the opposite side of the window from 'Solution Explorer'), so that you can see both 'Solution Builder' and 'Solution Explorer' at the same time. This is useful for working on the solution using both these windows.Add New Solution Element Dialog",
+				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/TipMoveanddockthetoolwindowinaseparateareaofthemainwindowofVisualStudioieontheoppositesideofthewindowfromSolutionExplorersothatyoucanseebothSolutionBuilderandSolutionExploreratthesametimeThisisusefulforworkingonthesolutionusingboththesewindowsAddNewSolutionElementDialog.mht",
 			};
-			guidanceaction154.ConnectTo(guidanceaction155);
-			var guidanceaction156 = new GuidanceAction
+			guidanceaction54.ConnectTo(guidanceaction55);
+			var guidanceaction56 = new GuidanceAction
 			{
 				Name = "Pattern Model Designer",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/PatternModelDesigner.mht",
 			};
-			guidanceaction155.ConnectTo(guidanceaction156);
-			var guidanceaction157 = new GuidanceAction
+			guidanceaction55.ConnectTo(guidanceaction56);
+			var guidanceaction57 = new GuidanceAction
 			{
 				Name = "Guidance Workflow Explorer",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/GuidanceWorkflowExplorer.mht",
 			};
-			guidanceaction156.ConnectTo(guidanceaction157);
-			var guidanceaction158 = new GuidanceAction
+			guidanceaction56.ConnectTo(guidanceaction57);
+			var guidanceaction58 = new GuidanceAction
 			{
 				Name = "Solution Explorer",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/SolutionExplorer.mht",
 			};
-			guidanceaction157.ConnectTo(guidanceaction158);
-			var guidanceaction159 = new GuidanceAction
+			guidanceaction57.ConnectTo(guidanceaction58);
+			var guidanceaction59 = new GuidanceAction
 			{
 				Name = "Properties Window",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/PropertiesWindow.mht",
 			};
-			guidanceaction158.ConnectTo(guidanceaction159);
-			var guidanceaction160 = new GuidanceAction
+			guidanceaction58.ConnectTo(guidanceaction59);
+			var guidanceaction60 = new GuidanceAction
 			{
 				Name = "Add/New Project/Item Dialog",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/AddNewProjectItemDialog.mht",
 			};
-			guidanceaction159.ConnectTo(guidanceaction160);
-			var guidanceaction161 = new GuidanceAction
+			guidanceaction59.ConnectTo(guidanceaction60);
+			var guidanceaction61 = new GuidanceAction
 			{
 				Name = "Extension Manager",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ExtensionManager.mht",
 			};
-			guidanceaction160.ConnectTo(guidanceaction161);
-			var guidanceaction162 = new GuidanceAction
+			guidanceaction60.ConnectTo(guidanceaction61);
+			var guidanceaction62 = new GuidanceAction
 			{
 				Name = "Options",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Options.mht",
 			};
-			guidanceaction161.ConnectTo(guidanceaction162);
-			var guidanceaction163 = new GuidanceAction
+			guidanceaction61.ConnectTo(guidanceaction62);
+			var guidanceaction63 = new GuidanceAction
 			{
 				Name = "Tracing Window",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/TracingWindow.mht",
 			};
-			guidanceaction162.ConnectTo(guidanceaction163);
-			var join164 = new Join
+			guidanceaction62.ConnectTo(guidanceaction63);
+			var join64 = new Join
 			{
-				Name = "Join24",
+				Name = "Join9",
 			};
-			guidanceaction163.ConnectTo(join164);
-			var join165 = new Join
+			guidanceaction63.ConnectTo(join64);
+			var join65 = new Join
 			{
-				Name = "Join25",
+				Name = "Join10",
 			};
-			join164.ConnectTo(join165);
-			var guidanceaction166 = new GuidanceAction
+			join64.ConnectTo(join65);
+			var guidanceaction66 = new GuidanceAction
 			{
 				Name = "More Information",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/MoreInformation.mht",
 			};
-			join165.ConnectTo(guidanceaction166);
-			var fork167 = new Fork
+			join65.ConnectTo(guidanceaction66);
+			var fork67 = new Fork
 			{
 				Name = "Known Issues",
 				Description = "This is a list of the critical known issues in the current version of NuPattern.",
 			};
-			guidanceaction166.ConnectTo(fork167);
-			var guidanceaction168 = new GuidanceAction
-			{
-				Name = "Error when opening a pattern toolkit solution file",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Errorwhenopeningapatterntoolkitsolutionfile.mht",
-			};
-			fork167.ConnectTo(guidanceaction168);
-			var guidanceaction169 = new GuidanceAction
-			{
-				Name = "Corruption of pattern model when performing an Undo",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/CorruptionofpatternmodelwhenperforminganUndo.mht",
-			};
-			guidanceaction168.ConnectTo(guidanceaction169);
-			var guidanceaction170 = new GuidanceAction
-			{
-				Name = "Error in Text Templates when using the Visual T4 Editor",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/ErrorinTextTemplateswhenusingtheVisualT4Editor.mht",
-			};
-			guidanceaction169.ConnectTo(guidanceaction170);
-			var guidanceaction171 = new GuidanceAction
+			guidanceaction66.ConnectTo(fork67);
+			var guidanceaction68 = new GuidanceAction
 			{
 				Name = "Build error: “store must be open for this operation”",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Builderrorstoremustbeopenforthisoperation.mht",
 			};
-			guidanceaction170.ConnectTo(guidanceaction171);
-			var guidanceaction172 = new GuidanceAction
+			fork67.ConnectTo(guidanceaction68);
+			var join69 = new Join
 			{
-				Name = "Error, building guidance with 64bit versions of Microsoft Word.",
-				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Errorbuildingguidancewith64bitversionsofMicrosoftWord.mht",
+				Name = "Join11",
 			};
-			guidanceaction171.ConnectTo(guidanceaction172);
-			var join173 = new Join
-			{
-				Name = "Join26",
-			};
-			guidanceaction172.ConnectTo(join173);
-			var guidanceaction174 = new GuidanceAction
+			guidanceaction68.ConnectTo(join69);
+			var guidanceaction70 = new GuidanceAction
 			{
 				Name = "Feedback",
 				Link = "content://c869918e-f94e-4e7a-ab25-b076ff4e751b/GeneratedCode/Guidance/Content/Feedback.mht",
 			};
-			join173.ConnectTo(guidanceaction174);
-			var final175 = new Final
+			join69.ConnectTo(guidanceaction70);
+			var final71 = new Final
 			{
 				Name = "ActivityFinal1",
 			};
-			guidanceaction174.ConnectTo(final175);
+			guidanceaction70.ConnectTo(final71);
 
 			this.OnPostInitialize();
 		}
