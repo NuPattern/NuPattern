@@ -184,6 +184,30 @@
     <None Include="..\..\..\Common\Guidance\Creating the PDF Guidance.txt">
       <Link>Guidance\Creating the PDF Guidance.txt</Link>
     </None>
+    <Content Include="..\..\..\Common\Guidance\Environment.xml">
+      <Link>Guidance\Environment.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\Feedback.xml">
+      <Link>Guidance\Feedback.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\First Time Users - Runtime.xml">
+      <Link>Guidance\First Time Users - Runtime.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\How To - Runtime.xml">
+      <Link>Guidance\How To - Runtime.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\Known Issues - Runtime.xml">
+      <Link>Guidance\Known Issues - Runtime.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\More Information.xml">
+      <Link>Guidance\More Information.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\Reference - Runtime.xml">
+      <Link>Guidance\Reference - Runtime.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\Troubleshooting Toolkits.xml">
+      <Link>Guidance\Troubleshooting Toolkits.xml</Link>
+    </Content>
     <Content Include="..\..\..\LICENSE.txt">
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -386,9 +410,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\Common\Guidance\CommonReferenceGuidance.doc">
-      <Link>Guidance\CommonReferenceGuidance.doc</Link>
-    </None>
     <None Include="..\..\..\Common\Guidance\RuntimeGuidance.doc">
       <Link>Guidance\RuntimeGuidance.doc</Link>
       <ItemGuid>02990d34-46b5-4617-82f9-cc74c83c5666</ItemGuid>

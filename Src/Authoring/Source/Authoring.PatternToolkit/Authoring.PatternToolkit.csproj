@@ -113,6 +113,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HandOnLabsToolkitInfo.tt</DependentUpon>
     </Compile>
+    <Content Include="..\..\..\Common\Guidance\Environment.xml">
+      <Link>Assets\Guidance\Environment.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\Feedback.xml">
+      <Link>Assets\Guidance\Feedback.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\First Time Users - Authoring.xml">
+      <Link>Assets\Guidance\First Time Users - Authoring.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\Hands On Labs - Authoring.xml">
+      <Link>Assets\Guidance\Hands On Labs - Authoring.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\How To - Authoring.xml">
+      <Link>Assets\Guidance\How To - Authoring.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\Known Issues - Authoring.xml">
+      <Link>Assets\Guidance\Known Issues - Authoring.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\More Information.xml">
+      <Link>Assets\Guidance\More Information.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\Reference - Authoring.xml">
+      <Link>Assets\Guidance\Reference - Authoring.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\Troubleshooting Toolkits.xml">
+      <Link>Assets\Guidance\Troubleshooting Toolkits.xml</Link>
+    </Content>
     <Content Include="..\..\..\LICENSE.txt">
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
