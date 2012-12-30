@@ -18,7 +18,7 @@ Sub SaveAsPDF()
 ' Adds a TOC and saves the guidance document as PDF
 '
     ' Save document first
-    ActiveDocument.Save
+    'ActiveDocument.Save
     
     ' Expand sub documents
     ExpandAllSubDocuments
@@ -57,5 +57,5 @@ Sub SaveAsPDF()
     Selection.TypeBackspace
     
     ' Save Document
-    ActiveDocument.Save
+    'ActiveDocument.Save
 End Sub
