@@ -5,17 +5,6 @@
 <#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
 <#@ Import Namespace="NuPattern.Runtime" #>
 <#@ Import Namespace="NuPattern.Authoring.PatternToolkit" #>
-<#
-	var toolkitInfo = ((IProductElement)this.Element).As<IPatternToolkitInfo>();
-#>
-\<#@ Template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" \#>
-\<#@ ProductStateStore processor="ProductStateStoreDirectiveProcessor" requires="fileName='..\\<#= toolkitInfo.Parent.Parent.SolutionName #>.slnbldr'" \#>
-\<#@ Assembly Name="System.Core.dll" \#>
-\<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" \#>
-\<#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" \#>
-\<#@ Import Namespace="NuPattern.Runtime" \#>
-\<#@ Import Namespace="NuPattern.Authoring.PatternToolkit" \#>
-\<#@ Import Namespace="System.Linq" \#>
 \<#@ output extension=".vsixmanifest" \#>
 \<#@ Include File="source.include.t4" \#>
 <?xml version="1.0" encoding="utf-8"?>
