@@ -96,27 +96,31 @@
       <PatternToolkitRuntimeFiles Include="$(PatternToolkitRuntime)\**\*.*"/>
     </ItemGroup>
 
+    <!-- Copy the extension to Experimental Instance -->
     <Message Condition="!Exists('$(PatternToolkitRuntimeDebugging)')"
-        Importance="High" Text="Copying VSIX dependencies to experimental instance for debugging -&gt; '<#= VsixInfo.PatternToolkitRuntime.Name #>'" />
+        Importance="High" Text="Copying VSIX dependency '<#= VsixInfo.PatternToolkitRuntime.Name #>' to experimental instance for debugging" />
     <Copy Condition="!Exists('$(PatternToolkitRuntimeDebugging)')"
         SourceFiles="@(PatternToolkitRuntimeFiles)"
         DestinationFiles="@(PatternToolkitRuntimeFiles->'$(PatternToolkitRuntimeDebugging)\%(RecursiveDir)%(Filename)%(Extension)')"
         SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true"/>
+          
+    <!-- Enable the copied extension in Experimental Instance -->
     <Message Condition="!Exists('$(PatternToolkitRuntimeExtensionEnableRegVal)')"
-        Importance="High" Text="Enabling VSIX extension in experimental instance for debugging -&gt; '<#= VsixInfo.PatternToolkitRuntime.Name #>'" />
-    <EnableExtension
+        Importance="High" Text="Enabling VSIX dependency '<#= VsixInfo.PatternToolkitRuntime.Name #>' in experimental instance for debugging" />
+    <EnableExtension Condition="!Exists('$(PatternToolkitRuntimeExtensionEnableRegVal)')"
         VsixIdentifier="<#= VsixInfo.PatternToolkitRuntime.Identifier #>"
         RootSuffix="$(VSSDKTargetPlatformRegRootSuffix)"
-        FailIfNotInstalled="true" />
-
-    </Target>
+        FailIfNotInstalled="false" />
+  </Target>
 
   <!--
     Copies the VSIX output of a tookit project to a shared <CopyVsixToFolder> folder, to aid VSIX packaging.
   -->
     <Target Name="CopyVsixContainerAfterBuild" AfterTargets="AfterBuild" Condition="'$(CopyVsixToFolder)' != '' and '$(TargetVsixContainer)' != '' and '$(CreateVsixContainer)' == 'true'">
-        <Copy SourceFiles="$(TargetVsixContainer)" DestinationFolder="$(CopyVsixToFolder)" OverwriteReadOnlyFiles="true">
-        </Copy>
-        <Message Importance="High" Text="Copying VSIX To local folder for packaging -&gt; '$(CopyVsixToFolder)'" />
+      <Message Importance="High" Text="Copying VSIX '$(TargetVsixContainerName)' To local folder for packaging -&gt; '$(CopyVsixToFolder)'" />
+      <Copy 
+        SourceFiles="$(TargetVsixContainer)" 
+        DestinationFolder="$(CopyVsixToFolder)" 
+        OverwriteReadOnlyFiles="true"/>
     </Target>
 </Project>
