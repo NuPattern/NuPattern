@@ -12,6 +12,7 @@
     <FeatureExtensionRuntime>$(PatternToolkitRuntime)</FeatureExtensionRuntime>
 
     <!-- Debugging pattern toolkit projects -->
+    <VSDebuggingExtensionsRegKey>$(VSSDKTargetPlatformRegRoot)$(VSSDKTargetPlatformRegRootSuffix)\ExtensionManager\EnabledExtensions</VSDebuggingExtensionsRegKey>
     <CopyVsixDebuggingDependencies Condition="'$(CopyVsixDebuggingDependencies)' == ''">true</CopyVsixDebuggingDependencies>
     <PatternToolkitRuntimeDebugging Condition="'$(VisualStudioVersion)' == '10.0'">$(LocalAppData)\$(ExtensionsDeploymentSubPath)Extensions-$(VsSDKVersion)\NuPattern\NuPattern Toolkit Manager\1.3.20.0</PatternToolkitRuntimeDebugging>
     <PatternToolkitRuntimeDebugging Condition="'$(VisualStudioVersion)' == '11.0'">$(LocalAppData)\$(ExtensionsDeploymentSubPath)Extensions-$(VsSDKVersion)\NuPattern Toolkit Manager</PatternToolkitRuntimeDebugging>
