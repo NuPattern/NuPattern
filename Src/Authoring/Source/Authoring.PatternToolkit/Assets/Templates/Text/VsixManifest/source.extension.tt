@@ -1,6 +1,4 @@
 ﻿<#@ output extension=".gen.t4" #>
-<#@ Include File="..\..\..\..\..\..\..\MasterVSIXInfo.gen.ttinclude" #>
-<#@ Include File="..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 \<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" \#>
 \<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
 \<#@ output extension=".tt" \#>
@@ -12,23 +10,23 @@
 \\\<#@ Include File="source.include.t4" \\\#>
 <?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-  <Identifier Id="\\\<#= identifier \\\#>">
-	<Name>\\\<#= toolkitName \\\#></Name>
-	<Author>\\\<#= author \\\#></Author>
-	<Version>\\\<#= version \\\#></Version>
-	<Description xml:space="preserve">\\\<#= description \\\#></Description>
+  <Identifier Id="\\\<#=identifier\\\#>">
+	<Name>\\\<#=toolkitName\\\#></Name>
+	<Author>\\\<#=author\\\#></Author>
+	<Version>\\\<#=version\\\#></Version>
+	<Description xml:space="preserve">\\\<#=description\\\#></Description>
 	<Locale>1033</Locale>
 \\\<#if(HasValue(eula))
 {
 \\\#>
-		<License>\\\<#= eula \\\#></License>
+		<License>\\\<#=eula\\\#></License>
 \\\<#
 }
 \\\#>
 \\\<#if(HasValue(icon))
 {
 \\\#>
-		<Icon>\\\<#= icon \\\#></Icon>
+		<Icon>\\\<#=icon\\\#></Icon>
 \\\<#
 }
 \\\#>
@@ -36,35 +34,22 @@
 	<GettingStartedGuide></GettingStartedGuide>
 	<PreviewImage></PreviewImage>
     <SupportedProducts>
-      <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
+      <VisualStudio Version="\<#=supportedVsVersion\#>">
         <Edition>Pro</Edition>
       </VisualStudio>
     </SupportedProducts>
-<# 
-if (VersionInfo.TargetVsVersion == "11.0")
-{ 
-#>
-    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
-<# 
-} 
-else
-{
-#>
-    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0"/>
-<#
-}
-#>
+    <SupportedFrameworkRuntimeEdition MinVersion="\<#=supportedFrxMinVersion\#>" MaxVersion="\<#=supportedFrxMaxVersion\#>"/>
   </Identifier>
 	<References>
-		<Reference Id="<#=VsixInfo.PatternToolkitRuntime.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitRuntime.Version #>">
-			<Name><#=VsixInfo.PatternToolkitRuntime.Name #></Name>
-			<VsixPath><#=VsixInfo.PatternToolkitRuntime.VsixFileName #></VsixPath>
+		<Reference Id="\<#=managerVsixIdentifier\#>" MinVersion="\<#=managerVsixVersion\#>">
+			<Name>\<#=managerVsixName\#></Name>
+			<VsixPath>\<#=managerVsixFileName\#></VsixPath>
 		</Reference>
 	</References>
 	<Content>
-		<MefComponent>|\\\<#= productName \\\#>|</MefComponent>
-		<MefComponent>|\\\<#= productName \\\#>.Automation|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="\\\<#= assemblyName \\\#>.dll">\\\<#= rootNamespace \\\#>.PatternModel.patterndefinition</CustomExtension>
+		<MefComponent>|\\\<#=productName\\\#>|</MefComponent>
+		<MefComponent>|\\\<#=productName\\\#>.Automation|</MefComponent>
+		<CustomExtension Type="PatternModel" AssemblyFile="\\\<#=assemblyName\\\#>.dll">\\\<#=rootNamespace\\\#>.PatternModel.patterndefinition</CustomExtension>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>

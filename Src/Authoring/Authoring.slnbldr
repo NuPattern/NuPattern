@@ -194,13 +194,13 @@
             </collection>
             <element Id="875cc557-a93c-4b12-b9ea-54a732b9c242" definitionId="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" definitionName="ToolkitInfo" instanceName="Toolkit Info">
               <properties>
-                <property Id="6a5aed16-9a95-4c6b-8371-de8530fe7226" definitionId="c6eb8c9f-7689-405c-9e04-05b4954e3bf6" definitionName="ToolkitName" rawValue="Pattern Toolkit Builder" />
-                <property Id="89b47696-9c2f-4bba-8383-f5bb735b8104" definitionId="09a9d6ed-39e6-414d-a8db-b7b381c227ca" definitionName="Author" rawValue="Microsoft" />
-                <property Id="91002af9-105d-48d0-9820-1ce7fcd432d1" definitionId="f28908ca-518f-497b-9b8c-0e3dc47f21dd" definitionName="Description" rawValue="An extension for designing and building Pattern Toolkit extensions, that combine automation and guidance with design patterns for repeatable solution development." />
-                <property Id="745e793c-9853-4322-ab0b-23587cee80c7" definitionId="2058a01f-6a09-4ad4-9e59-10393e0fca87" definitionName="Version" rawValue="1.3.20.0" />
-                <property Id="9d2fb797-d32c-4767-88bf-d0cd63a166f7" definitionId="766e5ae2-80de-4d94-a0be-4b953a40ac46" definitionName="Identifier" rawValue="84031a32-b20f-479c-a620-beacd982ea13" />
-                <property Id="28b88ca3-d7b3-4ab2-a618-ff0a3ab71bae" definitionId="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" definitionName="Icon" rawValue="Resources\VsixIconAuthoring.png" />
-                <property Id="2d602453-e8fa-4d52-a109-08e3ee9adb96" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" rawValue="PatternToolkitBuilderLicense.rtf" />
+                <property Id="6a5aed16-9a95-4c6b-8371-de8530fe7226" definitionId="c6eb8c9f-7689-405c-9e04-05b4954e3bf6" definitionName="ToolkitName" rawValue="Ignore" />
+                <property Id="89b47696-9c2f-4bba-8383-f5bb735b8104" definitionId="09a9d6ed-39e6-414d-a8db-b7b381c227ca" definitionName="Author" rawValue="Ignore" />
+                <property Id="91002af9-105d-48d0-9820-1ce7fcd432d1" definitionId="f28908ca-518f-497b-9b8c-0e3dc47f21dd" definitionName="Description" rawValue="Ignore" />
+                <property Id="745e793c-9853-4322-ab0b-23587cee80c7" definitionId="2058a01f-6a09-4ad4-9e59-10393e0fca87" definitionName="Version" rawValue="0.0" />
+                <property Id="9d2fb797-d32c-4767-88bf-d0cd63a166f7" definitionId="766e5ae2-80de-4d94-a0be-4b953a40ac46" definitionName="Identifier" rawValue="Ignore" />
+                <property Id="28b88ca3-d7b3-4ab2-a618-ff0a3ab71bae" definitionId="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" definitionName="Icon" />
+                <property Id="2d602453-e8fa-4d52-a109-08e3ee9adb96" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" />
               </properties>
               <references>
                 <reference Id="8910b6f2-03ea-406d-a12e-28a790364a50" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/13058dda-d9fb-4b59-b5ca-bde04f01b2ae" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.include.t4&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
@@ -325,12 +325,12 @@
             </collection>
             <element Id="7b588f3f-4927-42bf-847d-66bd00883529" definitionId="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" definitionName="ToolkitInfo" instanceName="Toolkit Info">
               <properties>
-                <property Id="bd5eb60b-dd22-433b-866c-d90d8db08223" definitionId="c6eb8c9f-7689-405c-9e04-05b4954e3bf6" definitionName="ToolkitName" rawValue="Pattern Toolkit Automation Library" />
-                <property Id="8ca0dc0b-f4e2-4fad-9661-595d66ab0854" definitionId="09a9d6ed-39e6-414d-a8db-b7b381c227ca" definitionName="Author" rawValue="Microsoft" />
-                <property Id="93de0135-1174-4e05-9ee0-fc286ee31551" definitionId="f28908ca-518f-497b-9b8c-0e3dc47f21dd" definitionName="Description" rawValue="An extension for creating shared automation libraries for Pattern Toolkit extensions." />
-                <property Id="997414c1-dd95-45ac-bd0c-927ac9f72354" definitionId="2058a01f-6a09-4ad4-9e59-10393e0fca87" definitionName="Version" rawValue="1.3.20.0" />
-                <property Id="9213dfb5-9af6-4c1a-bfd2-dc6325551d34" definitionId="766e5ae2-80de-4d94-a0be-4b953a40ac46" definitionName="Identifier" rawValue="080eb0ef-518d-4807-9b5c-aa32d0032e0b" />
-                <property Id="26095a6f-5e8e-49e7-9600-dc4035a07bda" definitionId="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" definitionName="Icon" rawValue="Resources\VsixIconAuthoring.png" />
+                <property Id="bd5eb60b-dd22-433b-866c-d90d8db08223" definitionId="c6eb8c9f-7689-405c-9e04-05b4954e3bf6" definitionName="ToolkitName" rawValue="Ignore" />
+                <property Id="8ca0dc0b-f4e2-4fad-9661-595d66ab0854" definitionId="09a9d6ed-39e6-414d-a8db-b7b381c227ca" definitionName="Author" rawValue="Ignore" />
+                <property Id="93de0135-1174-4e05-9ee0-fc286ee31551" definitionId="f28908ca-518f-497b-9b8c-0e3dc47f21dd" definitionName="Description" rawValue="Ignore" />
+                <property Id="997414c1-dd95-45ac-bd0c-927ac9f72354" definitionId="2058a01f-6a09-4ad4-9e59-10393e0fca87" definitionName="Version" rawValue="0.0" />
+                <property Id="9213dfb5-9af6-4c1a-bfd2-dc6325551d34" definitionId="766e5ae2-80de-4d94-a0be-4b953a40ac46" definitionName="Identifier" rawValue="Ignore" />
+                <property Id="26095a6f-5e8e-49e7-9600-dc4035a07bda" definitionId="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" definitionName="Icon" />
                 <property Id="9f600c5b-a2ce-4d78-9595-625bb9056365" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" />
               </properties>
               <references>
@@ -464,12 +464,12 @@
             </collection>
             <element Id="a71545af-2d3b-4467-b23a-5b49138d4667" definitionId="c00ddfa6-b949-4c7c-b8b9-f46b8e3ccf1e" definitionName="ToolkitInfo" instanceName="Toolkit Info">
               <properties>
-                <property Id="f190ce82-717a-4cca-abe6-80efabb19e83" definitionId="c6eb8c9f-7689-405c-9e04-05b4954e3bf6" definitionName="ToolkitName" rawValue="Pattern Toolkit Automation Library" />
-                <property Id="6e22386d-bd55-4fec-bb67-6ccd2de619bf" definitionId="09a9d6ed-39e6-414d-a8db-b7b381c227ca" definitionName="Author" rawValue="Microsoft" />
-                <property Id="73d8393d-c9f9-41b5-8d67-e5f819ea1c82" definitionId="f28908ca-518f-497b-9b8c-0e3dc47f21dd" definitionName="Description" rawValue="An extension for creating shared automation libraries for Pattern Toolkit extensions." />
-                <property Id="e4758533-5960-4fac-8636-4bab95956923" definitionId="2058a01f-6a09-4ad4-9e59-10393e0fca87" definitionName="Version" rawValue="1.3.20.0" />
-                <property Id="01e3bdf7-5082-4c73-872b-7b3e0097070c" definitionId="766e5ae2-80de-4d94-a0be-4b953a40ac46" definitionName="Identifier" rawValue="080eb0ef-518d-4807-9b5c-aa32d0032e0b" />
-                <property Id="1a1b59af-d5f1-4340-a9f1-9d8436c8c157" definitionId="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" definitionName="Icon" rawValue="Resources\VsixIconAuthoring.png" />
+                <property Id="f190ce82-717a-4cca-abe6-80efabb19e83" definitionId="c6eb8c9f-7689-405c-9e04-05b4954e3bf6" definitionName="ToolkitName" rawValue="Ignore" />
+                <property Id="6e22386d-bd55-4fec-bb67-6ccd2de619bf" definitionId="09a9d6ed-39e6-414d-a8db-b7b381c227ca" definitionName="Author" rawValue="Ignore" />
+                <property Id="73d8393d-c9f9-41b5-8d67-e5f819ea1c82" definitionId="f28908ca-518f-497b-9b8c-0e3dc47f21dd" definitionName="Description" rawValue="Ignore" />
+                <property Id="e4758533-5960-4fac-8636-4bab95956923" definitionId="2058a01f-6a09-4ad4-9e59-10393e0fca87" definitionName="Version" rawValue="0.0" />
+                <property Id="01e3bdf7-5082-4c73-872b-7b3e0097070c" definitionId="766e5ae2-80de-4d94-a0be-4b953a40ac46" definitionName="Identifier" rawValue="Ignore" />
+                <property Id="1a1b59af-d5f1-4340-a9f1-9d8436c8c157" definitionId="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" definitionName="Icon" />
                 <property Id="8dc25c80-6950-4bbe-988f-22e8c707f349" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" />
               </properties>
               <references>
