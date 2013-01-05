@@ -29,6 +29,17 @@
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
 
+  <!-- Verifies that the correct solution configuration is selected -->
+  <Target Name="VerifyTargetBuildConfiguration" BeforeTargets="BeforeBuild">
+    <Message
+      Importance="high"
+      Text="Verifying solution build configuration..."/>
+    <Error Condition="(('$(Configuration)' == 'Debug-VS2010' or '$(Configuration)' == 'Release-VS2010') and '$(VisualStudioVersion)' != '10.0')"
+           Text="The current solution build configuration '$(Configuration)' is only valid in Visual Studio 2010. You must change the solution build configuration to match this version of Visual Studio."/>
+    <Error Condition="(('$(Configuration)' == 'Debug-VS2012' or '$(Configuration)' == 'Release-VS2012') and '$(VisualStudioVersion)' != '11.0')"
+           Text="The current solution build configuration '$(Configuration)' is only valid in Visual Studio 2012. You must change the solution build configuration to match this version of Visual Studio."/>
+  </Target>
+  
   <!-- Tool includes -->
   <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.3\Microsoft.StyleCop.targets" />-->
   
