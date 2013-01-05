@@ -432,11 +432,6 @@
   <PropertyGroup>
     <TargetVsixContainerName>$(PatternToolkitLibraryVsixFileName)</TargetVsixContainerName>
   </PropertyGroup>
-  <!-- Properties for Toolkit Targets -->
-  <PropertyGroup>
-    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' == '' ">$(SolutionDir)..\Binaries</CopyVsixToFolder>
-    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\Platu\Projects\Src\Binaries</CopyVsixToFolder>
-  </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.targets" />
   <Import Project="$(BranchRoot)Common\Source\Versioning\Authoring.PatternToolkitVersion.gen.targets" />

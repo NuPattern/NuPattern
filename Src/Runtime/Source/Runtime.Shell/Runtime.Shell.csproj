@@ -513,11 +513,6 @@
     <TargetVsixContainerName>$(RuntimeShellVsixFileName)</TargetVsixContainerName>
     <IncludeDocFilesInVSIXContainer>false</IncludeDocFilesInVSIXContainer>
   </PropertyGroup>
-  <!-- Properties for Toolkit Targets -->
-  <PropertyGroup>
-    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' == '' ">$(SolutionDir)..\Binaries</CopyVsixToFolder>
-    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\Platu\Projects\Src\Binaries</CopyVsixToFolder>
-  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.targets" />
   <Import Project="NuPattern.Runtime.Shell.targets" />
@@ -527,22 +522,6 @@
     <RegisterWithCodebase>true</RegisterWithCodebase>
     <GacTargetOutput>false</GacTargetOutput>
   </PropertyGroup>
-  <PropertyGroup>
-    <GetVsixSourceItemsDependsOn>$(GetVsixSourceItemsDependsOn);IncludeTemplatesInVsix</GetVsixSourceItemsDependsOn>
-  </PropertyGroup>
-  <Target Name="IncludeTemplatesInVsix">
-    <!-- Include Project Templates -->
-    <ItemGroup Condition="'@(IntermediateZipProject)'!=''">
-      <VSIXSourceItem Include="@(IntermediateZipProject)">
-        <VSIXSubPath>$(AssemblyVSIXSubPath)\Templates\Projects</VSIXSubPath>
-      </VSIXSourceItem>
-    </ItemGroup>
-    <ItemGroup Condition="'@(IntermediateZipItem)'!=''">
-      <VSIXSourceItem Include="@(IntermediateZipItem)">
-        <VSIXSubPath>$(AssemblyVSIXSubPath)\Templates\Items</VSIXSubPath>
-      </VSIXSourceItem>
-    </ItemGroup>
-  </Target>
   <PropertyGroup>
     <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
     <StartAction>Program</StartAction>

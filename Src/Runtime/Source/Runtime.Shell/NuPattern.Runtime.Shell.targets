@@ -1,11 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <GetVsixSourceItemsDependsOn>$(GetVsixSourceItemsDependsOn);IncludeTemplatesInVsix</GetVsixSourceItemsDependsOn>
+  </PropertyGroup>
+  <Target Name="IncludeTemplatesInVsix">
+    <!-- Include Project Templates -->
+    <ItemGroup Condition="'@(IntermediateZipProject)'!=''">
+      <VSIXSourceItem Include="@(IntermediateZipProject)">
+        <VSIXSubPath>$(AssemblyVSIXSubPath)\Templates\Projects</VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+    <ItemGroup Condition="'@(IntermediateZipItem)'!=''">
+      <VSIXSourceItem Include="@(IntermediateZipItem)">
+        <VSIXSubPath>$(AssemblyVSIXSubPath)\Templates\Items</VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+  </Target>
+
   <!--
     Copies the VSIX output of a tookit project to a shared <CopyVsixToFolder> folder, to aid VSIX packaging.
   -->
-    <Target Name="AfterBuild" Condition="'$(CopyVsixToFolder)' != '' and '$(TargetVsixContainer)' != '' and '$(CreateVsixContainer)' == 'true'">
-      <Message Importance="High" Text="Copying VSIX To local folder for packaging -&gt; $(CopyVsixToFolder)" />
-      <Copy SourceFiles="$(TargetVsixContainer)" DestinationFolder="$(CopyVsixToFolder)" OverwriteReadOnlyFiles="true">
-        </Copy>
-    </Target>
+  <Target Name="CopyVsixContainerAfterBuild" AfterTargets="AfterBuild" Condition="'$(CopyVsixToFolder)' != '' and '$(TargetVsixContainer)' != '' and '$(CreateVsixContainer)' == 'true'">
+    <Message Importance="High" Text="Copying VSIX '$(TargetVsixContainerName)' To local folder for packaging -&gt; '$(CopyVsixToFolder)'" />
+    <Copy
+      SourceFiles="$(TargetVsixContainer)"
+      DestinationFolder="$(CopyVsixToFolder)"
+      OverwriteReadOnlyFiles="true"/>
+  </Target>
 </Project>

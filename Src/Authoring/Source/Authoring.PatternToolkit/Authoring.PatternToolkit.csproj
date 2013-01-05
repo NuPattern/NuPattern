@@ -1204,14 +1204,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
     </None>
-    <Content Include="..\..\..\Binaries\$(RuntimeShellVsixFileName)">
+    <Content Include="..\..\..\Binaries\$(TargetVSVersion)\$(RuntimeShellVsixFileName)">
       <Visible>true</Visible>
       <Link>$(RuntimeShellVsixFileName)</Link>
       <FixedLink>
       </FixedLink>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="..\..\..\Binaries\$(PatternToolkitLibraryVsixFileName)">
+    <Content Include="..\..\..\Binaries\$(TargetVSVersion)\$(PatternToolkitLibraryVsixFileName)">
       <Visible>true</Visible>
       <Link>$(PatternToolkitLibraryVsixFileName)</Link>
       <FixedLink>
@@ -1357,11 +1357,6 @@
   </ItemGroup>
   <PropertyGroup>
     <TargetVsixContainerName>$(PatternToolkitVsixFileName)</TargetVsixContainerName>
-  </PropertyGroup>
-  <!-- Properties for Toolkit Targets -->
-  <PropertyGroup>
-    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' == '' ">$(SolutionDir)..\Binaries</CopyVsixToFolder>
-    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\Platu\Projects\Src\Binaries</CopyVsixToFolder>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.targets" />

@@ -255,7 +255,7 @@
     <Folder Include="Runtime.IntegrationTests.Content\Projects\Sample\SolutionFolder\Library\Folder\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Binaries\NuPatternToolkitManager.$(TargetVSVersion).vsix">
+    <None Include="..\..\Binaries\$(TargetVSVersion)\NuPatternToolkitManager.$(TargetVSVersion).vsix">
       <Link>Runtime.IntegrationTests.Content\NuPatternToolkitManager.$(TargetVSVersion).vsix</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
