@@ -844,7 +844,7 @@
     </None>
     <None Include="source.include.t4">
       <DependentUpon>source.extension.tt</DependentUpon>
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\Platu\Main\Src\Authoring\Authoring.patternstate%252f875cc557-a93c-4b12-b9ea-54a732b9c242</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f875cc557-a93c-4b12-b9ea-54a732b9c242</SourceModelReference>
       <ItemGuid>13058dda-d9fb-4b59-b5ca-bde04f01b2ae</ItemGuid>
     </None>
     <ItemTemplate Include="Assets\Templates\Items\Extensibility\PatternTooling\PatternTooling.gen.vstemplate">
@@ -1131,10 +1131,17 @@
       <IncludeInVSIXAs>ProjectTemplate.vstemplate.t4</IncludeInVSIXAs>
       <ItemGuid>736354eb-f066-475f-8a43-b78cf07a135d</ItemGuid>
     </Content>
-    <Content Include="Assets\Templates\Text\VsixManifest\source.include.t4">
-      <IncludeInVSIX>true</IncludeInVSIX>
+    <Content Include="Assets\Templates\Text\VsixManifest\source.include.gen.t4">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>source.include.tt</DependentUpon>
+      <IncludeInVSIXAs>source.include.t4</IncludeInVSIXAs>
       <ItemGuid>d93786b4-73bd-4850-8a9b-dc71b0c85d79</ItemGuid>
     </Content>
+    <None Include="Assets\Templates\Text\VsixManifest\source.include.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>source.include.gen.t4</LastGenOutput>
+    </None>
     <Content Include="$(PatternToolkitRuntime)\GeneratedCode\LibrarySchema.gen.xsd">
       <Visible>true</Visible>
       <Link>Properties\Schemas\LibrarySchema.gen.xsd</Link>
