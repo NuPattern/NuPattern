@@ -5,7 +5,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Workflow", "_Workflow", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D575697-5894-42D6-B3D0-C0D65605209F}"
 	ProjectSection(SolutionItems) = preProject
-		Authoring.guidancestate = Authoring.guidancestate
+		Authoring.vs2012.guidancestate = Authoring.vs2012.guidancestate
 		Authoring.slnbldr = Authoring.slnbldr
 		Authoring.vs2012.testsettings = Authoring.vs2012.testsettings
 	EndProjectSection
