@@ -34,16 +34,16 @@
 	<GettingStartedGuide></GettingStartedGuide>
 	<PreviewImage></PreviewImage>
     <SupportedProducts>
-      <VisualStudio Version="\<#=supportedVsVersion\#>">
+      <VisualStudio Version="\\\<#=supportedVsVersion\\\#>">
         <Edition>Pro</Edition>
       </VisualStudio>
     </SupportedProducts>
-    <SupportedFrameworkRuntimeEdition MinVersion="\<#=supportedFrxMinVersion\#>" MaxVersion="\<#=supportedFrxMaxVersion\#>"/>
+    <SupportedFrameworkRuntimeEdition MinVersion="\\\<#=supportedFrxMinVersion\\\#>" MaxVersion="\\\<#=supportedFrxMaxVersion\\\#>"/>
   </Identifier>
 	<References>
-		<Reference Id="\<#=managerVsixIdentifier\#>" MinVersion="\<#=managerVsixVersion\#>">
-			<Name>\<#=managerVsixName\#></Name>
-			<VsixPath>\<#=managerVsixFileName\#></VsixPath>
+		<Reference Id="\\\<#=managerVsixIdentifier\\\#>" MinVersion="\\\<#=managerVsixVersion\\\#>">
+			<Name>\\\<#=managerVsixName\\\#></Name>
+			<VsixPath>\\\<#=managerVsixFileName\\\#></VsixPath>
 		</Reference>
 	</References>
 	<Content>
