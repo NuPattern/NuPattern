@@ -15,10 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\CodeAnalysis.Dictionary.xml = ..\CodeAnalysis.Dictionary.xml
 		..\CodeAnalysis.ruleset = ..\CodeAnalysis.ruleset
 		..\CodeAnalysis.TestProjects.ruleset = ..\CodeAnalysis.TestProjects.ruleset
-		Runtime.guidancestate = Runtime.guidancestate
+		Runtime.vs2010.guidancestate = Runtime.vs2010.guidancestate
 		Runtime.slnbldr = Runtime.slnbldr
 		Runtime.vs2010.testsettings = Runtime.vs2010.testsettings
-		Runtime.vsmdi = Runtime.vsmdi
+		Runtime.vs2010.vsmdi = Runtime.vs2010.vsmdi
 		..\SourceAnalysis.StyleCop = ..\SourceAnalysis.StyleCop
 		..\SourceAnalysis.TestProjects.StyleCop = ..\SourceAnalysis.TestProjects.StyleCop
 	EndProjectSection
@@ -144,7 +144,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.IntegrationTests.Te
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Runtime.vsmdi
+		CategoryFile = Runtime.vs2010.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug-VS2010|Any CPU = Debug-VS2010|Any CPU
