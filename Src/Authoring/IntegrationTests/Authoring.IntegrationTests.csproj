@@ -167,11 +167,11 @@
     <Content Include="VersionTargetsSpec\SimpleLibrarySolution.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="..\..\Binaries\$(PatternToolkitLibraryVsixFileName)">
+    <None Include="..\..\Binaries\$(TargetVSVersion)\$(PatternToolkitLibraryVsixFileName)">
       <Link>Authoring.IntegrationTests.Content\$(PatternToolkitLibraryVsixFileName)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\..\Binaries\$(PatternToolkitVsixFileName)">
+    <None Include="..\..\Binaries\$(TargetVSVersion)\$(PatternToolkitVsixFileName)">
       <Link>Authoring.IntegrationTests.Content\$(PatternToolkitVsixFileName)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

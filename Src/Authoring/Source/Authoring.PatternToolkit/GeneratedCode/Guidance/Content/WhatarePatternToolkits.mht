@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDDE4D.19C680E0"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDE6F0.62295D70"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDDE4D.19C680E0
+------=_NextPart_01CDE6F0.62295D70
 Content-Location: file:///C:/A4F732F3/WhatarePatternToolkits.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -27,14 +27,14 @@ xmlns=3D"http://www.w3.org/TR/REC-html40">
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-19T11:58:00Z</o:Created>
-  <o:LastSaved>2012-12-19T11:58:00Z</o:LastSaved>
+  <o:Created>2012-12-30T11:47:00Z</o:Created>
+  <o:LastSaved>2012-12-30T11:47:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>597</o:Words>
-  <o:Characters>3404</o:Characters>
-  <o:Lines>28</o:Lines>
+  <o:Words>581</o:Words>
+  <o:Characters>3316</o:Characters>
+  <o:Lines>27</o:Lines>
   <o:Paragraphs>7</o:Paragraphs>
-  <o:CharactersWithSpaces>3994</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>3890</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -2267,12 +2267,10 @@ table.MsoTableGrid
 <p class=3DMsoNormal><em><span style=3D'font-family:"Segoe UI","sans-serif";
 mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi'>Answ=
 er.
-&quot;A Toolkit in the context of Pattern Toolkits is the delivered package=
- of
-tools that is deployed and installed into the Visual Studio development
-environment. The tools work together to create, modify, manage and implement
-instances of the pattern defined within the toolkit.&quot;<o:p></o:p></span=
-></em></p>
+&quot;A Pattern Toolkit is a Visual Studio extension that contains template=
+s,
+automation and guidance that guide you through creating and configuring
+elements of your solution.&quot;<o:p></o:p></span></em></p>
 
 <p class=3DMsoNormal>In Visual Studio, in general a toolkit is compiled int=
 o and
@@ -2294,10 +2292,10 @@ Automating and Extending the Development Environment</a>.<o:p></o:p></p>
 
 <p class=3DMsoNormal>A 'Pattern Toolkit', is a special type of 'Visual Stud=
 io
-Extension' that is automatically compiled for you, and that provides all th=
-e information,
-guidance, tools and automation for creating instances of specific kinds of
-development patterns that you define. <o:p></o:p></p>
+Extension' that is automatically compiled for you, and that provides all the
+information, guidance, tools and automation for creating instances of speci=
+fic
+kinds of development patterns that you define. <o:p></o:p></p>
 
 <p class=3DMsoNormal>A ‘Pattern Toolkit’ can be defined as being composed o=
 f the
@@ -2456,7 +2454,7 @@ results.<o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CDDE4D.19C680E0
+------=_NextPart_01CDE6F0.62295D70
 Content-Location: file:///C:/A4F732F3/WhatarePatternToolkits_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2517,7 +2515,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDDE4D.19C680E0
+------=_NextPart_01CDE6F0.62295D70
 Content-Location: file:///C:/A4F732F3/WhatarePatternToolkits_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2527,7 +2525,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDDE4D.19C680E0
+------=_NextPart_01CDE6F0.62295D70
 Content-Location: file:///C:/A4F732F3/WhatarePatternToolkits_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -2538,4 +2536,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"colorschememapping.xml"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDDE4D.19C680E0--
+------=_NextPart_01CDE6F0.62295D70--

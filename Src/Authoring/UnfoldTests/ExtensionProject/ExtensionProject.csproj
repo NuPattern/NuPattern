@@ -37,7 +37,7 @@
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <Content Include="..\..\..\Binaries\$(RuntimeShellVsixFileName)">
+    <Content Include="..\..\..\Binaries\$(TargetVSVersion)\$(RuntimeShellVsixFileName)">
       <Link>$(RuntimeShellVsixFileName)</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

@@ -184,6 +184,18 @@
     <None Include="..\..\..\Common\Guidance\Creating the PDF Guidance.txt">
       <Link>Guidance\Creating the PDF Guidance.txt</Link>
     </None>
+    <Content Include="..\..\..\Common\Guidance\Environment.xml">
+      <Link>Guidance\Environment.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\Feedback.xml">
+      <Link>Guidance\Feedback.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\More Information.xml">
+      <Link>Guidance\More Information.xml</Link>
+    </Content>
+    <Content Include="..\..\..\Common\Guidance\Troubleshooting Toolkits.xml">
+      <Link>Guidance\Troubleshooting Toolkits.xml</Link>
+    </Content>
     <Content Include="..\..\..\LICENSE.txt">
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -213,13 +225,145 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIXAs>LibrarySchema.xsd</IncludeInVSIXAs>
     </Content>
+    <Content Include="GeneratedCode\Guidance\Content\AddNewProjectItemDialog.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\Builderrorstoremustbeopenforthisoperation.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\ExtensionManager.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="GeneratedCode\Guidance\Content\Feedback.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="GeneratedCode\Guidance\Content\InstallingNuPattern.mht">
+    <Content Include="GeneratedCode\Guidance\Content\GuidanceWorkflowExplorer.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisNuPattern.mht">
+    <Content Include="GeneratedCode\Guidance\Content\MoreInformation.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\Options.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\PatternModelDesigner.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\PropertiesWindow.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\SolutionBuilder.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\SolutionExplorer.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\TracingWindow.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\TroubleshootingToolkits.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\VisualStudioExperimentalInstance.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\Authoring.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\BrowsingManagingInstalledPatternToolkits.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToAddNewSolutionElements.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToControlthedisplayofSolutionElements.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToFindtheGuidance.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToFixRelatedItems.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToInstallUninstallPatternToolkits.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToNavigatetoorOpenSolutionItems.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToTroubleshootPatternProblems.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToUseaPattern.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToUseDragandDrop.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToValidateSolutionElements.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToWorkwithMultipleViews.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\InstallingaPatternToolkit.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\PrerequisitesforUsingPatternToolkits.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\RunningAutomation.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\UnderstandingWhatarePatternToolkits.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\UsingPatternToolkits.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\ViewingConfiguringSolutionElements.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatarePatterns.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatareRelatedItems.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatisaSolutionElement.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatisAutomation.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatisGuidance.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatisSolutionBuilder.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\AddNewSolutionElementDialog.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\HowToRunAutomation.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatareArtifactLinks.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatarePatternToolkits.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatisaGuidanceDocument.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatisaGuidanceWorkflow.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatistheGuidanceExplorer.mht">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="GeneratedCode\Guidance\Content\WhatistheGuidanceBrowser.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="VSPackage.tt">
@@ -269,15 +413,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\Common\Guidance\CommonReferenceGuidance.doc">
-      <Link>Guidance\CommonReferenceGuidance.doc</Link>
-    </None>
-    <None Include="..\..\..\Common\Guidance\CommonUnderstandingGuidance.doc">
-      <Link>Guidance\CommonUnderstandingGuidance.doc</Link>
-    </None>
     <None Include="..\..\..\Common\Guidance\RuntimeGuidance.doc">
       <Link>Guidance\RuntimeGuidance.doc</Link>
       <ItemGuid>02990d34-46b5-4617-82f9-cc74c83c5666</ItemGuid>
+      <SubType>Designer</SubType>
     </None>
     <None Include="..\..\..\Common\Guidance\RuntimeGuidance.pdf">
       <Link>Guidance\RuntimeGuidance.pdf</Link>
@@ -286,375 +425,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Constants.gen.cs</LastGenOutput>
     </None>
-    <Content Include="GeneratedCode\Guidance\Content\AddingaCollectionoranElement.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\AddingaCommand.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\AddingaLaunchPoint.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\AddingaTextTemplate.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\AddingaVSTemplate.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\AddingaWizard.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\AddNewProjectItemDialog.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\AddNewSolutionElementDialog.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Benefits.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\BrowsingManagingInstalledPatternToolkits.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\BuildingGuidance.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\CanICustomizeaPatternToolkit.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\CreatingandCustomizingPatternToolkits.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\CreatingaPatternToolkit.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\EditingGuidance.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ExtensionManager.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\GuidanceWorkflowExplorer.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowdoPatternToolkitsWork.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowisaPatternToolkitDeployed.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToAddNewSolutionElements.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToControlthedisplayofSolutionElements.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToFindtheGuidance.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToFixorRelatedItems.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToInstallUninstallPatternToolkits.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToNavigatetoorOpenSolutionItems.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToRuntheAutomation.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToTroubleshootPatternProblems.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToUseaPattern.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToUseDragandDrop.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToValidateSolutionElements.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\HowToWorkwithMultipleViews.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\InstallingaPatternToolkit.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\MoreInformation.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Motivations.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Options.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\PatternModelDesigner.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\PreRequisitesforAuthoring.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\PrerequisitesforUsing.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\PropertiesWindow.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\RunningAutomation.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\SolutionBuilder.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\SolutionExplorer.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\TargetPathSyntax.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\TheCustomizationProcess.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\TheDevelopmentCycleInPractice.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\TheDevelopmentCycleOverview.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\TheDevelopmentProcess.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\TracingWindow.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\TroubleshootingToolkits.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\UnderstandingWhatarePatternToolkits.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Using.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\UsingPatternToolkits.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ViewingConfiguringSolutionElements.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\VisualStudioExperimentalInstance.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareAssets.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareAutomationAssets.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareAutomationExtensions.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareCommands.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareConditions.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareEvents.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareLaunchPoints.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatarePatterns.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatarePatternToolkits.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareSolutionImplementationAssets.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareTextTemplates.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareValidationRules.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareValueProviders.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareVariabilityViews.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareVSTemplates.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareWizards.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisaGuidanceDocument.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisaGuidanceWorkflow.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisaPatternModel.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisaSolutionElement.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisAutomation.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisCommonalityVariability.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisGuidance.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisSolutionBuilder.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatistheGuidanceBrowser.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatistheGuidanceExplorer.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisthePatternModelDesigner.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisToolkitInfo.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhyWouldIBuildaPatternToolkit.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhyWouldIWanttoUseaPatternToolkit.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\AddingaVariableProperty.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\AddingaView.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ChangingtheCardinality.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ExpressionSyntax.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ShowingHiddenElements.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareExtensionPoints.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareRelatedItems.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareVariabilityElementsCollectionsandProperties.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisCardinality.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatisCustomization.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Authoring.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ConfiguringaCommand.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ConfiguringaContextMenuLaunchPoint.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ConfiguringaDragDropLaunchPoint.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ConfiguringaLaunchPoint.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ConfiguringanEventLaunchPoint.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ConfiguringaTemplateLaunchPoint.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ConfiguringaWizard.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\WhatareArtifactLinks.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\AddingPropertiestoAutomationClasses.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Commands.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\CommonAutomationTasks.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Conditions.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Events.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ImportingServicesintoAutomationClasses.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ImportingtheCurrentElementintoAutomationClasses.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\MovingBetweenGenericandTypedPatternModelSchemes.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\NavigatingPatternModelsProgrammaticallyGenerically.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\NavigatingPatternModelsProgrammaticallyTyped.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ProvidedAutomationTypes.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ValidationRules.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ValueProviders.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Builderrorstoremustbeopenforthisoperation.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\CorruptionofpatternmodelwhenperforminganUndo.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ErrorinTextTemplateswhenusingtheVisualT4Editor.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Errorwhenopeningapatterntoolkitsolutionfile.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ArrangingShapesonPatternModel.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\Errorbuildingguidancewith64bitversionsofMicrosoftWord.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="GeneratedCode\Guidance\Content\ChangingtheOrdering.mht">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <None Include="Guidance\RuntimeInterfaces.cd" />
     <None Include="NuPattern.Runtime.Shell.targets">
       <SubType>Designer</SubType>
@@ -743,11 +513,6 @@
     <TargetVsixContainerName>$(RuntimeShellVsixFileName)</TargetVsixContainerName>
     <IncludeDocFilesInVSIXContainer>false</IncludeDocFilesInVSIXContainer>
   </PropertyGroup>
-  <!-- Properties for Toolkit Targets -->
-  <PropertyGroup>
-    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' == '' ">$(SolutionDir)..\Binaries</CopyVsixToFolder>
-    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\Platu\Projects\Src\Binaries</CopyVsixToFolder>
-  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.targets" />
   <Import Project="NuPattern.Runtime.Shell.targets" />
@@ -757,22 +522,6 @@
     <RegisterWithCodebase>true</RegisterWithCodebase>
     <GacTargetOutput>false</GacTargetOutput>
   </PropertyGroup>
-  <PropertyGroup>
-    <GetVsixSourceItemsDependsOn>$(GetVsixSourceItemsDependsOn);IncludeTemplatesInVsix</GetVsixSourceItemsDependsOn>
-  </PropertyGroup>
-  <Target Name="IncludeTemplatesInVsix">
-    <!-- Include Project Templates -->
-    <ItemGroup Condition="'@(IntermediateZipProject)'!=''">
-      <VSIXSourceItem Include="@(IntermediateZipProject)">
-        <VSIXSubPath>$(AssemblyVSIXSubPath)\Templates\Projects</VSIXSubPath>
-      </VSIXSourceItem>
-    </ItemGroup>
-    <ItemGroup Condition="'@(IntermediateZipItem)'!=''">
-      <VSIXSourceItem Include="@(IntermediateZipItem)">
-        <VSIXSubPath>$(AssemblyVSIXSubPath)\Templates\Items</VSIXSubPath>
-      </VSIXSourceItem>
-    </ItemGroup>
-  </Target>
   <PropertyGroup>
     <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
     <StartAction>Program</StartAction>

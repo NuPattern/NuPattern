@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDDE50.3486C590"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDE6F3.2334B2B0"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDDE50.3486C590
+------=_NextPart_01CDE6F3.2334B2B0
 Content-Location: file:///C:/ADC8DC98/TargetPathSyntax.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -27,8 +27,8 @@ xmlns=3D"http://www.w3.org/TR/REC-html40">
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-19T12:20:00Z</o:Created>
-  <o:LastSaved>2012-12-19T12:20:00Z</o:LastSaved>
+  <o:Created>2012-12-30T12:06:00Z</o:Created>
+  <o:LastSaved>2012-12-30T12:07:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>859</o:Words>
   <o:Characters>4902</o:Characters>
@@ -2132,7 +2132,11 @@ table.MsoTableGrid
 
 <div class=3DWordSection1>
 
-<h4 style=3D'page-break-before:auto'>Target Path Syntax<o:p></o:p></h4>
+<h4 style=3D'page-break-before:auto'><a name=3D"_Toc344469460"></a><a
+name=3D"_Toc344467687"></a><a name=3D"_Toc344467145"><span style=3D'mso-boo=
+kmark:
+_Toc344467687'><span style=3D'mso-bookmark:_Toc344469460'>Target Path Synta=
+x</span></span></a><o:p></o:p></h4>
 
 <p class=3DMsoNormal>Several of the automation commands, conditions and val=
 ue
@@ -2308,19 +2312,17 @@ der-right-themecolor:
   <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'>By d=
 efault,
   if ~ is specified as first character, an artifact link is searched for by
-  traversing up the ancestry from the current element (starting with the cu=
-rrent
-  element) until an element is found that has an artifact link, and that li=
-nk
-  is then resolved. <span style=3D'mso-spacerun:yes'> </span>Be aware that =
-if
-  specifying ~ as the first character in the path on an element that has an
-  artifact link, will resolve to that artifact link and not to any link on =
-any
-  ancestor. It is recommended that ~ is always explicitly fully qualified w=
-ith
-  a relative ancestral path (i.e. ..\..\) to the ancestral element to avoid
-  errors in resolving the artifact links at runtime.<o:p></o:p></p>
+  traversing up the ancestry from the current element (starting with the
+  current element) until an element is found that has an artifact link, and
+  that link is then resolved. <span style=3D'mso-spacerun:yes'> </span>Be a=
+ware
+  that if specifying ~ as the first character in the path on an element that
+  has an artifact link, will resolve to that artifact link and not to any l=
+ink
+  on any ancestor. It is recommended that ~ is always explicitly fully
+  qualified with a relative ancestral path (i.e. ..\..\) to the ancestral
+  element to avoid errors in resolving the artifact links at runtime.<o:p><=
+/o:p></p>
   <p class=3DMsoNormal style=3D'margin-bottom:10.0pt;line-height:115%'>If no
   ancestor is found with an artifact link, then the ~ is resolved to being =
 the
@@ -2532,7 +2534,7 @@ o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CDDE50.3486C590
+------=_NextPart_01CDE6F3.2334B2B0
 Content-Location: file:///C:/ADC8DC98/TargetPathSyntax_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2593,7 +2595,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDDE50.3486C590
+------=_NextPart_01CDE6F3.2334B2B0
 Content-Location: file:///C:/ADC8DC98/TargetPathSyntax_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2603,7 +2605,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDDE50.3486C590
+------=_NextPart_01CDE6F3.2334B2B0
 Content-Location: file:///C:/ADC8DC98/TargetPathSyntax_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -2614,4 +2616,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"colorschememapping.xml"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDDE50.3486C590--
+------=_NextPart_01CDE6F3.2334B2B0--

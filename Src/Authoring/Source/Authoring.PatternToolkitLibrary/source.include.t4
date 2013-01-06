@@ -1,15 +1,27 @@
 ﻿<#+
+	// Toolkit Info
 	public const string identifier = "Ignore";
 	public const string toolkitName = "Ignore";
 	public const string author = "Ignore";
-	public const string version = "1.0";
+	public const string version = "0.0";
 	public const string description = "Ignore";
-	public const string eula = @"Ignore";
-	public const string icon = @"Ignore";
+	public const string eula = @"";
+	public const string icon = @"";
 
-	public const string productName = "AutomationLibrary.Toolkit";
+	// Toolkit Project Info
+	public const string productName = "Authoring.PatternToolkitLibrary";
 	public const string rootNamespace = "NuPattern.Authoring.PatternToolkitLibrary";
 	public const string assemblyName = "NuPattern.Authoring.PatternToolkitLibrary";
+
+	// Environment Info
+	public const string supportedVsVersion = "11.0";
+	public const string supportedFrxMinVersion = "4.0";
+	public const string supportedFrxMaxVersion = "4.5";
+
+	public const string managerVsixIdentifier = "c869918e-f94e-4e7a-ab25-b076ff4e751b";
+	public const string managerVsixName = "NuPattern Toolkit Manager";
+	public const string managerVsixVersion = "1.3.20.0";
+	public const string managerVsixFileName = "NuPatternToolkitManager.11.0.vsix";
 
 	public bool HasValue(string value)
 	{

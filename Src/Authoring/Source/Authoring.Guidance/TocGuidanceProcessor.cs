@@ -345,28 +345,22 @@ namespace NuPattern.Authoring.Guidance
         private static Word.Document OpenWordDocument(Word.Application word, string documentPath)
         {
             Word.Document document = null;
-            try
-            {
-                tracer.TraceInformation(
-                    Resources.TocGuidanceProcessor_TraceDocumentOpeningAsReadOnly, documentPath);
 
-                // Try open read-only, which will fail if it is a master document.
-                document = word.Documents.Open(documentPath, ReadOnly: true);
-            }
-            catch (COMException)
-            {
-                tracer.TraceInformation(
-                    Resources.TocGuidanceProcessor_TraceDocumentFailedOpenAsReadOnly, documentPath);
+            // Normally, we would open the document as ReadOnly, but we cannot do this is the document is a MasterDocument,
+            // and we dont know it is a MasterDocument until we open it.
+            // Therfore, we must open all documents in ReadWrite mode, as Master Documents opened in ReadOnly mode will throw errors 
+            // when accessing paragraphs of the MasterDocument. 
+            // Documents will always be closed without saving.
+            // Must ensure file is ReadWrite on disk, otherwise can't open document in ReadWrite mode.
 
-                // Remove r/o on disk if any, for master documents that are readon-only on disk
-                MakeWritable(documentPath);
+            // Remove r/o on disk if any, for master documents that are read-only on disk
+            MakeFileWritable(documentPath);
 
-                tracer.TraceInformation(
-                    Resources.TocGuidanceProcessor_TraceDocumentOpeningAsWritable, documentPath);
+            tracer.TraceInformation(
+                Resources.TocGuidanceProcessor_TraceDocumentOpeningAsWritable, documentPath);
 
-                // Try again normally
-                document = word.Documents.Open(documentPath);
-            }
+            // Try open read-write.
+            document = word.Documents.Open(documentPath, ReadOnly: false);
 
             if (document == null)
             {
@@ -382,7 +376,7 @@ namespace NuPattern.Authoring.Guidance
 
                 // Make all subdocuments readable on disk
                 document.Subdocuments.Cast<Word.Subdocument>().ToList()
-                    .ForEach(d => MakeWritable(d.Name));
+                    .ForEach(d => MakeFileWritable(d.Name));
 
                 // Expand all sub-documents for processing
                 if (document.Subdocuments.Expanded == false)
@@ -394,7 +388,7 @@ namespace NuPattern.Authoring.Guidance
             return document;
         }
 
-        private static void MakeWritable(string documentPath)
+        private static void MakeFileWritable(string documentPath)
         {
             var attributes = File.GetAttributes(documentPath);
             if ((attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)

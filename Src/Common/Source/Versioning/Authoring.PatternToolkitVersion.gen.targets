@@ -13,6 +13,7 @@
     <FeatureExtensionRuntime>$(PatternToolkitRuntime)</FeatureExtensionRuntime>
 
     <!-- Debugging pattern toolkit projects -->
+    <VSDebuggingExtensionsRegKey>$(VSSDKTargetPlatformRegRoot)$(VSSDKTargetPlatformRegRootSuffix)\ExtensionManager\EnabledExtensions</VSDebuggingExtensionsRegKey>
     <CopyVsixDebuggingDependencies Condition="'$(CopyVsixDebuggingDependencies)' == ''">false</CopyVsixDebuggingDependencies>
   </PropertyGroup>
   

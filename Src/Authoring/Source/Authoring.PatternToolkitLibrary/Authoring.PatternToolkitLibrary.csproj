@@ -247,7 +247,7 @@
     </Content>
     <None Include="source.include.t4">
       <DependentUpon>source.extension.tt</DependentUpon>
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\Platu\Main\Src\Authoring\Authoring.patternstate%252f7b588f3f-4927-42bf-847d-66bd00883529</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f7b588f3f-4927-42bf-847d-66bd00883529</SourceModelReference>
       <ItemGuid>f9e7aa00-7024-4128-bad8-097738a18ad0</ItemGuid>
     </None>
     <ProjectTemplate Include="Assets\Templates\Projects\Extensibility\Library\Library.gen.vstemplate">
@@ -431,11 +431,6 @@
   </ItemGroup>
   <PropertyGroup>
     <TargetVsixContainerName>$(PatternToolkitLibraryVsixFileName)</TargetVsixContainerName>
-  </PropertyGroup>
-  <!-- Properties for Toolkit Targets -->
-  <PropertyGroup>
-    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' == '' ">$(SolutionDir)..\Binaries</CopyVsixToFolder>
-    <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\Platu\Projects\Src\Binaries</CopyVsixToFolder>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.targets" />

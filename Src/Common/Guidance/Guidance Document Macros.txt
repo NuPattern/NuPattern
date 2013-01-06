@@ -1,0 +1,61 @@
+Sub ExpandAllSubDocuments()
+'
+' ExpandAllSubDocuments Macro
+' Expands all sub documents of the document
+'
+    If Not ActiveDocument.Subdocuments.Expanded Then
+        Dim viewType
+        viewType = ActiveWindow.ActivePane.View.Type
+        
+        ActiveWindow.ActivePane.View.Type = wdOutlineView
+        ActiveDocument.Subdocuments.Expanded = True
+        ActiveWindow.ActivePane.View.Type = viewType
+    End If
+End Sub
+Sub SaveAsPDF()
+'
+' SaveAsPDF Macro
+' Adds a TOC and saves the guidance document as PDF
+'
+    ' Save document first
+    'ActiveDocument.Save
+    
+    ' Expand sub documents
+    ExpandAllSubDocuments
+    
+    ' Move to start off the document
+    Selection.HomeKey Unit:=wdStory
+    Selection.EndKey Unit:=wdLine
+    
+    ' Insert TOC
+    Selection.TypeParagraph
+    With ActiveDocument
+        .TablesOfContents.Add Range:=Selection.Range, RightAlignPageNumbers:= _
+            True, UseHeadingStyles:=True, UpperHeadingLevel:=1, _
+            LowerHeadingLevel:=4, IncludePageNumbers:=True, AddedStyles:="", _
+            UseHyperlinks:=True, HidePageNumbersInWeb:=True, UseOutlineLevels:= _
+            True
+        .TablesOfContents(1).TabLeader = wdTabLeaderDots
+        .TablesOfContents.Format = wdIndexIndent
+    End With
+    
+    ' Save As PDF
+    Dim fileName As String
+    fileName = ActiveDocument.fullName
+    fileName = Left(fileName, InStrRev(fileName, ".")) + "pdf"
+    
+    ActiveDocument.ExportAsFixedFormat OutputFileName:=fileName, _
+        ExportFormat:=wdExportFormatPDF, OpenAfterExport:=False, OptimizeFor:= _
+        wdExportOptimizeForPrint, Range:=wdExportAllDocument, From:=1, To:=1, _
+        Item:=wdExportDocumentContent, IncludeDocProps:=True, KeepIRM:=True, _
+        CreateBookmarks:=wdExportCreateNoBookmarks, DocStructureTags:=True, _
+        BitmapMissingFonts:=True, UseISO19005_1:=False
+    
+    ' Remove TOC
+    Selection.MoveUp Unit:=wdLine, Count:=1, Extend:=wdExtend
+    Selection.Delete Unit:=wdCharacter, Count:=1
+    Selection.TypeBackspace
+    
+    ' Save Document
+    'ActiveDocument.Save
+End Sub

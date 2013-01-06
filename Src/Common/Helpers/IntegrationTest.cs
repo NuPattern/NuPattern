@@ -90,9 +90,14 @@ public class IntegrationTest
 
             try
             {
+                // Delete the direectory
                 Directory.Delete(this.DeploymentDirectory, true);
             }
             catch (UnauthorizedAccessException)
+            {
+                // Ignore and continue
+            }
+            catch (IOException)
             {
                 // Ignore and continue
             }

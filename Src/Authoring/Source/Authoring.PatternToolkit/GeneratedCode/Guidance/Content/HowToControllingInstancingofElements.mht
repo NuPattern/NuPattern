@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDDE4D.8A1A2630"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDE6F0.C2367220"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -37,8 +37,8 @@ w\:* {behavior:url(#default#VML);}
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-19T12:01:00Z</o:Created>
-  <o:LastSaved>2012-12-19T12:01:00Z</o:LastSaved>
+  <o:Created>2012-12-30T11:49:00Z</o:Created>
+  <o:LastSaved>2012-12-30T11:49:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>516</o:Words>
   <o:Characters>2945</o:Characters>
@@ -2385,14 +2385,14 @@ png"
 <p class=3DMsoNormal>In general, a user can always manually delete any elem=
 ent
 instance regardless of the ‘Cardinality’ property applied to it; as long as
-they are able to recreate it manually (i.e. ‘Allow Add New’ is true). This =
-includes
-deleting the last instance in a ‘One To One’ and ‘One to Many’ cardinality.
-Otherwise, if not allowed to manually recreate the instance, then a user can
-only delete instances if they don’t violate the cardinality rules. (e.g. ca=
-n’t
-delete the last instance in a ‘One To One’ or ‘One To Many’ relationship).<=
-o:p></o:p></p>
+they are able to recreate it manually (i.e. ‘Allow Add New’ is true). This
+includes deleting the last instance in a ‘One To One’ and ‘One to Many’
+cardinality. Otherwise, if not allowed to manually recreate the instance, t=
+hen
+a user can only delete instances if they don’t violate the cardinality rule=
+s.
+(e.g. can’t delete the last instance in a ‘One To One’ or ‘One To Many’
+relationship).<o:p></o:p></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
@@ -2413,8 +2413,9 @@ olor:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
 al'>Tip</b>:
 If you want to restrict the user from creating their own instances (i.e. you
-have special creation rules or constraints), then have instancing managed by
-your toolkit by using the ‘Allow Add New’ property.<o:p></o:p></p>
+have special creation rules or constraints), then have instancing managed b=
+y your
+toolkit by using the ‘Allow Add New’ property.<o:p></o:p></p>
 
 </div>
 
@@ -2444,7 +2445,7 @@ rules.<o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2505,7 +2506,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2515,7 +2516,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3164,7 +3165,7 @@ AIrQcKQwCAIgYFUC6uggP0YBARAAARAQBJpIevPLIAYCIAACkUyAftfxF4sOimMUEAABEAABOwHE
 CHEtgAAIxAqBMyf4OkKJryOUj2Nl7BgnCIAACHgnAEWIKwQEQCBWCGAdYazMNMYJAiDgPwFShMid
 +I8NLUAABCKPgPhdZ+PRQfzei7z5g8cgAAKmEvj/a4whub5FyW0AAAAASUVORK5CYIJ=
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/image002.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -3366,7 +3367,7 @@ wSc4q1VFFDQ/+QBp3/XtH/6CKv0UUMEFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUU
 UUAFFFFABRRRQAUUUUAcB4E/5HTxT/12H/ob139FFXPcmOwUUUVBQUUUUAFFFFABRRRQAUUUUAFF
 FFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//Z
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/image003.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3977,7 +3978,7 @@ IAACpiaAHcSmHh44BwIgEHEC0IIRR44GQQAE6onA+dOlcsvKfD25g2ZBAARAwBQEoAVNMQxwAgRA
 IAIEsF4wApDRBAiAQNQRgBaMuiGDwyAAAmERQEQwLHyoDAIgYDkC0IKWG1J0CARAwC8BrBfEDQIC
 IAACSgLQgrgfQAAE7EIA6wXtMtLoJwiAQDAE/j+2yuNWNCCzzQAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/image004.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -4161,7 +4162,7 @@ H/6CKv0UUMEFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAc
 DoX/ACVzW/8Ar3/+N131FFXPoTEKKKKgoKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA
 ooooAKKKKACiiigAooooA//Z
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/image005.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -4770,7 +4771,7 @@ IKCMCLI8EgiAAAiAQD0h8DwyKIEACIBA9BOg33XsJUYEeR4JBEAABEAAc8S4B0AABOxD4MIZtl5Q
 YOsFpbx9eo+eggAIgIA6AcwR484AARCwCwGsF7TLSKOfIAACwRAgLYiZkmCAoSwIgEC0EuC/6xws
 Iojfe9E6ivAbBEBAdwL/H/0EHf+OKs98AAAAAElFTkSuQmCC
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/image006.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -4954,7 +4955,7 @@ f/njP/38H+FH9k2//PGf/v4P8KPeC8jRtzm7cjoQP5CrlUrVWE5JUqMAAHnoMVdqiyhof/IA07/r
 OB0L/krmt/8AXv8A/G676iirn0JiFFFFQUFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQ
 AUUUUAFFFFABRRRQAUUUUAf/2Q==
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/image007.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -5010,7 +5011,7 @@ po/sZha/sDmw/olFfsr5i6eu9ngzc59eysBmUKCBEVv1uePlzVa7aLT4hQ3grrTU1n9fI++wXm82
 pVLTmcpXjlntUziLW9j2BFuzn9Dn3z3qiele9e1Y3ML+3a6dj1rtw1AtbmHHo30JO4b2P2pt2/jr
 cx+AAAAAAElFTkSuQmCC
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/image008.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -5383,7 +5384,7 @@ kwEcvMQB6ltBqxpdUSMCUN9qnDVt9BnqWxvziFGoDwFoTy+1J/Q71Lf6lj16rCgEoL4VNR1+1Rmo
 b7+abgxWEQhAd0N3SxIDrPpWRESjE0AACAABIOAJAqz6luT/AOqxww48oa0QA4gBGWIA6tuTf3bI
 CwSAABBQDAL/D4aFJxlOhFRCAAAAAElFTkSuQmCC
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/image009.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -5489,7 +5490,7 @@ a9E+K7F00hipUkSHaeo+7xXnddVP4UYT+IKKKK0JCiiigAooooAKKKKACiiigBDRQaKAOli+KHiC
 F2H/AAtbxH/z0tf+/P8A9ekPxU8RHq9r/wB+RRRRyrsF2ZmseKdR8S+V/aJiPkZ2eWm3rjP8hWZR
 RVpWRLCiiimIKKKKACiiigAooooAKKKKAA0UUUAf/9k=
 
-------=_NextPart_01CDDE4D.8A1A2630
+------=_NextPart_01CDE6F0.C2367220
 Content-Location: file:///C:/D10446F3/HowToControllingInstancingofElements_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -5509,4 +5510,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image009.jpg"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDDE4D.8A1A2630--
+------=_NextPart_01CDE6F0.C2367220--

@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDDE4D.05A4B1E0"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDE6F0.4F27CB80"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -35,14 +35,14 @@ w\:* {behavior:url(#default#VML);}
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-19T11:57:00Z</o:Created>
-  <o:LastSaved>2012-12-19T11:57:00Z</o:LastSaved>
+  <o:Created>2012-12-30T11:46:00Z</o:Created>
+  <o:LastSaved>2012-12-30T11:46:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>858</o:Words>
-  <o:Characters>4896</o:Characters>
+  <o:Words>860</o:Words>
+  <o:Characters>4905</o:Characters>
   <o:Lines>40</o:Lines>
   <o:Paragraphs>11</o:Paragraphs>
-  <o:CharactersWithSpaces>5743</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>5754</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -2224,22 +2224,24 @@ table.MsoTableGrid
 
 <h3 style=3D'page-break-before:auto'>What is NuPattern?<o:p></o:p></h3>
 
-<p class=3DMsoNormal>NuPattern is a set of Visual Studio extensions that en=
-able
-you to build and use custom 'Pattern Toolkits'. A ‘Pattern Toolkit’ is a se=
-t of
-custom tools with integrated guidance that guide and automate the creation =
-and
-integration of best practices for building custom IT solutions, giving users
-the ability to build custom solutions significantly more rapidly, more reli=
-ably,
-more consistently and more predictably. This leads to higher quality and mo=
-re
-maintainable solutions.<o:p></o:p></p>
+<p class=3DMsoNormal>NuPattern is a set of Visual Studio extensions that he=
+lp you
+build Visual Studio extensions called ‘Pattern Toolkits'. The people that b=
+uild
+the ‘Pattern Toolkits’ are called toolkit authors. The people who use the
+‘Pattern Toolkits’ to develop/deploy software are called toolkit users. <o:=
+p></o:p></p>
+
+<p class=3DMsoNormal>A 'Pattern Toolkit' is built to contain automation,
+guidance, templates and reusable assets that can all be used to accelerate =
+the
+development and deployment of more reliable, maintainable<span
+style=3D'mso-spacerun:yes'>  </span>and higher quality software.<o:p></o:p>=
+</p>
 
 <p class=3DMsoNormal>The NuPattern project site contains more up to date
-information and can be found at: <a href=3D"http://nupattern.codeplex.com">=
-http://nupattern.codeplex.com</a>
+information and can be found at: <a href=3D"http://nupattern.org">http://nu=
+pattern.org</a>
 <o:p></o:p></p>
 
 <p class=3DMsoNormal>A 'Pattern Toolkit' is a Visual Studio extension that =
@@ -2249,13 +2251,12 @@ uld
 be built correctly and consistently with established architectural or
 technology patterns, that an organization or community have pre-determined =
 to
-be most effective, superior and efficient from experiences and knowledge of=
- having
-built and refined those solutions in the past. The primary motivation for t=
-he
-experts to build a ‘Pattern Toolkit’ is to create a set of integrated tools
-that can be used by users to create repeatable solutions for other projects
-with similar customer requirements. <o:p></o:p></p>
+be most effective, superior and efficient from experiences and knowledge of
+having built and refined those solutions in the past. The primary motivation
+for the experts to build a ‘Pattern Toolkit’ is to create a set of integrat=
+ed
+tools that can be used by users to create repeatable solutions for other
+projects with similar customer requirements. <o:p></o:p></p>
 
 <p class=3DMsoNormal>Instead of waiting for platform and technology vendors=
  to
@@ -2298,14 +2299,14 @@ id=3D"_x0000_t75"
    <v:path o:extrusionok=3D"f" gradientshapeok=3D"t" o:connecttype=3D"rect"=
 />
    <o:lock v:ext=3D"edit" aspectratio=3D"t"/>
-  </v:shapetype><v:shape id=3D"Picture_x0020_3" o:spid=3D"_x0000_i1026" typ=
+  </v:shapetype><v:shape id=3D"Picture_x0020_4" o:spid=3D"_x0000_i1026" typ=
 e=3D"#_x0000_t75"
    style=3D'width:118.5pt;height:195pt;visibility:visible;mso-wrap-style:sq=
 uare'>
    <v:imagedata src=3D"WhatisNuPattern_files/image001.png" o:title=3D"SNAGH=
 TML2cd75913"/>
   </v:shape><![endif]--><![if !vml]><img border=3D0 width=3D158 height=3D260
-  src=3D"WhatisNuPattern_files/image002.png" v:shapes=3D"Picture_x0020_3"><=
+  src=3D"WhatisNuPattern_files/image002.png" v:shapes=3D"Picture_x0020_4"><=
 ![endif]></span><o:p></o:p></p>
   <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
 e-height:
@@ -2447,10 +2448,9 @@ style=3D'font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-fa=
 mily:
 Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
 ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Automation, which drives the validation, gen=
-eration
-and integration of a solution implementation into the current solution.<o:p=
-></o:p></p>
+</span></span></span><![endif]>Automation, which drives the validation,
+generation and integration of a solution implementation into the current
+solution.<o:p></o:p></p>
 
 <p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
 l1 level1 lfo2'><![if !supportLists]><span
@@ -2517,7 +2517,7 @@ competitive distinction for building solutions for its’ specific customers.=
 
 </html>
 
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2578,7 +2578,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2588,7 +2588,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3183,7 +3183,7 @@ BQEhOr/A7n6nvPPKn3/xJUkQEAS8Q0A2I7zDTVoJAoJAECEgRBdEkyVDFQQEAe8QEKLzDjdpJQgI
 AkGEgNPrJUE0dhmqICAICAJuIRD+1foFYW7VlEqCgCAgCAQhAsxxEroG4cTJkAUBQcAzBMJ0pVpu
 Rm8Tq7K1ntmQ2oKAICAIBBwCxmj1/wHQvkwl6z1PCgAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern_files/image002.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3651,7 +3651,7 @@ cpmcsSm2Ch1dPRy3fDIZcizezMev6VrRNWct7S/6+fUwwV5gTWCOFDH7NpNVOvdL3/0lE2mcq9hf
 9MOZyOcXFZeINeYJ2rfJlTL5oxwLPdczYF4m4ltOc3pgtDwgE+kCCsV6Yu7b/x+eJWS5t2gRrgAA
 AABJRU5ErkJggk==
 
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern_files/image003.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -4204,7 +4204,7 @@ br/lxroVcXPf/4B7AoqhQgFvXJehIOMK7Z16RV1K1Mt5a3TbuF4KnYGN/q+Z87Vt554zUJmSXuCA
 u60+b+EnYJwDgYS7POdgHVgkAghcJAJJKxe+dQaePLtIdNgMBBCotoDPEk55qs3FhAggcDoB936/
 U0+K/NnQx3hs5HRivI4AAmUESp/l/D+TT0wr5PxFIgAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern_files/image004.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -4613,7 +4613,7 @@ L+NNJ0a7SXDjDWXPbOjcHjOlK+nHbFbzTqnMp9eCemul2DdNcA6mhOb/fuMTEhpX37Q7QqIwm1oH
 g9JcrzdCqvCD1422b6yTJLf50DLQb63YXWUGKfm8fEgsMOwS20XipTab9e9iiWwOUyvfI8cQ3EzH
 FHdM03mvFAbabiG2r06zZ5TboQ6Oh5WtNiTobLQ7HN/9/wwzaSj2EPaLAAAAAElFTkSuQmCC
 
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern_files/image005.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -5095,7 +5095,7 @@ US7PHvoOAiAAAnlAAI4oDyYRQwABEACBXCYAR5TLs4e+gwAIgEAeEIAjyoNJxBBAAARAIJcJwBHl
 8uyh7yAAAiCQBwRcwnh5MCYMAQRAAARAIIcIHPXYlpVFOdRfdBUEQAAEQCCPCIgPQmgujyYUQwEB
 EACBXCRQNDw8HOs364jHT3JxNOgzCIAACIBAThDQo3H/HyGjDWIft2bCAAAAAElFTkSuQmCC
 
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern_files/image006.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -5573,7 +5573,7 @@ i0pJVjwB+9NComOP13t5T5BryRK4xSVg7+yW9Eboj4qZ3uudnpAZD/7V/2UgwdcLFL3F5SgP/xaW
 gJ+Uqw4Po3Dg36DS+P2PeTze37c6XAt8Xk8gLEcusgRkCXypBBQSr7HmU6VK9cP/H+DIoQ4Y2MMA
 AAAAAElFTkSuQmCC
 
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern_files/image007.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -6949,7 +6949,7 @@ u7s7++7Hn5uG/UL3swkKSVd/muTTN5ablDIJxzzhK0KKnMML1oV2Sm9874HeA70Heg/0Hug9EOWB
 kqjJ/LaCY+QLWeAe8K0NQHjxlVIHBfxiDb6RAfiH+UoyyzQMGSzOo4x8BIRevfqcOj4+rjD+/wEj
 UtXoDSfM9gAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern_files/image008.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -7801,7 +7801,7 @@ vvmjxub1bnZ6YdoxFc0NeZFD3OqAPaQDkq8XAHoAJq9QrG6wsA9NtmGswt6tpJbYlCjSBFxRm1Vm
 hUB2AmpYaEJLsSQ/Q8qgWrOCrk/vVV5dXfLW65cV34UKAmTsBG84wBu69zDrIoTIaY074gan71nq
 raCtOTyh/8PYCo1hdK1APt/wzvr9gXOhsaELx5988r5f/h9nFreMYRf4+AAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDDE4D.05A4B1E0
+------=_NextPart_01CDE6F0.4F27CB80
 Content-Location: file:///C:/C97BA2AE/WhatisNuPattern_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -7820,4 +7820,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image008.png"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDDE4D.05A4B1E0--
+------=_NextPart_01CDE6F0.4F27CB80--

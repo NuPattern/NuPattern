@@ -57,7 +57,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ConsoleApplicationProject.gen.csproj</LastGenOutput>
     </None>
-    <Content Include="..\..\..\Binaries\$(RuntimeShellVsixFileName)">
+    <Content Include="..\..\..\Binaries\$(TargetVSVersion)\$(RuntimeShellVsixFileName)">
       <Link>$(RuntimeShellVsixFileName)</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
