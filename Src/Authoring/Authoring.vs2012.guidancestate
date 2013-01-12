@@ -2784,4 +2784,12 @@
     <Key>Creating Pattern Toolkits.Error, building guidance with 64bit versions of Microsoft Word..StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What is NuPattern?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Installing NuPattern.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
 </ArrayOfKeyValueOfstringstring>

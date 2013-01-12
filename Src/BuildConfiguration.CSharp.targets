@@ -71,7 +71,8 @@
     <RebuildDependsOn>CleanT4TrackingFiles;$(RebuildDependsOn)</RebuildDependsOn>
   </PropertyGroup>
   <ItemGroup>
-    <T4TrackingFilesToDelete Include="$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\**\T4Transform*.tlog"/>
+    <T4TrackingFilesToDelete Condition="'$(PlatformName)' == '' or '$(PlatformName)' == 'AnyCPU'" Include="$(ProjectDir)obj\$(ConfigurationName)\**\T4Transform*.tlog"/>
+    <T4TrackingFilesToDelete Condition="'$(PlatformName)' != '' and '$(PlatformName)' != 'AnyCPU'" Include="$(ProjectDir)obj\$(PlatformName)\$(ConfigurationName)\**\T4Transform*.tlog"/>
   </ItemGroup>
   <Target Name="CleanT4TrackingFiles">
     <Message Importance="High" Text="Removing T4 tracking data to force a full transform"/>
