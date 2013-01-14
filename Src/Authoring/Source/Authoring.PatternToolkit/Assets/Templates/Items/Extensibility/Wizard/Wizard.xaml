@@ -8,9 +8,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Height="400" Width="600"
     Title="$safeitemname$ Wizard">
+    <p:WizardWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </p:WizardWindow.Resources>
+
     <p:WizardWindow.Pages>
-        <!-- Include your wizard pages here -->
-        <l:CustomWizardPage1 />
-        <l:CustomWizardPage2 />
+        <!-- Add your wizard pages here -->
+        <l:MyWizardPage1 />
+        <l:MyWizardPage2 />
+        <l:MyWizardPage3 />
     </p:WizardWindow.Pages>
 </p:WizardWindow>
