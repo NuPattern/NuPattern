@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
@@ -9,22 +8,23 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using Microsoft.ComponentModel.Composition.Diagnostics;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Shell;
+using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using Microsoft.VisualStudio.TextTemplating.VSHost;
 using NuPattern.Extensibility;
 using NuPattern.Library;
 using NuPattern.Runtime.Shell.OptionPages;
 using NuPattern.Runtime.Shell.Properties;
 using NuPattern.Runtime.Store;
 using NuPattern.Runtime.UI;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TextTemplating.VSHost;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
 namespace NuPattern.Runtime.Shell
@@ -97,12 +97,23 @@ namespace NuPattern.Runtime.Shell
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IToolkitInterfaceService ToolkitInterfaceService { get; set; }
 
+#if VSVER11
+        private ResolveEventHandler assemblyResolve = OnAssemblyResolve;
+        [ThreadStatic]
+        private static bool _isResolveAssemblyRunningOnThisThread = false;
+#endif
         /// <summary>
         /// Called when the VSPackage is loaded by Visual Studio.
         /// </summary>
         protected override void Initialize()
         {
             base.Initialize();
+
+#if VSVER11
+            //Register global assembly resolver
+            AppDomain.CurrentDomain.AssemblyResolve += this.assemblyResolve;
+            _isResolveAssemblyRunningOnThisThread = true;
+#endif
 
             //Import all services
             var componentModel = this.GetService<SComponentModel, IComponentModel>();
@@ -205,6 +216,14 @@ namespace NuPattern.Runtime.Shell
                 this.ShellEvents.ShellInitialized -= OnShellInitialized;
                 this.SolutionEvents.SolutionOpened -= OnSolutionOpened;
                 this.SolutionEvents.SolutionClosed -= OnSolutionClosed;
+
+#if VSVER11
+                _isResolveAssemblyRunningOnThisThread = false;
+                if (this.assemblyResolve != null)
+                {
+                    AppDomain.CurrentDomain.AssemblyResolve -= this.assemblyResolve;
+                }
+#endif
             }
         }
 
@@ -241,12 +260,16 @@ namespace NuPattern.Runtime.Shell
 
         private void OnSolutionOpened(object sender, SolutionEventArgs e)
         {
-            var pathExpression = string.Concat("*", Runtime.Constants.RuntimeStoreExtension);
+            var pathExpression = string.Concat(@"\*", Runtime.Constants.RuntimeStoreExtension);
 
             // Ensure solution contains at least one toolkit definition file
-            if (e.Solution != null && e.Solution.Find<IItem>(pathExpression).Any())
+            if (e.Solution != null)
             {
-                this.AutoOpenSolutionBuilder();
+                var solutionFiles = e.Solution.Find<IItem>(pathExpression);
+                if (solutionFiles.Any())
+                {
+                    this.AutoOpenSolutionBuilder();
+                }
             }
         }
 
@@ -323,5 +346,86 @@ namespace NuPattern.Runtime.Shell
                 }
             }
         }
+
+#if VSVER11
+        /// <summary>
+        /// Finds toolkit assemblies (in the current AppDomain) that are loaded with a partial name.
+        /// A partial name omits either the Version, Culture or PublicKeyToken.
+        /// Runtime loads many types dynamically using methods such as Type.GetType(string) with partial names, which aids versioning migrations.
+        /// VS2012 for some reason does not resolve assemblies with partial names unless the assemblies are signed.
+        /// </summary>
+        private static Assembly OnAssemblyResolve(object sender, ResolveEventArgs args)
+        {
+            Assembly assembly = null;
+
+            try
+            {
+                // Only process events from the thread that started it, not any other thread
+                if (_isResolveAssemblyRunningOnThisThread)
+                {
+                    // Determine if lost assembly has a partial name 
+                    // (only these are the ones that cause VS2012 difficulty in resolving)
+                    var name = new AssemblyName(args.Name);
+                    if (name.Version == null || name.CultureInfo == null)
+                    {
+                        var componentModel = ServiceProvider.GlobalProvider.GetService<SComponentModel, IComponentModel>();
+                        var patternManager = componentModel.GetService<IPatternManager>();
+                        if (patternManager != null)
+                        {
+                            // Get install paths of all (enabled) toolkits
+                            var installedExtensionDirs = from installedToolkit
+                                                             in patternManager.InstalledToolkits
+                                                         where installedToolkit.Extension.State == EnabledState.Enabled
+                                                         select new DirectoryInfo(installedToolkit.Extension.InstallPath);
+
+                            // Filter only assemblies installed by toolkits
+                            var comparer = new DirectoryInfoComparer();
+                            var toolkitAssemblies = from appDomainAssembly
+                                                        in ((AppDomain)sender).GetAssemblies()
+                                                    where !appDomainAssembly.IsDynamic
+                                                    let location = appDomainAssembly.Location
+                                                    where !String.IsNullOrEmpty(location)
+                                                        && File.Exists(location)
+                                                        && installedExtensionDirs.Contains(Directory.GetParent(location), comparer)
+                                                    select appDomainAssembly;
+                            if (toolkitAssemblies.Any())
+                            {
+                                // Filter only assemblies matching lost name (by highest version)
+                                var matchingAssemblies = from toolkitAssembly
+                                                             in toolkitAssemblies
+                                                         let assemblyName = toolkitAssembly.GetName()
+                                                         let assemblyVersion = assemblyName.Version
+                                                         where assemblyName.Name.Equals(args.Name, StringComparison.OrdinalIgnoreCase)
+                                                         orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
+                                                         select toolkitAssembly;
+                                if (matchingAssemblies.Any())
+                                {
+                                    var publicKeyToken = (name.KeyPair == null) ? string.Empty : name.GetPublicKeyTokenString();
+                                    if (!String.IsNullOrEmpty(publicKeyToken))
+                                    {
+                                        // Match latest version by PublicKeyToken
+                                        assembly = matchingAssemblies
+                                            .Where(a => a.GetName().KeyPair != null)
+                                            .FirstOrDefault(a => a.GetName().GetPublicKeyTokenString().Equals(publicKeyToken));
+                                    }
+                                    else
+                                    {
+                                        // Match latest version
+                                        assembly = matchingAssemblies.FirstOrDefault();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
+            return assembly;
+        }
+#endif
     }
 }

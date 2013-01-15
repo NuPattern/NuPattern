@@ -32,7 +32,7 @@
   <!-- Verifies that the correct solution configuration is selected -->
   <Target Name="VerifyTargetBuildConfiguration" BeforeTargets="BeforeBuild">
     <Message
-      Importance="high"
+      Importance="normal"
       Text="Verifying solution build configuration..."/>
     <Error Condition="(('$(Configuration)' == 'Debug-VS2010' or '$(Configuration)' == 'Release-VS2010') and '$(VisualStudioVersion)' != '10.0')"
            Text="The current solution build configuration '$(Configuration)' is only valid in Visual Studio 2010. You must change the solution build configuration to match this version of Visual Studio."/>
