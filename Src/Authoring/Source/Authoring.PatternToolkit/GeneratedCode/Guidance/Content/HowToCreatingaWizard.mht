@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDE6F1.8E891DF0"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDF362.8B384E00"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -33,16 +33,16 @@ w\:* {behavior:url(#default#VML);}
  <o:DocumentProperties>
   <o:Author>Jezz Santos</o:Author>
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
-  <o:Revision>1</o:Revision>
-  <o:TotalTime>0</o:TotalTime>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
   <o:Created>2012-12-30T11:55:00Z</o:Created>
-  <o:LastSaved>2012-12-30T11:55:00Z</o:LastSaved>
-  <o:Pages>1</o:Pages>
-  <o:Words>869</o:Words>
-  <o:Characters>4956</o:Characters>
+  <o:LastSaved>2013-01-15T07:54:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>865</o:Words>
+  <o:Characters>4935</o:Characters>
   <o:Lines>41</o:Lines>
   <o:Paragraphs>11</o:Paragraphs>
-  <o:CharactersWithSpaces>5814</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>5789</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -54,6 +54,9 @@ w\:* {behavior:url(#default#VML);}
 href=3D"HowToCreatingaWizard_files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
+  <w:Zoom>130</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
   <w:TrackMoves>false</w:TrackMoves>
   <w:TrackFormatting/>
   <w:PunctuationKerning/>
@@ -76,6 +79,7 @@ href=3D"HowToCreatingaWizard_files/colorschememapping.xml">
    <w:DontFlipMirrorIndents/>
    <w:OverrideTableStyleHps/>
   </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
   <m:mathPr>
    <m:mathFont m:val=3D"Cambria Math"/>
    <m:brkBin m:val=3D"before"/>
@@ -436,7 +440,8 @@ h1
 	mso-font-kerning:0pt;
 	font-weight:bold;}
 h2
-	{mso-style-priority:9;
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
 	mso-style-qformat:yes;
 	mso-style-link:"Heading 2 Char";
 	mso-style-next:Normal;
@@ -461,7 +466,8 @@ h2
 	mso-themetint:191;
 	font-weight:bold;}
 h3
-	{mso-style-priority:9;
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
 	mso-style-qformat:yes;
 	mso-style-link:"Heading 3 Char";
 	mso-style-next:Normal;
@@ -486,7 +492,8 @@ h3
 	mso-themeshade:64;
 	font-weight:bold;}
 h4
-	{mso-style-priority:9;
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
 	mso-style-qformat:yes;
 	mso-style-link:"Heading 4 Char";
 	mso-style-next:Normal;
@@ -512,7 +519,8 @@ h4
 	font-weight:bold;
 	font-style:italic;}
 h5
-	{mso-style-priority:9;
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
 	mso-style-qformat:yes;
 	mso-style-link:"Heading 5 Char";
 	mso-style-next:Normal;
@@ -538,7 +546,8 @@ h5
 	font-weight:bold;
 	mso-bidi-font-weight:normal;}
 h6
-	{mso-style-priority:9;
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
 	mso-style-qformat:yes;
 	mso-style-link:"Heading 6 Char";
 	mso-style-next:Normal;
@@ -652,6 +661,7 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	font-style:italic;}
 p.MsoToc1, li.MsoToc1, div.MsoToc1
 	{mso-style-update:auto;
+	mso-style-noshow:yes;
 	mso-style-priority:39;
 	mso-style-next:Normal;
 	margin-top:0in;
@@ -669,6 +679,7 @@ p.MsoToc1, li.MsoToc1, div.MsoToc1
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoToc2, li.MsoToc2, div.MsoToc2
 	{mso-style-update:auto;
+	mso-style-noshow:yes;
 	mso-style-priority:39;
 	mso-style-next:Normal;
 	margin-top:0in;
@@ -686,6 +697,7 @@ p.MsoToc2, li.MsoToc2, div.MsoToc2
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoToc3, li.MsoToc3, div.MsoToc3
 	{mso-style-update:auto;
+	mso-style-noshow:yes;
 	mso-style-priority:39;
 	mso-style-next:Normal;
 	margin-top:0in;
@@ -703,6 +715,7 @@ p.MsoToc3, li.MsoToc3, div.MsoToc3
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoToc4, li.MsoToc4, div.MsoToc4
 	{mso-style-update:auto;
+	mso-style-noshow:yes;
 	mso-style-priority:39;
 	mso-style-next:Normal;
 	margin-top:0in;
@@ -720,6 +733,7 @@ p.MsoToc4, li.MsoToc4, div.MsoToc4
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoToc5, li.MsoToc5, div.MsoToc5
 	{mso-style-update:auto;
+	mso-style-noshow:yes;
 	mso-style-priority:39;
 	mso-style-next:Normal;
 	margin-top:0in;
@@ -740,6 +754,7 @@ p.MsoToc5, li.MsoToc5, div.MsoToc5
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoToc6, li.MsoToc6, div.MsoToc6
 	{mso-style-update:auto;
+	mso-style-noshow:yes;
 	mso-style-priority:39;
 	mso-style-next:Normal;
 	margin-top:0in;
@@ -760,6 +775,7 @@ p.MsoToc6, li.MsoToc6, div.MsoToc6
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoToc7, li.MsoToc7, div.MsoToc7
 	{mso-style-update:auto;
+	mso-style-noshow:yes;
 	mso-style-priority:39;
 	mso-style-next:Normal;
 	margin-top:0in;
@@ -780,6 +796,7 @@ p.MsoToc7, li.MsoToc7, div.MsoToc7
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoToc8, li.MsoToc8, div.MsoToc8
 	{mso-style-update:auto;
+	mso-style-noshow:yes;
 	mso-style-priority:39;
 	mso-style-next:Normal;
 	margin-top:0in;
@@ -800,6 +817,7 @@ p.MsoToc8, li.MsoToc8, div.MsoToc8
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoToc9, li.MsoToc9, div.MsoToc9
 	{mso-style-update:auto;
+	mso-style-noshow:yes;
 	mso-style-priority:39;
 	mso-style-next:Normal;
 	margin-top:0in;
@@ -819,7 +837,8 @@ p.MsoToc9, li.MsoToc9, div.MsoToc9
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
-	{mso-style-priority:99;
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
 	margin-top:0in;
 	margin-right:0in;
 	margin-bottom:10.0pt;
@@ -828,7 +847,7 @@ p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
 	text-indent:-.25in;
 	line-height:115%;
 	mso-pagination:widow-orphan;
-	mso-list:l0 level1 lfo1;
+	mso-list:l0 level1 lfo3;
 	tab-stops:list .25in;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
@@ -839,7 +858,8 @@ p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoListBulletCxSpFirst, li.MsoListBulletCxSpFirst, div.MsoListBulletCxSpF=
 irst
-	{mso-style-priority:99;
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-type:export-only;
 	margin-top:0in;
 	margin-right:0in;
@@ -850,7 +870,7 @@ irst
 	text-indent:-.25in;
 	line-height:115%;
 	mso-pagination:widow-orphan;
-	mso-list:l0 level1 lfo1;
+	mso-list:l0 level1 lfo3;
 	tab-stops:list .25in;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
@@ -861,7 +881,8 @@ irst
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoListBulletCxSpMiddle, li.MsoListBulletCxSpMiddle, div.MsoListBulletCxS=
 pMiddle
-	{mso-style-priority:99;
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-type:export-only;
 	margin-top:0in;
 	margin-right:0in;
@@ -872,7 +893,7 @@ pMiddle
 	text-indent:-.25in;
 	line-height:115%;
 	mso-pagination:widow-orphan;
-	mso-list:l0 level1 lfo1;
+	mso-list:l0 level1 lfo3;
 	tab-stops:list .25in;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
@@ -882,7 +903,8 @@ pMiddle
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoListBulletCxSpLast, li.MsoListBulletCxSpLast, div.MsoListBulletCxSpLast
-	{mso-style-priority:99;
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-type:export-only;
 	margin-top:0in;
 	margin-right:0in;
@@ -892,7 +914,7 @@ p.MsoListBulletCxSpLast, li.MsoListBulletCxSpLast, div.MsoListBulletCxSpLast
 	text-indent:-.25in;
 	line-height:115%;
 	mso-pagination:widow-orphan;
-	mso-list:l0 level1 lfo1;
+	mso-list:l0 level1 lfo3;
 	tab-stops:list .25in;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
@@ -902,8 +924,10 @@ p.MsoListBulletCxSpLast, li.MsoListBulletCxSpLast, div.MsoListBulletCxSpLast
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoTitle, li.MsoTitle, div.MsoTitle
-	{mso-style-priority:10;
+	{mso-style-noshow:yes;
+	mso-style-priority:10;
 	mso-style-unhide:no;
+	mso-style-qformat:yes;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	margin-top:0in;
@@ -930,8 +954,10 @@ p.MsoTitle, li.MsoTitle, div.MsoTitle
 	letter-spacing:.25pt;
 	mso-font-kerning:14.0pt;}
 p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
-	{mso-style-priority:10;
+	{mso-style-noshow:yes;
+	mso-style-priority:10;
 	mso-style-unhide:no;
+	mso-style-qformat:yes;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
@@ -957,8 +983,10 @@ p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
 	letter-spacing:.25pt;
 	mso-font-kerning:14.0pt;}
 p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
-	{mso-style-priority:10;
+	{mso-style-noshow:yes;
+	mso-style-priority:10;
 	mso-style-unhide:no;
+	mso-style-qformat:yes;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
@@ -984,8 +1012,10 @@ p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
 	letter-spacing:.25pt;
 	mso-font-kerning:14.0pt;}
 p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
-	{mso-style-priority:10;
+	{mso-style-noshow:yes;
+	mso-style-priority:10;
 	mso-style-unhide:no;
+	mso-style-qformat:yes;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
@@ -1013,7 +1043,8 @@ p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
 	letter-spacing:.25pt;
 	mso-font-kerning:14.0pt;}
 a:link, span.MsoHyperlink
-	{mso-style-priority:99;
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
 	color:blue;
 	mso-themecolor:hyperlink;
 	text-decoration:underline;
@@ -1049,7 +1080,8 @@ p
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:"Times New Roman";}
 pre
-	{mso-style-priority:99;
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-link:"HTML Preformatted Char";
 	margin:0in;
 	margin-bottom:.0001pt;
@@ -1072,8 +1104,10 @@ p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;}
 p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{mso-style-priority:34;
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
 	mso-style-unhide:no;
+	mso-style-qformat:yes;
 	margin-top:0in;
 	margin-right:0in;
 	margin-bottom:10.0pt;
@@ -1090,8 +1124,10 @@ p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParag=
 raphCxSpFirst
-	{mso-style-priority:34;
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
 	mso-style-unhide:no;
+	mso-style-qformat:yes;
 	mso-style-type:export-only;
 	margin-top:0in;
 	margin-right:0in;
@@ -1110,8 +1146,10 @@ raphCxSpFirst
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListPar=
 agraphCxSpMiddle
-	{mso-style-priority:34;
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
 	mso-style-unhide:no;
+	mso-style-qformat:yes;
 	mso-style-type:export-only;
 	margin-top:0in;
 	margin-right:0in;
@@ -1130,8 +1168,10 @@ agraphCxSpMiddle
 	mso-bidi-theme-font:minor-bidi;}
 p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagra=
 phCxSpLast
-	{mso-style-priority:34;
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
 	mso-style-unhide:no;
+	mso-style-qformat:yes;
 	mso-style-type:export-only;
 	margin-top:0in;
 	margin-right:0in;
@@ -1193,6 +1233,7 @@ span.Heading1Char
 	font-weight:bold;}
 span.Heading2Char
 	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
 	mso-style-priority:9;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
@@ -1211,6 +1252,7 @@ span.Heading2Char
 	font-weight:bold;}
 span.Heading3Char
 	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
 	mso-style-priority:9;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
@@ -1229,6 +1271,7 @@ span.Heading3Char
 	font-weight:bold;}
 span.Heading4Char
 	{mso-style-name:"Heading 4 Char";
+	mso-style-noshow:yes;
 	mso-style-priority:9;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
@@ -1248,6 +1291,7 @@ span.Heading4Char
 	font-style:italic;}
 span.Heading5Char
 	{mso-style-name:"Heading 5 Char";
+	mso-style-noshow:yes;
 	mso-style-priority:9;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
@@ -1267,6 +1311,7 @@ span.Heading5Char
 	mso-bidi-font-weight:normal;}
 span.Heading6Char
 	{mso-style-name:"Heading 6 Char";
+	mso-style-noshow:yes;
 	mso-style-priority:9;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
@@ -1283,6 +1328,20 @@ span.Heading6Char
 	mso-themecolor:text2;
 	mso-themetint:153;
 	font-style:italic;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
 span.Heading7Char
 	{mso-style-name:"Heading 7 Char";
 	mso-style-noshow:yes;
@@ -1367,6 +1426,19 @@ span.TitleChar
 	mso-themetint:242;
 	letter-spacing:.25pt;
 	mso-font-kerning:14.0pt;}
+span.DocumentMapChar
+	{mso-style-name:"Document Map Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Document Map";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
 span.BalloonTextChar
 	{mso-style-name:"Balloon Text Char";
 	mso-style-noshow:yes;
@@ -1382,6 +1454,8 @@ span.BalloonTextChar
 	mso-bidi-font-family:Tahoma;}
 p.SourceCode, li.SourceCode, div.SourceCode
 	{mso-style-name:"Source Code";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	margin-top:12.0pt;
@@ -1403,6 +1477,8 @@ p.SourceCode, li.SourceCode, div.SourceCode
 	mso-bidi-theme-font:minor-bidi;}
 p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
 	{mso-style-name:"Source CodeCxSpFirst";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
@@ -1426,6 +1502,8 @@ p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
 	mso-bidi-theme-font:minor-bidi;}
 p.SourceCodeCxSpMiddle, li.SourceCodeCxSpMiddle, div.SourceCodeCxSpMiddle
 	{mso-style-name:"Source CodeCxSpMiddle";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
@@ -1446,6 +1524,8 @@ p.SourceCodeCxSpMiddle, li.SourceCodeCxSpMiddle, div.SourceCodeCxSpMiddle
 	mso-bidi-theme-font:minor-bidi;}
 p.SourceCodeCxSpLast, li.SourceCodeCxSpLast, div.SourceCodeCxSpLast
 	{mso-style-name:"Source CodeCxSpLast";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
@@ -1466,34 +1546,21 @@ p.SourceCodeCxSpLast, li.SourceCodeCxSpLast, div.SourceCodeCxSpLast
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;}
-span.HTMLPreformattedChar
-	{mso-style-name:"HTML Preformatted Char";
-	mso-style-priority:99;
+span.NoteChar
+	{mso-style-name:"Note Char";
 	mso-style-unhide:no;
 	mso-style-locked:yes;
-	mso-style-link:"HTML Preformatted";
-	mso-ansi-font-size:10.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Courier New";
-	mso-ascii-font-family:"Courier New";
-	mso-fareast-font-family:"Times New Roman";
-	mso-hansi-font-family:"Courier New";
-	mso-bidi-font-family:"Courier New";}
-span.DocumentMapChar
-	{mso-style-name:"Document Map Char";
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:"Document Map";
+	mso-style-link:Note;
 	mso-ansi-font-size:9.0pt;
-	mso-bidi-font-size:8.0pt;
-	font-family:"Tahoma","sans-serif";
-	mso-ascii-font-family:Tahoma;
-	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;}
+	font-family:"Segoe UI","sans-serif";
+	mso-ascii-font-family:"Segoe UI";
+	mso-hansi-font-family:"Segoe UI";
+	mso-bidi-font-family:"Segoe UI";
+	background:#FFFFCC;}
 p.Note, li.Note, div.Note
 	{mso-style-name:Note;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
@@ -1519,6 +1586,8 @@ p.Note, li.Note, div.Note
 	mso-bidi-theme-font:minor-bidi;}
 p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	{mso-style-name:NoteCxSpFirst;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
@@ -1546,6 +1615,8 @@ p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	mso-bidi-theme-font:minor-bidi;}
 p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	{mso-style-name:NoteCxSpMiddle;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
@@ -1573,6 +1644,8 @@ p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	mso-bidi-theme-font:minor-bidi;}
 p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
 	{mso-style-name:NoteCxSpLast;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
@@ -1597,18 +1670,24 @@ p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;}
-span.NoteChar
-	{mso-style-name:"Note Char";
+span.MissingContentChar
+	{mso-style-name:"Missing Content Char";
 	mso-style-unhide:no;
 	mso-style-locked:yes;
-	mso-style-link:Note;
+	mso-style-link:"Missing Content";
 	mso-ansi-font-size:9.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-ascii-font-family:"Segoe UI";
 	mso-hansi-font-family:"Segoe UI";
-	background:#FFFFCC;}
+	mso-bidi-font-family:"Segoe UI";
+	color:#A6A6A6;
+	mso-themecolor:background1;
+	mso-themeshade:166;
+	background:#FFFF66;}
 p.MissingContent, li.MissingContent, div.MissingContent
 	{mso-style-name:"Missing Content";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Missing Content Char";
@@ -1634,21 +1713,24 @@ p.MissingContent, li.MissingContent, div.MissingContent
 	color:#A6A6A6;
 	mso-themecolor:background1;
 	mso-themeshade:166;}
-span.MissingContentChar
-	{mso-style-name:"Missing Content Char";
+span.WarningChar
+	{mso-style-name:"Warning Char";
 	mso-style-unhide:no;
 	mso-style-locked:yes;
-	mso-style-link:"Missing Content";
+	mso-style-parent:"Note Char";
+	mso-style-link:Warning;
 	mso-ansi-font-size:9.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-ascii-font-family:"Segoe UI";
 	mso-hansi-font-family:"Segoe UI";
-	color:#A6A6A6;
-	mso-themecolor:background1;
-	mso-themeshade:166;
-	background:#FFFF66;}
+	mso-bidi-font-family:"Segoe UI";
+	background:#F2DBDB;
+	mso-shading-themecolor:accent2;
+	mso-shading-themetint:51;}
 p.Warning, li.Warning, div.Warning
 	{mso-style-name:Warning;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
@@ -1677,6 +1759,8 @@ p.Warning, li.Warning, div.Warning
 	mso-bidi-theme-font:minor-bidi;}
 p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	{mso-style-name:WarningCxSpFirst;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
@@ -1707,6 +1791,8 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-bidi-theme-font:minor-bidi;}
 p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	{mso-style-name:WarningCxSpMiddle;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
@@ -1737,6 +1823,8 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-bidi-theme-font:minor-bidi;}
 p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	{mso-style-name:WarningCxSpLast;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
@@ -1764,21 +1852,24 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;}
-span.WarningChar
-	{mso-style-name:"Warning Char";
+span.TipChar
+	{mso-style-name:"Tip Char";
 	mso-style-unhide:no;
 	mso-style-locked:yes;
 	mso-style-parent:"Note Char";
-	mso-style-link:Warning;
+	mso-style-link:Tip;
 	mso-ansi-font-size:9.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-ascii-font-family:"Segoe UI";
 	mso-hansi-font-family:"Segoe UI";
-	background:#F2DBDB;
-	mso-shading-themecolor:accent2;
-	mso-shading-themetint:51;}
+	mso-bidi-font-family:"Segoe UI";
+	background:#D6E3BC;
+	mso-shading-themecolor:accent3;
+	mso-shading-themetint:102;}
 p.Tip, li.Tip, div.Tip
 	{mso-style-name:Tip;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
@@ -1807,6 +1898,8 @@ p.Tip, li.Tip, div.Tip
 	mso-bidi-theme-font:minor-bidi;}
 p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	{mso-style-name:TipCxSpFirst;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
@@ -1837,6 +1930,8 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-bidi-theme-font:minor-bidi;}
 p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	{mso-style-name:TipCxSpMiddle;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
@@ -1867,143 +1962,12 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-bidi-theme-font:minor-bidi;}
 p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	{mso-style-name:TipCxSpLast;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
-	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:10.0pt;
-	margin-left:.4in;
-	mso-add-space:auto;
-	line-height:115%;
-	mso-pagination:widow-orphan lines-together;
-	background:#D6E3BC;
-	mso-background-themecolor:accent3;
-	mso-background-themetint:102;
-	border:none;
-	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
-	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
-	mso-border-shadow:yes;
-	font-size:9.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Segoe UI","sans-serif";
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
-span.TipChar
-	{mso-style-name:"Tip Char";
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-parent:"Note Char";
-	mso-style-link:Tip;
-	mso-ansi-font-size:9.0pt;
-	font-family:"Segoe UI","sans-serif";
-	mso-ascii-font-family:"Segoe UI";
-	mso-hansi-font-family:"Segoe UI";
-	background:#D6E3BC;
-	mso-shading-themecolor:accent3;
-	mso-shading-themetint:102;}
-span.parameter
-	{mso-style-name:parameter;
-	mso-style-unhide:no;}
-p.Recommend, li.Recommend, div.Recommend
-	{mso-style-name:Recommend;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:Note;
-	mso-style-link:"Recommend Char";
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:10.0pt;
-	margin-left:.4in;
-	mso-add-space:auto;
-	line-height:115%;
-	mso-pagination:widow-orphan lines-together;
-	background:#D6E3BC;
-	mso-background-themecolor:accent3;
-	mso-background-themetint:102;
-	border:none;
-	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
-	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
-	mso-border-shadow:yes;
-	font-size:9.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Segoe UI","sans-serif";
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
-p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
-	{mso-style-name:RecommendCxSpFirst;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:Note;
-	mso-style-link:"Recommend Char";
-	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
-	margin-bottom:.0001pt;
-	mso-add-space:auto;
-	line-height:115%;
-	mso-pagination:widow-orphan lines-together;
-	background:#D6E3BC;
-	mso-background-themecolor:accent3;
-	mso-background-themetint:102;
-	border:none;
-	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
-	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
-	mso-border-shadow:yes;
-	font-size:9.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Segoe UI","sans-serif";
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
-p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
-	{mso-style-name:RecommendCxSpMiddle;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:Note;
-	mso-style-link:"Recommend Char";
-	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
-	margin-bottom:.0001pt;
-	mso-add-space:auto;
-	line-height:115%;
-	mso-pagination:widow-orphan lines-together;
-	background:#D6E3BC;
-	mso-background-themecolor:accent3;
-	mso-background-themetint:102;
-	border:none;
-	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
-	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
-	mso-border-shadow:yes;
-	font-size:9.0pt;
-	mso-bidi-font-size:11.0pt;
-	font-family:"Segoe UI","sans-serif";
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
-p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
-	{mso-style-name:RecommendCxSpLast;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:Note;
-	mso-style-link:"Recommend Char";
 	mso-style-type:export-only;
 	margin-top:0in;
 	margin-right:.4in;
@@ -2037,12 +2001,150 @@ span.RecommendChar
 	font-family:"Segoe UI","sans-serif";
 	mso-ascii-font-family:"Segoe UI";
 	mso-hansi-font-family:"Segoe UI";
+	mso-bidi-font-family:"Segoe UI";
 	background:#D6E3BC;
 	mso-shading-themecolor:accent3;
 	mso-shading-themetint:102;}
+p.Recommend, li.Recommend, div.Recommend
+	{mso-style-name:Recommend;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Recommend Char";
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:10.0pt;
+	margin-left:.4in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#D6E3BC;
+	mso-background-themecolor:accent3;
+	mso-background-themetint:102;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
+	{mso-style-name:RecommendCxSpFirst;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Recommend Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:0in;
+	margin-left:.4in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#D6E3BC;
+	mso-background-themecolor:accent3;
+	mso-background-themetint:102;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
+	{mso-style-name:RecommendCxSpMiddle;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Recommend Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:0in;
+	margin-left:.4in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#D6E3BC;
+	mso-background-themecolor:accent3;
+	mso-background-themetint:102;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
+	{mso-style-name:RecommendCxSpLast;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:Note;
+	mso-style-link:"Recommend Char";
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:.4in;
+	margin-bottom:10.0pt;
+	margin-left:.4in;
+	mso-add-space:auto;
+	line-height:115%;
+	mso-pagination:widow-orphan lines-together;
+	background:#D6E3BC;
+	mso-background-themecolor:accent3;
+	mso-background-themetint:102;
+	border:none;
+	mso-border-alt:solid windowtext 1.0pt;
+	padding:0in;
+	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
+	mso-border-shadow:yes;
+	font-size:9.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Segoe UI","sans-serif";
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+span.parameter
+	{mso-style-name:parameter;
+	mso-style-unhide:no;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
 	font-family:"Calibri","sans-serif";
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
@@ -2052,10 +2154,6 @@ span.RecommendChar
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;}
-.MsoPapDefault
-	{mso-style-type:export-only;
-	margin-bottom:10.0pt;
-	line-height:115%;}
 @page WordSection1
 	{size:8.5in 11.0in;
 	margin:1.0in 1.0in 1.0in 1.0in;
@@ -2189,13 +2287,10 @@ ul
 	mso-style-priority:99;
 	mso-style-parent:"";
 	mso-padding-alt:0in 5.4pt 0in 5.4pt;
-	mso-para-margin-top:0in;
-	mso-para-margin-right:0in;
-	mso-para-margin-bottom:10.0pt;
-	mso-para-margin-left:0in;
-	line-height:115%;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
-	font-size:11.0pt;
+	font-size:10.0pt;
 	font-family:"Calibri","sans-serif";
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
@@ -2234,8 +2329,7 @@ table.MsoTableGrid
 
 <div class=3DWordSection1>
 
-<h4 style=3D'page-break-before:auto'>How To: Creating a Wizard<o:p></o:p></=
-h4>
+<h4 style=3D'page-break-before:auto'>How To: Creating a Wizard</h4>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#D6E3BC;
@@ -2251,8 +2345,7 @@ al'>Recommend</b>:
 See <a
 href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/UnderstandingWizards.mht">Understanding
-Wizards</a> for details on why and where they are implemented and used.<o:p=
-></o:p></p>
+Wizards</a> for details on why and where they are implemented and used.</p>
 
 <p class=3DNote style=3D'margin-top:0in;margin-right:0in;margin-bottom:10.0=
 pt;
@@ -2260,55 +2353,52 @@ margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: Wizards are created and configured to run on a specific
 element in a pattern model, but require the creation of a Wizard and one or
-more Wizard Page assets first.<o:p></o:p></p>
+more Wizard Page assets first.</p>
 
 </div>
 
-<p class=3DMsoNormal>The basic process for creating a Wizard is:<o:p></o:p>=
-</p>
+<p class=3DMsoNormal>The basic process for creating a Wizard is:</p>
 
 <p class=3DMsoListParagraphCxSpFirst style=3D'text-indent:-.25in;mso-list:l=
-2 level1 lfo2'><![if !supportLists]><span
+2 level1 lfo5'><![if !supportLists]><span
 style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
 '><span
 style=3D'mso-list:Ignore'>1.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Create a Custom XAML Wizard<o:p></o:p></p>
+</span></span></span><![endif]>Create a Custom XAML Wizard</p>
 
 <p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
-l2 level1 lfo2'><![if !supportLists]><span
+l2 level1 lfo5'><![if !supportLists]><span
 style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
 '><span
 style=3D'mso-list:Ignore'>2.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Create one or more XAML Wizard pages<o:p></o=
-:p></p>
+</span></span></span><![endif]>Create one or more XAML Wizard pages</p>
 
 <p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
-l2 level1 lfo2'><![if !supportLists]><span
+l2 level1 lfo5'><![if !supportLists]><span
 style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
 '><span
 style=3D'mso-list:Ignore'>3.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Add a Wizard on an element<o:p></o:p></p>
+</span></span></span><![endif]>Add a Wizard on an element</p>
 
 <p class=3DMsoListParagraphCxSpLast style=3D'text-indent:-.25in;mso-list:l2=
- level1 lfo2'><![if !supportLists]><span
+ level1 lfo5'><![if !supportLists]><span
 style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
 '><span
 style=3D'mso-list:Ignore'>4.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Configure the Wizard to be displayed<o:p></o=
-:p></p>
+</span></span></span><![endif]>Configure the Wizard to be displayed</p>
 
-<h5>Create Custom Wizard (XAML)<o:p></o:p></h5>
+<h5>Create Custom Wizard (XAML)</h5>
 
 <p class=3DMsoNormal>To create a new ‘Wizard’, in the pattern toolkit proje=
-ct, right-click
-on the ‘Wizards’ folder in <a
+ct,
+right-click on the ‘Wizards’ folder in <a
 href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
-Builder’</a> window, and click ‘Add’.<o:p></o:p></p>
+Builder’</a> window, and click ‘Add’.</p>
 
 <table class=3DMsoTableGrid border=3D0 cellspacing=3D0 cellpadding=3D0
  style=3D'border-collapse:collapse;mso-table-layout-alt:fixed;border:none;
@@ -2351,7 +2441,7 @@ ype=3D"#_x0000_t75"
 "/>
   </v:shape><![endif]--><![if !vml]><img border=3D0 width=3D221 height=3D113
   src=3D"HowToCreatingaWizard_files/image002.jpg" v:shapes=3D"Picture_x0020=
-_165"><![endif]></span><o:p></o:p></p>
+_165"><![endif]></span></p>
   </td>
   <td width=3D113 valign=3Dtop style=3D'width:84.95pt;padding:0in 5.4pt 0in=
  5.4pt'>
@@ -2399,30 +2489,30 @@ bHOkkMFqwzAMhu+DvYPRfXGawxijTi+j0GvpHsDYimMaW0Yy2fr2M4PBMnrbUb/Q94l/f/hMi1qR
 JVI2sOt6UJgd+ZiDgffL8ekFlFSbvV0oo4EbChzGx4f9GRdb25HMsYhqlCwG5lrLq9biZkxWOiqY
 22YiTra2kYMu1l1tQD30/bPm3wwYN0x18gb45AdQl1tp5j/sFB2T0FQ7R0nTNEV3j6o9feQzro1i
 OWA14Fm+Q8a1a8+Bvu/d/dMb2JY5uiPbhG/ktn4cqGU/er3pcvwCAAD//wMAUEsDBBQABgAIAAAA
-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
-AAAAAA=3D=3D
+IQBn4fBk7QIAAKcGAAAOAAAAZHJzL2Uyb0RvYy54bWysVdtuGyEQfa/Uf0C8J+vd+JKsso6ipKkq
+pW1Ut+ozBtZLwwIF7LX79R1gvXEuvaiqH1YwAzPnzBzG5xfbVqINt05oVeH8eIQRV1QzoVYV/vL5
+5ugUI+eJYkRqxSu84w5fzF+/Ou9MyQvdaMm4RRBEubIzFW68N2WWOdrwlrhjbbgCZ61tSzxs7Spj
+lnQQvZVZMRpNs05bZqym3DmwXicnnsf4dc2p/1jXjnskKwzYfPza+F2GbzY/J+XKEtMI2sMg/4Ci
+JUJB0iHUNfEEra14FqoV1Gqna39MdZvpuhaURw7AJh89YbNoiOGRCxTHmaFM7v+FpR82dxYJVuEp
+Roq00KKFt8Jwhj6JVePRpbW6Q0UoVGdcCecX5s4Gqs7canrvkNJXDVErHk82nDCAl4fz2aMLYePg
+Klp27zWDPGTtdazZtrZtCAjVQNvYmt3QGr71iILxbDadnkADKbjGp5PZbBIzkHJ/2Vjn33LdorCo
+sEskIocILGYim1vnY5tYT5awbzlGdSuh6xsi0WQEv14VB2eKx2eKaSJIyj5iRso9gF4F7EZIiaz2
+X4VvYiMDp+h0exAOGQ3FSuYoeX4lLQIcUB1KufJ5vCHXLZQs2fMAsEcIdlB3skcTwBjCQP1Bji5l
+TIn6u8E0HPt9toNy/F2ymLPnJ4VCIIwKF7MEGjlKJAet7asHDy/WKSCSCnXgCWcjaaelGJxP4MoX
+CnMWsKbO/Rnqo+Ct8DCDpGgrfJqAxqkQpPxGsbj2RMi0BoJSBbw8Tpeeql5DiEXDOuRAoKlq6B50
+e1SMJyfTEUzBl6TwhNavej4OqJ5Tmz6YiTQNSa0cWvZMDAPIKI0D/PGhhreZ3vhSsx28UwActBmm
+OywabX9g1MGkhMf1fU0sx0i+UyDfs3w8DqM1bsaTWQEbe+hZHnqIohCqwh6DNsLyyqdxvDY2DJwg
+jlBepS9hPtTC7wdJQtVPFZiGSd9pcodxe7iPpx7+X+Y/AQAA//8DAFBLAwQUAAYACAAAACEA4nqW
+/98AAAAIAQAADwAAAGRycy9kb3ducmV2LnhtbEyPzU7DMBCE70i8g7VI3KgD6U8U4lRVgQv0QmlB
+vbnxkkTE62C7bXh7tie4zWpGM98W88F24og+tI4U3I4SEEiVMy3VCjZvTzcZiBA1Gd05QgU/GGBe
+Xl4UOjfuRK94XMdacAmFXCtoYuxzKUPVoNVh5Hok9j6dtzry6WtpvD5xue3kXZJMpdUt8UKje1w2
+WH2tD1YBfvS7R/eAOIuL9+f4vfXL1e5FqeurYXEPIuIQ/8Jwxmd0KJlp7w5kgugUpFMOKphkKYiz
+PZmNQexZpOMMZFnI/w+UvwAAAP//AwBQSwECLQAUAAYACAAAACEAtoM4kv4AAADhAQAAEwAAAAAA
+AAAAAAAAAAAAAAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLAQItABQABgAIAAAAIQA4/SH/1gAAAJQB
+AAALAAAAAAAAAAAAAAAAAC8BAABfcmVscy8ucmVsc1BLAQItABQABgAIAAAAIQBn4fBk7QIAAKcG
+AAAOAAAAAAAAAAAAAAAAAC4CAABkcnMvZTJvRG9jLnhtbFBLAQItABQABgAIAAAAIQDiepb/3wAA
+AAgBAAAPAAAAAAAAAAAAAAAAAEcFAABkcnMvZG93bnJldi54bWxQSwUGAAAAAAQABADzAAAAUwYA
+AAAA
 " fillcolor=3D"#4f81bd [3204]" strokecolor=3D"#f2f2f2 [3041]" strokeweight=
 =3D"1pt">
    <v:fill color2=3D"#243f60 [1604]" angle=3D"45" focus=3D"100%" type=3D"gr=
@@ -2434,7 +2524,7 @@ adient"/>
   position:absolute;z-index:251660288;margin-left:1px;margin-top:36px;
   width:127px;height:57px'><img width=3D127 height=3D57
   src=3D"HowToCreatingaWizard_files/image003.png" v:shapes=3D"Striped_x0020=
-_Right_x0020_Arrow_x0020_2"></span><![endif]><o:p></o:p></p>
+_Right_x0020_Arrow_x0020_2"></span><![endif]></p>
   </td>
   <td width=3D378 valign=3Dtop style=3D'width:283.65pt;padding:0in 5.4pt 0i=
 n 5.4pt'>
@@ -2449,14 +2539,14 @@ ht:108pt;
 "/>
   </v:shape><![endif]--><![if !vml]><img border=3D0 width=3D454 height=3D144
   src=3D"HowToCreatingaWizard_files/image005.jpg" v:shapes=3D"Picture_x0020=
-_171"><![endif]></span><o:p></o:p></p>
+_171"><![endif]></span></p>
   </td>
  </tr>
 </table>
 
 <p class=3DMsoNormal>The XAML editor will open with the skeleton of the Wiz=
 ard in
-place.<o:p></o:p></p>
+place.</p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
@@ -2467,16 +2557,17 @@ pt;
 margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: There is very little visual appearance to customize in the
-XAML for a Wizard, so maximize the ‘XAML’ view. <o:p></o:p></p>
+XAML for a Wizard, so maximize the ‘XAML’ view. </p>
 
 </div>
 
-<h6>Updating the Title<o:p></o:p></h6>
+<h6>Updating the Title</h6>
 
-<p class=3DMsoNormal>Change the ‘Title’ property of the &lt;WizardWindow&gt;
-element, which will be displayed on the dialog of the wizard.<o:p></o:p></p>
+<p class=3DMsoNormal>Change the ‘Title’ property of the &lt;<span class=3DS=
+pellE>WizardWindow</span>&gt;
+element, which will be displayed on the dialog of the wizard.</p>
 
-<h6>Adding Wizard Pages<o:p></o:p></h6>
+<h6>Adding Wizard Pages</h6>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
@@ -2486,31 +2577,30 @@ margin-left:.4in;margin-right:.4in'>
 pt;
 margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
-normal'>Note</b>: The &lt;WizardWindow.Pages&gt; collection will be populat=
-ed
-after you create one or more Wizard Pages (below).<o:p></o:p></p>
+normal'>Note</b>: The &lt;<span class=3DSpellE>WizardWindow.Pages</span>&gt;
+collection will be populated after you create one or more Wizard Pages (bel=
+ow).</p>
 
 </div>
 
-<h6>Descriptive Information<o:p></o:p></h6>
+<h6>Descriptive Information</h6>
 
 <p class=3DMsoNormal>Use the naming guidelines in <a
 href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/HowToNamingYourOwnAutomationClasses.mht">Naming
 Custom Automation Classes</a> for configuring the descriptive properties of=
  the
-wizard’s class (*.cs in the code-behind), so that it is correctly documente=
-d,
-named, described and categorized.<o:p></o:p></p>
+wizard’s class (*.<span class=3DSpellE>cs</span> in the code-behind), so th=
+at it
+is correctly documented, named, described and categorized.</p>
 
-<h5>Create Custom Wizard Pages (XAML)<o:p></o:p></h5>
+<h5>Create Custom Wizard Pages (XAML)</h5>
 
-<p class=3DMsoNormal>To create a new ‘Wizard Page’, in the pattern toolkit =
-project,
-right-click on the ‘Wizard Pages’ folder in <a
+<p class=3DMsoNormal>To create a new ‘Wizard Page’, in the pattern toolkit
+project, right-click on the ‘Wizard Pages’ folder in <a
 href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
-Builder’</a> window, and click ‘Add’.<o:p></o:p></p>
+Builder’</a> window, and click ‘Add’.</p>
 
 <table class=3DMsoTableGrid border=3D0 cellspacing=3D0 cellpadding=3D0
  style=3D'border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-pa=
@@ -2530,7 +2620,7 @@ e-height:
 "/>
   </v:shape><![endif]--><![if !vml]><img border=3D0 width=3D260 height=3D123
   src=3D"HowToCreatingaWizard_files/image007.jpg" v:shapes=3D"Picture_x0020=
-_185"><![endif]></span><o:p></o:p></p>
+_185"><![endif]></span></p>
   </td>
   <td width=3D288 valign=3Dtop style=3D'width:216.25pt;padding:0in 5.4pt 0i=
 n 5.4pt'>
@@ -2558,30 +2648,30 @@ bHOkkMFqwzAMhu+DvYPRfXGawxijTi+j0GvpHsDYimMaW0Yy2fr2M4PBMnrbUb/Q94l/f/hMi1qR
 JVI2sOt6UJgd+ZiDgffL8ekFlFSbvV0oo4EbChzGx4f9GRdb25HMsYhqlCwG5lrLq9biZkxWOiqY
 22YiTra2kYMu1l1tQD30/bPm3wwYN0x18gb45AdQl1tp5j/sFB2T0FQ7R0nTNEV3j6o9feQzro1i
 OWA14Fm+Q8a1a8+Bvu/d/dMb2JY5uiPbhG/ktn4cqGU/er3pcvwCAAD//wMAUEsDBBQABgAIAAAA
-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
-AAAA
+IQDGSjrV7gIAAKcGAAAOAAAAZHJzL2Uyb0RvYy54bWysVdtuGyEQfa/Uf0C8J+t1fElWWUdR0lSV
+0jaqW/UZA7tLwwIF7LX79R1gvXEuvaiqH1YwMwznzBzG5xfbVqINt05oVeL8eIQRV1QzoeoSf/l8
+c3SKkfNEMSK14iXecYcvFq9fnXem4GPdaMm4RZBEuaIzJW68N0WWOdrwlrhjbbgCZ6VtSzxsbZ0x
+SzrI3spsPBrNsk5bZqym3DmwXicnXsT8VcWp/1hVjnskSwzYfPza+F2Fb7Y4J0VtiWkE7WGQf0DR
+EqHg0iHVNfEEra14lqoV1GqnK39MdZvpqhKURw7AJh89YbNsiOGRCxTHmaFM7v+lpR82dxYJVuIp
+Roq00KKlt8Jwhj6JuvHo0lrdoTwUqjOugPilubOBqjO3mt47pPRVQ1TNY2TDCQN4MT57dCBsHBxF
+q+69ZnAPWXsda7atbBsSQjXQNrZmN7SGbz2iYDybz2Yn0EAKrsnpdD6fBkQZKfaHjXX+LdctCosS
+u0QicojA4k1kc+t8bBPryRL2LceoaiV0fUMkmo7g16viIGb8OGY8SwRJ0WcEIHsAvQrYjZASWe2/
+Ct/ERgZO0en2IBwyGoqVzFHy/EpaBDigOpRy5fN4Qq5bKFmy5wFgjxDsoO5kjyaAMaSJ1aldujFd
+1J8NpiHs97cdlOPvLgME9Z6fFAqBMEo8nifQyFEiOWhtXz14eLFOAZFUqANPiI2knZZicD6BK18o
+zFnAmjr3Z6iPkrfCwwySoi3xaQIap0KQ8hvF4toTIdMaCEoV8PI4XfpW6jWkWDasQw4EmqqG7kG3
+R+PJ9GQ2gin4khSe0PpVzycB1XNqswczkaYhqZVDy56JYQAZpXGAPz7U8DbTG19ptoN3CoCDNsN0
+h0Wj7Q+MOpiU8Li+r4nlGMl3CuR7lk8mYbTGzWQ6H8PGHnpWhx6iKKQqscegjbC88mkcr40NAyeI
+I5RX6UuYD5Xw4ZmH2ZFQ9RuYhknfaXKHcXu4j1EP/y+LnwAAAP//AwBQSwMEFAAGAAgAAAAhAK4r
+0fLfAAAACAEAAA8AAABkcnMvZG93bnJldi54bWxMj81uwjAQhO+V+g7WVuqtOIACJY2DEG0vLRfo
+n7iZeJtExOvUNpC+fZdTue1oRrPf5PPetuKIPjSOFAwHCQik0pmGKgXvb8939yBC1GR06wgV/GKA
+eXF9levMuBOt8biJleASCplWUMfYZVKGskarw8B1SOx9O291ZOkrabw+cblt5ShJJtLqhvhDrTtc
+1ljuNwerAL+67ZN7RJzGxedL/Pnwy9X2Vanbm37xACJiH//DcMZndCiYaecOZIJoFczGHFQwnfGi
+sz0ZD0Hs+EjTFGSRy8sBxR8AAAD//wMAUEsBAi0AFAAGAAgAAAAhALaDOJL+AAAA4QEAABMAAAAA
+AAAAAAAAAAAAAAAAAFtDb250ZW50X1R5cGVzXS54bWxQSwECLQAUAAYACAAAACEAOP0h/9YAAACU
+AQAACwAAAAAAAAAAAAAAAAAvAQAAX3JlbHMvLnJlbHNQSwECLQAUAAYACAAAACEAxko61e4CAACn
+BgAADgAAAAAAAAAAAAAAAAAuAgAAZHJzL2Uyb0RvYy54bWxQSwECLQAUAAYACAAAACEArivR8t8A
+AAAIAQAADwAAAAAAAAAAAAAAAABIBQAAZHJzL2Rvd25yZXYueG1sUEsFBgAAAAAEAAQA8wAAAFQG
+AAAAAA=3D=3D
 " fillcolor=3D"#4f81bd [3204]" strokecolor=3D"#f2f2f2 [3041]" strokeweight=
 =3D"1pt">
    <v:fill color2=3D"#243f60 [1604]" angle=3D"45" focus=3D"100%" type=3D"gr=
@@ -2593,7 +2683,7 @@ adient"/>
   position:absolute;z-index:251659264;margin-left:5px;margin-top:50px;
   width:126px;height:56px'><img width=3D126 height=3D56
   src=3D"HowToCreatingaWizard_files/image008.png" v:shapes=3D"Striped_x0020=
-_Right_x0020_Arrow_x0020_1"></span><![endif]><o:p></o:p></p>
+_Right_x0020_Arrow_x0020_1"></span><![endif]></p>
   </td>
   <td width=3D288 valign=3Dtop style=3D'width:216.25pt;padding:0in 5.4pt 0i=
 n 5.4pt'>
@@ -2608,43 +2698,47 @@ ght:144.75pt;
 "/>
   </v:shape><![endif]--><![if !vml]><img border=3D0 width=3D557 height=3D193
   src=3D"HowToCreatingaWizard_files/image010.jpg" v:shapes=3D"Picture_x0020=
-_187"><![endif]></span><o:p></o:p></p>
+_187"><![endif]></span></p>
   </td>
  </tr>
 </table>
 
 <p class=3DMsoNormal>The XAML editor will open with the skeleton of the Wiz=
 ard
-Page in place (in ‘Split’ mode).<o:p></o:p></p>
+Page in place (in ‘Split’ mode).</p>
 
-<h6>Updating the Page Title<o:p></o:p></h6>
+<h6>Updating the Page Title</h6>
 
 <p class=3DMsoNormal>You should now change the ‘Title’ property of the
-&lt;Page&gt; element, which is displayed on the wizard page.<o:p></o:p></p>
+&lt;Page&gt; element, which is displayed on the wizard page.</p>
 
-<h6>Adding Controls<o:p></o:p></h6>
+<h6>Adding Controls</h6>
 
 <p class=3DMsoNormal>The ‘Data Context’ of the XAML page will be the current
 element from the pattern model upon which the Wizard will be configured, wh=
 ich
-gives access to data bind the properties of the current element.<o:p></o:p>=
-</p>
+gives access to data bind the properties of the current element.</p>
 
 <p class=3DMsoNormal>Variable properties of elements in the pattern model a=
 lready
 define appearance attributes for aiding the editing of the property in the
-‘Properties Window’ of Visual Studio (i.e. IsReadOnly, Type Converters, and
-Type Editors etc.). For UI consistency, you can reuse those already defined
-attributes by using the &lt;ValueEditor&gt; control in the XAML of the Wiza=
-rd
-Page. <o:p></o:p></p>
+‘Properties Window’ of Visual Studio (i.e. <span class=3DSpellE>IsReadOnly<=
+/span>,
+Type Converters, and Type Editors etc.). For UI consistency, you can reuse
+those already defined attributes by using the &lt;<span class=3DSpellE>Valu=
+eEditor</span>&gt;
+control in the XAML of the Wizard Page. </p>
 
-<p class=3DMsoNormal>The ValueEditor control will display the variable prop=
-erty
-value using its configured: Type Converter, Type Editor and other appearance
-attributes of the property automatically. You can even configure the
-ValueEditor to display error cues if invalid input is given, which use the
-configured validation rules of the variable property.<o:p></o:p></p>
+<p class=3DMsoNormal>The <span class=3DSpellE>ValueEditor</span> control wi=
+ll
+display the variable property value using its configured: Type Converter, T=
+ype
+Editor and other appearance attributes of the property automatically. You c=
+an
+even configure the <span class=3DSpellE>ValueEditor</span> to display error=
+ cues
+if invalid input is given, which use the configured validation rules of the
+variable property.</p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
@@ -2658,22 +2752,22 @@ normal'>Note</b>: In the default Wizard Page that is created for you, contr=
 ols
 are organized into a simple &lt;Grid&gt; control for convenience. You can u=
 se
-other layout controls as you see fit.<o:p></o:p></p>
+other layout controls as you see fit.</p>
 
 </div>
 
 <p class=3DMsoListParagraphCxSpFirst style=3D'text-indent:-.25in;mso-list:l=
-1 level1 lfo3'><![if !supportLists]><span
+1 level1 lfo7'><![if !supportLists]><span
 style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
 '><span
 style=3D'mso-list:Ignore'>1.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Add a &lt;ValueEditor&gt; control element to=
- the
-page<o:p></o:p></p>
+</span></span></span><![endif]>Add a &lt;<span class=3DSpellE>ValueEditor</=
+span>&gt;
+control element to the page</p>
 
 <p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
-l1 level1 lfo3'><![if !supportLists]><span
+l1 level1 lfo7'><![if !supportLists]><span
 style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
 '><span
 style=3D'mso-list:Ignore'>2.<span style=3D'font:7.0pt "Times New Roman"'>&n=
@@ -2682,46 +2776,51 @@ bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ty.
 The convention is to use the name of the variable property it is bound to, =
 and
-suffix the word ‘Editor’.<o:p></o:p></p>
+suffix the word ‘Editor’.</p>
 
 <p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
-l1 level1 lfo3'><![if !supportLists]><span
+l1 level1 lfo7'><![if !supportLists]><span
 style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
 '><span
 style=3D'mso-list:Ignore'>3.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>Set the ‘Value’ property binding to the ‘Code
-Identifier’ value of the variable property.<o:p></o:p></p>
+Identifier’ value of the variable property.</p>
 
 <p class=3DMsoListParagraphCxSpLast style=3D'text-indent:-.25in;mso-list:l1=
- level1 lfo3'><![if !supportLists]><span
+ level1 lfo7'><![if !supportLists]><span
 style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
 '><span
 style=3D'mso-list:Ignore'>4.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Set ‘ValidatesOnDataErrors’ =3D true, to hon=
-or the
-validation rules configured on the variable property.<o:p></o:p></p>
+</span></span></span><![endif]>Set ‘<span class=3DSpellE>ValidatesOnDataErr=
+ors</span>’
+=3D true, to honor the validation rules configured on the variable property=
+.</p>
 
-<p class=3DMsoNormal>For Example:<o:p></o:p></p>
+<p class=3DMsoNormal>For Example:</p>
 
 <p class=3DSourceCodeCxSpFirst><span style=3D'color:blue'>&lt;</span><span
-style=3D'color:#A31515'>p</span><span style=3D'color:blue'>:</span><span
-style=3D'color:#A31515'>ValueEditor</span>&nbsp;Name<span style=3D'color:bl=
-ue'>=3D&quot;InstanceNameEditor&quot;</span>&nbsp;Value<span
+style=3D'color:#A31515'>p</span><span class=3DGramE><span style=3D'color:bl=
+ue'>:</span><span
+style=3D'color:#A31515'>ValueEditor</span></span>&nbsp;Name<span
+style=3D'color:blue'>=3D&quot;InstanceNameEditor&quot;</span>&nbsp;Value<sp=
+an
 style=3D'color:blue'>=3D&quot;{</span><span style=3D'color:#A31515'>Binding=
 </span>&nbsp;InstanceName<span
 style=3D'color:blue'>,</span>&nbsp;ValidatesOnDataErrors<span style=3D'colo=
-r:blue'>=3DTrue}&quot;/&gt;</span><o:p></o:p></p>
+r:blue'>=3DTrue}&quot;/&gt;</span></p>
 
 <p class=3DSourceCodeCxSpLast><span style=3D'color:blue'>&lt;</span><span
-style=3D'color:#A31515'>p</span><span style=3D'color:blue'>:</span><span
-style=3D'color:#A31515'>ValueEditor</span>&nbsp;Name<span style=3D'color:bl=
-ue'>=3D&quot;MyPropertyNameEditor&quot;</span>&nbsp;Value<span
+style=3D'color:#A31515'>p</span><span class=3DGramE><span style=3D'color:bl=
+ue'>:</span><span
+style=3D'color:#A31515'>ValueEditor</span></span>&nbsp;Name<span
+style=3D'color:blue'>=3D&quot;MyPropertyNameEditor&quot;</span>&nbsp;Value<=
+span
 style=3D'color:blue'>=3D&quot;{</span><span style=3D'color:#A31515'>Binding=
 </span>&nbsp;MyProperty<span
 style=3D'color:blue'>,</span>&nbsp;ValidatesOnDataErrors<span style=3D'colo=
-r:blue'>=3DTrue}&quot;/&gt;</span><o:p></o:p></p>
+r:blue'>=3DTrue}&quot;/&gt;</span></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
@@ -2733,13 +2832,13 @@ ttom:
 style=3D'mso-bidi-font-weight:normal'>Note</b>: You are also free to use ot=
 her
 controls bound to other variable properties or even collections of elements
-throughout the pattern model. <o:p></o:p></p>
+throughout the pattern model. </p>
 
 <p class=3DNoteCxSpLast style=3D'margin-top:0in;margin-right:0in;margin-bot=
 tom:
-10.0pt;margin-left:0in;mso-add-space:auto;background:#FFFFCC'>(i.e. to show=
-ing
-lists of elements from the pattern model)<o:p></o:p></p>
+10.0pt;margin-left:0in;mso-add-space:auto;background:#FFFFCC'>(<span
+class=3DGramE>i.e</span>. to showing lists of elements from the pattern mod=
+el)</p>
 
 </div>
 
@@ -2748,74 +2847,81 @@ href=3D"http://msdn.microsoft.com/en-us/library/ms752059.aspx">XAML overvie=
 w for
 WPF</a> guide more information about using XAML to build more advanced wiza=
 rd
-pages.<o:p></o:p></p>
+pages.</p>
 
-<h6>Adding Page to Wizard Sequence<o:p></o:p></h6>
+<h6>Adding Page to Wizard Sequence</h6>
 
 <p class=3DMsoNormal>The final step in creating a wizard page is to add the=
  page
-to the wizard page sequence.<o:p></o:p></p>
+to the wizard page sequence.</p>
 
 <p class=3DMsoNormal>In the XAML for the Wizard (created in earlier step), =
 ensure
 there is a namespace declaration to the Wizard Page class (by default it is=
  the
-same namespace as the Wizard class), and add the type of the page to the
-&lt;WizardWindow.Pages&gt; element. For Example:<o:p></o:p></p>
+same namespace as the Wizard class), and add the type of the page to the &l=
+t;<span
+class=3DSpellE>WizardWindow.Pages</span>&gt; element. For Example:</p>
 
-<p class=3DSourceCode>&lt;<span style=3D'color:#A31515'>p</span>:<span
-style=3D'color:#A31515'>WizardWindow</span><br>
+<p class=3DSourceCode>&lt;<span class=3DSpellE><span style=3D'color:#A31515=
+'>p</span>:<span
+style=3D'color:#A31515'>WizardWindow</span></span><br>
 &nbsp;&nbsp;&nbsp;<span style=3D'color:red'>&nbsp;x</span>:<span
 style=3D'color:red'>Class</span>=3D&quot;SamplePatternToolkit.Assets.Wizard=
 s.Wizard1&quot;<br>
 &nbsp;&nbsp;&nbsp;<span style=3D'color:red'>&nbsp;xmlns</span>=3D&quot;http=
 ://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;<br>
-&nbsp;&nbsp;&nbsp;<span style=3D'color:red'>&nbsp;xmlns</span>:<span
-style=3D'color:red'>x</span>=3D&quot;http://schemas.microsoft.com/winfx/200=
-6/xaml&quot;<br>
-&nbsp;&nbsp;&nbsp;<span style=3D'color:red'>&nbsp;xmlns</span>:<span
-style=3D'color:red'>p</span>=3D&quot;http://schemas.microsoft.com/visualstu=
-diopatterning/2010/xaml/&quot;<br>
+&nbsp;&nbsp;&nbsp;<span style=3D'color:red'>&nbsp;<span class=3DSpellE>xmln=
+s<span
+style=3D'color:windowtext'>:</span>x</span></span>=3D&quot;http://schemas.m=
+icrosoft.com/<span
+class=3DSpellE>winfx</span>/2006/<span class=3DSpellE>xaml</span>&quot;<br>
+&nbsp;&nbsp;&nbsp;<span style=3D'color:red'>&nbsp;<span class=3DSpellE>xmln=
+s<span
+style=3D'color:windowtext'>:</span>p</span></span>=3D&quot;http://schemas.m=
+icrosoft.com/nupattern/2012/<span
+class=3DSpellE>xaml</span>/&quot;<br>
 &nbsp;&nbsp;&nbsp;<span style=3D'color:red'>&nbsp;xmlns</span>:<span
 style=3D'color:red'>l</span>=3D&quot;clr-namespace:SamplePatternToolkit.Ass=
 ets.Wizards.Pages&quot;<br>
 &nbsp;&nbsp;&nbsp;<span style=3D'color:red'>&nbsp;xmlns</span>:<span
 style=3D'color:red'>mc</span>=3D&quot;http://schemas.openxmlformats.org/mar=
 kup-compatibility/2006&quot;<br>
-&nbsp;&nbsp;&nbsp;<span style=3D'color:red'>&nbsp;mc</span>:<span
-style=3D'color:red'>Ignorable</span>=3D&quot;d&quot;<span style=3D'color:re=
-d'>&nbsp;Height</span>=3D&quot;400&quot;<span
-style=3D'color:red'>&nbsp;Width</span>=3D&quot;600&quot;<br>
+&nbsp;&nbsp;&nbsp;<span style=3D'color:red'>&nbsp;<span class=3DSpellE>mc<s=
+pan
+style=3D'color:windowtext'>:</span>Ignorable</span></span>=3D&quot;d&quot;<=
+span
+style=3D'color:red'>&nbsp;Height</span>=3D&quot;400&quot;<span style=3D'col=
+or:red'>&nbsp;Width</span>=3D&quot;600&quot;<br>
 &nbsp;&nbsp;&nbsp;<span style=3D'color:red'>&nbsp;Title</span>=3D&quot;Wiza=
 rd1&nbsp;Wizard&quot;&gt;<br>
 <span style=3D'color:#A31515'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;<span
-style=3D'color:#A31515'>p</span>:<span style=3D'color:#A31515'>WizardWindow=
-.Pages</span>&gt;<br>
+class=3DSpellE><span style=3D'color:#A31515'>p</span>:<span style=3D'color:=
+#A31515'>WizardWindow.Pages</span></span>&gt;<br>
 <span style=3D'color:#A31515'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
 sp;</span><span
-style=3D'color:green'>&lt;!--&nbsp;Include&nbsp;your&nbsp;wizard&nbsp;pages=
-&nbsp;here&nbsp;--&gt;</span><br>
+style=3D'color:green'>&lt;!--&nbsp;Add&nbsp;your&nbsp;wizard&nbsp;pages&nbs=
+p;here&nbsp;--&gt;</span><br>
 <span style=3D'color:#A31515'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
 sp;</span>&lt;<span
 style=3D'color:#A31515'>l</span>:<span style=3D'color:#A31515;background:ye=
 llow;
-mso-highlight:yellow'>WizardPage1</span>&nbsp;/&gt;<br>
+mso-highlight:yellow'>MyWizardPage1</span>&nbsp;/&gt;<br>
 <span style=3D'color:#A31515'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
 sp;</span><span
-style=3D'color:green'>&lt;!--&lt;l:CustomWizardPage2&nbsp;/&gt;--&gt;</span=
-><br>
+style=3D'color:green'>&lt;!--&lt;l:MyWizardPage2&nbsp;/&gt;--&gt;</span><br>
 <span style=3D'color:#A31515'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&lt;/<span
-style=3D'color:#A31515'>p</span>:<span style=3D'color:#A31515'>WizardWindow=
-.Pages</span>&gt;<br>
-&lt;/<span style=3D'color:#A31515'>p</span>:<span style=3D'color:#A31515'>W=
-izardWindow</span>&gt;<o:p></o:p></p>
+class=3DSpellE><span style=3D'color:#A31515'>p</span>:<span style=3D'color:=
+#A31515'>WizardWindow.Pages</span></span>&gt;<br>
+&lt;/<span class=3DSpellE><span style=3D'color:#A31515'>p</span>:<span
+style=3D'color:#A31515'>WizardWindow</span></span>&gt;</p>
 
-<h5>Add and Configure the Wizard<o:p></o:p></h5>
+<h5>Add and Configure the Wizard</h5>
 
 <p class=3DMsoNormal>Once the XAML Wizard and Wizard Page assets are create=
 d,
 configure the automation to display the wizard on an element in the pattern
-model.<o:p></o:p></p>
+model.</p>
 
 <p class=3DMsoNormal>See <a
 href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
@@ -2823,7 +2929,7 @@ ce/Content/AddingaWizard.mht">Adding
 a Wizard</a> and <a
 href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
 ce/Content/ConfiguringaWizard.mht">Configuring
-a Wizard</a>. <o:p></o:p></p>
+a Wizard</a>. </p>
 
 <p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
 
@@ -2833,7 +2939,7 @@ a Wizard</a>. <o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2894,7 +3000,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2904,7 +3010,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3298,7 +3404,7 @@ z0HBpFxpJNwbSjXAlaBO2tvb29raWlhYkM9GX/PHc3CqURpHs6ZcabyXidAlzL4hgJppvIppTaaP
 ACiSMA2HICdKOVdSeyV5vFzjQLnSqK8R0CUJRq2VVtYgEJCexafguJ/aK42jURLNnXJlg3iNaCca
 JQLUXmkcjZJorHR/ZaN8yWinGwQCdE+lMfeW/j9shBTWoMEqVAAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/image002.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -3391,7 +3497,7 @@ T7lVHYIP8aktEnl1SGRrWaNI0fLOuByKTaGjwpvvH60UrfeP1pK6zAKKKKACiiigAoopaAPozSf+
 QPZf9cE/9BFW6KK4WdKCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKa/wBxvpRRQB81
 N95vqaSiiu45gooooAKKKKAClFFFAH//2X==
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/image003.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3443,7 +3549,7 @@ EQX6iDEEZVEKjmfcNiMLvlGNnDv4mjf0LZk/b9d7PawbM6dsi7+jSMZtKSR//LngxQmK22ZkwTch
 X/OGvoXz5z33QS+7BRHVsbhdkNW4bUYWfIOy3T2j6N4vztsX7BXPyRCDl3+Xm7htRhZ8A2ptbQ15
 vd4Vxzrbu3I9FjOy4BtUvv/nSoAF/47W/wHs65OcoKooXAAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/image004.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -4445,7 +4551,7 @@ fH55fio79V/6xYsmQGcQAAEQAAEQqEYA+am4N0DAwwS2Pz/Vw7CgOgiAAAiAgNcI1MlIDBoIgIAX
 CRiRVFtU1YtWQGcQAAEQAAEQcCSA/FTcGCDgeQLIT/X8EsIAEAABEAABJwL/B8oWonExV6ThAAAA
 AElFTkSuQmCC
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/image005.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -4686,7 +4792,7 @@ bcT5spzgHO08DPfHXk89Rxip4NHjt4JIUnmKSAh9xBJG3GOnAHWr6KERVXOFGBk5p1FkZupJ7sxb
 tzZPtjpU9FFU23qzMKKKKQBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB
 /9k=
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/image006.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -5141,7 +5247,7 @@ c3My4cM3kY0NMAaUGCqGxMDeI/IGU49Xy6QH7IFdlll9K611x/5TyoNOXwZ2Be74dZQYKobEwN4j
 7mG10mlFrdlw1IEN6CPwsigEwPBLzy/Kfgn/yzDMbAzQo/CbhoqEw/8DE9kMzbJ24PsAAAAASUVO
 RK5CYIJ=
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/image007.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -5247,7 +5353,7 @@ OH/vmlzBY5u8sYb2cytdsh27AqlcYwQfzz+gpg0u3WzNul2yjYEGH+UANuB256+9dP8A2Np//PnD
 oAMck+n614gsKbR8o6UeSn90Vt7NmfMenfEaRH8MKFdWP2mPgMD615rTBEgOQozT6uMbEt3DFGKK
 KoQYoxRRQAYoxRRQAYoxRRQAUUCigD//2T==
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/image008.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -5298,7 +5404,7 @@ K4dA9y6270zytB5lDH5qbGQaQEKIifyyYyJ9++HPAYzn4maWS43btlUDFJLv3ysrbDjYu8XnKF/7
 xIO9T1y7TcU7rk0HHwaYDyH+J1Fc8C5XntYjE3wW4pwHv7bOMfOZn//8xq1bU1N/NiZP65EJPgsd
 OHDgZHd39/jQoL7/cDFSJvgspfffmozW/wGc4Zmh0Yo35gAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/image009.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -6546,7 +6652,7 @@ nlobKd3TV7LbmMZKVosz8OG0UXaXTJ6Xop68pJJ5hdz4YZP8iuD1TPwlNv/DpqYf3uCrUEdeS0lv
 TV5Lvm3k8xtMa+a1+raR3yHGl2rKZehcS1og+u8l35eMlrwGiN6aLlex7i+C/7WkNUeW37Qeswe+
 yNM6mGSyHWfF/f8/b+4DdPaZAzMAAAAASUVORK5CYIJ=
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/image010.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -6872,7 +6978,7 @@ qtqf/Id1P8P6UUUP4UL/AJd/P9CxD/x/yf8AX2v/AKEa3bj/AJFy/wDpP/6E1FFXHZmtPqc63/Ho
 P+uC/wDoxa2vDv8Ax9XH/XOP+VFFEPj/AK8yafxI3m+6fpVLRv8AkEwfQ/zNFFb9TpfxIvUUUUyj
 /9m=
 
-------=_NextPart_01CDE6F1.8E891DF0
+------=_NextPart_01CDF362.8B384E00
 Content-Location: file:///C:/F4CE92A4/HowToCreatingaWizard_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -6893,4 +6999,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image010.jpg"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDE6F1.8E891DF0--
+------=_NextPart_01CDF362.8B384E00--
