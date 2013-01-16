@@ -18,6 +18,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using NuPattern.Extensibility;
 using NuPattern.Library;
@@ -54,6 +55,7 @@ namespace NuPattern.Runtime.Shell
     [ProvideDirectiveProcessor(typeof(ModelElementDirectiveProcessor), ModelElementDirectiveProcessor.ProcessorName, Constants.LibraryDirectiveProcessorDescription)]
     public sealed class RuntimeShellPackage : Package
     {
+        private static readonly ITraceSource tracer = Tracer.GetSourceFor<RuntimeShellPackage>();
         private static readonly Guid OutputPaneGuid = new Guid(Constants.VsOutputWindowPaneId);
         private ProductStateValidator productStateValidator;
 
@@ -262,7 +264,7 @@ namespace NuPattern.Runtime.Shell
         {
             var pathExpression = string.Concat(@"\*", Runtime.Constants.RuntimeStoreExtension);
 
-            // Ensure solution contains at least one toolkit definition file
+            // Ensure solution contains at least one state file
             if (e.Solution != null)
             {
                 var solutionFiles = e.Solution.Find<IItem>(pathExpression);
@@ -335,9 +337,12 @@ namespace NuPattern.Runtime.Shell
                         Constants.FertVsixIdentifiers.Contains(ext.Header.Identifier, StringComparer.OrdinalIgnoreCase));
                 if (fertExtension != null)
                 {
-                    //TODO: trace this to trace window
+                    tracer.TraceError(
+                        Resources.RuntimeShellPackage_CheckFertInstalled_Enabled,
+                        fertExtension.Header.Name,
+                        Constants.ProductName);
 
-                    //Prompt user to manuall uninstall the FERT extension
+                    //Prompt user to manually uninstall the FERT extension
                     this.UserMessageService.ShowWarning(
                         string.Format(CultureInfo.CurrentCulture,
                         Resources.RuntimeShellPackage_CheckFertInstalled_Enabled,
@@ -356,6 +361,8 @@ namespace NuPattern.Runtime.Shell
         /// </summary>
         private static Assembly OnAssemblyResolve(object sender, ResolveEventArgs args)
         {
+            //TODO: Why do we get called twice to resolve any assembly, despite the fact that we resolved it the first time?
+
             Assembly assembly = null;
 
             try
@@ -368,59 +375,95 @@ namespace NuPattern.Runtime.Shell
                     var name = new AssemblyName(args.Name);
                     if (name.Version == null || name.CultureInfo == null)
                     {
+                        tracer.TraceInformation(
+                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssembly, args.Name);
+
                         var componentModel = ServiceProvider.GlobalProvider.GetService<SComponentModel, IComponentModel>();
                         var patternManager = componentModel.GetService<IPatternManager>();
                         if (patternManager != null)
                         {
-                            // Get install paths of all (enabled) toolkits
-                            var installedExtensionDirs = from installedToolkit
-                                                             in patternManager.InstalledToolkits
-                                                         where installedToolkit.Extension.State == EnabledState.Enabled
-                                                         select new DirectoryInfo(installedToolkit.Extension.InstallPath);
-
-                            // Filter only assemblies installed by toolkits
-                            var comparer = new DirectoryInfoComparer();
-                            var toolkitAssemblies = from appDomainAssembly
-                                                        in ((AppDomain)sender).GetAssemblies()
-                                                    where !appDomainAssembly.IsDynamic
-                                                    let location = appDomainAssembly.Location
-                                                    where !String.IsNullOrEmpty(location)
-                                                        && File.Exists(location)
-                                                        && installedExtensionDirs.Contains(Directory.GetParent(location), comparer)
-                                                    select appDomainAssembly;
-                            if (toolkitAssemblies.Any())
+                            // Match assemblies with lost name from loaded AppDomain assemblies
+                            var loadedAssemblies = from appDomainAssembly
+                                                         in ((AppDomain)sender).GetAssemblies()
+                                                     let assemblyName = appDomainAssembly.GetName()
+                                                     where assemblyName.Name.Equals(args.Name, StringComparison.OrdinalIgnoreCase)
+                                                     select appDomainAssembly;
+                            if (loadedAssemblies.Any())
                             {
-                                // Filter only assemblies matching lost name (by highest version)
-                                var matchingAssemblies = from toolkitAssembly
-                                                             in toolkitAssemblies
-                                                         let assemblyName = toolkitAssembly.GetName()
-                                                         let assemblyVersion = assemblyName.Version
-                                                         where assemblyName.Name.Equals(args.Name, StringComparison.OrdinalIgnoreCase)
-                                                         orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
-                                                         select toolkitAssembly;
-                                if (matchingAssemblies.Any())
+                                tracer.TraceInformation(
+                                    Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForLoadedAssembly, args.Name);
+
+                                // Get install paths of all (enabled) toolkits
+                                var installedExtensionDirs = from installedToolkit
+                                                                 in patternManager.InstalledToolkits
+                                                             where installedToolkit.Extension.State == EnabledState.Enabled
+                                                             select new DirectoryInfo(installedToolkit.Extension.InstallPath);
+                                if (installedExtensionDirs.Any())
                                 {
-                                    var publicKeyToken = (name.KeyPair == null) ? string.Empty : name.GetPublicKeyTokenString();
-                                    if (!String.IsNullOrEmpty(publicKeyToken))
+                                    // Match only (physical) assemblies installed by toolkits (by highest version)
+                                    var comparer = new DirectoryInfoComparer();
+                                    var toolkitAssemblies = from toolkitAssembly
+                                                                in loadedAssemblies
+                                                            let location = toolkitAssembly.Location
+                                                            where !toolkitAssembly.IsDynamic
+                                                                && !String.IsNullOrEmpty(location)
+                                                                && File.Exists(location)
+                                                            let assemblyName = toolkitAssembly.GetName()
+                                                            let assemblyVersion = assemblyName.Version
+                                                            where installedExtensionDirs.Contains(Directory.GetParent(location), comparer)
+                                                            orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
+                                                            select toolkitAssembly;
+                                    if (toolkitAssemblies.Any())
                                     {
-                                        // Match latest version by PublicKeyToken
-                                        assembly = matchingAssemblies
-                                            .Where(a => a.GetName().KeyPair != null)
-                                            .FirstOrDefault(a => a.GetName().GetPublicKeyTokenString().Equals(publicKeyToken));
-                                    }
-                                    else
-                                    {
-                                        // Match latest version
-                                        assembly = matchingAssemblies.FirstOrDefault();
+                                        tracer.TraceInformation(
+                                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForToolkitAssembly, args.Name);
+
+                                        if (name.KeyPair != null)
+                                        {
+                                            var publicKeyToken = name.GetPublicKeyTokenString();
+
+                                            // Match latest version by PublicKeyToken
+                                            var signedAssemblies = from signedAssembly
+                                                           in toolkitAssemblies
+                                                           let assemblyName = signedAssembly.GetName()
+                                                           let assemblyVersion = assemblyName.Version
+                                                           where assemblyName.KeyPair != null
+                                                           where assemblyName.GetPublicKeyTokenString().Equals(publicKeyToken, StringComparison.OrdinalIgnoreCase)
+                                                           orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
+                                                           select signedAssembly;
+                                            if (signedAssemblies.Any())
+                                            {
+                                                assembly = signedAssemblies.FirstOrDefault();
+                                            }
+                                        }
+                                        else
+                                        {
+                                            // Match latest version
+                                            assembly = toolkitAssemblies.FirstOrDefault();
+                                        }
                                     }
                                 }
                             }
                         }
+
+                        if (assembly == null)
+                        {
+                            tracer.TraceInformation(
+                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyFailed, args.Name);
+                        }
+                        else
+                        {
+                            tracer.TraceInformation(
+                            Resources.RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblySucceeded, args.Name, assembly.GetName().FullName);
+                        }
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                tracer.TraceInformation(
+                    Resources.RuntimeShellPackage_OnAssemblyResolved_UnexpectedError, ex.Message);
+
                 throw;
             }
 
