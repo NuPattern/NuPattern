@@ -152,6 +152,12 @@
       <DependentUpon>source.extension.tt</DependentUpon>
       <IncludeInVSIXAs>source.extension.t4</IncludeInVSIXAs>
     </Content>
+    <None Include="3e44e242-5b47-4338-827f-ca394a899c57.patterndefinition.diagram">
+      <DependentUpon>PatternModel.patterndefinition</DependentUpon>
+    </None>
+    <None Include="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8.patterndefinition.diagram">
+      <DependentUpon>PatternModel.patterndefinition</DependentUpon>
+    </None>
     <None Include="PatternToolkitInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PatternToolkitInfo.gen.cs</LastGenOutput>
@@ -844,7 +850,7 @@
     </None>
     <None Include="source.include.t4">
       <DependentUpon>source.extension.tt</DependentUpon>
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f875cc557-a93c-4b12-b9ea-54a732b9c242</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252f875cc557-a93c-4b12-b9ea-54a732b9c242</SourceModelReference>
       <ItemGuid>13058dda-d9fb-4b59-b5ca-bde04f01b2ae</ItemGuid>
     </None>
     <ItemTemplate Include="Assets\Templates\Items\Extensibility\PatternTooling\PatternTooling.gen.vstemplate">
@@ -1190,20 +1196,11 @@
       <DependentUpon>source.extension.tt</DependentUpon>
       <SubType>Designer</SubType>
     </None>
-    <EmbeddedResource Include="PatternModel.gen.patterndefinition">
-      <DependentUpon>PatternModel.tt</DependentUpon>
+    <EmbeddedResource Include="PatternModel.patterndefinition">
       <ItemGuid>aa404b57-5bb4-4521-95fa-b103034d26e3</ItemGuid>
-      <RunCustomToolOnUnfold>false</RunCustomToolOnUnfold>
       <SubType>Designer</SubType>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </EmbeddedResource>
-    <None Include="PatternModel.tt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
-    </None>
     <Content Include="..\..\..\Binaries\$(TargetVSVersion)\$(RuntimeShellVsixFileName)">
       <Visible>true</Visible>
       <Link>$(RuntimeShellVsixFileName)</Link>

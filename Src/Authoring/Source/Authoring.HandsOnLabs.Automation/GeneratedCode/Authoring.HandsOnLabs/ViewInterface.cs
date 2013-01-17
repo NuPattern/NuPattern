@@ -22,7 +22,7 @@ namespace NuPattern.Authoring.HandsOnLabs
 	///	Description for PatternToolkitHandsOnLabs.DefaultView
 	///	</summary>
 	[Description("Description for PatternToolkitHandsOnLabs.DefaultView")]
-	[ToolkitInterface(ExtensionId ="080eb0ef-518d-4807-9b5c-aa32d0032e0b", DefinitionId = "ac1fde3b-bfa2-4fcf-a1c5-50167323063d", ProxyType = typeof(DefaultView))]
+	[ToolkitInterface(ExtensionId ="97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "ac1fde3b-bfa2-4fcf-a1c5-50167323063d", ProxyType = typeof(DefaultView))]
 	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	public partial interface IDefaultView : IToolkitInterface
 	{ 

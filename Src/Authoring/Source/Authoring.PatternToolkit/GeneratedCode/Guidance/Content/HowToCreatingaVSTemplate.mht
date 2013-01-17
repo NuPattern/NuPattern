@@ -2217,7 +2217,7 @@ al'>Tip</b>:
 Rather than creating a VS Template from scratch), it is strongly recommende=
 d to
 export one from an existing project in Visual Studio. See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToExportingaVSTemplate.mht">Exporting
 a VS Template</a> for more details.<o:p></o:p></p>
 
@@ -2261,7 +2261,7 @@ pattern model.<o:p></o:p></p>
 atch,
 in your toolkit project, right-click on the ‘Project Templates’ or ‘Item
 templates’ folders in <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a>, and select Add.<o:p></o:p></p>
 
@@ -2298,7 +2298,7 @@ src=3D"HowToCreatingaVSTemplate_files/image002.jpg" v:shapes=3D"Picture_x00=
 20_155"><![endif]></span><o:p></o:p></p>
 
 <p class=3DMsoNormal>Then double-click on the new element in <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a> to open the template for editing.<o:p></o:p></p>
 
@@ -2340,14 +2340,14 @@ edit
 these files to substitute values from both the environment and from the pat=
 tern
 model when the templates are unfolded. See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToSubstitutingValuesinVSTemplates.mht">Substituting
 Values in VS Templates</a> for more details.<o:p></o:p></p>
 
 <h5>Automate the Template<o:p></o:p></h5>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToUnfoldingVSTemplates.mht">Unfolding
 VS Templates</a><span style=3D'mso-spacerun:yes'>  </span>for how to automa=
 te the

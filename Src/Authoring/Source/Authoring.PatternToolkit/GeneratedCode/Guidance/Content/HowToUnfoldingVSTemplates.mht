@@ -2157,7 +2157,7 @@ tom:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
 al'>Recommend:</b>
 See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatareVSTemplates.mht">What
 are VS Templates</a> for understanding how they can be used in pattern
 toolkits.<o:p></o:p></p>
@@ -2169,7 +2169,7 @@ ttom:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
 al'>Recommend:
 </b>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/UnderstandingVSTemplateDesignConsiderations.mht">VS
 Template Design Considerations</a> for designing your VS templates effectiv=
 ely
@@ -2183,7 +2183,7 @@ olor:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
 al'>Recommend</b>:
 Study the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/UnderstandingUnfoldorGenerate.mht">Unfold
 or Generate</a> topic to determine if unfolding a VS template is the right =
 fit
@@ -2214,13 +2214,13 @@ bottom:
 10.0pt;margin-left:0in;mso-add-space:auto;background:#F2DBDB;mso-background=
 -themecolor:
 accent2;mso-background-themetint:51'>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToExportingaVSTemplate.mht">Exporting</a>,
 <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToImportingaVSTemplate.mht">Importing</a><span
 class=3DMsoHyperlink>,</span> and <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingaVSTemplate.mht">Creating</a>
 for creating VS template assets.<span class=3DMsoHyperlink><o:p></o:p></spa=
 n></p>
@@ -2245,7 +2245,7 @@ e of
 the pattern when unfolded. When selected this option displays the template =
 in
 the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddNewProjectItemDialog.mht">Add/New
 Project/Item dialog</a> in Visual Studio. This capability provides a conven=
 ient
@@ -2276,7 +2276,7 @@ templates configured on other elements in the pattern model.<o:p></o:p></p>
 <p class=3DMsoNormal>To configure a VS template to be unfolded from the ‘Pa=
 ttern’
 element of a pattern model, <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingaLaunchPoint.mht">add
 a ‘Template Launch Point’</a> to the ‘Pattern’ element.<o:p></o:p></p>
 
@@ -2313,7 +2313,7 @@ src=3D"HowToUnfoldingVSTemplates_files/image002.jpg" v:shapes=3D"Picture_x0=
 020_7"><![endif]></span><o:p></o:p></p>
 
 <p class=3DMsoNormal><a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/ConfiguringaTemplateLaunchPoint.mht">Configure</a>
 the ‘Settings’ property of the ‘Template Launch Point’ to unfold the templa=
 te
@@ -2353,7 +2353,7 @@ element. See below for details.<o:p></o:p></p>
 rn
 model do not have the ability to create instances of those elements from th=
 e <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddNewProjectItemDialog.mht">Add/New
 Project/Item dialog</a> in Visual Studio. Were this the case, then the user
 adding or creating a project or item from that dialog has the additional
@@ -2367,14 +2367,14 @@ This complexity adds little value to the user, and makes for a complex user
 experience, compared to just adding a new element instance directly in the
 ‘Solution Builder’ window. For this reason, VS templates configured on child
 elements are hidden from the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddNewProjectItemDialog.mht">Add/New
 Project/Item dialog</a> in Visual Studio.<o:p></o:p></p>
 
 <p class=3DMsoNormal>To configure VS template on the child elements of a pa=
 ttern
 model, <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingaCommand.mht">add
 a ‘Command’</a> to the child element.<o:p></o:p></p>
 
@@ -2488,7 +2488,7 @@ p</b>:
   You can also define expressions in the value of the ‘Target File Name’
   property to substitute property values in calculated names. (i.e.
   {InstanceName} or {Parent.PropertyName}. See the <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/ExpressionSyntax.mht">Expression
   Syntax</a> for more details). Or you can use a Value Provider to calculate
   the name.<o:p></o:p></p>
@@ -2520,7 +2520,7 @@ ormal'>Note</b>:
   If left blank, then the path defaults to ‘~’, and will unfold into the
   solution item of the first ancestor element found, or if, none found then
   unfold to the solution. See the <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/TargetPathSyntax.mht">Target
   Path Syntax</a> for more details.<o:p></o:p></p>
   <p class=3DTip style=3D'margin:0in;margin-bottom:.0001pt;mso-add-space:au=
@@ -2532,7 +2532,7 @@ p</b>:
 y to
   substitute property values in calculated paths. (i.e. {InstanceName} or
   {Parent.PropertyName}. See the <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/ExpressionSyntax.mht">Expression
   Syntax</a> for more details). Or you can use a Value Provider to calculate
   the path.<o:p></o:p></p>
@@ -2599,7 +2599,7 @@ ght:
  value
   includes property substitutions (i.e. {InstanceName} or
   {Parent.PropertyName}, etc. See the <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/ExpressionSyntax.mht">Expression
   Syntax</a> for more details) or when the value is calculated by a value
   provider.<o:p></o:p></p>
@@ -2674,10 +2674,10 @@ name=3D"_HowTo:_Common_Commands_2"></a><a name=3D"_HowTo:_Generating_Code">=
 </a><o:p>&nbsp;</o:p></p>
 
 <p class=3DMsoNormal>Lastly, <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingaLaunchPoint.mht">add
 an appropriate launch point</a> and <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/ConfiguringaLaunchPoint.mht">configure
 the launch point</a> to execute the command.<o:p></o:p></p>
 

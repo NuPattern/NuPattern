@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<patternModelDiagram dslVersion="1.2.0.0" Id="3e44e242-5b47-4338-827f-ca394a899c57" type="NuPattern.Runtime.Schema.PatternModelSchemaDiagram" absoluteBounds="0, 0, 11, 8.5" name="3e44e242-5b47-4338-827f-ca394a899c57">
+  <patternModelSchemaMoniker Id="2c5403a9-5eaa-4d02-b309-0d948a9f740a" />
+  <nestedChildShapes>
+    <patternShape Id="2661117b-46f2-4bef-b940-406978d84847" absoluteBounds="0.375, 1.125, 2.375, 3.8780875651041669">
+      <patternSchemaMoniker Id="c034429e-01f9-48dd-a478-0321fb708dd3" />
+      <relativeChildShapes>
+        <viewShape Id="7cbee43d-faba-4eee-90cd-c8297ab54292" absoluteBounds="0.53125, 4.8780875651041669, 2, 0.25" isLayoutInitialized="false">
+          <viewSchemaMoniker Id="a5541c90-1637-4405-9fe7-4b31f28eb3cd" />
+        </viewShape>
+      </relativeChildShapes>
+      <nestedChildShapes>
+        <elementListCompartment Id="9dcc9702-8d44-4e44-ad92-90faae8dac7f" absoluteBounds="0.39, 1.635, 2.3449999999999998, 1.7878011067708333" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="294720c0-07b4-4990-882a-d717237ab536" absoluteBounds="0.39, 3.4328011067708331, 2.3449999999999998, 0.8262939453125" name="LaunchPoints" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="21612ad4-6536-41d9-a3d5-1b23d1ce3d3c" absoluteBounds="0.39, 4.2690950520833333, 2.3449999999999998, 0.63399251302083348" name="Automation" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </patternShape>
+    <elementShape Id="b5c5d33c-ef48-44a1-abef-7bb8d3dda4d0" absoluteBounds="0.375, 2.125, 1.625, 2.147374674479166">
+      <elementSchemaMoniker Id="9291502b-fefc-4ef8-afc0-4c6914f0d2d1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6dafb365-3ebc-4916-a76f-b963765b31d0" absoluteBounds="0.39, 2.635, 1.5950000000000002, 0.2493896484375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="37a45624-787c-487d-91af-2373f6e5bf18" absoluteBounds="0.39, 2.8943896484375, 1.5950000000000002, 0.44169108072916652" name="LaunchPoints" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="83417311-9fa9-4122-9811-862543b101d9" absoluteBounds="0.39, 3.3460807291666663, 1.5950000000000002, 0.82629394531249978" name="Automation" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </elementShape>
+    <viewHasElementsConnector edgePoints="[(1.53125 : 4.87808756510417); (1.53125 : 5.00520756510417); (0.25212 : 5.00520756510417); (0.25212 : 3.19868733723958); (0.375 : 3.19868733723958)]" fixedFrom="Caller" fixedTo="NotFixed" TargetRelationshipDomainClassId="3bfd2e51-26d4-48dd-89a2-7e7a715b2bfd" tailoringOutlineColor="184, 140, 238" tailoringTextColor="83, 155, 208">
+      <relativeChildShapes />
+      <nodes>
+        <viewShapeMoniker Id="7cbee43d-faba-4eee-90cd-c8297ab54292" />
+        <elementShapeMoniker Id="b5c5d33c-ef48-44a1-abef-7bb8d3dda4d0" />
+      </nodes>
+    </viewHasElementsConnector>
+  </nestedChildShapes>
+</patternModelDiagram>

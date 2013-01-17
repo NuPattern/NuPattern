@@ -2183,7 +2183,7 @@ table.MsoTableGrid
 ></o:p></h4>
 
 <p class=3DMsoNormal>Drag &amp; Drop in the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a> window is supported to enable toolkit users to drag data or
 artifacts from other sources that the pattern represents or integrates with
@@ -2219,7 +2219,7 @@ pt;
 margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: This is one strategy for <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/UnderstandingSupportingAddfromExistingArtifacts.mht">Supporting
 Add from Existing Artifacts</a>.<o:p></o:p></p>
 
@@ -2229,7 +2229,7 @@ Add from Existing Artifacts</a>.<o:p></o:p></p>
 umber
 of sources inside or even outside of Visual Studio (e.g. files from a hard
 disk) onto elements in Solution Builder using the ‘<a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatareLaunchPoints.mht">Drag
 Drop Launch Point’</a><o:p></o:p></p>
 
@@ -2280,7 +2280,7 @@ ata.<o:p></o:p></p>
 <h6>Creating a Custom Drop Command<o:p></o:p></h6>
 
 <p class=3DMsoNormal><a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnCommands.mht">Create
 a custom command</a> that will handle the data being dropped, and then may
 create or configure the necessary solution elements in response to the drop
@@ -2307,7 +2307,7 @@ dropped, and perform whatever action is necessary on the pattern model in
 response to the drop.<o:p></o:p></p>
 
 <p class=3DMsoNormal>See the topic <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnDragDropCommands.mht">Creating
 Your Own Drag Drop Commands</a> for more details and options available for
 creating your own drag drop commands.<o:p></o:p></p>
@@ -2316,7 +2316,7 @@ creating your own drag drop commands.<o:p></o:p></p>
 
 <p class=3DMsoNormal>There are a number of existing drop commands for common
 cases that can simply be configured in your pattern model. See the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/Commands.mht">Provided
 Commands</a> for more details.<o:p></o:p></p>
 
@@ -2333,7 +2333,7 @@ op
 commands, which may use these provided command classes or their base classe=
 s to
 gain access to the data within these dropped files. See the topic <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnDragDropCommands.mht">Creating
 Your Own Drag Drop Commands</a> for more details.<o:p></o:p></p>
 
@@ -2342,7 +2342,7 @@ Your Own Drag Drop Commands</a> for more details.<o:p></o:p></p>
 <h6>Creating a Custom Drag Condition<o:p></o:p></h6>
 
 <p class=3DMsoNormal><a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnConditions.mht">Create
 a custom condition</a> that will evaluate whether the dragged data is valid=
  and
@@ -2369,7 +2369,7 @@ determine if it can be dropped on this element in the pattern model.<o:p></=
 o:p></p>
 
 <p class=3DMsoNormal>See the topic <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnDragConditions.mht">Creating
 Your Own Drag Conditions</a> for more details and options available for
 creating your own drag conditions.<o:p></o:p></p>
@@ -2379,7 +2379,7 @@ creating your own drag conditions.<o:p></o:p></p>
 <p class=3DMsoNormal>There are a number of existing drag conditions for com=
 mon
 cases that can simply be configured in your pattern model. See the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/Conditions.mht">Provided
 Conditions</a> for more details.<o:p></o:p></p>
 
@@ -2396,7 +2396,7 @@ ag
 conditions, which may use these provided condition classes or their base
 classes to gain access to the data within these dragged files. See the topi=
 c <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnDragConditions.mht">Creating
 Your Own Drag Conditions</a> for more details.<o:p></o:p></p>
 
@@ -2418,7 +2418,7 @@ style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
 style=3D'mso-list:Ignore'>2.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>In your Pattern Model, add a <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingaLaunchPoint.mht">‘Drag
 Drop Launch Point’</a> to the element which supports the drag and drop.<o:p=
 ></o:p></p>
@@ -2432,7 +2432,7 @@ t:
 Ignore'>3.<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&n=
 bsp;&nbsp;&nbsp;
 </span></span></span></span><![endif]><a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/ConfiguringaDragDropLaunchPoint.mht">Configure
 the Drag and Drop Launch Point</a><span class=3DMsoHyperlink><o:p></o:p></s=
 pan></p>
@@ -2441,7 +2441,7 @@ pan></p>
 h5>
 
 <p class=3DMsoNormal>Optionally, you may want to <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingaWizard.mht">create
 a Wizard</a> and present the user with it before processing the dragged dat=
 a.<o:p></o:p></p>
@@ -2467,7 +2467,7 @@ solution elements are created or configured.<o:p></o:p></p>
 <h5>(Optional) Create a Value Provider for Status Text<o:p></o:p></h5>
 
 <p class=3DMsoNormal>Optionally, you may decide to create a <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnValueProviders.mht">custom
 Value Provider</a> that provides dynamic ‘Status Text’ that is displayed wh=
 en

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-	<Identifier Id="080eb0ef-518d-4807-9b5c-aa32d0032e0b">
+	<Identifier Id="97bd7ab2-964b-43f1-8a08-be6db68b018b">
 		<Name>NuPattern Toolkit Library</Name>
 		<Author>NuPattern</Author>
 		<Version>1.3.20.0</Version>
@@ -23,7 +23,7 @@
 	<Content>
 		<MefComponent>|%CurrentProject%|</MefComponent>
 		<MefComponent>|Authoring.PatternToolkit.Automation|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="NuPattern.Authoring.PatternToolkitLibrary.dll">NuPattern.Authoring.PatternToolkitLibrary.PatternModel.gen.patterndefinition</CustomExtension>
+		<CustomExtension Type="PatternModel" AssemblyFile="NuPattern.Authoring.PatternToolkitLibrary.dll">NuPattern.Authoring.PatternToolkitLibrary.PatternModel.patterndefinition</CustomExtension>
 		<CustomExtension Type="ToolkitCategory" Category="Authoring"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>

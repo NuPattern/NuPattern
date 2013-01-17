@@ -2263,7 +2263,7 @@ pattern author to define for them all the context they need which to operate
 with.<o:p></o:p></p>
 
 <p class=3DMsoNormal>All of the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/ProvidedAutomationTypes.mht">Provided
 Automation Types</a> classes are examples of generic automation.<o:p></o:p>=
 </p>
@@ -2293,7 +2293,7 @@ rs
 which will fetch the property values dynamically.<o:p></o:p></p>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingPropertiestoAutomationClasses.mht">Adding
 Properties to Automation Classes</a> for more details on how to create and
 declare properties.<o:p></o:p></p>
@@ -2348,7 +2348,7 @@ ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 that are passed around the model as string values.<o:p></o:p></p>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/ImportingServicesintoAutomationClasses.mht">Importing
 Services into Automation Classes</a> for more details on how to declare imp=
 orts
@@ -2378,7 +2378,7 @@ the pattern model with correctly typed properties and methods.<o:p></o:p></=
 p>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/ImportingtheCurrentElementintoAutomationClasses.mht">Importing
 the Current Element into Automation Classes</a> for more details on how to
 declare imports to access the current element via MEF.<o:p></o:p></p>
@@ -2425,7 +2425,7 @@ between collections and elements and the root pattern element.<o:p></o:p></=
 p>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/NavigatingPatternModelsProgrammaticallyGenerically.mht">Navigati=
 ng
 Pattern Models Programmatically (Generically)</a> for more details on how
@@ -2444,7 +2444,7 @@ These strongly typed interfaces reflect the configured structure and
 cardinalities of relationships in the pattern model. <o:p></o:p></p>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/NavigatingPatternModelsProgrammaticallyTyped.mht">Navigating
 Pattern Models Programmatically (Typed)</a> for more details on how navigate
 your way around a pattern model using the typed interfaces for optimized
@@ -2471,7 +2471,7 @@ move between these different interface schemes.<o:p></o:p></p>
 </div>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/MovingBetweenGenericandTypedPatternModelSchemes.mht">Moving
 Between Generic and Typed Pattern Model Schemes</a> for more details on the
 syntax for doing this.<o:p></o:p></p>
@@ -2484,7 +2484,7 @@ need to do to manage solution items that are referenced by their pattern
 models.<o:p></o:p></p>
 
 <p class=3DMsoNormal>See the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/CommonAutomationTasks.mht">Common
 Automation Tasks</a> topic which has references to libraries and classes th=
 at

@@ -2194,16 +2194,16 @@ table.MsoTableGrid
 
 <p class=3DMsoNormal>Context menus are configurable on all elements in the
 pattern model. They can display a ‘<a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatareWizards.mht">Wizard’</a>
 and/or execute a <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatareCommands.mht">‘Command’</a>
 when clicked (one or other, or both).<o:p></o:p></p>
 
 <p class=3DMsoNormal>Menus support both a textual Caption and an Icon. The
 display of the menu is controlled by a collection of ‘<a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatareConditions.mht">Conditions’</a>
 that must evaluate successfully before the menu is displayed to the user. F=
 or
@@ -2286,10 +2286,10 @@ bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <h5>Add the Command and Wizard<o:p></o:p></h5>
 
 <p class=3DMsoNormal>In the pattern model, <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingaCommand.mht">add
 a Command</a>, and configure it. Optionally, <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingaWizard.mht">add
 a Wizard</a> and configure it.<o:p></o:p></p>
 
@@ -2307,10 +2307,10 @@ src=3D"HowToShowingaContextMenu_files/image004.jpg" v:shapes=3D"Picture_x00=
 <h5>Add and Configure the Launch Point<o:p></o:p></h5>
 
 <p class=3DMsoNormal>To the same element, <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingaLaunchPoint.mht">add
 a Context Menu Launch Point</a> and <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/ConfiguringaContextMenuLaunchPoint.mht">configure
 it</a> with the configured command (and configured Wizard).<o:p></o:p></p>
 

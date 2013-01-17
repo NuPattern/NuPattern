@@ -2157,7 +2157,7 @@ olor:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
 al'>Recommend</b>:
 See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatareExtensionPoints.mht">What
 are Extension Points</a> for the concepts behind using ‘Extension Points’ in
 your pattern for:<o:p></o:p></p>
@@ -2176,13 +2176,13 @@ decompose pattern toolkits into smaller more reusable toolkits.<o:p></o:p><=
 and
 drop an ‘Extension Point’ shape from the toolbox onto your pattern model
 diagram. See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingaCollectionoranElement.mht">Adding
 Elements</a> for more details. <o:p></o:p></p>
 
 <p class=3DMsoNormal>You must name the extension point, and you can define =
 the '<a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatisCardinality.mht">Cardinality</a>'
 of the extension.<o:p></o:p></p>
 
@@ -2196,7 +2196,7 @@ margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: Because it is not known at design-time which pattern (from
 another toolkit) will plug into instances of this pattern, you cannot ‘<a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToControllingInstancingofElements.mht">Auto-Create’</a>
 instances of other patterns. However, you can create custom commands that <=
 o:p></o:p></p>
@@ -2325,7 +2325,7 @@ margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: These constraints are only applied when users compose
 patterns together in the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a> window.<o:p></o:p></p>
 

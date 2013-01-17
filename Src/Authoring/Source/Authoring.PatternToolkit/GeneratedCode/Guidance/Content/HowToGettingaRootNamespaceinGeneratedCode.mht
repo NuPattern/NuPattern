@@ -2189,7 +2189,7 @@ normal'>Note</b>: Typically, this property would exist on the element in the
 pattern model that either unfolded or generated the project in the first pl=
 ace,
 or has an existing <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatareArtifactLinks.mht">artifact
 link</a> to it.<o:p></o:p></p>
 
@@ -2250,7 +2250,7 @@ es=3D"Picture_x0020_277"><![endif]></span><o:p></o:p></p>
 project’s root namespace when evaluated. The target project must be reachab=
 le
 from an element in the pattern model through an existing <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatareArtifactLinks.mht">artifact
 link</a>. Typically this element either has the artifact link, or a parent
 element has the link to the project. <o:p></o:p></p>
@@ -2258,7 +2258,7 @@ element has the link to the project. <o:p></o:p></p>
 <p class=3DMsoNormal>Configure the ‘Project Path’ property to reference the
 element in the pattern model that has the artifact link to the project. See=
  <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/TargetPathSyntax.mht">Target
 Path Syntax</a> for more details on this value.<o:p></o:p></p>
 

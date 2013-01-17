@@ -2187,7 +2187,7 @@ di-font-weight:
   normal'>‘Pattern Toolkit’</b> from the Add New Solution Element button in=
  the
   <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatisSolutionBuilder.mht">Solution
   Builder</a> window.<o:p></o:p></p>
   <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
@@ -2239,12 +2239,12 @@ e-height:
   <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
 e-height:
   normal'>In the <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/VisualStudioExperimentalInstance.mht">Experimental
   Instance of Visual Studio</a> (VSExp), create a blank solution, then open=
  the
   <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatisSolutionBuilder.mht">Solution
   Builder</a> window and create a new instance of your pattern that should =
 now
@@ -2277,22 +2277,22 @@ ng
   with when building a pattern toolkit. The pattern model is the blueprint =
 or
   schema of your pattern’s variance. See more details in <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatisaPatternModel.mht">What
   is a Pattern Model</a>. <o:p></o:p></p>
   <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
 e-height:
   normal'>You develop a pattern model in the <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatisthePatternModelDesigner.mht">‘Pattern
   Model Designer’</a>.<span style=3D'mso-spacerun:yes'>  </span>The general=
  idea
   here is to represent the variability you have in this model. You decompose
   the pattern into different <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatareVariabilityViews.mht">Variable
   Views (or aspects)</a>, each view is decomposed into <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatareVariabilityElementsCollectionsandProperties.mht">Collec=
 tions
   and Elements</a>, each with multiplicity of either 1..1 (one-to-one) or 1=
@@ -2300,7 +2300,7 @@ tions
   (one-to-many).<span style=3D'mso-spacerun:yes'>  </span>For each collecti=
 on or
   element you define one or more <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatareVariabilityElementsCollectionsandProperties.mht">Variab=
 le
   Properties</a>. <o:p></o:p></p>
@@ -2317,7 +2317,7 @@ e-height:
   normal'>Assets are represented in many forms: from code templates, through
   libraries and frameworks, configuration files, to documentation. See more
   details in <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatareAssets.mht">Assets</a>.<o:p></o:p></p>
   <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
 e-height:
@@ -2354,12 +2354,12 @@ dance<o:p></o:p></h5>
   <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
 e-height:
   normal'><a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatisGuidance.mht">Guidance</a><span
   class=3DMsoHyperlink> </span>is typically represented in textual form in =
 what
   are called ‘<a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatisaGuidanceDocument.mht">Content
   Documents</a>’, one for each guidance topic. These documents contain
   information about the various elements in your pattern and have text, ima=
@@ -2370,7 +2370,7 @@ work
   <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
 e-height:
   normal'>These documents are orchestrated into <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatisaGuidanceWorkflow.mht">‘Guidance
   Workflows’</a> to help organize the information in a structure that can be
   browsed.<o:p></o:p></p>
@@ -2395,7 +2395,7 @@ n of
   your pattern in the solution, based upon the configured state of your pat=
 tern
   model at any time. See more details in <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatisAutomation.mht">Automation</a>.<o:p></o:p></p>
   <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
 e-height:
@@ -2404,7 +2404,7 @@ e-height:
 s of
   the automation. Some automation requires specific assets, such as the code
   generation and template commands. You configure these <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatareCommands.mht">Commands</a>
   to reference the assets in your toolkit, and then the assets are initiali=
 zed
@@ -2426,7 +2426,7 @@ rn
 e-height:
   normal'>Once a pattern model is ready for releasing to users, a process
   loosely called ‘publishing’. See more details in <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/WhatisToolkitInfo.mht">Publishing</a>.<o:p></o:p></p>
   <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
 e-height:
@@ -2447,7 +2447,7 @@ be
   installed into their Visual Studio environment. This file contains all the
   assets, the pattern model and any automation and guidance for the toolkit.
   See more details in <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/HowisaPatternToolkitDeployed.mht">Deploying
   a Toolkit</a>.<o:p></o:p></p>
   <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=

@@ -18,8 +18,8 @@ namespace NuPattern.Authoring.PatternToolkit
         internal static readonly string TargetsPath = Environment.ExpandEnvironmentVariables(Path.Combine(MsBuildPath, TargetsFilename));
 		internal static readonly Dictionary<string,string> InstalledExtensionProperties = new Dictionary<string, string>
         { 
-            {"PatternToolkitRuntime", "c869918e-f94e-4e7a-ab25-b076ff4e751b" },
-            {"PatternToolkitBuilder", "84031a32-b20f-479c-a620-beacd982ea13" },
+            {"PatternToolkitRuntime", "93373818-600f-414b-8181-3a0cb79fa785" },
+            {"PatternToolkitBuilder", "9f6dc301-6f66-4d21-9f9c-b37412b162f6" },
         };
     }
 }

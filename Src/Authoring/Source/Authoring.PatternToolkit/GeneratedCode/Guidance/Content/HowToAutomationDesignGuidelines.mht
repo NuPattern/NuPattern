@@ -2232,7 +2232,7 @@ provided in your toolkit will actually be read or followed initially, but
 ensure that topics are named accordingly and can be easily found when neede=
 d.
 See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToAddingGuidancetoYourPattern.mht">Adding
 Guidance to Your Pattern</a> for more details.<o:p></o:p></p>
 
@@ -2265,7 +2265,7 @@ especially if the automation creates other artifacts or commits any changes=
  to
 any data. Use conditions on the launch points that guard against invalid
 property values of solution elements of the pattern model. See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToControllingWhenCommandsareExecuted.mht">Controlling
 When Commands are Executed</a> for more details.<o:p></o:p></p>
 
@@ -2281,7 +2281,7 @@ at key times, and that performs ‘synchronization’ or ‘generation’ kinds of
 tasks, consider in addition providing menus that can be run by a user manua=
 lly.
 See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToShowingaContextMenu.mht">Showing
 a Context Menu</a> for more details.<o:p></o:p></p>
 
@@ -2312,7 +2312,7 @@ ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Conditions, Value Providers, Validation Rules, etc.) ensure your classes are
 well descried and categorized, and make extensive use of tracing for
 troubleshooting. See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnCustomAutomationClasses.mht">Creating
 Your Own Custom Automation Classes</a> for more details.<o:p></o:p></p>
 
@@ -2328,7 +2328,7 @@ ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  to
 ensure the model is always configured correctly, so automation can run
 correctly. See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToApplyingValidationtoaPropertyorElement.mht">Adding
 Validation to a Property</a> for more details.<o:p></o:p></p>
 
@@ -2343,7 +2343,7 @@ validation rule always tells the user which element is at fault, and guides=
  the
 user in how to resolve the violation. Be very specific where possible. See =
 <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnValidationRules.mht">Creating
 Your Own Validation Rules</a> for more details.<o:p></o:p></p>
 
@@ -2354,7 +2354,7 @@ mily:
 Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
 ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>Configure when validation occurs. See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToExecutingValidationRules.mht">Executing
 Validation Rules</a> for more details. And avoid executing validation ‘On S=
 ave’
@@ -2380,7 +2380,7 @@ either with Drag and Drop or with custom ‘Import’ kinds of automation. This
 ability also helps your pattern be integrated with existing solutions that =
 may
 not have been created wholly by your pattern model. See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/UnderstandingSupportingAddfromExistingArtifacts.mht">Supporting
 Add from Existing Artifacts</a> for more details.<o:p></o:p></p>
 
@@ -2411,7 +2411,7 @@ mily:
 Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
 ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/UnderstandingUnfoldorGenerate.mht">Unfold
 or Generate</a> to determine when to use code generation or VS templates to=
  get
@@ -2475,7 +2475,7 @@ mily:
 Symbol'><span style=3D'mso-list:Ignore'>·<span style=3D'font:7.0pt "Times N=
 ew Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/UnderstandingUnfoldorGenerate.mht">Unfold
 or Generate</a> to determine when to use code generation or VS templates to=
  get
@@ -2518,7 +2518,7 @@ template is the same value as the Icon property of the 'Pattern' shape.<o:p=
 ></o:p></p>
 
 <p class=3DMsoNormal>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/UnderstandingWhichAutomationtoUse.mht">Which
 Automation to Use</a> to understand better the provided automation classes =
 or
