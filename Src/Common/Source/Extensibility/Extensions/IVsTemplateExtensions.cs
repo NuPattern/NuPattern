@@ -61,15 +61,11 @@ namespace NuPattern.Extensibility
             var temp = (VSTemplate)template;
             var doc = new XmlDocument();
 
-            var assemblyPartialName = string.Format("{0}, PublicKeyToken={1}",
-                templateExtensionType.Assembly.GetName().Name,
-                templateExtensionType.Assembly.GetName().GetPublicKeyTokenString());
-
             var newExtension = new VSTemplateWizardExtension[]
 			{
 				new VSTemplateWizardExtension
 				{
-					Assembly = new[] { new XmlNode[] { doc.CreateTextNode(assemblyPartialName) } },
+					Assembly = new[] { new XmlNode[] { doc.CreateTextNode(templateExtensionType.Assembly.GetName().FullName) } },
 					FullClassName = new[] { new XmlNode[] { doc.CreateTextNode(templateExtensionType.FullName) } }
 				}
 			};
@@ -107,9 +103,9 @@ namespace NuPattern.Extensibility
         [CLSCompliant(false)]
         public static IVsTemplateWizardExtension GetExtension(this IEnumerable<IVsTemplateWizardExtension> extensions, Type extensionType)
         {
-            //return extensions.FirstOrDefault(ext => ext.Assembly.Equals(extensionType.Assembly.GetName().ToString()) && ext.FullClassName.Equals(extensionType.ToString()));
             return extensions.FirstOrDefault(ext =>
                 ext.Assembly.StartsWith(extensionType.Assembly.GetName().Name)
+                && ext.Assembly.Contains(string.Format(CultureInfo.CurrentCulture, "Version={0}", extensionType.Assembly.GetName().Version.ToString(4)))
                 && ext.Assembly.EndsWith(string.Format(CultureInfo.CurrentCulture, "PublicKeyToken={0}", extensionType.Assembly.GetName().GetPublicKeyTokenString()))
                 && ext.FullClassName.Equals(extensionType.ToString()));
         }
