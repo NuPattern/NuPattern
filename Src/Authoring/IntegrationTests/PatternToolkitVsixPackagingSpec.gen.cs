@@ -31,7 +31,7 @@ namespace NuPattern.Authoring.IntegrationTests
             public void ThenVsixInfoCorrect()
             {
                 //Identifier, Name, Author, Version
-                Assert.Equal(@"84031a32-b20f-479c-a620-beacd982ea13", this.VsixInfo.Header.Identifier);
+                Assert.Equal(@"9f6dc301-6f66-4d21-9f9c-b37412b162f6", this.VsixInfo.Header.Identifier);
                 Assert.Equal(@"NuPattern Toolkit Builder VS2012", this.VsixInfo.Header.Name);
                 Assert.Equal(@"An extension for building NuPattern Toolkits, which automate design patterns for rapid and consistent custom solution development.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"NuPattern", this.VsixInfo.Header.Author);

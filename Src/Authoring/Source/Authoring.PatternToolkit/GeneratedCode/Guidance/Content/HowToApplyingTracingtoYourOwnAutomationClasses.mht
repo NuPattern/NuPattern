@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDE6F2.3AD78790"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDFC13.96FE9FA0"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDE6F2.3AD78790
+------=_NextPart_01CDFC13.96FE9FA0
 Content-Location: file:///C:/9E4B5913/HowToApplyingTracingtoYourOwnAutomationClasses.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -28,8 +28,8 @@ href=3D"HowToApplyingTracingtoYourOwnAutomationClasses_files/filelist.xml">
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-30T12:00:00Z</o:Created>
-  <o:LastSaved>2012-12-30T12:00:00Z</o:LastSaved>
+  <o:Created>2013-01-26T09:22:00Z</o:Created>
+  <o:LastSaved>2013-01-26T09:22:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>951</o:Words>
   <o:Characters>5426</o:Characters>
@@ -2161,7 +2161,7 @@ authors to debug their toolkits.<o:p></o:p></p>
 <p class=3DMsoNormal>Trace information appears for both authors and users i=
 n the
 ‘Output Window’, in the ‘Pattern Toolkit Extensions’ pane (see <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/TracingWindow.mht">Tracing
 Window</a>). As an author and a user you can see information about how the
 toolkits work, and a record of all information, warnings and errors there.<=
@@ -2170,9 +2170,10 @@ o:p></o:p></p>
 <p class=3DMsoNormal>By default, the level of trace messages seen in the ou=
 tput
 window is ‘Warning’ and above. But if you want to see more diagnostic
-information, you can configure the level of tracing in the options dialog of
-Visual Studio. See the options in the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+information, you can configure the level of tracing in the options dialog o=
+f Visual
+Studio. See the options in the <a
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/TracingWindow.mht">Tracing
 Window</a> for more details.<o:p></o:p></p>
 
@@ -2182,9 +2183,10 @@ follow the steps below.<o:p></o:p></p>
 
 <h5>How to Add Tracing<o:p></o:p></h5>
 
-<p class=3DMsoNormal>Add the Tracer variable to your automation class,
-remembering to replace the type of your class in the method
-GetSourceFor&lt;T&gt;():<o:p></o:p></p>
+<p class=3DMsoNormal>Add the Tracer variable to your automation class, reme=
+mbering
+to replace the type of your class in the method GetSourceFor&lt;T&gt;():<o:=
+p></o:p></p>
 
 <p class=3DSourceCode><span style=3D'mso-tab-count:2'>              </span>=
 <span
@@ -2198,8 +2200,8 @@ style=3D'color:#2B91AF'>Tracer</span>.GetSourceFor&lt;<span style=3D'color:=
 <h5>What and When to Trace<o:p></o:p></h5>
 
 <p class=3DMsoNormal>Your automation class will have a single actionable me=
-thod such
-as: Execute() (for Commands), or Evaluate() (for Conditions and Value
+thod
+such as: Execute() (for Commands), or Evaluate() (for Conditions and Value
 Providers) or Validate() for (Validation Rules), these methods should always
 start with a call to:<o:p></o:p></p>
 
@@ -2229,12 +2231,11 @@ for informing user on decisions being made by the code. These calls are only
 seen when the level of tracing is turned up very high, and allow a
 troubleshooter to see the decision paths through the code.<o:p></o:p></p>
 
-<p class=3DMsoNormal>Use calls to TraceWarning() to identify where the logi=
-c fails
-expectedly, but continues. These calls are seen by toolkit users by default=
-, so
-should only contain data and conditions that indicate a recoverable failure=
-.<o:p></o:p></p>
+<p class=3DMsoNormal>Use calls to TraceWarning() to identify where the logic
+fails expectedly, but continues. These calls are seen by toolkit users by
+default, so should only contain data and conditions that indicate a recover=
+able
+failure.<o:p></o:p></p>
 
 <p class=3DMsoNormal>Trace the final result of the automation using
 TraceInformation(). Together with first trace call, this pair of traces
@@ -2243,24 +2244,23 @@ succeeded with its results.<o:p></o:p></p>
 
 <p class=3DMsoNormal>Don’t use TraceError() for error conditions, instead t=
 hrow
-exceptions (i.e. InvalidOperationException ) where the logic fails unexpect=
-edly.
-This will automatically get traced using TraceError() by the runtime framew=
-ork.<o:p></o:p></p>
+exceptions (i.e. InvalidOperationException ) where the logic fails
+unexpectedly. This will automatically get traced using TraceError() by the
+runtime framework.<o:p></o:p></p>
 
 <h5>Tracing Statement Recommendations<o:p></o:p></h5>
 
 <p class=3DMsoNormal>For consistency, you may want to keep the format of tr=
 acing
-statements consistent based upon the automation type. This aids in the read=
-ability
-of the tracing statements in the trace window.<o:p></o:p></p>
+statements consistent based upon the automation type. This aids in the
+readability of the tracing statements in the trace window.<o:p></o:p></p>
 
 <p class=3DMsoNormal>For example, Value Providers and Conditions both 'Eval=
 uate'
 values with parameters, Validation Rules ‘Validate’ rules and Commands
-'Execute' actions with parameters. You can reflect that in trace statements
-consistently. <o:p></o:p></p>
+'Execute' actions with parameters. You can reflect that in trace statements=
+ consistently.
+<o:p></o:p></p>
 
 <p class=3DMsoNormal>Here are some recommended trace statement formats that=
  you
@@ -2535,13 +2535,12 @@ expression maybe invalid or may resolve to the wrong element in the element=
 ’s ancestry.”</span>,&nbsp;<span
 style=3D'color:blue'>this</span>.Expression,&nbsp;<span style=3D'color:blue=
 '>this</span>.CurrentElement);<br>
-<span style=3D'mso-tab-count:2'>              </span><span style=3D'mso-tab=
--count:
-1'>       </span>}<o:p></o:p></p>
+<span style=3D'mso-tab-count:3'>                     </span>}<o:p></o:p></p>
 
 <p class=3DSourceCodeCxSpLast><br>
-<span style=3D'mso-tab-count:3'>                     </span>tracer.TraceInf=
-ormation(<br>
+<span style=3D'mso-tab-count:2'>              </span><span style=3D'mso-tab=
+-count:
+1'>       </span>tracer.TraceInformation(<br>
 <span style=3D'mso-tab-count:4'>                           </span><span
 style=3D'color:#C00000'>“Evaluated expression'{0}' on element '{1}', as '{2=
 ]'.”</span>,&nbsp;<span
@@ -2561,7 +2560,7 @@ style=3D'color:blue'>return</span>&nbsp;result;<br>
 
 </html>
 
-------=_NextPart_01CDE6F2.3AD78790
+------=_NextPart_01CDFC13.96FE9FA0
 Content-Location: file:///C:/9E4B5913/HowToApplyingTracingtoYourOwnAutomationClasses_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2622,7 +2621,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDE6F2.3AD78790
+------=_NextPart_01CDFC13.96FE9FA0
 Content-Location: file:///C:/9E4B5913/HowToApplyingTracingtoYourOwnAutomationClasses_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2632,7 +2631,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDE6F2.3AD78790
+------=_NextPart_01CDFC13.96FE9FA0
 Content-Location: file:///C:/9E4B5913/HowToApplyingTracingtoYourOwnAutomationClasses_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -2644,4 +2643,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"colorschememapping.xml"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDE6F2.3AD78790--
+------=_NextPart_01CDFC13.96FE9FA0--

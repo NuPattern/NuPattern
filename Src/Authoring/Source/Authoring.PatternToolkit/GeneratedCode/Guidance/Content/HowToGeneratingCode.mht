@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDE6F1.D15FDD80"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDFC13.6C0E0A10"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDE6F1.D15FDD80
+------=_NextPart_01CDFC13.6C0E0A10
 Content-Location: file:///C:/229348E5/HowToGeneratingCode.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -35,8 +35,8 @@ w\:* {behavior:url(#default#VML);}
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-30T11:57:00Z</o:Created>
-  <o:LastSaved>2012-12-30T11:57:00Z</o:LastSaved>
+  <o:Created>2013-01-26T09:20:00Z</o:Created>
+  <o:LastSaved>2013-01-26T09:21:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>855</o:Words>
   <o:Characters>4874</o:Characters>
@@ -2154,7 +2154,7 @@ tom:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
 al'>Recommend:</b>
 See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatareTextTemplates.mht">What
 are Text Templates</a> for understanding how they can be used in pattern
 toolkits.<o:p></o:p></p>
@@ -2166,7 +2166,7 @@ olor:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
 al'>Recommend</b>:
 Study the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/UnderstandingUnfoldorGenerate.mht">Unfold
 or Generate</a> topic to determine if generating with a text template is the
 right fit for toolkit’s your needs.<o:p></o:p></p>
@@ -2195,7 +2195,7 @@ bottom:
 10.0pt;margin-left:0in;mso-add-space:auto;background:#F2DBDB;mso-background=
 -themecolor:
 accent2;mso-background-themetint:51'>See <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingaTextTemplate.mht">Creating</a>
 for creating text template assets.<span class=3DMsoHyperlink><o:p></o:p></s=
 pan></p>
@@ -2212,7 +2212,7 @@ generate with the template, configure the appropriate automation.<o:p></o:p=
 <p class=3DMsoNormal>To configure a text template on any element in the pat=
 tern
 model, <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingaCommand.mht">add
 a ‘Command’</a> to the element.<o:p></o:p></p>
 
@@ -2333,7 +2333,7 @@ p</b>:
   You can also define expressions in the value of the ‘Target File Name’
   property to substitute property values in calculated names. (i.e.
   {InstanceName} or {Parent.PropertyName}. See the <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/ExpressionSyntax.mht">Expression
   Syntax</a> for more details). Or you can use a Value Provider to calculate
   the name.<o:p></o:p></p>
@@ -2366,7 +2366,7 @@ ormal'>Note</b>:
 the
   first solution item of the current element or the first ancestor element
   found, or if, none found then generated to the solution. See the <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/TargetPathSyntax.mht">Target
   Path Syntax</a> for more details.<o:p></o:p></p>
   <p class=3DWarning style=3D'margin:0in;margin-bottom:.0001pt;mso-add-spac=
@@ -2390,7 +2390,7 @@ p</b>:
 y to
   substitute property values in calculated paths. (i.e. {InstanceName} or
   {Parent.PropertyName}. See the <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/ExpressionSyntax.mht">Expression
   Syntax</a> for more details). Or you can use a Value Provider to calculate
   the path.<o:p></o:p></p>
@@ -2454,7 +2454,7 @@ ght:
  value
   includes property substitutions (i.e. {InstanceName} or
   {Parent.PropertyName}, etc. See the <a
-  href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guid=
+  href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guid=
 ance/Content/ExpressionSyntax.mht">Expression
   Syntax</a> for more details) or when the value is calculated by a value
   provider.<o:p></o:p></p>
@@ -2464,9 +2464,9 @@ dd-space:
 ght:
   normal'>Note</b>: By default this is false. When false, the filename is n=
 ever
-  changed from the name it was originally generated with. If true, then the=
- generated
-  file will be renamed whenever the file is re-generated.<o:p></o:p></p>
+  changed from the name it was originally generated with. If true, then the
+  generated file will be renamed whenever the file is re-generated.<o:p></o=
+:p></p>
   <p class=3DNoteCxSpLast style=3D'margin:0in;margin-bottom:.0001pt;mso-add=
 -space:
   auto;line-height:normal;background:#FFFFCC'><b style=3D'mso-bidi-font-wei=
@@ -2571,10 +2571,10 @@ ble
 <p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
 
 <p class=3DMsoNormal>Lastly, <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingaLaunchPoint.mht">add
 an appropriate launch point</a> and <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/ConfiguringaLaunchPoint.mht">configure
 the launch point</a> to execute the command.<o:p></o:p></p>
 
@@ -2586,7 +2586,7 @@ the launch point</a> to execute the command.<o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CDE6F1.D15FDD80
+------=_NextPart_01CDFC13.6C0E0A10
 Content-Location: file:///C:/229348E5/HowToGeneratingCode_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2647,7 +2647,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDE6F1.D15FDD80
+------=_NextPart_01CDFC13.6C0E0A10
 Content-Location: file:///C:/229348E5/HowToGeneratingCode_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2657,7 +2657,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDE6F1.D15FDD80
+------=_NextPart_01CDFC13.6C0E0A10
 Content-Location: file:///C:/229348E5/HowToGeneratingCode_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -2785,7 +2785,7 @@ fwBcyvvwT7Mypt/3wCOPrP3F5Mnjn3jyuVUP3vfTJQsGSjF/9Uu3JcS/jStqXbr34K/usZ2wQuDu
 rUtKSlz9UM7XhaFAJ4qtyy+3awdu1CS0EaitrV+4ZMWczFmP/Wr1LTO09hNc/cXeZWevv41hfUQg
 vBGQP1Ee3pig9YiAjwggnXwEDqshAlIE/h8vlqYy4rrzJgAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDE6F1.D15FDD80
+------=_NextPart_01CDFC13.6C0E0A10
 Content-Location: file:///C:/229348E5/HowToGeneratingCode_files/image002.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -2841,7 +2841,7 @@ ch2B9iH98/nR9iH98/nRRQAfYh/fP50fYh/fP50UUAH2If3z+dH2If3z+dFFAB9iH98/nR9iH98/
 nRRQAfYh/fP50fYh/fP50UUAV73TZpY4vs0ypLHKrhnBYDGQePxqHTNLuY/tEl9JmeWQk7T8pA6E
 AdM/4UUUAXvsQ/vn86PsQ/vn86KKAD7EP75/OpYYfKBGciiigD//2T==
 
-------=_NextPart_01CDE6F1.D15FDD80
+------=_NextPart_01CDFC13.6C0E0A10
 Content-Location: file:///C:/229348E5/HowToGeneratingCode_files/image003.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3369,7 +3369,7 @@ xKmoxFEeBEAgEoEEclKIU5GIozAIgEAkAsnkpBCnIkFHYRAAgfAEEstJIU6Fh46SIAAC4QkkmZNC
 nArPHSVBAARCEkg4J4U4FZI7ioEACIQkkHxOCnEqJHoUAwEQCEMgJzkpyCSEQY8yIAACYQiE1ZMK
 YwtlQAAEQCBxAv8PBIB67WPndtMAAAAASUVORK5CYIJ=
 
-------=_NextPart_01CDE6F1.D15FDD80
+------=_NextPart_01CDFC13.6C0E0A10
 Content-Location: file:///C:/229348E5/HowToGeneratingCode_files/image004.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -3598,7 +3598,7 @@ WD/nkv5UAS7h60bh61F9lg/55L+VH2WD/nkv5UAS7h60bh61F9lg/wCeS/lR9lg/55L+VAGN4w+b
 SYsc/vx/6C1FHim3iXTIysag+cOg9mooAa3/ACIVv/15w/yWvPW/1zf7zfzloooYG1RRRQAUUUUA
 FFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAVNS/491/3v6GiiigD//Z
 
-------=_NextPart_01CDE6F1.D15FDD80
+------=_NextPart_01CDFC13.6C0E0A10
 Content-Location: file:///C:/229348E5/HowToGeneratingCode_files/image005.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3835,7 +3835,7 @@ gNhfBDPycNYS792YXJYjMQiAQOEEcGh3wUihPV4wULfscGi3Gyek6gOB5o1k+wAJRYIACIBAtwTg
 ZLslh/tAAARAwIEAnKwDpDxJKIqq/xIhz21ICwIg0FICcLItbVhUCwRAoB4E/j9EAbWR9ujywAAA
 AABJRU5ErkJggk==
 
-------=_NextPart_01CDE6F1.D15FDD80
+------=_NextPart_01CDFC13.6C0E0A10
 Content-Location: file:///C:/229348E5/HowToGeneratingCode_files/image006.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -3916,7 +3916,7 @@ ANaytYrODy7cfuyxYcjHPpVjJ9KwG8NTM5Iv2UKAI9qkbCARuHOM8mtiwtjZ2UUDOXKDG4knP580
 AT5PpRk+lLRQAmT6UhJx0p1IelABk+lGT6UtFACZPpRk+lLRQAmT6UZPpS0UAJk+lGT6UtFACZPp
 Rk+lLRQAmT6UUtFAH//Z
 
-------=_NextPart_01CDE6F1.D15FDD80
+------=_NextPart_01CDFC13.6C0E0A10
 Content-Location: file:///C:/229348E5/HowToGeneratingCode_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -3933,4 +3933,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image006.jpg"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDE6F1.D15FDD80--
+------=_NextPart_01CDFC13.6C0E0A10--

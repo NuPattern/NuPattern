@@ -2,7 +2,7 @@
 	x:Class="NuPattern.Runtime.Schema.AddAutomationExtensionView"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:p="http://schemas.microsoft.com/visualstudiopatterning/2010/xaml/"
+	xmlns:p="http://schemas.microsoft.com/nupattern/2012/xaml/"
 	xmlns:vsfx="clr-namespace:NuPattern.Common.Presentation.Vs;assembly=NuPattern.Common.Presentation"
     xmlns:cp="clr-namespace:NuPattern.Common.Presentation;assembly=NuPattern.Common.Presentation"
 	x:Name="automationExtensionSelector"

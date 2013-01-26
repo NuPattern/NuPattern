@@ -1,6 +1,6 @@
 ﻿<#+
 	// Toolkit Info
-	public const string identifier = "Ignore";
+	public const string identifier = "9f6dc301-6f66-4d21-9f9c-b37412b162f6";
 	public const string toolkitName = "Ignore";
 	public const string author = "Ignore";
 	public const string version = "0.0";
@@ -18,7 +18,7 @@
 	public const string supportedFrxMinVersion = "4.0";
 	public const string supportedFrxMaxVersion = "4.5";
 
-	public const string managerVsixIdentifier = "c869918e-f94e-4e7a-ab25-b076ff4e751b";
+	public const string managerVsixIdentifier = "93373818-600f-414b-8181-3a0cb79fa785";
 	public const string managerVsixName = "NuPattern Toolkit Manager";
 	public const string managerVsixVersion = "1.3.20.0";
 	public const string managerVsixFileName = "NuPatternToolkitManager.11.0.vsix";

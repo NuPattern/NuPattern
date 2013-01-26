@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDE6F2.059753D0"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDFC13.807BAF20"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDE6F2.059753D0
+------=_NextPart_01CDFC13.807BAF20
 Content-Location: file:///C:/4893D650/HowToSupportingDragDrop.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -27,8 +27,8 @@ xmlns=3D"http://www.w3.org/TR/REC-html40">
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-30T11:58:00Z</o:Created>
-  <o:LastSaved>2012-12-30T11:59:00Z</o:LastSaved>
+  <o:Created>2013-01-26T09:21:00Z</o:Created>
+  <o:LastSaved>2013-01-26T09:21:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>1265</o:Words>
   <o:Characters>7214</o:Characters>
@@ -2183,18 +2183,19 @@ table.MsoTableGrid
 ></o:p></h4>
 
 <p class=3DMsoNormal>Drag &amp; Drop in the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/SolutionBuilder.mht">‘Solution
 Builder’</a> window is supported to enable toolkit users to drag data or
 artifacts from other sources that the pattern represents or integrates with
 (i.e. windows, the hard disk, databases, external web services etc.). Dragg=
 ing
-and dropping data from these sources allows a pattern author to create newly
-configured solution elements or configure existing solution elements config=
-ured
-with data and links from the dropped data. A common example of this is for
-importing data from other sources into the ‘Solution Builder’.<o:p></o:p></=
-p>
+and dropping data from these sources allows a pattern author to create newl=
+y configured
+solution elements or configure existing solution elements configured with d=
+ata
+and links from the dropped data. A common example of this is for importing =
+data
+from other sources into the ‘Solution Builder’.<o:p></o:p></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#F2DBDB;
@@ -2219,7 +2220,7 @@ pt;
 margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note</b>: This is one strategy for <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/UnderstandingSupportingAddfromExistingArtifacts.mht">Supporting
 Add from Existing Artifacts</a>.<o:p></o:p></p>
 
@@ -2229,7 +2230,7 @@ Add from Existing Artifacts</a>.<o:p></o:p></p>
 umber
 of sources inside or even outside of Visual Studio (e.g. files from a hard
 disk) onto elements in Solution Builder using the ‘<a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatareLaunchPoints.mht">Drag
 Drop Launch Point’</a><o:p></o:p></p>
 
@@ -2260,10 +2261,10 @@ author and pattern model ultimately determine the specific relationships and
 abstraction between solution elements and related artifacts. Therefore, in
 general it is not possible to infer much information about the creation or
 configuration of any given solution element based upon what is dragged and
-dropped on it or its parent element. However, there are some common simple
-cases accommodated for such as dragging and dropping files from the solutio=
-n,
-and dropping files from windows explorer.<o:p></o:p></p>
+dropped on it or its parent element. However, there are some common simple =
+cases
+accommodated for such as dragging and dropping files from the solution, and
+dropping files from windows explorer.<o:p></o:p></p>
 
 </div>
 
@@ -2280,7 +2281,7 @@ ata.<o:p></o:p></p>
 <h6>Creating a Custom Drop Command<o:p></o:p></h6>
 
 <p class=3DMsoNormal><a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnCommands.mht">Create
 a custom command</a> that will handle the data being dropped, and then may
 create or configure the necessary solution elements in response to the drop
@@ -2307,7 +2308,7 @@ dropped, and perform whatever action is necessary on the pattern model in
 response to the drop.<o:p></o:p></p>
 
 <p class=3DMsoNormal>See the topic <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnDragDropCommands.mht">Creating
 Your Own Drag Drop Commands</a> for more details and options available for
 creating your own drag drop commands.<o:p></o:p></p>
@@ -2316,7 +2317,7 @@ creating your own drag drop commands.<o:p></o:p></p>
 
 <p class=3DMsoNormal>There are a number of existing drop commands for common
 cases that can simply be configured in your pattern model. See the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/Commands.mht">Provided
 Commands</a> for more details.<o:p></o:p></p>
 
@@ -2333,7 +2334,7 @@ op
 commands, which may use these provided command classes or their base classe=
 s to
 gain access to the data within these dropped files. See the topic <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnDragDropCommands.mht">Creating
 Your Own Drag Drop Commands</a> for more details.<o:p></o:p></p>
 
@@ -2342,7 +2343,7 @@ Your Own Drag Drop Commands</a> for more details.<o:p></o:p></p>
 <h6>Creating a Custom Drag Condition<o:p></o:p></h6>
 
 <p class=3DMsoNormal><a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnConditions.mht">Create
 a custom condition</a> that will evaluate whether the dragged data is valid=
  and
@@ -2369,7 +2370,7 @@ determine if it can be dropped on this element in the pattern model.<o:p></=
 o:p></p>
 
 <p class=3DMsoNormal>See the topic <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnDragConditions.mht">Creating
 Your Own Drag Conditions</a> for more details and options available for
 creating your own drag conditions.<o:p></o:p></p>
@@ -2379,7 +2380,7 @@ creating your own drag conditions.<o:p></o:p></p>
 <p class=3DMsoNormal>There are a number of existing drag conditions for com=
 mon
 cases that can simply be configured in your pattern model. See the <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/Conditions.mht">Provided
 Conditions</a> for more details.<o:p></o:p></p>
 
@@ -2396,7 +2397,7 @@ ag
 conditions, which may use these provided condition classes or their base
 classes to gain access to the data within these dragged files. See the topi=
 c <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnDragConditions.mht">Creating
 Your Own Drag Conditions</a> for more details.<o:p></o:p></p>
 
@@ -2418,7 +2419,7 @@ style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
 style=3D'mso-list:Ignore'>2.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>In your Pattern Model, add a <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/AddingaLaunchPoint.mht">‘Drag
 Drop Launch Point’</a> to the element which supports the drag and drop.<o:p=
 ></o:p></p>
@@ -2432,7 +2433,7 @@ t:
 Ignore'>3.<span style=3D'font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&n=
 bsp;&nbsp;&nbsp;
 </span></span></span></span><![endif]><a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/ConfiguringaDragDropLaunchPoint.mht">Configure
 the Drag and Drop Launch Point</a><span class=3DMsoHyperlink><o:p></o:p></s=
 pan></p>
@@ -2441,7 +2442,7 @@ pan></p>
 h5>
 
 <p class=3DMsoNormal>Optionally, you may want to <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingaWizard.mht">create
 a Wizard</a> and present the user with it before processing the dragged dat=
 a.<o:p></o:p></p>
@@ -2467,7 +2468,7 @@ solution elements are created or configured.<o:p></o:p></p>
 <h5>(Optional) Create a Value Provider for Status Text<o:p></o:p></h5>
 
 <p class=3DMsoNormal>Optionally, you may decide to create a <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingYourOwnValueProviders.mht">custom
 Value Provider</a> that provides dynamic ‘Status Text’ that is displayed wh=
 en
@@ -2503,7 +2504,7 @@ text when data is dragged over the element.<o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CDE6F2.059753D0
+------=_NextPart_01CDFC13.807BAF20
 Content-Location: file:///C:/4893D650/HowToSupportingDragDrop_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2564,7 +2565,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDE6F2.059753D0
+------=_NextPart_01CDFC13.807BAF20
 Content-Location: file:///C:/4893D650/HowToSupportingDragDrop_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2574,7 +2575,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDE6F2.059753D0
+------=_NextPart_01CDFC13.807BAF20
 Content-Location: file:///C:/4893D650/HowToSupportingDragDrop_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -2585,4 +2586,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"colorschememapping.xml"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDE6F2.059753D0--
+------=_NextPart_01CDFC13.807BAF20--

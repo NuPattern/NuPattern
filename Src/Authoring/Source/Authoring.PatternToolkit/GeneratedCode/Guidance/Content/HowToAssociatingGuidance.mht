@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDE6F1.EB28AA30"
+Content-Type: multipart/related; boundary="----=_NextPart_01CDFC13.74D05180"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -36,8 +36,8 @@ w\:* {behavior:url(#default#VML);}
   <o:LastAuthor>Jezz Santos</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2012-12-30T11:58:00Z</o:Created>
-  <o:LastSaved>2012-12-30T11:58:00Z</o:LastSaved>
+  <o:Created>2013-01-26T09:21:00Z</o:Created>
+  <o:LastSaved>2013-01-26T09:21:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>733</o:Words>
   <o:Characters>4182</o:Characters>
@@ -2146,7 +2146,7 @@ table.MsoTableGrid
 ></h4>
 
 <p class=3DMsoNormal>In the ‘<a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/WhatisthePatternModelDesigner.mht">Pattern
 Model Designer’</a>, select the element you want to associate guidance to.<=
 o:p></o:p></p>
@@ -2212,7 +2212,7 @@ margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
 normal'>Note:</b> A pattern toolkit, only provides one guidance workflow by
 default, see <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToAddingAdditionalGuidancetoYourPatternToolkit.mht">Adding
 Additional Guidance to Your Pattern</a>, for how to build additional Guidan=
 ce
@@ -2246,10 +2246,10 @@ element.<o:p></o:p></p>
 <h6>Additional Guidance<o:p></o:p></h6>
 
 <p class=3DMsoNormal>The ‘Feature Id’ for additional guidance workflows from
-separate feature extensions is found from the ‘Id’ attribute of the ‘Identi=
-fier’
-element in the source.extension.vsixmanifest file of the feature extension
-project. <o:p></o:p></p>
+separate feature extensions is found from the ‘Id’ attribute of the
+‘Identifier’ element in the source.extension.vsixmanifest file of the featu=
+re
+extension project. <o:p></o:p></p>
 
 <p class=3DMsoNormal>Copy this value to associate the additional guidance t=
 o this
@@ -2271,7 +2271,7 @@ src=3D"HowToAssociatingGuidance_files/image006.jpg" v:shapes=3D"Picture_x00=
 <p class=3DMsoNormal>When guidance is associated to an element in a pattern
 model, an instance of a Guidance Workflow is created, and displayed in the =
 <a
-href=3D"content://84031a32-b20f-479c-a620-beacd982ea13/GeneratedCode/Guidan=
+href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/GuidanceWorkflowExplorer.mht">‘Guidance
 Explorer’</a> tool window.<o:p></o:p></p>
 
@@ -2337,9 +2337,10 @@ f the
 guidance for each instance of the element to which it is associated, then y=
 ou
 can contextualize the name the guidance instance with the name of the eleme=
-nt instance,
-by setting the value of the ‘Instance Name’ property to an expression like:
-“Using this process for element {InstanceName}”.<o:p></o:p></p>
+nt
+instance, by setting the value of the ‘Instance Name’ property to an expres=
+sion
+like: “Using this process for element {InstanceName}”.<o:p></o:p></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
@@ -2389,7 +2390,7 @@ workflow is displayed when those elements are first created. <o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2450,7 +2451,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2460,7 +2461,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -2962,7 +2963,7 @@ AAiAAAiUlQAMhLLihDAQAAEQAAEQqA0C1scc5Y1K2EAABEAABEAABKYugdCrlqcuCswcBEAABEAA
 BEBAE5i2rv+uOuAAARAAARAAARAAAU1AbAOsQcDxAAIgAAIgAAIgECJQNzY25hUuar4p9yXUFAUg
 AAIgAAIgAAK1TMCMKvz/BXofEeaDSDgAAAAASUVORK5CYIJ=
 
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance_files/image002.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3580,7 +3581,7 @@ Gfv275e0/zJDuAjKyrfIFLgKKSAYQmlZGZ3AhFcoQXZ42FnppHEdsvtIMXYenGNP9HiR8FZXIT3k
 LssUuM4pIGIm6OeoYmSWUb9KqVYo72ay1jctJusg4hzSGNOxsuE6p5o8fJkC1ygFBLaHil6w5sVq
 m8vD/w9cLDaPTLYhLwAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance_files/image003.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -4314,7 +4315,7 @@ cCyQDoPCCA6KGWA6Y2y8rBH6puYRNUwm2aqxzu8kwzSGuIYpf8M9+OB927bvcFon1zBNfTua/fZF
 68JE/fiWLrEzJo9p06pZ0EiU04ac/fviG0s+Wbcxo6yslOOA1ww3xMEkHGjclKvSzFutenhNZhoR
 B/q4IQ5M6jyOg+XGHmTlAN9qJr3VEFvUILTPwP8DxL8E5ac0wOQAAAAASUVORK5CYIJ=
 
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance_files/image004.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -4542,7 +4543,7 @@ at5OAM8eYe9NF/drnFzMMnP3z1zn+dFFIBovLhXZlnkVmbcxViMnnn9T+dL9vusKPtM2EAC/OeAO
 mKKKAF/tC7BYi5mywwfnPP8AnFJ9tud6P9ol3R/cO85XjHH4ACiigCX+1r4QPF9pl2swY/Mc8Zxz
 6c9KjOoXZKk3M2Uxt+c8Y6UUUWGRSTPM+6V2dumSc0zNFFMQZooooA//2Q==
 
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance_files/image005.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -4860,7 +4861,7 @@ oPW7J8Ajpf1NkOG+YGRLsLgWLCWmRr2oZmDcCc8XPVfrtN/fHu7ewPHpgIft2uyseKcbgSeG+1c3
 tLH01mI1JJupXgs52520L5CAndI3s9eiyA2rR+qFsMfchGenuCvNaq4A/2p+aDvNn50ejFRB5xH4
 /7v8L0NVbykfAAAAAElFTkSuQmCC
 
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance_files/image006.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -4971,7 +4972,7 @@ zBRliAM45PegBaKKhiu7edcxTRuMFvlYHgHBP5gj8KAJqKZHNHMoaKRXVlDAqc5B6H6Gld1jQs7B
 VHUk4AoAdRTIpo503QyJIucZRgRn0p9ABRTRIhkZAwLqASueQD0/kaQyxqRl1G5to56n0+tAD6KK
 KACiiigAooooAKKKKACiiigD/9k=
 
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance_files/image007.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -5483,7 +5484,7 @@ Z+o76K9ggI5c52R4FYdo7XllSkP3AzrH+1dp+81oMbfrruFxt9NvXG99a1PmZHgxO8ydOhw75Xwz
 GouLIOBpAklJ7zw9W0wOBEBgyRF4hzNx2twsWXJzg8EgAAJLnIDQp0XYk1ri1GA+CICAqwTyzE9M
 f1nXkpDv3FVLMBgIgAAIGATMEd5/kKK4qGrC5tMAAAAASUVORK5CYIJ=
 
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance_files/image008.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -6036,7 +6037,7 @@ NyYe6oGbbwDcKIwtfPDSueS7au0SvlzMfUxfHOk3OUW9vf3YBCt6yTEqTbHkw/JUKcmNZYKO/jwu
 rgoE+ivQ1d4p5byDjiw0AjehpcBfuq8OHbqxs6ve43H+86pOkibxv7Gd52RyJgqXYSfl6Tv/P/KT
 h9qdrmzGAAAAAElFTkSuQmCC
 
-------=_NextPart_01CDE6F1.EB28AA30
+------=_NextPart_01CDFC13.74D05180
 Content-Location: file:///C:/187244C5/HowToAssociatingGuidance_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -6055,4 +6056,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image008.png"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDE6F1.EB28AA30--
+------=_NextPart_01CDFC13.74D05180--

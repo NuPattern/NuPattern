@@ -2,15 +2,24 @@
     x:Class="$rootnamespace$.$safeitemname$"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:p="http://schemas.microsoft.com/visualstudiopatterning/2010/xaml/"
+    xmlns:p="http://schemas.microsoft.com/nupattern/2012/xaml/"
     xmlns:l="clr-namespace:$rootnamespace$.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Height="400" Width="600"
     Title="$safeitemname$ Wizard">
+    <p:WizardWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </p:WizardWindow.Resources>
+
     <p:WizardWindow.Pages>
-        <!-- Include your wizard pages here -->
-        <l:CustomWizardPage1 />
-        <l:CustomWizardPage2 />
+        <!-- Add your wizard pages here -->
+        <l:MyWizardPage1 />
+        <l:MyWizardPage2 />
+        <l:MyWizardPage3 />
     </p:WizardWindow.Pages>
 </p:WizardWindow>

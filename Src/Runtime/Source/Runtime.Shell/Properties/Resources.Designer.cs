@@ -111,6 +111,60 @@ namespace NuPattern.Runtime.Shell.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attempting to resolve partially named assembly &apos;{0}&apos;..
+        /// </summary>
+        internal static string RuntimeShellPackage_OnAssemblyResolved_ResolvingAssembly {
+            get {
+                return ResourceManager.GetString("RuntimeShellPackage_OnAssemblyResolved_ResolvingAssembly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partially named assembly &apos;{0}&apos;, was not resolved to any Pattern Toolkit assembly loaded into the AppDomain..
+        /// </summary>
+        internal static string RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyFailed {
+            get {
+                return ResourceManager.GetString("RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partially named assembly &apos;{0}&apos;, was loaded into the current AppDomain..
+        /// </summary>
+        internal static string RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForLoadedAssembly {
+            get {
+                return ResourceManager.GetString("RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForLoadedAssembly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partially named assembly &apos;{0}&apos;, is installed by an enabled Pattern Toolkit..
+        /// </summary>
+        internal static string RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForToolkitAssembly {
+            get {
+                return ResourceManager.GetString("RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblyForToolkitAssembly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partially named assembly &apos;{0}&apos;, was resolved to Pattern Toolkit assembly &apos;{1}&apos;..
+        /// </summary>
+        internal static string RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblySucceeded {
+            get {
+                return ResourceManager.GetString("RuntimeShellPackage_OnAssemblyResolved_ResolvingAssemblySucceeded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unexpected error resolving partially named assembly, the error was: {0}.
+        /// </summary>
+        internal static string RuntimeShellPackage_OnAssemblyResolved_UnexpectedError {
+            get {
+                return ResourceManager.GetString("RuntimeShellPackage_OnAssemblyResolved_UnexpectedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pattern Toolkit References.
         /// </summary>
         internal static string ToolkitReferencesFolderName {

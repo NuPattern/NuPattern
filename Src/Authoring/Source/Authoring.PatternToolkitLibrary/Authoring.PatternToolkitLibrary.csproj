@@ -155,6 +155,9 @@
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
+    <None Include="9be0eaf7-8717-414f-97fe-58c0c97be587.patterndefinition.diagram">
+      <DependentUpon>PatternModel.patterndefinition</DependentUpon>
+    </None>
     <None Include="Assets\Templates\Items\Extensibility\ElementOrderingComparer\ElementOrderingComparer.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ElementOrderingComparer.gen.vstemplate</LastGenOutput>
@@ -228,9 +231,6 @@
       <Link>Assets\Templates\Projects\Extensibility\Library\VsTemplateIconPatternToolkitLibraryProject.ico</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="9be0eaf7-8717-414f-97fe-58c0c97be587.gen.patterndefinition.diagram">
-      <DependentUpon>PatternModel.gen.patterndefinition</DependentUpon>
-    </None>
     <None Include="Assets\Templates\Items\Extensibility\DataTypeConverter\DataTypeConverter.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DataTypeConverter.gen.vstemplate</LastGenOutput>
@@ -247,7 +247,7 @@
     </Content>
     <None Include="source.include.t4">
       <DependentUpon>source.extension.tt</DependentUpon>
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f7b588f3f-4927-42bf-847d-66bd00883529</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252f7b588f3f-4927-42bf-847d-66bd00883529</SourceModelReference>
       <ItemGuid>f9e7aa00-7024-4128-bad8-097738a18ad0</ItemGuid>
     </None>
     <ProjectTemplate Include="Assets\Templates\Projects\Extensibility\Library\Library.gen.vstemplate">
@@ -257,19 +257,11 @@
       <DependentUpon>Library.tt</DependentUpon>
       <ItemGuid>07d8d448-a0b0-49d5-8b2e-f51239a49d63</ItemGuid>
     </ProjectTemplate>
-    <EmbeddedResource Include="PatternModel.gen.patterndefinition">
-      <DependentUpon>PatternModel.tt</DependentUpon>
+    <EmbeddedResource Include="PatternModel.patterndefinition">
       <ItemGuid>c8131dba-0954-41b1-bf71-defcc7035456</ItemGuid>
       <SubType>Designer</SubType>
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </EmbeddedResource>
-    <None Include="PatternModel.tt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
-    </None>
     <Content Include="Assets\Guidance\ToolkitGuidance.doc">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

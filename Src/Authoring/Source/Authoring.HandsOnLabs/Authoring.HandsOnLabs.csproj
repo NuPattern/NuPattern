@@ -164,7 +164,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.cs">
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252f14fc43ef-9d28-4b36-905f-adc76a9c92f3</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252f14fc43ef-9d28-4b36-905f-adc76a9c92f3</SourceModelReference>
       <ItemGuid>0ddee1e0-beae-431c-a10b-5379b9aa183f</ItemGuid>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -447,7 +447,7 @@
     </None>
     <None Include="source.include.t4">
       <DependentUpon>source.extension.tt</DependentUpon>
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\VSPAT\sprint20\Src\Authoring\Authoring.slnbldr%252fa71545af-2d3b-4467-b23a-5b49138d4667</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252fa71545af-2d3b-4467-b23a-5b49138d4667</SourceModelReference>
       <ItemGuid>94470e9e-4cd7-447b-842b-5b18e708fd20</ItemGuid>
     </None>
   </ItemGroup>
