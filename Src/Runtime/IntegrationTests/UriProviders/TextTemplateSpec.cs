@@ -44,13 +44,13 @@ namespace NuPattern.Runtime.IntegrationTests
 
 			[TestMethod, TestCategory("Integration")]
 			[HostType("VS IDE")]
-			[DeploymentItem("Runtime.IntegrationTests.Content\\Projects\\Sample", "Runtime.IntegrationTests\\TextTemplateSpec\\WhenUnfolding_ThenTransformsText")]
-			[DeploymentItem("UriProviders\\Hello.t4", "Runtime.IntegrationTests\\TextTemplateSpec\\WhenUnfolding_ThenTransformsText")]
+			[DeploymentItem("Runtime.IntegrationTests.Content\\Sample", "Runtime.IntegrationTests\\TextTemplateSpec\\WhenUnfolding_ThenTransformsText")]
+            [DeploymentItem("Runtime.IntegrationTests.Content\\TextTemplate\\TestTextTemplate.t4", "Runtime.IntegrationTests\\TextTemplateSpec\\WhenUnfolding_ThenTransformsText")]
 			public void WhenUnfolding_ThenTransformsText()
 			{
 				var solution = Path.Combine(this.TestContext.DeploymentDirectory, "Runtime.IntegrationTests\\TextTemplateSpec\\WhenUnfolding_ThenTransformsText\\Sample.sln");
 				this.solution.Open(solution);
-				var file = Path.Combine(this.TestContext.DeploymentDirectory, "Runtime.IntegrationTests\\TextTemplateSpec\\WhenUnfolding_ThenTransformsText\\Hello.t4");
+				var file = Path.Combine(this.TestContext.DeploymentDirectory, "Runtime.IntegrationTests\\TextTemplateSpec\\WhenUnfolding_ThenTransformsText\\TestTextTemplate.t4");
 				var template = new TextTemplate(this.templating, this.modelBus, file);
 				var parent = this.solution.Find<ISolutionFolder>().First();
 

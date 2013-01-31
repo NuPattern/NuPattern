@@ -11,7 +11,7 @@ namespace NuPattern.Runtime.IntegrationTests
 {
 	[TestClass]
 	[CLSCompliant(false)]
-	[DeploymentItem(@"Runtime.IntegrationTests.Content\Projects\TestProviders", "Projects")]
+    [DeploymentItem(@"Runtime.IntegrationTests.Content\SolutionUriProvider", @"Runtime.IntegrationTests.Content\SolutionUriProvider")]
 	public class SolutionUriProviderSpec : IntegrationTest
 	{
 		private static readonly IAssertion Assert = new Assertion();
@@ -22,7 +22,7 @@ namespace NuPattern.Runtime.IntegrationTests
 		[TestInitialize]
 		public void Initialize()
 		{
-			VsIdeTestHostContext.Dte.Solution.Open(this.PathTo(@"Projects\TestProviders.sln"));
+            VsIdeTestHostContext.Dte.Solution.Open(this.PathTo(@"Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders.sln"));
 
 			this.solution = VsIdeTestHostContext.ServiceProvider.GetService<ISolution>();
 			this.provider = new SolutionUriProvider { Solution = this.solution };

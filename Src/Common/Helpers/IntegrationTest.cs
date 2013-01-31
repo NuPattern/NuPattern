@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -55,7 +56,7 @@ public class IntegrationTest
 	}
 
 	/// <summary>
-	/// Retruns a path relative to the test deployment directory.
+	/// Returns a path relative to the test deployment directory.
 	/// </summary>
 	/// <param name="deploymentRelativePath">A relative path that is resolved from the deployment directory.</param>
 	/// <returns>The path relative to the test deployment directory.</returns>
@@ -66,16 +67,24 @@ public class IntegrationTest
 
 	private static void RunXCopy(string sourceDir, string targetDir)
 	{
-		var startInfo = new ProcessStartInfo(
-			"xcopy",
-			"\"" + sourceDir + "\" " + "\"" + targetDir + "\" " + " /D /S /I /F /Y");
-		startInfo.RedirectStandardError = startInfo.RedirectStandardInput = startInfo.RedirectStandardOutput;
-		startInfo.CreateNoWindow = true;
-		startInfo.UseShellExecute = false;
-		startInfo.WorkingDirectory = sourceDir;
+        try
+        {
+            var startInfo = new ProcessStartInfo(
+                "xcopy",
+                "\"" + sourceDir + "\" " + "\"" + targetDir + "\" " + " /D /S /I /F /Y");
+            startInfo.RedirectStandardError = startInfo.RedirectStandardInput = startInfo.RedirectStandardOutput;
+            startInfo.CreateNoWindow = true;
+            startInfo.UseShellExecute = false;
+            startInfo.WorkingDirectory = sourceDir;
 
-		var process = Process.Start(startInfo);
-		process.WaitForExit();
+            var process = Process.Start(startInfo);
+            process.WaitForExit();
+        }
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException(string.Format(CultureInfo.InvariantCulture,
+                "Failed to xcopy integration test dependencies from '{0}' to '{1}'.", sourceDir, targetDir), ex);
+        }
 	}
 
 	private void CleanDeploymentDirectory()

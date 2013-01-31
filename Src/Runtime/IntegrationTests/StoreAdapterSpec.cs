@@ -12,7 +12,7 @@ namespace NuPattern.Runtime.IntegrationTests
 {
     [TestClass]
     [CLSCompliant(false)]
-    [DeploymentItem(@"Runtime.IntegrationTests.Content\\Projects\\Sample", "Runtime.IntegrationTests.Content\\StoreAdapterSpec")]
+    [DeploymentItem(@"Runtime.IntegrationTests.Content\\Sample", "Runtime.IntegrationTests.Content\\StoreAdapterSpec")]
     public class StoreAdapterSpec : IntegrationTest
     {
         internal static readonly IAssertion Assert = new Assertion();
