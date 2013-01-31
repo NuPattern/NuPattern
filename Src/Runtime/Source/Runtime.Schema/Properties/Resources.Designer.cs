@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Runtime.Schema.Properties
-{
-
-
+namespace NuPattern.Runtime.Schema.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -806,7 +806,7 @@ namespace NuPattern.Runtime.Schema.Properties
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Element &apos;{0}&apos;  has an invalid value for the &apos;Icon&apos; property. You must select an existing icon file from the solution..
+        ///   Looks up a localized string similar to Element &apos;{0}&apos;  has an invalid value for the &apos;Icon&apos; property. You must select an existing icon file from the solution, or an icon resource in a referenced assembly of the project..
         /// </summary>
         internal static string Validate_NamedElementIconDoesNotPointToAValidFile {
             get {

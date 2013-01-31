@@ -5,6 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using EnvDTE;
 using Microsoft.VisualStudio.Shell;
@@ -15,6 +16,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.HierarchyNodes;
 using NuPattern.Extensibility.Properties;
 using NuPattern.Runtime;
+using VSLangProj;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
 namespace NuPattern.Extensibility
@@ -730,6 +732,71 @@ namespace NuPattern.Extensibility
             }
         }
 
+        /// <summary>
+        /// Gets the nearest project to the currently selected item in the solution, or the first project in the solution.
+        /// </summary>
+        /// <remarks>
+        /// If a project is currently selected, then that project is returned. If a file is currently opened, then its owning project is returned.
+        /// Failing that the fall back is to return the first project in the solution (if any).
+        /// </remarks>
+        [CLSCompliant(false)]
+        public static IProject GetCurrentProjectScope(this ISolution solution)
+        {
+            Guard.NotNull(() => solution, solution);
+
+            var selection = ServiceProvider.GlobalProvider.GetService<SVsShellMonitorSelection, IVsMonitorSelectionFixed>();
+            if (selection != null)
+            {
+                IVsHierarchy hierarchy;
+                uint pitemid;
+                IVsMultiItemSelect ppMIS;
+                ISelectionContainer ppSC;
+
+                if (selection.GetCurrentSelection(out hierarchy, out pitemid, out ppMIS, out ppSC) == Microsoft.VisualStudio.VSConstants.S_OK)
+                {
+                    if (hierarchy != null)
+                    {
+                        var project = hierarchy.ToProject();
+                        if (project != null)
+                        {
+                            return solution.Find<IProject>(p => p.As<EnvDTE.Project>() == project).FirstOrDefault();
+                        }
+                    }
+                }
+            }
+
+            // Use first project in the solution
+            return solution.Find<IProject>().FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Gets the assembly references of the project
+        /// </summary>
+        [CLSCompliant(false)]
+        public static IEnumerable<IAssemblyReference> GetAssemblyReferences(this IProject project)
+        {
+            Guard.NotNull(() => project, project);
+
+            var references = new List<AssemblyReference>();
+
+            var dteProject = project.As<EnvDTE.Project>();
+            if (dteProject != null)
+            {
+                var vslangProject = dteProject.Object as VSProject;
+                if (vslangProject != null)
+                {
+                    vslangProject.References.Cast<VSLangProj.Reference>()
+                        .ForEach(r =>
+                            {
+                                if (!String.IsNullOrEmpty(r.Path))
+                                {
+                                    references.Add(new AssemblyReference(r.Name, r.Path));
+                                }
+                            });
+                }
+            }
+            return references;
+        }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1806:DoNotIgnoreMethodResults", MessageId = "Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchyWindow.ExpandItem(Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy,System.UInt32,Microsoft.VisualStudio.Shell.Interop.EXPANDFLAGS)"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1806:DoNotIgnoreMethodResults", MessageId = "Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show")]
         private static void Select(IEnumerable<IHierarchyNode> hierarchyNodes)
@@ -761,6 +828,25 @@ namespace NuPattern.Extensibility
 
                 frame.Show();
             }
+        }
+
+        [ComImport, InterfaceType(ComInterfaceType.InterfaceIsIUnknown), Guid("55AB9450-F9C7-4305-94E8-BEF12065338D")]
+        private interface IVsMonitorSelectionFixed
+        {
+            [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+            int GetCurrentSelection([MarshalAs(UnmanagedType.Interface)] out IVsHierarchy ppHier, [ComAliasName("Microsoft.VisualStudio.Shell.Interop.VSITEMID")] out uint pitemid, [MarshalAs(UnmanagedType.Interface)] out IVsMultiItemSelect ppMIS, [MarshalAs(UnmanagedType.Interface)] out ISelectionContainer ppSC);
+            [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+            int AdviseSelectionEvents([In, MarshalAs(UnmanagedType.Interface)] IVsSelectionEvents pSink, [ComAliasName("Microsoft.VisualStudio.Shell.Interop.VSCOOKIE")] out uint pdwCookie);
+            [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+            int UnadviseSelectionEvents([In, ComAliasName("Microsoft.VisualStudio.Shell.Interop.VSCOOKIE")] uint dwCookie);
+            [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+            int GetCurrentElementValue([In, ComAliasName("Microsoft.VisualStudio.Shell.Interop.VSSELELEMID")] uint elementid, [MarshalAs(UnmanagedType.Struct)] out object pvarValue);
+            [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+            int GetCmdUIContextCookie([In, ComAliasName("Microsoft.VisualStudio.OLE.Interop.REFGUID")] ref Guid rguidCmdUI, [ComAliasName("Microsoft.VisualStudio.Shell.Interop.VSCOOKIE")] out uint pdwCmdUICookie);
+            [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+            int IsCmdUIContextActive([In, ComAliasName("Microsoft.VisualStudio.Shell.Interop.VSCOOKIE")] uint dwCmdUICookie, [ComAliasName("Microsoft.VisualStudio.OLE.Interop.BOOL")] out int pfActive);
+            [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+            int SetCmdUIContext([In, ComAliasName("Microsoft.VisualStudio.Shell.Interop.VSCOOKIE")] uint dwCmdUICookie, [In, ComAliasName("Microsoft.VisualStudio.OLE.Interop.BOOL")] int fActive);
         }
     }
 }

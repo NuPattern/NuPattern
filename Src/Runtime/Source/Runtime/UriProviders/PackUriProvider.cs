@@ -1,9 +1,10 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using System.IO;
+using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.Extensibility;
 
 namespace NuPattern.Runtime.UriProviders
 {
@@ -15,13 +16,16 @@ namespace NuPattern.Runtime.UriProviders
 	[CLSCompliant(false)]
 	public class PackUriProvider : IFxrUriReferenceProvider<ResourcePack>
 	{
+        private const string PackUriScheme = "pack";
+        private const string PackUriFormat = PackUriScheme + "://application:,,,/{0};component/{1}";
+
 		[Import]
 		internal ISolution Solution { get; set; }
 
 		static PackUriProvider()
 		{
-			if (!UriParser.IsKnownScheme("pack"))
-				UriParser.Register(new GenericUriParser(GenericUriParserOptions.GenericAuthority), "pack", -1);
+            if (!UriParser.IsKnownScheme(PackUriScheme))
+                UriParser.Register(new GenericUriParser(GenericUriParserOptions.GenericAuthority), PackUriScheme, -1);
 		}
 
 		/// <summary>
@@ -32,9 +36,9 @@ namespace NuPattern.Runtime.UriProviders
 		{
 			Guard.NotNull(() => instance, instance);
 
-			var project = instance.Item.GetContainingProject();
-			var uriFormat = "pack://application:,,,/{0};component/{1}";
-			return new Uri(string.Format(uriFormat, project.Data.AssemblyName, instance.Item.PhysicalPath.Substring(Path.GetDirectoryName(project.PhysicalPath).Length).Replace('\\', '/').TrimStart('/')), UriKind.RelativeOrAbsolute);
+            return new Uri(string.Format(CultureInfo.InvariantCulture, PackUriFormat,
+                instance.AssemblyName,
+                instance.ResourcePath), UriKind.RelativeOrAbsolute);
 		}
 
 		/// <summary>
@@ -45,7 +49,10 @@ namespace NuPattern.Runtime.UriProviders
 		{
 			Guard.NotNull(() => instance, instance);
 
-			instance.Item.Select();
+            if (instance.Type == ResourcePackType.ProjectItem)
+            {
+                instance.GetItem().Select();
+            }
 		}
 
 		/// <summary>
@@ -55,25 +62,47 @@ namespace NuPattern.Runtime.UriProviders
 		{
 			Guard.NotNull(() => uri, uri);
 
-			var packRegex = new Regex("pack://application:,,,/([^;]+);component/(.+)");
+            // Parse the URI 
+            var packRegexExpr = string.Format(CultureInfo.InvariantCulture, PackUriFormat, "([^;]+)", "(.+)");
+            var packRegex = new Regex(packRegexExpr);
 			var match = packRegex.Match(uri.AbsoluteUri);
 			if (match.Groups.Count != 3)
 			{
 				return null;
 			}
 
-			var project = GetIdFromAssemblyName(match.Groups[1].Value);
+            var assemblyName = match.Groups[1].Value;
+            var resourcePath = match.Groups[2].Value;
 
-			if (project == null)
-			{
-				return null;
-			}
+            // First, search the solution for the assembly and resource
+			var project = GetProjectFromSolutionByAssemblyName(assemblyName);
+            if (project != null)
+            {
+                var items = project.Find(resourcePath.Replace('/', '\\'));
+                if (items.Any())
+                {
+                    return new ResourcePack(items.FirstOrDefault().As<IItem>());
+                }
+            }
+            else
+            {
+                // If project is not found, then search the current project's assembly references for the resource
+                var currentProject = this.Solution.GetCurrentProjectScope();
+                if (currentProject != null)
+                {
+                    var assembly = currentProject.GetAssemblyReferences()
+                        .Where(ar => ar.AssemblyName.Equals(assemblyName, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+                    if (assembly != null)
+                    {
+                        var resource = assembly.Resources.Where(res => res.Name.Equals(resourcePath, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+                        if (resource != null)
+                        {
+                            return new ResourcePack(resource);
+                        }
+                    }
+                }
+            }
 
-			var items = project.Find(match.Groups[2].Value.Replace('/', '\\'));
-			if (items != null && items.Count() > 0)
-			{
-				return new ResourcePack(items.FirstOrDefault().As<IItem>());
-			}
 			return null;
 		}
 
@@ -85,13 +114,13 @@ namespace NuPattern.Runtime.UriProviders
 		{
 			get
 			{
-				return "pack";
+                return PackUriScheme;
 			}
 		}
 
-		private IProject GetIdFromAssemblyName(string capture)
+		private IProject GetProjectFromSolutionByAssemblyName(string capture)
 		{
-			return Solution.Items.OfType<IProject>().FirstOrDefault(p => p.Data.AssemblyName == capture);
+            return this.Solution.Find<IProject>(p => p.Data.AssemblyName == capture).FirstOrDefault();
 		}
 
 	}

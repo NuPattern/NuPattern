@@ -22,11 +22,11 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensionManager">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
@@ -52,6 +52,8 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="AssemblyReference.cs" />
+    <Compile Include="AssemblyResource.cs" />
     <Compile Include="Bindings\IBindingCompositionService.cs" />
     <Compile Include="Constants.gen.cs">
       <DependentUpon>Constants.tt</DependentUpon>
@@ -70,12 +72,15 @@
     <Compile Include="Extensions\TraceSourceExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="FirstPropertyValueProductElementComparer.cs" />
+    <Compile Include="IAssemblyReference.cs" />
+    <Compile Include="IAssemblyResource.cs" />
     <Compile Include="Model\Schema\IContainingLinkSchema.cs" />
     <Compile Include="Model\Schema\IPatternInfo.cs" />
     <Compile Include="Model\Schema\IPatternModelInfo.cs" />
     <Compile Include="Model\Schema\IPatternModelSchema.cs" />
     <Compile Include="ProductElementComparer.cs" />
     <Compile Include="ProductElementInstanceNameComparer.cs" />
+    <Compile Include="ResourcePack.cs" />
     <Compile Include="ToolkitInterfaceLayer\IToolkitInterfaceService.cs" />
     <Compile Include="IToolkitRepository.cs" />
     <Compile Include="IFluentInterface.cs" />
@@ -150,7 +155,6 @@
     <Compile Include="ICommandStatus.cs" />
     <Compile Include="ISupportTransaction.cs" />
     <Compile Include="ITransaction.cs" />
-    <Compile Include="ResourcePack.cs" />
     <Compile Include="PropertyUsages.cs" />
     <Compile Include="ReferenceKindProvider.cs" />
     <Compile Include="ReferenceKindProviderAttribute.cs" />
