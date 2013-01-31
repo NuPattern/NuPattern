@@ -72,7 +72,8 @@ namespace NuPattern.Library.Commands
                         Resources.Validate_GenerateModelingCodeCommandItemTypeShouldBeSetToContentCode, settingsElement as ModelElement);
                     }
 
-                    if (!(string.Equals(item.Data.IncludeInVSIX, Boolean.TrueString.ToUpperInvariant(), StringComparison.OrdinalIgnoreCase)))
+                    if (!(string.Equals(item.Data.IncludeInVSIX, Boolean.TrueString.ToUpperInvariant(), StringComparison.OrdinalIgnoreCase))
+                        && (String.IsNullOrEmpty(item.Data.IncludeInVSIXAs)))
                     {
                         context.LogError(
                         string.Format(

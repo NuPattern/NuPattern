@@ -4952,7 +4952,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; has either no value or an invalid value for the &apos;Text Template&apos; property. You must select an existing *.t4 or *.tt for the &apos;Text Template&apos; property in the &apos;Settings&apos;..
+        ///   Looks up a localized string similar to &apos;{0}&apos; has either no value or an invalid value for the &apos;Text Template&apos; property. You must select an existing *.t4 or *.tt file as the &apos;Text Template&apos; property in the &apos;Settings&apos;..
         /// </summary>
         internal static string Validate_GenerateModelingCodeAuthoringUriIsInvalid {
             get {
@@ -4970,7 +4970,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The file associated to the command &apos;{0}&apos; should have its  &apos;Include in VSIX&apos; property set to &apos;True&apos;.
+        ///   Looks up a localized string similar to The text template file associated to the command &apos;{0}&apos; should either have its  &apos;Include in VSIX&apos; property set to &apos;True&apos;, or should define a value for the &apos;IncludeInVSIXAs&apos; property in the project file..
         /// </summary>
         internal static string Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrue {
             get {
@@ -4988,7 +4988,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The file associated to the command &apos;{0}&apos; should have its Item Type set to &apos;Content&apos;.
+        ///   Looks up a localized string similar to The text template file associated to the command &apos;{0}&apos; should have its Item Type set to &apos;Content&apos;.
         /// </summary>
         internal static string Validate_GenerateModelingCodeCommandItemTypeShouldBeSetToContent {
             get {

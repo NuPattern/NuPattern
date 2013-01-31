@@ -151,6 +151,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>source.extension.tt</DependentUpon>
       <IncludeInVSIXAs>source.extension.t4</IncludeInVSIXAs>
+      <ItemGuid>a71d52a0-214a-471a-968e-6a12ec5d35bc</ItemGuid>
     </Content>
     <None Include="3e44e242-5b47-4338-827f-ca394a899c57.patterndefinition.diagram">
       <DependentUpon>PatternModel.patterndefinition</DependentUpon>
