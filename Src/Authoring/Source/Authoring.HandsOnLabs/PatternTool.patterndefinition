@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="9060cbd8-62e7-4e45-a8b6-795a32676067" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
   <dm0:extensions>
-    <templateSettings Id="aed4ee56-bb0d-4fcd-95a8-8927bf6df103" templateUri="template://projectgroup/CSharp/c3c73531a152-PatternToolkitHOLs" unfoldOnElementCreated="false" commandId="00000000-0000-0000-0000-000000000000" wizardId="00000000-0000-0000-0000-000000000000" templateAuthoringUri="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/aeda2b85-f038-4872-a74a-7ce7f3bb2936">
+    <templateSettings Id="aed4ee56-bb0d-4fcd-95a8-8927bf6df103" templateUri="template://projectgroup/CSharp/c3c73531a152-PatternToolkitHOLs" unfoldOnElementCreated="false" commandId="00000000-0000-0000-0000-000000000000" wizardId="00000000-0000-0000-0000-000000000000" templateAuthoringUri="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/27fdaf3f-8ec0-409e-9664-7ba94c121dff">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="502647ac-ce4f-49ec-aff8-276bc9ac5b04" />
       </extendedElement>
@@ -70,7 +70,7 @@
       </extendedElement>
     </validationExtension>
   </dm0:extensions>
-  <pattern Id="71309920-c4ac-4283-b6bf-3cec975eca86" name="PatternToolkitHandsOnLabs" displayName="Pattern Toolkit Hands-On Labs" description="Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project." codeIdentifier="PatternToolkitHandsOnLabs" isCustomizable="True" icon="pack://application:,,,/NuPattern.HandsOnLabs;component/Resources/PatternNodeHOL.png" currentDiagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713" patternLink="patternmanager://92131a71-f4c2-42ef-9a66-efe53b0ca4d8">
+  <pattern Id="71309920-c4ac-4283-b6bf-3cec975eca86" name="PatternToolkitHandsOnLabs" displayName="Pattern Toolkit Hands-On Labs" description="Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project." codeIdentifier="PatternToolkitHandsOnLabs" isCustomizable="True" icon="pack://application:,,,/NuPattern.Authoring.HandsOnLabs;component/Resources/PatternNodeHOL.png" currentDiagramId="052a23d2-bdcd-42a7-97fd-b2aa70b27713" patternLink="patternmanager://92131a71-f4c2-42ef-9a66-efe53b0ca4d8">
     <customizationPolicy name="CustomizationPolicySchema1">
       <settings>
         <setting propertyId="DisplayName" />

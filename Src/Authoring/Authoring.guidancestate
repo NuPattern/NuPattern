@@ -1,162 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfKeyValueOfstringstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
   <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a Product?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a Factory?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Factory Development and Product Development.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.New vs. Customize.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Using the Tools.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are the Elements of Factory Design?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Define Variability Requirements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Define Production Tooling.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Overview: What Goes Into a Factory?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a Pattern Model?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a View?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Work with a Pattern Model.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Define a View.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Overview: What is Automation?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a Command?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a Launch Point?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a Wizard?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Create a Command.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Create and Use Value Providers.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Create Custom Events.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Create a Condition.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Configure a Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Configure a Wizard.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Use Project Templates.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Use Parameters in Project Templates.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Extension Points and Extending Products?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Define an Extension Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Create an Extending Product.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is Guidance?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Author Guidance with Feature Builder.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Add Guidance Guidance Your Factory.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How Does Code Generation Fit Into Factories?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Configure Code Generators.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Why Customize Factories?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Customize an Existing Factory.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How To: Allow Customization of Your Factory.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Publishing the Factory.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Extending the Authoring Experience.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Extending the Using Experience.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.First Time Users.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
@@ -165,11 +9,11 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Pattern Toolkits?.StateOverride</Key>
+    <Key>Creating Pattern Toolkits.What is NuPattern?.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Why Would I Want To Use a Pattern Toolkit?.StateOverride</Key>
+    <Key>Creating Pattern Toolkits.Why Would I Want to Use a Pattern Toolkit?.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -225,11 +69,15 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Adding New Solution Elements.StateOverride</Key>
+    <Key>Creating Pattern Toolkits.Using Pattern Toolkits.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Viewing &amp; Configuring Solution Elements .StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Running Automation.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -242,6 +90,10 @@
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Pre-Requisites for Authoring.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Installing NuPattern.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -281,11 +133,23 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Toolkits?.StateOverride</Key>
+    <Key>Creating Pattern Toolkits.What are Pattern Toolkits?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What is Customization?.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Solution Builder.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.(Placeholder) Solution Builder.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join7.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -297,11 +161,7 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is the Pattern State?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join7.StateOverride</Key>
+    <Key>Creating Pattern Toolkits.Join8.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -309,15 +169,7 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is Pattern Modeling?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is Pattern Modeling?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join8.StateOverride</Key>
+    <Key>Creating Pattern Toolkits.What is a Pattern Model?.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -325,1779 +177,7 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is Commonality &amp; Variability?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join9.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.What are Variability Views?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Variability Views?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join10.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Elements &amp; Collections?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Elements &amp; Collections?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join11.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Variable Properties?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Variable Properties?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join12.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is the Pattern Model Designer?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join13.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Assets.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Assets?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Assets?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join14.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Solution Implementation Assets?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Solution Implementation Assets?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join15.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Automation Assets?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Automation Assets?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join16.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are VS Templates?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Text Templates?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join17.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Guidance.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is Guidance?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join18.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a Guidance Document?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is a Guidance Document?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join19.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a Guidance Workflow?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is the Guidance Workflow Explorer?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is the Guidance Workflow Explorer?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join20.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is the Guidance Browser?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is the Guidance Browser?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join21.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join22.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Automation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is Automation?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Launch Points?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Launch Points?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join23.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Events?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Events?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join24.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Conditions?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Conditions?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join25.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Wizards?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Wizards?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join26.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Commands?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Commands?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join27.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Value Providers?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Value Providers?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join28.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join29.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Publishing.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is Publishing Information?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is Publishing Information?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join30.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are the Documentation and Requirements?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are the Documentation and Requirements?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join31.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join32.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Deployment.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is Deployment?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is Deployment?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join33.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How is a Toolkit Deployed?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) How is a Toolkit Deployed?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join34.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a Visual Studio Extension?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is a Visual Studio Extension?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join35.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join36.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join37.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join38.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Guides.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Using.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Install Toolkits.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Work in a Teams.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Work in a Teams.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join39.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create a New Pattern (Solution Element).StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create a New Pattern (Solution Element).StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join40.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Control the display of Solution Elements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Control the display of Solution Elements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join41.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Work with Multiple Views.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Work with Multiple Views.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join42.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Add New Solution Elements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Add New Solution Elements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join43.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Find the Guidance.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Find the Guidance.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join44.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Run the Automation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Run the Automation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join45.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Compose Multiple Solution Elements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Compose Multiple Solution Elements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join46.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Navigate between Elements and Artifacts.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Navigate between Elements and Artifacts.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join47.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Validate the elements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Validate the elements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join48.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Troubleshoot Problems.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join49.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Authoring.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a Toolkit Project?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is a Toolkit Project?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join50.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create a new Toolkit Project.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create a new Toolkit Project.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join51.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Debug or Run a Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Debug or Run a Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join52.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Design.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create a Tooling Workflow.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create a Tooling Workflow.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join53.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join54.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Modeling.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is a Pattern Model?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join55.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create a Pattern Model.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create a Pattern Model.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join56.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Define Model Variability.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Define Model Variability.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join57.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Control Instancing.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Control Instancing.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join58.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Control Display of Elements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Control Display of Elements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join59.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Display a Custom Type.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Display a Custom Type.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join60.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Display an Enumeration.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Display an Enumeration.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join61.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Apply Validation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Apply Validation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join62.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Control Customization.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Control Customization.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join63.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Design for Versioning.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Design for Versioning.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join64.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Design for Reuse.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Design for Reuse.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join65.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join66.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Assets.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What are Assets.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join67.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What Are VS Templates?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What Are VS Templates?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join68.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create a VS Template.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create a VS Template.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join69.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Export a VS Template.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Export a VS Template.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join70.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Import a VS Template.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Import a VS Template.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join71.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Unfold VS Templates From Your Pattern.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Unfold VS Templates From Your Pattern.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join72.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What Are Text Templates?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What Are Text Templates?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join73.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create Text Templates.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create Text Templates.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join74.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Generate Code From Your Pattern.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Generate Code From Your Pattern.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join75.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join76.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What Is Guidance?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What Is Guidance?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join77.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create a Guidance Workflow.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create a Guidance Workflow.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join78.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join79.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is Automation?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join80.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join81.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join82.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join83.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join84.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join85.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join86.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Add Automation To Your Pattern.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Add Automation To Your Pattern.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join87.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Show a Wizard.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Show a Wizard.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join88.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Run a Command.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Run a Command.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join89.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Configure Automation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Configure Automation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join90.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Control When Commands Are Executed..StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Control When Commands Are Executed..StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join91.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Run a Sequence of Commands.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Run a Sequence of Commands.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join92.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Common Commands - Unfold Templates.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Common Commands - Unfold Templates.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join93.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Common Commands - Generate Code.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Common Commands - Generate Code.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join94.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Common Commands - Associate Guidance.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Common Commands - Associate Guidance.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join95.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Common Commands - Artifact Navigation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Common Commands - Artifact Navigation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join96.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create Your Own Event.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create Your Own Event.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join97.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create Your Own Commands.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create Your Own Commands.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join98.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Add Validation to Your Own Commands.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create Your Own Conditions.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create Your Own Conditions.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join99.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create Your Own Value Providers.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create Your Own Value Providers.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join100.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create Your Own Wizards.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create Your Own Wizards.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join101.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create Tests for Automation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create Tests for Automation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join102.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join103.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Deployment &amp; Releasing.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join104.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Where can I Publish my Toolkit?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Where can I Publish my Toolkit?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join105.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How Can I Package my Toolkit?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) How Can I Package my Toolkit?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join106.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Update Publishing Information.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Update Publishing Information.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join107.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Version a Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Version a Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join108.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Provide Documentation &amp; Requirements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Provide Documentation &amp; Requirements.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join109.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Install a Toolkit For Customization.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create an MSI for a Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create an MSI for a Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join110.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Package Multiple Toolkits.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Package Multiple Toolkits.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join111.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join112.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join113.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Customization.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is a Customized Toolkit?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) What is a Customized Toolkit?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join114.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Create a Customized Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Create a Customized Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join115.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Customize the Pattern Model.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Customize the Pattern Model.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join116.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join117.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Assets .StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Customize the Assets.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Customize the Assets.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join118.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join119.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Customize the Guidance.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Customize the Guidance.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join120.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join121.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Customize the Automation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Customize the Automation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join122.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join123.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join124.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join125.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.How It Works: .StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowItWorks: Multiple Views One Designer.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowItWorks: Multiple Views One Designer.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join126.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowItWorks: The Wizard Framework.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowItWorks: The Wizard Framework.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join127.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowItWorks: T4 Code Generation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowItWorks: T4 Code Generation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join128.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowItWorks: The Template Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowItWorks: The Template Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join129.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowItWorks: Automation Extensions.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowItWorks: Automation Extensions.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join130.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowItWorks: Customization Settings.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowItWorks: Customization Settings.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join131.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join132.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Using .StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowItWorks: Solution Builder Window Management.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowItWorks: Solution Builder Window Management.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join133.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowItWorks: Pattern State File Management.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowItWorks: Pattern State File Management.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join134.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowItWorks: Loading Pattern Toolkit Schema.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowItWorks: Loading Pattern Toolkit Schema.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join135.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join136.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowItWorks: Cloning a Pattern Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowItWorks: Cloning a Pattern Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join137.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join138.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join139.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.More Information.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Feedback.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Reference.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Design.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join140.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Create a Pattern Model.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Create a Pattern Model.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join141.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Create an Element.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Create an Element.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join142.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Create a Collection.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Create a Collection.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join143.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Create a Variable Property.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Create a Variable Property.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join144.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join145.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Assets.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join146.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Guidance.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join147.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Create a Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Create a Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join148.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Create Automation .StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Create Automation .StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join149.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join150.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join151.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Using.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join152.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Customization.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join153.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Environment.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Visual Studio Experimental Instance.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Visual Studio Experimental Instance.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join154.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Solution Builder.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join155.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Add New Solution Element Dialog.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Add New Solution Element Dialog.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join156.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.New Solution Element Dialog.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) New Solution Element Dialog.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join157.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Pattern Model Designer.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Pattern Model Designer.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join158.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Solution Explorer.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Solution Explorer.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join159.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Properties Window.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Properties Window.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join160.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Add New Project/Item Dialog.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Add New Project/Item Dialog.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join161.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Extension Manager.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Extension Manager.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join162.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join163.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join164.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Why Customize?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What are Variability Elements &amp; Collections?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Walkthroughs.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Creating a Simple Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Creating a Simple Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Customizing a Simple Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Customizing a Simple Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Naming in a Toolkit Project.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Display Aspects.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Display Aspects.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Add Automation to your Pattern.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) HowTo: Add Automation to your Pattern.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Apply Tracing to your Automation Classes.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Command Commands - Template Substitution.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.HowTo: Common Commands – Support Drag &amp; Drop.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Target Path Syntax.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Linked Items.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Template Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Template Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Event Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Event Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Menu Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Menu Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Drag Drop Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Drag Drop Launch Point.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Configure Tracing for Troubleshooting.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.(Placeholder) Configure Tracing for Troubleshooting.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Join165.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is the Pattern Automation Toolkit?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Why Would I Want to Use a Pattern Toolkit?.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Using Pattern Toolkits.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Running Automation.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Installing the Pattern Automation Toolkit.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.What is Customization?.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2109,6 +189,10 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What is the Pattern Model Designer?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.What is Cardinality?.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
@@ -2117,11 +201,99 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join9.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Assets.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What are Assets?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What are Solution Implementation Assets?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What are Automation Assets?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What are VS Templates?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What are Text Templates?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join10.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Guidance.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What is Guidance?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What is a Guidance Workflow?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What is a Guidance Document?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.What is the Guidance Explorer?.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What is the Guidance Browser?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join11.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Automation.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What is Automation?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.What are Automation Extensions?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What are Launch Points?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What are Events?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What are Commands?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What are Wizards?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What are Conditions?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What are Value Providers?.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2133,11 +305,39 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join12.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Publishing.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.What is Toolkit Info?.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join13.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Deployment.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.How is a Pattern Toolkit Deployed?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join14.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join15.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join16.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2149,7 +349,19 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join17.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.How To: Guides.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Using .StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Authoring.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2181,6 +393,10 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join18.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.How To: Toolkit Design Guidelines.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
@@ -2201,6 +417,10 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join19.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.How To: Run, Debug, Test a Toolkit.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
@@ -2209,7 +429,19 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Design.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.How To: Create a Production Tooling Workflow.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join20.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Modeling.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2293,6 +525,10 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join21.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Understanding: What are Assets?.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
@@ -2349,6 +585,10 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join22.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Understanding: What is Guidance?.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
@@ -2362,6 +602,10 @@
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.How To: Adding Additional Guidance to Your Pattern Toolkit.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join23.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2529,6 +773,10 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join24.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Building.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
@@ -2542,6 +790,14 @@
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.How To: Building a Toolkit in Team Build.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join25.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Deployment &amp; Releasing.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2573,6 +829,22 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join26.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join27.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Customization.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.What is a Customized Toolkit?.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.How To: Creating a Customized Toolkit.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
@@ -2581,7 +853,19 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join28.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Assets .StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.How To: Customizing the Assets.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join29.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2589,7 +873,15 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join30.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.How To: Customizing the Automation.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join31.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2597,7 +889,19 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Troubleshooting Toolkits.StateOverride</Key>
+    <Key>Creating Pattern Toolkits.Join32.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join33.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join34.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Reference.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2629,6 +933,10 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join35.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Adding a VS Template.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
@@ -2637,11 +945,19 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join36.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Editing Guidance.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Building Guidance.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join37.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2713,7 +1029,15 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Target Path Syntax.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Expression Syntax.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join38.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2741,11 +1065,51 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join39.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join40.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Troubleshooting Toolkits.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Environment.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Visual Studio Experimental Instance.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Add New Solution Element Dialog.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Pattern Model Designer.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Guidance Workflow Explorer.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Solution Explorer.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Properties Window.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Add/New Project/Item Dialog.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Extension Manager.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2757,15 +1121,19 @@
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Feature Builder Power Tool.StateOverride</Key>
+    <Key>Creating Pattern Toolkits.Join41.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join42.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.More Information.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Known Issues.StateOverride</Key>
-    <Value>False</Value>
-  </KeyValueOfstringstring>
-  <KeyValueOfstringstring>
-    <Key>Creating Pattern Toolkits.Error when opening a pattern toolkit solution file.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
@@ -2782,6 +1150,14 @@
   </KeyValueOfstringstring>
   <KeyValueOfstringstring>
     <Key>Creating Pattern Toolkits.Error, building guidance with 64bit versions of Microsoft Word..StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Join43.StateOverride</Key>
+    <Value>False</Value>
+  </KeyValueOfstringstring>
+  <KeyValueOfstringstring>
+    <Key>Creating Pattern Toolkits.Feedback.StateOverride</Key>
     <Value>False</Value>
   </KeyValueOfstringstring>
 </ArrayOfKeyValueOfstringstring>

@@ -153,7 +153,6 @@
     </None>
     <None Include="Assets\Templates\Projects\Extensibility\HolProjectTemplate\HolProjectTemplate.tt">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/HandsOnLabs/Element/C:\Projects\Platu\Dev\Team\Quickstarts\HandsOnLabs\HandsOnLabs.patternstate%252f47f070ae-29fc-4650-8eed-06a7a22f8af6</SourceModelReference>
-      <ItemGuid>aeda2b85-f038-4872-a74a-7ce7f3bb2936</ItemGuid>
       <SubType>Designer</SubType>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>HolProjectTemplate.gen.vstemplate</LastGenOutput>
