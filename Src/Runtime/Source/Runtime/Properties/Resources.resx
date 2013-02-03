@@ -265,7 +265,7 @@
     <value>Unfolding template '{0}' onto '{1}'.</value>
   </data>
   <data name="TextTemplateUriProvider_TraceInvalidExtensionRelative" xml:space="preserve">
-    <value>Uri '{0}' does not contain a valid extension-relative path. It must be of the form: t4://extension/{extension-identifier}/{relative-path-to-t4-file}.</value>
+    <value>Uri '{0}' does not contain a valid extension-relative path. It must be of the form: t4://extension/[extension-identifier]/[relative-path-to-t4-file].</value>
   </data>
   <data name="CustomToolRunnerTemplateWizard_FailedToRunCustomTools" xml:space="preserve">
     <value>Failed to run associated Custom Tool on project items.</value>

@@ -1178,13 +1178,13 @@ Please add a new or existing image file to the project and try again.</value>
     <value>Solution Name</value>
   </data>
   <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrue" xml:space="preserve">
-    <value>The text template file associated to the command '{0}' should either have its  'Include in VSIX' property set to 'True', or should define a value for the 'IncludeInVSIXAs' property in the project file.</value>
+    <value>The text template file associated to the command '{0}' should have its  'Include in VSIX' property set to 'True'. You can re-select the text template file in the 'Template' property in the 'Settings' to automatically correct this.</value>
   </data>
   <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrueCode" xml:space="preserve">
     <value>345</value>
   </data>
   <data name="Validate_GenerateModelingCodeCommandItemTypeShouldBeSetToContent" xml:space="preserve">
-    <value>The text template file associated to the command '{0}' should have its Item Type set to 'Content'</value>
+    <value>The text template file associated to the command '{0}' should have its 'Build Action' set to 'Content'</value>
   </data>
   <data name="Validate_GenerateModelingCodeCommandItemTypeShouldBeSetToContentCode" xml:space="preserve">
     <value>346</value>
@@ -1736,7 +1736,7 @@ Please add a new or existing image file to the project and try again.</value>
     <value>Executing collapse of all items in the solution, including all projects '{0}'</value>
   </data>
   <data name="Validate_GenerateModelingCodeAuthoringUriIsInvalid" xml:space="preserve">
-    <value>'{0}' has either no value or an invalid value for the 'Text Template' property. You must select an existing *.t4 or *.tt file as the 'Text Template' property in the 'Settings'.</value>
+    <value>The 'Text Template' property of command '{0}' is not defined, or has an invalid value. You must select an existing *.t4 or *.tt file for the 'Text Template' property in the 'Settings'.</value>
   </data>
   <data name="Validate_GenerateModelingCodeAuthoringUriIsInvalidCode" xml:space="preserve">
     <value>347</value>
@@ -2042,5 +2042,17 @@ Error was: {2}</value>
   </data>
   <data name="PreserveOrderComparer_DisplayName" xml:space="preserve">
     <value>Preserves the Existing Order of Product Elements</value>
+  </data>
+  <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFile" xml:space="preserve">
+    <value>The text template file associated to the command '{0}' has been configured in its project with a 'IncludeInVSIXAs' value that does not match. You can re-select the text template file in the 'Template' property in the 'Settings' to automatically correct this.</value>
+  </data>
+  <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFileCode" xml:space="preserve">
+    <value>351</value>
+  </data>
+  <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicate" xml:space="preserve">
+    <value>The text template file associated to the command '{0}' has both its  'Include in VSIX' property set to 'True', and it defines a value for the 'IncludeInVSIXAs' property in the project file. You can re-select the text template file in the 'Template' property in the 'Settings' to automatically correct this.</value>
+  </data>
+  <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicateCode" xml:space="preserve">
+    <value>352</value>
   </data>
 </root>

@@ -712,7 +712,7 @@
         <propertySettings Id="2b65efb1-f568-455f-ba2a-ba5f8e158025" value="False" name="SyncName" />
         <propertySettings Id="eb004004-3f68-4c6b-b494-68d89e850cec" value="source.extension.tt" name="TargetFileName" />
         <propertySettings Id="99d70c98-3f40-4123-a75c-35741a94f9ad" name="TargetPath" />
-        <propertySettings Id="c4eb1e35-133c-4706-b740-ce8036b39e0b" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.extension.gen.t4" name="TemplateUri" />
+        <propertySettings Id="c4eb1e35-133c-4706-b740-ce8036b39e0b" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.extension.t4" name="TemplateUri" />
         <propertySettings Id="6041f199-728a-4416-9750-031d0fec66b6" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/a71d52a0-214a-471a-968e-6a12ec5d35bc" name="TemplateAuthoringUri" />
         <propertySettings Id="ee984d78-548c-4b0b-8829-b67216406854" name="Tag" />
         <propertySettings Id="9ab9c87e-139b-46ad-a2ed-497b6ba2ed18" name="TargetBuildAction" />
@@ -737,7 +737,7 @@
         <propertySettings Id="603da6ad-d0dc-407d-b70a-e80d45847766" value="False" name="SyncName" />
         <propertySettings Id="6a50e599-74ea-41cb-9d37-d792daa5d778" value="source.include.t4" name="TargetFileName" />
         <propertySettings Id="6f24c4cb-4567-4ab9-a3a8-a74d1b9cd61c" name="TargetPath" />
-        <propertySettings Id="1943c55e-ad1f-401d-a092-ee5a77111a2e" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.include.gen.t4" name="TemplateUri" />
+        <propertySettings Id="1943c55e-ad1f-401d-a092-ee5a77111a2e" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.include.t4" name="TemplateUri" />
         <propertySettings Id="b51a1f8b-c9d9-4273-9ff3-9d433e9c6115" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/d93786b4-73bd-4850-8a9b-dc71b0c85d79" name="TemplateAuthoringUri" />
         <propertySettings Id="66188dc1-d851-429f-9e29-0ad61023b648" name="Tag" />
         <propertySettings Id="b0c0934a-00f8-43c8-9923-f086a28eb3e9" name="TargetBuildAction" />

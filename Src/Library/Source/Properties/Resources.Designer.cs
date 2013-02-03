@@ -4952,7 +4952,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; has either no value or an invalid value for the &apos;Text Template&apos; property. You must select an existing *.t4 or *.tt file as the &apos;Text Template&apos; property in the &apos;Settings&apos;..
+        ///   Looks up a localized string similar to The &apos;Text Template&apos; property of command &apos;{0}&apos; is not defined, or has an invalid value. You must select an existing *.t4 or *.tt file for the &apos;Text Template&apos; property in the &apos;Settings&apos;..
         /// </summary>
         internal static string Validate_GenerateModelingCodeAuthoringUriIsInvalid {
             get {
@@ -4970,7 +4970,43 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The text template file associated to the command &apos;{0}&apos; should either have its  &apos;Include in VSIX&apos; property set to &apos;True&apos;, or should define a value for the &apos;IncludeInVSIXAs&apos; property in the project file..
+        ///   Looks up a localized string similar to The text template file associated to the command &apos;{0}&apos; has been configured in its project with a &apos;IncludeInVSIXAs&apos; value that does not match. You can re-select the text template file in the &apos;Template&apos; property in the &apos;Settings&apos; to automatically correct this..
+        /// </summary>
+        internal static string Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFile {
+            get {
+                return ResourceManager.GetString("Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 351.
+        /// </summary>
+        internal static string Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFileCode {
+            get {
+                return ResourceManager.GetString("Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFileCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text template file associated to the command &apos;{0}&apos; has both its  &apos;Include in VSIX&apos; property set to &apos;True&apos;, and it defines a value for the &apos;IncludeInVSIXAs&apos; property in the project file. You can re-select the text template file in the &apos;Template&apos; property in the &apos;Settings&apos; to automatically correct this..
+        /// </summary>
+        internal static string Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicate {
+            get {
+                return ResourceManager.GetString("Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 352.
+        /// </summary>
+        internal static string Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicateCode {
+            get {
+                return ResourceManager.GetString("Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicateCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text template file associated to the command &apos;{0}&apos; should have its  &apos;Include in VSIX&apos; property set to &apos;True&apos;. You can re-select the text template file in the &apos;Template&apos; property in the &apos;Settings&apos; to automatically correct this..
         /// </summary>
         internal static string Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrue {
             get {
@@ -4988,7 +5024,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The text template file associated to the command &apos;{0}&apos; should have its Item Type set to &apos;Content&apos;.
+        ///   Looks up a localized string similar to The text template file associated to the command &apos;{0}&apos; should have its &apos;Build Action&apos; set to &apos;Content&apos;.
         /// </summary>
         internal static string Validate_GenerateModelingCodeCommandItemTypeShouldBeSetToContent {
             get {

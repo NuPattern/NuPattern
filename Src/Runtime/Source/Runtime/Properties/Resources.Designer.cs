@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Runtime.Properties
-{
-
-
+namespace NuPattern.Runtime.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -976,7 +976,7 @@ namespace NuPattern.Runtime.Properties
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uri &apos;{0}&apos; does not contain a valid extension-relative path. It must be of the form: t4://extension/{extension-identifier}/{relative-path-to-t4-file}..
+        ///   Looks up a localized string similar to Uri &apos;{0}&apos; does not contain a valid extension-relative path. It must be of the form: t4://extension/[extension-identifier]/[relative-path-to-t4-file]..
         /// </summary>
         internal static string TextTemplateUriProvider_TraceInvalidExtensionRelative {
             get {
