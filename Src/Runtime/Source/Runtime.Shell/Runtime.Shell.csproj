@@ -515,7 +515,6 @@
   <PropertyGroup>
     <DeployVSTemplates>false</DeployVSTemplates>
     <TargetVsixContainerName>$(RuntimeShellVsixFileName)</TargetVsixContainerName>
-    <IncludeDocFilesInVSIXContainer>false</IncludeDocFilesInVSIXContainer>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.targets" />

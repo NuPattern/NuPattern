@@ -11,11 +11,6 @@
     <RootNamespace>NuPattern.Runtime.IntegrationTests.SampleVsix</RootNamespace>
     <AssemblyName>NuPattern.Runtime.IntegrationTests.SampleVsix</AssemblyName>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
-    <!--<IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
-    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
-    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
-    <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
-    <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>-->
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Runtime\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -23,6 +18,7 @@
     <BranchRoot>..\..\</BranchRoot>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
@@ -42,11 +38,11 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
@@ -63,7 +59,7 @@
     <ProjectReference Include="..\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
       <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
       <Name>Runtime.Interfaces</Name>
-      <Private>True</Private>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -72,7 +68,6 @@
     </CodeAnalysisDictionary>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
-  <Import Project="$(VsxTargetsPath)\Microsoft.VsSDK.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>
