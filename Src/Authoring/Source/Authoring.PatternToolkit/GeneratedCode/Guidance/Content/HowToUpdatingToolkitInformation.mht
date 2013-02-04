@@ -2160,7 +2160,7 @@ pattern toolkit.<o:p></o:p></p>
 ed
 when you build the toolkit project. However there may be times when you wan=
 t to
-manually enact the process.<o:p></o:p></p>
+manually force the process.<o:p></o:p></p>
 
 <h5>Update Information Manually<o:p></o:p></h5>
 
@@ -2203,7 +2203,7 @@ ure_x0020_19"><![endif]></span><o:p></o:p></p>
 
 <p class=3DMsoNormal>This menu transforms the information in the ‘Toolkit I=
 nfo’
-element into a temporary file in the toolkit project (source.include.t4) th=
+element into a temporary file in the toolkit project (source.extension.gen.ttinclude) th=
 at
 will be transformed into the source.extension.vsixmanifest file on the next
 build of the toolkit. <o:p></o:p></p>

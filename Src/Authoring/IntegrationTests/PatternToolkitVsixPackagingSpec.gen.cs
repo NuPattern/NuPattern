@@ -142,7 +142,7 @@ namespace NuPattern.Authoring.IntegrationTests
                     new[]
                         {
 							"source.extension.t4",
-							"source.include.t4",
+							"source.extension.include.t4",
 						}));
 			}
 

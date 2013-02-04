@@ -203,7 +203,7 @@
                 <property Id="2d602453-e8fa-4d52-a109-08e3ee9adb96" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" />
               </properties>
               <references>
-                <reference Id="8910b6f2-03ea-406d-a12e-28a790364a50" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/13058dda-d9fb-4b59-b5ca-bde04f01b2ae" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.include.t4&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
+                <reference Id="8910b6f2-03ea-406d-a12e-28a790364a50" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/13058dda-d9fb-4b59-b5ca-bde04f01b2ae" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.extension.gen.ttinclude&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
               </references>
             </element>
           </elements>
@@ -334,7 +334,7 @@
                 <property Id="9f600c5b-a2ce-4d78-9595-625bb9056365" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" />
               </properties>
               <references>
-                <reference Id="f7e8f96c-b957-43a5-b11a-2ab48e677cba" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/f9e7aa00-7024-4128-bad8-097738a18ad0" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.include.t4&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
+                <reference Id="f7e8f96c-b957-43a5-b11a-2ab48e677cba" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/f9e7aa00-7024-4128-bad8-097738a18ad0" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.extension.gen.ttinclude&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
               </references>
             </element>
           </elements>
@@ -473,7 +473,7 @@
                 <property Id="8dc25c80-6950-4bbe-988f-22e8c707f349" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" />
               </properties>
               <references>
-                <reference Id="a1f150ea-43b6-4079-b1f2-bb28f007d3dc" value="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/94470e9e-4cd7-447b-842b-5b18e708fd20" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.include.t4&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
+                <reference Id="a1f150ea-43b6-4079-b1f2-bb28f007d3dc" value="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/94470e9e-4cd7-447b-842b-5b18e708fd20" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.extension.gen.ttinclude&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
               </references>
             </element>
           </elements>

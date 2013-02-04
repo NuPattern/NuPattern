@@ -1,5 +1,5 @@
 ﻿<#@ output extension=".vsixmanifest" #>
-<#@ Include  File="source.include.t4"#>
+<#@ Include  File="source.extension.gen.ttinclude"#>
 <#@ Include  File="..\..\..\MasterVSIXInfo.gen.ttinclude"#>
 <#@ Include  File="..\..\..\MasterVersion.gen.ttinclude"#>
 <?xml version="1.0" encoding="utf-8"?>
