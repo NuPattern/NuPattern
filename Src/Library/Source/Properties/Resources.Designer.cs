@@ -3311,6 +3311,42 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Retrieves the name of a project in the current solution..
+        /// </summary>
+        internal static string ProjectNameValueProvider_Description {
+            get {
+                return ResourceManager.GetString("ProjectNameValueProvider_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Name.
+        /// </summary>
+        internal static string ProjectNameValueProvider_DisplayName {
+            get {
+                return ResourceManager.GetString("ProjectNameValueProvider_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated name of project for current element &apos;{0}&apos;, using project path &apos;{1}&apos;, as &apos;{2}&apos;..
+        /// </summary>
+        internal static string ProjectNameValueProvider_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("ProjectNameValueProvider_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating name of project for current element &apos;{0}&apos;, using project path &apos;{1}&apos;..
+        /// </summary>
+        internal static string ProjectNameValueProvider_TraceInitial {
+            get {
+                return ResourceManager.GetString("ProjectNameValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Optional project platform to retrieve the property from..
         /// </summary>
         internal static string ProjectPropertyValueProvider_ProjectPlatform_Description {

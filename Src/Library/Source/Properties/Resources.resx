@@ -2055,4 +2055,16 @@ Error was: {2}</value>
   <data name="Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicateCode" xml:space="preserve">
     <value>352</value>
   </data>
+  <data name="ProjectNameValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the name of a project in the current solution.</value>
+  </data>
+  <data name="ProjectNameValueProvider_DisplayName" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="ProjectNameValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated name of project for current element '{0}', using project path '{1}', as '{2}'.</value>
+  </data>
+  <data name="ProjectNameValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating name of project for current element '{0}', using project path '{1}'.</value>
+  </data>
 </root>

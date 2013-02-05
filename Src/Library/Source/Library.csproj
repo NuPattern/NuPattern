@@ -289,6 +289,7 @@
     <Compile Include="Design\CommandReferencesEditor.cs" />
     <Compile Include="Design\CommandReferenceTypeDescriptionProvider.cs" />
     <Compile Include="ValidationRules\PropertyStringValueForbiddenCharsValidationRule.cs" />
+    <Compile Include="ValueProviders\ProjectNameValueProvider.cs" />
     <Compile Include="ValueProviders\CurrentDateTimeValueProvider.cs" />
     <Compile Include="ValueProviders\RemoveForbiddenCharsValueProvider.cs" />
     <Compile Include="ValueProviders\VsProjectPropertyValueProvider.cs" />
