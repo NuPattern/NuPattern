@@ -47,7 +47,7 @@
 	</References>
 	<Content>
 		<MefComponent>|%CurrentProject%|</MefComponent>
-		<MefComponent>|\<#=productName\#>.Automation|</MefComponent>
+		<MefComponent>|\<#=libraryProjectName\#>|</MefComponent>
 		<CustomExtension Type="PatternModel" AssemblyFile="\<#=assemblyName\#>.dll">\<#=rootNamespace\#>.PatternModel.patterndefinition</CustomExtension>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>

@@ -33,6 +33,14 @@ namespace NuPattern.Authoring.PatternToolkit
 		[DisplayName("Project Assembly Name")]
 		[Category("General")]
 		String ProjectAssemblyName { get; set; }
+
+		///	<summary>
+		///	The name of the automation library project.
+		///	</summary>
+		[Description("The name of the automation library project.")]
+		[DisplayName("Project Name")]
+		[Category("General")]
+		String ProjectName { get; set; }
 		
 		///	<summary>
 		///	The ToolkitInfo.

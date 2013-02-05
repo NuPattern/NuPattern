@@ -53,6 +53,14 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		String ProjectAssemblyName { get; set; }
 
 		///	<summary>
+		///	The name of the automation library project.
+		///	</summary>
+		[Description("The name of the automation library project.")]
+		[DisplayName("Project Name")]
+		[Category("General")]
+		String ProjectName { get; set; }
+
+		///	<summary>
 		///	Excludes all generated code from code coverage metrics.
 		///	</summary>
 		[Description("Excludes all generated code from code coverage metrics.")]
@@ -73,15 +81,15 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		String InstanceName { get; set; }
 		
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		Double InstanceOrder { get; set; }
 		
 		///	<summary>
@@ -93,8 +101,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Description("Notes for this element.")]
 		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
+		[Description("Notes for this element.")]
 		String Notes { get; set; }
 		
 		///	<summary>

@@ -60,6 +60,18 @@ namespace NuPattern.Authoring.PatternToolkit
 			get { return this.proxy.GetValue(() => this.ProjectAssemblyName); }
 			set { this.proxy.SetValue(() => this.ProjectAssemblyName, value); }
 		}
+
+		///	<summary>
+		///	The name of the automation library project.
+		///	</summary>
+		[Description("The name of the automation library project.")]
+		[DisplayName("Project Name")]
+		[Category("General")]
+		public virtual String ProjectName 
+		{
+			get { return this.proxy.GetValue(() => this.ProjectName); }
+			set { this.proxy.SetValue(() => this.ProjectName, value); }
+		}
 		
 		///	<summary>
 		///	The ToolkitInfo.

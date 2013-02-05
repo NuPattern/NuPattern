@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="9cc7bde6-881f-47aa-8f65-c7c2ecd3fc9a" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
   <dm0:extensions>
-    <templateSettings Id="0d64d7af-d72f-434f-9693-1f27420bec49" templateUri="template://project/CSharp/6d6b3308cc34-AutomationLibrary" commandId="00000000-0000-0000-0000-000000000000" wizardId="00000000-0000-0000-0000-000000000000" templateAuthoringUri="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/07d8d448-a0b0-49d5-8b2e-f51239a49d63">
+    <templateSettings Id="0d64d7af-d72f-434f-9693-1f27420bec49" templateUri="template://project/CSharp/6d6b3308cc34-AutomationLibrary" commandId="00000000-0000-0000-0000-000000000000" wizardId="00000000-0000-0000-0000-000000000000" templateAuthoringUri="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/07d8d448-a0b0-49d5-8b2e-f51239a49d63" sanitizeName="false">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="647a9a48-cf31-468d-bdd6-894c8ec29910" />
       </extendedElement>
@@ -1464,6 +1464,32 @@
         </customizationPolicy>
         <valueProvider>{
   "TypeId": "NuPattern.Library.ValueProviders.AssemblyNameValueProvider",
+  "Properties": [
+    {
+      "Name": "ProjectPath",
+      "Value": "~",
+      "ValueProvider": null
+    }
+  ]
+}</valueProvider>
+      </property>
+      <property Id="7864a4c0-2152-4c05-8bf3-30d414d312f8" name="ProjectName" baseId="600f744c-1017-424b-a62a-2612e35900e6" displayName="Project Name" description="The name of the automation library project." codeIdentifier="ProjectName" isVisible="false" propertyUsage="ExtensionContract">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="RawDefaultValue" />
+            <setting propertyId="IsVisible" />
+            <setting propertyId="IsReadOnly" />
+            <setting propertyId="Category" />
+            <setting propertyId="TypeConverterTypeName" />
+            <setting propertyId="EditorTypeName" />
+            <setting propertyId="RawValidationRules" />
+            <setting propertyId="RawValueProvider" />
+          </settings>
+        </customizationPolicy>
+        <valueProvider>{
+  "TypeId": "NuPattern.Library.ValueProviders.ProjectNameValueProvider",
   "Properties": [
     {
       "Name": "ProjectPath",

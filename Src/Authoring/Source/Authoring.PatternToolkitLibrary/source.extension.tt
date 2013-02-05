@@ -39,7 +39,7 @@ else
 	</References>
 	<Content>
 		<MefComponent>|%CurrentProject%|</MefComponent>
-		<MefComponent>|Authoring.PatternToolkit.Automation|</MefComponent>
+		<MefComponent>|<#=libraryProjectName #>|</MefComponent>
 		<CustomExtension Type="PatternModel" AssemblyFile="<#= assemblyName #>.dll"><#= rootNamespace #>.PatternModel.patterndefinition</CustomExtension>
 		<CustomExtension Type="ToolkitCategory" Category="Authoring"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>

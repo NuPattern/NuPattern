@@ -57,7 +57,7 @@ else
 		<MefComponent>|Authoring.WorkflowDesign|</MefComponent>
 		<VsPackage>|Authoring.PatternModelDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
 		<MefComponent>|Authoring.PatternModelDesign.Shell|</MefComponent>
-		<MefComponent>|Authoring.PatternToolkit.Automation|</MefComponent>
+		<MefComponent>|<#=libraryProjectName #>|</MefComponent>
 		<CustomExtension Type="PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternModel.patterndefinition</CustomExtension>
 		<CustomExtension Type="ToolkitCategory" Category="Authoring"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>

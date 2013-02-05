@@ -22,9 +22,9 @@
 	//------------------------------------------------------------------------------
 	// Toolkit Project Info
 	//------------------------------------------------------------------------------
-	public const string productName = @"Authoring.PatternToolkitLibrary";
 	public const string rootNamespace = @"NuPattern.Authoring.PatternToolkitLibrary";
 	public const string assemblyName = @"NuPattern.Authoring.PatternToolkitLibrary";
+	public const string libraryProjectName = @"Authoring.PatternToolkit.Automation";
 
 	//------------------------------------------------------------------------------
 	// Environment Info

@@ -22,9 +22,9 @@
 	//------------------------------------------------------------------------------
 	// Toolkit Project Info
 	//------------------------------------------------------------------------------
-	public const string productName = @"Authoring.HandsOnLabs";
 	public const string rootNamespace = @"NuPattern.Authoring.HandsOnLabs";
 	public const string assemblyName = @"NuPattern.Authoring.HandsOnLabs";
+	public const string libraryProjectName = @"Authoring.HandsOnLabs.Automation";
 
 	//------------------------------------------------------------------------------
 	// Environment Info
