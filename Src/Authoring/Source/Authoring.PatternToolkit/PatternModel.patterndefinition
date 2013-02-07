@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="2c5403a9-5eaa-4d02-b309-0d948a9f740a" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
   <dm0:extensions>
-    <templateSettings Id="db28cfc6-bc8f-45a6-8b1b-7caaffae6126" templateUri="template://project/CSharp/301af1ad3bdb-PatternToolkit" commandId="00000000-0000-0000-0000-000000000000" wizardId="89961330-d06d-4447-8015-1198ef9af6ea" templateAuthoringUri="solution://0216a624-c5c5-4335-8361-f640b91b4dea/0a1c38d2-55bd-4d49-b0b8-d17f5a6318d6">
+    <templateSettings Id="db28cfc6-bc8f-45a6-8b1b-7caaffae6126" templateUri="template://project/CSharp/301af1ad3bdb-PatternToolkit" commandId="00000000-0000-0000-0000-000000000000" wizardId="89961330-d06d-4447-8015-1198ef9af6ea" templateAuthoringUri="solution://0216a624-c5c5-4335-8361-f640b91b4dea/0a1c38d2-55bd-4d49-b0b8-d17f5a6318d6" sanitizeName="false">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b3e68e57-c4df-4821-9ad7-b1d7b9811c13" />
       </extendedElement>
@@ -230,7 +230,7 @@
         <automationSettingsSchemaMoniker Id="31f7c469-2c03-4169-8bd0-41f9e43ee518" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="241af1a5-d726-4e3f-b6bc-82706101df55" commandId="d321df0a-d467-45d6-944f-ccd9b82225fe" eventId="NuPattern.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="241af1a5-d726-4e3f-b6bc-82706101df55" commandId="b687f186-20c9-4389-be6b-9aaa92f283ac" eventId="NuPattern.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3dbe232e-84ae-4c48-970e-f21503559286" />
       </extendedElement>
@@ -913,6 +913,14 @@
       </extendedElement>
       <properties>
         <propertySettings Id="9f5f310e-34bc-4715-bb9d-7c5829c1d579" value="e2d14d50-dc8f-4a40-bf60-10e2a7ac9f89;acf616d7-278f-41a0-87bf-580ce8d3cdae" name="CommandReferenceList" />
+      </properties>
+    </commandSettings>
+    <commandSettings Id="b687f186-20c9-4389-be6b-9aaa92f283ac" typeId="NuPattern.Library.Commands.AggregatorCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="8a4c692a-7ad4-4eca-a80c-3acbb7df2453" />
+      </extendedElement>
+      <properties>
+        <propertySettings Id="9b268597-7e37-443e-83ba-e7faed5c95c9" value="d321df0a-d467-45d6-944f-ccd9b82225fe;60bf8de3-2170-40f4-8dd6-56997f0cec65" name="CommandReferenceList" />
       </properties>
     </commandSettings>
     <menuSettings Id="11e7a8a4-db6a-484b-b6c7-f497a7774ea1" text="Show Guidance" commandId="049e298a-8525-40a8-9fe8-f74fe455c307" wizardId="00000000-0000-0000-0000-000000000000">
@@ -3673,7 +3681,7 @@
                   </settings>
                 </customizationPolicy>
               </automationSettings>
-              <automationSettings Id="3dbe232e-84ae-4c48-970e-f21503559286" name="GenerateManifestIncludeOnBuild" displayName="Generate Manifest Include On Build" description="" codeIdentifier="GenerateManifestIncludeOnBuild" automationType="Event Launch Point" classification="LaunchPoint">
+              <automationSettings Id="3dbe232e-84ae-4c48-970e-f21503559286" name="TransformManifestPartsOnBuild" displayName="Transform Manifest Parts On Build" description="" codeIdentifier="TransformManifestPartsOnBuild" automationType="Event Launch Point" classification="LaunchPoint">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -3701,6 +3709,15 @@
                 </customizationPolicy>
               </automationSettings>
               <automationSettings Id="e1234322-7a52-400b-a4cb-a3480c6d95da" name="TransformManifest" displayName="Transform Manifest" description="" codeIdentifier="TransformManifest" automationType="Command">
+                <customizationPolicy name="CustomizationPolicySchema1">
+                  <settings>
+                    <setting propertyId="DisplayName" />
+                    <setting propertyId="Description" />
+                    <setting propertyId="Settings" />
+                  </settings>
+                </customizationPolicy>
+              </automationSettings>
+              <automationSettings Id="8a4c692a-7ad4-4eca-a80c-3acbb7df2453" name="TransformManifestParts" displayName="Transform Manifest Parts" description="" codeIdentifier="TransformManifestParts" automationType="Command">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />

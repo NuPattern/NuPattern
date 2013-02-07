@@ -88,6 +88,18 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		}
 
 		///	<summary>
+		///	The name of the automation library project.
+		///	</summary>
+		[Description("The name of the automation library project.")]
+		[DisplayName("Project Name")]
+		[Category("General")]
+		public virtual String ProjectName 
+		{
+			get { return this.proxy.GetValue(() => this.ProjectName); }
+			set { this.proxy.SetValue(() => this.ProjectName, value); }
+		}
+
+		///	<summary>
 		///	Excludes all generated code from code coverage metrics.
 		///	</summary>
 		[Description("Excludes all generated code from code coverage metrics.")]
@@ -119,8 +131,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		public virtual String InstanceName 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceName); }
@@ -130,8 +142,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		public virtual Double InstanceOrder 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceOrder); }
@@ -150,8 +162,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Description("Notes for this element.")]
 		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
+		[Description("Notes for this element.")]
 		public virtual String Notes 
 		{ 
 			get { return this.proxy.GetValue(() => this.Notes); }

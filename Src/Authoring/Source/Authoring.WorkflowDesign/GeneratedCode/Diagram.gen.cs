@@ -206,15 +206,15 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 		protected override DslDiagrams::ShapeElement CreateChildShape(DslModeling::ModelElement element)
 		{
-			if(element is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
-			{
-				global::NuPattern.Authoring.WorkflowDesign.ProducedAssetShape newShape = new global::NuPattern.Authoring.WorkflowDesign.ProducedAssetShape(this.Partition);
-				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
-				return newShape;
-			}
 			if(element is global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset)
 			{
 				global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape newShape = new global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
+			{
+				global::NuPattern.Authoring.WorkflowDesign.ProducedAssetShape newShape = new global::NuPattern.Authoring.WorkflowDesign.ProducedAssetShape(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
@@ -1164,10 +1164,10 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.ProducedAsset), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.ProductionTool), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]

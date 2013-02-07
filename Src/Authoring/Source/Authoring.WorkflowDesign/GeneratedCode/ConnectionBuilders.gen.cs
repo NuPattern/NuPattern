@@ -27,11 +27,11 @@ namespace NuPattern.Authoring.WorkflowDesign
 		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
 		{
 			if (candidate == null) return false;
-			else if (candidate is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
+			else if (candidate is global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset)
 			{ 
 				return true;
 			}
-			else if (candidate is global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset)
+			else if (candidate is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
 			{ 
 				return true;
 			}
@@ -107,16 +107,6 @@ namespace NuPattern.Authoring.WorkflowDesign
 			}
 			else // Check combinations
 			{
-				if (candidateSource is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
-				{
-					if (candidateTarget is global::NuPattern.Authoring.WorkflowDesign.ProductionTool)
-					{
-						global::NuPattern.Authoring.WorkflowDesign.ProducedAsset sourceProducedAsset = (global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)candidateSource;
-						global::NuPattern.Authoring.WorkflowDesign.ProductionTool targetProductionTool = (global::NuPattern.Authoring.WorkflowDesign.ProductionTool)candidateTarget;
-						if(targetProductionTool == null || sourceProducedAsset == null || global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.GetLinks(sourceProducedAsset, targetProductionTool).Count > 0) return false;
-						return true;
-					}
-				}
 				if (candidateSource is global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset)
 				{
 					if (candidateTarget is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
@@ -131,6 +121,16 @@ namespace NuPattern.Authoring.WorkflowDesign
 						global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset sourceSuppliedAsset = (global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset)candidateSource;
 						global::NuPattern.Authoring.WorkflowDesign.ProductionTool targetProductionTool = (global::NuPattern.Authoring.WorkflowDesign.ProductionTool)candidateTarget;
 						if(targetProductionTool == null || sourceSuppliedAsset == null || global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.GetLinks(sourceSuppliedAsset, targetProductionTool).Count > 0) return false;
+						return true;
+					}
+				}
+				if (candidateSource is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
+				{
+					if (candidateTarget is global::NuPattern.Authoring.WorkflowDesign.ProductionTool)
+					{
+						global::NuPattern.Authoring.WorkflowDesign.ProducedAsset sourceProducedAsset = (global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)candidateSource;
+						global::NuPattern.Authoring.WorkflowDesign.ProductionTool targetProductionTool = (global::NuPattern.Authoring.WorkflowDesign.ProductionTool)candidateTarget;
+						if(targetProductionTool == null || sourceProducedAsset == null || global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.GetLinks(sourceProducedAsset, targetProductionTool).Count > 0) return false;
 						return true;
 					}
 				}
@@ -179,20 +179,6 @@ namespace NuPattern.Authoring.WorkflowDesign
 			
 			if (CanAcceptSourceAndTarget(source, target))
 			{
-				if (source is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
-				{
-					if (target is global::NuPattern.Authoring.WorkflowDesign.ProductionTool)
-					{
-						global::NuPattern.Authoring.WorkflowDesign.ProducedAsset sourceAccepted = (global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)source;
-						global::NuPattern.Authoring.WorkflowDesign.ProductionTool targetAccepted = (global::NuPattern.Authoring.WorkflowDesign.ProductionTool)target;
-						DslModeling::ElementLink result = new global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools(sourceAccepted, targetAccepted);
-						if (DslModeling::DomainClassInfo.HasNameProperty(result))
-						{
-							DslModeling::DomainClassInfo.SetUniqueName(result);
-						}
-						return result;
-					}
-				}
 				if (source is global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset)
 				{
 					if (target is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
@@ -211,6 +197,20 @@ namespace NuPattern.Authoring.WorkflowDesign
 						global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset sourceAccepted = (global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset)source;
 						global::NuPattern.Authoring.WorkflowDesign.ProductionTool targetAccepted = (global::NuPattern.Authoring.WorkflowDesign.ProductionTool)target;
 						DslModeling::ElementLink result = new global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				if (source is global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)
+				{
+					if (target is global::NuPattern.Authoring.WorkflowDesign.ProductionTool)
+					{
+						global::NuPattern.Authoring.WorkflowDesign.ProducedAsset sourceAccepted = (global::NuPattern.Authoring.WorkflowDesign.ProducedAsset)source;
+						global::NuPattern.Authoring.WorkflowDesign.ProductionTool targetAccepted = (global::NuPattern.Authoring.WorkflowDesign.ProductionTool)target;
+						DslModeling::ElementLink result = new global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools(sourceAccepted, targetAccepted);
 						if (DslModeling::DomainClassInfo.HasNameProperty(result))
 						{
 							DslModeling::DomainClassInfo.SetUniqueName(result);
