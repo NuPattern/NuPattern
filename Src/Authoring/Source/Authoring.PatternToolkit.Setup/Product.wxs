@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:ui="http://schemas.microsoft.com/wix/UIExtension"
+     xmlns:vs="http://schemas.microsoft.com/wix/VSExtension">
+	<Product Id="*" Name="NuPattern" Language="1033" Version="1.3.20.0" Manufacturer="NuPattern" UpgradeCode="151c3ddf-ddb1-4af6-9a50-3e71c9a6d2e8">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+    
+    <!-- Include the License file -->
+    <WixVariable Id="WixUILicenseRtf" Value="License.rtf"/>
+
+    <!-- Read settings from machine -->
+    <Property Id="VS2010_INSTALL" Secure="yes">
+      <RegistrySearch Id="VS2010_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS" Name="EnvironmentDirectory" Type="raw"/>
+    </Property>
+    <Property Id="VS2012_INSTALL" Secure="yes">
+      <RegistrySearch Id="VS2012_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS" Name="EnvironmentDirectory" Type="raw"/>
+    </Property>
+    <Property Id="VS2010_VSIXINSTALLER" Secure="yes">
+      <RegistrySearch Id="VS2010_VsixInstallerRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS" Name="EnvironmentDirectory" Type="raw">
+        <DirectorySearch Id="VS2010_VsixInstallerDirSearch">
+          <FileSearch Id="VS2010_VsixInstallerFileSearch" Name="VSIXInstaller.exe" />
+        </DirectorySearch>
+      </RegistrySearch>
+    </Property>
+    <Property Id="VS2012_VSIXINSTALLER" Secure="yes">
+      <RegistrySearch Id="VS2012_VsixInstallerRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS" Name="EnvironmentDirectory" Type="raw">
+        <DirectorySearch Id="VS2012_VsixInstallerDirSearch">
+          <FileSearch Id="VS2012_VsixInstallerFileSearch" Name="VSIXInstaller.exe" />
+        </DirectorySearch>
+      </RegistrySearch>
+    </Property>
+    <SetProperty Id="VSIXFILE2010" After="AppSearch" Value="$(var.Authoring_PatternToolkit.TargetDir)NuPatternToolkitBuilder.11.0.vsix" />
+    <SetProperty Id="VSIXFILE2012" After="AppSearch" Value="$(var.Authoring_PatternToolkit.TargetDir)NuPatternToolkitBuilder.10.0.vsix" />
+
+    <!-- Define Feature Selections -->
+    <Feature Id="TOOLKITBUILDER2010" Title="Toolkit Builder VS2010" Level="1" Display="expand">
+      <Condition Level="0"><![CDATA[VS2010_INSTALL=""]]></Condition>
+      <ComponentGroupRef Id="ToolkitBuilder2010Components" />
+      <Feature Id="TOOLKITBUILDERLABS2010" Title="Hands-On Labs VS2010" Level="5000" >
+        <ComponentGroupRef Id="ToolkitBuilderLabs2010Components" />
+      </Feature>
+    </Feature>
+    <Feature Id="TOOLKITBUILDER2012" Title="Toolkit Builder VS2012" Level="1" Display="expand">
+      <Condition Level="0"><![CDATA[VS2012_INSTALL=""]]></Condition>
+      <ComponentGroupRef Id="ToolkitBuilder2012Components" />
+      <Feature Id="TOOLKITBUILDERLABS2012" Title="Hands-On Labs VS2012" Level="5000">
+        <ComponentGroupRef Id="ToolkitBuilderLabs2012Components" />
+      </Feature>
+    </Feature>
+
+    <!-- Set the user interface -->
+    <UIRef Id="WixUI_FeatureTree" />
+  </Product>
+
+  <!-- Define Directories -->
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="INSTALLFOLDER">
+      </Directory>
+    </Directory>
+  </Fragment>
+  
+  <!--
+  TODO
+  
+    Fix issue with the MSI itself being copied to C:\Binaries???
+  
+    1. Get the built binaries into a local directory for packaging in this VSIX. then reference them below and in the <Components>
+    
+    2. Add entries below for HOL VSIXes
+    
+    3. Sort out uninstall actions
+    
+    4. Sort out Dependency checking
+    
+    5. Change Icons, Banners in UI
+    
+    6. Add the /q to VSIXINstaller command below
+  -->
+  
+  <!-- Define the Actions-->
+  <Fragment>
+    <CustomAction Id="INSTALLVSIX2010A" Property="VS2012_VSIXINSTALLER" ExeCommand="&quot;[VSIXFILE2010]&quot;" Execute="deferred" Return="check" Impersonate="yes"/>
+    <CustomAction Id="INSTALLVSIX2010B" Property="VS2010_VSIXINSTALLER" ExeCommand="&quot;[VSIXFILE2010]&quot;" Execute="deferred" Return="check" Impersonate="yes"/>
+    <CustomAction Id="INSTALLVSIX2012" Property="VS2012_VSIXINSTALLER" ExeCommand="&quot;[VSIXFILE2012]&quot;" Execute="deferred" Return="check" Impersonate="yes"/>
+
+    <!--<CustomAction Id="UNINSTALLVSIX2010A" Property="VS2012_VSIXINSTALLER" ExeCommand="/q /uninstall:&quot;[VSIXFILE2010]&quot;" Execute="deferred" Return="check" Impersonate="yes">Installed AND VS2012_VSIXINSTALLER</CustomAction>
+    <CustomAction Id="UNINSTALLVSIX2010B" Property="VS2010_VSIXINSTALLER" ExeCommand="/q /uninstall:&quot;[VSIXFILE2010]&quot;" Execute="deferred" Return="check" Impersonate="yes">Installed AND VS2012_VSIXINSTALLER=""</CustomAction>
+    <CustomAction Id="UNINSTALLVSIX2012" Property="VS2012_VSIXINSTALLER" ExeCommand="/q /uninstall:&quot;[VSIXFILE2012]&quot;" Execute="deferred" Return="check" Impersonate="yes">Installed AND VS2012_VSIXINSTALLER</CustomAction>-->
+  </Fragment>
+
+  <Fragment>
+    <InstallExecuteSequence>
+      <Custom Action="INSTALLVSIX2010A" After="CostFinalize"><![CDATA[(&TOOLKITBUILDER2010 > 1) AND VS2012_VSIXINSTALLER AND NOT Installed]]></Custom>
+      <Custom Action="INSTALLVSIX2010B" After="INSTALLVSIX2010A"><![CDATA[(&TOOLKITBUILDER2010 > 1) AND VS2012_VSIXINSTALLER="" AND NOT Installed]]></Custom>
+      <Custom Action="INSTALLVSIX2012" After="INSTALLVSIX2010B"><![CDATA[(&TOOLKITBUILDER2012 > 1) AND VS2012_VSIXINSTALLER AND NOT Installed]]></Custom>
+
+      <!--<Custom Action="UNINSTALLVSIX2010A" After="CostFinalize"><![CDATA[(&TOOLKITBUILDER2010 > 1) AND VS2012_VSIXINSTALLER AND Installed]]></Custom>
+      <Custom Action="UNINSTALLVSIX2010B" After="UNINSTALLVSIX2010A"><![CDATA[(&TOOLKITBUILDER2010 > 1) AND VS2012_VSIXINSTALLER="" AND Installed]]></Custom>
+      <Custom Action="UNINSTALLVSIX2012" After="UNINSTALLVSIX2010B"><![CDATA[(&TOOLKITBUILDER2012 > 1) AND VS2012_VSIXINSTALLER AND Installed]]></Custom>-->
+    </InstallExecuteSequence>
+  </Fragment>
+</Wix>

@@ -121,14 +121,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versioning", "..\Common\Sou
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Authoring", "_Authoring", "{D283BB26-C5A2-46E1-AA9D-799FF3F16445}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{4958AD46-B754-4E5D-BE2F-855EACBFBBC7}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Authoring.PatternToolkit.Setup", "Source\Authoring.PatternToolkit.Setup\Authoring.PatternToolkit.Setup.wixproj", "{A49C2C09-8D28-4367-8E79-C75FE69F84BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
 		Debug-VS2010|Any CPU = Debug-VS2010|Any CPU
 		Debug-VS2010|Mixed Platforms = Debug-VS2010|Mixed Platforms
 		Debug-VS2010|x86 = Debug-VS2010|x86
 		Debug-VS2012|Any CPU = Debug-VS2012|Any CPU
 		Debug-VS2012|Mixed Platforms = Debug-VS2012|Mixed Platforms
 		Debug-VS2012|x86 = Debug-VS2012|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
 		Release-VS2010|Any CPU = Release-VS2010|Any CPU
 		Release-VS2010|Mixed Platforms = Release-VS2010|Mixed Platforms
 		Release-VS2010|x86 = Release-VS2010|x86
@@ -137,6 +147,12 @@ Global
 		Release-VS2012|x86 = Release-VS2012|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}.Debug|Any CPU.ActiveCfg = Debug-VS2012|Any CPU
+		{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}.Debug|Any CPU.Build.0 = Debug-VS2012|Any CPU
+		{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}.Debug|Mixed Platforms.ActiveCfg = Debug-VS2012|x86
+		{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}.Debug|Mixed Platforms.Build.0 = Debug-VS2012|x86
+		{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}.Debug|x86.ActiveCfg = Debug-VS2012|x86
+		{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}.Debug|x86.Build.0 = Debug-VS2012|x86
 		{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}.Debug-VS2010|Any CPU.ActiveCfg = Debug-VS2010|Any CPU
 		{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}.Debug-VS2010|Any CPU.Build.0 = Debug-VS2010|Any CPU
 		{63F04D57-AC8A-4813-A98F-9927AA7C3C6C}.Debug-VS2010|Mixed Platforms.ActiveCfg = Debug-VS2010|x86

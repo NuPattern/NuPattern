@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:vs="http://schemas.microsoft.com/wix/VSExtension">
+  
+  <!-- Components -->
+  <Fragment>
+		<ComponentGroup Id="ToolkitBuilder2010Components" Directory="INSTALLFOLDER">
+      
+    </ComponentGroup>
+    <ComponentGroup Id="ToolkitBuilderLabs2010Components" Directory="INSTALLFOLDER">
+    
+    </ComponentGroup>
+    <ComponentGroup Id="ToolkitBuilder2012Components" Directory="INSTALLFOLDER">
+      <Component Id="ToolkitBuilderVsix2012" Guid="7FA47463-4E82-4B2B-B405-9452DA607BCD">
+        <File Id="ToolkitBuilderVsixFile2012" Source="$(var.Authoring_PatternToolkit.TargetDir)NuPatternToolkitBuilder.11.0.vsix" >
+          <vs:VsixPackage PackageId="9f6dc301-6f66-4d21-9f9c-b37412b162f6"/>
+        </File>
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="ToolkitBuilderLabs2012Components" Directory="INSTALLFOLDER">
+    </ComponentGroup>
+  </Fragment>
+</Wix>
