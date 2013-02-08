@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Authoring.Setup", "Source\Authoring.Setup\Authoring.Setup.wixproj", "{A49C2C09-8D28-4367-8E79-C75FE69F84BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug-VS2010|x86 = Debug-VS2010|x86
+		Debug-VS2012|x86 = Debug-VS2012|x86
+		Release-VS2010|x86 = Release-VS2010|x86
+		Release-VS2012|x86 = Release-VS2012|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A49C2C09-8D28-4367-8E79-C75FE69F84BE}.Debug-VS2010|x86.ActiveCfg = Debug-VS2010|x86
+		{A49C2C09-8D28-4367-8E79-C75FE69F84BE}.Debug-VS2010|x86.Build.0 = Debug-VS2010|x86
+		{A49C2C09-8D28-4367-8E79-C75FE69F84BE}.Debug-VS2012|x86.ActiveCfg = Debug-VS2012|x86
+		{A49C2C09-8D28-4367-8E79-C75FE69F84BE}.Debug-VS2012|x86.Build.0 = Debug-VS2012|x86
+		{A49C2C09-8D28-4367-8E79-C75FE69F84BE}.Release-VS2010|x86.ActiveCfg = Release-VS2010|x86
+		{A49C2C09-8D28-4367-8E79-C75FE69F84BE}.Release-VS2010|x86.Build.0 = Release-VS2010|x86
+		{A49C2C09-8D28-4367-8E79-C75FE69F84BE}.Release-VS2012|x86.ActiveCfg = Release-VS2012|x86
+		{A49C2C09-8D28-4367-8E79-C75FE69F84BE}.Release-VS2012|x86.Build.0 = Release-VS2012|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
