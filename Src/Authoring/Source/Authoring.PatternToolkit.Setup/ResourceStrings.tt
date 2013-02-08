@@ -1,0 +1,11 @@
+﻿<#@ output extension=".gen.wxl" #>
+<#@ Include file="..\..\..\MasterVersion.gen.ttinclude" #>
+<#@ Include file="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+
+	<!-- Product Information -->	
+	<String Id="ApplicationName"><#=VersionInfo.AssemblyProductName#></String>
+	<String Id="ManufacturerName"><#=VersionInfo.VsixAuthor#></String>
+	<String Id="HelpLink"><#=VersionInfo.ProjectHomePage#></String>
+
+</WixLocalization>

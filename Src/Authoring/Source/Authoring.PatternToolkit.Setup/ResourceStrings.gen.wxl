@@ -1,0 +1,8 @@
+﻿<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+
+	<!-- Product Information -->	
+	<String Id="ApplicationName">NuPattern</String>
+	<String Id="ManufacturerName">NuPattern</String>
+	<String Id="HelpLink">http://www.nupattern.org/</String>
+
+</WixLocalization>

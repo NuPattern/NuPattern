@@ -16,27 +16,6 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
-    <Compile Include="Product.wxs" />
-    <None Include="License.rtf" />
-    <None Include="Components.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Components.wxs</LastGenOutput>
-    </None>
-    <Compile Include="Components.wxs">
-      <DependentUpon>Components.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Authoring.PatternToolkit\Authoring.PatternToolkit.csproj">
-      <Name>Authoring_PatternToolkit</Name>
-      <Project>{0216a624-c5c5-4335-8361-f640b91b4dea}</Project>
-      <Private>True</Private>
-      <DoNotHarvest>True</DoNotHarvest>
-      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
-      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WixExtension Include="WixVSExtension">
       <HintPath>$(WixExtDir)\WixVSExtension.dll</HintPath>
       <Name>WixVSExtension</Name>
@@ -50,13 +29,34 @@
     <Folder Include="Resources" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Product.wxs" />
+    <None Include="Variables.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Variables.gen.wxi</LastGenOutput>
+    </None>
+    <Content Include="Variables.gen.wxi">
+      <DependentUpon>Variables.tt</DependentUpon>
+    </Content>
+    <None Include="License.rtf" />
+    <None Include="Components.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Components.gen.wxs</LastGenOutput>
+    </None>
+    <Compile Include="Components.gen.wxs">
+      <DependentUpon>Components.tt</DependentUpon>
+    </Compile>
     <Content Include="Diagnose MSI.bat" />
+    <Content Include="ResourceStrings.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ResourceStrings.gen.wxs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="ResourceStrings.gen.wxl">
+      <DependentUpon>ResourceStrings.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceStrings.wxl" />
     <Content Include="Resources\Banner.bmp" />
     <Content Include="Resources\DialogBackground.bmp" />
     <Content Include="Resources\Icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ResourceStrings.wxl" />
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />

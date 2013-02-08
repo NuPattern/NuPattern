@@ -2,7 +2,6 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
      xmlns:vs="http://schemas.microsoft.com/wix/VSExtension">
   
-  <!-- Components -->
   <Fragment>
     <!-- VSIX IDs -->
     <SetProperty Id="TOOLKITBUILDER2010VSIXID" After="AppSearch" Value="9f6dc301-6f66-4d21-9f9c-b37412b162f6"/>
@@ -12,7 +11,7 @@
 
     <!-- Components to Install  -->
     <Component Id="ToolkitBuilderVsix2010" Guid="47540C54-6174-4B37-8666-6CE98A49A1A7" Directory="INSTALLFOLDER">
-      <File Id="ToolkitBuilderVsixFile2010" Source="$(var.Authoring_PatternToolkit.ProjectDir)..\..\..\Binaries\10.0\NuPatternToolkitBuilder.10.0.vsix"/>
+      <File Id="ToolkitBuilderVsixFile2010" Source="..\..\..\Binaries\10.0\NuPatternToolkitBuilder.10.0.vsix"/>
       <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
         <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
         <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="no"/>
@@ -21,7 +20,7 @@
       <RemoveFolder Id="RemoveFolderToolkitBuilderVsixFile2010" On="both"/>
     </Component>
     <Component Id="ToolkitBuilderLabsVsix2010" Guid="DFA0088E-35DE-40AE-9884-971286EEF490" Directory="INSTALLFOLDER">
-      <File Id="ToolkitBuilderLabsVsixFile2010" Source="$(var.Authoring_PatternToolkit.ProjectDir)..\..\..\Binaries\10.0\NuPatternToolkitBuilderLabs.10.0.vsix"/>
+      <File Id="ToolkitBuilderLabsVsixFile2010" Source="..\..\..\Binaries\10.0\NuPatternToolkitBuilderLabs.10.0.vsix"/>
       <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
         <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
         <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="no"/>
@@ -30,7 +29,7 @@
       <RemoveFolder Id="RemoveFolderToolkitBuilderLabsVsixFile2010" On="both"/>
     </Component>
     <Component Id="ToolkitBuilderVsix2012" Guid="BAD88824-C92D-4F07-92A7-BF0BEA57CA5D" Directory="INSTALLFOLDER">
-      <File Id="ToolkitBuilderVsixFile2012" Source="$(var.Authoring_PatternToolkit.ProjectDir)..\..\..\Binaries\11.0\NuPatternToolkitBuilder.11.0.vsix"/>
+      <File Id="ToolkitBuilderVsixFile2012" Source="..\..\..\Binaries\11.0\NuPatternToolkitBuilder.11.0.vsix"/>
       <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
         <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
         <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="no"/>
@@ -39,7 +38,7 @@
       <RemoveFolder Id="RemoveFolderToolkitBuilderVsixFile2012" On="both"/>
     </Component>
     <Component Id="ToolkitBuilderLabsVsix2012" Guid="8054E94F-AAB1-4E1C-8628-8F44E9DF46C4" Directory="INSTALLFOLDER">
-      <File Id="ToolkitBuilderLabsVsixFile2012" Source="$(var.Authoring_PatternToolkit.ProjectDir)..\..\..\Binaries\11.0\NuPatternToolkitBuilderLabs.11.0.vsix"/>
+      <File Id="ToolkitBuilderLabsVsixFile2012" Source="..\..\..\Binaries\11.0\NuPatternToolkitBuilderLabs.11.0.vsix"/>
       <RegistryKey Root="HKCU" Key="Software\!(loc.ManufacturerName)\!(loc.ApplicationName)">
         <RegistryValue Name="InstallDir" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
         <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="no"/>
