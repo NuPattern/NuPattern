@@ -21,79 +21,90 @@
     <!-- Include the License file -->
     <WixVariable Id="WixUILicenseRtf" Value="License.rtf"/>
 
+    <!-- Set the user interface -->
+    <UIRef Id="WixUI_FeatureTree" />
+
     <!-- Read settings from machine -->
-    <Property Id="VS2010_INSTALL" Secure="yes">
+    <Property Id="VS2010_INSTALLED" Secure="yes">
       <!-- Find the first of any of these editions -->
       <RegistrySearch Id="VS2010PRO_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS\Pro" Name="ProductDir" Type="raw"/>
       <RegistrySearch Id="VS2010VSTD_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS\VSTD" Name="ProductDir" Type="raw"/>
       <RegistrySearch Id="VS2010VSTA_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS\VSTA" Name="ProductDir" Type="raw"/>
       <RegistrySearch Id="VS2010VSTS_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS\VSTS" Name="ProductDir" Type="raw"/>
     </Property>
-    <Property Id="VS2010SDK_INSTALL" Secure="yes">
+    <Property Id="VS2010SDK_INSTALLED" Secure="yes">
       <RegistrySearch Id="VS2010SDK_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\VSIP\10.0" Name="InstallDir" Type="raw"/>
     </Property>
-    <Property Id="VS2012_INSTALL" Secure="yes">
+    <Property Id="VS2012_INSTALLED" Secure="yes">
       <!-- Find the first of any of these editions -->
       <RegistrySearch Id="VS2012PRO_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS\Pro" Name="ProductDir" Type="raw"/>
       <RegistrySearch Id="VS2012VSTD_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS\VSTD" Name="ProductDir" Type="raw"/>
       <RegistrySearch Id="VS2012VSTA_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS\VSTA" Name="ProductDir" Type="raw"/>
       <RegistrySearch Id="VS2012VSTS_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS\VSTS" Name="ProductDir" Type="raw"/>
     </Property>
-    <Property Id="VS2012SDK_INSTALL" Secure="yes">
+    <Property Id="VS2012SDK_INSTALLED" Secure="yes">
       <RegistrySearch Id="VS2012SDK_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\VSIP\11.0" Name="InstallDir" Type="raw"/>
     </Property>
-    <Property Id="VS2010_VSIXINSTALLER" Secure="yes">
+    <Property Id="VS2010_VSIXINSTALLERPATH" Secure="yes">
       <RegistrySearch Id="VS2010_VsixInstallerRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS" Name="EnvironmentDirectory" Type="raw">
         <DirectorySearch Id="VS2010_VsixInstallerDirSearch">
           <FileSearch Id="VS2010_VsixInstallerFileSearch" Name="VSIXInstaller.exe" />
         </DirectorySearch>
       </RegistrySearch>
     </Property>
-    <Property Id="VS2012_VSIXINSTALLER" Secure="yes">
+    <Property Id="VS2012_VSIXINSTALLERPATH" Secure="yes">
       <RegistrySearch Id="VS2012_VsixInstallerRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS" Name="EnvironmentDirectory" Type="raw">
         <DirectorySearch Id="VS2012_VsixInstallerDirSearch">
           <FileSearch Id="VS2012_VsixInstallerFileSearch" Name="VSIXInstaller.exe" />
         </DirectorySearch>
       </RegistrySearch>
     </Property>
-    
-    <!-- Launch Conditions for dependencies -->
-    <Condition Message="!(loc.LaunchCondition_VisualStudioAnyVersion)">(VS2010_INSTALL) OR (VS2012_INSTALL)</Condition>
-    <Condition Message="!(loc.LaunchCondition_VSSDK2010)">(VS2010_INSTALL AND VS2010SDK_INSTALL) OR (NOT VS2010_INSTALL)</Condition>
-    <Condition Message="!(loc.LaunchCondition_VSSDK2012)">(VS2012_INSTALL AND VS2012SDK_INSTALL) OR (NOT VS2012_INSTALL)</Condition>
+    <SetProperty Id="CANINSTALLFORVS2010" After="AppSearch" Value="1">VS2010_INSTALLED AND VS2010SDK_INSTALLED</SetProperty>
+    <SetProperty Id="CANINSTALLFORVS2012" After="AppSearch" Value="1">VS2012_INSTALLED AND VS2012SDK_INSTALLED</SetProperty>
+
+    <!-- Ensure minimal VS and VSIX dependencies -->
+    <!-- We dont want to prevent the user installing only one of their versions of VS (if they have both) as long as it has the necessary dependencies,
+      but they need to have at least one version of VS with all dependencies installed to continue -->
+    <Condition Message="!(loc.LaunchCondition_VisualStudioAnyVersion)">VS2010_INSTALLED OR VS2012_INSTALLED</Condition>
+    <Condition Message="!(loc.LaunchCondition_VisualStudioAndVSSDKAnyVersion)">((VS2010_INSTALLED AND VS2010SDK_INSTALLED) OR (NOT VS2010_INSTALLED)) OR ((VS2012_INSTALLED AND VS2012SDK_INSTALLED) OR (NOT VS2012_INSTALLED))</Condition>
 
     <!-- Define Feature Selections -->
+    <!-- Only show the features for the version of VS they have installed -->
     <Feature Id="TOOLKITBUILDER2010FEATURE" Title="!(loc.Feature_ToolkitBuilderVS2010)" Level="1" Display="expand">
-      <Condition Level="0"><![CDATA[VS2010_INSTALL=""]]></Condition>
+      <Condition Level="0"><![CDATA[NOT CANINSTALLFORVS2010]]></Condition>
       <ComponentRef Id="ToolkitBuilderVsix2010" />
       <Feature Id="TOOLKITBUILDERLABS2010FEATURE" Title="!(loc.Feature_ToolkitBuilderLabsVS2010)" Level="5000" >
         <ComponentRef Id="ToolkitBuilderLabsVsix2010" />
       </Feature>
     </Feature>
     <Feature Id="TOOLKITBUILDER2012FEATURE" Title="!(loc.Feature_ToolkitBuilderVS2012)" Level="1" Display="expand">
-      <Condition Level="0"><![CDATA[VS2012_INSTALL=""]]></Condition>
+      <Condition Level="0"><![CDATA[NOT CANINSTALLFORVS2012]]></Condition>
       <ComponentRef Id="ToolkitBuilderVsix2012" />
       <Feature Id="TOOLKITBUILDERLABS2012FEATURE" Title="!(loc.Feature_ToolkitBuilderLabsVS2012)" Level="5000">
         <ComponentRef Id="ToolkitBuilderLabsVsix2012" />
       </Feature>
     </Feature>
 
-    <!-- Set the user interface -->
-    <UIRef Id="WixUI_FeatureTree" />
+    <!-- UI Process -->
+    <InstallUISequence>
+      <!-- Warn user about missing pre-requisities limiting the features that can be selected -->
+      <Custom Action="MSGBOXVS2010INSTALL" After="LaunchConditions">VS2010_INSTALLED AND NOT VS2010SDK_INSTALLED</Custom>
+      <Custom Action="MSGBOXVS2012INSTALL" After="LaunchConditions">VS2012_INSTALLED AND NOT VS2012SDK_INSTALLED</Custom>
+    </InstallUISequence>
 
     <!-- Installation Process -->
     <InstallExecuteSequence>
-      <!-- Ensure we are using the latest VSIXInstaller -->
+      <!-- Ensure we are using the latest VSIXInstaller version (VSIXInstaller from VS2012 overrides the one from VS2010) -->
       <Custom Action="SETDEFAULTVSIXINSTALLEREXE" After="CostInitialize"></Custom>
-      <Custom Action="DOWNGRADEVSIXINSTALLEREXE" After="SETDEFAULTVSIXINSTALLEREXE">VS2012_INSTALL=""</Custom>
+      <Custom Action="DOWNGRADEVSIXINSTALLEREXE" After="SETDEFAULTVSIXINSTALLEREXE">NOT VS2012_INSTALLED</Custom>
       
-      <!-- Install VSIXes -->
+      <!-- Install chosen VSIXes, after we copy the VSIXes to the installation folder -->
       <Custom Action="INSTALLBUILDERVSIX2010" After="InstallFiles"><![CDATA[(&TOOLKITBUILDER2010FEATURE=3)]]> AND NOT Installed</Custom>
       <Custom Action="INSTALLBUILDERLABSVSIX2010" After="INSTALLBUILDERVSIX2010"><![CDATA[(&TOOLKITBUILDERLABS2010FEATURE=3)]]> AND NOT Installed</Custom>
       <Custom Action="INSTALLBUILDERVSIX2012" After="INSTALLBUILDERLABSVSIX2010"><![CDATA[(&TOOLKITBUILDER2012FEATURE=3)]]> AND NOT Installed</Custom>
       <Custom Action="INSTALLBUILDERLABSVSIX2012" After="INSTALLBUILDERVSIX2012"><![CDATA[(&TOOLKITBUILDERLABS2012FEATURE=3)]]> AND NOT Installed</Custom>
 
-      <!-- Uninstall VSIXes (on an uninstall and only if installed) -->
+      <!-- Uninstall installed VSIXes (only on  an uninstall), before we remove the VSIXes from installation folder -->
       <Custom Action="UNINSTALLBUILDERVSIX2010" Before="RemoveFiles"><![CDATA[(!TOOLKITBUILDER2010FEATURE=3)]]> AND Installed AND ((REMOVE="ALL") OR (MaintenanceMode="Remove"))</Custom>
       <Custom Action="UNINSTALLBUILDERLABSVSIX2010" After="UNINSTALLBUILDERVSIX2010"><![CDATA[(!TOOLKITBUILDERLABS2010FEATURE=3)]]> AND Installed AND ((REMOVE="ALL") OR (MaintenanceMode="Remove"))</Custom>
       <Custom Action="UNINSTALLBUILDERVSIX2012" After="UNINSTALLBUILDERLABSVSIX2010"><![CDATA[(!TOOLKITBUILDER2012FEATURE=3)]]> AND Installed AND ((REMOVE="ALL") OR (MaintenanceMode="Remove"))</Custom>
@@ -101,7 +112,7 @@
     </InstallExecuteSequence>
   </Product>
 
-  <!-- Define Directories -->
+  <!-- Define local installation folders -->
   <Fragment>
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="LocalAppDataFolder">
@@ -111,11 +122,15 @@
     </Directory>
   </Fragment>
   
-  <!-- Define the Actions-->
+  <!-- Define the various Actions-->
   <Fragment>
+    <!-- Warn user of missing prerequisites -->
+    <CustomAction Id="MSGBOXVS2010INSTALL" Script="vbscript"><![CDATA[MsgBox "!(loc.Message_VSSDK2010)", 48]]></CustomAction>
+    <CustomAction Id="MSGBOXVS2012INSTALL" Script="vbscript"><![CDATA[MsgBox "!(loc.Message_VSSDK2012)", 48]]></CustomAction>
+
     <!-- Set the path for the VSIXINstaller -->
-    <CustomAction Id="SETDEFAULTVSIXINSTALLEREXE" Property="VSIXINSTALLEREXE" Value="[VS2012_VSIXINSTALLER]"/>
-    <CustomAction Id="DOWNGRADEVSIXINSTALLEREXE" Property="VSIXINSTALLEREXE" Value="[VS2010_VSIXINSTALLER]"/>
+    <CustomAction Id="SETDEFAULTVSIXINSTALLEREXE" Property="VSIXINSTALLEREXE" Value="[VS2012_VSIXINSTALLERPATH]"/>
+    <CustomAction Id="DOWNGRADEVSIXINSTALLEREXE" Property="VSIXINSTALLEREXE" Value="[VS2010_VSIXINSTALLERPATH]"/>
     
     <!-- Install the VSIXes -->
     <CustomAction Id="INSTALLBUILDERVSIX2010" Property="VSIXINSTALLEREXE" ExeCommand="/q &quot;[#ToolkitBuilderVsixFile2010]&quot;" Execute="deferred" Return="check" Impersonate="yes"/>
@@ -129,6 +144,7 @@
     <CustomAction Id="UNINSTALLBUILDERVSIX2012" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:[TOOLKITBUILDER2012VSIXID]" Execute="deferred" Return="ignore" Impersonate="yes"/>
     <CustomAction Id="UNINSTALLBUILDERLABSVSIX2012" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:&quot;[TOOLKITBUILDERLABS2012VSIXID]&quot;" Execute="deferred" Return="ignore" Impersonate="yes"/>
   
+    <!-- Text for installer progress -->
     <UI>
       <ProgressText Action="INSTALLBUILDERVSIX2010">!(loc.ProgressText_Install_ToolkitBuilderVS2010)</ProgressText>
       <ProgressText Action="INSTALLBUILDERLABSVSIX2010">!(loc.ProgressText_Install_ToolkitBuilderLabsVS2010)</ProgressText>

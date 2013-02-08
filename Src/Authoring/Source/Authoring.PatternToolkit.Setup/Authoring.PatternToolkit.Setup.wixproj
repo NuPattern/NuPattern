@@ -50,6 +50,7 @@
     <Folder Include="Resources" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Diagnose MSI.bat" />
     <Content Include="Resources\Banner.bmp" />
     <Content Include="Resources\DialogBackground.bmp" />
     <Content Include="Resources\Icon.ico" />
@@ -63,7 +64,8 @@
     <PreBuildEvent />
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>copy "!(TargetPath)" "$(ProjectDir)$(BranchRoot)Binaries\$(TargetVsVersion)\$(TargetFileName)"</PostBuildEvent>
+    <PostBuildEvent>copy "!(TargetPath)" "$(ProjectDir)$(BranchRoot)Binaries\$(TargetFileName)"
+copy "$(ProjectDir)Diagnose MSI.bat" "$(ProjectDir)$(BranchRoot)Binaries\Diagnose MSI.bat"</PostBuildEvent>
   </PropertyGroup>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.
