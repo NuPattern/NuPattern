@@ -46,6 +46,14 @@
       <Name>WixUIExtension</Name>
     </WixExtension>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Banner.bmp" />
+    <Content Include="Resources\DialogBackground.bmp" />
+    <Content Include="Resources\Icon.ico" />
+  </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
   <PropertyGroup>

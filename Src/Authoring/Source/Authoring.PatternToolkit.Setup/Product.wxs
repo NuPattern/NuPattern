@@ -8,6 +8,13 @@
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
 		<MediaTemplate EmbedCab="yes" />
     
+    <!-- Custom Look and Feel -->
+    <WixVariable Id="WixUIBannerBmp" Value="Resources\Banner.bmp"/>
+    <WixVariable Id="WixUIDialogBmp" Value="Resources\DialogBackground.bmp"/>
+    <Icon Id="Icon.ico" SourceFile="Resources\Icon.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="Icon.ico" />
+    <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="Restart Visual Studio for the changes to take effect." />
+
     <!-- Include the License file -->
     <WixVariable Id="WixUILicenseRtf" Value="License.rtf"/>
 
@@ -31,7 +38,12 @@
           <FileSearch Id="VS2012_VsixInstallerFileSearch" Name="VSIXInstaller.exe" />
         </DirectorySearch>
       </RegistrySearch>
-    </Property>   
+    </Property>
+    
+    <!-- Launch Conditions for dependencies -->
+    <!-- VS2010 or VS2012 -->
+    <!-- IF VS2010, THEN VS2012SDK or VS2010SDKSP1-->
+    <!-- IF VS2012, THEN VS20112SDK -->
 
     <!-- Define Feature Selections -->
     <Feature Id="TOOLKITBUILDER2010FEATURE" Title="Toolkit Builder VS2010" Level="1" Display="expand">
@@ -82,18 +94,6 @@
     </Directory>
   </Fragment>
   
-  <!--
-  TODO
-
-    3. Sort out uninstall actions
-    
-    4. Sort out Dependency checking
-    
-    5. Change Icons, Banners in UI
-    
-    6. Add the /q to VSIXINstaller command below
-  -->
-  
   <!-- Define the Actions-->
   <Fragment>
     <!-- Set the path for the VSIXINstaller -->
@@ -107,10 +107,10 @@
     <CustomAction Id="INSTALLBUILDERLABSVSIX2012" Property="VSIXINSTALLEREXE" ExeCommand="/q &quot;[#ToolkitBuilderLabsVsixFile2012]&quot;" Execute="deferred" Return="check" Impersonate="yes"/>
     
     <!-- Uninstall the VSIXes -->
-    <CustomAction Id="UNINSTALLBUILDERVSIX2010" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:[TOOLKITBUILDER2010VSIXID]" Execute="deferred" Return="check" Impersonate="yes"/>
-    <CustomAction Id="UNINSTALLBUILDERLABSVSIX2010" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:[TOOLKITBUILDERLABS2010VSIXID]" Execute="deferred" Return="check" Impersonate="yes"/>
-    <CustomAction Id="UNINSTALLBUILDERVSIX2012" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:[TOOLKITBUILDER2012VSIXID]" Execute="deferred" Return="check" Impersonate="yes"/>
-    <CustomAction Id="UNINSTALLBUILDERLABSVSIX2012" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:&quot;[TOOLKITBUILDERLABS2012VSIXID]&quot;" Execute="deferred" Return="check" Impersonate="yes"/>
+    <CustomAction Id="UNINSTALLBUILDERVSIX2010" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:[TOOLKITBUILDER2010VSIXID]" Execute="deferred" Return="ignore" Impersonate="yes"/>
+    <CustomAction Id="UNINSTALLBUILDERLABSVSIX2010" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:[TOOLKITBUILDERLABS2010VSIXID]" Execute="deferred" Return="ignore" Impersonate="yes"/>
+    <CustomAction Id="UNINSTALLBUILDERVSIX2012" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:[TOOLKITBUILDER2012VSIXID]" Execute="deferred" Return="ignore" Impersonate="yes"/>
+    <CustomAction Id="UNINSTALLBUILDERLABSVSIX2012" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:&quot;[TOOLKITBUILDERLABS2012VSIXID]&quot;" Execute="deferred" Return="ignore" Impersonate="yes"/>
   
     <UI>
       <ProgressText Action="INSTALLBUILDERVSIX2010">Installing 'NuPattern Toolkit Builder' extension for Visual Studio 2010</ProgressText>
