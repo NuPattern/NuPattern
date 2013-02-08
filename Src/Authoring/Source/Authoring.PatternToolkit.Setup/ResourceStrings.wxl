@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+
+  <String Id="ApplicationName">NuPattern</String>
+  <String Id="ManufacturerName">NuPattern</String>
+  <String Id="HelpLink">http://www.nupattern.org/</String>
+
+  <String Id="DownGradeError">A newer version of !(loc.ApplicationName) is already installed.</String>
+
+  <String Id="LaunchCondition_VisualStudioAnyVersion">Visual Studio 2010 Pro/Prem/Ultimate or Visual Studio 2012 Pro/Prem/Ultimate is required to be installed before you can install '!(loc.ApplicationName)'.</String>
+  <String Id="LaunchCondition_VSSDK2010">Visual Studio 2010 SDK is required to be installed before you can install '!(loc.ApplicationName)' for Visual Studio 2010.</String>
+  <String Id="LaunchCondition_VSSDK2012">Visual Studio 2012 SDK is required to be installed before you can install '!(loc.ApplicationName)' for Visual Studio 2012.</String>
+
+  <String Id="Feature_ToolkitBuilderVS2010">Toolkit Builder for VS2010</String>
+  <String Id="Feature_ToolkitBuilderLabsVS2010">Hands-On Labs for VS2010</String>
+  <String Id="Feature_ToolkitBuilderVS2012">Toolkit Builder for VS2012</String>
+  <String Id="Feature_ToolkitBuilderLabsVS2012">Hands-On Labs for VS2012</String>
+
+  <String Id="ProgressText_Install_ToolkitBuilderVS2010">Installing 'NuPattern Toolkit Builder' extension for Visual Studio 2010</String>
+  <String Id="ProgressText_Install_ToolkitBuilderLabsVS2010">Installing 'NuPattern Toolkit Builder Hands-On Labs' extension for Visual Studio 2010</String>
+  <String Id="ProgressText_Install_ToolkitBuilderVS2012">Installing 'NuPattern Toolkit Builder' extension for Visual Studio 2012</String>
+  <String Id="ProgressText_Install_ToolkitBuilderLabsVS2012">Installing 'NuPattern Toolkit Builder Hands-On Labs' extension for Visual Studio 2012</String>
+
+  <String Id="ProgressText_UnInstall_ToolkitBuilderVS2010">Removing 'NuPattern Toolkit Builder' extension from Visual Studio 2010</String>
+  <String Id="ProgressText_UnInstall_ToolkitBuilderLabsVS2010">Removing 'NuPattern Toolkit Builder Hands-On Labs' extension from Visual Studio 2010</String>
+  <String Id="ProgressText_UnInstall_ToolkitBuilderVS2012">Removing 'NuPattern Toolkit Builder' extension from Visual Studio 2012</String>
+  <String Id="ProgressText_UnInstall_ToolkitBuilderLabsVS2012">Removing 'NuPattern Toolkit Builder Hands-On Labs' extension from Visual Studio 2012</String>
+
+  <String Id="CompletionMessage">Restart Visual Studio for the changes to take effect.</String>
+  <String Id="WelcomeDlgTitle">{\WixUI_Font_Bigger}Welcome to the [ProductName] [ProductVersion] Setup Wizard</String>
+</WixLocalization>

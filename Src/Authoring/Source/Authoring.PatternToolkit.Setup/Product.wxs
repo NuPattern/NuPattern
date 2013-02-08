@@ -2,10 +2,12 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
      xmlns:ui="http://schemas.microsoft.com/wix/UIExtension"
      xmlns:vs="http://schemas.microsoft.com/wix/VSExtension">
-	<Product Id="EE3DCDA9-4490-4C5F-9862-252DF030645A" Name="NuPattern" Language="1033" Version="1.3.20.0" Manufacturer="NuPattern" UpgradeCode="151c3ddf-ddb1-4af6-9a50-3e71c9a6d2e8">
+	<Product Id="EE3DCDA9-4490-4C5F-9862-252DF030645A" Name="!(loc.ApplicationName)" 
+           Language="1033" Version="1.3.20.0" Manufacturer="!(loc.ManufacturerName)" 
+           UpgradeCode="151c3ddf-ddb1-4af6-9a50-3e71c9a6d2e8">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perUser" />
 
-		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MajorUpgrade DowngradeErrorMessage="!(loc.DownGradeError)" />
 		<MediaTemplate EmbedCab="yes" />
     
     <!-- Custom Look and Feel -->
@@ -13,17 +15,32 @@
     <WixVariable Id="WixUIDialogBmp" Value="Resources\DialogBackground.bmp"/>
     <Icon Id="Icon.ico" SourceFile="Resources\Icon.ico"/>
     <Property Id="ARPPRODUCTICON" Value="Icon.ico" />
-    <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="Restart Visual Studio for the changes to take effect." />
+    <Property Id="ARPHELPLINK" Value="!(loc.HelpLink)" />
+    <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="!(loc.CompletionMessage)" />
 
     <!-- Include the License file -->
     <WixVariable Id="WixUILicenseRtf" Value="License.rtf"/>
 
     <!-- Read settings from machine -->
     <Property Id="VS2010_INSTALL" Secure="yes">
-      <RegistrySearch Id="VS2010_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS" Name="EnvironmentDirectory" Type="raw"/>
+      <!-- Find the first of any of these editions -->
+      <RegistrySearch Id="VS2010PRO_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS\Pro" Name="ProductDir" Type="raw"/>
+      <RegistrySearch Id="VS2010VSTD_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS\VSTD" Name="ProductDir" Type="raw"/>
+      <RegistrySearch Id="VS2010VSTA_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS\VSTA" Name="ProductDir" Type="raw"/>
+      <RegistrySearch Id="VS2010VSTS_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS\VSTS" Name="ProductDir" Type="raw"/>
+    </Property>
+    <Property Id="VS2010SDK_INSTALL" Secure="yes">
+      <RegistrySearch Id="VS2010SDK_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\VSIP\10.0" Name="InstallDir" Type="raw"/>
     </Property>
     <Property Id="VS2012_INSTALL" Secure="yes">
-      <RegistrySearch Id="VS2012_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS" Name="EnvironmentDirectory" Type="raw"/>
+      <!-- Find the first of any of these editions -->
+      <RegistrySearch Id="VS2012PRO_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS\Pro" Name="ProductDir" Type="raw"/>
+      <RegistrySearch Id="VS2012VSTD_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS\VSTD" Name="ProductDir" Type="raw"/>
+      <RegistrySearch Id="VS2012VSTA_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS\VSTA" Name="ProductDir" Type="raw"/>
+      <RegistrySearch Id="VS2012VSTS_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS\VSTS" Name="ProductDir" Type="raw"/>
+    </Property>
+    <Property Id="VS2012SDK_INSTALL" Secure="yes">
+      <RegistrySearch Id="VS2012SDK_InstallRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\VSIP\11.0" Name="InstallDir" Type="raw"/>
     </Property>
     <Property Id="VS2010_VSIXINSTALLER" Secure="yes">
       <RegistrySearch Id="VS2010_VsixInstallerRegSearch" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS" Name="EnvironmentDirectory" Type="raw">
@@ -41,22 +58,22 @@
     </Property>
     
     <!-- Launch Conditions for dependencies -->
-    <!-- VS2010 or VS2012 -->
-    <!-- IF VS2010, THEN VS2012SDK or VS2010SDKSP1-->
-    <!-- IF VS2012, THEN VS20112SDK -->
+    <Condition Message="!(loc.LaunchCondition_VisualStudioAnyVersion)">(VS2010_INSTALL) OR (VS2012_INSTALL)</Condition>
+    <Condition Message="!(loc.LaunchCondition_VSSDK2010)">(VS2010_INSTALL AND VS2010SDK_INSTALL) OR (NOT VS2010_INSTALL)</Condition>
+    <Condition Message="!(loc.LaunchCondition_VSSDK2012)">(VS2012_INSTALL AND VS2012SDK_INSTALL) OR (NOT VS2012_INSTALL)</Condition>
 
     <!-- Define Feature Selections -->
-    <Feature Id="TOOLKITBUILDER2010FEATURE" Title="Toolkit Builder VS2010" Level="1" Display="expand">
+    <Feature Id="TOOLKITBUILDER2010FEATURE" Title="!(loc.Feature_ToolkitBuilderVS2010)" Level="1" Display="expand">
       <Condition Level="0"><![CDATA[VS2010_INSTALL=""]]></Condition>
       <ComponentRef Id="ToolkitBuilderVsix2010" />
-      <Feature Id="TOOLKITBUILDERLABS2010FEATURE" Title="Hands-On Labs VS2010" Level="5000" >
+      <Feature Id="TOOLKITBUILDERLABS2010FEATURE" Title="!(loc.Feature_ToolkitBuilderLabsVS2010)" Level="5000" >
         <ComponentRef Id="ToolkitBuilderLabsVsix2010" />
       </Feature>
     </Feature>
-    <Feature Id="TOOLKITBUILDER2012FEATURE" Title="Toolkit Builder VS2012" Level="1" Display="expand">
+    <Feature Id="TOOLKITBUILDER2012FEATURE" Title="!(loc.Feature_ToolkitBuilderVS2012)" Level="1" Display="expand">
       <Condition Level="0"><![CDATA[VS2012_INSTALL=""]]></Condition>
       <ComponentRef Id="ToolkitBuilderVsix2012" />
-      <Feature Id="TOOLKITBUILDERLABS2012FEATURE" Title="Hands-On Labs VS2012" Level="5000">
+      <Feature Id="TOOLKITBUILDERLABS2012FEATURE" Title="!(loc.Feature_ToolkitBuilderLabsVS2012)" Level="5000">
         <ComponentRef Id="ToolkitBuilderLabsVsix2012" />
       </Feature>
     </Feature>
@@ -88,7 +105,7 @@
   <Fragment>
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="LocalAppDataFolder">
-        <Directory Id="INSTALLFOLDER" Name="NuPattern">
+        <Directory Id="INSTALLFOLDER" Name="!(loc.ApplicationName)">
         </Directory>
       </Directory>
     </Directory>
@@ -113,15 +130,15 @@
     <CustomAction Id="UNINSTALLBUILDERLABSVSIX2012" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:&quot;[TOOLKITBUILDERLABS2012VSIXID]&quot;" Execute="deferred" Return="ignore" Impersonate="yes"/>
   
     <UI>
-      <ProgressText Action="INSTALLBUILDERVSIX2010">Installing 'NuPattern Toolkit Builder' extension for Visual Studio 2010</ProgressText>
-      <ProgressText Action="INSTALLBUILDERLABSVSIX2010">Installing 'NuPattern Toolkit Builder Hands-On Labs' extension for Visual Studio 2010</ProgressText>
-      <ProgressText Action="INSTALLBUILDERVSIX2012">Installing 'NuPattern Toolkit Builder' extension for Visual Studio 2012</ProgressText>
-      <ProgressText Action="INSTALLBUILDERLABSVSIX2012">Installing 'NuPattern Toolkit Builder Hands-On Labs' extension for Visual Studio 2012</ProgressText>
+      <ProgressText Action="INSTALLBUILDERVSIX2010">!(loc.ProgressText_Install_ToolkitBuilderVS2010)</ProgressText>
+      <ProgressText Action="INSTALLBUILDERLABSVSIX2010">!(loc.ProgressText_Install_ToolkitBuilderLabsVS2010)</ProgressText>
+      <ProgressText Action="INSTALLBUILDERVSIX2012">!(loc.ProgressText_Install_ToolkitBuilderVS2012)</ProgressText>
+      <ProgressText Action="INSTALLBUILDERLABSVSIX2012">!(loc.ProgressText_Install_ToolkitBuilderLabsVS2012)</ProgressText>
 
-      <ProgressText Action="UNINSTALLBUILDERVSIX2010">Removing 'NuPattern Toolkit Builder' extension from Visual Studio 2010</ProgressText>
-      <ProgressText Action="UNINSTALLBUILDERLABSVSIX2010">Removing 'NuPattern Toolkit Builder Hands-On Labs' extension from Visual Studio 2010</ProgressText>
-      <ProgressText Action="UNINSTALLBUILDERVSIX2012">Removing 'NuPattern Toolkit Builder' extension from Visual Studio 2012</ProgressText>
-      <ProgressText Action="UNINSTALLBUILDERLABSVSIX2012">Removing 'NuPattern Toolkit Builder Hands-On Labs' extension from Visual Studio 2012</ProgressText>
+      <ProgressText Action="UNINSTALLBUILDERVSIX2010">!(loc.ProgressText_UnInstall_ToolkitBuilderVS2010)</ProgressText>
+      <ProgressText Action="UNINSTALLBUILDERLABSVSIX2010">!(loc.ProgressText_UnInstall_ToolkitBuilderLabsVS2010)</ProgressText>
+      <ProgressText Action="UNINSTALLBUILDERVSIX2012">!(loc.ProgressText_UnInstall_ToolkitBuilderVS2012)</ProgressText>
+      <ProgressText Action="UNINSTALLBUILDERLABSVSIX2012">!(loc.ProgressText_UnInstall_ToolkitBuilderLabsVS2012)</ProgressText>
     </UI>
   </Fragment>
 </Wix>

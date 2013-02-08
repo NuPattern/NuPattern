@@ -54,6 +54,9 @@
     <Content Include="Resources\DialogBackground.bmp" />
     <Content Include="Resources\Icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceStrings.wxl" />
+  </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
   <PropertyGroup>
