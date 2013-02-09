@@ -11,20 +11,26 @@
 
 		<MajorUpgrade DowngradeErrorMessage="!(loc.DownGradeError)" />
 		<MediaTemplate EmbedCab="yes" />
-    
+
+    <!-- Include the License file -->
+    <WixVariable Id="WixUILicenseRtf" Value="License.rtf"/>
+
     <!-- Custom Look and Feel -->
     <WixVariable Id="WixUIBannerBmp" Value="Resources\Banner.bmp"/>
     <WixVariable Id="WixUIDialogBmp" Value="Resources\DialogBackground.bmp"/>
     <Icon Id="Icon.ico" SourceFile="Resources\Icon.ico"/>
     <Property Id="ARPPRODUCTICON" Value="Icon.ico" />
     <Property Id="ARPHELPLINK" Value="!(loc.HelpLink)" />
-    <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="!(loc.CompletionMessage)" />
+    <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="!(loc.Message_Completion)" />
+    <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="!(loc.Message_BrowseGettingStarted)" />
+    <Property Id="WixShellExecTarget" Value="!(loc.GettingStartedLink)" />
+    <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOX" Value="1"/>
 
-    <!-- Include the License file -->
-    <WixVariable Id="WixUILicenseRtf" Value="License.rtf"/>
-
-    <!-- Set the user interface -->
-    <UIRef Id="WixUI_FeatureTree" />
+    <!-- Set, and customize the user interface -->
+    <UI>
+      <UIRef Id="WixUI_FeatureTree" />
+      <Publish Dialog="ExitDialog" Control="Finish" Event="DoAction" Value="BrowseGettingStarted">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
+    </UI>
 
     <!-- Read settings from machine -->
     <Property Id="VS2010_INSTALLED" Secure="yes">
@@ -145,18 +151,21 @@
     <CustomAction Id="UNINSTALLBUILDERLABSVSIX2010" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:[TOOLKITBUILDERLABS2010VSIXID]" Execute="deferred" Return="ignore" Impersonate="yes"/>
     <CustomAction Id="UNINSTALLBUILDERVSIX2012" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:[TOOLKITBUILDER2012VSIXID]" Execute="deferred" Return="ignore" Impersonate="yes"/>
     <CustomAction Id="UNINSTALLBUILDERLABSVSIX2012" Property="VSIXINSTALLEREXE" ExeCommand="/q /uninstall:&quot;[TOOLKITBUILDERLABS2012VSIXID]&quot;" Execute="deferred" Return="ignore" Impersonate="yes"/>
-  
+
+    <!-- Browse to Getting Started -->
+    <CustomAction Id="BrowseGettingStarted" BinaryKey="WixCA" DllEntry="WixShellExec" Execute="immediate" Return="ignore" Impersonate="yes" />
+
     <!-- Text for installer progress -->
     <UI>
       <ProgressText Action="INSTALLBUILDERVSIX2010">!(loc.ProgressText_Install_ToolkitBuilderVS2010)</ProgressText>
       <ProgressText Action="INSTALLBUILDERLABSVSIX2010">!(loc.ProgressText_Install_ToolkitBuilderLabsVS2010)</ProgressText>
       <ProgressText Action="INSTALLBUILDERVSIX2012">!(loc.ProgressText_Install_ToolkitBuilderVS2012)</ProgressText>
       <ProgressText Action="INSTALLBUILDERLABSVSIX2012">!(loc.ProgressText_Install_ToolkitBuilderLabsVS2012)</ProgressText>
-
       <ProgressText Action="UNINSTALLBUILDERVSIX2010">!(loc.ProgressText_UnInstall_ToolkitBuilderVS2010)</ProgressText>
       <ProgressText Action="UNINSTALLBUILDERLABSVSIX2010">!(loc.ProgressText_UnInstall_ToolkitBuilderLabsVS2010)</ProgressText>
       <ProgressText Action="UNINSTALLBUILDERVSIX2012">!(loc.ProgressText_UnInstall_ToolkitBuilderVS2012)</ProgressText>
       <ProgressText Action="UNINSTALLBUILDERLABSVSIX2012">!(loc.ProgressText_UnInstall_ToolkitBuilderLabsVS2012)</ProgressText>
     </UI>
+
   </Fragment>
 </Wix>

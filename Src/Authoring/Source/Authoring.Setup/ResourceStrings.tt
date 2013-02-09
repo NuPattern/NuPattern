@@ -7,5 +7,6 @@
 	<String Id="ApplicationName"><#=VersionInfo.AssemblyProductName#></String>
 	<String Id="ManufacturerName"><#=VersionInfo.VsixAuthor#></String>
 	<String Id="HelpLink"><#=VersionInfo.ProjectHomePage#></String>
+	<String Id="GettingStartedLink"><#=VsixInfo.PatternToolkitBuilder.GettingStartedUrl#></String>
 
 </WixLocalization>

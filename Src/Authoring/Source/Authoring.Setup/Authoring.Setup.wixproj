@@ -17,6 +17,10 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
     <WixExtension Include="WixVSExtension">
       <HintPath>$(WixExtDir)\WixVSExtension.dll</HintPath>
       <Name>WixVSExtension</Name>

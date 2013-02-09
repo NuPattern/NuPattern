@@ -18,16 +18,17 @@
   <String Id="Feature_ToolkitBuilderLabsVS2012">Hands-On Labs for VS2012</String>
 
   <!-- Progress Text -->
-  <String Id="ProgressText_Install_ToolkitBuilderVS2010">Installing 'NuPattern Toolkit Builder' extension for Visual Studio 2010</String>
-  <String Id="ProgressText_Install_ToolkitBuilderLabsVS2010">Installing 'NuPattern Toolkit Builder Hands-On Labs' extension for Visual Studio 2010</String>
-  <String Id="ProgressText_Install_ToolkitBuilderVS2012">Installing 'NuPattern Toolkit Builder' extension for Visual Studio 2012</String>
-  <String Id="ProgressText_Install_ToolkitBuilderLabsVS2012">Installing 'NuPattern Toolkit Builder Hands-On Labs' extension for Visual Studio 2012</String>
-  <String Id="ProgressText_UnInstall_ToolkitBuilderVS2010">Removing 'NuPattern Toolkit Builder' extension from Visual Studio 2010</String>
-  <String Id="ProgressText_UnInstall_ToolkitBuilderLabsVS2010">Removing 'NuPattern Toolkit Builder Hands-On Labs' extension from Visual Studio 2010</String>
-  <String Id="ProgressText_UnInstall_ToolkitBuilderVS2012">Removing 'NuPattern Toolkit Builder' extension from Visual Studio 2012</String>
-  <String Id="ProgressText_UnInstall_ToolkitBuilderLabsVS2012">Removing 'NuPattern Toolkit Builder Hands-On Labs' extension from Visual Studio 2012</String>
+  <String Id="ProgressText_Install_ToolkitBuilderVS2010">Installing 'NuPattern Toolkit Builder' for Visual Studio 2010</String>
+  <String Id="ProgressText_Install_ToolkitBuilderLabsVS2010">Installing 'NuPattern Toolkit Builder Hands-On Labs' for Visual Studio 2010</String>
+  <String Id="ProgressText_Install_ToolkitBuilderVS2012">Installing 'NuPattern Toolkit Builder' for Visual Studio 2012</String>
+  <String Id="ProgressText_Install_ToolkitBuilderLabsVS2012">Installing 'NuPattern Toolkit Builder Hands-On Labs' for Visual Studio 2012</String>
+  <String Id="ProgressText_UnInstall_ToolkitBuilderVS2010">Removing 'NuPattern Toolkit Builder' from Visual Studio 2010</String>
+  <String Id="ProgressText_UnInstall_ToolkitBuilderLabsVS2010">Removing 'NuPattern Toolkit Builder Hands-On Labs' from Visual Studio 2010</String>
+  <String Id="ProgressText_UnInstall_ToolkitBuilderVS2012">Removing 'NuPattern Toolkit Builder' from Visual Studio 2012</String>
+  <String Id="ProgressText_UnInstall_ToolkitBuilderLabsVS2012">Removing 'NuPattern Toolkit Builder Hands-On Labs' from Visual Studio 2012</String>
 
   <!-- UI Text -->
-  <String Id="CompletionMessage">Restart Visual Studio for the changes to take effect.</String>
+  <String Id="Message_BrowseGettingStarted">Read the Getting Started guide for NuPattern</String>
+  <String Id="Message_Completion">Restart Visual Studio for the new changes to take effect.</String>
   <String Id="WelcomeDlgTitle">{\WixUI_Font_Bigger}Welcome to the [ProductName] [ProductVersion] Setup Wizard</String>
 </WixLocalization>

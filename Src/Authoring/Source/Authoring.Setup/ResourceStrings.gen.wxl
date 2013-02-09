@@ -4,5 +4,6 @@
 	<String Id="ApplicationName">NuPattern</String>
 	<String Id="ManufacturerName">NuPattern</String>
 	<String Id="HelpLink">http://www.nupattern.org/</String>
+	<String Id="GettingStartedLink">http://nupattern.codeplex.com/wikipage?title=Getting%20Started</String>
 
 </WixLocalization>
