@@ -4,12 +4,14 @@
   <String Id="DownGradeError">A newer version of [ProductName] is already installed.</String>
 
   <!-- Launch Condition Messages -->
-  <String Id="LaunchCondition_VisualStudioAnyVersion">Visual Studio 2010 Pro/Prem/Ultimate or Visual Studio 2012 Pro/Prem/Ultimate must be installed before you can install '!(loc.ApplicationName)'.</String>
-  <String Id="LaunchCondition_VisualStudioAndVSSDKAnyVersion">Visual Studio 2010 SDK or Visual Studio 2012 SDK must be installed in the version of Visual Studio you want to install '!(loc.ApplicationName)'. Download and install the Visual Studio SDK extensions from the Visual Studio Gallery before installing '!(loc.ApplicationName)'</String>
+  <String Id="LaunchCondition_NoVSAnyVersion">Visual Studio 2010 Pro/Prem/Ultimate or Visual Studio 2012 Pro/Prem/Ultimate must be installed first, before you can install '!(loc.ApplicationName)'.</String>
+  <String Id="LaunchCondition_VSAllVersionsAndNoVSSDKAnyVersion">Visual Studio 2010 SDK or Visual Studio 2012 SDK must be installed in the versions of Visual Studio you want to install '!(loc.ApplicationName)'. &#13;&#10;&#13;&#10;Download and install the Visual Studio SDK extensions from the Visual Studio Gallery first.</String>
+  <String Id="LaunchCondition_VS2010NoVSSDK">Visual Studio 2010 SDK must be installed to install '!(loc.ApplicationName)'. &#13;&#10;&#13;&#10;Download and install the Visual Studio 2010 SDK extension from the Visual Studio Gallery first</String>
+  <String Id="LaunchCondition_VS2012NoVSSDK">Visual Studio 2012 SDK must be installed to install '!(loc.ApplicationName)'. &#13;&#10;&#13;&#10;Download and install the Visual Studio 2012 SDK extension from the Visual Studio Gallery first</String>
 
   <!-- Feature Warnings -->
-  <String Id="Message_VSSDK2010">Visual Studio 2010 SDK extension must be installed before installing '!(loc.ApplicationName)' for Visual Studio 2010. If you continue, Visual Studio 2010 will not be updated, but you can re-run the installer from Control Panel to add this feature later.</String>
-  <String Id="Message_VSSDK2012">Visual Studio 2012 SDK extension must be installed before installing '!(loc.ApplicationName)' for Visual Studio 2012. If you continue, Visual Studio 2012 will not be updated, but you can re-run the installer from Control Panel to add this feature later.</String>
+  <String Id="Message_VSSDK2010">"Visual Studio 2010 SDK must be installed before installing '!(loc.ApplicationName)' for Visual Studio 2010." &amp; vbCrLf &amp; vbCrLf &amp; "If you continue, Visual Studio 2010 will not be updated, but you can run this installer again from Control Panel to add this feature later."</String>
+  <String Id="Message_VSSDK2012">"Visual Studio 2012 SDK must be installed before installing '!(loc.ApplicationName)' for Visual Studio 2012." &amp; vbCrLf &amp; vbCrLf &amp; "If you continue, Visual Studio 2012 will not be updated, but you can run this installer again from Control Panel to add this feature later."</String>
 
   <!-- Feature Names -->
   <String Id="Feature_ToolkitBuilderVS2010">Toolkit Builder for VS2010</String>

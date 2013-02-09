@@ -73,20 +73,22 @@
     <!-- Ensure minimal VS and VSIX dependencies -->
     <!-- We dont want to prevent the user installing only one of their versions of VS (if they have both) as long as it has the necessary dependencies,
       but they need to have at least one version of VS with all dependencies installed to continue -->
-    <Condition Message="!(loc.LaunchCondition_VisualStudioAnyVersion)">VS2010_INSTALLED OR VS2012_INSTALLED</Condition>
-    <Condition Message="!(loc.LaunchCondition_VisualStudioAndVSSDKAnyVersion)">((VS2010_INSTALLED AND VS2010SDK_INSTALLED) OR (NOT VS2010_INSTALLED)) OR ((VS2012_INSTALLED AND VS2012SDK_INSTALLED) OR (NOT VS2012_INSTALLED))</Condition>
+    <Condition Message="!(loc.LaunchCondition_NoVSAnyVersion)">VS2010_INSTALLED OR VS2012_INSTALLED</Condition>
+    <Condition Message="!(loc.LaunchCondition_VS2010NoVSSDK)">NOT ((NOT VS2012_INSTALLED) AND (VS2010_INSTALLED AND NOT VS2010SDK_INSTALLED))</Condition>
+    <Condition Message="!(loc.LaunchCondition_VS2012NoVSSDK)">NOT ((NOT VS2010_INSTALLED) AND (VS2012_INSTALLED AND NOT VS2012SDK_INSTALLED))</Condition>
+    <Condition Message="!(loc.LaunchCondition_VSAllVersionsAndNoVSSDKAnyVersion)">NOT((VS2012_INSTALLED AND VS2010_INSTALLED) AND ((NOT VS2012SDK_INSTALLED) AND (NOT VS2010SDK_INSTALLED)))</Condition>
 
     <!-- Define Feature Selections -->
     <!-- Only show the features for the version of VS they have installed -->
-    <Feature Id="TOOLKITBUILDER2010FEATURE" Title="!(loc.Feature_ToolkitBuilderVS2010)" Level="1" Display="expand">
-      <Condition Level="0"><![CDATA[NOT CANINSTALLFORVS2010]]></Condition>
+    <Feature Id="TOOLKITBUILDER2010FEATURE" Title="!(loc.Feature_ToolkitBuilderVS2010)" Level="0" Display="expand">
+      <Condition Level="1"><![CDATA[CANINSTALLFORVS2010]]></Condition>
       <ComponentRef Id="ToolkitBuilderVsix2010" />
       <Feature Id="TOOLKITBUILDERLABS2010FEATURE" Title="!(loc.Feature_ToolkitBuilderLabsVS2010)" Level="1" >
         <ComponentRef Id="ToolkitBuilderLabsVsix2010" />
       </Feature>
     </Feature>
-    <Feature Id="TOOLKITBUILDER2012FEATURE" Title="!(loc.Feature_ToolkitBuilderVS2012)" Level="1" Display="expand">
-      <Condition Level="0"><![CDATA[NOT CANINSTALLFORVS2012]]></Condition>
+    <Feature Id="TOOLKITBUILDER2012FEATURE" Title="!(loc.Feature_ToolkitBuilderVS2012)" Level="0" Display="expand">
+      <Condition Level="1"><![CDATA[CANINSTALLFORVS2012]]></Condition>
       <ComponentRef Id="ToolkitBuilderVsix2012" />
       <Feature Id="TOOLKITBUILDERLABS2012FEATURE" Title="!(loc.Feature_ToolkitBuilderLabsVS2012)" Level="1">
         <ComponentRef Id="ToolkitBuilderLabsVsix2012" />
@@ -95,9 +97,9 @@
 
     <!-- UI Process -->
     <InstallUISequence>
-      <!-- Warn user about missing pre-requisities limiting the features that can be selected -->
-      <Custom Action="MSGBOXVS2010INSTALL" After="LaunchConditions">VS2010_INSTALLED AND NOT VS2010SDK_INSTALLED</Custom>
-      <Custom Action="MSGBOXVS2012INSTALL" After="LaunchConditions">VS2012_INSTALLED AND NOT VS2012SDK_INSTALLED</Custom>
+      <!-- Warn user about missing pre-requisities limiting the features that can be selected, when bot VS Versions installed -->
+      <Custom Action="MSGBOXVS2010INSTALL" After="LaunchConditions">(VS2010_INSTALLED AND VS2012_INSTALLED) AND (NOT CANINSTALLFORVS2010)</Custom>
+      <Custom Action="MSGBOXVS2012INSTALL" After="LaunchConditions">(VS2010_INSTALLED AND VS2012_INSTALLED) AND (NOT CANINSTALLFORVS2012)</Custom>
     </InstallUISequence>
 
     <!-- Installation Process -->
@@ -133,8 +135,8 @@
   <!-- Define the various Actions-->
   <Fragment>
     <!-- Warn user of missing prerequisites -->
-    <CustomAction Id="MSGBOXVS2010INSTALL" Script="vbscript"><![CDATA[MsgBox "!(loc.Message_VSSDK2010)", 48]]></CustomAction>
-    <CustomAction Id="MSGBOXVS2012INSTALL" Script="vbscript"><![CDATA[MsgBox "!(loc.Message_VSSDK2012)", 48]]></CustomAction>
+    <CustomAction Id="MSGBOXVS2010INSTALL" Script="vbscript"><![CDATA[MsgBox !(loc.Message_VSSDK2010), 48]]></CustomAction>
+    <CustomAction Id="MSGBOXVS2012INSTALL" Script="vbscript"><![CDATA[MsgBox !(loc.Message_VSSDK2012), 48]]></CustomAction>
 
     <!-- Set the path for the VSIXINstaller -->
     <CustomAction Id="SETDEFAULTVSIXINSTALLEREXE" Property="VSIXINSTALLEREXE" Value="[VS2012_VSIXINSTALLERPATH]"/>
