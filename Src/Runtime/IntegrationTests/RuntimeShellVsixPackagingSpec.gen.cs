@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.IntegrationTests
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Runtime.IntegrationTests.Content";
-        private const string DeployedVsixItem = DeployedContentDirectory + "\\NuPatternToolkitManager.11.0.vsix";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\NuPatternToolkitManager.vsix";
 
         [TestClass]
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]

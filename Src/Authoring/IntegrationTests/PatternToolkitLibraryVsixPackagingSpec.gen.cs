@@ -10,7 +10,7 @@ namespace NuPattern.Authoring.IntegrationTests
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Authoring.IntegrationTests.Content";
-        private const string DeployedVsixItem = DeployedContentDirectory + "\\NuPatternToolkitLibrary.11.0.vsix";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\NuPatternToolkitLibrary.vsix";
 
         [TestClass]
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]

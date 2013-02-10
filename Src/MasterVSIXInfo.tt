@@ -1,28 +1,6 @@
 ﻿<#@ output extension=".gen.ttinclude" #>
 <#@ Include File="MasterVersion.gen.ttinclude" #>
 <#@ Include File="Runtime\Source\Runtime.Shell\VsPackageInfo.ttinclude" #>
-<#
-	// WARNING: After changing this file, you must regenerate MasterVSIXInfo.tt
-
-	var runtimeVsixId = RuntimeShellPackageInfo.PackageGuid; 
-	var authoringVsixId = "9f6dc301-6f66-4d21-9f9c-b37412b162f6"; 
-	var automationLibraryVsixId = "97bd7ab2-964b-43f1-8a08-be6db68b018b"; 
-	var holVsixId = "5d64cfe6-a6ff-4e73-a000-c6a8832740ff"; 
-	var vsixNameVersionSuffix = "";
-	switch (VersionInfo.TargetVsVersion)
-	{
-		case "10.0":
-			vsixNameVersionSuffix = "2010";
-		break;
-
-		case "11.0":
-			vsixNameVersionSuffix = "2012";
-		break;
-
-		default:
-			throw new InvalidOperationException("Unknown VS version!");
-	}
-#>
 \<#+
 // Toolkit VSIX Info
 public static class VsixInfo
@@ -33,8 +11,8 @@ public static class VsixInfo
 		public const string Description = "Includes the 'Solution Builder' window, and the automation framework for accelerating solution development using NuPattern Toolkits.";
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.RuntimeVSIXVersion#>";
-		public const string Identifier = "<#=runtimeVsixId#>";
-		public const string VsixFileName = "NuPatternToolkitManager.<#=VersionInfo.TargetVsVersion#>.vsix";
+		public const string Identifier = "<#=RuntimeShellPackageInfo.PackageGuid#>";
+		public const string VsixFileName = "NuPatternToolkitManager.vsix";
 		public const string MoreInfoUrl = "http://nupattern.codeplex.com";
 		public const string GettingStartedUrl = "http://nupattern.codeplex.com/wikipage?title=Getting%20Started";
 		public const string SettingsName = "NuPatternToolkitManager";
@@ -42,12 +20,12 @@ public static class VsixInfo
 	}
 	public static class PatternToolkitBuilder
 	{
-		public const string Name = "NuPattern Toolkit Builder VS<#=vsixNameVersionSuffix#>";
+		public const string Name = "NuPattern Toolkit Builder";
 		public const string Description = "An extension for building NuPattern Toolkits, which automate design patterns for rapid and consistent custom solution development.";
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.AuthoringVSIXVersion#>";
-		public const string Identifier = "<#=authoringVsixId#>";
-		public const string VsixFileName = "NuPatternToolkitBuilder.<#=VersionInfo.TargetVsVersion#>.vsix";
+		public const string Identifier = "9f6dc301-6f66-4d21-9f9c-b37412b162f6";
+		public const string VsixFileName = "NuPatternToolkitBuilder.vsix";
 		public const string MoreInfoUrl = "http://nupattern.codeplex.com";
 		public const string GettingStartedUrl = "http://nupattern.codeplex.com/wikipage?title=Getting%20Started";
 	}
@@ -57,19 +35,19 @@ public static class VsixInfo
 		public const string Description = "An extension for creating shared automation libraries for NuPattern Toolkits.";
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.AuthoringVSIXVersion#>";
-		public const string Identifier = "<#=automationLibraryVsixId#>";
-		public const string VsixFileName = "NuPatternToolkitLibrary.<#=VersionInfo.TargetVsVersion#>.vsix";
+		public const string Identifier = "97bd7ab2-964b-43f1-8a08-be6db68b018b";
+		public const string VsixFileName = "NuPatternToolkitLibrary.vsix";
 		public const string MoreInfoUrl = "http://nupattern.codeplex.com";
 		public const string GettingStartedUrl = "http://nupattern.codeplex.com/wikipage?title=Getting%20Started";
 	}
 	public static class PatternToolkitHol
 	{
-		public const string Name = "NuPattern Toolkit Builder HOL VS<#=vsixNameVersionSuffix#>";
+		public const string Name = "NuPattern Toolkit Builder HOL";
 		public const string Description = "A Hands-On Lab for creating and customizing NuPattern Toolkit projects.";
 		public const string Author = "<#=VersionInfo.VsixAuthor#>";
 		public const string Version = "<#=VersionInfo.AuthoringVSIXVersion#>";
-		public const string Identifier = "<#=holVsixId#>";
-		public const string VsixFileName = "NuPatternToolkitBuilderLabs.<#=VersionInfo.TargetVsVersion#>.vsix";
+		public const string Identifier = "5d64cfe6-a6ff-4e73-a000-c6a8832740ff";
+		public const string VsixFileName = "NuPatternToolkitBuilderLabs.vsix";
 		public const string MoreInfoUrl = "http://nupattern.codeplex.com";
 		public const string GettingStartedUrl = "http://nupattern.codeplex.com/wikipage?title=Getting%20Started";
 	}
