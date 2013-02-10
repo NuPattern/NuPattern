@@ -82,15 +82,19 @@
     <!-- Only show the features for the version of VS they have installed -->
     <Feature Id="TOOLKITBUILDER2010FEATURE" Title="!(loc.Feature_ToolkitBuilderVS2010)" Level="0" Display="expand">
       <Condition Level="1"><![CDATA[CANINSTALLFORVS2010]]></Condition>
+      <ComponentRef Id="InstallFolder" />
       <ComponentRef Id="ToolkitBuilderVsix2010" />
       <Feature Id="TOOLKITBUILDERLABS2010FEATURE" Title="!(loc.Feature_ToolkitBuilderLabsVS2010)" Level="1" >
+        <ComponentRef Id="InstallFolder" />
         <ComponentRef Id="ToolkitBuilderLabsVsix2010" />
       </Feature>
     </Feature>
     <Feature Id="TOOLKITBUILDER2012FEATURE" Title="!(loc.Feature_ToolkitBuilderVS2012)" Level="0" Display="expand">
       <Condition Level="1"><![CDATA[CANINSTALLFORVS2012]]></Condition>
+      <ComponentRef Id="InstallFolder" />
       <ComponentRef Id="ToolkitBuilderVsix2012" />
       <Feature Id="TOOLKITBUILDERLABS2012FEATURE" Title="!(loc.Feature_ToolkitBuilderLabsVS2012)" Level="1">
+        <ComponentRef Id="InstallFolder" />
         <ComponentRef Id="ToolkitBuilderLabsVsix2012" />
       </Feature>
     </Feature>
@@ -127,6 +131,8 @@
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="LocalAppDataFolder">
         <Directory Id="INSTALLFOLDER" Name="!(loc.ApplicationName)">
+          <Directory Id="V10" Name="10.0"></Directory>
+          <Directory Id="V11" Name="11.0"></Directory>
         </Directory>
       </Directory>
     </Directory>

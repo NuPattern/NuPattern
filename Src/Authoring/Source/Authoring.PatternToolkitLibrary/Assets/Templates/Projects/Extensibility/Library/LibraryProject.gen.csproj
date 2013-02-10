@@ -105,7 +105,7 @@
 		<CopyVsixDebuggingDependencies>false</CopyVsixDebuggingDependencies>
 	</PropertyGroup>
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-	<Import Project="$(localappdata)\Microsoft\MSBuild\NuPattern\NuPattern Toolkit Builder VS2012\NuPattern.Authoring.PatternToolkitVersion.targets"/>
+	<Import Project="$(localappdata)\Microsoft\MSBuild\NuPattern\NuPattern Toolkit Builder\NuPattern.Authoring.PatternToolkitVersion.targets"/>
 	<!-- Properties for VSSDK/DSL Targets -->
 	<PropertyGroup>
 		<StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>

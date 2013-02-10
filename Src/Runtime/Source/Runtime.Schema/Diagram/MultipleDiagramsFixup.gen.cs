@@ -16,15 +16,15 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 	/// </summary>
-	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.CollectionSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
-	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PatternSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ExtensionPointSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.PatternSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ViewSchema), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority + 1, InitiallyDisabled=true)]
-	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ViewHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
-	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementHasExtensionPoints), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ViewHasExtensionPoints), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ViewHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+	[DslModeling::RuleOn(typeof(global::NuPattern.Runtime.Schema.ElementHasElements), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 	internal sealed partial class FixUpMultipleDiagram : FixUpDiagramBase
 	{
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -53,17 +53,6 @@ namespace NuPattern.Runtime.Schema
 
 				return;
 			} else
-			if(childElement is global::NuPattern.Runtime.Schema.ElementSchema)
-			{
-				// Method:
-				// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForElementSchema(ElementSchema childElement)
-				// {
-				// }
-				// must be implemented in a partial class of NuPattern.Runtime.Schema.FixUpDiagram.  Given a child element,
-				// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
-				// of the shape created for this child.  If no shape should be created, the method should return null.
-				parentElement = GetParentForElementSchema((global::NuPattern.Runtime.Schema.ElementSchema)childElement);
-			} else
 			if(childElement is global::NuPattern.Runtime.Schema.CollectionSchema)
 			{
 				// Method:
@@ -75,9 +64,16 @@ namespace NuPattern.Runtime.Schema
 				// of the shape created for this child.  If no shape should be created, the method should return null.
 				parentElement = GetParentForCollectionSchema((global::NuPattern.Runtime.Schema.CollectionSchema)childElement);
 			} else
-			if(childElement is global::NuPattern.Runtime.Schema.PatternSchema)
+			if(childElement is global::NuPattern.Runtime.Schema.ElementSchema)
 			{
-				parentElement = GetParentForPatternSchema((global::NuPattern.Runtime.Schema.PatternSchema)childElement);
+				// Method:
+				// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForElementSchema(ElementSchema childElement)
+				// {
+				// }
+				// must be implemented in a partial class of NuPattern.Runtime.Schema.FixUpDiagram.  Given a child element,
+				// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+				// of the shape created for this child.  If no shape should be created, the method should return null.
+				parentElement = GetParentForElementSchema((global::NuPattern.Runtime.Schema.ElementSchema)childElement);
 			} else
 			if(childElement is global::NuPattern.Runtime.Schema.ExtensionPointSchema)
 			{
@@ -89,6 +85,10 @@ namespace NuPattern.Runtime.Schema
 				// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
 				// of the shape created for this child.  If no shape should be created, the method should return null.
 				parentElement = GetParentForExtensionPointSchema((global::NuPattern.Runtime.Schema.ExtensionPointSchema)childElement);
+			} else
+			if(childElement is global::NuPattern.Runtime.Schema.PatternSchema)
+			{
+				parentElement = GetParentForPatternSchema((global::NuPattern.Runtime.Schema.PatternSchema)childElement);
 			} else
 			if(childElement is global::NuPattern.Runtime.Schema.ViewSchema)
 			{

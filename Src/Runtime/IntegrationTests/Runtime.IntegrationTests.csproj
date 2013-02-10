@@ -18,6 +18,7 @@
     <BranchRoot>..\..\</BranchRoot>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
     <Reference Include="EnvDTE">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -269,8 +270,8 @@
     <Folder Include="Runtime.IntegrationTests.Content\Sample\SolutionFolder\Library\Folder\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Binaries\$(TargetVSVersion)\NuPatternToolkitManager.$(TargetVSVersion).vsix">
-      <Link>Runtime.IntegrationTests.Content\NuPatternToolkitManager.$(TargetVSVersion).vsix</Link>
+    <None Include="..\..\Binaries\$(TargetVSVersion)\$(RuntimeShellVsixFileName)">
+      <Link>Runtime.IntegrationTests.Content\$(RuntimeShellVsixFileName)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />

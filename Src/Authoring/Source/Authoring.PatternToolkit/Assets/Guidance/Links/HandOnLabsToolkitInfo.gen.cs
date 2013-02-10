@@ -14,7 +14,7 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
 		/// <summary>
 		/// Gets the VSIX name of this toolkit.
 		/// </summary>
-		public static string RegistrationName = "NuPattern Toolkit Builder HOL VS2012";
+		public static string RegistrationName = "NuPattern Toolkit Builder HOL";
 	}
 }
 
