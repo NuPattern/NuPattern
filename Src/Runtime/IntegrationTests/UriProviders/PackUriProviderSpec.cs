@@ -118,10 +118,10 @@ namespace NuPattern.Runtime.IntegrationTests.UriProviders
             var resolver = new PackUriProvider();
             resolver.Solution = solution;
 
-            var resolved = resolver.ResolveUri(new Uri("pack://application:,,,/NuPattern.Runtime.IntegrationTests;component/Runtime.IntegrationTests.Content/Projects/PackUriProvider/TestIcon.bmp"));
+            var resolved = resolver.ResolveUri(new Uri("pack://application:,,,/NuPattern.Runtime.IntegrationTests;component/Runtime.IntegrationTests.Content/PackUriProvider/TestIcon.bmp"));
 
             Assert.Equal("NuPattern.Runtime.IntegrationTests", resolved.AssemblyName);
-            Assert.Equal("runtime.integrationtests.content/projects/packuriprovider/testicon.bmp", resolved.ResourcePath);
+            Assert.Equal("runtime.integrationtests.content/packuriprovider/testicon.bmp", resolved.ResourcePath);
         }
     }
 }
