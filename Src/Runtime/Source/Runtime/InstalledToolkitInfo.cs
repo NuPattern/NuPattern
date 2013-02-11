@@ -17,6 +17,12 @@ namespace NuPattern.Runtime
     [CLSCompliant(false)]
     public class InstalledToolkitInfo : IInstalledToolkitInfo
     {
+        internal const string PatternModelCustomExtensionName = "PatternModel"; // NuPattern.Toolkit.PatternModel
+        internal const string ToolkitClassificationCustomExtensionName = "NuPattern.Toolkit.Classification";
+        internal const string CategoryAttributeName = "Category";
+        internal const string CustomizeVisibilityAttributeName = "CustomizeVisibility";
+        internal const string CreateVisibilityAttributeName = "CreateVisibility";
+
         // Lazy initialized;
         private IPatternModelInfo schema;
 
@@ -157,6 +163,18 @@ namespace NuPattern.Runtime
             }
         }
 
+        /// <summary>
+        /// Gets the classification of the toolkit.
+        /// </summary>
+        public IToolkitClassification Classification
+        {
+            get
+            {
+                return GetClassification();
+            }
+        }
+
+
         private void LoadTemplates()
         {
             this.templates = new List<IVsTemplate>();
@@ -186,6 +204,24 @@ namespace NuPattern.Runtime
         private IPatternModelInfo LoadSchema()
         {
             return this.reader.Load(this.resource);
+        }
+
+        private IToolkitClassification GetClassification()
+        {
+            // Read the 'ToolkitClassification' customextension
+            var customExtension = this.Extension.Content.Where(cnt => cnt.ContentTypeName.Equals(ToolkitClassificationCustomExtensionName, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+            if (customExtension != null
+                && customExtension.Attributes != null)
+            {
+                return new ToolkitClassification(
+                    customExtension.GetCustomAttributeValue(CategoryAttributeName),
+                    customExtension.GetVisibilityAttributeValue(CreateVisibilityAttributeName, ToolkitVisibility.Expanded),
+                    customExtension.GetVisibilityAttributeValue(CustomizeVisibilityAttributeName, ToolkitVisibility.Expanded));
+            }
+            else
+            {
+                return new ToolkitClassification();
+            }
         }
     }
 }

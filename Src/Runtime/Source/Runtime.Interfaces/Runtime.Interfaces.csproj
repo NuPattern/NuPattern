@@ -66,6 +66,7 @@
     <Compile Include="Events\IOnSolutionBuilderDrop.cs" />
     <Compile Include="Extensions\ContainedElementInfoExtensions.cs" />
     <Compile Include="Extensions\ElementContainerExtensions.cs" />
+    <Compile Include="Extensions\ExtensionContentExtensions.cs" />
     <Compile Include="Extensions\PropertyExtensions.cs" />
     <Compile Include="Extensions\PropertyInfoExtensions.cs" />
     <Compile Include="Extensions\ServiceProviderExtensions.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="FirstPropertyValueProductElementComparer.cs" />
     <Compile Include="IAssemblyReference.cs" />
     <Compile Include="IAssemblyResource.cs" />
+    <Compile Include="IToolkitClassification.cs" />
     <Compile Include="Model\Schema\IContainingLinkSchema.cs" />
     <Compile Include="Model\Schema\IPatternInfo.cs" />
     <Compile Include="Model\Schema\IPatternModelInfo.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="Settings\IAutomationMenuCommand.cs" />
     <Compile Include="Settings\TraceSourceSetting.cs" />
     <Compile Include="Settings\TracingSettings.cs" />
+    <Compile Include="ToolkitVisibility.cs" />
     <Compile Include="ValidationConstants.cs" />
     <Compile Include="ValueEventArgs.cs" />
     <Compile Include="Model\Schema\IAutomationSettingsInfo.cs" />

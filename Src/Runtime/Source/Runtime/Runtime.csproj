@@ -122,6 +122,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RuntimeShellInfo.tt</DependentUpon>
     </Compile>
+    <Compile Include="ToolkitClassification.cs" />
     <Compile Include="ToolkitInterfaceService.cs" />
     <Compile Include="ObjectDumper.cs" />
     <Compile Include="ProductStoreValidationController.cs" />
