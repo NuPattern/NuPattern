@@ -26,10 +26,6 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="NuPattern.Runtime.Schema">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="NuPattern.Runtime.Interfaces">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>False</Private>

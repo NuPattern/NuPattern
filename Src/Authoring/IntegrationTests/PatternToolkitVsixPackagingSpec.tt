@@ -173,9 +173,6 @@ namespace NuPattern.Authoring.IntegrationTests
 							"redist.txt",
 							"Release%20Notes.docx",
 
-                            //Auxillary Assemblies
-							"NuPattern.Runtime.Schema.dll",
-
                             //Authoring Assemblies
                             "NuPattern.Authoring.Guidance.dll",
                             "NuPattern.Authoring.PatternModelDesign.Shell.dll",
