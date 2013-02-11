@@ -15,6 +15,7 @@
 			</ResourceDictionary.MergedDictionaries>
 
 			<p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
 			<BitmapImage x:Key="DefaultToolkitIcon" UriSource="../../../Resources/VsixIconDefault.png" />
 		</ResourceDictionary>
 	</Page.Resources>
@@ -22,7 +23,9 @@
 		<Label DockPanel.Dock="Top" FontWeight="Bold">What kind of toolkit do you want to create?</Label>
 		<RadioButton DockPanel.Dock="Top" Name="NewRadio" GroupName="NewOrExisting" Margin="20,10,0,0" IsChecked="True">Create a new toolkit</RadioButton>
 		<RadioButton DockPanel.Dock="Top" Name="ExistingRadio" GroupName="NewOrExisting" Margin="20,20,0,0" Unchecked="OnExistingRadioCheckedChanged" Checked="OnExistingRadioCheckedChanged">Customize an existing toolkit:</RadioButton>
-		<StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="40,15,0,0" IsEnabled="{Binding IsChecked, ElementName=ExistingRadio}">
+		<StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="40,15,0,0" 
+                    IsEnabled="{Binding IsChecked, ElementName=ExistingRadio}"
+                    Visibility="{Binding Path=IsChecked, ElementName=ExistingRadio, Converter={StaticResource BooleanToVisibilityConverter}}">
 			<ListView
 			x:Name="toolkits"
 			AutomationProperties.AutomationId="Installed Toolkits"
