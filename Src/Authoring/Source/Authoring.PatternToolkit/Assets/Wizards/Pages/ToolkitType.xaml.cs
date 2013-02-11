@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using System.Windows.Data;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Extensibility;
@@ -14,13 +17,32 @@ namespace NuPattern.Authoring.PatternToolkit.Assets.Wizards.Pages
     /// <summary>
     /// A custom wizard page that edits the properties of the current element.
     /// </summary>
-    public partial class ToolkitType : Page
+    public partial class ToolkitType : Page, INotifyPropertyChanged
     {
+        private const string DefaultSortFilter = "Name";
+        private ObservableCollection<IInstalledToolkitInfo> allToolkits;
+        private CollectionView toolkitsView;
+
+        /// <summary>
+        /// Property change event.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Raised the property change event.
+        /// </summary>
+        /// <param name="propertyName">Name fo the property that has changed.</param>
+        protected void OnNotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         /// <summary>
         /// Using a DependencyProperty as the backing store for CurrentToolkit.  This enables animation, styling, binding, etc...
         /// </summary>
         public static readonly DependencyProperty CurrentToolkitProperty =
-            DependencyProperty.Register("CurrentToolkit", typeof(IInstalledToolkitInfo),
+            DependencyProperty.Register(Reflector<ToolkitType>.GetPropertyName(x => x.CurrentToolkit), typeof(IInstalledToolkitInfo),
             typeof(ToolkitType), new UIPropertyMetadata(new PropertyChangedCallback(OnCurrentToolkitChanged)));
 
         /// <summary>
@@ -30,11 +52,12 @@ namespace NuPattern.Authoring.PatternToolkit.Assets.Wizards.Pages
         {
             var componentModel = ServiceProvider.GlobalProvider.GetService<SComponentModel, IComponentModel>();
             var export = componentModel.GetService<IEnumerable<IInstalledToolkitInfo>>();
-            this.Toolkits = export != null ? export.ToList() : new List<IInstalledToolkitInfo>();
+            this.allToolkits = new ObservableCollection<IInstalledToolkitInfo>((export != null) ? export.ToList() : new List<IInstalledToolkitInfo>());
+            this.toolkitsView = new ListCollectionView(this.allToolkits);
 
             InitializeComponent();
 
-            this.ExistingRadio.IsEnabled = this.Toolkits.Any();
+            FilterToolkits();
         }
 
         /// <summary>
@@ -49,10 +72,16 @@ namespace NuPattern.Authoring.PatternToolkit.Assets.Wizards.Pages
         }
 
         /// <summary>
-        /// Gets the toolkits installed as VSIX.
+        /// Gets the currently installed toolkits.
         /// </summary>
-        /// <value>The toolkits installed as VSIX.</value>
-        public IList<IInstalledToolkitInfo> Toolkits { get; private set; }
+        [CLSCompliant(false)]
+        public CollectionView Toolkits
+        {
+            get
+            {
+                return this.toolkitsView;
+            }
+        }
 
         private void ChangeExistingToolkitId(IInstalledToolkitInfo existingToolkitInfo)
         {
@@ -95,6 +124,38 @@ namespace NuPattern.Authoring.PatternToolkit.Assets.Wizards.Pages
         {
             var page = (ToolkitType)d;
             page.ChangeExistingToolkitId(e.NewValue as IInstalledToolkitInfo);
+        }
+
+        private void OnShowAllToolkitsChanged(object sender, System.Windows.RoutedEventArgs e)
+        {
+            FilterToolkits();
+        }
+
+        private void FilterToolkits()
+        {
+            // Filter the results
+            var showAllToolkits = (bool)ShowAllToolkits.IsChecked;
+            if (showAllToolkits)
+            {
+                // All toolkits, except 'hidden' visibility
+                this.toolkitsView.Filter += new Predicate<object>(delegate(object x)
+                    {
+                        var toolkitInfo = (IInstalledToolkitInfo)x;
+                        return toolkitInfo.Classification.CustomizeVisibility != ToolkitVisibility.Hidden;
+                    });
+            }
+            else
+            {
+                // Only toolkits with 'expanded' visibility 
+                this.toolkitsView.Filter += new Predicate<object>(delegate(object x)
+                {
+                    var toolkitInfo = (IInstalledToolkitInfo)x;
+                    return toolkitInfo.Classification.CustomizeVisibility == ToolkitVisibility.Expanded;
+                });
+            }
+
+            // Notify filter changed
+            OnNotifyPropertyChanged(Reflector<ToolkitType>.GetPropertyName(x => x.Toolkits));
         }
     }
 }

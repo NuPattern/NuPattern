@@ -41,7 +41,7 @@ else
 		<MefComponent>|%CurrentProject%|</MefComponent>
 		<MefComponent>|<#=libraryProjectName #>|</MefComponent>
 		<CustomExtension Type="PatternModel" AssemblyFile="<#= assemblyName #>.dll"><#= rootNamespace #>.PatternModel.patterndefinition</CustomExtension>
-		<CustomExtension Type="ToolkitCategory" Category="Authoring"/>
+		<CustomExtension Type="NuPattern.Toolkit.Classification" Category="Authoring" CreateVisibility="Expanded" CustomizeVisibility="Collapsed"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>

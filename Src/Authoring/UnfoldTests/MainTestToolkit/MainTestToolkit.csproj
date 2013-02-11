@@ -71,6 +71,7 @@
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <ProjectTemplate Include="Assets\Templates\Projects\Console\ConsoleApplication.gen.vstemplate">
       <ItemGuid>af858aa1-5567-4174-901e-d0f91c7d721d</ItemGuid>

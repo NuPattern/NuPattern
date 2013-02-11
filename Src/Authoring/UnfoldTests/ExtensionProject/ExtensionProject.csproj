@@ -49,6 +49,7 @@
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <EmbeddedResource Include="PatternModel.patterndefinition">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/MainTestToolkit/Element/c:\users\joj\documents\visual studio 2010\Projects\MainTestToolkit\MainTestToolkit.patternstate%252fd283ce73-5e49-4e3f-8dac-1e8bd82686c5</SourceModelReference>

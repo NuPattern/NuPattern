@@ -28,6 +28,7 @@
     <MefComponent>|MainTestToolkit|</MefComponent>
     <MefComponent>|MainTestToolkit.Automation|</MefComponent>
     <CustomExtension Type="PatternModel" AssemblyFile="MainTestToolkit.dll">MainTestToolkit.PatternModel.patterndefinition</CustomExtension>
+    <CustomExtension Type="NuPattern.Toolkit.Classification" Category="Test" CreateVisibility="Collapsed" CustomizeVisibility="Hidden"/>
     <ItemTemplate>Assets\Templates\Items</ItemTemplate>
     <ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
   </Content>

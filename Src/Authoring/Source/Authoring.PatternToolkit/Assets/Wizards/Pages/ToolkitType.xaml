@@ -23,37 +23,46 @@
 		<Label DockPanel.Dock="Top" FontWeight="Bold">What kind of toolkit do you want to create?</Label>
 		<RadioButton DockPanel.Dock="Top" Name="NewRadio" GroupName="NewOrExisting" Margin="20,10,0,0" IsChecked="True">Create a new toolkit</RadioButton>
 		<RadioButton DockPanel.Dock="Top" Name="ExistingRadio" GroupName="NewOrExisting" Margin="20,20,0,0" Unchecked="OnExistingRadioCheckedChanged" Checked="OnExistingRadioCheckedChanged">Customize an existing toolkit:</RadioButton>
-		<StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="40,15,0,0" 
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="40,15,0,10" 
                     IsEnabled="{Binding IsChecked, ElementName=ExistingRadio}"
                     Visibility="{Binding Path=IsChecked, ElementName=ExistingRadio, Converter={StaticResource BooleanToVisibilityConverter}}">
-			<ListView
-			x:Name="toolkits"
-			AutomationProperties.AutomationId="Installed Toolkits"
-			Margin="6"
-			ItemsSource="{Binding Toolkits,ElementName=ThisPage}"
-			SelectedItem="{Binding CurrentToolkit,ElementName=ThisPage,Mode=TwoWay}"
-			SelectionMode="Single"
-			IsSynchronizedWithCurrentItem="true"
-			p:SortBehavior.CanUserSortColumns="true">
-				<ListView.Resources>
-					<DataTemplate x:Key="VsixIcon">
-						<Image
-						Width="40"
-						Height="40"
-						Source="{Binding ToolkitIconPath,Converter={StaticResource UriToCachedImageConverter},FallbackValue={StaticResource DefaultToolkitIcon}}" />
-					</DataTemplate>
-				</ListView.Resources>
-				<ListView.View>
-					<GridView>
-						<GridViewColumn CellTemplate="{StaticResource VsixIcon}" Width="50" p:SortBehavior.CanUseSort="false" />
-						<GridViewColumn DisplayMemberBinding="{Binding Name}" Width="220" Header="Name" p:SortBehavior.SortDirection="Ascending" />
-						<GridViewColumn DisplayMemberBinding="{Binding Author}" Width="100" Header="Author" />
-						<GridViewColumn DisplayMemberBinding="{Binding Version}" Width="65" Header="Version" />
-					</GridView>
-				</ListView.View>
-			</ListView>
+            <Grid Margin="0,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <ListView
+			        x:Name="installedToolkits"
+                    Grid.Row="0"
+			        AutomationProperties.AutomationId="Installed Toolkits"
+			        Margin="6"
+			        ItemsSource="{Binding Toolkits,ElementName=ThisPage}"
+			        SelectedItem="{Binding CurrentToolkit,ElementName=ThisPage,Mode=TwoWay}"
+			        SelectionMode="Single"
+			        IsSynchronizedWithCurrentItem="true"
+			        p:SortBehavior.CanUserSortColumns="true">
+				    <ListView.Resources>
+					    <DataTemplate x:Key="VsixIcon">
+						    <Image
+						    Width="40"
+						    Height="40"
+						    Source="{Binding ToolkitIconPath,Converter={StaticResource UriToCachedImageConverter},FallbackValue={StaticResource DefaultToolkitIcon}}" />
+					    </DataTemplate>
+				    </ListView.Resources>
+				    <ListView.View>
+					    <GridView>
+						    <GridViewColumn CellTemplate="{StaticResource VsixIcon}" Width="50" p:SortBehavior.CanUseSort="false" />
+						    <GridViewColumn DisplayMemberBinding="{Binding Name}" Width="220" Header="Name" p:SortBehavior.SortDirection="Ascending" />
+						    <GridViewColumn DisplayMemberBinding="{Binding Author}" Width="100" Header="Author" />
+						    <GridViewColumn DisplayMemberBinding="{Binding Version}" Width="65" Header="Version" />
+					    </GridView>
+				    </ListView.View>
+			    </ListView>
+                <CheckBox Grid.Row="1" Name="ShowAllToolkits" HorizontalAlignment="Right" 
+                          IsChecked="false" Unchecked="OnShowAllToolkitsChanged" Checked="OnShowAllToolkitsChanged">Show all installed toolkits</CheckBox>
+            </Grid>
 
-			<StackPanel Grid.Row="1" Grid.Column="1" Margin="0,6,6,6" Width="150" Background="White">
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,6,6,6" Width="150" Background="White">
 				<TextBlock Padding="3" TextWrapping="WrapWithOverflow">
 					<Run FontWeight="Bold" Text="Name:" />
 					<LineBreak />

@@ -42,7 +42,7 @@
 		<MefComponent>|Authoring.PatternModelDesign.Shell|</MefComponent>
 		<MefComponent>|Authoring.PatternToolkit.Automation|</MefComponent>
 		<CustomExtension Type="PatternModel" AssemblyFile="NuPattern.Authoring.PatternToolkit.dll">NuPattern.Authoring.PatternToolkit.PatternModel.patterndefinition</CustomExtension>
-		<CustomExtension Type="ToolkitCategory" Category="Authoring"/>
+		<CustomExtension Type="NuPattern.Toolkit.Classification" Category="Authoring" CreateVisibility="Expanded" CustomizeVisibility="Collapsed"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>
