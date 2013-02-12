@@ -184,6 +184,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SolutionBuilderViewModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UI\ViewModels\SortItem.cs" />
     <Compile Include="UI\ViewModels\ValidationViewModel.cs" />
     <Compile Include="UI\ViewModels\AddNewNodeViewModel.cs" />
     <Compile Include="UI\ViewModels\AddNewProductViewModel.cs" />

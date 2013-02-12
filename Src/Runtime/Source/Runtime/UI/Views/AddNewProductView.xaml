@@ -4,77 +4,87 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:vsfx="clr-namespace:NuPattern.Common.Presentation.Vs;assembly=NuPattern.Common.Presentation"
 	xmlns:p="http://schemas.microsoft.com/nupattern/2012/xaml/"
-    xmlns:cp="clr-namespace:NuPattern.Common.Presentation;assembly=NuPattern.Common.Presentation"
+	xmlns:cp="clr-namespace:NuPattern.Common.Presentation;assembly=NuPattern.Common.Presentation"
 	Name="selector"
 	Title="New Solution Element"
 	WindowStartupLocation="CenterOwner"
 	Width="760"
 	Height="470"
 	ShowInTaskbar="False"
-    Foreground="{DynamicResource VsBrush.WindowText}"
+	Foreground="{DynamicResource VsBrush.WindowText}"
 	FocusManager.FocusedElement="{x:Reference patterns}">
 	<vsfx:VsDialogWindow.Resources>
-	    <ResourceDictionary>
+		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommonStyles.xaml" />
-                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/ListView.xaml" />
-            </ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommonStyles.xaml" />
+				<ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/ListView.xaml" />
+			</ResourceDictionary.MergedDictionaries>
 
 			<p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />
 			<BitmapImage x:Key="DefaultProductIcon" UriSource="../../Resources/PatternNodeDefault.png" />
 		</ResourceDictionary>
 	</vsfx:VsDialogWindow.Resources>
 
-    <Grid Background="{StaticResource VsVersion.Dialog.Background}">
+	<Grid Background="{StaticResource VsVersion.Dialog.Background}">
 		<Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="*" />
+			<RowDefinition Height="30"/>
+			<RowDefinition Height="*" />
 			<RowDefinition Height="Auto" />
 			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
-            <ColumnDefinition Width="160" />
-            <ColumnDefinition />
+			<ColumnDefinition Width="160" />
+			<ColumnDefinition />
 			<ColumnDefinition Width="Auto" />
 		</Grid.ColumnDefinitions>
 
-        <TextBlock 
-            Grid.Row="0" Grid.ColumnSpan="3" 
-            Margin="6, 0, 6, 0"
-            Background="{StaticResource VsVersion.AddNewWindow.ControlPanel.Fill}"/>
+		<Grid Grid.Row="0" Grid.Column="1" Background="{StaticResource VsVersion.AddNewWindow.ControlPanel.Fill}">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="20,5,0,0">Sort By:</Label>
+            <ComboBox Name="SortList" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Width="120" Height="20" Margin="4,5,0,0" 
+				ItemsSource="{Binding SortingItems}" SelectedItem="{Binding SortingItem}" IsEditable="false" IsReadOnly="true"/>
+			<CheckBox Name="ShowAllPatterns" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Margin="0,10,20,0"
+				IsChecked="false" Command="{Binding ToggleAllPatternsCommand}" CommandParameter="{Binding IsChecked, ElementName=ShowAllPatterns}">Show all installed patterns</CheckBox>
+		</Grid>
 
-        <DockPanel
-            Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
-            Margin="0,0,0,6"
-            Background="{DynamicResource VsVersion.Controls.Fill}">
-            <Border 
-                DockPanel.Dock="Bottom"
-                BorderBrush="{StaticResource VsVersion.Dialog.Background}"
-                BorderThickness="0,2,0,0">
-                <TextBlock 
-                    Padding="4" 
-                    TextWrapping="WrapWithOverflow"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Bottom"
-                    Foreground="{DynamicResource VsBrush.GrayText}"
-                    Background="{StaticResource VsVersion.Controls.Fill}">
-                    <Run Text="The toolkits which contain the listed patterns are built with NuPattern"/>
-                    <Hyperlink Command="{Binding HomePageCommand}" Focusable="False">learn more...</Hyperlink>
-                </TextBlock>
-            </Border>
-            <Label 
-                DockPanel.Dock="Top"
-                Padding="10, 4, 4, 4"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Top"
-                Height="24"
-                Background="{StaticResource VsVersion.AddNewWindow.CategoryButton.SelectedFill}"
-                BorderBrush="{StaticResource VsVersion.AddNewWindow.CategoryButton.SelectedBorder}">
-                <Label.Content>Installed Patterns</Label.Content>
-            </Label>
-        </DockPanel>
-
-        <ListView
+		<DockPanel
+			Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
+			Margin="0,0,0,6"
+			Background="{DynamicResource VsVersion.Controls.Fill}">
+			<Border 
+				DockPanel.Dock="Bottom"
+				BorderBrush="{StaticResource VsVersion.Dialog.Background}"
+				BorderThickness="0,2,0,0">
+				<TextBlock 
+					Padding="4" 
+					TextWrapping="WrapWithOverflow"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Bottom"
+					Foreground="{DynamicResource VsBrush.GrayText}"
+					Background="{StaticResource VsVersion.Controls.Fill}">
+					<Run Text="The toolkits which contain the listed patterns are built with NuPattern"/>
+					<Hyperlink Command="{Binding HomePageCommand}" Focusable="False">learn more...</Hyperlink>
+				</TextBlock>
+			</Border>
+			<Label 
+				DockPanel.Dock="Top"
+				Padding="10, 4, 4, 4"
+				HorizontalAlignment="Stretch"
+				VerticalAlignment="Top"
+				Height="24"
+				Background="{StaticResource VsVersion.AddNewWindow.CategoryButton.SelectedFill}"
+				BorderBrush="{StaticResource VsVersion.AddNewWindow.CategoryButton.SelectedBorder}">
+				<Label.Content>Installed Patterns</Label.Content>
+			</Label>
+		</DockPanel>
+		<ListView
 			Grid.Row="1" Grid.Column="1"
 			x:Name="patterns"
 			AutomationProperties.AutomationId="Installed Patterns"
@@ -84,83 +94,84 @@
 			IsSynchronizedWithCurrentItem="true"
 			SelectionMode="Single"
 			p:SortBehavior.CanUserSortColumns="false">
-			<ListView.Resources>
-				<Style TargetType="ListViewItem" BasedOn="{StaticResource {x:Type ListViewItem}}">
-					<Setter Property="p:ControlBehavior.DoubleClickCommand" Value="{Binding DataContext.SelectToolkitCommand,ElementName=selector}" />
-					<Setter Property="p:ControlBehavior.DoubleClickCommandParameter" Value="{x:Reference selector}" />
-				</Style>
+				<ListView.Resources>
+					<Style TargetType="ListViewItem" BasedOn="{StaticResource {x:Type ListViewItem}}">
+						<Setter Property="p:ControlBehavior.DoubleClickCommand" Value="{Binding DataContext.SelectToolkitCommand,ElementName=selector}" />
+						<Setter Property="p:ControlBehavior.DoubleClickCommandParameter" Value="{x:Reference selector}" />
+					</Style>
 
-				<DataTemplate x:Key="VsixIcon">
-					<Image
+					<DataTemplate x:Key="VsixIcon">
+						<Image
 						Width="40"
 						Height="40"
 						Source="{Binding Schema.Pattern.Icon,Converter={StaticResource UriToCachedImageConverter},FallbackValue={StaticResource DefaultProductIcon}}" />
-				</DataTemplate>
-			</ListView.Resources>
-			<ListView.View>
-				<GridView>
-                    <GridViewColumn x:Name="firstColumn" Width="50" CellTemplate="{StaticResource VsixIcon}" p:SortBehavior.CanUseSort="false" />
-                    <GridViewColumn Width="{Binding ElementName=resizerColumn, Path=ActualWidth}" p:SortBehavior.SortExpression="Schema.Pattern.DisplayName"  p:SortBehavior.SortDirection="Ascending">
-						<GridViewColumn.CellTemplate>
-							<DataTemplate>
-                                <TextBlock>
-                                    <Run Text="{Binding Schema.Pattern.DisplayName,Mode=OneWay}" FontWeight="Bold" />
-                                    <LineBreak />
-                                    <Run Text="{Binding Schema.Pattern.Description,Mode=OneWay}" />
-                                    <TextBlock.ToolTip>
-                                        <ToolTip MaxWidth="350">
-                                            <TextBlock TextWrapping="WrapWithOverflow">
-                                                <TextBlock.Text>
-                                                    <Binding Path="Schema.Pattern.Description" />
-                                                </TextBlock.Text>
-                                            </TextBlock>
-                                        </ToolTip>
-                                    </TextBlock.ToolTip>
+					</DataTemplate>
+				</ListView.Resources>
+				<ListView.View>
+					<GridView>
+						<GridViewColumn x:Name="firstColumn" Width="50" CellTemplate="{StaticResource VsixIcon}" p:SortBehavior.CanUseSort="false" />
+						<GridViewColumn Width="{Binding ElementName=resizerColumn, Path=ActualWidth}" p:SortBehavior.SortExpression="Schema.Pattern.DisplayName"  p:SortBehavior.SortDirection="Ascending">
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<TextBlock>
+									<Run Text="{Binding Schema.Pattern.DisplayName,Mode=OneWay}" FontWeight="Bold" />
+									<LineBreak />
+									<Run Text="{Binding Schema.Pattern.Description,Mode=OneWay}" />
+										<TextBlock.ToolTip>
+											<ToolTip MaxWidth="350">
+												<TextBlock TextWrapping="WrapWithOverflow">
+													<TextBlock.Text>
+														<Binding Path="Schema.Pattern.Description" />
+													</TextBlock.Text>
+												</TextBlock>
+											</ToolTip>
+										</TextBlock.ToolTip>
 								</TextBlock>
-							</DataTemplate>
-						</GridViewColumn.CellTemplate>
-					</GridViewColumn>
-                    <GridView.ColumnHeaderContainerStyle>
-                        <Style>
-                            <Setter Property="FrameworkElement.Visibility" Value="Hidden"/>
-                        </Style>
-                    </GridView.ColumnHeaderContainerStyle>
-				</GridView>
-			</ListView.View>
-		</ListView>
-        <!-- Hidden Grid used to size the ListView columns -->
-        <Grid
-            Grid.Column="1" Grid.Row="1" Visibility="Hidden"
-            Margin="20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="{Binding ElementName=firstColumn, Path=ActualWidth}"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="1" x:Name="resizerColumn"/>
-        </Grid>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+						<GridView.ColumnHeaderContainerStyle>
+							<Style>
+								<Setter Property="FrameworkElement.Visibility" Value="Hidden"/>
+							</Style>
+						</GridView.ColumnHeaderContainerStyle>
+					</GridView>
+				</ListView.View>
+			</ListView>
+		
+		<!-- Hidden Grid used to size the ListView columns -->
+		<Grid
+			Grid.Column="1" Grid.Row="1" Visibility="Hidden"
+			Margin="20">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="{Binding ElementName=firstColumn, Path=ActualWidth}"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Grid Grid.Column="1" x:Name="resizerColumn"/>
+		</Grid>
 
-        <DockPanel Grid.Row="1" Grid.Column="2" Margin="0,0,0,6" Width="150" Background="{DynamicResource VsVersion.Controls.Fill}">
-            <Border 
-                DockPanel.Dock="Bottom" 
-                BorderBrush="{StaticResource VsVersion.Dialog.Background}" 
-                BorderThickness="0,2,0,0">
-                <TextBlock 
-                    Padding="4" 
-                    TextWrapping="WrapWithOverflow" 
-                    TextAlignment="Left" 
-                    VerticalAlignment="Bottom" 
-                    Background="{StaticResource VsVersion.Controls.Fill}" 
-                    Foreground="{DynamicResource VsVersion.Controls.Text}">
-                    <Run Text="Each toolkit is licensed to you by its owner. NuPattern is not responsible for, nor does it grant any licenses to, third-party toolkits."/>
-                </TextBlock>
-            </Border>
-            <TextBlock 
-                x:Name="description" 
-                DockPanel.Dock="Top" 
-                Padding="4" 
-                TextWrapping="WrapWithOverflow" 
-                VerticalAlignment="Top" 
-                Background="{StaticResource VsVersion.Controls.Fill}">
+		<DockPanel Grid.Row="1" Grid.Column="2" Margin="0,0,0,6" Width="150" Background="{DynamicResource VsVersion.Controls.Fill}">
+			<Border 
+				DockPanel.Dock="Bottom" 
+				BorderBrush="{StaticResource VsVersion.Dialog.Background}" 
+				BorderThickness="0,2,0,0">
+				<TextBlock 
+					Padding="4" 
+					TextWrapping="WrapWithOverflow" 
+					TextAlignment="Left" 
+					VerticalAlignment="Bottom" 
+					Background="{StaticResource VsVersion.Controls.Fill}" 
+					Foreground="{DynamicResource VsVersion.Controls.Text}">
+					<Run Text="Each toolkit is licensed to you by its owner. NuPattern is not responsible for, nor does it grant any licenses to, third-party toolkits."/>
+				</TextBlock>
+			</Border>
+			<TextBlock 
+				x:Name="description" 
+				DockPanel.Dock="Top" 
+				Padding="4" 
+				TextWrapping="WrapWithOverflow" 
+				VerticalAlignment="Top" 
+				Background="{StaticResource VsVersion.Controls.Fill}">
 				<Run FontWeight="Bold" Text="Toolkit Information: " />
 				<LineBreak />
 				<Run Text="{Binding CurrentToolkit.Name,Mode=OneWay}" />
@@ -176,7 +187,7 @@
 				<Run FontWeight="Bold" Text="Version: " />
 				<Run Text="{Binding CurrentToolkit.Version,Mode=OneWay}" />
 			</TextBlock>
-        </DockPanel>
+		</DockPanel>
 
 		<Grid Grid.Row="2" Grid.Column="1" Margin="0,0,6,6">
 			<Grid.ColumnDefinitions>
@@ -192,10 +203,10 @@
 				Grid.Column="1"
 				Text="{Binding ProductName,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}"
 				Margin="0,2,0,0" />
-        </Grid>
+		</Grid>
 
-        <StackPanel Grid.Row="3" Grid.ColumnSpan="3" Background="{StaticResource VsVersion.Dialog.CmdButton.Panel.Fill}">
-            <Grid Grid.IsSharedSizeScope="True" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+		<StackPanel Grid.Row="3" Grid.ColumnSpan="3" Background="{StaticResource VsVersion.Dialog.CmdButton.Panel.Fill}">
+			<Grid Grid.IsSharedSizeScope="True" VerticalAlignment="Bottom" HorizontalAlignment="Right">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
 					<ColumnDefinition Width="3" />
@@ -203,20 +214,20 @@
 				</Grid.ColumnDefinitions>
 				<vsfx:VsDialogButton
 					Grid.Column="0" 
-                    Margin="0,6,10,6"
+					Margin="0,6,10,6"
 					AutomationProperties.AutomationId="Ok"
 					VerticalAlignment="Top"
 					Content="OK"
 					IsDefault="True"
 					Command="{Binding SelectToolkitCommand}"
 					CommandParameter="{Binding ElementName=selector}" />
-                <vsfx:VsDialogButton 
-                    Grid.Column="2" 
-                    Margin="0,6,10,6" 
-                    VerticalAlignment="Top" 
-                    Content="Cancel" 
-                    IsCancel="True" />
+				<vsfx:VsDialogButton 
+					Grid.Column="2" 
+					Margin="0,6,10,6" 
+					VerticalAlignment="Top" 
+					Content="Cancel" 
+					IsCancel="True" />
 			</Grid>
-        </StackPanel>
+		</StackPanel>
 	</Grid>
 </cp:CommonDialogWindow>

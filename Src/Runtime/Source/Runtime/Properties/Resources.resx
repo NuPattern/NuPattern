@@ -456,4 +456,10 @@ Would you like to automatically upgrade this file to the current version?</value
   <data name="ProductElementViewModel_RenameMenuText" xml:space="preserve">
     <value>Rename</value>
   </data>
+  <data name="AddNewProductViewModel_SortFormatNameAscending" xml:space="preserve">
+    <value>Name Ascending</value>
+  </data>
+  <data name="AddNewProductViewModel_SortFormatNameDescending" xml:space="preserve">
+    <value>Name Descending</value>
+  </data>
 </root>
