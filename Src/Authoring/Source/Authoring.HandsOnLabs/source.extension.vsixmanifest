@@ -26,7 +26,7 @@
 	<Content>
 		<MefComponent>|%CurrentProject%|</MefComponent>
 		<MefComponent>|Authoring.HandsOnLabs.Automation|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="NuPattern.Authoring.HandsOnLabs.dll">NuPattern.Authoring.HandsOnLabs.PatternTool.patterndefinition</CustomExtension>
+		<CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="NuPattern.Authoring.HandsOnLabs.dll">NuPattern.Authoring.HandsOnLabs.PatternTool.patterndefinition</CustomExtension>
 		<CustomExtension Type="NuPattern.Toolkit.Classification" Category="HOL" CreateVisibility="Expanded" CustomizeVisibility="Collapsed"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>

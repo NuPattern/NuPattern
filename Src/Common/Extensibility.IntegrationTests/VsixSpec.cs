@@ -132,7 +132,7 @@ namespace NuPattern.Extensibility.IntegrationTests
 				Assert.Equal("Toolkit1", extension.Header.Name);
                 Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeMefComponent).Count());
 				Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeProjectTemplate).Count());
-				Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "PatternModel").Count());
+                Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "NuPattern.Toolkit.PatternModel").Count());
 			}
 
 			[TestMethod, TestCategory("Integration")]
@@ -145,7 +145,7 @@ namespace NuPattern.Extensibility.IntegrationTests
 					Assert.Equal("Toolkit1", extension.Header.Name);
                     Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeMefComponent).Count());
                     Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeProjectTemplate).Count());
-					Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "PatternModel").Count());
+                    Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "NuPattern.Toolkit.PatternModel").Count());
 				}
 			}
 		}
@@ -162,7 +162,7 @@ namespace NuPattern.Extensibility.IntegrationTests
 				Assert.Equal("Toolkit1", extension.Header.Name);
                 Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeMefComponent).Count());
                 Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == VsixContentTypeProjectTemplate).Count());
-				Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "PatternModel").Count());
+				Assert.Equal(1, extension.Content.Where(c => c.ContentTypeName == "NuPattern.Toolkit.PatternModel").Count());
 			}
 
 			[TestMethod, TestCategory("Integration")]

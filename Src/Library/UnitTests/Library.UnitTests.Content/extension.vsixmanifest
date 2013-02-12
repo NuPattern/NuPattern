@@ -21,7 +21,7 @@
 		<CustomExtension Type="ToolkitDocumentationRef">Documentation\ToolkitDocumentation.docx</CustomExtension>
 		<CustomExtension Type="PatternDocumentationRef">Documentation\PatternDocumentation.docx</CustomExtension>
 		<CustomExtension Type="PatternRequirementsRef">Documentation\PatternRequirements.xlsx</CustomExtension>
-		<CustomExtension Type="PatternModel" AssemblyFile="Toolkit1.dll">Toolkit1.PatternModel.patterndefinition</CustomExtension>
+		<CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="Toolkit1.dll">Toolkit1.PatternModel.patterndefinition</CustomExtension>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>
 </Vsix>

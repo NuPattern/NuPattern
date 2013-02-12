@@ -19,7 +19,7 @@
   <References />
   <Content>
     <MefComponent>|$safeprojectname$|</MefComponent>
-    <CustomExtension Type="PatternModel" AssemblyFile="$safeprojectname$.dll">$safeprojectname$.PatternModel.patterndefinition</CustomExtension>
+    <CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="$safeprojectname$.dll">$safeprojectname$.PatternModel.patterndefinition</CustomExtension>
     <ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
   </Content>
 </Vsix>

@@ -17,7 +17,7 @@ namespace NuPattern.Runtime
     [CLSCompliant(false)]
     public class InstalledToolkitInfo : IInstalledToolkitInfo
     {
-        internal const string PatternModelCustomExtensionName = "PatternModel"; // NuPattern.Toolkit.PatternModel
+        internal const string PatternModelCustomExtensionName = "NuPattern.Toolkit.PatternModel";
         internal const string ToolkitClassificationCustomExtensionName = "NuPattern.Toolkit.Classification";
         internal const string CategoryAttributeName = "Category";
         internal const string CustomizeVisibilityAttributeName = "CustomizeVisibility";

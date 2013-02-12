@@ -48,7 +48,7 @@
 	<Content>
 		<MefComponent>|%CurrentProject%|</MefComponent>
 		<MefComponent>|\<#=libraryProjectName\#>|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="\<#=assemblyName\#>.dll">\<#=rootNamespace\#>.PatternModel.patterndefinition</CustomExtension>
+		<CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="\<#=assemblyName\#>.dll">\<#=rootNamespace\#>.PatternModel.patterndefinition</CustomExtension>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>

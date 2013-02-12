@@ -29,7 +29,7 @@
   <Content>
     <MefComponent>|ExtensionItem|</MefComponent>
     <MefComponent>|ExtensionItem.Automation|</MefComponent>
-    <CustomExtension Type="PatternModel" AssemblyFile="ExtensionItem.dll">ExtensionItem.PatternModel.patterndefinition</CustomExtension>
+    <CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="ExtensionItem.dll">ExtensionItem.PatternModel.patterndefinition</CustomExtension>
     <CustomExtension Type="NuPattern.Toolkit.Classification" Category="Test" CreateVisibility="Collapsed" CustomizeVisibility="Hidden"/>
     <ItemTemplate>Assets\Templates\Items</ItemTemplate>
   </Content>
