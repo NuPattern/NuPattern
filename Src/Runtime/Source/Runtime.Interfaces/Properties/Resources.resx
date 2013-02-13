@@ -156,6 +156,12 @@
   <data name="ReferenceKindProvider_UnsupportedReferenceKind" xml:space="preserve">
     <value>Reference of kind {0} is not supported. Reference must be of type {1}.</value>
   </data>
+  <data name="ResourcePack_Error_InvalidResourceType" xml:space="preserve">
+    <value>Wrong resource type.</value>
+  </data>
+  <data name="ResourcePack_Error_UnknownResourceType" xml:space="preserve">
+    <value>Unknown resource type.</value>
+  </data>
   <data name="StoreEventBufferingScope_BufferingEvent" xml:space="preserve">
     <value>Buffering scope is active, event will be delayed until Dispose.</value>
   </data>

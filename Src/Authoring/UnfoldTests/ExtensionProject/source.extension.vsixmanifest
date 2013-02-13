@@ -27,7 +27,7 @@
   <Content>
     <MefComponent>|ExtensionProject|</MefComponent>
     <MefComponent>|ExtensionProject.Automation|</MefComponent>
-    <CustomExtension Type="PatternModel" AssemblyFile="ExtensionProject.dll">ExtensionProject.PatternModel.patterndefinition</CustomExtension>
-    <CustomExtension Type="ToolkitCategory" Category="Test"/>
+    <CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="ExtensionProject.dll">ExtensionProject.PatternModel.patterndefinition</CustomExtension>
+    <CustomExtension Type="NuPattern.Toolkit.Classification" Category="Test" CreateVisibility="Collapsed" CustomizeVisibility="Hidden"/>
   </Content>
 </Vsix>

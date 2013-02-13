@@ -153,7 +153,6 @@
     </None>
     <None Include="Assets\Templates\Projects\Extensibility\HolProjectTemplate\HolProjectTemplate.tt">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/HandsOnLabs/Element/C:\Projects\Platu\Dev\Team\Quickstarts\HandsOnLabs\HandsOnLabs.patternstate%252f47f070ae-29fc-4650-8eed-06a7a22f8af6</SourceModelReference>
-      <ItemGuid>aeda2b85-f038-4872-a74a-7ce7f3bb2936</ItemGuid>
       <SubType>Designer</SubType>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>HolProjectTemplate.gen.vstemplate</LastGenOutput>
@@ -163,7 +162,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.cs">
+    <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.gen.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252f14fc43ef-9d28-4b36-905f-adc76a9c92f3</SourceModelReference>
       <ItemGuid>0ddee1e0-beae-431c-a10b-5379b9aa183f</ItemGuid>
     </Compile>
@@ -445,7 +444,7 @@
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/HandsOnLabs/Element/C:\Projects\Platu\Dev\Team\Quickstarts\HandsOnLabs\HandsOnLabs.patternstate%252f23369711-1fee-4fa6-b891-5269a7e59cec</SourceModelReference>
       <ItemGuid>27056d3d-e2ca-4c9b-abf5-8e558358b7f7</ItemGuid>
     </None>
-    <None Include="source.include.t4">
+    <None Include="source.extension.gen.ttinclude">
       <DependentUpon>source.extension.tt</DependentUpon>
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252fa71545af-2d3b-4467-b23a-5b49138d4667</SourceModelReference>
       <ItemGuid>94470e9e-4cd7-447b-842b-5b18e708fd20</ItemGuid>

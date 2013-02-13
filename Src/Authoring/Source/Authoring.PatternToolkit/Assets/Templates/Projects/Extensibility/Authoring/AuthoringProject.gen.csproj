@@ -20,7 +20,7 @@
 		<ProjectGuid>$guid2$</ProjectGuid>
 		<OutputType>Library</OutputType>
 		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<RootNamespace>$rootnamespace$</RootNamespace>
+		<RootNamespace>$safeprojectname$</RootNamespace>
 		<AssemblyName>$safeprojectname$</AssemblyName>
 		<TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
 		<FileAlignment>512</FileAlignment>
@@ -115,16 +115,16 @@
 			<IncludeInVSIX>True</IncludeInVSIX>
 		</Content>
 		<Resource Include="Resources\PatternIcon.png"/>
-		<Content Include="NuPatternToolkitManager.11.0.vsix">
+		<Content Include="NuPatternToolkitManager.vsix">
 			<Visible>false</Visible>
-			<Link>NuPatternToolkitManager.11.0.vsix</Link>
-			<FixedLink>$(PatternToolkitBuilder)\NuPatternToolkitManager.11.0.vsix</FixedLink>
+			<Link>NuPatternToolkitManager.vsix</Link>
+			<FixedLink>$(PatternToolkitBuilder)\NuPatternToolkitManager.vsix</FixedLink>
 			<IncludeInVSIX>true</IncludeInVSIX>
 		</Content>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\$safeprojectname$.Automation\$safeprojectname$.Automation.csproj">
-			<Name>$safeprojectname$.Automation</Name>
+		<ProjectReference Include="..\$projectname$.Automation\$projectname$.Automation.csproj">
+			<Name>$projectname$.Automation</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
 		</ProjectReference>
@@ -146,7 +146,7 @@
 	</PropertyGroup>
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 	<Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" />
-	<Import Project="$(localappdata)\Microsoft\MSBuild\NuPattern\NuPattern Toolkit Builder VS2012\NuPattern.Authoring.PatternToolkitVersion.targets"/>
+	<Import Project="$(localappdata)\Microsoft\MSBuild\NuPattern\NuPattern Toolkit Builder\NuPattern.Authoring.PatternToolkitVersion.targets"/>
 	<PropertyGroup>
 		<StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
 		<StartAction>Program</StartAction>

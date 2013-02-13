@@ -5,7 +5,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Workflow", "_Workflow", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D575697-5894-42D6-B3D0-C0D65605209F}"
 	ProjectSection(SolutionItems) = preProject
-		Authoring.guidancestate = Authoring.guidancestate
+		Authoring.vs2012.guidancestate = Authoring.vs2012.guidancestate
 		Authoring.slnbldr = Authoring.slnbldr
 		Authoring.vs2012.testsettings = Authoring.vs2012.testsettings
 	EndProjectSection
@@ -107,12 +107,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.Guidance", "Sourc
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOnLabs.Automation", "Source\Authoring.HandsOnLabs.Automation\Authoring.HandsOnLabs.Automation.csproj", "{EBD848C7-5823-48BD-AF23-3DD723141161}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.HandsOnLabs.Automation", "Source\Authoring.HandsOnLabs.Automation\Authoring.HandsOnLabs.Automation.csproj", "{EBD848C7-5823-48BD-AF23-3DD723141161}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandsOnLabs", "Source\Authoring.HandsOnLabs\Authoring.HandsOnLabs.csproj", "{FB67BCAD-DFB0-40B1-9E02-CE4D8DA5BE9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.HandsOnLabs", "Source\Authoring.HandsOnLabs\Authoring.HandsOnLabs.csproj", "{FB67BCAD-DFB0-40B1-9E02-CE4D8DA5BE9D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection

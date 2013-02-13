@@ -31,7 +31,7 @@ if (VersionInfo.TargetVsVersion == "11.0")
 		<ProjectGuid>$guid2$</ProjectGuid>
 		<OutputType>Library</OutputType>
 		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<RootNamespace>$rootnamespace$</RootNamespace>
+		<RootNamespace>$safeprojectname$</RootNamespace>
 		<AssemblyName>$safeprojectname$</AssemblyName>
 		<TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
 		<FileAlignment>512</FileAlignment>
@@ -134,8 +134,8 @@ if (VersionInfo.TargetVsVersion == "11.0")
 		</Content>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\$safeprojectname$.Automation\$safeprojectname$.Automation.csproj">
-			<Name>$safeprojectname$.Automation</Name>
+		<ProjectReference Include="..\$projectname$.Automation\$projectname$.Automation.csproj">
+			<Name>$projectname$.Automation</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
 		</ProjectReference>

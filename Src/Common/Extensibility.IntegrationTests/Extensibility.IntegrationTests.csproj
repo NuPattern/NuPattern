@@ -34,6 +34,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensionManager">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
@@ -59,7 +60,7 @@
     </Reference>
     <Reference Include="Microsoft.VSSDK.TestHostFramework">
       <HintPath>$(BranchReferencesPath)\VSSDK\$(TargetVsVersion)\Microsoft.VSSDK.TestHostFramework.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Moq">
       <HintPath>..\..\Runtime\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>

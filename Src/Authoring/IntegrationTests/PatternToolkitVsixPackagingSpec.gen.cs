@@ -10,7 +10,7 @@ namespace NuPattern.Authoring.IntegrationTests
     {
         private static readonly IAssertion Assert = new Assertion();
         private const string DeployedContentDirectory = "Authoring.IntegrationTests.Content";
-        private const string DeployedVsixItem = DeployedContentDirectory + "\\NuPatternToolkitBuilder.11.0.vsix";
+        private const string DeployedVsixItem = DeployedContentDirectory + "\\NuPatternToolkitBuilder.vsix";
 
         [TestClass]
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]
@@ -32,7 +32,7 @@ namespace NuPattern.Authoring.IntegrationTests
             {
                 //Identifier, Name, Author, Version
                 Assert.Equal(@"9f6dc301-6f66-4d21-9f9c-b37412b162f6", this.VsixInfo.Header.Identifier);
-                Assert.Equal(@"NuPattern Toolkit Builder VS2012", this.VsixInfo.Header.Name);
+                Assert.Equal(@"NuPattern Toolkit Builder", this.VsixInfo.Header.Name);
                 Assert.Equal(@"An extension for building NuPattern Toolkits, which automate design patterns for rapid and consistent custom solution development.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"NuPattern", this.VsixInfo.Header.Author);
                 Assert.Equal("1.3.20.0", this.VsixInfo.Header.Version.ToString());
@@ -142,7 +142,7 @@ namespace NuPattern.Authoring.IntegrationTests
                     new[]
                         {
 							"source.extension.t4",
-							"source.include.t4",
+							"source.extension.include.t4",
 						}));
 			}
 
@@ -171,9 +171,6 @@ namespace NuPattern.Authoring.IntegrationTests
 							"redist.txt",
 							"Release%20Notes.docx",
 
-                            //Auxillary Assemblies
-							"NuPattern.Runtime.Schema.dll",
-
                             //Authoring Assemblies
                             "NuPattern.Authoring.Guidance.dll",
                             "NuPattern.Authoring.PatternModelDesign.Shell.dll",
@@ -188,8 +185,8 @@ namespace NuPattern.Authoring.IntegrationTests
 							"NuPattern.Authoring.WorkflowDesign.Shell.pkgdef",
 
 							//Embedded VSIXes
-							"NuPatternToolkitLibrary.11.0.vsix",
-							"NuPatternToolkitManager.11.0.vsix",
+							"NuPatternToolkitLibrary.vsix",
+							"NuPatternToolkitManager.vsix",
                         }));
             }
         }

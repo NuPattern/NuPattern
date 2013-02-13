@@ -29,11 +29,11 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
@@ -122,8 +122,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RuntimeShellInfo.tt</DependentUpon>
     </Compile>
+    <Compile Include="ToolkitClassification.cs" />
     <Compile Include="ToolkitInterfaceService.cs" />
-    <Compile Include="ObjectDumper.cs"/>
+    <Compile Include="ObjectDumper.cs" />
     <Compile Include="ProductStoreValidationController.cs" />
     <Compile Include="Settings\SettingsManager.cs" />
     <Compile Include="Settings\TracingSettingsMonitor.cs" />
@@ -183,6 +184,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SolutionBuilderViewModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UI\ViewModels\SortItem.cs" />
     <Compile Include="UI\ViewModels\ValidationViewModel.cs" />
     <Compile Include="UI\ViewModels\AddNewNodeViewModel.cs" />
     <Compile Include="UI\ViewModels\AddNewProductViewModel.cs" />

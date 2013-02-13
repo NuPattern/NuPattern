@@ -11,6 +11,7 @@ using NuPattern.Extensibility;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.Runtime.UriProviders;
 
 namespace NuPattern.Library.Commands
 {
@@ -42,14 +43,15 @@ namespace NuPattern.Library.Commands
 
             try
             {
-                var authoringUri = settings.GetOrCreatePropertyValue(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), string.Empty);
-                if (!string.IsNullOrEmpty(authoringUri))
+                var authoringUriString = settings.GetOrCreatePropertyValue(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), string.Empty);
+                if (!string.IsNullOrEmpty(authoringUriString))
                 {
+                    var authoringUri = new Uri(authoringUriString);
                     var uriService = serviceProvider.GetService<IFxrUriReferenceService>();
                     IItem item = null;
                     try
                     {
-                        item = uriService.ResolveUri<IItemContainer>(new Uri(authoringUri)).As<IItem>();
+                        item = uriService.ResolveUri<IItemContainer>(authoringUri).As<IItem>();
                     }
                     catch (NotSupportedException)
                     {
@@ -62,6 +64,7 @@ namespace NuPattern.Library.Commands
                         return;
                     }
 
+                    // Ensure file is configured as 'Content'
                     if (!(string.Equals(item.Data.ItemType, BuildAction.Content.ToString(), StringComparison.OrdinalIgnoreCase)))
                     {
                         context.LogError(
@@ -72,14 +75,49 @@ namespace NuPattern.Library.Commands
                         Resources.Validate_GenerateModelingCodeCommandItemTypeShouldBeSetToContentCode, settingsElement as ModelElement);
                     }
 
+                    // Ensure file is 'IncludeInVSIX'
                     if (!(string.Equals(item.Data.IncludeInVSIX, Boolean.TrueString.ToUpperInvariant(), StringComparison.OrdinalIgnoreCase)))
                     {
-                        context.LogError(
-                        string.Format(
-                            CultureInfo.CurrentCulture,
-                            Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrue,
-                            settings.Name),
-                        Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrueCode, settingsElement as ModelElement);
+                        if (String.IsNullOrEmpty(item.Data.IncludeInVSIXAs))
+                        {
+                            context.LogError(
+                            string.Format(
+                                CultureInfo.CurrentCulture,
+                                Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrue,
+                                settings.Name),
+                            Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXShouldBeSetToTrueCode, settingsElement as ModelElement);
+                        }
+                        else
+                        {
+                            // Ensure the 'IncludeInVSIXAs' value matches TemplateUri value
+                            var templateUriString = settings.GetOrCreatePropertyValue(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateUri), string.Empty);
+                            if (!String.IsNullOrEmpty(templateUriString))
+                            {
+                                var templateFilename = TextTemplateUriProvider.ParseFileName(new Uri(templateUriString));
+                                if (!templateFilename.Equals(item.Data.IncludeInVSIXAs, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    context.LogError(
+                                    string.Format(
+                                        CultureInfo.CurrentCulture,
+                                        Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFile,
+                                        settings.Name),
+                                    Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXAsShouldBeSameAsFileCode, settingsElement as ModelElement);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        // Ensure not both 'IncludeInVSIX' and 'IncludeInVSIXAs'
+                        if (!String.IsNullOrEmpty(item.Data.IncludeInVSIXAs))
+                        {
+                            context.LogError(
+                            string.Format(
+                                CultureInfo.CurrentCulture,
+                                Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicate,
+                                settings.Name),
+                            Resources.Validate_GenerateModelingCodeCommandIIncludeInVSIXDuplicateCode, settingsElement as ModelElement);
+                        }
                     }
                 }
                 else

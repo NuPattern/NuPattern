@@ -19,7 +19,8 @@
 	<References />
 	<Content>
 		<MefComponent>|Runtime.IntegrationTests.TestToolkit|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="NuPattern.Runtime.IntegrationTests.TestToolkit.dll">NuPattern.Runtime.IntegrationTests.TestToolkit.PatternModel.gen.patterndefinition</CustomExtension>
+		<CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="NuPattern.Runtime.IntegrationTests.TestToolkit.dll">NuPattern.Runtime.IntegrationTests.TestToolkit.PatternModel.gen.patterndefinition</CustomExtension>
+    <CustomExtension Type="NuPattern.Toolkit.Classification" Category="Test" CreateVisibility="Collapsed" CustomizeVisibility="Hidden"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>

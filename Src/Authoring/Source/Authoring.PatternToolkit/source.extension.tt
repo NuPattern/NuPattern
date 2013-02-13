@@ -1,5 +1,5 @@
 ﻿<#@ output extension=".vsixmanifest" #>
-<#@ Include  File="source.include.t4"#>
+<#@ Include  File="source.extension.gen.ttinclude"#>
 <#@ Include  File="..\..\..\MasterVSIXInfo.gen.ttinclude"#>
 <#@ include  File="..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
@@ -57,9 +57,9 @@ else
 		<MefComponent>|Authoring.WorkflowDesign|</MefComponent>
 		<VsPackage>|Authoring.PatternModelDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
 		<MefComponent>|Authoring.PatternModelDesign.Shell|</MefComponent>
-		<MefComponent>|Authoring.PatternToolkit.Automation|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternModel.patterndefinition</CustomExtension>
-		<CustomExtension Type="ToolkitCategory" Category="Authoring"/>
+		<MefComponent>|<#=libraryProjectName #>|</MefComponent>
+		<CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternModel.patterndefinition</CustomExtension>
+		<CustomExtension Type="NuPattern.Toolkit.Classification" Category="Authoring" CreateVisibility="Expanded" CustomizeVisibility="Collapsed"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>

@@ -44,6 +44,11 @@ namespace NuPattern.Runtime.UriProviders
 		/// </summary>
 		public const string ExtensionRelativeHost = "extension";
 
+        /// <summary>
+        /// The prefix for all Uris from this provider.
+        /// </summary>
+        public const string UriHostPrefix = UriSchemeName + "://" + ExtensionRelativeHost + "/";
+
 		/// <summary>
 		/// The host to use in a uri that is resolved relative to the current solution.
 		/// </summary>
@@ -174,5 +179,20 @@ namespace NuPattern.Runtime.UriProviders
 		{
 			get { return UriSchemeName; }
 		}
+
+        /// <summary>
+        /// Returns the filename component of the Uri.
+        /// </summary>
+        /// <param name="uri">A URI in the form 't4://extension/{id}/{relative-path-to-t4-file}'</param>
+        public static string ParseFileName(Uri uri)
+        {
+            var segments = uri.GetComponents(UriComponents.Path, UriFormat.Unescaped).Split(Path.AltDirectorySeparatorChar);
+            if (segments.Length < 2)
+            {
+                return null;
+            }
+
+            return segments.Last();
+        }
 	}
 }

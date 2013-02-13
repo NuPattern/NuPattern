@@ -37,6 +37,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
@@ -121,6 +122,7 @@
     <Compile Include="Commands\ActivateFeatureCommandSpec.cs" />
     <Compile Include="Commands\ActivateArtifactCommandSpec.cs" />
     <Compile Include="Commands\CreateElementFromDroppedWindowsFileCommandSpec.cs" />
+    <Compile Include="Commands\GenerateModelingCodeCommandValidationSpec.cs" />
     <Compile Include="Commands\InstantiateSolutionElementCommandSpec.cs" />
     <Compile Include="Commands\RunVsCommandCommandSpec.cs" />
     <Compile Include="Commands\SynchArtifactNameCommandSpec.cs" />
@@ -199,9 +201,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Library.UnitTests.Content\Toolkit1.vsix">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

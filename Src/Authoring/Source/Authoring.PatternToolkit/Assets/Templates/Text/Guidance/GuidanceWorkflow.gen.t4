@@ -1,6 +1,6 @@
 ﻿<#@ Template inherits="NuPattern.Authoring.Guidance.TocProcessWorkflowTextTransformation" HostSpecific="True" Debug="True" #>
 <#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
-<#@ output extension=".cs" #>
+<#@ output extension=".gen.cs" #>
 <#@ Assembly Name="NuPattern.Authoring.Guidance.dll" #>
 <#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
 <#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
@@ -35,7 +35,7 @@ namespace <#=rootNamespace #>.Guidance
 <#
 	}
 #>
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder", "1.3.20.0")]
 	public partial class ProcessWorkflow : GuidanceWorkflow
 	{
 		/// <summary>
@@ -94,7 +94,7 @@ namespace <#=rootNamespace #>.Guidance
 <#
 	}
 #>
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder", "1.3.20.0")]
 	public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
 	{
 		/// <summary>

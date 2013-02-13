@@ -77,12 +77,16 @@ namespace NuPattern.Runtime.Schema
                         return;
                     }
 
-                    if (resolvedIcon.Item.Data.ItemType != "Resource")
+                    if (resolvedIcon.Type == ResourcePackType.ProjectItem)
                     {
-                        context.LogError(
-                                string.Format(CultureInfo.CurrentCulture, Resources.Validate_NamedElementIconIsNotAResource, this.Name, resolvedIcon.Item.Name),
-                                Resources.Validate_NamedElementIconIsNotAResource,
-                                this);
+                        var item = resolvedIcon.GetItem();
+                        if (item.Data.ItemType != "Resource")
+                        {
+                            context.LogError(
+                                    string.Format(CultureInfo.CurrentCulture, Resources.Validate_NamedElementIconIsNotAResource, this.Name, item.Name),
+                                    Resources.Validate_NamedElementIconIsNotAResource,
+                                    this);
+                        }
                     }
                 }
             }

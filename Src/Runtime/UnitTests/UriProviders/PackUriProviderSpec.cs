@@ -21,23 +21,23 @@ namespace NuPattern.Runtime.UnitTests.UriProviders
         [TestInitialize]
         public void Initialize()
         {
-            solution = new Solution();
-            project = new Project { Name = "project", PhysicalPath = @"c:\projects\solution\project\project.csproj" };
-            folder = new Folder { PhysicalPath = @"c:\projects\solution\project\assets", Name = "assets" };
-            item = new Item { Data = { CustomTool = "", IncludeInVSIX = "false", CopyToOutputDirectory = (int)CopyToOutput.DoNotCopy, ItemType = "None" }, PhysicalPath = @"c:\projects\solution\project\assets\icon.ico", Name = "icon.ico" };
-            folder.Items.Add(item);
-            project.Items.Add(folder);
-            project.Data.AssemblyName = "project";
-            project.Id = Guid.NewGuid().ToString();
-            solution.Items.Add(project);
-            solution.Id = Guid.NewGuid().ToString();
+            this.solution = new Solution();
+            this.project = new Project { Name = "project", PhysicalPath = @"c:\projects\solution\project\project.csproj" };
+            this.folder = new Folder { PhysicalPath = @"c:\projects\solution\project\assets", Name = "assets" };
+            this.item = new Item { Data = { CustomTool = "", IncludeInVSIX = "false", CopyToOutputDirectory = (int)CopyToOutput.DoNotCopy, ItemType = "None" }, PhysicalPath = @"c:\projects\solution\project\assets\icon.ico", Name = "icon.ico" };
+            this.folder.Items.Add(item);
+            this.project.Items.Add(folder);
+            this.project.Data.AssemblyName = "project";
+            this.project.Id = Guid.NewGuid().ToString();
+            this.solution.Items.Add(project);
+            this.solution.Id = Guid.NewGuid().ToString();
 
-            serviceProvider = new Mock<IServiceProvider>();
-            serviceProvider.Setup(s => s.GetService(typeof(IFxrUriReferenceService))).Returns(new UriReferenceService(new[] { new SolutionUriProvider() }));
+            this.serviceProvider = new Mock<IServiceProvider>();
+            this.serviceProvider.Setup(s => s.GetService(typeof(IFxrUriReferenceService))).Returns(new UriReferenceService(new[] { new SolutionUriProvider() }));
         }
 
         [TestMethod, TestCategory("Unit")]
-        public void WhenItemExists_ReturnPackForItem()
+        public void WhenProjectItem_CreateUriForItem()
         {
             var resolver = new PackUriProvider();
 
@@ -45,12 +45,21 @@ namespace NuPattern.Runtime.UnitTests.UriProviders
         }
 
         [TestMethod, TestCategory("Unit")]
-        public void WhenPackIsValid_ReturnItem()
+        public void WhenPackIsItem_ReturnItem()
         {
             var resolver = new PackUriProvider();
             resolver.Solution = solution;
 
-            Assert.Equal(item, resolver.ResolveUri(new Uri("pack://application:,,,/project;component/assets/icon.ico")).Item);
+            Assert.Equal(item, resolver.ResolveUri(new Uri("pack://application:,,,/project;component/assets/icon.ico")).GetItem());
+        }
+
+        [TestMethod, TestCategory("Unit")]
+        public void WhenPackIsNotItem_ReturnNull()
+        {
+            var resolver = new PackUriProvider();
+            resolver.Solution = solution;
+
+            Assert.Null(resolver.ResolveUri(new Uri("pack://application:,,,/referencedproject;component/foo.ico")));
         }
     }
 }

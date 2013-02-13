@@ -17,7 +17,8 @@ namespace NuPattern.Library.UnitTests
 		{
 			private ISolution solution;
 
-			public GivenAVsixProject()
+            [TestInitialize]
+			public void InitializeContext()
 			{
 				var manifest = new Item
 				{
@@ -66,6 +67,10 @@ namespace NuPattern.Library.UnitTests
 												new Item
 												{
 													Name = "VsixTemplate.tt",
+												},
+                                                new Item
+												{
+													Name = "VsixTemplateAs.foo.tt",
 												}
 											}
 										}
@@ -81,7 +86,7 @@ namespace NuPattern.Library.UnitTests
 			[TestMethod, TestCategory("Unit")]
 			public void WhenBuildingUriForTemplateInProject_ThenUsesVsixIdentifierAndRelativePathToFile()
 			{
-				var uri = TextTemplateUriEditor.BuildUri(solution.Traverse().First(i => i.Name == "VsixTemplate.tt"));
+				var uri = TextTemplateUriEditor.BuildUri(this.solution.Traverse().First(i => i.Name == "VsixTemplate.tt"));
 
 				Assert.Equal("t4", uri.Scheme);
 				Assert.Equal(TextTemplateUriProvider.ExtensionRelativeHost, uri.Host);
@@ -99,6 +104,19 @@ namespace NuPattern.Library.UnitTests
 			{
 				Assert.Throws<ArgumentException>(() => TextTemplateUriEditor.BuildUri(solution.Traverse().First(i => i.Name == "NormalProject.tt")));
 			}
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenBuildingUriForTemplateWithIncludeInVSIXAs_ThenUsesFilenameFromIncludeInVSIXAs()
+            {
+                var item = this.solution.Traverse().First(i => i.Name == "VsixTemplateAs.foo.tt") as IItem;
+                item.Data.IncludeInVSIXAs = "NewTemplate.t4";
+
+                var uri = TextTemplateUriEditor.BuildUri(item);
+
+                Assert.Equal("t4", uri.Scheme);
+                Assert.Equal(TextTemplateUriProvider.ExtensionRelativeHost, uri.Host);
+                Assert.Equal("/ef4561f7-a3ea-4666-a080-bc2f195451e3/Templates/Text/NewTemplate.t4", uri.PathAndQuery);
+            }
 		}
 
 	}

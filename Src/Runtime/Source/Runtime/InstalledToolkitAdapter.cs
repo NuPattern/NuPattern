@@ -18,7 +18,6 @@ namespace NuPattern.Runtime
     public class InstalledToolkitAdapter
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<InstalledToolkitAdapter>();
-        internal const string CustomExtensionType = "PatternModel";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="InstalledToolkitAdapter"/> class.
@@ -53,7 +52,7 @@ namespace NuPattern.Runtime
 
         private static bool IsToolkit(IInstalledExtension extension)
         {
-            return extension.Content.Any(c => c.ContentTypeName.Equals(CustomExtensionType, StringComparison.OrdinalIgnoreCase));
+            return extension.Content.Any(c => c.ContentTypeName.Equals(InstalledToolkitInfo.PatternModelCustomExtensionName, StringComparison.OrdinalIgnoreCase));
         }
 
         private static InstalledToolkitInfo TryCreateRegistration(ISchemaReader reader, IInstalledExtension extension)
@@ -79,7 +78,7 @@ namespace NuPattern.Runtime
             Guard.NotNull(() => extension, extension);
 
             var content = extension.Content
-                .SingleOrDefault(c => c.ContentTypeName.Equals(CustomExtensionType, StringComparison.OrdinalIgnoreCase));
+                .SingleOrDefault(c => c.ContentTypeName.Equals(InstalledToolkitInfo.PatternModelCustomExtensionName, StringComparison.OrdinalIgnoreCase));
 
             return content != null ? new SchemaResource(extension.InstallPath, content) : null;
         }

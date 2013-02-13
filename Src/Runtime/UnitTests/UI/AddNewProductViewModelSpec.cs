@@ -40,10 +40,10 @@ namespace NuPattern.Runtime.UI.UnitTests
             {
                 var products = new List<IProduct>();
 
-                var factories = new[] { GetInstalledToolkit("Foo"), GetInstalledToolkit("Bar") };
+                var toolkits = new[] { GetInstalledToolkit("Foo"), GetInstalledToolkit("Bar") };
 
                 this.patternManager = new Mock<IPatternManager>();
-                this.patternManager.Setup(pm => pm.InstalledToolkits).Returns(factories);
+                this.patternManager.Setup(pm => pm.InstalledToolkits).Returns(toolkits);
                 this.patternManager.Setup(pm => pm.CreateProduct(It.IsAny<IInstalledToolkitInfo>(), It.IsAny<string>(), true))
                     .Callback<IInstalledToolkitInfo, string, bool>((f, n, r) => products.Add(Mocks.Of<IProduct>().First(p => p.InstanceName == n)));
                 this.patternManager.Setup(pm => pm.Products)
@@ -53,15 +53,15 @@ namespace NuPattern.Runtime.UI.UnitTests
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenInitializing_ThenFactoriesIsExposed()
+            public void WhenInitializing_ThenToolkitsIsExposed()
             {
-                Assert.Equal(2, this.target.Toolkits.Count());
+                Assert.Equal(2, this.target.AllToolkits.Count());
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenInitializing_ThenCurrentToolkitIsTurnedToFirstItem()
             {
-                Assert.Same(this.target.Toolkits.First(), this.target.CurrentToolkit);
+                Assert.Same(this.target.AllToolkits.First(), this.target.CurrentToolkit);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -75,7 +75,7 @@ namespace NuPattern.Runtime.UI.UnitTests
             {
                 var eventRaised = false;
 
-                this.target.CurrentToolkit = this.target.Toolkits.ElementAt(1);
+                this.target.CurrentToolkit = this.target.AllToolkits.ElementAt(1);
                 this.target.PropertyChanged += (s, e) =>
                 {
                     if (e.PropertyName == Reflector<AddNewProductViewModel>.GetProperty(x => x.CurrentToolkit).Name)
@@ -83,7 +83,7 @@ namespace NuPattern.Runtime.UI.UnitTests
                         eventRaised = true;
                     }
                 };
-                this.target.CurrentToolkit = this.target.Toolkits.First();
+                this.target.CurrentToolkit = this.target.AllToolkits.First();
 
                 Assert.True(eventRaised);
             }
@@ -93,7 +93,7 @@ namespace NuPattern.Runtime.UI.UnitTests
             {
                 var eventRaised = false;
 
-                this.target.CurrentToolkit = this.target.Toolkits.First();
+                this.target.CurrentToolkit = this.target.AllToolkits.First();
                 this.target.PropertyChanged += (s, e) =>
                 {
                     if (e.PropertyName == Reflector<AddNewProductViewModel>.GetProperty(x => x.CurrentToolkit).Name)
@@ -101,7 +101,7 @@ namespace NuPattern.Runtime.UI.UnitTests
                         eventRaised = true;
                     }
                 };
-                this.target.CurrentToolkit = this.target.Toolkits.First();
+                this.target.CurrentToolkit = this.target.AllToolkits.First();
 
                 Assert.False(eventRaised);
             }
@@ -180,7 +180,7 @@ namespace NuPattern.Runtime.UI.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenProductNameIsNullOrEmpty_ThenSelectToolkitCommandCanNotExecute()
             {
-                this.target.CurrentToolkit = this.target.Toolkits.First();
+                this.target.CurrentToolkit = this.target.AllToolkits.First();
                 this.target.ProductName = null;
 
                 Assert.False(this.target.SelectToolkitCommand.CanExecute(new Mock<IDialogWindow>().Object));
@@ -189,7 +189,7 @@ namespace NuPattern.Runtime.UI.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenDataAreValid_ThenSelectToolkitCommandCanExecute()
             {
-                this.target.CurrentToolkit = this.target.Toolkits.First();
+                this.target.CurrentToolkit = this.target.AllToolkits.First();
                 this.target.ProductName = "foo";
 
                 Assert.True(this.target.SelectToolkitCommand.CanExecute(new Mock<IDialogWindow>().Object));
@@ -200,7 +200,7 @@ namespace NuPattern.Runtime.UI.UnitTests
             {
                 var dialog = new Mock<IDialogWindow>();
 
-                this.target.CurrentToolkit = this.target.Toolkits.First();
+                this.target.CurrentToolkit = this.target.AllToolkits.First();
                 this.target.ProductName = "foo";
 
                 this.target.SelectToolkitCommand.Execute(dialog.Object);
@@ -212,11 +212,11 @@ namespace NuPattern.Runtime.UI.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenSelectingANewProduct_ThenProductNameIsChanged()
             {
-                this.target.CurrentToolkit = this.target.Toolkits.First();
+                this.target.CurrentToolkit = this.target.AllToolkits.First();
 
                 Assert.Equal("Foo1", this.target.ProductName);
 
-                this.target.CurrentToolkit = this.target.Toolkits.ElementAt(1);
+                this.target.CurrentToolkit = this.target.AllToolkits.ElementAt(1);
 
                 Assert.Equal("Bar1", this.target.ProductName);
             }
@@ -224,9 +224,9 @@ namespace NuPattern.Runtime.UI.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenSettingProductNameExternallyAndSelectingANewProduct_ThenProductNameIsNotChanged()
             {
-                this.target.CurrentToolkit = this.target.Toolkits.First();
+                this.target.CurrentToolkit = this.target.AllToolkits.First();
                 this.target.ProductName = "Sample";
-                this.target.CurrentToolkit = this.target.Toolkits.ElementAt(1);
+                this.target.CurrentToolkit = this.target.AllToolkits.ElementAt(1);
 
                 Assert.Equal("Sample", this.target.ProductName);
             }
@@ -244,10 +244,10 @@ namespace NuPattern.Runtime.UI.UnitTests
             {
                 var products = new List<IProduct> { Mocks.Of<IProduct>().First(p => p.InstanceName == "Foo1"), Mocks.Of<IProduct>().First(p => p.InstanceName == "Foo2") };
 
-                var factories = new[] { GetInstalledToolkit("Foo"), GetInstalledToolkit("Bar") };
+                var toolkits = new[] { GetInstalledToolkit("Foo"), GetInstalledToolkit("Bar") };
 
                 this.patternManager = new Mock<IPatternManager>();
-                this.patternManager.Setup(pm => pm.InstalledToolkits).Returns(factories);
+                this.patternManager.Setup(pm => pm.InstalledToolkits).Returns(toolkits);
                 this.patternManager.Setup(pm => pm.CreateProduct(It.IsAny<IInstalledToolkitInfo>(), It.IsAny<string>(), true))
                     .Callback<IInstalledToolkitInfo, string, bool>((f, n, r) => products.Add(Mocks.Of<IProduct>().First(p => p.InstanceName == n)));
                 this.patternManager.Setup(pm => pm.Products)
@@ -281,6 +281,7 @@ namespace NuPattern.Runtime.UI.UnitTests
         private static IInstalledToolkitInfo GetInstalledToolkit(string productName)
         {
             var toolkit = new Mock<IInstalledToolkitInfo>();
+            toolkit.Setup(f => f.Classification).Returns(new Mock<IToolkitClassification>().Object);
             toolkit.Setup(f => f.Schema.Pattern.DisplayName).Returns(productName);
             return toolkit.Object;
         }

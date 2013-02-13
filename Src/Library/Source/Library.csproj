@@ -25,11 +25,11 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
@@ -37,6 +37,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensionManager">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
@@ -288,6 +289,7 @@
     <Compile Include="Design\CommandReferencesEditor.cs" />
     <Compile Include="Design\CommandReferenceTypeDescriptionProvider.cs" />
     <Compile Include="ValidationRules\PropertyStringValueForbiddenCharsValidationRule.cs" />
+    <Compile Include="ValueProviders\ProjectNameValueProvider.cs" />
     <Compile Include="ValueProviders\CurrentDateTimeValueProvider.cs" />
     <Compile Include="ValueProviders\RemoveForbiddenCharsValueProvider.cs" />
     <Compile Include="ValueProviders\VsProjectPropertyValueProvider.cs" />

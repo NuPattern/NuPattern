@@ -1,5 +1,5 @@
 ﻿<#@ output extension=".vsixmanifest" #>
-<#@ Include  File="source.include.t4"#>
+<#@ Include  File="source.extension.gen.ttinclude"#>
 <#@ Include  File="..\..\..\MasterVSIXInfo.gen.ttinclude"#>
 <#@ Include  File="..\..\..\MasterVersion.gen.ttinclude"#>
 <?xml version="1.0" encoding="utf-8"?>
@@ -42,8 +42,9 @@ else
 	</References>
 	<Content>
 		<MefComponent>|%CurrentProject%|</MefComponent>
-		<MefComponent>|<#=productName #>.Automation|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternTool.patterndefinition</CustomExtension>
+		<MefComponent>|<#=libraryProjectName #>|</MefComponent>
+		<CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternTool.patterndefinition</CustomExtension>
+		<CustomExtension Type="NuPattern.Toolkit.Classification" Category="HOL" CreateVisibility="Expanded" CustomizeVisibility="Collapsed"/>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>

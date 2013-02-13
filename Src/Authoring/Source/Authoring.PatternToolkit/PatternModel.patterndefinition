@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="2c5403a9-5eaa-4d02-b309-0d948a9f740a" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
   <dm0:extensions>
-    <templateSettings Id="db28cfc6-bc8f-45a6-8b1b-7caaffae6126" templateUri="template://project/CSharp/301af1ad3bdb-PatternToolkit" commandId="00000000-0000-0000-0000-000000000000" wizardId="89961330-d06d-4447-8015-1198ef9af6ea" templateAuthoringUri="solution://0216a624-c5c5-4335-8361-f640b91b4dea/0a1c38d2-55bd-4d49-b0b8-d17f5a6318d6">
+    <templateSettings Id="db28cfc6-bc8f-45a6-8b1b-7caaffae6126" templateUri="template://project/CSharp/301af1ad3bdb-PatternToolkit" commandId="00000000-0000-0000-0000-000000000000" wizardId="89961330-d06d-4447-8015-1198ef9af6ea" templateAuthoringUri="solution://0216a624-c5c5-4335-8361-f640b91b4dea/0a1c38d2-55bd-4d49-b0b8-d17f5a6318d6" sanitizeName="false">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b3e68e57-c4df-4821-9ad7-b1d7b9811c13" />
       </extendedElement>
@@ -230,7 +230,7 @@
         <automationSettingsSchemaMoniker Id="31f7c469-2c03-4169-8bd0-41f9e43ee518" />
       </extendedElement>
     </eventSettings>
-    <eventSettings Id="241af1a5-d726-4e3f-b6bc-82706101df55" commandId="d321df0a-d467-45d6-944f-ccd9b82225fe" eventId="NuPattern.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+    <eventSettings Id="241af1a5-d726-4e3f-b6bc-82706101df55" commandId="b687f186-20c9-4389-be6b-9aaa92f283ac" eventId="NuPattern.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3dbe232e-84ae-4c48-970e-f21503559286" />
       </extendedElement>
@@ -711,9 +711,12 @@
         <propertySettings Id="0897e473-147d-46cc-8be1-dfc6537f5507" value="False" name="SanitizeName" />
         <propertySettings Id="2b65efb1-f568-455f-ba2a-ba5f8e158025" value="False" name="SyncName" />
         <propertySettings Id="eb004004-3f68-4c6b-b494-68d89e850cec" value="source.extension.tt" name="TargetFileName" />
-        <propertySettings Id="99d70c98-3f40-4123-a75c-35741a94f9ad" name="TargetPath" />
+        <propertySettings Id="99d70c98-3f40-4123-a75c-35741a94f9ad" value="..\~" name="TargetPath" />
         <propertySettings Id="c4eb1e35-133c-4706-b740-ce8036b39e0b" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.extension.t4" name="TemplateUri" />
-        <propertySettings Id="6041f199-728a-4416-9750-031d0fec66b6" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/df833f58-85c6-45f7-afc9-834c0217473d" name="TemplateAuthoringUri" />
+        <propertySettings Id="6041f199-728a-4416-9750-031d0fec66b6" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/a71d52a0-214a-471a-968e-6a12ec5d35bc" name="TemplateAuthoringUri" />
+        <propertySettings Id="ee984d78-548c-4b0b-8829-b67216406854" name="Tag" />
+        <propertySettings Id="9ab9c87e-139b-46ad-a2ed-497b6ba2ed18" name="TargetBuildAction" />
+        <propertySettings Id="719cf5ef-e316-4597-9a2e-906c7f4e2cee" value="DoNotCopy" name="TargetCopyToOutput" />
       </properties>
     </commandSettings>
     <commandSettings Id="e7f46324-a7e5-434d-a3bc-d25c7bbe4e18" typeId="NuPattern.Library.Commands.SetBuildActionCommand">
@@ -732,10 +735,13 @@
       <properties>
         <propertySettings Id="4b49fe7d-3f88-48d9-9ebf-706c5cf196b1" value="False" name="SanitizeName" />
         <propertySettings Id="603da6ad-d0dc-407d-b70a-e80d45847766" value="False" name="SyncName" />
-        <propertySettings Id="6a50e599-74ea-41cb-9d37-d792daa5d778" value="source.include.t4" name="TargetFileName" />
-        <propertySettings Id="6f24c4cb-4567-4ab9-a3a8-a74d1b9cd61c" name="TargetPath" />
-        <propertySettings Id="1943c55e-ad1f-401d-a092-ee5a77111a2e" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.include.t4" name="TemplateUri" />
+        <propertySettings Id="6a50e599-74ea-41cb-9d37-d792daa5d778" value="source.extension.gen.ttinclude" name="TargetFileName" />
+        <propertySettings Id="6f24c4cb-4567-4ab9-a3a8-a74d1b9cd61c" value="~" name="TargetPath" />
+        <propertySettings Id="1943c55e-ad1f-401d-a092-ee5a77111a2e" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.extension.include.t4" name="TemplateUri" />
         <propertySettings Id="b51a1f8b-c9d9-4273-9ff3-9d433e9c6115" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/d93786b4-73bd-4850-8a9b-dc71b0c85d79" name="TemplateAuthoringUri" />
+        <propertySettings Id="66188dc1-d851-429f-9e29-0ad61023b648" name="Tag" />
+        <propertySettings Id="b0c0934a-00f8-43c8-9923-f086a28eb3e9" name="TargetBuildAction" />
+        <propertySettings Id="f159af74-1766-4dcd-9d0a-2b0e66870398" value="DoNotCopy" name="TargetCopyToOutput" />
       </properties>
     </commandSettings>
     <commandSettings Id="add1e759-dac1-42ed-a26e-586cf883975b" typeId="NuPattern.Library.Commands.AggregatorCommand">
@@ -907,6 +913,14 @@
       </extendedElement>
       <properties>
         <propertySettings Id="9f5f310e-34bc-4715-bb9d-7c5829c1d579" value="e2d14d50-dc8f-4a40-bf60-10e2a7ac9f89;acf616d7-278f-41a0-87bf-580ce8d3cdae" name="CommandReferenceList" />
+      </properties>
+    </commandSettings>
+    <commandSettings Id="b687f186-20c9-4389-be6b-9aaa92f283ac" typeId="NuPattern.Library.Commands.AggregatorCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="8a4c692a-7ad4-4eca-a80c-3acbb7df2453" />
+      </extendedElement>
+      <properties>
+        <propertySettings Id="9b268597-7e37-443e-83ba-e7faed5c95c9" value="d321df0a-d467-45d6-944f-ccd9b82225fe;60bf8de3-2170-40f4-8dd6-56997f0cec65" name="CommandReferenceList" />
       </properties>
     </commandSettings>
     <menuSettings Id="11e7a8a4-db6a-484b-b6c7-f497a7774ea1" text="Show Guidance" commandId="049e298a-8525-40a8-9fe8-f74fe455c307" wizardId="00000000-0000-0000-0000-000000000000">
@@ -3667,7 +3681,7 @@
                   </settings>
                 </customizationPolicy>
               </automationSettings>
-              <automationSettings Id="3dbe232e-84ae-4c48-970e-f21503559286" name="GenerateManifestIncludeOnBuild" displayName="Generate Manifest Include On Build" description="" codeIdentifier="GenerateManifestIncludeOnBuild" automationType="Event Launch Point" classification="LaunchPoint">
+              <automationSettings Id="3dbe232e-84ae-4c48-970e-f21503559286" name="TransformManifestPartsOnBuild" displayName="Transform Manifest Parts On Build" description="" codeIdentifier="TransformManifestPartsOnBuild" automationType="Event Launch Point" classification="LaunchPoint">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -3695,6 +3709,15 @@
                 </customizationPolicy>
               </automationSettings>
               <automationSettings Id="e1234322-7a52-400b-a4cb-a3480c6d95da" name="TransformManifest" displayName="Transform Manifest" description="" codeIdentifier="TransformManifest" automationType="Command">
+                <customizationPolicy name="CustomizationPolicySchema1">
+                  <settings>
+                    <setting propertyId="DisplayName" />
+                    <setting propertyId="Description" />
+                    <setting propertyId="Settings" />
+                  </settings>
+                </customizationPolicy>
+              </automationSettings>
+              <automationSettings Id="8a4c692a-7ad4-4eca-a80c-3acbb7df2453" name="TransformManifestParts" displayName="Transform Manifest Parts" description="" codeIdentifier="TransformManifestParts" automationType="Command">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />

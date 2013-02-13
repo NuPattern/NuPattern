@@ -16,13 +16,16 @@ namespace NuPattern.Library.Automation
 			{
 				base.ElementPropertyChanged(e);
 				var componentModel = e.ModelElement.Store.GetService<SComponentModel, IComponentModel>();
-				var changeRules = componentModel.DefaultExportProvider.GetExports<ICommandChangeRule, ICommandChangeRuleMetadata>()
-					.Where(r => r.Metadata.CommandType.ToString() == ((PropertySettings)e.ModelElement).CommandSettings.TypeId);
+                if (componentModel != null)
+                {
+                    var changeRules = componentModel.DefaultExportProvider.GetExports<ICommandChangeRule, ICommandChangeRuleMetadata>()
+                        .Where(r => r.Metadata.CommandType.ToString() == ((PropertySettings)e.ModelElement).CommandSettings.TypeId);
 
-				foreach (var rule in changeRules)
-				{
-					rule.Value.Change(e);
-				}
+                    foreach (var rule in changeRules)
+                    {
+                        rule.Value.Change(e);
+                    }
+                }
 			}
 		}
 	}

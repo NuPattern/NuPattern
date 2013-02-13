@@ -428,7 +428,7 @@
     <value>Applying tailoring rules to cloned pattern line.</value>
   </data>
   <data name="Validate_NamedElementIconDoesNotPointToAValidFile" xml:space="preserve">
-    <value>Element '{0}'  has an invalid value for the 'Icon' property. You must select an existing icon file from the solution.</value>
+    <value>Element '{0}'  has an invalid value for the 'Icon' property. You must select an existing icon file from the solution, or an icon resource in a referenced assembly of the project.</value>
   </data>
   <data name="Validate_NamedElementIconDoesNotPointToAValidFileCode" xml:space="preserve">
     <value>135</value>

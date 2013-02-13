@@ -19,7 +19,7 @@
   <References />
   <Content>
     <MefComponent>|SampleToolkit|</MefComponent>
-    <CustomExtension Type="PatternModel" AssemblyFile="SampleToolkit.dll">SampleToolkit.PatternModel.gen.patterndefinition</CustomExtension>
+    <CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="SampleToolkit.dll">SampleToolkit.PatternModel.gen.patterndefinition</CustomExtension>
     <ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
   </Content>
 </Vsix>

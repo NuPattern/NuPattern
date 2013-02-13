@@ -6,12 +6,23 @@
     <CopyVsixToFolder Condition=" '$(TeamBuildConstants)' != '' ">$(SolutionRoot)\NuPattern\Projects\Src\Binaries\$(TargetVsVersion)</CopyVsixToFolder>
   </PropertyGroup>
 
+  <!-- VSIX package contents -->
+  <PropertyGroup>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
+    <IncludeDocFilesInVSIXContainer>false</IncludeDocFilesInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>true</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <IncludeCopyLocalReferencesInVSIXContainer>true</IncludeCopyLocalReferencesInVSIXContainer>
+    <!--<CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>-->
+    <!--<CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>-->
+  </PropertyGroup>
+
   <!-- VSIX file name overrides -->
   <PropertyGroup>
-    <RuntimeShellVsixFileName>NuPatternToolkitManager.11.0.vsix</RuntimeShellVsixFileName>
-    <PatternToolkitVsixFileName>NuPatternToolkitBuilder.11.0.vsix</PatternToolkitVsixFileName>
-    <PatternToolkitLibraryVsixFileName>NuPatternToolkitLibrary.11.0.vsix</PatternToolkitLibraryVsixFileName>
-    <HandsOnLabsVsixFileName>NuPatternToolkitBuilderLabs.11.0.vsix</HandsOnLabsVsixFileName>
+    <RuntimeShellVsixFileName>NuPatternToolkitManager.vsix</RuntimeShellVsixFileName>
+    <PatternToolkitVsixFileName>NuPatternToolkitBuilder.vsix</PatternToolkitVsixFileName>
+    <PatternToolkitLibraryVsixFileName>NuPatternToolkitLibrary.vsix</PatternToolkitLibraryVsixFileName>
+    <HandsOnLabsVsixFileName>NuPatternToolkitBuilderLabs.vsix</HandsOnLabsVsixFileName>
   
 </PropertyGroup>
   

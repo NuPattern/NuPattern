@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D70F79C1-8A0B-44E6-A218-9A253DFBA1A6}"
+	ProjectSection(SolutionItems) = preProject
+		Sample.gen.slnbldr = Sample.gen.slnbldr
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{565DDD83-721B-4494-9F43-5150B1A33498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "SolutionFolder\Library\Library.csproj", "{A9ED6F8F-F2FB-4CC5-9E60-3834BC497DAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9ED6F8F-F2FB-4CC5-9E60-3834BC497DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9ED6F8F-F2FB-4CC5-9E60-3834BC497DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9ED6F8F-F2FB-4CC5-9E60-3834BC497DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9ED6F8F-F2FB-4CC5-9E60-3834BC497DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A9ED6F8F-F2FB-4CC5-9E60-3834BC497DAF} = {565DDD83-721B-4494-9F43-5150B1A33498}
+	EndGlobalSection
+EndGlobal

@@ -6,7 +6,7 @@
 <#@ Import Namespace="NuPattern.Runtime" #>
 <#@ Import Namespace="NuPattern.Authoring.PatternToolkit" #>
 \<#@ output extension=".vsixmanifest" \#>
-\<#@ Include File="source.include.t4" \#>
+\<#@ Include File="source.extension.gen.ttinclude" \#>
 <?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
   <Identifier Id="\<#=identifier\#>">
@@ -46,9 +46,9 @@
 		</Reference>
 	</References>
 	<Content>
-		<MefComponent>|\<#=productName\#>|</MefComponent>
-		<MefComponent>|\<#=productName\#>.Automation|</MefComponent>
-		<CustomExtension Type="PatternModel" AssemblyFile="\<#=assemblyName\#>.dll">\<#=rootNamespace\#>.PatternModel.patterndefinition</CustomExtension>
+		<MefComponent>|%CurrentProject%|</MefComponent>
+		<MefComponent>|\<#=libraryProjectName\#>|</MefComponent>
+		<CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="\<#=assemblyName\#>.dll">\<#=rootNamespace\#>.PatternModel.patterndefinition</CustomExtension>
 		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
 		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
 	</Content>

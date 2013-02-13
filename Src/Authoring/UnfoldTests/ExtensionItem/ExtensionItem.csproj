@@ -53,6 +53,7 @@
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <ItemTemplate Include="Assets\Templates\Items\Interface\Interface.gen.vstemplate">
       <AutoGen>True</AutoGen>

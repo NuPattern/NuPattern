@@ -41,6 +41,15 @@ namespace NuPattern.Runtime.IntegrationTests
                 Assert.Equal("MyTemplate1", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "MyTemplate1.gen.vstemplate").TemplateData.Name.Value);
                 Assert.Equal("MyTemplate2", this.toolkit.Templates.First(t => Path.GetFileName(t.TemplateFileName) == "MyTemplate2.gen.vstemplate").TemplateData.Name.Value);
             }
+
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void ThenClassificationReturned()
+            {
+                Assert.Equal("Test", this.toolkit.Classification.Category);
+                Assert.Equal(ToolkitVisibility.Collapsed, this.toolkit.Classification.CreateVisibility);
+                Assert.Equal(ToolkitVisibility.Hidden, this.toolkit.Classification.CustomizeVisibility);
+            }
         }
     }
 }

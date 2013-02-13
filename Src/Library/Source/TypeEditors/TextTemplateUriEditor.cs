@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Drawing.Design;
 using System.Globalization;
+using System.IO;
 using System.Text;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -14,6 +15,7 @@ using NuPattern.Extensibility.Properties;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
+using NuPattern.Runtime.UriProviders;
 
 namespace NuPattern.Library.TypeEditors
 {
@@ -61,7 +63,7 @@ namespace NuPattern.Library.TypeEditors
 					// Set item properties automatically.
 					var item = (IItem)picker.SelectedItem;
 					item.Data.ItemType = BuildAction.Content.ToString();
-					item.Data.IncludeInVSIX = Boolean.TrueString.ToLowerInvariant();
+                    item.Data.IncludeInVSIX = (!IsIncludeInVSIXAs(item)).ToString().ToLowerInvariant();
 
 					SetAuthoringUri(context, uriService.CreateUri(picker.SelectedItem));
 				}
@@ -74,10 +76,10 @@ namespace NuPattern.Library.TypeEditors
 		/// <summary>
 		/// Builds the URI for the given template based on the containing project VSIX manifest identifier.
 		/// </summary>
-		public static Uri BuildUri(IItemContainer templateItem)
+		public static Uri BuildUri(IItemContainer selectedItem)
 		{
-			var manifest = templateItem.GetToolkitManifest();
-			var owningProject = templateItem.Traverse(x => x.Parent, item => item.Kind == ItemKind.Project);
+			var manifest = selectedItem.GetToolkitManifest();
+			var owningProject = selectedItem.Traverse(x => x.Parent, item => item.Kind == ItemKind.Project);
 
 			tracer.TraceInformation(Properties.Resources.TextTemplateUriEditor_TraceReadingManifest, manifest.GetLogicalPath());
 
@@ -93,10 +95,16 @@ namespace NuPattern.Library.TypeEditors
 				throw;
 			}
 
-			var path = GetLogicalPath(templateItem).Replace(owningProject.GetLogicalPath(), string.Empty);
-			var uri = new Uri(new Uri("t4://extension/"), new Uri(vsixId + path, UriKind.Relative));
+			var path = GetLogicalPath(selectedItem).Replace(owningProject.GetLogicalPath(), string.Empty);
 
-			return uri;
+            // Use alternative name if IncludeInVSIXAs defined
+            var templateItem = (IItem)selectedItem;
+            if (IsIncludeInVSIXAs(templateItem))
+            {
+                path = Path.Combine(Path.GetDirectoryName(path), templateItem.Data.IncludeInVSIXAs);
+            }
+
+			return new Uri(new Uri(TextTemplateUriProvider.UriHostPrefix), new Uri(vsixId + path, UriKind.Relative));
 		}
 
 		/// <summary>
@@ -147,5 +155,11 @@ namespace NuPattern.Library.TypeEditors
 		{
 			return UITypeEditorEditStyle.Modal;
 		}
+
+        private static bool IsIncludeInVSIXAs(IItem selectedItem)
+        {
+            return (selectedItem != null
+                && (!String.IsNullOrEmpty(selectedItem.Data.IncludeInVSIXAs)));
+        }
 	}
 }

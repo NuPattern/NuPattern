@@ -26,10 +26,6 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="NuPattern.Runtime.Schema">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="NuPattern.Runtime.Interfaces">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>False</Private>
@@ -151,6 +147,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>source.extension.tt</DependentUpon>
       <IncludeInVSIXAs>source.extension.t4</IncludeInVSIXAs>
+      <ItemGuid>a71d52a0-214a-471a-968e-6a12ec5d35bc</ItemGuid>
     </Content>
     <None Include="3e44e242-5b47-4338-827f-ca394a899c57.patterndefinition.diagram">
       <DependentUpon>PatternModel.patterndefinition</DependentUpon>
@@ -848,7 +845,7 @@
       <LastGenOutput>NuPattern.Authoring.PatternToolkitVersion.gen.targets</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="source.include.t4">
+    <None Include="source.extension.gen.ttinclude">
       <DependentUpon>source.extension.tt</DependentUpon>
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252f875cc557-a93c-4b12-b9ea-54a732b9c242</SourceModelReference>
       <ItemGuid>13058dda-d9fb-4b59-b5ca-bde04f01b2ae</ItemGuid>
@@ -948,7 +945,7 @@
     <Compile Include="Assets\Wizards\ToolkitCreationWizard.xaml.cs">
       <DependentUpon>ToolkitCreationWizard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.cs">
+    <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.gen.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252fb05cc972-cb01-4a17-9627-cf110c7b376c</SourceModelReference>
       <ItemGuid>963aeb3b-af3f-4a89-ad89-63a71b77335f</ItemGuid>
     </Compile>
@@ -1137,16 +1134,16 @@
       <IncludeInVSIXAs>ProjectTemplate.vstemplate.t4</IncludeInVSIXAs>
       <ItemGuid>736354eb-f066-475f-8a43-b78cf07a135d</ItemGuid>
     </Content>
-    <Content Include="Assets\Templates\Text\VsixManifest\source.include.gen.t4">
+    <Content Include="Assets\Templates\Text\VsixManifest\source.extension.include.gen.t4">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>source.include.tt</DependentUpon>
-      <IncludeInVSIXAs>source.include.t4</IncludeInVSIXAs>
+      <DependentUpon>source.extension.include.tt</DependentUpon>
+      <IncludeInVSIXAs>source.extension.include.t4</IncludeInVSIXAs>
       <ItemGuid>d93786b4-73bd-4850-8a9b-dc71b0c85d79</ItemGuid>
     </Content>
-    <None Include="Assets\Templates\Text\VsixManifest\source.include.tt">
+    <None Include="Assets\Templates\Text\VsixManifest\source.extension.include.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>source.include.gen.t4</LastGenOutput>
+      <LastGenOutput>source.extension.include.gen.t4</LastGenOutput>
     </None>
     <Content Include="$(PatternToolkitRuntime)\GeneratedCode\LibrarySchema.gen.xsd">
       <Visible>true</Visible>

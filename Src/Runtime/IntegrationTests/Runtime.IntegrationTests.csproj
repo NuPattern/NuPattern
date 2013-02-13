@@ -18,6 +18,7 @@
     <BranchRoot>..\..\</BranchRoot>
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
     <Reference Include="EnvDTE">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -93,11 +94,11 @@
     </Reference>
     <Reference Include="Microsoft.VSSDK.TestHostFramework">
       <HintPath>$(BranchReferencesPath)\VSSDK\$(TargetVsVersion)\Microsoft.VSSDK.TestHostFramework.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ComponentModel.Composition.Diagnostics">
       <HintPath>..\..\..\Lib\MEF\Microsoft.ComponentModel.Composition.Diagnostics.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
@@ -131,31 +132,45 @@
     </None>
     <Compile Include="FeatureExtensionSpec.cs" />
     <Compile Include="InstalledToolkitInfoSpec.cs" />
+    <Compile Include="UriProviders\PackUriProviderSpec.cs" />
     <Compile Include="RuntimeShellVsixPackagingSpec.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RuntimeShellVsixPackagingSpec.tt</DependentUpon>
     </Compile>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\Sample\SolutionFolder\Library\Properties\AssemblyInfo.cs">
+    <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\LinkedBitmap1.bmp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TestProviders2\TopLevelProjectItem.cs">
+    <Resource Include="Runtime.IntegrationTests.Content\PackUriProvider\TestIcon.bmp" />
+    <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\TestProviders.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TestProviders\TopLevelProjectFolder\SecondLevelProjectFolder\SecondLevelProjectFolderItem.cs">
+    <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\TestProviders\Resources\Bitmap1.bmp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TestProviders\TopLevelProjectFolder\SecondLevelProjectFolder\ThirdLevelProjectFolder\ThirdLevelProjectFolderItem.cs">
+    <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\TestProviders\TopLevelProject.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TestProviders\TopLevelProjectFolder\TopLevelProjectFolderItem.cs">
+    <Content Include="Runtime.IntegrationTests.Content\Sample\SolutionFolder\Library\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TestProviders\TopLevelProjectItem.cs">
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders2\TopLevelProjectItem.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\TopLevelProjectFolder\SecondLevelProjectFolder\SecondLevelProjectFolderItem.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\TopLevelProjectFolder\SecondLevelProjectFolder\ThirdLevelProjectFolder\ThirdLevelProjectFolderItem.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\TopLevelProjectFolder\TopLevelProjectFolderItem.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\TopLevelProjectItem.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Compile Include="PatternManagerSpec.cs" />
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TestProviders2\TopLevelProjectItemWithItemGuid.cs">
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders2\TopLevelProjectItemWithItemGuid.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Compile Include="RuntimeShellPackageSpec.cs" />
@@ -165,22 +180,22 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="UriProviders\SolutionUriProviderSpec.cs" />
     <Compile Include="MefLogger.cs" />
-    <Content Include="Runtime.IntegrationTests.Content\Projects\Sample\Sample.sln">
+    <Content Include="Runtime.IntegrationTests.Content\Sample\Sample.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\Sample\SolutionFolder\Library\Library.csproj">
+    <Content Include="Runtime.IntegrationTests.Content\Sample\SolutionFolder\Library\Library.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\SecondLevelSolutionItem.txt">
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\SecondLevelSolutionItem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TestProviders2\Properties\AssemblyInfo.cs">
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders2\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TestProviders2\ThirdLevelProject.csproj">
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders2\ThirdLevelProject.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TestProviders\Properties\AssemblyInfo.cs">
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Compile Include="SettingsManagerSpec.cs" />
@@ -197,16 +212,16 @@
     <CodeAnalysisDictionary Include="..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TestProviders.sln">
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TestProviders\TopLevelProject.csproj">
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\TopLevelProject.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\ThirdLevelSolutionItem.txt">
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\ThirdLevelSolutionItem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Runtime.IntegrationTests.Content\Projects\TestProviders\TopLevelSolutionItem.txt">
+    <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TopLevelSolutionItem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -247,26 +262,26 @@
     <Content Include="Runtime.IntegrationTests.Content\UnfoldTemplate\BlankSolution.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="UriProviders\Hello.t4">
+    <Content Include="Runtime.IntegrationTests.Content\TextTemplate\TestTextTemplate.t4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Runtime.IntegrationTests.Content\Projects\Sample\SolutionFolder\Library\Folder\" />
+    <Folder Include="Runtime.IntegrationTests.Content\Sample\SolutionFolder\Library\Folder\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Binaries\$(TargetVSVersion)\NuPatternToolkitManager.$(TargetVSVersion).vsix">
-      <Link>Runtime.IntegrationTests.Content\NuPatternToolkitManager.$(TargetVSVersion).vsix</Link>
+    <None Include="..\..\Binaries\$(TargetVSVersion)\$(RuntimeShellVsixFileName)">
+      <Link>Runtime.IntegrationTests.Content\$(RuntimeShellVsixFileName)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
-    <None Include="Runtime.IntegrationTests.Content\Projects\Sample\Sample.gen.slnbldr">
+    <None Include="Runtime.IntegrationTests.Content\Sample\Sample.gen.slnbldr">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Sample.tt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Runtime.IntegrationTests.Content\Projects\Sample\Sample.tt">
+    <None Include="Runtime.IntegrationTests.Content\Sample\Sample.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Sample.gen.slnbldr</LastGenOutput>
     </None>

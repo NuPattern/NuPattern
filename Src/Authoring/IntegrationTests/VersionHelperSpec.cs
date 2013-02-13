@@ -72,7 +72,7 @@ namespace NuPattern.Authoring.IntegrationTests
             [TestCleanup]
             public void Cleanup()
             {
-                VsIdeTestHostContext.Dte.Solution.Close();
+                VsIdeTestHostContext.Dte.Solution.Close(false);
 
                 // Remove file if written
                 File.Delete(TargetsFilePath);
@@ -138,7 +138,7 @@ namespace NuPattern.Authoring.IntegrationTests
             [TestCleanup]
             public void Cleanup()
             {
-                VsIdeTestHostContext.Dte.Solution.Close();
+                VsIdeTestHostContext.Dte.Solution.Close(false);
 
                 // Remove file if written
                 File.Delete(TargetsFilePath);

@@ -1,0 +1,7 @@
+﻿<#@ output extension=".gen.wxi" #>
+<#@ Include file="..\..\..\MasterVersion.gen.ttinclude" #>
+<#@ Include file="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <?define ProductVersion = "<#=VersionInfo.AuthoringVSIXVersion#>"?>
+</Include>

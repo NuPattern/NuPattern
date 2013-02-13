@@ -52,6 +52,7 @@
                     <property Id="6ddfcc42-0ca3-4ef1-a892-8203cde86e90" definitionId="32699d9a-aa7d-4a51-8c86-6b2a708be486" definitionName="ToolkitProjectRootNamespace" rawValue="NuPattern.Authoring.PatternToolkit" />
                     <property Id="87bbfde0-fa53-4b68-9d38-2803f943a4ec" definitionId="11ac48e6-d493-49ca-9a01-65dac40d6d42" definitionName="ProjectAssemblyName" rawValue="NuPattern.Authoring.PatternToolkit.Automation" />
                     <property Id="37a8198d-08a3-422d-acc8-3dca5827f1f5" definitionId="44d4abc1-7e06-4ea4-8673-d0adb12fea71" definitionName="ExcludeFromCodeCoverage" rawValue="True" />
+                    <property Id="6fa9b5ec-6906-4c26-a7b1-278557334268" definitionId="7864a4c0-2152-4c05-8bf3-30d414d312f8" definitionName="ProjectName" rawValue="Authoring.PatternToolkit.Automation" />
                   </properties>
                   <references>
                     <reference Id="6d1927f4-05ad-4402-860b-2451013b01af" value="solution://3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE/" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;{Parent.Parent.Parent.InstanceName}.Automation&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;&#xD;&#xA;}" />
@@ -203,7 +204,7 @@
                 <property Id="2d602453-e8fa-4d52-a109-08e3ee9adb96" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" />
               </properties>
               <references>
-                <reference Id="8910b6f2-03ea-406d-a12e-28a790364a50" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/13058dda-d9fb-4b59-b5ca-bde04f01b2ae" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.include.t4&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
+                <reference Id="8910b6f2-03ea-406d-a12e-28a790364a50" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/13058dda-d9fb-4b59-b5ca-bde04f01b2ae" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.extension.gen.ttinclude&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
               </references>
             </element>
           </elements>
@@ -292,6 +293,7 @@
                     <property Id="73ee5dbe-dc6e-444c-9c36-a904436bea1b" definitionId="32699d9a-aa7d-4a51-8c86-6b2a708be486" definitionName="ToolkitProjectRootNamespace" rawValue="NuPattern.Authoring.PatternToolkitLibrary" />
                     <property Id="0956ccbe-f1f8-4369-9e36-fcdbfe47c31d" definitionId="11ac48e6-d493-49ca-9a01-65dac40d6d42" definitionName="ProjectAssemblyName" rawValue="NuPattern.Authoring.PatternToolkit.Automation" />
                     <property Id="b6e5eb62-2ff1-4398-bb46-51841d357e1d" definitionId="44d4abc1-7e06-4ea4-8673-d0adb12fea71" definitionName="ExcludeFromCodeCoverage" rawValue="True" />
+                    <property Id="b5ec49df-355d-4b9e-9f72-bf1dd1a38981" definitionId="7864a4c0-2152-4c05-8bf3-30d414d312f8" definitionName="ProjectName" rawValue="Authoring.PatternToolkit.Automation" />
                   </properties>
                   <references>
                     <reference Id="7faac368-db2a-4733-a057-178d5b8fdf38" value="solution://3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE/" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;{Parent.Parent.Parent.InstanceName}.Automation&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;&#xD;&#xA;}" />
@@ -334,7 +336,7 @@
                 <property Id="9f600c5b-a2ce-4d78-9595-625bb9056365" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" />
               </properties>
               <references>
-                <reference Id="f7e8f96c-b957-43a5-b11a-2ab48e677cba" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/f9e7aa00-7024-4128-bad8-097738a18ad0" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.include.t4&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
+                <reference Id="f7e8f96c-b957-43a5-b11a-2ab48e677cba" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/f9e7aa00-7024-4128-bad8-097738a18ad0" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.extension.gen.ttinclude&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
               </references>
             </element>
           </elements>
@@ -431,6 +433,7 @@
                     <property Id="fa8cff69-2e13-4afb-bb1e-18d818344aee" definitionId="32699d9a-aa7d-4a51-8c86-6b2a708be486" definitionName="ToolkitProjectRootNamespace" rawValue="NuPattern.Authoring.HandsOnLabs" />
                     <property Id="2ca29df5-bd70-4cc4-8a98-8aafbcf16862" definitionId="11ac48e6-d493-49ca-9a01-65dac40d6d42" definitionName="ProjectAssemblyName" rawValue="NuPattern.Authoring.HandsOnLabs.Automation" />
                     <property Id="1d7c63ee-b0ba-4525-b23f-7807bf6d8181" definitionId="44d4abc1-7e06-4ea4-8673-d0adb12fea71" definitionName="ExcludeFromCodeCoverage" rawValue="True" />
+                    <property Id="e1fb12fd-c096-499a-9106-cac949fbe059" definitionId="7864a4c0-2152-4c05-8bf3-30d414d312f8" definitionName="ProjectName" rawValue="Authoring.HandsOnLabs.Automation" />
                   </properties>
                   <references>
                     <reference Id="39a91d52-a317-4f92-b6e5-01a713a5284c" value="solution://ebd848c7-5823-48bd-af23-3dd723141161/" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;{Parent.Parent.Parent.InstanceName}.Automation&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;&#xD;&#xA;}" />
@@ -473,7 +476,7 @@
                 <property Id="8dc25c80-6950-4bbe-988f-22e8c707f349" definitionId="c9e003d7-cb45-4865-a511-de29c04b5b2d" definitionName="Eula" />
               </properties>
               <references>
-                <reference Id="a1f150ea-43b6-4079-b1f2-bb28f007d3dc" value="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/94470e9e-4cd7-447b-842b-5b18e708fd20" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.include.t4&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
+                <reference Id="a1f150ea-43b6-4079-b1f2-bb28f007d3dc" value="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/94470e9e-4cd7-447b-842b-5b18e708fd20" kind="NuPattern.Extensibility.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;source.extension.gen.ttinclude&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;d321df0a-d467-45d6-944f-ccd9b82225fe&quot;&#xD;&#xA;}" />
               </references>
             </element>
           </elements>
