@@ -46,15 +46,15 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		String InstanceName { get; set; }
 		
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		Double InstanceOrder { get; set; }
 		
 		///	<summary>
@@ -130,15 +130,15 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		String InstanceName { get; set; }
 		
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		Double InstanceOrder { get; set; }
 		
 		///	<summary>
@@ -214,15 +214,15 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		String InstanceName { get; set; }
 		
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		Double InstanceOrder { get; set; }
 		
 		///	<summary>
@@ -298,15 +298,15 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		String InstanceName { get; set; }
 		
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		Double InstanceOrder { get; set; }
 		
 		///	<summary>
@@ -394,15 +394,15 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		String InstanceName { get; set; }
 		
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		Double InstanceOrder { get; set; }
 		
 		///	<summary>
@@ -490,15 +490,15 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		String InstanceName { get; set; }
 		
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		Double InstanceOrder { get; set; }
 		
 		///	<summary>
@@ -586,15 +586,15 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		String InstanceName { get; set; }
 		
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		Double InstanceOrder { get; set; }
 		
 		///	<summary>
@@ -670,15 +670,15 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		String InstanceName { get; set; }
 		
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		Double InstanceOrder { get; set; }
 		
 		///	<summary>

@@ -69,8 +69,8 @@ namespace NuPattern.Authoring.HandsOnLabs
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		public virtual String InstanceName 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceName); }
@@ -80,8 +80,8 @@ namespace NuPattern.Authoring.HandsOnLabs
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		public virtual Double InstanceOrder 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceOrder); }

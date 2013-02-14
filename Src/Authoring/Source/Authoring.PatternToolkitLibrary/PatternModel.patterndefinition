@@ -1473,7 +1473,7 @@
   ]
 }</valueProvider>
       </property>
-      <property Id="7864a4c0-2152-4c05-8bf3-30d414d312f8" name="ProjectName" baseId="600f744c-1017-424b-a62a-2612e35900e6" displayName="Project Name" description="The name of the automation library project." codeIdentifier="ProjectName" isVisible="false" propertyUsage="ExtensionContract">
+      <property Id="7864a4c0-2152-4c05-8bf3-30d414d312f8" name="ProjectName" baseId="7c85a501-bc28-456a-8cb5-6c6e7ab1903b" displayName="Project Name" description="The name of the automation library project." codeIdentifier="ProjectName" isVisible="false" propertyUsage="ExtensionContract">
         <customizationPolicy name="CustomizationPolicySchema1">
           <settings>
             <setting propertyId="DisplayName" />

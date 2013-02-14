@@ -75,8 +75,8 @@ namespace NuPattern.Authoring.PatternToolkit
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		[Description("Notes for this element.")]
+		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		String Notes { get; set; }
 		
 		///	<summary>

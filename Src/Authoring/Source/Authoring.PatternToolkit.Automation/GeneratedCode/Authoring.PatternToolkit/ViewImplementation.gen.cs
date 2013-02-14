@@ -133,7 +133,7 @@ namespace NuPattern.Authoring.PatternToolkit
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IPatternModel CreatePatternModel(string name, Action<IPatternModel> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IPatternModel>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IPatternModel>(name, initializer, raiseInstantiateEvents);
 		}
 		
 		/// <summary>
@@ -143,7 +143,7 @@ namespace NuPattern.Authoring.PatternToolkit
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IPatternToolkitInfo CreatePatternToolkitInfo(string name, Action<IPatternToolkitInfo> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IPatternToolkitInfo>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IPatternToolkitInfo>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -237,7 +237,7 @@ namespace NuPattern.Authoring.PatternToolkit
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IProductionTooling CreateProductionTooling(string name, Action<IProductionTooling> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IProductionTooling>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IProductionTooling>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
