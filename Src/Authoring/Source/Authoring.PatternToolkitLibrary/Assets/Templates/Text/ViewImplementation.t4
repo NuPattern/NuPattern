@@ -19,17 +19,17 @@
 <#@ Import Namespace="System.Reflection" #>
 <#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
 <#@ Include File="Constants.t4" #>
-<#@ Include File="Helpers.t4" #>
-<#@ Include File="Header.t4" #>
-<#@ Include File="NamedElementParentImplementation.t4" #>
-<#@ Include File="ElementContainerImplementation.t4" #>
+<#@ Include File="Helpers.t4include" #>
+<#@ Include File="Header.t4include" #>
+<#@ Include File="NamedElementParent.t4include" #>
+<#@ Include File="ElementContainer.t4include" #>
 <#
 var library = this.Element.As<IPatternToolkitLibrary>();
 var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
 var toolkitInfo = developmentView.PatternToolkitInfo;
 
 if (toolkitInfo == null)
-    throw new Exception("ToolkitInfo element not found");
+	throw new Exception("ToolkitInfo element not found");
 
 var patternModel = developmentView.PatternModel;
 var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
@@ -41,11 +41,11 @@ var pluralizer = PluralizationService.CreateService(new System.Globalization.Cul
 <#
 foreach (var view in pattern.Views)
 {
-    var codegen = new ViewCodeGeneration<IViewInfo, IView>(view);
-    codegen.AddType(typeof(Action));
-    codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
-    codegen.AddType(typeof(System.Collections.Generic.IEnumerable<object>));
-    codegen.EndInit();
+	var codegen = new ViewCodeGeneration<IViewInfo, IView>(view);
+	codegen.AddType(typeof(Action));
+	codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
+	codegen.AddType(typeof(System.Collections.Generic.IEnumerable<object>));
+	codegen.EndInit();
 #>
 namespace <#=library.ToolkitProjectRootNamespace #>
 {
@@ -74,8 +74,7 @@ namespace <#=library.ToolkitProjectRootNamespace #>
 		}	
 
 		partial void OnCreated();
-
-<#GenerateParentProperty(view); #>
+<#GenerateParentProperty(view, false); #>
 
 		/// <summary>
 		/// Gets the generic <see cref="Runtime.IView"/> underlying element.
@@ -97,7 +96,7 @@ namespace <#=library.ToolkitProjectRootNamespace #>
 PushIndent("\t");
 PushIndent("\t");
 
-GenerateContainedElements(pluralizer, view);
+GenerateContainedElements(pluralizer, view, false);
 
 PopIndent();
 PopIndent();

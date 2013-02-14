@@ -19,18 +19,18 @@
 <#@ Import Namespace="System.Reflection" #>
 <#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
 <#@ Include File="Constants.t4" #>
-<#@ Include File="Helpers.t4" #>
-<#@ Include File="Header.t4" #>
-<#@ Include File="NamedElementParentImplementation.t4" #>
-<#@ Include File="ElementContainerImplementation.t4" #>
-<#@ Include File="ProductElementImplementation.t4" #>
+<#@ Include File="Helpers.t4include" #>
+<#@ Include File="Header.t4include" #>
+<#@ Include File="NamedElementParent.t4include" #>
+<#@ Include File="ElementContainer.t4include" #>
+<#@ Include File="ProductElement.t4include" #>
 <#
 var library = this.Element.As<IPatternToolkitLibrary>();
 var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
 var toolkitInfo = developmentView.PatternToolkitInfo;
 
 if (toolkitInfo == null)
-    throw new Exception("ToolkitInfo element not found");
+	throw new Exception("ToolkitInfo element not found");
 
 var patternModel = developmentView.PatternModel;
 var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
@@ -41,10 +41,10 @@ var pluralizer = PluralizationService.CreateService(new System.Globalization.Cul
 
 foreach (var element in store.DefaultPartition.ElementDirectory.AllElements.OfType<IElementInfo>())
 {
-    var codegen = new ProductCodeGeneration<IElementInfo, IElement>(element);
-    codegen.AddType(typeof(Action));
-    codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
-    codegen.EndInit();
+	var codegen = new ProductCodeGeneration<IElementInfo, IElement>(element);
+	codegen.AddType(typeof(Action));
+	codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
+	codegen.EndInit();
 #>
 namespace <#=library.ToolkitProjectRootNamespace #>
 {
@@ -73,8 +73,7 @@ namespace <#=library.ToolkitProjectRootNamespace #>
 		}	
 
 		partial void OnCreated();
-
-<#GenerateParentProperty(element); #>
+<#GenerateParentProperty(element, false); #>
 
 		/// <summary>
 		/// Gets the generic <see cref="Runtime.IElement"/> underlying element.
@@ -92,12 +91,12 @@ namespace <#=library.ToolkitProjectRootNamespace #>
 		{
 			return this.target as TRuntimeInterface;
 		}
-<#GenerateProperties(codegen, element); #>
+<#GenerateProperties(codegen, element, false); #>
 <#
 PushIndent("\t");
 PushIndent("\t");
 
-GenerateContainedElements(pluralizer, element);
+GenerateContainedElements(pluralizer, element, false);
 
 PopIndent();
 PopIndent();

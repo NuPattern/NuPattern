@@ -43,7 +43,7 @@ void Delete();
 	private void GenerateToolkitCommentsAndAttributes(AttributeTargets target, NuPattern.Authoring.PatternToolkitLibrary.IPatternToolkitLibrary library, NuPattern.Authoring.PatternToolkit.IPatternToolkitInfo toolkitInfo, INamedElementInfo element)
 	{
 		PushIndent("\t");
-		GenerateDescription(element);
+		GenerateComments(element);
 
 		switch (target)
 		{
@@ -93,7 +93,7 @@ void Delete();
 		}
 	}
 
-	private void GenerateDescription(MemberInfo typeOrMember)
+	private void GenerateComments(MemberInfo typeOrMember)
 	{
 		var description = typeOrMember.GetCustomAttributes(true).OfType<DescriptionAttribute>().Select(attr => attr.Description).FirstOrDefault();
 		if (!string.IsNullOrEmpty(description))
@@ -114,7 +114,7 @@ void Delete();
 		 }
 	}
 
-	private void GenerateDescription(INamedElementInfo element)
+	private void GenerateComments(INamedElementInfo element)
 	{
 		if (!string.IsNullOrEmpty(element.Description))
 	{

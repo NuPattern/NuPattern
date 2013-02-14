@@ -19,18 +19,18 @@
 <#@ Import Namespace="System.Reflection" #>
 <#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
 <#@ Include File="Constants.t4" #>
-<#@ Include File="Helpers.t4" #>
-<#@ Include File="Header.t4" #>
-<#@ Include File="NamedElementParentInterface.t4" #>
-<#@ Include File="ElementContainerInterface.t4" #>
-<#@ Include File="ProductElementInterface.t4" #>
+<#@ Include File="Helpers.t4include" #>
+<#@ Include File="Header.t4include" #>
+<#@ Include File="NamedElementParent.t4include" #>
+<#@ Include File="ElementContainer.t4include" #>
+<#@ Include File="ProductElement.t4include" #>
 <#
 var library = this.Element.As<IPatternToolkitLibrary>();
 var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
 var toolkitInfo = developmentView.PatternToolkitInfo;
 
 if (toolkitInfo == null)
-    throw new Exception("ToolkitInfo element not found");
+	throw new Exception("ToolkitInfo element not found");
 
 var patternModel = developmentView.PatternModel;
 var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
@@ -41,9 +41,9 @@ var pluralizer = PluralizationService.CreateService(new System.Globalization.Cul
 
 foreach (var collection in store.DefaultPartition.ElementDirectory.AllElements.OfType<ICollectionInfo>())
 {
-    var codegen = new ProductCodeGeneration<ICollectionInfo, ICollection>(collection);
-    codegen.AddType(typeof(Action));
-    codegen.EndInit();
+	var codegen = new ProductCodeGeneration<ICollectionInfo, ICollection>(collection);
+	codegen.AddType(typeof(Action));
+	codegen.EndInit();
 #>
 namespace <#=library.ToolkitProjectRootNamespace #>
 {
@@ -52,13 +52,13 @@ namespace <#=library.ToolkitProjectRootNamespace #>
 	<#GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, collection); #>
 	public partial interface I<#=collection.CodeIdentifier #> : IToolkitInterface
 	{ <# 
-GenerateProperties(codegen, collection);
-GenerateParentProperty(collection);
+GenerateProperties(codegen, collection, true);
+GenerateParentProperty(collection, true);
 
 PushIndent("\t");
 PushIndent("\t");
 
-GenerateContainedElements(pluralizer, collection);
+GenerateContainedElements(pluralizer, collection, true);
 GenerateDeleteInterfaceMethod();
 
 PopIndent();

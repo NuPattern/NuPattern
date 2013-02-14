@@ -5,47 +5,78 @@
 <#@ Import Namespace="System.ComponentModel" #>
 <#@ Import Namespace="System.Reflection" #>
 <#@ Import Namespace="System.IO" #>
-<#@ Import Namespace="NuPattern.Runtime" #>
 <#+
 
-private void GenerateProperties<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, TInfo element)
+private void GenerateProperties<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, TInfo element, bool noImpl)
 	where TInfo : IPatternElementInfo
 	where TRuntime : IProductElement
 {
 	PushIndent("\t");	
 
-	foreach (var property in element.Properties)
+	// Generate the user defined properties on element
+	var elementProperties = element.Properties;
+	foreach (var property in elementProperties)
 	{
-		GenerateProperty(codegen, property);
+		GenerateProperty(codegen, property, noImpl);
 	}
 
+	// Generate generic runtime properties
 	var type = typeof(TRuntime);
-	foreach (var property in type
-		.GetProperties()
+	var genericProperties = type.GetProperties()
 		.Concat(type.GetInterfaces().SelectMany(t => t.GetProperties()))
 		.Where(prop => !prop.IsDefined(typeof(HiddenAttribute), true))
-		.Distinct(new SelectorEqualityComparer<PropertyInfo, string>(prop => prop.Name)))
+		.Distinct(new SelectorEqualityComparer<PropertyInfo, string>(prop => prop.Name));
+	foreach (var property in genericProperties)
 	{
 		PushIndent("\t");	
 #>
 <#= "" #>
 <#+
-		GenerateDescription(property);
-		RenderCustomAttributes(codegen, property);
+		GenerateComments(property);
+		GenerateAttributes(codegen, property);
+		// Generate property signature
+		if (noImpl)
+		{
 #><#= codegen.GetTypeName(property.PropertyType) #> <#= property.Name #> { <#= property.CanRead ? "get;" : "" #> <#= property.CanWrite ? "set;" : "" #> }
 <#+
+		}
+		else
+		{
+#>public virtual <#= codegen.GetTypeName(property.PropertyType) #> <#= property.Name #> 
+{ 
+<#+
+		// Generate get and set signatures
+		if (property.CanRead)
+		{
+#>
+	get { return this.proxy.GetValue(() => this.<#= property.Name #>); }
+<#+
+		}
+		if (property.CanWrite)
+		{
+#>
+	set { this.proxy.SetValue(() => this.<#= property.Name #>, value); }
+<#+
+		}
+#>
+}
+<#+
+		}
 		PopIndent();
 	}
 
 	PopIndent();
 }
 
-private void RenderCustomAttributes<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, MemberInfo typeOrMember)
+private void GenerateAttributes<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, MemberInfo typeOrMember)
 	where TInfo : IPatternElementInfo
 	where TRuntime : IProductElement
 {
-	foreach (var attribute in typeOrMember.GetCustomAttributesData()
-		.Where(attr => attr.Constructor.DeclaringType.Namespace == typeof(IComponent).Namespace))
+	// Order the attibutess alphabetically
+	var attributes = typeOrMember.GetCustomAttributesData()
+		.Where(attr => attr.Constructor.DeclaringType.Namespace == typeof(IComponent).Namespace)
+		.OrderBy(attr => codegen.GetTypeName(attr.Constructor.DeclaringType));
+	foreach (var attribute in attributes)
 	{
 		var ctorParams = string.Join(", ", attribute
 			.ConstructorArguments
@@ -65,7 +96,8 @@ private void RenderCustomAttributes<TInfo, TRuntime>(ProductCodeGeneration<TInfo
 		var attrName = codegen.GetTypeName(attribute.Constructor.DeclaringType);
 		if (attrName.IndexOf("Attribute") != -1)
 			attrName = attrName.Substring(0, attrName.LastIndexOf("Attribute"));
-
+		
+		// Generate the attribute signature
 #>[<#= attrName #><#+
 		if (!string.IsNullOrEmpty(constructorArgs))
 		{
@@ -76,14 +108,15 @@ private void RenderCustomAttributes<TInfo, TRuntime>(ProductCodeGeneration<TInfo
 	}
 }
 
-private void GenerateProperty<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, IPropertyInfo property)
+private void GenerateProperty<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, IPropertyInfo property, bool noImpl)
 	where TInfo : IPatternElementInfo
 	where TRuntime : IProductElement
 {
 	PushIndent("\t");
 	this.WriteLine("");
-	GenerateDescription(property);
+	GenerateComments(property);
 
+	// Generate configured attributes
 	if (!string.IsNullOrEmpty(property.DisplayName))
 	{
 #>
@@ -108,9 +141,24 @@ private void GenerateProperty<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRun
 [Editor(typeof(<#= codegen.GetTypeName(property.EditorTypeName) #>), typeof(UITypeEditor))]
 <#+
 	}
+
+	// Generate property signature
+	if (noImpl)
+	{
 #>
 <#= codegen.GetTypeName(property.Type) #> <#= property.CodeIdentifier #> { get; set; }
 <#+
+	}
+	else
+	{
+#>
+public virtual <#= codegen.GetTypeName(property.Type) #> <#= property.CodeIdentifier #> 
+{
+	get { return this.proxy.GetValue(() => this.<#= property.CodeIdentifier #>); }
+	set { this.proxy.SetValue(() => this.<#= property.CodeIdentifier #>, value); }
+}
+<#+
+	}
 	PopIndent();
 }
 #>

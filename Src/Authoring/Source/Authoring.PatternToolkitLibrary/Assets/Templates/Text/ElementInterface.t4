@@ -19,11 +19,11 @@
 <#@ Import Namespace="System.Reflection" #>
 <#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
 <#@ Include File="Constants.t4" #>
-<#@ Include File="Helpers.t4" #>
-<#@ Include File="Header.t4" #>
-<#@ Include File="NamedElementParentInterface.t4" #>
-<#@ Include File="ElementContainerInterface.t4" #>
-<#@ Include File="ProductElementInterface.t4" #>
+<#@ Include File="Helpers.t4include" #>
+<#@ Include File="Header.t4include" #>
+<#@ Include File="NamedElementParent.t4include" #>
+<#@ Include File="ElementContainer.t4include" #>
+<#@ Include File="ProductElement.t4include" #>
 <#
 var library = this.Element.As<IPatternToolkitLibrary>();
 var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
@@ -41,9 +41,9 @@ var pluralizer = PluralizationService.CreateService(new System.Globalization.Cul
 
 foreach (var element in store.DefaultPartition.ElementDirectory.AllElements.OfType<IElementInfo>())
 {
-    var codegen = new ProductCodeGeneration<IElementInfo, IElement>(element);
-    codegen.AddType(typeof(Action));
-    codegen.EndInit();
+	var codegen = new ProductCodeGeneration<IElementInfo, IElement>(element);
+	codegen.AddType(typeof(Action));
+	codegen.EndInit();
 #>
 namespace <#= library.ToolkitProjectRootNamespace #>
 {
@@ -52,13 +52,13 @@ namespace <#= library.ToolkitProjectRootNamespace #>
 	<#GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, element); #>
 	public partial interface I<#=element.CodeIdentifier #> : IToolkitInterface
 	{ <# 	
-GenerateProperties(codegen, element);
-GenerateParentProperty(element);
+GenerateProperties(codegen, element, true);
+GenerateParentProperty(element, true);
 
 PushIndent("\t");
 PushIndent("\t");
 
-GenerateContainedElements(pluralizer, element);
+GenerateContainedElements(pluralizer, element, true);
 GenerateDeleteInterfaceMethod();
 
 PopIndent();

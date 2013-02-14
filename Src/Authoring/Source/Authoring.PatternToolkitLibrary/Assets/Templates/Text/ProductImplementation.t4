@@ -19,9 +19,9 @@
 <#@ Import Namespace="System.Reflection" #>
 <#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
 <#@ Include File="Constants.t4" #>
-<#@ Include File="Helpers.t4" #>
-<#@ Include File="Header.t4" #>
-<#@ Include File="ProductElementImplementation.t4" #>
+<#@ Include File="Helpers.t4include" #>
+<#@ Include File="Header.t4include" #>
+<#@ Include File="ProductElement.t4include" #>
 <#
 var library = this.Element.As<IPatternToolkitLibrary>();
 var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
@@ -65,7 +65,7 @@ namespace <#=library.ToolkitProjectRootNamespace #>
 		}	
 
 		partial void OnCreated();
-<#GenerateProperties(codegen, pattern);
+<#GenerateProperties(codegen, pattern, false);
 
 PushIndent("\t");
 PushIndent("\t");
@@ -73,7 +73,7 @@ PushIndent("\t");
 foreach (var view in pattern.Views)
 {
     this.WriteLine("");
-    GenerateDescription(view);
+    GenerateComments(view);
 #>
 public virtual I<#=view.CodeIdentifier #> <#=view.CodeIdentifier #>
 { 

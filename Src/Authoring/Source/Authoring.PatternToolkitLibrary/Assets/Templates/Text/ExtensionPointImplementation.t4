@@ -19,17 +19,17 @@
 <#@ Import Namespace="System.Reflection" #>
 <#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
 <#@ Include File="Constants.t4" #>
-<#@ Include File="Helpers.t4" #>
-<#@ Include File="Header.t4" #>
-<#@ Include File="NamedElementParentImplementation.t4" #>
-<#@ Include File="ProductElementImplementation.t4" #>
+<#@ Include File="Helpers.t4include" #>
+<#@ Include File="Header.t4include" #>
+<#@ Include File="NamedElementParent.t4include" #>
+<#@ Include File="ProductElement.t4include" #>
 <#
 var library = this.Element.As<IPatternToolkitLibrary>();
 var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
 var toolkitInfo = developmentView.PatternToolkitInfo;
 
 if (toolkitInfo == null)
-    throw new Exception("ToolkitInfo element not found");
+	throw new Exception("ToolkitInfo element not found");
 
 var patternModel = developmentView.PatternModel;
 var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
@@ -37,10 +37,10 @@ var store = pattern.Store;
 
 foreach (var extensionPoint in store.DefaultPartition.ElementDirectory.AllElements.OfType<IExtensionPointInfo>())
 {
-    var codegen = new ProductCodeGeneration<IExtensionPointInfo, IProduct>(extensionPoint);
-    codegen.AddType(typeof(Action));
-    codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
-    codegen.EndInit();
+	var codegen = new ProductCodeGeneration<IExtensionPointInfo, IProduct>(extensionPoint);
+	codegen.AddType(typeof(Action));
+	codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
+	codegen.EndInit();
 #>
 namespace <#=library.ToolkitProjectRootNamespace #>
 {
@@ -70,8 +70,8 @@ namespace <#=library.ToolkitProjectRootNamespace #>
 
 		partial void OnCreated();
 <# 
-GenerateProperties(codegen, extensionPoint);
-GenerateParentProperty(extensionPoint);
+GenerateProperties(codegen, extensionPoint, false);
+GenerateParentProperty(extensionPoint, false);
 #>
 
 		/// <summary>
