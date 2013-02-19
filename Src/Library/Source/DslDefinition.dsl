@@ -11,7 +11,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Library.TypeEditors.TemplateUriEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.TypeEditors.VsTemplateUriEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>

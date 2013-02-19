@@ -78,9 +78,9 @@ namespace NuPattern.Library.UnitTests.Automation.Menu
 
                 picker.Setup(p => p.ShowDialog()).Returns(false);
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
-                Assert.Equal("image", value);
+                Assert.Equal("image://", value);
             }
 
 
@@ -91,7 +91,7 @@ namespace NuPattern.Library.UnitTests.Automation.Menu
                 item.Data.ItemType = "None";
                 var editor = new ImageUriEditor(new Window());
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
                 Assert.Equal("None", (string)item.Data.ItemType);
             }
@@ -103,7 +103,7 @@ namespace NuPattern.Library.UnitTests.Automation.Menu
                 item.Data.CustomTool = "MyTool";
                 var editor = new ImageUriEditor(new Window());
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
                 Assert.Equal("MyTool", (string)item.Data.CustomTool);
             }
@@ -126,7 +126,7 @@ namespace NuPattern.Library.UnitTests.Automation.Menu
             {
                 var editor = new ImageUriEditor(new Window());
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
                 Assert.Equal("pack://application:,,,/project;component/assets/icon.ico", value);
             }
@@ -137,7 +137,7 @@ namespace NuPattern.Library.UnitTests.Automation.Menu
             {
                 var editor = new ImageUriEditor(new Window());
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
                 Assert.Equal("Resource", (string)item.Data.ItemType);
             }
@@ -149,7 +149,7 @@ namespace NuPattern.Library.UnitTests.Automation.Menu
                 item.Data.CustomTool = "MyTool";
                 var editor = new ImageUriEditor(new Window());
 
-                var value = editor.EditValue(context, serviceProvider.Object, "image");
+                var value = editor.EditValue(context, serviceProvider.Object, "image://");
 
                 Assert.Equal("MyTool", (string)item.Data.CustomTool);
             }

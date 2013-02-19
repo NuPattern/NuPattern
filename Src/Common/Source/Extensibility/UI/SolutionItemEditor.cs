@@ -31,14 +31,16 @@ namespace NuPattern.Extensibility
 			Guard.NotNull(() => context, context);
 			Guard.NotNull(() => provider, provider);
 
-			var componentModel = provider.GetService<SComponentModel, IComponentModel>();
-			var picker = componentModel.GetService<Func<ISolutionPicker>>()();
-			picker.RootItem = provider.GetService<ISolution>();
-			SetOwner(picker);
-			SetSettings(context.PropertyDescriptor, picker);
-			SetSelectedItem(context, picker, value);
+			var uriService = provider.GetService<IFxrUriReferenceService>();
 
-			if (picker.ShowDialog().GetValueOrDefault())
+			var componentModel = provider.GetService<SComponentModel, IComponentModel>();
+
+			var picker = componentModel.GetService<Func<ISolutionPicker>>()();
+			picker.Owner = GetOwner();
+			picker.RootItem = provider.GetService<ISolution>();
+			SetSettings(context.PropertyDescriptor, picker);
+			SetSelectedItem(context, picker, uriService, value);
+			if (picker.ShowDialog())
 			{
 				return ConvertValue(context, provider, picker.SelectedItem);
 			}
@@ -77,28 +79,21 @@ namespace NuPattern.Extensibility
 			return UITypeEditorEditStyle.Modal;
 		}
 
-		private static void SetOwner(ISolutionPicker picker)
+		private static Window GetOwner()
 		{
-			if (Application.Current != null)
-			{
-				picker.Owner = Application.Current.MainWindow;
-			}
+			return (Application.Current != null) ? Application.Current.MainWindow : null;
 		}
 
-		private static void SetSelectedItem(ITypeDescriptorContext context, ISolutionPicker picker, object value)
+		private static void SetSelectedItem(ITypeDescriptorContext context, ISolutionPicker picker, IFxrUriReferenceService uriService, object value)
 		{
-			var item = value as IItemContainer;
-			if (item == null)
+			var uri = value as string;
+			if (!string.IsNullOrEmpty(uri))
 			{
-				var converter = context.PropertyDescriptor.Converter;
-				if (converter != null && converter.CanConvertFrom(context.PropertyDescriptor.PropertyType))
+				var item = uriService.TryResolveUri<IItemContainer>(new Uri(uri));
+				if (item != null)
 				{
-					picker.SelectedItem = converter.ConvertFrom(context, CultureInfo.CurrentCulture, value) as IItemContainer;
+					picker.SelectedItem = item;
 				}
-			}
-			else
-			{
-				picker.SelectedItem = item;
 			}
 		}
 

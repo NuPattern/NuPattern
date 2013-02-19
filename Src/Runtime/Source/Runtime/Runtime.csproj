@@ -151,6 +151,7 @@
     <Compile Include="SingletonScope.cs" />
     <Compile Include="SolutionEvents.cs" />
     <Compile Include="TemplateInstantiationScope.cs" />
+    <Compile Include="UI\SolutionPicker.cs" />
     <Compile Include="UI\TreeViewItemOrderingConverter.cs" />
     <Compile Include="UI\Data\MenuGroupingEnumerableConverter.cs" />
     <Compile Include="UI\Events\OnSolutionBuilderDragEnter.cs" />
@@ -162,8 +163,8 @@
     <Compile Include="UI\ProductPicker.xaml.cs">
       <DependentUpon>ProductPicker.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\SolutionPicker.xaml.cs">
-      <DependentUpon>SolutionPicker.xaml</DependentUpon>
+    <Compile Include="UI\Views\SolutionPickerView.xaml.cs">
+      <DependentUpon>SolutionPickerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\UserMessageService.cs" />
     <None Include="UI\ViewModels\AddNewProductViewModel.tt">
@@ -184,6 +185,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SolutionBuilderViewModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UI\ViewModels\SolutionPickerViewModel.cs" />
     <Compile Include="UI\ViewModels\SortItem.cs" />
     <Compile Include="UI\ViewModels\ValidationViewModel.cs" />
     <Compile Include="UI\ViewModels\AddNewNodeViewModel.cs" />
@@ -268,7 +270,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UI\SolutionPicker.xaml">
+    <Page Include="UI\Views\SolutionPickerView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

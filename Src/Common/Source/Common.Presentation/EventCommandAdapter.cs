@@ -52,15 +52,20 @@ namespace NuPattern.Common.Presentation
 
 		private void OnEventRaised(object sender, RoutedEventArgs e)
 		{
-            var dep = e.Source as DependencyObject;
-            if (dep != null)
-            {
-                var command = dep.GetValue(this.commandProperty) as ICommand;
-                if (command != null)
-                {
-                    command.Execute(dep.GetValue(this.parameterProperty));
-                }
-            }
+			var dep = e.Source as DependencyObject;
+			if (dep != null)
+			{
+				var command = dep.GetValue(this.commandProperty) as ICommand;
+				if (command != null)
+				{
+					var param = dep.GetValue(this.parameterProperty);
+					if (command.CanExecute(param))
+					{
+						command.Execute(param);
+						e.Handled = true;
+					}
+				}
+			}
 		}
 	}
 }
