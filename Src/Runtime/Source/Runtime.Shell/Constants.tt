@@ -1,7 +1,6 @@
 ﻿<#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude" #>
 <#@ Include File="VSPackageInfo.ttinclude" #>
 <#@ output extension=".gen.cs" #>
-using System;
 
 namespace NuPattern.Runtime.Shell
 {
