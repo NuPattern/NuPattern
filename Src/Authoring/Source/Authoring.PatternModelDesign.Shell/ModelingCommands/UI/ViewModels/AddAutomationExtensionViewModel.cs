@@ -22,7 +22,7 @@ namespace NuPattern.Runtime.Schema
 			Guard.NotNull(() => exportedAutomations, exportedAutomations);
 
 			this.ExportedAutomations = exportedAutomations.OrderBy(a => a.DisplayName).ToArray();
-			this.RegisterCommands();
+			this.InitializeCommands();
 		}
 
 		/// <summary>
@@ -55,9 +55,14 @@ namespace NuPattern.Runtime.Schema
 			private set;
 		}
 
-		private void RegisterCommands()
+		private void InitializeCommands()
 		{
-			this.SelectAutomationExtensionCommand = new RelayCommand<IDialogWindow>(w => CloseDialog(w), w => this.CurrentExportedAutomation != null);
+			this.SelectAutomationExtensionCommand = new RelayCommand<IDialogWindow>(dialog => CloseDialog(dialog), dialog => CanCloseDialog());
+		}
+
+		private bool CanCloseDialog()
+		{
+			return (this.CurrentExportedAutomation != null);
 		}
 
 		private static void CloseDialog(IDialogWindow dialog)
