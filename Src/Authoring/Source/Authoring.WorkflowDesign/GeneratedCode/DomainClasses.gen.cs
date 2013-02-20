@@ -1251,7 +1251,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 			{
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Authoring.WorkflowDesign.ProductionTool.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement.DomainClassId)) 
 				{
 					return true;
 				}
@@ -1261,7 +1261,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Authoring.WorkflowDesign.ProductionTool.DomainClassId)) 
 				{
 					return true;
 				}
@@ -1290,11 +1290,11 @@ namespace NuPattern.Authoring.WorkflowDesign
 			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
 		
 				
-			global::NuPattern.Authoring.WorkflowDesign.ProductionTool sourceProductionTool1 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.ProductionTool;
-			if (sourceProductionTool1 != null)
+			global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement1 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement;
+			if (sourceVariabilityRequirement1 != null)
 			{
-				// Create link for path DesignHasProductionTools.ProductionTools
-				this.ProductionTools.Add(sourceProductionTool1);
+				// Create link for path DesignHasVariabilityRequirements.VariabilityRequirements
+				this.VariabilityRequirements.Add(sourceVariabilityRequirement1);
 
 				return;
 			}
@@ -1308,11 +1308,11 @@ namespace NuPattern.Authoring.WorkflowDesign
 				return;
 			}
 				
-			global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement3 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement;
-			if (sourceVariabilityRequirement3 != null)
+			global::NuPattern.Authoring.WorkflowDesign.ProductionTool sourceProductionTool3 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.ProductionTool;
+			if (sourceProductionTool3 != null)
 			{
-				// Create link for path DesignHasVariabilityRequirements.VariabilityRequirements
-				this.VariabilityRequirements.Add(sourceVariabilityRequirement3);
+				// Create link for path DesignHasProductionTools.ProductionTools
+				this.ProductionTools.Add(sourceProductionTool3);
 
 				return;
 			}
@@ -1339,15 +1339,15 @@ namespace NuPattern.Authoring.WorkflowDesign
 		{
 			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
 				
-			global::NuPattern.Authoring.WorkflowDesign.ProductionTool sourceProductionTool1 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.ProductionTool;
-			if (sourceProductionTool1 != null)
+			global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement1 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement;
+			if (sourceVariabilityRequirement1 != null)
 			{
-				// Delete link for path DesignHasProductionTools.ProductionTools
+				// Delete link for path DesignHasVariabilityRequirements.VariabilityRequirements
 				
-				foreach (DslModeling::ElementLink link in global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.GetLinks((global::NuPattern.Authoring.WorkflowDesign.Design)this, sourceProductionTool1))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.GetLinks((global::NuPattern.Authoring.WorkflowDesign.Design)this, sourceVariabilityRequirement1))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.DesignDomainRoleId, global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionToolDomainRoleId);
+					link.Delete(global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DesignDomainRoleId, global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirementDomainRoleId);
 				}
 
 				return;
@@ -1367,15 +1367,15 @@ namespace NuPattern.Authoring.WorkflowDesign
 				return;
 			}
 				
-			global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirement3 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement;
-			if (sourceVariabilityRequirement3 != null)
+			global::NuPattern.Authoring.WorkflowDesign.ProductionTool sourceProductionTool3 = sourceElement as global::NuPattern.Authoring.WorkflowDesign.ProductionTool;
+			if (sourceProductionTool3 != null)
 			{
-				// Delete link for path DesignHasVariabilityRequirements.VariabilityRequirements
+				// Delete link for path DesignHasProductionTools.ProductionTools
 				
-				foreach (DslModeling::ElementLink link in global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.GetLinks((global::NuPattern.Authoring.WorkflowDesign.Design)this, sourceVariabilityRequirement3))
+				foreach (DslModeling::ElementLink link in global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.GetLinks((global::NuPattern.Authoring.WorkflowDesign.Design)this, sourceProductionTool3))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DesignDomainRoleId, global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirementDomainRoleId);
+					link.Delete(global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.DesignDomainRoleId, global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionToolDomainRoleId);
 				}
 
 				return;
