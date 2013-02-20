@@ -148,6 +148,9 @@
     <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\TestProviders\Resources\Bitmap1.bmp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\TestProviders\Resources\Bitmap2 With Spaces.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Runtime.IntegrationTests.Content\PackUriProvider\TestProviders\TopLevelProject.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
