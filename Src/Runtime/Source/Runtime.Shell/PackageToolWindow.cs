@@ -1,7 +1,7 @@
 ﻿using System;
-using NuPattern.Runtime.Shell.Properties;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using NuPattern.Runtime.Shell.Properties;
 
 namespace NuPattern.Runtime.Shell
 {

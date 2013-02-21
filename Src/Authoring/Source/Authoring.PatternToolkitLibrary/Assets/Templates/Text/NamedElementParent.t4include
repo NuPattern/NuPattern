@@ -1,0 +1,30 @@
+﻿<#+
+private void GenerateParentProperty(NuPattern.Runtime.INamedElementInfo infoElement, bool noImpl)
+{
+	if (infoElement.Parent != null)
+	{
+#>
+
+		/// <summary>
+		/// Gets the parent element.
+		/// </summary>
+<#+
+		// Generate property signature
+		if (noImpl)
+		{
+#>
+		I<#=infoElement.Parent.CodeIdentifier #> Parent { get; }
+<#+
+		}
+		else
+		{
+#>
+		public virtual I<#=infoElement.Parent.CodeIdentifier #> Parent
+		{ 
+			get { return this.target.Parent.As<I<#=infoElement.Parent.CodeIdentifier #>>(); }
+		}
+<#+
+		}
+	}
+}
+#>

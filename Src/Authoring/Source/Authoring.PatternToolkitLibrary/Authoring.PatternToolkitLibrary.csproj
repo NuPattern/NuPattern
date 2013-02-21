@@ -245,6 +245,15 @@
       <DependentUpon>Constants.tt</DependentUpon>
       <IncludeInVSIXAs>Constants.t4</IncludeInVSIXAs>
     </Content>
+    <Content Include="Assets\Templates\Text\ProductElement.t4include">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\NamedElementParent.t4include">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\ElementContainer.t4include">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="source.extension.gen.ttinclude">
       <DependentUpon>source.extension.tt</DependentUpon>
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252f7b588f3f-4927-42bf-847d-66bd00883529</SourceModelReference>
@@ -309,19 +318,10 @@
       <IncludeInVSIX>true</IncludeInVSIX>
       <ItemGuid>ec407639-4851-4333-97ac-40bb6e3768f0</ItemGuid>
     </Content>
-    <Content Include="Assets\Templates\Text\Helpers.t4">
+    <Content Include="Assets\Templates\Text\Helpers.t4include">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Assets\Templates\Text\Header.t4">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Assets\Templates\Text\NamedElementParentImplementation.t4">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Assets\Templates\Text\ElementContainerImplementation.t4">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Assets\Templates\Text\ProductElementImplementation.t4">
+    <Content Include="Assets\Templates\Text\Header.t4include">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Assets\Templates\Text\ViewInterface.t4">
@@ -340,12 +340,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
       <ItemGuid>d200252e-c25d-48be-b3f5-9ae32bf62acb</ItemGuid>
     </Content>
-    <Content Include="Assets\Templates\Text\ProductElementInterface.t4">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Assets\Templates\Text\NamedElementParentInterface.t4">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Assets\Templates\Text\ExtensionPointImplementation.t4">
       <IncludeInVSIX>true</IncludeInVSIX>
       <ItemGuid>5bb7bdd5-2ac3-42e7-9c34-748e51fd7d4f</ItemGuid>
@@ -361,9 +355,6 @@
     <Content Include="Assets\Templates\Text\ElementImplementation.t4">
       <IncludeInVSIX>true</IncludeInVSIX>
       <ItemGuid>25907df2-ca68-43df-bc28-428aecb472a3</ItemGuid>
-    </Content>
-    <Content Include="Assets\Templates\Text\ElementContainerInterface.t4">
-      <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Assets\Templates\Text\CollectionInterface.t4">
       <IncludeInVSIX>true</IncludeInVSIX>

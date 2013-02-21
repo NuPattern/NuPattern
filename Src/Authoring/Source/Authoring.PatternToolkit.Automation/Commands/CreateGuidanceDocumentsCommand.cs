@@ -8,9 +8,8 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Authoring.PatternToolkit;
-using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.Authoring.Guidance;
+using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.Extensibility;
 using NuPattern.Extensibility.References;
 

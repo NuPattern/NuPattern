@@ -11,9 +11,9 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
-using NuPattern.Extensibility.Properties;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
+using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.UriProviders;
 
@@ -26,6 +26,7 @@ namespace NuPattern.Library.TypeEditors
 	[CLSCompliant(false)]
 	public class TextTemplateUriEditor : UITypeEditor
 	{
+		private const string FileExtension = ".tt;.t4";
 		private static readonly ITraceSource tracer = Tracer.GetSourceFor<TextTemplateUriEditor>();
 
 		/// <summary>
@@ -43,32 +44,28 @@ namespace NuPattern.Library.TypeEditors
 			tracer.ShieldUI(() =>
 			{
 				var componentModel = provider.GetService<SComponentModel, IComponentModel>();
-				var picker = componentModel.GetService<Func<ISolutionPicker>>()();
-
 				var uriService = componentModel.GetService<IFxrUriReferenceService>();
 
-				// Initialize solution picker
-				var solution = provider.GetService<ISolution>();
+				var picker = componentModel.GetService<Func<ISolutionPicker>>()();
 				picker.Owner = provider.GetService<SVsUIShell, IVsUIShell>().GetMainWindow();
+				picker.RootItem = provider.GetService<ISolution>();
 				picker.Title = Resources.TextTemplateUriEditor_Title;
-				picker.RootItem = solution;
-
+				picker.EmptyItemsMessage = string.Format(CultureInfo.CurrentCulture, Resources.TextTemplateUriEditor_EmptyItemsMessage, FileExtension);
 				picker.Filter.Kind = ItemKind.Solution | ItemKind.SolutionFolder | ItemKind.Project | ItemKind.Folder | ItemKind.Item;
-				picker.Filter.IncludeFileExtensions = Resources.TextTemplateUriEditor_FileExtensions;
-
-				if (picker.ShowDialog().GetValueOrDefault())
+				picker.Filter.IncludeFileExtensions = FileExtension;
+				SetSelectedItem(context, picker, uriService, GetAuthoringTemplateProperty(context));
+				if (picker.ShowDialog())
 				{
 					templateUri = BuildUri(picker.SelectedItem);
 
 					// Set item properties automatically.
 					var item = (IItem)picker.SelectedItem;
 					item.Data.ItemType = BuildAction.Content.ToString();
-                    item.Data.IncludeInVSIX = (!IsIncludeInVSIXAs(item)).ToString().ToLowerInvariant();
+					item.Data.IncludeInVSIX = (!IsIncludeInVSIXAs(item)).ToString().ToLowerInvariant();
 
 					SetAuthoringUri(context, uriService.CreateUri(picker.SelectedItem));
 				}
-			},
-			Resources.TextTemplateUriEditor_FailedToEdit);
+			}, Resources.TextTemplateUriEditor_FailedToEdit);
 
 			return templateUri;
 		}
@@ -76,7 +73,7 @@ namespace NuPattern.Library.TypeEditors
 		/// <summary>
 		/// Builds the URI for the given template based on the containing project VSIX manifest identifier.
 		/// </summary>
-		public static Uri BuildUri(IItemContainer selectedItem)
+		internal static Uri BuildUri(IItemContainer selectedItem)
 		{
 			var manifest = selectedItem.GetToolkitManifest();
 			var owningProject = selectedItem.Traverse(x => x.Parent, item => item.Kind == ItemKind.Project);
@@ -97,12 +94,12 @@ namespace NuPattern.Library.TypeEditors
 
 			var path = GetLogicalPath(selectedItem).Replace(owningProject.GetLogicalPath(), string.Empty);
 
-            // Use alternative name if IncludeInVSIXAs defined
-            var templateItem = (IItem)selectedItem;
-            if (IsIncludeInVSIXAs(templateItem))
-            {
-                path = Path.Combine(Path.GetDirectoryName(path), templateItem.Data.IncludeInVSIXAs);
-            }
+			// Use alternative name if IncludeInVSIXAs defined
+			var templateItem = (IItem)selectedItem;
+			if (IsIncludeInVSIXAs(templateItem))
+			{
+				path = Path.Combine(Path.GetDirectoryName(path), templateItem.Data.IncludeInVSIXAs);
+			}
 
 			return new Uri(new Uri(TextTemplateUriProvider.UriHostPrefix), new Uri(vsixId + path, UriKind.Relative));
 		}
@@ -127,13 +124,29 @@ namespace NuPattern.Library.TypeEditors
 			return ((builder.Length == 0) ? string.Empty : builder.ToString(1, builder.Length - 1));
 		}
 
+		/// <summary>
+		/// Gets the editor style used by the <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/> method.
+		/// </summary>
+		public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
+		{
+			return UITypeEditorEditStyle.Modal;
+		}
+
 		private static void SetAuthoringUri(ITypeDescriptorContext context, Uri uri)
 		{
-			var commandSettings = context.Instance as ICommandSettings;
+			var prop = GetAuthoringTemplateProperty(context);
+			if (prop != null)
+			{
+				prop.Value = uri.AbsoluteUri;
+			}
+		}
 
+		private static DesignProperty GetAuthoringTemplateProperty(ITypeDescriptorContext context)
+		{
+			var commandSettings = context.Instance as ICommandSettings;
 			if (commandSettings != null)
 			{
-				// Make up the design property descriptor to persist the authoring value.
+				// Make up the design property descriptor to access the authoring value.
 				var descriptor = new DesignPropertyDescriptor(
 					Reflector<GenerateModelingCodeCommand>.GetPropertyName(c => c.TemplateAuthoringUri),
 					string.Empty,
@@ -143,23 +156,32 @@ namespace NuPattern.Library.TypeEditors
 					typeof(CommandSettings),
 					new Attribute[0]);
 
-				var prop = (DesignProperty)descriptor.GetValue(commandSettings);
-				prop.Value = uri.AbsoluteUri;
+				return (DesignProperty)descriptor.GetValue(commandSettings);
+			}
+
+			return null;
+		}
+
+		private static bool IsIncludeInVSIXAs(IItem selectedItem)
+		{
+			return (selectedItem != null
+				&& (!String.IsNullOrEmpty(selectedItem.Data.IncludeInVSIXAs)));
+		}
+
+		private static void SetSelectedItem(ITypeDescriptorContext context, ISolutionPicker picker, IFxrUriReferenceService uriService, DesignProperty prop)
+		{
+			if (prop != null)
+			{
+				var value = prop.Value.ToString();
+				if (!String.IsNullOrEmpty(value))
+				{
+					var item = uriService.TryResolveUri<IItemContainer>(new Uri(value));
+					if (item != null)
+					{
+						picker.SelectedItem = item;
+					}
+				}
 			}
 		}
-
-		/// <summary>
-		/// Gets the editor style used by the <see cref="M:System.Drawing.Design.UITypeEditor.EditValue(System.IServiceProvider,System.Object)"/> method.
-		/// </summary>
-		public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
-		{
-			return UITypeEditorEditStyle.Modal;
-		}
-
-        private static bool IsIncludeInVSIXAs(IItem selectedItem)
-        {
-            return (selectedItem != null
-                && (!String.IsNullOrEmpty(selectedItem.Data.IncludeInVSIXAs)));
-        }
 	}
 }

@@ -4,37 +4,50 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:p="http://schemas.microsoft.com/nupattern/2012/xaml/"
 	xmlns:vsfx="clr-namespace:NuPattern.Common.Presentation.Vs;assembly=NuPattern.Common.Presentation"
-    xmlns:cp="clr-namespace:NuPattern.Common.Presentation;assembly=NuPattern.Common.Presentation"
+	xmlns:cp="clr-namespace:NuPattern.Common.Presentation;assembly=NuPattern.Common.Presentation"
 	x:Name="automationExtensionSelector"
 	Title="Add New Automation"
 	WindowStartupLocation="CenterOwner"
-    Foreground="{DynamicResource VsBrush.WindowText}"
+	Foreground="{DynamicResource VsBrush.WindowText}"
 	ShowInTaskbar="False"
 	ResizeMode="CanResizeWithGrip"
-    Height="280" Width="340">
-    <vsfx:VsDialogWindow.Resources>
+	Height="288" Width="340">
+	<vsfx:VsDialogWindow.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommonStyles.xaml" />
-                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/VsVersionStyles.gen.xaml" />
-                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/ListBox.xaml" />
-            </ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommonStyles.xaml" />
+				<ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/VsVersionStyles.gen.xaml" />
+				<ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/ListBox.xaml" />
+			</ResourceDictionary.MergedDictionaries>
 
 			<p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />
 			<BitmapImage x:Key="DefaultProductIcon" UriSource="../../Resources/AutomationSettingsDefault.png" />
-        </ResourceDictionary>
+		</ResourceDictionary>
 
-    </vsfx:VsDialogWindow.Resources>
-    
-    <DockPanel Background="{StaticResource VsVersion.Dialog.Background}">
+	</vsfx:VsDialogWindow.Resources>
+	
+	<DockPanel Background="{StaticResource VsVersion.Dialog.Background}">
 		<Grid DockPanel.Dock="Bottom" HorizontalAlignment="Right">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
 				<ColumnDefinition Width="3" />
 				<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
 			</Grid.ColumnDefinitions>
-            <vsfx:VsDialogButton VerticalAlignment="Top" Content="OK" Command="{Binding SelectAutomationExtensionCommand}" CommandParameter="{x:Reference automationExtensionSelector}" IsDefault="True" />
-            <vsfx:VsDialogButton Grid.Column="2" VerticalAlignment="Top" Content="Cancel" IsCancel="True"/>
+			<vsfx:VsDialogButton 
+				Grid.Column="0" 
+				Margin="0,6,10,6"
+				AutomationProperties.AutomationId="Ok"
+				VerticalAlignment="Top"
+				Content="OK" 
+				IsDefault="True" 
+				Command="{Binding SelectAutomationExtensionCommand}" 
+				CommandParameter="{x:Reference automationExtensionSelector}"/>
+			<vsfx:VsDialogButton 
+				Grid.Column="2" 
+				Margin="0,6,10,6" 
+				VerticalAlignment="Top" 
+				Content="Cancel" 
+				IsCancel="True" />
 		</Grid>
 		<ListBox
 			x:Name="automations"
@@ -44,8 +57,7 @@
 			SelectedItem="{Binding CurrentExportedAutomation,Mode=TwoWay}"
 			IsSynchronizedWithCurrentItem="true"
 			SelectionMode="Single"
-            ItemContainerStyle="{StaticResource ListBoxItems}"
-            Foreground="{DynamicResource VsBrush.WindowText}">
+			Foreground="{DynamicResource VsBrush.WindowText}">
 			<ListBox.Resources>
 				<Style TargetType="ListBoxItem" BasedOn="{StaticResource {x:Type ListBoxItem}}">
 					<Setter Property="p:ControlBehavior.DoubleClickCommand" Value="{Binding DataContext.SelectAutomationExtensionCommand,ElementName=automationExtensionSelector}" />
@@ -60,15 +72,11 @@
 			<ListBox.ItemTemplate>
 				<DataTemplate>
 					<StackPanel Width="80" Height="80" Margin="6">
-						<Image
-							Margin="2"
-							Width="40"
-							Height="40"
-							Source="{Binding IconPath,Converter={StaticResource UriToCachedImageConverter},FallbackValue={StaticResource DefaultProductIcon}}" />
+						<Image Margin="2" Width="40" Height="40" Source="{Binding IconPath,Converter={StaticResource UriToCachedImageConverter},FallbackValue={StaticResource DefaultProductIcon}}" />
 						<TextBlock Margin="2" Text="{Binding DisplayName}" TextWrapping="Wrap"  TextAlignment="Center"/>
 					</StackPanel>
 				</DataTemplate>
 			</ListBox.ItemTemplate>
-        </ListBox>
+		</ListBox>
 	</DockPanel>
 </cp:CommonDialogWindow>

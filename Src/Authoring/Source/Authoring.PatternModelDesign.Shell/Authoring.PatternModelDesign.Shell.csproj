@@ -157,10 +157,10 @@
     <Compile Include="ModelingCommands\AddAutomationExtensionCommand.cs" />
     <Compile Include="ModelingCommands\AddVariablePropertyCommand.cs" />
     <Compile Include="ModelingCommands\LayoutDiagramCommand.cs" />
-    <Compile Include="ModelingCommands\UI\AddAutomationExtensionView.xaml.cs">
+    <Compile Include="ModelingCommands\UI\Views\AddAutomationExtensionView.xaml.cs">
       <DependentUpon>AddAutomationExtensionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ModelingCommands\UI\AddAutomationExtensionViewModel.cs" />
+    <Compile Include="ModelingCommands\UI\ViewModels\AddAutomationExtensionViewModel.cs" />
     <Compile Include="Properties\ShellResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -289,7 +289,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GeneratedVSCT.tt</DependentUpon>
     </None>
-    <Page Include="ModelingCommands\UI\AddAutomationExtensionView.xaml">
+    <Page Include="ModelingCommands\UI\Views\AddAutomationExtensionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -147,12 +147,6 @@
   <data name="FeatureExtensionsTypeConverter_None" xml:space="preserve">
     <value>(None)</value>
   </data>
-  <data name="IconEditor_FileExtensions" xml:space="preserve">
-    <value>.gif;.jpg;.jpeg;.bmp;.png;.ico</value>
-  </data>
-  <data name="IconEditor_PickerTitle" xml:space="preserve">
-    <value>Select An Image</value>
-  </data>
   <data name="IconFilter" xml:space="preserve">
     <value>Icon files(*.ico)|*.ico</value>
   </data>
@@ -173,15 +167,6 @@
   </data>
   <data name="SelectImage" xml:space="preserve">
     <value>Select Image</value>
-  </data>
-  <data name="TextTemplateUriEditor_FailedToEdit" xml:space="preserve">
-    <value>Failed to edit file.</value>
-  </data>
-  <data name="TextTemplateUriEditor_FileExtensions" xml:space="preserve">
-    <value>.t4;.tt</value>
-  </data>
-  <data name="TextTemplateUriEditor_Title" xml:space="preserve">
-    <value>Select a Text Template (.t4 or .tt)</value>
   </data>
   <data name="Vsix_InvalidManifest" xml:space="preserve">
     <value>Vsix manifest file '{0}' does not contain required Identifier element.</value>
@@ -406,10 +391,7 @@
     <value>Solution could not be opened</value>
   </data>
   <data name="ImageUriEditor_PickerTitle" xml:space="preserve">
-    <value>Select An Image</value>
-  </data>
-  <data name="ImageUriEditor_NoImageMessage" xml:space="preserve">
-    <value>No images found in solution.</value>
+    <value>Select an Image from the Solution</value>
   </data>
   <data name="DefaultCategory" xml:space="preserve">
     <value>General</value>
@@ -447,5 +429,12 @@ The solution item has instead been renamed to: '{1}'.</value>
   </data>
   <data name="DteExtensions_CreateNewSolution_FailedCreate" xml:space="preserve">
     <value>Failed to create a new empty solution, an error occurred creating and saving the new solution to '{0}'. Verify that you have permissions to create new subfolders in the parent directory.</value>
+  </data>
+  <data name="ImageUriEditor_EmptyItemsMessage" xml:space="preserve">
+    <value>There were no image files ({0}) found in the current solution.
+Please add a new or existing image file {0} to the project and try again.</value>
+  </data>
+  <data name="ImageUriEditor_FailedToEdit" xml:space="preserve">
+    <value>Failed to edit file.</value>
   </data>
 </root>

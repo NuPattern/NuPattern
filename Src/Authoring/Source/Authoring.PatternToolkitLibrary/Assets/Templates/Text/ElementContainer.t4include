@@ -1,28 +1,28 @@
 ﻿<#+
-private void GenerateContainedElements(PluralizationService pluralizer, IElementInfoContainer infoElement)
+private void GenerateContainedElements(PluralizationService pluralizer, IElementInfoContainer infoElement, bool noImpl)
 {
 	foreach (var element in infoElement.Elements)
 	{
-		GenerateContainedElementProperty(pluralizer, element);		
+		GenerateContainedElementProperty(pluralizer, element, "GetElement", "GetElements", noImpl);
 	}
 
 	foreach (var extension in infoElement.ExtensionPoints)
 	{
-		GenerateContainedElementProperty(pluralizer, extension);		
+		GenerateContainedElementProperty(pluralizer, extension, "GetExtension", "GetExtensions", noImpl);
 	}
 
 	foreach (var element in infoElement.Elements)
 	{
-		GenerateContainedElementCreate(pluralizer, element);		
+		GenerateContainedElementCreate(pluralizer, element, noImpl);
 	}
 
 	foreach (var element in infoElement.ExtensionPoints)
 	{
-		GenerateContainedExtensionCreate(pluralizer, element);		
+		GenerateContainedExtensionCreate(pluralizer, element, noImpl);
 	}
 }
 
-private void GenerateContainedElementCreate(PluralizationService pluralizer, IContainedElementInfo element)
+private void GenerateContainedElementCreate(PluralizationService pluralizer, IContainedElementInfo element, bool noImpl)
 {
 	var name = Pluralize(pluralizer, element);
 #>
@@ -32,11 +32,42 @@ private void GenerateContainedElementCreate(PluralizationService pluralizer, ICo
 /// executing the optional <paramref name="initializer"/> if not <see langword="null"/>.
 ///	</summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
+<#+
+	if (noImpl)
+	{
+#>
 I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(string name, Action<I<#=element.CodeIdentifier#>> initializer = null, bool raiseInstantiateEvents = true);
 <#+
+	}
+	else
+	{
+#>
+public virtual I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(string name, Action<I<#=element.CodeIdentifier#>> initializer = null, bool raiseInstantiateEvents = true)
+{
+<#+
+		if (element is IElementInfo)
+		{
+#>
+	return proxy.CreateElement<I<#=element.CodeIdentifier#>>(name, initializer, raiseInstantiateEvents);
+<#+
+		}
+		else if (element is ICollectionInfo)
+		{
+#>
+	return proxy.CreateCollection<I<#=element.CodeIdentifier#>>(name, initializer, raiseInstantiateEvents);
+<#+
+		}
+		else
+		{
+			throw new NotSupportedException("Unsupported element type");
+		}
+#>
+}
+<#+
+	}
 }
 
-private void GenerateContainedExtensionCreate(PluralizationService pluralizer, IContainedElementInfo element)
+private void GenerateContainedExtensionCreate(PluralizationService pluralizer, IContainedElementInfo element, bool noImpl)
 {
 	var name = Pluralize(pluralizer, element);
 #>
@@ -46,11 +77,36 @@ private void GenerateContainedExtensionCreate(PluralizationService pluralizer, I
 /// executing the optional <paramref name="initializer"/> if not <see langword="null"/>.
 ///	</summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
+<#+
+	if (noImpl)
+	{
+#>
 I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(string name, Guid productId, string toolkitId, Action<I<#=element.CodeIdentifier#>> initializer = null, bool raiseInstantiateEvents = true);
 <#+
+	}
+	else
+	{
+#>
+public virtual I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(string name, Guid productId, string toolkitId, Action<I<#=element.CodeIdentifier#>> initializer = null, bool raiseInstantiateEvents = true)
+{
+<#+
+		if (element is IExtensionPointInfo)
+		{
+#>
+	return proxy.CreateExtension<I<#=element.CodeIdentifier#>>(name, productId, toolkitId, initializer, raiseInstantiateEvents);
+<#+
+		}
+		else
+		{
+			throw new NotSupportedException("Unsupported element type");
+		}
+#>
+}
+<#+
+	}
 }
 
-private void GenerateContainedElementProperty(PluralizationService pluralizer, IContainedElementInfo element)
+private void GenerateContainedElementProperty(PluralizationService pluralizer, IContainedElementInfo element, string singularMethod, string pluralMethod, bool noImpl)
 {
 	if (element.Cardinality == NuPattern.Runtime.Cardinality.ZeroToOne ||
 		element.Cardinality == NuPattern.Runtime.Cardinality.OneToOne)
@@ -60,8 +116,22 @@ private void GenerateContainedElementProperty(PluralizationService pluralizer, I
 /// <summary>
 /// Gets the <see cref="I<#=element.CodeIdentifier#>"/> contained in this element.
 /// </summary>
+<#+
+		if (noImpl)
+		{
+#>
 I<#=element.CodeIdentifier#> <#=element.CodeIdentifier#> { get; }
 <#+
+		}
+		else
+		{
+#>
+public virtual I<#=element.CodeIdentifier#> <#=element.CodeIdentifier#> 
+{ 
+	get { return proxy.<#= singularMethod #>(() => this.<#=element.CodeIdentifier#>, element => new <#=element.CodeIdentifier#>(element)); }
+}
+<#+
+		}
 	}
 	else
 	{
@@ -71,8 +141,22 @@ I<#=element.CodeIdentifier#> <#=element.CodeIdentifier#> { get; }
 /// <summary>
 /// Gets all instances of <see cref="I<#=element.CodeIdentifier#>"/> contained in this element.
 /// </summary>
+<#+
+		if (noImpl)
+		{
+#>
 IEnumerable<I<#=element.CodeIdentifier#>> <#=name#> { get; }
 <#+
+		}
+		else
+		{
+#>
+public virtual IEnumerable<I<#=element.CodeIdentifier#>> <#=name#> 
+{ 
+	get { return proxy.<#= pluralMethod #>(() => this.<#=name#>, element => new <#=element.CodeIdentifier#>(element)); }
+}
+<#+
+		}
 	}
 }
 

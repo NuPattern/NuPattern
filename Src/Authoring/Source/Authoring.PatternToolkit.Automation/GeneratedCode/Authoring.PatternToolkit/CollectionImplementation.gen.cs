@@ -77,8 +77,8 @@ namespace NuPattern.Authoring.PatternToolkit
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		[Description("Notes for this element.")]
+		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		public virtual String Notes 
 		{ 
 			get { return this.proxy.GetValue(() => this.Notes); }
@@ -183,7 +183,7 @@ namespace NuPattern.Authoring.PatternToolkit
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IGuidance CreateGuidance(string name, Action<IGuidance> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IGuidance>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IGuidance>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -265,8 +265,8 @@ namespace NuPattern.Authoring.PatternToolkit
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		[Description("Notes for this element.")]
+		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		public virtual String Notes 
 		{ 
 			get { return this.proxy.GetValue(() => this.Notes); }
@@ -453,8 +453,8 @@ namespace NuPattern.Authoring.PatternToolkit
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		[Description("Notes for this element.")]
+		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		public virtual String Notes 
 		{ 
 			get { return this.proxy.GetValue(() => this.Notes); }
@@ -523,7 +523,7 @@ namespace NuPattern.Authoring.PatternToolkit
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IItemTemplate CreateItemTemplate(string name, Action<IItemTemplate> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IItemTemplate>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IItemTemplate>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -605,8 +605,8 @@ namespace NuPattern.Authoring.PatternToolkit
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		[Description("Notes for this element.")]
+		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		public virtual String Notes 
 		{ 
 			get { return this.proxy.GetValue(() => this.Notes); }
@@ -675,7 +675,7 @@ namespace NuPattern.Authoring.PatternToolkit
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IProjectTemplate CreateProjectTemplate(string name, Action<IProjectTemplate> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IProjectTemplate>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IProjectTemplate>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -757,8 +757,8 @@ namespace NuPattern.Authoring.PatternToolkit
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		[Description("Notes for this element.")]
+		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		public virtual String Notes 
 		{ 
 			get { return this.proxy.GetValue(() => this.Notes); }
@@ -827,7 +827,7 @@ namespace NuPattern.Authoring.PatternToolkit
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual ITextTemplate CreateTextTemplate(string name, Action<ITextTemplate> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<ITextTemplate>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<ITextTemplate>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -909,8 +909,8 @@ namespace NuPattern.Authoring.PatternToolkit
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		[Description("Notes for this element.")]
+		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		public virtual String Notes 
 		{ 
 			get { return this.proxy.GetValue(() => this.Notes); }
@@ -987,7 +987,7 @@ namespace NuPattern.Authoring.PatternToolkit
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IWizard CreateWizard(string name, Action<IWizard> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IWizard>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IWizard>(name, initializer, raiseInstantiateEvents);
 		}
 		
 		/// <summary>
@@ -1079,8 +1079,8 @@ namespace NuPattern.Authoring.PatternToolkit
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		[Description("Notes for this element.")]
+		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		public virtual String Notes 
 		{ 
 			get { return this.proxy.GetValue(() => this.Notes); }
@@ -1149,7 +1149,7 @@ namespace NuPattern.Authoring.PatternToolkit
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IWizardPage CreateWizardPage(string name, Action<IWizardPage> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IWizardPage>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IWizardPage>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -1231,8 +1231,8 @@ namespace NuPattern.Authoring.PatternToolkit
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		[Description("Notes for this element.")]
+		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		public virtual String Notes 
 		{ 
 			get { return this.proxy.GetValue(() => this.Notes); }
@@ -1301,7 +1301,7 @@ namespace NuPattern.Authoring.PatternToolkit
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IAutomationLibrary CreateAutomationLibrary(string name, Guid productId, string toolkitId, Action<IAutomationLibrary> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateExtension<IAutomationLibrary>(name, productId, toolkitId, initializer, raiseInstantiateEvents);	
+			return proxy.CreateExtension<IAutomationLibrary>(name, productId, toolkitId, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -1383,8 +1383,8 @@ namespace NuPattern.Authoring.PatternToolkit
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		[Description("Notes for this element.")]
+		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		public virtual String Notes 
 		{ 
 			get { return this.proxy.GetValue(() => this.Notes); }
@@ -1453,7 +1453,7 @@ namespace NuPattern.Authoring.PatternToolkit
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IViewModel CreateViewModel(string name, Action<IViewModel> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IViewModel>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IViewModel>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>

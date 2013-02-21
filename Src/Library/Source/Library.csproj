@@ -243,7 +243,7 @@
     <Compile Include="Commands\Helpers\ReferenceTag.cs" />
     <Compile Include="Commands\SaveArtifactCommand.cs" />
     <Compile Include="Commands\RunVsCommandCommand.cs" />
-    <Compile Include="TypeEditors\TemplateUriEditor.cs" />
+    <Compile Include="TypeEditors\VsTemplateUriEditor.cs" />
     <Compile Include="Commands\TransformTemplatesCommand.cs" />
     <Compile Include="Commands\Helpers\UnfoldKind.cs" />
     <Compile Include="Automation\DragDrop\DragDropSettings.Validation.cs">

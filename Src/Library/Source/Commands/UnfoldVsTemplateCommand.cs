@@ -65,7 +65,7 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [Required]
         [DesignOnly(true)]
-        [Editor(typeof(TemplateUriEditor), typeof(UITypeEditor))]
+        [Editor(typeof(VsTemplateUriEditor), typeof(UITypeEditor))]
         [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/TemplateUri.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
         [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/TemplateUri.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
         public virtual Uri TemplateUri

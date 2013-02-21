@@ -19,26 +19,26 @@
 <#@ Import Namespace="System.Reflection" #>
 <#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
 <#@ Include File="Constants.t4" #>
-<#@ Include File="Helpers.t4" #>
-<#@ Include File="Header.t4" #>
-<#@ Include File="NamedElementParentInterface.t4" #>
-<#@ Include File="ProductElementInterface.t4" #>
+<#@ Include File="Helpers.t4include" #>
+<#@ Include File="Header.t4include" #>
+<#@ Include File="NamedElementParent.t4include" #>
+<#@ Include File="ProductElement.t4include" #>
 <#
 	var library = this.Element.As<IPatternToolkitLibrary>();
-    var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
-    var toolkitInfo = developmentView.PatternToolkitInfo;
+	var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
+	var toolkitInfo = developmentView.PatternToolkitInfo;
 
-    if (toolkitInfo == null)
-	    throw new Exception("ToolkitInfo element not found");
+	if (toolkitInfo == null)
+		throw new Exception("ToolkitInfo element not found");
 
-    var patternModel = developmentView.PatternModel;
-    var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
-    var store = pattern.Store;
+	var patternModel = developmentView.PatternModel;
+	var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
+	var store = pattern.Store;
 
-    foreach (var extensionPoint in store.DefaultPartition.ElementDirectory.AllElements.OfType<IExtensionPointInfo>())
-    {
-	    var codegen = new ProductCodeGeneration<IExtensionPointInfo, IProduct>(extensionPoint);
-	    codegen.AddType(typeof(Action));
+	foreach (var extensionPoint in store.DefaultPartition.ElementDirectory.AllElements.OfType<IExtensionPointInfo>())
+	{
+		var codegen = new ProductCodeGeneration<IExtensionPointInfo, IProduct>(extensionPoint);
+		codegen.AddType(typeof(Action));
 	codegen.EndInit();
 #>
 namespace <#=library.ToolkitProjectRootNamespace #>
@@ -48,8 +48,8 @@ namespace <#=library.ToolkitProjectRootNamespace #>
 	<#GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, extensionPoint); #>
 	public partial interface I<#=extensionPoint.CodeIdentifier #> : IToolkitInterface
 	{ <# 
-GenerateProperties(codegen, extensionPoint);
-GenerateParentProperty(extensionPoint);
+GenerateProperties(codegen, extensionPoint, true);
+GenerateParentProperty(extensionPoint, true);
 
 PushIndent("\t");
 PushIndent("\t");
@@ -68,5 +68,5 @@ PopIndent();
 }
 
 <#
-                                                                }
+																}
 #>

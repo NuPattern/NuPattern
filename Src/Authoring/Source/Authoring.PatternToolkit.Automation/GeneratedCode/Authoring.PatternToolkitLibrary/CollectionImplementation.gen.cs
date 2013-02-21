@@ -104,8 +104,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		public virtual String InstanceName 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceName); }
@@ -115,8 +115,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		public virtual Double InstanceOrder 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceOrder); }
@@ -147,7 +147,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual ICommand CreateCommand(string name, Action<ICommand> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<ICommand>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<ICommand>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -256,8 +256,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		public virtual String InstanceName 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceName); }
@@ -267,8 +267,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		public virtual Double InstanceOrder 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceOrder); }
@@ -299,7 +299,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual ICondition CreateCondition(string name, Action<ICondition> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<ICondition>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<ICondition>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -408,8 +408,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		public virtual String InstanceName 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceName); }
@@ -419,8 +419,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		public virtual Double InstanceOrder 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceOrder); }
@@ -451,7 +451,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IEvent CreateEvent(string name, Action<IEvent> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IEvent>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IEvent>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -560,8 +560,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		public virtual String InstanceName 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceName); }
@@ -571,8 +571,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		public virtual Double InstanceOrder 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceOrder); }
@@ -611,7 +611,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IEnumTypeConverter CreateEnumTypeConverter(string name, Action<IEnumTypeConverter> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IEnumTypeConverter>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IEnumTypeConverter>(name, initializer, raiseInstantiateEvents);
 		}
 		
 		/// <summary>
@@ -621,7 +621,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IDataTypeConverter CreateDataTypeConverter(string name, Action<IDataTypeConverter> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IDataTypeConverter>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IDataTypeConverter>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -730,8 +730,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		public virtual String InstanceName 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceName); }
@@ -741,8 +741,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		public virtual Double InstanceOrder 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceOrder); }
@@ -781,7 +781,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual ITypePickerEditor CreateTypePickerEditor(string name, Action<ITypePickerEditor> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<ITypePickerEditor>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<ITypePickerEditor>(name, initializer, raiseInstantiateEvents);
 		}
 		
 		/// <summary>
@@ -791,7 +791,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IUIEditor CreateUIEditor(string name, Action<IUIEditor> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IUIEditor>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IUIEditor>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -900,8 +900,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		public virtual String InstanceName 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceName); }
@@ -911,8 +911,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		public virtual Double InstanceOrder 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceOrder); }
@@ -951,7 +951,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IElementValidationRule CreateElementValidationRule(string name, Action<IElementValidationRule> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IElementValidationRule>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IElementValidationRule>(name, initializer, raiseInstantiateEvents);
 		}
 		
 		/// <summary>
@@ -961,7 +961,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IPropertyValidationRule CreatePropertyValidationRule(string name, Action<IPropertyValidationRule> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IPropertyValidationRule>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IPropertyValidationRule>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -1070,8 +1070,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		public virtual String InstanceName 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceName); }
@@ -1081,8 +1081,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		public virtual Double InstanceOrder 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceOrder); }
@@ -1113,7 +1113,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IValueProvider CreateValueProvider(string name, Action<IValueProvider> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IValueProvider>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IValueProvider>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>
@@ -1222,8 +1222,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The name of this element instance.
 		///	</summary>
-		[ParenthesizePropertyName(true)]
 		[Description("The name of this element instance.")]
+		[ParenthesizePropertyName(true)]
 		public virtual String InstanceName 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceName); }
@@ -1233,8 +1233,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	The order of this element relative to its siblings.
 		///	</summary>
-		[ReadOnly(true)]
 		[Description("The order of this element relative to its siblings.")]
+		[ReadOnly(true)]
 		public virtual Double InstanceOrder 
 		{ 
 			get { return this.proxy.GetValue(() => this.InstanceOrder); }
@@ -1265,7 +1265,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 		public virtual IElementOrderingComparer CreateElementOrderingComparer(string name, Action<IElementOrderingComparer> initializer = null, bool raiseInstantiateEvents = true)
 		{
-			return proxy.CreateElement<IElementOrderingComparer>(name, initializer, raiseInstantiateEvents);	
+			return proxy.CreateElement<IElementOrderingComparer>(name, initializer, raiseInstantiateEvents);
 		}
 
 		/// <summary>

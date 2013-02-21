@@ -8,20 +8,17 @@ namespace NuPattern.Runtime
 	/// Defines a picker used for selecting filtered solution artifacts.
 	/// </summary>
 	[CLSCompliant(false)]
-	public interface ISolutionPicker : IDialogWindow
+	public interface ISolutionPicker
 	{
 		/// <summary>
-		/// The currently selected item.
+		/// Gets or sets the owner window of the picker.
 		/// </summary>
-		IItemContainer SelectedItem { get; set; }
+		Window Owner { get; set; }
 
 		/// <summary>
-		/// The current fileter to apply to items in the picker.
+		/// Gets or sets the root item to pick from.
 		/// </summary>
-		IPickerFilter Filter
-		{
-			get;
-		}
+		IItemContainer RootItem { get; set; }
 
 		/// <summary>
 		/// The title of the picker.
@@ -34,13 +31,19 @@ namespace NuPattern.Runtime
 		string EmptyItemsMessage { get; set; }
 
 		/// <summary>
-		/// The root item to start teh select at.
+		/// Gets or sets the filter for the picker.
 		/// </summary>
-		IItemContainer RootItem { get; set; }
+		IPickerFilter Filter { get; }
 
 		/// <summary>
-		/// The window owner of the picker dialog.
+		/// Displays the dialog.
 		/// </summary>
-		Window Owner { get; set; }
+		/// <returns></returns>
+		bool ShowDialog();
+
+		/// <summary>
+		/// Gets or sets the currently selected item.
+		/// </summary>
+		IItemContainer SelectedItem { get; set; }
 	}
 }

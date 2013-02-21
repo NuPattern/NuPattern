@@ -868,11 +868,29 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An unexpected error occured, please retry again..
+        /// </summary>
+        internal static string SolutionPicker_ErrorFailedDialog {
+            get {
+                return ResourceManager.GetString("SolutionPicker_ErrorFailedDialog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The &apos;RootItem&apos; value must be assigned before a call to &apos;ShowDialog&apos;..
+        /// </summary>
+        internal static string SolutionPicker_ErrorNoRootItem {
+            get {
+                return ResourceManager.GetString("SolutionPicker_ErrorNoRootItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There are no &apos;{0}&apos; files in the current solution..
         /// </summary>
-        internal static string SolutionPicker_EmptyItemsMessage {
+        internal static string SolutionPickerViewModel_EmptyItemsMessage {
             get {
-                return ResourceManager.GetString("SolutionPicker_EmptyItemsMessage", resourceCulture);
+                return ResourceManager.GetString("SolutionPickerViewModel_EmptyItemsMessage", resourceCulture);
             }
         }
         

@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Bitmap1.bmp" />
+    <Resource Include="Resources\Bitmap2 With Spaces.bmp" />
     <Resource Include="..\LinkedBitmap1.bmp">
       <Link>Resources\LinkedBitmap1.bmp</Link>
     </Resource>

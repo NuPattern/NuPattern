@@ -6,6 +6,8 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility.Properties;
 using NuPattern.Runtime;
 
 namespace NuPattern.Extensibility
@@ -15,6 +17,9 @@ namespace NuPattern.Extensibility
 	/// </summary>
 	public class IconEditor : UITypeEditor
 	{
+		private static readonly ITraceSource tracer = Tracer.GetSourceFor<IconEditor>();
+		private const string ImageExtension = ".gif;.jpg;.jpeg;.bmp;.png;.ico";
+
 		/// <summary>
 		/// Edits the specified object's value using the editor style indicated by the <see cref="UITypeEditor.GetEditStyle()"/> method.
 		/// </summary>
@@ -29,23 +34,24 @@ namespace NuPattern.Extensibility
 			Guard.NotNull(() => context, context);
 			Guard.NotNull(() => provider, provider);
 
-			var componentModel = provider.GetService<SComponentModel, IComponentModel>();
-			var picker = componentModel.GetService<Func<ISolutionPicker>>()();
-
-			var solution = provider.GetService<ISolution>();
-			picker.Owner = provider.GetService<SVsUIShell, IVsUIShell>().GetMainWindow();
-			picker.Title = Properties.Resources.IconEditor_PickerTitle;
-			picker.RootItem = solution;
-			picker.Filter.Kind = ItemKind.Solution | ItemKind.SolutionFolder | ItemKind.Project | ItemKind.Folder | ItemKind.Item;
-			picker.Filter.IncludeFileExtensions = Properties.Resources.IconEditor_FileExtensions;
-
-			if (picker.ShowDialog().GetValueOrDefault())
+			tracer.ShieldUI(() =>
 			{
-				var item = (IItem)picker.SelectedItem;
-				item.Data.ItemType = BuildAction.Content.ToString();
-				item.Data.IncludeInVSIX = Boolean.TrueString.ToLower(CultureInfo.CurrentCulture);
-				value = item;
-			}
+				var componentModel = provider.GetService<SComponentModel, IComponentModel>();
+				var picker = componentModel.GetService<Func<ISolutionPicker>>()();
+				picker.Owner = provider.GetService<SVsUIShell, IVsUIShell>().GetMainWindow();
+				picker.RootItem = provider.GetService<ISolution>();
+				picker.Title = Properties.Resources.ImageUriEditor_PickerTitle;
+				picker.EmptyItemsMessage = string.Format(CultureInfo.CurrentCulture, Resources.ImageUriEditor_EmptyItemsMessage, ImageExtension);
+				picker.Filter.Kind = ItemKind.Solution | ItemKind.SolutionFolder | ItemKind.Project | ItemKind.Folder | ItemKind.Item;
+				picker.Filter.IncludeFileExtensions = ImageExtension;
+				if (picker.ShowDialog())
+				{
+					var item = (IItem)picker.SelectedItem;
+					item.Data.ItemType = BuildAction.Content.ToString();
+					item.Data.IncludeInVSIX = Boolean.TrueString.ToLower(CultureInfo.CurrentCulture);
+					value = item;
+				}
+			}, Resources.ImageUriEditor_FailedToEdit);
 
 			var converter = context.PropertyDescriptor.Converter;
 

@@ -206,6 +206,7 @@
     <Compile Include="UI\ProductViewModelSpec.cs" />
     <Compile Include="Store\ProductElementTypeDescriptorSpec.cs" />
     <Compile Include="UI\ProductElementViewModelSpec.cs" />
+    <Compile Include="UI\SolutionPickerViewModelSpec.cs" />
     <Compile Include="UriProviders\VsTemplateUriProviderSpec.cs" />
     <Compile Include="UriProviders\PackUriProviderSpec.cs" />
     <Compile Include="UriProviders\TextTemplateUriProviderSpec.cs" />

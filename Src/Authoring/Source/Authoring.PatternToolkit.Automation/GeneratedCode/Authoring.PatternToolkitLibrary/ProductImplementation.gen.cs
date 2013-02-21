@@ -162,8 +162,8 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		///	<summary>
 		///	Notes for this element.
 		///	</summary>
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		[Description("Notes for this element.")]
+		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
 		public virtual String Notes 
 		{ 
 			get { return this.proxy.GetValue(() => this.Notes); }
