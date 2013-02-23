@@ -262,15 +262,26 @@ namespace NuPattern.Runtime.Shell
 
         private void OnSolutionOpened(object sender, SolutionEventArgs e)
         {
-            var pathExpression = string.Concat(@"\*", Runtime.Constants.RuntimeStoreExtension);
+            var pathExpression1 = Path.Combine(SolutionExtensions.SolutionItemsFolderName, string.Concat(@"*", Runtime.Constants.RuntimeStoreExtension));
+            var pathExpression2 = string.Concat(@"*", Runtime.Constants.RuntimeStoreExtension);
 
             // Ensure solution contains at least one state file
             if (e.Solution != null)
             {
-                var solutionFiles = e.Solution.Find<IItem>(pathExpression);
+                // Search Solution Items folder
+                var solutionFiles = e.Solution.Find<IItem>(pathExpression1);
                 if (solutionFiles.Any())
                 {
                     this.AutoOpenSolutionBuilder();
+                }
+                else
+                {
+                    // Search whole solution for state file.
+                    solutionFiles = e.Solution.Find<IItem>(pathExpression2);
+                    if (solutionFiles.Any())
+                    {
+                        this.AutoOpenSolutionBuilder();
+                    }
                 }
             }
         }
@@ -385,9 +396,9 @@ namespace NuPattern.Runtime.Shell
                             // Match assemblies with lost name from loaded AppDomain assemblies
                             var loadedAssemblies = from appDomainAssembly
                                                          in ((AppDomain)sender).GetAssemblies()
-                                                     let assemblyName = appDomainAssembly.GetName()
-                                                     where assemblyName.Name.Equals(args.Name, StringComparison.OrdinalIgnoreCase)
-                                                     select appDomainAssembly;
+                                                   let assemblyName = appDomainAssembly.GetName()
+                                                   where assemblyName.Name.Equals(args.Name, StringComparison.OrdinalIgnoreCase)
+                                                   select appDomainAssembly;
                             if (loadedAssemblies.Any())
                             {
                                 tracer.TraceInformation(
@@ -425,12 +436,12 @@ namespace NuPattern.Runtime.Shell
                                             // Match latest version by PublicKeyToken
                                             var signedAssemblies = from signedAssembly
                                                            in toolkitAssemblies
-                                                           let assemblyName = signedAssembly.GetName()
-                                                           let assemblyVersion = assemblyName.Version
-                                                           where assemblyName.KeyPair != null
-                                                           where assemblyName.GetPublicKeyTokenString().Equals(publicKeyToken, StringComparison.OrdinalIgnoreCase)
-                                                           orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
-                                                           select signedAssembly;
+                                                                   let assemblyName = signedAssembly.GetName()
+                                                                   let assemblyVersion = assemblyName.Version
+                                                                   where assemblyName.KeyPair != null
+                                                                   where assemblyName.GetPublicKeyTokenString().Equals(publicKeyToken, StringComparison.OrdinalIgnoreCase)
+                                                                   orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
+                                                                   select signedAssembly;
                                             if (signedAssemblies.Any())
                                             {
                                                 assembly = signedAssemblies.FirstOrDefault();
