@@ -178,6 +178,15 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} Collection.
+        /// </summary>
+        internal static string CancelableCollectionEditor_Title {
+            get {
+                return ResourceManager.GetString("CancelableCollectionEditor_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Initialization has already been done. This invocation can only be performed before EndInit is been called..
         /// </summary>
         internal static string CodeGeneration_InitializationFinished {
@@ -309,6 +318,15 @@ namespace NuPattern.Extensibility.Properties {
         internal static string DescriptorExtensions_MustBeDelegatingDescriptor {
             get {
                 return ResourceManager.GetString("DescriptorExtensions_MustBeDelegatingDescriptor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Collection).
+        /// </summary>
+        internal static string DesignCollectionPropertyDescriptor_ToString {
+            get {
+                return ResourceManager.GetString("DesignCollectionPropertyDescriptor_ToString", resourceCulture);
             }
         }
         

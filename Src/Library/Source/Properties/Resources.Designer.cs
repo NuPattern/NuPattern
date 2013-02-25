@@ -1466,15 +1466,6 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (Collection).
-        /// </summary>
-        internal static string DesignCollectionPropertyDescriptor_ToString {
-            get {
-                return ResourceManager.GetString("DesignCollectionPropertyDescriptor_ToString", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to A configured value for this property, defined at design-time..
         /// </summary>
         internal static string DesignValueProvider_ValueDescription {

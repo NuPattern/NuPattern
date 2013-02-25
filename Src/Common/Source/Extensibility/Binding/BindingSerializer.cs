@@ -39,6 +39,28 @@ namespace NuPattern.Extensibility.Binding
         }
 
         /// <summary>
+        /// Deserializes the specified serialized value.
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1305:SpecifyIFormatProvider", MessageId = "System.String.Format(System.String,System.Object,System.Object)")]
+        public static object Deserialize(string serializedValue, Type objectType)
+        {
+            try
+            {
+                return JsonConvert.DeserializeObject(serializedValue, objectType,
+                    new IsoDateTimeConverter(),
+                    propertyConverter, valueProviderConverter, bindingConverter);
+            }
+            catch (JsonSerializationException ex)
+            {
+                throw new BindingSerializationException(string.Format(
+                    Resources.BindingSerializationException_DeserializationFailed,
+                    objectType,
+                    serializedValue),
+                    ex);
+            }
+        }
+
+        /// <summary>
         /// Serializes the specified value.
         /// </summary>
         public static string Serialize<T>(T value)

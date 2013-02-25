@@ -133,7 +133,7 @@ namespace NuPattern.Runtime.Schema
 				role => role.DomainRelationship.Name == typeof(CustomizableElementHasPolicy).Name);
 
 			//// Copy meta-attributes from CustomizationPolicy MEL
-			var category = typeof(CustomizationPolicySchema).Category(true);
+			var category = typeof(CustomizationPolicySchema).Category();
 			if (!string.IsNullOrEmpty(category))
 			{
 				attributes.Add(new CategoryAttribute(category));

@@ -449,4 +449,10 @@ Please add a new or existing image file {0} to the project and try again.</value
   <data name="XmlProcessor_ErrorSaveFailed" xml:space="preserve">
     <value>Failed to save modified XML document '{0}'.</value>
   </data>
+  <data name="CancelableCollectionEditor_Title" xml:space="preserve">
+    <value>{0} Collection</value>
+  </data>
+  <data name="DesignCollectionPropertyDescriptor_ToString" xml:space="preserve">
+    <value>(Collection)</value>
+  </data>
 </root>

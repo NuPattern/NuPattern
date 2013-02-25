@@ -175,7 +175,7 @@ namespace NuPattern.Runtime.Schema
 				// Get the display name of the associated property from this element (search public, internal, provate properties)
 				PropertyInfo propertyInfo = this.Policy.Owner.GetDomainClass().ImplementationClass.GetProperty(this.PropertyId,
 					(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static | BindingFlags.IgnoreCase));
-				string displayName = propertyInfo.DisplayName(true);
+				string displayName = propertyInfo.DisplayName();
 				return (!string.IsNullOrEmpty(displayName)) ? displayName : propertyInfo.Name;
 			}
 			else

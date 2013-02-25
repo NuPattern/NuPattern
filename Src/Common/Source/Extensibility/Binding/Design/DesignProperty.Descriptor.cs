@@ -38,34 +38,7 @@ namespace NuPattern.Extensibility.Binding
             //TODO: Display instructional text to user when unconfigured.
             //i.e. !propertySettings.IsConfigured => "(Expand to modify)"
 
-            IPropertyBindingSettings propertySettings = null;
-            // This check for the type of component is here because 
-            // we use the same descriptor for both properties on the 
-            // condition model as well as on the value provider.
-            var settings = component as IBindingSettings;
-            if (settings != null)
-            {
-                propertySettings = settings.Properties.FirstOrDefault(prop => prop.Name == this.Name);
-                if (propertySettings == null)
-                {
-                    propertySettings = new PropertyBindingSettings { Name = this.Name };
-                    settings.Properties.Add(propertySettings);
-                }
-            }
-            else
-            {
-                var design = component as DesignValueProvider;
-                if (design != null)
-                {
-                    propertySettings = design.ValueProvider.Properties.FirstOrDefault(prop => prop.Name == this.Name);
-                    if (propertySettings == null)
-                    {
-                        propertySettings = new PropertyBindingSettings { Name = this.Name };
-                        design.ValueProvider.Properties.Add(propertySettings);
-                    }
-                }
-            }
-
+            var propertySettings = EnsurePropertySettings(component, this.Name);
             return new DesignProperty(propertySettings)
             {
                 Type = this.propertyType,
@@ -96,6 +69,39 @@ namespace NuPattern.Extensibility.Binding
         public override void ResetValue(object component)
         {
             //TODO: get access to nested design property and reset it
+        }
+
+        internal static IPropertyBindingSettings EnsurePropertySettings(object component, string propertyName)
+        {
+            // This check for the type of component is here because 
+            // we use the same descriptor for both properties on the 
+            // condition model as well as on the value provider.
+            IPropertyBindingSettings propertySettings = null;
+            var settings = component as IBindingSettings;
+            if (settings != null)
+            {
+                propertySettings = settings.Properties.FirstOrDefault(prop => prop.Name == propertyName);
+                if (propertySettings == null)
+                {
+                    propertySettings = new PropertyBindingSettings { Name = propertyName };
+                    settings.Properties.Add(propertySettings);
+                }
+            }
+            else
+            {
+                var design = component as DesignValueProvider;
+                if (design != null)
+                {
+                    propertySettings = design.ValueProvider.Properties.FirstOrDefault(prop => prop.Name == propertyName);
+                    if (propertySettings == null)
+                    {
+                        propertySettings = new PropertyBindingSettings { Name = propertyName };
+                        design.ValueProvider.Properties.Add(propertySettings);
+                    }
+                }
+            }
+
+            return propertySettings;
         }
     }
 }

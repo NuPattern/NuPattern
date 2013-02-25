@@ -213,7 +213,7 @@ namespace NuPattern.Extensibility.Binding
 
                     if (extensionType != null)
                     {
-                        foreach (var descriptor in TypeDescriptor.GetProperties(extensionType).Cast<PropertyDescriptor>().Where(d => d.IsPlatuBindableProperty()))
+                        foreach (var descriptor in TypeDescriptor.GetProperties(extensionType).Cast<PropertyDescriptor>().Where(d => d.IsBindableDesignProperty()))
                         {
                             properties.Add(new DesignPropertyDescriptor(
                                 descriptor.Name,

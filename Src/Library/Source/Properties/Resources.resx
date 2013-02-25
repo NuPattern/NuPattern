@@ -2211,7 +2211,4 @@ Please add a new 'Text Template', or create a new folder within the 'Templates\T
   <data name="XmlNamespace_EmptyText" xml:space="preserve">
     <value>(empty)</value>
   </data>
-  <data name="DesignCollectionPropertyDescriptor_ToString" xml:space="preserve">
-    <value>(Collection)</value>
-  </data>
 </root>

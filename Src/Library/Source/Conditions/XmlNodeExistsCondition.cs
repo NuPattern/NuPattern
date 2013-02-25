@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.XPath;
@@ -29,7 +30,7 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         public XmlNodeExistsCondition()
         {
-            this.Namespaces = new List<XmlNamespace>();
+            this.Namespaces = new Collection<XmlNamespace>();
         }
 
         /// <summary>
@@ -80,7 +81,8 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         [DisplayNameResource("ModifyXmlCommand_Namespaces_DisplayName", typeof(Resources))]
         [DescriptionResource("ModifyXmlCommand_Namespaces_Description", typeof(Resources))]
-        public List<XmlNamespace> Namespaces { get; set; }
+        [TypeConverter(typeof(DesignCollectionConverter<XmlNamespace>))]
+        public Collection<XmlNamespace> Namespaces { get; set; }
 
         /// <summary>
         /// Evaluates this instance.

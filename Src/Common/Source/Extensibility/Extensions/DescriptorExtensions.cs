@@ -9,131 +9,145 @@ using NuPattern.Extensibility.Properties;
 
 namespace NuPattern.Extensibility
 {
-	/// <summary>
-	/// Extensions that property and type descriptors could use.
-	/// </summary>
-	public static class DescriptorExtensions
-	{
-		/// <summary>
-		/// Determines whether the specified property is imported from MEF.
-		/// </summary>
-		public static bool IsImported(this PropertyDescriptor property)
-		{
-			Guard.NotNull(() => property, property);
+    /// <summary>
+    /// Extensions that property and type descriptors could use.
+    /// </summary>
+    public static class DescriptorExtensions
+    {
+        /// <summary>
+        /// Determines whether the specified property is imported from MEF.
+        /// </summary>
+        public static bool IsImported(this PropertyDescriptor property)
+        {
+            Guard.NotNull(() => property, property);
 
-			return
-				property.Attributes.OfType<ImportAttribute>().Any<ImportAttribute>() ||
-				property.Attributes.OfType<ImportManyAttribute>().Any<ImportManyAttribute>();
-		}
+            return
+                property.Attributes.OfType<ImportAttribute>().Any<ImportAttribute>() ||
+                property.Attributes.OfType<ImportManyAttribute>().Any<ImportManyAttribute>();
+        }
 
-		/// <summary>
-		/// Determines whether the specified property has a <see cref="DesignOnlyAttribute"/> set.
-		/// </summary>
-		public static bool IsDesignOnlyProperty(this PropertyDescriptor property)
-		{
-			Guard.NotNull(() => property, property);
+        /// <summary>
+        /// Determines whether the specified property has a <see cref="DesignOnlyAttribute"/> set.
+        /// </summary>
+        public static bool IsDesignOnlyProperty(this PropertyDescriptor property)
+        {
+            Guard.NotNull(() => property, property);
 
-			return
-				property.Attributes.OfType<DesignOnlyAttribute>().Any<DesignOnlyAttribute>(a => a.IsDesignOnly);
-		}
+            return
+                property.Attributes.OfType<DesignOnlyAttribute>().Any<DesignOnlyAttribute>(a => a.IsDesignOnly);
+        }
 
-		/// <summary>
-		/// Determines whether the specified property has a <see cref="BindableAttribute"/> set.
-		/// </summary>
-		public static bool IsPlatuBindableProperty(this PropertyDescriptor descriptor)
-		{
-			Guard.NotNull(() => descriptor, descriptor);
+        /// <summary>
+        /// Determines whether the specified property is a generic of the specified type.
+        /// </summary>
+        public static bool IsPropertyTypeGeneric(this PropertyDescriptor property, Type ofType)
+        {
+            Guard.NotNull(() => property, property);
+            Guard.NotNull(() => ofType, ofType);
 
-			BindableAttribute attribute = descriptor.Attributes.OfType<BindableAttribute>().FirstOrDefault();
-			return ((((attribute == null) || attribute.Bindable) && !descriptor.Attributes.OfType<ImportAttribute>().Any<ImportAttribute>()) && !descriptor.Attributes.OfType<ImportManyAttribute>().Any<ImportManyAttribute>());
-		}
+            return
+                property.PropertyType.IsGenericType
+                && ((ofType == property.PropertyType.GetGenericTypeDefinition()) ||
+                ofType.IsAssignableFrom(property.PropertyType.GetGenericTypeDefinition()));
+        }
 
-		/// <summary>
-		/// Tries to locate a custom type converter assigned via a 
-		/// <see cref="DesignTypeConverterAttribute"/> or <see cref="TypeConverterAttribute"/>.
-		/// </summary>
-		/// <returns>The found converter or <see langword="null"/> if no custom type converter is set on the property.</returns>
-		public static TypeConverter FindCustomTypeConverter(this PropertyDescriptor descriptor)
-		{
-			return descriptor.Attributes.FindCustomTypeConverter();
-		}
+        /// <summary>
+        /// Determines whether the specified property has a <see cref="BindableAttribute"/> set, and is not a MEF imported property.
+        /// </summary>
+        public static bool IsBindableDesignProperty(this PropertyDescriptor descriptor)
+        {
+            Guard.NotNull(() => descriptor, descriptor);
 
-		/// <summary>
-		/// Tries to locate a custom type converter assigned via a 
-		/// <see cref="DesignTypeConverterAttribute"/> or <see cref="TypeConverterAttribute"/>.
-		/// </summary>
-		/// <returns>The found converter or <see langword="null"/> if no custom type converter is set on the attributes collection.</returns>
-		public static TypeConverter FindCustomTypeConverter(this AttributeCollection attributes)
-		{
-			return attributes.OfType<Attribute>().ToArray().FindCustomTypeConverter();
-		}
+            BindableAttribute attribute = descriptor.Attributes.OfType<BindableAttribute>().FirstOrDefault();
+            return (((attribute == null) || attribute.Bindable) && !descriptor.IsImported());
+        }
 
-		/// <summary>
-		/// Tries to locate a custom type converter assigned via a 
-		/// <see cref="DesignTypeConverterAttribute"/> or <see cref="TypeConverterAttribute"/>.
-		/// </summary>
-		/// <returns>The found converter or <see langword="null"/> if no custom type converter is set on the attributes collection.</returns>
-		public static TypeConverter FindCustomTypeConverter(this Attribute[] attributes)
-		{
-			var designTypeConverterAttribute = attributes.OfType<DesignTypeConverterAttribute>().FirstOrDefault();
+        /// <summary>
+        /// Tries to locate a custom type converter assigned via a 
+        /// <see cref="DesignTypeConverterAttribute"/> or <see cref="TypeConverterAttribute"/>.
+        /// </summary>
+        /// <returns>The found converter or <see langword="null"/> if no custom type converter is set on the property.</returns>
+        public static TypeConverter FindCustomTypeConverter(this PropertyDescriptor descriptor)
+        {
+            return descriptor.Attributes.FindCustomTypeConverter();
+        }
 
-			if (designTypeConverterAttribute != null)
-			{
-				return (TypeConverter)Activator.CreateInstance(designTypeConverterAttribute.ConverterType);
-			}
+        /// <summary>
+        /// Tries to locate a custom type converter assigned via a 
+        /// <see cref="DesignTypeConverterAttribute"/> or <see cref="TypeConverterAttribute"/>.
+        /// </summary>
+        /// <returns>The found converter or <see langword="null"/> if no custom type converter is set on the attributes collection.</returns>
+        public static TypeConverter FindCustomTypeConverter(this AttributeCollection attributes)
+        {
+            return attributes.OfType<Attribute>().ToArray().FindCustomTypeConverter();
+        }
 
-			var converterAttribute = attributes.OfType<TypeConverterAttribute>().FirstOrDefault();
+        /// <summary>
+        /// Tries to locate a custom type converter assigned via a 
+        /// <see cref="DesignTypeConverterAttribute"/> or <see cref="TypeConverterAttribute"/>.
+        /// </summary>
+        /// <returns>The found converter or <see langword="null"/> if no custom type converter is set on the attributes collection.</returns>
+        public static TypeConverter FindCustomTypeConverter(this Attribute[] attributes)
+        {
+            var designTypeConverterAttribute = attributes.OfType<DesignTypeConverterAttribute>().FirstOrDefault();
 
-			if (converterAttribute != null)
-			{
-				var converterType = Type.GetType(converterAttribute.ConverterTypeName);
+            if (designTypeConverterAttribute != null)
+            {
+                return (TypeConverter)Activator.CreateInstance(designTypeConverterAttribute.ConverterType);
+            }
 
-				if (converterType != null)
-				{
-					return (TypeConverter)Activator.CreateInstance(converterType);
-				}
-			}
+            var converterAttribute = attributes.OfType<TypeConverterAttribute>().FirstOrDefault();
 
-			return null;
-		}
+            if (converterAttribute != null)
+            {
+                var converterType = Type.GetType(converterAttribute.ConverterTypeName);
 
-		/// <summary>
-		/// Checks for the presence of a <see cref="PropertyDescriptorAttribute"/>  and wraps the 
-		/// descriptor using the one from the attribute, if existing.
-		/// </summary>
-		public static PropertyDescriptor ProcessPropertyDescriptorAttribute(this PropertyDescriptor property, object component)
-		{
-			Guard.NotNull(() => property, property);
+                if (converterType != null)
+                {
+                    return (TypeConverter)Activator.CreateInstance(converterType);
+                }
+            }
 
-			var descriptorAttribute = property.Attributes.OfType<PropertyDescriptorAttribute>().FirstOrDefault();
+            return null;
+        }
 
-			if (descriptorAttribute != null)
-			{
-				ConstructorInfo defaultConstructor;
+        /// <summary>
+        /// Checks for the presence of a <see cref="PropertyDescriptorAttribute"/>  and wraps the 
+        /// descriptor using the one from the attribute, if existing.
+        /// </summary>
+        public static PropertyDescriptor ProcessPropertyDescriptorAttribute(this PropertyDescriptor property, object component)
+        {
+            Guard.NotNull(() => property, property);
 
-				if (typeof(DelegatingPropertyDescriptor).IsAssignableFrom(descriptorAttribute.DescriptorType))
-				{
-					return (PropertyDescriptor)Activator.CreateInstance(descriptorAttribute.DescriptorType, property, new Attribute[0]);
-				}
-				else if ((defaultConstructor = descriptorAttribute.DescriptorType.GetConstructor(new[] { typeof(PropertyDescriptor) })) != null)
-				{
-					return (PropertyDescriptor)defaultConstructor.Invoke(new object[] { property });
-				}
-				else if ((defaultConstructor = descriptorAttribute.DescriptorType.GetConstructor(new[] { typeof(PropertyDescriptor), typeof(object) })) != null)
-				{
-					return (PropertyDescriptor)defaultConstructor.Invoke(new object[] { property, component });
-				}
-				else
-				{
-					throw new NotSupportedException(string.Format(
-						CultureInfo.CurrentCulture,
-						Resources.DescriptorExtensions_MustBeDelegatingDescriptor,
-						typeof(DelegatingPropertyDescriptor).FullName,
-						typeof(PropertyDescriptor).FullName));
-				}
-			}
+            var descriptorAttribute = property.Attributes.OfType<PropertyDescriptorAttribute>().FirstOrDefault();
 
-			return property;
-		}
-	}
+            if (descriptorAttribute != null)
+            {
+                ConstructorInfo defaultConstructor;
+
+                if (typeof(DelegatingPropertyDescriptor).IsAssignableFrom(descriptorAttribute.DescriptorType))
+                {
+                    return (PropertyDescriptor)Activator.CreateInstance(descriptorAttribute.DescriptorType, property, new Attribute[0]);
+                }
+                else if ((defaultConstructor = descriptorAttribute.DescriptorType.GetConstructor(new[] { typeof(PropertyDescriptor) })) != null)
+                {
+                    return (PropertyDescriptor)defaultConstructor.Invoke(new object[] { property });
+                }
+                else if ((defaultConstructor = descriptorAttribute.DescriptorType.GetConstructor(new[] { typeof(PropertyDescriptor), typeof(object) })) != null)
+                {
+                    return (PropertyDescriptor)defaultConstructor.Invoke(new object[] { property, component });
+                }
+                else
+                {
+                    throw new NotSupportedException(string.Format(
+                        CultureInfo.CurrentCulture,
+                        Resources.DescriptorExtensions_MustBeDelegatingDescriptor,
+                        typeof(DelegatingPropertyDescriptor).FullName,
+                        typeof(PropertyDescriptor).FullName));
+                }
+            }
+
+            return property;
+        }
+    }
 }

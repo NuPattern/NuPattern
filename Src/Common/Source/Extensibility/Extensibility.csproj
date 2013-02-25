@@ -153,6 +153,8 @@
     <Compile Include="Binding\BindingCompositionService.cs" />
     <Compile Include="Binding\BindingFactory.cs" />
     <Compile Include="Binding\BindingPropertyDescriptor.cs" />
+    <Compile Include="Design\DesignCollectionConverter.cs" />
+    <Compile Include="Binding\Design\DesignCollectionPropertyDescriptor.cs" />
     <Compile Include="Binding\PropertyBindingDescriptor.cs" />
     <Compile Include="BuildAction.cs" />
     <Compile Include="CopyToOutput.cs" />

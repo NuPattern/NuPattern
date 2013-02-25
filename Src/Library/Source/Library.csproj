@@ -153,8 +153,8 @@
     <Compile Include="Automation\Command\Validation\CommandValidationRuleAttribute.cs" />
     <Compile Include="Automation\Command\Validation\ICommandValidationRule.cs" />
     <Compile Include="Automation\Command\Validation\ICommandValidationRuleMetadata.cs" />
-    <Compile Include="Automation\Command\ValueProviderSettings.cs" />
-    <Compile Include="Automation\Command\PropertySettings.cs" />
+    <Compile Include="Automation\ValueProvider\ValueProviderSettings.cs" />
+    <Compile Include="Automation\PropertySettings.cs" />
     <Compile Include="Automation\Command\CommandAutomation.cs" />
     <Compile Include="Automation\Command\CommandSettings.DescriptionProvider.cs">
       <DependentUpon>CommandSettings.cs</DependentUpon>

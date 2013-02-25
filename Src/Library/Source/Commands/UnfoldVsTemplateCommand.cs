@@ -66,8 +66,8 @@ namespace NuPattern.Library.Commands
         [Required]
         [DesignOnly(true)]
         [Editor(typeof(VsTemplateUriEditor), typeof(UITypeEditor))]
-        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/TemplateUri.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/TemplateUri.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/TemplateUri.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/TemplateUri.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         public virtual Uri TemplateUri
         {
             get;
@@ -77,8 +77,8 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// Gets or sets the target path.
         /// </summary>
-        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/RawTargetPath.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/RawTargetPath.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/RawTargetPath.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/RawTargetPath.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         public virtual string TargetPath
         {
             get;
@@ -89,8 +89,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the name of the target.
         /// </summary>
         [DefaultValue("{InstanceName}")]
-        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         public virtual string TargetFileName
         {
             get;
@@ -102,8 +102,8 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [DefaultValue(DefaultSyncName)]
         [DesignOnly(true)]
-        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/SyncName.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/SyncName.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/SyncName.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/SyncName.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         public virtual bool SyncName
         {
             get;
@@ -115,8 +115,8 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [DefaultValue(DefaultSanitizeName)]
         [DesignOnly(true)]
-        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/SanitizeName.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/SanitizeName.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/SanitizeName.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/SanitizeName.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         public virtual bool SanitizeName
         {
             get;
@@ -126,8 +126,8 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// An optional value to atg the generated reference for the generated file.
         /// </summary>
-        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
-        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/Tag.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx")]
+        [Dsl.DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/Tag.DisplayName", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+        [Dsl.DescriptionResource("NuPattern.Library.Automation.TemplateSettings/Tag.Description", typeof(LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
         [DefaultValue(DefaultTag)]
         public string Tag { get; set; }
 
