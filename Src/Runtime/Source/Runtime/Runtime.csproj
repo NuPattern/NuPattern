@@ -129,7 +129,6 @@
     <Compile Include="Settings\SettingsManager.cs" />
     <Compile Include="Settings\TracingSettingsMonitor.cs" />
     <Compile Include="ShellEvents.cs" />
-    <Compile Include="StatusBar.cs" />
     <Compile Include="TemplateWizards\FixLinkPathTemplateWizard.cs" />
     <Compile Include="TemplateWizards\CustomToolRunnerTemplateWizard.cs" />
     <Compile Include="TemplateWizards\GuidGeneratorTemplateWizard.cs" />

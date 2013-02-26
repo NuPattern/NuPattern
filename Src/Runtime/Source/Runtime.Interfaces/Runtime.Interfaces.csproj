@@ -86,7 +86,6 @@
     <Compile Include="ToolkitInterfaceLayer\IToolkitInterfaceService.cs" />
     <Compile Include="IToolkitRepository.cs" />
     <Compile Include="IFluentInterface.cs" />
-    <Compile Include="IStatusBar.cs" />
     <Compile Include="Model\Schema\IPropertySchema.cs" />
     <Compile Include="Model\StoreEventBufferingScope.cs" />
     <Compile Include="Model\Store\AutomationExtension.cs" />

@@ -80,6 +80,7 @@
     <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +125,7 @@
     <Compile Include="Commands\CreateElementFromDroppedWindowsFileCommandSpec.cs" />
     <Compile Include="Commands\GenerateModelingCodeCommandValidationSpec.cs" />
     <Compile Include="Commands\InstantiateSolutionElementCommandSpec.cs" />
+    <Compile Include="Commands\ModifyXmlCommandSpec.cs" />
     <Compile Include="Commands\RunVsCommandCommandSpec.cs" />
     <Compile Include="Commands\SynchArtifactNameCommandSpec.cs" />
     <Compile Include="Commands\UnfoldScopeSpec.cs" />
@@ -138,6 +140,7 @@
     <Compile Include="Conditions\DropSolutionItemConditionSpec.cs" />
     <Compile Include="Conditions\ElementReferenceExistsConditionSpec.cs" />
     <Compile Include="Conditions\ElementPropertyExistsConditionSpec.cs" />
+    <Compile Include="Conditions\XmlNodeExistsConditionSpec.cs" />
     <Compile Include="Conditions\PropertyChangedEventArgsMatchesPropertyNameConditionSpec.cs" />
     <Compile Include="ModelElementDirectiveProcessorSpec.cs" />
     <Compile Include="Events\OnElementDeletedEventSpec.cs" />
@@ -154,6 +157,7 @@
     <Compile Include="ValueProviders\RandomGuidValueProvider.cs" />
     <Compile Include="ValueProviders\RegisteredMachineUserValueProviderSpec.cs" />
     <Compile Include="ValueProviders\ElementPropertyValueProviderSpec.cs" />
+    <Compile Include="ValueProviders\XmlNodeValueProviderSpec.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Source\Extensibility\Extensibility.csproj">

@@ -1466,6 +1466,15 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (Collection).
+        /// </summary>
+        internal static string DesignCollectionPropertyDescriptor_ToString {
+            get {
+                return ResourceManager.GetString("DesignCollectionPropertyDescriptor_ToString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A configured value for this property, defined at design-time..
         /// </summary>
         internal static string DesignValueProvider_ValueDescription {
@@ -3036,6 +3045,186 @@ namespace NuPattern.Library.Properties {
         internal static string ModelElementDirectiveProcessor_TypeAttributeRequired {
             get {
                 return ResourceManager.GetString("ModelElementDirectiveProcessor_TypeAttributeRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The action to perform against the XML element or attribute..
+        /// </summary>
+        internal static string ModifyXmlCommand_Action_Description {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_Action_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Action.
+        /// </summary>
+        internal static string ModifyXmlCommand_Action_DisplayName {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_Action_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modifies the element text or attribute value in a referenced XML configuration file..
+        /// </summary>
+        internal static string ModifyXmlCommand_Description {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modify XML configuration file.
+        /// </summary>
+        internal static string ModifyXmlCommand_DisplayName {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not load XML from file &apos;{0}&apos;. File may not be a valid XML file..
+        /// </summary>
+        internal static string ModifyXmlCommand_ErrorLoadXmlDoc {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_ErrorLoadXmlDoc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not resolve SourcePath &apos;{1}&apos; from element &apos;{0}&apos; to a file in the solution..
+        /// </summary>
+        internal static string ModifyXmlCommand_ErrorNoSource {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_ErrorNoSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not save changes to file &apos;{0}&apos;.
+        /// </summary>
+        internal static string ModifyXmlCommand_ErrorSaveXmlDoc {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_ErrorSaveXmlDoc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not locate element/attribute in solution item &apos;{0}&apos; with XML path &apos;{1}&apos;. This element/attribute must be created before this update can occur..
+        /// </summary>
+        internal static string ModifyXmlCommand_ErrorUpdateNodeNotFound {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_ErrorUpdateNodeNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not locate SourceElement in XML file &apos;{0}&apos; using XPath &apos;{1}&apos;.
+        /// </summary>
+        internal static string ModifyXmlCommand_ErrorXPath {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_ErrorXPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A list of XML namespace declarations to use in the &apos;XML Path&apos; query. You must include at least one prefix and namespace declaration if the XML document has a default namespace (i.e. xmlns=&quot;someURI&quot;). And then use this prefix in your &apos;XPath Query&apos; property..
+        /// </summary>
+        internal static string ModifyXmlCommand_Namespaces_Description {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_Namespaces_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML Namespaces.
+        /// </summary>
+        internal static string ModifyXmlCommand_Namespaces_DisplayName {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_Namespaces_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If &apos;Action&apos;=&apos;Update&apos; the new value of the element or attribute to update..
+        /// </summary>
+        internal static string ModifyXmlCommand_NewValue_Description {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_NewValue_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Value.
+        /// </summary>
+        internal static string ModifyXmlCommand_NewValue_DisplayName {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_NewValue_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The path to the XML file in the current solution. i.e. ..\~\GeneratedCode\MyConfig.xml, navigates up to the parent element, and traverses the first artifact link found on the parent element and into the &apos;GeneratedCode&apos; sub-folder of that container (project or folder), to the file.  See guidance documentation for more example paths and details..
+        /// </summary>
+        internal static string ModifyXmlCommand_SourcePath_Description {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_SourcePath_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Source Path.
+        /// </summary>
+        internal static string ModifyXmlCommand_SourcePath_DisplayName {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_SourcePath_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing modification of XML file with source path &apos;{0}&apos;, and element path &apos;{1}&apos; with for action &apos;{2}&apos;, with value &apos;{3}&apos;.
+        /// </summary>
+        internal static string ModifyXmlCommand_TraceInitial {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NewValue evaluates to &apos;{0}&apos;.
+        /// </summary>
+        internal static string ModifyXmlCommand_TraceNewValue {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_TraceNewValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XmlPath evaluates to XPath &apos;{0}&apos;.
+        /// </summary>
+        internal static string ModifyXmlCommand_TraceXPath {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_TraceXPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The XPath query to an element or attribute to modify. i.e. /bookstore/book/title for an element and /bookstore/book/@title for an attribute.  If your XML document has a namespace declaration, even a default one (i.e. xmlns=&quot;SomeURI&quot;), you must qualify your query with a prefix i.e. /bk:bookstore/bk:book/bk:title. You will also need to declare the prefix and namespace in the &apos;XML Namespaces&apos; property. i.e. bk = SomeURI..
+        /// </summary>
+        internal static string ModifyXmlCommand_XmlPath_Description {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_XmlPath_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XPath Query.
+        /// </summary>
+        internal static string ModifyXmlCommand_XmlPath_DisplayName {
+            get {
+                return ResourceManager.GetString("ModifyXmlCommand_XmlPath_DisplayName", resourceCulture);
             }
         }
         
@@ -5884,6 +6073,240 @@ namespace NuPattern.Library.Properties {
         internal static string WizardAutomation_WizardTypeMustBeWindow {
             get {
                 return ResourceManager.GetString("WizardAutomation_WizardTypeMustBeWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An XMLNamespace definition.
+        /// </summary>
+        internal static string XmlNamespace_Description {
+            get {
+                return ResourceManager.GetString("XmlNamespace_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML Namespace.
+        /// </summary>
+        internal static string XmlNamespace_DisplayName {
+            get {
+                return ResourceManager.GetString("XmlNamespace_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (empty).
+        /// </summary>
+        internal static string XmlNamespace_EmptyText {
+            get {
+                return ResourceManager.GetString("XmlNamespace_EmptyText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The full namespace for the &apos;Prefix&apos;..
+        /// </summary>
+        internal static string XmlNamespace_Namespace_Description {
+            get {
+                return ResourceManager.GetString("XmlNamespace_Namespace_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Namespace.
+        /// </summary>
+        internal static string XmlNamespace_Namespace_DisplayName {
+            get {
+                return ResourceManager.GetString("XmlNamespace_Namespace_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The prefix used to reference elements in the &apos;Namespace&apos;..
+        /// </summary>
+        internal static string XmlNamespace_Prefix_Description {
+            get {
+                return ResourceManager.GetString("XmlNamespace_Prefix_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prefix.
+        /// </summary>
+        internal static string XmlNamespace_Prefix_DisplayName {
+            get {
+                return ResourceManager.GetString("XmlNamespace_Prefix_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Used to verify that an element or attribute of a referenced XML configuration file exists..
+        /// </summary>
+        internal static string XmlNodeExistsCondition_Description {
+            get {
+                return ResourceManager.GetString("XmlNodeExistsCondition_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML Configuration File Node Exists.
+        /// </summary>
+        internal static string XmlNodeExistsCondition_DisplayName {
+            get {
+                return ResourceManager.GetString("XmlNodeExistsCondition_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not save changes to file &apos;{0}&apos;.
+        /// </summary>
+        internal static string XmlNodeExistsCondition_ErrorCloseXmlDoc {
+            get {
+                return ResourceManager.GetString("XmlNodeExistsCondition_ErrorCloseXmlDoc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not load XML from file &apos;{0}&apos;. File may not be a valid XML file..
+        /// </summary>
+        internal static string XmlNodeExistsCondition_ErrorLoadXmlDoc {
+            get {
+                return ResourceManager.GetString("XmlNodeExistsCondition_ErrorLoadXmlDoc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not resolve SourcePath &apos;{1}&apos; from element &apos;{0}&apos; to a file in the solution..
+        /// </summary>
+        internal static string XmlNodeExistsCondition_ErrorNoSource {
+            get {
+                return ResourceManager.GetString("XmlNodeExistsCondition_ErrorNoSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not locate SourceElement in XML file &apos;{0}&apos; using XPath &apos;{1}&apos;.
+        /// </summary>
+        internal static string XmlNodeExistsCondition_ErrorXPath {
+            get {
+                return ResourceManager.GetString("XmlNodeExistsCondition_ErrorXPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated existance of element within XML file with source path &apos;{0}&apos;, and element path &apos;{1}&apos;, as &apos;{2}&apos;.
+        /// </summary>
+        internal static string XmlNodeExistsCondition_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("XmlNodeExistsCondition_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating existance of element within XML file with source path &apos;{0}&apos;, and element path &apos;{1}&apos;.
+        /// </summary>
+        internal static string XmlNodeExistsCondition_TraceInitial {
+            get {
+                return ResourceManager.GetString("XmlNodeExistsCondition_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XmlPath evaluates to XPath &apos;{0}&apos;.
+        /// </summary>
+        internal static string XmlNodeExistsCondition_TraceXPath {
+            get {
+                return ResourceManager.GetString("XmlNodeExistsCondition_TraceXPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retrieves the text of an element or the value of an attribute in a referenced XML configuration file..
+        /// </summary>
+        internal static string XmlNodeValueProvider_Description {
+            get {
+                return ResourceManager.GetString("XmlNodeValueProvider_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML Configuration File Node.
+        /// </summary>
+        internal static string XmlNodeValueProvider_DisplayName {
+            get {
+                return ResourceManager.GetString("XmlNodeValueProvider_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not save changes to file &apos;{0}&apos;.
+        /// </summary>
+        internal static string XmlNodeValueProvider_ErrorCloseXmlDoc {
+            get {
+                return ResourceManager.GetString("XmlNodeValueProvider_ErrorCloseXmlDoc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not load XML from file &apos;{0}&apos;. File may not be a valid XML file..
+        /// </summary>
+        internal static string XmlNodeValueProvider_ErrorLoadXmlDoc {
+            get {
+                return ResourceManager.GetString("XmlNodeValueProvider_ErrorLoadXmlDoc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not resolve SourcePath &apos;{1}&apos; from element &apos;{0}&apos; to a file in the solution..
+        /// </summary>
+        internal static string XmlNodeValueProvider_ErrorNoSource {
+            get {
+                return ResourceManager.GetString("XmlNodeValueProvider_ErrorNoSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not locate element/attribute in solution item &apos;{0}&apos; with XML path &apos;{1}&apos;. This element/attribute must be created before this update can occur..
+        /// </summary>
+        internal static string XmlNodeValueProvider_ErrorSearchNodeNotFound {
+            get {
+                return ResourceManager.GetString("XmlNodeValueProvider_ErrorSearchNodeNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not locate SourceElement in XML file &apos;{0}&apos; using XPath &apos;{1}&apos;.
+        /// </summary>
+        internal static string XmlNodeValueProvider_ErrorXPath {
+            get {
+                return ResourceManager.GetString("XmlNodeValueProvider_ErrorXPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated value within XML file with source path &apos;{0}&apos;, and element path &apos;{1}&apos;, as &apos;{2}&apos;.
+        /// </summary>
+        internal static string XmlNodeValueProvider_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("XmlNodeValueProvider_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating value within XML file with source path &apos;{0}&apos;, and element path &apos;{1}&apos;.
+        /// </summary>
+        internal static string XmlNodeValueProvider_TraceInitial {
+            get {
+                return ResourceManager.GetString("XmlNodeValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XmlPath evaluates to XPath &apos;{0}&apos;.
+        /// </summary>
+        internal static string XmlNodeValueProvider_TraceXPath {
+            get {
+                return ResourceManager.GetString("XmlNodeValueProvider_TraceXPath", resourceCulture);
             }
         }
     }

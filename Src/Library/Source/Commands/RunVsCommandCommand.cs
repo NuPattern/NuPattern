@@ -21,7 +21,7 @@ namespace NuPattern.Library.Commands
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<RunVsCommandCommand>();
 
         /// <summary>
-        /// Gets or sets teh solution.
+        /// Gets or sets the solution.
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]

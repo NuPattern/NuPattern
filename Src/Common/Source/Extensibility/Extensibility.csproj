@@ -159,6 +159,7 @@
     <Compile Include="ComponentMetadataExtensions.cs" />
     <Compile Include="CoordinatorTemplateWizard.cs" />
     <Compile Include="Design\PropertyDescriptorTypeDescriptor.cs" />
+    <Compile Include="ErrorCategory.cs" />
     <Compile Include="Extensions\CollapseOptions.cs" />
     <Compile Include="Extensions\DirectoryInfoExtensions.cs" />
     <Compile Include="Extensions\DteExtensions.cs" />
@@ -167,9 +168,13 @@
     <Compile Include="Extensions\ValidatorExtensions.cs" />
     <Compile Include="IPropertyEvaluator.cs" />
     <Compile Include="IRegistryReader.cs" />
+    <Compile Include="IStatusBar.cs" />
+    <Compile Include="IXmlProcessorNode.cs" />
+    <Compile Include="IXmlProcessor.cs" />
     <Compile Include="ObjectValidator.cs" />
     <Compile Include="PropertyEvaluator.cs" />
     <Compile Include="RegistryReader.cs" />
+    <Compile Include="StatusBar.cs" />
     <Compile Include="TempFileCleaner.cs" />
     <Compile Include="UniqueNameGenerator.cs" />
     <Compile Include="ViewCodeGeneration.cs" />
@@ -309,6 +314,8 @@
     <Compile Include="ValidationRule.cs" />
     <Compile Include="ValidationRuleAttribute.cs" />
     <Compile Include="Vsix.cs" />
+    <Compile Include="XmlProcessor.cs" />
+    <Compile Include="XmlProcessorNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">

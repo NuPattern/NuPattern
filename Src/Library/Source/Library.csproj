@@ -113,6 +113,7 @@
     <Compile Include="Automation\Artifact\ArtifactExtension.cs" />
     <Compile Include="Automation\Artifact\ArtifactReferencesValidation.cs" />
     <Compile Include="Automation\Artifact\AssociatedArtifactsTypeConverter.cs" />
+    <Compile Include="Automation\Command\Design\DesignCollectionPropertyDescriptor.cs" />
     <Compile Include="Automation\LibraryDomainModel.cs" />
     <Compile Include="Automation\CommandChangeRuleAttribute.cs" />
     <Compile Include="Automation\Command\CommandSettings.Extensions.cs">
@@ -231,8 +232,12 @@
       <DependentUpon>GenerateProductCodeCommand.cs</DependentUpon>
     </Compile>
     <Compile Include="Commands\Helpers\WindowsFileImporter.cs" />
+    <Compile Include="Commands\Helpers\XmlNamespace.cs" />
     <Compile Include="Commands\InstantiateSolutionElementCommand.cs" />
+    <Compile Include="Commands\Helpers\ModifyAction.cs" />
+    <Compile Include="Commands\ModifyXmlCommand.cs" />
     <Compile Include="Commands\SetBuildActionCommand.cs" />
+    <Compile Include="Conditions\XmlNodeExistsCondition.cs" />
     <Compile Include="ValueComparers\PreserveOrderComparer.cs" />
     <Compile Include="ValueComparers\InstanceNameComparer.cs" />
     <Compile Include="Conditions\DropFileCondition.cs" />
@@ -249,6 +254,7 @@
     <Compile Include="Automation\DragDrop\DragDropSettings.Validation.cs">
       <DependentUpon>DragDropSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValueProviders\XmlNodeValueProvider.cs" />
     <None Include="Commands\Helpers\UnfoldContext.cs" />
     <Compile Include="Commands\Helpers\UnfoldScope.cs" />
     <Compile Include="Automation\Validation\ValidationExecutionTypeConverter.cs" />

@@ -1015,5 +1015,41 @@ namespace NuPattern.Extensibility.Properties {
                 return ResourceManager.GetString("Vsix_ManifestMissing", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML document load failed for file &apos;{0}&apos;..
+        /// </summary>
+        internal static string XmlProcessor_ErrorLoadFailed {
+            get {
+                return ResourceManager.GetString("XmlProcessor_ErrorLoadFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML document must be loaded before you can call this method..
+        /// </summary>
+        internal static string XmlProcessor_ErrorLoadNotCalledFirst {
+            get {
+                return ResourceManager.GetString("XmlProcessor_ErrorLoadNotCalledFirst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to save modified XML document &apos;{0}&apos;..
+        /// </summary>
+        internal static string XmlProcessor_ErrorSaveFailed {
+            get {
+                return ResourceManager.GetString("XmlProcessor_ErrorSaveFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to find nodes in the XMLdocument using XPath search &apos;{0}&apos;.
+        /// </summary>
+        internal static string XmlProcessor_ErrorXPathSearchFailed {
+            get {
+                return ResourceManager.GetString("XmlProcessor_ErrorXPathSearchFailed", resourceCulture);
+            }
+        }
     }
 }

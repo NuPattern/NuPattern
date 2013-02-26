@@ -437,4 +437,16 @@ Please add a new or existing image file {0} to the project and try again.</value
   <data name="ImageUriEditor_FailedToEdit" xml:space="preserve">
     <value>Failed to edit file.</value>
   </data>
+  <data name="XmlProcessor_ErrorLoadNotCalledFirst" xml:space="preserve">
+    <value>XML document must be loaded before you can call this method.</value>
+  </data>
+  <data name="XmlProcessor_ErrorLoadFailed" xml:space="preserve">
+    <value>XML document load failed for file '{0}'.</value>
+  </data>
+  <data name="XmlProcessor_ErrorXPathSearchFailed" xml:space="preserve">
+    <value>Failed to find nodes in the XMLdocument using XPath search '{0}'</value>
+  </data>
+  <data name="XmlProcessor_ErrorSaveFailed" xml:space="preserve">
+    <value>Failed to save modified XML document '{0}'.</value>
+  </data>
 </root>
