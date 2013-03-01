@@ -38,7 +38,7 @@ namespace NuPattern.Extensibility.Binding
             //TODO: Display instructional text to user when unconfigured.
             //i.e. !propertySettings.IsConfigured => "(Expand to modify)"
 
-            var propertySettings = EnsurePropertySettings(component, this.Name);
+            var propertySettings = EnsurePropertySettings(component, this.Name, this.propertyType);
             return new DesignProperty(propertySettings)
             {
                 Type = this.propertyType,
@@ -71,7 +71,7 @@ namespace NuPattern.Extensibility.Binding
             //TODO: get access to nested design property and reset it
         }
 
-        internal static IPropertyBindingSettings EnsurePropertySettings(object component, string propertyName)
+        internal static IPropertyBindingSettings EnsurePropertySettings(object component, string propertyName, Type propertyType)
         {
             // This check for the type of component is here because 
             // we use the same descriptor for both properties on the 
@@ -83,8 +83,7 @@ namespace NuPattern.Extensibility.Binding
                 propertySettings = settings.Properties.FirstOrDefault(prop => prop.Name == propertyName);
                 if (propertySettings == null)
                 {
-                    propertySettings = new PropertyBindingSettings { Name = propertyName };
-                    settings.Properties.Add(propertySettings);
+                    propertySettings = settings.AddProperty(propertyName, propertyType);
                 }
             }
             else
@@ -95,8 +94,7 @@ namespace NuPattern.Extensibility.Binding
                     propertySettings = design.ValueProvider.Properties.FirstOrDefault(prop => prop.Name == propertyName);
                     if (propertySettings == null)
                     {
-                        propertySettings = new PropertyBindingSettings { Name = propertyName };
-                        design.ValueProvider.Properties.Add(propertySettings);
+                        propertySettings = design.ValueProvider.AddProperty(propertyName, propertyType);
                     }
                 }
             }

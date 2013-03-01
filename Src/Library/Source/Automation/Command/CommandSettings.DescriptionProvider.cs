@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
 
 namespace NuPattern.Library.Automation
 {
@@ -99,23 +100,20 @@ namespace NuPattern.Library.Automation
                         // Determine if a collection property
                         if (descriptor.IsPropertyTypeGeneric(typeof(Collection<>)))
                         {
-                            properties.Add(new NuPattern.Library.Automation.DesignCollectionPropertyDescriptor<CommandSettings>(descriptor));
+                            properties.Add(new DesignCollectionPropertyDescriptor<CommandSettings>(descriptor));
                         }
                         else
                         {
                             // Determine if a [DesignOnly(true)] property
                             if (descriptor.IsDesignOnlyProperty())
                             {
-                                properties.Add(new NuPattern.Library.Automation.DesignOnlyPropertyDescriptor(descriptor));
+                                properties.Add(new DesignOnlyPropertyDescriptor(descriptor));
                             }
                             else
                             {
                                 // Browsable attribute will already be honored.
-                                properties.Add(new NuPattern.Library.Automation.DesignPropertyDescriptor(
+                                properties.Add(new DesignPropertyDescriptor(
                                     descriptor.Name,
-                                    descriptor.DisplayName,
-                                    descriptor.Description,
-                                    descriptor.Category,
                                     descriptor.PropertyType,
                                     this.ModelElement.GetType(),
                                     descriptor.Attributes.Cast<Attribute>().ToArray()));

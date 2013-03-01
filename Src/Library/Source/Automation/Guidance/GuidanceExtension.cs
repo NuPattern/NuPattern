@@ -50,22 +50,15 @@ namespace NuPattern.Library.Automation
             if (activateMenu != null)
             {
                 // Set the conditions
+                var conditionBindings = new Bindings.ConditionBindingSettings { TypeId = typeof(ElementReferenceExistsCondition).FullName };
+                var property = conditionBindings.AddProperty(Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind), typeof(string));
+                property.Value = ReferenceKindConstants.Guidance;
+
                 activateMenu.Conditions = Bindings.BindingSerializer.Serialize(
                     new List<Bindings.ConditionBindingSettings>
-					{
-						new Bindings.ConditionBindingSettings
-						{
-							TypeId = typeof(ElementReferenceExistsCondition).FullName,
-							Properties =
-							{
-								new Bindings.PropertyBindingSettings
-								{
-									Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
-									Value = ReferenceKindConstants.Guidance
-								},
-							}
-						}
-					});
+                    {
+                        conditionBindings,
+                    });
             }
         }
     }

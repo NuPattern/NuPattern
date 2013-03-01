@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Drawing.Design;
 using System.Globalization;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using NuPattern.Extensibility.Properties;
 using NuPattern.Runtime;
@@ -13,17 +14,25 @@ namespace NuPattern.Extensibility.Binding
     /// </summary>
     [TypeDescriptionProvider(typeof(DesignPropertyTypeDescriptionProvider))]
     [TypeConverter(typeof(ExpandableObjectConverter))]
-    internal class DesignProperty : INotifyPropertyChanged
+    public class DesignProperty : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Handles the property changed event
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = (sender, args) => { };
 
-        private Lazy<TypeConverter> valueConverter;
         private Type type;
 
+        /// <summary>
+        /// Creates a new instance of the <see cref="DesignProperty"/> class.
+        /// </summary>
+        /// <param name="propertySettings"></param>
         public DesignProperty(IPropertyBindingSettings propertySettings)
         {
+            Guard.NotNull(() => propertySettings, propertySettings);
+
             this.Settings = propertySettings;
-            this.valueConverter = new Lazy<TypeConverter>(() =>
+            this.ValueConverter = new Lazy<TypeConverter>(() =>
             {
                 var converter = this.Attributes.FindCustomTypeConverter();
                 if (converter == null ||
@@ -39,11 +48,14 @@ namespace NuPattern.Extensibility.Binding
             });
         }
 
+        /// <summary>
+        /// Gets or sets the design value provider.
+        /// </summary>
         [DescriptionResource("DesignProperty_ValueProviderDescription", typeof(Resources))]
         [DisplayNameResource("DesignProperty_ValueProviderDisplayName", typeof(Resources))]
         [Editor(typeof(StandardValuesEditor), typeof(UITypeEditor))]
         [TypeConverter(typeof(DesignValueProviderTypeConverter))]
-        public DesignValueProvider ValueProvider
+        public virtual DesignValueProvider ValueProvider
         {
             get
             {
@@ -56,28 +68,63 @@ namespace NuPattern.Extensibility.Binding
             }
         }
 
+        /// <summary>
+        /// Gets or sets the attributes for the property
+        /// </summary>
         internal Attribute[] Attributes { get; set; }
 
-        internal IPropertyBindingSettings Settings { get; private set; }
+        /// <summary>
+        /// Gets or sets the property settings
+        /// </summary>
+        [Browsable(false)]
+        public IPropertyBindingSettings Settings { get; private set; }
 
+        /// <summary>
+        /// Gets or sets the value converter.
+        /// </summary>
+        protected Lazy<TypeConverter> ValueConverter { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of the property
+        /// </summary>
+        [Browsable(false)]
         internal Type Type
         {
             get { return this.type; }
             set { this.type = Type.GetType(value.AssemblyQualifiedName) ?? TypeDescriptor.GetProvider(value).GetRuntimeType(value); }
         }
 
-        public object GetValue()
+        /// <summary>
+        /// Gets the value of the property.
+        /// </summary>
+        public virtual object GetValue()
         {
-            return this.Settings.HasValue()
-                ? this.valueConverter.Value.ConvertFromString(this.Settings.Value)
-                : null;
+            var context = new SimpleTypeDescriptorContext { Instance = this.Settings, ServiceProvider = GetServiceProvider() };
+            if (this.Settings.HasValue())
+            {
+                return this.ValueConverter.Value.CanConvertFrom(context, typeof(string))
+                           ? this.ValueConverter.Value.ConvertFromString(context, this.Settings.Value)
+                           : string.Empty;
+            }
+            else
+            {
+                return string.Empty;
+            }
         }
 
-        public void SetValue(object value)
+        /// <summary>
+        /// Sets the value of this property.
+        /// </summary>
+        public virtual void SetValue(object value)
         {
-            this.Settings.Value = this.valueConverter.Value.ConvertToString(value);
+            var context = new SimpleTypeDescriptorContext { Instance = this.Settings, ServiceProvider = GetServiceProvider() };
+            this.Settings.Value = this.ValueConverter.Value.CanConvertTo(context, typeof(string)) ? this.ValueConverter.Value.ConvertToString(context, value) : string.Empty;
         }
 
+        /// <summary>
+        /// Returns the string representation of the property value.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             if (this.Settings.HasValue())
@@ -92,6 +139,11 @@ namespace NuPattern.Extensibility.Binding
             }
 
             return string.Empty;
+        }
+
+        private IServiceProvider GetServiceProvider()
+        {
+            return ServiceProvider.GlobalProvider;
         }
     }
 }

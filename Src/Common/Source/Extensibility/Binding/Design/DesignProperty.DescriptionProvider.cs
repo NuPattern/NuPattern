@@ -14,6 +14,14 @@ namespace NuPattern.Extensibility.Binding
         private static readonly TypeDescriptionProvider parent = TypeDescriptor.GetProvider(typeof(DesignProperty));
 
         /// <summary>
+        /// Creates a new instance of the <see cref="DesignPropertyTypeDescriptionProvider"/> class.
+        /// </summary>
+        public DesignPropertyTypeDescriptionProvider()
+            : base(parent)
+        {
+        }
+
+        /// <summary>
         /// Gets a custom type descriptor for the given type and object.
         /// </summary>
         /// <param name="objectType">The type of object for which to retrieve the type descriptor.</param>
@@ -64,11 +72,9 @@ namespace NuPattern.Extensibility.Binding
 
                 try
                 {
-                    // TODO: Evaluate Property type converters (not only the type converters of the property type)
                     if (this.designProperty.Type != null)
                     {
-                        var converter = TypeDescriptor.GetConverter(this.designProperty.Type);
-
+                        var converter = GetTypeConverter(this.designProperty);
                         if (converter != null && converter.CanConvertFrom(typeof(string)))
                         {
                             // Add new Descriptor for nested Value property
@@ -78,9 +84,9 @@ namespace NuPattern.Extensibility.Binding
                                 converter,
                                 this.designProperty.Attributes
                                 .Concat(new Attribute[] 
-								{ 
-									new DefaultValueAttribute(this.designProperty.Type.GetDefaultValueString()) 
-								})
+                                { 
+                                    new DefaultValueAttribute(this.designProperty.Type.GetDefaultValueString()) 
+                                })
                                 .ToArray()));
                         }
                     }
@@ -92,6 +98,30 @@ namespace NuPattern.Extensibility.Binding
                 }
 
                 return new PropertyDescriptorCollection(properties.ToArray());
+            }
+
+            private static TypeConverter GetTypeConverter(DesignProperty designProperty)
+            {
+                TypeConverter converter = null;
+
+                // Get user-defined TypeConverter of property first 
+                var typeConverterAttribute = designProperty.Attributes.OfType<TypeConverterAttribute>().FirstOrDefault();
+                if (typeConverterAttribute != null)
+                {
+                    var converterType = Type.GetType(typeConverterAttribute.ConverterTypeName);
+                    if (converterType != null)
+                    {
+                        converter = (TypeConverter)Activator.CreateInstance(converterType);
+                    }
+                }
+
+                // Get the default converter for the type
+                if (converter == null)
+                {
+                    converter = TypeDescriptor.GetConverter(designProperty.Type);
+                }
+
+                return converter;
             }
         }
     }

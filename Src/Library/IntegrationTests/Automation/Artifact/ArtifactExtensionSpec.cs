@@ -138,8 +138,8 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
                     Assert.Equal(commandSettings.TypeId, typeof(ActivateArtifactCommand).FullName);
 
                     var openProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<ActivateArtifactCommand>.GetPropertyName(c => c.Open)]
-                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
-                    Assert.Equal(true, openProperty.Value);
+                        .GetValue(commandSettings) as DesignProperty;
+                    Assert.Equal(true, openProperty.GetValue());
                 }
 
                 return command;
@@ -186,8 +186,8 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
                     Assert.Equal(commandSettings.TypeId, typeof(ActivateArtifactCommand).FullName);
 
                     var openProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<ActivateArtifactCommand>.GetPropertyName(c => c.Open)]
-                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
-                    Assert.Equal(false, openProperty.Value);
+                        .GetValue(commandSettings) as DesignProperty;
+                    Assert.Equal(false, openProperty.GetValue());
                 }
 
                 return command;
@@ -215,12 +215,12 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
 
                     var conditions = BindingSerializer.Serialize(
                         new[]
-						{
-							new ConditionBindingSettings
-							{
-								TypeId = typeof(ArtifactReferenceExistsCondition).FullName,
-							}
-						});
+                        {
+                            new ConditionBindingSettings
+                            {
+                                TypeId = typeof(ArtifactReferenceExistsCondition).FullName,
+                            }
+                        });
 
                     Assert.Equal(menuSettings.Conditions, conditions);
                 }

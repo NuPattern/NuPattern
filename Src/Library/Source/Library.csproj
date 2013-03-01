@@ -113,41 +113,13 @@
     <Compile Include="Automation\Artifact\ArtifactExtension.cs" />
     <Compile Include="Automation\Artifact\ArtifactReferencesValidation.cs" />
     <Compile Include="Automation\Artifact\AssociatedArtifactsTypeConverter.cs" />
-    <Compile Include="Automation\Command\Design\DesignCollectionPropertyDescriptor.cs" />
     <Compile Include="Automation\LibraryDomainModel.cs" />
-    <Compile Include="Automation\CommandChangeRuleAttribute.cs" />
+    <Compile Include="Automation\Rules\CommandChange\CommandChangeRuleAttribute.cs" />
     <Compile Include="Automation\Command\CommandSettings.Extensions.cs">
       <DependentUpon>CommandSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Automation\Command\CommandSettings.DescriptionContext.cs">
       <DependentUpon>CommandSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignOnlyPropertyDescriptor.cs" />
-    <Compile Include="Automation\Command\Design\DesignProperty.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignProperty.Descriptor.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>DesignProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignProperty.DescriptionProvider.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>DesignProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignProperty.ValueDescriptor.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>DesignProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignValueProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignValueProvider.Converter.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>DesignValueProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignValueProvider.DescriptionProvider.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>DesignValueProvider.cs</DependentUpon>
     </Compile>
     <Compile Include="Automation\Command\ICommandSettings.cs" />
     <Compile Include="Automation\Command\Validation\CommandValidationRuleAttribute.cs" />
@@ -172,16 +144,16 @@
     </Compile>
     <Compile Include="Automation\Guidance\GuidanceReferenceValidation.cs" />
     <Compile Include="Automation\Guidance\GuidanceInstanceNameTypeConverter.cs" />
-    <Compile Include="Automation\ICommandChangeRule.cs" />
-    <Compile Include="Automation\ICommandChangeRuleMetadata.cs" />
-    <Compile Include="Automation\PatternElementSchemaExtensions.cs" />
+    <Compile Include="Automation\Rules\CommandChange\ICommandChangeRule.cs" />
+    <Compile Include="Automation\Rules\CommandChange\ICommandChangeRuleMetadata.cs" />
+    <Compile Include="Extensions\PatternElementSchemaExtensions.cs" />
     <Compile Include="Automation\Menu\IMenuSettings.cs" />
     <Compile Include="Automation\Guidance\AssociatedGuidanceTypeConverter.cs" />
     <Compile Include="Automation\Guidance\GuidanceExtension.cs" />
     <Compile Include="Automation\Menu\MenuSettings.Validation.cs">
       <DependentUpon>MenuSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Automation\PropertySettingsChangeRule.cs" />
+    <Compile Include="Automation\Rules\PropertySettingsChangeRule.cs" />
     <Compile Include="Automation\Rules\ArtifactExtensionChangeRule.cs" />
     <Compile Include="Automation\Rules\AggregatorCommandCommandSettingsDeletingRule.cs" />
     <Compile Include="Automation\SyncName\SyncNameExtension.cs" />

@@ -16,6 +16,20 @@ namespace NuPattern.Extensibility.Binding
     {
         private static TypeDescriptionProvider parent = TypeDescriptor.GetProvider(typeof(DesignValueProvider));
 
+        ///// <summary>
+        ///// Creates a new instance of the <see cref="DesignValueProviderTypeDescriptionProvider"/> class.
+        ///// </summary>
+        //public DesignValueProviderTypeDescriptionProvider()
+        //    : base(parent)
+        //{
+        //}
+
+        /// <summary>
+        /// Returns the type descriptor for the object type.
+        /// </summary>
+        /// <param name="objectType"></param>
+        /// <param name="instance"></param>
+        /// <returns></returns>
         public override ICustomTypeDescriptor GetTypeDescriptor(Type objectType, object instance)
         {
             return new DesignValueProviderTypeDescriptor(parent.GetTypeDescriptor(objectType, instance), instance as DesignValueProvider);
@@ -26,6 +40,11 @@ namespace NuPattern.Extensibility.Binding
             private DesignValueProvider designValueProvider;
             private ICustomTypeDescriptor parent;
 
+            /// <summary>
+            /// Creates a new instance of the <see cref="DesignValueProviderTypeDescriptor"/> class.
+            /// </summary>
+            /// <param name="parent">The parent.</param>
+            /// <param name="valueProvider">The value provider.</param>
             public DesignValueProviderTypeDescriptor(ICustomTypeDescriptor parent, DesignValueProvider valueProvider)
                 : base(parent)
             {
@@ -44,7 +63,9 @@ namespace NuPattern.Extensibility.Binding
             public override PropertyDescriptorCollection GetProperties(Attribute[] attributes)
             {
                 var properties = parent.GetProperties(attributes).Cast<PropertyDescriptor>().ToList();
-                properties.AddRange(base.GetProperties(attributes).Cast<PropertyDescriptor>());
+                properties.AddRange(attributes != null
+                                        ? base.GetProperties(attributes).Cast<PropertyDescriptor>()
+                                        : base.GetProperties().Cast<PropertyDescriptor>());
 
                 if (this.ProjectTypeProvider == null)
                 {

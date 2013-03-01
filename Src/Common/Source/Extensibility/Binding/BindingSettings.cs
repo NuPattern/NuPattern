@@ -56,7 +56,7 @@ namespace NuPattern.Extensibility.Binding
             {
                 if (this.IsConfigured() && !this.typeId.Equals(value, StringComparison.OrdinalIgnoreCase))
                 {
-                    this.Properties.Clear();
+                    this.properties.Clear();
                 }
 
                 this.typeId = value;
@@ -68,9 +68,27 @@ namespace NuPattern.Extensibility.Binding
         /// Gets the optional property bindings.
         /// </summary>
         [DataMember]
-        public IList<IPropertyBindingSettings> Properties
+        public IEnumerable<IPropertyBindingSettings> Properties
         {
             get { return this.properties; }
+        }
+
+        /// <summary>
+        /// Adds a new property binding to the collection
+        /// </summary>
+        public IPropertyBindingSettings AddProperty(string name, Type propertyType)
+        {
+            var propertySettings = new PropertyBindingSettings { Name = name };
+            this.properties.Add(propertySettings);
+            return propertySettings;
+        }
+
+        /// <summary>
+        /// Removes all properties in the property binding collection.
+        /// </summary>
+        void IBindingSettings.ClearProperties()
+        {
+            this.properties.Clear();
         }
 
         /// <summary>

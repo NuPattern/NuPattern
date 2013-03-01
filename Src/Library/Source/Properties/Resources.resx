@@ -765,7 +765,7 @@ Please add or import a new 'Item/Project Template', or create a new folder withi
     <value>Child Element Name</value>
   </data>
   <data name="Validate_InvalidPropertyBinding" xml:space="preserve">
-    <value>Property '{0}' does no longer exist in target type '{1}' so it has been removed.</value>
+    <value>Property '{0}' no longer exist in target type '{1}' so it has been removed.</value>
   </data>
   <data name="Validate_InvalidPropertyBindingCode" xml:space="preserve">
     <value>317</value>

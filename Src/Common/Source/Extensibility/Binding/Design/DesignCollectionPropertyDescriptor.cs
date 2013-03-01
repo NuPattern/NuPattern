@@ -169,7 +169,7 @@ namespace NuPattern.Extensibility.Binding
         protected virtual IPropertyBindingSettings GetPropertySettings(object component)
         {
             var settings = component as T;
-            return (settings != null) ? DesignPropertyDescriptor.EnsurePropertySettings(component, this.Name) : null;
+            return (settings != null) ? DesignPropertyDescriptor.EnsurePropertySettings(component, this.Name, this.PropertyType) : null;
         }
 
         private static bool IsDisplayText(string value)

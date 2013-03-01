@@ -66,7 +66,7 @@ namespace NuPattern.Extensibility
             Guard.NotNull(() => settings, settings);
 
             settings.TypeId = BindingSettings.Empty;
-            settings.Properties.Clear();
+            settings.ClearProperties();
         }
     }
 }

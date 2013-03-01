@@ -65,22 +65,13 @@ namespace NuPattern.Runtime.Schema.UnitTests
                 var settings = new ValidationBindingSettings
                 {
                     TypeId = "Foo",
-                    Properties = 
-					{
-						new PropertyBindingSettings
-						{
-							Name = "Message", 
-							Value = "Hello",
-						},
-						new PropertyBindingSettings
-						{
-							Name = "From", 
-							ValueProvider = new ValueProviderBindingSettings
-							{
-								TypeId = "CurrentUserProvider", 
-							}
-						},
-					},
+                };
+                var propBinding = settings.AddProperty("Message", typeof(string));
+                propBinding.Value = "Hello";
+                propBinding = settings.AddProperty("From", typeof(string));
+                propBinding.ValueProvider = new ValueProviderBindingSettings
+                {
+                    TypeId = "CurrentUserProvider",
                 };
 
                 this.property.ValidationSettings = new IBindingSettings[] { settings };
@@ -88,12 +79,12 @@ namespace NuPattern.Runtime.Schema.UnitTests
                 var saved = BindingSerializer.Deserialize<ValidationBindingSettings[]>(((PropertySchema)this.property).RawValidationRules);
 
                 Assert.Equal(1, saved.Length);
-                Assert.Equal("Foo", saved[0].TypeId);
-                Assert.Equal(2, saved[0].Properties.Count);
-                Assert.Equal("Message", saved[0].Properties[0].Name);
-                Assert.Equal("Hello", saved[0].Properties[0].Value);
-                Assert.Equal("From", saved[0].Properties[1].Name);
-                Assert.Equal("CurrentUserProvider", saved[0].Properties[1].ValueProvider.TypeId);
+                Assert.Equal("Foo", saved.First().TypeId);
+                Assert.Equal(2, saved.First().Properties.Count());
+                Assert.Equal("Message", saved.First().Properties.First().Name);
+                Assert.Equal("Hello", saved.First().Properties.First().Value);
+                Assert.Equal("From", saved.First().Properties.ElementAt(1).Name);
+                Assert.Equal("CurrentUserProvider", saved.First().Properties.ElementAt(1).ValueProvider.TypeId);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -102,34 +93,25 @@ namespace NuPattern.Runtime.Schema.UnitTests
                 var settings = new ValidationBindingSettings
                 {
                     TypeId = "Foo",
-                    Properties = 
-					{
-						new PropertyBindingSettings
-						{
-							Name = "Message", 
-							Value = "Hello",
-						},
-						new PropertyBindingSettings
-						{
-							Name = "From", 
-							ValueProvider = new ValueProviderBindingSettings
-							{
-								TypeId = "CurrentUserProvider", 
-							}
-						},
-					},
+                };
+                var propBinding = settings.AddProperty("Message", typeof(string));
+                propBinding.Value = "Hello";
+                propBinding = settings.AddProperty("From", typeof(string));
+                propBinding.ValueProvider = new ValueProviderBindingSettings
+                {
+                    TypeId = "CurrentUserProvider",
                 };
 
                 ((PropertySchema)this.property).RawValidationRules = BindingSerializer.Serialize<ValidationBindingSettings[]>(new ValidationBindingSettings[] { settings });
 
-                ((BindingSettings)this.property.ValidationSettings.First()).Properties[0].Value = "World";
-                ((BindingSettings)this.property.ValidationSettings.First()).Properties[1].ValueProvider.TypeId = "AnotherProvider";
+                ((BindingSettings)this.property.ValidationSettings.First()).Properties.First().Value = "World";
+                ((BindingSettings)this.property.ValidationSettings.First()).Properties.ElementAt(1).ValueProvider.TypeId = "AnotherProvider";
 
                 var saved = BindingSerializer.Deserialize<ValidationBindingSettings[]>(((PropertySchema)this.property).RawValidationRules);
 
                 Assert.Equal(1, saved.Length);
-                Assert.Equal("World", saved[0].Properties[0].Value);
-                Assert.Equal("AnotherProvider", saved[0].Properties[1].ValueProvider.TypeId);
+                Assert.Equal("World", saved.First().Properties.First().Value);
+                Assert.Equal("AnotherProvider", saved.First().Properties.ElementAt(1).ValueProvider.TypeId);
             }
         }
     }

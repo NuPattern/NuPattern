@@ -1,6 +1,7 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
+using NuPattern.Extensibility;
 using NuPattern.Runtime;
 
 namespace NuPattern.Library.Automation
@@ -8,8 +9,10 @@ namespace NuPattern.Library.Automation
     /// <content>
     /// Adds the implementation of <see cref="IPropertyBindingSettings"/>.
     /// </content>
-    public partial class PropertySettings : IPropertyBindingSettings
+    partial class PropertySettings : IPropertyBindingSettings
     {
+        private const char NameDelimiter = '.';
+
         /// <summary>
         /// Occurs when a property value changes.
         /// </summary>
@@ -21,28 +24,21 @@ namespace NuPattern.Library.Automation
         IValueProviderBindingSettings IPropertyBindingSettings.ValueProvider
         {
             get { return this.ValueProvider; }
-            set
-            {
-                // Creating value provider for the DSL binding has to be done via the DSL API.
-                throw new NotSupportedException();
-            }
+            set { CreateNewValueProviderSettings(value); }
         }
 
         /// <summary>
-        /// Gets the name of the property.
+        /// Gets the name of the property binding.
         /// </summary>
         string IPropertyBindingSettings.Name
         {
             get
             {
-                // We need to project the properties without our value-provider 
-                // concatenated full name as built by DesignValueProviderTypeDescriptionProvider.GetPropertyName.
-                // dots are invalid in a binding name, so it's safe to query for it and to the split.
-                return this.Name.Split('.').Last();
+                return GetInternalPropertyName(this.Name);
             }
             set
             {
-                this.Name = value;
+                this.Name = CreateInternalPropertyName(this, value);
             }
         }
 
@@ -62,6 +58,59 @@ namespace NuPattern.Library.Automation
 
                 return this.propertyChanges;
             }
+        }
+
+        private void CreateNewValueProviderSettings(IValueProviderBindingSettings settings)
+        {
+            using (var transaction = this.Store.TransactionManager.BeginTransaction("Creating Value Provider"))
+            {
+                if (settings != null)
+                {
+                    if (this.ValueProvider == null)
+                    {
+                        this.Create<ValueProviderSettings>();
+                    }
+
+                    this.ValueProvider.TypeId = settings.TypeId;
+                }
+                else if (this.ValueProvider != null)
+                {
+                    this.ValueProvider.Delete();
+                }
+
+                transaction.Commit();
+            }
+        }
+
+        /// <summary>
+        /// Creates a name for the property in the VP hierarchy
+        /// </summary>
+        /// <remarks>
+        /// A CommandSettings need to save all properties of all nested ValueProviders at same level in Store.
+        /// Therefore, the name of the PropertySettings needs to be unique in the scope of the whole CommandSettings.
+        /// </remarks>
+        internal static string CreateInternalPropertyName(PropertySettings settings, string bindingPropertyName)
+        {
+            var parentValueProvider = settings.ParentProvider;
+
+            if (parentValueProvider == null)
+            {
+                return bindingPropertyName;
+            }
+
+            return
+                string.Format(CultureInfo.InvariantCulture, "{0}.{1}.{2}",
+                              parentValueProvider.OwnerProperty.Name,
+                              parentValueProvider.TypeId.Split(NameDelimiter).Last(),
+                              bindingPropertyName);
+        }
+
+        /// <summary>
+        /// Normalizes the built name from <see cref="CreateInternalPropertyName"/>.
+        /// </summary>
+        private static string GetInternalPropertyName(string name)
+        {
+            return name.Split(NameDelimiter).Last();
         }
     }
 }

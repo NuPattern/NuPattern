@@ -3,28 +3,50 @@ using NuPattern.Runtime;
 
 namespace NuPattern.Extensibility.Binding
 {
-	/// <summary>
-	/// Defines a value provider wrapper for the property grid.
-	/// </summary>
-	[TypeDescriptionProvider(typeof(DesignValueProviderTypeDescriptionProvider))]
-	internal class DesignValueProvider
-	{
-		/// <summary>
-		/// Initializes a new instance of the <see cref="DesignValueProvider"/> class.
-		/// </summary>
-		/// <param name="property">The property.</param>
-		/// <param name="valueProvider">The value provider.</param>
-		public DesignValueProvider(DesignProperty property, IValueProviderBindingSettings valueProvider)
-		{
-			this.DesignProperty = property;
-			this.ValueProvider = valueProvider;
-			this.Name = valueProvider.TypeId;
-		}
+    /// <summary>
+    /// Defines a value provider wrapper for the property grid.
+    /// </summary>
+    [TypeDescriptionProvider(typeof(DesignValueProviderTypeDescriptionProvider))]
+    public class DesignValueProvider
+    {
+        /// <summary>
+        /// Creates a new instance of the <see cref="DesignValueProvider"/> class.
+        /// </summary>
+        /// <param name="property">The property.</param>
+        /// <param name="valueProvider">The value provider.</param>
+        public DesignValueProvider(DesignProperty property, IValueProviderBindingSettings valueProvider)
+            : this(property, (valueProvider != null && !string.IsNullOrEmpty(valueProvider.TypeId)) ? valueProvider.TypeId : string.Empty)
+        {
+            this.ValueProvider = valueProvider;
+        }
 
-		internal DesignProperty DesignProperty { get; private set; }
+        /// <summary>
+        /// Creates a new instance of the <see cref="DesignValueProvider"/> class.
+        /// </summary>
+        /// <param name="property">The property.</param>
+        /// <param name="name">The name of the property.</param>
+        public DesignValueProvider(DesignProperty property, string name)
+        {
+            Guard.NotNull(() => property, property);
+            Guard.NotNull(() => name, name);
 
-		internal IValueProviderBindingSettings ValueProvider { get; set; }
+            this.DesignProperty = property;
+            this.Name = name;
+        }
 
-		internal string Name { get; private set; }
-	}
+        /// <summary>
+        /// Gets the property
+        /// </summary>
+        internal DesignProperty DesignProperty { get; private set; }
+
+        /// <summary>
+        /// Gets the value provider.
+        /// </summary>
+        internal IValueProviderBindingSettings ValueProvider { get; set; }
+
+        /// <summary>
+        /// Gets the name of the value provider type.
+        /// </summary>
+        internal string Name { get; private set; }
+    }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using NuPattern.Extensibility.Binding;
 using NuPattern.Library.Automation;
 
 namespace NuPattern.Library.Design
@@ -81,7 +82,7 @@ namespace NuPattern.Library.Design
         /// <exception cref="T:System.NotSupportedException">The conversion cannot be performed. </exception>
         public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
         {
-			Guard.NotNull(() => value, value);
+            Guard.NotNull(() => value, value);
 
             var values = value.ToString().Split(new string[] { Separator }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -95,7 +96,7 @@ namespace NuPattern.Library.Design
                 }
                 else if (context.Instance is DesignProperty)
                 {
-                    settings = ((DesignProperty)(context.Instance)).ModelProperty.CommandSettings;
+                    settings = ((PropertySettings)((DesignProperty)(context.Instance)).Settings).CommandSettings;
                 }
                 else
                 {

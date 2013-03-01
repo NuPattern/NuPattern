@@ -8,17 +8,17 @@ namespace NuPattern.Runtime
     public interface IPropertyBindingSettings : INotifyPropertyChanged
     {
         /// <summary>
-        /// Gets the name of the property.
+        /// Gets or sets the name of the property.
         /// </summary>
         string Name { get; set; }
 
         /// <summary>
-        /// Gets the optional fixed value of the property.
+        /// Gets or sets the optional fixed value of the property.
         /// </summary>
         string Value { get; set; }
 
         /// <summary>
-        /// Gets the optional value provider to dynamically evaluate the property value at runtime.
+        /// Gets or sets the optional value provider to dynamically evaluate the property value at runtime.
         /// </summary>
         IValueProviderBindingSettings ValueProvider { get; set; }
     }

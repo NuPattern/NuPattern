@@ -5290,7 +5290,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Property &apos;{0}&apos; does no longer exist in target type &apos;{1}&apos; so it has been removed..
+        ///   Looks up a localized string similar to Property &apos;{0}&apos; no longer exist in target type &apos;{1}&apos; so it has been removed..
         /// </summary>
         internal static string Validate_InvalidPropertyBinding {
             get {

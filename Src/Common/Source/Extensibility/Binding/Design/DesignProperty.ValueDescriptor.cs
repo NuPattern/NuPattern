@@ -43,12 +43,38 @@ namespace NuPattern.Extensibility.Binding
 
         public override object GetEditor(Type editorBaseType)
         {
-            var editorAttribute = base.Attributes.OfType<DesignEditorAttribute>()
+            // Use design attribute first
+            var designEditorAttribute = base.Attributes.OfType<DesignEditorAttribute>()
                 .FirstOrDefault(attr => attr.BaseType == editorBaseType);
+            if (designEditorAttribute != null)
+            {
+                return Activator.CreateInstance(designEditorAttribute.EditorType);
+            }
 
-            return editorAttribute != null ?
-                Activator.CreateInstance(editorAttribute.EditorType) :
-                base.GetEditor(editorBaseType);
+            var editorAttribute = this.Attributes.OfType<EditorAttribute>().FirstOrDefault();
+            if (editorAttribute != null)
+            {
+                var editorType = Type.GetType(editorAttribute.EditorTypeName);
+                if (editorType != null)
+                {
+                    try
+                    {
+                        // Try editor for the type
+                        return Activator.CreateInstance(editorType, this.PropertyType);
+                    }
+                    catch
+                    {
+                        if (editorType.GetConstructors().Any(c => c.GetParameters().Length == 0))
+                        {
+                            return Activator.CreateInstance(editorType);
+                        }
+
+                        return null;
+                    }
+                }
+            }
+
+            return base.GetEditor(editorBaseType);
         }
 
         public override bool SupportsChangeEvents
@@ -59,7 +85,7 @@ namespace NuPattern.Extensibility.Binding
         public override object GetValue(object component)
         {
             var designProperty = (DesignProperty)component;
-            return designProperty.GetValue();
+            return designProperty != null ? designProperty.GetValue() : null;
         }
 
         public override bool IsReadOnly
