@@ -9,193 +9,194 @@ using NuPattern.Extensibility;
 
 namespace NuPattern.Runtime.IntegrationTests
 {
-	public class SolutionEventsSpec
-	{
-		internal static readonly IAssertion Assert = new Assertion();
+    public class SolutionEventsSpec
+    {
+        internal static readonly IAssertion Assert = new Assertion();
 
-		[TestClass]
-		[SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test Code")]
-		public class GivenAnEnviromentWithoutSolutionOpened
-		{
-			private SolutionEvents solutionEvents;
-			private ISolution solution;
+        [TestClass]
+        [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test Code")]
+        public class GivenAnEnviromentWithoutSolutionOpened
+        {
+            private SolutionEvents solutionEvents;
+            private ISolution solution;
 
-			[TestInitialize]
-			public void Initialize()
-			{
-				this.solutionEvents = new SolutionEvents(VsIdeTestHostContext.ServiceProvider);
-				this.solution = VsIdeTestHostContext.ServiceProvider.GetService<ISolution>();
-			}
+            [TestInitialize]
+            public void Initialize()
+            {
+                this.solutionEvents = new SolutionEvents(VsIdeTestHostContext.ServiceProvider);
+                this.solution = VsIdeTestHostContext.ServiceProvider.GetService<ISolution>();
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
-			public void WhenThereIsNoSolutionOpened_ThenIsSolutionOpenedIsFalse()
-			{
-				Assert.False(this.solutionEvents.IsSolutionOpened);
-			}
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenThereIsNoSolutionOpened_ThenIsSolutionOpenedIsFalse()
+            {
+                Assert.False(this.solutionEvents.IsSolutionOpened);
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
-			public void WhenCreatingANewSolution_ThenIsSolutionOpenedTurnsTrue()
-			{
-				this.solution.CreateInstance(Path.GetTempPath(), Path.GetFileName(Path.GetRandomFileName()));
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenCreatingANewSolution_ThenIsSolutionOpenedTurnsTrue()
+            {
+                this.solution.CreateInstance(Path.GetTempPath(), Path.GetFileName(Path.GetRandomFileName()));
 
-				Assert.True(this.solutionEvents.IsSolutionOpened);
-			}
+                Assert.True(this.solutionEvents.IsSolutionOpened);
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
-			public void WhenCreatingANewSolution_ThenRaisesSolutionOpened()
-			{
-				var eventRaised = false;
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenCreatingANewSolution_ThenRaisesSolutionOpened()
+            {
+                var eventRaised = false;
 
-				this.solutionEvents.SolutionOpened += (s, e) => eventRaised = true;
-				this.solution.CreateInstance(Path.GetTempPath(), Path.GetFileName(Path.GetRandomFileName()));
+                this.solutionEvents.SolutionOpened += (s, e) => eventRaised = true;
+                this.solution.CreateInstance(Path.GetTempPath(), Path.GetFileName(Path.GetRandomFileName()));
 
-				Assert.True(eventRaised);
-			}
+                Assert.True(eventRaised);
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
-			public void WhenCreatingANewSolution_ThenIsSolutionOpenedTurnsTrueAndThenRaisesSolutionOpened()
-			{
-				var sequenceAchived = false;
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenCreatingANewSolution_ThenIsSolutionOpenedTurnsTrueAndThenRaisesSolutionOpened()
+            {
+                var sequenceAchived = false;
 
-				this.solutionEvents.SolutionOpened += (s, e) => sequenceAchived = this.solutionEvents.IsSolutionOpened;
-				this.solution.CreateInstance(Path.GetTempPath(), Path.GetFileName(Path.GetRandomFileName()));
+                this.solutionEvents.SolutionOpened += (s, e) => sequenceAchived = this.solutionEvents.IsSolutionOpened;
+                this.solution.CreateInstance(Path.GetTempPath(), Path.GetFileName(Path.GetRandomFileName()));
 
-				Assert.True(sequenceAchived);
-			}
-		}
+                Assert.True(sequenceAchived);
+            }
+        }
 
-		[TestClass]
-		[SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test Code")]
-		public class GivenAnEnviromentWithASolutionOpened
-		{
-			private SolutionEvents solutionEvents;
-			private ISolution solution;
+        [TestClass]
+        [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test Code")]
+        public class GivenAnEnviromentWithANewSolutionCreated
+        {
+            private SolutionEvents solutionEvents;
+            private ISolution solution;
 
-			[TestInitialize]
-			public void Initialize()
-			{
-				this.solutionEvents = new SolutionEvents(VsIdeTestHostContext.ServiceProvider);
+            [TestInitialize]
+            public void Initialize()
+            {
+                this.solutionEvents = new SolutionEvents(VsIdeTestHostContext.ServiceProvider);
 
-				this.solution = VsIdeTestHostContext.ServiceProvider.GetService<ISolution>();
-				this.solution.CreateInstance(Path.GetTempPath(), Path.GetFileName(Path.GetRandomFileName()));
-			}
+                this.solution = VsIdeTestHostContext.ServiceProvider.GetService<ISolution>();
+                this.solution.CreateInstance(Path.GetTempPath(), Path.GetFileName(Path.GetRandomFileName()));
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
-			public void WhenClosingTheSolution_ThenIsSolutionOpenedTurnsFalse()
-			{
-				this.solution.As<Solution>().Close();
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenClosingTheSolution_ThenIsSolutionOpenedTurnsFalse()
+            {
+                this.solution.As<Solution>().Close();
 
-				Assert.False(this.solutionEvents.IsSolutionOpened);
-			}
+                Assert.False(this.solutionEvents.IsSolutionOpened);
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
-			public void WhenClosingTheSolution_ThenRaisesSolutionClosing()
-			{
-				var eventRaised = false;
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenClosingTheSolution_ThenRaisesSolutionClosing()
+            {
+                var eventRaised = false;
 
-				this.solutionEvents.SolutionClosing += (s, e) => eventRaised = true;
-				this.solution.As<Solution>().Close();
+                this.solutionEvents.SolutionClosing += (s, e) => eventRaised = true;
+                this.solution.As<Solution>().Close();
 
-				Assert.True(eventRaised);
-			}
+                Assert.True(eventRaised);
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
-			public void WhenClosingTheSolution_ThenRaisesSolutionClosed()
-			{
-				var eventRaised = false;
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenClosingTheSolution_ThenRaisesSolutionClosed()
+            {
+                var eventRaised = false;
 
-				this.solutionEvents.SolutionClosed += (s, e) => eventRaised = true;
-				this.solution.As<Solution>().Close();
+                this.solutionEvents.SolutionClosed += (s, e) => eventRaised = true;
+                this.solution.As<Solution>().Close();
 
-				Assert.True(eventRaised);
-			}
+                Assert.True(eventRaised);
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
-			public void WhenClosingTheSolution_ThenRaisesSolutionClosingAndThenIsSolutionOpenedTurnsFalseAndThenRaisesSolutionClosed()
-			{
-				var index = 0;
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenClosingTheSolution_ThenRaisesSolutionClosingAndThenIsSolutionOpenedTurnsFalseAndThenRaisesSolutionClosed()
+            {
+                var index = 0;
 
-				this.solutionEvents.SolutionClosing += (s, e) =>
-				{
-					if (this.solutionEvents.IsSolutionOpened && index == 0)
-					{
-						index++;
-					}
-				};
-				this.solutionEvents.SolutionClosed += (s, e) =>
-				{
-					if (!this.solutionEvents.IsSolutionOpened && index == 1)
-					{
-						index++;
-					}
-				};
-				this.solution.As<Solution>().Close();
+                this.solutionEvents.SolutionClosing += (s, e) =>
+                {
+                    if (this.solutionEvents.IsSolutionOpened && index == 0)
+                    {
+                        index++;
+                    }
+                };
+                this.solutionEvents.SolutionClosed += (s, e) =>
+                {
+                    if (!this.solutionEvents.IsSolutionOpened && index == 1)
+                    {
+                        index++;
+                    }
+                };
+                this.solution.As<Solution>().Close();
 
-				Assert.Equal(2, index);
-			}
-		}
+                Assert.Equal(2, index);
+            }
+        }
 
-		[TestClass]
-		[SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test Code")]
-		public class GivenAnExistingSolutionNotOpened
-		{
-			private SolutionEvents solutionEvents;
-			private ISolution solution;
-			private string solutionPath;
+        [TestClass]
+        [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test Code")]
+        public class GivenAnExistingSolution
+        {
+            private SolutionEvents solutionEvents;
+            private ISolution solution;
+            private string solutionPath;
 
-			[TestInitialize]
-			public void Initialize()
-			{
-				this.solutionEvents = new SolutionEvents(VsIdeTestHostContext.ServiceProvider);
-				this.solution = VsIdeTestHostContext.ServiceProvider.GetService<ISolution>();
+            [TestInitialize]
+            public void Initialize()
+            {
+                this.solutionEvents = new SolutionEvents(VsIdeTestHostContext.ServiceProvider);
+                this.solution = VsIdeTestHostContext.ServiceProvider.GetService<ISolution>();
 
-				var fileName = Path.GetFileName(Path.GetRandomFileName());
-				this.solution.CreateInstance(Path.GetTempPath(), fileName);
-				this.solution.As<Solution>().SaveAs(fileName);
-				this.solutionPath = this.solution.PhysicalPath;
-				this.solution.As<Solution>().Close();
-			}
+                // Create a new solution and close it
+                var fileName = Path.GetFileName(Path.GetRandomFileName());
+                this.solution.CreateInstance(Path.GetTempPath(), fileName);
+                this.solution.As<Solution>().SaveAs(fileName);
+                this.solutionPath = this.solution.PhysicalPath;
+                this.solution.As<Solution>().Close();
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
-			public void WhenOpeningSolution_ThenIsSolutionOpenedTurnsTrue()
-			{
-				this.solution.As<Solution>().Open(this.solutionPath);
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenOpeningSolution_ThenIsSolutionOpenedTurnsTrue()
+            {
+                this.solution.As<Solution>().Open(this.solutionPath);
 
-				Assert.True(this.solutionEvents.IsSolutionOpened);
-			}
+                Assert.True(this.solutionEvents.IsSolutionOpened);
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
-			public void WhenOpeningSolution_ThenRaisesSolutionOpened()
-			{
-				var eventRaised = false;
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenOpeningSolution_ThenRaisesSolutionOpened()
+            {
+                var eventRaised = false;
 
-				this.solutionEvents.SolutionOpened += (s, e) => eventRaised = true;
-				this.solution.As<Solution>().Open(this.solutionPath);
+                this.solutionEvents.SolutionOpened += (s, e) => eventRaised = true;
+                this.solution.As<Solution>().Open(this.solutionPath);
 
-				Assert.True(eventRaised);
-			}
+                Assert.True(eventRaised);
+            }
 
-			[HostType("VS IDE")]
-			[TestMethod, TestCategory("Integration")]
-			public void WhenOpeningSolution_ThenIsSolutionOpenedTurnsTrueAndThenRaisesSolutionOpened()
-			{
-				var sequenceAchived = false;
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenOpeningSolution_ThenIsSolutionOpenedTurnsTrueAndThenRaisesSolutionOpened()
+            {
+                var sequenceAchived = false;
 
-				this.solutionEvents.SolutionOpened += (s, e) => sequenceAchived = this.solutionEvents.IsSolutionOpened;
-				this.solution.As<Solution>().Open(this.solutionPath);
+                this.solutionEvents.SolutionOpened += (s, e) => sequenceAchived = this.solutionEvents.IsSolutionOpened;
+                this.solution.As<Solution>().Open(this.solutionPath);
 
-				Assert.True(sequenceAchived);
-			}
-		}
-	}
+                Assert.True(sequenceAchived);
+            }
+        }
+    }
 }
