@@ -570,7 +570,7 @@ Please add or import a new 'Item/Project Template', or create a new folder withi
     <value>SelectArtifactCommand</value>
   </data>
   <data name="ArtifactExtension_SelectMenuItemText" xml:space="preserve">
-    <value>Go To Solution Items</value>
+    <value>Show Solution Items</value>
   </data>
   <data name="ArtifactExtension_SelectContextMenuName" xml:space="preserve">
     <value>SelectArtifactContextMenu</value>

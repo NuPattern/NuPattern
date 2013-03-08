@@ -61,8 +61,9 @@ namespace NuPattern.Library.UnitTests.Automation.Artifact
                 var descriptor = TypedDescriptor.GetProperty(this.artifactExtension, extension => extension.AssociatedArtifacts);
                 var descriptors = descriptor.Converter.GetProperties(mockContext.Object, string.Empty);
 
-                Assert.Equal(1, descriptors.Count);
+                Assert.Equal(2, descriptors.Count);
                 Assert.NotNull(descriptors[Reflector<ArtifactExtension>.GetProperty(extension => extension.OnArtifactActivation).Name]);
+                Assert.NotNull(descriptors[Reflector<ArtifactExtension>.GetProperty(extension => extension.OnArtifactDeletion).Name]);
             }
         }
     }

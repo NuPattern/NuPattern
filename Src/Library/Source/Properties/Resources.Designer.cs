@@ -521,7 +521,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Go To Solution Items.
+        ///   Looks up a localized string similar to Show Solution Items.
         /// </summary>
         internal static string ArtifactExtension_SelectMenuItemText {
             get {

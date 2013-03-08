@@ -12,7 +12,8 @@ namespace NuPattern.Library.Automation
     /// </summary>
     public partial class ArtifactExtension
     {
-        private static readonly string navigateIconPath = "Resources/CommandNavigateSolutionItem.png";
+        private const string OpenIconPath = "";//"resources/commandopensolutionitem.png";
+        private const string NavigateIconPath = "";//"resources/commandnavigatesolutionitem.png";
 
         /// <summary>
         /// Ensures the associated commands and launchpoint automation are created and configured correctly.
@@ -35,7 +36,7 @@ namespace NuPattern.Library.Automation
                 Resources.ArtifactExtension_OpenContextMenuName,
                 openCommand,
                 Resources.ArtifactExtension_OpenMenuItemText,
-                null,
+                OpenIconPath,
                 () => this.OnArtifactActivation == ArtifactActivatedAction.Open);
             if (openMenu != null)
             {
@@ -57,7 +58,7 @@ namespace NuPattern.Library.Automation
                 Resources.ArtifactExtension_SelectContextMenuName,
                 selectCommand,
                 Resources.ArtifactExtension_SelectMenuItemText,
-                navigateIconPath,
+                NavigateIconPath,
                 () => (this.OnArtifactActivation == ArtifactActivatedAction.Select || this.OnArtifactActivation == ArtifactActivatedAction.Open));
             if (selectMenu != null)
             {

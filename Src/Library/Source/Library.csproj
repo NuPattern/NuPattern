@@ -436,6 +436,9 @@
     <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandNavigateSolutionItem.png">
       <Link>Resources\CommandNavigateSolutionItem.png</Link>
     </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandOpenSolutionItem.png">
+      <Link>Resources\CommandOpenSolutionItem.png</Link>
+    </Resource>
     <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandShowGuidance.png">
       <Link>Resources\CommandShowGuidance.png</Link>
     </Resource>
