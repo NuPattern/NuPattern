@@ -346,7 +346,7 @@ Interface=ValueProviderBindingSettings</Notes>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
       </BaseClass>
       <Properties>
-        <DomainProperty Id="41cbff0c-4b29-4540-b9fd-af2e7c93a185" Description="Configures actions for working with artifacts associated with this element. Expand this property to configure." Name="AssociatedArtifacts" DisplayName="Associated Artifacts" Category="Artifacts">
+        <DomainProperty Id="41cbff0c-4b29-4540-b9fd-af2e7c93a185" Description="Configures actions for working with solution items associated with this element. Expand this property to configure." Name="AssociatedArtifacts" DisplayName="Associated Solution Items" Category="Solution Items">
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
@@ -358,9 +358,14 @@ Interface=ValueProviderBindingSettings</Notes>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="593016b6-aa8b-49ff-a5e9-26c7cfafbbfb" Description="The action to perform on associated artifacts, when this element is 'activated' by the user (i.e. double-clicked). A value of 'Open' will open the artifact in its default view, a value of 'Select' will select the file in Solution Explorer." Name="OnArtifactActivation" DisplayName="On Activation" DefaultValue="None" Category="Artifacts" IsBrowsable="false">
+        <DomainProperty Id="593016b6-aa8b-49ff-a5e9-26c7cfafbbfb" Description="The action to perform on associated solution items, when this element is 'activated' by the user (i.e. double-clicked). A value of 'Open' will open the solution item in its default view, a value of 'Select' will select the item in 'Solution Explorer'." Name="OnArtifactActivation" DisplayName="On Activation" DefaultValue="None" Category="Solution Items" IsBrowsable="false">
           <Type>
             <DomainEnumerationMoniker Name="ArtifactActivatedAction" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="7bcdb4f8-c554-4355-9ae6-6cbb0b97d818" Description="The action to perform on associated solution items, when this element is 'deleted' by the user. A value of 'DeleteAll' will automatically delete all associated solution items, a value of 'PromptUser' prompt the user to select which solution items to delete." Name="OnArtifactDeletion" DisplayName="On Deletion" DefaultValue="None" Category="Solution Items" IsBrowsable="false">
+          <Type>
+            <DomainEnumerationMoniker Name="ArtifactDeletedAction" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -518,6 +523,13 @@ Interface=ValueProviderBindingSettings</Notes>
         <EnumerationLiteral Description="No action is performed, activated items are neither opened nor selected." Name="None" Value="" />
         <EnumerationLiteral Description="Associated artifacts are opened, in their default view." Name="Open" Value="" />
         <EnumerationLiteral Description="Associated artifacts are selected in Solution Explorer." Name="Select" Value="" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="ArtifactDeletedAction" Namespace="NuPattern.Library.Automation" Description="Description for NuPattern.Library.Automation.ArtifactDeletedAction">
+      <Literals>
+        <EnumerationLiteral Description="No action is performed, associated solution items are not deleted from the solution." Name="None" Value="" />
+        <EnumerationLiteral Description="All associated solution items are deleted automatically." Name="DeleteAll" Value="" />
+        <EnumerationLiteral Description="The user is prompted to select which associated solution items to delete." Name="PromptUser" Value="" />
       </Literals>
     </DomainEnumeration>
   </Types>
@@ -688,6 +700,9 @@ Interface=ValueProviderBindingSettings</Notes>
           </XmlPropertyData>
           <XmlPropertyData XmlName="associatedArtifacts">
             <DomainPropertyMoniker Name="ArtifactExtension/AssociatedArtifacts" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="onArtifactDeletion">
+            <DomainPropertyMoniker Name="ArtifactExtension/OnArtifactDeletion" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>

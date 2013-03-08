@@ -335,14 +335,19 @@ namespace NuPattern.Library.Automation
 	public partial interface IArtifactExtension 
 	{ 
 		/// <summary>
-		/// Configures actions for working with artifacts associated with this element. Expand this property to configure.
+		/// Configures actions for working with solution items associated with this element. Expand this property to configure.
 		/// </summary>
 		global::System.String AssociatedArtifacts { get; set; }
 		
 		/// <summary>
-		/// The action to perform on associated artifacts, when this element is 'activated' by the user (i.e. double-clicked). A value of 'Open' will open the artifact in its default view, a value of 'Select' will select the file in Solution Explorer.
+		/// The action to perform on associated solution items, when this element is 'activated' by the user (i.e. double-clicked). A value of 'Open' will open the solution item in its default view, a value of 'Select' will select the item in 'Solution Explorer'.
 		/// </summary>
 		ArtifactActivatedAction OnArtifactActivation { get; set; }
+		
+		/// <summary>
+		/// The action to perform on associated solution items, when this element is 'deleted' by the user. A value of 'DeleteAll' will automatically delete all associated solution items, a value of 'PromptUser' prompt the user to select which solution items to delete.
+		/// </summary>
+		ArtifactDeletedAction OnArtifactDeletion { get; set; }
 	}
 }
 namespace NuPattern.Library.Automation

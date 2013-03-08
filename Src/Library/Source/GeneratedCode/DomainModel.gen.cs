@@ -125,6 +125,7 @@ namespace NuPattern.Library.Automation
 				new DomainMemberInfo(typeof(WizardSettings), "TypeName", WizardSettings.TypeNameDomainPropertyId, typeof(WizardSettings.TypeNamePropertyHandler)),
 				new DomainMemberInfo(typeof(ArtifactExtension), "AssociatedArtifacts", ArtifactExtension.AssociatedArtifactsDomainPropertyId, typeof(ArtifactExtension.AssociatedArtifactsPropertyHandler)),
 				new DomainMemberInfo(typeof(ArtifactExtension), "OnArtifactActivation", ArtifactExtension.OnArtifactActivationDomainPropertyId, typeof(ArtifactExtension.OnArtifactActivationPropertyHandler)),
+				new DomainMemberInfo(typeof(ArtifactExtension), "OnArtifactDeletion", ArtifactExtension.OnArtifactDeletionDomainPropertyId, typeof(ArtifactExtension.OnArtifactDeletionPropertyHandler)),
 				new DomainMemberInfo(typeof(ValidationExtension), "ValidationExecution", ValidationExtension.ValidationExecutionDomainPropertyId, typeof(ValidationExtension.ValidationExecutionPropertyHandler)),
 				new DomainMemberInfo(typeof(ValidationExtension), "ValidationOnBuild", ValidationExtension.ValidationOnBuildDomainPropertyId, typeof(ValidationExtension.ValidationOnBuildPropertyHandler)),
 				new DomainMemberInfo(typeof(ValidationExtension), "ValidationOnSave", ValidationExtension.ValidationOnSaveDomainPropertyId, typeof(ValidationExtension.ValidationOnSavePropertyHandler)),
@@ -492,6 +493,36 @@ namespace NuPattern.Library.Automation
 		/// </summary>
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactActivatedAction/Select.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		Select,
+	}
+}
+namespace NuPattern.Library.Automation
+{
+	/// <summary>
+	/// DomainEnumeration: ArtifactDeletedAction
+	/// Description for NuPattern.Library.Automation.ArtifactDeletedAction
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum ArtifactDeletedAction
+	{
+		/// <summary>
+		/// None
+		/// No action is performed, associated solution items are not deleted from the
+		/// solution.
+		/// </summary>
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactDeletedAction/None.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		None,
+		/// <summary>
+		/// DeleteAll
+		/// All associated solution items are deleted automatically.
+		/// </summary>
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactDeletedAction/DeleteAll.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		DeleteAll,
+		/// <summary>
+		/// PromptUser
+		/// The user is prompted to select which associated solution items to delete.
+		/// </summary>
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactDeletedAction/PromptUser.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		PromptUser,
 	}
 }
 

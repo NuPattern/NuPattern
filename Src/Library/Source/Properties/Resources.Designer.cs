@@ -458,6 +458,24 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to DeleteArtifactsCommand.
+        /// </summary>
+        internal static string ArtifactExtension_DeleteCommandName {
+            get {
+                return ResourceManager.GetString("ArtifactExtension_DeleteCommandName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DeleteArtifactsEvent.
+        /// </summary>
+        internal static string ArtifactExtension_DeleteEventName {
+            get {
+                return ResourceManager.GetString("ArtifactExtension_DeleteEventName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to OpenArtifactCommand.
         /// </summary>
         internal static string ArtifactExtension_OpenCommandName {

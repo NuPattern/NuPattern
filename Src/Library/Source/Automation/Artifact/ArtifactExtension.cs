@@ -12,16 +12,16 @@ namespace NuPattern.Library.Automation
     /// </summary>
     public partial class ArtifactExtension
     {
-        private static readonly string navigateIconPath = ""; //"Resources/CommandNavigateSolutionItem.png";
+        private static readonly string navigateIconPath = "Resources/CommandNavigateSolutionItem.png";
 
         /// <summary>
         /// Ensures the associated commands and launchpoint automation are created and configured correctly.
         /// </summary>
         internal void EnsureActivateArtifactExtensionAutomation()
         {
-            IPatternElementSchema element = this.Extends as IPatternElementSchema;
+            var element = this.Extends as IPatternElementSchema;
 
-            // Configure the open command and menu.
+            // Configure the open command.
             var openCommand = element.EnsureCommandAutomation<ActivateArtifactCommand>(
                 Resources.ArtifactExtension_OpenCommandName,
                 () => this.OnArtifactActivation == ArtifactActivatedAction.Open);
@@ -30,6 +30,7 @@ namespace NuPattern.Library.Automation
                 openCommand.SetPropertyValue<ActivateArtifactCommand, bool>(cmd => cmd.Open, true);
             }
 
+            // Configure the open menu launchpoint.
             var openMenu = element.EnsureMenuLaunchPoint(
                 Resources.ArtifactExtension_OpenContextMenuName,
                 openCommand,
@@ -42,7 +43,7 @@ namespace NuPattern.Library.Automation
                 openMenu.Conditions = GetSerializedLinkExistsCondition();
             }
 
-            // Configure the select command and menu.
+            // Configure the select command.
             var selectCommand = element.EnsureCommandAutomation<ActivateArtifactCommand>(
                 Resources.ArtifactExtension_SelectCommandName,
                 () => (this.OnArtifactActivation == ArtifactActivatedAction.Select || this.OnArtifactActivation == ArtifactActivatedAction.Open));
@@ -51,6 +52,7 @@ namespace NuPattern.Library.Automation
                 selectCommand.SetPropertyValue<ActivateArtifactCommand, bool>(cmd => cmd.Open, false);
             }
 
+            // Configure the select menu launchpoint.
             var selectMenu = element.EnsureMenuLaunchPoint(
                 Resources.ArtifactExtension_SelectContextMenuName,
                 selectCommand,
@@ -63,26 +65,50 @@ namespace NuPattern.Library.Automation
                 selectMenu.Conditions = GetSerializedLinkExistsCondition();
             }
 
-            // Configure the activation event.
+            // Configure the event launchpoint.
             var eventCommand = (this.OnArtifactActivation == ArtifactActivatedAction.Open ? openCommand : (this.OnArtifactActivation == ArtifactActivatedAction.Select ? selectCommand : null));
-            var activateEvent = element.EnsureEventLaunchPoint<IOnElementActivatedEvent>(
+            element.EnsureEventLaunchPoint<IOnElementActivatedEvent>(
                 Resources.ArtifactExtension_ActivateEventName,
                 eventCommand,
                 true,
                 () => this.OnArtifactActivation != ArtifactActivatedAction.None);
         }
 
-        private string GetSerializedLinkExistsCondition()
+        /// <summary>
+        /// Ensures the associated commands and launchpoint automation are created and configured correctly.
+        /// </summary>
+        internal void EnsureDeleteArtifactExtensionAutomation()
+        {
+            var element = this.Extends as IPatternElementSchema;
+
+            // Configure the delete command.
+            var deleteCommand = element.EnsureCommandAutomation<DeleteArtifactsCommand>(
+                Resources.ArtifactExtension_DeleteCommandName,
+                () => this.OnArtifactDeletion != ArtifactDeletedAction.None);
+            if (deleteCommand != null)
+            {
+                var deleteAction = (this.OnArtifactDeletion == ArtifactDeletedAction.DeleteAll) ? DeleteAction.DeleteAll : DeleteAction.PromptUser;
+                deleteCommand.SetPropertyValue<DeleteArtifactsCommand, DeleteAction>(cmd => cmd.Action, deleteAction);
+            }
+
+            // Configure the event launchpoint.
+            element.EnsureEventLaunchPoint<IOnElementDeletingEvent>(
+                Resources.ArtifactExtension_DeleteEventName,
+                deleteCommand,
+                true,
+                () => this.OnArtifactDeletion != ArtifactDeletedAction.None);
+        }
+        private static string GetSerializedLinkExistsCondition()
         {
             // Set the conditions
             var condition =
                 new[]
-				{
-					new ConditionBindingSettings
-					{
-						TypeId = typeof(ArtifactReferenceExistsCondition).FullName,
-					}
-				};
+                {
+                    new ConditionBindingSettings
+                    {
+                        TypeId = typeof(ArtifactReferenceExistsCondition).FullName,
+                    }
+                };
 
             return BindingSerializer.Serialize(condition);
         }

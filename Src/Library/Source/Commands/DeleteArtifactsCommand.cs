@@ -80,6 +80,7 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the solution selector.
         /// </summary>
         [Required]
+        [Browsable(false)]
         public ISolutionSelector SolutionSelector
         {
             get

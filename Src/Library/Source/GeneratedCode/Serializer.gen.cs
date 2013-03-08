@@ -6742,6 +6742,23 @@ namespace NuPattern.Library.Automation
 					}
 				}
 			}
+			// OnArtifactDeletion
+			if (!serializationContext.Result.Failed)
+			{
+				string attribOnArtifactDeletion = LibrarySerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "onArtifactDeletion");
+				if (attribOnArtifactDeletion != null)
+				{
+					ArtifactDeletedAction valueOfOnArtifactDeletion;
+					if (DslModeling::SerializationUtilities.TryGetValue<ArtifactDeletedAction>(serializationContext, attribOnArtifactDeletion, out valueOfOnArtifactDeletion))
+					{
+						instanceOfArtifactExtension.OnArtifactDeletion = valueOfOnArtifactDeletion;
+					}
+					else
+					{	// Invalid property value, ignored.
+						LibrarySerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "onArtifactDeletion", typeof(ArtifactDeletedAction), attribOnArtifactDeletion);
+					}
+				}
+			}
 		}
 	
 		#region TryCreateInstance
@@ -7166,6 +7183,19 @@ namespace NuPattern.Library.Automation
 					if (!string.IsNullOrEmpty(propValue))
 						LibrarySerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "associatedArtifacts", propValue);
 	
+				}
+			}
+			// OnArtifactDeletion
+			if (!serializationContext.Result.Failed)
+			{
+				ArtifactDeletedAction propValue = instanceOfArtifactExtension.OnArtifactDeletion;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<ArtifactDeletedAction>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "None") != 0)
+					{	// No need to write the value out if it's the same as default value.
+						LibrarySerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "onArtifactDeletion", serializedPropValue);
+					}
 				}
 			}
 		}

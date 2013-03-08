@@ -482,19 +482,19 @@
     <comment>DisplayName for DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/AssociatedArtifacts.Description" xml:space="preserve">
-    <value>Configures actions for working with artifacts associated with this element. Expand this property to configure.</value>
+    <value>Configures actions for working with solution items associated with this element. Expand this property to configure.</value>
     <comment>Description for DomainProperty &apos;AssociatedArtifacts&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/AssociatedArtifacts.DisplayName" xml:space="preserve">
-    <value>Associated Artifacts</value>
+    <value>Associated Solution Items</value>
     <comment>DisplayName for DomainProperty &apos;AssociatedArtifacts&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/AssociatedArtifacts.Category" xml:space="preserve">
-    <value>Artifacts</value>
+    <value>Solution Items</value>
     <comment>Category for DomainProperty &apos;AssociatedArtifacts&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactActivation.Description" xml:space="preserve">
-    <value>The action to perform on associated artifacts, when this element is &apos;activated&apos; by the user (i.e. double-clicked). A value of &apos;Open&apos; will open the artifact in its default view, a value of &apos;Select&apos; will select the file in Solution Explorer.</value>
+    <value>The action to perform on associated solution items, when this element is &apos;activated&apos; by the user (i.e. double-clicked). A value of &apos;Open&apos; will open the solution item in its default view, a value of &apos;Select&apos; will select the item in &apos;Solution Explorer&apos;.</value>
     <comment>Description for DomainProperty &apos;OnArtifactActivation&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactActivation.DisplayName" xml:space="preserve">
@@ -502,8 +502,20 @@
     <comment>DisplayName for DomainProperty &apos;OnArtifactActivation&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactActivation.Category" xml:space="preserve">
-    <value>Artifacts</value>
+    <value>Solution Items</value>
     <comment>Category for DomainProperty &apos;OnArtifactActivation&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactDeletion.Description" xml:space="preserve">
+    <value>The action to perform on associated solution items, when this element is &apos;deleted&apos; by the user. A value of &apos;DeleteAll&apos; will automatically delete all associated solution items, a value of &apos;PromptUser&apos; prompt the user to select which solution items to delete.</value>
+    <comment>Description for DomainProperty &apos;OnArtifactDeletion&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactDeletion.DisplayName" xml:space="preserve">
+    <value>On Deletion</value>
+    <comment>DisplayName for DomainProperty &apos;OnArtifactDeletion&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactDeletion.Category" xml:space="preserve">
+    <value>Solution Items</value>
+    <comment>Category for DomainProperty &apos;OnArtifactDeletion&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ValidationExtension.Description" xml:space="preserve">
     <value>Configures settings for managing validation of this element.</value>
@@ -732,6 +744,30 @@
   <data name="NuPattern.Library.Automation.ArtifactActivatedAction/Select.Description" xml:space="preserve">
     <value>Associated artifacts are selected in Solution Explorer.</value>
     <comment>Description for EnumerationLiteral &apos;Select&apos; on DomainEnumeration &apos;ArtifactActivatedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/None.DisplayName" xml:space="preserve">
+    <value>None</value>
+    <comment>Display name for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/None.Description" xml:space="preserve">
+    <value>No action is performed, associated solution items are not deleted from the solution.</value>
+    <comment>Description for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/DeleteAll.DisplayName" xml:space="preserve">
+    <value>DeleteAll</value>
+    <comment>Display name for EnumerationLiteral &apos;DeleteAll&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/DeleteAll.Description" xml:space="preserve">
+    <value>All associated solution items are deleted automatically.</value>
+    <comment>Description for EnumerationLiteral &apos;DeleteAll&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/PromptUser.DisplayName" xml:space="preserve">
+    <value>PromptUser</value>
+    <comment>Display name for EnumerationLiteral &apos;PromptUser&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/PromptUser.Description" xml:space="preserve">
+    <value>The user is prompted to select which associated solution items to delete.</value>
+    <comment>Description for EnumerationLiteral &apos;PromptUser&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
   </data>
   <data name="UnrecognizedElementType" xml:space="preserve">
     <value>ElementType {0} is not recognized as a type of domain class which belongs to this domain model.</value>

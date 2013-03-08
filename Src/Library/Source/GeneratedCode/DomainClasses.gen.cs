@@ -4299,7 +4299,7 @@ namespace NuPattern.Library.Automation
 		
 		/// <summary>
 		/// Gets or sets the value of AssociatedArtifacts domain property.
-		/// Configures actions for working with artifacts associated with this element.
+		/// Configures actions for working with solution items associated with this element.
 		/// Expand this property to configure.
 		/// </summary>
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Library.Automation.AssociatedArtifactsTypeConverter))]
@@ -4409,9 +4409,10 @@ namespace NuPattern.Library.Automation
 		
 		/// <summary>
 		/// Gets or sets the value of OnArtifactActivation domain property.
-		/// The action to perform on associated artifacts, when this element is 'activated'
-		/// by the user (i.e. double-clicked). A value of 'Open' will open the artifact in
-		/// its default view, a value of 'Select' will select the file in Solution Explorer.
+		/// The action to perform on associated solution items, when this element is
+		/// 'activated' by the user (i.e. double-clicked). A value of 'Open' will open the
+		/// solution item in its default view, a value of 'Select' will select the item in
+		/// 'Solution Explorer'.
 		/// </summary>
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ArtifactExtension/OnArtifactActivation.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Library.Automation.ArtifactExtension/OnArtifactActivation.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -4503,6 +4504,119 @@ namespace NuPattern.Library.Automation
 				element.onArtifactActivationPropertyStorage = newValue;
 				ValueChanged(element, oldValue, newValue);
 				element.PropertyChanges.NotifyChanged<ArtifactExtension>(x => x.OnArtifactActivation);
+			}
+		}
+		
+		#endregion
+		#region OnArtifactDeletion domain property code
+		
+		/// <summary>
+		/// OnArtifactDeletion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid OnArtifactDeletionDomainPropertyId = new global::System.Guid(0x7bcdb4f8, 0xc554, 0x4355, 0x9a, 0xe6, 0x6c, 0xbb, 0x0b, 0x97, 0xd8, 0x18);
+		
+		/// <summary>
+		/// Storage for OnArtifactDeletion
+		/// </summary>
+		private ArtifactDeletedAction onArtifactDeletionPropertyStorage = ArtifactDeletedAction.None;
+		
+		/// <summary>
+		/// Gets or sets the value of OnArtifactDeletion domain property.
+		/// The action to perform on associated solution items, when this element is
+		/// 'deleted' by the user. A value of 'DeleteAll' will automatically delete all
+		/// associated solution items, a value of 'PromptUser' prompt the user to select
+		/// which solution items to delete.
+		/// </summary>
+		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ArtifactExtension/OnArtifactDeletion.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Library.Automation.ArtifactExtension/OnArtifactDeletion.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactExtension/OnArtifactDeletion.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[global::System.ComponentModel.DefaultValue(ArtifactDeletedAction.None)]
+		[global::System.ComponentModel.Browsable(false)]
+		[DslModeling::DomainObjectId("7bcdb4f8-c554-4355-9ae6-6cbb0b97d818")]
+		public ArtifactDeletedAction OnArtifactDeletion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return onArtifactDeletionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				OnArtifactDeletionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ArtifactExtension.OnArtifactDeletion domain property.
+		/// </summary>
+		internal sealed partial class OnArtifactDeletionPropertyHandler : DslModeling::DomainPropertyValueHandler<ArtifactExtension, ArtifactDeletedAction>
+		{
+			private OnArtifactDeletionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ArtifactExtension.OnArtifactDeletion domain property value handler.
+			/// </summary>
+			public static readonly OnArtifactDeletionPropertyHandler Instance = new OnArtifactDeletionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ArtifactExtension.OnArtifactDeletion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return OnArtifactDeletionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed ArtifactDeletedAction GetValue(ArtifactExtension element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.onArtifactDeletionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ArtifactExtension element, ArtifactDeletedAction newValue)
+			{
+				if (element == null)
+				{
+					throw new global::System.ArgumentNullException("element");
+				}
+		
+				ArtifactDeletedAction oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+					{
+						this.SetValue(element, oldValue, newValue);
+					}
+					else
+					{
+						using (var tx = element.Store.TransactionManager.BeginTransaction())
+						{
+							this.SetValue(element, oldValue, newValue);
+							tx.Commit();
+						}
+					}
+				}
+			}
+		
+			private void SetValue(ArtifactExtension element, ArtifactDeletedAction oldValue, ArtifactDeletedAction newValue)
+			{
+				this.ValueChanging(element, oldValue, newValue);
+				element.onArtifactDeletionPropertyStorage = newValue;
+				ValueChanged(element, oldValue, newValue);
+				element.PropertyChanges.NotifyChanged<ArtifactExtension>(x => x.OnArtifactDeletion);
 			}
 		}
 		

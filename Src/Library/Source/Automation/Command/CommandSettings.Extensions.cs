@@ -28,6 +28,11 @@ namespace NuPattern.Library.Automation
                 {
                     designProperty.SetValue(value);
                 }
+                else if (descriptor is DesignOnlyPropertyDescriptor)
+                {
+                    // Try setting actual value directly
+                    descriptor.SetValue(commandSettings, value);
+                }
             }
         }
     }

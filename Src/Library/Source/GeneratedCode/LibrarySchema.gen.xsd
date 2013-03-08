@@ -568,13 +568,19 @@
         <!-- Property: OnArtifactActivation -->
         <xsd:attribute name="onArtifactActivation" type="ArtifactActivatedAction" >
           <xsd:annotation>
-            <xsd:documentation>The action to perform on associated artifacts, when this element is &apos;activated&apos; by the user (i.e. double-clicked). A value of &apos;Open&apos; will open the artifact in its default view, a value of &apos;Select&apos; will select the file in Solution Explorer.</xsd:documentation>
+            <xsd:documentation>The action to perform on associated solution items, when this element is &apos;activated&apos; by the user (i.e. double-clicked). A value of &apos;Open&apos; will open the solution item in its default view, a value of &apos;Select&apos; will select the item in &apos;Solution Explorer&apos;.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: AssociatedArtifacts -->
         <xsd:attribute name="associatedArtifacts" type="xsd:string" >
           <xsd:annotation>
-            <xsd:documentation>Configures actions for working with artifacts associated with this element. Expand this property to configure.</xsd:documentation>
+            <xsd:documentation>Configures actions for working with solution items associated with this element. Expand this property to configure.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: OnArtifactDeletion -->
+        <xsd:attribute name="onArtifactDeletion" type="ArtifactDeletedAction" >
+          <xsd:annotation>
+            <xsd:documentation>The action to perform on associated solution items, when this element is &apos;deleted&apos; by the user. A value of &apos;DeleteAll&apos; will automatically delete all associated solution items, a value of &apos;PromptUser&apos; prompt the user to select which solution items to delete.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
       </xsd:extension>
@@ -827,6 +833,27 @@
       <xsd:enumeration value="Select">
         <xsd:annotation>
           <xsd:documentation>Associated artifacts are selected in Solution Explorer.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum ArtifactDeletedAction -->
+  <xsd:simpleType name="ArtifactDeletedAction">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="None">
+        <xsd:annotation>
+          <xsd:documentation>No action is performed, associated solution items are not deleted from the solution.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="DeleteAll">
+        <xsd:annotation>
+          <xsd:documentation>All associated solution items are deleted automatically.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PromptUser">
+        <xsd:annotation>
+          <xsd:documentation>The user is prompted to select which associated solution items to delete.</xsd:documentation>
         </xsd:annotation>
       </xsd:enumeration>
     </xsd:restriction>

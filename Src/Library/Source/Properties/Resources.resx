@@ -2249,4 +2249,10 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   <data name="DeleteArtifactsCommand_SelectorFailed" xml:space="preserve">
     <value>Failed to select files to delete</value>
   </data>
+  <data name="ArtifactExtension_DeleteCommandName" xml:space="preserve">
+    <value>DeleteArtifactsCommand</value>
+  </data>
+  <data name="ArtifactExtension_DeleteEventName" xml:space="preserve">
+    <value>DeleteArtifactsEvent</value>
+  </data>
 </root>
