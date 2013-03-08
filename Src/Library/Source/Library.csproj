@@ -146,6 +146,8 @@
     <Compile Include="Automation\Guidance\GuidanceInstanceNameTypeConverter.cs" />
     <Compile Include="Automation\Rules\CommandChange\ICommandChangeRule.cs" />
     <Compile Include="Automation\Rules\CommandChange\ICommandChangeRuleMetadata.cs" />
+    <Compile Include="Commands\DeleteArtifactsCommand.cs" />
+    <Compile Include="Commands\Helpers\DeleteAction.cs" />
     <Compile Include="Extensions\PatternElementSchemaExtensions.cs" />
     <Compile Include="Automation\Menu\IMenuSettings.cs" />
     <Compile Include="Automation\Guidance\AssociatedGuidanceTypeConverter.cs" />

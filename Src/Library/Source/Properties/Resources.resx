@@ -2211,4 +2211,42 @@ Please add a new 'Text Template', or create a new folder within the 'Templates\T
   <data name="XmlNamespace_EmptyText" xml:space="preserve">
     <value>(empty)</value>
   </data>
+  <data name="DeleteArtifactsCommand_Description" xml:space="preserve">
+    <value>Deletes all the associated solution items for the current element. This command supports prompting the user to choose which associated artifacts to delete.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_DisplayName" xml:space="preserve">
+    <value>Deletes an Element's Associated Artifacts</value>
+  </data>
+  <data name="DeleteArtifactsCommand_TraceInitial" xml:space="preserve">
+    <value>Executing deletion of associated solution items for current element, '{0}', and action '{1}'.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_TraceNoLinks" xml:space="preserve">
+    <value>No associated solution items to delete for the current element '{0}'.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_ErrorDeletingSolutionItem" xml:space="preserve">
+    <value>Failed to delete solution item '{0}', error was: '{1}'</value>
+  </data>
+  <data name="DeleteArtifactsCommand_TraceDeleteSolutionItem" xml:space="preserve">
+    <value>Deleting item '{0}' from solution.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorEmptyItems" xml:space="preserve">
+    <value>There are no items in the solution to delete.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorTitle" xml:space="preserve">
+    <value>Select the solution items to delete</value>
+  </data>
+  <data name="DeleteArtifactsCommand_Action_Description" xml:space="preserve">
+    <value>The default delete action to take. 'DeleteAll' deletes all associated solution items automatically. 'PromptUser' allows the user to specify which solution items to delete.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_Action_DisplayName" xml:space="preserve">
+    <value>Delete Action</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorMessage" xml:space="preserve">
+    <value>'{0}' was related to one or more items in solution, which it may have created. These solution items may no longer be required or managed by this element and may need deleting.
+
+Select the related solution items to delete and press 'OK', or press 'Cancel' to keep the items in the solution.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorFailed" xml:space="preserve">
+    <value>Failed to select files to delete</value>
+  </data>
 </root>

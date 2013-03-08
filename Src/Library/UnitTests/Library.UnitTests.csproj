@@ -123,6 +123,7 @@
     <Compile Include="Commands\ActivateFeatureCommandSpec.cs" />
     <Compile Include="Commands\ActivateArtifactCommandSpec.cs" />
     <Compile Include="Commands\CreateElementFromDroppedWindowsFileCommandSpec.cs" />
+    <Compile Include="Commands\DeleteArtifactsCommandSpec.cs" />
     <Compile Include="Commands\GenerateModelingCodeCommandValidationSpec.cs" />
     <Compile Include="Commands\InstantiateSolutionElementCommandSpec.cs" />
     <Compile Include="Commands\ModifyXmlCommandSpec.cs" />

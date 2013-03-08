@@ -1466,6 +1466,116 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The default delete action to take. &apos;DeleteAll&apos; deletes all associated solution items automatically. &apos;PromptUser&apos; allows the user to specify which solution items to delete..
+        /// </summary>
+        internal static string DeleteArtifactsCommand_Action_Description {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_Action_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Action.
+        /// </summary>
+        internal static string DeleteArtifactsCommand_Action_DisplayName {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_Action_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deletes all the associated solution items for the current element. This command supports prompting the user to choose which associated artifacts to delete..
+        /// </summary>
+        internal static string DeleteArtifactsCommand_Description {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deletes an Element&apos;s Associated Artifacts.
+        /// </summary>
+        internal static string DeleteArtifactsCommand_DisplayName {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to delete solution item &apos;{0}&apos;, error was: &apos;{1}&apos;.
+        /// </summary>
+        internal static string DeleteArtifactsCommand_ErrorDeletingSolutionItem {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_ErrorDeletingSolutionItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There are no items in the solution to delete..
+        /// </summary>
+        internal static string DeleteArtifactsCommand_SelectorEmptyItems {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_SelectorEmptyItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to select files to delete.
+        /// </summary>
+        internal static string DeleteArtifactsCommand_SelectorFailed {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_SelectorFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; was related to one or more items in solution, which it may have created. These solution items may no longer be required or managed by this element and may need deleting.
+        ///
+        ///Select the related solution items to delete and press &apos;OK&apos;, or press &apos;Cancel&apos; to keep the items in the solution..
+        /// </summary>
+        internal static string DeleteArtifactsCommand_SelectorMessage {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_SelectorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the solution items to delete.
+        /// </summary>
+        internal static string DeleteArtifactsCommand_SelectorTitle {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_SelectorTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting item &apos;{0}&apos; from solution..
+        /// </summary>
+        internal static string DeleteArtifactsCommand_TraceDeleteSolutionItem {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_TraceDeleteSolutionItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing deletion of associated solution items for current element, &apos;{0}&apos;, and action &apos;{1}&apos;..
+        /// </summary>
+        internal static string DeleteArtifactsCommand_TraceInitial {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No associated solution items to delete for the current element &apos;{0}&apos;..
+        /// </summary>
+        internal static string DeleteArtifactsCommand_TraceNoLinks {
+            get {
+                return ResourceManager.GetString("DeleteArtifactsCommand_TraceNoLinks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A configured value for this property, defined at design-time..
         /// </summary>
         internal static string DesignValueProvider_ValueDescription {
