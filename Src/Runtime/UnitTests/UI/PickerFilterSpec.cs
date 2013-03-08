@@ -1,100 +1,253 @@
-﻿using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
 namespace NuPattern.Runtime.UI.UnitTests
 {
-	[TestClass]
-	public class PickerFilterSpec
-	{
-		internal static readonly IAssertion Assert = new Assertion();
+    [TestClass]
+    public class PickerFilterSpec
+    {
+        private static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenCreatingANewPickerFilter_ThenKindIsAllItemsByDefault()
-		{
-			const ItemKind AllKinds = ItemKind.Folder | ItemKind.Item | ItemKind.Project | ItemKind.Reference |
-				ItemKind.ReferencesFolder | ItemKind.Solution | ItemKind.SolutionFolder | ItemKind.Unknown;
+        [TestClass]
+        public class GivenNoContext
+        {
+            private PickerFilter filter;
 
-			var target = new PickerFilter();
+            private Solution solution = new Solution
+                {
+                    Items = 
+                        {
+                            new Project
+                                {
+                                    Name = "ProjectWithFiles",
+                                    PhysicalPath = @"C:\Temp\ProjectWithFiles.proj",
+                                    Items =
+                                        {
+                                            new Item
+                                                {
+                                                    Name = "File.withkids",
+                                                    PhysicalPath = @"C:\Temp\File.withkids",
+                                                    Items =
+                                                        {
+                                                            new Item
+                                                                {
+                                                                    Name = "NestedFile.nested",
+                                                                    PhysicalPath = @"C:\Temp\NestedFile.nested",
+                                                                },
+                                                        },
+                                                },
+                                            new Item
+                                                {
+                                                    Name = "File.nokids",
+                                                    PhysicalPath = @"C:\Temp\File.nokids",
+                                                },
+                                        }
+                                },
+                            new Project
+                                {
+                                    Name = "ProjectWithNoFiles",
+                                    PhysicalPath = @"C:\Temp\ProjectWithNoFiles.proj",
+                                },
+                        }
+                };
 
-			Assert.Equal(AllKinds, target.Kind);
-		}
+            [TestInitialize]
+            public void InitializeContext()
+            {
+                this.filter = new PickerFilter();
+            }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenDefininingKindContainingItem_ThenAppliesFilterReturnsTrue()
-		{
-			var child = new Mock<IItemContainer>();
-			child.SetupGet(item => item.Kind).Returns(ItemKind.Item);
+            [TestMethod, TestCategory("Unit")]
+            public void ThenKindIsAllKinds()
+            {
+                Assert.Equal(PickerFilter.AllKinds, this.filter.Kind);
+            }
 
-			var container = new Mock<IItemContainer>();
-			container.SetupGet(item => item.Kind).Returns(ItemKind.Project);
-			container.SetupGet(item => item.Items).Returns(new[] { child.Object });
+            [TestMethod, TestCategory("Unit")]
+            public void ThenIncludeFileExtensionsIsEmpty()
+            {
+                Assert.Equal(string.Empty, this.filter.MatchFileExtensions);
+            }
 
-			var target = new PickerFilter { Kind = ItemKind.Project | ItemKind.Item };
+            [TestMethod, TestCategory("Unit")]
+            public void ThenIncludeEmptyContainersIsFalse()
+            {
+                Assert.False(this.filter.IncludeEmptyContainers);
+            }
 
-			Assert.True(target.ApplyFilter(container.Object));
-		}
+            [TestMethod, TestCategory("Unit")]
+            public void ThenIncludedItemsEmpty()
+            {
+                Assert.NotNull(this.filter.MatchItems);
+                Assert.False(this.filter.MatchItems.Any());
+            }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenDefininingKindNotContainingItem_ThenAppliesFilterReturnsFalse()
-		{
-			var container = new Mock<IItemContainer>();
-			container.SetupGet(item => item.Kind).Returns(ItemKind.Project);
+            [TestMethod, TestCategory("Unit")]
+            public void WhenMatchesFilterToItemIncludingItems_ThenReturnsTrue()
+            {
+                this.filter.Kind = ItemKind.Item;
 
-			var target = new PickerFilter { Kind = ItemKind.Item | ItemKind.Folder };
+                Assert.True(this.filter.MatchesFilter(this.solution.Find<IItem>(p => p.Name == "File.withkids").First()));
+            }
 
-			Assert.False(target.ApplyFilter(container.Object));
-		}
+            [TestMethod, TestCategory("Unit")]
+            public void WhenMatchesFilterToItemExcludingItems_ThenReturnsFalse()
+            {
+                this.filter.Kind = ItemKind.Unknown;
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenNotIncludingEmptyFoldersAndItemDoesNotHaveChildren_ThenAppliesFilerReturnsFalse()
-		{
-			var container = new Mock<IItemContainer>();
-			container.SetupGet(item => item.Kind).Returns(ItemKind.Project);
-			container.SetupGet(item => item.Items).Returns(new IItemContainer[0]);
+                Assert.False(this.filter.MatchesFilter(this.solution.Find<IItem>(p => p.Name == "File.withkids").First()));
+            }
 
-			var target = new PickerFilter { Kind = ItemKind.Project | ItemKind.Folder, IncludeEmptyContainers = false };
+            [TestMethod, TestCategory("Unit")]
+            public void WhenMatchesFilterToProjectContainingItemIncludingItemsOnly_ThenReturnsFalse()
+            {
+                this.filter.Kind = ItemKind.Item;
 
-			Assert.False(target.ApplyFilter(container.Object));
-		}
+                Assert.False(this.filter.MatchesFilter(this.solution.Find<IProject>(p => p.Name == "ProjectWithFiles").First()));
+            }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenKindIsItemAndDefininingFileExtensionsAndItemMachOneInTheList_ThenAppliesFilterReturnsTrue()
-		{
-			var container = new Mock<IItemContainer>();
-			container.SetupGet(item => item.Kind).Returns(ItemKind.Item);
-			container.SetupGet(item => item.PhysicalPath).Returns(@"X:\myfile.foo");
+            [TestMethod, TestCategory("Unit")]
+            public void WhenMatchesFilterWithIncludedItemNotSame_ThenReturnsFalse()
+            {
+                this.filter.MatchItems = new List<IItemContainer>(this.solution.Find<IItem>(p => p.Name == "File.withkids"));
 
-			var target = new PickerFilter { Kind = ItemKind.Item, IncludeEmptyContainers = true, IncludeFileExtensions = ".foo .bar" };
+                Assert.False(this.filter.MatchesFilter(this.solution.Find<Item>(p => p.Name == "File.nokids").First()));
+            }
 
-			Assert.True(target.ApplyFilter(container.Object));
-		}
+            [TestMethod, TestCategory("Unit")]
+            public void WhenMatchesFilterWithIncludedItemSame_ThenReturnsTrue()
+            {
+                this.filter.MatchItems = new List<IItemContainer>(this.solution.Find<IItem>(p => p.Name == "File.withkids"));
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenKindIsItemAndDefininingFileExtensionsAndItemDoesNotMachOneInTheList_ThenAppliesFilterReturnsFalse()
-		{
-			var container = new Mock<IItemContainer>();
-			container.SetupGet(item => item.Kind).Returns(ItemKind.Item);
-			container.SetupGet(item => item.PhysicalPath).Returns(@"X:\myfile.bar");
+                Assert.True(this.filter.MatchesFilter(this.solution.Find<Item>(p => p.Name == "File.withkids").First()));
+            }
 
-			var target = new PickerFilter { Kind = ItemKind.Item, IncludeEmptyContainers = true, IncludeFileExtensions = ".foo" };
+            [TestMethod, TestCategory("Unit")]
+            public void WhenMatchesFilterWithExtensionFilterNotMatch_ThenReturnsFalse()
+            {
+                this.filter.MatchFileExtensions = ".bar";
 
-			Assert.False(target.ApplyFilter(container.Object));
-		}
+                Assert.False(this.filter.MatchesFilter(this.solution.Find<Item>(p => p.Name == "File.withkids").First()));
+            }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenNotIncludingEmptyFolderAndItemHasChildrenThatNotMatchFilter_ThenAppliesFilterReturnsFalse()
-		{
-			var child = new Mock<IItemContainer>();
-			child.SetupGet(item => item.Kind).Returns(ItemKind.Unknown);
+            [TestMethod, TestCategory("Unit")]
+            public void WhenMatchesFilterWithSingleExtensionFilterMatch_ThenReturnsTrue()
+            {
+                this.filter.MatchFileExtensions = ".withkids";
 
-			var container = new Mock<IItemContainer>();
-			container.SetupGet(item => item.Kind).Returns(ItemKind.Folder);
-			container.SetupGet(item => item.Items).Returns(new[] { child.Object });
+                Assert.True(this.filter.MatchesFilter(this.solution.Find<Item>(p => p.Name == "File.withkids").First()));
+            }
 
-			var target = new PickerFilter { Kind = ItemKind.Folder | ItemKind.Item, IncludeEmptyContainers = false };
+            [TestMethod, TestCategory("Unit")]
+            public void WhenMatchesFilterWithMultipleExtensionFilterMatch_ThenReturnsTrue()
+            {
+                this.filter.MatchFileExtensions = ".dll.withkids.exe";
 
-			Assert.False(target.ApplyFilter(container.Object));
-		}
-	}
+                Assert.True(this.filter.MatchesFilter(this.solution.Find<Item>(p => p.Name == "File.withkids").First()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenMatchesFilterWithInvalidExtensionFilterMatch_ThenReturnsFalse()
+            {
+                this.filter.MatchFileExtensions = "top";
+
+                Assert.False(this.filter.MatchesFilter(this.solution.Find<Item>(p => p.Name == "File.withkids").First()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenMatchesFilterWithIncludedItemNotSameAndExtensionFilterMatch_ThenReturnsTrue()
+            {
+                this.filter.MatchItems = new List<IItemContainer>(this.solution.Find<IItem>(p => p.Name == "File.withkids"));
+                this.filter.MatchFileExtensions = ".nokids";
+
+                Assert.True(this.filter.MatchesFilter(this.solution.Find<Item>(p => p.Name == "File.nokids").First()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenMatchesFilterWithIncludedItemSameAndExtensionFilterNotMatch_ThenReturnsTrue()
+            {
+                this.filter.MatchItems = new List<IItemContainer>(this.solution.Find<IItem>(p => p.Name == "File.withkids"));
+                this.filter.MatchFileExtensions = ".bar";
+
+                Assert.True(this.filter.MatchesFilter(this.solution.Find<Item>(p => p.Name == "File.withkids").First()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenApplyFilterToNonMatchWithNotAllowedKind_ThenReturnsFalse()
+            {
+                this.filter.MatchItems = new[] { Mock.Of<IItemContainer>() };
+                this.filter.Kind = ItemKind.Unknown;
+
+                Assert.False(this.filter.ApplyFilter(this.solution.Find<IItem>(p => p.Name == "File.nokids").First()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenApplyFilterToNonMatchWithAllowedKindAndNotNotionalContainerKindWithNoChildren_ThenReturnsFalse()
+            {
+                this.filter.MatchItems = new[] { Mock.Of<IItemContainer>() };
+                this.filter.Kind = ItemKind.Item;
+
+                Assert.False(this.filter.ApplyFilter(this.solution.Find<IItem>(p => p.Name == "File.nokids").First()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenApplyFilterToNonMatchWithAllowedKindAndNotNotionalContainerKindWithChildrenThatMatch_ThenReturnsTrue()
+            {
+                this.filter.MatchFileExtensions = ".nested";
+                this.filter.Kind = ItemKind.Item;
+
+                Assert.True(this.filter.ApplyFilter(this.solution.Find<IItem>(p => p.Name == "File.withkids").First()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenApplyFilterToNonMatchWithAllowedKindAndNotNotionalContainerKindWithChildrenThatDontMatch_ThenReturnsFalse()
+            {
+                this.filter.MatchFileExtensions = ".foo";
+                this.filter.Kind = ItemKind.Item;
+
+                Assert.False(this.filter.ApplyFilter(this.solution.Find<IItem>(p => p.Name == "File.withkids").First()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenApplyFilterToNonMatchWithAllowedKindAndNotionalContainerKindWithChildrenThatMatch_ThenReturnsTrue()
+            {
+                this.filter.MatchFileExtensions = ".withkids";
+                this.filter.Kind = ItemKind.Project;
+
+                Assert.True(this.filter.ApplyFilter(this.solution.Find<IProject>(p => p.Name == "ProjectWithFiles").First()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenApplyFilterToNonMatchWithAllowedKindAndNotionalContainerKindWithChildrenThatDontMatch_ThenReturnsFalse()
+            {
+                this.filter.MatchFileExtensions = ".foo";
+                this.filter.Kind = ItemKind.Project;
+
+                Assert.False(this.filter.ApplyFilter(this.solution.Find<IProject>(p => p.Name == "ProjectWithFiles").First()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenApplyFilterToNonMatchWithAllowedKindAndNotionalContainerKindWithNoChildrenAndAllowEmptyContainers_ThenReturnsTrue()
+            {
+                this.filter.MatchFileExtensions = ".foo";
+                this.filter.IncludeEmptyContainers = true;
+                this.filter.Kind = ItemKind.Project;
+
+                Assert.True(this.filter.ApplyFilter(this.solution.Find<IProject>(p => p.Name == "ProjectWithNoFiles").First()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenApplyFilterToNonMatchWithAllowedKindAndNotionalContainerKindWithNoChildrenAndNotAllowEmptyContainers_ThenReturnsFalse()
+            {
+                this.filter.MatchFileExtensions = ".foo";
+                this.filter.IncludeEmptyContainers = false;
+                this.filter.Kind = ItemKind.Project;
+
+                Assert.False(this.filter.ApplyFilter(this.solution.Find<IProject>(p => p.Name == "ProjectWithNoFiles").First()));
+            }
+        }
+    }
 }

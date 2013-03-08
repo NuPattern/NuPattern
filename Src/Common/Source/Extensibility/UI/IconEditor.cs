@@ -43,7 +43,7 @@ namespace NuPattern.Extensibility
 				picker.Title = Properties.Resources.ImageUriEditor_PickerTitle;
 				picker.EmptyItemsMessage = string.Format(CultureInfo.CurrentCulture, Resources.ImageUriEditor_EmptyItemsMessage, ImageExtension);
 				picker.Filter.Kind = ItemKind.Solution | ItemKind.SolutionFolder | ItemKind.Project | ItemKind.Folder | ItemKind.Item;
-				picker.Filter.IncludeFileExtensions = ImageExtension;
+				picker.Filter.MatchFileExtensions = ImageExtension;
 				if (picker.ShowDialog())
 				{
 					var item = (IItem)picker.SelectedItem;

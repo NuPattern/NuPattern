@@ -53,7 +53,7 @@ namespace NuPattern.Library.TypeEditors
                 picker.Title = Resources.TextTemplateUriEditor_Title;
                 picker.EmptyItemsMessage = string.Format(CultureInfo.CurrentCulture, Resources.TextTemplateUriEditor_EmptyItemsMessage, FileExtension);
                 picker.Filter.Kind = ItemKind.Solution | ItemKind.SolutionFolder | ItemKind.Project | ItemKind.Folder | ItemKind.Item;
-                picker.Filter.IncludeFileExtensions = FileExtension;
+                picker.Filter.MatchFileExtensions = FileExtension;
                 SetSelectedItem(context, picker, uriService, GetAuthoringTemplateProperty(context));
                 if (picker.ShowDialog())
                 {

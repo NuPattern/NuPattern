@@ -116,6 +116,7 @@
     </Compile>
     <Compile Include="Commands\VsMenuCommand.cs" />
     <Compile Include="Commands\VsMenuCommandAdapter.cs" />
+    <Compile Include="Extensions\FilteredItemContainerExtensions.cs" />
     <Compile Include="Extensions\MenuCommandServiceExtensions.cs" />
     <Compile Include="RuntimeShellInfo.gen.cs">
       <AutoGen>True</AutoGen>
@@ -150,6 +151,7 @@
     <Compile Include="SingletonScope.cs" />
     <Compile Include="SolutionEvents.cs" />
     <Compile Include="TemplateInstantiationScope.cs" />
+    <Compile Include="UI\SolutionSelector.cs" />
     <Compile Include="UI\SolutionPicker.cs" />
     <Compile Include="UI\TreeViewItemOrderingConverter.cs" />
     <Compile Include="UI\Data\MenuGroupingEnumerableConverter.cs" />
@@ -161,6 +163,11 @@
     <Compile Include="UI\PickerFilter.cs" />
     <Compile Include="UI\ProductPicker.xaml.cs">
       <DependentUpon>ProductPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewModels\SolutionPickerBaseViewModel.cs" />
+    <Compile Include="UI\ViewModels\SolutionSelectorViewModel.cs" />
+    <Compile Include="UI\Views\SolutionSelectorView.xaml.cs">
+      <DependentUpon>SolutionSelectorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\Views\SolutionPickerView.xaml.cs">
       <DependentUpon>SolutionPickerView.xaml</DependentUpon>
@@ -269,6 +276,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="UI\Views\SolutionSelectorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UI\Views\SolutionPickerView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -319,6 +330,9 @@
     </Resource>
     <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandExpandAll.png">
       <Link>Resources\CommandExpandAll.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandSelectAll.png">
+      <Link>Resources\CommandSelectAll.png</Link>
     </Resource>
     <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\NodeProductVersionNotFound.png">
       <Link>Resources\NodeProductVersionNotFound.png</Link>

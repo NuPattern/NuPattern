@@ -128,6 +128,9 @@ namespace NuPattern.Runtime.Shell
                 container.ComposeExportedValue<Func<ISolutionPicker>>(
                     () => new SolutionPicker());
 
+                container.ComposeExportedValue<Func<ISolutionSelector>>(
+                    () => new SolutionSelector());
+
                 container.ComposeExportedValue<Func<IProductPicker>>(
                     () => new ProductPicker());
             }
