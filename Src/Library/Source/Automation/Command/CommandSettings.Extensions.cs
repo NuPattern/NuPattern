@@ -28,7 +28,7 @@ namespace NuPattern.Library.Automation
                 {
                     designProperty.SetValue(value);
                 }
-                else if (descriptor is DesignOnlyPropertyDescriptor)
+                else if (!descriptor.IsReadOnly)
                 {
                     // Try setting actual value directly
                     descriptor.SetValue(commandSettings, value);
