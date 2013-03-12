@@ -31,9 +31,13 @@
       <extendedElement>
         <automationSettingsSchemaMoniker Id="41a46a03-57ca-43fa-9e9b-701910b00b59" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="6b3a69f1-9e26-47f0-aa5c-e64a3e564c3c" value="FilteredByTag" name="ReferenceTag" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ReferenceTag",
+    "Value": "FilteredByTag",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <guidanceExtension Id="19777560-c7a0-4d6b-82fe-bf0363f89d24">
       <extendedElement>

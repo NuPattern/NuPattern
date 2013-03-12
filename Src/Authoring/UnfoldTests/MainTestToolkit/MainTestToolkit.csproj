@@ -47,6 +47,9 @@
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="bfbc51a8-3ace-4c9f-851c-f918a123aac7.patterndefinition.diagram">
+      <DependentUpon>PatternModel.patterndefinition</DependentUpon>
+    </None>
     <None Include="source.extension.vsixmanifest">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

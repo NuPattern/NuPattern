@@ -25,12 +25,28 @@
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d6b5820b-135a-419b-9dc1-7f6279e1771d" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="402d10ee-b3e0-4c1a-8996-254b4c8200d5" value="5d64cfe6-a6ff-4e73-a000-c6a8832740ff" name="FeatureId" />
-        <propertySettings Id="e8996285-f256-4201-9ea7-b3e97fa52536" value="Pattern Toolkit Hands-On Labs" name="DefaultInstanceName" />
-        <propertySettings Id="f2786bc1-9f02-457e-80f7-4a67aa56b6f1" value="True" name="SharedInstance" />
-        <propertySettings Id="da7f4eb2-637b-441c-92d6-695f42197fb8" value="True" name="ActivateOnInstantiation" />
-      </properties>
+      <properties>[
+  {
+    "Name": "FeatureId",
+    "Value": "5d64cfe6-a6ff-4e73-a000-c6a8832740ff",
+    "ValueProvider": null
+  },
+  {
+    "Name": "DefaultInstanceName",
+    "Value": "Pattern Toolkit Hands-On Labs",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SharedInstance",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "ActivateOnInstantiation",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="0433fe7d-38fd-4aa3-bcbd-fc9dccbf9205" typeId="NuPattern.Library.Commands.ActivateFeatureCommand">
       <extendedElement>

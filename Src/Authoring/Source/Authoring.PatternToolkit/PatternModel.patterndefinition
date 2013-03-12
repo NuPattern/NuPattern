@@ -295,12 +295,28 @@
       <extendedElement>
         <automationSettingsSchemaMoniker Id="637a727b-f99f-48de-8bae-aef51fd397fb" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="7ff775e2-101a-40c8-8b14-484068f278d0" value="9f6dc301-6f66-4d21-9f9c-b37412b162f6" name="FeatureId" />
-        <propertySettings Id="73101b02-5c04-483e-9ffc-506a09c6d143" value="Creating Pattern Toolkits" name="DefaultInstanceName" />
-        <propertySettings Id="92ab3cc1-23ee-45d5-85e5-a045f5b439d3" value="True" name="SharedInstance" />
-        <propertySettings Id="0aa96877-2bf9-47cf-a97f-58e0f4c2afc5" value="True" name="ActivateOnInstantiation" />
-      </properties>
+      <properties>[
+  {
+    "Name": "FeatureId",
+    "Value": "9f6dc301-6f66-4d21-9f9c-b37412b162f6",
+    "ValueProvider": null
+  },
+  {
+    "Name": "DefaultInstanceName",
+    "Value": "Creating Pattern Toolkits",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SharedInstance",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "ActivateOnInstantiation",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="049e298a-8525-40a8-9fe8-f74fe455c307" typeId="NuPattern.Library.Commands.ActivateFeatureCommand">
       <extendedElement>
@@ -311,247 +327,531 @@
       <extendedElement>
         <automationSettingsSchemaMoniker Id="71dd5a90-e8b9-4d73-92bf-cbe0e20865b9" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="350b1f41-9b43-4c53-9975-c7307745c717" value="True" name="ValidateDescendants" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ValidateDescendants",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="eadcd298-57cf-423b-9c1b-3d515413c77f" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="ae1ded6c-2c88-4437-818e-e7db23243597" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="9509a557-1baf-4a01-a590-76f466a6dc3d" value="False" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "False",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="6ddf673a-92e9-479a-91b1-e183ed1bcc7e" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3d053cef-8144-4b9d-9ce2-83791652814d" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="cbc59f50-2518-447e-885a-61f9b6c18bff" value="True" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="b5a0762e-07e6-493a-a8f4-5a7c6e634bd7" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d9d5fd97-f7fc-4acf-b3bc-4503cc1027b9" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="e6ca785b-300f-49d1-b616-5ff34dc5dfc5" value="False" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "False",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="e2d14d50-dc8f-4a40-bf60-10e2a7ac9f89" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="1176089f-d5ac-49a2-9d26-c4c1e1473614" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="5bd43d54-1ab0-4886-8dcb-53437ce6bf20" value="PatternTooling.toolingdesign" name="TargetFileName" />
-        <propertySettings Id="d52108c9-7b68-43d1-b00b-b0709d7a544a" name="TargetPath" />
-        <propertySettings Id="5674bd7c-dd57-4b74-8c08-2450d863ee0d" value="template://item/CSharp/231bca8f8397-PatternToolkit.Design.ProductionTooling" name="TemplateUri" />
-        <propertySettings Id="b56d5f69-a3e7-4339-927a-6983e9712393" value="True" name="SanitizeName" />
-        <propertySettings Id="17421b32-cce0-466b-b9b5-4573b350e7e5" value="False" name="SyncName" />
-        <propertySettings Id="03487753-f7ed-494a-9f02-af9b647d7b04" name="TemplateAuthoringUri" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetFileName",
+    "Value": "PatternTooling.toolingdesign",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "template://item/CSharp/231bca8f8397-PatternToolkit.Design.ProductionTooling",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": null,
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="cca56d5e-ebff-4f89-8ea8-95acc2bc62da" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="98fd0624-85df-4b3c-b4c1-3e3b300c14c8" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="20b94e94-9040-422d-bd45-4ab3fb8d73f6" value="False" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "False",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="45cf3a4f-9fe7-4ace-a35d-f4004cf0f15d" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b4589ec5-f7f1-4784-a5eb-1261f00e6f5b" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="eb7fb117-3966-4e94-b6d8-a76ece692287" value="True" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="f55383be-22ca-4142-ad04-a192b61c5641" typeId="NuPattern.Library.Commands.TransformTemplatesCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="48339eab-5572-4ef7-b280-d3b6512ddc34" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="b5edb221-e9e8-4c30-bacb-3419e6771243" name="TargetPath" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetPath",
+    "Value": null,
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="2068fc51-98dd-4a87-a886-5e8cb1ef114c" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="996e376a-e2bd-40c5-92bc-ae8d1b48a227" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="a558019e-b880-4d38-a026-53602d3d08c8" value="{InstanceName}" name="TargetFileName" />
-        <propertySettings Id="586c62cc-816b-47f3-9d6d-7c0243a51160" value="..\..\..\..\~\Assets\Templates\Items\{InstanceName}" name="TargetPath" />
-        <propertySettings Id="1010eb7c-f1d8-4cb5-a49f-fa4f9458ca73" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/ItemTemplate/ItemTemplate.vstemplate.t4" name="TemplateUri" />
-        <propertySettings Id="7301b8d3-dc2f-42b2-8615-47bf3092d4e6" value="True" name="SanitizeName" />
-        <propertySettings Id="4e791890-f969-45d6-b6ce-301f48745968" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/ee377e53-72e7-4715-a1f2-0a6c8e89e89b" name="TemplateAuthoringUri" />
-        <propertySettings Id="c84af3f9-7226-4792-93ca-6571d2e4923d" value="False" name="SyncName" />
-        <propertySettings Id="52ff2154-c1c6-4f02-bd78-99add4b8b1f1" name="Tag" />
-        <propertySettings Id="683328d7-0651-48f5-9bf8-fbc77aba398f" name="TargetBuildAction" />
-        <propertySettings Id="d2e6ba74-cc08-44fd-bada-65be78730a3f" value="DoNotCopy" name="TargetCopyToOutput" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetFileName",
+    "Value": "{InstanceName}",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\..\\..\\..\\~\\Assets\\Templates\\Items\\{InstanceName}",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/ItemTemplate/ItemTemplate.vstemplate.t4",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": "solution://0216a624-c5c5-4335-8361-f640b91b4dea/ee377e53-72e7-4715-a1f2-0a6c8e89e89b",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Tag",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetBuildAction",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetCopyToOutput",
+    "Value": "DoNotCopy",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="24f6b63c-c819-474b-ba22-c56f24b3ca60" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d217f4c3-5876-4b35-ac67-3d5daab4e575" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="6858009c-3b60-4fb3-b5fa-4c59922bad76" name="TargetFileName" />
-        <propertySettings Id="48b52f79-fe3c-4890-81f8-4402f4490e36" value="..\..\..\..\~\Assets\Templates\Projects\{InstanceName}" name="TargetPath" />
-        <propertySettings Id="560a6d50-112a-4ddb-961f-dcded19ec768" value="template://item/CSharp/7037915fcaae-.Assets.Templates.ProjectTemplates.ProjectTemplate" name="TemplateUri" />
-        <propertySettings Id="6e6a1366-a241-4629-8753-a3b85fea57b3" value="True" name="SanitizeName" />
-        <propertySettings Id="7433f6fe-11b2-4b22-b812-1c43a2202223" value="True" name="SyncName" />
-        <propertySettings Id="f528e04a-edf9-4e55-beeb-884226c4b37f" name="TemplateAuthoringUri" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetFileName",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\..\\..\\..\\~\\Assets\\Templates\\Projects\\{InstanceName}",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "template://item/CSharp/7037915fcaae-.Assets.Templates.ProjectTemplates.ProjectTemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": null,
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="b119f2da-1680-4ffe-b676-394e7800195d" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="4e38487f-cf56-4bad-a884-ffc7dd61152d" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="5bc50795-0784-4fd7-b303-088ebfb2c041" name="TargetFileName" />
-        <propertySettings Id="ff19ac98-2b69-4c1c-9a99-f77787de6612" value="~\Assets\Wizards" name="TargetPath" />
-        <propertySettings Id="6f1730db-d8f2-44ea-9b30-1886b652e706" value="template://item/CSharp/5f2ba6abc61d-PatternToolkit.Development.Assets.Wizards.Wizard" name="TemplateUri" />
-        <propertySettings Id="f34ea689-6aa9-4143-bf69-ba3742d4de20" value="True" name="SanitizeName" />
-        <propertySettings Id="3fdf589e-4789-42eb-95d0-598b9facb639" value="True" name="SyncName" />
-        <propertySettings Id="94fc4326-c1e1-46bc-9a66-388e7165ea7f" name="TemplateAuthoringUri" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetFileName",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "~\\Assets\\Wizards",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "template://item/CSharp/5f2ba6abc61d-PatternToolkit.Development.Assets.Wizards.Wizard",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": null,
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="5639f255-6a98-47a2-9aa0-a42837719991" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="41abb338-95cc-4b57-8c97-124ea6194864" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="ad0a3a1c-c29f-435a-b826-af5edbdd6bad" name="TargetFileName" />
-        <propertySettings Id="b22d813d-a2ca-4db3-80c1-370aa1737219" value="~\Assets\Wizards\Pages" name="TargetPath" />
-        <propertySettings Id="36d25d6e-18dd-4b96-8f33-f554924c2389" value="template://item/CSharp/540bca8f8397-.Development.Assets.Wizards.WizardPages.WizardPage" name="TemplateUri" />
-        <propertySettings Id="0867987c-10c6-4163-bec2-57649680c5cc" value="True" name="SanitizeName" />
-        <propertySettings Id="848f62ed-523d-4da7-ba97-100e85e96a3b" value="True" name="SyncName" />
-        <propertySettings Id="2e65920d-7007-4e99-8224-acf7c61a6196" name="TemplateAuthoringUri" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetFileName",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "~\\Assets\\Wizards\\Pages",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "template://item/CSharp/540bca8f8397-.Development.Assets.Wizards.WizardPages.WizardPage",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": null,
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="9ff7f358-d1fb-49c8-a8ca-577d1825b7ef" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="1599bc51-f0a5-498f-8957-609113265ffe" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="6450ea16-e6df-48d8-8bd4-961d1279d1f3" name="TargetFileName" />
-        <propertySettings Id="94f71b88-d382-4fbf-b73f-e3ea59ed4496" value="~\Assets\Templates\Text" name="TargetPath" />
-        <propertySettings Id="44f040a3-e4f3-47f7-8d1d-2a2550a1ced7" value="template://item/CSharp/efd533db2f84-opment.Assets.Templates.TextTemplates.TextTemplate" name="TemplateUri" />
-        <propertySettings Id="5295389b-c021-4155-99f5-365e016440d8" value="True" name="SanitizeName" />
-        <propertySettings Id="b64b0363-e17a-49eb-81c7-59e9e3f82ba0" value="True" name="SyncName" />
-        <propertySettings Id="2caf7f71-eda4-473b-ac7e-12643e88f52e" name="TemplateAuthoringUri" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetFileName",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "~\\Assets\\Templates\\Text",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "template://item/CSharp/efd533db2f84-opment.Assets.Templates.TextTemplates.TextTemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": null,
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="c83e1094-77c2-4c10-b6c8-baea86f146b8" typeId="NuPattern.Library.Commands.UnfoldVsTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3b2e0366-e7be-44b5-a9e3-c653ebfd4372" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="f740a41f-8466-42d6-8b6e-9a6ddfd1a70b" name="TargetFileName" />
-        <propertySettings Id="b554a4e6-d6be-4ec9-af52-e91fff2d29f8" value="..\..\..\..\~\Assets\Templates\Items\{InstanceName}" name="TargetPath" />
-        <propertySettings Id="8d3f9f07-0456-4601-8415-366f583d8a71" value="template://item/CSharp/b69b847487b3-opment.Assets.Templates.ItemTemplates.ItemTemplate" name="TemplateUri" />
-        <propertySettings Id="9fc0358c-18cc-4f1c-91c6-0b4f82027080" value="True" name="SanitizeName" />
-        <propertySettings Id="0fa7e755-9438-4d3e-a714-88b1de447a53" value="True" name="SyncName" />
-        <propertySettings Id="f30992b4-ed29-42f9-badb-afc2389ab878" name="TemplateAuthoringUri" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetFileName",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\..\\..\\..\\~\\Assets\\Templates\\Items\\{InstanceName}",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "template://item/CSharp/b69b847487b3-opment.Assets.Templates.ItemTemplates.ItemTemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": null,
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="419b51a5-d552-4d15-bc67-0368cdee105b" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="e77de6ed-feb2-4e6f-8432-e522847f8774" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="8fb207ff-5c43-4d4b-a528-a7ad2185f79b" value="True" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="831ca27a-01ac-4862-bf3a-5e8908ed1f67" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f2bc5f3d-ab59-4b85-9b7f-c40f36514e27" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="e4b8449d-09c4-433c-a257-61d0626b29e8" value="False" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "False",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="19a18c3a-2e35-41b5-801a-3632d0c7c0d4" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3b3743a8-d637-4bd8-a235-545d6a670af6" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="ebfd2ad5-d170-4367-adec-1f908a0b379d" value="True" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="e07b4470-a2d3-4749-ad5a-6d276a32b515" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="998a67f2-fa9e-428f-a703-af1f30dcd352" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="c8e5cd93-a3ad-4d7b-a345-e2974dde02ba" value="False" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "False",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="2e00fd3b-2b8f-40e4-ac67-bf0ceef140a6" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="1fce269e-51dc-4548-aaa3-ef3e35285297" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="a49c4b0f-1f69-47bb-8374-7a6f5ef12287" value="True" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="397b704f-685b-4469-8dcb-dcf3c952fef4" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="7c585a13-3418-4a6a-b647-d49de0ce1755" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="6246b39a-a83f-4128-b6b5-80e923714678" value="False" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "False",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="3ff5c4dd-f7ec-4ee3-a3e1-fe12d70120c3" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="3f768261-42d7-4cb5-8325-3aaec6a4953a" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="bae08663-40e4-4308-99f7-b52fa38d5c2b" value="True" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="c3cc82f1-62d0-4f8b-895c-e2e2fb5695a2" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="a12c8796-b824-4e57-a6b9-2f3a36050e93" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="07678f71-4b47-4936-b02b-03aa838b9971" value="False" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "False",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="a3b93464-fee6-4066-9eae-8292b5a0201d" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="653e1252-90ac-42f9-962f-90ddcec425fe" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="b1456be7-4efd-4c84-881e-ea487031af69" value="True" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="18e244c7-76ad-4430-a987-c37c609452dc" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="bcba6d1c-ce33-48da-867e-02f280884e2b" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="f544dfcb-31cf-4f94-9927-0f220988cbe5" value="False" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "False",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="e158f25c-3cd1-40e7-8ecc-bec3b1c8f7b3" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="120460b7-86d2-448c-ba9c-c6582cd4453b" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="2b8fe33b-aa80-40b0-945f-7caa2a84199d" value="{InstanceName}" name="TargetFileName" />
-        <propertySettings Id="aec14cf0-f9ba-48ca-ac18-c1cefdb9d62e" value="..\..\..\..\~\Assets\Templates\Projects\{InstanceName}" name="TargetPath" />
-        <propertySettings Id="04899ce1-199a-4935-929c-9f29025d57a3" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/ProjectTemplate/ProjectTemplate.vstemplate.t4" name="TemplateUri" />
-        <propertySettings Id="2b1c2f8f-deda-4a79-a820-e726d1802405" value="True" name="SanitizeName" />
-        <propertySettings Id="5f6e184e-ac88-41f3-8a0a-571698911527" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/736354eb-f066-475f-8a43-b78cf07a135d" name="TemplateAuthoringUri" />
-        <propertySettings Id="984aba49-0154-4688-8b9f-eca44a95851c" value="False" name="SyncName" />
-        <propertySettings Id="5170eebf-0169-468d-a2d1-4ba8b460a27f" name="Tag" />
-        <propertySettings Id="c09a2cf5-0f05-48a0-89ef-b064f1d05cd7" name="TargetBuildAction" />
-        <propertySettings Id="bb5720c4-5529-4d9c-bcf8-45aa10d1c6dc" value="DoNotCopy" name="TargetCopyToOutput" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetFileName",
+    "Value": "{InstanceName}",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\..\\..\\..\\~\\Assets\\Templates\\Projects\\{InstanceName}",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/ProjectTemplate/ProjectTemplate.vstemplate.t4",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": "solution://0216a624-c5c5-4335-8361-f640b91b4dea/736354eb-f066-475f-8a43-b78cf07a135d",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Tag",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetBuildAction",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetCopyToOutput",
+    "Value": "DoNotCopy",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="d4ebc0c4-7992-4304-b462-b4155a54c25f" typeId="NuPattern.Authoring.PatternToolkit.Automation.Commands.SetAsDefaultViewCommand">
       <extendedElement>
@@ -587,25 +887,65 @@
       <extendedElement>
         <automationSettingsSchemaMoniker Id="e584cf89-312d-4698-b57d-ea003e4bf5f4" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="02392644-0bc8-41ce-9184-7777b02b41cf" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/PatternModel/PatternModel.patterndefinition.t4" name="TemplateUri" />
-        <propertySettings Id="c7f6e88f-f951-437f-9344-e5f66959948e" value="..\~" name="TargetPath" />
-        <propertySettings Id="4a729bce-b240-4094-82ca-7c64c4a4dce5" value="PatternModel.patterndefinition" name="TargetFileName" />
-        <propertySettings Id="32796853-4a49-4c20-b544-aa03d720a17f" value="True" name="SanitizeName" />
-        <propertySettings Id="06bca198-9ed9-4a6d-9d1a-1cbf0078a84d" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/65938d55-f3c6-4923-b32e-6682ba09c7bd" name="TemplateAuthoringUri" />
-        <propertySettings Id="07b0dedb-3cb8-4f58-9ec9-aa942aacdeb7" value="False" name="SyncName" />
-        <propertySettings Id="7344802d-63b4-4cdd-8fde-52a341ea2b09" name="Tag" />
-        <propertySettings Id="c8cbf081-a767-400e-892a-61b2e2aeb5cb" name="TargetBuildAction" />
-        <propertySettings Id="3fd06cbf-2628-45ed-a46e-a24c1498cdd6" value="DoNotCopy" name="TargetCopyToOutput" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TemplateUri",
+    "Value": "t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/PatternModel/PatternModel.patterndefinition.t4",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\~",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetFileName",
+    "Value": "PatternModel.patterndefinition",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": "solution://0216a624-c5c5-4335-8361-f640b91b4dea/65938d55-f3c6-4923-b32e-6682ba09c7bd",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Tag",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetBuildAction",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetCopyToOutput",
+    "Value": "DoNotCopy",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="f9a86aec-5e67-4059-a030-fbab5e75ae8d" typeId="NuPattern.Library.Commands.AggregatorCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="31f96dca-d0a6-4a52-9ae5-4f10a689e597" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="f31e4661-d780-4c5b-b65c-6f90fea5b88d" value="e52d1228-39f9-422d-b667-1e6f26249aa0;9434ad4c-395d-4fd9-bec4-a3d9fac0e111;3c8b1aaa-68b2-49aa-9bc4-26516cbd5509;c18e93e0-d2eb-4b30-a560-a62b6f4728f6;4a0bf7de-d568-4076-ab02-e62138bc3e41" name="CommandReferenceList" />
-      </properties>
+      <properties>[
+  {
+    "Name": "CommandReferenceList",
+    "Value": "e52d1228-39f9-422d-b667-1e6f26249aa0;9434ad4c-395d-4fd9-bec4-a3d9fac0e111;3c8b1aaa-68b2-49aa-9bc4-26516cbd5509;c18e93e0-d2eb-4b30-a560-a62b6f4728f6;4a0bf7de-d568-4076-ab02-e62138bc3e41",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="c18e93e0-d2eb-4b30-a560-a62b6f4728f6" typeId="NuPattern.Authoring.PatternToolkit.Automation.Commands.CreateViewElementsCommand">
       <extendedElement>
@@ -616,9 +956,13 @@
       <extendedElement>
         <automationSettingsSchemaMoniker Id="77e7e003-db91-4747-9f3e-4088009f1c6f" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="ef64bf68-9e70-4b50-8929-cad63a07ae6e" value="True" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="4a0bf7de-d568-4076-ab02-e62138bc3e41" typeId="NuPattern.Library.Commands.SaveArtifactCommand">
       <extendedElement>
@@ -629,74 +973,170 @@
       <extendedElement>
         <automationSettingsSchemaMoniker Id="c4d75b79-128e-4a5e-b7d7-46b4c6feec3e" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="aebe08a2-16eb-49e6-824a-b19c677681c4" value="EmbeddedResource" name="BuildAction" />
-        <propertySettings Id="58f52bd6-65bf-44e1-8e1d-f5d4c1931fa6" name="TargetPath" />
-      </properties>
+      <properties>[
+  {
+    "Name": "BuildAction",
+    "Value": "EmbeddedResource",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": null,
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="dc5c415e-e06b-49d5-aa77-044879bc0714" typeId="NuPattern.Authoring.PatternToolkit.Automation.Commands.ValidatePatternModelCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="0aeb8219-d178-48cf-b2e3-9a58c2cb406b" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="ef1dd957-4002-4cdf-bb12-82d3783e4ee4" name="TargetPath" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetPath",
+    "Value": null,
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="90291e86-b780-4adf-b500-5c11c868c3fd" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="bce7bc48-3436-4ff0-ba05-8f06bfe62b58" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="89ec901f-400c-4ee0-b385-1abc1c619b4c" value="ToolkitGuidance.doc" name="TargetFileName" />
-        <propertySettings Id="faf6c896-5b22-4702-b77c-956c6ee8216e" value="..\..\~\Assets\Guidance" name="TargetPath" />
-        <propertySettings Id="d454ff47-921f-44ca-9297-160f80c0219b" value="True" name="SanitizeName" />
-        <propertySettings Id="a6561caa-9717-45d8-9935-d851807f5936" value="False" name="SyncName" />
-        <propertySettings Id="4d82b5e8-e719-4ca5-b7a1-710dbb12a8db" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/Guidance/ToolkitGuidance.t4" name="TemplateUri" />
-        <propertySettings Id="af1bd1e1-3a18-452e-81e9-8be1131d16bd" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/deddac25-042a-4a6d-92b1-8cb2b4beb60a" name="TemplateAuthoringUri" />
-        <propertySettings Id="b6b6d1a1-14e8-4156-b3a8-5b48daba9b0a" name="Tag" />
-        <propertySettings Id="0377a1ef-edc9-470b-ae59-5bd035f693cc" name="TargetBuildAction" />
-        <propertySettings Id="e5d7eb5c-07d5-42de-8d44-ce927b8a20d3" value="DoNotCopy" name="TargetCopyToOutput" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetFileName",
+    "Value": "ToolkitGuidance.doc",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\..\\~\\Assets\\Guidance",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/Guidance/ToolkitGuidance.t4",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": "solution://0216a624-c5c5-4335-8361-f640b91b4dea/deddac25-042a-4a6d-92b1-8cb2b4beb60a",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Tag",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetBuildAction",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetCopyToOutput",
+    "Value": "DoNotCopy",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="50c8adef-76cc-44a0-80c3-ac8aef6c4513" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="c6833ee4-743a-4358-a10b-f76a0d6328d8" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="bf0f2dad-045a-44c8-844d-271ecc676433" value="GuidanceWorkflow" name="TargetFileName" />
-        <propertySettings Id="a571e9f8-c756-4e66-80de-5535bd1724ec" value="..\..\~\GeneratedCode\Guidance" name="TargetPath" />
-        <propertySettings Id="99a78b06-2175-4237-a5b3-cc3cc535542f" value="True" name="SanitizeName" />
-        <propertySettings Id="7f16834e-1509-49ea-9700-2df8d52cac3a" value="False" name="SyncName" />
-        <propertySettings Id="2842b2fc-ec6e-4302-86d9-70d3bd9eaf2c" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/Guidance/GuidanceWorkflow.t4" name="TemplateUri" />
-        <propertySettings Id="880cc1f9-83ed-44df-aaab-62cb7e550e91" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/0891b2f7-6a6a-4a7f-8d9d-7320d1884b1c" name="TemplateAuthoringUri" />
-        <propertySettings Id="d413ae36-b9fc-47c5-8283-c33d69301134" name="Tag" />
-        <propertySettings Id="768fa27b-7e82-4410-ad17-e832b9e6b318" name="TargetBuildAction" />
-        <propertySettings Id="3b5688b0-62b2-4718-b205-57f7feb78e72" value="DoNotCopy" name="TargetCopyToOutput" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetFileName",
+    "Value": "GuidanceWorkflow",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\..\\~\\GeneratedCode\\Guidance",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/Guidance/GuidanceWorkflow.t4",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": "solution://0216a624-c5c5-4335-8361-f640b91b4dea/0891b2f7-6a6a-4a7f-8d9d-7320d1884b1c",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Tag",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetBuildAction",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetCopyToOutput",
+    "Value": "DoNotCopy",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="16edcd41-7f26-4332-afbc-db279696a30f" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f07136e6-e7f0-41df-b316-50ca17104986" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="ea8a7432-90d9-4e12-a901-84a3d77aa5bd" value="True" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="fa8be218-d6de-4ed7-a197-7b42f127db4b" typeId="NuPattern.Library.Commands.ActivateArtifactCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="7522d045-c877-4e72-bc9c-5a987fb784aa" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="5cea6618-ce3f-40e9-ac84-99265de4f2e6" value="False" name="Open" />
-      </properties>
+      <properties>[
+  {
+    "Name": "Open",
+    "Value": "False",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="5a814601-5260-42a6-94fd-1e8a7a178ace" typeId="NuPattern.Library.Commands.AggregatorCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="cae00472-8a7e-43db-8ca6-c4e01c8355be" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="5d4a15ac-a0ac-4e0e-bca3-35efd1a5455d" value="caf296ed-c384-4491-8169-6c1539c98180;50c8adef-76cc-44a0-80c3-ac8aef6c4513" name="CommandReferenceList" />
-      </properties>
+      <properties>[
+  {
+    "Name": "CommandReferenceList",
+    "Value": "caf296ed-c384-4491-8169-6c1539c98180;50c8adef-76cc-44a0-80c3-ac8aef6c4513",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="caf296ed-c384-4491-8169-6c1539c98180" typeId="NuPattern.Authoring.PatternToolkit.Automation.Commands.CreateGuidanceDocumentsCommand">
       <extendedElement>
@@ -707,140 +1147,304 @@
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b77d9219-672c-46af-8ad1-1bafe3725738" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="0897e473-147d-46cc-8be1-dfc6537f5507" value="False" name="SanitizeName" />
-        <propertySettings Id="2b65efb1-f568-455f-ba2a-ba5f8e158025" value="False" name="SyncName" />
-        <propertySettings Id="eb004004-3f68-4c6b-b494-68d89e850cec" value="source.extension.tt" name="TargetFileName" />
-        <propertySettings Id="99d70c98-3f40-4123-a75c-35741a94f9ad" value="..\~" name="TargetPath" />
-        <propertySettings Id="c4eb1e35-133c-4706-b740-ce8036b39e0b" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.extension.t4" name="TemplateUri" />
-        <propertySettings Id="6041f199-728a-4416-9750-031d0fec66b6" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/a71d52a0-214a-471a-968e-6a12ec5d35bc" name="TemplateAuthoringUri" />
-        <propertySettings Id="ee984d78-548c-4b0b-8829-b67216406854" name="Tag" />
-        <propertySettings Id="9ab9c87e-139b-46ad-a2ed-497b6ba2ed18" name="TargetBuildAction" />
-        <propertySettings Id="719cf5ef-e316-4597-9a2e-906c7f4e2cee" value="DoNotCopy" name="TargetCopyToOutput" />
-      </properties>
+      <properties>[
+  {
+    "Name": "SanitizeName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetFileName",
+    "Value": "source.extension.tt",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\~",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.extension.t4",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": "solution://0216a624-c5c5-4335-8361-f640b91b4dea/a71d52a0-214a-471a-968e-6a12ec5d35bc",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Tag",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetBuildAction",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetCopyToOutput",
+    "Value": "DoNotCopy",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="e7f46324-a7e5-434d-a3bc-d25c7bbe4e18" typeId="NuPattern.Library.Commands.SetBuildActionCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b41e8ff4-9832-4df7-9b14-30adbd15255c" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="4e93c196-7801-4b43-a935-e8eb94a10bdc" value="None" name="BuildAction" />
-        <propertySettings Id="9a3860c0-f836-4ef6-b608-5e2c88df2d82" value="..\~\..\source.extension.tt\source.extension.vsixmanifest" name="TargetPath" />
-      </properties>
+      <properties>[
+  {
+    "Name": "BuildAction",
+    "Value": "None",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\~\\..\\source.extension.tt\\source.extension.vsixmanifest",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="d321df0a-d467-45d6-944f-ccd9b82225fe" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="aa38025e-adcf-4664-83f5-844cdbfe29f2" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="4b49fe7d-3f88-48d9-9ebf-706c5cf196b1" value="False" name="SanitizeName" />
-        <propertySettings Id="603da6ad-d0dc-407d-b70a-e80d45847766" value="False" name="SyncName" />
-        <propertySettings Id="6a50e599-74ea-41cb-9d37-d792daa5d778" value="source.extension.gen.ttinclude" name="TargetFileName" />
-        <propertySettings Id="6f24c4cb-4567-4ab9-a3a8-a74d1b9cd61c" value="~" name="TargetPath" />
-        <propertySettings Id="1943c55e-ad1f-401d-a092-ee5a77111a2e" value="t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.extension.include.t4" name="TemplateUri" />
-        <propertySettings Id="b51a1f8b-c9d9-4273-9ff3-9d433e9c6115" value="solution://0216a624-c5c5-4335-8361-f640b91b4dea/d93786b4-73bd-4850-8a9b-dc71b0c85d79" name="TemplateAuthoringUri" />
-        <propertySettings Id="66188dc1-d851-429f-9e29-0ad61023b648" name="Tag" />
-        <propertySettings Id="b0c0934a-00f8-43c8-9923-f086a28eb3e9" name="TargetBuildAction" />
-        <propertySettings Id="f159af74-1766-4dcd-9d0a-2b0e66870398" value="DoNotCopy" name="TargetCopyToOutput" />
-      </properties>
+      <properties>[
+  {
+    "Name": "SanitizeName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetFileName",
+    "Value": "source.extension.gen.ttinclude",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "~",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "t4://extension/9f6dc301-6f66-4d21-9f9c-b37412b162f6/Assets/Templates/Text/VsixManifest/source.extension.include.t4",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": "solution://0216a624-c5c5-4335-8361-f640b91b4dea/d93786b4-73bd-4850-8a9b-dc71b0c85d79",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Tag",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetBuildAction",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetCopyToOutput",
+    "Value": "DoNotCopy",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="add1e759-dac1-42ed-a26e-586cf883975b" typeId="NuPattern.Library.Commands.AggregatorCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="4e34f6c5-3b8e-4374-9b71-0284f1757994" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="69b46bae-1824-4d8d-90b6-745fc850689d" value="33b932d3-2554-4e59-ba10-64d46ee6e396;d321df0a-d467-45d6-944f-ccd9b82225fe;e7f46324-a7e5-434d-a3bc-d25c7bbe4e18;32796c01-8e80-4981-948d-1cc707d12eb2;60bf8de3-2170-40f4-8dd6-56997f0cec65" name="CommandReferenceList" />
-      </properties>
+      <properties>[
+  {
+    "Name": "CommandReferenceList",
+    "Value": "33b932d3-2554-4e59-ba10-64d46ee6e396;d321df0a-d467-45d6-944f-ccd9b82225fe;e7f46324-a7e5-434d-a3bc-d25c7bbe4e18;32796c01-8e80-4981-948d-1cc707d12eb2;60bf8de3-2170-40f4-8dd6-56997f0cec65",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="098b6414-ce54-4513-999b-4c237fe3079c" typeId="NuPattern.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f0d75646-5479-4c39-9019-9ff5cb1a343c" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="753db193-4d21-4246-98b1-68f9e524aed4" value="ItemTemplate" name="ChildElementName" />
-        <propertySettings Id="d793d1b6-33e0-4d2b-890c-bcd1c8857a17" value="*.vstemplate" name="Extension" />
-        <propertySettings Id="822237ca-78c4-47ad-ab3d-b537039e3575" value="True" name="SyncName" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ChildElementName",
+    "Value": "ItemTemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Extension",
+    "Value": "*.vstemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="c0d65b6f-6b41-4cd4-bf20-23e30ec3e9c3" typeId="NuPattern.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="8765ef5b-572f-4825-a259-2a6cbbebd89f" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="7daa33b9-be9d-4cf6-8ab4-439dc0f97733" value="ProjectTemplate" name="ChildElementName" />
-        <propertySettings Id="c7367758-15fb-4239-a219-14c17974aa57" value="*.vstemplate" name="Extension" />
-        <propertySettings Id="1f22477f-ac4f-4145-b2ba-b58bb3ab64db" value="True" name="SyncName" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ChildElementName",
+    "Value": "ProjectTemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Extension",
+    "Value": "*.vstemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="6d7b67f7-0256-4717-b3aa-b651d89f1d83" typeId="NuPattern.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="be717b25-b909-4a5a-9d32-b10b02c4fb6e" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="c2a8cd59-6791-4309-aced-98f0ca089e60" value="TextTemplate" name="ChildElementName" />
-        <propertySettings Id="4b8852dd-1b50-444d-8636-f25c75cf8249" value="*.tt;*.t4" name="Extension" />
-        <propertySettings Id="5afeacff-756b-4875-8499-bc875aaeae9c" value="True" name="SyncName" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ChildElementName",
+    "Value": "TextTemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Extension",
+    "Value": "*.tt;*.t4",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="d741af5f-7781-44fa-b46d-2dd75e08d069" typeId="NuPattern.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="8b816c0f-9a05-46a1-a2fc-6bc9de3f1e54" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="d728b389-905c-4b3e-b65d-4485f1a609af" value="Wizard" name="ChildElementName" />
-        <propertySettings Id="02b31e8b-aafb-4eb4-9c76-6b8e9f297f72" value="*.xaml" name="Extension" />
-        <propertySettings Id="ab90d6e5-92a1-4e86-add3-17e433a6305b" value="True" name="SyncName" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ChildElementName",
+    "Value": "Wizard",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Extension",
+    "Value": "*.xaml",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="951e1ef4-5d78-4acb-85b4-535a3a804f25" typeId="NuPattern.Library.Commands.CreateElementFromDroppedSolutionItemCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="50f11fcc-61d1-420b-a068-908ca54b6673" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="5e238ade-9e9a-4ae5-990e-7889abf2616f" value="WizardPage" name="ChildElementName" />
-        <propertySettings Id="d368f761-48e5-4dc1-9678-a4db48d5e7b4" value="*.xaml" name="Extension" />
-        <propertySettings Id="e0ac118f-aa71-4273-971d-ee5e4781af9c" value="True" name="SyncName" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ChildElementName",
+    "Value": "WizardPage",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Extension",
+    "Value": "*.xaml",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="17b73407-0787-41ce-ac50-a2336771cc12" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="447cd057-b97a-424b-a64e-c7dfcf84fd08" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="b63435dd-9134-4159-9d40-c68420d494f2" value="FilteredByTag" name="ReferenceTag" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ReferenceTag",
+    "Value": "FilteredByTag",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="f412f567-aca1-49fb-9a69-38bf49e01c99" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="62b581ac-368c-45ed-a9c0-dbf1e70fa42f" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="f2dfe3aa-8f7a-4461-a1ff-c962ab383421" value="FilteredByTag" name="ReferenceTag" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ReferenceTag",
+    "Value": "FilteredByTag",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="62fa0899-836e-47a3-b8cd-66d4b01af60a" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="713072e7-4d10-4bb2-a625-524d74aed892" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="a2700258-781f-4950-b7e0-51ec1049b256" value="FilteredByTag" name="ReferenceTag" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ReferenceTag",
+    "Value": "FilteredByTag",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="bcc1d8b7-86bf-4c5b-a182-a2cc806f69a6" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f79c99fc-8c93-493e-ab43-cdda1576fa79" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="3f5f310c-a8e6-4505-a226-0fe56190b9f1" value="FilteredByTag" name="ReferenceTag" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ReferenceTag",
+    "Value": "FilteredByTag",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="97178f1c-d168-4caf-9933-a24a576cf6f1" typeId="NuPattern.Library.Commands.SynchArtifactNameCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="706fbb48-7fed-410f-958c-55cd0cae4dbc" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="7a857542-af33-4a6e-ac7c-63225d1c4606" value="FilteredByTag" name="ReferenceTag" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ReferenceTag",
+    "Value": "FilteredByTag",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="32796c01-8e80-4981-948d-1cc707d12eb2" typeId="NuPattern.Authoring.PatternToolkit.Automation.Commands.SetManifestMSBuildCommand">
       <extendedElement>
@@ -851,77 +1455,157 @@
       <extendedElement>
         <automationSettingsSchemaMoniker Id="e1234322-7a52-400b-a4cb-a3480c6d95da" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="de6815dc-7adb-4a58-aff2-b959e00309f1" name="TargetPath" />
-      </properties>
+      <properties>[
+  {
+    "Name": "TargetPath",
+    "Value": null,
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="da42779a-bd4a-4f9e-b727-6c916652402f" typeId="NuPattern.Authoring.PatternToolkit.Automation.Commands.AddFromDroppedVSTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f38183c1-bade-40d8-ac93-15e8fb236161" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="96f43b6a-9da9-432b-932b-66f9a4f9b62a" value="ItemTemplate" name="ChildElementName" />
-        <propertySettings Id="09b6a54e-ffc0-4981-ba4d-165af6cd3445" value="..\..\..\~\Assets\Templates\Items" name="TargetPath" />
-        <propertySettings Id="eef8167e-4f8f-4ff9-95c8-5f6dfd135b9b" value="True" name="SyncName" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ChildElementName",
+    "Value": "ItemTemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\..\\..\\~\\Assets\\Templates\\Items",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="4beb6753-29d1-4fac-bf97-e17f6ef4995e" typeId="NuPattern.Authoring.PatternToolkit.Automation.Commands.AddFromDroppedVSTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="c6b2cf00-6285-4ff1-b10f-62222328d7a3" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="8f420413-5220-4df5-aa8f-079d3dfd812b" value="ProjectTemplate" name="ChildElementName" />
-        <propertySettings Id="c1a74472-67f7-43c8-84a9-c5fbbfa2bffb" value="..\..\..\~\Assets\Templates\Projects" name="TargetPath" />
-        <propertySettings Id="5bc8089c-db58-43f6-a092-ec79fe360351" value="True" name="SyncName" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ChildElementName",
+    "Value": "ProjectTemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\..\\..\\~\\Assets\\Templates\\Projects",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="95a51e75-adab-4725-9345-7a788483cffb" typeId="NuPattern.Authoring.PatternToolkit.Automation.Commands.ImportVSTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="b3ac4bfe-8277-489f-8898-f8ec8806c5b4" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="c82a0c2c-064e-4c0a-a3a6-27455907c687" value="ItemTemplate" name="ChildElementName" />
-        <propertySettings Id="e707de0e-0968-4004-8b2f-b4962c5f5cd4" value="Select Item Template" name="PickerTitle" />
-        <propertySettings Id="c8dafd4c-d727-412c-9e88-7db08e70aba2" name="InitialDirectory" />
-        <propertySettings Id="4ce71bbb-bfa7-44c5-af2a-be85037a9b5b" value="..\..\..\~\Assets\Templates\Items" name="TargetPath" />
-        <propertySettings Id="bd3f284a-bf70-4565-b15a-4505416fe777" value="True" name="SyncName" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ChildElementName",
+    "Value": "ItemTemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "PickerTitle",
+    "Value": "Select Item Template",
+    "ValueProvider": null
+  },
+  {
+    "Name": "InitialDirectory",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\..\\..\\~\\Assets\\Templates\\Items",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="1463a6c5-005f-4e68-80d9-c595d20a0a94" typeId="NuPattern.Authoring.PatternToolkit.Automation.Commands.ImportVSTemplateCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="ff12ec5c-fbbe-4d27-b83f-c28f3feeb514" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="7353841c-16d5-45a3-a311-b844f9e8c3f9" value="ProjectTemplate" name="ChildElementName" />
-        <propertySettings Id="fda1ee4e-5cd7-48ba-b219-395d90bdbfff" value="..\..\..\~\Assets\Templates\Projects" name="TargetPath" />
-        <propertySettings Id="8f2a3457-eb54-4c98-a211-37a4f486fa59" value="Select Project Template" name="PickerTitle" />
-        <propertySettings Id="452bfcca-3e04-4d5b-87f3-32694789e29c" name="InitialDirectory" />
-        <propertySettings Id="c5d1b66c-73a9-4410-9d6a-c691f642e00e" value="True" name="SyncName" />
-      </properties>
+      <properties>[
+  {
+    "Name": "ChildElementName",
+    "Value": "ProjectTemplate",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "..\\..\\..\\~\\Assets\\Templates\\Projects",
+    "ValueProvider": null
+  },
+  {
+    "Name": "PickerTitle",
+    "Value": "Select Project Template",
+    "ValueProvider": null
+  },
+  {
+    "Name": "InitialDirectory",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="acf616d7-278f-41a0-87bf-580ce8d3cdae" typeId="NuPattern.Library.Commands.CollapseSolutionItemsCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="96fe3ac7-3714-4b5c-b1a6-a1ad76878a3f" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="157b902c-c2fa-4c12-8f11-fa9ee037633d" value="False" name="IncludeProjects" />
-      </properties>
+      <properties>[
+  {
+    "Name": "IncludeProjects",
+    "Value": "False",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="07cf58a3-12f4-41d9-9b9e-d74a46e73d88" typeId="NuPattern.Library.Commands.AggregatorCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="ea24d5af-cb2e-44dc-a9e2-a906c998a152" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="9f5f310e-34bc-4715-bb9d-7c5829c1d579" value="e2d14d50-dc8f-4a40-bf60-10e2a7ac9f89;acf616d7-278f-41a0-87bf-580ce8d3cdae" name="CommandReferenceList" />
-      </properties>
+      <properties>[
+  {
+    "Name": "CommandReferenceList",
+    "Value": "e2d14d50-dc8f-4a40-bf60-10e2a7ac9f89;acf616d7-278f-41a0-87bf-580ce8d3cdae",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <commandSettings Id="b687f186-20c9-4389-be6b-9aaa92f283ac" typeId="NuPattern.Library.Commands.AggregatorCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="8a4c692a-7ad4-4eca-a80c-3acbb7df2453" />
       </extendedElement>
-      <properties>
-        <propertySettings Id="9b268597-7e37-443e-83ba-e7faed5c95c9" value="d321df0a-d467-45d6-944f-ccd9b82225fe;60bf8de3-2170-40f4-8dd6-56997f0cec65" name="CommandReferenceList" />
-      </properties>
+      <properties>[
+  {
+    "Name": "CommandReferenceList",
+    "Value": "d321df0a-d467-45d6-944f-ccd9b82225fe;60bf8de3-2170-40f4-8dd6-56997f0cec65",
+    "ValueProvider": null
+  }
+]</properties>
     </commandSettings>
     <menuSettings Id="11e7a8a4-db6a-484b-b6c7-f497a7774ea1" text="Show Guidance" commandId="049e298a-8525-40a8-9fe8-f74fe455c307" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
