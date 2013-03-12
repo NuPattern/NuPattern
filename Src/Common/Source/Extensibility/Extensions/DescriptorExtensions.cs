@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
+using System.Drawing.Design;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
@@ -38,6 +40,37 @@ namespace NuPattern.Extensibility
         }
 
         /// <summary>
+        /// Determines if the descriptor represents an automatic design collection property.
+        /// </summary>
+        public static bool IsAutoDesignCollectionProperty(this PropertyDescriptor descriptor)
+        {
+            // Descriptor must be using the built-in default collection editor, not declare a custom one
+            // Descriptor must be using the Extensibility.CollectionConverter, not declare anything different.
+            var editor = descriptor.GetEditor(typeof(UITypeEditor));
+            var converter = descriptor.Converter;
+
+            return (descriptor.IsPropertyTypeGeneric(typeof(Collection<>))
+                && editor is System.ComponentModel.Design.CollectionEditor
+                && converter != null
+                && converter.GetType().IsOfGenericType(typeof(Extensibility.CollectionConverter<>)));
+        }
+
+        /// <summary>
+        /// Determined whether the instance is of the specified generic type.
+        /// </summary>
+        /// <param name="instanceType">The instance of the object</param>
+        /// <param name="ofType">The generic type of the object to compare to. (i.e. typeof(MyGeneric{}))</param>
+        public static bool IsOfGenericType(this Type instanceType, Type ofType)
+        {
+            Guard.NotNull(() => instanceType, instanceType);
+            Guard.NotNull(() => ofType, ofType);
+
+            return (instanceType.IsGenericType
+                && (ofType == instanceType.GetGenericTypeDefinition()
+                || ofType.IsAssignableFrom(instanceType.GetGenericTypeDefinition())));
+        }
+
+        /// <summary>
         /// Determines whether the specified property is a generic of the specified type.
         /// </summary>
         public static bool IsPropertyTypeGeneric(this PropertyDescriptor property, Type ofType)
@@ -45,10 +78,7 @@ namespace NuPattern.Extensibility
             Guard.NotNull(() => property, property);
             Guard.NotNull(() => ofType, ofType);
 
-            return
-                property.PropertyType.IsGenericType
-                && ((ofType == property.PropertyType.GetGenericTypeDefinition()) ||
-                ofType.IsAssignableFrom(property.PropertyType.GetGenericTypeDefinition()));
+            return property.PropertyType.IsOfGenericType(ofType);
         }
 
         /// <summary>

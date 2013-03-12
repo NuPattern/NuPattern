@@ -145,11 +145,7 @@
       <Name>Library</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Automation\Command\" />
-    <Folder Include="Automation\Event\" />
-    <Folder Include="Automation\Menu\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Content\ClassLibrary\ClassLibrary.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

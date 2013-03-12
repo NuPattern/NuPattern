@@ -83,7 +83,8 @@ namespace NuPattern.Extensibility.Binding
                 propertySettings = settings.Properties.FirstOrDefault(prop => prop.Name == propertyName);
                 if (propertySettings == null)
                 {
-                    propertySettings = settings.AddProperty(propertyName, propertyType);
+                    propertySettings = new PropertyBindingSettings { Name = propertyName };
+                    settings.Properties.Add(propertySettings);
                 }
             }
             else
@@ -94,7 +95,8 @@ namespace NuPattern.Extensibility.Binding
                     propertySettings = design.ValueProvider.Properties.FirstOrDefault(prop => prop.Name == propertyName);
                     if (propertySettings == null)
                     {
-                        propertySettings = design.ValueProvider.AddProperty(propertyName, propertyType);
+                        propertySettings = new PropertyBindingSettings { Name = propertyName };
+                        design.ValueProvider.Properties.Add(propertySettings);
                     }
                 }
             }

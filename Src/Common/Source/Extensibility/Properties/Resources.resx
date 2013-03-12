@@ -199,10 +199,10 @@
     <value>Value</value>
   </data>
   <data name="ConditionBindingSettings_ElementName" xml:space="preserve">
-    <value>(Condition Binding)</value>
+    <value>(Empty Condition)</value>
   </data>
   <data name="ValidationBindingSettings_ElementName" xml:space="preserve">
-    <value>(Validation Rule Binding)</value>
+    <value>(Empty Validation Rule)</value>
   </data>
   <data name="FolderPathAlreadyExists" xml:space="preserve">
     <value>The folder path '{0}' already exists.</value>
@@ -280,7 +280,7 @@
     <value>Resolved artifact link in path '{0}', which resolved to '{1}'.</value>
   </data>
   <data name="ValueProviderBindingSettings_ElementName" xml:space="preserve">
-    <value>(Value Provider Binding)</value>
+    <value>(Empty Value Provider)</value>
   </data>
   <data name="DescriptorExtensions_MustBeDelegatingDescriptor" xml:space="preserve">
     <value>The descriptor must inherit from {0} or provide a constructor receiving a single parameter of type {1}, which is the original one to be replaced.</value>

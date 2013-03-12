@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using NuPattern.Extensibility.Binding;
 using NuPattern.Library.Automation;
 
 namespace NuPattern.Library.Design
@@ -88,21 +87,7 @@ namespace NuPattern.Library.Design
 
             if (context != null)
             {
-                ICommandSettings settings = null;
-
-                if (context.Instance is PropertySettings)
-                {
-                    settings = ((PropertySettings)(context.Instance)).CommandSettings;
-                }
-                else if (context.Instance is DesignProperty)
-                {
-                    settings = ((PropertySettings)((DesignProperty)(context.Instance)).Settings).CommandSettings;
-                }
-                else
-                {
-                    settings = (ICommandSettings)context.Instance;
-                }
-
+                var settings = (ICommandSettings)context.Instance;
                 return values.Select(val => new CommandReference(settings) { CommandId = new Guid(val) }).ToList();
             }
 

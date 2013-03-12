@@ -6,9 +6,9 @@ using NuPattern.Extensibility.Binding;
 namespace NuPattern.Extensibility
 {
     /// <summary>
-    /// Provides a <see cref="TypeConverter"/> for a bindable property for runtime.
+    /// Provides a <see cref="TypeConverter"/> for a bindable property for runtime, that converts Json values.
     /// </summary>
-    public class DesignCollectionConverter<T> : CollectionConverter where T : class
+    public class CollectionConverter<T> : CollectionConverter where T : class
     {
         /// <summary>
         /// Whether this converter can convert from the sourceType to the object, using the specified context.

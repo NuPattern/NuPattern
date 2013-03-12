@@ -47,28 +47,40 @@ namespace NuPattern.Extensibility.UnitTests
         public void WhenRoundTrippingFullBinding_ThenSucceeds()
         {
             IBindingSettings binding = new BindingSettings
-                {
-                    TypeId = "foo",
-                };
-            var propBinding = binding.AddProperty("Name", typeof(string));
-            propBinding.Value = "Value";
-            propBinding.ValueProvider = new ValueProviderBindingSettings
             {
-                TypeId = "ValueProvider",
+                TypeId = "foo",
+                Properties = 
+                {
+                    new PropertyBindingSettings
+                    {
+                        Name = "Name", 
+                        Value = "Value", 
+                        ValueProvider = new ValueProviderBindingSettings
+                        {
+                            TypeId = "ValueProvider",
+                            Properties = 
+                            {
+                                new PropertyBindingSettings
+                                {
+                                    Name = "Id", 
+                                    Value = "1"
+                                }
+                            }
+                        }
+                    }
+                }
             };
-            var vpPropBinding = propBinding.ValueProvider.AddProperty("Id", typeof(string));
-            vpPropBinding.Value = "1";
 
             var serialized = BindingSerializer.Serialize(binding);
             var deserialized = BindingSerializer.Deserialize<IBindingSettings>(serialized);
 
             Assert.Equal(binding.TypeId, deserialized.TypeId);
-            Assert.Equal(binding.Properties.Count(), deserialized.Properties.Count());
-            Assert.Equal(binding.Properties.First().Name, deserialized.Properties.First().Name);
-            Assert.Equal(binding.Properties.First().Value, deserialized.Properties.First().Value);
-            Assert.Equal(binding.Properties.First().ValueProvider.TypeId, deserialized.Properties.First().ValueProvider.TypeId);
-            Assert.Equal(binding.Properties.First().ValueProvider.Properties.First().Name, deserialized.Properties.First().ValueProvider.Properties.First().Name);
-            Assert.Equal(binding.Properties.First().ValueProvider.Properties.First().Value, deserialized.Properties.First().ValueProvider.Properties.First().Value);
+            Assert.Equal(binding.Properties.Count, deserialized.Properties.Count);
+            Assert.Equal(binding.Properties[0].Name, deserialized.Properties[0].Name);
+            Assert.Equal(binding.Properties[0].Value, deserialized.Properties[0].Value);
+            Assert.Equal(binding.Properties[0].ValueProvider.TypeId, deserialized.Properties[0].ValueProvider.TypeId);
+            Assert.Equal(binding.Properties[0].ValueProvider.Properties[0].Name, deserialized.Properties[0].ValueProvider.Properties[0].Name);
+            Assert.Equal(binding.Properties[0].ValueProvider.Properties[0].Value, deserialized.Properties[0].ValueProvider.Properties[0].Value);
         }
 
         public class Foo

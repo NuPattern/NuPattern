@@ -37,7 +37,7 @@ namespace NuPattern.Library.Automation
                 instantiateCommand.SetPropertyValue<InstantiateFeatureCommand, bool>(cmd => cmd.ActivateOnInstantiation, this.GuidanceActivateOnCreation);
             }
 
-            var instantiateEvent = element.EnsureEventLaunchPoint<IOnElementInstantiatedEvent>(Properties.Resources.GuidanceExtension_InstantiateEventName,
+            element.EnsureEventLaunchPoint<IOnElementInstantiatedEvent>(Properties.Resources.GuidanceExtension_InstantiateEventName,
                 instantiateCommand, true, () => !String.IsNullOrEmpty(this.GuidanceFeatureId));
 
             // Configure the activate command and menu.
@@ -50,14 +50,21 @@ namespace NuPattern.Library.Automation
             if (activateMenu != null)
             {
                 // Set the conditions
-                var conditionBindings = new Bindings.ConditionBindingSettings { TypeId = typeof(ElementReferenceExistsCondition).FullName };
-                var property = conditionBindings.AddProperty(Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind), typeof(string));
-                property.Value = ReferenceKindConstants.Guidance;
-
                 activateMenu.Conditions = Bindings.BindingSerializer.Serialize(
                     new List<Bindings.ConditionBindingSettings>
                     {
-                        conditionBindings,
+                        new Bindings.ConditionBindingSettings
+                        {
+                            TypeId = typeof(ElementReferenceExistsCondition).FullName,
+                            Properties =
+                            {
+                                new Bindings.PropertyBindingSettings
+                                {
+                                    Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
+                                    Value = ReferenceKindConstants.Guidance
+                                },
+                            }
+                        }
                     });
             }
         }

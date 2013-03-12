@@ -1837,609 +1837,6 @@ namespace NuPattern.Library.Automation
 namespace NuPattern.Library.Automation
 {
 	/// <summary>
-	/// DomainClass PropertySettings
-	/// Description for NuPattern.Library.Automation.PropertySettings
-	/// </summary>
-	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.PropertySettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("NuPattern.Library.Automation.PropertySettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
-	[DslModeling::DomainObjectId("7f53ba11-b54c-4157-945c-eb7963a5066b")]
-	public partial class PropertySettings : DslModeling::ModelElement
-	{
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// PropertySettings domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x7f53ba11, 0xb54c, 0x4157, 0x94, 0x5c, 0xeb, 0x79, 0x63, 0xa5, 0x06, 0x6b);
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public PropertySettings(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public PropertySettings(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-		#region Value domain property code
-		
-		/// <summary>
-		/// Value domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid ValueDomainPropertyId = new global::System.Guid(0xeb262797, 0xd9e2, 0x4a34, 0x89, 0x38, 0x40, 0x71, 0x34, 0x84, 0x34, 0xc8);
-		
-		/// <summary>
-		/// Storage for Value
-		/// </summary>
-		private global::System.String valuePropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of Value domain property.
-		/// The configured value of the property.
-		/// </summary>
-		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.PropertySettings/Value.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("NuPattern.Library.Automation.PropertySettings/Value.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainObjectId("eb262797-d9e2-4a34-8938-4071348434c8")]
-		public global::System.String Value
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return valuePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				ValuePropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the PropertySettings.Value domain property.
-		/// </summary>
-		internal sealed partial class ValuePropertyHandler : DslModeling::DomainPropertyValueHandler<PropertySettings, global::System.String>
-		{
-			private ValuePropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the PropertySettings.Value domain property value handler.
-			/// </summary>
-			public static readonly ValuePropertyHandler Instance = new ValuePropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the PropertySettings.Value domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return ValueDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(PropertySettings element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.valuePropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(PropertySettings element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
-		
-			private void SetValue(PropertySettings element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.valuePropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<PropertySettings>(x => x.Value);
-			}
-		}
-		
-		#endregion
-		#region Name domain property code
-		
-		/// <summary>
-		/// Name domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid NameDomainPropertyId = new global::System.Guid(0x8caa6961, 0x3c1a, 0x4c63, 0xa6, 0x9f, 0x70, 0x85, 0x0d, 0x88, 0x86, 0x0c);
-		
-		/// <summary>
-		/// Storage for Name
-		/// </summary>
-		private global::System.String namePropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of Name domain property.
-		/// The name of the property.
-		/// </summary>
-		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.PropertySettings/Name.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("NuPattern.Library.Automation.PropertySettings/Name.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::ElementName]
-		[DslModeling::DomainObjectId("8caa6961-3c1a-4c63-a69f-70850d88860c")]
-		public global::System.String Name
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return namePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				NamePropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the PropertySettings.Name domain property.
-		/// </summary>
-		internal sealed partial class NamePropertyHandler : DslModeling::DomainPropertyValueHandler<PropertySettings, global::System.String>
-		{
-			private NamePropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the PropertySettings.Name domain property value handler.
-			/// </summary>
-			public static readonly NamePropertyHandler Instance = new NamePropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the PropertySettings.Name domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return NameDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(PropertySettings element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.namePropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(PropertySettings element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
-		
-			private void SetValue(PropertySettings element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.namePropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<PropertySettings>(x => x.Name);
-			}
-		}
-		
-		#endregion
-		#region ValueProvider opposite domain role accessor
-		/// <summary>
-		/// Gets or sets ValueProvider.
-		/// Description for
-		/// NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettings
-		/// </summary>
-		public virtual ValueProviderSettings ValueProvider
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettingsDomainRoleId) as ValueProviderSettings;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettingsDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region ParentProvider opposite domain role accessor
-		/// <summary>
-		/// Gets or sets ParentProvider.
-		/// Description for
-		/// NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettings
-		/// </summary>
-		public virtual ValueProviderSettings ParentProvider
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettingsDomainRoleId) as ValueProviderSettings;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettingsDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region CommandSettings opposite domain role accessor
-		/// <summary>
-		/// Gets or sets CommandSettings.
-		/// Description for
-		/// NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettings
-		/// </summary>
-		public virtual CommandSettings CommandSettings
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettingsDomainRoleId) as CommandSettings;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettingsDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region ElementGroupPrototype Merge methods
-		/// <summary>
-		/// Returns a value indicating whether the source element represented by the
-		/// specified root ProtoElement can be added to this element.
-		/// </summary>
-		/// <param name="rootElement">
-		/// The root ProtoElement representing a source element.  This can be null, 
-		/// in which case the ElementGroupPrototype does not contain an ProtoElements
-		/// and the code should inspect the ElementGroupPrototype context information.
-		/// </param>
-		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
-		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
-		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
-		{
-			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
-			
-			if (rootElement != null)
-			{
-				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Library.Automation.ValueProviderSettings.DomainClassId)) 
-				{
-					// Check that creating a link with this path doesn't cause multiplicity overflow: PropertySettingsHasValueProvider.ValueProvider
-					if (this.ValueProvider != null)
-					{
-						return false;
-					}
-					return true;
-				}
-			}
-			return base.CanMerge(rootElement, elementGroupPrototype);
-		}
-		
-		/// <summary>
-		/// Called by the Merge process to create a relationship between 
-		/// this target element and the specified source element. 
-		/// Typically, a parent-child relationship is established
-		/// between the target element (the parent) and the source element 
-		/// (the child), but any relationship can be established.
-		/// </summary>
-		/// <param name="sourceElement">The element that is to be related to this model element.</param>
-		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
-		/// <remarks>
-		/// This method is overriden to create the relationship between the target element and the specified source element.
-		/// The base method does nothing.
-		/// </remarks>
-		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
-		{
-			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
-			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
-			// need to support this case.
-			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
-		
-				
-			global::NuPattern.Library.Automation.ValueProviderSettings sourceValueProviderSettings1 = sourceElement as global::NuPattern.Library.Automation.ValueProviderSettings;
-			if (sourceValueProviderSettings1 != null)
-			{
-				// Create link for path PropertySettingsHasValueProvider.ValueProvider
-				this.ValueProvider = sourceValueProviderSettings1;
-
-				return;
-			}
-		
-			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
-			// during a "Paste".
-			if (sourceElement is DslModeling::ExtensionElement
-				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
-			{
-				return;
-			}
-		
-			// Fall through to base class if this class hasn't handled the merge.
-			base.MergeRelate(sourceElement, elementGroup);
-		}
-		
-		/// <summary>
-		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
-		/// element from the current one (removes links created by MergeRelate).
-		/// </summary>
-		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
-		{
-			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
-				
-			global::NuPattern.Library.Automation.ValueProviderSettings sourceValueProviderSettings1 = sourceElement as global::NuPattern.Library.Automation.ValueProviderSettings;
-			if (sourceValueProviderSettings1 != null)
-			{
-				// Delete link for path PropertySettingsHasValueProvider.ValueProvider
-				
-				foreach (DslModeling::ElementLink link in global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.GetLinks((global::NuPattern.Library.Automation.PropertySettings)this, sourceValueProviderSettings1))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettingsDomainRoleId, global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettingsDomainRoleId);
-				}
-
-				return;
-			}
-			// Fall through to base class if this class hasn't handled the unmerge.
-			base.MergeDisconnect(sourceElement);
-		}
-		#endregion
-	}
-}
-namespace NuPattern.Library.Automation
-{
-	/// <summary>
-	/// DomainClass ValueProviderSettings
-	/// Description for NuPattern.Library.Automation.ValueProviderSettings
-	/// </summary>
-	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ValueProviderSettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-	[DslDesign::DescriptionResource("NuPattern.Library.Automation.ValueProviderSettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainObjectId("3f9e25f8-1c05-4ef9-86da-16b4590e29ac")]
-	public partial class ValueProviderSettings : DslModeling::ModelElement
-	{
-		#region Constructors, domain class Id
-	
-		/// <summary>
-		/// ValueProviderSettings domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x3f9e25f8, 0x1c05, 0x4ef9, 0x86, 0xda, 0x16, 0xb4, 0x59, 0x0e, 0x29, 0xac);
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ValueProviderSettings(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new element is to be created.</param>
-		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public ValueProviderSettings(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, propertyAssignments)
-		{
-		}
-		#endregion
-		#region TypeId domain property code
-		
-		/// <summary>
-		/// TypeId domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid TypeIdDomainPropertyId = new global::System.Guid(0xf034691b, 0xd5dc, 0x4b95, 0xbc, 0x6d, 0xaa, 0xdd, 0xff, 0x62, 0x08, 0x4f);
-		
-		/// <summary>
-		/// Storage for TypeId
-		/// </summary>
-		private global::System.String typeIdPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of TypeId domain property.
-		/// The ValueProvider that provides the value of this property.
-		/// </summary>
-		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ValueProviderSettings/TypeId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ValueProviderSettings/TypeId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslModeling::DomainObjectId("f034691b-d5dc-4b95-bc6d-aaddff62084f")]
-		public global::System.String TypeId
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return typeIdPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				TypeIdPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the ValueProviderSettings.TypeId domain property.
-		/// </summary>
-		internal sealed partial class TypeIdPropertyHandler : DslModeling::DomainPropertyValueHandler<ValueProviderSettings, global::System.String>
-		{
-			private TypeIdPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the ValueProviderSettings.TypeId domain property value handler.
-			/// </summary>
-			public static readonly TypeIdPropertyHandler Instance = new TypeIdPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the ValueProviderSettings.TypeId domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return TypeIdDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ValueProviderSettings element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.typeIdPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ValueProviderSettings element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
-		
-			private void SetValue(ValueProviderSettings element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.typeIdPropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<ValueProviderSettings>(x => x.TypeId);
-			}
-		}
-		
-		#endregion
-		#region OwnerProperty opposite domain role accessor
-		/// <summary>
-		/// Gets or sets OwnerProperty.
-		/// Description for
-		/// NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettings
-		/// </summary>
-		public virtual PropertySettings OwnerProperty
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettingsDomainRoleId) as PropertySettings;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettingsDomainRoleId, value);
-			}
-		}
-		#endregion
-		#region Properties opposite domain role accessor
-		
-		/// <summary>
-		/// Gets a list of Properties.
-		/// Description for
-		/// NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettings
-		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<PropertySettings> Properties
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<PropertySettings>, PropertySettings>(global::NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettingsDomainRoleId);
-			}
-		}
-		#endregion
-	}
-}
-namespace NuPattern.Library.Automation
-{
-	/// <summary>
 	/// DomainClass CommandSettings
 	/// Configures the settings for adding a command that can be executed on this
 	/// element.
@@ -2587,118 +1984,112 @@ namespace NuPattern.Library.Automation
 		}
 		
 		#endregion
-		#region Properties opposite domain role accessor
+		#region Properties domain property code
 		
 		/// <summary>
-		/// Gets a list of Properties.
-		/// Description for
-		/// NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettings
+		/// Properties domain property Id.
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<PropertySettings> Properties
+		public static readonly global::System.Guid PropertiesDomainPropertyId = new global::System.Guid(0xec625787, 0xee50, 0x4604, 0x9b, 0x1e, 0xde, 0x6f, 0xb5, 0x88, 0x59, 0x8e);
+		
+		/// <summary>
+		/// Storage for Properties
+		/// </summary>
+		private global::System.String propertiesPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of Properties domain property.
+		/// The design-time properties of the command.
+		/// </summary>
+		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.CommandSettings/Properties.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.CommandSettings/Properties.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslModeling::DomainObjectId("ec625787-ee50-4604-9b1e-de6fb588598e")]
+		public global::System.String Properties
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<PropertySettings>, PropertySettings>(global::NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettingsDomainRoleId);
+				return propertiesPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				PropertiesPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
-		#endregion
-		#region ElementGroupPrototype Merge methods
 		/// <summary>
-		/// Returns a value indicating whether the source element represented by the
-		/// specified root ProtoElement can be added to this element.
+		/// Value handler for the CommandSettings.Properties domain property.
 		/// </summary>
-		/// <param name="rootElement">
-		/// The root ProtoElement representing a source element.  This can be null, 
-		/// in which case the ElementGroupPrototype does not contain an ProtoElements
-		/// and the code should inspect the ElementGroupPrototype context information.
-		/// </param>
-		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
-		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
-		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
+		internal sealed partial class PropertiesPropertyHandler : DslModeling::DomainPropertyValueHandler<CommandSettings, global::System.String>
 		{
-			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
+			private PropertiesPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CommandSettings.Properties domain property value handler.
+			/// </summary>
+			public static readonly PropertiesPropertyHandler Instance = new PropertiesPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CommandSettings.Properties domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return PropertiesDomainPropertyId;
+				}
+			}
 			
-			if (rootElement != null)
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CommandSettings element)
 			{
-				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
-				
-				if (rootElementDomainInfo.IsDerivedFrom(global::NuPattern.Library.Automation.PropertySettings.DomainClassId)) 
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.propertiesPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CommandSettings element, global::System.String newValue)
+			{
+				if (element == null)
 				{
-					return true;
+					throw new global::System.ArgumentNullException("element");
+				}
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+					{
+						this.SetValue(element, oldValue, newValue);
+					}
+					else
+					{
+						using (var tx = element.Store.TransactionManager.BeginTransaction())
+						{
+							this.SetValue(element, oldValue, newValue);
+							tx.Commit();
+						}
+					}
 				}
 			}
-			return base.CanMerge(rootElement, elementGroupPrototype);
+		
+			private void SetValue(CommandSettings element, global::System.String oldValue, global::System.String newValue)
+			{
+				this.ValueChanging(element, oldValue, newValue);
+				element.propertiesPropertyStorage = newValue;
+				ValueChanged(element, oldValue, newValue);
+				element.PropertyChanges.NotifyChanged<CommandSettings>(x => x.Properties);
+			}
 		}
 		
-		/// <summary>
-		/// Called by the Merge process to create a relationship between 
-		/// this target element and the specified source element. 
-		/// Typically, a parent-child relationship is established
-		/// between the target element (the parent) and the source element 
-		/// (the child), but any relationship can be established.
-		/// </summary>
-		/// <param name="sourceElement">The element that is to be related to this model element.</param>
-		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
-		/// <remarks>
-		/// This method is overriden to create the relationship between the target element and the specified source element.
-		/// The base method does nothing.
-		/// </remarks>
-		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
-		{
-			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
-			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
-			// need to support this case.
-			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
-		
-				
-			global::NuPattern.Library.Automation.PropertySettings sourcePropertySettings1 = sourceElement as global::NuPattern.Library.Automation.PropertySettings;
-			if (sourcePropertySettings1 != null)
-			{
-				// Create link for path CommandSettingsHasProperties.Properties
-				this.Properties.Add(sourcePropertySettings1);
-
-				return;
-			}
-		
-			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
-			// during a "Paste".
-			if (sourceElement is DslModeling::ExtensionElement
-				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
-			{
-				return;
-			}
-		
-			// Fall through to base class if this class hasn't handled the merge.
-			base.MergeRelate(sourceElement, elementGroup);
-		}
-		
-		/// <summary>
-		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
-		/// element from the current one (removes links created by MergeRelate).
-		/// </summary>
-		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
-		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
-		{
-			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
-				
-			global::NuPattern.Library.Automation.PropertySettings sourcePropertySettings1 = sourceElement as global::NuPattern.Library.Automation.PropertySettings;
-			if (sourcePropertySettings1 != null)
-			{
-				// Delete link for path CommandSettingsHasProperties.Properties
-				
-				foreach (DslModeling::ElementLink link in global::NuPattern.Library.Automation.CommandSettingsHasProperties.GetLinks((global::NuPattern.Library.Automation.CommandSettings)this, sourcePropertySettings1))
-				{
-					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettingsDomainRoleId, global::NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettingsDomainRoleId);
-				}
-
-				return;
-			}
-			// Fall through to base class if this class hasn't handled the unmerge.
-			base.MergeDisconnect(sourceElement);
-		}
 		#endregion
 	}
 }

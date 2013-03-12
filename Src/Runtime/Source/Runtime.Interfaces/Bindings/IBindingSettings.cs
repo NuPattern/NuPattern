@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace NuPattern.Runtime
@@ -17,19 +16,6 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Gets the optional property bindings.
         /// </summary>
-        IEnumerable<IPropertyBindingSettings> Properties { get; }
-
-        /// <summary>
-        /// Adds a new property to the property bindings collection.
-        /// </summary>
-        /// <param name="name">The name of the property.</param>
-        /// <param name="propertyType">The type of the property.</param>
-        /// <returns>The newly created property</returns>
-        IPropertyBindingSettings AddProperty(string name, Type propertyType);
-
-        /// <summary>
-        /// Removes all properties in the property binding collection.
-        /// </summary>
-        void ClearProperties();
+        IList<IPropertyBindingSettings> Properties { get; }
     }
 }

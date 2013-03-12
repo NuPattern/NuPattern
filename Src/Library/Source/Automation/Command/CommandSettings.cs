@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
 using NuPattern.Runtime;
 
 namespace NuPattern.Library.Automation
@@ -11,48 +8,17 @@ namespace NuPattern.Library.Automation
     /// <summary>
     /// Double-derived class to allow easier code customization.
     /// </summary>
-    [TypeDescriptionProvider(typeof(CommandSettingsTypeDescriptionProvider))]
+    [TypeDescriptionProvider(typeof(CommandSettingsDescriptionProvider))]
     public partial class CommandSettings : IBindingSettings
     {
+        private List<IPropertyBindingSettings> propertySettings;
+
         /// <summary>
         /// Creates the runtime automation element for this setting element.
         /// </summary>
         public IAutomationExtension CreateAutomation(IProductElement owner)
         {
             return new CommandAutomation(owner, this);
-        }
-
-        /// <summary>
-        /// Gets the binding properties.
-        /// </summary>
-        IEnumerable<IPropertyBindingSettings> IBindingSettings.Properties
-        {
-            get
-            {
-                return new ReadOnlyCollection<IPropertyBindingSettings>(this.Properties
-                    .Where(prop => prop.ParentProvider == null)
-                    .Cast<IPropertyBindingSettings>()
-                    .ToList());
-            }
-        }
-
-        /// <summary>
-        /// Adds a new property to the properties collection.
-        /// </summary>
-        /// <param name="name">The name of the property</param>
-        /// <param name="propertyType">The type of the property</param>
-        /// <returns>The newly created property</returns>
-        IPropertyBindingSettings IBindingSettings.AddProperty(string name, Type propertyType)
-        {
-            return CreateNewPropertySetting(name, propertyType);
-        }
-
-        /// <summary>
-        /// Removes all properties in the property binding collection.
-        /// </summary>
-        void IBindingSettings.ClearProperties()
-        {
-            this.Properties.Clear();
         }
 
         /// <summary>
@@ -63,25 +29,22 @@ namespace NuPattern.Library.Automation
             get { return AutomationSettingsClassification.General; }
         }
 
-        private PropertySettings CreateNewPropertySetting(string name, Type propertyType)
+        /// <summary>
+        /// Gets the properties for the binding. 
+        /// </summary>
+        IList<IPropertyBindingSettings> IBindingSettings.Properties
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("Configuring Property Settings"))
+            get { return this.propertySettings ?? (this.propertySettings = this.GetPropertySettings()); }
+        }
+
+        private List<IPropertyBindingSettings> GetPropertySettings()
+        {
+            if (string.IsNullOrEmpty(this.Properties))
             {
-                var settings = this.Create<PropertySettings>();
-
-                // Set the Binding Name
-                ((IPropertyBindingSettings)settings).Name = name;
-
-                if (propertyType.IsValueType)
-                {
-                    // We need to provide a default value
-                    settings.Value = Activator.CreateInstance(propertyType).ToString();
-                }
-
-                tx.Commit();
-
-                return settings;
+                return new List<IPropertyBindingSettings>();
             }
+
+            return BindingSerializer.Deserialize<List<IPropertyBindingSettings>>(this.Properties);
         }
     }
 }

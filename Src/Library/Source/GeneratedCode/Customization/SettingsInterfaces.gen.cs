@@ -167,16 +167,6 @@ namespace NuPattern.Library.Automation
 		/// The type of the command. Once selected, the specific properties of the selected command can be configured.
 		/// </summary>
 		global::System.String TypeId { get; set; }
-		
-		/// <summary>
-		/// Description for NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettings
-		/// </summary>
-		IEnumerable<IPropertyBindingSettings> Properties { get; }
-		
-		/// <summary>
-		/// Creates an instance of a child <see cref="IPropertyBindingSettings"/>, which is automatically added to the <see cref="Properties"/> collection.
-		/// </summary>
-		IPropertyBindingSettings CreatePropertySettings(Action<IPropertyBindingSettings> initializer = null);
 	}
 }
 namespace NuPattern.Library.Automation

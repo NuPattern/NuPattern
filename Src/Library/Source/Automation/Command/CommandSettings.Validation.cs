@@ -139,77 +139,65 @@ namespace NuPattern.Library.Automation
             Guard.NotNull(() => context, context);
             Guard.NotNull(() => settings, settings);
 
+            var properties = ((IBindingSettings)settings).Properties;
             try
             {
-                var toRemove = new List<PropertySettings>();
+                var toRemove = new List<IPropertyBindingSettings>();
 
                 if (settings.FindBoundType<IFeatureCommand>(Commands, context) != null)
                 {
                     // We could resolve the command type, so the typedescriptor for this settings will have the command properties and we can check.
                     var commandProps = TypeDescriptor.GetProperties(settings).Cast<PropertyDescriptor>().Select(prop => prop.Name);
-                    toRemove.AddRange(settings.Properties
-                        .Where(prop => prop.ParentProvider == null && !commandProps.Contains(prop.Name)));
+                    toRemove.AddRange(properties
+                        .Where(prop => !commandProps.Contains(prop.Name)));
                 }
                 else
                 {
-                    context.LogWarning(string.Format(
-                        CultureInfo.CurrentCulture,
-                        Resources.Validate_CannotResolveType,
-                        settings.TypeId,
-                        settings.Name),
-                        Resources.Validate_CannotResolveTypeCode,
-                        settings.Extends);
+                    context.LogWarning(string.Format(CultureInfo.CurrentCulture,
+                        Resources.Validate_CannotResolveType, settings.TypeId, settings.Name),
+                        Resources.Validate_CannotResolveTypeCode, settings.Extends);
                 }
 
-                // The providers are all flattened in this collection of property bindings, 
-                // and only those property bindings with a "ParentProvider" are the 
-                // ones that configure value providers, not commands (which we have 
-                // already evaluated above)
-                var valueProviders = settings.Properties
-                    .Where(prop => prop.ParentProvider != null)
-                    .GroupBy(prop => prop.ParentProvider);
+                //// The providers are all flattened in this collection of property bindings, 
+                //// and only those property bindings with a "ParentProvider" are the 
+                //// ones that configure value providers, not commands (which we have 
+                //// already evaluated above)
+                //var valueProviders = properties
+                //    .Where(prop => prop.ParentProvider != null)
+                //    .GroupBy(prop => prop.ParentProvider);
 
-                // This should be generalized as it is the same for FeatureCommand, Condition, ValidationRule
-                foreach (var valueProvider in valueProviders)
-                {
-                    var providerType = valueProvider.Key.FindBoundType<IValueProvider>(ValueProviders, context);
-                    // We skip those valueproviders where we cannot resolve the type, as we 
-                    // have no way of knowing what properties it has.
-                    if (providerType == null)
-                    {
-                        context.LogWarning(string.Format(
-                            CultureInfo.CurrentCulture,
-                            Resources.Validate_CannotResolveType,
-                            valueProvider.Key.TypeId,
-                            settings.Name),
-                            Resources.Validate_CannotResolveTypeCode,
-                            settings.Extends);
+                //// This should be generalized as it is the same for FeatureCommand, Condition, ValidationRule
+                //foreach (var valueProvider in valueProviders)
+                //{
+                //    var providerType = valueProvider.Key.FindBoundType<IValueProvider>(ValueProviders, context);
+                //    // We skip those valueproviders where we cannot resolve the type, as we 
+                //    // have no way of knowing what properties it has.
+                //    if (providerType == null)
+                //    {
+                //        context.LogWarning(string.Format(
+                //            CultureInfo.CurrentCulture,
+                //            Resources.Validate_CannotResolveType,
+                //            valueProvider.Key.TypeId,
+                //            settings.Name),
+                //            Resources.Validate_CannotResolveTypeCode,
+                //            settings.Extends);
 
-                        continue;
-                    }
+                //        continue;
+                //    }
 
-                    var providerProps = TypeDescriptor.GetProperties(providerType).Cast<PropertyDescriptor>().Select(prop => prop.Name);
-                    toRemove.AddRange(valueProvider.Where(prop => !providerProps.Contains(prop.Name.Split('.').Last())));
-                }
+                //    var providerProps = TypeDescriptor.GetProperties(providerType).Cast<PropertyDescriptor>().Select(prop => prop.Name);
+                //    toRemove.AddRange(valueProvider.Where(prop => !providerProps.Contains(prop.Name.Split('.').Last())));
+                //}
 
                 if (toRemove.Count > 0)
                 {
-                    using (var transaction = settings.Store.TransactionManager.BeginTransaction("Removing invalid property bindings"))
+                    foreach (var property in toRemove)
                     {
-                        foreach (var property in toRemove)
-                        {
-                            context.LogMessage(string.Format(
-                                CultureInfo.CurrentCulture,
-                                Resources.Validate_InvalidPropertyBinding,
-                                property.Name,
-                                property.ParentProvider != null ? property.ParentProvider.TypeId : property.CommandSettings.TypeId),
-                                Resources.Validate_InvalidPropertyBindingCode,
-                                settings.Extends);
+                        context.LogMessage(string.Format(CultureInfo.CurrentCulture,
+                            Resources.Validate_CommandSettingsInvalidPropertyBinding, property.Name, settings.TypeId),
+                            Resources.Validate_CommandSettingsInvalidPropertyBindingCode, settings.Extends);
 
-                            settings.Properties.Remove(property);
-                        }
-
-                        transaction.Commit();
+                        properties.Remove(property);
                     }
                 }
             }

@@ -40,17 +40,17 @@ namespace NuPattern.Extensibility.UnitTests
                 var compositionService = new Mock<IBindingCompositionService>();
                 compositionService.Setup(cs => cs.GetExports<IFoo, IFeatureComponentMetadata>())
                     .Returns(new[]
-					{
-						new Lazy<IFoo, IFeatureComponentMetadata>(() => value.Object, 
-							Mocks.Of<IFeatureComponentMetadata>().First(m => m.CatalogName ==  Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName && m.Id == "Foo"))
-					});
+                    {
+                        new Lazy<IFoo, IFeatureComponentMetadata>(() => value.Object, 
+                            Mocks.Of<IFeatureComponentMetadata>().First(m => m.CatalogName ==  Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName && m.Id == "Foo"))
+                    });
 
                 compositionService.Setup(cs => cs.GetExports<IValueProvider, IFeatureComponentMetadata>())
                     .Returns(new[]
-					{
-						new Lazy<IValueProvider, IFeatureComponentMetadata>(() => valueProvider.Object, 
-							Mocks.Of<IFeatureComponentMetadata>().First(m => m.CatalogName == Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName && m.Id == "ValueProvider"))
-					});
+                    {
+                        new Lazy<IValueProvider, IFeatureComponentMetadata>(() => valueProvider.Object, 
+                            Mocks.Of<IFeatureComponentMetadata>().First(m => m.CatalogName == Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName && m.Id == "ValueProvider"))
+                    });
 
 
                 this.target = new BindingFactory(compositionService.Object);
@@ -70,12 +70,18 @@ namespace NuPattern.Extensibility.UnitTests
                 var settings = new BindingSettings
                 {
                     TypeId = "Foo",
-                };
-                var propBinding = settings.AddProperty(Reflector<IFoo>.GetProperty(x => x.Message).Name, typeof(string));
-                propBinding.Value = FixedValue;
-                propBinding.ValueProvider = new ValueProviderBindingSettings
-                {
-                    TypeId = "ValueProvider",
+                    Properties =  
+                    {
+                        new PropertyBindingSettings
+                        {
+                            Name = Reflector<IFoo>.GetProperty(x => x.Message).Name, 
+                            Value = FixedValue, 
+                            ValueProvider = new ValueProviderBindingSettings
+                            {
+                                TypeId = "ValueProvider"
+                            }
+                        }
+                    }
                 };
 
                 var binding = this.target.CreateBinding<IFoo>(settings);
@@ -90,12 +96,18 @@ namespace NuPattern.Extensibility.UnitTests
                 var settings = new BindingSettings
                 {
                     TypeId = "Foo",
-                };
-                var propBinding = settings.AddProperty(Reflector<IFoo>.GetProperty(x => x.Message).Name, typeof(string));
-                propBinding.Value = string.Empty;
-                propBinding.ValueProvider = new ValueProviderBindingSettings
-                {
-                    TypeId = "ValueProvider",
+                    Properties =  
+                    {
+                        new PropertyBindingSettings
+                        {
+                            Name = Reflector<IFoo>.GetProperty(x => x.Message).Name, 
+                            Value = string.Empty, 
+                            ValueProvider = new ValueProviderBindingSettings
+                            {
+                                TypeId = "ValueProvider"
+                            }
+                        }
+                    }
                 };
 
                 var binding = this.target.CreateBinding<IFoo>(settings);

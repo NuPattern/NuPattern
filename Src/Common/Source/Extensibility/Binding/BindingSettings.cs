@@ -68,27 +68,10 @@ namespace NuPattern.Extensibility.Binding
         /// Gets the optional property bindings.
         /// </summary>
         [DataMember]
-        public IEnumerable<IPropertyBindingSettings> Properties
+        [Browsable(false)]
+        public IList<IPropertyBindingSettings> Properties
         {
             get { return this.properties; }
-        }
-
-        /// <summary>
-        /// Adds a new property binding to the collection
-        /// </summary>
-        public IPropertyBindingSettings AddProperty(string name, Type propertyType)
-        {
-            var propertySettings = new PropertyBindingSettings { Name = name };
-            this.properties.Add(propertySettings);
-            return propertySettings;
-        }
-
-        /// <summary>
-        /// Removes all properties in the property binding collection.
-        /// </summary>
-        void IBindingSettings.ClearProperties()
-        {
-            this.properties.Clear();
         }
 
         /// <summary>

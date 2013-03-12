@@ -1,32 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
 using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
 using NuPattern.Library.Automation;
 using NuPattern.Runtime;
 
 namespace NuPattern.Library.Commands
 {
     /// <summary>
-    /// Extensions to be used in Command Settings to set command properties at runtime
+    /// Extensions for <see cref="CommandSettings"/>.
     /// </summary>
-    public static class CommandSettingExtensions
+    internal static class CommandSettingsExtensions
     {
         /// <summary>
-        /// Sets a property in a command at runtime.
+        /// Sets the specified property of the given CommandSettings to the specified value.
         /// </summary>
-        public static ICommandSettings<TCommand> SetProperty<TCommand, TPropertyType>(this ICommandSettings<TCommand> commandSettings, Expression<Func<TCommand, TPropertyType>> propertyName, string value)
+        public static void SetPropertyValue<TFeatureCommand, TProperty>(
+            this CommandSettings commandSettings,
+            Expression<Func<TFeatureCommand, TProperty>> expression,
+            object value) where TFeatureCommand : Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand
         {
-            Guard.NotNull(() => commandSettings, commandSettings);
-
-            var prop = commandSettings.CreatePropertySettings();
-            prop.Name = Reflector<TCommand>.GetPropertyName(propertyName);
-            prop.Value = value;
-            return commandSettings;
+            var descriptors = TypeDescriptor.GetProperties(commandSettings);
+            var descriptor = descriptors[Reflector<TFeatureCommand>.GetPropertyName(expression)];
+            if (descriptor != null)
+            {
+                var designProperty = descriptor.GetValue(commandSettings) as DesignProperty;
+                if (designProperty != null)
+                {
+                    designProperty.SetValue(value);
+                }
+                else if (!descriptor.IsReadOnly)
+                {
+                    // Try setting actual value directly
+                    descriptor.SetValue(commandSettings, value);
+                }
+            }
         }
+
+        ///// <summary>
+        ///// Sets a property in a command at runtime.
+        ///// </summary>
+        //public static ICommandSettings<TCommand> SetProperty<TCommand, TPropertyType>(this ICommandSettings<TCommand> commandSettings, Expression<Func<TCommand, TPropertyType>> propertyName, string value)
+        //{
+        //    Guard.NotNull(() => commandSettings, commandSettings);
+
+        //    var prop = commandSettings.CreatePropertySettings();
+        //    prop.Name = Reflector<TCommand>.GetPropertyName(propertyName);
+        //    prop.Value = value;
+        //    return commandSettings;
+        //}
 
         /// <summary>
         /// Gets the value of the property, creating it with a default if needed
@@ -39,17 +64,16 @@ namespace NuPattern.Library.Commands
             var prop = (IPropertyBindingSettings)settings.Properties.FirstOrDefault(p => p.Name == propertyName);
             if (prop == null)
             {
-                prop = settings.CreatePropertySettings(p =>
+                prop = new PropertyBindingSettings
                 {
-                    p.Name = propertyName;
-                    p.Value = converter.ConvertToString(defaultValue);
-                });
+                    Name = propertyName,
+                    Value = converter.ConvertToString(defaultValue),
+                };
+                settings.Properties.Add(prop);
             }
 
             return (T)converter.ConvertFromString(prop.Value);
         }
-
-
     }
 
     /// <summary>
@@ -106,33 +130,9 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// Wrapper for Properties
         /// </summary>
-        public IEnumerable<IPropertyBindingSettings> Properties
+        public IList<IPropertyBindingSettings> Properties
         {
             get { return internalSettings.Properties; }
-        }
-
-        /// <summary>
-        /// Adds a new property to the collection.
-        /// </summary>
-        IPropertyBindingSettings IBindingSettings.AddProperty(string name, Type propertyType)
-        {
-            return this.internalSettings.AddProperty(name, propertyType);
-        }
-
-        /// <summary>
-        /// Removes all properties in the property binding collection.
-        /// </summary>
-        void IBindingSettings.ClearProperties()
-        {
-            internalSettings.Properties.ToList().Clear();
-        }
-
-        /// <summary>
-        /// Wrapper for CreatePropertySettings
-        /// </summary>
-        public Runtime.IPropertyBindingSettings CreatePropertySettings(Action<Runtime.IPropertyBindingSettings> initializer = null)
-        {
-            return internalSettings.CreatePropertySettings(initializer);
         }
 
         /// <summary>

@@ -198,17 +198,21 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
                     Assert.Equal(menuSettings.CommandId, commandSettings.Id);
                     Assert.Equal(menuSettings.WizardId, Guid.Empty);
 
-                    var settings = new ConditionBindingSettings
-                    {
-                        TypeId = typeof(ElementReferenceExistsCondition).FullName,
-                    };
-                    var propBinding = settings.AddProperty(Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind), typeof(string));
-                    propBinding.Value = ReferenceKindConstants.Guidance;
-
                     var conditions = BindingSerializer.Serialize(
                         new[]
                         {
-                            settings,
+                            new ConditionBindingSettings
+                            {
+                                TypeId = typeof(ElementReferenceExistsCondition).FullName,
+                                Properties = 
+                                {
+                                    new Extensibility.Binding.PropertyBindingSettings
+                                    {
+                                        Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
+                                        Value = ReferenceKindConstants.Guidance
+                                    },
+                                }
+                            }
                         });
 
                     Assert.Equal(menuSettings.Conditions, conditions);

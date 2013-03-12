@@ -15,43 +15,40 @@ namespace NuPattern.Library.Automation
         private const string Separator = ";";
 
         /// <summary>
-        /// public virtual method for the client to have his own user-defined delete rule class
+        /// Handles the element deleting rule
         /// </summary>
         /// <param name="e"></param>
         public override void ElementDeleting(ElementDeletingEventArgs e)
         {
-			Guard.NotNull(() => e, e);
+            Guard.NotNull(() => e, e);
 
             base.ElementDeleting(e);
 
             var commandSettings = e.ModelElement as CommandSettings;
-
-            var element = commandSettings.Owner;
-
-            var typeId = typeof(AggregatorCommand).FullName;
-
-            var aggregatorCommandSettings = element.AutomationSettings
-                    .Select(s => s.As<ICommandSettings>())
-                    .Where(s => 
-                        s != null && 
-                        s.TypeId == typeId);
-
-            if(aggregatorCommandSettings.Any())
+            if (commandSettings != null)
             {
-                foreach (var setting in aggregatorCommandSettings)
+                // Find the aggregator command on same element as the command being deleted
+                var element = commandSettings.Owner;
+                var aggregatorCommandSettings = element.AutomationSettings
+                        .Select(s => s.As<ICommandSettings>())
+                        .Where(s =>
+                            s != null &&
+                            s.TypeId == typeof(AggregatorCommand).FullName);
+                if (aggregatorCommandSettings.Any())
                 {
-                    var property = setting.Properties.FirstOrDefault(
-                        p => p.Name == Reflector<AggregatorCommand>.GetPropertyName(x => x.CommandReferenceList));
-
-                    if (property != null)
+                    // Rebuild settings for command
+                    foreach (var setting in aggregatorCommandSettings)
                     {
-                        var propertySettings = property as PropertySettings;
+                        var property = setting.Properties.FirstOrDefault(
+                            p => p.Name == Reflector<AggregatorCommand>.GetPropertyName(x => x.CommandReferenceList));
+                        if (property != null)
+                        {
+                            var ids = property.Value.Split(
+                                new string[] { Separator }, StringSplitOptions.RemoveEmptyEntries);
 
-                        var ids = propertySettings.Value.ToString().Split(
-                            new string[] { Separator }, StringSplitOptions.RemoveEmptyEntries);
-
-                        propertySettings.Value =
-                            string.Join(Separator, ids.Where(id => new Guid(id) != commandSettings.Id)); 
+                            property.Value =
+                                string.Join(Separator, ids.Where(id => new Guid(id) != commandSettings.Id));
+                        }
                     }
                 }
             }

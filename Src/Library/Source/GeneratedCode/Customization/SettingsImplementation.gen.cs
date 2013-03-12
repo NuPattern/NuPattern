@@ -222,45 +222,6 @@ namespace NuPattern.Library.Automation
 	public partial class CommandSettings : ICommandSettings 
 	{ 
 		/// <summary>
-		/// Description for NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettings
-		/// </summary>
-		IEnumerable<IPropertyBindingSettings> ICommandSettings.Properties
-		{
-			get { return this.Properties.Cast<IPropertyBindingSettings>(); }
-		}
-		
-		
-		/// <summary>
-		/// Creates an instance of a child <see cref="IPropertyBindingSettings"/>.
-		/// </summary>
-		public IPropertyBindingSettings CreatePropertySettings()
-		{
-			return this.CreatePropertySettings(null);
-		}
-		
-		/// <summary>
-		/// Creates an instance of a child <see cref="IPropertyBindingSettings"/> with an optional initializer to perform 
-		/// object initialization within the creation transaction.
-		/// </summary>
-		public IPropertyBindingSettings CreatePropertySettings(Action<IPropertyBindingSettings> initializer)
-		{
-			var isSerializing = this.Store.TransactionManager.InTransaction && this.Store.TransactionManager.CurrentTransaction.IsSerializing;
-			
-			using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", isSerializing))
-			{
-				var instance = this.Create<PropertySettings>();
-				instance.CommandSettings = this;
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
-		
-				tx.Commit();
-				return instance;
-			}
-		}
-	
-		/// <summary>
 		/// Gets the owner of this automation settings.
 		/// </summary>
 		public IPatternElementSchema Owner

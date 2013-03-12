@@ -232,7 +232,7 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (Condition Binding).
+        ///   Looks up a localized string similar to (Empty Condition).
         /// </summary>
         internal static string ConditionBindingSettings_ElementName {
             get {
@@ -963,7 +963,7 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (Validation Rule Binding).
+        ///   Looks up a localized string similar to (Empty Validation Rule).
         /// </summary>
         internal static string ValidationBindingSettings_ElementName {
             get {
@@ -1008,7 +1008,7 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (Value Provider Binding).
+        ///   Looks up a localized string similar to (Empty Value Provider).
         /// </summary>
         internal static string ValueProviderBindingSettings_ElementName {
             get {

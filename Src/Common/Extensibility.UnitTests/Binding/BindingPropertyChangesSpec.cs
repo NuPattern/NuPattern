@@ -27,7 +27,7 @@ namespace NuPattern.Extensibility.UnitTests.Binding
             var raised = false;
             binding.PropertyChanged += (sender, args) => raised = true;
 
-            binding.AddProperty("", typeof(string));
+            binding.Properties.Add(new PropertyBindingSettings());
 
             Assert.True(raised);
         }
@@ -36,9 +36,8 @@ namespace NuPattern.Extensibility.UnitTests.Binding
         public void WhenPropertyNameChanged_ThenBindingRaisesChanged()
         {
             var binding = new BindingSettings();
+            var property = new PropertyBindingSettings();
             var raised = false;
-            var property = binding.AddProperty("", typeof(string));
-
             binding.Properties.Add(property);
 
             binding.PropertyChanged += (sender, args) => raised = true;
@@ -52,8 +51,9 @@ namespace NuPattern.Extensibility.UnitTests.Binding
         public void WhenPropertyValueChanged_ThenBindingRaisesChanged()
         {
             var binding = new BindingSettings();
+            var property = new PropertyBindingSettings();
             var raised = false;
-            var property = binding.AddProperty("", typeof(string));
+            binding.Properties.Add(property);
 
             binding.PropertyChanged += (sender, args) => raised = true;
 
@@ -66,8 +66,9 @@ namespace NuPattern.Extensibility.UnitTests.Binding
         public void WhenPropertyValueProviderSet_ThenBindingRaisesChanged()
         {
             var binding = new BindingSettings();
+            var property = new PropertyBindingSettings();
             var raised = false;
-            var property = binding.AddProperty("", typeof(string));
+            binding.Properties.Add(property);
 
             binding.PropertyChanged += (sender, args) => raised = true;
 
@@ -81,9 +82,16 @@ namespace NuPattern.Extensibility.UnitTests.Binding
         {
             var raised = false;
             var provider = new ValueProviderBindingSettings();
-            var binding = new BindingSettings();
-            var propBinding = binding.AddProperty("", typeof(string));
-            propBinding.ValueProvider = provider;
+            var binding = new BindingSettings
+            {
+                Properties = 
+                {
+                    new PropertyBindingSettings
+                    {
+                        ValueProvider = provider,
+                    }
+                }
+            };
 
             binding.PropertyChanged += (sender, args) => raised = true;
 
@@ -97,13 +105,20 @@ namespace NuPattern.Extensibility.UnitTests.Binding
         {
             var raised = false;
             var provider = new ValueProviderBindingSettings();
-            var binding = new BindingSettings();
-            var propBinding = binding.AddProperty("", typeof(string));
-            propBinding.ValueProvider = provider;
+            var binding = new BindingSettings
+            {
+                Properties = 
+                {
+                    new PropertyBindingSettings
+                    {
+                        ValueProvider = provider,
+                    }
+                }
+            };
 
             binding.PropertyChanged += (sender, args) => raised = true;
 
-            provider.AddProperty("", typeof(string));
+            provider.Properties.Add(new PropertyBindingSettings());
 
             Assert.True(raised);
         }
@@ -112,10 +127,23 @@ namespace NuPattern.Extensibility.UnitTests.Binding
         public void WhenValueProviderPropertyChanged_ThenBindingRaisesChanged()
         {
             var raised = false;
-            var binding = new BindingSettings();
-            var propBinding = binding.AddProperty("", typeof(string));
-            propBinding.ValueProvider = new ValueProviderBindingSettings();
-            var property = propBinding.ValueProvider.AddProperty("", typeof(string));
+            var property = new PropertyBindingSettings();
+            var binding = new BindingSettings
+            {
+                Properties = 
+                {
+                    new PropertyBindingSettings
+                    {
+                        ValueProvider = new ValueProviderBindingSettings
+                        {
+                            Properties = 
+                            {
+                                property,
+                            }
+                        }
+                    }
+                }
+            };
 
             binding.PropertyChanged += (sender, args) => raised = true;
 

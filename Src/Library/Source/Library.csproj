@@ -86,6 +86,7 @@
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="VSLangProj">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\VSLangProj.dll</HintPath>
@@ -113,23 +114,17 @@
     <Compile Include="Automation\Artifact\ArtifactExtension.cs" />
     <Compile Include="Automation\Artifact\ArtifactReferencesValidation.cs" />
     <Compile Include="Automation\Artifact\AssociatedArtifactsTypeConverter.cs" />
+    <Compile Include="Automation\Command\CommandSettingsCollectionPropertyDescriptor.cs" />
+    <Compile Include="Automation\Command\ICommandSettings.cs" />
     <Compile Include="Automation\LibraryDomainModel.cs" />
     <Compile Include="Automation\Rules\CommandChange\CommandChangeRuleAttribute.cs" />
-    <Compile Include="Automation\Command\CommandSettings.Extensions.cs">
-      <DependentUpon>CommandSettings.cs</DependentUpon>
+    <Compile Include="Automation\Command\CommandSettingsDescriptionContext.cs">
     </Compile>
-    <Compile Include="Automation\Command\CommandSettings.DescriptionContext.cs">
-      <DependentUpon>CommandSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\ICommandSettings.cs" />
     <Compile Include="Automation\Command\Validation\CommandValidationRuleAttribute.cs" />
     <Compile Include="Automation\Command\Validation\ICommandValidationRule.cs" />
     <Compile Include="Automation\Command\Validation\ICommandValidationRuleMetadata.cs" />
-    <Compile Include="Automation\ValueProvider\ValueProviderSettings.cs" />
-    <Compile Include="Automation\PropertySettings.cs" />
     <Compile Include="Automation\Command\CommandAutomation.cs" />
-    <Compile Include="Automation\Command\CommandSettings.DescriptionProvider.cs">
-      <DependentUpon>CommandSettings.cs</DependentUpon>
+    <Compile Include="Automation\Command\CommandSettingsDescriptionProvider.cs">
     </Compile>
     <Compile Include="Automation\Command\CommandSettings.Validation.cs">
       <DependentUpon>CommandSettings.cs</DependentUpon>
@@ -155,7 +150,6 @@
     <Compile Include="Automation\Menu\MenuSettings.Validation.cs">
       <DependentUpon>MenuSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Automation\Rules\PropertySettingsChangeRule.cs" />
     <Compile Include="Automation\Rules\ArtifactExtensionChangeRule.cs" />
     <Compile Include="Automation\Rules\AggregatorCommandCommandSettingsDeletingRule.cs" />
     <Compile Include="Automation\SyncName\SyncNameExtension.cs" />
@@ -212,6 +206,7 @@
     <Compile Include="Commands\ModifyXmlCommand.cs" />
     <Compile Include="Commands\SetBuildActionCommand.cs" />
     <Compile Include="Conditions\XmlNodeExistsCondition.cs" />
+    <Compile Include="Migration\CommandSettingsMigrationProcessor.cs" />
     <Compile Include="ValueComparers\PreserveOrderComparer.cs" />
     <Compile Include="ValueComparers\InstanceNameComparer.cs" />
     <Compile Include="Conditions\DropFileCondition.cs" />
