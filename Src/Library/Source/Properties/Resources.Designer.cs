@@ -935,6 +935,33 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Migrating previous version of Properties of CommandSettings element &apos;{0}&apos;..
+        /// </summary>
+        internal static string CommandSettingsMigrationProcessor_TraceDeserializeCommandSettings {
+            get {
+                return ResourceManager.GetString("CommandSettingsMigrationProcessor_TraceDeserializeCommandSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upgrading CommandSettings elements..
+        /// </summary>
+        internal static string CommandSettingsUpgradeProcessor_TraceDeserialize {
+            get {
+                return ResourceManager.GetString("CommandSettingsUpgradeProcessor_TraceDeserialize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upgrading CommandSettings element &apos;{0}&apos;, replacing XML with JSon for Properties..
+        /// </summary>
+        internal static string CommandSettingsUpgradeProcessor_TraceDeserializeCommandSettings {
+            get {
+                return ResourceManager.GetString("CommandSettingsUpgradeProcessor_TraceDeserializeCommandSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copies an existing folder (and all its content) from one path to another..
         /// </summary>
         internal static string CopyFolderCommand_Description {
@@ -4799,20 +4826,20 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to change Hidden value on Template &apos;{0}&apos;.
-        /// </summary>
-        internal static string TemplateSettingsChangeRule_ChangeHiddenFailed {
-            get {
-                return ResourceManager.GetString("TemplateSettingsChangeRule_ChangeHiddenFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Tracking changes for CreateOnUnfold on Template Launch Point &apos;{0}&apos;.
         /// </summary>
         internal static string TemplateSettingsChangeRule_ChangeHiddenOnCreateElementOnUnfold {
             get {
                 return ResourceManager.GetString("TemplateSettingsChangeRule_ChangeHiddenOnCreateElementOnUnfold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to sync SyncName automation on Template LaunchPoint &apos;{0}&apos;.
+        /// </summary>
+        internal static string TemplateSettingsChangeRule_ErrorSyncNameFailed {
+            get {
+                return ResourceManager.GetString("TemplateSettingsChangeRule_ErrorSyncNameFailed", resourceCulture);
             }
         }
         
@@ -4977,6 +5004,15 @@ namespace NuPattern.Library.Properties {
         internal static string UnfoldScope_Initialized {
             get {
                 return ResourceManager.GetString("UnfoldScope_Initialized", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to sync SyncName automation on Command &apos;{0}&apos;.
+        /// </summary>
+        internal static string UnfoldVsCommandChangeRule_ErrorSyncNameFailed {
+            get {
+                return ResourceManager.GetString("UnfoldVsCommandChangeRule_ErrorSyncNameFailed", resourceCulture);
             }
         }
         
@@ -5180,6 +5216,24 @@ namespace NuPattern.Library.Properties {
         internal static string Validate_CommandIsNotValidCode {
             get {
                 return ResourceManager.GetString("Validate_CommandIsNotValidCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Property &apos;{0}&apos; no longer exist in command type &apos;{1}&apos; so it has been removed..
+        /// </summary>
+        internal static string Validate_CommandSettingsInvalidPropertyBinding {
+            get {
+                return ResourceManager.GetString("Validate_CommandSettingsInvalidPropertyBinding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 317.
+        /// </summary>
+        internal static string Validate_CommandSettingsInvalidPropertyBindingCode {
+            get {
+                return ResourceManager.GetString("Validate_CommandSettingsInvalidPropertyBindingCode", resourceCulture);
             }
         }
         
@@ -5414,24 +5468,6 @@ namespace NuPattern.Library.Properties {
         internal static string Validate_GuidanceReferenceNotFoundCode {
             get {
                 return ResourceManager.GetString("Validate_GuidanceReferenceNotFoundCode", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Property &apos;{0}&apos; no longer exist in target type &apos;{1}&apos; so it has been removed..
-        /// </summary>
-        internal static string Validate_InvalidPropertyBinding {
-            get {
-                return ResourceManager.GetString("Validate_InvalidPropertyBinding", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 317.
-        /// </summary>
-        internal static string Validate_InvalidPropertyBindingCode {
-            get {
-                return ResourceManager.GetString("Validate_InvalidPropertyBindingCode", resourceCulture);
             }
         }
         

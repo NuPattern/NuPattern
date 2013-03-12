@@ -129,6 +129,12 @@ Are you sure you want to Continue?</value>
   <data name="LayoutDiagramCommand_CommandCaption" xml:space="preserve">
     <value>Auto Arrange Shapes</value>
   </data>
+  <data name="PatternModelDocData_ErrorUpgradeRulesFailed" xml:space="preserve">
+    <value>Failed to run schema migration rules.</value>
+  </data>
+  <data name="PatternModelDocData_TraceExecuteUpgradeRule" xml:space="preserve">
+    <value>Executing schema migration for type '{0}'</value>
+  </data>
   <data name="VariableProperty_DisplayName" xml:space="preserve">
     <value>Add Variable Property</value>
   </data>

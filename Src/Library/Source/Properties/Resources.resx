@@ -764,10 +764,10 @@ Please add or import a new 'Item/Project Template', or create a new folder withi
   <data name="CardinalityValidationRule_ChildElementNameDisplayName" xml:space="preserve">
     <value>Child Element Name</value>
   </data>
-  <data name="Validate_InvalidPropertyBinding" xml:space="preserve">
-    <value>Property '{0}' no longer exist in target type '{1}' so it has been removed.</value>
+  <data name="Validate_CommandSettingsInvalidPropertyBinding" xml:space="preserve">
+    <value>Property '{0}' no longer exist in command type '{1}' so it has been removed.</value>
   </data>
-  <data name="Validate_InvalidPropertyBindingCode" xml:space="preserve">
+  <data name="Validate_CommandSettingsInvalidPropertyBindingCode" xml:space="preserve">
     <value>317</value>
   </data>
   <data name="PropertyAttributeValidationRule_ErrorMessageDisplayName" xml:space="preserve">
@@ -844,8 +844,8 @@ Do you  want your new product/element renamed from '{0}' to '{1}'?</value>
   <data name="GenerateProductCodeCommand_Trace_UpdatedExistingArtifactLink" xml:space="preserve">
     <value>Existing artifact link did not resolve to a solution element. It was updated to a new link: {0}.</value>
   </data>
-  <data name="TemplateSettingsChangeRule_ChangeHiddenFailed" xml:space="preserve">
-    <value>Failed to change Hidden value on Template '{0}'</value>
+  <data name="TemplateSettingsChangeRule_ErrorSyncNameFailed" xml:space="preserve">
+    <value>Failed to sync SyncName automation on Template LaunchPoint '{0}'</value>
   </data>
   <data name="TemplateSettingsChangeRule_ChangeHiddenOnCreateElementOnUnfold" xml:space="preserve">
     <value>Tracking changes for CreateOnUnfold on Template Launch Point '{0}'</value>
@@ -2254,5 +2254,17 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   </data>
   <data name="ArtifactExtension_DeleteEventName" xml:space="preserve">
     <value>DeleteArtifactsEvent</value>
+  </data>
+  <data name="CommandSettingsMigrationProcessor_TraceDeserializeCommandSettings" xml:space="preserve">
+    <value>Migrating previous version of Properties of CommandSettings element '{0}'.</value>
+  </data>
+  <data name="CommandSettingsUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading CommandSettings elements.</value>
+  </data>
+  <data name="CommandSettingsUpgradeProcessor_TraceDeserializeCommandSettings" xml:space="preserve">
+    <value>Upgrading CommandSettings element '{0}', replacing XML with JSon for Properties.</value>
+  </data>
+  <data name="UnfoldVsCommandChangeRule_ErrorSyncNameFailed" xml:space="preserve">
+    <value>Failed to sync SyncName automation on Command '{0}'</value>
   </data>
 </root>

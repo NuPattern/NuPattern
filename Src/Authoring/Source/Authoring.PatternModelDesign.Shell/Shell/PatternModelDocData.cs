@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 using EnvDTE;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling;
@@ -11,9 +13,11 @@ using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
 using NuPattern.Extensibility.References;
 using NuPattern.Library.Commands;
+using NuPattern.Runtime.Schema.Properties;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -22,7 +26,11 @@ namespace NuPattern.Runtime.Schema
     /// </summary>
     internal partial class PatternModelDocData
     {
+        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternModelDocData>();
         private bool modelCloned;
+
+        [ImportMany]
+        private IEnumerable<IPatternModelSchemaUpgradeProcessor> MigrationProcessors { get; set; }
 
         /// <summary>
         /// Get the Partition where diagram data will be loaded into.
@@ -67,6 +75,9 @@ namespace NuPattern.Runtime.Schema
             var diagramFileNames =
                 Directory.GetFiles(
                     Path.GetDirectoryName(fileName), string.Concat("*", DesignerConstants.ModelExtension, DesignerConstants.DiagramFileExtension));
+
+            // Run migration rules
+            this.ExecuteUpgradeRules(fileName);
 
             modelRoot = PatternModelSerializationHelper.Instance.LoadModelAndDiagrams(
                     serializationResult,
@@ -370,6 +381,34 @@ namespace NuPattern.Runtime.Schema
                     viewShape.PerformInitialLayout();
                 }
             }
+        }
+
+        private void ExecuteUpgradeRules(string fileName)
+        {
+            NuPattern.Extensibility.TracingExtensions.Shield(tracer, () =>
+                {
+                    if (this.MigrationProcessors != null
+                        && this.MigrationProcessors.Any())
+                    {
+                        // Load document
+                        var document = XDocument.Load(fileName);
+
+                        // Execute Processors
+                        this.MigrationProcessors.ForEach(mp =>
+                            {
+                                tracer.TraceInformation(ShellResources.PatternModelDocData_TraceExecuteUpgradeRule, mp.GetType());
+
+                                mp.ProcessSchema(document);
+                            });
+
+                        // Save document
+                        if (this.MigrationProcessors.Any(mp => mp.IsModified))
+                        {
+                            VsHelper.CheckOut(this.ServiceProvider, fileName);
+                            document.Save(fileName);
+                        }
+                    }
+                }, ShellResources.PatternModelDocData_ErrorUpgradeRulesFailed);
         }
     }
 }
