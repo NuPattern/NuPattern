@@ -764,12 +764,6 @@ Please add or import a new 'Item/Project Template', or create a new folder withi
   <data name="CardinalityValidationRule_ChildElementNameDisplayName" xml:space="preserve">
     <value>Child Element Name</value>
   </data>
-  <data name="Validate_CommandSettingsInvalidPropertyBinding" xml:space="preserve">
-    <value>Property '{0}' no longer exist in command type '{1}' so it has been removed.</value>
-  </data>
-  <data name="Validate_CommandSettingsInvalidPropertyBindingCode" xml:space="preserve">
-    <value>317</value>
-  </data>
   <data name="PropertyAttributeValidationRule_ErrorMessageDisplayName" xml:space="preserve">
     <value>Error Message</value>
   </data>
@@ -940,9 +934,6 @@ Error is: '{1}'.</value>
   </data>
   <data name="AggregatorCommand_DisplayName" xml:space="preserve">
     <value>Aggregates Other Commands</value>
-  </data>
-  <data name="CommandReferencesEditor_Caption" xml:space="preserve">
-    <value>Commands editor</value>
   </data>
   <data name="AggregatorCommand_TraceExecutingCommands" xml:space="preserve">
     <value>Executing aggregated commands on current element '{0}'.</value>
@@ -2208,8 +2199,8 @@ Please add a new 'Text Template', or create a new folder within the 'Templates\T
   <data name="XmlNamespace_DisplayName" xml:space="preserve">
     <value>XML Namespace</value>
   </data>
-  <data name="XmlNamespace_EmptyText" xml:space="preserve">
-    <value>(empty)</value>
+  <data name="XmlNamespace_EmptyNamespace" xml:space="preserve">
+    <value>(Empty Namespace)</value>
   </data>
   <data name="DeleteArtifactsCommand_Description" xml:space="preserve">
     <value>Deletes all the associated solution items for the current element. This command supports prompting the user to choose which associated artifacts to delete.</value>
@@ -2266,5 +2257,8 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   </data>
   <data name="UnfoldVsCommandChangeRule_ErrorSyncNameFailed" xml:space="preserve">
     <value>Failed to sync SyncName automation on Command '{0}'</value>
+  </data>
+  <data name="CommandReference_EmptyReference" xml:space="preserve">
+    <value>(Empty Command)</value>
   </data>
 </root>

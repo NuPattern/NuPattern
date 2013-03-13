@@ -223,20 +223,29 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (Collection).
+        ///   Looks up a localized string similar to A condition of execution.
         /// </summary>
-        internal static string CollectionPropertyDescriptor_ToString {
+        internal static string ConditionBindingSettings_Description {
             get {
-                return ResourceManager.GetString("CollectionPropertyDescriptor_ToString", resourceCulture);
+                return ResourceManager.GetString("ConditionBindingSettings_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Condition.
+        /// </summary>
+        internal static string ConditionBindingSettings_DisplayName {
+            get {
+                return ResourceManager.GetString("ConditionBindingSettings_DisplayName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to (Empty Condition).
         /// </summary>
-        internal static string ConditionBindingSettings_ElementName {
+        internal static string ConditionBindingSettings_EmptyBinding {
             get {
-                return ResourceManager.GetString("ConditionBindingSettings_ElementName", resourceCulture);
+                return ResourceManager.GetString("ConditionBindingSettings_EmptyBinding", resourceCulture);
             }
         }
         
@@ -900,6 +909,15 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (Collection).
+        /// </summary>
+        internal static string StringCollectionPropertyDescriptor_ToString {
+            get {
+                return ResourceManager.GetString("StringCollectionPropertyDescriptor_ToString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Completing existing active scope..
         /// </summary>
         internal static string TemplateWizard_CompletingScope {
@@ -963,11 +981,29 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A validation rule..
+        /// </summary>
+        internal static string ValidationBindingSettings_Description {
+            get {
+                return ResourceManager.GetString("ValidationBindingSettings_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Validation Rule.
+        /// </summary>
+        internal static string ValidationBindingSettings_DisplayName {
+            get {
+                return ResourceManager.GetString("ValidationBindingSettings_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to (Empty Validation Rule).
         /// </summary>
-        internal static string ValidationBindingSettings_ElementName {
+        internal static string ValidationBindingSettings_EmptyBinding {
             get {
-                return ResourceManager.GetString("ValidationBindingSettings_ElementName", resourceCulture);
+                return ResourceManager.GetString("ValidationBindingSettings_EmptyBinding", resourceCulture);
             }
         }
         
@@ -1010,9 +1046,9 @@ namespace NuPattern.Extensibility.Properties {
         /// <summary>
         ///   Looks up a localized string similar to (Empty Value Provider).
         /// </summary>
-        internal static string ValueProviderBindingSettings_ElementName {
+        internal static string ValueProviderBindingSettings_EmptyBinding {
             get {
-                return ResourceManager.GetString("ValueProviderBindingSettings_ElementName", resourceCulture);
+                return ResourceManager.GetString("ValueProviderBindingSettings_EmptyBinding", resourceCulture);
             }
         }
         

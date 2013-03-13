@@ -40,39 +40,38 @@ namespace NuPattern.Library.Commands
             }
         }
 
-        ///// <summary>
-        ///// Sets a property in a command at runtime.
-        ///// </summary>
-        //public static ICommandSettings<TCommand> SetProperty<TCommand, TPropertyType>(this ICommandSettings<TCommand> commandSettings, Expression<Func<TCommand, TPropertyType>> propertyName, string value)
-        //{
-        //    Guard.NotNull(() => commandSettings, commandSettings);
-
-        //    var prop = commandSettings.CreatePropertySettings();
-        //    prop.Name = Reflector<TCommand>.GetPropertyName(propertyName);
-        //    prop.Value = value;
-        //    return commandSettings;
-        //}
-
         /// <summary>
-        /// Gets the value of the property, creating it with a default if needed
+        /// Gets the value of the property.
         /// </summary>
-        public static T GetOrCreatePropertyValue<T>(this ICommandSettings settings, string propertyName, T defaultValue)
+        public static T GetPropertyValue<T>(this ICommandSettings settings, string propertyName)
         {
             Guard.NotNull(() => settings, settings);
+            Guard.NotNullOrEmpty(() => propertyName, propertyName);
 
             var converter = TypeDescriptor.GetConverter(typeof(T));
             var prop = (IPropertyBindingSettings)settings.Properties.FirstOrDefault(p => p.Name == propertyName);
-            if (prop == null)
+            if (prop != null)
             {
-                prop = new PropertyBindingSettings
-                {
-                    Name = propertyName,
-                    Value = converter.ConvertToString(defaultValue),
-                };
-                settings.Properties.Add(prop);
+                return (T)converter.ConvertFromString(prop.Value);
             }
 
-            return (T)converter.ConvertFromString(prop.Value);
+            return default(T);
+        }
+
+        /// <summary>
+        /// Sets the value of the property.
+        /// </summary>
+        public static void SetPropertyValue<T>(this ICommandSettings settings, string propertyName, T value)
+        {
+            Guard.NotNull(() => settings, settings);
+            Guard.NotNullOrEmpty(() => propertyName, propertyName);
+
+            var converter = TypeDescriptor.GetConverter(typeof(T));
+            var prop = (IPropertyBindingSettings)settings.Properties.FirstOrDefault(p => p.Name == propertyName);
+            if (prop != null)
+            {
+                prop.Value = converter.ConvertToString(value);
+            }
         }
     }
 

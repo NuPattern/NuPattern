@@ -83,7 +83,7 @@ namespace NuPattern.Extensibility.Binding
                 propertySettings = settings.Properties.FirstOrDefault(prop => prop.Name == propertyName);
                 if (propertySettings == null)
                 {
-                    propertySettings = new PropertyBindingSettings { Name = propertyName };
+                    propertySettings = CreatePropertySettings(settings, propertyName, propertyType);
                     settings.Properties.Add(propertySettings);
                 }
             }
@@ -95,13 +95,36 @@ namespace NuPattern.Extensibility.Binding
                     propertySettings = design.ValueProvider.Properties.FirstOrDefault(prop => prop.Name == propertyName);
                     if (propertySettings == null)
                     {
-                        propertySettings = new PropertyBindingSettings { Name = propertyName };
+                        propertySettings = CreatePropertySettings(design, propertyName, propertyType);
                         design.ValueProvider.Properties.Add(propertySettings);
                     }
                 }
             }
 
             return propertySettings;
+        }
+
+        private static PropertyBindingSettings CreatePropertySettings(object component, string name, Type propertyType)
+        {
+            // Get the default value of the instance
+            var converter = TypeDescriptor.GetConverter(propertyType);
+            var defaultValue = (string)null;
+            var descriptor = TypeDescriptor.GetProperties(component).Cast<PropertyDescriptor>().FirstOrDefault(p => p.Name == name);
+            if (descriptor != null)
+            {
+                var defaultValueAttribute = descriptor.Attributes.OfType<DefaultValueAttribute>().FirstOrDefault();
+                if (defaultValueAttribute != null)
+                {
+                    defaultValue = converter.ConvertToString(defaultValueAttribute.Value);
+                }
+            }
+
+            // Create new property
+            return new PropertyBindingSettings
+            {
+                Name = name,
+                Value = (!String.IsNullOrEmpty(defaultValue)) ? defaultValue : null,
+            };
         }
     }
 }

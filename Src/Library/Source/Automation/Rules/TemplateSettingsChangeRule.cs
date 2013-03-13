@@ -23,16 +23,16 @@ namespace NuPattern.Library.Automation
 
             if (e.DomainProperty.Id == TemplateSettings.SyncNameDomainPropertyId)
             {
-                var settings = e.ModelElement as ITemplateSettings;
-                if (settings != null)
+                var template = e.ModelElement as TemplateSettings;
+                if (template != null && template.Extends != null)
                 {
                     if (!e.ModelElement.Store.TransactionManager.CurrentTransaction.IsSerializing)
                     {
                         tracer.Shield(() =>
                         {
-                            SyncNameExtension.EnsureSyncNameExtensionAutomation(settings.Owner);
+                            SyncNameExtension.EnsureSyncNameExtensionAutomation(template.Owner);
                         },
-                        Resources.TemplateSettingsChangeRule_ErrorSyncNameFailed, settings.Name);
+                        Resources.TemplateSettingsChangeRule_ErrorSyncNameFailed, template.Name);
                     }
                 }
             }

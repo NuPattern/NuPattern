@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
@@ -29,24 +30,24 @@ namespace NuPattern.Library.UnitTests.Commands
             private CommandSettings settings;
             private AutomationSettingsSchema element;
             private ISolution solution = new Solution
-				{
-					Name = "Solution.sln",
-					PhysicalPath = "C:\\Temp",
-					Items = 
-					{
-						new Project
-						{
-							Name = "Project",
-							Items = 
-							{
-								new Item 
+                {
+                    Name = "Solution.sln",
+                    PhysicalPath = "C:\\Temp",
+                    Items = 
+                    {
+                        new Project
+                        {
+                            Name = "Project",
+                            Items = 
+                            {
+                                new Item 
                                 { 
                                     Name = "TextTemplate.t4",
                                 }
-							}
-						},
-					}
-				};
+                            }
+                        },
+                    }
+                };
             private IItem textTemplateFile;
 
             [TestInitialize]
@@ -64,6 +65,10 @@ namespace NuPattern.Library.UnitTests.Commands
                     this.settings = element.AddExtension<CommandSettings>();
 
                     this.settings.TypeId = typeof(GenerateModelingCodeCommand).Name;
+                    ((ICommandSettings)this.settings).Properties.Add(new PropertyBindingSettings { Name = Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName) });
+                    ((ICommandSettings)this.settings).Properties.Add(new PropertyBindingSettings { Name = Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath) });
+                    ((ICommandSettings)this.settings).Properties.Add(new PropertyBindingSettings { Name = Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri) });
+                    ((ICommandSettings)this.settings).Properties.Add(new PropertyBindingSettings { Name = Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateUri) });
 
                 });
 
@@ -81,12 +86,12 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenTextTemplateNotDefined_ThenValidationFails()
             {
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), string.Empty);
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), string.Empty);
 
-                this.validation.Validate(this.validationContext, this.element, this.settings); 
-                
+                this.validation.Validate(this.validationContext, this.element, this.settings);
+
                 Assert.True(this.validationContext.CurrentViolations.Count == 1);
                 Assert.Equal(Resources.Validate_GenerateModelingCodeAuthoringUriIsInvalidCode, this.validationContext.CurrentViolations.First().Code);
             }
@@ -94,9 +99,9 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenTextTemplateNotExistInSolution_ThenValidationFails()
             {
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
                 this.uriService.Setup(us => us.ResolveUri<IItemContainer>(It.IsAny<Uri>())).Throws<UriFormatException>();
 
                 this.validation.Validate(this.validationContext, this.element, this.settings);
@@ -108,9 +113,9 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenTextTemplateExistsButNotContent_ThenValidationFails()
             {
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
 
                 this.textTemplateFile.Data.ItemType = "NotContent";
                 this.textTemplateFile.Data.IncludeInVSIX = "false";
@@ -127,9 +132,9 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenTextTemplateExistsButNotIncludeInVSIX_ThenValidationFails()
             {
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
 
                 this.textTemplateFile.Data.ItemType = "Content";
                 this.textTemplateFile.Data.IncludeInVSIX = "false";
@@ -145,9 +150,9 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenTextTemplateExistsAndIncludeInVSIX_ThenValidationSucceeds()
             {
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
 
                 this.textTemplateFile.Data.ItemType = "Content";
                 this.textTemplateFile.Data.IncludeInVSIX = "true";
@@ -162,10 +167,10 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenTextTemplateExistsAndIncludeInVSIXAs_ThenValidationSucceeds()
             {
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateUri), "t4://extension/vsixguid/foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateUri), "t4://extension/vsixguid/foo");
 
                 this.textTemplateFile.Data.ItemType = "Content";
                 this.textTemplateFile.Data.IncludeInVSIX = "false";
@@ -180,10 +185,10 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenTextTemplateExistsAndIncludeInVSIXAsWrongFilename_ThenValidationFails()
             {
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateUri), "t4://extension/vsixguid/foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateUri), "t4://extension/vsixguid/foo");
 
                 this.textTemplateFile.Data.ItemType = "Content";
                 this.textTemplateFile.Data.IncludeInVSIX = "false";
@@ -199,9 +204,9 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenTextTemplateExistsAndIncludeInVSIXDuplicate_ThenValidationFails()
             {
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
 
                 this.textTemplateFile.Data.ItemType = "Content";
                 this.textTemplateFile.Data.IncludeInVSIX = "true";
@@ -217,9 +222,9 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenTargetFileNameEmpty_ThenValidationFails()
             {
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), string.Empty);
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), string.Empty);
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
 
                 this.textTemplateFile.Data.ItemType = "Content";
                 this.textTemplateFile.Data.IncludeInVSIX = "true";
@@ -235,9 +240,9 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenTargetPathStartsWithTildaOnNonProductElement_ThenValidationFails()
             {
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), PathResolver.ResolveArtifactLinkCharacter + "foo");
-                this.settings.GetOrCreatePropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), PathResolver.ResolveArtifactLinkCharacter + "foo");
+                this.settings.SetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), "solution://projectguid/fileguid");
 
                 this.textTemplateFile.Data.ItemType = "Content";
                 this.textTemplateFile.Data.IncludeInVSIX = "true";

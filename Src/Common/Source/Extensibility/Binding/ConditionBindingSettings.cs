@@ -9,7 +9,9 @@ namespace NuPattern.Extensibility.Binding
 	/// <summary>
 	/// Defines an <see cref="ICondition"/> implementation of <see cref="BindingSettings"/>.
 	/// </summary>
-	[DataContract]
+    [DisplayNameResource("ConditionBindingSettings_DisplayName", typeof(Resources))]
+    [DescriptionResource("ConditionBindingSettings_Description", typeof(Resources))]
+    [DataContract]
 	[TypeDescriptionProvider(typeof(BindingSettingsTypeDescriptionProvider<ICondition>))]
 	public class ConditionBindingSettings : BindingSettings
 	{
@@ -34,7 +36,7 @@ namespace NuPattern.Extensibility.Binding
 		{
 			if (string.IsNullOrEmpty(this.TypeId))
 			{
-				return Resources.ConditionBindingSettings_ElementName;
+				return Resources.ConditionBindingSettings_EmptyBinding;
 			}
 
 			return this.TypeId.Split('.').Last();

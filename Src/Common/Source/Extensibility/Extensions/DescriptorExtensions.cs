@@ -44,30 +44,70 @@ namespace NuPattern.Extensibility
         /// </summary>
         public static bool IsAutoDesignCollectionProperty(this PropertyDescriptor descriptor)
         {
-            // Descriptor must be using the built-in default collection editor, not declare a custom one
-            // Descriptor must be using the Extensibility.CollectionConverter, not declare anything different.
             var editor = descriptor.GetEditor(typeof(UITypeEditor));
             var converter = descriptor.Converter;
 
-            return (descriptor.IsPropertyTypeGeneric(typeof(Collection<>))
-                && editor is System.ComponentModel.Design.CollectionEditor
-                && converter != null
-                && converter.GetType().IsOfGenericType(typeof(Extensibility.CollectionConverter<>)));
+            // Descriptor must be using a Collection<T>
+            var supportedCollectionType = descriptor.IsPropertyTypeGeneric(typeof(Collection<>));
+            // Descriptor must be using a derivative of Extensibility.DesignCollectionEditor editor, 
+            // or default collection editor, NOT declare an arbitrary one or a derivative of default collection editor
+            var supportedEditor = ((editor is Extensibility.DesignCollectionEditor) ||
+                                   (editor != null && editor.GetType() == typeof(System.ComponentModel.Design.CollectionEditor)));
+            // Descriptor must be using a derivative of Extensibility.DesignCollectionConverter, 
+            // or default collection converter, NOT declare an arbitrary one or a derivative of default collection converter
+            var supportedConverter = ((converter != null && converter.GetType() == typeof(System.ComponentModel.CollectionConverter)) ||
+                                      (converter is Extensibility.Binding.DesignCollectionConverter));
+
+            return (supportedCollectionType && supportedEditor && supportedConverter);
         }
 
         /// <summary>
         /// Determined whether the instance is of the specified generic type.
         /// </summary>
-        /// <param name="instanceType">The instance of the object</param>
-        /// <param name="ofType">The generic type of the object to compare to. (i.e. typeof(MyGeneric{}))</param>
-        public static bool IsOfGenericType(this Type instanceType, Type ofType)
+        /// <param name="instanceType">The type of the object.</param>
+        /// <param name="ofGenericType">The generic type of the object to compare to. (i.e. typeof(MyGeneric{}))</param>
+        public static bool IsOfGenericType(this Type instanceType, Type ofGenericType)
         {
             Guard.NotNull(() => instanceType, instanceType);
-            Guard.NotNull(() => ofType, ofType);
+            Guard.NotNull(() => ofGenericType, ofGenericType);
 
-            return (instanceType.IsGenericType
-                && (ofType == instanceType.GetGenericTypeDefinition()
-                || ofType.IsAssignableFrom(instanceType.GetGenericTypeDefinition())));
+            if (!ofGenericType.IsGenericType)
+            {
+                return false;
+            }
+
+            if (instanceType.IsGenericType)
+            {
+                if (instanceType.GetGenericTypeDefinition() == ofGenericType.GetGenericTypeDefinition())
+                {
+                    return true;
+                }
+                else
+                {
+                    return (ofGenericType == instanceType.GetGenericTypeDefinition()
+                            || ofGenericType.IsAssignableFrom(instanceType.GetGenericTypeDefinition()));
+                }
+            }
+            else
+            {
+                // Test the inheritance chain
+                var interfaces = instanceType.GetInterfaces()
+                    .Where(i => i.IsGenericType && i.GetGenericTypeDefinition() == ofGenericType);
+                if (interfaces.Any())
+                {
+                    return true;
+                }
+                else
+                {
+                    // Enumerate base interfaces
+                    if (instanceType.BaseType != null)
+                    {
+                        return instanceType.BaseType.IsOfGenericType(ofGenericType);
+                    }
+                }
+
+                return false;
+            }
         }
 
         /// <summary>

@@ -1,8 +1,10 @@
-﻿using System;
+﻿using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
 using NuPattern.Library.Commands;
+using NuPattern.Library.Design;
 
 namespace NuPattern.Library.Automation
 {
@@ -12,8 +14,6 @@ namespace NuPattern.Library.Automation
     [RuleOn(typeof(CommandSettings), FireTime = TimeToFire.TopLevelCommit)]
     public class AggregatorCommandCommandSettingsDeletingRule : DeletingRule
     {
-        private const string Separator = ";";
-
         /// <summary>
         /// Handles the element deleting rule
         /// </summary>
@@ -24,32 +24,37 @@ namespace NuPattern.Library.Automation
 
             base.ElementDeleting(e);
 
-            var commandSettings = e.ModelElement as CommandSettings;
-            if (commandSettings != null)
+            var deletingCommand = e.ModelElement as CommandSettings;
+            if (deletingCommand != null && deletingCommand.Extends != null)
             {
-                // Find the aggregator command on same element as the command being deleted
-                var element = commandSettings.Owner;
-                var aggregatorCommandSettings = element.AutomationSettings
+                // Find all aggregator commands on same element as the command being deleted
+                var element = deletingCommand.Owner;
+                var aggregatorCommands = element.AutomationSettings
                         .Select(s => s.As<ICommandSettings>())
-                        .Where(s =>
-                            s != null &&
-                            s.TypeId == typeof(AggregatorCommand).FullName);
-                if (aggregatorCommandSettings.Any())
+                        .Where(s => s != null && s.TypeId == typeof(AggregatorCommand).FullName && s.Id != deletingCommand.Id);
+                if (aggregatorCommands.Any())
                 {
-                    // Rebuild settings for command
-                    foreach (var setting in aggregatorCommandSettings)
-                    {
-                        var property = setting.Properties.FirstOrDefault(
-                            p => p.Name == Reflector<AggregatorCommand>.GetPropertyName(x => x.CommandReferenceList));
-                        if (property != null)
+                    // Update references for each aggregator command
+                    aggregatorCommands.ForEach(cmdSettings =>
                         {
-                            var ids = property.Value.Split(
-                                new string[] { Separator }, StringSplitOptions.RemoveEmptyEntries);
-
-                            property.Value =
-                                string.Join(Separator, ids.Where(id => new Guid(id) != commandSettings.Id));
-                        }
-                    }
+                            // Get the referenced aggregated commands
+                            var property = TypeDescriptor.GetProperties(cmdSettings).Cast<PropertyDescriptor>()
+                                .FirstOrDefault(p => p.Name == Reflector<AggregatorCommand>.GetPropertyName(x => x.CommandReferenceList));
+                            if (property != null)
+                            {
+                                var references = DesignCollectionPropertyDescriptor<CommandSettings>.FromObjectToCollection<CommandReference>(property.GetValue(cmdSettings));
+                                if (references != null)
+                                {
+                                    // Remove reference if references the command being deleted.
+                                    var referenceToRemove = references.FirstOrDefault(r => r.CommandId == deletingCommand.Id);
+                                    if (referenceToRemove != null)
+                                    {
+                                        references.Remove(referenceToRemove);
+                                        property.SetValue(cmdSettings, DesignCollectionPropertyDescriptor<CommandSettings>.ToObjectCollection<CommandReference>(references));
+                                    }
+                                }
+                            }
+                        });
                 }
             }
         }

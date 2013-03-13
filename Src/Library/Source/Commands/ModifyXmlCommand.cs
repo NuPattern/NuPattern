@@ -104,7 +104,6 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [DisplayNameResource("ModifyXmlCommand_Namespaces_DisplayName", typeof(Resources))]
         [DescriptionResource("ModifyXmlCommand_Namespaces_Description", typeof(Resources))]
-        [TypeConverter(typeof(CollectionConverter<XmlNamespace>))]
         public Collection<XmlNamespace> Namespaces { get; set; }
 
         /// <summary>

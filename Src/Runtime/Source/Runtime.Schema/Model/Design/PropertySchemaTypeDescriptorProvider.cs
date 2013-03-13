@@ -62,7 +62,7 @@ namespace NuPattern.Runtime.Schema
                 // Add descriptor for validation rules collection
                 properties.ReplaceDescriptor<PropertySchema, string>(
                     p => p.RawValidationRules,
-                    x => new CollectionPropertyDescriptor<ValidationBindingSettings>(x, Resources.SchemaTypeDescriptionProvider_ValidatorEditorCaption));
+                    x => new StringCollectionPropertyDescriptor<ValidationBindingSettings>(x));
 
                 PrepareDefaultValue(properties);
 

@@ -25,30 +25,28 @@ namespace NuPattern.Library.Automation
 
             base.ElementPropertyChanged(e);
 
-            var commandSettings = e.ModelElement as CommandSettings;
-            if (commandSettings != null)
+            var changedCommand = e.ModelElement as CommandSettings;
+            if (changedCommand != null && changedCommand.Extends != null)
             {
-                if (!e.ModelElement.Store.TransactionManager.CurrentTransaction.IsSerializing)
+                if (e.DomainProperty.Id == CommandSettings.PropertiesDomainPropertyId)
                 {
-                    // Get the unfold commands on the element
-                    var element = commandSettings.Owner;
-                    var unfoldCommandSettings = element.AutomationSettings
-                                                       .Select(s => s.As<ICommandSettings>())
-                                                       .Where(s =>
-                                                              s != null &&
-                                                              s.TypeId == typeof(UnfoldVsTemplateCommand).FullName);
-                    if (unfoldCommandSettings.Any())
+                    if (!e.ModelElement.Store.TransactionManager.CurrentTransaction.IsSerializing)
                     {
-                        unfoldCommandSettings.ForEach(cmd =>
-                            {
-                                tracer.Shield(() =>
-                                    {
-                                        if (e.DomainProperty.Id == CommandSettings.PropertiesDomainPropertyId)
+                        // Find all unfold commands on the same element that changed
+                        var element = changedCommand.Owner;
+                        var unfoldCommands = element.AutomationSettings
+                                                    .Select(s => s.As<ICommandSettings>())
+                                                    .Where(s => s != null && s.TypeId == typeof(UnfoldVsTemplateCommand).FullName);
+                        if (unfoldCommands.Any())
+                        {
+                            unfoldCommands.ToList().ForEach(cmd =>
+                                {
+                                    tracer.Shield(() =>
                                         {
-                                            SyncNameExtension.EnsureSyncNameExtensionAutomation(commandSettings.Owner);
-                                        }
-                                    }, Resources.UnfoldVsCommandChangeRule_ErrorSyncNameFailed, cmd.Name);
-                            });
+                                            SyncNameExtension.EnsureSyncNameExtensionAutomation(changedCommand.Owner);
+                                        }, Resources.UnfoldVsCommandChangeRule_ErrorSyncNameFailed, cmd.Name);
+                                });
+                        }
                     }
                 }
             }
