@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.XPath;
@@ -81,7 +80,6 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         [DisplayNameResource("ModifyXmlCommand_Namespaces_DisplayName", typeof(Resources))]
         [DescriptionResource("ModifyXmlCommand_Namespaces_Description", typeof(Resources))]
-        [TypeConverter(typeof(CollectionConverter<XmlNamespace>))]
         public Collection<XmlNamespace> Namespaces { get; set; }
 
         /// <summary>

@@ -37,7 +37,7 @@ namespace NuPattern.Library.Commands
         {
             if (string.IsNullOrEmpty(this.Namespace))
             {
-                return Resources.XmlNamespace_EmptyText;
+                return Resources.XmlNamespace_EmptyNamespace;
             }
 
             return string.Format(CultureInfo.CurrentCulture, "xmlns{2}{0}={1}", this.Prefix, this.Namespace, (!string.IsNullOrEmpty(this.Prefix) ? ":" : ""));

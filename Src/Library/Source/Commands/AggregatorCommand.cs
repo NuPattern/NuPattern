@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Drawing.Design;
-using System.Globalization;
 using System.Linq;
 using System.Windows.Input;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
@@ -32,13 +31,11 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the command reference list.
         /// </summary>
         /// <value>The command reference list.</value>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1002:DoNotExposeGenericLists"), Required]
         [DisplayNameResource("AggregatorCommand_CommandReferences_DisplayName", typeof(Resources))]
         [DescriptionResource("AggregatorCommand_CommandReferences_Description", typeof(Resources))]
-        [Editor(typeof(CommandReferencesEditor), typeof(UITypeEditor))]
         [TypeConverter(typeof(CommandReferencesConverter))]
-        [DesignOnly(true)]
-        public List<CommandReference> CommandReferenceList { get; set; }
+        [Editor(typeof(CommandReferencesEditor), typeof(UITypeEditor))]
+        public Collection<CommandReference> CommandReferenceList { get; set; }
 
         /// <summary>
         /// Gets or sets the current element.
@@ -76,13 +73,6 @@ namespace NuPattern.Library.Commands
 
                 if (settings != null)
                 {
-                    var converter = new CommandReferencesConverter();
-
-                    this.CommandReferenceList = (List<CommandReference>)converter.ConvertFrom(
-                        new SimpleTypeDescriptorContext { Instance = this.Settings },
-                        CultureInfo.CurrentCulture,
-                        settings.Value);
-
                     using (new MouseCursor(Cursors.Wait))
                     {
                         foreach (var reference in this.CommandReferenceList)

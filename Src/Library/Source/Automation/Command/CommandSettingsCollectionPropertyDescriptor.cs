@@ -8,7 +8,7 @@ namespace NuPattern.Library.Automation
     /// <summary>
     /// Provides a <see cref="PropertyDescriptor"/> that displays a <see cref="Collection{T}"/> property binding.
     /// </summary>
-    internal class CommandSettingsCollectionPropertyDescriptor : CollectionPropertyDescriptor<CommandSettings>
+    internal class CommandSettingsCollectionPropertyDescriptor : StringCollectionPropertyDescriptor<CommandSettings>
     {
         private PropertyDescriptor descriptor;
 

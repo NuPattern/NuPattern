@@ -10,6 +10,8 @@ namespace NuPattern.Library.Design
     /// <summary>
     /// Command reference element to be shown int he command reference editor
     /// </summary>
+    [DisplayNameResource("CommandReference_DisplayName", typeof(Resources))]
+    [DescriptionResource("CommandReference_Description", typeof(Resources))]
     [TypeDescriptionProvider(typeof(CommandReferenceTypeDescriptionProvider))]
     public class CommandReference
     {
@@ -41,18 +43,25 @@ namespace NuPattern.Library.Design
         /// </returns>
         public override string ToString()
         {
-            if (this.CommandSettings != null && this.CommandId != Guid.Empty)
+            if (this.CommandId == Guid.Empty)
             {
-                var settings = this.CommandSettings.Owner.AutomationSettings;
+                return Resources.CommandReference_EmptyReference;
+            }
+            else
+            {
+                if (this.CommandSettings != null)
+                {
+                    var settings = this.CommandSettings.Owner.AutomationSettings;
 
-                return (from cs in settings
-                        let setting = cs.As<ICommandSettings>()
-                        where setting != null && setting.Id == this.CommandId
-                        select cs.Name)
-                        .SingleOrDefault();
+                    return (from cs in settings
+                            let setting = cs.As<ICommandSettings>()
+                            where setting != null && setting.Id == this.CommandId
+                            select cs.Name)
+                            .SingleOrDefault();
+                }
             }
 
-            return this.GetType().Name.Split('.').Last();
+            return base.ToString();
         }
     }
 }

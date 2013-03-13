@@ -926,11 +926,11 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commands editor.
+        ///   Looks up a localized string similar to (Empty Command).
         /// </summary>
-        internal static string CommandReferencesEditor_Caption {
+        internal static string CommandReference_EmptyReference {
             get {
-                return ResourceManager.GetString("CommandReferencesEditor_Caption", resourceCulture);
+                return ResourceManager.GetString("CommandReference_EmptyReference", resourceCulture);
             }
         }
         
@@ -5220,24 +5220,6 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Property &apos;{0}&apos; no longer exist in command type &apos;{1}&apos; so it has been removed..
-        /// </summary>
-        internal static string Validate_CommandSettingsInvalidPropertyBinding {
-            get {
-                return ResourceManager.GetString("Validate_CommandSettingsInvalidPropertyBinding", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 317.
-        /// </summary>
-        internal static string Validate_CommandSettingsInvalidPropertyBindingCode {
-            get {
-                return ResourceManager.GetString("Validate_CommandSettingsInvalidPropertyBindingCode", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &apos;{0}&apos; command has no value for the &apos;Type&apos; property. You must select a command from this element to execute in the &apos;Settings&apos;..
         /// </summary>
         internal static string Validate_CommandSettingsTypeIsNotEmpty {
@@ -6250,11 +6232,11 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (empty).
+        ///   Looks up a localized string similar to (Empty Namespace).
         /// </summary>
-        internal static string XmlNamespace_EmptyText {
+        internal static string XmlNamespace_EmptyNamespace {
             get {
-                return ResourceManager.GetString("XmlNamespace_EmptyText", resourceCulture);
+                return ResourceManager.GetString("XmlNamespace_EmptyNamespace", resourceCulture);
             }
         }
         

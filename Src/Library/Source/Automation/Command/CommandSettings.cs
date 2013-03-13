@@ -1,5 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
+using NuPattern.Extensibility;
 using NuPattern.Extensibility.Binding;
 using NuPattern.Runtime;
 
@@ -11,7 +15,7 @@ namespace NuPattern.Library.Automation
     [TypeDescriptionProvider(typeof(CommandSettingsDescriptionProvider))]
     public partial class CommandSettings : IBindingSettings
     {
-        private List<IPropertyBindingSettings> propertySettings;
+        private ObservableCollection<IPropertyBindingSettings> propertySettings;
 
         /// <summary>
         /// Creates the runtime automation element for this setting element.
@@ -37,14 +41,36 @@ namespace NuPattern.Library.Automation
             get { return this.propertySettings ?? (this.propertySettings = this.GetPropertySettings()); }
         }
 
-        private List<IPropertyBindingSettings> GetPropertySettings()
+        private ObservableCollection<IPropertyBindingSettings> GetPropertySettings()
         {
-            if (string.IsNullOrEmpty(this.Properties))
-            {
-                return new List<IPropertyBindingSettings>();
-            }
+            var properties = string.IsNullOrEmpty(this.Properties) ?
+               new ObservableCollection<IPropertyBindingSettings>() :
+               BindingSerializer.Deserialize<ObservableCollection<IPropertyBindingSettings>>(this.Properties);
+            properties.CollectionChanged += (sender, args) =>
+                {
+                    if (args.OldItems != null)
+                    {
+                        args.OldItems.OfType<IPropertyBindingSettings>()
+                            .ToList()
+                            .ForEach(binding => binding.PropertyChanged -= OnSaveRules);
+                    }
+                    if (args.NewItems != null)
+                    {
+                        args.NewItems.OfType<IPropertyBindingSettings>()
+                            .ToList()
+                            .ForEach(binding => binding.PropertyChanged += OnSaveRules);
+                    }
+                };
 
-            return BindingSerializer.Deserialize<List<IPropertyBindingSettings>>(this.Properties);
+            properties
+                .ForEach(binding => binding.PropertyChanged += OnSaveRules);
+
+            return properties;
+        }
+
+        private void OnSaveRules(object sender, EventArgs args)
+        {
+            this.Properties = BindingSerializer.Serialize(this.propertySettings);
         }
     }
 }

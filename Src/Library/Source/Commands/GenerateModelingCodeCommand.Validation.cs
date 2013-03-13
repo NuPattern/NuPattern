@@ -43,7 +43,7 @@ namespace NuPattern.Library.Commands
 
             try
             {
-                var authoringUriString = settings.GetOrCreatePropertyValue(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri), string.Empty);
+                var authoringUriString = settings.GetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateAuthoringUri));
                 if (!string.IsNullOrEmpty(authoringUriString))
                 {
                     var authoringUri = new Uri(authoringUriString);
@@ -90,7 +90,7 @@ namespace NuPattern.Library.Commands
                         else
                         {
                             // Ensure the 'IncludeInVSIXAs' value matches TemplateUri value
-                            var templateUriString = settings.GetOrCreatePropertyValue(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateUri), string.Empty);
+                            var templateUriString = settings.GetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateUri));
                             if (!String.IsNullOrEmpty(templateUriString))
                             {
                                 var templateFilename = TextTemplateUriProvider.ParseFileName(new Uri(templateUriString));
@@ -126,7 +126,7 @@ namespace NuPattern.Library.Commands
                     return;
                 }
 
-                var targetFilename = settings.GetOrCreatePropertyValue(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName), string.Empty);
+                var targetFilename = settings.GetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetFileName));
                 if (string.IsNullOrEmpty(targetFilename))
                 {
                     context.LogError(
@@ -138,7 +138,7 @@ namespace NuPattern.Library.Commands
                 }
 
                 var isConfiguredOnProduct = ((settingsElement.Parent as IPatternSchema) != null);
-                var targetPath = settings.GetOrCreatePropertyValue(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath), string.Empty);
+                var targetPath = settings.GetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TargetPath));
                 if ((!string.IsNullOrEmpty(targetPath))
                     && (targetPath.StartsWith(PathResolver.ResolveArtifactLinkCharacter, StringComparison.OrdinalIgnoreCase))
                     && !isConfiguredOnProduct)

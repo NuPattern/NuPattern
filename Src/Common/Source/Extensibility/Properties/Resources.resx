@@ -138,7 +138,7 @@
   <data name="CollectionDropDownEditor_ValueCollectionException" xml:space="preserve">
     <value>The value must implement ICollection.</value>
   </data>
-  <data name="CollectionPropertyDescriptor_ToString" xml:space="preserve">
+  <data name="StringCollectionPropertyDescriptor_ToString" xml:space="preserve">
     <value>(Collection)</value>
   </data>
   <data name="DynamicBinding_UnsupportedCompositionService" xml:space="preserve">
@@ -198,10 +198,10 @@
   <data name="DesignPropertyValueDescriptor_ValueDisplayName" xml:space="preserve">
     <value>Value</value>
   </data>
-  <data name="ConditionBindingSettings_ElementName" xml:space="preserve">
+  <data name="ConditionBindingSettings_EmptyBinding" xml:space="preserve">
     <value>(Empty Condition)</value>
   </data>
-  <data name="ValidationBindingSettings_ElementName" xml:space="preserve">
+  <data name="ValidationBindingSettings_EmptyBinding" xml:space="preserve">
     <value>(Empty Validation Rule)</value>
   </data>
   <data name="FolderPathAlreadyExists" xml:space="preserve">
@@ -279,7 +279,7 @@
   <data name="PathResolver_TraceResolvedArtifactLink" xml:space="preserve">
     <value>Resolved artifact link in path '{0}', which resolved to '{1}'.</value>
   </data>
-  <data name="ValueProviderBindingSettings_ElementName" xml:space="preserve">
+  <data name="ValueProviderBindingSettings_EmptyBinding" xml:space="preserve">
     <value>(Empty Value Provider)</value>
   </data>
   <data name="DescriptorExtensions_MustBeDelegatingDescriptor" xml:space="preserve">
@@ -454,5 +454,17 @@ Please add a new or existing image file {0} to the project and try again.</value
   </data>
   <data name="DesignCollectionPropertyDescriptor_ToString" xml:space="preserve">
     <value>(Collection)</value>
+  </data>
+  <data name="ValidationBindingSettings_Description" xml:space="preserve">
+    <value>A validation rule.</value>
+  </data>
+  <data name="ValidationBindingSettings_DisplayName" xml:space="preserve">
+    <value>Validation Rule</value>
+  </data>
+  <data name="ConditionBindingSettings_Description" xml:space="preserve">
+    <value>A condition of execution</value>
+  </data>
+  <data name="ConditionBindingSettings_DisplayName" xml:space="preserve">
+    <value>Condition</value>
   </data>
 </root>

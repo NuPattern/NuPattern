@@ -12,7 +12,7 @@ namespace NuPattern.Extensibility
     /// <summary>
     /// A simple collection editor that supports cancelling of editing.
     /// </summary>
-    public class CancelableCollectionEditor : CollectionEditor
+    public abstract class CancelableCollectionEditor : CollectionEditor
     {
         private string caption;
 
@@ -20,7 +20,7 @@ namespace NuPattern.Extensibility
         /// Initializes a new instance of the <see cref="CancelableCollectionEditor"/> class.
         /// </summary>
         /// <param name="type">The type of the collection for this editor to edit.</param>
-        public CancelableCollectionEditor(Type type)
+        protected CancelableCollectionEditor(Type type)
             : base(type)
         {
         }
@@ -30,7 +30,7 @@ namespace NuPattern.Extensibility
         /// </summary>
         /// <param name="type">The type of the collection for this editor to edit.</param>
         /// <param name="caption">The title for the editor window.</param>
-        public CancelableCollectionEditor(Type type, string caption)
+        protected CancelableCollectionEditor(Type type, string caption)
             : base(type)
         {
             this.caption = caption;

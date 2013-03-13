@@ -98,7 +98,7 @@
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Automation\CollectionPropertyDescriptorSpec.cs" />
+    <Compile Include="Automation\StringCollectionPropertyDescriptorSpec.cs" />
     <Compile Include="Automation\Template\InstantiationTemplateWizardSpec.cs" />
     <Compile Include="Automation\Template\TemplateAutomationExtensionSpec.cs" />
     <Compile Include="Automation\Rules\PatternElementSchemaAddRuleSpec.cs" />

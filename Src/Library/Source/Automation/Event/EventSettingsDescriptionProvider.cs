@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
 using NuPattern.Extensibility;
 using NuPattern.Extensibility.Binding;
-using NuPattern.Library.Properties;
 
 namespace NuPattern.Library.Automation
 {
@@ -56,7 +55,7 @@ namespace NuPattern.Library.Automation
                     d => new SettingsReferencePropertyDescriptor<IEventSettings, IWizardSettings>(d, x => x.WizardId));
                 properties.ReplaceDescriptor<EventSettings, string>(
                     x => x.Conditions,
-                    d => new CollectionPropertyDescriptor<ConditionBindingSettings>(d, Resources.SettingsDescriptionProvider_ConditionsEditorCaption));
+                    d => new StringCollectionPropertyDescriptor<ConditionBindingSettings>(d));
 
                 return new PropertyDescriptorCollection(properties.ToArray());
             }

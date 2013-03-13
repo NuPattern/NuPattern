@@ -153,15 +153,16 @@
     <Compile Include="Binding\BindingCompositionService.cs" />
     <Compile Include="Binding\BindingFactory.cs" />
     <Compile Include="Binding\BindingPropertyDescriptor.cs" />
+    <Compile Include="Binding\Design\DesignCollectionConverter.cs" />
     <Compile Include="Binding\Design\DesignComponentTypeDescriptor.cs" />
     <Compile Include="Binding\Design\DesignOnlyPropertyDescriptor.cs" />
-    <Compile Include="CollectionConverter.cs" />
     <Compile Include="Binding\Design\DesignCollectionPropertyDescriptor.cs" />
     <Compile Include="Binding\PropertyBindingDescriptor.cs" />
     <Compile Include="BuildAction.cs" />
     <Compile Include="CopyToOutput.cs" />
     <Compile Include="ComponentMetadataExtensions.cs" />
     <Compile Include="CoordinatorTemplateWizard.cs" />
+    <Compile Include="Design\DesignCollectionEditor.cs" />
     <Compile Include="Design\PropertyDescriptorTypeDescriptor.cs" />
     <Compile Include="ErrorCategory.cs" />
     <Compile Include="Extensions\CollapseOptions.cs" />
@@ -225,7 +226,7 @@
     <Compile Include="CodeGeneration.cs" />
     <Compile Include="DataFormats.cs" />
     <Compile Include="Design\AnonymousPropertyDescriptor.cs" />
-    <Compile Include="Design\CollectionPropertyDescriptor.cs" />
+    <Compile Include="Design\StringCollectionPropertyDescriptor.cs" />
     <Compile Include="Design\DelegatingTypeDescriptorContext.cs" />
     <Compile Include="Design\FeatureComponentTypeConverter.cs" />
     <Compile Include="Design\FullTypeTypeConverter.cs" />

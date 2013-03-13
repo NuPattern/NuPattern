@@ -1,15 +1,13 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.ComponentModel.Design.Serialization;
 using System.Drawing.Design;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.Extensibility.Properties;
 using NuPattern.Runtime;
-using ICollection = System.Collections.ICollection;
 
 namespace NuPattern.Extensibility.Binding
 {
@@ -104,20 +102,42 @@ namespace NuPattern.Extensibility.Binding
         /// </summary>
         public override TypeConverter Converter
         {
-            get { return new DesignCollectionTypeConverter(); }
+            get
+            {
+                // Use declared compatible converter or default design converter
+                var baseConverter = this.descriptor.Converter;
+                if (baseConverter != null
+                    && baseConverter.GetType().IsOfGenericType(typeof(DesignCollectionConverter<,>)))
+                {
+                    return baseConverter;
+                }
+                else
+                {
+                    return new DesignCollectionConverter(this.PropertyType);
+                }
+            }
         }
 
         /// <summary>
         /// Gets an editor of the specified type.
         /// </summary>
-        public override object GetEditor(Type editorBaseType)
+        public override object GetEditor(Type type)
         {
             if (this.IsReadOnly)
             {
                 return new UITypeEditor();
             }
 
-            return new CancelableCollectionEditor(this.PropertyType);
+            // Use declared compatible editor or default design editor
+            var baseEditor = this.descriptor.GetEditor(type);
+            if (baseEditor is DesignCollectionEditor)
+            {
+                return baseEditor;
+            }
+            else
+            {
+                return new DesignCollectionEditor(this.PropertyType);
+            }
         }
 
         /// <summary>
@@ -127,14 +147,30 @@ namespace NuPattern.Extensibility.Binding
         {
             var values = new Collection<object>();
 
-            var property = GetPropertySettings(component);
-            if (property != null)
+            var propertySettings = GetPropertySettings(component);
+            if (propertySettings != null)
             {
-                var value = property.Value;
+                var value = propertySettings.Value;
                 if (!string.IsNullOrEmpty(value))
                 {
                     // Exclude displayed caption
-                    values = IsDisplayText(value) ? new Collection<object>() : ConvertObjectToObjectCollection(BindingSerializer.Deserialize(value, this.descriptor.PropertyType));
+                    if (IsDisplayText(value))
+                    {
+                        values = new Collection<object>();
+                    }
+                    else
+                    {
+                        // Ask TypeConverter for deserialized value
+                        var context = new SimpleTypeDescriptorContext { Instance = component, PropertyDescriptor = this };
+                        if (this.Converter != null && this.Converter.CanConvertFrom(context, typeof(string)))
+                        {
+                            values = FromObjectToCollection<object>(this.Converter.ConvertFrom(context, CultureInfo.CurrentCulture, value));
+                        }
+                        else
+                        {
+                            values = new Collection<object>();
+                        }
+                    }
                 }
             }
 
@@ -177,55 +213,26 @@ namespace NuPattern.Extensibility.Binding
             return value.Equals(Resources.DesignCollectionPropertyDescriptor_ToString, StringComparison.Ordinal);
         }
 
-        private static Collection<object> ConvertObjectToObjectCollection(object result)
+        /// <summary>
+        /// Converts object to <see cref="Collection{TCollection}"/>.
+        /// </summary>
+        public static Collection<TCollection> FromObjectToCollection<TCollection>(object collectionObject)
         {
-            var values = new Collection<object>();
-
-            var collection = result as ICollection;
-            if (collection != null)
+            var enumerable = (IEnumerable)collectionObject;
+            if (enumerable != null)
             {
-                values.AddRange(collection.Cast<object>());
+                return new Collection<TCollection>(enumerable.Cast<TCollection>().ToList());
             }
 
-            return values;
+            return new Collection<TCollection>();
         }
 
         /// <summary>
-        /// Provides friendly rendering of the collection at design time.
+        /// Converts from <see cref="Collection{TCollection}"/> to <see cref="Collection{Object}"/>.
         /// </summary>
-        private class DesignCollectionTypeConverter : TypeConverter
+        public static Collection<object> ToObjectCollection<TCollection>(Collection<TCollection> collection)
         {
-            /// <summary>
-            /// Whether this converter can convert the object to the destinationType, using the specified context.
-            /// </summary>
-            public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)
-            {
-                return destinationType == typeof(InstanceDescriptor) || base.CanConvertTo(context, destinationType);
-            }
-
-            /// <summary>
-            /// Converts the given object value to the destinationType type, using the specified context and culture information.
-            /// </summary>
-            public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
-            {
-                return destinationType == typeof(string) ?
-                    Resources.DesignCollectionPropertyDescriptor_ToString :
-                    base.ConvertTo(context, culture, value, destinationType);
-            }
-
-            /// <summary>
-            /// Converts the given value to the object value, using the specified context and culture information. 
-            /// </summary>
-            public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
-            {
-                // Need this to copy value back to descriptor
-                if (value is Collection<object>)
-                {
-                    return value as Collection<object>;
-                }
-
-                return base.ConvertFrom(context, culture, value);
-            }
+            return new Collection<object>(collection.Cast<object>().ToList());
         }
     }
 }

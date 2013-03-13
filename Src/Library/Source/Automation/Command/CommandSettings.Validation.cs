@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
@@ -118,97 +116,6 @@ namespace NuPattern.Library.Automation
             foreach (var validator in Validators[settings.TypeId])
             {
                 validator.Value.Validate(context, settings.Extends as IAutomationSettingsSchema, settings);
-            }
-        }
-
-        /// <summary>
-        /// Deletes unused bindings on all command automation.
-        /// </summary>
-        ///<remarks>
-        /// This is the same behavior we have in FeatureBuilder/Runtime, which is necessary to do every time the model is validated.
-        /// The reason is that bindings need to always be current, and invalid bindings must be deleted when the corresponding property in the underlying command implementation is removed (or renamed). Otherwise, the runtime binding will always fail as the property will not be found.
-        /// This needs to be done on validation of the DSL as I don't think there's another deterministic point in time to validate the bindings (they can be invalidated when the command implementation is changed in the current solution, or in a third party library).
-        ///</remarks>
-        [Export(typeof(System.Action<ValidationContext, object>))]
-        [AuthoringValidationExtension]
-        [ValidationMethod(ValidationCategories.Open | ValidationCategories.Menu | ValidationCategories.Save)]
-        [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "MEF")]
-        [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "By Design")]
-        internal void ValidatePropertyBindings(ValidationContext context, CommandSettings settings)
-        {
-            Guard.NotNull(() => context, context);
-            Guard.NotNull(() => settings, settings);
-
-            var properties = ((IBindingSettings)settings).Properties;
-            try
-            {
-                var toRemove = new List<IPropertyBindingSettings>();
-
-                if (settings.FindBoundType<IFeatureCommand>(Commands, context) != null)
-                {
-                    // We could resolve the command type, so the typedescriptor for this settings will have the command properties and we can check.
-                    var commandProps = TypeDescriptor.GetProperties(settings).Cast<PropertyDescriptor>().Select(prop => prop.Name);
-                    toRemove.AddRange(properties
-                        .Where(prop => !commandProps.Contains(prop.Name)));
-                }
-                else
-                {
-                    context.LogWarning(string.Format(CultureInfo.CurrentCulture,
-                        Resources.Validate_CannotResolveType, settings.TypeId, settings.Name),
-                        Resources.Validate_CannotResolveTypeCode, settings.Extends);
-                }
-
-                //// The providers are all flattened in this collection of property bindings, 
-                //// and only those property bindings with a "ParentProvider" are the 
-                //// ones that configure value providers, not commands (which we have 
-                //// already evaluated above)
-                //var valueProviders = properties
-                //    .Where(prop => prop.ParentProvider != null)
-                //    .GroupBy(prop => prop.ParentProvider);
-
-                //// This should be generalized as it is the same for FeatureCommand, Condition, ValidationRule
-                //foreach (var valueProvider in valueProviders)
-                //{
-                //    var providerType = valueProvider.Key.FindBoundType<IValueProvider>(ValueProviders, context);
-                //    // We skip those valueproviders where we cannot resolve the type, as we 
-                //    // have no way of knowing what properties it has.
-                //    if (providerType == null)
-                //    {
-                //        context.LogWarning(string.Format(
-                //            CultureInfo.CurrentCulture,
-                //            Resources.Validate_CannotResolveType,
-                //            valueProvider.Key.TypeId,
-                //            settings.Name),
-                //            Resources.Validate_CannotResolveTypeCode,
-                //            settings.Extends);
-
-                //        continue;
-                //    }
-
-                //    var providerProps = TypeDescriptor.GetProperties(providerType).Cast<PropertyDescriptor>().Select(prop => prop.Name);
-                //    toRemove.AddRange(valueProvider.Where(prop => !providerProps.Contains(prop.Name.Split('.').Last())));
-                //}
-
-                if (toRemove.Count > 0)
-                {
-                    foreach (var property in toRemove)
-                    {
-                        context.LogMessage(string.Format(CultureInfo.CurrentCulture,
-                            Resources.Validate_CommandSettingsInvalidPropertyBinding, property.Name, settings.TypeId),
-                            Resources.Validate_CommandSettingsInvalidPropertyBindingCode, settings.Extends);
-
-                        properties.Remove(property);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                tracer.TraceError(
-                    ex,
-                    Resources.ValidationMethodFailed_Error,
-                    Reflector<CommandSettingsValidations>.GetMethod(n => n.ValidatePropertyBindings(null, null)).Name);
-
-                throw;
             }
         }
     }
