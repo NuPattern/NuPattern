@@ -978,7 +978,7 @@ Please open and make a note of the updates that were automatically made to the *
     <value>Invoke validation method '{0}' failed.</value>
   </data>
   <data name="Validate_MenuSettingsIconDoesNotPointToAValidFile" xml:space="preserve">
-    <value>'{0}' context menu launch point has an invalid value for the 'Icon' property. You must select an existing icon file from the solution, in the 'Settings'.</value>
+    <value>'{0}' context menu launch point has an invalid value for the 'Icon' property. You must select an existing icon file from the solution, or an icon resource in a referenced assembly of the project, in the 'Settings'</value>
   </data>
   <data name="Validate_MenuSettingsIconDoesNotPointToAValidFileCode" xml:space="preserve">
     <value>331</value>

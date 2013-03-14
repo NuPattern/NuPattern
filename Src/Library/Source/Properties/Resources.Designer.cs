@@ -5472,7 +5472,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; context menu launch point has an invalid value for the &apos;Icon&apos; property. You must select an existing icon file from the solution, in the &apos;Settings&apos;..
+        ///   Looks up a localized string similar to &apos;{0}&apos; context menu launch point has an invalid value for the &apos;Icon&apos; property. You must select an existing icon file from the solution in the &apos;Settings&apos;, or an icon resource in a referenced assembly of the project..
         /// </summary>
         internal static string Validate_MenuSettingsIconDoesNotPointToAValidFile {
             get {
