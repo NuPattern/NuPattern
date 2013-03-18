@@ -2246,19 +2246,22 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   <data name="ArtifactExtension_DeleteEventName" xml:space="preserve">
     <value>DeleteArtifactsEvent</value>
   </data>
-  <data name="CommandSettingsMigrationProcessor_TraceDeserializeCommandSettings" xml:space="preserve">
-    <value>Migrating previous version of Properties of CommandSettings element '{0}'.</value>
-  </data>
   <data name="CommandSettingsUpgradeProcessor_TraceDeserialize" xml:space="preserve">
     <value>Upgrading CommandSettings elements.</value>
   </data>
   <data name="CommandSettingsUpgradeProcessor_TraceDeserializeCommandSettings" xml:space="preserve">
-    <value>Upgrading CommandSettings element '{0}', replacing XML with JSon for Properties.</value>
+    <value>Upgrading CommandSettings element '{0}', replacing XML properties with JSon.</value>
   </data>
   <data name="UnfoldVsCommandChangeRule_ErrorSyncNameFailed" xml:space="preserve">
     <value>Failed to sync SyncName automation on Command '{0}'</value>
   </data>
   <data name="CommandReference_EmptyReference" xml:space="preserve">
     <value>(Empty Command)</value>
+  </data>
+  <data name="AggregatorCommandUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading AggregatorCommand elements.</value>
+  </data>
+  <data name="AggregatorCommandUpgradeProcessor_TraceDeserializeCommandSettings" xml:space="preserve">
+    <value>Upgrading AggregatorCommandSettings element '{0}', replacing string JSon with CommandReference collection JSon.</value>
   </data>
 </root>

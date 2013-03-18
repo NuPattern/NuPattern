@@ -1,6 +1,5 @@
 ﻿
 using System.Collections.Generic;
-using System.ComponentModel.Composition;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
@@ -15,11 +14,11 @@ namespace NuPattern.Library.Migration
     /// <summary>
     /// Migrates CommandSetting properties from XML to JSon.
     /// </summary>
-    [Export(typeof(IPatternModelSchemaUpgradeProcessor))]
+    [SchemaUpgradeProcessorOptions(Order = 1100, TargetVersion = "1.2.0.0")]
     internal class CommandSettingsUpgradeProcessor : IPatternModelSchemaUpgradeProcessor
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CommandSettingsUpgradeProcessor>();
-        private const string DefaultNamespace = @"http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel";
+        private const string DefaultNamespace = SchemaConstants.DefaultNamespace;
         private static readonly XName CommandSettingsElementName = XName.Get("commandSettings", DefaultNamespace);
         private static readonly XName CommandSettingsPropertiesElementName = XName.Get("properties", DefaultNamespace);
         private static readonly XName PropertySettingsElementName = XName.Get("propertySettings", DefaultNamespace);
@@ -98,7 +97,7 @@ namespace NuPattern.Library.Migration
             }
         }
 
-        private void AddPropertySettings(XElement cmdPropsElement, IList<IPropertyBindingSettings> bindings, XElement propSettingElement, IList<XElement> processedPropertySettings)
+        private static void AddPropertySettings(XElement cmdPropsElement, IList<IPropertyBindingSettings> bindings, XElement propSettingElement, IList<XElement> processedPropertySettings)
         {
             // Create a PropertyBindingSettings from the <PropertySettings> element.
             if (propSettingElement.Attributes().Any(a => a.Name == PropertySettingsNameName))

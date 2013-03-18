@@ -120,6 +120,7 @@
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="VSLangProj">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\VSLangProj.dll</HintPath>
@@ -171,14 +172,24 @@
     <Compile Include="Extensions\TypeExtensions.cs" />
     <Compile Include="Extensions\UIHierarchyExtensions.cs" />
     <Compile Include="Extensions\ValidatorExtensions.cs" />
+    <Compile Include="IPatternModelSchemaUpgradeManager.cs" />
+    <Compile Include="IPatternModelSchemaUpgradeProcessor.cs" />
     <Compile Include="IPropertyEvaluator.cs" />
     <Compile Include="IRegistryReader.cs" />
+    <Compile Include="ISchemaUpgradeContext.cs" />
+    <Compile Include="ISchemaUpgradeProccesorOptions.cs" />
     <Compile Include="IStatusBar.cs" />
     <Compile Include="IXmlProcessorNode.cs" />
     <Compile Include="IXmlProcessor.cs" />
     <Compile Include="ObjectValidator.cs" />
     <Compile Include="PropertyEvaluator.cs" />
     <Compile Include="RegistryReader.cs" />
+    <Compile Include="SchemaConstants.gen.cs">
+      <DependentUpon>SchemaConstants.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SchemaUpgradeProcessorOptionsAttribute.cs" />
     <Compile Include="StatusBar.cs" />
     <Compile Include="TempFileCleaner.cs" />
     <Compile Include="UniqueNameGenerator.cs" />
@@ -353,7 +364,12 @@
       <DependentUpon>CollectionDropDown.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="SchemaConstants.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SchemaConstants.gen.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

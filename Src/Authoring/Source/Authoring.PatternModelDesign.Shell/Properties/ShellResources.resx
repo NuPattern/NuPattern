@@ -129,13 +129,40 @@ Are you sure you want to Continue?</value>
   <data name="LayoutDiagramCommand_CommandCaption" xml:space="preserve">
     <value>Auto Arrange Shapes</value>
   </data>
-  <data name="PatternModelDocData_ErrorUpgradeRulesFailed" xml:space="preserve">
-    <value>Failed to run schema migration rules.</value>
+  <data name="SchemaUpgradeContext_ErrorUpgradedBackup" xml:space="preserve">
+    <value>Failed to backup upgraded pattern model schema file '{0}', error was: '{1}'</value>
   </data>
-  <data name="PatternModelDocData_TraceExecuteUpgradeRule" xml:space="preserve">
-    <value>Executing schema migration for type '{0}'</value>
+  <data name="PatternModelSchemaUpgradeManager_ErrorUpgradeRulesFailed" xml:space="preserve">
+    <value>Failed to run schema upgrade rules.</value>
+  </data>
+  <data name="PatternModelSchemaUpgradeManager_TraceExecuteUpgradeRule" xml:space="preserve">
+    <value>Executing schema upgrade processor '{0}' on version '{1}' of schema file.</value>
+  </data>
+  <data name="SchemaUpgradeContext_TraceUpgradedBackup" xml:space="preserve">
+    <value>Backedup pattern model schema file '{0}' from schema version '{1} to: '{2}'</value>
   </data>
   <data name="VariableProperty_DisplayName" xml:space="preserve">
     <value>Add Variable Property</value>
+  </data>
+  <data name="PatternModelSchemaUpgradeManager_ErrorUpgradeRuleFailed" xml:space="preserve">
+    <value>Upgrade processor '{0} failed to process. Error was: '{1}'</value>
+  </data>
+  <data name="PatternModelSchemaUpgradeManager_TraceFoundUpgradeRule" xml:space="preserve">
+    <value>Loaded schema upgrade processor '{0}', for schema version '{1}', order '{2}'</value>
+  </data>
+  <data name="PatternModelSchemaUpgradeManager_TraceExecute" xml:space="preserve">
+    <value>Executing schema upgrades on pattern model definition file: '{0}'</value>
+  </data>
+  <data name="PatternModelSchemaUpgradeManager_TraceExecuteUpgradeProcessors" xml:space="preserve">
+    <value>Executing schema upgrade from version '{0} of schema file to version '{1}'</value>
+  </data>
+  <data name="SchemaUpgradeContext_TraceSaveDocument" xml:space="preserve">
+    <value>Saving changes to schema file</value>
+  </data>
+  <data name="SchemaUpgradeContext_TraceUpgradeSchemaVersion" xml:space="preserve">
+    <value>Updating DSL version from '{0}' to '{1}'</value>
+  </data>
+  <data name="SchemaUpgradeContext_TraceSaveSchemaFile" xml:space="preserve">
+    <value>Saving schema file '{0}'</value>
   </data>
 </root>

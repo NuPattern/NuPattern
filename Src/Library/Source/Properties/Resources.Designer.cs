@@ -449,6 +449,24 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Upgrading AggregatorCommand elements..
+        /// </summary>
+        internal static string AggregatorCommandUpgradeProcessor_TraceDeserialize {
+            get {
+                return ResourceManager.GetString("AggregatorCommandUpgradeProcessor_TraceDeserialize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upgrading AggregatorCommandSettings element &apos;{0}&apos;, replacing string JSon with CommandReference collection JSon..
+        /// </summary>
+        internal static string AggregatorCommandUpgradeProcessor_TraceDeserializeCommandSettings {
+            get {
+                return ResourceManager.GetString("AggregatorCommandUpgradeProcessor_TraceDeserializeCommandSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ActivateArtifactEvent.
         /// </summary>
         internal static string ArtifactExtension_ActivateEventName {
@@ -935,15 +953,6 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Migrating previous version of Properties of CommandSettings element &apos;{0}&apos;..
-        /// </summary>
-        internal static string CommandSettingsMigrationProcessor_TraceDeserializeCommandSettings {
-            get {
-                return ResourceManager.GetString("CommandSettingsMigrationProcessor_TraceDeserializeCommandSettings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Upgrading CommandSettings elements..
         /// </summary>
         internal static string CommandSettingsUpgradeProcessor_TraceDeserialize {
@@ -953,7 +962,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Upgrading CommandSettings element &apos;{0}&apos;, replacing XML with JSon for Properties..
+        ///   Looks up a localized string similar to Upgrading CommandSettings element &apos;{0}&apos;, replacing XML properties with JSon..
         /// </summary>
         internal static string CommandSettingsUpgradeProcessor_TraceDeserializeCommandSettings {
             get {
@@ -5472,7 +5481,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; context menu launch point has an invalid value for the &apos;Icon&apos; property. You must select an existing icon file from the solution in the &apos;Settings&apos;, or an icon resource in a referenced assembly of the project..
+        ///   Looks up a localized string similar to &apos;{0}&apos; context menu launch point has an invalid value for the &apos;Icon&apos; property. You must select an existing icon file from the solution, or an icon resource in a referenced assembly of the project, in the &apos;Settings&apos;.
         /// </summary>
         internal static string Validate_MenuSettingsIconDoesNotPointToAValidFile {
             get {

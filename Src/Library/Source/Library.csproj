@@ -207,7 +207,8 @@
     <Compile Include="Commands\ModifyXmlCommand.cs" />
     <Compile Include="Commands\SetBuildActionCommand.cs" />
     <Compile Include="Conditions\XmlNodeExistsCondition.cs" />
-    <Compile Include="Migration\CommandSettingsMigrationProcessor.cs" />
+    <Compile Include="Migration\CommandSettingsUpgradeProcessor.cs" />
+    <Compile Include="Migration\AggregatorCommandUpgradeProcessor.cs" />
     <Compile Include="ValueComparers\PreserveOrderComparer.cs" />
     <Compile Include="ValueComparers\InstanceNameComparer.cs" />
     <Compile Include="Conditions\DropFileCondition.cs" />

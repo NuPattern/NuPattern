@@ -1,7 +1,6 @@
-﻿
-using System.Xml.Linq;
+﻿using System.Xml.Linq;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Extensibility
 {
     /// <summary>
     /// Defines a schema upgrade processor

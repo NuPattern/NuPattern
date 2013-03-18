@@ -41,9 +41,12 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
     <Reference Include="EnvDTE">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -138,6 +141,7 @@
     </Compile>
     <Compile Include="Commands.cs" />
     <Compile Include="Commands\CreateGuidanceDocumentsCommandSpec.cs" />
+    <Compile Include="PatternModelDesign\SchemaUpgradeContextSpec.cs" />
     <Compile Include="PatternToolkitLibraryVsixPackagingSpec.gen.cs">
       <DependentUpon>PatternToolkitLibraryVsixPackagingSpec.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -150,6 +154,23 @@
       <DependentUpon>PatternToolkitVsixPackagingSpec.tt</DependentUpon>
     </Compile>
     <Compile Include="VersionHelperSpec.cs" />
+    <None Include="Authoring.IntegrationTests.Content\SchemaUpgradeContext\OlderVersion.View1.patterndefinition.diagram">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Authoring.IntegrationTests.Content\SchemaUpgradeContext\OlderVersion.View2.patterndefinition.diagram">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Authoring.IntegrationTests.Content\SchemaUpgradeContext\CurrentVersion.gen.patterndefinition">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CurrentVersion.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Authoring.IntegrationTests.Content\SchemaUpgradeContext\CurrentVersion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CurrentVersion.gen.patterndefinition</LastGenOutput>
+    </None>
     <Content Include="VersionTargetsSpec\ClassLibrary1\Class1.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -173,6 +194,9 @@
     </None>
     <None Include="..\..\Binaries\$(TargetVSVersion)\$(PatternToolkitVsixFileName)">
       <Link>Authoring.IntegrationTests.Content\$(PatternToolkitVsixFileName)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Authoring.IntegrationTests.Content\SchemaUpgradeContext\OlderVersion.patterndefinition">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="PatternToolkitLibraryVsixPackagingSpec.tt">
@@ -392,6 +416,10 @@
     <ProjectReference Include="..\Source\Authoring.Guidance\Authoring.Guidance.csproj">
       <Project>{67257A67-4ECB-4D70-92EE-445835343670}</Project>
       <Name>Authoring.Guidance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Authoring.PatternModelDesign.Shell\Authoring.PatternModelDesign.Shell.csproj">
+      <Project>{a999a0eb-246c-4b63-8bc1-405020026cab}</Project>
+      <Name>Authoring.PatternModelDesign.Shell</Name>
     </ProjectReference>
     <ProjectReference Include="..\Source\Authoring.PatternToolkit.Automation\Authoring.PatternToolkit.Automation.csproj">
       <Project>{3CCD565D-D7A3-4AAE-8C6E-8E1B10FD77FE}</Project>

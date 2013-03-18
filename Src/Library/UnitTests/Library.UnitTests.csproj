@@ -145,6 +145,7 @@
     <Compile Include="Conditions\XmlNodeExistsConditionSpec.cs" />
     <Compile Include="Conditions\PropertyChangedEventArgsMatchesPropertyNameConditionSpec.cs" />
     <Compile Include="Migration\CommandSettingsUpgradeProcessorSpec.cs" />
+    <Compile Include="Migration\AggregatorCommandUpgradeProcessorSpec.cs" />
     <Compile Include="ModelElementDirectiveProcessorSpec.cs" />
     <Compile Include="Events\OnElementDeletedEventSpec.cs" />
     <Compile Include="Events\OnElementActivatedSpec.cs" />
