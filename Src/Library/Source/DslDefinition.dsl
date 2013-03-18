@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DslLibrary xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="47c59fea-739b-4a85-8f6f-e9e260340928" Description="Library" Name="Library" DisplayName="Library" Namespace="NuPattern.Library.Automation" MinorVersion="2" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
+<DslLibrary xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="47c59fea-739b-4a85-8f6f-e9e260340928" Description="Library" Name="Library" DisplayName="Library" Namespace="NuPattern.Library.Automation" MinorVersion="3" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
     <DomainClass Id="1d522a01-5d23-4d87-8493-dfcbe3d05a9b" Description="Configures the settings for adding a project or item template to unfold, and execute other automation on this element." Name="TemplateSettings" DisplayName="VS Template Launch Point" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>

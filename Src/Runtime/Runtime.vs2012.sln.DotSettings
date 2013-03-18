@@ -33,27 +33,30 @@
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Shortcut/@EntryValue">testc</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Text/@EntryValue">public class $filename$&#xD;
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=224A8F7369059E40BB5FEEBDE33F0BB2/Text/@EntryValue">using System;&#xD;
+using Microsoft.VisualStudio.TestTools.UnitTesting;&#xD;
+&#xD;
+public class $filename$&#xD;
 {&#xD;
 	private static readonly IAssertion Assert = new Assertion();&#xD;
 &#xD;
-	[Microsoft.VisualStudio.TestTools.UnitTesting.TestClass]&#xD;
+	[TestClass]&#xD;
 	public class GivenAContext&#xD;
 	{&#xD;
 		private $Type$ $variable$;&#xD;
 &#xD;
-		[Microsoft.VisualStudio.TestTools.UnitTesting.TestInitialize]&#xD;
+		[TestInitialize]&#xD;
 		public void Initialize()&#xD;
 		{&#xD;
 		}&#xD;
 &#xD;
-		[Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod, Microsoft.VisualStudio.TestTools.UnitTesting.TestCategory("Unit")]&#xD;
+		[TestMethod, TestCategory("Unit")]&#xD;
 		public void When_ThenThrows()&#xD;
 		{&#xD;
-			Assert.Throws&lt;System.InvalidOperationException&gt;(() =&gt; $Type$.somemethod);&#xD;
+			Assert.Throws&lt;InvalidOperationException&gt;(() =&gt; $Type$.somemethod);&#xD;
 		}&#xD;
 &#xD;
-		[Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod, Microsoft.VisualStudio.TestTools.UnitTesting.TestCategory("Unit")]&#xD;
+		[TestMethod, TestCategory("Unit")]&#xD;
 		public void When_Then()&#xD;
 		{&#xD;
 			Assert.Equal(0, $Type$.something);&#xD;
@@ -70,7 +73,7 @@
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Shortcut/@EntryValue">testm</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Text/@EntryValue">[Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod, Microsoft.VisualStudio.TestTools.UnitTesting.TestCategory("Unit")]&#xD;
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F97D6536341BCD42B46E812CE57621ED/Text/@EntryValue">[TestMethod, TestCategory("Unit")]&#xD;
 public void When_Then()&#xD;
 {&#xD;
     Assert.Equal(0, something);&#xD;

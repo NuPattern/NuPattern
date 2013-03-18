@@ -245,7 +245,7 @@ namespace NuPattern.Library.Automation
                 // Move the temporary state file, if any, to the current solution.
                 if (!string.IsNullOrEmpty(this.tempStoreFile))
                 {
-                    var fileName = Path.ChangeExtension(Solution.PhysicalPath, Runtime.Constants.RuntimeStoreExtension);
+                    var fileName = Path.ChangeExtension(Solution.PhysicalPath, Runtime.StoreConstants.RuntimeStoreExtension);
                     this.PatternManager.SaveAs(fileName);
                     this.RemoveTempFile(tempStoreFile);
                 }

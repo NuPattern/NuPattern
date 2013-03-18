@@ -34,7 +34,7 @@ namespace NuPattern.Runtime.Shell
     /// Represents the VS package for this assembly.
     /// </summary>
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Disposed on package dispose.")]
-    [ProvideEditorExtension(typeof(ProductStateEditorFactory), NuPattern.Runtime.Constants.RuntimeStoreExtension, 8, DefaultName = NuPattern.Runtime.Constants.RuntimeStoreEditorDescription)]
+    [ProvideEditorExtension(typeof(ProductStateEditorFactory), NuPattern.Runtime.StoreConstants.RuntimeStoreExtension, 8, DefaultName = NuPattern.Runtime.StoreConstants.RuntimeStoreEditorDescription)]
     [ProvideAutoLoad(UIContextGuids.NoSolution)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
@@ -265,8 +265,8 @@ namespace NuPattern.Runtime.Shell
 
         private void OnSolutionOpened(object sender, SolutionEventArgs e)
         {
-            var pathExpression1 = Path.Combine(SolutionExtensions.SolutionItemsFolderName, string.Concat(@"*", Runtime.Constants.RuntimeStoreExtension));
-            var pathExpression2 = string.Concat(@"*", Runtime.Constants.RuntimeStoreExtension);
+            var pathExpression1 = Path.Combine(SolutionExtensions.SolutionItemsFolderName, string.Concat(@"*", Runtime.StoreConstants.RuntimeStoreExtension));
+            var pathExpression2 = string.Concat(@"*", Runtime.StoreConstants.RuntimeStoreExtension);
 
             // Ensure solution contains at least one state file
             if (e.Solution != null)

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Original design that generated the toolkit interface layer -->
-<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="4f4d79de-b31d-41ba-9953-4050a5dc57a1" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.3.0.0" Id="4f4d79de-b31d-41ba-9953-4050a5dc57a1" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
   <dm0:extensions>
     <guidanceExtension Id="4b491dde-5c54-45d1-bebd-a6628c8debc6">
       <extendedElement>

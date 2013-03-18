@@ -501,8 +501,8 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You are opening a solution whose product state (&apos;{0}&apos;) file was created with an older version of the &apos;{1}&apos;. 
-        ///Previous versions of these state files cannot be opened in the &apos;Solution Builder&apos; window. 
+        ///   Looks up a localized string similar to You are opening a solution whose &apos;Solution Builder&apos; state file (&apos;{0}&apos;) was created with an older version of the &apos;{1}&apos;. 
+        ///Previous versions of these state files cannot be opened by the &apos;Solution Builder&apos; window, and must be upgraded.
         ///
         ///Would you like to automatically upgrade this file to the current version?.
         /// </summary>

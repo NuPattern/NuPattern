@@ -342,8 +342,8 @@ Please close this solution, and open this solution again from within Visual Stud
     <value>Failed to properly verify dsl version.</value>
   </data>
   <data name="PatternManager_NewerDslVersionUpgrade" xml:space="preserve">
-    <value>You are opening a solution whose product state ('{0}') file was created with an older version of the '{1}'. 
-Previous versions of these state files cannot be opened in the 'Solution Builder' window. 
+    <value>You are opening a solution whose 'Solution Builder' state file ('{0}') was created with an older version of the '{1}'. 
+Previous versions of these state files cannot be opened by the 'Solution Builder' window, and must be upgraded.
 
 Would you like to automatically upgrade this file to the current version?</value>
   </data>

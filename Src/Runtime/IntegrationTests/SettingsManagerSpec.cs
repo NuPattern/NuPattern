@@ -25,9 +25,9 @@ namespace NuPattern.Runtime.IntegrationTests
                 var manager = new ShellSettingsManager(VsIdeTestHostContext.ServiceProvider);
                 var store = manager.GetWritableSettingsStore(SettingsScope.UserSettings);
 
-                if (store.CollectionExists(NuPattern.Runtime.Constants.RegistrySettingsKeyName))
+                if (store.CollectionExists(NuPattern.Runtime.StoreConstants.RegistrySettingsKeyName))
                 {
-                    store.DeleteCollection(NuPattern.Runtime.Constants.RegistrySettingsKeyName);
+                    store.DeleteCollection(NuPattern.Runtime.StoreConstants.RegistrySettingsKeyName);
                 }
 
                 this.manager = components.GetService<ISettingsManager>();

@@ -46,8 +46,6 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xaml" />
-    <Reference Include="System.XML" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -57,12 +55,11 @@
     <Compile Include="AssemblyReference.cs" />
     <Compile Include="AssemblyResource.cs" />
     <Compile Include="Bindings\IBindingCompositionService.cs" />
-    <Compile Include="Constants.gen.cs">
-      <DependentUpon>Constants.tt</DependentUpon>
+    <Compile Include="StoreConstants.gen.cs">
+      <DependentUpon>StoreConstants.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="IPatternModelSchemaUpgradeProcessor.cs" />
     <Compile Include="ISolutionSelector.cs" />
     <Compile Include="Events\IEventCondition.cs" />
     <Compile Include="Events\IOnSolutionBuilderDragEnter.cs" />
@@ -248,9 +245,9 @@
     <None Include="..\..\..\Common\Helpers\PropertyChangedInterface.tt">
       <Link>GeneratedCode\PropertyChangedInterface.tt</Link>
     </None>
-    <None Include="Constants.tt">
+    <None Include="StoreConstants.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Constants.gen.cs</LastGenOutput>
+      <LastGenOutput>StoreConstants.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\InfoInterfaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

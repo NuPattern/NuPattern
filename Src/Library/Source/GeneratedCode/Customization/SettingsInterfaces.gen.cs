@@ -37,7 +37,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a project or item template to unfold, and execute other automation on this element.
 	/// </summary>
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface ITemplateSettings  : IAutomationSettings
 	{ 
 		/// <summary>
@@ -116,7 +116,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for handling an event for executing other automation on this element.
 	/// </summary>
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IEventSettings  : IAutomationSettings
 	{ 
 		/// <summary>
@@ -160,7 +160,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a command that can be executed on this element.
 	/// </summary>
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface ICommandSettings  : IAutomationSettings
 	{ 
 		/// <summary>
@@ -189,7 +189,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a context menu item for executing other automation on this element.
 	/// </summary>
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IMenuSettings  : IAutomationSettings
 	{ 
 		/// <summary>
@@ -243,7 +243,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for associating guidance to this element.
 	/// </summary>
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IGuidanceExtension 
 	{ 
 		/// <summary>
@@ -292,7 +292,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a wizard to gather and initialize data for properties on this element.
 	/// </summary>
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IWizardSettings  : IAutomationSettings
 	{ 
 		/// <summary>
@@ -321,7 +321,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures settings for managing associated artifacts to this element.
 	/// </summary>
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IArtifactExtension 
 	{ 
 		/// <summary>
@@ -360,7 +360,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures settings for managing validation of this element.
 	/// </summary>
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IValidationExtension 
 	{ 
 		/// <summary>
@@ -409,7 +409,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures settings for handling a drag drop operations on this element.
 	/// </summary>
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IDragDropSettings  : IAutomationSettings
 	{ 
 		/// <summary>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.2.0.0" Id="6a90ca99-d916-454d-961d-1b47ee941712" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.3.0.0" Id="6a90ca99-d916-454d-961d-1b47ee941712" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
 	<pattern Id="b3335b68-0efb-44da-8015-61df30fd64ec" name="Test" baseId="de4d967a-6950-403f-88a5-fbc65ea8cfc4">
 		<properties>
 		  <property name="NotTailorable" baseId="8f04d261-28f1-4f6a-877c-84408e7c7f88">

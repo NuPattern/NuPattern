@@ -1086,7 +1086,7 @@ namespace NuPattern.Runtime.Schema
 				// Only model has schema, diagram has no schema.
 				rootElementSettings.SchemaTargetNamespace = "http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel";
 			}
-			rootElementSettings.Version = new global::System.Version("1.2.0.0");
+			rootElementSettings.Version = new global::System.Version("1.3.0.0");
 	
 			// Carry out the normal serialization.
 			rootSerializer.Write(serializationContext, rootElement, writer, rootElementSettings);
@@ -1108,7 +1108,7 @@ namespace NuPattern.Runtime.Schema
 				throw new global::System.ArgumentNullException("reader");
 			#endregion
 	
-			global::System.Version expectedVersion = new global::System.Version("1.2.0.0");
+			global::System.Version expectedVersion = new global::System.Version("1.3.0.0");
 			string dslVersionStr = reader.GetAttribute("dslVersion");
 			if (dslVersionStr != null)
 			{
