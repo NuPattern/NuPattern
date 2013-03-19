@@ -21,10 +21,16 @@ namespace NuPattern.Library.Design
             var references = baseResult as Collection<CommandReference>;
             if (references != null)
             {
-                var settings = (ICommandSettings)context.Instance;
+                // Assign commandSettings (design-time only)
+                if (context != null && context.Instance != null)
+                {
+                    var settings = (ICommandSettings)context.Instance;
 
-                var values = (Collection<CommandReference>)baseResult;
-                return values.Select(val => new CommandReference(settings) { CommandId = val.CommandId });
+                    var values = (Collection<CommandReference>)baseResult;
+                    return values.Select(val => new CommandReference(settings) { CommandId = val.CommandId });
+                }
+
+                return references;
             }
 
             return baseResult;
