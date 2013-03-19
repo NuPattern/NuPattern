@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="2c5403a9-5eaa-4d02-b309-0d948a9f740a" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.3.0.0" Id="2c5403a9-5eaa-4d02-b309-0d948a9f740a" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
   <dm0:extensions>
     <templateSettings Id="db28cfc6-bc8f-45a6-8b1b-7caaffae6126" templateUri="template://project/CSharp/301af1ad3bdb-PatternToolkit" commandId="00000000-0000-0000-0000-000000000000" wizardId="89961330-d06d-4447-8015-1198ef9af6ea" templateAuthoringUri="solution://0216a624-c5c5-4335-8361-f640b91b4dea/0a1c38d2-55bd-4d49-b0b8-d17f5a6318d6" sanitizeName="false">
       <extendedElement>
@@ -942,7 +942,7 @@
       <properties>[
   {
     "Name": "CommandReferenceList",
-    "Value": "e52d1228-39f9-422d-b667-1e6f26249aa0;9434ad4c-395d-4fd9-bec4-a3d9fac0e111;3c8b1aaa-68b2-49aa-9bc4-26516cbd5509;c18e93e0-d2eb-4b30-a560-a62b6f4728f6;4a0bf7de-d568-4076-ab02-e62138bc3e41",
+    "Value": "[\r\n  {\r\n    \"CommandId\": \"e52d1228-39f9-422d-b667-1e6f26249aa0\"\r\n  },\r\n  {\r\n    \"CommandId\": \"9434ad4c-395d-4fd9-bec4-a3d9fac0e111\"\r\n  },\r\n  {\r\n    \"CommandId\": \"3c8b1aaa-68b2-49aa-9bc4-26516cbd5509\"\r\n  },\r\n  {\r\n    \"CommandId\": \"c18e93e0-d2eb-4b30-a560-a62b6f4728f6\"\r\n  },\r\n  {\r\n    \"CommandId\": \"4a0bf7de-d568-4076-ab02-e62138bc3e41\"\r\n  }\r\n]",
     "ValueProvider": null
   }
 ]</properties>
@@ -1133,7 +1133,7 @@
       <properties>[
   {
     "Name": "CommandReferenceList",
-    "Value": "caf296ed-c384-4491-8169-6c1539c98180;50c8adef-76cc-44a0-80c3-ac8aef6c4513",
+    "Value": "[\r\n  {\r\n    \"CommandId\": \"caf296ed-c384-4491-8169-6c1539c98180\"\r\n  },\r\n  {\r\n    \"CommandId\": \"50c8adef-76cc-44a0-80c3-ac8aef6c4513\"\r\n  }\r\n]",
     "ValueProvider": null
   }
 ]</properties>
@@ -1271,7 +1271,7 @@
       <properties>[
   {
     "Name": "CommandReferenceList",
-    "Value": "33b932d3-2554-4e59-ba10-64d46ee6e396;d321df0a-d467-45d6-944f-ccd9b82225fe;e7f46324-a7e5-434d-a3bc-d25c7bbe4e18;32796c01-8e80-4981-948d-1cc707d12eb2;60bf8de3-2170-40f4-8dd6-56997f0cec65",
+    "Value": "[\r\n  {\r\n    \"CommandId\": \"33b932d3-2554-4e59-ba10-64d46ee6e396\"\r\n  },\r\n  {\r\n    \"CommandId\": \"d321df0a-d467-45d6-944f-ccd9b82225fe\"\r\n  },\r\n  {\r\n    \"CommandId\": \"e7f46324-a7e5-434d-a3bc-d25c7bbe4e18\"\r\n  },\r\n  {\r\n    \"CommandId\": \"32796c01-8e80-4981-948d-1cc707d12eb2\"\r\n  },\r\n  {\r\n    \"CommandId\": \"60bf8de3-2170-40f4-8dd6-56997f0cec65\"\r\n  }\r\n]",
     "ValueProvider": null
   }
 ]</properties>
@@ -1590,7 +1590,7 @@
       <properties>[
   {
     "Name": "CommandReferenceList",
-    "Value": "e2d14d50-dc8f-4a40-bf60-10e2a7ac9f89;acf616d7-278f-41a0-87bf-580ce8d3cdae",
+    "Value": "[\r\n  {\r\n    \"CommandId\": \"e2d14d50-dc8f-4a40-bf60-10e2a7ac9f89\"\r\n  },\r\n  {\r\n    \"CommandId\": \"acf616d7-278f-41a0-87bf-580ce8d3cdae\"\r\n  }\r\n]",
     "ValueProvider": null
   }
 ]</properties>
@@ -1602,7 +1602,7 @@
       <properties>[
   {
     "Name": "CommandReferenceList",
-    "Value": "d321df0a-d467-45d6-944f-ccd9b82225fe;60bf8de3-2170-40f4-8dd6-56997f0cec65",
+    "Value": "[\r\n  {\r\n    \"CommandId\": \"d321df0a-d467-45d6-944f-ccd9b82225fe\"\r\n  },\r\n  {\r\n    \"CommandId\": \"60bf8de3-2170-40f4-8dd6-56997f0cec65\"\r\n  }\r\n]",
     "ValueProvider": null
   }
 ]</properties>
