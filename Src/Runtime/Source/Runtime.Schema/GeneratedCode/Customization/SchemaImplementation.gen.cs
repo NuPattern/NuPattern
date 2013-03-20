@@ -24,7 +24,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The definition of the pattern in this toolkit..
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class PatternModelSchemaBase
 	{
 		private PropertyChangeManager propertyChanges;
@@ -90,7 +90,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The definition of the pattern in this toolkit.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class PatternModelSchema : IPatternModelSchema, IPatternModelInfo
 	{ 
 		/// <summary>
@@ -217,7 +217,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The definition of the pattern.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class PatternSchema : IPatternSchema, IPatternInfo
 	{ 
 		/// <summary>
@@ -425,7 +425,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// An element that has a unique name.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class NamedElementSchema : INamedElementSchema, INamedElementInfo
 	{ 
 		/// <summary>
@@ -491,7 +491,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A container of properties and automation.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class PatternElementSchema : IPatternElementSchema, IPatternElementInfo
 	{ 
 		/// <summary>
@@ -664,7 +664,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A property of an element.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class PropertySchema : IPropertySchema, IPropertyInfo
 	{ }
 }
@@ -713,7 +713,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A distinct view of the pattern.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class ViewSchema : IViewSchema, IViewInfo
 	{ 
 		/// <summary>
@@ -911,7 +911,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A child collection element.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class CollectionSchema : ICollectionSchema, ICollectionInfo
 	{ }
 }
@@ -960,7 +960,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A child element.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class ElementSchema : IElementSchema, IElementInfo
 	{ }
 }
@@ -1009,7 +1009,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// An element that supports customization of its properties.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class CustomizableElementSchema : ICustomizableElementSchema, ICustomizableElementInfo
 	{ 
 		/// <summary>
@@ -1119,7 +1119,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A child element or collection of the pattern.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class AbstractElementSchema : IAbstractElementSchema, IAbstractElementInfo
 	{ 
 		/// <summary>
@@ -1260,7 +1260,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The policy that controls what properties are customizable on an element..
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class CustomizationPolicySchemaBase
 	{
 		private PropertyChangeManager propertyChanges;
@@ -1326,7 +1326,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The policy that controls what properties are customizable on an element.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class CustomizationPolicySchema : ICustomizationPolicySchema, ICustomizationPolicyInfo
 	{ 
 		/// <summary>
@@ -1431,7 +1431,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The settings for a customizable property..
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class CustomizableSettingSchemaBase
 	{
 		private PropertyChangeManager propertyChanges;
@@ -1497,7 +1497,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The settings for a customizable property.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class CustomizableSettingSchema : ICustomizableSettingSchema, ICustomizableSettingInfo
 	{ 
 		/// <summary>
@@ -1580,7 +1580,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The settings for an automation extension.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class AutomationSettingsSchema : IAutomationSettingsSchema, IAutomationSettingsInfo
 	{ }
 }
@@ -1647,7 +1647,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The extension points that this pattern provides.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class ProvidedExtensionPointSchema : IProvidedExtensionPointSchema, IProvidedExtensionPointInfo
 	{ 
 		/// <summary>
@@ -1730,7 +1730,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A child extension to the pattern, provided by a pattern of another toolkit.
 	/// </summary>
-	[GeneratedCode("NuPattern.Runtime.Schema", "1.2.0.0")]
+	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
 	public partial class ExtensionPointSchema : IExtensionPointSchema, IExtensionPointInfo
 	{ 
 		/// <summary>

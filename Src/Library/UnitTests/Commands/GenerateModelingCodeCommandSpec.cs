@@ -60,7 +60,7 @@ namespace NuPattern.Library.UnitTests.Commands
                     TemplateUri = new Uri("t4://foo.tt"),
                     UriService = this.uriService.Object,
                     ModelElement = (ModelElement)this.product,
-                    ModelFile = "C:\\Temp\\foo" + NuPattern.Runtime.Constants.RuntimeStoreExtension,
+                    ModelFile = "C:\\Temp\\foo" + NuPattern.Runtime.StoreConstants.RuntimeStoreExtension,
                     ServiceProvider = this.serviceProvider.Object,
                     Solution = this.solution,
                 };

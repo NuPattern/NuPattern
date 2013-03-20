@@ -220,10 +220,10 @@ namespace NuPattern.Library.Automation
                 var ownerElement = automationElement.Parent as IPatternSchema;
 
                 var unfoldCommands = ownerElement.GetAutomationSettings<CommandSettings>().Where(t => t.TypeId == typeof(UnfoldVsTemplateCommand).ToString());
-                Func<PropertySettings, bool> authoringProperty = p => p.Name == Reflector<UnfoldVsTemplateCommand>.GetPropertyName(t => t.TemplateAuthoringUri);
+                Func<IPropertyBindingSettings, bool> authoringProperty = p => p.Name == Reflector<UnfoldVsTemplateCommand>.GetPropertyName(t => t.TemplateAuthoringUri);
 
                 if (unfoldCommands.Count() > 0 &&
-                    unfoldCommands.Any(c => c.Properties.Any(authoringProperty) && c.Properties.First(authoringProperty).Value == this.TemplateAuthoringUri))
+                    unfoldCommands.Any(c => ((IBindingSettings)c).Properties.Any(authoringProperty) && ((IBindingSettings)c).Properties.First(authoringProperty).Value == this.TemplateAuthoringUri))
                 {
                     context.LogError(
                         string.Format(

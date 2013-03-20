@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
 using NuPattern.Extensibility.Binding;
 using NuPattern.Runtime.Schema.Properties;
@@ -16,8 +15,6 @@ namespace NuPattern.Runtime.Schema
     /// </summary>
     public class PropertySchemaTypeDescriptorProvider : ElementTypeDescriptionProvider
     {
-        private static ITraceSource tracer = Tracer.GetSourceFor<PropertySchemaTypeDescriptorProvider>();
-
         /// <summary>
         /// Overridables for the derived class to provide a custom type descriptor.
         /// </summary>
@@ -65,7 +62,7 @@ namespace NuPattern.Runtime.Schema
                 // Add descriptor for validation rules collection
                 properties.ReplaceDescriptor<PropertySchema, string>(
                     p => p.RawValidationRules,
-                    x => new CollectionPropertyDescriptor<ValidationBindingSettings>(x, Resources.SchemaTypeDescriptionProvider_ValidatorEditorCaption));
+                    x => new StringCollectionPropertyDescriptor<ValidationBindingSettings>(x));
 
                 PrepareDefaultValue(properties);
 

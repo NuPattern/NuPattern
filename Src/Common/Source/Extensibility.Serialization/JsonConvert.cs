@@ -68,10 +68,6 @@ namespace NuPattern.Extensibility.Serialization
         /// <summary>
         /// Deserializes an object from Json, using the given converters.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="value"></param>
-        /// <param name="converters"></param>
-        /// <returns></returns>
         public static T DeserializeObject<T>(string value, params JsonConverter[] converters)
         {
             try
@@ -79,6 +75,27 @@ namespace NuPattern.Extensibility.Serialization
                 var mappedConverters = converters.ToList().Select(c => c.InnerConverter as Newtonsoft.Json.JsonConverter);
 
                 return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(value, mappedConverters.ToArray());
+            }
+            catch (Newtonsoft.Json.JsonSerializationException)
+            {
+                throw new JsonSerializationException();
+            }
+            catch (Newtonsoft.Json.JsonReaderException)
+            {
+                throw new JsonSerializationException();
+            }
+        }
+
+        /// <summary>
+        /// Deserializes an object from Json, using the given converters.
+        /// </summary>
+        public static object DeserializeObject(string value, Type objectType, params JsonConverter[] converters)
+        {
+            try
+            {
+                var mappedConverters = converters.ToList().Select(c => c.InnerConverter as Newtonsoft.Json.JsonConverter);
+
+                return Newtonsoft.Json.JsonConvert.DeserializeObject(value, objectType, mappedConverters.ToArray());
             }
             catch (Newtonsoft.Json.JsonSerializationException)
             {

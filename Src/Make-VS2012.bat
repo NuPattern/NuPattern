@@ -1,0 +1,1 @@
+call Make.bat x86 11.0 2012

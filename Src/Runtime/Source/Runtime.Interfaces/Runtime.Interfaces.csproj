@@ -55,11 +55,12 @@
     <Compile Include="AssemblyReference.cs" />
     <Compile Include="AssemblyResource.cs" />
     <Compile Include="Bindings\IBindingCompositionService.cs" />
-    <Compile Include="Constants.gen.cs">
-      <DependentUpon>Constants.tt</DependentUpon>
+    <Compile Include="StoreConstants.gen.cs">
+      <DependentUpon>StoreConstants.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="ISolutionSelector.cs" />
     <Compile Include="Events\IEventCondition.cs" />
     <Compile Include="Events\IOnSolutionBuilderDragEnter.cs" />
     <Compile Include="Events\IOnSolutionBuilderDragLeave.cs" />
@@ -86,7 +87,6 @@
     <Compile Include="ToolkitInterfaceLayer\IToolkitInterfaceService.cs" />
     <Compile Include="IToolkitRepository.cs" />
     <Compile Include="IFluentInterface.cs" />
-    <Compile Include="IStatusBar.cs" />
     <Compile Include="Model\Schema\IPropertySchema.cs" />
     <Compile Include="Model\StoreEventBufferingScope.cs" />
     <Compile Include="Model\Store\AutomationExtension.cs" />
@@ -245,9 +245,9 @@
     <None Include="..\..\..\Common\Helpers\PropertyChangedInterface.tt">
       <Link>GeneratedCode\PropertyChangedInterface.tt</Link>
     </None>
-    <None Include="Constants.tt">
+    <None Include="StoreConstants.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Constants.gen.cs</LastGenOutput>
+      <LastGenOutput>StoreConstants.gen.cs</LastGenOutput>
     </None>
     <None Include="GeneratedCode\InfoInterfaces.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

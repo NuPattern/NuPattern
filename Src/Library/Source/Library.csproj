@@ -86,6 +86,7 @@
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="VSLangProj">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\VSLangProj.dll</HintPath>
@@ -113,50 +114,17 @@
     <Compile Include="Automation\Artifact\ArtifactExtension.cs" />
     <Compile Include="Automation\Artifact\ArtifactReferencesValidation.cs" />
     <Compile Include="Automation\Artifact\AssociatedArtifactsTypeConverter.cs" />
-    <Compile Include="Automation\LibraryDomainModel.cs" />
-    <Compile Include="Automation\CommandChangeRuleAttribute.cs" />
-    <Compile Include="Automation\Command\CommandSettings.Extensions.cs">
-      <DependentUpon>CommandSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\CommandSettings.DescriptionContext.cs">
-      <DependentUpon>CommandSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignOnlyPropertyDescriptor.cs" />
-    <Compile Include="Automation\Command\Design\DesignProperty.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignProperty.Descriptor.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>DesignProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignProperty.DescriptionProvider.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>DesignProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignProperty.ValueDescriptor.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>DesignProperty.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignValueProvider.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignValueProvider.Converter.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>DesignValueProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Automation\Command\Design\DesignValueProvider.DescriptionProvider.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>DesignValueProvider.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Automation\Command\CommandSettingsCollectionPropertyDescriptor.cs" />
     <Compile Include="Automation\Command\ICommandSettings.cs" />
+    <Compile Include="Automation\LibraryDomainModel.cs" />
+    <Compile Include="Automation\Rules\CommandChange\CommandChangeRuleAttribute.cs" />
+    <Compile Include="Automation\Command\CommandSettingsDescriptionContext.cs">
+    </Compile>
     <Compile Include="Automation\Command\Validation\CommandValidationRuleAttribute.cs" />
     <Compile Include="Automation\Command\Validation\ICommandValidationRule.cs" />
     <Compile Include="Automation\Command\Validation\ICommandValidationRuleMetadata.cs" />
-    <Compile Include="Automation\Command\ValueProviderSettings.cs" />
-    <Compile Include="Automation\Command\PropertySettings.cs" />
     <Compile Include="Automation\Command\CommandAutomation.cs" />
-    <Compile Include="Automation\Command\CommandSettings.DescriptionProvider.cs">
-      <DependentUpon>CommandSettings.cs</DependentUpon>
+    <Compile Include="Automation\Command\CommandSettingsDescriptionProvider.cs">
     </Compile>
     <Compile Include="Automation\Command\CommandSettings.Validation.cs">
       <DependentUpon>CommandSettings.cs</DependentUpon>
@@ -171,16 +139,18 @@
     </Compile>
     <Compile Include="Automation\Guidance\GuidanceReferenceValidation.cs" />
     <Compile Include="Automation\Guidance\GuidanceInstanceNameTypeConverter.cs" />
-    <Compile Include="Automation\ICommandChangeRule.cs" />
-    <Compile Include="Automation\ICommandChangeRuleMetadata.cs" />
-    <Compile Include="Automation\PatternElementSchemaExtensions.cs" />
+    <Compile Include="Automation\Rules\CommandChange\ICommandChangeRule.cs" />
+    <Compile Include="Automation\Rules\CommandChange\ICommandChangeRuleMetadata.cs" />
+    <Compile Include="Commands\DeleteArtifactsCommand.cs" />
+    <Compile Include="Commands\Helpers\DeleteAction.cs" />
+    <Compile Include="Design\CommandReferencePropertyDescriptor.cs" />
+    <Compile Include="Extensions\PatternElementSchemaExtensions.cs" />
     <Compile Include="Automation\Menu\IMenuSettings.cs" />
     <Compile Include="Automation\Guidance\AssociatedGuidanceTypeConverter.cs" />
     <Compile Include="Automation\Guidance\GuidanceExtension.cs" />
     <Compile Include="Automation\Menu\MenuSettings.Validation.cs">
       <DependentUpon>MenuSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Automation\PropertySettingsChangeRule.cs" />
     <Compile Include="Automation\Rules\ArtifactExtensionChangeRule.cs" />
     <Compile Include="Automation\Rules\AggregatorCommandCommandSettingsDeletingRule.cs" />
     <Compile Include="Automation\SyncName\SyncNameExtension.cs" />
@@ -231,8 +201,14 @@
       <DependentUpon>GenerateProductCodeCommand.cs</DependentUpon>
     </Compile>
     <Compile Include="Commands\Helpers\WindowsFileImporter.cs" />
+    <Compile Include="Commands\Helpers\XmlNamespace.cs" />
     <Compile Include="Commands\InstantiateSolutionElementCommand.cs" />
+    <Compile Include="Commands\Helpers\ModifyAction.cs" />
+    <Compile Include="Commands\ModifyXmlCommand.cs" />
     <Compile Include="Commands\SetBuildActionCommand.cs" />
+    <Compile Include="Conditions\XmlNodeExistsCondition.cs" />
+    <Compile Include="Migration\CommandSettingsUpgradeProcessor.cs" />
+    <Compile Include="Migration\AggregatorCommandUpgradeProcessor.cs" />
     <Compile Include="ValueComparers\PreserveOrderComparer.cs" />
     <Compile Include="ValueComparers\InstanceNameComparer.cs" />
     <Compile Include="Conditions\DropFileCondition.cs" />
@@ -249,6 +225,7 @@
     <Compile Include="Automation\DragDrop\DragDropSettings.Validation.cs">
       <DependentUpon>DragDropSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValueProviders\XmlNodeValueProvider.cs" />
     <None Include="Commands\Helpers\UnfoldContext.cs" />
     <Compile Include="Commands\Helpers\UnfoldScope.cs" />
     <Compile Include="Automation\Validation\ValidationExecutionTypeConverter.cs" />
@@ -455,6 +432,9 @@
   <ItemGroup>
     <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandNavigateSolutionItem.png">
       <Link>Resources\CommandNavigateSolutionItem.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandOpenSolutionItem.png">
+      <Link>Resources\CommandOpenSolutionItem.png</Link>
     </Resource>
     <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandShowGuidance.png">
       <Link>Resources\CommandShowGuidance.png</Link>

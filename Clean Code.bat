@@ -44,7 +44,7 @@ pause
 goto :EOF
 
 :error
-echo Failed Building! error #%errorlevel%
+echo Failed Cleaning! error #%errorlevel%
 color 04
 pause
 exit %errorlevel%

@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Events;
@@ -141,8 +142,8 @@ namespace NuPattern.Library.IntegrationTests.Automation.Validation
                     Assert.Equal(commandSettings.TypeId, typeof(ValidateElementCommand).FullName);
 
                     var descendantsProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<ValidateElementCommand>.GetPropertyName(c => c.ValidateDescendants)]
-                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
-                    Assert.Equal(true, descendantsProperty.Value);
+                        .GetValue(commandSettings) as DesignProperty;
+                    Assert.Equal(true, descendantsProperty.GetValue());
                 }
 
                 return command;

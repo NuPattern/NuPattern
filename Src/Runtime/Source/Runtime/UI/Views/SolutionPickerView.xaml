@@ -18,19 +18,32 @@
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommonStyles.xaml" />
-				<ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/TreeView.xaml" />
+                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommandBar.xaml" />
+                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/TreeView.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</vsfx:VsDialogWindow.Resources>
 
 	<Grid Background="{StaticResource VsVersion.Dialog.Background}">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-		</Grid.RowDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Style="{DynamicResource CommandBar.Panel}">
+            <StackPanel Orientation="Horizontal" Margin="2">
+                <Button ToolTip="Expand All" Command="{Binding ExpandAllCommand}" Focusable="false">
+                    <BitmapImage UriSource="../../Resources/CommandExpandAll.png" />
+                </Button>
+                <Button ToolTip="Collapse All" Command="{Binding CollapseAllCommand}" Focusable="false">
+                    <BitmapImage UriSource="../../Resources/CommandCollapseAll.png" />
+                </Button>
+            </StackPanel>
+        </StackPanel>
 
 		<TreeView
-			Grid.Row="0"
+			Grid.Row="1"
 			x:Name="solutionItems"
 			Margin="5,5,5,10"
 			Height="320"
@@ -67,7 +80,7 @@
 				<Style TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
 					<Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
 					<Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
-					<Setter Property="p:ControlBehavior.DoubleClickCommand" Value="{Binding DataContext.SelectItemCommand, ElementName=solutionPicker}" />
+					<Setter Property="p:ControlBehavior.DoubleClickCommand" Value="{Binding DataContext.SubmitCommand, ElementName=solutionPicker}" />
 					<Setter Property="p:ControlBehavior.DoubleClickCommandParameter" Value="{x:Reference solutionPicker}" />
 				</Style>
 
@@ -83,7 +96,7 @@
 			</TreeView.ItemTemplate>
 		</TreeView>
 
-		<Grid Grid.Row="1" Grid.IsSharedSizeScope="True" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+		<Grid Grid.Row="2" Grid.IsSharedSizeScope="True" VerticalAlignment="Bottom" HorizontalAlignment="Right">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
 				<ColumnDefinition Width="3" />
@@ -96,7 +109,7 @@
 					VerticalAlignment="Top"
 					Content="OK"
 					IsDefault="True"
-					Command="{Binding SelectItemCommand}"
+					Command="{Binding SubmitCommand}"
 					CommandParameter="{Binding ElementName=solutionPicker}" />
 			<vsfx:VsDialogButton 
 					Grid.Column="2" 

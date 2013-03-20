@@ -3,153 +3,153 @@ using NuPattern.Extensibility.Binding;
 
 namespace NuPattern.Extensibility.UnitTests.Binding
 {
-	[TestClass]
-	public class BindingPropertyChangesSpec
-	{
-		internal static readonly IAssertion Assert = new Assertion();
+    [TestClass]
+    public class BindingPropertyChangesSpec
+    {
+        internal static readonly IAssertion Assert = new Assertion();
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenTypeIdChanged_ThenBindingRaisesChanged()
-		{
-			var binding = new BindingSettings();
-			var raised = false;
-			binding.PropertyChanged += (sender, args) => raised = true;
+        [TestMethod, TestCategory("Unit")]
+        public void WhenTypeIdChanged_ThenBindingRaisesChanged()
+        {
+            var binding = new BindingSettings();
+            var raised = false;
+            binding.PropertyChanged += (sender, args) => raised = true;
 
-			binding.TypeId = "foo";
+            binding.TypeId = "foo";
 
-			Assert.True(raised);
-		}
+            Assert.True(raised);
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenPropertyAdded_ThenBindingRaisesChanged()
-		{
-			var binding = new BindingSettings();
-			var raised = false;
-			binding.PropertyChanged += (sender, args) => raised = true;
+        [TestMethod, TestCategory("Unit")]
+        public void WhenPropertyAdded_ThenBindingRaisesChanged()
+        {
+            var binding = new BindingSettings();
+            var raised = false;
+            binding.PropertyChanged += (sender, args) => raised = true;
 
-			binding.Properties.Add(new PropertyBindingSettings());
+            binding.Properties.Add(new PropertyBindingSettings());
 
-			Assert.True(raised);
-		}
+            Assert.True(raised);
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenPropertyNameChanged_ThenBindingRaisesChanged()
-		{
-			var binding = new BindingSettings();
-			var property = new PropertyBindingSettings();
-			var raised = false;
-			binding.Properties.Add(property);
+        [TestMethod, TestCategory("Unit")]
+        public void WhenPropertyNameChanged_ThenBindingRaisesChanged()
+        {
+            var binding = new BindingSettings();
+            var property = new PropertyBindingSettings();
+            var raised = false;
+            binding.Properties.Add(property);
 
-			binding.PropertyChanged += (sender, args) => raised = true;
+            binding.PropertyChanged += (sender, args) => raised = true;
 
-			property.Name = "hello";
+            property.Name = "hello";
 
-			Assert.True(raised);
-		}
+            Assert.True(raised);
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenPropertyValueChanged_ThenBindingRaisesChanged()
-		{
-			var binding = new BindingSettings();
-			var property = new PropertyBindingSettings();
-			var raised = false;
-			binding.Properties.Add(property);
+        [TestMethod, TestCategory("Unit")]
+        public void WhenPropertyValueChanged_ThenBindingRaisesChanged()
+        {
+            var binding = new BindingSettings();
+            var property = new PropertyBindingSettings();
+            var raised = false;
+            binding.Properties.Add(property);
 
-			binding.PropertyChanged += (sender, args) => raised = true;
+            binding.PropertyChanged += (sender, args) => raised = true;
 
-			property.Value = "hello";
+            property.Value = "hello";
 
-			Assert.True(raised);
-		}
+            Assert.True(raised);
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenPropertyValueProviderSet_ThenBindingRaisesChanged()
-		{
-			var binding = new BindingSettings();
-			var property = new PropertyBindingSettings();
-			var raised = false;
-			binding.Properties.Add(property);
+        [TestMethod, TestCategory("Unit")]
+        public void WhenPropertyValueProviderSet_ThenBindingRaisesChanged()
+        {
+            var binding = new BindingSettings();
+            var property = new PropertyBindingSettings();
+            var raised = false;
+            binding.Properties.Add(property);
 
-			binding.PropertyChanged += (sender, args) => raised = true;
+            binding.PropertyChanged += (sender, args) => raised = true;
 
-			property.ValueProvider = new ValueProviderBindingSettings();
+            property.ValueProvider = new ValueProviderBindingSettings();
 
-			Assert.True(raised);
-		}
+            Assert.True(raised);
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenValueProviderTypeIdChanged_ThenBindingRaisesChanged()
-		{
-			var raised = false;
-			var provider = new ValueProviderBindingSettings();
-			var binding = new BindingSettings
-			{
-				Properties = 
-				{
-					new PropertyBindingSettings
-					{
-						ValueProvider = provider,
-					}
-				}
-			};
+        [TestMethod, TestCategory("Unit")]
+        public void WhenValueProviderTypeIdChanged_ThenBindingRaisesChanged()
+        {
+            var raised = false;
+            var provider = new ValueProviderBindingSettings();
+            var binding = new BindingSettings
+            {
+                Properties = 
+                {
+                    new PropertyBindingSettings
+                    {
+                        ValueProvider = provider,
+                    }
+                }
+            };
 
-			binding.PropertyChanged += (sender, args) => raised = true;
+            binding.PropertyChanged += (sender, args) => raised = true;
 
-			provider.TypeId = "foo";
+            provider.TypeId = "foo";
 
-			Assert.True(raised);
-		}
+            Assert.True(raised);
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenValueProviderPropertyAdded_ThenBindingRaisesChanged()
-		{
-			var raised = false;
-			var provider = new ValueProviderBindingSettings();
-			var binding = new BindingSettings
-			{
-				Properties = 
-				{
-					new PropertyBindingSettings
-					{
-						ValueProvider = provider,
-					}
-				}
-			};
+        [TestMethod, TestCategory("Unit")]
+        public void WhenValueProviderPropertyAdded_ThenBindingRaisesChanged()
+        {
+            var raised = false;
+            var provider = new ValueProviderBindingSettings();
+            var binding = new BindingSettings
+            {
+                Properties = 
+                {
+                    new PropertyBindingSettings
+                    {
+                        ValueProvider = provider,
+                    }
+                }
+            };
 
-			binding.PropertyChanged += (sender, args) => raised = true;
+            binding.PropertyChanged += (sender, args) => raised = true;
 
-			provider.Properties.Add(new PropertyBindingSettings());
+            provider.Properties.Add(new PropertyBindingSettings());
 
-			Assert.True(raised);
-		}
+            Assert.True(raised);
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenValueProviderPropertyChanged_ThenBindingRaisesChanged()
-		{
-			var raised = false;
-			var property = new PropertyBindingSettings();
-			var binding = new BindingSettings
-			{
-				Properties = 
-				{
-					new PropertyBindingSettings
-					{
-						ValueProvider = new ValueProviderBindingSettings
-						{
-							Properties = 
-							{
-								property,
-							}
-						}
-					}
-				}
-			};
+        [TestMethod, TestCategory("Unit")]
+        public void WhenValueProviderPropertyChanged_ThenBindingRaisesChanged()
+        {
+            var raised = false;
+            var property = new PropertyBindingSettings();
+            var binding = new BindingSettings
+            {
+                Properties = 
+                {
+                    new PropertyBindingSettings
+                    {
+                        ValueProvider = new ValueProviderBindingSettings
+                        {
+                            Properties = 
+                            {
+                                property,
+                            }
+                        }
+                    }
+                }
+            };
 
-			binding.PropertyChanged += (sender, args) => raised = true;
+            binding.PropertyChanged += (sender, args) => raised = true;
 
-			property.Value = "foo";
+            property.Value = "foo";
 
-			Assert.True(raised);
-		}
-	}
+            Assert.True(raised);
+        }
+    }
 }

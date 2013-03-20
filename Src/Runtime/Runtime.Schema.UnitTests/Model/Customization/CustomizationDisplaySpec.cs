@@ -75,7 +75,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             public void ThenCustomizationPolicyDisplaysCorrectly()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.PatternModel.Pattern, element => element.Policy);
-                string category = this.PatternModel.Pattern.Policy.GetDomainClass().ImplementationClass.Category(true);
+                string category = this.PatternModel.Pattern.Policy.GetDomainClass().ImplementationClass.Category();
 
                 Assert.Equal(category, descriptor.Category);
                 Assert.Equal(descriptor.Converter.ConvertToString(this.PatternModel.Pattern.Policy),

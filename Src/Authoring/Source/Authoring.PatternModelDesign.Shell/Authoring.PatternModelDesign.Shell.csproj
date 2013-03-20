@@ -142,6 +142,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +168,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ShellResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SchemaUpgradeContext.cs" />
     <Compile Include="Shell\PatternModelClipboardCommandSet.cs" />
     <Compile Include="Shell\PatternModelCommandSet.cs" />
     <Compile Include="Shell\PatternModelDocData.cs" />
@@ -181,6 +184,7 @@
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
+    <Compile Include="PatternModelSchemaUpgradeManager.cs" />
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>

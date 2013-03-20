@@ -570,7 +570,7 @@ Please add or import a new 'Item/Project Template', or create a new folder withi
     <value>SelectArtifactCommand</value>
   </data>
   <data name="ArtifactExtension_SelectMenuItemText" xml:space="preserve">
-    <value>Go To Solution Items</value>
+    <value>Show Solution Items</value>
   </data>
   <data name="ArtifactExtension_SelectContextMenuName" xml:space="preserve">
     <value>SelectArtifactContextMenu</value>
@@ -764,12 +764,6 @@ Please add or import a new 'Item/Project Template', or create a new folder withi
   <data name="CardinalityValidationRule_ChildElementNameDisplayName" xml:space="preserve">
     <value>Child Element Name</value>
   </data>
-  <data name="Validate_InvalidPropertyBinding" xml:space="preserve">
-    <value>Property '{0}' does no longer exist in target type '{1}' so it has been removed.</value>
-  </data>
-  <data name="Validate_InvalidPropertyBindingCode" xml:space="preserve">
-    <value>317</value>
-  </data>
   <data name="PropertyAttributeValidationRule_ErrorMessageDisplayName" xml:space="preserve">
     <value>Error Message</value>
   </data>
@@ -844,8 +838,8 @@ Do you  want your new product/element renamed from '{0}' to '{1}'?</value>
   <data name="GenerateProductCodeCommand_Trace_UpdatedExistingArtifactLink" xml:space="preserve">
     <value>Existing artifact link did not resolve to a solution element. It was updated to a new link: {0}.</value>
   </data>
-  <data name="TemplateSettingsChangeRule_ChangeHiddenFailed" xml:space="preserve">
-    <value>Failed to change Hidden value on Template '{0}'</value>
+  <data name="TemplateSettingsChangeRule_ErrorSyncNameFailed" xml:space="preserve">
+    <value>Failed to sync SyncName automation on Template LaunchPoint '{0}'</value>
   </data>
   <data name="TemplateSettingsChangeRule_ChangeHiddenOnCreateElementOnUnfold" xml:space="preserve">
     <value>Tracking changes for CreateOnUnfold on Template Launch Point '{0}'</value>
@@ -941,9 +935,6 @@ Error is: '{1}'.</value>
   <data name="AggregatorCommand_DisplayName" xml:space="preserve">
     <value>Aggregates Other Commands</value>
   </data>
-  <data name="CommandReferencesEditor_Caption" xml:space="preserve">
-    <value>Commands editor</value>
-  </data>
   <data name="AggregatorCommand_TraceExecutingCommands" xml:space="preserve">
     <value>Executing aggregated commands on current element '{0}'.</value>
   </data>
@@ -987,7 +978,7 @@ Please open and make a note of the updates that were automatically made to the *
     <value>Invoke validation method '{0}' failed.</value>
   </data>
   <data name="Validate_MenuSettingsIconDoesNotPointToAValidFile" xml:space="preserve">
-    <value>'{0}' context menu launch point has an invalid value for the 'Icon' property. You must select an existing icon file from the solution, in the 'Settings'.</value>
+    <value>'{0}' context menu launch point has an invalid value for the 'Icon' property. You must select an existing icon file from the solution, or an icon resource in a referenced assembly of the project, in the 'Settings'</value>
   </data>
   <data name="Validate_MenuSettingsIconDoesNotPointToAValidFileCode" xml:space="preserve">
     <value>331</value>
@@ -2072,5 +2063,205 @@ Error was: {2}</value>
   <data name="TextTemplateUriEditor_EmptyItemsMessage" xml:space="preserve">
     <value>There were no Text Template files ({0}) found in the current solution.
 Please add a new 'Text Template', or create a new folder within the 'Templates\Text' folder in this project, and add a new or existing {0} file, and try again.</value>
+  </data>
+  <data name="ModifyXmlCommand_Action_Description" xml:space="preserve">
+    <value>The action to perform against the XML element or attribute.</value>
+  </data>
+  <data name="ModifyXmlCommand_Action_DisplayName" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="ModifyXmlCommand_Description" xml:space="preserve">
+    <value>Modifies the element text or attribute value in a referenced XML configuration file.</value>
+  </data>
+  <data name="ModifyXmlCommand_DisplayName" xml:space="preserve">
+    <value>Modify XML configuration file</value>
+  </data>
+  <data name="ModifyXmlCommand_SourcePath_Description" xml:space="preserve">
+    <value>The path to the XML file in the current solution. i.e. ..\~\GeneratedCode\MyConfig.xml, navigates up to the parent element, and traverses the first artifact link found on the parent element and into the 'GeneratedCode' sub-folder of that container (project or folder), to the file.  See guidance documentation for more example paths and details.</value>
+  </data>
+  <data name="ModifyXmlCommand_SourcePath_DisplayName" xml:space="preserve">
+    <value>Source Path</value>
+  </data>
+  <data name="ModifyXmlCommand_TraceInitial" xml:space="preserve">
+    <value>Executing modification of XML file with source path '{0}', and element path '{1}' with for action '{2}', with value '{3}'</value>
+  </data>
+  <data name="ModifyXmlCommand_NewValue_Description" xml:space="preserve">
+    <value>If 'Action'='Update' the new value of the element or attribute to update.</value>
+  </data>
+  <data name="ModifyXmlCommand_NewValue_DisplayName" xml:space="preserve">
+    <value>New Value</value>
+  </data>
+  <data name="ModifyXmlCommand_XmlPath_Description" xml:space="preserve">
+    <value>The XPath query to an element or attribute to modify. i.e. /bookstore/book/title for an element and /bookstore/book/@title for an attribute.  If your XML document has a namespace declaration, even a default one (i.e. xmlns="SomeURI"), you must qualify your query with a prefix i.e. /bk:bookstore/bk:book/bk:title. You will also need to declare the prefix and namespace in the 'XML Namespaces' property. i.e. bk = SomeURI.</value>
+  </data>
+  <data name="ModifyXmlCommand_XmlPath_DisplayName" xml:space="preserve">
+    <value>XPath Query</value>
+  </data>
+  <data name="ModifyXmlCommand_ErrorNoSource" xml:space="preserve">
+    <value>Could not resolve SourcePath '{1}' from element '{0}' to a file in the solution.</value>
+  </data>
+  <data name="ModifyXmlCommand_ErrorLoadXmlDoc" xml:space="preserve">
+    <value>Could not load XML from file '{0}'. File may not be a valid XML file.</value>
+  </data>
+  <data name="ModifyXmlCommand_ErrorSaveXmlDoc" xml:space="preserve">
+    <value>Could not save changes to file '{0}'</value>
+  </data>
+  <data name="ModifyXmlCommand_ErrorXPath" xml:space="preserve">
+    <value>Could not locate SourceElement in XML file '{0}' using XPath '{1}'</value>
+  </data>
+  <data name="ModifyXmlCommand_TraceNewValue" xml:space="preserve">
+    <value>NewValue evaluates to '{0}'</value>
+  </data>
+  <data name="ModifyXmlCommand_TraceXPath" xml:space="preserve">
+    <value>XmlPath evaluates to XPath '{0}'</value>
+  </data>
+  <data name="ModifyXmlCommand_ErrorUpdateNodeNotFound" xml:space="preserve">
+    <value>Could not locate element/attribute in solution item '{0}' with XML path '{1}'. This element/attribute must be created before this update can occur.</value>
+  </data>
+  <data name="XmlNodeExistsCondition_Description" xml:space="preserve">
+    <value>Used to verify that an element or attribute of a referenced XML configuration file exists.</value>
+  </data>
+  <data name="XmlNodeExistsCondition_DisplayName" xml:space="preserve">
+    <value>XML Configuration File Node Exists</value>
+  </data>
+  <data name="XmlNodeExistsCondition_ErrorCloseXmlDoc" xml:space="preserve">
+    <value>Could not save changes to file '{0}'</value>
+  </data>
+  <data name="XmlNodeExistsCondition_ErrorLoadXmlDoc" xml:space="preserve">
+    <value>Could not load XML from file '{0}'. File may not be a valid XML file.</value>
+  </data>
+  <data name="XmlNodeExistsCondition_ErrorNoSource" xml:space="preserve">
+    <value>Could not resolve SourcePath '{1}' from element '{0}' to a file in the solution.</value>
+  </data>
+  <data name="XmlNodeExistsCondition_ErrorXPath" xml:space="preserve">
+    <value>Could not locate SourceElement in XML file '{0}' using XPath '{1}'</value>
+  </data>
+  <data name="XmlNodeExistsCondition_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated existance of element within XML file with source path '{0}', and element path '{1}', as '{2}'</value>
+  </data>
+  <data name="XmlNodeExistsCondition_TraceInitial" xml:space="preserve">
+    <value>Evaluating existance of element within XML file with source path '{0}', and element path '{1}'</value>
+  </data>
+  <data name="XmlNodeExistsCondition_TraceXPath" xml:space="preserve">
+    <value>XmlPath evaluates to XPath '{0}'</value>
+  </data>
+  <data name="XmlNodeValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the text of an element or the value of an attribute in a referenced XML configuration file.</value>
+  </data>
+  <data name="XmlNodeValueProvider_DisplayName" xml:space="preserve">
+    <value>XML Configuration File Node</value>
+  </data>
+  <data name="XmlNodeValueProvider_ErrorCloseXmlDoc" xml:space="preserve">
+    <value>Could not save changes to file '{0}'</value>
+  </data>
+  <data name="XmlNodeValueProvider_ErrorLoadXmlDoc" xml:space="preserve">
+    <value>Could not load XML from file '{0}'. File may not be a valid XML file.</value>
+  </data>
+  <data name="XmlNodeValueProvider_ErrorNoSource" xml:space="preserve">
+    <value>Could not resolve SourcePath '{1}' from element '{0}' to a file in the solution.</value>
+  </data>
+  <data name="XmlNodeValueProvider_ErrorSearchNodeNotFound" xml:space="preserve">
+    <value>Could not locate element/attribute in solution item '{0}' with XML path '{1}'. This element/attribute must be created before this update can occur.</value>
+  </data>
+  <data name="XmlNodeValueProvider_ErrorXPath" xml:space="preserve">
+    <value>Could not locate SourceElement in XML file '{0}' using XPath '{1}'</value>
+  </data>
+  <data name="XmlNodeValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated value within XML file with source path '{0}', and element path '{1}', as '{2}'</value>
+  </data>
+  <data name="XmlNodeValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating value within XML file with source path '{0}', and element path '{1}'</value>
+  </data>
+  <data name="XmlNodeValueProvider_TraceXPath" xml:space="preserve">
+    <value>XmlPath evaluates to XPath '{0}'</value>
+  </data>
+  <data name="ModifyXmlCommand_Namespaces_Description" xml:space="preserve">
+    <value>A list of XML namespace declarations to use in the 'XML Path' query. You must include at least one prefix and namespace declaration if the XML document has a default namespace (i.e. xmlns="someURI"). And then use this prefix in your 'XPath Query' property.</value>
+  </data>
+  <data name="ModifyXmlCommand_Namespaces_DisplayName" xml:space="preserve">
+    <value>XML Namespaces</value>
+  </data>
+  <data name="XmlNamespace_Namespace_Description" xml:space="preserve">
+    <value>The full namespace for the 'Prefix'.</value>
+  </data>
+  <data name="XmlNamespace_Namespace_DisplayName" xml:space="preserve">
+    <value>Namespace</value>
+  </data>
+  <data name="XmlNamespace_Prefix_Description" xml:space="preserve">
+    <value>The prefix used to reference elements in the 'Namespace'.</value>
+  </data>
+  <data name="XmlNamespace_Prefix_DisplayName" xml:space="preserve">
+    <value>Prefix</value>
+  </data>
+  <data name="XmlNamespace_Description" xml:space="preserve">
+    <value>An XMLNamespace definition</value>
+  </data>
+  <data name="XmlNamespace_DisplayName" xml:space="preserve">
+    <value>XML Namespace</value>
+  </data>
+  <data name="XmlNamespace_EmptyNamespace" xml:space="preserve">
+    <value>(Empty Namespace)</value>
+  </data>
+  <data name="DeleteArtifactsCommand_Description" xml:space="preserve">
+    <value>Deletes all the associated solution items for the current element. This command supports prompting the user to choose which associated artifacts to delete.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_DisplayName" xml:space="preserve">
+    <value>Deletes an Element's Associated Artifacts</value>
+  </data>
+  <data name="DeleteArtifactsCommand_TraceInitial" xml:space="preserve">
+    <value>Executing deletion of associated solution items for current element, '{0}', and action '{1}'.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_TraceNoLinks" xml:space="preserve">
+    <value>No associated solution items to delete for the current element '{0}'.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_ErrorDeletingSolutionItem" xml:space="preserve">
+    <value>Failed to delete solution item '{0}', error was: '{1}'</value>
+  </data>
+  <data name="DeleteArtifactsCommand_TraceDeleteSolutionItem" xml:space="preserve">
+    <value>Deleting item '{0}' from solution.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorEmptyItems" xml:space="preserve">
+    <value>There are no items in the solution to delete.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorTitle" xml:space="preserve">
+    <value>Select the solution items to delete</value>
+  </data>
+  <data name="DeleteArtifactsCommand_Action_Description" xml:space="preserve">
+    <value>The default delete action to take. 'DeleteAll' deletes all associated solution items automatically. 'PromptUser' allows the user to specify which solution items to delete.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_Action_DisplayName" xml:space="preserve">
+    <value>Delete Action</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorMessage" xml:space="preserve">
+    <value>'{0}' was related to one or more items in solution, which it may have created. These solution items may no longer be required or managed by this element and may need deleting.
+
+Select the related solution items to delete and press 'OK', or press 'Cancel' to keep the items in the solution.</value>
+  </data>
+  <data name="DeleteArtifactsCommand_SelectorFailed" xml:space="preserve">
+    <value>Failed to select files to delete</value>
+  </data>
+  <data name="ArtifactExtension_DeleteCommandName" xml:space="preserve">
+    <value>DeleteArtifactsCommand</value>
+  </data>
+  <data name="ArtifactExtension_DeleteEventName" xml:space="preserve">
+    <value>DeleteArtifactsEvent</value>
+  </data>
+  <data name="CommandSettingsUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading CommandSettings elements.</value>
+  </data>
+  <data name="CommandSettingsUpgradeProcessor_TraceDeserializeCommandSettings" xml:space="preserve">
+    <value>Upgrading CommandSettings element '{0}', replacing XML properties with JSon.</value>
+  </data>
+  <data name="UnfoldVsCommandChangeRule_ErrorSyncNameFailed" xml:space="preserve">
+    <value>Failed to sync SyncName automation on Command '{0}'</value>
+  </data>
+  <data name="CommandReference_EmptyReference" xml:space="preserve">
+    <value>(Empty Command)</value>
+  </data>
+  <data name="AggregatorCommandUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading AggregatorCommand elements.</value>
+  </data>
+  <data name="AggregatorCommandUpgradeProcessor_TraceDeserializeCommandSettings" xml:space="preserve">
+    <value>Upgrading AggregatorCommandSettings element '{0}', replacing string JSon with CommandReference collection JSon.</value>
   </data>
 </root>

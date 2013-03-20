@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
@@ -11,6 +12,7 @@ using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
 using NuPattern.Extensibility.References;
 using NuPattern.Library.Commands;
@@ -22,7 +24,11 @@ namespace NuPattern.Runtime.Schema
     /// </summary>
     internal partial class PatternModelDocData
     {
+        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternModelDocData>();
         private bool modelCloned;
+
+        [Import]
+        private IPatternModelSchemaUpgradeManager PatternModelUpgradeManager { get; set; }
 
         /// <summary>
         /// Get the Partition where diagram data will be loaded into.
@@ -68,6 +74,10 @@ namespace NuPattern.Runtime.Schema
                 Directory.GetFiles(
                     Path.GetDirectoryName(fileName), string.Concat("*", DesignerConstants.ModelExtension, DesignerConstants.DiagramFileExtension));
 
+            // Run migration rules
+            this.ExecuteUpgradeRules(fileName, diagramFileNames);
+
+            // Load models
             modelRoot = PatternModelSerializationHelper.Instance.LoadModelAndDiagrams(
                     serializationResult,
                     this.GetModelPartition(),
@@ -369,6 +379,20 @@ namespace NuPattern.Runtime.Schema
                 {
                     viewShape.PerformInitialLayout();
                 }
+            }
+        }
+
+        private void ExecuteUpgradeRules(string schemaFilePath, string[] diagramFilePaths)
+        {
+            if (this.PatternModelUpgradeManager != null)
+            {
+                // Create the context
+                var context = new SchemaUpgradeContext(schemaFilePath, diagramFilePaths);
+                var componentModel = this.ServiceProvider.GetService<SComponentModel, IComponentModel>();
+                componentModel.DefaultCompositionService.SatisfyImportsOnce(context);
+
+                // Execute the manager
+                this.PatternModelUpgradeManager.Execute(context);
             }
         }
     }

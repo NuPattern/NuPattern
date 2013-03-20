@@ -74,9 +74,8 @@ public class IntegrationTest
     {
         try
         {
-            var startInfo = new ProcessStartInfo(
-                "xcopy",
-                "\"" + sourceDir + "\" " + "\"" + targetDir + "\" " + " /D /S /I /F /Y");
+            var cmdLine = "\"" + sourceDir + "\" " + "\"" + targetDir + "\" " + " /D /S /I /F /Y";
+            var startInfo = new ProcessStartInfo("xcopy", cmdLine);
             startInfo.RedirectStandardError = startInfo.RedirectStandardInput = startInfo.RedirectStandardOutput;
             startInfo.CreateNoWindow = true;
             startInfo.UseShellExecute = false;

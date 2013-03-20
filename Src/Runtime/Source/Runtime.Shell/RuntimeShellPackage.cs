@@ -34,7 +34,7 @@ namespace NuPattern.Runtime.Shell
     /// Represents the VS package for this assembly.
     /// </summary>
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Disposed on package dispose.")]
-    [ProvideEditorExtension(typeof(ProductStateEditorFactory), NuPattern.Runtime.Constants.RuntimeStoreExtension, 8, DefaultName = NuPattern.Runtime.Constants.RuntimeStoreEditorDescription)]
+    [ProvideEditorExtension(typeof(ProductStateEditorFactory), NuPattern.Runtime.StoreConstants.RuntimeStoreExtension, 8, DefaultName = NuPattern.Runtime.StoreConstants.RuntimeStoreEditorDescription)]
     [ProvideAutoLoad(UIContextGuids.NoSolution)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
@@ -127,6 +127,9 @@ namespace NuPattern.Runtime.Shell
 
                 container.ComposeExportedValue<Func<ISolutionPicker>>(
                     () => new SolutionPicker());
+
+                container.ComposeExportedValue<Func<ISolutionSelector>>(
+                    () => new SolutionSelector());
 
                 container.ComposeExportedValue<Func<IProductPicker>>(
                     () => new ProductPicker());
@@ -262,15 +265,26 @@ namespace NuPattern.Runtime.Shell
 
         private void OnSolutionOpened(object sender, SolutionEventArgs e)
         {
-            var pathExpression = string.Concat(@"\*", Runtime.Constants.RuntimeStoreExtension);
+            var pathExpression1 = Path.Combine(SolutionExtensions.SolutionItemsFolderName, string.Concat(@"*", Runtime.StoreConstants.RuntimeStoreExtension));
+            var pathExpression2 = string.Concat(@"*", Runtime.StoreConstants.RuntimeStoreExtension);
 
             // Ensure solution contains at least one state file
             if (e.Solution != null)
             {
-                var solutionFiles = e.Solution.Find<IItem>(pathExpression);
+                // Search Solution Items folder
+                var solutionFiles = e.Solution.Find<IItem>(pathExpression1);
                 if (solutionFiles.Any())
                 {
                     this.AutoOpenSolutionBuilder();
+                }
+                else
+                {
+                    // Search whole solution for state file.
+                    solutionFiles = e.Solution.Find<IItem>(pathExpression2);
+                    if (solutionFiles.Any())
+                    {
+                        this.AutoOpenSolutionBuilder();
+                    }
                 }
             }
         }
@@ -385,9 +399,9 @@ namespace NuPattern.Runtime.Shell
                             // Match assemblies with lost name from loaded AppDomain assemblies
                             var loadedAssemblies = from appDomainAssembly
                                                          in ((AppDomain)sender).GetAssemblies()
-                                                     let assemblyName = appDomainAssembly.GetName()
-                                                     where assemblyName.Name.Equals(args.Name, StringComparison.OrdinalIgnoreCase)
-                                                     select appDomainAssembly;
+                                                   let assemblyName = appDomainAssembly.GetName()
+                                                   where assemblyName.Name.Equals(args.Name, StringComparison.OrdinalIgnoreCase)
+                                                   select appDomainAssembly;
                             if (loadedAssemblies.Any())
                             {
                                 tracer.TraceInformation(
@@ -425,12 +439,12 @@ namespace NuPattern.Runtime.Shell
                                             // Match latest version by PublicKeyToken
                                             var signedAssemblies = from signedAssembly
                                                            in toolkitAssemblies
-                                                           let assemblyName = signedAssembly.GetName()
-                                                           let assemblyVersion = assemblyName.Version
-                                                           where assemblyName.KeyPair != null
-                                                           where assemblyName.GetPublicKeyTokenString().Equals(publicKeyToken, StringComparison.OrdinalIgnoreCase)
-                                                           orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
-                                                           select signedAssembly;
+                                                                   let assemblyName = signedAssembly.GetName()
+                                                                   let assemblyVersion = assemblyName.Version
+                                                                   where assemblyName.KeyPair != null
+                                                                   where assemblyName.GetPublicKeyTokenString().Equals(publicKeyToken, StringComparison.OrdinalIgnoreCase)
+                                                                   orderby (assemblyVersion != null) ? assemblyVersion.ToString(4) : new Version().ToString(4) descending
+                                                                   select signedAssembly;
                                             if (signedAssemblies.Any())
                                             {
                                                 assembly = signedAssemblies.FirstOrDefault();

@@ -18,7 +18,7 @@ namespace NuPattern.Runtime.Schema
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
 		public const string CompanyName = @"NuPattern";
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-		public const string ProductVersion = "1.2.0.0";
+		public const string ProductVersion = "1.3.0.0";
 
 		// Menu definitions
 		public static readonly global::System.ComponentModel.Design.CommandID PatternModelDiagramMenu = new global::System.ComponentModel.Design.CommandID(new global::System.Guid(PatternModelCommandSetId), 0x10000);

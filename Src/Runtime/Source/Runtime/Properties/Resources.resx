@@ -327,8 +327,8 @@
   <data name="FixLinkPathTemplateWizard_FailedToFixLinkPaths" xml:space="preserve">
     <value>Failed to fix linked project item paths.</value>
   </data>
-  <data name="SolutionPickerViewModel_EmptyItemsMessage" xml:space="preserve">
-    <value>There are no '{0}' files in the current solution.</value>
+  <data name="SolutionPickerBaseViewModel_EmptyItemsMessage" xml:space="preserve">
+    <value>There are no files to select in the current solution.</value>
   </data>
   <data name="PatternManager_FailedToOpenStore" xml:space="preserve">
     <value>Solution Builder failed to properly load the product state for this solution. 
@@ -342,8 +342,8 @@ Please close this solution, and open this solution again from within Visual Stud
     <value>Failed to properly verify dsl version.</value>
   </data>
   <data name="PatternManager_NewerDslVersionUpgrade" xml:space="preserve">
-    <value>You are opening a solution whose product state ('{0}') file was created with an older version of the '{1}'. 
-Previous versions of these state files cannot be opened in the 'Solution Builder' window. 
+    <value>You are opening a solution whose 'Solution Builder' state file ('{0}') was created with an older version of the '{1}'. 
+Previous versions of these state files cannot be opened by the 'Solution Builder' window, and must be upgraded.
 
 Would you like to automatically upgrade this file to the current version?</value>
   </data>
@@ -467,5 +467,14 @@ Would you like to automatically upgrade this file to the current version?</value
   </data>
   <data name="SolutionPicker_ErrorFailedDialog" xml:space="preserve">
     <value>An unexpected error occured, please retry again.</value>
+  </data>
+  <data name="SolutionSelector_ErrorFailedDialog" xml:space="preserve">
+    <value>An unexpected error occured, please retry again.</value>
+  </data>
+  <data name="SolutionSelector_ErrorNoRootItem" xml:space="preserve">
+    <value>The 'RootItem' value must be assigned before a call to 'ShowDialog'.</value>
+  </data>
+  <data name="SolutionPickerBaseViewModel_EmptyItemsMessageFileType" xml:space="preserve">
+    <value>There are no '{0}' files to select in the current solution.</value>
   </data>
 </root>

@@ -35,7 +35,7 @@ namespace NuPattern.Extensibility.Binding
 		{
 			if (string.IsNullOrEmpty(this.TypeId))
 			{
-				return Resources.ValueProviderBindingSettings_ElementName;
+				return Resources.ValueProviderBindingSettings_EmptyBinding;
 			}
 
 			return this.TypeId.Split('.').Last();

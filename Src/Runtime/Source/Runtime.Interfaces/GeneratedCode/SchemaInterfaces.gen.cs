@@ -35,7 +35,7 @@ namespace NuPattern.Runtime
 	/// The definition of the pattern in this toolkit.
 	/// </summary>
 	[Description("The definition of the pattern in this toolkit.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IPatternModelSchema  
 	{
 		/// <summary>
@@ -100,7 +100,7 @@ namespace NuPattern.Runtime
 	/// The definition of the pattern.
 	/// </summary>
 	[Description("The definition of the pattern.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IPatternSchema : IPatternElementSchema 
 	{
 		/// <summary>
@@ -184,7 +184,7 @@ namespace NuPattern.Runtime
 	/// An element that has a unique name.
 	/// </summary>
 	[Description("An element that has a unique name.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface INamedElementSchema  
 	{
 		/// <summary>
@@ -265,7 +265,7 @@ namespace NuPattern.Runtime
 	/// A container of properties and automation.
 	/// </summary>
 	[Description("A container of properties and automation.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IPatternElementSchema : ICustomizableElementSchema 
 	{
 		/// <summary>
@@ -329,7 +329,7 @@ namespace NuPattern.Runtime
 	/// A property of an element.
 	/// </summary>
 	[Description("A property of an element.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IPropertySchema : ICustomizableElementSchema 
 	{
 		/// <summary>
@@ -410,7 +410,7 @@ namespace NuPattern.Runtime
 	/// A distinct view of the pattern.
 	/// </summary>
 	[Description("A distinct view of the pattern.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IViewSchema : ICustomizableElementSchema 
 	{
 		/// <summary>
@@ -488,7 +488,7 @@ namespace NuPattern.Runtime
 	/// A child collection element.
 	/// </summary>
 	[Description("A child collection element.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface ICollectionSchema : IAbstractElementSchema 
 	{}
 }
@@ -514,7 +514,7 @@ namespace NuPattern.Runtime
 	/// A child element.
 	/// </summary>
 	[Description("A child element.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IElementSchema : IAbstractElementSchema 
 	{}
 }
@@ -540,7 +540,7 @@ namespace NuPattern.Runtime
 	/// An element that supports customization of its properties.
 	/// </summary>
 	[Description("An element that supports customization of its properties.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface ICustomizableElementSchema : INamedElementSchema 
 	{
 		/// <summary>
@@ -602,7 +602,7 @@ namespace NuPattern.Runtime
 	/// A child element or collection of the pattern.
 	/// </summary>
 	[Description("A child element or collection of the pattern.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IAbstractElementSchema : IPatternElementSchema 
 	{
 		/// <summary>
@@ -654,7 +654,7 @@ namespace NuPattern.Runtime
 	/// The policy that controls what properties are customizable on an element.
 	/// </summary>
 	[Description("The policy that controls what properties are customizable on an element.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface ICustomizationPolicySchema  
 	{
 		/// <summary>
@@ -726,7 +726,7 @@ namespace NuPattern.Runtime
 	/// The settings for a customizable property.
 	/// </summary>
 	[Description("The settings for a customizable property.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface ICustomizableSettingSchema  
 	{
 		/// <summary>
@@ -830,7 +830,7 @@ namespace NuPattern.Runtime
 	/// The settings for an automation extension.
 	/// </summary>
 	[Description("The settings for an automation extension.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IAutomationSettingsSchema : ICustomizableElementSchema 
 	{
 		/// <summary>
@@ -870,7 +870,7 @@ namespace NuPattern.Runtime
 	/// The extension points that this pattern provides.
 	/// </summary>
 	[Description("The extension points that this pattern provides.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IProvidedExtensionPointSchema  
 	{
 		/// <summary>
@@ -918,7 +918,7 @@ namespace NuPattern.Runtime
 	/// A child extension to the pattern, provided by a pattern of another toolkit.
 	/// </summary>
 	[Description("A child extension to the pattern, provided by a pattern of another toolkit.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
+	[GeneratedCode("NuPattern", "1.3.0.0")]
 	public partial interface IExtensionPointSchema : IPatternElementSchema 
 	{
 		/// <summary>

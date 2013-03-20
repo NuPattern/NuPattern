@@ -34,7 +34,7 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenCreatingReference_ThenUsesAdapter()
         {
-            var stateFile = this.solution.Find<IItem>(item => item.Name.EndsWith(Constants.RuntimeStoreExtension)).First();
+            var stateFile = this.solution.Find<IItem>(item => item.Name.EndsWith(StoreConstants.RuntimeStoreExtension)).First();
 
             var manager = this.modelBus.FindAdapterManagers(new object[] { stateFile.PhysicalPath }).FirstOrDefault();
 

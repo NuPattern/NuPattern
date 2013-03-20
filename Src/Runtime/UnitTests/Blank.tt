@@ -1,4 +1,4 @@
-﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\Source\Runtime.Schema\DslDefinition.dsl'" #>
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\Source\Runtime.Store\DslDefinition.dsl'" #>
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ output extension=".gen.slnbldr" #>
 <#@ Include File="..\..\Common\Helpers\DslVersion.tt" #>

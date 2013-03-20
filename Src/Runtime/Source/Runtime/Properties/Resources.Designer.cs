@@ -501,8 +501,8 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You are opening a solution whose product state (&apos;{0}&apos;) file was created with an older version of the &apos;{1}&apos;. 
-        ///Previous versions of these state files cannot be opened in the &apos;Solution Builder&apos; window. 
+        ///   Looks up a localized string similar to You are opening a solution whose &apos;Solution Builder&apos; state file (&apos;{0}&apos;) was created with an older version of the &apos;{1}&apos;. 
+        ///Previous versions of these state files cannot be opened by the &apos;Solution Builder&apos; window, and must be upgraded.
         ///
         ///Would you like to automatically upgrade this file to the current version?.
         /// </summary>
@@ -886,11 +886,38 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There are no &apos;{0}&apos; files in the current solution..
+        ///   Looks up a localized string similar to There are no files to select in the current solution..
         /// </summary>
-        internal static string SolutionPickerViewModel_EmptyItemsMessage {
+        internal static string SolutionPickerBaseViewModel_EmptyItemsMessage {
             get {
-                return ResourceManager.GetString("SolutionPickerViewModel_EmptyItemsMessage", resourceCulture);
+                return ResourceManager.GetString("SolutionPickerBaseViewModel_EmptyItemsMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There are no &apos;{0}&apos; files to select in the current solution..
+        /// </summary>
+        internal static string SolutionPickerBaseViewModel_EmptyItemsMessageFileType {
+            get {
+                return ResourceManager.GetString("SolutionPickerBaseViewModel_EmptyItemsMessageFileType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An unexpected error occured, please retry again..
+        /// </summary>
+        internal static string SolutionSelector_ErrorFailedDialog {
+            get {
+                return ResourceManager.GetString("SolutionSelector_ErrorFailedDialog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The &apos;RootItem&apos; value must be assigned before a call to &apos;ShowDialog&apos;..
+        /// </summary>
+        internal static string SolutionSelector_ErrorNoRootItem {
+            get {
+                return ResourceManager.GetString("SolutionSelector_ErrorNoRootItem", resourceCulture);
             }
         }
         

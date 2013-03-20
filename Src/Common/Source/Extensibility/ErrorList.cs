@@ -10,8 +10,7 @@ namespace NuPattern.Extensibility
     /// </summary>
     [PartCreationPolicy(CreationPolicy.Shared)]
     [Export(typeof(IErrorList))]
-    [CLSCompliant(false)]
-    public class ErrorList : IErrorList, IDisposable
+    internal class ErrorList : IErrorList, IDisposable
     {
         private ErrorListProvider errorListProvider;
         private bool disposed;
@@ -65,7 +64,7 @@ namespace NuPattern.Extensibility
         /// <summary>
         /// Adds a message to the error list.
         /// </summary>
-        public void AddMessage(string message, TaskErrorCategory errorCategory)
+        public void AddMessage(string message, ErrorCategory errorCategory)
         {
             AddMessage(message, string.Empty, errorCategory);
         }
@@ -73,11 +72,11 @@ namespace NuPattern.Extensibility
         /// <summary>
         /// Adds a message of the given document to the error list.
         /// </summary>
-        public void AddMessage(string message, string document, TaskErrorCategory errorCategory)
+        public void AddMessage(string message, string document, ErrorCategory errorCategory)
         {
-            ErrorTask errorTask = new ErrorTask
+            var errorTask = new ErrorTask
                 {
-                    ErrorCategory = errorCategory,
+                    ErrorCategory = (TaskErrorCategory)errorCategory,
                     Text = message,
                     Document = document,
                 };

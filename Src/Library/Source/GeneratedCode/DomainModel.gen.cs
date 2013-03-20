@@ -67,8 +67,6 @@ namespace NuPattern.Library.Automation
 			{
 				typeof(TemplateSettings),
 				typeof(EventSettings),
-				typeof(PropertySettings),
-				typeof(ValueProviderSettings),
 				typeof(CommandSettings),
 				typeof(MenuSettings),
 				typeof(GuidanceExtension),
@@ -76,9 +74,6 @@ namespace NuPattern.Library.Automation
 				typeof(ArtifactExtension),
 				typeof(ValidationExtension),
 				typeof(DragDropSettings),
-				typeof(PropertySettingsHasValueProvider),
-				typeof(ValueProviderSettingsReferencesProperties),
-				typeof(CommandSettingsHasProperties),
 			};
 		}
 		/// <summary>
@@ -106,10 +101,8 @@ namespace NuPattern.Library.Automation
 				new DomainMemberInfo(typeof(EventSettings), "Conditions", EventSettings.ConditionsDomainPropertyId, typeof(EventSettings.ConditionsPropertyHandler)),
 				new DomainMemberInfo(typeof(EventSettings), "FilterForCurrentElement", EventSettings.FilterForCurrentElementDomainPropertyId, typeof(EventSettings.FilterForCurrentElementPropertyHandler)),
 				new DomainMemberInfo(typeof(EventSettings), "WizardId", EventSettings.WizardIdDomainPropertyId, typeof(EventSettings.WizardIdPropertyHandler)),
-				new DomainMemberInfo(typeof(PropertySettings), "Value", PropertySettings.ValueDomainPropertyId, typeof(PropertySettings.ValuePropertyHandler)),
-				new DomainMemberInfo(typeof(PropertySettings), "Name", PropertySettings.NameDomainPropertyId, typeof(PropertySettings.NamePropertyHandler)),
-				new DomainMemberInfo(typeof(ValueProviderSettings), "TypeId", ValueProviderSettings.TypeIdDomainPropertyId, typeof(ValueProviderSettings.TypeIdPropertyHandler)),
 				new DomainMemberInfo(typeof(CommandSettings), "TypeId", CommandSettings.TypeIdDomainPropertyId, typeof(CommandSettings.TypeIdPropertyHandler)),
+				new DomainMemberInfo(typeof(CommandSettings), "Properties", CommandSettings.PropertiesDomainPropertyId, typeof(CommandSettings.PropertiesPropertyHandler)),
 				new DomainMemberInfo(typeof(MenuSettings), "Conditions", MenuSettings.ConditionsDomainPropertyId, typeof(MenuSettings.ConditionsPropertyHandler)),
 				new DomainMemberInfo(typeof(MenuSettings), "Text", MenuSettings.TextDomainPropertyId, typeof(MenuSettings.TextPropertyHandler)),
 				new DomainMemberInfo(typeof(MenuSettings), "Icon", MenuSettings.IconDomainPropertyId, typeof(MenuSettings.IconPropertyHandler)),
@@ -125,6 +118,7 @@ namespace NuPattern.Library.Automation
 				new DomainMemberInfo(typeof(WizardSettings), "TypeName", WizardSettings.TypeNameDomainPropertyId, typeof(WizardSettings.TypeNamePropertyHandler)),
 				new DomainMemberInfo(typeof(ArtifactExtension), "AssociatedArtifacts", ArtifactExtension.AssociatedArtifactsDomainPropertyId, typeof(ArtifactExtension.AssociatedArtifactsPropertyHandler)),
 				new DomainMemberInfo(typeof(ArtifactExtension), "OnArtifactActivation", ArtifactExtension.OnArtifactActivationDomainPropertyId, typeof(ArtifactExtension.OnArtifactActivationPropertyHandler)),
+				new DomainMemberInfo(typeof(ArtifactExtension), "OnArtifactDeletion", ArtifactExtension.OnArtifactDeletionDomainPropertyId, typeof(ArtifactExtension.OnArtifactDeletionPropertyHandler)),
 				new DomainMemberInfo(typeof(ValidationExtension), "ValidationExecution", ValidationExtension.ValidationExecutionDomainPropertyId, typeof(ValidationExtension.ValidationExecutionPropertyHandler)),
 				new DomainMemberInfo(typeof(ValidationExtension), "ValidationOnBuild", ValidationExtension.ValidationOnBuildDomainPropertyId, typeof(ValidationExtension.ValidationOnBuildPropertyHandler)),
 				new DomainMemberInfo(typeof(ValidationExtension), "ValidationOnSave", ValidationExtension.ValidationOnSaveDomainPropertyId, typeof(ValidationExtension.ValidationOnSavePropertyHandler)),
@@ -134,22 +128,6 @@ namespace NuPattern.Library.Automation
 				new DomainMemberInfo(typeof(DragDropSettings), "DropConditions", DragDropSettings.DropConditionsDomainPropertyId, typeof(DragDropSettings.DropConditionsPropertyHandler)),
 				new DomainMemberInfo(typeof(DragDropSettings), "WizardId", DragDropSettings.WizardIdDomainPropertyId, typeof(DragDropSettings.WizardIdPropertyHandler)),
 				new DomainMemberInfo(typeof(DragDropSettings), "StatusText", DragDropSettings.StatusTextDomainPropertyId, typeof(DragDropSettings.StatusTextPropertyHandler)),
-			};
-		}
-		/// <summary>
-		/// Gets the list of generated domain roles.
-		/// </summary>
-		/// <returns>List of role data.</returns>
-		protected sealed override DomainRolePlayerInfo[] GetGeneratedDomainRoles()
-		{
-			return new DomainRolePlayerInfo[]
-			{
-				new DomainRolePlayerInfo(typeof(PropertySettingsHasValueProvider), "PropertySettings", PropertySettingsHasValueProvider.PropertySettingsDomainRoleId),
-				new DomainRolePlayerInfo(typeof(PropertySettingsHasValueProvider), "ValueProviderSettings", PropertySettingsHasValueProvider.ValueProviderSettingsDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ValueProviderSettingsReferencesProperties), "ValueProviderSettings", ValueProviderSettingsReferencesProperties.ValueProviderSettingsDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ValueProviderSettingsReferencesProperties), "PropertySettings", ValueProviderSettingsReferencesProperties.PropertySettingsDomainRoleId),
-				new DomainRolePlayerInfo(typeof(CommandSettingsHasProperties), "CommandSettings", CommandSettingsHasProperties.CommandSettingsDomainRoleId),
-				new DomainRolePlayerInfo(typeof(CommandSettingsHasProperties), "PropertySettings", CommandSettingsHasProperties.PropertySettingsDomainRoleId),
 			};
 		}
 		#endregion
@@ -171,18 +149,16 @@ namespace NuPattern.Library.Automation
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(11);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(9);
 				createElementMap.Add(typeof(TemplateSettings), 0);
 				createElementMap.Add(typeof(EventSettings), 1);
-				createElementMap.Add(typeof(PropertySettings), 2);
-				createElementMap.Add(typeof(ValueProviderSettings), 3);
-				createElementMap.Add(typeof(CommandSettings), 4);
-				createElementMap.Add(typeof(MenuSettings), 5);
-				createElementMap.Add(typeof(GuidanceExtension), 6);
-				createElementMap.Add(typeof(WizardSettings), 7);
-				createElementMap.Add(typeof(ArtifactExtension), 8);
-				createElementMap.Add(typeof(ValidationExtension), 9);
-				createElementMap.Add(typeof(DragDropSettings), 10);
+				createElementMap.Add(typeof(CommandSettings), 2);
+				createElementMap.Add(typeof(MenuSettings), 3);
+				createElementMap.Add(typeof(GuidanceExtension), 4);
+				createElementMap.Add(typeof(WizardSettings), 5);
+				createElementMap.Add(typeof(ArtifactExtension), 6);
+				createElementMap.Add(typeof(ValidationExtension), 7);
+				createElementMap.Add(typeof(DragDropSettings), 8);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -198,15 +174,13 @@ namespace NuPattern.Library.Automation
 			{
 				case 0: return new TemplateSettings(partition, propertyAssignments);
 				case 1: return new EventSettings(partition, propertyAssignments);
-				case 2: return new PropertySettings(partition, propertyAssignments);
-				case 3: return new ValueProviderSettings(partition, propertyAssignments);
-				case 4: return new CommandSettings(partition, propertyAssignments);
-				case 5: return new MenuSettings(partition, propertyAssignments);
-				case 6: return new GuidanceExtension(partition, propertyAssignments);
-				case 7: return new WizardSettings(partition, propertyAssignments);
-				case 8: return new ArtifactExtension(partition, propertyAssignments);
-				case 9: return new ValidationExtension(partition, propertyAssignments);
-				case 10: return new DragDropSettings(partition, propertyAssignments);
+				case 2: return new CommandSettings(partition, propertyAssignments);
+				case 3: return new MenuSettings(partition, propertyAssignments);
+				case 4: return new GuidanceExtension(partition, propertyAssignments);
+				case 5: return new WizardSettings(partition, propertyAssignments);
+				case 6: return new ArtifactExtension(partition, propertyAssignments);
+				case 7: return new ValidationExtension(partition, propertyAssignments);
+				case 8: return new DragDropSettings(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -229,10 +203,7 @@ namespace NuPattern.Library.Automation
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(3);
-				createElementLinkMap.Add(typeof(PropertySettingsHasValueProvider), 0);
-				createElementLinkMap.Add(typeof(ValueProviderSettingsReferencesProperties), 1);
-				createElementLinkMap.Add(typeof(CommandSettingsHasProperties), 2);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(0);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -247,9 +218,6 @@ namespace NuPattern.Library.Automation
 			}
 			switch (index)
 			{
-				case 0: return new PropertySettingsHasValueProvider(partition, roleAssignments, propertyAssignments);
-				case 1: return new ValueProviderSettingsReferencesProperties(partition, roleAssignments, propertyAssignments);
-				case 2: return new CommandSettingsHasProperties(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -389,8 +357,6 @@ namespace NuPattern.Library.Automation
 		public LibraryDeleteClosureBase()
 		{
 			#region Initialize DomainData Table
-			DomainRoles.Add(global::NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettingsDomainRoleId, true);
-			DomainRoles.Add(global::NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettingsDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>
@@ -492,6 +458,36 @@ namespace NuPattern.Library.Automation
 		/// </summary>
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactActivatedAction/Select.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		Select,
+	}
+}
+namespace NuPattern.Library.Automation
+{
+	/// <summary>
+	/// DomainEnumeration: ArtifactDeletedAction
+	/// Description for NuPattern.Library.Automation.ArtifactDeletedAction
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum ArtifactDeletedAction
+	{
+		/// <summary>
+		/// None
+		/// No action is performed, associated solution items are not deleted from the
+		/// solution.
+		/// </summary>
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactDeletedAction/None.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		None,
+		/// <summary>
+		/// DeleteAll
+		/// All associated solution items are deleted automatically.
+		/// </summary>
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactDeletedAction/DeleteAll.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		DeleteAll,
+		/// <summary>
+		/// PromptUser
+		/// The user is prompted to select which associated solution items to delete.
+		/// </summary>
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactDeletedAction/PromptUser.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		PromptUser,
 	}
 }
 

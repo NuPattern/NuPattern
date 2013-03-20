@@ -132,7 +132,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 base.Initialize();
 
                 this.PatternManager.Setup(x => x.IsOpen).Returns(true);
-                this.PatternManager.Setup(x => x.StoreFile).Returns("C:\\Foo" + NuPattern.Runtime.Constants.RuntimeStoreExtension);
+                this.PatternManager.Setup(x => x.StoreFile).Returns("C:\\Foo" + NuPattern.Runtime.StoreConstants.RuntimeStoreExtension);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -151,7 +151,7 @@ namespace NuPattern.Library.UnitTests.Commands
             {
                 Command.Execute();
 
-                Assert.Equal("C:\\Foo" + NuPattern.Runtime.Constants.RuntimeStoreExtension, Command.ModelFile);
+                Assert.Equal("C:\\Foo" + NuPattern.Runtime.StoreConstants.RuntimeStoreExtension, Command.ModelFile);
             }
 
             [TestMethod, TestCategory("Unit")]

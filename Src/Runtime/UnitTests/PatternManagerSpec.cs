@@ -65,7 +65,7 @@ namespace NuPattern.Runtime.UnitTests
         public class GivenAConfiguredPatternManager
         {
             private static readonly string solutionItemsDir = Path.GetTempPath() + "\\Solution Items";
-            private const string RuntimeStoreFilename = "Blank.gen" + Constants.RuntimeStoreExtension;
+            private const string RuntimeStoreFilename = "Blank.gen" + StoreConstants.RuntimeStoreExtension;
             private Solution solution;
             private Mock<IShellEvents> shellEvents;
             private Mock<ISolutionEvents> solutionEvents;
@@ -255,7 +255,7 @@ namespace NuPattern.Runtime.UnitTests
 
                 this.manager.IsOpenChanged += (s, e) => changed = true;
 
-                this.manager.Open(new FileInfo("Invalid" + Constants.RuntimeStoreExtension).FullName);
+                this.manager.Open(new FileInfo("Invalid" + StoreConstants.RuntimeStoreExtension).FullName);
 
                 Assert.False(changed);
             }
@@ -269,7 +269,7 @@ namespace NuPattern.Runtime.UnitTests
 
                 this.manager.IsOpenChanged += (s, e) => changed = true;
 
-                this.manager.Open(new FileInfo("OldVersion" + Constants.RuntimeStoreExtension).FullName);
+                this.manager.Open(new FileInfo("OldVersion" + StoreConstants.RuntimeStoreExtension).FullName);
 
                 Assert.False(changed);
             }
@@ -283,7 +283,7 @@ namespace NuPattern.Runtime.UnitTests
 
                 this.manager.IsOpenChanged += (s, e) => changed = true;
 
-                this.manager.Open(new FileInfo("OldVersion" + Constants.RuntimeStoreExtension).FullName);
+                this.manager.Open(new FileInfo("OldVersion" + StoreConstants.RuntimeStoreExtension).FullName);
 
                 Assert.True(changed);
             }
@@ -295,7 +295,7 @@ namespace NuPattern.Runtime.UnitTests
 
                 this.manager.IsOpenChanged += (s, e) => changed = true;
 
-                this.manager.Open(new FileInfo("InvalidVersion" + Constants.RuntimeStoreExtension).FullName);
+                this.manager.Open(new FileInfo("InvalidVersion" + StoreConstants.RuntimeStoreExtension).FullName);
 
                 Assert.False(changed);
             }
@@ -424,7 +424,7 @@ namespace NuPattern.Runtime.UnitTests
 							Name = "Solution Items", 
 							Items = 
 							{
-								new Item { PhysicalPath = "Foo" + Constants.RuntimeStoreExtension },
+								new Item { PhysicalPath = "Foo" + StoreConstants.RuntimeStoreExtension },
 								new Item { PhysicalPath = stateFile },
 							}
 						}
@@ -451,8 +451,8 @@ namespace NuPattern.Runtime.UnitTests
 							Items = 
 							{
 								new Item { PhysicalPath = stateFile },
-								new Item { PhysicalPath = "Foo" + Constants.RuntimeStoreExtension },
-								new Item { PhysicalPath = "Bar" + Constants.RuntimeStoreExtension },
+								new Item { PhysicalPath = "Foo" + StoreConstants.RuntimeStoreExtension },
+								new Item { PhysicalPath = "Bar" + StoreConstants.RuntimeStoreExtension },
 							}
 						}
 					}

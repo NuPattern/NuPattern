@@ -340,12 +340,6 @@
   <data name="Cardinality_NoParentLinkFound" xml:space="preserve">
     <value>The element does not have a relationship to a containing parent, so the cardinality cannot be determined.</value>
   </data>
-  <data name="SchemaTypeDescriptionProvider_ConditionsEditorCaption" xml:space="preserve">
-    <value>Constraints Editor</value>
-  </data>
-  <data name="SchemaTypeDescriptionProvider_ValidatorEditorCaption" xml:space="preserve">
-    <value>Validation Rules Editor</value>
-  </data>
   <data name="HostedExtensionPointPropertyDescriptor_PropertiesWillBeDeleted" xml:space="preserve">
     <value>All existing variable properties will be cleared in order to host this Extension Point.</value>
   </data>

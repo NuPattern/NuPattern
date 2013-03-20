@@ -37,7 +37,7 @@ namespace NuPattern.Library.Automation
                 instantiateCommand.SetPropertyValue<InstantiateFeatureCommand, bool>(cmd => cmd.ActivateOnInstantiation, this.GuidanceActivateOnCreation);
             }
 
-            var instantiateEvent = element.EnsureEventLaunchPoint<IOnElementInstantiatedEvent>(Properties.Resources.GuidanceExtension_InstantiateEventName,
+            element.EnsureEventLaunchPoint<IOnElementInstantiatedEvent>(Properties.Resources.GuidanceExtension_InstantiateEventName,
                 instantiateCommand, true, () => !String.IsNullOrEmpty(this.GuidanceFeatureId));
 
             // Configure the activate command and menu.
@@ -52,20 +52,20 @@ namespace NuPattern.Library.Automation
                 // Set the conditions
                 activateMenu.Conditions = Bindings.BindingSerializer.Serialize(
                     new List<Bindings.ConditionBindingSettings>
-					{
-						new Bindings.ConditionBindingSettings
-						{
-							TypeId = typeof(ElementReferenceExistsCondition).FullName,
-							Properties =
-							{
-								new Bindings.PropertyBindingSettings
-								{
-									Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
-									Value = ReferenceKindConstants.Guidance
-								},
-							}
-						}
-					});
+                    {
+                        new Bindings.ConditionBindingSettings
+                        {
+                            TypeId = typeof(ElementReferenceExistsCondition).FullName,
+                            Properties =
+                            {
+                                new Bindings.PropertyBindingSettings
+                                {
+                                    Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
+                                    Value = ReferenceKindConstants.Guidance
+                                },
+                            }
+                        }
+                    });
             }
         }
     }

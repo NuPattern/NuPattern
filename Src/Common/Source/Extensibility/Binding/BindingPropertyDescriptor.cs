@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Drawing.Design;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using NuPattern.Runtime;
 
@@ -134,7 +133,7 @@ namespace NuPattern.Extensibility.Binding
         }
 
         /// <summary>
-        /// When overridden in a class, resets teh property value.
+        /// When overridden in a class, resets the property value.
         /// </summary>
         public override void ResetValue(object component)
         {
@@ -192,39 +191,16 @@ namespace NuPattern.Extensibility.Binding
 
             public override PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, object value, Attribute[] attributes)
             {
-                var settings = (IBindingSettings)value;
-                var properties = new PropertyDescriptorCollection(new PropertyDescriptor[0]);
+                var properties = new PropertyDescriptorCollection(new PropertyDescriptor[0]).Cast<PropertyDescriptor>().ToList();
 
+                var settings = (IBindingSettings)value;
                 if (settings.IsConfigured())
                 {
-                    var extensionType = this.Components.FromFeaturesCatalog()
-                        .Where(binding => binding.Metadata.Id == settings.TypeId)
-                        .Select(binding => binding.Metadata.ExportingType)
-                        .FirstOrDefault();
-
-                    if (extensionType == null && !string.IsNullOrEmpty(settings.TypeId))
-                    {
-                        extensionType = (from type in this.ProjectTypeProvider.GetTypes<TValue>()
-                                         let meta = type.AsProjectFeatureComponent()
-                                         where meta != null && meta.Id == settings.TypeId
-                                         select type)
-                                        .FirstOrDefault();
-                    }
-
-                    if (extensionType != null)
-                    {
-                        foreach (var descriptor in TypeDescriptor.GetProperties(extensionType).Cast<PropertyDescriptor>().Where(d => d.IsPlatuBindableProperty()))
-                        {
-                            properties.Add(new DesignPropertyDescriptor(
-                                descriptor.Name,
-                                descriptor.PropertyType,
-                                settings.GetType(),
-                                descriptor.Attributes.Cast<Attribute>().ToArray()));
-                        }
-                    }
+                    properties.AddRange(DesignComponentTypeDescriptor<TValue, IBindingSettings>.GetComponentProperties(
+                        this.ProjectTypeProvider, this.Components, settings.TypeId));
                 }
 
-                return properties;
+                return new PropertyDescriptorCollection(properties.ToArray());
             }
         }
     }

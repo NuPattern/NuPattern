@@ -178,6 +178,15 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} Collection.
+        /// </summary>
+        internal static string CancelableCollectionEditor_Title {
+            get {
+                return ResourceManager.GetString("CancelableCollectionEditor_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Initialization has already been done. This invocation can only be performed before EndInit is been called..
         /// </summary>
         internal static string CodeGeneration_InitializationFinished {
@@ -214,20 +223,29 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (Collection).
+        ///   Looks up a localized string similar to A condition of execution.
         /// </summary>
-        internal static string CollectionPropertyDescriptor_ToString {
+        internal static string ConditionBindingSettings_Description {
             get {
-                return ResourceManager.GetString("CollectionPropertyDescriptor_ToString", resourceCulture);
+                return ResourceManager.GetString("ConditionBindingSettings_Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (Condition Binding).
+        ///   Looks up a localized string similar to Condition.
         /// </summary>
-        internal static string ConditionBindingSettings_ElementName {
+        internal static string ConditionBindingSettings_DisplayName {
             get {
-                return ResourceManager.GetString("ConditionBindingSettings_ElementName", resourceCulture);
+                return ResourceManager.GetString("ConditionBindingSettings_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Empty Condition).
+        /// </summary>
+        internal static string ConditionBindingSettings_EmptyBinding {
+            get {
+                return ResourceManager.GetString("ConditionBindingSettings_EmptyBinding", resourceCulture);
             }
         }
         
@@ -309,6 +327,15 @@ namespace NuPattern.Extensibility.Properties {
         internal static string DescriptorExtensions_MustBeDelegatingDescriptor {
             get {
                 return ResourceManager.GetString("DescriptorExtensions_MustBeDelegatingDescriptor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Collection).
+        /// </summary>
+        internal static string DesignCollectionPropertyDescriptor_ToString {
+            get {
+                return ResourceManager.GetString("DesignCollectionPropertyDescriptor_ToString", resourceCulture);
             }
         }
         
@@ -882,6 +909,15 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (Collection).
+        /// </summary>
+        internal static string StringCollectionPropertyDescriptor_ToString {
+            get {
+                return ResourceManager.GetString("StringCollectionPropertyDescriptor_ToString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Completing existing active scope..
         /// </summary>
         internal static string TemplateWizard_CompletingScope {
@@ -945,11 +981,29 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (Validation Rule Binding).
+        ///   Looks up a localized string similar to A validation rule..
         /// </summary>
-        internal static string ValidationBindingSettings_ElementName {
+        internal static string ValidationBindingSettings_Description {
             get {
-                return ResourceManager.GetString("ValidationBindingSettings_ElementName", resourceCulture);
+                return ResourceManager.GetString("ValidationBindingSettings_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Validation Rule.
+        /// </summary>
+        internal static string ValidationBindingSettings_DisplayName {
+            get {
+                return ResourceManager.GetString("ValidationBindingSettings_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (Empty Validation Rule).
+        /// </summary>
+        internal static string ValidationBindingSettings_EmptyBinding {
+            get {
+                return ResourceManager.GetString("ValidationBindingSettings_EmptyBinding", resourceCulture);
             }
         }
         
@@ -990,11 +1044,11 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (Value Provider Binding).
+        ///   Looks up a localized string similar to (Empty Value Provider).
         /// </summary>
-        internal static string ValueProviderBindingSettings_ElementName {
+        internal static string ValueProviderBindingSettings_EmptyBinding {
             get {
-                return ResourceManager.GetString("ValueProviderBindingSettings_ElementName", resourceCulture);
+                return ResourceManager.GetString("ValueProviderBindingSettings_EmptyBinding", resourceCulture);
             }
         }
         
@@ -1013,6 +1067,42 @@ namespace NuPattern.Extensibility.Properties {
         internal static string Vsix_ManifestMissing {
             get {
                 return ResourceManager.GetString("Vsix_ManifestMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML document load failed for file &apos;{0}&apos;..
+        /// </summary>
+        internal static string XmlProcessor_ErrorLoadFailed {
+            get {
+                return ResourceManager.GetString("XmlProcessor_ErrorLoadFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XML document must be loaded before you can call this method..
+        /// </summary>
+        internal static string XmlProcessor_ErrorLoadNotCalledFirst {
+            get {
+                return ResourceManager.GetString("XmlProcessor_ErrorLoadNotCalledFirst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to save modified XML document &apos;{0}&apos;..
+        /// </summary>
+        internal static string XmlProcessor_ErrorSaveFailed {
+            get {
+                return ResourceManager.GetString("XmlProcessor_ErrorSaveFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to find nodes in the XMLdocument using XPath search &apos;{0}&apos;.
+        /// </summary>
+        internal static string XmlProcessor_ErrorXPathSearchFailed {
+            get {
+                return ResourceManager.GetString("XmlProcessor_ErrorXPathSearchFailed", resourceCulture);
             }
         }
     }

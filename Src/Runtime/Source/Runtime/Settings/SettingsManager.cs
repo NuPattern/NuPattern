@@ -53,8 +53,8 @@ namespace NuPattern.Runtime
 
             //// TODO: refactor this code to be generic and reflection/typedescritor-based.
 
-            var tracingRoot = Path.Combine(Constants.RegistrySettingsKeyName, RuntimeSettings, Tracing);
-            var sourceNamesRoot = Path.Combine(Constants.RegistrySettingsKeyName, RuntimeSettings, Tracing, SourceNames);
+            var tracingRoot = Path.Combine(StoreConstants.RegistrySettingsKeyName, RuntimeSettings, Tracing);
+            var sourceNamesRoot = Path.Combine(StoreConstants.RegistrySettingsKeyName, RuntimeSettings, Tracing, SourceNames);
 
             var oldValue = ReadSettings(this.serviceProvider);
 
@@ -101,8 +101,8 @@ namespace NuPattern.Runtime
 
             var settings = new RuntimeSettings();
 
-            var tracingRoot = Path.Combine(Constants.RegistrySettingsKeyName, RuntimeSettings, Tracing);
-            var sourceNamesRoot = Path.Combine(Constants.RegistrySettingsKeyName, RuntimeSettings, Tracing, SourceNames);
+            var tracingRoot = Path.Combine(StoreConstants.RegistrySettingsKeyName, RuntimeSettings, Tracing);
+            var sourceNamesRoot = Path.Combine(StoreConstants.RegistrySettingsKeyName, RuntimeSettings, Tracing, SourceNames);
 
             if (!store.CollectionExists(tracingRoot))
             {

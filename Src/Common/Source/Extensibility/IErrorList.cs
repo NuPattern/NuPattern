@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.VisualStudio.Shell;
 
 namespace NuPattern.Extensibility
 {
@@ -12,12 +11,12 @@ namespace NuPattern.Extensibility
         /// <summary>
         /// Adds a message to the error window.
         /// </summary>
-        void AddMessage(string message, TaskErrorCategory errorCategory);
+        void AddMessage(string message, ErrorCategory errorCategory);
 
         /// <summary>
         /// Adds a message of the given document to the error window.
         /// </summary>
-        void AddMessage(string message, string document, TaskErrorCategory errorCategory);
+        void AddMessage(string message, string document, ErrorCategory errorCategory);
 
         /// <summary>
         /// Clears all errors in the error list.

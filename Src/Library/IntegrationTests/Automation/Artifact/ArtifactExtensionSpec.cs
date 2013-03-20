@@ -75,6 +75,17 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
                 AssertActivateEvent(true, AssertSelectCommand(false));
             }
 
+
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenOnArtifactDeletionIsDeleteAll_ThenCreatesAutomationSettings()
+            {
+                this.artifactExtension.OnArtifactDeletion = ArtifactDeletedAction.DeleteAll;
+
+                AssertDeleteCommand(true, DeleteAction.DeleteAll);
+                AssertDeleteEvent(true, AssertDeleteCommand(false, DeleteAction.DeleteAll));
+            }
+
             [HostType("VS IDE")]
             [TestMethod, TestCategory("Integration")]
             public void WhenChangingOnArtifactActivationFromOpenToSelect_ThenUpdatedCommandSettings()
@@ -87,6 +98,19 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
                 AssertSelectCommand(true);
                 AssertSelectContextMenu(true);
                 AssertActivateEvent(true, AssertSelectCommand(false));
+            }
+
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenChangingOnArtifactDeletionFromDeleteAllToPromptUser_ThenUpdatedCommandSettings()
+            {
+                this.artifactExtension.OnArtifactDeletion = ArtifactDeletedAction.DeleteAll;
+                this.artifactExtension.OnArtifactDeletion = ArtifactDeletedAction.PromptUser;
+
+                Assert.Equal(2, this.container.AutomationSettings.Count());
+
+                AssertDeleteCommand(true, DeleteAction.PromptUser);
+                AssertDeleteEvent(true, AssertDeleteCommand(false, DeleteAction.PromptUser));
             }
 
             [HostType("VS IDE")]
@@ -105,6 +129,20 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
                 AssertActivateEvent(true, AssertOpenCommand(false));
             }
 
+
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenChangingOnArtifactDeletionFromPromptUserToDeleteAll_ThenUpdatedCommandSettings()
+            {
+                this.artifactExtension.OnArtifactDeletion = ArtifactDeletedAction.PromptUser;
+                this.artifactExtension.OnArtifactDeletion = ArtifactDeletedAction.DeleteAll;
+
+                Assert.Equal(2, this.container.AutomationSettings.Count());
+
+                AssertDeleteCommand(true, DeleteAction.DeleteAll);
+                AssertDeleteEvent(true, AssertDeleteCommand(false, DeleteAction.DeleteAll));
+            }
+
             [HostType("VS IDE")]
             [TestMethod, TestCategory("Integration")]
             public void WhenResettingOnArtifactActivation_ThenDeletesCommandSettingAndEventSettings()
@@ -117,6 +155,23 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
 
                 this.artifactExtension.OnArtifactActivation = ArtifactActivatedAction.Select;
                 this.artifactExtension.OnArtifactActivation = ArtifactActivatedAction.None;
+
+                Assert.Equal(0, this.container.AutomationSettings.Count());
+                Assert.Equal(0, this.container.Properties.Count());
+            }
+
+            [HostType("VS IDE")]
+            [TestMethod, TestCategory("Integration")]
+            public void WhenResettingOnArtifactDeletion_ThenDeletesCommandSettingAndEventSettings()
+            {
+                this.artifactExtension.OnArtifactDeletion = ArtifactDeletedAction.DeleteAll;
+                this.artifactExtension.OnArtifactDeletion = ArtifactDeletedAction.None;
+
+                Assert.Equal(0, this.container.AutomationSettings.Count());
+                Assert.Equal(0, this.container.Properties.Count());
+
+                this.artifactExtension.OnArtifactDeletion = ArtifactDeletedAction.PromptUser;
+                this.artifactExtension.OnArtifactDeletion = ArtifactDeletedAction.None;
 
                 Assert.Equal(0, this.container.AutomationSettings.Count());
                 Assert.Equal(0, this.container.Properties.Count());
@@ -138,8 +193,8 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
                     Assert.Equal(commandSettings.TypeId, typeof(ActivateArtifactCommand).FullName);
 
                     var openProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<ActivateArtifactCommand>.GetPropertyName(c => c.Open)]
-                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
-                    Assert.Equal(true, openProperty.Value);
+                        .GetValue(commandSettings) as DesignProperty;
+                    Assert.Equal(true, openProperty.GetValue());
                 }
 
                 return command;
@@ -186,8 +241,8 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
                     Assert.Equal(commandSettings.TypeId, typeof(ActivateArtifactCommand).FullName);
 
                     var openProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<ActivateArtifactCommand>.GetPropertyName(c => c.Open)]
-                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
-                    Assert.Equal(false, openProperty.Value);
+                        .GetValue(commandSettings) as DesignProperty;
+                    Assert.Equal(false, openProperty.GetValue());
                 }
 
                 return command;
@@ -215,12 +270,12 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
 
                     var conditions = BindingSerializer.Serialize(
                         new[]
-						{
-							new ConditionBindingSettings
-							{
-								TypeId = typeof(ArtifactReferenceExistsCondition).FullName,
-							}
-						});
+                        {
+                            new ConditionBindingSettings
+                            {
+                                TypeId = typeof(ArtifactReferenceExistsCondition).FullName,
+                            }
+                        });
 
                     Assert.Equal(menuSettings.Conditions, conditions);
                 }
@@ -242,6 +297,54 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
                     Assert.True(event1.IsSystem);
 
                     Assert.Equal(eventSettings.EventId, typeof(IOnElementActivatedEvent).FullName);
+                    Assert.Equal(eventSettings.FilterForCurrentElement, true);
+
+                    var commandSettings = command.GetExtensions<ICommandSettings>().FirstOrDefault();
+                    Assert.NotNull(commandSettings);
+
+                    Assert.Equal(eventSettings.CommandId, commandSettings.Id);
+                }
+
+                return event1;
+            }
+
+            private IAutomationSettingsSchema AssertDeleteCommand(bool verifySettings, DeleteAction action)
+            {
+                var command = this.container.AutomationSettings.FirstOrDefault(set => set.Name.Equals(Properties.Resources.ArtifactExtension_DeleteCommandName));
+                Assert.NotNull(command);
+
+                var commandSettings = command.GetExtensions<ICommandSettings>().FirstOrDefault();
+                Assert.NotNull(commandSettings);
+
+                if (verifySettings)
+                {
+                    Assert.Equal(CustomizationState.False, command.IsCustomizable);
+                    Assert.True(command.IsSystem);
+
+                    Assert.Equal(commandSettings.TypeId, typeof(DeleteArtifactsCommand).FullName);
+
+                    var deleteProperty = (DeleteAction)TypeDescriptor.GetProperties(commandSettings)[Reflector<DeleteArtifactsCommand>.GetPropertyName(c => c.Action)]
+                        .GetValue(commandSettings);
+                    Assert.Equal(action, deleteProperty);
+                }
+
+                return command;
+            }
+
+            private IAutomationSettingsSchema AssertDeleteEvent(bool verifySettings, IAutomationSettingsSchema command)
+            {
+                var event1 = this.container.AutomationSettings.FirstOrDefault(set => set.Name.Equals(Properties.Resources.ArtifactExtension_DeleteEventName));
+                Assert.NotNull(event1);
+
+                var eventSettings = event1.GetExtensions<IEventSettings>().FirstOrDefault();
+                Assert.NotNull(eventSettings);
+
+                if (verifySettings)
+                {
+                    Assert.Equal(CustomizationState.False, event1.IsCustomizable);
+                    Assert.True(event1.IsSystem);
+
+                    Assert.Equal(eventSettings.EventId, typeof(IOnElementDeletingEvent).FullName);
                     Assert.Equal(eventSettings.FilterForCurrentElement, true);
 
                     var commandSettings = command.GetExtensions<ICommandSettings>().FirstOrDefault();

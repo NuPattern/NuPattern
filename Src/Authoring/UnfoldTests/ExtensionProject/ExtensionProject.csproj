@@ -41,6 +41,9 @@
       <Link>$(RuntimeShellVsixFileName)</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <None Include="9ef5c2db-c77c-4341-bc3d-6a77efecf9e9.patterndefinition.diagram">
+      <DependentUpon>PatternModel.patterndefinition</DependentUpon>
+    </None>
     <None Include="source.extension.vsixmanifest">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

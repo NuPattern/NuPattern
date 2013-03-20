@@ -269,46 +269,6 @@
     <value>Wizard</value>
     <comment>DisplayName for DomainProperty &apos;WizardId&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="NuPattern.Library.Automation.PropertySettings.Description" xml:space="preserve">
-    <value>Description for NuPattern.Library.Automation.PropertySettings</value>
-    <comment>Description for DomainClass &apos;PropertySettings&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettings.DisplayName" xml:space="preserve">
-    <value>Property</value>
-    <comment>DisplayName for DomainClass &apos;PropertySettings&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettings/Value.Description" xml:space="preserve">
-    <value>The configured value of the property.</value>
-    <comment>Description for DomainProperty &apos;Value&apos; on DomainClass &apos;PropertySettings&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettings/Value.DisplayName" xml:space="preserve">
-    <value>Value</value>
-    <comment>DisplayName for DomainProperty &apos;Value&apos; on DomainClass &apos;PropertySettings&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettings/Name.Description" xml:space="preserve">
-    <value>The name of the property.</value>
-    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;PropertySettings&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettings/Name.DisplayName" xml:space="preserve">
-    <value>Name</value>
-    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;PropertySettings&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettings.Description" xml:space="preserve">
-    <value>Description for NuPattern.Library.Automation.ValueProviderSettings</value>
-    <comment>Description for DomainClass &apos;ValueProviderSettings&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettings.DisplayName" xml:space="preserve">
-    <value>Value Provider Settings</value>
-    <comment>DisplayName for DomainClass &apos;ValueProviderSettings&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettings/TypeId.Description" xml:space="preserve">
-    <value>The ValueProvider that provides the value of this property.</value>
-    <comment>Description for DomainProperty &apos;TypeId&apos; on DomainClass &apos;ValueProviderSettings&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettings/TypeId.DisplayName" xml:space="preserve">
-    <value>Provider Type</value>
-    <comment>DisplayName for DomainProperty &apos;TypeId&apos; on DomainClass &apos;ValueProviderSettings&apos;</comment>
-  </data>
   <data name="NuPattern.Library.Automation.CommandSettings.Description" xml:space="preserve">
     <value>Configures the settings for adding a command that can be executed on this element.</value>
     <comment>Description for DomainClass &apos;CommandSettings&apos;</comment>
@@ -324,6 +284,14 @@
   <data name="NuPattern.Library.Automation.CommandSettings/TypeId.DisplayName" xml:space="preserve">
     <value>Command Type</value>
     <comment>DisplayName for DomainProperty &apos;TypeId&apos; on DomainClass &apos;CommandSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.CommandSettings/Properties.Description" xml:space="preserve">
+    <value>The design-time properties of the command.</value>
+    <comment>Description for DomainProperty &apos;Properties&apos; on DomainClass &apos;CommandSettings&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.CommandSettings/Properties.DisplayName" xml:space="preserve">
+    <value>Properties</value>
+    <comment>DisplayName for DomainProperty &apos;Properties&apos; on DomainClass &apos;CommandSettings&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.MenuSettings.Description" xml:space="preserve">
     <value>Configures the settings for adding a context menu item for executing other automation on this element.</value>
@@ -482,19 +450,19 @@
     <comment>DisplayName for DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/AssociatedArtifacts.Description" xml:space="preserve">
-    <value>Configures actions for working with artifacts associated with this element. Expand this property to configure.</value>
+    <value>Configures actions for working with solution items associated with this element. Expand this property to configure.</value>
     <comment>Description for DomainProperty &apos;AssociatedArtifacts&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/AssociatedArtifacts.DisplayName" xml:space="preserve">
-    <value>Associated Artifacts</value>
+    <value>Associated Solution Items</value>
     <comment>DisplayName for DomainProperty &apos;AssociatedArtifacts&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/AssociatedArtifacts.Category" xml:space="preserve">
-    <value>Artifacts</value>
+    <value>Solution Items</value>
     <comment>Category for DomainProperty &apos;AssociatedArtifacts&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactActivation.Description" xml:space="preserve">
-    <value>The action to perform on associated artifacts, when this element is &apos;activated&apos; by the user (i.e. double-clicked). A value of &apos;Open&apos; will open the artifact in its default view, a value of &apos;Select&apos; will select the file in Solution Explorer.</value>
+    <value>The action to perform on associated solution items, when this element is &apos;activated&apos; by the user (i.e. double-clicked). A value of &apos;Open&apos; will open the solution item in its default view, a value of &apos;Select&apos; will select the item in &apos;Solution Explorer&apos;.</value>
     <comment>Description for DomainProperty &apos;OnArtifactActivation&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactActivation.DisplayName" xml:space="preserve">
@@ -502,8 +470,20 @@
     <comment>DisplayName for DomainProperty &apos;OnArtifactActivation&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactActivation.Category" xml:space="preserve">
-    <value>Artifacts</value>
+    <value>Solution Items</value>
     <comment>Category for DomainProperty &apos;OnArtifactActivation&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactDeletion.Description" xml:space="preserve">
+    <value>The action to perform on associated solution items, when this element is &apos;deleted&apos; by the user. A value of &apos;DeleteAll&apos; will automatically delete all associated solution items, a value of &apos;PromptUser&apos; prompt the user to select which solution items to delete.</value>
+    <comment>Description for DomainProperty &apos;OnArtifactDeletion&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactDeletion.DisplayName" xml:space="preserve">
+    <value>On Deletion</value>
+    <comment>DisplayName for DomainProperty &apos;OnArtifactDeletion&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactExtension/OnArtifactDeletion.Category" xml:space="preserve">
+    <value>Solution Items</value>
+    <comment>Category for DomainProperty &apos;OnArtifactDeletion&apos; on DomainClass &apos;ArtifactExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.ValidationExtension.Description" xml:space="preserve">
     <value>Configures settings for managing validation of this element.</value>
@@ -613,102 +593,6 @@
     <value>Status Text</value>
     <comment>DisplayName for DomainProperty &apos;StatusText&apos; on DomainClass &apos;DragDropSettings&apos;</comment>
   </data>
-  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider.Description" xml:space="preserve">
-    <value>Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider</value>
-    <comment>Description for DomainClass &apos;PropertySettingsHasValueProvider&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider.DisplayName" xml:space="preserve">
-    <value>Property Settings Has Value Provider</value>
-    <comment>DisplayName for DomainClass &apos;PropertySettingsHasValueProvider&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.Description" xml:space="preserve">
-    <value>Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettings</value>
-    <comment>Description for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.DisplayName" xml:space="preserve">
-    <value>Property Settings</value>
-    <comment>DisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/PropertySettings.PropertyDisplayName" xml:space="preserve">
-    <value>Value Provider</value>
-    <comment>PropertyDisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.Description" xml:space="preserve">
-    <value>Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettings</value>
-    <comment>Description for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.DisplayName" xml:space="preserve">
-    <value>Value Provider Settings</value>
-    <comment>DisplayName for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.PropertySettingsHasValueProvider/ValueProviderSettings.PropertyDisplayName" xml:space="preserve">
-    <value>Owner Property</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;PropertySettingsHasValueProvider&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.Description" xml:space="preserve">
-    <value>Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties</value>
-    <comment>Description for DomainClass &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.DisplayName" xml:space="preserve">
-    <value>Value Provider Settings References Properties</value>
-    <comment>DisplayName for DomainClass &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.Description" xml:space="preserve">
-    <value>Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettings</value>
-    <comment>Description for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.DisplayName" xml:space="preserve">
-    <value>Value Provider Settings</value>
-    <comment>DisplayName for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/ValueProviderSettings.PropertyDisplayName" xml:space="preserve">
-    <value>Properties</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ValueProviderSettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.Description" xml:space="preserve">
-    <value>Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettings</value>
-    <comment>Description for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.DisplayName" xml:space="preserve">
-    <value>Property Settings</value>
-    <comment>DisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties/PropertySettings.PropertyDisplayName" xml:space="preserve">
-    <value>Parent Provider</value>
-    <comment>PropertyDisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;ValueProviderSettingsReferencesProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties.Description" xml:space="preserve">
-    <value>Description for NuPattern.Library.Automation.CommandSettingsHasProperties</value>
-    <comment>Description for DomainClass &apos;CommandSettingsHasProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties.DisplayName" xml:space="preserve">
-    <value>Command Settings Has Properties</value>
-    <comment>DisplayName for DomainClass &apos;CommandSettingsHasProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/CommandSettings.Description" xml:space="preserve">
-    <value>Description for NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettings</value>
-    <comment>Description for DomainRole &apos;CommandSettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/CommandSettings.DisplayName" xml:space="preserve">
-    <value>Command Settings</value>
-    <comment>DisplayName for DomainRole &apos;CommandSettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/CommandSettings.PropertyDisplayName" xml:space="preserve">
-    <value>Properties</value>
-    <comment>PropertyDisplayName for DomainRole &apos;CommandSettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/PropertySettings.Description" xml:space="preserve">
-    <value>Description for NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettings</value>
-    <comment>Description for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/PropertySettings.DisplayName" xml:space="preserve">
-    <value>Property Settings</value>
-    <comment>DisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.CommandSettingsHasProperties/PropertySettings.PropertyDisplayName" xml:space="preserve">
-    <value>Command Settings</value>
-    <comment>PropertyDisplayName for DomainRole &apos;PropertySettings&apos; on DomainRelationship &apos;CommandSettingsHasProperties&apos;</comment>
-  </data>
   <data name="NuPattern.Library.Automation.ArtifactActivatedAction/None.DisplayName" xml:space="preserve">
     <value>None</value>
     <comment>Display name for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;ArtifactActivatedAction&apos;</comment>
@@ -732,6 +616,30 @@
   <data name="NuPattern.Library.Automation.ArtifactActivatedAction/Select.Description" xml:space="preserve">
     <value>Associated artifacts are selected in Solution Explorer.</value>
     <comment>Description for EnumerationLiteral &apos;Select&apos; on DomainEnumeration &apos;ArtifactActivatedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/None.DisplayName" xml:space="preserve">
+    <value>None</value>
+    <comment>Display name for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/None.Description" xml:space="preserve">
+    <value>No action is performed, associated solution items are not deleted from the solution.</value>
+    <comment>Description for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/DeleteAll.DisplayName" xml:space="preserve">
+    <value>DeleteAll</value>
+    <comment>Display name for EnumerationLiteral &apos;DeleteAll&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/DeleteAll.Description" xml:space="preserve">
+    <value>All associated solution items are deleted automatically.</value>
+    <comment>Description for EnumerationLiteral &apos;DeleteAll&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/PromptUser.DisplayName" xml:space="preserve">
+    <value>PromptUser</value>
+    <comment>Display name for EnumerationLiteral &apos;PromptUser&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
+  </data>
+  <data name="NuPattern.Library.Automation.ArtifactDeletedAction/PromptUser.Description" xml:space="preserve">
+    <value>The user is prompted to select which associated solution items to delete.</value>
+    <comment>Description for EnumerationLiteral &apos;PromptUser&apos; on DomainEnumeration &apos;ArtifactDeletedAction&apos;</comment>
   </data>
   <data name="UnrecognizedElementType" xml:space="preserve">
     <value>ElementType {0} is not recognized as a type of domain class which belongs to this domain model.</value>

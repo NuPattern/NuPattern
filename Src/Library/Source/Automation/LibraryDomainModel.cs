@@ -2,18 +2,18 @@
 
 namespace NuPattern.Library.Automation
 {
-	/// <summary>
-	/// Library domain model customization.
-	/// </summary>
-	public partial class LibraryDomainModel
-	{
-		/// <summary>
-		/// Gets the list of non-generated domain model types.
-		/// </summary>
-		/// <returns>List of types.</returns>
-		protected override Type[] GetCustomDomainModelTypes()
-		{
-			return new[]
+    /// <summary>
+    /// Library domain model customization.
+    /// </summary>
+    public partial class LibraryDomainModel
+    {
+        /// <summary>
+        /// Gets the list of non-generated domain model types.
+        /// </summary>
+        /// <returns>List of types.</returns>
+        protected override Type[] GetCustomDomainModelTypes()
+        {
+            return new[]
 			{ 
 				typeof(PatternElementSchemaAddRule),
 				typeof(GuidanceExtensionChangeRule),
@@ -22,8 +22,8 @@ namespace NuPattern.Library.Automation
                 typeof(EventSettingsChangeRule),
                 typeof(AggregatorCommandCommandSettingsDeletingRule),
 				typeof(TemplateSettingsChangeRule),
-				typeof(PropertySettingsChangeRule)
+                typeof(UnfoldVsTemplateCommandChangeRule),
 			};
-		}
-	}
+        }
+    }
 }

@@ -150,7 +150,7 @@ namespace NuPattern.Extensibility.Binding
 		}
 
 		/// <summary>
-		/// When overridden in a class, resets teh property value.
+		/// When overridden in a class, resets the property value.
 		/// </summary>
 		public override void ResetValue(object component)
 		{

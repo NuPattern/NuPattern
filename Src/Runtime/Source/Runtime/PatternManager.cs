@@ -31,6 +31,7 @@ namespace NuPattern.Runtime
     public class PatternManager : IPatternManager
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternManager>();
+        private const string DslVersionAttribute = "dslVersion";
 
         private IServiceProvider serviceProvider;
         private ISolution solution;
@@ -444,15 +445,15 @@ namespace NuPattern.Runtime
                 () =>
                 {
                     var document = XDocument.Load(storeFile);
-                    var dslVersion = new Version(document.Root.Attribute("dslVersion").Value);
+                    var dslVersion = new Version(document.Root.Attribute(DslVersionAttribute).Value);
 
-                    if (dslVersion != Constants.DslVersion)
+                    if (dslVersion != StoreConstants.DslVersion)
                     {
                         if (this.messageService.PromptWarning(
                                 string.Format(CultureInfo.InvariantCulture,
-                                    Properties.Resources.PatternManager_NewerDslVersionUpgrade, Path.GetFileName(this.StoreFile), Constants.ProductName)))
+                                    Properties.Resources.PatternManager_NewerDslVersionUpgrade, Path.GetFileName(this.StoreFile), StoreConstants.ProductName)))
                         {
-                            document.Root.Attribute("dslVersion").Value = Constants.DslVersion.ToString();
+                            document.Root.Attribute(DslVersionAttribute).Value = StoreConstants.DslVersion.ToString();
 
                             VsHelper.CheckOut(this.serviceProvider, storeFile);
 
@@ -727,7 +728,7 @@ namespace NuPattern.Runtime
 
         private static string GetDefaultStateFileName(ISolution solution)
         {
-            return Path.ChangeExtension(Path.GetFileName(solution.PhysicalPath), Constants.RuntimeStoreExtension);
+            return Path.ChangeExtension(Path.GetFileName(solution.PhysicalPath), StoreConstants.RuntimeStoreExtension);
         }
 
         private static IItem[] FindStateFiles(ISolution solution)
@@ -740,7 +741,7 @@ namespace NuPattern.Runtime
 
             return slnItems.Items
                 .OfType<IItem>()
-                .Where(i => i.PhysicalPath.EndsWith(Constants.RuntimeStoreExtension, StringComparison.OrdinalIgnoreCase))
+                .Where(i => i.PhysicalPath.EndsWith(StoreConstants.RuntimeStoreExtension, StringComparison.OrdinalIgnoreCase))
                 .ToArray();
         }
 

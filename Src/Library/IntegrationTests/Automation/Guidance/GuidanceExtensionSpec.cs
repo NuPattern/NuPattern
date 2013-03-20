@@ -140,20 +140,20 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
                     Assert.Equal(commandSettings.TypeId, typeof(InstantiateFeatureCommand).FullName);
 
                     var featureIdProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.FeatureId).Name]
-                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
-                    Assert.Equal(this.guidanceExtension.GuidanceFeatureId, featureIdProperty.Value);
+                        .GetValue(commandSettings) as DesignProperty;
+                    Assert.Equal(this.guidanceExtension.GuidanceFeatureId, featureIdProperty.GetValue());
 
                     var defaultInstanceProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.DefaultInstanceName).Name]
-                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
-                    Assert.Equal(this.guidanceExtension.GuidanceInstanceName, defaultInstanceProperty.Value);
+                        .GetValue(commandSettings) as DesignProperty;
+                    Assert.Equal(this.guidanceExtension.GuidanceInstanceName, defaultInstanceProperty.GetValue());
 
                     var focusOnInstantiationProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.ActivateOnInstantiation).Name]
-                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
-                    Assert.Equal(this.guidanceExtension.GuidanceActivateOnCreation, focusOnInstantiationProperty.Value);
+                        .GetValue(commandSettings) as DesignProperty;
+                    Assert.Equal(this.guidanceExtension.GuidanceActivateOnCreation, focusOnInstantiationProperty.GetValue());
 
                     var sharedInstanceProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.SharedInstance).Name]
-                        .GetValue(commandSettings) as NuPattern.Library.Automation.DesignProperty;
-                    Assert.Equal(this.guidanceExtension.GuidanceSharedInstance, sharedInstanceProperty.Value);
+                        .GetValue(commandSettings) as DesignProperty;
+                    Assert.Equal(this.guidanceExtension.GuidanceSharedInstance, sharedInstanceProperty.GetValue());
                 }
 
                 return command;
@@ -200,20 +200,20 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
 
                     var conditions = BindingSerializer.Serialize(
                         new[]
-						{
-							new ConditionBindingSettings
-							{
-								TypeId = typeof(ElementReferenceExistsCondition).FullName,
-								Properties = 
-								{
-									new Extensibility.Binding.PropertyBindingSettings
-									{
-										Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
-										Value = ReferenceKindConstants.Guidance
-									},
-								}
-							}
-						});
+                        {
+                            new ConditionBindingSettings
+                            {
+                                TypeId = typeof(ElementReferenceExistsCondition).FullName,
+                                Properties = 
+                                {
+                                    new Extensibility.Binding.PropertyBindingSettings
+                                    {
+                                        Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
+                                        Value = ReferenceKindConstants.Guidance
+                                    },
+                                }
+                            }
+                        });
 
                     Assert.Equal(menuSettings.Conditions, conditions);
                 }

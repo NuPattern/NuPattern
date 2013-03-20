@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 namespace NuPattern.Authoring.WorkflowDesign
 {
     /// <summary>
-    /// A custom geometric shape based upon teh rounded rectangle shape.
+    /// A custom geometric shape based upon the rounded rectangle shape.
     /// </summary>
     internal abstract class RoundedRectangleShapeGeometry : Microsoft.VisualStudio.Modeling.Diagrams.RoundedRectangleShapeGeometry
     {

@@ -66,21 +66,21 @@ namespace NuPattern.Runtime.Schema.UnitTests
                 {
                     TypeId = "Foo",
                     Properties = 
-					{
-						new PropertyBindingSettings
-						{
-							Name = "Message", 
-							Value = "Hello",
-						},
-						new PropertyBindingSettings
-						{
-							Name = "From", 
-							ValueProvider = new ValueProviderBindingSettings
-							{
-								TypeId = "CurrentUserProvider", 
-							}
-						},
-					},
+                    {
+                        new PropertyBindingSettings
+                        {
+                            Name = "Message", 
+                            Value = "Hello",
+                        },
+                        new PropertyBindingSettings
+                        {
+                            Name = "From", 
+                            ValueProvider = new ValueProviderBindingSettings
+                            {
+                                TypeId = "CurrentUserProvider", 
+                            }
+                        },
+                    },
                 };
 
                 this.property.ValidationSettings = new IBindingSettings[] { settings };
@@ -103,21 +103,21 @@ namespace NuPattern.Runtime.Schema.UnitTests
                 {
                     TypeId = "Foo",
                     Properties = 
-					{
-						new PropertyBindingSettings
-						{
-							Name = "Message", 
-							Value = "Hello",
-						},
-						new PropertyBindingSettings
-						{
-							Name = "From", 
-							ValueProvider = new ValueProviderBindingSettings
-							{
-								TypeId = "CurrentUserProvider", 
-							}
-						},
-					},
+                    {
+                        new PropertyBindingSettings
+                        {
+                            Name = "Message", 
+                            Value = "Hello",
+                        },
+                        new PropertyBindingSettings
+                        {
+                            Name = "From", 
+                            ValueProvider = new ValueProviderBindingSettings
+                            {
+                                TypeId = "CurrentUserProvider", 
+                            }
+                        },
+                    },
                 };
 
                 ((PropertySchema)this.property).RawValidationRules = BindingSerializer.Serialize<ValidationBindingSettings[]>(new ValidationBindingSettings[] { settings });

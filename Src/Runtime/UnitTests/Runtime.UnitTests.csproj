@@ -201,6 +201,7 @@
     <Compile Include="UI\AutomationMenuOptionViewModelSpec.cs" />
     <Compile Include="UI\AddNewNodeViewModelSpec.cs" />
     <Compile Include="UI\ElementViewModelSpec.cs" />
+    <Compile Include="UI\FilteredItemContainerSpec.cs" />
     <Compile Include="UI\PickerFilterSpec.cs" />
     <Compile Include="UI\SolutionBuilderViewModelSpec.cs" />
     <Compile Include="UI\ProductViewModelSpec.cs" />

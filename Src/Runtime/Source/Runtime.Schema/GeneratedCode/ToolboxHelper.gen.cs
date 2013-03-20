@@ -46,19 +46,19 @@ namespace NuPattern.Runtime.Schema
 		/// See the MSDN documentation for the ToolboxItemFilterAttribute class for more information on toolbox
 		/// item filters.
 		/// </remarks>
-		public const string ToolboxFilterString = "PatternModel.1.2";
+		public const string ToolboxFilterString = "PatternModel.1.3";
 		/// <summary>
 		/// Toolbox item filter string used to identify Collection element tool.
 		/// </summary>
-		public const string CollectionFilterString = "Collection.1.2";
+		public const string CollectionFilterString = "Collection.1.3";
 		/// <summary>
 		/// Toolbox item filter string used to identify Element element tool.
 		/// </summary>
-		public const string ElementFilterString = "Element.1.2";
+		public const string ElementFilterString = "Element.1.3";
 		/// <summary>
 		/// Toolbox item filter string used to identify ExtensionPoint element tool.
 		/// </summary>
-		public const string ExtensionPointFilterString = "ExtensionPoint.1.2";
+		public const string ExtensionPointFilterString = "ExtensionPoint.1.3";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();

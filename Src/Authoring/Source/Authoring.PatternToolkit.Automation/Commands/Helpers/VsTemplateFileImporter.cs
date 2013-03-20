@@ -65,7 +65,18 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
                 tracer.TraceInformation(
                     Resources.VsTemplateFileImporter_TraceDeleteTempFolder, tempFolderPath);
 
-                Directory.Delete(tempFolderPath, true);
+                try
+                {
+                    Directory.Delete(tempFolderPath, true);
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    // Ignore and continue
+                }
+                catch (IOException)
+                {
+                    // Ignore and continue
+                }
             }
         }
 

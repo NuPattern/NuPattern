@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DslLibrary xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="47c59fea-739b-4a85-8f6f-e9e260340928" Description="Library" Name="Library" DisplayName="Library" Namespace="NuPattern.Library.Automation" MinorVersion="2" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
+<DslLibrary xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="47c59fea-739b-4a85-8f6f-e9e260340928" Description="Library" Name="Library" DisplayName="Library" Namespace="NuPattern.Library.Automation" MinorVersion="3" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
     <DomainClass Id="1d522a01-5d23-4d87-8493-dfcbe3d05a9b" Description="Configures the settings for adding a project or item template to unfold, and execute other automation on this element." Name="TemplateSettings" DisplayName="VS Template Launch Point" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
@@ -133,43 +133,6 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="7f53ba11-b54c-4157-945c-eb7963a5066b" Description="Description for NuPattern.Library.Automation.PropertySettings" Name="PropertySettings" DisplayName="Property" Namespace="NuPattern.Library.Automation">
-      <Notes>Skip=true
-Interface=PropertyBindingSettings</Notes>
-      <Properties>
-        <DomainProperty Id="eb262797-d9e2-4a34-8938-4071348434c8" Description="The configured value of the property." Name="Value" DisplayName="Value">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="8caa6961-3c1a-4c63-a69f-70850d88860c" Description="The name of the property." Name="Name" DisplayName="Name" IsElementName="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-      <ElementMergeDirectives>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="ValueProviderSettings" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>PropertySettingsHasValueProvider.ValueProvider</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-      </ElementMergeDirectives>
-    </DomainClass>
-    <DomainClass Id="3f9e25f8-1c05-4ef9-86da-16b4590e29ac" Description="Description for NuPattern.Library.Automation.ValueProviderSettings" Name="ValueProviderSettings" DisplayName="Value Provider Settings" Namespace="NuPattern.Library.Automation">
-      <Notes>Skip=true
-Interface=ValueProviderBindingSettings</Notes>
-      <Properties>
-        <DomainProperty Id="f034691b-d5dc-4b95-bc6d-aaddff62084f" Description="The ValueProvider that provides the value of this property." Name="TypeId" DisplayName="Provider Type">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-    </DomainClass>
     <DomainClass Id="63e8eaf8-6f53-45ea-96f9-b6d8af7276e2" Description="Configures the settings for adding a command that can be executed on this element." Name="CommandSettings" DisplayName="Command" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
@@ -194,17 +157,13 @@ Interface=ValueProviderBindingSettings</Notes>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="ec625787-ee50-4604-9b1e-de6fb588598e" Description="The design-time properties of the command." Name="Properties" DisplayName="Properties">
+          <Notes>Skip=true</Notes>
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
-      <ElementMergeDirectives>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="PropertySettings" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>CommandSettingsHasProperties.Properties</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
-      </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="29b8619f-8cba-4cdc-98ec-7035d9d2c3f8" Description="Configures the settings for adding a context menu item for executing other automation on this element." Name="MenuSettings" DisplayName="ContextMenu Launch Point" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
@@ -346,7 +305,7 @@ Interface=ValueProviderBindingSettings</Notes>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
       </BaseClass>
       <Properties>
-        <DomainProperty Id="41cbff0c-4b29-4540-b9fd-af2e7c93a185" Description="Configures actions for working with artifacts associated with this element. Expand this property to configure." Name="AssociatedArtifacts" DisplayName="Associated Artifacts" Category="Artifacts">
+        <DomainProperty Id="41cbff0c-4b29-4540-b9fd-af2e7c93a185" Description="Configures actions for working with solution items associated with this element. Expand this property to configure." Name="AssociatedArtifacts" DisplayName="Associated Solution Items" Category="Solution Items">
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
@@ -358,9 +317,14 @@ Interface=ValueProviderBindingSettings</Notes>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="593016b6-aa8b-49ff-a5e9-26c7cfafbbfb" Description="The action to perform on associated artifacts, when this element is 'activated' by the user (i.e. double-clicked). A value of 'Open' will open the artifact in its default view, a value of 'Select' will select the file in Solution Explorer." Name="OnArtifactActivation" DisplayName="On Activation" DefaultValue="None" Category="Artifacts" IsBrowsable="false">
+        <DomainProperty Id="593016b6-aa8b-49ff-a5e9-26c7cfafbbfb" Description="The action to perform on associated solution items, when this element is 'activated' by the user (i.e. double-clicked). A value of 'Open' will open the solution item in its default view, a value of 'Select' will select the item in 'Solution Explorer'." Name="OnArtifactActivation" DisplayName="On Activation" DefaultValue="None" Category="Solution Items" IsBrowsable="false">
           <Type>
             <DomainEnumerationMoniker Name="ArtifactActivatedAction" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="7bcdb4f8-c554-4355-9ae6-6cbb0b97d818" Description="The action to perform on associated solution items, when this element is 'deleted' by the user. A value of 'DeleteAll' will automatically delete all associated solution items, a value of 'PromptUser' prompt the user to select which solution items to delete." Name="OnArtifactDeletion" DisplayName="On Deletion" DefaultValue="None" Category="Solution Items" IsBrowsable="false">
+          <Type>
+            <DomainEnumerationMoniker Name="ArtifactDeletedAction" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -447,56 +411,6 @@ Interface=ValueProviderBindingSettings</Notes>
       </Properties>
     </DomainClass>
   </Classes>
-  <Relationships>
-    <DomainRelationship Id="da7276bc-f8a3-471d-9c13-2272264c49be" Description="Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider" Name="PropertySettingsHasValueProvider" DisplayName="Property Settings Has Value Provider" Namespace="NuPattern.Library.Automation" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="d6ca83ae-f203-48a8-a5a0-534c7a8847cd" Description="Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider.PropertySettings" Name="PropertySettings" DisplayName="Property Settings" PropertyName="ValueProvider" Multiplicity="ZeroOne" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Value Provider">
-          <RolePlayer>
-            <DomainClassMoniker Name="PropertySettings" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="605c7185-04d8-4233-a865-69f2e521667e" Description="Description for NuPattern.Library.Automation.PropertySettingsHasValueProvider.ValueProviderSettings" Name="ValueProviderSettings" DisplayName="Value Provider Settings" PropertyName="OwnerProperty" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Owner Property">
-          <RolePlayer>
-            <DomainClassMoniker Name="ValueProviderSettings" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="f1c21f7d-ff90-42a2-bacf-deef2c7411f0" Description="Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties" Name="ValueProviderSettingsReferencesProperties" DisplayName="Value Provider Settings References Properties" Namespace="NuPattern.Library.Automation">
-      <Source>
-        <DomainRole Id="f544718c-e9c6-49f6-bc0e-ab01878c0c2e" Description="Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.ValueProviderSettings" Name="ValueProviderSettings" DisplayName="Value Provider Settings" PropertyName="Properties" PropertyDisplayName="Properties">
-          <RolePlayer>
-            <DomainClassMoniker Name="ValueProviderSettings" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="e1bda564-c196-48d6-b8ed-0d0bb1dd82d9" Description="Description for NuPattern.Library.Automation.ValueProviderSettingsReferencesProperties.PropertySettings" Name="PropertySettings" DisplayName="Property Settings" PropertyName="ParentProvider" Multiplicity="ZeroOne" PropertyDisplayName="Parent Provider">
-          <RolePlayer>
-            <DomainClassMoniker Name="PropertySettings" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-    <DomainRelationship Id="a6a80f96-3fb8-4523-b9f0-a57bcceda592" Description="Description for NuPattern.Library.Automation.CommandSettingsHasProperties" Name="CommandSettingsHasProperties" DisplayName="Command Settings Has Properties" Namespace="NuPattern.Library.Automation" IsEmbedding="true">
-      <Source>
-        <DomainRole Id="b78a78b0-9e86-4825-90d5-c67b36b15752" Description="Description for NuPattern.Library.Automation.CommandSettingsHasProperties.CommandSettings" Name="CommandSettings" DisplayName="Command Settings" PropertyName="Properties" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Properties">
-          <RolePlayer>
-            <DomainClassMoniker Name="CommandSettings" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="7e084d9a-d60a-45b2-807b-5cfa2d8b728a" Description="Description for NuPattern.Library.Automation.CommandSettingsHasProperties.PropertySettings" Name="PropertySettings" DisplayName="Property Settings" PropertyName="CommandSettings" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Command Settings">
-          <RolePlayer>
-            <DomainClassMoniker Name="PropertySettings" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
-  </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
     <ExternalType Name="String" Namespace="System" />
@@ -518,6 +432,13 @@ Interface=ValueProviderBindingSettings</Notes>
         <EnumerationLiteral Description="No action is performed, activated items are neither opened nor selected." Name="None" Value="" />
         <EnumerationLiteral Description="Associated artifacts are opened, in their default view." Name="Open" Value="" />
         <EnumerationLiteral Description="Associated artifacts are selected in Solution Explorer." Name="Select" Value="" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="ArtifactDeletedAction" Namespace="NuPattern.Library.Automation" Description="Description for NuPattern.Library.Automation.ArtifactDeletedAction">
+      <Literals>
+        <EnumerationLiteral Description="No action is performed, associated solution items are not deleted from the solution." Name="None" Value="" />
+        <EnumerationLiteral Description="All associated solution items are deleted automatically." Name="DeleteAll" Value="" />
+        <EnumerationLiteral Description="The user is prompted to select which associated solution items to delete." Name="PromptUser" Value="" />
       </Literals>
     </DomainEnumeration>
   </Types>
@@ -581,50 +502,16 @@ Interface=ValueProviderBindingSettings</Notes>
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="PropertySettings" MonikerAttributeName="" SerializeId="true" MonikerElementName="propertySettingsMoniker" ElementName="propertySettings" MonikerTypeName="PropertySettingsMoniker">
-        <DomainClassMoniker Name="PropertySettings" />
-        <ElementData>
-          <XmlPropertyData XmlName="value">
-            <DomainPropertyMoniker Name="PropertySettings/Value" />
-          </XmlPropertyData>
-          <XmlRelationshipData RoleElementName="valueProvider">
-            <DomainRelationshipMoniker Name="PropertySettingsHasValueProvider" />
-          </XmlRelationshipData>
-          <XmlPropertyData XmlName="name">
-            <DomainPropertyMoniker Name="PropertySettings/Name" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="ValueProviderSettings" MonikerAttributeName="" SerializeId="true" MonikerElementName="valueProviderSettingsMoniker" ElementName="valueProviderSettings" MonikerTypeName="ValueProviderSettingsMoniker">
-        <DomainClassMoniker Name="ValueProviderSettings" />
-        <ElementData>
-          <XmlPropertyData XmlName="typeId">
-            <DomainPropertyMoniker Name="ValueProviderSettings/TypeId" />
-          </XmlPropertyData>
-          <XmlRelationshipData RoleElementName="properties">
-            <DomainRelationshipMoniker Name="ValueProviderSettingsReferencesProperties" />
-          </XmlRelationshipData>
-        </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="PropertySettingsHasValueProvider" MonikerAttributeName="" MonikerElementName="propertySettingsHasValueProviderMoniker" ElementName="propertySettingsHasValueProvider" MonikerTypeName="PropertySettingsHasValueProviderMoniker">
-        <DomainRelationshipMoniker Name="PropertySettingsHasValueProvider" />
-      </XmlClassData>
-      <XmlClassData TypeName="ValueProviderSettingsReferencesProperties" MonikerAttributeName="" MonikerElementName="valueProviderSettingsReferencesPropertiesMoniker" ElementName="valueProviderSettingsReferencesProperties" MonikerTypeName="ValueProviderSettingsReferencesPropertiesMoniker">
-        <DomainRelationshipMoniker Name="ValueProviderSettingsReferencesProperties" />
-      </XmlClassData>
       <XmlClassData TypeName="CommandSettings" MonikerAttributeName="" SerializeId="true" MonikerElementName="commandSettingsMoniker" ElementName="commandSettings" MonikerTypeName="CommandSettingsMoniker">
         <DomainClassMoniker Name="CommandSettings" />
         <ElementData>
           <XmlPropertyData XmlName="typeId">
             <DomainPropertyMoniker Name="CommandSettings/TypeId" />
           </XmlPropertyData>
-          <XmlRelationshipData RoleElementName="properties">
-            <DomainRelationshipMoniker Name="CommandSettingsHasProperties" />
-          </XmlRelationshipData>
+          <XmlPropertyData XmlName="properties" Representation="Element">
+            <DomainPropertyMoniker Name="CommandSettings/Properties" />
+          </XmlPropertyData>
         </ElementData>
-      </XmlClassData>
-      <XmlClassData TypeName="CommandSettingsHasProperties" MonikerAttributeName="" MonikerElementName="commandSettingsHasPropertiesMoniker" ElementName="commandSettingsHasProperties" MonikerTypeName="CommandSettingsHasPropertiesMoniker">
-        <DomainRelationshipMoniker Name="CommandSettingsHasProperties" />
       </XmlClassData>
       <XmlClassData TypeName="MenuSettings" MonikerAttributeName="" SerializeId="true" MonikerElementName="menuSettingsMoniker" ElementName="menuSettings" MonikerTypeName="MenuSettingsMoniker">
         <DomainClassMoniker Name="MenuSettings" />
@@ -689,6 +576,9 @@ Interface=ValueProviderBindingSettings</Notes>
           <XmlPropertyData XmlName="associatedArtifacts">
             <DomainPropertyMoniker Name="ArtifactExtension/AssociatedArtifacts" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="onArtifactDeletion">
+            <DomainPropertyMoniker Name="ArtifactExtension/OnArtifactDeletion" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ValidationExtension" MonikerAttributeName="" SerializeId="true" MonikerElementName="validationExtensionMoniker" ElementName="validationExtension" MonikerTypeName="ValidationExtensionMoniker">
@@ -730,25 +620,4 @@ Interface=ValueProviderBindingSettings</Notes>
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
-  <ConnectionBuilders>
-    <ConnectionBuilder Name="ValueProviderSettingsReferencesPropertiesBuilder">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="ValueProviderSettingsReferencesProperties" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="ValueProviderSettings" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="PropertySettings" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-  </ConnectionBuilders>
 </DslLibrary>

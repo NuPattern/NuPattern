@@ -85,7 +85,7 @@
         If you need to include a file in a VSIX but need its filename changed in the VSIX (e.g. for a generated file),
         The item must be of type <Content>
         Add the property <IncludeInVSIXAs>newname.extension</IncludeInVSIXAs>
-        The item will appear int eh VSIX in teh sam folder structure as in the project.
+        The item will appear in the VSIX in the same folder structure as in the project.
         You can optionally override the destination folder in the VSIX by specifying the property <VSIXSubPath>newpath</VSIXSubPath>
   -->
   <PropertyGroup>

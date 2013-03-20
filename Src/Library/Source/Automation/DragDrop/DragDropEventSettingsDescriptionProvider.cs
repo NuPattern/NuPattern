@@ -5,14 +5,13 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
 using NuPattern.Extensibility;
 using NuPattern.Extensibility.Binding;
-using NuPattern.Library.Properties;
 
 namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Defines a type descriptor provider over <see cref="DragDropSettings"/>.
     /// </summary>
-	public class DragDropEventSettingsDescriptionProvider: ElementTypeDescriptionProvider
+    public class DragDropEventSettingsDescriptionProvider : ElementTypeDescriptionProvider
     {
         /// <summary>
         /// Overridables for the derived class to provide a custom type descriptor.
@@ -56,10 +55,10 @@ namespace NuPattern.Library.Automation
                     d => new SettingsReferencePropertyDescriptor<IDragDropSettings, IWizardSettings>(d, x => x.WizardId));
                 properties.ReplaceDescriptor<DragDropSettings, string>(
                     x => x.DropConditions,
-                    d => new CollectionPropertyDescriptor<ConditionBindingSettings>(d, Resources.SettingsDescriptionProvider_ConditionsEditorCaption));
+                    d => new StringCollectionPropertyDescriptor<ConditionBindingSettings>(d));
 
                 return new PropertyDescriptorCollection(properties.ToArray());
             }
         }
-	}
+    }
 }

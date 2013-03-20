@@ -108,7 +108,7 @@ namespace NuPattern.Extensibility
 				}
 
 				picker.Filter.Kind = settings.Kind;
-				picker.Filter.IncludeFileExtensions = settings.IncludeFileExtensions;
+				picker.Filter.MatchFileExtensions = settings.IncludeFileExtensions;
 				picker.Filter.IncludeEmptyContainers = settings.IncludeEmptyContainers;
 			}
 		}

@@ -56,7 +56,7 @@ namespace NuPattern.Extensibility.Binding
             {
                 if (this.IsConfigured() && !this.typeId.Equals(value, StringComparison.OrdinalIgnoreCase))
                 {
-                    this.Properties.Clear();
+                    this.properties.Clear();
                 }
 
                 this.typeId = value;
@@ -68,6 +68,7 @@ namespace NuPattern.Extensibility.Binding
         /// Gets the optional property bindings.
         /// </summary>
         [DataMember]
+        [Browsable(false)]
         public IList<IPropertyBindingSettings> Properties
         {
             get { return this.properties; }
