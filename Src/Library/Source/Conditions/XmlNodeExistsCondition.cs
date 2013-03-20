@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.XPath;
@@ -7,6 +8,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
@@ -80,6 +82,7 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         [DisplayNameResource("ModifyXmlCommand_Namespaces_DisplayName", typeof(Resources))]
         [DescriptionResource("ModifyXmlCommand_Namespaces_Description", typeof(Resources))]
+        [TypeConverter(typeof(DesignCollectionConverter<XmlNamespace>))]
         public Collection<XmlNamespace> Namespaces { get; set; }
 
         /// <summary>

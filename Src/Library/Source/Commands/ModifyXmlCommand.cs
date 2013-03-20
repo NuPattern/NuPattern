@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
+using NuPattern.Extensibility.Binding;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 
@@ -104,6 +105,7 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [DisplayNameResource("ModifyXmlCommand_Namespaces_DisplayName", typeof(Resources))]
         [DescriptionResource("ModifyXmlCommand_Namespaces_Description", typeof(Resources))]
+        [TypeConverter(typeof(DesignCollectionConverter<XmlNamespace>))]
         public Collection<XmlNamespace> Namespaces { get; set; }
 
         /// <summary>

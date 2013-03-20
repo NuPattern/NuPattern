@@ -107,7 +107,7 @@ namespace NuPattern.Extensibility.Binding
                 // Use declared compatible converter or default design converter
                 var baseConverter = this.descriptor.Converter;
                 if (baseConverter != null
-                    && baseConverter.GetType().IsOfGenericType(typeof(DesignCollectionConverter<,>)))
+                    && baseConverter.GetType().IsOfGenericType(typeof(DesignCollectionConverter<>)))
                 {
                     return baseConverter;
                 }

@@ -11,15 +11,13 @@ namespace NuPattern.Extensibility.Binding
     /// <summary>
     /// Converts between collections and string values for both runtime and design time.
     /// </summary>
-    public class DesignCollectionConverter<TCollection, TCollected> : DesignCollectionConverter
-        where TCollection : Collection<TCollected>
-        where TCollected : class
+    public class DesignCollectionConverter<T> : DesignCollectionConverter where T : class
     {
         /// <summary>
         /// Creates a new instance of the <see cref="DesignCollectionConverter"/> class.
         /// </summary>
         public DesignCollectionConverter()
-            : base(typeof(TCollection))
+            : base(typeof(Collection<T>))
         {
         }
     }

@@ -10,7 +10,7 @@ namespace NuPattern.Library.Design
     /// <summary>
     /// Command references type converter
     /// </summary>
-    public class CommandReferencesConverter : DesignCollectionConverter<Collection<CommandReference>, CommandReference>
+    public class CommandReferencesConverter : DesignCollectionConverter<CommandReference>
     {
         /// <summary>
         /// Converts the given object to the type of this converter, using the specified context and culture information.
