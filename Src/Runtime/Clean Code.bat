@@ -41,10 +41,12 @@ for /f "delims=" %%a in ('dir /ah-hr/s/b ~*.*') do (del /f/q "%%a")
 echo Cleaned Successfully!
 color 0A
 pause
-goto :EOF
+color
+exit /b 0
 
 :error
-echo Failed Building! error #%errorlevel%
+echo Failed Cleaning! error #%errorlevel%
 color 04
 pause
-exit %errorlevel%
+color
+exit /b %errorlevel%
