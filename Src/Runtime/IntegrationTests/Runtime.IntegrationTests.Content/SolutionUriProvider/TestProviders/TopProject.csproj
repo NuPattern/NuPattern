@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B13B408F-4969-48C0-85C2-227461953FA7}</ProjectGuid>
+    <ProjectGuid>{46F565BA-4071-4ACE-A876-BEBFFF6A8B55}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestProviders2</RootNamespace>
-    <AssemblyName>TestProviders2</AssemblyName>
+    <RootNamespace>TestProviders</RootNamespace>
+    <AssemblyName>TestProviders</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,10 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-		<Compile Include="TopLevelProjectItemWithItemGuid.cs">
-			<ItemGuid>B3FA54F7-EF27-4EEB-A15A-05EF37EEB0CF</ItemGuid>
-		</Compile>
-    <Compile Include="TopLevelProjectItem.cs" />
+    <Compile Include="TopProjectFolder\SecProjectFolder\TrdProjectFolder\TrdProjectFolderItem.cs">
+      <ItemGuid>0F8E541A-784C-4EB7-AB71-BEEAEF10FF95</ItemGuid>
+    </Compile>
+    <Compile Include="TopProjectFolder\SecProjectFolder\SecProjectFolderItem.cs">
+      <ItemGuid>827D5E95-B27A-49D9-8CCC-5B6B8794D1BB</ItemGuid>
+    </Compile>
+    <Compile Include="TopProjectFolder\TopProjectFolderItem.cs">
+      <ItemGuid>D6C06317-BA19-4E3C-8F6F-216AA2607172</ItemGuid>
+    </Compile>
+    <Compile Include="TopProjectItem.cs">
+      <ItemGuid>D2592611-C2DB-4CB0-AFF3-C1CF8102DCD6</ItemGuid>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
