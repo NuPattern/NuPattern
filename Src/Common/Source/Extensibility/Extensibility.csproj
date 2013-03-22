@@ -350,6 +350,10 @@
       <Project>{B2B1ED0A-60E0-4A5C-822A-605527663E0B}</Project>
       <Name>Extensibility.Serialization</Name>
     </ProjectReference>
+    <ProjectReference Include="..\VisualStudio\VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>VisualStudio</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

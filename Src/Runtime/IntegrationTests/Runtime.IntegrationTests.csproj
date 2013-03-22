@@ -233,6 +233,10 @@
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
       <Name>Extensibility</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Common\Source\VisualStudio\VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>VisualStudio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IntegrationTests.SampleVsix\Runtime.IntegrationTests.SampleVsix.csproj">
       <Project>{BBD7F731-F49B-4A10-90A0-9CDE33D6B745}</Project>
       <Name>Runtime.IntegrationTests.SampleVsix</Name>

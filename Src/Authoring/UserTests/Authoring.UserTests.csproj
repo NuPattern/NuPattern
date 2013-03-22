@@ -27,6 +27,10 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="NuPattern.Runtime">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.dll</HintPath>
       <Private>True</Private>

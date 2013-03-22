@@ -38,7 +38,11 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
       <Private>false</Private>
     </Reference>
-		<Reference Include="NuPattern.Runtime.Schema">
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Runtime.Schema">
 			<HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
 			<Private>True</Private>
 		</Reference>

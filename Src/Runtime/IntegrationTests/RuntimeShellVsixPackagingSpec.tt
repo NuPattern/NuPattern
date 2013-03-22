@@ -18,16 +18,16 @@ namespace NuPattern.Runtime.IntegrationTests
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]
         public class GivenTheCompiledVsix : VsixPackagingSpec.GivenAVsix
         {
-			/// <summary>
-			/// Returns the relative path to the deployed Vsix file in the project
-			/// </summary>
-			protected override string DeployedVsixItemPath
-			{
-				get
-				{
-					return DeployedVsixItem;
-				}
-			}
+            /// <summary>
+            /// Returns the relative path to the deployed Vsix file in the project
+            /// </summary>
+            protected override string DeployedVsixItemPath
+            {
+                get
+                {
+                    return DeployedVsixItem;
+                }
+            }
          
             [TestMethod, TestCategory("Integration")]
             public void ThenVsixInfoCorrect()
@@ -38,21 +38,21 @@ namespace NuPattern.Runtime.IntegrationTests
                 Assert.Equal(@"<#=VsixInfo.PatternToolkitRuntime.Description#>", this.VsixInfo.Header.Description);
                 Assert.Equal(@"<#=VsixInfo.PatternToolkitRuntime.Author#>", this.VsixInfo.Header.Author);
                 Assert.Equal("<#=VsixInfo.PatternToolkitRuntime.Version#>", this.VsixInfo.Header.Version.ToString());
-				
-				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
-				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
-				Assert.Equal(@"Resources\VsixIconRunTime.png", this.VsixInfo.Header.Icon);
-				Assert.Equal(@"Resources\VsixPreviewRunTime.png", this.VsixInfo.Header.PreviewImage);
-				Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitRuntime.MoreInfoUrl#>"), this.VsixInfo.Header.MoreInfoUrl);
-				Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitRuntime.GettingStartedUrl#>"), this.VsixInfo.Header.GettingStartedGuide);
+                
+                //License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
+                Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
+                Assert.Equal(@"Resources\VsixIconRunTime.png", this.VsixInfo.Header.Icon);
+                Assert.Equal(@"Resources\VsixPreviewRunTime.png", this.VsixInfo.Header.PreviewImage);
+                Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitRuntime.MoreInfoUrl#>"), this.VsixInfo.Header.MoreInfoUrl);
+                Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitRuntime.GettingStartedUrl#>"), this.VsixInfo.Header.GettingStartedGuide);
 
                 //SupportedFrameworkRuntimeEdition
 #if VSVER10
-				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMinVersion.ToString());
-				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMaxVersion.ToString());
+                Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMinVersion.ToString());
+                Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMaxVersion.ToString());
 #endif
 #if VSVER11
-				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
+                Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
                 Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
 #endif
                 //SupportedProducts
@@ -75,21 +75,21 @@ namespace NuPattern.Runtime.IntegrationTests
                             "PatternModelSchema.xsd",
                             "ProductStateSchema.xsd",
                         }));
-			}
+            }
 
-			[TestMethod, TestCategory("Integration")]
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsGuidance()
             {
                 //Guidance (\\GeneratedCode\Gudiance\Content\*
-				Assert.True(this.FolderNotEmpty(@"GeneratedCode\Guidance\Content", "*.mht"));
+                Assert.True(this.FolderNotEmpty(@"GeneratedCode\Guidance\Content", "*.mht"));
             }
 
-			[TestMethod, TestCategory("Integration")]
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsAssets()
             {
-			}
+            }
 
-			[TestMethod, TestCategory("Integration")]
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsResources()
             {
                 //Schema files (\Resources\*)
@@ -99,17 +99,17 @@ namespace NuPattern.Runtime.IntegrationTests
                             "VsixIconRunTime.png",
                             "VsixPreviewRunTime.png",
                         }));
-			}
-						
-			[TestMethod, TestCategory("Integration")]
+            }
+                        
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsRedistributables()
             {
                 //Redist files
                 Assert.True(this.FolderContainsExclusive("",
                     new[]
                         {
-							"extension.vsixmanifest",
-							//"[Content_Types].xml",
+                            "extension.vsixmanifest",
+                            //"[Content_Types].xml",
                             "LICENSE.txt",
 
                             //Auxillary Assemblies
@@ -141,8 +141,9 @@ namespace NuPattern.Runtime.IntegrationTests
                             "NuPattern.Runtime.Shell.dll",
                             "NuPattern.Runtime.Shell.pkgdef",
                             "NuPattern.Runtime.Store.dll",
+                            "NuPattern.VisualStudio.dll",
 
-							// XML documentation
+                            // XML documentation
                             //"NuPattern.Common.Presentation.xml",
                             "NuPattern.Extensibility.xml",
                             //"NuPattern.Extensibility.Serialization.xml",
@@ -152,6 +153,7 @@ namespace NuPattern.Runtime.IntegrationTests
                             "NuPattern.Runtime.Schema.xml",
                             //"NuPattern.Runtime.Shell.xml",
                             //"NuPattern.Runtime.Store.xml",
+                            "NuPattern.VisualStudio.xml",
                         }));
             }
         }

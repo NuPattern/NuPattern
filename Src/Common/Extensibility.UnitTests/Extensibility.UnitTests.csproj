@@ -119,6 +119,10 @@
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
       <Name>Extensibility</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Source\VisualStudio\VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>VisualStudio</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
