@@ -5,15 +5,18 @@ using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.ComponentModel;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Extensibility.Design;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// ExtensionPointSchema type descriptor provider. 
     /// </summary>
-    public class ExtensionPointSchemaTypeDescriptionProvider : ElementTypeDescriptionProvider
+    internal class ExtensionPointSchemaTypeDescriptionProvider : ElementTypeDescriptionProvider
     {
         /// <summary>
         /// Overridables for the derived class to provide a custom type descriptor.
@@ -127,8 +130,8 @@ namespace NuPattern.Runtime.Schema
 
             var newAttributes = filteredAttributes.Concat(
                 new Attribute[] { 
-						new DescriptionAttribute(description), 
-						new DisplayNameAttribute(displayName) });
+                        new DescriptionAttribute(description), 
+                        new DisplayNameAttribute(displayName) });
 
             return new AttributeCollection(newAttributes.ToArray());
         }

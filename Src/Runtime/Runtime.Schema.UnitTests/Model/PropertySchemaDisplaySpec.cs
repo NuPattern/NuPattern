@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel;
 using NuPattern.Extensibility;
 
 namespace NuPattern.Runtime.Schema.UnitTests
@@ -17,7 +18,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
         {
             protected PatternModelSchema PatternModel { get; set; }
 
-            protected PropertySchema Property { get; set; }
+            internal PropertySchema Property { get; set; }
 
             [TestInitialize]
             public virtual void InitializeContext()

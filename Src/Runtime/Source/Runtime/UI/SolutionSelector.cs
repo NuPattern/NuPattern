@@ -4,16 +4,15 @@ using System.Linq;
 using System.Windows;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// A selector that displays solution items
     /// </summary>
-    [CLSCompliant(false)]
-    public class SolutionSelector : ISolutionSelector
+    internal class SolutionSelector : ISolutionSelector
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SolutionSelector>();
 

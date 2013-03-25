@@ -162,9 +162,6 @@
   <data name="SolutionBuilderViewModel_FailedToRenderElements" xml:space="preserve">
     <value>Failed to add child nodes to the element '{0}'.</value>
   </data>
-  <data name="VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot" xml:space="preserve">
-    <value>Failed to retrieve registry root suffix of the currently running Visual Studio instance.</value>
-  </data>
   <data name="PatternManager_FailedToCloseOpenedStore" xml:space="preserve">
     <value>Failed to properly unload the currently opened solution product state file '{0}'.</value>
   </data>
@@ -267,9 +264,6 @@
   <data name="TextTemplateUriProvider_TraceInvalidExtensionRelative" xml:space="preserve">
     <value>Uri '{0}' does not contain a valid extension-relative path. It must be of the form: t4://extension/[extension-identifier]/[relative-path-to-t4-file].</value>
   </data>
-  <data name="CustomToolRunnerTemplateWizard_FailedToRunCustomTools" xml:space="preserve">
-    <value>Failed to run associated Custom Tool on project items.</value>
-  </data>
   <data name="ProductElementViewModel_AddMenuText" xml:space="preserve">
     <value>Add</value>
   </data>
@@ -324,9 +318,6 @@
   <data name="SchemaResource_FailedToLoadSchemaStream" xml:space="preserve">
     <value>Schema stream was not found as an embedded resource named '{0}' (or '{1}') in assembly '{2}'.</value>
   </data>
-  <data name="FixLinkPathTemplateWizard_FailedToFixLinkPaths" xml:space="preserve">
-    <value>Failed to fix linked project item paths.</value>
-  </data>
   <data name="SolutionPickerBaseViewModel_EmptyItemsMessage" xml:space="preserve">
     <value>There are no files to select in the current solution.</value>
   </data>
@@ -347,38 +338,8 @@ Previous versions of these state files cannot be opened by the 'Solution Builder
 
 Would you like to automatically upgrade this file to the current version?</value>
   </data>
-  <data name="SolutionNameTemplateWizard_ContextSolutionName" xml:space="preserve">
-    <value>Found contextual solution name {0}.</value>
-  </data>
-  <data name="SolutionNameTemplateWizard_NewContextSolution" xml:space="preserve">
-    <value>No existing contextual solution found. Setting {0} as the solution name.</value>
-  </data>
   <data name="EndStoreEventBufferingTemplateWizard_CompletingScope" xml:space="preserve">
     <value>Completing existing active scope.</value>
-  </data>
-  <data name="FixLinkPathTemplateWizard_LinkFixed" xml:space="preserve">
-    <value>Fixed item {0} to link to {1}.</value>
-  </data>
-  <data name="GuidGeneratorTemplateWizard_GeneratedNewGuid" xml:space="preserve">
-    <value>Generated new Guid available on template replacement with the key {0}.</value>
-  </data>
-  <data name="OpenDesignerTemplateWizard_DesignerItemNotFound" xml:space="preserve">
-    <value>Designer item for file {0} was not found.</value>
-  </data>
-  <data name="OpenDesignerTemplateWizard_OpeningDesigner" xml:space="preserve">
-    <value>Opening designer file {0}.</value>
-  </data>
-  <data name="OpenDesignerTemplateWizard_RetrievedDesignerFile" xml:space="preserve">
-    <value>Designer file name with key $patterndefinition$ was not found in the replacement dictionary.</value>
-  </data>
-  <data name="ReplacementTemplateWizard_Replacing" xml:space="preserve">
-    <value>Processing custom replacement {0}={1}.</value>
-  </data>
-  <data name="CustomToolRunnerTemplateWizard_RunningCustomTool" xml:space="preserve">
-    <value>Running custom tool {0} on item {1} because it has RunCustomToolOnUnfold.</value>
-  </data>
-  <data name="VsRootSuffixTemplateWizard_RootSuffixDetermined" xml:space="preserve">
-    <value>Determined VS root suffix as {0}.</value>
   </data>
   <data name="DroppedItemContainerValueProvider_Description" xml:space="preserve">
     <value>Item Dropped from Solution Explorer</value>

@@ -10,11 +10,15 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings.Design;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Library.TypeEditors
 {
@@ -44,8 +48,6 @@ namespace NuPattern.Library.TypeEditors
             Guard.NotNull(() => context, context);
             Guard.NotNull(() => provider, provider);
             Guard.NotNull(() => value, value);
-
-            var solution = provider.GetService<ISolution>();
 
             var uriService = provider.GetService<IFxrUriReferenceService>();
 

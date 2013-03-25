@@ -16,7 +16,7 @@ namespace NuPattern.Library.Automation
 	/// Exports the 'TemplateSettings' extension element.
 	/// </summary>
 	[ExportedAutomation(ExportingType = typeof(TemplateSettings), IconPath = "pack://application:,,,/NuPattern.Library;component/Resources/AutomationSettingsTemplateSettings.png")]
-	public partial class TemplateSettings
+	partial class TemplateSettings
 	{
 	}
 	
@@ -24,7 +24,7 @@ namespace NuPattern.Library.Automation
 	/// Exports the 'EventSettings' extension element.
 	/// </summary>
 	[ExportedAutomation(ExportingType = typeof(EventSettings), IconPath = "pack://application:,,,/NuPattern.Library;component/Resources/AutomationSettingsEventSettings.png")]
-	public partial class EventSettings
+	partial class EventSettings
 	{
 	}
 	
@@ -32,7 +32,7 @@ namespace NuPattern.Library.Automation
 	/// Exports the 'CommandSettings' extension element.
 	/// </summary>
 	[ExportedAutomation(ExportingType = typeof(CommandSettings), IconPath = "pack://application:,,,/NuPattern.Library;component/Resources/AutomationSettingsCommandSettings.png")]
-	public partial class CommandSettings
+	partial class CommandSettings
 	{
 	}
 	
@@ -40,7 +40,7 @@ namespace NuPattern.Library.Automation
 	/// Exports the 'MenuSettings' extension element.
 	/// </summary>
 	[ExportedAutomation(ExportingType = typeof(MenuSettings), IconPath = "pack://application:,,,/NuPattern.Library;component/Resources/AutomationSettingsMenuSettings.png")]
-	public partial class MenuSettings
+	partial class MenuSettings
 	{
 	}
 	
@@ -48,7 +48,7 @@ namespace NuPattern.Library.Automation
 	/// Exports the 'WizardSettings' extension element.
 	/// </summary>
 	[ExportedAutomation(ExportingType = typeof(WizardSettings), IconPath = "pack://application:,,,/NuPattern.Library;component/Resources/AutomationSettingsWizardSettings.png")]
-	public partial class WizardSettings
+	partial class WizardSettings
 	{
 	}
 	
@@ -56,7 +56,7 @@ namespace NuPattern.Library.Automation
 	/// Exports the 'DragDropSettings' extension element.
 	/// </summary>
 	[ExportedAutomation(ExportingType = typeof(DragDropSettings), IconPath = "pack://application:,,,/NuPattern.Library;component/Resources/AutomationSettingsDragDropSettings.png")]
-	public partial class DragDropSettings
+	partial class DragDropSettings
 	{
 	}
 }

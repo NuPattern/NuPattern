@@ -201,21 +201,21 @@ namespace NuPattern.Library.UnitTests.Commands
                     Name = "Solution.sln",
                     PhysicalPath = "C:\\Temp",
                     Items = 
-					{
-						new SolutionFolder
-						{
-							Name = "Solution Items", 
-						},
-						new Project
-						{
-							Name = "Project",
-							Items = 
-							{
-								new Folder { Name = "Folder" },
-								new Folder { Name = "Foo" },
-							}
-						},
-					}
+                    {
+                        new SolutionFolder
+                        {
+                            Name = "Solution Items", 
+                        },
+                        new Project
+                        {
+                            Name = "Project",
+                            Items = 
+                            {
+                                new Folder { Name = "Folder" },
+                                new Folder { Name = "Foo" },
+                            }
+                        },
+                    }
                 };
             }
         }

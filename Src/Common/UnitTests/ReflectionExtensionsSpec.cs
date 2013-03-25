@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NuPattern.Extensibility;
+using NuPattern.Reflection;
 
 namespace NuPattern.Common.UnitTests
 {

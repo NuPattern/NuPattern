@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Windows.Forms;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 /// <summary>
@@ -53,6 +54,29 @@ public class IntegrationTest
                 RunXCopy(sourceDir, Path.Combine(this.DeploymentDirectory, deploymentItem.OutputDirectory));
             }
         }
+    }
+
+    protected static void DoActionWithWait(int millisecondsToWait, Action action)
+    {
+        DoActionWithWaitAndRetry(action, millisecondsToWait, 1, () => true);
+    }
+
+    protected static void DoActionWithWaitAndRetry(Action action, int millisecondsToWait, int numberOfRetries, Func<bool> retryCondition)
+    {
+        int retry = 0;
+
+        do
+        {
+            action();
+
+            if (retryCondition())
+            {
+                System.Threading.Thread.Sleep(millisecondsToWait);
+                Application.DoEvents();
+                retry++;
+            }
+        }
+        while (retryCondition() && retry < numberOfRetries);
     }
 
     private string TestDirectory

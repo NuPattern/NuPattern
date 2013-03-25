@@ -14,7 +14,7 @@ namespace NuPattern.Runtime.UnitTests.Store
         [TestClass]
         public class GivenARuntimeStore
         {
-            public ProductState ProductStore { get; private set; }
+            internal ProductState ProductStore { get; private set; }
             internal DslTestStore<ProductStateStoreDomainModel> DslStore { get; private set; }
 
             [TestInitialize]
@@ -99,9 +99,9 @@ namespace NuPattern.Runtime.UnitTests.Store
             {
                 ((Element)this.element).Info = Mock.Of<IElementInfo>(elei =>
                     elei.ExtensionPoints == new[] 
-					{ 
-						Mock.Of<IExtensionPointInfo>(epi => epi.RequiredExtensionPointId == "Foo") 
-					});
+                    { 
+                        Mock.Of<IExtensionPointInfo>(epi => epi.RequiredExtensionPointId == "Foo") 
+                    });
 
                 IElement extElement = null;
                 var extension = this.element.CreateExtension(p =>
@@ -115,9 +115,9 @@ namespace NuPattern.Runtime.UnitTests.Store
                     );
                     ((Product)p).Info = Mock.Of<IPatternInfo>(pei =>
                         pei.ProvidedExtensionPoints == new[] 
-						{ 
-							Mock.Of<IProvidedExtensionPointInfo>(epi => epi.ExtensionPointId == "Foo") 
-						});
+                        { 
+                            Mock.Of<IProvidedExtensionPointInfo>(epi => epi.ExtensionPointId == "Foo") 
+                        });
                 });
 
                 var root = extElement.Root;

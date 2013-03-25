@@ -1,4 +1,4 @@
-﻿using NuPattern.Extensibility.Binding;
+﻿using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Conditions;
 using NuPattern.Library.Events;
@@ -10,7 +10,7 @@ namespace NuPattern.Library.Automation
     /// <summary>
     /// Customizations for the <see cref="ArtifactExtension"/> class.
     /// </summary>
-    public partial class ArtifactExtension
+    partial class ArtifactExtension
     {
         private const string OpenIconPath = "";//"resources/commandopensolutionitem.png";
         private const string NavigateIconPath = "";//"resources/commandnavigatesolutionitem.png";

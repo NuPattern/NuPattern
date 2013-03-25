@@ -1,96 +1,96 @@
 ﻿<ResourceDictionary
-	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:l="clr-namespace:NuPattern.Common.Presentation">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:l="clr-namespace:NuPattern.Presentation">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="VsVersionStyles.gen.xaml" />
     </ResourceDictionary.MergedDictionaries>
     
-	<ControlTemplate x:Key="ListViewItem.Template" TargetType="ListViewItem">
-		<Border SnapsToDevicePixels="true" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2">
-			<Border x:Name="InnerBorder" BorderThickness="1" CornerRadius="1">
-				<Grid>
-					<Grid.RowDefinitions>
-						<RowDefinition MaxHeight="11"/>
-						<RowDefinition/>
-					</Grid.RowDefinitions>
-					<GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Grid.RowSpan="2"/>
-				</Grid>
-			</Border>
-		</Border>
-		<ControlTemplate.Triggers>
-			<Trigger Property="IsMouseOver" Value="true">
+    <ControlTemplate x:Key="ListViewItem.Template" TargetType="ListViewItem">
+        <Border SnapsToDevicePixels="true" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2">
+            <Border x:Name="InnerBorder" BorderThickness="1" CornerRadius="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition MaxHeight="11"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Grid.RowSpan="2"/>
+                </Grid>
+            </Border>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Background" Value="{StaticResource  VsVersion.ListViewItem.HoverFill}"/>
                 <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.HoverBorder}"/>
             </Trigger>
-			<Trigger Property="IsSelected" Value="true">
+            <Trigger Property="IsSelected" Value="true">
                 <Setter Property="Background" Value="{StaticResource VsVersion.ListViewItem.SelectedFill}"/>
                 <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.SelectedBorder}"/>
                 <Setter Property="BorderBrush" TargetName="InnerBorder" Value="{StaticResource VsVersion.ListViewItem.InnerBorder.SelectedBorder}"/>
-			</Trigger>
-			<MultiTrigger>
-				<MultiTrigger.Conditions>
-					<Condition Property="IsSelected" Value="true"/>
-					<Condition Property="Selector.IsSelectionActive" Value="false"/>
-				</MultiTrigger.Conditions>
+            </Trigger>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsSelected" Value="true"/>
+                    <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                </MultiTrigger.Conditions>
                 <Setter Property="Background" Value="{StaticResource VsVersion.ListViewItem.SelectedInactiveFill}"/>
                 <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.SelectedInactiveBorder}"/>
                 <Setter Property="BorderBrush" TargetName="InnerBorder" Value="{StaticResource VsVersion.ListViewItem.InnerBorder.SelectedInactiveBorder}"/>
             </MultiTrigger>
-			<MultiTrigger>
-				<MultiTrigger.Conditions>
-					<Condition Property="IsSelected" Value="true"/>
-					<Condition Property="IsMouseOver" Value="true"/>
-				</MultiTrigger.Conditions>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsSelected" Value="true"/>
+                    <Condition Property="IsMouseOver" Value="true"/>
+                </MultiTrigger.Conditions>
                 <Setter Property="Background" Value="{StaticResource VsVersion.ListViewItem.SelectedHoverFill}"/>
                 <Setter Property="BorderBrush" Value="{StaticResource VsVersion.ListViewItem.SelectedHoverBorder}"/>
             </MultiTrigger>
-			<Trigger Property="IsEnabled" Value="false">
-				<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
-			</Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+            </Trigger>
         </ControlTemplate.Triggers>
-	</ControlTemplate>
+    </ControlTemplate>
 
-	<Style TargetType="ListViewItem">
-		<Setter Property="Background" Value="Transparent"/>
-		<Setter Property="BorderBrush" Value="Transparent"/>
-		<Setter Property="BorderThickness" Value="1"/>
-		<Setter Property="Margin" Value="5,0,0,1"/>
-		<Setter Property="Padding" Value="5,2,5,2"/>
-		<Setter Property="VerticalContentAlignment" Value="Center"/>
-		<Setter Property="Template" Value="{StaticResource ListViewItem.Template}" />
+    <Style TargetType="ListViewItem">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="5,0,0,1"/>
+        <Setter Property="Padding" Value="5,2,5,2"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template" Value="{StaticResource ListViewItem.Template}" />
     </Style>
 
-	<Style TargetType="GridViewColumnHeader">
-		<Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    <Style TargetType="GridViewColumnHeader">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
     </Style>
 
-	<Style TargetType="ListView">
-		<Setter Property="BorderThickness" Value="0" />
+    <Style TargetType="ListView">
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Background" Value="{DynamicResource VsVersion.ListView.Fill}"/>
         <Setter Property="Foreground" Value="{DynamicResource VsVersion.Controls.Text}"/>
     </Style>
 
-	<DataTemplate x:Key="SortHeader">
-		<Grid Margin="3,0">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*" />
-				<ColumnDefinition Width="20" />
-			</Grid.ColumnDefinitions>
-			<TextBlock Text="{Binding}" Grid.Column="0" HorizontalAlignment="Left" />
-			<Path x:Name="arrow" StrokeThickness="1" Fill="DarkGray" Visibility="Hidden" Grid.Column="1" />
-		</Grid>
-		<DataTemplate.Triggers>
-			<DataTrigger Binding="{Binding Path=Column.(l:SortBehavior.SortDirection),RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type GridViewColumnHeader}}}" Value="Ascending">
-				<Setter TargetName="arrow" Property="Data" Value="M 5,10 L 15,10 L 10,5" />
-				<Setter TargetName="arrow" Property="Visibility" Value="Visible" />
-			</DataTrigger>
-			<DataTrigger Binding="{Binding Path=Column.(l:SortBehavior.SortDirection),RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type GridViewColumnHeader}}}" Value="Descending">
-				<Setter TargetName="arrow" Property="Data" Value="M 5,5 L 10,10 L 15,5" />
-				<Setter TargetName="arrow" Property="Visibility" Value="Visible" />
-			</DataTrigger>
-		</DataTemplate.Triggers>
-	</DataTemplate>
+    <DataTemplate x:Key="SortHeader">
+        <Grid Margin="3,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="{Binding}" Grid.Column="0" HorizontalAlignment="Left" />
+            <Path x:Name="arrow" StrokeThickness="1" Fill="DarkGray" Visibility="Hidden" Grid.Column="1" />
+        </Grid>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=Column.(l:SortBehavior.SortDirection),RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type GridViewColumnHeader}}}" Value="Ascending">
+                <Setter TargetName="arrow" Property="Data" Value="M 5,10 L 15,10 L 10,5" />
+                <Setter TargetName="arrow" Property="Visibility" Value="Visible" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=Column.(l:SortBehavior.SortDirection),RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type GridViewColumnHeader}}}" Value="Descending">
+                <Setter TargetName="arrow" Property="Data" Value="M 5,5 L 10,10 L 15,5" />
+                <Setter TargetName="arrow" Property="Visibility" Value="Visible" />
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
 
 </ResourceDictionary>

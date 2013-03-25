@@ -8,7 +8,9 @@ using NuPattern.Extensibility;
 using NuPattern.Library.Automation.Template;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation
 {
@@ -16,7 +18,7 @@ namespace NuPattern.Library.Automation
     /// Custom validation rules.
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class TemplateSettings
+    partial class TemplateSettings
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<TemplateSettings>();
 

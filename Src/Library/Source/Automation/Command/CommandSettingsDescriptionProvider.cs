@@ -4,15 +4,16 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings.Design;
+using NuPattern.Reflection;
+using NuPattern.Runtime;
 
 namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Defines a <see cref="TypeDescriptionProvider"/> over <see cref="CommandSettings"/>.
     /// </summary>
-    public class CommandSettingsDescriptionProvider : ElementTypeDescriptionProvider
+    internal class CommandSettingsDescriptionProvider : ElementTypeDescriptionProvider
     {
         /// <summary>
         /// Overridables for the derived class to provide a custom type descriptor.
@@ -53,7 +54,7 @@ namespace NuPattern.Library.Automation
                 var commandSettings = (CommandSettings)this.ModelElement;
                 if (commandSettings != null)
                 {
-                    var projectTypeProvider = commandSettings.Store.GetService<IPlatuProjectTypeProvider>();
+                    var projectTypeProvider = commandSettings.Store.GetService<INuPatternProjectTypeProvider>();
                     var components = commandSettings.Store.GetService<IFeatureCompositionService>()
                                        .GetExports<IFeatureCommand, IFeatureComponentMetadata>();
 

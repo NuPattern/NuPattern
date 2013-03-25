@@ -7,7 +7,7 @@ namespace NuPattern.Library
     /// <summary>
     /// Implementing classes when attributed with <see cref="CommandValidationRuleAttribute"/>  will be part of the validation
     /// </summary>
-    public interface ICommandValidationRule
+    internal interface ICommandValidationRule
     {
         /// <summary>
         /// Called when Validation is needed for the command

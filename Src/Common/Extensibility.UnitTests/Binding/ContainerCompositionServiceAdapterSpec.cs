@@ -4,144 +4,144 @@ using System.ComponentModel.Composition.Hosting;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings;
 
-namespace NuPattern.Extensibility.UnitTests
+namespace NuPattern.Extensibility.UnitTests.Binding
 {
-	[TestClass]
-	[SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test Code")]
-	public class ContainerCompositionServiceAdapterSpec
-	{
-		internal static readonly IAssertion Assert = new Assertion();
+    [TestClass]
+    [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test Code")]
+    public class ContainerCompositionServiceAdapterSpec
+    {
+        internal static readonly IAssertion Assert = new Assertion();
 
-		private CompositionContainer container;
+        private CompositionContainer container;
 
-		[TestInitialize]
-		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		public void Initialize()
-		{
-			this.container = new CompositionContainer(new TypeCatalog(typeof(Foo)));
-		}
+        [TestInitialize]
+        [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
+        public void Initialize()
+        {
+            this.container = new CompositionContainer(new TypeCatalog(typeof(Foo)));
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		public void WhenComposingParts_ThenDelegates()
-		{
-			var delegating = new ContainerCompositionServiceAdapter(this.container);
-			var consumer = new FooConsumer();
+        [TestMethod, TestCategory("Unit")]
+        [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
+        public void WhenComposingParts_ThenDelegates()
+        {
+            var delegating = new ContainerCompositionServiceAdapter(this.container);
+            var consumer = new FooConsumer();
 
-			delegating.ComposeParts(consumer);
+            delegating.ComposeParts(consumer);
 
-			Assert.NotNull(consumer.Foo);
-		}
+            Assert.NotNull(consumer.Foo);
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		public void WhenDisposing_ThenDoesNotDisposeInnerService()
-		{
-			var delegating = new ContainerCompositionServiceAdapter(this.container);
+        [TestMethod, TestCategory("Unit")]
+        public void WhenDisposing_ThenDoesNotDisposeInnerService()
+        {
+            var delegating = new ContainerCompositionServiceAdapter(this.container);
 
-			delegating.Dispose();
+            delegating.Dispose();
 
-			var consumer = new FooConsumer();
-			delegating.ComposeParts(consumer);
+            var consumer = new FooConsumer();
+            delegating.ComposeParts(consumer);
 
-			Assert.NotNull(consumer.Foo);
-		}
+            Assert.NotNull(consumer.Foo);
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		public void WhenGettingExport_ThenDelegates()
-		{
-			var delegating = new ContainerCompositionServiceAdapter(this.container);
+        [TestMethod, TestCategory("Unit")]
+        [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
+        public void WhenGettingExport_ThenDelegates()
+        {
+            var delegating = new ContainerCompositionServiceAdapter(this.container);
 
-			var foo = delegating.GetExport<IFoo>();
+            var foo = delegating.GetExport<IFoo>();
 
-			Assert.NotNull(foo);
-		}
+            Assert.NotNull(foo);
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		public void WhenGettingExportedValue_ThenDelegates()
-		{
-			var delegating = new ContainerCompositionServiceAdapter(this.container);
+        [TestMethod, TestCategory("Unit")]
+        [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
+        public void WhenGettingExportedValue_ThenDelegates()
+        {
+            var delegating = new ContainerCompositionServiceAdapter(this.container);
 
-			var foo = delegating.GetExportedValue<IFoo>();
+            var foo = delegating.GetExportedValue<IFoo>();
 
-			Assert.NotNull(foo);
-		}
+            Assert.NotNull(foo);
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		public void WhenGettingExportedValueOrDefault_ThenDelegates()
-		{
-			var delegating = new ContainerCompositionServiceAdapter(this.container);
+        [TestMethod, TestCategory("Unit")]
+        [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
+        public void WhenGettingExportedValueOrDefault_ThenDelegates()
+        {
+            var delegating = new ContainerCompositionServiceAdapter(this.container);
 
-			var foo = delegating.GetExportedValueOrDefault<IFoo>();
+            var foo = delegating.GetExportedValueOrDefault<IFoo>();
 
-			Assert.NotNull(foo);
-			Assert.Null(delegating.GetExportedValueOrDefault<IFormatProvider>());
-		}
+            Assert.NotNull(foo);
+            Assert.Null(delegating.GetExportedValueOrDefault<IFormatProvider>());
+        }
 
-		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		[TestMethod, TestCategory("Unit")]
-		public void WhenGettingExportedValues_ThenDelegates()
-		{
-			var delegating = new ContainerCompositionServiceAdapter(this.container);
+        [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
+        [TestMethod, TestCategory("Unit")]
+        public void WhenGettingExportedValues_ThenDelegates()
+        {
+            var delegating = new ContainerCompositionServiceAdapter(this.container);
 
-			var foos = delegating.GetExportedValues<IFoo>();
+            var foos = delegating.GetExportedValues<IFoo>();
 
-			Assert.Equal(1, foos.Count());
-		}
+            Assert.Equal(1, foos.Count());
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		public void WhenGettingExports_ThenDelegates()
-		{
-			var delegating = new ContainerCompositionServiceAdapter(this.container);
+        [TestMethod, TestCategory("Unit")]
+        [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
+        public void WhenGettingExports_ThenDelegates()
+        {
+            var delegating = new ContainerCompositionServiceAdapter(this.container);
 
-			var foos = delegating.GetExports<IFoo>();
+            var foos = delegating.GetExports<IFoo>();
 
-			Assert.Equal(1, foos.Count());
-		}
+            Assert.Equal(1, foos.Count());
+        }
 
-		[TestMethod, TestCategory("Unit")]
-		[SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
-		public void WhenSatisfyingImportsOnce_ThenDelegates()
-		{
-			var delegating = new ContainerCompositionServiceAdapter(this.container);
-			var consumer = new FooConsumer();
+        [TestMethod, TestCategory("Unit")]
+        [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
+        public void WhenSatisfyingImportsOnce_ThenDelegates()
+        {
+            var delegating = new ContainerCompositionServiceAdapter(this.container);
+            var consumer = new FooConsumer();
 
-			delegating.SatisfyImportsOnce(AttributedModelServices.CreatePart(consumer));
+            delegating.SatisfyImportsOnce(AttributedModelServices.CreatePart(consumer));
 
-			Assert.NotNull(consumer.Foo);
-		}
+            Assert.NotNull(consumer.Foo);
+        }
 
-		public class FooConsumer
-		{
-			[Import]
-			public IFoo Foo { get; set; }
-		}
+        public class FooConsumer
+        {
+            [Import]
+            public IFoo Foo { get; set; }
+        }
 
-		[Export(typeof(IFoo))]
-		[NameMetadata(Name = "Foo")]
-		public class Foo : IFoo
-		{
-		}
+        [Export(typeof(IFoo))]
+        [NameMetadata(Name = "Foo")]
+        public class Foo : IFoo
+        {
+        }
 
-		public interface IFoo
-		{
-		}
+        public interface IFoo
+        {
+        }
 
-		public interface INameMetadata
-		{
-			string Name { get; }
-		}
+        public interface INameMetadata
+        {
+            string Name { get; }
+        }
 
-		[MetadataAttribute]
-		[AttributeUsage(AttributeTargets.Class)]
-		public sealed class NameMetadataAttribute : Attribute, INameMetadata
-		{
-			public string Name { get; set; }
-		}
-	}
+        [MetadataAttribute]
+        [AttributeUsage(AttributeTargets.Class)]
+        public sealed class NameMetadataAttribute : Attribute, INameMetadata
+        {
+            public string Name { get; set; }
+        }
+    }
 }

@@ -10,8 +10,13 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Presentation;
+using NuPattern.Reflection;
+using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.Store;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UI
 {
@@ -21,8 +26,7 @@ namespace NuPattern.Runtime.UI
     /// <summary>
     /// Base view model for <see cref="ProductElement"/> elements.
     /// </summary>
-    [CLSCompliant(false)]
-    public abstract class ProductElementViewModel : ViewModel<IProductElement>, IEditableObject
+    internal abstract class ProductElementViewModel : ViewModel<IProductElement>, IEditableObject
     {
         private static readonly string assemblyName = typeof(ProductElementViewModel).Assembly.GetName().Name;
         private static readonly string deleteIconPath = "pack://application:,,,/" + assemblyName + ";component/Resources/CommandRemove.png";
@@ -308,7 +312,7 @@ namespace NuPattern.Runtime.UI
                 Resources.SolutionBuilder_ConfirmDelete,
                 this.Model.InstanceName)))
             {
-                var ex = Extensibility.TracingExtensions.Shield(tracer,
+                var ex = NuPattern.VisualStudio.TraceSourceExtensions.Shield(tracer,
                     () => this.Model.Delete(),
                     Resources.ProductViewModel_FailedToDeleteProduct);
 
@@ -621,26 +625,26 @@ namespace NuPattern.Runtime.UI
             #region Element factories
 
             private static readonly KeyValuePair<Type, ElementFactory>[] elementFactories = new[]
-			{
-				new KeyValuePair<Type, ElementFactory>(typeof(IElementInfo), NewElement),
-				new KeyValuePair<Type, ElementFactory>(typeof(ICollectionInfo), NewCollection),
-				new KeyValuePair<Type, ElementFactory>(typeof(IPatternInfo), NewExtension)
-			};
+            {
+                new KeyValuePair<Type, ElementFactory>(typeof(IElementInfo), NewElement),
+                new KeyValuePair<Type, ElementFactory>(typeof(ICollectionInfo), NewCollection),
+                new KeyValuePair<Type, ElementFactory>(typeof(IPatternInfo), NewExtension)
+            };
 
             #endregion
 
             #region ViewModel factories
 
             private static readonly KeyValuePair<Type, ViewModelFactory>[] vmFactories = new[]
-			{
-				new KeyValuePair<Type, ViewModelFactory>(
-					typeof(IAbstractElement),
-					(e, ctx) => new ElementViewModel((IAbstractElement)e, ctx)),
+            {
+                new KeyValuePair<Type, ViewModelFactory>(
+                    typeof(IAbstractElement),
+                    (e, ctx) => new ElementViewModel((IAbstractElement)e, ctx)),
 
-				new KeyValuePair<Type, ViewModelFactory>(
-					typeof(IProduct),
-					(e, ctx) => new ProductViewModel((IProduct)e, ctx))
-			};
+                new KeyValuePair<Type, ViewModelFactory>(
+                    typeof(IProduct),
+                    (e, ctx) => new ProductViewModel((IProduct)e, ctx))
+            };
 
             #endregion
 

@@ -7,11 +7,13 @@ using System.Xml.XPath;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings.Design;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.Xml;
 
 namespace NuPattern.Library.Conditions
 {

@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary
-	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:vsfx="clr-namespace:NuPattern.Common.Presentation.Vs"
-	xmlns:l="clr-namespace:NuPattern.Common.Presentation">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:l="clr-namespace:NuPattern.Presentation"
+    xmlns:vsfx="clr-namespace:NuPattern.Presentation.VsIde">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="VsVersionStyles.gen.xaml" />
@@ -137,13 +137,13 @@
                     <Grid Background="Transparent" Height="24" Width="24">
                         <Ellipse x:Name="Circle" Fill="{StaticResource VsVersion.WizardWindow.NavButton.Fill}" Stroke="{StaticResource VsVersion.WizardWindow.NavButton.Border}" StrokeThickness="1"/>
                         <Path
-							x:Name="Arrow"
-							Data="M0.37,7.69 L5.74,14.20 A1.5,1.5,0,1,0,10.26,12.27 L8.42,10.42 14.90,10.39 A1.5,1.5,0,1,0,14.92,5.87 L8.44,5.90 10.31,4.03 A1.5,1.5,0,1,0,5.79,1.77 z"
-							Fill="{StaticResource VsVersion.WizardWindow.NavArrow.Fill}"
-							HorizontalAlignment="Center"
-							Stroke="{StaticResource VsVersion.WizardWindow.NavArrow.Border}"
-							StrokeThickness="0.75"
-							VerticalAlignment="Center"/>
+                            x:Name="Arrow"
+                            Data="M0.37,7.69 L5.74,14.20 A1.5,1.5,0,1,0,10.26,12.27 L8.42,10.42 14.90,10.39 A1.5,1.5,0,1,0,14.92,5.87 L8.44,5.90 10.31,4.03 A1.5,1.5,0,1,0,5.79,1.77 z"
+                            Fill="{StaticResource VsVersion.WizardWindow.NavArrow.Fill}"
+                            HorizontalAlignment="Center"
+                            Stroke="{StaticResource VsVersion.WizardWindow.NavArrow.Border}"
+                            StrokeThickness="0.75"
+                            VerticalAlignment="Center"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="false">

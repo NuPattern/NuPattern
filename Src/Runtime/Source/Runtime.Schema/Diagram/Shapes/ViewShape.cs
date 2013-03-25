@@ -12,7 +12,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// Customizations for the <see cref="ViewShape"/> class.
     /// </summary>
-    public partial class ViewShape
+    partial class ViewShape
     {
         private const double ShapeMarginX = 0.25d;
         private const double ShapeMarginY = 0.25d;

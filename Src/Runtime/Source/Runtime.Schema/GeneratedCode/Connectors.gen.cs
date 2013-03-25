@@ -20,9 +20,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElementsConnector.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElementsConnector.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("4ab6824f-a9cf-45a6-9ac6-5a65b60fe5a0")]
-	public partial class ViewHasElementsConnector : PatternElementConnector
+	internal partial class ViewHasElementsConnector : PatternElementConnector
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -187,9 +186,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElementsConnector.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElementsConnector.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("d880db25-406b-41e8-b8ec-0a0de1e3ac5d")]
-	public partial class ElementHasElementsConnector : PatternElementConnector
+	internal partial class ElementHasElementsConnector : PatternElementConnector
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -353,9 +351,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementConnector.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementConnector.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("147c9db8-7ff8-4426-a8f7-2ffa38cc6bad")]
-	public abstract partial class PatternElementConnectorBase : DslDiagrams::BinaryLinkShape
+	internal abstract partial class PatternElementConnectorBase : DslDiagrams::BinaryLinkShape
 	{
 		
 		#region Connector styles
@@ -595,9 +592,8 @@ namespace NuPattern.Runtime.Schema
 	/// DomainClass PatternElementConnector
 	/// Description for NuPattern.Runtime.Schema.PatternElementConnector
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public abstract partial class PatternElementConnector : PatternElementConnectorBase
+	internal abstract partial class PatternElementConnector : PatternElementConnectorBase
 	{
 		#region Constructors
 		/// <summary>
@@ -621,9 +617,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPointsConnector.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("5ff64aa7-63bd-4ae6-8395-fc955f077c42")]
-	public partial class ElementHasExtensionPointsConnector : PatternElementConnector
+	internal partial class ElementHasExtensionPointsConnector : PatternElementConnector
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -788,9 +783,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPointsConnector.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("54c171e1-89d9-4023-89a6-8cddb13bda44")]
-	public partial class ViewHasExtensionPointsConnector : PatternElementConnector
+	internal partial class ViewHasExtensionPointsConnector : PatternElementConnector
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;

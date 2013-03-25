@@ -7,7 +7,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace NuPattern.Extensibility.UnitTests
+namespace NuPattern.Extensibility.UnitTests.Binding
 {
     [TestClass]
     public class LazyBindingSpec

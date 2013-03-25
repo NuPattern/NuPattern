@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Media.Imaging;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using NuPattern.Common.Presentation.Data;
-using NuPattern.Extensibility;
+using NuPattern.Presentation.Data;
+using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Wraps an <see cref="IItemContainer"/> to provide filtering.
     /// </summary>
-    [CLSCompliant(false)]
-    public class FilteredItemContainer : INotifyPropertyChanged
+    internal class FilteredItemContainer : INotifyPropertyChanged
     {
         private IPickerFilter filter;
         private BitmapSource icon;

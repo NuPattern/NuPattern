@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Bindings
 {
 	/// <summary>
 	/// Provides a dynamic binding context to provide additional exports 

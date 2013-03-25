@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Extensibility.UnitTests
 {
@@ -24,58 +25,58 @@ namespace NuPattern.Extensibility.UnitTests
                     Name = "Solution.sln",
                     PhysicalPath = "C:\\Temp",
                     Items = 
-					{
-						new Item
-						{
-							Name = "Item.cs"
-						},
-						new Item
-						{
-							Name = "Item1.cs"
-						},
-						new Item
-						{
-							Name = "ItemNoExtension"
-						},
-						new SolutionFolder
-						{
-							Name = "Solution Items", 
-							Items = 
-							{
-								new Item { Name = "Item.cs" }
-							}
-						},
-						new Project
-						{
-							Name = "Project",
-							Items = 
-							{
-								new Folder { Name = "Folder" },
-								new Folder { Name = "Folder1" },
-								new Item
-								{
-									Name = "ItemNoExtension"
-								},
-								new Item
-								{
-									Name = "Item.cs"
-								},
-								new Item
-								{
-									Name = "Item1.cs"
-								},
-							}
-						},
-						new Project
-						{
-							Name = "Project1",
-							Items = 
-							{
-								new Folder { Name = "Folder" },
-								new Folder { Name = "Folder1" },
-							}
-						},
-					}
+                    {
+                        new Item
+                        {
+                            Name = "Item.cs"
+                        },
+                        new Item
+                        {
+                            Name = "Item1.cs"
+                        },
+                        new Item
+                        {
+                            Name = "ItemNoExtension"
+                        },
+                        new SolutionFolder
+                        {
+                            Name = "Solution Items", 
+                            Items = 
+                            {
+                                new Item { Name = "Item.cs" }
+                            }
+                        },
+                        new Project
+                        {
+                            Name = "Project",
+                            Items = 
+                            {
+                                new Folder { Name = "Folder" },
+                                new Folder { Name = "Folder1" },
+                                new Item
+                                {
+                                    Name = "ItemNoExtension"
+                                },
+                                new Item
+                                {
+                                    Name = "Item.cs"
+                                },
+                                new Item
+                                {
+                                    Name = "Item1.cs"
+                                },
+                            }
+                        },
+                        new Project
+                        {
+                            Name = "Project1",
+                            Items = 
+                            {
+                                new Folder { Name = "Folder" },
+                                new Folder { Name = "Folder1" },
+                            }
+                        },
+                    }
                 };
             }
         }

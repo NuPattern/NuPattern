@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Bindings
 {
     /// <summary>
     /// Represents the settings needed to create a runtime dynamic binding object.

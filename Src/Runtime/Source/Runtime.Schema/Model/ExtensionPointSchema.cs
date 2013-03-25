@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -10,7 +11,7 @@ namespace NuPattern.Runtime.Schema
     /// Customizations to the <see cref="ExtensionPointSchema"/> class.
     /// </summary>
     [TypeDescriptionProvider(typeof(ExtensionPointSchemaTypeDescriptionProvider))]
-    public partial class ExtensionPointSchema
+    partial class ExtensionPointSchema
     {
         private ConditionBindingSettings[] conditionSettings;
 

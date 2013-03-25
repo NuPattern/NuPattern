@@ -6,7 +6,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     ///  Defines a view in a model element.
     /// </summary>
-    public partial class ViewSchema
+    partial class ViewSchema
     {
         /// <summary>
         /// Returns a value indicating whether the source element represented by the

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 
@@ -8,8 +7,7 @@ namespace NuPattern.Runtime.UI
     /// <summary>
     /// Defines a view model for a <see cref="IAbstractElement"/>.
     /// </summary>
-    [CLSCompliant(false)]
-    public class ElementViewModel : ProductElementViewModel
+    internal class ElementViewModel : ProductElementViewModel
     {
         internal const string IconPathFormat = "../../Resources/" + "Node{0}.png"; // element images stored as resource with prefix
 

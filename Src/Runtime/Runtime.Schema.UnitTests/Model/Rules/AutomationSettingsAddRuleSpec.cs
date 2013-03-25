@@ -3,6 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NuPattern.Extensibility;
+using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Schema.UnitTests
 {

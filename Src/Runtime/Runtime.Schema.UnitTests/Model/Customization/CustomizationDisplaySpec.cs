@@ -6,7 +6,9 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel;
 using NuPattern.Extensibility;
+using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Schema.UnitTests
 {
@@ -18,7 +20,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
         [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
         public abstract class GivenAPatternModelWithAProperty
         {
-            protected PropertySchema Property { get; set; }
+            internal PropertySchema Property { get; set; }
 
             protected PatternModelSchema PatternModel { get; set; }
 

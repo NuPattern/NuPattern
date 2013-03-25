@@ -4,12 +4,13 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
 using NuPattern.Extensibility.References;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
+using ReflectionExtensions = Microsoft.VisualStudio.TeamArchitect.PowerTools.ReflectionExtensions;
 
 namespace NuPattern.Library.Automation
 {
@@ -46,7 +47,7 @@ namespace NuPattern.Library.Automation
                         context.LogError(
                             string.Format(CultureInfo.InvariantCulture,
                                 Properties.Resources.Validate_GuidanceReferenceNotFound,
-                                element.InstanceName, reference, typeof(GuidanceReference).DisplayName()),
+                                element.InstanceName, reference, ReflectionExtensions.DisplayName(typeof(GuidanceReference))),
                             Properties.Resources.Validate_GuidanceReferenceNotFoundCode,
                             element as ModelElement);
                     }

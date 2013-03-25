@@ -9,16 +9,15 @@ using System.Windows.Input;
 using System.Windows.Media;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
-using NuPattern.Common.Presentation;
-using NuPattern.Extensibility;
+using NuPattern.Presentation;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Interaction logic for SolutionBuilderView.xaml.
     /// </summary>
-    [CLSCompliant(false)]
-    public partial class SolutionBuilderView : CommonUserControl
+    partial class SolutionBuilderView : CommonUserControl
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SolutionBuilderView"/> class.
@@ -49,99 +48,99 @@ namespace NuPattern.Runtime.UI
             return null;
         }
 
-		#region Drag
+        #region Drag
 
-		private Point startPoint;
+        private Point startPoint;
 
-		private void OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-		{
-			startPoint = e.GetPosition(null);
-		}
+        private void OnPreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            startPoint = e.GetPosition(null);
+        }
 
-		private void OnPreviewMouseMove(object sender, MouseEventArgs e)
-		{
-			if (e.LeftButton == MouseButtonState.Pressed)
-			{
-				var mousePos = e.GetPosition(null);
-				var diff = startPoint - mousePos;
+        private void OnPreviewMouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                var mousePos = e.GetPosition(null);
+                var diff = startPoint - mousePos;
 
-				if (Math.Abs(diff.X) > SystemParameters.MinimumHorizontalDragDistance
-					|| Math.Abs(diff.Y) > SystemParameters.MinimumVerticalDragDistance)
-				{
-					var treeView = sender as TreeView;
-					var treeViewItem =
-						FindAncestor<TreeViewItem>((DependencyObject)e.OriginalSource);
+                if (Math.Abs(diff.X) > SystemParameters.MinimumHorizontalDragDistance
+                    || Math.Abs(diff.Y) > SystemParameters.MinimumVerticalDragDistance)
+                {
+                    var treeView = sender as TreeView;
+                    var treeViewItem =
+                        FindAncestor<TreeViewItem>((DependencyObject)e.OriginalSource);
 
-					if (treeView == null || treeViewItem == null)
-						return;
+                    if (treeView == null || treeViewItem == null)
+                        return;
 
-					var viewModel = treeView.SelectedItem as ProductElementViewModel;
-					if (viewModel == null)
-						return;
+                    var viewModel = treeView.SelectedItem as ProductElementViewModel;
+                    if (viewModel == null)
+                        return;
 
-					var dragData = new DataObject("VSPAT", viewModel.Model);
-					DragDrop.DoDragDrop(treeViewItem, dragData, DragDropEffects.Move);
-				}
-			}
-		}
+                    var dragData = new DataObject("VSPAT", viewModel.Model);
+                    DragDrop.DoDragDrop(treeViewItem, dragData, DragDropEffects.Move);
+                }
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#region Drop
+        #region Drop
 
-		internal event DragEventHandler ElementDragEnter;
-		internal event DragEventHandler ElementDragLeave;
-		internal event DragEventHandler ElementDrop;
+        internal event DragEventHandler ElementDragEnter;
+        internal event DragEventHandler ElementDragLeave;
+        internal event DragEventHandler ElementDrop;
 
-		internal DragDropEffects effects = DragDropEffects.None;
+        internal DragDropEffects effects = DragDropEffects.None;
 
-		private void OnDragEnter(object sender, DragEventArgs e)
-		{
-			e.Effects = DragDropEffects.None;
-			e.Handled = true;
+        private void OnDragEnter(object sender, DragEventArgs e)
+        {
+            e.Effects = DragDropEffects.None;
+            e.Handled = true;
 
-			if (ElementDragEnter != null)
-			{
-				ElementDragEnter(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
-			}
+            if (ElementDragEnter != null)
+            {
+                ElementDragEnter(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
+            }
 
-			effects = e.Effects;
-		}
+            effects = e.Effects;
+        }
 
-		private void OnDragOver(object sender, DragEventArgs e)
-		{
-			e.Effects = effects;
-			e.Handled = true;
+        private void OnDragOver(object sender, DragEventArgs e)
+        {
+            e.Effects = effects;
+            e.Handled = true;
 
-			if (ElementDragEnter != null)
-			{
-				ElementDragEnter(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
-			}
-		}
+            if (ElementDragEnter != null)
+            {
+                ElementDragEnter(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
+            }
+        }
 
-		private void OnDragLeave(object sender, DragEventArgs e)
-		{
-			e.Effects = DragDropEffects.None;
-			e.Handled = true;
+        private void OnDragLeave(object sender, DragEventArgs e)
+        {
+            e.Effects = DragDropEffects.None;
+            e.Handled = true;
 
-			if (ElementDragLeave != null)
-			{
-				ElementDragLeave(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
-			}
-		}
+            if (ElementDragLeave != null)
+            {
+                ElementDragLeave(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
+            }
+        }
 
-		private void OnDragDrop(object sender, DragEventArgs e)
-		{
-			if (ElementDrop != null)
-			{
-				ElementDrop(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
-			}
-			e.Handled = true;
-		}
+        private void OnDragDrop(object sender, DragEventArgs e)
+        {
+            if (ElementDrop != null)
+            {
+                ElementDrop(((ProductElementViewModel)(((TreeViewItem)sender).DataContext)).Model, e);
+            }
+            e.Handled = true;
+        }
 
-		#endregion
+        #endregion
 
-		private void OnItemMouseRightButtonDown(object sender, MouseEventArgs e)
+        private void OnItemMouseRightButtonDown(object sender, MouseEventArgs e)
         {
             var item = sender as TreeViewItem;
             if (item != null)
@@ -182,19 +181,19 @@ namespace NuPattern.Runtime.UI
             }
         }
 
-		private static T FindAncestor<T>(DependencyObject current)
-			where T : DependencyObject
-		{
-			do
-			{
-				if (current is T)
-				{
-					return (T)current;
-				}
-				current = VisualTreeHelper.GetParent(current);
-			}
-			while (current != null);
-			return null;
-		}
+        private static T FindAncestor<T>(DependencyObject current)
+            where T : DependencyObject
+        {
+            do
+            {
+                if (current is T)
+                {
+                    return (T)current;
+                }
+                current = VisualTreeHelper.GetParent(current);
+            }
+            while (current != null);
+            return null;
+        }
     }
 }

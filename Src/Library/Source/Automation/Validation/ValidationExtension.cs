@@ -9,7 +9,7 @@ namespace NuPattern.Library.Automation
     /// <summary>
     /// Customization for the <see cref="ValidationExtension"/> class.
     /// </summary>
-    public partial class ValidationExtension
+    partial class ValidationExtension
     {
         /// <summary>
         /// Ensures the associated commands and launchpoint automation are created and configured correctly.

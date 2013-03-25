@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings;
 
 namespace NuPattern.Extensibility.UnitTests.Binding
 {

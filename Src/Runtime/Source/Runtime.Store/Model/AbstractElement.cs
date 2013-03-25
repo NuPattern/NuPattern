@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using NuPattern.Extensibility;
 
 namespace NuPattern.Runtime.Store
 {
     /// <summary>
     /// Base class for collection and element.
     /// </summary>
-    public partial class AbstractElement : IElementContainer
+    partial class AbstractElement : IElementContainer
     {
         private ElementContainerImplementation<AbstractElement> containerImplementation;
 

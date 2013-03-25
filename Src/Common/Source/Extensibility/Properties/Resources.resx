@@ -132,12 +132,6 @@
   <data name="BitmapFilter" xml:space="preserve">
     <value>Bitmap files(*.bmp)|*.bmp</value>
   </data>
-  <data name="CollectionDropDownEditor_ConverterException" xml:space="preserve">
-    <value>The associated converter does not support standard values.</value>
-  </data>
-  <data name="CollectionDropDownEditor_ValueCollectionException" xml:space="preserve">
-    <value>The value must implement ICollection.</value>
-  </data>
   <data name="StringCollectionPropertyDescriptor_ToString" xml:space="preserve">
     <value>(Collection)</value>
   </data>
@@ -153,12 +147,6 @@
   <data name="ImageFilter" xml:space="preserve">
     <value>Image files(*.gif;*.jpg;*.jpeg;*.bmp;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.png</value>
   </data>
-  <data name="IProjectExtensions_ItemNotInProject" xml:space="preserve">
-    <value>Solution element '{0}' must be contained in a project in the solution.</value>
-  </data>
-  <data name="IProjectExtensions_NotToolkitProject" xml:space="preserve">
-    <value>The solution element '{0}' must be contained in a project containing a VSIX manifest file marked with the '{1}' MSBuild metadata.</value>
-  </data>
   <data name="SelectBitmap" xml:space="preserve">
     <value>Select Bitmap</value>
   </data>
@@ -167,12 +155,6 @@
   </data>
   <data name="SelectImage" xml:space="preserve">
     <value>Select Image</value>
-  </data>
-  <data name="Vsix_InvalidManifest" xml:space="preserve">
-    <value>Vsix manifest file '{0}' does not contain required Identifier element.</value>
-  </data>
-  <data name="Vsix_ManifestMissing" xml:space="preserve">
-    <value>Vsix file '{0}' does not contain the required manifest named "extension.vsixmanifest".</value>
   </data>
   <data name="CodeGeneration_InitializationFinished" xml:space="preserve">
     <value>Initialization has already been done. This invocation can only be performed before EndInit is been called.</value>
@@ -204,35 +186,8 @@
   <data name="ValidationBindingSettings_EmptyBinding" xml:space="preserve">
     <value>(Empty Validation Rule)</value>
   </data>
-  <data name="FolderPathAlreadyExists" xml:space="preserve">
-    <value>The folder path '{0}' already exists.</value>
-  </data>
-  <data name="SeeDiagnosticsWindow" xml:space="preserve">
-    <value>Please see the Output Window ('NuPattern Toolkit Extensions' pane) for more information..</value>
-  </data>
   <data name="ElementNameNotSupported" xml:space="preserve">
     <value>The domain class {0} doesn't have a Name domain property</value>
-  </data>
-  <data name="ValidationException" xml:space="preserve">
-    <value>Validation failed for {0}:</value>
-  </data>
-  <data name="ValidatorDefaultMessage" xml:space="preserve">
-    <value>'{0}' validation failed.</value>
-  </data>
-  <data name="ValidationResult" xml:space="preserve">
-    <value>{0} ({1})</value>
-  </data>
-  <data name="CouldNotFindOrCreate" xml:space="preserve">
-    <value>Could not find or create target path '{0}'.</value>
-  </data>
-  <data name="InvalidFolderPath" xml:space="preserve">
-    <value>The path to create can only be relative to a solution, solution folder, project or folder. Invalid relative node kind '{0}' found at '{1}' for path expression '{2}'.</value>
-  </data>
-  <data name="SolutionExtensions_MissingService" xml:space="preserve">
-    <value>Service '{0}' is required.</value>
-  </data>
-  <data name="SolutionExtensions_UnsupportedProject" xml:space="preserve">
-    <value>Project type is not supported. It must be a Visual Studio project.</value>
   </data>
   <data name="SolutionArtifactLinkReference_Description" xml:space="preserve">
     <value>A project, folder or file associated to the current element.</value>
@@ -281,9 +236,6 @@
   </data>
   <data name="ValueProviderBindingSettings_EmptyBinding" xml:space="preserve">
     <value>(Empty Value Provider)</value>
-  </data>
-  <data name="DescriptorExtensions_MustBeDelegatingDescriptor" xml:space="preserve">
-    <value>The descriptor must inherit from {0} or provide a constructor receiving a single parameter of type {1}, which is the original one to be replaced.</value>
   </data>
   <data name="SolutionArtifactLinkReference_EditorTitle" xml:space="preserve">
     <value>Select an Associated Solution Item</value>
@@ -399,19 +351,6 @@
   <data name="DesignProperty_ToStringValueProviderFormat" xml:space="preserve">
     <value>(provided by: '{0}')</value>
   </data>
-  <data name="SolutionExtensions_PromptItemAlreadyExists_Message" xml:space="preserve">
-    <value>An associated solution item (file, folder or project) with the name '{0}' already exists in the solution. 
-The solution item has instead been renamed to: '{1}'.</value>
-  </data>
-  <data name="SolutionExtensions_PromptItemAlreadyExists_Title" xml:space="preserve">
-    <value>Solution Item Already Exists</value>
-  </data>
-  <data name="SolutionExtensions_ErrorRenamedItemExists" xml:space="preserve">
-    <value>Solution item with name '{0}' already exists, rename failed.</value>
-  </data>
-  <data name="SolutionExtensions_ErrorRenameUnknownType" xml:space="preserve">
-    <value>Unknown  solution item type for rename</value>
-  </data>
   <data name="FeatureManagerExtensions_ErrorGuidanceInstantiationFailed" xml:space="preserve">
     <value>Failed to create a new instance of the guidance workflow '{0} ({1})'. </value>
   </data>
@@ -424,33 +363,12 @@ The solution item has instead been renamed to: '{1}'.</value>
   <data name="FeatureManagerExtensions_TraceActivation" xml:space="preserve">
     <value>Activating guidance workflow '{0}'</value>
   </data>
-  <data name="DteExtensions_CreateNewSolution_FailedDirSearch" xml:space="preserve">
-    <value>Failed to create a new empty solution, the default save location for new solutions could not be found.</value>
-  </data>
-  <data name="DteExtensions_CreateNewSolution_FailedCreate" xml:space="preserve">
-    <value>Failed to create a new empty solution, an error occurred creating and saving the new solution to '{0}'. Verify that you have permissions to create new subfolders in the parent directory.</value>
-  </data>
   <data name="ImageUriEditor_EmptyItemsMessage" xml:space="preserve">
     <value>There were no image files ({0}) found in the current solution.
 Please add a new or existing image file {0} to the project and try again.</value>
   </data>
   <data name="ImageUriEditor_FailedToEdit" xml:space="preserve">
     <value>Failed to edit file.</value>
-  </data>
-  <data name="XmlProcessor_ErrorLoadNotCalledFirst" xml:space="preserve">
-    <value>XML document must be loaded before you can call this method.</value>
-  </data>
-  <data name="XmlProcessor_ErrorLoadFailed" xml:space="preserve">
-    <value>XML document load failed for file '{0}'.</value>
-  </data>
-  <data name="XmlProcessor_ErrorXPathSearchFailed" xml:space="preserve">
-    <value>Failed to find nodes in the XMLdocument using XPath search '{0}'</value>
-  </data>
-  <data name="XmlProcessor_ErrorSaveFailed" xml:space="preserve">
-    <value>Failed to save modified XML document '{0}'.</value>
-  </data>
-  <data name="CancelableCollectionEditor_Title" xml:space="preserve">
-    <value>{0} Collection</value>
   </data>
   <data name="DesignCollectionPropertyDescriptor_ToString" xml:space="preserve">
     <value>(Collection)</value>
@@ -466,5 +384,134 @@ Please add a new or existing image file {0} to the project and try again.</value
   </data>
   <data name="ConditionBindingSettings_DisplayName" xml:space="preserve">
     <value>Condition</value>
+  </data>
+  <data name="DynamicBinding_ValidatorDefaultMessage" xml:space="preserve">
+    <value>'{0}' validation failed.</value>
+  </data>
+  <data name="SolutionItemUriConverter_MissingService" xml:space="preserve">
+    <value>Service '{0}' is required.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_InstancePropertyNotFound" xml:space="preserve">
+    <value>The element of type '{0}' does not have a class property or variable property named '{1}'.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_InstanceTypeDoesNotHaveInterfaceLayer" xml:space="preserve">
+    <value>The type {0} does not support a generated interface layer.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_InterfaceLayerNotFound" xml:space="preserve">
+    <value>The type '{0}' is not a valid interface layer type.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_InvalidPropertyExpression" xml:space="preserve">
+    <value>Expression must be of the form 'this.PropertyName'. Invalid expression '{0}'.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_PropertyNotFound" xml:space="preserve">
+    <value>Interface '{0}' does not contain expected property '{1}'.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_ProxyImplementationConstructorMissing" xml:space="preserve">
+    <value>Interface layer concrete implementation type '{0}' does not provide expected public constructor receiving exactly one argument of type '{1}'.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_ProxyMissingInterface" xml:space="preserve">
+    <value>Interface layer concrete implementation '{0}' specified on interface '{1}' does not implement that interface.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_ServiceUnavailable" xml:space="preserve">
+    <value>Cannot add interface layer because the service providing the available interfaces was not found.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_ViewNotFound" xml:space="preserve">
+    <value>The product does not have a view named '{0}'.</value>
+  </data>
+  <data name="ResourcePack_Error_InvalidResourceType" xml:space="preserve">
+    <value>Wrong resource type.</value>
+  </data>
+  <data name="ResourcePack_Error_UnknownResourceType" xml:space="preserve">
+    <value>Unknown resource type.</value>
+  </data>
+  <data name="ReferenceKindProvider_CanNotConvertFromString" xml:space="preserve">
+    <value>The TypeConverter on this ReferenceKindProvider type does not support convert from System.String to of its declared type. The reference value cannot be read.</value>
+  </data>
+  <data name="ReferenceKindProvider_CanNotConvertString" xml:space="preserve">
+    <value>The TypeConverter on this ReferenceKindProvider type {0} or its typed value {1} does not support convert of its declared type to and from System.String. The reference value cannot be set.</value>
+  </data>
+  <data name="ReferenceKindProvider_UnsupportedReferenceKind" xml:space="preserve">
+    <value>Reference of kind {0} is not supported. Reference must be of type {1}.</value>
+  </data>
+  <data name="StoreEventBufferingScope_BufferingEvent" xml:space="preserve">
+    <value>Buffering scope is active, event will be delayed until Dispose.</value>
+  </data>
+  <data name="StoreEventBufferingScope_CancelledScopeIgnoringEvent" xml:space="preserve">
+    <value>Buffering scope is cancelled. Events will be ignored.</value>
+  </data>
+  <data name="StoreEventBufferingScope_CompleteEnqueingOnParent" xml:space="preserve">
+    <value>Parent buffering scope is active. Events will be enqueued on parent scope until it's disposed.</value>
+  </data>
+  <data name="StoreEventBufferingScope_DisposingNonComplete" xml:space="preserve">
+    <value>Current scope has not been marked as completed. Buffered events are being discarded.</value>
+  </data>
+  <data name="StoreEventBufferingScope_Initialized" xml:space="preserve">
+    <value>Initialized new event buffering scope.</value>
+  </data>
+  <data name="StoreEventBufferingScope_MarkedCanceled" xml:space="preserve">
+    <value>Scope marked as canceled. Events will not be raised on Dispose.</value>
+  </data>
+  <data name="StoreEventBufferingScope_MarkedCompleted" xml:space="preserve">
+    <value>Scope marked as completed. Events will be raised on Dispose.</value>
+  </data>
+  <data name="StoreEventBufferingScope_RaisingEvents" xml:space="preserve">
+    <value>Buffering scope is the topmost scope. Events firing now.</value>
+  </data>
+  <data name="ElementContainerExtensions_UnknownElementContainer" xml:space="preserve">
+    <value>This element container is of an unknown type.</value>
+  </data>
+  <data name="ElementContainerExtensions_ViewInstanceNameFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="ProductElementExtensions_CreateChildElement_InvalidType" xml:space="preserve">
+    <value>Cannot create child element of given type. Only collections and elements supported.</value>
+  </data>
+  <data name="ProductElementExtensions_DisconnectedObject" xml:space="preserve">
+    <value>The element must have an owner or a parent view.</value>
+  </data>
+  <data name="ProductElementExtensions_ErrorNotChildElement" xml:space="preserve">
+    <value>'{0}' is not defined as having child elements named '{1}'.</value>
+  </data>
+  <data name="ProductElementExtensions_ErrorNotElementContainer" xml:space="preserve">
+    <value>'{0}' does not allow creation of child elements '{1}'.</value>
+  </data>
+  <data name="CustomToolRunnerTemplateWizard_FailedToRunCustomTools" xml:space="preserve">
+    <value>Failed to run associated Custom Tool on project items.</value>
+  </data>
+  <data name="CustomToolRunnerTemplateWizard_RunningCustomTool" xml:space="preserve">
+    <value>Running custom tool {0} on item {1} because it has RunCustomToolOnUnfold.</value>
+  </data>
+  <data name="FixLinkPathTemplateWizard_FailedToFixLinkPaths" xml:space="preserve">
+    <value>Failed to fix linked project item paths.</value>
+  </data>
+  <data name="FixLinkPathTemplateWizard_LinkFixed" xml:space="preserve">
+    <value>Fixed item {0} to link to {1}.</value>
+  </data>
+  <data name="SolutionNameTemplateWizard_ContextSolutionName" xml:space="preserve">
+    <value>Found contextual solution name {0}.</value>
+  </data>
+  <data name="SolutionNameTemplateWizard_NewContextSolution" xml:space="preserve">
+    <value>No existing contextual solution found. Setting {0} as the solution name.</value>
+  </data>
+  <data name="VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot" xml:space="preserve">
+    <value>Failed to retrieve registry root suffix of the currently running Visual Studio instance.</value>
+  </data>
+  <data name="VsRootSuffixTemplateWizard_RootSuffixDetermined" xml:space="preserve">
+    <value>Determined VS root suffix as {0}.</value>
+  </data>
+  <data name="GuidGeneratorTemplateWizard_GeneratedNewGuid" xml:space="preserve">
+    <value>Generated new Guid available on template replacement with the key {0}.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_DesignerItemNotFound" xml:space="preserve">
+    <value>Designer item for file {0} was not found.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_OpeningDesigner" xml:space="preserve">
+    <value>Opening designer file {0}.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_RetrievedDesignerFile" xml:space="preserve">
+    <value>Designer file name with key $patterndefinition$ was not found in the replacement dictionary.</value>
+  </data>
+  <data name="ReplacementTemplateWizard_Replacing" xml:space="preserve">
+    <value>Processing custom replacement {0}={1}.</value>
   </data>
 </root>

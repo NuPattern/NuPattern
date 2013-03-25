@@ -5,6 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Extensibility;
+using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Schema.UnitTests
 {
@@ -50,7 +51,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
         [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
         public class GivenAnAuthoredPatternWithAViewAndASingleElement : GivenAPatternModel
         {
-            protected ElementSchema Element { get; set; }
+            internal ElementSchema Element { get; set; }
 
             [TestInitialize]
             public override void InitializeContext()
@@ -79,7 +80,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
         [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test code")]
         public class GivenATailoredPatternWithAViewAndASingleElement : GivenAPatternModel
         {
-            protected ElementSchema Element { get; set; }
+            internal ElementSchema Element { get; set; }
 
             [TestInitialize]
             public override void InitializeContext()

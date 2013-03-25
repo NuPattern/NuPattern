@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Bindings
 {
 	/// <summary>
 	/// A binding that allows passing dynamic values at runtime.

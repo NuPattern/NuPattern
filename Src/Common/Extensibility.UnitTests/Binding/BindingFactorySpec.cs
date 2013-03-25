@@ -3,10 +3,11 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility.Binding;
-using NuPattern.Runtime;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Reflection;
+using NuPattern.Runtime.Bindings;
 
-namespace NuPattern.Extensibility.UnitTests
+namespace NuPattern.Extensibility.UnitTests.Binding
 {
     public class BindingFactorySpec
     {

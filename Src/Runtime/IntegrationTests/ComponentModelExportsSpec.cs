@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.IntegrationTests
 {

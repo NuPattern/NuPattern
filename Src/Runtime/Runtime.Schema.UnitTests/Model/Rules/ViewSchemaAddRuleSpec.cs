@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling.Immutability;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NuPattern.Extensibility;
+using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Schema.UnitTests
 {

@@ -7,134 +7,142 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Moq;
-using NuPattern.Extensibility.Binding;
-using NuPattern.Runtime;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Runtime.Bindings;
 
-namespace NuPattern.Extensibility.UnitTests.Binding
+namespace NuPattern.Extensibility.IntegrationTests.Binding
 {
-	[TestClass]
-	public class BindingCompositionServiceSpec : VsHostedSpec
-	{
-		internal static readonly IAssertion Assert = new Assertion();
+    [TestClass]
+    public class BindingCompositionServiceSpec : IntegrationTest
+    {
+        internal static readonly IAssertion Assert = new Assertion();
+        private IServiceProvider serviceProvider;
 
-		[HostType("VS IDE")]
-		[TestMethod, TestCategory("Integration")]
-		public void WhenResolvingISolution_ThenSucceeds()
-		{
-			var composition = ServiceProvider.GetService<IBindingCompositionService>();
+        [TestInitialize]
+        public void InitializeContext()
+        {
+            this.serviceProvider = VsIdeTestHostContext.ServiceProvider;
+        }
 
-			var solution = composition.GetExportedValue<ISolution>();
+        [HostType("VS IDE")]
+        [TestMethod, TestCategory("Integration")]
+        public void WhenResolvingISolution_ThenSucceeds()
+        {
+            var composition = this.serviceProvider.GetService<IBindingCompositionService>();
 
-			Assert.NotNull(solution);
-		}
+            var solution = composition.GetExportedValue<ISolution>();
 
-		[HostType("VS IDE")]
-		[TestMethod, TestCategory("Integration")]
-		public void WhenResolvingIBindingFactory_ThenSucceeds()
-		{
-			var composition = ServiceProvider.GetService<IBindingCompositionService>();
+            Assert.NotNull(solution);
+        }
 
-			var result = composition.GetExportedValue<IBindingFactory>();
+        [HostType("VS IDE")]
+        [TestMethod, TestCategory("Integration")]
+        public void WhenResolvingIBindingFactory_ThenSucceeds()
+        {
+            var composition = this.serviceProvider.GetService<IBindingCompositionService>();
 
-			Assert.NotNull(result);
-		}
+            var result = composition.GetExportedValue<IBindingFactory>();
 
-		[HostType("VS IDE")]
-		[TestMethod, TestCategory("Integration")]
-		public void WhenResolvingEvents_ThenSucceeds()
-		{
-			var composition = ServiceProvider.GetService<IBindingCompositionService>();
+            Assert.NotNull(result);
+        }
 
-			var result = composition.GetExportedValues<IObservableEvent>();
+        [HostType("VS IDE")]
+        [TestMethod, TestCategory("Integration")]
+        public void WhenResolvingEvents_ThenSucceeds()
+        {
+            var composition = this.serviceProvider.GetService<IBindingCompositionService>();
 
-			Assert.NotNull(result);
-			Assert.True(result.Count() > 0);
-		}
+            var result = composition.GetExportedValues<IObservableEvent>();
 
-		[HostType("VS IDE")]
-		[TestMethod, TestCategory("Integration")]
-		public void WhenResolvingOtherVSExports_ThenSucceeds()
-		{
-			var composition = ServiceProvider.GetService<IBindingCompositionService>();
+            Assert.NotNull(result);
+            Assert.True(result.Count() > 0);
+        }
 
-			var result = composition.GetExportedValues<ISmartTagSourceProvider>();
+        [HostType("VS IDE")]
+        [TestMethod, TestCategory("Integration")]
+        public void WhenResolvingOtherVSExports_ThenSucceeds()
+        {
+            var composition = this.serviceProvider.GetService<IBindingCompositionService>();
 
-			Assert.NotNull(result);
-			Assert.True(result.Count() > 0);
-		}
+            var result = composition.GetExportedValues<ISmartTagSourceProvider>();
 
-		[HostType("VS IDE")]
-		[TestMethod, TestCategory("Integration")]
-		public void WhenResolvingSVsServiceProvider_ThenSucceeds()
-		{
-			var composition = ServiceProvider.GetService<IBindingCompositionService>();
+            Assert.NotNull(result);
+            Assert.True(result.Count() > 0);
+        }
 
-			var result = (IServiceProvider)composition.GetExportedValue<SVsServiceProvider>();
+        [HostType("VS IDE")]
+        [TestMethod, TestCategory("Integration")]
+        public void WhenResolvingSVsServiceProvider_ThenSucceeds()
+        {
+            var composition = this.serviceProvider.GetService<IBindingCompositionService>();
 
-			Assert.NotNull(result);
-		}
+            var result = (IServiceProvider)composition.GetExportedValue<SVsServiceProvider>();
 
-		[HostType("VS IDE")]
-		[TestMethod, TestCategory("Integration")]
-		public void WhenResolvingCompositionService_ThenReturnsSelf()
-		{
-			var composition = ServiceProvider.GetService<IBindingCompositionService>();
+            Assert.NotNull(result);
+        }
 
-			var service = composition.GetExportedValue<IFeatureCompositionService>();
+        [HostType("VS IDE")]
+        [TestMethod, TestCategory("Integration")]
+        public void WhenResolvingCompositionService_ThenReturnsSelf()
+        {
+            var composition = this.serviceProvider.GetService<IBindingCompositionService>();
 
-			Assert.Same(composition, service);
-		}
+            var service = composition.GetExportedValue<IFeatureCompositionService>();
 
-		[TestMethod, TestCategory("Integration")]
-		public void WhenResolvingSVsServiceProviderImport_ThenSucceeds()
-		{
-			var components = new Mock<IComponentModel> { DefaultValue = DefaultValue.Mock };
-			components.As<SComponentModel>();
-			var services = new Mock<IServiceProvider> { DefaultValue = DefaultValue.Mock };
-			services.As<SVsServiceProvider>();
+            Assert.Same(composition, service);
+        }
 
-			services.Setup(x => x.GetService(typeof(SComponentModel))).Returns(components.Object);
+        [TestMethod, TestCategory("Integration")]
+        public void WhenResolvingSVsServiceProviderImport_ThenSucceeds()
+        {
+            var components = new Mock<IComponentModel> { DefaultValue = DefaultValue.Mock };
+            components.As<SComponentModel>();
+            var services = new Mock<IServiceProvider> { DefaultValue = DefaultValue.Mock };
+            services.As<SVsServiceProvider>();
 
-			var composition = new BindingCompositionService(services.Object);
+            services.Setup(x => x.GetService(typeof(SComponentModel))).Returns(components.Object);
 
-			var result = new ServicedClass();
+            var composition = new BindingCompositionService(services.Object);
 
-			composition.SatisfyImportsOnce(result);
-		}
+            var result = new ServicedClass();
 
-		[HostType("VS IDE")]
-		[TestMethod, TestCategory("Integration")]
-		public void WhenResolvingSVsServiceProviderImportInVS_ThenSucceeds()
-		{
-			var composition = ServiceProvider.GetService<IBindingCompositionService>();
+            composition.SatisfyImportsOnce(result);
+        }
 
-			var result = new ServicedClass();
+        [HostType("VS IDE")]
+        [TestMethod, TestCategory("Integration")]
+        public void WhenResolvingSVsServiceProviderImportInVS_ThenSucceeds()
+        {
+            var composition = this.serviceProvider.GetService<IBindingCompositionService>();
 
-			composition.SatisfyImportsOnce(result);
-		}
+            var result = new ServicedClass();
 
-		[HostType("VS IDE")]
-		[TestMethod, TestCategory("Integration")]
-		public void WhenResolvingDynamicBindingContxtImport_ThenSucceeds()
-		{
-			var composition = ServiceProvider.GetService<IBindingCompositionService>();
-			var context = composition.CreateDynamicContext();
+            composition.SatisfyImportsOnce(result);
+        }
 
-			var result = new ServicedClass();
+        [HostType("VS IDE")]
+        [TestMethod, TestCategory("Integration")]
+        public void WhenResolvingDynamicBindingContxtImport_ThenSucceeds()
+        {
+            var composition = this.serviceProvider.GetService<IBindingCompositionService>();
+            var context = composition.CreateDynamicContext();
 
-			context.CompositionService.SatisfyImportsOnce(result);
+            var result = new ServicedClass();
 
-			Assert.NotNull(result.Context);
-		}
+            context.CompositionService.SatisfyImportsOnce(result);
 
-		public class ServicedClass
-		{
-			[Import(typeof(SVsServiceProvider))]
-			public IServiceProvider Services { get; set; }
+            Assert.NotNull(result.Context);
+        }
 
-			[Import(AllowDefault = true)]
-			public IDynamicBindingContext Context { get; set; }
-		}
-	}
+        public class ServicedClass
+        {
+            [Import(typeof(SVsServiceProvider))]
+            public IServiceProvider Services { get; set; }
+
+            [Import(AllowDefault = true)]
+            public IDynamicBindingContext Context { get; set; }
+        }
+    }
 }

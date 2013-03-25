@@ -3,6 +3,8 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
+using NuPattern.ComponentModel;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Extensibility;
 
 namespace NuPattern.Library.Automation
@@ -10,7 +12,7 @@ namespace NuPattern.Library.Automation
     /// <summary>
     /// Type converter to display artifact automation settings.
     /// </summary>
-    public class AssociatedArtifactsTypeConverter : ExpandableObjectConverter
+    internal class AssociatedArtifactsTypeConverter : ExpandableObjectConverter
     {
         /// <summary>
         /// Returns the property descriptors for this instance.

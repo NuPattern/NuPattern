@@ -7,11 +7,12 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings.Design;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Events;
 using NuPattern.Library.Properties;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Schema;
 

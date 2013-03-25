@@ -22,23 +22,23 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a project or item template to unfold, and execute other automation on this element.
 	/// </summary>
-	public partial interface ITemplateSettings : INotifyPropertyChanged
+	partial interface ITemplateSettings : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<ITemplateSettings, object>> propertyExpression, Action<ITemplateSettings> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<ITemplateSettings, object>> propertyExpression, Action<ITemplateSettings> callbackAction);
 	}
 	
 	/// <summary>
 	/// Configures the settings for adding a project or item template to unfold, and execute other automation on this element.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface ITemplateSettings  : IAutomationSettings
+	partial interface ITemplateSettings  : IAutomationSettings
 	{ 
 		/// <summary>
 		/// The project or item template to unfold.
@@ -101,23 +101,23 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for handling an event for executing other automation on this element.
 	/// </summary>
-	public partial interface IEventSettings : INotifyPropertyChanged
+	partial interface IEventSettings : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IEventSettings, object>> propertyExpression, Action<IEventSettings> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IEventSettings, object>> propertyExpression, Action<IEventSettings> callbackAction);
 	}
 	
 	/// <summary>
 	/// Configures the settings for handling an event for executing other automation on this element.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IEventSettings  : IAutomationSettings
+	partial interface IEventSettings  : IAutomationSettings
 	{ 
 		/// <summary>
 		/// The type of event which triggers the command to execute when all conditions are met.
@@ -145,23 +145,23 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a command that can be executed on this element.
 	/// </summary>
-	public partial interface ICommandSettings : INotifyPropertyChanged
+	partial interface ICommandSettings : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<ICommandSettings, object>> propertyExpression, Action<ICommandSettings> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<ICommandSettings, object>> propertyExpression, Action<ICommandSettings> callbackAction);
 	}
 	
 	/// <summary>
 	/// Configures the settings for adding a command that can be executed on this element.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface ICommandSettings  : IAutomationSettings
+	partial interface ICommandSettings  : IAutomationSettings
 	{ 
 		/// <summary>
 		/// The type of the command. Once selected, the specific properties of the selected command can be configured.
@@ -174,23 +174,23 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a context menu item for executing other automation on this element.
 	/// </summary>
-	public partial interface IMenuSettings : INotifyPropertyChanged
+	partial interface IMenuSettings : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IMenuSettings, object>> propertyExpression, Action<IMenuSettings> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IMenuSettings, object>> propertyExpression, Action<IMenuSettings> callbackAction);
 	}
 	
 	/// <summary>
 	/// Configures the settings for adding a context menu item for executing other automation on this element.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IMenuSettings  : IAutomationSettings
+	partial interface IMenuSettings  : IAutomationSettings
 	{ 
 		/// <summary>
 		/// The text that is displayed on the menu to the user.
@@ -228,23 +228,23 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for associating guidance to this element.
 	/// </summary>
-	public partial interface IGuidanceExtension : INotifyPropertyChanged
+	partial interface IGuidanceExtension : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IGuidanceExtension, object>> propertyExpression, Action<IGuidanceExtension> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IGuidanceExtension, object>> propertyExpression, Action<IGuidanceExtension> callbackAction);
 	}
 	
 	/// <summary>
 	/// Configures the settings for associating guidance to this element.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IGuidanceExtension 
+	partial interface IGuidanceExtension 
 	{ 
 		/// <summary>
 		/// Configures guidance associated to this element. Expand this property to configure.
@@ -277,23 +277,23 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures the settings for adding a wizard to gather and initialize data for properties on this element.
 	/// </summary>
-	public partial interface IWizardSettings : INotifyPropertyChanged
+	partial interface IWizardSettings : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IWizardSettings, object>> propertyExpression, Action<IWizardSettings> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IWizardSettings, object>> propertyExpression, Action<IWizardSettings> callbackAction);
 	}
 	
 	/// <summary>
 	/// Configures the settings for adding a wizard to gather and initialize data for properties on this element.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IWizardSettings  : IAutomationSettings
+	partial interface IWizardSettings  : IAutomationSettings
 	{ 
 		/// <summary>
 		/// The type name of the wizard. 
@@ -306,23 +306,23 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures settings for managing associated artifacts to this element.
 	/// </summary>
-	public partial interface IArtifactExtension : INotifyPropertyChanged
+	partial interface IArtifactExtension : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IArtifactExtension, object>> propertyExpression, Action<IArtifactExtension> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IArtifactExtension, object>> propertyExpression, Action<IArtifactExtension> callbackAction);
 	}
 	
 	/// <summary>
 	/// Configures settings for managing associated artifacts to this element.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IArtifactExtension 
+	partial interface IArtifactExtension 
 	{ 
 		/// <summary>
 		/// Configures actions for working with solution items associated with this element. Expand this property to configure.
@@ -345,23 +345,23 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures settings for managing validation of this element.
 	/// </summary>
-	public partial interface IValidationExtension : INotifyPropertyChanged
+	partial interface IValidationExtension : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IValidationExtension, object>> propertyExpression, Action<IValidationExtension> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IValidationExtension, object>> propertyExpression, Action<IValidationExtension> callbackAction);
 	}
 	
 	/// <summary>
 	/// Configures settings for managing validation of this element.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IValidationExtension 
+	partial interface IValidationExtension 
 	{ 
 		/// <summary>
 		/// Configures actions for validating this element. Expand this property to configure.
@@ -394,23 +394,23 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Configures settings for handling a drag drop operations on this element.
 	/// </summary>
-	public partial interface IDragDropSettings : INotifyPropertyChanged
+	partial interface IDragDropSettings : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IDragDropSettings, object>> propertyExpression, Action<IDragDropSettings> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IDragDropSettings, object>> propertyExpression, Action<IDragDropSettings> callbackAction);
 	}
 	
 	/// <summary>
 	/// Configures settings for handling a drag drop operations on this element.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IDragDropSettings  : IAutomationSettings
+	partial interface IDragDropSettings  : IAutomationSettings
 	{ 
 		/// <summary>
 		/// The command to execute when valid data is dropped on instances of this element.

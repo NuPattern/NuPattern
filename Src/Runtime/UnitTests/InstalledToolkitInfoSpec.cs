@@ -5,6 +5,8 @@ using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
+using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Runtime.UnitTests
 {
@@ -143,8 +145,8 @@ namespace NuPattern.Runtime.UnitTests
                 var target = new InstalledToolkitInfo(extension.Object, this.reader, this.resource);
 
                 Assert.Equal(string.Empty, target.Classification.Category);
-                Assert.Equal(ToolkitVisibility.Expanded, target.Classification.CustomizeVisibility);
-                Assert.Equal(ToolkitVisibility.Expanded, target.Classification.CreateVisibility);
+                Assert.Equal(ExtensionVisibility.Expanded, target.Classification.CustomizeVisibility);
+                Assert.Equal(ExtensionVisibility.Expanded, target.Classification.CreateVisibility);
             }
         }
 
@@ -165,11 +167,11 @@ namespace NuPattern.Runtime.UnitTests
                 mock.Setup(ext => ext.InstallPath).Returns(@"X:\");
                 mock.Setup(ext => ext.Content).Returns(
                     new[]
-					{ 
-						Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == InstalledToolkitInfo.PatternModelCustomExtensionName && c.RelativePath == @"Foo.patterndefinition" && c.Attributes == new Dictionary<string, string> { { SchemaResource.AssemblyFileProperty, "Test.dll" } }),
-						Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == "Other" && c.RelativePath == @"Documentation\Other.docx" && c.Attributes == new Dictionary<string, string> { { "IsCustomizable", bool.TrueString } }),
-						Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == "Other" && c.RelativePath == @"Sample.file" && c.Attributes == new Dictionary<string, string> { { "IsCustomizable", bool.TrueString } }),
-					});
+                    { 
+                        Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == InstalledToolkitInfo.PatternModelCustomExtensionName && c.RelativePath == @"Foo.patterndefinition" && c.Attributes == new Dictionary<string, string> { { SchemaResource.AssemblyFileProperty, "Test.dll" } }),
+                        Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == "Other" && c.RelativePath == @"Documentation\Other.docx" && c.Attributes == new Dictionary<string, string> { { "IsCustomizable", bool.TrueString } }),
+                        Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == "Other" && c.RelativePath == @"Sample.file" && c.Attributes == new Dictionary<string, string> { { "IsCustomizable", bool.TrueString } }),
+                    });
 
                 this.extension = mock.Object;
                 this.reader = new Mock<ISchemaReader>().Object;
@@ -210,7 +212,7 @@ namespace NuPattern.Runtime.UnitTests
 
             [TestMethod, TestCategory("Unit")]
             [Ignore]
-            public void WhenGettingToolkitSchema_ThenInitializesSchemaInstanceAndProductFactoryId()
+            public void WhenGettingToolkitSchema_ThenInitializesSchemaInstanceAndPatternToolkitId()
             {
                 // TODO: isolate the schema reading and extracting
                 Assert.NotNull(this.target.Schema);
@@ -243,8 +245,8 @@ namespace NuPattern.Runtime.UnitTests
             public void WhenNoClassifaction_ThenDefaultClassification()
             {
                 Assert.Equal(String.Empty, target.Classification.Category);
-                Assert.Equal(ToolkitVisibility.Expanded, target.Classification.CustomizeVisibility);
-                Assert.Equal(ToolkitVisibility.Expanded, target.Classification.CreateVisibility);
+                Assert.Equal(ExtensionVisibility.Expanded, target.Classification.CustomizeVisibility);
+                Assert.Equal(ExtensionVisibility.Expanded, target.Classification.CreateVisibility);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -252,18 +254,18 @@ namespace NuPattern.Runtime.UnitTests
             {
                 this.mockExtension.Setup(ext => ext.Content).Returns(
                     new[]
-					{ 
-						Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == InstalledToolkitInfo.ToolkitClassificationCustomExtensionName && c.Attributes == new Dictionary<string, string> 
-						{ 
-							{ 
-								InstalledToolkitInfo.CategoryAttributeName, "Foo" 
-							}, 
-						}),
-					});
+                    { 
+                        Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == InstalledToolkitInfo.ToolkitClassificationCustomExtensionName && c.Attributes == new Dictionary<string, string> 
+                        { 
+                            { 
+                                InstalledToolkitInfo.CategoryAttributeName, "Foo" 
+                            }, 
+                        }),
+                    });
 
                 Assert.Equal("Foo", target.Classification.Category);
-                Assert.Equal(ToolkitVisibility.Expanded, target.Classification.CustomizeVisibility);
-                Assert.Equal(ToolkitVisibility.Expanded, target.Classification.CreateVisibility);
+                Assert.Equal(ExtensionVisibility.Expanded, target.Classification.CustomizeVisibility);
+                Assert.Equal(ExtensionVisibility.Expanded, target.Classification.CreateVisibility);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -271,18 +273,18 @@ namespace NuPattern.Runtime.UnitTests
             {
                 this.mockExtension.Setup(ext => ext.Content).Returns(
                     new[]
-					{ 
-						Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == InstalledToolkitInfo.ToolkitClassificationCustomExtensionName && c.Attributes == new Dictionary<string, string> 
-						{ 
-							{
-								InstalledToolkitInfo.CustomizeVisibilityAttributeName, ToolkitVisibility.Hidden.ToString()
-							} 
-						}),
-					});
+                    { 
+                        Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == InstalledToolkitInfo.ToolkitClassificationCustomExtensionName && c.Attributes == new Dictionary<string, string> 
+                        { 
+                            {
+                                InstalledToolkitInfo.CustomizeVisibilityAttributeName, ExtensionVisibility.Hidden.ToString()
+                            } 
+                        }),
+                    });
 
                 Assert.Equal(String.Empty, target.Classification.Category);
-                Assert.Equal(ToolkitVisibility.Hidden, target.Classification.CustomizeVisibility);
-                Assert.Equal(ToolkitVisibility.Expanded, target.Classification.CreateVisibility);
+                Assert.Equal(ExtensionVisibility.Hidden, target.Classification.CustomizeVisibility);
+                Assert.Equal(ExtensionVisibility.Expanded, target.Classification.CreateVisibility);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -290,21 +292,21 @@ namespace NuPattern.Runtime.UnitTests
             {
                 this.mockExtension.Setup(ext => ext.Content).Returns(
                     new[]
-					{ 
-						Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == InstalledToolkitInfo.ToolkitClassificationCustomExtensionName && c.Attributes == new Dictionary<string, string> 
-						{ 
-							{ 
-								InstalledToolkitInfo.CategoryAttributeName, "Foo" 
-							}, 
-							{
-								InstalledToolkitInfo.CustomizeVisibilityAttributeName, ToolkitVisibility.Hidden.ToString()
-							} 
-						}),
-					});
+                    { 
+                        Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == InstalledToolkitInfo.ToolkitClassificationCustomExtensionName && c.Attributes == new Dictionary<string, string> 
+                        { 
+                            { 
+                                InstalledToolkitInfo.CategoryAttributeName, "Foo" 
+                            }, 
+                            {
+                                InstalledToolkitInfo.CustomizeVisibilityAttributeName, ExtensionVisibility.Hidden.ToString()
+                            } 
+                        }),
+                    });
 
                 Assert.Equal("Foo", target.Classification.Category);
-                Assert.Equal(ToolkitVisibility.Hidden, target.Classification.CustomizeVisibility);
-                Assert.Equal(ToolkitVisibility.Expanded, target.Classification.CreateVisibility);
+                Assert.Equal(ExtensionVisibility.Hidden, target.Classification.CustomizeVisibility);
+                Assert.Equal(ExtensionVisibility.Expanded, target.Classification.CreateVisibility);
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -312,18 +314,18 @@ namespace NuPattern.Runtime.UnitTests
             {
                 this.mockExtension.Setup(ext => ext.Content).Returns(
                     new[]
-					{ 
-						Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == InstalledToolkitInfo.ToolkitClassificationCustomExtensionName && c.Attributes == new Dictionary<string, string> 
-						{ 
-							{
-								InstalledToolkitInfo.CustomizeVisibilityAttributeName, "Foo"
-							} 
-						}),
-					});
+                    { 
+                        Mocks.Of<IExtensionContent>().First(c => c.ContentTypeName == InstalledToolkitInfo.ToolkitClassificationCustomExtensionName && c.Attributes == new Dictionary<string, string> 
+                        { 
+                            {
+                                InstalledToolkitInfo.CustomizeVisibilityAttributeName, "Foo"
+                            } 
+                        }),
+                    });
 
                 Assert.Equal(String.Empty, target.Classification.Category);
-                Assert.Equal(ToolkitVisibility.Expanded, target.Classification.CustomizeVisibility);
-                Assert.Equal(ToolkitVisibility.Expanded, target.Classification.CreateVisibility);
+                Assert.Equal(ExtensionVisibility.Expanded, target.Classification.CustomizeVisibility);
+                Assert.Equal(ExtensionVisibility.Expanded, target.Classification.CreateVisibility);
             }
         }
     }

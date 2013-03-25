@@ -15,6 +15,7 @@ using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Store;
 
 namespace NuPattern.Library.UnitTests.Commands

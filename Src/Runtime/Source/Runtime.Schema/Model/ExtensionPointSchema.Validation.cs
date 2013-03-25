@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
+using NuPattern.Reflection;
 using NuPattern.Runtime.Schema.Properties;
 
 namespace NuPattern.Runtime.Schema
@@ -13,7 +14,7 @@ namespace NuPattern.Runtime.Schema
     /// Customizations for the ExtensionPointSchema class.
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class ExtensionPointSchema
+    partial class ExtensionPointSchema
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ExtensionPointSchema>();
 

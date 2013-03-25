@@ -3,8 +3,8 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
 using NuPattern.Library.Commands;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.UnitTests.Commands
 {
@@ -30,12 +30,12 @@ namespace NuPattern.Library.UnitTests.Commands
                 Parent = new Item
                 {
                     Items = 
-					{
-						new Item
-						{
-							Name = "Foo.txt",
-						}
-					},
+                    {
+                        new Item
+                        {
+                            Name = "Foo.txt",
+                        }
+                    },
                 },
             };
         }

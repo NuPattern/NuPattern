@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Presentation;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI.UnitTests
 {
@@ -106,9 +109,9 @@ namespace NuPattern.Runtime.UI.UnitTests
                 var product = Mocks.Of<IProduct>().First(p =>
                     p.InstanceName == "Foo" &&
                     p.Views == new[]
-					{
-						Mocks.Of<IView>().First(v => v.Info.Name == "View1" && v.Info.IsDefault == true && v.AllElements == new[] { Mocks.Of<IElement>().First() })
-					});
+                    {
+                        Mocks.Of<IView>().First(v => v.Info.Name == "View1" && v.Info.IsDefault == true && v.AllElements == new[] { Mocks.Of<IElement>().First() })
+                    });
 
                 var target = new ProductViewModel(product, this.ctx);
 
@@ -121,9 +124,9 @@ namespace NuPattern.Runtime.UI.UnitTests
                 var product = Mocks.Of<IProduct>().First(p =>
                     p.InstanceName == "Foo" &&
                     p.Views == new[]
-					{
-						Mocks.Of<IView>().First(v => v.Info.Name == "View1" && v.Info.IsDefault == true && v.AllElements == new[] { Mocks.Of<IElement>().First() })
-					});
+                    {
+                        Mocks.Of<IView>().First(v => v.Info.Name == "View1" && v.Info.IsDefault == true && v.AllElements == new[] { Mocks.Of<IElement>().First() })
+                    });
 
                 var target = new ProductViewModel(product, this.ctx);
 
@@ -149,11 +152,11 @@ namespace NuPattern.Runtime.UI.UnitTests
                 Mock.Get(hiddenView.Info).Setup(x => x.IsVisible).Returns(false);
 
                 var views = new[]
-				{
-					CreateView("View1", false, Create<IElement, IElementInfo>("Element1", Cardinality.OneToOne)),
-					CreateView("View2", true, Create<ICollection, ICollectionInfo>("Collection2", Cardinality.OneToOne), Create<IElement, IElementInfo>("Element2", Cardinality.ZeroToMany)), 
-					hiddenView,
-				};
+                {
+                    CreateView("View1", false, Create<IElement, IElementInfo>("Element1", Cardinality.OneToOne)),
+                    CreateView("View2", true, Create<ICollection, ICollectionInfo>("Collection2", Cardinality.OneToOne), Create<IElement, IElementInfo>("Element2", Cardinality.ZeroToMany)), 
+                    hiddenView,
+                };
 
                 var view1Children = (List<IAbstractElementInfo>)views[0].Info.Elements;
                 Mock.Get((IElementInfo)view1Children[0])

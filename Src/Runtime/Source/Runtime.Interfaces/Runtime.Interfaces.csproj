@@ -46,15 +46,33 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="AssemblyReference.cs" />
-    <Compile Include="AssemblyResource.cs" />
     <Compile Include="Bindings\IBindingCompositionService.cs" />
+    <Compile Include="IExportedAutomationMetadata.cs" />
+    <Compile Include="IExpressionEvaluator.cs" />
+    <Compile Include="INuPatternProjectTypeProvider.cs" />
+    <Compile Include="IPatternModelSchemaUpgradeManager.cs" />
+    <Compile Include="IPatternModelSchemaUpgradeProcessor.cs" />
+    <Compile Include="IPropertyEvaluator.cs" />
+    <Compile Include="ISchemaUpgradeContext.cs" />
+    <Compile Include="ISchemaUpgradeProccesorOptions.cs" />
+    <Compile Include="IWizardAutomationExtension.cs" />
+    <Compile Include="SchemaConstants.gen.cs">
+      <DependentUpon>SchemaConstants.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SchemaUpgradeProcessorOptionsAttribute.cs" />
+    <Compile Include="Settings\ITraceSourceSetting.cs" />
+    <Compile Include="Settings\ITracingSettings.cs" />
+    <Compile Include="Settings\IRuntimeSettings.cs" />
     <Compile Include="StoreConstants.gen.cs">
       <DependentUpon>StoreConstants.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -65,41 +83,20 @@
     <Compile Include="Events\IOnSolutionBuilderDragEnter.cs" />
     <Compile Include="Events\IOnSolutionBuilderDragLeave.cs" />
     <Compile Include="Events\IOnSolutionBuilderDrop.cs" />
-    <Compile Include="Extensions\ContainedElementInfoExtensions.cs" />
-    <Compile Include="Extensions\ElementContainerExtensions.cs" />
-    <Compile Include="Extensions\ExtensionContentExtensions.cs" />
-    <Compile Include="Extensions\PropertyExtensions.cs" />
-    <Compile Include="Extensions\PropertyInfoExtensions.cs" />
-    <Compile Include="Extensions\ServiceProviderExtensions.cs" />
-    <Compile Include="Extensions\TraceSourceExtensions.cs" />
-    <Compile Include="Extensions\TypeExtensions.cs" />
-    <Compile Include="FirstPropertyValueProductElementComparer.cs" />
-    <Compile Include="IAssemblyReference.cs" />
-    <Compile Include="IAssemblyResource.cs" />
     <Compile Include="IToolkitClassification.cs" />
     <Compile Include="Model\Schema\IContainingLinkSchema.cs" />
     <Compile Include="Model\Schema\IPatternInfo.cs" />
     <Compile Include="Model\Schema\IPatternModelInfo.cs" />
     <Compile Include="Model\Schema\IPatternModelSchema.cs" />
-    <Compile Include="ProductElementComparer.cs" />
-    <Compile Include="ProductElementInstanceNameComparer.cs" />
-    <Compile Include="ResourcePack.cs" />
     <Compile Include="ToolkitInterfaceLayer\IToolkitInterfaceService.cs" />
     <Compile Include="IToolkitRepository.cs" />
     <Compile Include="IFluentInterface.cs" />
     <Compile Include="Model\Schema\IPropertySchema.cs" />
-    <Compile Include="Model\StoreEventBufferingScope.cs" />
     <Compile Include="Model\Store\AutomationExtension.cs" />
-    <Compile Include="Commands\ICommand.cs" />
-    <Compile Include="Commands\IVsMenuCommand.cs" />
-    <Compile Include="Extensions\AutomationSettingsExtensions.cs" />
-    <Compile Include="Extensions\AutomationExtensionExtensions.cs" />
     <Compile Include="Model\Schema\AutomationSettingsClassification.cs" />
-    <Compile Include="ToolkitInterfaceLayer\ToolkitInterfaceLayerCacheKey.cs" />
     <Compile Include="ToolkitInterfaceLayer\ToolkitInterfaceProxyAttribute.cs" />
     <Compile Include="ToolkitInterfaceLayer\IToolkitInterface.cs" />
     <Compile Include="ToolkitInterfaceLayer\IToolkitInterfaceMetadata.cs" />
-    <Compile Include="FileEventArgs.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Model\Schema\INamedElementInfo.cs" />
     <Compile Include="Bindings\IBindingFactory.cs" />
@@ -108,13 +105,8 @@
     <Compile Include="Bindings\IDynamicBindingContext.cs" />
     <Compile Include="Bindings\IPropertyBindingSettings.cs" />
     <Compile Include="Bindings\IValueProviderBindingSettings.cs" />
-    <Compile Include="Extensions\NamedElementInfoExtensions.cs" />
-    <Compile Include="Extensions\InstanceBaseExtensions.cs" />
-    <Compile Include="ToolkitInterfaceLayer\AbstractElementProxy.cs" />
-    <Compile Include="ToolkitInterfaceLayer\ContainerProxy.cs" />
+    <Compile Include="Model\Store\InstanceBaseExtensions.cs" />
     <Compile Include="ToolkitInterfaceLayer\ToolkitInterfaceAttribute.cs" />
-    <Compile Include="ToolkitInterfaceLayer\ToolkitInterfaceLayer.cs" />
-    <Compile Include="ToolkitInterfaceLayer\ProductProxy.cs" />
     <Compile Include="Model\Store\IAbstractElement.cs" />
     <Compile Include="IPickerFilter.cs" />
     <Compile Include="IProductPicker.cs" />
@@ -133,57 +125,39 @@
     <Compile Include="Model\Schema\IAbstractElementInfo.cs" />
     <Compile Include="Model\Schema\IAbstractElementSchema.cs" />
     <Compile Include="Model\Schema\IContainedElementSchema.cs" />
-    <Compile Include="Extensions\DynamicBindingExtensions.cs" />
-    <Compile Include="Extensions\InstalledToolkitInfoExtensions.cs" />
-    <Compile Include="Extensions\PatternManagerExtensions.cs" />
-    <Compile Include="HiddenAttribute.cs" />
     <Compile Include="Model\Store\IElementContainer.cs" />
-    <Compile Include="Extensions\ProductElementExtensions.cs" />
     <Compile Include="Model\Schema\IExtensionPointInfo.cs" />
     <Compile Include="Model\Store\IInstanceBase.cs" />
-    <Compile Include="IItemEvents.cs" />
     <Compile Include="Model\Schema\IContainedElementInfo.cs" />
     <Compile Include="ToolkitInterfaceLayer\IAbstractElementProxy.cs" />
     <Compile Include="ToolkitInterfaceLayer\IContainerProxy.cs" />
     <Compile Include="ToolkitInterfaceLayer\IProductProxy.cs" />
     <Compile Include="ToolkitInterfaceLayer\IPropertyProxy.cs" />
     <Compile Include="IValidationRule.cs" />
-    <Compile Include="IWizardAutomationExtension.cs" />
     <Compile Include="Model\Schema\INamedElementSchema.cs" />
-    <Compile Include="Events\ChangedEventArgs.cs" />
     <Compile Include="Events\EventAttribute.cs" />
-    <Compile Include="Events\WeakObservableEventExtensions.cs" />
-    <Compile Include="Extensions\PatternElementSchemaExtensions.cs" />
     <Compile Include="ICommandStatus.cs" />
     <Compile Include="ISupportTransaction.cs" />
     <Compile Include="ITransaction.cs" />
     <Compile Include="PropertyUsages.cs" />
-    <Compile Include="ReferenceKindProvider.cs" />
     <Compile Include="ReferenceKindProviderAttribute.cs" />
     <Compile Include="RuntimeValidationExtensionAttribute.cs" />
     <Compile Include="Settings\IAutomationMenuCommand.cs" />
-    <Compile Include="Settings\TraceSourceSetting.cs" />
-    <Compile Include="Settings\TracingSettings.cs" />
-    <Compile Include="ToolkitVisibility.cs" />
+    <Compile Include="Uri\TextTemplateUri.cs" />
+    <Compile Include="Uri\VsTemplateUri.cs" />
     <Compile Include="ValidationConstants.cs" />
     <Compile Include="ValueEventArgs.cs" />
     <Compile Include="Model\Schema\IAutomationSettingsInfo.cs" />
     <Compile Include="Events\IEventMetadata.cs" />
     <Compile Include="Model\Store\IAutomationSettings.cs" />
     <Compile Include="Model\Schema\IAutomationSettingsSchema.cs" />
-    <Compile Include="IComponentModelInfo.cs" />
-    <Compile Include="Events\IObservableEvent.cs" />
     <Compile Include="IIdMetadata.cs" />
     <Compile Include="IPatternManager.cs" />
     <Compile Include="Model\Store\IProductState.cs" />
     <Compile Include="Model\Schema\IPatternElementInfo.cs" />
     <Compile Include="Settings\ISettingsManager.cs" />
-    <Compile Include="IShellEvents.cs" />
-    <Compile Include="ISolutionEvents.cs" />
     <Compile Include="Model\Schema\Cardinality.cs" />
-    <Compile Include="Extensions\ExceptionExtensions.cs" />
     <Compile Include="Model\Store\IProductElement.cs" />
-    <Compile Include="Guard.cs" />
     <Compile Include="Model\Store\IAutomationExtension.cs" />
     <Compile Include="IToolkitInfo.cs" />
     <Compile Include="IInstalledToolkitInfo.cs" />
@@ -196,18 +170,6 @@
     <Compile Include="Model\Schema\CustomizedLevel.cs" />
     <Compile Include="ISchemaReader.cs" />
     <Compile Include="ISchemaResource.cs" />
-    <Compile Include="Events\StaticWeakReference.cs" />
-    <Compile Include="Events\PropertyChangeManager.cs" />
-    <Compile Include="Events\WeakObservable.cs" />
-    <Compile Include="Events\AnonymousDisposable.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Events\Event.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Events\IEvent.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="GeneratedCode\SchemaInterfaces.gen.cs">
       <DependentUpon>SchemaInterfaces.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -215,23 +177,11 @@
     </Compile>
     <Compile Include="ProductCollectionChangedEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <DependentUpon>Resources.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="GeneratedCode\RuntimeInterfaces.gen.cs">
       <DependentUpon>RuntimeInterfaces.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Events\WeakObservableEvent.cs" />
-    <Compile Include="Events\WeakObserverEvent.cs" />
-    <Compile Include="Settings\RuntimeSettings.cs" />
-    <Compile Include="SolutionEventArgs.cs" />
-    <Compile Include="UI\IDialogWindow.cs" />
-    <Compile Include="UI\IUserMessageService.cs" />
-    <Compile Include="UI\MouseCursor.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
@@ -244,6 +194,10 @@
     </None>
     <None Include="..\..\..\Common\Helpers\PropertyChangedInterface.tt">
       <Link>GeneratedCode\PropertyChangedInterface.tt</Link>
+    </None>
+    <None Include="SchemaConstants.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SchemaConstants.gen.cs</LastGenOutput>
     </None>
     <None Include="StoreConstants.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -266,11 +220,14 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>NuPattern.Runtime.Interfaces</CustomToolNamespace>
-    </EmbeddedResource>
+    <ProjectReference Include="..\..\..\Common\Source\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>Common.VisualStudio</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

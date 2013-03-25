@@ -6,7 +6,7 @@ namespace NuPattern.Extensibility
 	/// <summary>
 	/// Default implementation of a transaction that wraps the DSL transaction.
 	/// </summary>
-	internal sealed class ModelingTransaction : ITransaction
+	public sealed class ModelingTransaction : ITransaction
 	{
 		private Transaction transaction;
 

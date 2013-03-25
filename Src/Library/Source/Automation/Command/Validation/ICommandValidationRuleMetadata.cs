@@ -5,7 +5,7 @@ namespace NuPattern.Library
 	/// <summary>
 	/// Metadata for the  <see cref="ICommandValidationRule"/>
 	/// </summary>
-	public interface ICommandValidationRuleMetadata
+    internal interface ICommandValidationRuleMetadata
 	{
 		/// <summary>
 		/// The type of the command to which the validations apply

@@ -13,10 +13,13 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Extensibility;
 using NuPattern.Library.Properties;
 using NuPattern.Library.TypeEditors;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.Commands
 {

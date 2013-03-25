@@ -7,7 +7,9 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
 using NuPattern.Extensibility.References;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
+using ReflectionExtensions = Microsoft.VisualStudio.TeamArchitect.PowerTools.ReflectionExtensions;
 
 namespace NuPattern.Library.Automation
 {
@@ -49,7 +51,7 @@ namespace NuPattern.Library.Automation
                         context.LogError(
                             string.Format(CultureInfo.InvariantCulture,
                                 Properties.Resources.Validate_ArtifactReferenceNotFound,
-                                element.InstanceName, reference.ToString(), typeof(SolutionArtifactLinkReference).DisplayName()),
+                                element.InstanceName, reference.ToString(), ReflectionExtensions.DisplayName(typeof(SolutionArtifactLinkReference))),
                             Properties.Resources.Validate_ArtifactReferenceNotFoundCode,
                             element as ModelElement);
                     }

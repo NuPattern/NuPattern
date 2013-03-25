@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Settings;
 using NuPattern.Runtime.Shell.Properties;
 
 namespace NuPattern.Runtime.Shell.OptionPages
@@ -106,8 +106,8 @@ namespace NuPattern.Runtime.Shell.OptionPages
             }
             else
             {
-                if (!NuPattern.Extensibility.DataFormats.IsValidCSharpIdentifier(this.txtSourceName.Text) &&
-                    !NuPattern.Extensibility.DataFormats.DesignTime.IsValidNamespaceIdentifier(this.txtSourceName.Text))
+                if (!NuPattern.VisualStudio.Solution.DataFormats.IsValidCSharpIdentifier(this.txtSourceName.Text) &&
+                    !NuPattern.VisualStudio.Solution.DataFormats.DesignTime.IsValidNamespaceIdentifier(this.txtSourceName.Text))
                 {
                     this.errorProvider.SetError(this.txtSourceName, Resources.TraceOptionsPageControl_SourceNameInvalid);
 

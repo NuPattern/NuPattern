@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility.Binding;
-using NuPattern.Runtime;
+using NuPattern.Extensibility.Bindings.Design;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Extensibility.UnitTests.Binding.Design
 {

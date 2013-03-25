@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.ComponentModel;
 using NuPattern.Extensibility;
 
 namespace NuPattern.Runtime.Schema.UnitTests
@@ -15,7 +16,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
         {
             protected PatternModelSchema PatternModel { get; set; }
 
-            protected ElementSchema Element { get; set; }
+            internal ElementSchema Element { get; set; }
 
             [TestInitialize]
             public virtual void InitializeContext()

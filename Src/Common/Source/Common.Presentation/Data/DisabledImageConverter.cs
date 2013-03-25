@@ -5,21 +5,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.VisualStudio.PlatformUI;
 
-namespace NuPattern.Common.Presentation.Data
+namespace NuPattern.Presentation.Data
 {
 #if VSVER10
-	/// <summary>
-	/// Converts an image <see cref="BitmapSource"/> into a disabled version of the same image as an <see cref="Image"/>.
-	/// </summary>
-	[ValueConversion(typeof(BitmapImage), typeof(Image))]
-	public sealed class DisabledImageConverter : Microsoft.VisualStudio.PlatformUI.GrayscaleImageConverter
+    /// <summary>
+    /// Converts an image <see cref="BitmapSource"/> into a disabled version of the same image as an <see cref="Image"/>.
+    /// </summary>
+    [ValueConversion(typeof(BitmapImage), typeof(Image))]
+    public sealed class DisabledImageConverter : Microsoft.VisualStudio.PlatformUI.GrayscaleImageConverter
     {	}
 #endif
 #if VSVER11
     /// <summary>
     /// Converts an image <see cref="BitmapSource"/> into a disabled version of the same image as an <see cref="Image"/>.
-	/// </summary>
-	[ValueConversion(typeof(BitmapImage), typeof(Image))]
+    /// </summary>
+    [ValueConversion(typeof(BitmapImage), typeof(Image))]
     public sealed class DisabledImageConverter : ValueConverter<BitmapSource, Image>
     {
         private ThemedImageConverter innerConverter;
@@ -42,7 +42,7 @@ namespace NuPattern.Common.Presentation.Data
 
             if (parameter == null)
             {
-                parameter = (Color) ColorConverter.ConvertFromString("#40FFFFFF");
+                parameter = (Color)ColorConverter.ConvertFromString("#40FFFFFF");
             }
 
             if (value == null)

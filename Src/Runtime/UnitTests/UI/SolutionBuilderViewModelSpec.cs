@@ -5,6 +5,9 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Presentation;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI.UnitTests
 {
@@ -552,12 +555,12 @@ namespace NuPattern.Runtime.UI.UnitTests
             view.As<IElementContainer>().Setup(v => v.Info).Returns(info);
 
             var elements = new List<IAbstractElement>
-			{
-				Mocks.Of<IElement>()
-					.First(e =>	e.Info.Parent == view.Object.Info && e.Info.Cardinality == Cardinality.OneToOne && e.InstanceName == "1first"),
-				Mocks.Of<ICollection>()
-					.First(e =>	e.Info.Parent == view.Object.Info && e.Info.Cardinality == Cardinality.OneToOne && e.InstanceName == "3third")
-			};
+            {
+                Mocks.Of<IElement>()
+                    .First(e =>	e.Info.Parent == view.Object.Info && e.Info.Cardinality == Cardinality.OneToOne && e.InstanceName == "1first"),
+                Mocks.Of<ICollection>()
+                    .First(e =>	e.Info.Parent == view.Object.Info && e.Info.Cardinality == Cardinality.OneToOne && e.InstanceName == "3third")
+            };
 
             view.Setup(v => v.AllElements).Returns(elements);
 

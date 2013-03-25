@@ -67,7 +67,7 @@ if ((domainClass.BaseClass != null && (domainClass.BaseClass.Name == "ExtensionE
 /// <#=domainClass.Description #>
 /// </summary>
 [GeneratedCode("<#=this.ToolName #>", "<#=this.DslVersion #>")]
-public partial interface I<#=domainClass.Name #> <#+if (baseInterfaces.Count > 0)
+partial interface I<#=domainClass.Name #> <#+if (baseInterfaces.Count > 0)
 { #> : <#=string.Join(", ", baseInterfaces.ToArray()) #><#+} #>
 
 { <#+

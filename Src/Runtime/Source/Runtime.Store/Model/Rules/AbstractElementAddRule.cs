@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.Store
     /// Triggers this notification rule whether a <see cref="AbstractElement"/> is added.
     /// </summary>
     [RuleOn(typeof(AbstractElement), FireTime = TimeToFire.LocalCommit)]
-    public partial class AbstractElementAddRule : AddRule
+    internal class AbstractElementAddRule : AddRule
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<AbstractElementAddRule>();
 

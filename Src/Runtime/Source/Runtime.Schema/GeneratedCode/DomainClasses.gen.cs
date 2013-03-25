@@ -261,7 +261,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets Pattern.
 		/// The pattern in this definition.
 		/// </summary>
-		public virtual PatternSchema Pattern
+		internal virtual PatternSchema Pattern
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -418,9 +418,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("15a27251-8feb-4fae-b6d8-703a5697d3eb")]
-	public partial class PatternSchema : PatternElementSchema
+	internal partial class PatternSchema : PatternElementSchema
 	{
 		#region Constructors, domain class Id
 	
@@ -963,10 +962,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.NamedElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.NamedElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("50bd80bb-6516-4bfc-a5e5-8ce26fc23224")]
-	public abstract partial class NamedElementSchema : DslModeling::ModelElement
+	internal abstract partial class NamedElementSchema : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -2122,9 +2120,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("dbe13a31-7dcd-4fbd-a601-18ca765e264e")]
-	public abstract partial class PatternElementSchema : CustomizableElementSchema
+	internal abstract partial class PatternElementSchema : CustomizableElementSchema
 	{
 		#region Constructors, domain class Id
 	
@@ -2267,8 +2264,8 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets the value of Icon domain property.
 		/// The icon for this item displayed to the user.
 		/// </summary>
-		[NuPattern.Extensibility.ImageFilter(NuPattern.Extensibility.ImageKind.Image )]
-		[System.ComponentModel.Editor(typeof(NuPattern.Extensibility.ImageUriEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[NuPattern.Extensibility.Design.ImageFilter(NuPattern.Extensibility.Design.ImageKind.Image )]
+		[System.ComponentModel.Editor(typeof(NuPattern.Extensibility.Design.ImageUriEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementSchema/Icon.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PatternElementSchema/Icon.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -2528,9 +2525,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PropertySchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("079a705a-0fc2-4c40-b0ba-c8b76fc60f7c")]
-	public partial class PropertySchema : CustomizableElementSchema
+	internal partial class PropertySchema : CustomizableElementSchema
 	{
 		#region Constructors, domain class Id
 	
@@ -3239,7 +3235,7 @@ namespace NuPattern.Runtime.Schema
 		/// acceptable values.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.ComponentModel.TypeConverter>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter<System.ComponentModel.TypeConverter>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/TypeConverterTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/TypeConverterTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -3351,7 +3347,7 @@ namespace NuPattern.Runtime.Schema
 		/// value of this property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.Drawing.Design.UITypeEditor>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter<System.Drawing.Design.UITypeEditor>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/EditorTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/EditorTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -3570,7 +3566,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets the value of RawValueProvider domain property.
 		/// A value provider that calculates the value of this property dynamically.
 		/// </summary>
-		[NuPattern.Extensibility.PropertyDescriptor(typeof(NuPattern.Extensibility.Binding.BindingPropertyDescriptor<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider>))]
+		[NuPattern.ComponentModel.Design.PropertyDescriptor(typeof(NuPattern.Extensibility.Bindings.BindingPropertyDescriptor<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/RawValueProvider.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/RawValueProvider.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -3669,7 +3665,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual PatternElementSchema Owner
+		internal virtual PatternElementSchema Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3693,9 +3689,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("14b6f5ec-0468-4380-9210-07c2fdbda012")]
-	public abstract partial class ViewSchemaBase : CustomizableElementSchema
+	internal abstract partial class ViewSchemaBase : CustomizableElementSchema
 	{
 		#region Constructors, domain class Id
 	
@@ -4111,7 +4106,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets Pattern.
 		/// The owning pattern.
 		/// </summary>
-		public virtual PatternSchema Pattern
+		internal virtual PatternSchema Pattern
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -4285,9 +4280,8 @@ namespace NuPattern.Runtime.Schema
 	/// DomainClass ViewSchema
 	/// A distinct view of the pattern.
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class ViewSchema : ViewSchemaBase
+	internal partial class ViewSchema : ViewSchemaBase
 	{
 		#region Constructors
 		/// <summary>
@@ -4322,9 +4316,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CollectionSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CollectionSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("5c399883-85a3-4863-90dd-470b20576f61")]
-	public partial class CollectionSchema : AbstractElementSchema
+	internal partial class CollectionSchema : AbstractElementSchema
 	{
 		#region Constructors, domain class Id
 	
@@ -4364,9 +4357,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("18de646e-e001-4e6b-b78b-59086f74d429")]
-	public partial class ElementSchema : AbstractElementSchema
+	internal partial class ElementSchema : AbstractElementSchema
 	{
 		#region Constructors, domain class Id
 	
@@ -4404,9 +4396,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("129120e9-f7e2-4154-805e-16bf6890f67a")]
-	public abstract partial class CustomizableElementSchemaBase : NamedElementSchema
+	internal abstract partial class CustomizableElementSchemaBase : NamedElementSchema
 	{
 		#region Constructors, domain class Id
 	
@@ -4786,7 +4777,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets Policy.
 		/// The customization policy that applies to the element.
 		/// </summary>
-		public virtual CustomizationPolicySchema Policy
+		internal virtual CustomizationPolicySchema Policy
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -4907,9 +4898,8 @@ namespace NuPattern.Runtime.Schema
 	/// DomainClass CustomizableElementSchema
 	/// An element that supports customization of its properties.
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public abstract partial class CustomizableElementSchema : CustomizableElementSchemaBase
+	internal abstract partial class CustomizableElementSchema : CustomizableElementSchemaBase
 	{
 		#region Constructors
 		/// <summary>
@@ -4933,9 +4923,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.AbstractElementSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.AbstractElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a022a552-666a-4f23-b829-4edf1cea0971")]
-	public abstract partial class AbstractElementSchema : PatternElementSchema
+	internal abstract partial class AbstractElementSchema : PatternElementSchema
 	{
 		#region Constructors, domain class Id
 	
@@ -5068,7 +5057,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets View.
 		/// The owning view.
 		/// </summary>
-		public virtual ViewSchema View
+		internal virtual ViewSchema View
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -5102,7 +5091,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual AbstractElementSchema Owner
+		internal virtual AbstractElementSchema Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -5263,14 +5252,13 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Double-derived base class for DomainClass CustomizationPolicySchema
 	/// </summary>
-	[NuPattern.Extensibility.CategoryResource("CustomizationCategory", typeof(NuPattern.Runtime.Schema.Properties.Resources))]
+	[NuPattern.ComponentModel.Design.CategoryResource("CustomizationCategory", typeof(NuPattern.Runtime.Schema.Properties.Resources))]
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizationPolicySchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizationPolicySchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("c9fbbae3-628d-46f1-860e-5e80fc1b6211")]
-	public abstract partial class CustomizationPolicySchemaBase : DslModeling::ModelElement
+	internal abstract partial class CustomizationPolicySchemaBase : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -5554,7 +5542,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual CustomizableElementSchema Owner
+		internal virtual CustomizableElementSchema Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -5670,9 +5658,8 @@ namespace NuPattern.Runtime.Schema
 	/// DomainClass CustomizationPolicySchema
 	/// The policy that controls what properties are customizable on an element.
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class CustomizationPolicySchema : CustomizationPolicySchemaBase
+	internal partial class CustomizationPolicySchema : CustomizationPolicySchemaBase
 	{
 		#region Constructors
 		/// <summary>
@@ -5705,9 +5692,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableSettingSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableSettingSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a8991222-7d76-4467-b4d4-663daec5050d")]
-	public abstract partial class CustomizableSettingSchemaBase : DslModeling::ModelElement
+	internal abstract partial class CustomizableSettingSchemaBase : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -6666,7 +6652,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets Policy.
 		/// The owning policy.
 		/// </summary>
-		public virtual CustomizationPolicySchema Policy
+		internal virtual CustomizationPolicySchema Policy
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -6685,9 +6671,8 @@ namespace NuPattern.Runtime.Schema
 	/// DomainClass CustomizableSettingSchema
 	/// The settings for a customizable property.
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class CustomizableSettingSchema : CustomizableSettingSchemaBase
+	internal partial class CustomizableSettingSchema : CustomizableSettingSchemaBase
 	{
 		#region Constructors
 		/// <summary>
@@ -6721,9 +6706,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.AutomationSettingsSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.AutomationSettingsSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a997feca-f406-49ad-82ae-fc1f53d31527")]
-	public partial class AutomationSettingsSchema : CustomizableElementSchema
+	internal partial class AutomationSettingsSchema : CustomizableElementSchema
 	{
 		#region Constructors, domain class Id
 	
@@ -7087,7 +7071,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual PatternElementSchema Owner
+		internal virtual PatternElementSchema Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -7112,10 +7096,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ProvidedExtensionPointSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ProvidedExtensionPointSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (ExtensionPointId = {extensionPointIdPropertyStorage})")]
 	[DslModeling::DomainObjectId("14956bbf-ded7-4762-9ade-ced0cc89683c")]
-	public partial class ProvidedExtensionPointSchema : DslModeling::ModelElement
+	internal partial class ProvidedExtensionPointSchema : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -7257,7 +7240,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets Pattern.
 		/// The owning pattern.
 		/// </summary>
-		public virtual PatternSchema Pattern
+		internal virtual PatternSchema Pattern
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -7282,9 +7265,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ExtensionPointSchema.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ExtensionPointSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("889fcf39-249f-4484-a7e8-2bf14320962f")]
-	public partial class ExtensionPointSchema : PatternElementSchema
+	internal partial class ExtensionPointSchema : PatternElementSchema
 	{
 		#region Constructors, domain class Id
 	
@@ -7603,7 +7585,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual AbstractElementSchema Owner
+		internal virtual AbstractElementSchema Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -7622,7 +7604,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets View.
 		/// The owning view.
 		/// </summary>
-		public virtual ViewSchema View
+		internal virtual ViewSchema View
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get

@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
 using NuPattern.Library.Properties;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Library.Automation
 {
@@ -9,7 +9,7 @@ namespace NuPattern.Library.Automation
     /// Change rule for <see cref="TemplateSettings"/> domain class.
     /// </summary>
     [RuleOn(typeof(TemplateSettings), FireTime = TimeToFire.TopLevelCommit)]
-    public class TemplateSettingsChangeRule : ChangeRule
+    internal class TemplateSettingsChangeRule : ChangeRule
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<TemplateSettingsChangeRule>();
 

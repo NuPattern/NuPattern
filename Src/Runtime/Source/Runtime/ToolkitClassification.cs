@@ -1,4 +1,6 @@
 ﻿
+using NuPattern.VisualStudio.Extensions;
+
 namespace NuPattern.Runtime
 {
     /// <summary>
@@ -7,15 +9,15 @@ namespace NuPattern.Runtime
     internal class ToolkitClassification : IToolkitClassification
     {
         private string category;
-        private ToolkitVisibility customizeVisibility;
-        private ToolkitVisibility createVisibility;
+        private ExtensionVisibility customizeVisibility;
+        private ExtensionVisibility createVisibility;
 
         /// <summary>
         /// Creates a new instance of the <see cref="ToolkitClassification"/> class.
         /// </summary>
         public ToolkitClassification(string category = "",
-            ToolkitVisibility createVisibility = ToolkitVisibility.Expanded,
-            ToolkitVisibility customizeVisibility = ToolkitVisibility.Expanded)
+            ExtensionVisibility createVisibility = ExtensionVisibility.Expanded,
+            ExtensionVisibility customizeVisibility = ExtensionVisibility.Expanded)
         {
             Guard.NotNull(() => category, category);
 
@@ -35,7 +37,7 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Gets the visibility of the toolkit for customization.
         /// </summary>
-        public ToolkitVisibility CustomizeVisibility
+        public ExtensionVisibility CustomizeVisibility
         {
             get { return this.customizeVisibility; }
         }
@@ -43,7 +45,7 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Gets the visibility of the toolkit for creation.
         /// </summary>
-        public ToolkitVisibility CreateVisibility
+        public ExtensionVisibility CreateVisibility
         {
             get { return this.createVisibility; }
         }

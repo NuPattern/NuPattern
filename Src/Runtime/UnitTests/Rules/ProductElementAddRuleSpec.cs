@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Extensibility;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Runtime.Store.UnitTests
 {

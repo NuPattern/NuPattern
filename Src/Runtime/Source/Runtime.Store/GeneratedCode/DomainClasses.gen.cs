@@ -18,9 +18,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.ProductState.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.ProductState.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("567410f3-5e44-4211-8623-bd9ee337dd82")]
-	public partial class ProductState : DslModeling::ModelElement
+	internal partial class ProductState : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -173,9 +172,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Property.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Property.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("9d160ca6-f94d-4cb7-956d-e2f537a0e33d")]
-	public partial class Property : InstanceBase
+	internal partial class Property : InstanceBase
 	{
 		#region Constructors, domain class Id
 	
@@ -319,7 +317,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual ProductElement Owner
+		internal virtual ProductElement Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -344,9 +342,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Collection.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Collection.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("4d1f8038-151c-461d-97cc-3eaf779f50eb")]
-	public partial class Collection : AbstractElement
+	internal partial class Collection : AbstractElement
 	{
 		#region Constructors, domain class Id
 	
@@ -385,9 +382,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Element.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Element.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("375050fd-908d-47b2-9494-7626fee46113")]
-	public partial class Element : AbstractElement
+	internal partial class Element : AbstractElement
 	{
 		#region Constructors, domain class Id
 	
@@ -427,9 +423,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.ProductElement.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.ProductElement.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("ce0a63a4-80a0-4a07-b9d1-d97fd206a8f1")]
-	public abstract partial class ProductElement : InstanceBase
+	internal abstract partial class ProductElement : InstanceBase
 	{
 		#region Constructors, domain class Id
 	
@@ -811,9 +806,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Product.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Product.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("f7b1afaf-b90d-411b-9792-1b402d72dfaf")]
-	public partial class Product : ProductElement
+	internal partial class Product : ProductElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1301,7 +1295,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets ProductState.
 		/// The owning state model.
 		/// </summary>
-		public virtual ProductState ProductState
+		internal virtual ProductState ProductState
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1320,7 +1314,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual AbstractElement Owner
+		internal virtual AbstractElement Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1339,7 +1333,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets View.
 		/// The owning view.
 		/// </summary>
-		public virtual View View
+		internal virtual View View
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1364,9 +1358,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.View.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.View.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("f02be9bc-9733-4d6c-a35c-8460b2d6e310")]
-	public partial class View : InstanceBase
+	internal partial class View : InstanceBase
 	{
 		#region Constructors, domain class Id
 	
@@ -1399,7 +1392,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets Product.
 		/// The owning product.
 		/// </summary>
-		public virtual Product Product
+		internal virtual Product Product
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1551,9 +1544,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.AbstractElement.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.AbstractElement.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("fb175123-6a49-496b-88b4-4c82c6d2e6ca")]
-	public abstract partial class AbstractElement : ProductElement
+	internal abstract partial class AbstractElement : ProductElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1576,7 +1568,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets View.
 		/// The owning view.
 		/// </summary>
-		public virtual View View
+		internal virtual View View
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1610,7 +1602,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual AbstractElement Owner
+		internal virtual AbstractElement Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1747,10 +1739,9 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.InstanceBase.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.InstanceBase.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (DefinitionName = {DefinitionName})")]
 	[DslModeling::DomainObjectId("30b2207d-bb9a-456f-82ee-a116d74598ef")]
-	public abstract partial class InstanceBase : DslModeling::ModelElement
+	internal abstract partial class InstanceBase : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -2112,10 +2103,9 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Reference.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Reference.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Kind = {kindPropertyStorage})")]
 	[DslModeling::DomainObjectId("3fcc5eb5-c492-48ba-84a1-9172012c8f5f")]
-	public partial class Reference : DslModeling::ModelElement
+	internal partial class Reference : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -2472,7 +2462,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual ProductElement Owner
+		internal virtual ProductElement Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get

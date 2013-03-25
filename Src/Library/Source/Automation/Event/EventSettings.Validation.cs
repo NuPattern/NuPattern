@@ -7,8 +7,11 @@ using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
+using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Properties;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation
 {
@@ -16,17 +19,16 @@ namespace NuPattern.Library.Automation
     /// Custom validation rules.
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class EventSettings
+    partial class EventSettings
     {
     }
 
     /// <summary>
     /// Exports the validations for <see cref="EventSettings"/>.
     /// </summary>
-    [CLSCompliant(false)]
     [Export]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    public class EventSettingsValidations
+    internal class EventSettingsValidations
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<EventSettingsValidations>();
 
@@ -37,7 +39,7 @@ namespace NuPattern.Library.Automation
         private static ILookup<string, Lazy<Type>> Events;
 
         [Import]
-        internal IPlatuProjectTypeProvider ProjectTypeProvider { get; set; }
+        internal INuPatternProjectTypeProvider ProjectTypeProvider { get; set; }
 
         [Import]
         internal IBindingFactory BindingFactory { get; set; }

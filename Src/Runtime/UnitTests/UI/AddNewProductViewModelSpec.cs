@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Presentation;
+using NuPattern.Reflection;
+using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.UI.UnitTests
 {

@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.Common.Presentation;
+using NuPattern.Presentation;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Interaction logic for ProductPicker.xaml.
     /// </summary>
-    [CLSCompliant(false)]
-    public partial class ProductPicker : CommonDialogWindow, IDialogWindow, IProductPicker
+    partial class ProductPicker : CommonDialogWindow, IDialogWindow, IProductPicker
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductPicker"/> class.

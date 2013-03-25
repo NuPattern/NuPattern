@@ -178,15 +178,6 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} Collection.
-        /// </summary>
-        internal static string CancelableCollectionEditor_Title {
-            get {
-                return ResourceManager.GetString("CancelableCollectionEditor_Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Initialization has already been done. This invocation can only be performed before EndInit is been called..
         /// </summary>
         internal static string CodeGeneration_InitializationFinished {
@@ -201,24 +192,6 @@ namespace NuPattern.Extensibility.Properties {
         internal static string CodeGeneration_InitializationPending {
             get {
                 return ResourceManager.GetString("CodeGeneration_InitializationPending", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The associated converter does not support standard values..
-        /// </summary>
-        internal static string CollectionDropDownEditor_ConverterException {
-            get {
-                return ResourceManager.GetString("CollectionDropDownEditor_ConverterException", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The value must implement ICollection..
-        /// </summary>
-        internal static string CollectionDropDownEditor_ValueCollectionException {
-            get {
-                return ResourceManager.GetString("CollectionDropDownEditor_ValueCollectionException", resourceCulture);
             }
         }
         
@@ -304,11 +277,20 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Could not find or create target path &apos;{0}&apos;..
+        ///   Looks up a localized string similar to Failed to run associated Custom Tool on project items..
         /// </summary>
-        internal static string CouldNotFindOrCreate {
+        internal static string CustomToolRunnerTemplateWizard_FailedToRunCustomTools {
             get {
-                return ResourceManager.GetString("CouldNotFindOrCreate", resourceCulture);
+                return ResourceManager.GetString("CustomToolRunnerTemplateWizard_FailedToRunCustomTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Running custom tool {0} on item {1} because it has RunCustomToolOnUnfold..
+        /// </summary>
+        internal static string CustomToolRunnerTemplateWizard_RunningCustomTool {
+            get {
+                return ResourceManager.GetString("CustomToolRunnerTemplateWizard_RunningCustomTool", resourceCulture);
             }
         }
         
@@ -318,15 +300,6 @@ namespace NuPattern.Extensibility.Properties {
         internal static string DefaultCategory {
             get {
                 return ResourceManager.GetString("DefaultCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The descriptor must inherit from {0} or provide a constructor receiving a single parameter of type {1}, which is the original one to be replaced..
-        /// </summary>
-        internal static string DescriptorExtensions_MustBeDelegatingDescriptor {
-            get {
-                return ResourceManager.GetString("DescriptorExtensions_MustBeDelegatingDescriptor", resourceCulture);
             }
         }
         
@@ -385,29 +358,38 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to create a new empty solution, an error occurred creating and saving the new solution to &apos;{0}&apos;. Verify that you have permissions to create new subfolders in the parent directory..
-        /// </summary>
-        internal static string DteExtensions_CreateNewSolution_FailedCreate {
-            get {
-                return ResourceManager.GetString("DteExtensions_CreateNewSolution_FailedCreate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to create a new empty solution, the default save location for new solutions could not be found..
-        /// </summary>
-        internal static string DteExtensions_CreateNewSolution_FailedDirSearch {
-            get {
-                return ResourceManager.GetString("DteExtensions_CreateNewSolution_FailedDirSearch", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Dynamic context creation is only available for bindings created using the BindingFactory..
         /// </summary>
         internal static string DynamicBinding_UnsupportedCompositionService {
             get {
                 return ResourceManager.GetString("DynamicBinding_UnsupportedCompositionService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; validation failed..
+        /// </summary>
+        internal static string DynamicBinding_ValidatorDefaultMessage {
+            get {
+                return ResourceManager.GetString("DynamicBinding_ValidatorDefaultMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This element container is of an unknown type..
+        /// </summary>
+        internal static string ElementContainerExtensions_UnknownElementContainer {
+            get {
+                return ResourceManager.GetString("ElementContainerExtensions_UnknownElementContainer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} ({1}).
+        /// </summary>
+        internal static string ElementContainerExtensions_ViewInstanceNameFormat {
+            get {
+                return ResourceManager.GetString("ElementContainerExtensions_ViewInstanceNameFormat", resourceCulture);
             }
         }
         
@@ -466,11 +448,20 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The folder path &apos;{0}&apos; already exists..
+        ///   Looks up a localized string similar to Failed to fix linked project item paths..
         /// </summary>
-        internal static string FolderPathAlreadyExists {
+        internal static string FixLinkPathTemplateWizard_FailedToFixLinkPaths {
             get {
-                return ResourceManager.GetString("FolderPathAlreadyExists", resourceCulture);
+                return ResourceManager.GetString("FixLinkPathTemplateWizard_FailedToFixLinkPaths", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fixed item {0} to link to {1}..
+        /// </summary>
+        internal static string FixLinkPathTemplateWizard_LinkFixed {
+            get {
+                return ResourceManager.GetString("FixLinkPathTemplateWizard_LinkFixed", resourceCulture);
             }
         }
         
@@ -489,6 +480,15 @@ namespace NuPattern.Extensibility.Properties {
         internal static string GuidanceReference_DisplayName {
             get {
                 return ResourceManager.GetString("GuidanceReference_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generated new Guid available on template replacement with the key {0}..
+        /// </summary>
+        internal static string GuidGeneratorTemplateWizard_GeneratedNewGuid {
+            get {
+                return ResourceManager.GetString("GuidGeneratorTemplateWizard_GeneratedNewGuid", resourceCulture);
             }
         }
         
@@ -539,29 +539,29 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The path to create can only be relative to a solution, solution folder, project or folder. Invalid relative node kind &apos;{0}&apos; found at &apos;{1}&apos; for path expression &apos;{2}&apos;..
+        ///   Looks up a localized string similar to Designer item for file {0} was not found..
         /// </summary>
-        internal static string InvalidFolderPath {
+        internal static string OpenDesignerTemplateWizard_DesignerItemNotFound {
             get {
-                return ResourceManager.GetString("InvalidFolderPath", resourceCulture);
+                return ResourceManager.GetString("OpenDesignerTemplateWizard_DesignerItemNotFound", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Solution element &apos;{0}&apos; must be contained in a project in the solution..
+        ///   Looks up a localized string similar to Opening designer file {0}..
         /// </summary>
-        internal static string IProjectExtensions_ItemNotInProject {
+        internal static string OpenDesignerTemplateWizard_OpeningDesigner {
             get {
-                return ResourceManager.GetString("IProjectExtensions_ItemNotInProject", resourceCulture);
+                return ResourceManager.GetString("OpenDesignerTemplateWizard_OpeningDesigner", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The solution element &apos;{0}&apos; must be contained in a project containing a VSIX manifest file marked with the &apos;{1}&apos; MSBuild metadata..
+        ///   Looks up a localized string similar to Designer file name with key $patterndefinition$ was not found in the replacement dictionary..
         /// </summary>
-        internal static string IProjectExtensions_NotToolkitProject {
+        internal static string OpenDesignerTemplateWizard_RetrievedDesignerFile {
             get {
-                return ResourceManager.GetString("IProjectExtensions_NotToolkitProject", resourceCulture);
+                return ResourceManager.GetString("OpenDesignerTemplateWizard_RetrievedDesignerFile", resourceCulture);
             }
         }
         
@@ -791,11 +791,92 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please see the Output Window (&apos;NuPattern Toolkit Extensions&apos; pane) for more information...
+        ///   Looks up a localized string similar to Cannot create child element of given type. Only collections and elements supported..
         /// </summary>
-        internal static string SeeDiagnosticsWindow {
+        internal static string ProductElementExtensions_CreateChildElement_InvalidType {
             get {
-                return ResourceManager.GetString("SeeDiagnosticsWindow", resourceCulture);
+                return ResourceManager.GetString("ProductElementExtensions_CreateChildElement_InvalidType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The element must have an owner or a parent view..
+        /// </summary>
+        internal static string ProductElementExtensions_DisconnectedObject {
+            get {
+                return ResourceManager.GetString("ProductElementExtensions_DisconnectedObject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; is not defined as having child elements named &apos;{1}&apos;..
+        /// </summary>
+        internal static string ProductElementExtensions_ErrorNotChildElement {
+            get {
+                return ResourceManager.GetString("ProductElementExtensions_ErrorNotChildElement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; does not allow creation of child elements &apos;{1}&apos;..
+        /// </summary>
+        internal static string ProductElementExtensions_ErrorNotElementContainer {
+            get {
+                return ResourceManager.GetString("ProductElementExtensions_ErrorNotElementContainer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The TypeConverter on this ReferenceKindProvider type does not support convert from System.String to of its declared type. The reference value cannot be read..
+        /// </summary>
+        internal static string ReferenceKindProvider_CanNotConvertFromString {
+            get {
+                return ResourceManager.GetString("ReferenceKindProvider_CanNotConvertFromString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The TypeConverter on this ReferenceKindProvider type {0} or its typed value {1} does not support convert of its declared type to and from System.String. The reference value cannot be set..
+        /// </summary>
+        internal static string ReferenceKindProvider_CanNotConvertString {
+            get {
+                return ResourceManager.GetString("ReferenceKindProvider_CanNotConvertString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reference of kind {0} is not supported. Reference must be of type {1}..
+        /// </summary>
+        internal static string ReferenceKindProvider_UnsupportedReferenceKind {
+            get {
+                return ResourceManager.GetString("ReferenceKindProvider_UnsupportedReferenceKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Processing custom replacement {0}={1}..
+        /// </summary>
+        internal static string ReplacementTemplateWizard_Replacing {
+            get {
+                return ResourceManager.GetString("ReplacementTemplateWizard_Replacing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wrong resource type..
+        /// </summary>
+        internal static string ResourcePack_Error_InvalidResourceType {
+            get {
+                return ResourceManager.GetString("ResourcePack_Error_InvalidResourceType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown resource type..
+        /// </summary>
+        internal static string ResourcePack_Error_UnknownResourceType {
+            get {
+                return ResourceManager.GetString("ResourcePack_Error_UnknownResourceType", resourceCulture);
             }
         }
         
@@ -854,57 +935,101 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Solution item with name &apos;{0}&apos; already exists, rename failed..
-        /// </summary>
-        internal static string SolutionExtensions_ErrorRenamedItemExists {
-            get {
-                return ResourceManager.GetString("SolutionExtensions_ErrorRenamedItemExists", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Unknown  solution item type for rename.
-        /// </summary>
-        internal static string SolutionExtensions_ErrorRenameUnknownType {
-            get {
-                return ResourceManager.GetString("SolutionExtensions_ErrorRenameUnknownType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Service &apos;{0}&apos; is required..
         /// </summary>
-        internal static string SolutionExtensions_MissingService {
+        internal static string SolutionItemUriConverter_MissingService {
             get {
-                return ResourceManager.GetString("SolutionExtensions_MissingService", resourceCulture);
+                return ResourceManager.GetString("SolutionItemUriConverter_MissingService", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An associated solution item (file, folder or project) with the name &apos;{0}&apos; already exists in the solution. 
-        ///The solution item has instead been renamed to: &apos;{1}&apos;..
+        ///   Looks up a localized string similar to Found contextual solution name {0}..
         /// </summary>
-        internal static string SolutionExtensions_PromptItemAlreadyExists_Message {
+        internal static string SolutionNameTemplateWizard_ContextSolutionName {
             get {
-                return ResourceManager.GetString("SolutionExtensions_PromptItemAlreadyExists_Message", resourceCulture);
+                return ResourceManager.GetString("SolutionNameTemplateWizard_ContextSolutionName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Solution Item Already Exists.
+        ///   Looks up a localized string similar to No existing contextual solution found. Setting {0} as the solution name..
         /// </summary>
-        internal static string SolutionExtensions_PromptItemAlreadyExists_Title {
+        internal static string SolutionNameTemplateWizard_NewContextSolution {
             get {
-                return ResourceManager.GetString("SolutionExtensions_PromptItemAlreadyExists_Title", resourceCulture);
+                return ResourceManager.GetString("SolutionNameTemplateWizard_NewContextSolution", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Project type is not supported. It must be a Visual Studio project..
+        ///   Looks up a localized string similar to Buffering scope is active, event will be delayed until Dispose..
         /// </summary>
-        internal static string SolutionExtensions_UnsupportedProject {
+        internal static string StoreEventBufferingScope_BufferingEvent {
             get {
-                return ResourceManager.GetString("SolutionExtensions_UnsupportedProject", resourceCulture);
+                return ResourceManager.GetString("StoreEventBufferingScope_BufferingEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buffering scope is cancelled. Events will be ignored..
+        /// </summary>
+        internal static string StoreEventBufferingScope_CancelledScopeIgnoringEvent {
+            get {
+                return ResourceManager.GetString("StoreEventBufferingScope_CancelledScopeIgnoringEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parent buffering scope is active. Events will be enqueued on parent scope until it&apos;s disposed..
+        /// </summary>
+        internal static string StoreEventBufferingScope_CompleteEnqueingOnParent {
+            get {
+                return ResourceManager.GetString("StoreEventBufferingScope_CompleteEnqueingOnParent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current scope has not been marked as completed. Buffered events are being discarded..
+        /// </summary>
+        internal static string StoreEventBufferingScope_DisposingNonComplete {
+            get {
+                return ResourceManager.GetString("StoreEventBufferingScope_DisposingNonComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Initialized new event buffering scope..
+        /// </summary>
+        internal static string StoreEventBufferingScope_Initialized {
+            get {
+                return ResourceManager.GetString("StoreEventBufferingScope_Initialized", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scope marked as canceled. Events will not be raised on Dispose..
+        /// </summary>
+        internal static string StoreEventBufferingScope_MarkedCanceled {
+            get {
+                return ResourceManager.GetString("StoreEventBufferingScope_MarkedCanceled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scope marked as completed. Events will be raised on Dispose..
+        /// </summary>
+        internal static string StoreEventBufferingScope_MarkedCompleted {
+            get {
+                return ResourceManager.GetString("StoreEventBufferingScope_MarkedCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buffering scope is the topmost scope. Events firing now..
+        /// </summary>
+        internal static string StoreEventBufferingScope_RaisingEvents {
+            get {
+                return ResourceManager.GetString("StoreEventBufferingScope_RaisingEvents", resourceCulture);
             }
         }
         
@@ -963,6 +1088,87 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The element of type &apos;{0}&apos; does not have a class property or variable property named &apos;{1}&apos;..
+        /// </summary>
+        internal static string ToolkitInterfaceLayer_InstancePropertyNotFound {
+            get {
+                return ResourceManager.GetString("ToolkitInterfaceLayer_InstancePropertyNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The type {0} does not support a generated interface layer..
+        /// </summary>
+        internal static string ToolkitInterfaceLayer_InstanceTypeDoesNotHaveInterfaceLayer {
+            get {
+                return ResourceManager.GetString("ToolkitInterfaceLayer_InstanceTypeDoesNotHaveInterfaceLayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The type &apos;{0}&apos; is not a valid interface layer type..
+        /// </summary>
+        internal static string ToolkitInterfaceLayer_InterfaceLayerNotFound {
+            get {
+                return ResourceManager.GetString("ToolkitInterfaceLayer_InterfaceLayerNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expression must be of the form &apos;this.PropertyName&apos;. Invalid expression &apos;{0}&apos;..
+        /// </summary>
+        internal static string ToolkitInterfaceLayer_InvalidPropertyExpression {
+            get {
+                return ResourceManager.GetString("ToolkitInterfaceLayer_InvalidPropertyExpression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interface &apos;{0}&apos; does not contain expected property &apos;{1}&apos;..
+        /// </summary>
+        internal static string ToolkitInterfaceLayer_PropertyNotFound {
+            get {
+                return ResourceManager.GetString("ToolkitInterfaceLayer_PropertyNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interface layer concrete implementation type &apos;{0}&apos; does not provide expected public constructor receiving exactly one argument of type &apos;{1}&apos;..
+        /// </summary>
+        internal static string ToolkitInterfaceLayer_ProxyImplementationConstructorMissing {
+            get {
+                return ResourceManager.GetString("ToolkitInterfaceLayer_ProxyImplementationConstructorMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interface layer concrete implementation &apos;{0}&apos; specified on interface &apos;{1}&apos; does not implement that interface..
+        /// </summary>
+        internal static string ToolkitInterfaceLayer_ProxyMissingInterface {
+            get {
+                return ResourceManager.GetString("ToolkitInterfaceLayer_ProxyMissingInterface", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot add interface layer because the service providing the available interfaces was not found..
+        /// </summary>
+        internal static string ToolkitInterfaceLayer_ServiceUnavailable {
+            get {
+                return ResourceManager.GetString("ToolkitInterfaceLayer_ServiceUnavailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The product does not have a view named &apos;{0}&apos;..
+        /// </summary>
+        internal static string ToolkitInterfaceLayer_ViewNotFound {
+            get {
+                return ResourceManager.GetString("ToolkitInterfaceLayer_ViewNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A project, folder or file unfolded as part of a template for the current element..
         /// </summary>
         internal static string UnfoldedArtifactLink_Description {
@@ -1008,33 +1214,6 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Validation failed for {0}:.
-        /// </summary>
-        internal static string ValidationException {
-            get {
-                return ResourceManager.GetString("ValidationException", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0} ({1}).
-        /// </summary>
-        internal static string ValidationResult {
-            get {
-                return ResourceManager.GetString("ValidationResult", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; validation failed..
-        /// </summary>
-        internal static string ValidatorDefaultMessage {
-            get {
-                return ResourceManager.GetString("ValidatorDefaultMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Value provider binding for property {0} on element {1} failed to evaluate..
         /// </summary>
         internal static string ValueProviderBinding_FailedToEvaluate {
@@ -1053,56 +1232,20 @@ namespace NuPattern.Extensibility.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vsix manifest file &apos;{0}&apos; does not contain required Identifier element..
+        ///   Looks up a localized string similar to Failed to retrieve registry root suffix of the currently running Visual Studio instance..
         /// </summary>
-        internal static string Vsix_InvalidManifest {
+        internal static string VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot {
             get {
-                return ResourceManager.GetString("Vsix_InvalidManifest", resourceCulture);
+                return ResourceManager.GetString("VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vsix file &apos;{0}&apos; does not contain the required manifest named &quot;extension.vsixmanifest&quot;..
+        ///   Looks up a localized string similar to Determined VS root suffix as {0}..
         /// </summary>
-        internal static string Vsix_ManifestMissing {
+        internal static string VsRootSuffixTemplateWizard_RootSuffixDetermined {
             get {
-                return ResourceManager.GetString("Vsix_ManifestMissing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to XML document load failed for file &apos;{0}&apos;..
-        /// </summary>
-        internal static string XmlProcessor_ErrorLoadFailed {
-            get {
-                return ResourceManager.GetString("XmlProcessor_ErrorLoadFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to XML document must be loaded before you can call this method..
-        /// </summary>
-        internal static string XmlProcessor_ErrorLoadNotCalledFirst {
-            get {
-                return ResourceManager.GetString("XmlProcessor_ErrorLoadNotCalledFirst", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to save modified XML document &apos;{0}&apos;..
-        /// </summary>
-        internal static string XmlProcessor_ErrorSaveFailed {
-            get {
-                return ResourceManager.GetString("XmlProcessor_ErrorSaveFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to find nodes in the XMLdocument using XPath search &apos;{0}&apos;.
-        /// </summary>
-        internal static string XmlProcessor_ErrorXPathSearchFailed {
-            get {
-                return ResourceManager.GetString("XmlProcessor_ErrorXPathSearchFailed", resourceCulture);
+                return ResourceManager.GetString("VsRootSuffixTemplateWizard_RootSuffixDetermined", resourceCulture);
             }
         }
     }

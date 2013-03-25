@@ -5,6 +5,8 @@ using System.Drawing.Design;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Extensibility.Design;
 using NuPattern.Extensibility.Properties;
 using NuPattern.Runtime;
 

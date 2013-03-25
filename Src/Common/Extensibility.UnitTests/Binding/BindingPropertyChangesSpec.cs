@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings;
 
 namespace NuPattern.Extensibility.UnitTests.Binding
 {

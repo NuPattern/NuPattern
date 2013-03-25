@@ -16,7 +16,7 @@ namespace NuPattern.Runtime
     /// We still need this replacement for FB listener as we use Json for 
     /// serialization, rather than ObjectDumper :(
     /// </devdoc>
-    public class TraceRecordTextListener : TextWriterTraceListener
+    internal class TraceRecordTextListener : TextWriterTraceListener
     {
         private const string RecordFormat = "[{0}] {1}";
         private const string DictionaryFormat = "{0}={1}";

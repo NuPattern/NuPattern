@@ -7,9 +7,11 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.Shell.Settings;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Shell.Properties;
 using NuPattern.Runtime.UI;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Shell
 {
@@ -17,8 +19,7 @@ namespace NuPattern.Runtime.Shell
     /// Provides the Pattern Explorer tool window.
     /// </summary>
     [Guid("c44b2e95-86f4-40dd-8fc8-bbc9725ea86b")]
-    [CLSCompliant(false)]
-    public class SolutionBuilderToolWindow : ToolWindowPane
+    internal class SolutionBuilderToolWindow : ToolWindowPane
     {
         private const string SolutionBuilderVisibilitySetting = "FirstTimeInitialization";
         private const string SolutionBuilderAutoOpenedSetting = "SolutionBuilderAutoOpened";
@@ -125,7 +126,7 @@ namespace NuPattern.Runtime.Shell
         /// </summary>
         internal static void AutoOpenWindow(IServiceProvider serviceProvider)
         {
-            Guard.NotNull(()=> serviceProvider, serviceProvider);
+            Guard.NotNull(() => serviceProvider, serviceProvider);
 
             var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
 

@@ -4,35 +4,35 @@
 <#+
 private string ToInfo(DomainClass target)
 {
-	var typeName = target.Name;
+    var typeName = target.Name;
     var schemaName = GetSchemaNameAnnotation(target.Notes);
     if (!String.IsNullOrEmpty(schemaName))
-	{
-	    typeName = schemaName;
-	}
+    {
+        typeName = schemaName;
+    }
 
-	return ToInfo(typeName);
+    return ToInfo(typeName);
 }
 
 private string ToInfo(string typeName)
 {
-	return typeName.Replace("Schema", "") + "Info";
+    return typeName.Replace("Schema", "") + "Info";
 }
 
 private string StripGenericSpecification(string typeName)
 {
-	int firstGeneric = typeName.IndexOf("<", 0, StringComparison.Ordinal);
-	if (firstGeneric != -1)
-	{
-		return typeName.Substring(0, firstGeneric);
-	}
+    int firstGeneric = typeName.IndexOf("<", 0, StringComparison.Ordinal);
+    if (firstGeneric != -1)
+    {
+        return typeName.Substring(0, firstGeneric);
+    }
 
-	return typeName;
+    return typeName;
 }
 
 private bool IsRoot(DomainClass target)
 {
-	return target.Notes == "IsRoot";
+    return target.Notes == "IsRoot";
 }
 
 private string GetSchemaNameAnnotation(string plainAnnotations)
@@ -40,29 +40,29 @@ private string GetSchemaNameAnnotation(string plainAnnotations)
     var annotations = GetAnnotations(plainAnnotations);
     if (annotations.ContainsKey("SchemaTypeName"))
     {
-	   return annotations["SchemaTypeName"];
-	}
+       return annotations["SchemaTypeName"];
+    }
 
     return string.Empty;                                                 
 }
 
 private bool HasSkipAnnotation(string plainAnnotations)
 {
-	return HasAnnotationFlag(plainAnnotations, "Skip");
+    return HasAnnotationFlag(plainAnnotations, "Skip");
 }
 
 private bool HasAnnotationFlag(string plainAnnotations, string annotationKey)
 {
-	var annotations = GetAnnotations(plainAnnotations);
-	return annotations.ContainsKey(annotationKey) && annotations[annotationKey] == "true";
+    var annotations = GetAnnotations(plainAnnotations);
+    return annotations.ContainsKey(annotationKey) && annotations[annotationKey] == "true";
 }
 
 private IDictionary<string, string> GetAnnotations(string plainAnnotations)
 {
-	return plainAnnotations
-		.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries)
-		.Select(s => s.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries))
-		.Where(s => s.Length == 2)
-		.ToDictionary(s => s[0], s => s[1]);
+    return plainAnnotations
+        .Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries)
+        .Select(s => s.Split(new[] { '=' }, StringSplitOptions.RemoveEmptyEntries))
+        .Where(s => s.Length == 2)
+        .ToDictionary(s => s[0], s => s[1]);
 }
 #>

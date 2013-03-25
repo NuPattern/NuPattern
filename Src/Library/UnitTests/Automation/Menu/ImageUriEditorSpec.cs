@@ -8,8 +8,10 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Extensibility;
+using NuPattern.Extensibility.Design;
 using NuPattern.Runtime;
 using NuPattern.Runtime.UriProviders;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.UnitTests.Automation.Menu
 {

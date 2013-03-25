@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation
 {
     [TypeDescriptionProvider(typeof(DragDropEventSettingsDescriptionProvider))]
-    public partial class DragDropSettings
+    partial class DragDropSettings
     {
         private List<ConditionBindingSettings> conditionSettings;
 

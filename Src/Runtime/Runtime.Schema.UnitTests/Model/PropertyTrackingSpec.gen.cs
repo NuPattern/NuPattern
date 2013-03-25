@@ -18,9 +18,9 @@ namespace NuPattern.Runtime.Schema.UnitTests
         [TestClass]
         public abstract class GivenANamedElementSchema
         {
-            protected abstract NamedElementSchema Element
+            internal abstract NamedElementSchema Element
             {
-				get;
+                get;
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -33,7 +33,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenTrackedPropertyIsChanged_ThenDisplayNameNotTracking()
             {
-			    this.Element.Store.TransactionManager.DoWithinTransaction( () =>
+                this.Element.Store.TransactionManager.DoWithinTransaction( () =>
                     {
                         this.Element.DisplayName = "TestDisplayNameChanged";
                     });
@@ -52,7 +52,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenTrackedPropertyIsChanged_ThenDescriptionNotTracking()
             {
-			    this.Element.Store.TransactionManager.DoWithinTransaction( () =>
+                this.Element.Store.TransactionManager.DoWithinTransaction( () =>
                     {
                         this.Element.Description = "TestDescriptionChanged";
                     });
@@ -71,7 +71,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenTrackedPropertyIsChanged_ThenCodeIdentifierNotTracking()
             {
-			    this.Element.Store.TransactionManager.DoWithinTransaction( () =>
+                this.Element.Store.TransactionManager.DoWithinTransaction( () =>
                     {
                         this.Element.CodeIdentifier = "TestCodeIdentifierChanged";
                     });
@@ -79,7 +79,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
                 Assert.False(this.Element.IsCodeIdentifierTracking);
                 Assert.Equal("TestCodeIdentifierChanged", this.Element.CodeIdentifier);
             }
-		}
-	}
+        }
+    }
 
 }

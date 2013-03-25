@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.Schema
     [RuleOn(typeof(ViewHasExtensionPoints), FireTime = TimeToFire.TopLevelCommit)]
     [RuleOn(typeof(ElementHasElements), FireTime = TimeToFire.TopLevelCommit)]
     [RuleOn(typeof(ElementHasExtensionPoints), FireTime = TimeToFire.TopLevelCommit)]
-    public partial class ElementHasElementsChangeRule : ChangeRule
+    internal class ElementHasElementsChangeRule : ChangeRule
     {
         /// <summary>
         /// Handles property change events for the listed classes of this rule.
@@ -26,22 +26,22 @@ namespace NuPattern.Runtime.Schema
                 // Repaint the connector (to update decorators)
                 if (!element.Store.TransactionManager.CurrentTransaction.IsSerializing)
                 {
-					if (e.DomainProperty.Id == ViewHasElements.CardinalityDomainPropertyId)
+                    if (e.DomainProperty.Id == ViewHasElements.CardinalityDomainPropertyId)
                     {
                         RepaintRelationshipConnectors<ViewHasElements>(element);
                     }
 
-					if (e.DomainProperty.Id == ViewHasExtensionPoints.CardinalityDomainPropertyId)
+                    if (e.DomainProperty.Id == ViewHasExtensionPoints.CardinalityDomainPropertyId)
                     {
                         RepaintRelationshipConnectors<ViewHasExtensionPoints>(element);
                     }
 
-					if (e.DomainProperty.Id == ElementHasElements.CardinalityDomainPropertyId)
+                    if (e.DomainProperty.Id == ElementHasElements.CardinalityDomainPropertyId)
                     {
                         RepaintRelationshipConnectors<ElementHasElements>(element);
                     }
 
-					if (e.DomainProperty.Id == ElementHasExtensionPoints.CardinalityDomainPropertyId)
+                    if (e.DomainProperty.Id == ElementHasExtensionPoints.CardinalityDomainPropertyId)
                     {
                         RepaintRelationshipConnectors<ElementHasExtensionPoints>(element);
                     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.Windows;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Extensibility;
 using NuPattern.Runtime.Properties;
 

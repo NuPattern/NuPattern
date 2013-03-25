@@ -17,11 +17,10 @@ namespace NuPattern.Runtime.Store
 	/// </summary>
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.ProductStateStoreDomainModel.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.ProductStateStoreDomainModel.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.CoreDomainModel))]
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 	[DslModeling::DomainObjectId("04739abb-263d-488f-b865-fed569a7b766")]
-	public partial class ProductStateStoreDomainModel : DslModeling::DomainModel
+	internal partial class ProductStateStoreDomainModel : DslModeling::DomainModel
 	{
 		#region Constructor, domain model Id
 	
@@ -351,8 +350,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Remove closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class ProductStateStoreDeleteClosure : ProductStateStoreDeleteClosureBase, DslModeling::IElementVisitorFilter
+	internal partial class ProductStateStoreDeleteClosure : ProductStateStoreDeleteClosureBase, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor
@@ -365,8 +363,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Base class for remove closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class ProductStateStoreDeleteClosureBase : DslModeling::IElementVisitorFilter
+	internal partial class ProductStateStoreDeleteClosureBase : DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// DomainRoles
@@ -434,8 +431,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Copy closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class ProductStateStoreCopyClosure : ProductStateStoreCopyClosureBase, DslModeling::IElementVisitorFilter
+	internal partial class ProductStateStoreCopyClosure : ProductStateStoreCopyClosureBase, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor
@@ -447,8 +443,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Base class for copy closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class ProductStateStoreCopyClosureBase : DslModeling::CopyClosureFilter, DslModeling::IElementVisitorFilter
+	internal partial class ProductStateStoreCopyClosureBase : DslModeling::CopyClosureFilter, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor

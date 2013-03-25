@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Runtime
 {

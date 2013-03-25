@@ -6,7 +6,7 @@ namespace NuPattern.Runtime.Schema
     /// ElementHasExtensionPoints relationship definition.
     /// </summary>
     [TypeDescriptionProvider(typeof(ContainingLinkSchemaTypeDescriptionProvider))]
-    public partial class ElementHasExtensionPoints : IContainingLinkSchema
+    partial class ElementHasExtensionPoints : IContainingLinkSchema
     {
         /// <summary>
         /// Returns the value of the Cardinality property.

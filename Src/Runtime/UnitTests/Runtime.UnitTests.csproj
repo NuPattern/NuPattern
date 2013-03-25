@@ -119,12 +119,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
-    <None Include="ToolkitInterfaceLayer\PatternModel.gen.patterndefinition">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PatternModel.tt</DependentUpon>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="InvalidVersion.slnbldr">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -148,43 +142,17 @@
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="AutomationExtensionsSpec.cs" />
-    <Compile Include="Events\AnonymousDisposableSpec.cs" />
-    <Compile Include="Events\EventSpec.cs" />
-    <Compile Include="Events\WeakObservableSpec.cs" />
-    <Compile Include="Events\StaticWeakReferenceSpec.cs" />
-    <Compile Include="Events\ObservableEventExtensionsSpec.cs" />
-    <Compile Include="Events\WeakObserverEventSpec.cs" />
-    <Compile Include="Events\WeakObservableEventSpec.cs" />
-    <Compile Include="ToolkitInfoSerializerSpec.cs" />
-    <Compile Include="ToolkitInterfaceLayer\Architecture.cs" />
-    <Compile Include="ToolkitInterfaceLayer\DataContract.cs" />
-    <Compile Include="ToolkitInterfaceLayer\Folder.cs" />
-    <Compile Include="ToolkitInterfaceLayer\IArchitecture.cs" />
-    <Compile Include="ToolkitInterfaceLayer\IDataContract.cs" />
-    <Compile Include="ToolkitInterfaceLayer\IFolder.cs" />
-    <Compile Include="ToolkitInterfaceLayer\ISerializer.cs" />
-    <Compile Include="ToolkitInterfaceLayer\IWebService.cs" />
-    <Compile Include="ToolkitInterfaceLayer\Serializer.cs" />
-    <Compile Include="ToolkitInterfaceLayer\TrueConverter.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ToolkitInterfaceLayer\WebService.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Events\Misc.cs" />
-    <Compile Include="ToolkitInterfaceLayerSpec.cs" />
     <Compile Include="RuntimeElementUriProviderSpec.cs" />
     <Compile Include="PatternElementValidationSpec.cs" />
     <Compile Include="PatternManagerExtensionsSpec.cs" />
     <Compile Include="PatternManagerSpec.cs" />
     <Compile Include="ProductStateSpec.cs" />
-    <Compile Include="ReferenceKindProviderSpec.cs" />
     <Compile Include="Rules\ProductElementAddRuleSpec.cs" />
     <Compile Include="Rules\PropertyAddRuleSpec.cs" />
     <Compile Include="Rules\AbstractElementAddRuleSpec.cs" />
     <Compile Include="Rules\ViewAddRuleSpec.cs" />
     <Compile Include="Rules\ProductAddRuleSpec.cs" />
-    <Compile Include="Events\PropertyChangedManagerSpec.cs" />
     <Compile Include="RuntimeModelSpec.cs" />
     <Compile Include="SchemaSpec.cs" />
     <Compile Include="InstalledToolkitInfoSpec.cs" />
@@ -193,10 +161,9 @@
     <Compile Include="Store\InstanceBaseSpecs.cs" />
     <Compile Include="Store\ProductElementSpec.cs" />
     <Compile Include="Store\PropertySpec.cs" />
-    <Compile Include="Store\StoreEventBufferingScopeSpec.cs" />
     <Compile Include="Store\ViewSpec.cs" />
     <Compile Include="TraceOutputWindowManagerSpec.cs" />
-    <Compile Include="TracingSettingsMonitorSpec.cs" />
+    <Compile Include="Settings\TracingSettingsMonitorSpec.cs" />
     <Compile Include="UI\AddNewProductViewModelSpec.cs" />
     <Compile Include="UI\AutomationMenuOptionViewModelSpec.cs" />
     <Compile Include="UI\AddNewNodeViewModelSpec.cs" />
@@ -212,7 +179,6 @@
     <Compile Include="UriProviders\PackUriProviderSpec.cs" />
     <Compile Include="UriProviders\TextTemplateUriProviderSpec.cs" />
     <Compile Include="UriProviders\VsixExtensionUriProviderSpec.cs" />
-    <Compile Include="UriReferenceServiceSpec.cs" />
     <Compile Include="VsMenuCommandAdapterSpec.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -223,13 +189,17 @@
       <Project>{72CC87F3-2860-45CC-8712-00621F868D60}</Project>
       <Name>Common.Presentation</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Common\Source\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common\Source\Extensibility\Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
       <Name>Extensibility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Common\Source\VisualStudio\VisualStudio.csproj">
+    <ProjectReference Include="..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
-      <Name>VisualStudio</Name>
+      <Name>Common.VisualStudio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
       <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
@@ -251,12 +221,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ToolkitInterfaceLayer\PatternModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />

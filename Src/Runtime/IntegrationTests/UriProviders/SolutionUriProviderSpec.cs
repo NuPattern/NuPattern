@@ -15,55 +15,53 @@ namespace NuPattern.Runtime.IntegrationTests
     public class SolutionUriProviderSpec : IntegrationTest
     {
         private static readonly IAssertion Assert = new Assertion();
-
         private ISolution solution;
-        private IFxrUriReferenceProvider<IItemContainer> provider;
+        private IFxrUriReferenceService service;
 
         [TestInitialize]
         public void Initialize()
         {
             VsIdeTestHostContext.Dte.Solution.Open(this.PathTo(@"Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders.sln"));
-
             this.solution = VsIdeTestHostContext.ServiceProvider.GetService<ISolution>();
-            this.provider = new SolutionUriProvider { Solution = this.solution };
+            this.service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
         }
 
         [HostType("VS IDE")]
         [TestMethod, TestCategory("Integration")]
         public void WhenResolveUriWithNullUri_ThenThrows()
         {
-            Assert.Throws<ArgumentNullException>(() => this.provider.ResolveUri(null));
+            Assert.Throws<NullReferenceException>(() => this.service.ResolveUri<IItemContainer>(null));
         }
 
         [HostType("VS IDE")]
         [TestMethod, TestCategory("Integration")]
         public void WhenResolveUriWithInvalidUriScheme_ThenThrows()
         {
-            Assert.Throws<UriFormatException>(() => this.provider.ResolveUri(new Uri("foo://")));
+            Assert.Throws<NotSupportedException>(() => this.service.ResolveUri<IItemContainer>(new Uri("foo://")));
         }
 
         [HostType("VS IDE")]
         [TestMethod, TestCategory("Integration")]
         public void WhenCreateUriWithNullInstance_ThenThrows()
         {
-            Assert.Throws<ArgumentNullException>(() => this.provider.CreateUri(null));
+            Assert.Throws<ArgumentNullException>(() => this.service.CreateUri<IItemContainer>(null));
         }
 
         [HostType("VS IDE")]
         [TestMethod, TestCategory("Integration")]
         public void WhenOpenWithNullInstance_ThenThrows()
         {
-            Assert.Throws<ArgumentNullException>(() => this.provider.Open(null));
+            Assert.Throws<NullReferenceException>(() => this.service.Open<IItemContainer>(null));
         }
 
         [HostType("VS IDE")]
         [TestMethod, TestCategory("Integration")]
         public void WhenResolveUriWithNoHost_ThenReturnsSolutionUri()
         {
-            var expected = this.provider.ResolveUri(new Uri("solution://"));
+            var expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://"));
             Assert.Equal(this.solution, expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution:///"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution:///"));
             Assert.Equal(this.solution, expected);
         }
 
@@ -71,22 +69,22 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenResolveUriWithSolutionFolders_ThenReturnsSolutionFolders()
         {
-            var expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder"));
+            var expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder"));
             Assert.Equal(this.solution.Find<ISolutionFolder>(@"TopSolutionFolder").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/"));
             Assert.Equal(this.solution.Find<ISolutionFolder>(@"TopSolutionFolder").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder"));
             Assert.Equal(this.solution.Find<ISolutionFolder>(@"TopSolutionFolder\SecSolutionFolder").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/"));
             Assert.Equal(this.solution.Find<ISolutionFolder>(@"TopSolutionFolder\SecSolutionFolder").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder"));
             Assert.Equal(this.solution.Find<ISolutionFolder>(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/"));
             Assert.Equal(this.solution.Find<ISolutionFolder>(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder").First(), expected);
         }
 
@@ -94,22 +92,22 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenResolveUriWithSolutionItems_ThenReturnsSolutionItems()
         {
-            var expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/TopSolutionItem.txt"));
+            var expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/TopSolutionItem.txt"));
             Assert.Equal(this.solution.Find<IItem>(@"TopSolutionFolder\TopSolutionItem.txt").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/TopSolutionItem.txt/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/TopSolutionItem.txt/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopSolutionFolder\TopSolutionItem.txt").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/SecSolutionItem.txt"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/SecSolutionItem.txt"));
             Assert.Equal(this.solution.Find<IItem>(@"TopSolutionFolder\SecSolutionFolder\SecSolutionItem.txt").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/SecSolutionItem.txt/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/SecSolutionItem.txt/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopSolutionFolder\SecSolutionFolder\SecSolutionItem.txt").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdSolutionItem.txt"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdSolutionItem.txt"));
             Assert.Equal(this.solution.Find<IItem>(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdSolutionItem.txt").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdSolutionItem.txt/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdSolutionItem.txt/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdSolutionItem.txt").First(), expected);
         }
 
@@ -117,16 +115,16 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenResolveUriWithProjectsByPath_ThenReturnsProjects()
         {
-            var expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdProject"));
+            var expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdProject"));
             Assert.Equal(this.solution.Find<IProject>(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdProject/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdProject/"));
             Assert.Equal(this.solution.Find<IProject>(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopProject"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopProject"));
             Assert.Equal(this.solution.Find<IProject>(@"TopProject").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopProject/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopProject/"));
             Assert.Equal(this.solution.Find<IProject>(@"TopProject").First(), expected);
         }
 
@@ -134,16 +132,16 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenResolveUriWithProjectsById_ThenReturnsProjects()
         {
-            var expected = this.provider.ResolveUri(new Uri("solution://B13B408F-4969-48C0-85C2-227461953FA7"));
+            var expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://B13B408F-4969-48C0-85C2-227461953FA7"));
             Assert.Equal(this.solution.Find<IProject>(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://B13B408F-4969-48C0-85C2-227461953FA7/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://B13B408F-4969-48C0-85C2-227461953FA7/"));
             Assert.Equal(this.solution.Find<IProject>(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55"));
             Assert.Equal(this.solution.Find<IProject>(@"TopProject").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/"));
             Assert.Equal(this.solution.Find<IProject>(@"TopProject").First(), expected);
         }
 
@@ -151,10 +149,10 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenResolveUriWithSolutionProjectItems_ThenReturnsProjectItems()
         {
-            var expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdProject/TopProjectItem.cs"));
+            var expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdProject/TopProjectItem.cs"));
             Assert.Equal(this.solution.Find<IItem>(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject\TopProjectItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdProject/TopProjectItem.cs/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdProject/TopProjectItem.cs/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject\TopProjectItem.cs").First(), expected);
         }
 
@@ -162,22 +160,22 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenResolveUriWithProjectFolders_ThenReturnsProjectFolders()
         {
-            var expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder"));
+            var expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder"));
             Assert.Equal(this.solution.Find<IFolder>(@"TopProject\TopProjectFolder").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/"));
             Assert.Equal(this.solution.Find<IFolder>(@"TopProject\TopProjectFolder").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder"));
             Assert.Equal(this.solution.Find<IFolder>(@"TopProject\TopProjectFolder\SecProjectFolder").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/"));
             Assert.Equal(this.solution.Find<IFolder>(@"TopProject\TopProjectFolder\SecProjectFolder").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/TrdProjectFolder"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/TrdProjectFolder"));
             Assert.Equal(this.solution.Find<IFolder>(@"TopProject\TopProjectFolder\SecProjectFolder\TrdProjectFolder").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/TrdProjectFolder/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/TrdProjectFolder/"));
             Assert.Equal(this.solution.Find<IFolder>(@"TopProject\TopProjectFolder\SecProjectFolder\TrdProjectFolder").First(), expected);
         }
 
@@ -185,28 +183,28 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenResolveUriWithProjectItemByName_ThenReturnsProjectItems()
         {
-            var expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectItem.cs"));
+            var expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectItem.cs"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectItem.cs/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectItem.cs/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/TopProjectFolderItem.cs"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/TopProjectFolderItem.cs"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\TopProjectFolderItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/TopProjectFolderItem.cs/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/TopProjectFolderItem.cs/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\TopProjectFolderItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/SecProjectFolderItem.cs"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/SecProjectFolderItem.cs"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\SecProjectFolder\SecProjectFolderItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/SecProjectFolderItem.cs/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/SecProjectFolderItem.cs/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\SecProjectFolder\SecProjectFolderItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/TrdProjectFolder/TrdProjectFolderItem.cs"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/TrdProjectFolder/TrdProjectFolderItem.cs"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\SecProjectFolder\TrdProjectFolder\TrdProjectFolderItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/TrdProjectFolder/TrdProjectFolderItem.cs/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/TrdProjectFolder/TrdProjectFolderItem.cs/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\SecProjectFolder\TrdProjectFolder\TrdProjectFolderItem.cs").First(), expected);
         }
 
@@ -214,31 +212,31 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenResolveUriWithProjectItemById_ThenReturnsProjectItems()
         {
-            var expected = this.provider.ResolveUri(new Uri("solution://B13B408F-4969-48C0-85C2-227461953FA7/TopProjectItem.cs"));
+            var expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://B13B408F-4969-48C0-85C2-227461953FA7/TopProjectItem.cs"));
             Assert.Equal(this.solution.Find<IItem>(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject\TopProjectItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/D2592611-C2DB-4CB0-AFF3-C1CF8102DCD6"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/D2592611-C2DB-4CB0-AFF3-C1CF8102DCD6"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/D2592611-C2DB-4CB0-AFF3-C1CF8102DCD6/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/D2592611-C2DB-4CB0-AFF3-C1CF8102DCD6/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/D6C06317-BA19-4E3C-8F6F-216AA2607172"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/D6C06317-BA19-4E3C-8F6F-216AA2607172"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\TopProjectFolderItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/D6C06317-BA19-4E3C-8F6F-216AA2607172/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/D6C06317-BA19-4E3C-8F6F-216AA2607172/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\TopProjectFolderItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/827D5E95-B27A-49D9-8CCC-5B6B8794D1BB"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/827D5E95-B27A-49D9-8CCC-5B6B8794D1BB"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\SecProjectFolder\SecProjectFolderItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/827D5E95-B27A-49D9-8CCC-5B6B8794D1BB/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/827D5E95-B27A-49D9-8CCC-5B6B8794D1BB/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\SecProjectFolder\SecProjectFolderItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/0F8E541A-784C-4EB7-AB71-BEEAEF10FF95"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/0F8E541A-784C-4EB7-AB71-BEEAEF10FF95"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\SecProjectFolder\TrdProjectFolder\TrdProjectFolderItem.cs").First(), expected);
 
-            expected = this.provider.ResolveUri(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/0F8E541A-784C-4EB7-AB71-BEEAEF10FF95/"));
+            expected = this.service.ResolveUri<IItemContainer>(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/0F8E541A-784C-4EB7-AB71-BEEAEF10FF95/"));
             Assert.Equal(this.solution.Find<IItem>(@"TopProject\TopProjectFolder\SecProjectFolder\TrdProjectFolder\TrdProjectFolderItem.cs").First(), expected);
         }
 
@@ -246,7 +244,7 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenCreateUriWithSolution_TheReturnsUri()
         {
-            var result = this.provider.CreateUri(this.solution);
+            var result = this.service.CreateUri(this.solution);
 
             Assert.Equal(new Uri("solution://root/"), result);
         }
@@ -255,13 +253,13 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenCreateUriWithSolutionFolders_TheReturnsUris()
         {
-            var result = this.provider.CreateUri(this.solution.Find(@"TopSolutionFolder").FirstOrDefault());
+            var result = this.service.CreateUri(this.solution.Find(@"TopSolutionFolder").FirstOrDefault());
             Assert.Equal(new Uri("solution://root/TopSolutionFolder"), result);
 
-            result = this.provider.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder").FirstOrDefault());
+            result = this.service.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder").FirstOrDefault());
             Assert.Equal(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder"), result);
 
-            result = this.provider.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder").FirstOrDefault());
+            result = this.service.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder").FirstOrDefault());
             Assert.Equal(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder"), result);
         }
 
@@ -269,13 +267,13 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenCreateUriWithSolutionItems_TheReturnsUris()
         {
-            var result = this.provider.CreateUri(this.solution.Find(@"TopSolutionFolder\TopSolutionItem.txt").FirstOrDefault());
+            var result = this.service.CreateUri(this.solution.Find(@"TopSolutionFolder\TopSolutionItem.txt").FirstOrDefault());
             Assert.Equal(new Uri("solution://root/TopSolutionFolder/TopSolutionItem.txt"), result);
 
-            result = this.provider.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\SecSolutionItem.txt").FirstOrDefault());
+            result = this.service.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\SecSolutionItem.txt").FirstOrDefault());
             Assert.Equal(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/SecSolutionItem.txt"), result);
 
-            result = this.provider.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdSolutionItem.txt").FirstOrDefault());
+            result = this.service.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdSolutionItem.txt").FirstOrDefault());
             Assert.Equal(new Uri("solution://root/TopSolutionFolder/SecSolutionFolder/TrdSolutionFolder/TrdSolutionItem.txt"), result);
         }
 
@@ -283,10 +281,10 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenCreateUriWithSolutionProjectsByPath_TheReturnsUris()
         {
-            var result = this.provider.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject").FirstOrDefault());
+            var result = this.service.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject").FirstOrDefault());
             Assert.Equal(new Uri("solution://B13B408F-4969-48C0-85C2-227461953FA7"), result);
 
-            result = this.provider.CreateUri(this.solution.Find(@"TopProject").FirstOrDefault());
+            result = this.service.CreateUri(this.solution.Find(@"TopProject").FirstOrDefault());
             Assert.Equal(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55"), result);
         }
 
@@ -294,7 +292,7 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenCreateUriWithSolutionProjectItemWithItemGuid_TheReturnsResilientUri()
         {
-            var result = this.provider.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject\TopProjectItemWithItemGuid.cs").FirstOrDefault());
+            var result = this.service.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject\TopProjectItemWithItemGuid.cs").FirstOrDefault());
             Assert.Equal(new Uri("solution://B13B408F-4969-48C0-85C2-227461953FA7/B3FA54F7-EF27-4EEB-A15A-05EF37EEB0CF"), result);
         }
 
@@ -303,7 +301,7 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenCreateUriWithSolutionProjectItemWithoutItemGuid_TheReturnsResilientUri()
         {
-            var result = this.provider.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject\TopProjectItem.cs").FirstOrDefault());
+            var result = this.service.CreateUri(this.solution.Find(@"TopSolutionFolder\SecSolutionFolder\TrdSolutionFolder\TrdProject\TopProjectItem.cs").FirstOrDefault());
             var itemGuidString = result.ToString().ToLower(CultureInfo.InvariantCulture).Replace("solution://b13b408f-4969-48c0-85c2-227461953fa7/", string.Empty);
             itemGuidString = itemGuidString.Trim(SolutionUriProvider.UriPathDelimiter);
 
@@ -315,13 +313,13 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenCreateUriWithProjectFolders_TheReturnsUris()
         {
-            var result = this.provider.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder").FirstOrDefault());
+            var result = this.service.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder").FirstOrDefault());
             Assert.Equal(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder"), result);
 
-            result = this.provider.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder\SecProjectFolder").FirstOrDefault());
+            result = this.service.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder\SecProjectFolder").FirstOrDefault());
             Assert.Equal(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder"), result);
 
-            result = this.provider.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder\SecProjectFolder\TrdProjectFolder").FirstOrDefault());
+            result = this.service.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder\SecProjectFolder\TrdProjectFolder").FirstOrDefault());
             Assert.Equal(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/TopProjectFolder/SecProjectFolder/TrdProjectFolder"), result);
         }
 
@@ -329,16 +327,16 @@ namespace NuPattern.Runtime.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenCreateUriWithProjectItems_TheReturnsUris()
         {
-            var result = this.provider.CreateUri(this.solution.Find(@"TopProject\TopProjectItem.cs").FirstOrDefault());
+            var result = this.service.CreateUri(this.solution.Find(@"TopProject\TopProjectItem.cs").FirstOrDefault());
             Assert.Equal(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/D2592611-C2DB-4CB0-AFF3-C1CF8102DCD6"), result);
 
-            result = this.provider.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder\TopProjectFolderItem.cs").FirstOrDefault());
+            result = this.service.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder\TopProjectFolderItem.cs").FirstOrDefault());
             Assert.Equal(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/D6C06317-BA19-4E3C-8F6F-216AA2607172"), result);
 
-            result = this.provider.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder\SecProjectFolder\SecProjectFolderItem.cs").FirstOrDefault());
+            result = this.service.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder\SecProjectFolder\SecProjectFolderItem.cs").FirstOrDefault());
             Assert.Equal(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/827D5E95-B27A-49D9-8CCC-5B6B8794D1BB"), result);
 
-            result = this.provider.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder\SecProjectFolder\TrdProjectFolder\TrdProjectFolderItem.cs").FirstOrDefault());
+            result = this.service.CreateUri(this.solution.Find(@"TopProject\TopProjectFolder\SecProjectFolder\TrdProjectFolder\TrdProjectFolderItem.cs").FirstOrDefault());
             Assert.Equal(new Uri("solution://46F565BA-4071-4ACE-A876-BEBFFF6A8B55/0F8E541A-784C-4EB7-AB71-BEEAEF10FF95"), result);
         }
     }

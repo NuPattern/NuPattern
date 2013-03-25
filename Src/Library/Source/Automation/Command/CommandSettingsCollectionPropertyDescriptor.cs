@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using NuPattern.Extensibility;
+using NuPattern.Extensibility.Design;
 
 namespace NuPattern.Library.Automation
 {

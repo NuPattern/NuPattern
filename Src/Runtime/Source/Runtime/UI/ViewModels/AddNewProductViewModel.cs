@@ -9,15 +9,19 @@ using System.Linq;
 using System.Windows.Data;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Extensibility;
+using NuPattern.Presentation;
+using NuPattern.Reflection;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio.Extensions;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Provides a view model to create a new pattern.
     /// </summary>
-    [CLSCompliant(false)]
-    public partial class AddNewProductViewModel : ValidationViewModel
+    internal partial class AddNewProductViewModel : ValidationViewModel
     {
         private string productName;
         private IInstalledToolkitInfo currentToolkit;
@@ -251,7 +255,7 @@ namespace NuPattern.Runtime.UI
                 this.toolkitsView.Filter += new Predicate<object>(delegate(object x)
                 {
                     var toolkitInfo = (IInstalledToolkitInfo)x;
-                    return toolkitInfo.Classification.CreateVisibility != ToolkitVisibility.Hidden;
+                    return toolkitInfo.Classification.CreateVisibility != ExtensionVisibility.Hidden;
                 });
             }
             else
@@ -260,7 +264,7 @@ namespace NuPattern.Runtime.UI
                 this.toolkitsView.Filter += new Predicate<object>(delegate(object x)
                 {
                     var toolkitInfo = (IInstalledToolkitInfo)x;
-                    return toolkitInfo.Classification.CreateVisibility == ToolkitVisibility.Expanded;
+                    return toolkitInfo.Classification.CreateVisibility == ExtensionVisibility.Expanded;
                 });
             }
         }

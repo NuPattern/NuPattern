@@ -9,11 +9,13 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.Bindings;
 using NuPattern.Extensibility.References;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation
 {
@@ -404,7 +406,7 @@ namespace NuPattern.Library.Automation
             // Find the toolkit that shares the same path as this vstemplate (VS2010 only)
             var toolkitInfo = patternManager.InstalledToolkits
                 .FirstOrDefault(f => templateFile.StartsWith(f.Extension.InstallPath, StringComparison.OrdinalIgnoreCase));
-            
+
 #if VSVER11
             // In VS2012, vstemplates are loaded from cache not from toolkit installation path.
             if (toolkitInfo == null)
@@ -421,7 +423,7 @@ namespace NuPattern.Library.Automation
                                 .FirstOrDefault(it => it.Templates.Any(t => ((t.TemplateData.TemplateID != null) &&
                                 (t.TemplateData.TemplateID.Equals(template.TemplateData.TemplateID, StringComparison.OrdinalIgnoreCase)))));
                         }
-                    else
+                        else
                         {
                             toolkitInfo = patternManager.InstalledToolkits
                                 .FirstOrDefault(it => it.Templates.Any(t => ((t.TemplateData.Name != null) &&

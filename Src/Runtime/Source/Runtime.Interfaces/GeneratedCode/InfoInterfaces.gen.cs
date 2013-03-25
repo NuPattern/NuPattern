@@ -20,16 +20,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// The definition of the pattern in this toolkit.
 	/// </summary>
-	public partial interface IPatternModelInfo : INotifyPropertyChanged
+	partial interface IPatternModelInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IPatternModelInfo, object>> propertyExpression, Action<IPatternModelInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IPatternModelInfo, object>> propertyExpression, Action<IPatternModelInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -66,16 +66,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// The definition of the pattern.
 	/// </summary>
-	public partial interface IPatternInfo : INotifyPropertyChanged
+	partial interface IPatternInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IPatternInfo, object>> propertyExpression, Action<IPatternInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IPatternInfo, object>> propertyExpression, Action<IPatternInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -123,16 +123,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// An element that has a unique name.
 	/// </summary>
-	public partial interface INamedElementInfo : INotifyPropertyChanged
+	partial interface INamedElementInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<INamedElementInfo, object>> propertyExpression, Action<INamedElementInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<INamedElementInfo, object>> propertyExpression, Action<INamedElementInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -194,16 +194,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// A container of properties and automation.
 	/// </summary>
-	public partial interface IPatternElementInfo : INotifyPropertyChanged
+	partial interface IPatternElementInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IPatternElementInfo, object>> propertyExpression, Action<IPatternElementInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IPatternElementInfo, object>> propertyExpression, Action<IPatternElementInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -234,16 +234,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// A property of an element.
 	/// </summary>
-	public partial interface IPropertyInfo : INotifyPropertyChanged
+	partial interface IPropertyInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IPropertyInfo, object>> propertyExpression, Action<IPropertyInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IPropertyInfo, object>> propertyExpression, Action<IPropertyInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -312,16 +312,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// A distinct view of the pattern.
 	/// </summary>
-	public partial interface IViewInfo : INotifyPropertyChanged
+	partial interface IViewInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IViewInfo, object>> propertyExpression, Action<IViewInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IViewInfo, object>> propertyExpression, Action<IViewInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -365,16 +365,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// A child collection element.
 	/// </summary>
-	public partial interface ICollectionInfo : INotifyPropertyChanged
+	partial interface ICollectionInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<ICollectionInfo, object>> propertyExpression, Action<ICollectionInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<ICollectionInfo, object>> propertyExpression, Action<ICollectionInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -389,16 +389,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// A child element.
 	/// </summary>
-	public partial interface IElementInfo : INotifyPropertyChanged
+	partial interface IElementInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IElementInfo, object>> propertyExpression, Action<IElementInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IElementInfo, object>> propertyExpression, Action<IElementInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -413,16 +413,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// An element that supports customization of its properties.
 	/// </summary>
-	public partial interface ICustomizableElementInfo : INotifyPropertyChanged
+	partial interface ICustomizableElementInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<ICustomizableElementInfo, object>> propertyExpression, Action<ICustomizableElementInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<ICustomizableElementInfo, object>> propertyExpression, Action<ICustomizableElementInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -460,16 +460,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// A child element or collection of the pattern.
 	/// </summary>
-	public partial interface IAbstractElementInfo : INotifyPropertyChanged
+	partial interface IAbstractElementInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IAbstractElementInfo, object>> propertyExpression, Action<IAbstractElementInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IAbstractElementInfo, object>> propertyExpression, Action<IAbstractElementInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -490,16 +490,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// The policy that controls what properties are customizable on an element.
 	/// </summary>
-	public partial interface ICustomizationPolicyInfo : INotifyPropertyChanged
+	partial interface ICustomizationPolicyInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<ICustomizationPolicyInfo, object>> propertyExpression, Action<ICustomizationPolicyInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<ICustomizationPolicyInfo, object>> propertyExpression, Action<ICustomizationPolicyInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -541,16 +541,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// The settings for a customizable property.
 	/// </summary>
-	public partial interface ICustomizableSettingInfo : INotifyPropertyChanged
+	partial interface ICustomizableSettingInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<ICustomizableSettingInfo, object>> propertyExpression, Action<ICustomizableSettingInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<ICustomizableSettingInfo, object>> propertyExpression, Action<ICustomizableSettingInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -629,16 +629,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// The settings for an automation extension.
 	/// </summary>
-	public partial interface IAutomationSettingsInfo : INotifyPropertyChanged
+	partial interface IAutomationSettingsInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IAutomationSettingsInfo, object>> propertyExpression, Action<IAutomationSettingsInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IAutomationSettingsInfo, object>> propertyExpression, Action<IAutomationSettingsInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -665,16 +665,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// The extension points that this pattern provides.
 	/// </summary>
-	public partial interface IProvidedExtensionPointInfo : INotifyPropertyChanged
+	partial interface IProvidedExtensionPointInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IProvidedExtensionPointInfo, object>> propertyExpression, Action<IProvidedExtensionPointInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IProvidedExtensionPointInfo, object>> propertyExpression, Action<IProvidedExtensionPointInfo> callbackAction);
 	}
 	
 	/// <summary>
@@ -705,16 +705,16 @@ namespace NuPattern.Runtime
 	/// <summary>
 	/// A child extension to the pattern, provided by a pattern of another toolkit.
 	/// </summary>
-	public partial interface IExtensionPointInfo : INotifyPropertyChanged
+	partial interface IExtensionPointInfo : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IExtensionPointInfo, object>> propertyExpression, Action<IExtensionPointInfo> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IExtensionPointInfo, object>> propertyExpression, Action<IExtensionPointInfo> callbackAction);
 	}
 	
 	/// <summary>

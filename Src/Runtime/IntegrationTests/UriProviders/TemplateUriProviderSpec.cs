@@ -6,55 +6,35 @@ using Microsoft.VSSDK.Tools.VsIdeTesting;
 
 namespace NuPattern.Runtime.IntegrationTests
 {
-	[TestClass]
-	public class TemplateUriProviderSpec
-	{
-		internal static readonly IAssertion Assert = new Assertion();
+    [TestClass]
+    public class TemplateUriProviderSpec
+    {
+        internal static readonly IAssertion Assert = new Assertion();
 
-		private IServiceProvider serviceProvider;
-		private TemplateUriProvider target;
+        private IFxrUriReferenceService service;
 
-		[TestInitialize]
-		public void Initialize()
-		{
-			this.serviceProvider = VsIdeTestHostContext.ServiceProvider;
-			this.target = new TemplateUriProvider(this.serviceProvider);
-		}
+        [TestInitialize]
+        public void Initialize()
+        {
+            this.service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
+        }
 
-		[TestMethod, TestCategory("Integration")]
-		[HostType("VS IDE")]
-		public void WhenResolvingProjectTemplate_ThenGetsTemplate()
-		{
-			var template = this.target.ResolveUri(new Uri("template://Project/CSharp/Microsoft.CSharp.ClassLibrary"));
+        [TestMethod, TestCategory("Integration")]
+        [HostType("VS IDE")]
+        public void WhenResolvingProjectTemplate_ThenGetsTemplate()
+        {
+            var template = this.service.ResolveUri<ITemplate>(new Uri("template://Project/CSharp/Microsoft.CSharp.ClassLibrary"));
 
-			Assert.NotNull(template);
-		}
+            Assert.NotNull(template);
+        }
 
-		[TestMethod, TestCategory("Integration")]
-		[HostType("VS IDE")]
-		public void WhenResolvingItemTemplate_ThenGetsTemplate()
-		{
-			var template = this.target.ResolveUri(new Uri("template://Item/CSharp/Microsoft.CSharp.Class"));
+        [TestMethod, TestCategory("Integration")]
+        [HostType("VS IDE")]
+        public void WhenResolvingItemTemplate_ThenGetsTemplate()
+        {
+            var template = this.service.ResolveUri<ITemplate>(new Uri("template://Item/CSharp/Microsoft.CSharp.Class"));
 
-			Assert.NotNull(template);
-		}
-
-		[TestMethod, TestCategory("Integration")]
-		[HostType("VS IDE")]
-		public void WhenResolvingProjectTemplateViaUriService_ThenGetsTemplate()
-		{
-			var template = this.serviceProvider.GetService<IFxrUriReferenceService>().ResolveUri<ITemplate>(new Uri("template://Project/CSharp/Microsoft.CSharp.ClassLibrary"));
-
-			Assert.NotNull(template);
-		}
-
-		[TestMethod, TestCategory("Integration")]
-		[HostType("VS IDE")]
-		public void WhenResolvingItemTemplateViaUriService_ThenGetsTemplate()
-		{
-			var template = this.serviceProvider.GetService<IFxrUriReferenceService>().ResolveUri<ITemplate>(new Uri("template://Item/CSharp/Microsoft.CSharp.Class"));
-
-			Assert.NotNull(template);
-		}
-	}
+            Assert.NotNull(template);
+        }
+    }
 }

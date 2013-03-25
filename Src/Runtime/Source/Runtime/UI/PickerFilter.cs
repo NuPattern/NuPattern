@@ -15,8 +15,7 @@ namespace NuPattern.Runtime.UI
     /// Since this filter is applied to a hierarchy, non-matching items are only permitted if they contain descendant items that match.
     /// Empty containers are only permitted when IncludeEmptyContainers=true.
     /// </remarks>
-    [CLSCompliant(false)]
-    public class PickerFilter : IPickerFilter
+    internal class PickerFilter : IPickerFilter
     {
         internal const ItemKind AllKinds = ItemKind.Folder | ItemKind.Item | ItemKind.Project | ItemKind.Reference |
                 ItemKind.ReferencesFolder | ItemKind.Solution | ItemKind.SolutionFolder | ItemKind.Unknown;

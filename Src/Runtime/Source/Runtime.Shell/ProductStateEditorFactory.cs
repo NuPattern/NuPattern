@@ -8,9 +8,8 @@ namespace NuPattern.Runtime.Shell
     /// <summary>
     /// Provides opening behavior for pattern state files.
     /// </summary>
-    [CLSCompliant(false)]
     [Guid("449EA23C-4893-4EB9-8324-364354EEE5B7")]
-    public sealed class ProductStateEditorFactory : IVsEditorFactory
+    internal sealed class ProductStateEditorFactory : IVsEditorFactory
     {
         private IPatternManager patternManager;
 

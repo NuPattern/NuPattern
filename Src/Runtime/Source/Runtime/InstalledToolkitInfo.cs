@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Runtime
 {
@@ -14,8 +15,7 @@ namespace NuPattern.Runtime
     /// information which exposes information from a 
     /// Visual Studio extension.
     /// </summary>
-    [CLSCompliant(false)]
-    public class InstalledToolkitInfo : IInstalledToolkitInfo
+    internal class InstalledToolkitInfo : IInstalledToolkitInfo
     {
         internal const string PatternModelCustomExtensionName = "NuPattern.Toolkit.PatternModel";
         internal const string ToolkitClassificationCustomExtensionName = "NuPattern.Toolkit.Classification";
@@ -215,8 +215,8 @@ namespace NuPattern.Runtime
             {
                 return new ToolkitClassification(
                     customExtension.GetCustomAttributeValue(CategoryAttributeName),
-                    customExtension.GetVisibilityAttributeValue(CreateVisibilityAttributeName, ToolkitVisibility.Expanded),
-                    customExtension.GetVisibilityAttributeValue(CustomizeVisibilityAttributeName, ToolkitVisibility.Expanded));
+                    customExtension.GetVisibilityAttributeValue(CreateVisibilityAttributeName, ExtensionVisibility.Expanded),
+                    customExtension.GetVisibilityAttributeValue(CustomizeVisibilityAttributeName, ExtensionVisibility.Expanded));
             }
             else
             {

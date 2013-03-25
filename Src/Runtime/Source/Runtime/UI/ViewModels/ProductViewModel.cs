@@ -1,19 +1,17 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Provides a view model for a pattern instance in the solution builder view.
     /// </summary>
-    [CLSCompliant(false)]
-    public class ProductViewModel : ProductElementViewModel
+    internal class ProductViewModel : ProductElementViewModel
     {
         private const string IconEnabledPath = "../../Resources/NodeProductDefault.png";
         private const string IconUninstalledPath = "../../Resources/NodeProductVersionNotFound.png";

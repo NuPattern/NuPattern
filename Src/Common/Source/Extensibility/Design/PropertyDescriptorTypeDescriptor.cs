@@ -3,8 +3,10 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
+using NuPattern.ComponentModel;
+using NuPattern.ComponentModel.Design;
 
-namespace NuPattern.Extensibility
+namespace NuPattern.Extensibility.Design
 {
     /// <summary>
     /// Provides a type descriptor for all elements that use <see cref="PropertyDescriptorAttribute"/>.

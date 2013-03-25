@@ -5,15 +5,17 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Extensibility;
+using NuPattern.Presentation;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Provides a view model to create a new node.
     /// </summary>
-    [CLSCompliant(false)]
-    public class AddNewNodeViewModel : ValidationViewModel
+    internal class AddNewNodeViewModel : ValidationViewModel
     {
         private string instanceName;
         private IEnumerable<IProductElement> sibilings;

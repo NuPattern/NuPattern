@@ -18,10 +18,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelHasPattern.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelHasPattern.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("ef11f513-2a94-4473-8b92-e23ad76801f3")]
-	public partial class PatternModelHasPattern : DslModeling::ElementLink
+	internal partial class PatternModelHasPattern : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -37,7 +36,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		/// <param name="source">PatternModelSchema to use as the source of the relationship.</param>
 		/// <param name="target">PatternSchema to use as the target of the relationship.</param>
-		public PatternModelHasPattern(PatternModelSchema source, PatternSchema target)
+		internal PatternModelHasPattern(PatternModelSchema source, PatternSchema target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(PatternModelHasPattern.PatternModelSchemaDomainRoleId, source), new DslModeling::RoleAssignment(PatternModelHasPattern.PatternSchemaDomainRoleId, target)}, null)
 		{
 		}
@@ -120,7 +119,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static PatternModelSchema GetPatternModel(PatternSchema element)
+		internal static PatternModelSchema GetPatternModel(PatternSchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, PatternSchemaDomainRoleId) as PatternModelSchema;
 		}
@@ -130,7 +129,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetPatternModel(PatternSchema element, PatternModelSchema newPatternModelSchema)
+		internal static void SetPatternModel(PatternSchema element, PatternModelSchema newPatternModelSchema)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, PatternSchemaDomainRoleId, newPatternModelSchema);
 		}
@@ -150,7 +149,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelHasPattern/PatternSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "PatternModel", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternModelHasPattern/PatternSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("a173d11e-d3aa-41c0-800c-8a90c8bfdf2b")]
-		public virtual PatternSchema PatternSchema
+		internal virtual PatternSchema PatternSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -171,7 +170,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static PatternSchema GetPattern(PatternModelSchema element)
+		internal static PatternSchema GetPattern(PatternModelSchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, PatternModelSchemaDomainRoleId) as PatternSchema;
 		}
@@ -181,7 +180,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetPattern(PatternModelSchema element, PatternSchema newPatternSchema)
+		internal static void SetPattern(PatternModelSchema element, PatternSchema newPatternSchema)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, PatternModelSchemaDomainRoleId, newPatternSchema);
 		}
@@ -192,7 +191,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PatternModelHasPattern GetLinkToPattern (global::NuPattern.Runtime.Schema.PatternModelSchema patternModelSchemaInstance)
+		internal static global::NuPattern.Runtime.Schema.PatternModelHasPattern GetLinkToPattern (global::NuPattern.Runtime.Schema.PatternModelSchema patternModelSchemaInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternModelHasPattern>(patternModelSchemaInstance, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of PatternModelSchema not obeyed.");
@@ -212,7 +211,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PatternModelHasPattern GetLinkToPatternModel (global::NuPattern.Runtime.Schema.PatternSchema patternSchemaInstance)
+		internal static global::NuPattern.Runtime.Schema.PatternModelHasPattern GetLinkToPatternModel (global::NuPattern.Runtime.Schema.PatternSchema patternSchemaInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternModelHasPattern>(patternSchemaInstance, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of PatternSchema not obeyed.");
@@ -233,7 +232,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternModelHasPattern> GetLinks( global::NuPattern.Runtime.Schema.PatternModelSchema source, global::NuPattern.Runtime.Schema.PatternSchema target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternModelHasPattern> GetLinks( global::NuPattern.Runtime.Schema.PatternModelSchema source, global::NuPattern.Runtime.Schema.PatternSchema target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternModelHasPattern> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternModelHasPattern>();
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternModelHasPattern>(source, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId);
@@ -251,7 +250,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PatternModelHasPattern GetLink( global::NuPattern.Runtime.Schema.PatternModelSchema source, global::NuPattern.Runtime.Schema.PatternSchema target )
+		internal static global::NuPattern.Runtime.Schema.PatternModelHasPattern GetLink( global::NuPattern.Runtime.Schema.PatternModelSchema source, global::NuPattern.Runtime.Schema.PatternSchema target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternModelHasPattern> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternModelHasPattern>(source, global::NuPattern.Runtime.Schema.PatternModelHasPattern.PatternModelSchemaDomainRoleId);
 			foreach ( global::NuPattern.Runtime.Schema.PatternModelHasPattern link in links )
@@ -276,10 +275,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementHasProperties.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasProperties.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("4b1811b8-c0fe-451a-9715-881e3af1eb2f")]
-	public partial class PatternElementHasProperties : DslModeling::ElementLink
+	internal partial class PatternElementHasProperties : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -295,7 +293,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		/// <param name="source">PatternElementSchema to use as the source of the relationship.</param>
 		/// <param name="target">PropertySchema to use as the target of the relationship.</param>
-		public PatternElementHasProperties(PatternElementSchema source, PropertySchema target)
+		internal PatternElementHasProperties(PatternElementSchema source, PropertySchema target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(PatternElementHasProperties.PatternElementSchemaDomainRoleId, source), new DslModeling::RoleAssignment(PatternElementHasProperties.PropertySchemaDomainRoleId, target)}, null)
 		{
 		}
@@ -357,7 +355,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasProperties/PatternElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Properties", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternElementHasProperties/PatternElementSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("047b91aa-4ea9-4dfe-9f20-b5c2ff8ae6df")]
-		public virtual PatternElementSchema PatternElementSchema
+		internal virtual PatternElementSchema PatternElementSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -378,7 +376,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static PatternElementSchema GetOwner(PropertySchema element)
+		internal static PatternElementSchema GetOwner(PropertySchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, PropertySchemaDomainRoleId) as PatternElementSchema;
 		}
@@ -388,7 +386,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetOwner(PropertySchema element, PatternElementSchema newPatternElementSchema)
+		internal static void SetOwner(PropertySchema element, PatternElementSchema newPatternElementSchema)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, PropertySchemaDomainRoleId, newPatternElementSchema);
 		}
@@ -408,7 +406,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasProperties/PropertySchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternElementHasProperties/PropertySchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("a36dc941-fb07-4d65-847f-09fe8ee64497")]
-		public virtual PropertySchema PropertySchema
+		internal virtual PropertySchema PropertySchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -429,7 +427,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<PropertySchema> GetProperties(PatternElementSchema element)
+		internal static DslModeling::LinkedElementCollection<PropertySchema> GetProperties(PatternElementSchema element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<PropertySchema>, PropertySchema>(element, PatternElementSchemaDomainRoleId);
 		}
@@ -440,7 +438,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasProperties> GetLinksToProperties ( global::NuPattern.Runtime.Schema.PatternElementSchema patternElementSchemaInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasProperties> GetLinksToProperties ( global::NuPattern.Runtime.Schema.PatternElementSchema patternElementSchemaInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasProperties>(patternElementSchemaInstance, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId);
 		}
@@ -451,7 +449,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PatternElementHasProperties GetLinkToOwner (global::NuPattern.Runtime.Schema.PropertySchema propertySchemaInstance)
+		internal static global::NuPattern.Runtime.Schema.PatternElementHasProperties GetLinkToOwner (global::NuPattern.Runtime.Schema.PropertySchema propertySchemaInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasProperties>(propertySchemaInstance, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PropertySchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of PropertySchema not obeyed.");
@@ -472,7 +470,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasProperties> GetLinks( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.PropertySchema target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasProperties> GetLinks( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.PropertySchema target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternElementHasProperties> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternElementHasProperties>();
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasProperties>(source, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId);
@@ -490,7 +488,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PatternElementHasProperties GetLink( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.PropertySchema target )
+		internal static global::NuPattern.Runtime.Schema.PatternElementHasProperties GetLink( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.PropertySchema target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasProperties> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasProperties>(source, global::NuPattern.Runtime.Schema.PatternElementHasProperties.PatternElementSchemaDomainRoleId);
 			foreach ( global::NuPattern.Runtime.Schema.PatternElementHasProperties link in links )
@@ -515,10 +513,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternHasViews.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasViews.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("aad70656-c8af-4d31-bd93-e288096ee274")]
-	public partial class PatternHasViews : DslModeling::ElementLink
+	internal partial class PatternHasViews : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -534,7 +531,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		/// <param name="source">PatternSchema to use as the source of the relationship.</param>
 		/// <param name="target">ViewSchema to use as the target of the relationship.</param>
-		public PatternHasViews(PatternSchema source, ViewSchema target)
+		internal PatternHasViews(PatternSchema source, ViewSchema target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(PatternHasViews.PatternSchemaDomainRoleId, source), new DslModeling::RoleAssignment(PatternHasViews.ViewSchemaDomainRoleId, target)}, null)
 		{
 		}
@@ -596,7 +593,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasViews/PatternSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Views", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternHasViews/PatternSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.OneMany)]
 		[DslModeling::DomainObjectId("9b7b2ee3-1c1f-48f2-a873-07774f4dd02d")]
-		public virtual PatternSchema PatternSchema
+		internal virtual PatternSchema PatternSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -617,7 +614,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static PatternSchema GetPattern(ViewSchema element)
+		internal static PatternSchema GetPattern(ViewSchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ViewSchemaDomainRoleId) as PatternSchema;
 		}
@@ -627,7 +624,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetPattern(ViewSchema element, PatternSchema newPatternSchema)
+		internal static void SetPattern(ViewSchema element, PatternSchema newPatternSchema)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, ViewSchemaDomainRoleId, newPatternSchema);
 		}
@@ -647,7 +644,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasViews/ViewSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Pattern", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternHasViews/ViewSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("413f3607-99ef-4762-8093-eab85559d32d")]
-		public virtual ViewSchema ViewSchema
+		internal virtual ViewSchema ViewSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -668,7 +665,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ViewSchema> GetViews(PatternSchema element)
+		internal static DslModeling::LinkedElementCollection<ViewSchema> GetViews(PatternSchema element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ViewSchema>, ViewSchema>(element, PatternSchemaDomainRoleId);
 		}
@@ -679,7 +676,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasViews> GetLinksToViews ( global::NuPattern.Runtime.Schema.PatternSchema patternSchemaInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasViews> GetLinksToViews ( global::NuPattern.Runtime.Schema.PatternSchema patternSchemaInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasViews>(patternSchemaInstance, global::NuPattern.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId);
 		}
@@ -690,7 +687,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PatternHasViews GetLinkToPattern (global::NuPattern.Runtime.Schema.ViewSchema viewSchemaInstance)
+		internal static global::NuPattern.Runtime.Schema.PatternHasViews GetLinkToPattern (global::NuPattern.Runtime.Schema.ViewSchema viewSchemaInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasViews> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasViews>(viewSchemaInstance, global::NuPattern.Runtime.Schema.PatternHasViews.ViewSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ViewSchema not obeyed.");
@@ -711,7 +708,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasViews> GetLinks( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ViewSchema target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasViews> GetLinks( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ViewSchema target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternHasViews> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternHasViews>();
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasViews> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasViews>(source, global::NuPattern.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId);
@@ -729,7 +726,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PatternHasViews GetLink( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ViewSchema target )
+		internal static global::NuPattern.Runtime.Schema.PatternHasViews GetLink( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ViewSchema target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasViews> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasViews>(source, global::NuPattern.Runtime.Schema.PatternHasViews.PatternSchemaDomainRoleId);
 			foreach ( global::NuPattern.Runtime.Schema.PatternHasViews link in links )
@@ -754,10 +751,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("3bfd2e51-26d4-48dd-89a2-7e7a715b2bfd")]
-	public partial class ViewHasElements : DslModeling::ElementLink
+	internal partial class ViewHasElements : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -773,7 +769,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		/// <param name="source">ViewSchema to use as the source of the relationship.</param>
 		/// <param name="target">AbstractElementSchema to use as the target of the relationship.</param>
-		public ViewHasElements(ViewSchema source, AbstractElementSchema target)
+		internal ViewHasElements(ViewSchema source, AbstractElementSchema target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ViewHasElements.ViewSchemaDomainRoleId, source), new DslModeling::RoleAssignment(ViewHasElements.AbstractElementSchemaDomainRoleId, target)}, null)
 		{
 		}
@@ -835,7 +831,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements/ViewSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elements", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ViewHasElements/ViewSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("f8ee9bb4-3327-41db-84c6-10f81425e0b1")]
-		public virtual ViewSchema ViewSchema
+		internal virtual ViewSchema ViewSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -856,7 +852,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ViewSchema GetView(AbstractElementSchema element)
+		internal static ViewSchema GetView(AbstractElementSchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AbstractElementSchemaDomainRoleId) as ViewSchema;
 		}
@@ -866,7 +862,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetView(AbstractElementSchema element, ViewSchema newViewSchema)
+		internal static void SetView(AbstractElementSchema element, ViewSchema newViewSchema)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, AbstractElementSchemaDomainRoleId, newViewSchema);
 		}
@@ -886,7 +882,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasElements/AbstractElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "View", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ViewHasElements/AbstractElementSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("9144c828-2674-4da6-b7cd-02ba2caa48b0")]
-		public virtual AbstractElementSchema AbstractElementSchema
+		internal virtual AbstractElementSchema AbstractElementSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -907,7 +903,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<AbstractElementSchema> GetElements(ViewSchema element)
+		internal static DslModeling::LinkedElementCollection<AbstractElementSchema> GetElements(ViewSchema element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<AbstractElementSchema>, AbstractElementSchema>(element, ViewSchemaDomainRoleId);
 		}
@@ -1360,7 +1356,7 @@ namespace NuPattern.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -1440,7 +1436,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasElements> GetLinksToElements ( global::NuPattern.Runtime.Schema.ViewSchema viewSchemaInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasElements> GetLinksToElements ( global::NuPattern.Runtime.Schema.ViewSchema viewSchemaInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasElements>(viewSchemaInstance, global::NuPattern.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId);
 		}
@@ -1451,7 +1447,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.ViewHasElements GetLinkToView (global::NuPattern.Runtime.Schema.AbstractElementSchema abstractElementSchemaInstance)
+		internal static global::NuPattern.Runtime.Schema.ViewHasElements GetLinkToView (global::NuPattern.Runtime.Schema.AbstractElementSchema abstractElementSchemaInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasElements>(abstractElementSchemaInstance, global::NuPattern.Runtime.Schema.ViewHasElements.AbstractElementSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AbstractElementSchema not obeyed.");
@@ -1472,7 +1468,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasElements> GetLinks( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasElements> GetLinks( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ViewHasElements> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ViewHasElements>();
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasElements>(source, global::NuPattern.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId);
@@ -1490,7 +1486,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.ViewHasElements GetLink( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
+		internal static global::NuPattern.Runtime.Schema.ViewHasElements GetLink( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasElements>(source, global::NuPattern.Runtime.Schema.ViewHasElements.ViewSchemaDomainRoleId);
 			foreach ( global::NuPattern.Runtime.Schema.ViewHasElements link in links )
@@ -1515,10 +1511,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PolicyHasSettings.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PolicyHasSettings.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("c30fb6ed-9e58-473d-a596-e52f20c88224")]
-	public partial class PolicyHasSettings : DslModeling::ElementLink
+	internal partial class PolicyHasSettings : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -1534,7 +1529,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		/// <param name="source">CustomizationPolicySchema to use as the source of the relationship.</param>
 		/// <param name="target">CustomizableSettingSchema to use as the target of the relationship.</param>
-		public PolicyHasSettings(CustomizationPolicySchema source, CustomizableSettingSchema target)
+		internal PolicyHasSettings(CustomizationPolicySchema source, CustomizableSettingSchema target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(PolicyHasSettings.CustomizationPolicySchemaDomainRoleId, source), new DslModeling::RoleAssignment(PolicyHasSettings.CustomizableSettingSchemaDomainRoleId, target)}, null)
 		{
 		}
@@ -1596,7 +1591,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PolicyHasSettings/CustomizationPolicySchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Settings", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PolicyHasSettings/CustomizationPolicySchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("eb849f5a-92b0-4bd1-8b0d-05663de599cd")]
-		public virtual CustomizationPolicySchema CustomizationPolicySchema
+		internal virtual CustomizationPolicySchema CustomizationPolicySchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1617,7 +1612,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static CustomizationPolicySchema GetPolicy(CustomizableSettingSchema element)
+		internal static CustomizationPolicySchema GetPolicy(CustomizableSettingSchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CustomizableSettingSchemaDomainRoleId) as CustomizationPolicySchema;
 		}
@@ -1627,7 +1622,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetPolicy(CustomizableSettingSchema element, CustomizationPolicySchema newCustomizationPolicySchema)
+		internal static void SetPolicy(CustomizableSettingSchema element, CustomizationPolicySchema newCustomizationPolicySchema)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, CustomizableSettingSchemaDomainRoleId, newCustomizationPolicySchema);
 		}
@@ -1647,7 +1642,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PolicyHasSettings/CustomizableSettingSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Policy", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PolicyHasSettings/CustomizableSettingSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("ab2c4075-57db-4e21-9b1f-da59fa3e5d3d")]
-		public virtual CustomizableSettingSchema CustomizableSettingSchema
+		internal virtual CustomizableSettingSchema CustomizableSettingSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1668,7 +1663,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<CustomizableSettingSchema> GetSettings(CustomizationPolicySchema element)
+		internal static DslModeling::LinkedElementCollection<CustomizableSettingSchema> GetSettings(CustomizationPolicySchema element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<CustomizableSettingSchema>, CustomizableSettingSchema>(element, CustomizationPolicySchemaDomainRoleId);
 		}
@@ -1679,7 +1674,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PolicyHasSettings> GetLinksToSettings ( global::NuPattern.Runtime.Schema.CustomizationPolicySchema customizationPolicySchemaInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PolicyHasSettings> GetLinksToSettings ( global::NuPattern.Runtime.Schema.CustomizationPolicySchema customizationPolicySchemaInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PolicyHasSettings>(customizationPolicySchemaInstance, global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId);
 		}
@@ -1690,7 +1685,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PolicyHasSettings GetLinkToPolicy (global::NuPattern.Runtime.Schema.CustomizableSettingSchema customizableSettingSchemaInstance)
+		internal static global::NuPattern.Runtime.Schema.PolicyHasSettings GetLinkToPolicy (global::NuPattern.Runtime.Schema.CustomizableSettingSchema customizableSettingSchemaInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PolicyHasSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PolicyHasSettings>(customizableSettingSchemaInstance, global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizableSettingSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CustomizableSettingSchema not obeyed.");
@@ -1711,7 +1706,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PolicyHasSettings> GetLinks( global::NuPattern.Runtime.Schema.CustomizationPolicySchema source, global::NuPattern.Runtime.Schema.CustomizableSettingSchema target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PolicyHasSettings> GetLinks( global::NuPattern.Runtime.Schema.CustomizationPolicySchema source, global::NuPattern.Runtime.Schema.CustomizableSettingSchema target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PolicyHasSettings> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PolicyHasSettings>();
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PolicyHasSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PolicyHasSettings>(source, global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId);
@@ -1729,7 +1724,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PolicyHasSettings GetLink( global::NuPattern.Runtime.Schema.CustomizationPolicySchema source, global::NuPattern.Runtime.Schema.CustomizableSettingSchema target )
+		internal static global::NuPattern.Runtime.Schema.PolicyHasSettings GetLink( global::NuPattern.Runtime.Schema.CustomizationPolicySchema source, global::NuPattern.Runtime.Schema.CustomizableSettingSchema target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PolicyHasSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PolicyHasSettings>(source, global::NuPattern.Runtime.Schema.PolicyHasSettings.CustomizationPolicySchemaDomainRoleId);
 			foreach ( global::NuPattern.Runtime.Schema.PolicyHasSettings link in links )
@@ -1754,10 +1749,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementHasPolicy.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementHasPolicy.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("b060fe61-7009-47eb-a1ad-5267426e6afd")]
-	public partial class CustomizableElementHasPolicy : DslModeling::ElementLink
+	internal partial class CustomizableElementHasPolicy : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -1773,7 +1767,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		/// <param name="source">CustomizableElementSchema to use as the source of the relationship.</param>
 		/// <param name="target">CustomizationPolicySchema to use as the target of the relationship.</param>
-		public CustomizableElementHasPolicy(CustomizableElementSchema source, CustomizationPolicySchema target)
+		internal CustomizableElementHasPolicy(CustomizableElementSchema source, CustomizationPolicySchema target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId, source), new DslModeling::RoleAssignment(CustomizableElementHasPolicy.CustomizationPolicySchemaDomainRoleId, target)}, null)
 		{
 		}
@@ -1835,7 +1829,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizableElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Policy", PropertyDisplayNameKey="NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizableElementSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("873ce323-5608-4607-870b-1419d5a4c88d")]
-		public virtual CustomizableElementSchema CustomizableElementSchema
+		internal virtual CustomizableElementSchema CustomizableElementSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1856,7 +1850,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static CustomizableElementSchema GetOwner(CustomizationPolicySchema element)
+		internal static CustomizableElementSchema GetOwner(CustomizationPolicySchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CustomizationPolicySchemaDomainRoleId) as CustomizableElementSchema;
 		}
@@ -1866,7 +1860,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetOwner(CustomizationPolicySchema element, CustomizableElementSchema newCustomizableElementSchema)
+		internal static void SetOwner(CustomizationPolicySchema element, CustomizableElementSchema newCustomizableElementSchema)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, CustomizationPolicySchemaDomainRoleId, newCustomizableElementSchema);
 		}
@@ -1886,7 +1880,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizationPolicySchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="NuPattern.Runtime.Schema.CustomizableElementHasPolicy/CustomizationPolicySchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("fdc3a233-a290-4fa9-b891-b5f9ae2425f7")]
-		public virtual CustomizationPolicySchema CustomizationPolicySchema
+		internal virtual CustomizationPolicySchema CustomizationPolicySchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1907,7 +1901,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static CustomizationPolicySchema GetPolicy(CustomizableElementSchema element)
+		internal static CustomizationPolicySchema GetPolicy(CustomizableElementSchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, CustomizableElementSchemaDomainRoleId) as CustomizationPolicySchema;
 		}
@@ -1917,7 +1911,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetPolicy(CustomizableElementSchema element, CustomizationPolicySchema newCustomizationPolicySchema)
+		internal static void SetPolicy(CustomizableElementSchema element, CustomizationPolicySchema newCustomizationPolicySchema)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, CustomizableElementSchemaDomainRoleId, newCustomizationPolicySchema);
 		}
@@ -1928,7 +1922,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy GetLinkToPolicy (global::NuPattern.Runtime.Schema.CustomizableElementSchema customizableElementSchemaInstance)
+		internal static global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy GetLinkToPolicy (global::NuPattern.Runtime.Schema.CustomizableElementSchema customizableElementSchemaInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy>(customizableElementSchemaInstance, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CustomizableElementSchema not obeyed.");
@@ -1948,7 +1942,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy GetLinkToOwner (global::NuPattern.Runtime.Schema.CustomizationPolicySchema customizationPolicySchemaInstance)
+		internal static global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy GetLinkToOwner (global::NuPattern.Runtime.Schema.CustomizationPolicySchema customizationPolicySchemaInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy>(customizationPolicySchemaInstance, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizationPolicySchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of CustomizationPolicySchema not obeyed.");
@@ -1969,7 +1963,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> GetLinks( global::NuPattern.Runtime.Schema.CustomizableElementSchema source, global::NuPattern.Runtime.Schema.CustomizationPolicySchema target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> GetLinks( global::NuPattern.Runtime.Schema.CustomizableElementSchema source, global::NuPattern.Runtime.Schema.CustomizationPolicySchema target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy>();
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy>(source, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId);
@@ -1987,7 +1981,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy GetLink( global::NuPattern.Runtime.Schema.CustomizableElementSchema source, global::NuPattern.Runtime.Schema.CustomizationPolicySchema target )
+		internal static global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy GetLink( global::NuPattern.Runtime.Schema.CustomizableElementSchema source, global::NuPattern.Runtime.Schema.CustomizationPolicySchema target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy>(source, global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy.CustomizableElementSchemaDomainRoleId);
 			foreach ( global::NuPattern.Runtime.Schema.CustomizableElementHasPolicy link in links )
@@ -2012,10 +2006,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("b0afa4dc-233e-4c6c-a058-5b2f2989b751")]
-	public partial class ElementHasElements : DslModeling::ElementLink
+	internal partial class ElementHasElements : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -2031,7 +2024,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		/// <param name="source">AbstractElementSchema to use as the source of the relationship.</param>
 		/// <param name="target">AbstractElementSchema to use as the target of the relationship.</param>
-		public ElementHasElements(AbstractElementSchema source, AbstractElementSchema target)
+		internal ElementHasElements(AbstractElementSchema source, AbstractElementSchema target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ElementHasElements.ParentElementDomainRoleId, source), new DslModeling::RoleAssignment(ElementHasElements.ChildElementDomainRoleId, target)}, null)
 		{
 		}
@@ -2093,7 +2086,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements/ParentElement.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Elements", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ElementHasElements/ParentElement.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("8a909b18-fbd3-48c1-adf9-a6fbeae26aa6")]
-		public virtual AbstractElementSchema ParentElement
+		internal virtual AbstractElementSchema ParentElement
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2114,7 +2107,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static AbstractElementSchema GetOwner(AbstractElementSchema element)
+		internal static AbstractElementSchema GetOwner(AbstractElementSchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ChildElementDomainRoleId) as AbstractElementSchema;
 		}
@@ -2124,7 +2117,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetOwner(AbstractElementSchema element, AbstractElementSchema newParentElement)
+		internal static void SetOwner(AbstractElementSchema element, AbstractElementSchema newParentElement)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, ChildElementDomainRoleId, newParentElement);
 		}
@@ -2144,7 +2137,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasElements/ChildElement.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ElementHasElements/ChildElement.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("f9fecc66-b0f5-4f50-9ab8-30fffb30f00e")]
-		public virtual AbstractElementSchema ChildElement
+		internal virtual AbstractElementSchema ChildElement
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2165,7 +2158,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<AbstractElementSchema> GetElements(AbstractElementSchema element)
+		internal static DslModeling::LinkedElementCollection<AbstractElementSchema> GetElements(AbstractElementSchema element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<AbstractElementSchema>, AbstractElementSchema>(element, ParentElementDomainRoleId);
 		}
@@ -2618,7 +2611,7 @@ namespace NuPattern.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -2698,7 +2691,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasElements> GetLinksToElements ( global::NuPattern.Runtime.Schema.AbstractElementSchema parentElementInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasElements> GetLinksToElements ( global::NuPattern.Runtime.Schema.AbstractElementSchema parentElementInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasElements>(parentElementInstance, global::NuPattern.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId);
 		}
@@ -2709,7 +2702,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.ElementHasElements GetLinkToOwner (global::NuPattern.Runtime.Schema.AbstractElementSchema childElementInstance)
+		internal static global::NuPattern.Runtime.Schema.ElementHasElements GetLinkToOwner (global::NuPattern.Runtime.Schema.AbstractElementSchema childElementInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasElements>(childElementInstance, global::NuPattern.Runtime.Schema.ElementHasElements.ChildElementDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ChildElement not obeyed.");
@@ -2730,7 +2723,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasElements> GetLinks( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasElements> GetLinks( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ElementHasElements> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ElementHasElements>();
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasElements>(source, global::NuPattern.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId);
@@ -2748,7 +2741,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.ElementHasElements GetLink( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
+		internal static global::NuPattern.Runtime.Schema.ElementHasElements GetLink( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.AbstractElementSchema target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasElements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasElements>(source, global::NuPattern.Runtime.Schema.ElementHasElements.ParentElementDomainRoleId);
 			foreach ( global::NuPattern.Runtime.Schema.ElementHasElements link in links )
@@ -2773,10 +2766,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("932e4f6e-8c17-4cdd-923e-409a627ba93c")]
-	public partial class PatternHasProvidedExtensionPoints : DslModeling::ElementLink
+	internal partial class PatternHasProvidedExtensionPoints : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -2792,7 +2784,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		/// <param name="source">PatternSchema to use as the source of the relationship.</param>
 		/// <param name="target">ProvidedExtensionPointSchema to use as the target of the relationship.</param>
-		public PatternHasProvidedExtensionPoints(PatternSchema source, ProvidedExtensionPointSchema target)
+		internal PatternHasProvidedExtensionPoints(PatternSchema source, ProvidedExtensionPointSchema target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId, source), new DslModeling::RoleAssignment(PatternHasProvidedExtensionPoints.ProvidedExtensionPointSchemaDomainRoleId, target)}, null)
 		{
 		}
@@ -2854,7 +2846,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/PatternSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ProvidedExtensionPoints", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/PatternSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("ac61bcdd-4aa4-44a2-b7a1-d71a7f46999a")]
-		public virtual PatternSchema PatternSchema
+		internal virtual PatternSchema PatternSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2875,7 +2867,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static PatternSchema GetPattern(ProvidedExtensionPointSchema element)
+		internal static PatternSchema GetPattern(ProvidedExtensionPointSchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ProvidedExtensionPointSchemaDomainRoleId) as PatternSchema;
 		}
@@ -2885,7 +2877,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetPattern(ProvidedExtensionPointSchema element, PatternSchema newPatternSchema)
+		internal static void SetPattern(ProvidedExtensionPointSchema element, PatternSchema newPatternSchema)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, ProvidedExtensionPointSchemaDomainRoleId, newPatternSchema);
 		}
@@ -2905,7 +2897,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/ProvidedExtensionPointSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Pattern", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints/ProvidedExtensionPointSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("28e7dfd9-4a29-473c-a0cb-74bd9b3b3c6a")]
-		public virtual ProvidedExtensionPointSchema ProvidedExtensionPointSchema
+		internal virtual ProvidedExtensionPointSchema ProvidedExtensionPointSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2926,7 +2918,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ProvidedExtensionPointSchema> GetProvidedExtensionPoints(PatternSchema element)
+		internal static DslModeling::LinkedElementCollection<ProvidedExtensionPointSchema> GetProvidedExtensionPoints(PatternSchema element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ProvidedExtensionPointSchema>, ProvidedExtensionPointSchema>(element, PatternSchemaDomainRoleId);
 		}
@@ -2937,7 +2929,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> GetLinksToProvidedExtensionPoints ( global::NuPattern.Runtime.Schema.PatternSchema patternSchemaInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> GetLinksToProvidedExtensionPoints ( global::NuPattern.Runtime.Schema.PatternSchema patternSchemaInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints>(patternSchemaInstance, global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId);
 		}
@@ -2948,7 +2940,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints GetLinkToPattern (global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema providedExtensionPointSchemaInstance)
+		internal static global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints GetLinkToPattern (global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema providedExtensionPointSchemaInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints>(providedExtensionPointSchemaInstance, global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.ProvidedExtensionPointSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ProvidedExtensionPointSchema not obeyed.");
@@ -2969,7 +2961,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> GetLinks( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> GetLinks( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints>();
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints>(source, global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId);
@@ -2987,7 +2979,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints GetLink( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema target )
+		internal static global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints GetLink( global::NuPattern.Runtime.Schema.PatternSchema source, global::NuPattern.Runtime.Schema.ProvidedExtensionPointSchema target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints>(source, global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints.PatternSchemaDomainRoleId);
 			foreach ( global::NuPattern.Runtime.Schema.PatternHasProvidedExtensionPoints link in links )
@@ -3012,10 +3004,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("936a92cc-4eec-4e05-84b5-4dca5b2845bd")]
-	public partial class ElementHasExtensionPoints : DslModeling::ElementLink
+	internal partial class ElementHasExtensionPoints : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -3031,7 +3022,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		/// <param name="source">AbstractElementSchema to use as the source of the relationship.</param>
 		/// <param name="target">ExtensionPointSchema to use as the target of the relationship.</param>
-		public ElementHasExtensionPoints(AbstractElementSchema source, ExtensionPointSchema target)
+		internal ElementHasExtensionPoints(AbstractElementSchema source, ExtensionPointSchema target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ElementHasExtensionPoints.ParentElementDomainRoleId, source), new DslModeling::RoleAssignment(ElementHasExtensionPoints.ChildElementDomainRoleId, target)}, null)
 		{
 		}
@@ -3093,7 +3084,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/ParentElement.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ExtensionPoints", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ElementHasExtensionPoints/ParentElement.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("398dc337-36b1-4259-a3b2-1a1a61db928a")]
-		public virtual AbstractElementSchema ParentElement
+		internal virtual AbstractElementSchema ParentElement
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3114,7 +3105,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static AbstractElementSchema GetOwner(ExtensionPointSchema element)
+		internal static AbstractElementSchema GetOwner(ExtensionPointSchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ChildElementDomainRoleId) as AbstractElementSchema;
 		}
@@ -3124,7 +3115,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetOwner(ExtensionPointSchema element, AbstractElementSchema newParentElement)
+		internal static void SetOwner(ExtensionPointSchema element, AbstractElementSchema newParentElement)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, ChildElementDomainRoleId, newParentElement);
 		}
@@ -3144,7 +3135,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/ChildElement.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ElementHasExtensionPoints/ChildElement.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("1e701701-d288-458a-a579-10e1474d9b2a")]
-		public virtual ExtensionPointSchema ChildElement
+		internal virtual ExtensionPointSchema ChildElement
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3165,7 +3156,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ExtensionPointSchema> GetExtensionPoints(AbstractElementSchema element)
+		internal static DslModeling::LinkedElementCollection<ExtensionPointSchema> GetExtensionPoints(AbstractElementSchema element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ExtensionPointSchema>, ExtensionPointSchema>(element, ParentElementDomainRoleId);
 		}
@@ -3438,7 +3429,7 @@ namespace NuPattern.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -3518,7 +3509,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> GetLinksToExtensionPoints ( global::NuPattern.Runtime.Schema.AbstractElementSchema parentElementInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> GetLinksToExtensionPoints ( global::NuPattern.Runtime.Schema.AbstractElementSchema parentElementInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints>(parentElementInstance, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId);
 		}
@@ -3529,7 +3520,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.ElementHasExtensionPoints GetLinkToOwner (global::NuPattern.Runtime.Schema.ExtensionPointSchema childElementInstance)
+		internal static global::NuPattern.Runtime.Schema.ElementHasExtensionPoints GetLinkToOwner (global::NuPattern.Runtime.Schema.ExtensionPointSchema childElementInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints>(childElementInstance, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ChildElementDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ChildElement not obeyed.");
@@ -3550,7 +3541,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> GetLinks( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> GetLinks( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints>();
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints>(source, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId);
@@ -3568,7 +3559,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.ElementHasExtensionPoints GetLink( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
+		internal static global::NuPattern.Runtime.Schema.ElementHasExtensionPoints GetLink( global::NuPattern.Runtime.Schema.AbstractElementSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ElementHasExtensionPoints>(source, global::NuPattern.Runtime.Schema.ElementHasExtensionPoints.ParentElementDomainRoleId);
 			foreach ( global::NuPattern.Runtime.Schema.ElementHasExtensionPoints link in links )
@@ -3593,10 +3584,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("990a7838-e437-42ab-8bd6-2accfad82fc7")]
-	public partial class ViewHasExtensionPoints : DslModeling::ElementLink
+	internal partial class ViewHasExtensionPoints : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -3612,7 +3602,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		/// <param name="source">ViewSchema to use as the source of the relationship.</param>
 		/// <param name="target">ExtensionPointSchema to use as the target of the relationship.</param>
-		public ViewHasExtensionPoints(ViewSchema source, ExtensionPointSchema target)
+		internal ViewHasExtensionPoints(ViewSchema source, ExtensionPointSchema target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ViewHasExtensionPoints.ViewSchemaDomainRoleId, source), new DslModeling::RoleAssignment(ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId, target)}, null)
 		{
 		}
@@ -3674,7 +3664,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/ViewSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ExtensionPoints", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ViewHasExtensionPoints/ViewSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("f48796b2-8c83-41b9-beb8-8c98b4d99521")]
-		public virtual ViewSchema ViewSchema
+		internal virtual ViewSchema ViewSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3695,7 +3685,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static ViewSchema GetView(ExtensionPointSchema element)
+		internal static ViewSchema GetView(ExtensionPointSchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ExtensionPointSchemaDomainRoleId) as ViewSchema;
 		}
@@ -3705,7 +3695,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetView(ExtensionPointSchema element, ViewSchema newViewSchema)
+		internal static void SetView(ExtensionPointSchema element, ViewSchema newViewSchema)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, ExtensionPointSchemaDomainRoleId, newViewSchema);
 		}
@@ -3725,7 +3715,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/ExtensionPointSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "View", PropertyDisplayNameKey="NuPattern.Runtime.Schema.ViewHasExtensionPoints/ExtensionPointSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("4322ef66-06a1-48f4-a863-4f61fc52d4de")]
-		public virtual ExtensionPointSchema ExtensionPointSchema
+		internal virtual ExtensionPointSchema ExtensionPointSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3746,7 +3736,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ExtensionPointSchema> GetExtensionPoints(ViewSchema element)
+		internal static DslModeling::LinkedElementCollection<ExtensionPointSchema> GetExtensionPoints(ViewSchema element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ExtensionPointSchema>, ExtensionPointSchema>(element, ViewSchemaDomainRoleId);
 		}
@@ -4019,7 +4009,7 @@ namespace NuPattern.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -4099,7 +4089,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> GetLinksToExtensionPoints ( global::NuPattern.Runtime.Schema.ViewSchema viewSchemaInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> GetLinksToExtensionPoints ( global::NuPattern.Runtime.Schema.ViewSchema viewSchemaInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints>(viewSchemaInstance, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId);
 		}
@@ -4110,7 +4100,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.ViewHasExtensionPoints GetLinkToView (global::NuPattern.Runtime.Schema.ExtensionPointSchema extensionPointSchemaInstance)
+		internal static global::NuPattern.Runtime.Schema.ViewHasExtensionPoints GetLinkToView (global::NuPattern.Runtime.Schema.ExtensionPointSchema extensionPointSchemaInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints>(extensionPointSchemaInstance, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ExtensionPointSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ExtensionPointSchema not obeyed.");
@@ -4131,7 +4121,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> GetLinks( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> GetLinks( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints>();
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints>(source, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId);
@@ -4149,7 +4139,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.ViewHasExtensionPoints GetLink( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
+		internal static global::NuPattern.Runtime.Schema.ViewHasExtensionPoints GetLink( global::NuPattern.Runtime.Schema.ViewSchema source, global::NuPattern.Runtime.Schema.ExtensionPointSchema target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.ViewHasExtensionPoints>(source, global::NuPattern.Runtime.Schema.ViewHasExtensionPoints.ViewSchemaDomainRoleId);
 			foreach ( global::NuPattern.Runtime.Schema.ViewHasExtensionPoints link in links )
@@ -4174,10 +4164,9 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("66cfcfbd-f570-48a2-a9e7-a317c9779ca0")]
-	public partial class PatternElementHasAutomationSettings : DslModeling::ElementLink
+	internal partial class PatternElementHasAutomationSettings : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -4193,7 +4182,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		/// <param name="source">PatternElementSchema to use as the source of the relationship.</param>
 		/// <param name="target">AutomationSettingsSchema to use as the target of the relationship.</param>
-		public PatternElementHasAutomationSettings(PatternElementSchema source, AutomationSettingsSchema target)
+		internal PatternElementHasAutomationSettings(PatternElementSchema source, AutomationSettingsSchema target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId, source), new DslModeling::RoleAssignment(PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId, target)}, null)
 		{
 		}
@@ -4255,7 +4244,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/PatternElementSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AutomationSettings", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/PatternElementSchema.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("5f06d1b0-aba7-4689-8c74-e92735685207")]
-		public virtual PatternElementSchema PatternElementSchema
+		internal virtual PatternElementSchema PatternElementSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -4276,7 +4265,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static PatternElementSchema GetOwner(AutomationSettingsSchema element)
+		internal static PatternElementSchema GetOwner(AutomationSettingsSchema element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AutomationSettingsSchemaDomainRoleId) as PatternElementSchema;
 		}
@@ -4286,7 +4275,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetOwner(AutomationSettingsSchema element, PatternElementSchema newPatternElementSchema)
+		internal static void SetOwner(AutomationSettingsSchema element, PatternElementSchema newPatternElementSchema)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, AutomationSettingsSchemaDomainRoleId, newPatternElementSchema);
 		}
@@ -4306,7 +4295,7 @@ namespace NuPattern.Runtime.Schema
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/AutomationSettingsSchema.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Owner", PropertyDisplayNameKey="NuPattern.Runtime.Schema.PatternElementHasAutomationSettings/AutomationSettingsSchema.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("1740ff91-ccb8-4f9f-a970-88ea0cae783c")]
-		public virtual AutomationSettingsSchema AutomationSettingsSchema
+		internal virtual AutomationSettingsSchema AutomationSettingsSchema
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -4327,7 +4316,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<AutomationSettingsSchema> GetAutomationSettings(PatternElementSchema element)
+		internal static DslModeling::LinkedElementCollection<AutomationSettingsSchema> GetAutomationSettings(PatternElementSchema element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<AutomationSettingsSchema>, AutomationSettingsSchema>(element, PatternElementSchemaDomainRoleId);
 		}
@@ -4338,7 +4327,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> GetLinksToAutomationSettings ( global::NuPattern.Runtime.Schema.PatternElementSchema patternElementSchemaInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> GetLinksToAutomationSettings ( global::NuPattern.Runtime.Schema.PatternElementSchema patternElementSchemaInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings>(patternElementSchemaInstance, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId);
 		}
@@ -4349,7 +4338,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings GetLinkToOwner (global::NuPattern.Runtime.Schema.AutomationSettingsSchema automationSettingsSchemaInstance)
+		internal static global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings GetLinkToOwner (global::NuPattern.Runtime.Schema.AutomationSettingsSchema automationSettingsSchemaInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings>(automationSettingsSchemaInstance, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.AutomationSettingsSchemaDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of AutomationSettingsSchema not obeyed.");
@@ -4370,7 +4359,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> GetLinks( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.AutomationSettingsSchema target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> GetLinks( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.AutomationSettingsSchema target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings>();
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings>(source, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId);
@@ -4388,7 +4377,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings GetLink( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.AutomationSettingsSchema target )
+		internal static global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings GetLink( global::NuPattern.Runtime.Schema.PatternElementSchema source, global::NuPattern.Runtime.Schema.AutomationSettingsSchema target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings>(source, global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings.PatternElementSchemaDomainRoleId);
 			foreach ( global::NuPattern.Runtime.Schema.PatternElementHasAutomationSettings link in links )

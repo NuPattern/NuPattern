@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Extensibility;
+using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Store;
 
 namespace NuPattern.Runtime.UnitTests.Store
@@ -19,8 +20,8 @@ namespace NuPattern.Runtime.UnitTests.Store
         public class GivenAProperty
         {
             internal DslTestStore<ProductStateStoreDomainModel> Store { get; private set; }
-            protected ProductElement Element { get; private set; }
-            protected Property Property { get; private set; }
+            internal ProductElement Element { get; private set; }
+            internal Property Property { get; private set; }
             protected Mock<IDynamicBindingContext> BindingContext { get; private set; }
 
             [TestInitialize]

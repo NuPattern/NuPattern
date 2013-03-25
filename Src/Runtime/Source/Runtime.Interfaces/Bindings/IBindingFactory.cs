@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Bindings
 {
 	/// <summary>
 	/// Defines a factory to create <see cref="IDynamicBinding{T}"/>.

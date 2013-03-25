@@ -6,7 +6,7 @@ namespace NuPattern.Runtime.Schema
     /// ViewHasAbstractElements relationship definition.
     /// </summary>
     [TypeDescriptionProvider(typeof(ContainingLinkSchemaTypeDescriptionProvider))]
-    public partial class ViewHasElements : IContainingLinkSchema
+    partial class ViewHasElements : IContainingLinkSchema
     {
         /// <summary>
         /// Returns the value of the Cardinality property.

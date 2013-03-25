@@ -5,28 +5,29 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.IntegrationTests.UriProviders
 {
-	[TestClass]
-	public class VsixExtensionUriProviderSpec
-	{
-		internal static readonly IAssertion Assert = new Assertion();
+    [TestClass]
+    public class VsixExtensionUriProviderSpec
+    {
+        internal static readonly IAssertion Assert = new Assertion();
 
-		[HostType("VS IDE")]
-		[TestMethod, TestCategory("Integration")]
-		public void WhenResolvingUri_ThenNotFeatureRuntimeVsix()
-		{
-			var service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
-			Assert.NotNull(service);
-			var uri = new Uri("vsix://FeatureExtensionRuntime");
+        [HostType("VS IDE")]
+        [TestMethod, TestCategory("Integration")]
+        public void WhenResolvingUri_ThenNotFeatureRuntimeVsix()
+        {
+            var service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
+            Assert.NotNull(service);
+            var uri = new Uri("vsix://FeatureExtensionRuntime");
 
-			var installed = service.ResolveUri<IInstalledExtension>(uri);
-			var extension = service.ResolveUri<IExtension>(uri);
+            var installed = service.ResolveUri<IInstalledExtension>(uri);
+            var extension = service.ResolveUri<IExtension>(uri);
 
-			Assert.Null(installed);
-			Assert.Null(extension);
-		}
+            Assert.Null(installed);
+            Assert.Null(extension);
+        }
 
         [HostType("VS IDE")]
         [TestMethod, TestCategory("Integration")]
@@ -43,23 +44,23 @@ namespace NuPattern.Runtime.IntegrationTests.UriProviders
             Assert.NotNull(extension);
         }
 
-		[HostType("VS IDE")]
-		[TestMethod, TestCategory("Integration")]
-		public void WhenCreatingUri_ThenCanRoundTrip()
-		{
-			var service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
-			Assert.NotNull(service);
-			var installed = VsIdeTestHostContext.ServiceProvider.GetService<SVsExtensionManager, IVsExtensionManager>().GetInstalledExtensions().First();
+        [HostType("VS IDE")]
+        [TestMethod, TestCategory("Integration")]
+        public void WhenCreatingUri_ThenCanRoundTrip()
+        {
+            var service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
+            Assert.NotNull(service);
+            var installed = VsIdeTestHostContext.ServiceProvider.GetService<SVsExtensionManager, IVsExtensionManager>().GetInstalledExtensions().First();
 
-			Assert.True(service.CanCreateUri(installed));
-			Assert.True(service.CanCreateUri<IExtension>(installed));
+            Assert.True(service.CanCreateUri(installed));
+            Assert.True(service.CanCreateUri<IExtension>(installed));
 
-			var uri = service.CreateUri(installed);
-			var resolved = service.ResolveUri<IExtension>(uri);
-			var resolved2 = service.ResolveUri<IInstalledExtension>(uri);
+            var uri = service.CreateUri(installed);
+            var resolved = service.ResolveUri<IExtension>(uri);
+            var resolved2 = service.ResolveUri<IInstalledExtension>(uri);
 
-			Assert.Equal(installed.Header.Identifier, resolved.Header.Identifier);
-			Assert.Equal(installed.Header.Identifier, resolved2.Header.Identifier);
-		}
-	}
+            Assert.Equal(installed.Header.Identifier, resolved.Header.Identifier);
+            Assert.Equal(installed.Header.Identifier, resolved2.Header.Identifier);
+        }
+    }
 }

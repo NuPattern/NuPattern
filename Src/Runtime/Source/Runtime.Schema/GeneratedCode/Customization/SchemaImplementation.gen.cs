@@ -14,76 +14,74 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
-using NuPattern.Extensibility;
-using NuPattern.Runtime;
-using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Extensibility;
+using NuPattern.ComponentModel;
+using NuPattern.Extensibility;
 
 namespace NuPattern.Runtime.Schema
-{
-	/// <summary>
+{/// <summary>
 	/// The definition of the pattern in this toolkit..
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class PatternModelSchemaBase
+	partial class PatternModelSchemaBase
 	{
-		private PropertyChangeManager propertyChanges;
+	    private PropertyChangeManager propertyChanges;
 	
-		/// <summary>
-		/// Gets the manager for property change event subscriptions for this instance 
-		///	and any of its derived classes.
-		/// </summary>
-		protected PropertyChangeManager PropertyChanges
-		{
-			get
-			{
-				if (this.propertyChanges == null)
-				{
-					this.propertyChanges = new PropertyChangeManager(this);
-				}
+	    /// <summary>
+	    /// Gets the manager for property change event subscriptions for this instance 
+	    ///	and any of its derived classes.
+	    /// </summary>
+	    protected PropertyChangeManager PropertyChanges
+	    {
+	        get
+	        {
+	            if (this.propertyChanges == null)
+	            {
+	                this.propertyChanges = new PropertyChangeManager(this);
+	            }
 	
-				return this.propertyChanges;
-			}
-		}
+	            return this.propertyChanges;
+	        }
+	    }
 	}
 	
 	/// <summary>
 	/// The definition of the pattern in this toolkit..
 	/// </summary>
-	public partial class PatternModelSchema : INotifyPropertyChanged
+	partial class PatternModelSchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IPatternModelSchema.SubscribeChanged(Expression<Func<IPatternModelSchema, object>> propertyExpression, Action<IPatternModelSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IPatternModelSchema.SubscribeChanged(Expression<Func<IPatternModelSchema, object>> propertyExpression, Action<IPatternModelSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IPatternModelInfo.SubscribeChanged(Expression<Func<IPatternModelInfo, object>> propertyExpression, Action<IPatternModelInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IPatternModelInfo.SubscribeChanged(Expression<Func<IPatternModelInfo, object>> propertyExpression, Action<IPatternModelInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -91,15 +89,15 @@ namespace NuPattern.Runtime.Schema
 	/// The definition of the pattern in this toolkit.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class PatternModelSchema : IPatternModelSchema, IPatternModelInfo
+	partial class PatternModelSchema : IPatternModelSchema, IPatternModelInfo
 	{ 
 		/// <summary>
 		/// The pattern in this definition.
 		/// </summary>
 		IPatternSchema IPatternModelSchema.Pattern
 		{
-			get { return this.Pattern; }
-			set { this.Pattern = (PatternSchema)value; }
+		    get { return this.Pattern; }
+		    set { this.Pattern = (PatternSchema)value; }
 		}
 		
 		/// <summary>
@@ -107,7 +105,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IPatternInfo IPatternModelInfo.Pattern
 		{
-			get { return this.Pattern; }
+		    get { return this.Pattern; }
 		}
 		
 		/// <summary>
@@ -115,7 +113,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IPatternSchema CreatePatternSchema()
 		{
-			return this.CreatePatternSchema(null);
+		    return this.CreatePatternSchema(null);
 		}
 		
 		/// <summary>
@@ -124,17 +122,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IPatternSchema CreatePatternSchema(Action<IPatternSchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of PatternSchema", this.IsSerializing))
-			{
-				var instance = this.Create<PatternSchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of PatternSchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<PatternSchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -142,34 +140,34 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeletePatternSchema(IPatternSchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting PatternSchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as PatternSchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting PatternSchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as PatternSchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 	
-		/// <summary>
-		/// Gets the extensions.
-		/// </summary>
-		/// <typeparam name="TExtension">The type of the extension.</typeparam>	
-		public IEnumerable<TExtension> GetExtensions<TExtension>()
-		{
-		 	return this.GetAllExtensions().OfType<TExtension>();
-		}
+	    /// <summary>
+	    /// Gets the extensions.
+	    /// </summary>
+	    /// <typeparam name="TExtension">The type of the extension.</typeparam>	
+	    public IEnumerable<TExtension> GetExtensions<TExtension>()
+	    {
+	        return this.GetAllExtensions().OfType<TExtension>();
+	    }
 	
-		/// <summary>
-		/// Gets a value indicating whether this instance is serializing.
-		/// </summary>
-		public bool IsSerializing
-		{
-			get { return this.Store.InSerializationTransaction;	}
-		}
+	    /// <summary>
+	    /// Gets a value indicating whether this instance is serializing.
+	    /// </summary>
+	    public bool IsSerializing
+	    {
+	        get { return this.Store.InSerializationTransaction;	}
+	    }
 	}
 }
 namespace NuPattern.Runtime.Schema
@@ -177,40 +175,40 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The definition of the pattern..
 	/// </summary>
-	public partial class PatternSchema : INotifyPropertyChanged
+	partial class PatternSchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IPatternSchema.SubscribeChanged(Expression<Func<IPatternSchema, object>> propertyExpression, Action<IPatternSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IPatternSchema.SubscribeChanged(Expression<Func<IPatternSchema, object>> propertyExpression, Action<IPatternSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IPatternInfo.SubscribeChanged(Expression<Func<IPatternInfo, object>> propertyExpression, Action<IPatternInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IPatternInfo.SubscribeChanged(Expression<Func<IPatternInfo, object>> propertyExpression, Action<IPatternInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -218,15 +216,15 @@ namespace NuPattern.Runtime.Schema
 	/// The definition of the pattern.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class PatternSchema : IPatternSchema, IPatternInfo
+	partial class PatternSchema : IPatternSchema, IPatternInfo
 	{ 
 		/// <summary>
 		/// The definition of the pattern.
 		/// </summary>
 		IPatternModelSchema IPatternSchema.PatternModel
 		{
-			get { return this.PatternModel; }
-			set { this.PatternModel = (PatternModelSchema)value; }
+		    get { return this.PatternModel; }
+		    set { this.PatternModel = (PatternModelSchema)value; }
 		}
 		
 		/// <summary>
@@ -234,7 +232,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IPatternModelInfo IPatternInfo.PatternModel
 		{
-			get { return this.PatternModel; }
+		    get { return this.PatternModel; }
 		}
 		
 		/// <summary>
@@ -242,7 +240,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IEnumerable<IViewSchema> IPatternSchema.Views
 		{
-			get { return this.Views.Cast<IViewSchema>(); }
+		    get { return this.Views.Cast<IViewSchema>(); }
 		}
 		
 		/// <summary>
@@ -251,7 +249,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IEnumerable<IViewInfo> IPatternInfo.Views
 		{
-			get { return this.Views.Cast<IViewInfo>(); }
+		    get { return this.Views.Cast<IViewInfo>(); }
 		}
 		
 		
@@ -260,7 +258,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IViewSchema CreateViewSchema()
 		{
-			return this.CreateViewSchema(null);
+		    return this.CreateViewSchema(null);
 		}
 		
 		/// <summary>
@@ -269,17 +267,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IViewSchema CreateViewSchema(Action<IViewSchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ViewSchema", this.IsSerializing))
-			{
-				var instance = this.Create<ViewSchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ViewSchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<ViewSchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -287,16 +285,16 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeleteViewSchema(IViewSchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ViewSchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as ViewSchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ViewSchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as ViewSchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 		
 		/// <summary>
@@ -304,7 +302,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IEnumerable<IProvidedExtensionPointSchema> IPatternSchema.ProvidedExtensionPoints
 		{
-			get { return this.ProvidedExtensionPoints.Cast<IProvidedExtensionPointSchema>(); }
+		    get { return this.ProvidedExtensionPoints.Cast<IProvidedExtensionPointSchema>(); }
 		}
 		
 		/// <summary>
@@ -313,7 +311,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IEnumerable<IProvidedExtensionPointInfo> IPatternInfo.ProvidedExtensionPoints
 		{
-			get { return this.ProvidedExtensionPoints.Cast<IProvidedExtensionPointInfo>(); }
+		    get { return this.ProvidedExtensionPoints.Cast<IProvidedExtensionPointInfo>(); }
 		}
 		
 		
@@ -322,7 +320,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IProvidedExtensionPointSchema CreateProvidedExtensionPointSchema()
 		{
-			return this.CreateProvidedExtensionPointSchema(null);
+		    return this.CreateProvidedExtensionPointSchema(null);
 		}
 		
 		/// <summary>
@@ -331,17 +329,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IProvidedExtensionPointSchema CreateProvidedExtensionPointSchema(Action<IProvidedExtensionPointSchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ProvidedExtensionPointSchema", this.IsSerializing))
-			{
-				var instance = this.Create<ProvidedExtensionPointSchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ProvidedExtensionPointSchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<ProvidedExtensionPointSchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -349,16 +347,16 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeleteProvidedExtensionPointSchema(IProvidedExtensionPointSchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ProvidedExtensionPointSchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as ProvidedExtensionPointSchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ProvidedExtensionPointSchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as ProvidedExtensionPointSchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 	}
 }
@@ -367,83 +365,83 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// An element that has a unique name..
 	/// </summary>
-	public partial class NamedElementSchema : INotifyPropertyChanged
-	{ 	private PropertyChangeManager propertyChanges;
+	partial class NamedElementSchema : INotifyPropertyChanged
+	{     private PropertyChangeManager propertyChanges;
 	
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable INamedElementSchema.SubscribeChanged(Expression<Func<INamedElementSchema, object>> propertyExpression, Action<INamedElementSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable INamedElementSchema.SubscribeChanged(Expression<Func<INamedElementSchema, object>> propertyExpression, Action<INamedElementSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable INamedElementInfo.SubscribeChanged(Expression<Func<INamedElementInfo, object>> propertyExpression, Action<INamedElementInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable INamedElementInfo.SubscribeChanged(Expression<Func<INamedElementInfo, object>> propertyExpression, Action<INamedElementInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
-		/// <summary>
-		/// Gets the manager for property change event subscriptions for this instance 
-		///	and any of its derived classes.
-		/// </summary>
-		protected PropertyChangeManager PropertyChanges
-		{
-			get
-			{
-				if (this.propertyChanges == null)
-				{
-					this.propertyChanges = new PropertyChangeManager(this);
-				}
+	    /// <summary>
+	    /// Gets the manager for property change event subscriptions for this instance 
+	    ///	and any of its derived classes.
+	    /// </summary>
+	    protected PropertyChangeManager PropertyChanges
+	    {
+	        get
+	        {
+	            if (this.propertyChanges == null)
+	            {
+	                this.propertyChanges = new PropertyChangeManager(this);
+	            }
 	
-				return this.propertyChanges;
-			}
-		}
+	            return this.propertyChanges;
+	        }
+	    }
 	}
 	
 	/// <summary>
 	/// An element that has a unique name.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class NamedElementSchema : INamedElementSchema, INamedElementInfo
+	partial class NamedElementSchema : INamedElementSchema, INamedElementInfo
 	{ 
-		/// <summary>
-		/// Gets the extensions.
-		/// </summary>
-		/// <typeparam name="TExtension">The type of the extension.</typeparam>	
-		public IEnumerable<TExtension> GetExtensions<TExtension>()
-		{
-		 	return this.GetAllExtensions().OfType<TExtension>();
-		}
+	    /// <summary>
+	    /// Gets the extensions.
+	    /// </summary>
+	    /// <typeparam name="TExtension">The type of the extension.</typeparam>	
+	    public IEnumerable<TExtension> GetExtensions<TExtension>()
+	    {
+	        return this.GetAllExtensions().OfType<TExtension>();
+	    }
 	
-		/// <summary>
-		/// Gets a value indicating whether this instance is serializing.
-		/// </summary>
-		public bool IsSerializing
-		{
-			get { return this.Store.InSerializationTransaction;	}
-		}
+	    /// <summary>
+	    /// Gets a value indicating whether this instance is serializing.
+	    /// </summary>
+	    public bool IsSerializing
+	    {
+	        get { return this.Store.InSerializationTransaction;	}
+	    }
 	}
 }
 namespace NuPattern.Runtime.Schema
@@ -451,40 +449,40 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A container of properties and automation..
 	/// </summary>
-	public partial class PatternElementSchema : INotifyPropertyChanged
+	partial class PatternElementSchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IPatternElementSchema.SubscribeChanged(Expression<Func<IPatternElementSchema, object>> propertyExpression, Action<IPatternElementSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IPatternElementSchema.SubscribeChanged(Expression<Func<IPatternElementSchema, object>> propertyExpression, Action<IPatternElementSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IPatternElementInfo.SubscribeChanged(Expression<Func<IPatternElementInfo, object>> propertyExpression, Action<IPatternElementInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IPatternElementInfo.SubscribeChanged(Expression<Func<IPatternElementInfo, object>> propertyExpression, Action<IPatternElementInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -492,14 +490,14 @@ namespace NuPattern.Runtime.Schema
 	/// A container of properties and automation.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class PatternElementSchema : IPatternElementSchema, IPatternElementInfo
+	partial class PatternElementSchema : IPatternElementSchema, IPatternElementInfo
 	{ 
 		/// <summary>
 		/// The properties of this element.
 		/// </summary>
 		IEnumerable<IPropertySchema> IPatternElementSchema.Properties
 		{
-			get { return this.Properties.Cast<IPropertySchema>(); }
+		    get { return this.Properties.Cast<IPropertySchema>(); }
 		}
 		
 		/// <summary>
@@ -508,7 +506,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IEnumerable<IPropertyInfo> IPatternElementInfo.Properties
 		{
-			get { return this.Properties.Cast<IPropertyInfo>(); }
+		    get { return this.Properties.Cast<IPropertyInfo>(); }
 		}
 		
 		
@@ -517,7 +515,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IPropertySchema CreatePropertySchema()
 		{
-			return this.CreatePropertySchema(null);
+		    return this.CreatePropertySchema(null);
 		}
 		
 		/// <summary>
@@ -526,17 +524,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IPropertySchema CreatePropertySchema(Action<IPropertySchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of PropertySchema", this.IsSerializing))
-			{
-				var instance = this.Create<PropertySchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of PropertySchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<PropertySchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -544,16 +542,16 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeletePropertySchema(IPropertySchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting PropertySchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as PropertySchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting PropertySchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as PropertySchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 		
 		/// <summary>
@@ -561,7 +559,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IEnumerable<IAutomationSettingsSchema> IPatternElementSchema.AutomationSettings
 		{
-			get { return this.AutomationSettings.Cast<IAutomationSettingsSchema>(); }
+		    get { return this.AutomationSettings.Cast<IAutomationSettingsSchema>(); }
 		}
 		
 		/// <summary>
@@ -570,7 +568,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IEnumerable<IAutomationSettingsInfo> IPatternElementInfo.AutomationSettings
 		{
-			get { return this.AutomationSettings.Cast<IAutomationSettingsInfo>(); }
+		    get { return this.AutomationSettings.Cast<IAutomationSettingsInfo>(); }
 		}
 		
 		
@@ -579,7 +577,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IAutomationSettingsSchema CreateAutomationSettingsSchema()
 		{
-			return this.CreateAutomationSettingsSchema(null);
+		    return this.CreateAutomationSettingsSchema(null);
 		}
 		
 		/// <summary>
@@ -588,17 +586,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IAutomationSettingsSchema CreateAutomationSettingsSchema(Action<IAutomationSettingsSchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of AutomationSettingsSchema", this.IsSerializing))
-			{
-				var instance = this.Create<AutomationSettingsSchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of AutomationSettingsSchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<AutomationSettingsSchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -606,16 +604,16 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeleteAutomationSettingsSchema(IAutomationSettingsSchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting AutomationSettingsSchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as AutomationSettingsSchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting AutomationSettingsSchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as AutomationSettingsSchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 	}
 }
@@ -624,40 +622,40 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A property of an element..
 	/// </summary>
-	public partial class PropertySchema : INotifyPropertyChanged
+	partial class PropertySchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IPropertySchema.SubscribeChanged(Expression<Func<IPropertySchema, object>> propertyExpression, Action<IPropertySchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IPropertySchema.SubscribeChanged(Expression<Func<IPropertySchema, object>> propertyExpression, Action<IPropertySchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IPropertyInfo.SubscribeChanged(Expression<Func<IPropertyInfo, object>> propertyExpression, Action<IPropertyInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IPropertyInfo.SubscribeChanged(Expression<Func<IPropertyInfo, object>> propertyExpression, Action<IPropertyInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -665,7 +663,7 @@ namespace NuPattern.Runtime.Schema
 	/// A property of an element.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class PropertySchema : IPropertySchema, IPropertyInfo
+	partial class PropertySchema : IPropertySchema, IPropertyInfo
 	{ }
 }
 namespace NuPattern.Runtime.Schema
@@ -673,40 +671,40 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A distinct view of the pattern..
 	/// </summary>
-	public partial class ViewSchema : INotifyPropertyChanged
+	partial class ViewSchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IViewSchema.SubscribeChanged(Expression<Func<IViewSchema, object>> propertyExpression, Action<IViewSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IViewSchema.SubscribeChanged(Expression<Func<IViewSchema, object>> propertyExpression, Action<IViewSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IViewInfo.SubscribeChanged(Expression<Func<IViewInfo, object>> propertyExpression, Action<IViewInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IViewInfo.SubscribeChanged(Expression<Func<IViewInfo, object>> propertyExpression, Action<IViewInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -714,15 +712,15 @@ namespace NuPattern.Runtime.Schema
 	/// A distinct view of the pattern.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class ViewSchema : IViewSchema, IViewInfo
+	partial class ViewSchema : IViewSchema, IViewInfo
 	{ 
 		/// <summary>
 		/// The owning pattern.
 		/// </summary>
 		IPatternSchema IViewSchema.Pattern
 		{
-			get { return this.Pattern; }
-			set { this.Pattern = (PatternSchema)value; }
+		    get { return this.Pattern; }
+		    set { this.Pattern = (PatternSchema)value; }
 		}
 		
 		/// <summary>
@@ -730,7 +728,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IPatternInfo IViewInfo.Pattern
 		{
-			get { return this.Pattern; }
+		    get { return this.Pattern; }
 		}
 		
 		/// <summary>
@@ -738,7 +736,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public ICollectionSchema CreateCollectionSchema()
 		{
-			return this.CreateCollectionSchema(null);
+		    return this.CreateCollectionSchema(null);
 		}
 		
 		/// <summary>
@@ -747,17 +745,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public ICollectionSchema CreateCollectionSchema(Action<ICollectionSchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CollectionSchema", this.IsSerializing))
-			{
-				var instance = this.Create<CollectionSchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CollectionSchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<CollectionSchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -765,16 +763,16 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeleteCollectionSchema(ICollectionSchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CollectionSchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as CollectionSchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CollectionSchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as CollectionSchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 		
 		/// <summary>
@@ -782,7 +780,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IElementSchema CreateElementSchema()
 		{
-			return this.CreateElementSchema(null);
+		    return this.CreateElementSchema(null);
 		}
 		
 		/// <summary>
@@ -791,17 +789,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IElementSchema CreateElementSchema(Action<IElementSchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ElementSchema", this.IsSerializing))
-			{
-				var instance = this.Create<ElementSchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ElementSchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<ElementSchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -809,16 +807,16 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeleteElementSchema(IElementSchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ElementSchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as ElementSchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ElementSchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as ElementSchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 		
 		/// <summary>
@@ -826,7 +824,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IExtensionPointSchema CreateExtensionPointSchema()
 		{
-			return this.CreateExtensionPointSchema(null);
+		    return this.CreateExtensionPointSchema(null);
 		}
 		
 		/// <summary>
@@ -835,17 +833,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IExtensionPointSchema CreateExtensionPointSchema(Action<IExtensionPointSchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ExtensionPointSchema", this.IsSerializing))
-			{
-				var instance = this.Create<ExtensionPointSchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ExtensionPointSchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<ExtensionPointSchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -853,16 +851,16 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeleteExtensionPointSchema(IExtensionPointSchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ExtensionPointSchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as ExtensionPointSchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ExtensionPointSchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as ExtensionPointSchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 	}
 }
@@ -871,40 +869,40 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A child collection element..
 	/// </summary>
-	public partial class CollectionSchema : INotifyPropertyChanged
+	partial class CollectionSchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable ICollectionSchema.SubscribeChanged(Expression<Func<ICollectionSchema, object>> propertyExpression, Action<ICollectionSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable ICollectionSchema.SubscribeChanged(Expression<Func<ICollectionSchema, object>> propertyExpression, Action<ICollectionSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable ICollectionInfo.SubscribeChanged(Expression<Func<ICollectionInfo, object>> propertyExpression, Action<ICollectionInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable ICollectionInfo.SubscribeChanged(Expression<Func<ICollectionInfo, object>> propertyExpression, Action<ICollectionInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -912,7 +910,7 @@ namespace NuPattern.Runtime.Schema
 	/// A child collection element.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class CollectionSchema : ICollectionSchema, ICollectionInfo
+	partial class CollectionSchema : ICollectionSchema, ICollectionInfo
 	{ }
 }
 namespace NuPattern.Runtime.Schema
@@ -920,40 +918,40 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A child element..
 	/// </summary>
-	public partial class ElementSchema : INotifyPropertyChanged
+	partial class ElementSchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IElementSchema.SubscribeChanged(Expression<Func<IElementSchema, object>> propertyExpression, Action<IElementSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IElementSchema.SubscribeChanged(Expression<Func<IElementSchema, object>> propertyExpression, Action<IElementSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IElementInfo.SubscribeChanged(Expression<Func<IElementInfo, object>> propertyExpression, Action<IElementInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IElementInfo.SubscribeChanged(Expression<Func<IElementInfo, object>> propertyExpression, Action<IElementInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -961,7 +959,7 @@ namespace NuPattern.Runtime.Schema
 	/// A child element.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class ElementSchema : IElementSchema, IElementInfo
+	partial class ElementSchema : IElementSchema, IElementInfo
 	{ }
 }
 namespace NuPattern.Runtime.Schema
@@ -969,40 +967,40 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// An element that supports customization of its properties..
 	/// </summary>
-	public partial class CustomizableElementSchema : INotifyPropertyChanged
+	partial class CustomizableElementSchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable ICustomizableElementSchema.SubscribeChanged(Expression<Func<ICustomizableElementSchema, object>> propertyExpression, Action<ICustomizableElementSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable ICustomizableElementSchema.SubscribeChanged(Expression<Func<ICustomizableElementSchema, object>> propertyExpression, Action<ICustomizableElementSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable ICustomizableElementInfo.SubscribeChanged(Expression<Func<ICustomizableElementInfo, object>> propertyExpression, Action<ICustomizableElementInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable ICustomizableElementInfo.SubscribeChanged(Expression<Func<ICustomizableElementInfo, object>> propertyExpression, Action<ICustomizableElementInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -1010,15 +1008,15 @@ namespace NuPattern.Runtime.Schema
 	/// An element that supports customization of its properties.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class CustomizableElementSchema : ICustomizableElementSchema, ICustomizableElementInfo
+	partial class CustomizableElementSchema : ICustomizableElementSchema, ICustomizableElementInfo
 	{ 
 		/// <summary>
 		/// The customization policy that applies to the element.
 		/// </summary>
 		ICustomizationPolicySchema ICustomizableElementSchema.Policy
 		{
-			get { return this.Policy; }
-			set { this.Policy = (CustomizationPolicySchema)value; }
+		    get { return this.Policy; }
+		    set { this.Policy = (CustomizationPolicySchema)value; }
 		}
 		
 		/// <summary>
@@ -1026,7 +1024,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		ICustomizationPolicyInfo ICustomizableElementInfo.Policy
 		{
-			get { return this.Policy; }
+		    get { return this.Policy; }
 		}
 		
 		/// <summary>
@@ -1034,7 +1032,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public ICustomizationPolicySchema CreateCustomizationPolicySchema()
 		{
-			return this.CreateCustomizationPolicySchema(null);
+		    return this.CreateCustomizationPolicySchema(null);
 		}
 		
 		/// <summary>
@@ -1043,17 +1041,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public ICustomizationPolicySchema CreateCustomizationPolicySchema(Action<ICustomizationPolicySchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CustomizationPolicySchema", this.IsSerializing))
-			{
-				var instance = this.Create<CustomizationPolicySchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CustomizationPolicySchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<CustomizationPolicySchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -1061,16 +1059,16 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeleteCustomizationPolicySchema(ICustomizationPolicySchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CustomizationPolicySchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as CustomizationPolicySchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CustomizationPolicySchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as CustomizationPolicySchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 	}
 }
@@ -1079,40 +1077,40 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A child element or collection of the pattern..
 	/// </summary>
-	public partial class AbstractElementSchema : INotifyPropertyChanged
+	partial class AbstractElementSchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IAbstractElementSchema.SubscribeChanged(Expression<Func<IAbstractElementSchema, object>> propertyExpression, Action<IAbstractElementSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IAbstractElementSchema.SubscribeChanged(Expression<Func<IAbstractElementSchema, object>> propertyExpression, Action<IAbstractElementSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IAbstractElementInfo.SubscribeChanged(Expression<Func<IAbstractElementInfo, object>> propertyExpression, Action<IAbstractElementInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IAbstractElementInfo.SubscribeChanged(Expression<Func<IAbstractElementInfo, object>> propertyExpression, Action<IAbstractElementInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -1120,14 +1118,14 @@ namespace NuPattern.Runtime.Schema
 	/// A child element or collection of the pattern.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class AbstractElementSchema : IAbstractElementSchema, IAbstractElementInfo
+	partial class AbstractElementSchema : IAbstractElementSchema, IAbstractElementInfo
 	{ 
 		/// <summary>
 		/// Creates an instance of a child <see cref="ICollectionSchema"/>.
 		/// </summary>
 		public ICollectionSchema CreateCollectionSchema()
 		{
-			return this.CreateCollectionSchema(null);
+		    return this.CreateCollectionSchema(null);
 		}
 		
 		/// <summary>
@@ -1136,17 +1134,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public ICollectionSchema CreateCollectionSchema(Action<ICollectionSchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CollectionSchema", this.IsSerializing))
-			{
-				var instance = this.Create<CollectionSchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CollectionSchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<CollectionSchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -1154,16 +1152,16 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeleteCollectionSchema(ICollectionSchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CollectionSchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as CollectionSchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CollectionSchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as CollectionSchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 		
 		/// <summary>
@@ -1171,7 +1169,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IElementSchema CreateElementSchema()
 		{
-			return this.CreateElementSchema(null);
+		    return this.CreateElementSchema(null);
 		}
 		
 		/// <summary>
@@ -1180,17 +1178,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IElementSchema CreateElementSchema(Action<IElementSchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ElementSchema", this.IsSerializing))
-			{
-				var instance = this.Create<ElementSchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ElementSchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<ElementSchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -1198,16 +1196,16 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeleteElementSchema(IElementSchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ElementSchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as ElementSchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ElementSchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as ElementSchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 		
 		/// <summary>
@@ -1215,7 +1213,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IExtensionPointSchema CreateExtensionPointSchema()
 		{
-			return this.CreateExtensionPointSchema(null);
+		    return this.CreateExtensionPointSchema(null);
 		}
 		
 		/// <summary>
@@ -1224,17 +1222,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public IExtensionPointSchema CreateExtensionPointSchema(Action<IExtensionPointSchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ExtensionPointSchema", this.IsSerializing))
-			{
-				var instance = this.Create<ExtensionPointSchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ExtensionPointSchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<ExtensionPointSchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -1242,84 +1240,83 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeleteExtensionPointSchema(IExtensionPointSchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ExtensionPointSchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as ExtensionPointSchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ExtensionPointSchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as ExtensionPointSchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 	}
 }
 namespace NuPattern.Runtime.Schema
-{
-	/// <summary>
+{/// <summary>
 	/// The policy that controls what properties are customizable on an element..
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class CustomizationPolicySchemaBase
+	partial class CustomizationPolicySchemaBase
 	{
-		private PropertyChangeManager propertyChanges;
+	    private PropertyChangeManager propertyChanges;
 	
-		/// <summary>
-		/// Gets the manager for property change event subscriptions for this instance 
-		///	and any of its derived classes.
-		/// </summary>
-		protected PropertyChangeManager PropertyChanges
-		{
-			get
-			{
-				if (this.propertyChanges == null)
-				{
-					this.propertyChanges = new PropertyChangeManager(this);
-				}
+	    /// <summary>
+	    /// Gets the manager for property change event subscriptions for this instance 
+	    ///	and any of its derived classes.
+	    /// </summary>
+	    protected PropertyChangeManager PropertyChanges
+	    {
+	        get
+	        {
+	            if (this.propertyChanges == null)
+	            {
+	                this.propertyChanges = new PropertyChangeManager(this);
+	            }
 	
-				return this.propertyChanges;
-			}
-		}
+	            return this.propertyChanges;
+	        }
+	    }
 	}
 	
 	/// <summary>
 	/// The policy that controls what properties are customizable on an element..
 	/// </summary>
-	public partial class CustomizationPolicySchema : INotifyPropertyChanged
+	partial class CustomizationPolicySchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable ICustomizationPolicySchema.SubscribeChanged(Expression<Func<ICustomizationPolicySchema, object>> propertyExpression, Action<ICustomizationPolicySchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable ICustomizationPolicySchema.SubscribeChanged(Expression<Func<ICustomizationPolicySchema, object>> propertyExpression, Action<ICustomizationPolicySchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable ICustomizationPolicyInfo.SubscribeChanged(Expression<Func<ICustomizationPolicyInfo, object>> propertyExpression, Action<ICustomizationPolicyInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable ICustomizationPolicyInfo.SubscribeChanged(Expression<Func<ICustomizationPolicyInfo, object>> propertyExpression, Action<ICustomizationPolicyInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -1327,14 +1324,14 @@ namespace NuPattern.Runtime.Schema
 	/// The policy that controls what properties are customizable on an element.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class CustomizationPolicySchema : ICustomizationPolicySchema, ICustomizationPolicyInfo
+	partial class CustomizationPolicySchema : ICustomizationPolicySchema, ICustomizationPolicyInfo
 	{ 
 		/// <summary>
 		/// The individual settings of the customization policy
 		/// </summary>
 		IEnumerable<ICustomizableSettingSchema> ICustomizationPolicySchema.Settings
 		{
-			get { return this.Settings.Cast<ICustomizableSettingSchema>(); }
+		    get { return this.Settings.Cast<ICustomizableSettingSchema>(); }
 		}
 		
 		/// <summary>
@@ -1343,7 +1340,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IEnumerable<ICustomizableSettingInfo> ICustomizationPolicyInfo.Settings
 		{
-			get { return this.Settings.Cast<ICustomizableSettingInfo>(); }
+		    get { return this.Settings.Cast<ICustomizableSettingInfo>(); }
 		}
 		
 		
@@ -1352,7 +1349,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public ICustomizableSettingSchema CreateCustomizableSettingSchema()
 		{
-			return this.CreateCustomizableSettingSchema(null);
+		    return this.CreateCustomizableSettingSchema(null);
 		}
 		
 		/// <summary>
@@ -1361,17 +1358,17 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public ICustomizableSettingSchema CreateCustomizableSettingSchema(Action<ICustomizableSettingSchema> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CustomizableSettingSchema", this.IsSerializing))
-			{
-				var instance = this.Create<CustomizableSettingSchema>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of CustomizableSettingSchema", this.IsSerializing))
+		    {
+		        var instance = this.Create<CustomizableSettingSchema>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -1379,16 +1376,16 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		public void DeleteCustomizableSettingSchema(ICustomizableSettingSchema instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CustomizableSettingSchema instance", this.IsSerializing))
-			{
-				var modelElement = instance as CustomizableSettingSchema;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting CustomizableSettingSchema instance", this.IsSerializing))
+		    {
+		        var modelElement = instance as CustomizableSettingSchema;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 		
 		/// <summary>
@@ -1396,8 +1393,8 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		ICustomizableElementSchema ICustomizationPolicySchema.Owner
 		{
-			get { return this.Owner; }
-			set { this.Owner = (CustomizableElementSchema)value; }
+		    get { return this.Owner; }
+		    set { this.Owner = (CustomizableElementSchema)value; }
 		}
 		
 		/// <summary>
@@ -1405,92 +1402,91 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		ICustomizableElementInfo ICustomizationPolicyInfo.Owner
 		{
-			get { return this.Owner; }
+		    get { return this.Owner; }
 		}
 	
-		/// <summary>
-		/// Gets the extensions.
-		/// </summary>
-		/// <typeparam name="TExtension">The type of the extension.</typeparam>	
-		public IEnumerable<TExtension> GetExtensions<TExtension>()
-		{
-		 	return this.GetAllExtensions().OfType<TExtension>();
-		}
+	    /// <summary>
+	    /// Gets the extensions.
+	    /// </summary>
+	    /// <typeparam name="TExtension">The type of the extension.</typeparam>	
+	    public IEnumerable<TExtension> GetExtensions<TExtension>()
+	    {
+	        return this.GetAllExtensions().OfType<TExtension>();
+	    }
 	
-		/// <summary>
-		/// Gets a value indicating whether this instance is serializing.
-		/// </summary>
-		public bool IsSerializing
-		{
-			get { return this.Store.InSerializationTransaction;	}
-		}
+	    /// <summary>
+	    /// Gets a value indicating whether this instance is serializing.
+	    /// </summary>
+	    public bool IsSerializing
+	    {
+	        get { return this.Store.InSerializationTransaction;	}
+	    }
 	}
 }
 namespace NuPattern.Runtime.Schema
-{
-	/// <summary>
+{/// <summary>
 	/// The settings for a customizable property..
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class CustomizableSettingSchemaBase
+	partial class CustomizableSettingSchemaBase
 	{
-		private PropertyChangeManager propertyChanges;
+	    private PropertyChangeManager propertyChanges;
 	
-		/// <summary>
-		/// Gets the manager for property change event subscriptions for this instance 
-		///	and any of its derived classes.
-		/// </summary>
-		protected PropertyChangeManager PropertyChanges
-		{
-			get
-			{
-				if (this.propertyChanges == null)
-				{
-					this.propertyChanges = new PropertyChangeManager(this);
-				}
+	    /// <summary>
+	    /// Gets the manager for property change event subscriptions for this instance 
+	    ///	and any of its derived classes.
+	    /// </summary>
+	    protected PropertyChangeManager PropertyChanges
+	    {
+	        get
+	        {
+	            if (this.propertyChanges == null)
+	            {
+	                this.propertyChanges = new PropertyChangeManager(this);
+	            }
 	
-				return this.propertyChanges;
-			}
-		}
+	            return this.propertyChanges;
+	        }
+	    }
 	}
 	
 	/// <summary>
 	/// The settings for a customizable property..
 	/// </summary>
-	public partial class CustomizableSettingSchema : INotifyPropertyChanged
+	partial class CustomizableSettingSchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable ICustomizableSettingSchema.SubscribeChanged(Expression<Func<ICustomizableSettingSchema, object>> propertyExpression, Action<ICustomizableSettingSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable ICustomizableSettingSchema.SubscribeChanged(Expression<Func<ICustomizableSettingSchema, object>> propertyExpression, Action<ICustomizableSettingSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable ICustomizableSettingInfo.SubscribeChanged(Expression<Func<ICustomizableSettingInfo, object>> propertyExpression, Action<ICustomizableSettingInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable ICustomizableSettingInfo.SubscribeChanged(Expression<Func<ICustomizableSettingInfo, object>> propertyExpression, Action<ICustomizableSettingInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -1498,15 +1494,15 @@ namespace NuPattern.Runtime.Schema
 	/// The settings for a customizable property.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class CustomizableSettingSchema : ICustomizableSettingSchema, ICustomizableSettingInfo
+	partial class CustomizableSettingSchema : ICustomizableSettingSchema, ICustomizableSettingInfo
 	{ 
 		/// <summary>
 		/// The owning policy.
 		/// </summary>
 		ICustomizationPolicySchema ICustomizableSettingSchema.Policy
 		{
-			get { return this.Policy; }
-			set { this.Policy = (CustomizationPolicySchema)value; }
+		    get { return this.Policy; }
+		    set { this.Policy = (CustomizationPolicySchema)value; }
 		}
 		
 		/// <summary>
@@ -1514,25 +1510,25 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		ICustomizationPolicyInfo ICustomizableSettingInfo.Policy
 		{
-			get { return this.Policy; }
+		    get { return this.Policy; }
 		}
 	
-		/// <summary>
-		/// Gets the extensions.
-		/// </summary>
-		/// <typeparam name="TExtension">The type of the extension.</typeparam>	
-		public IEnumerable<TExtension> GetExtensions<TExtension>()
-		{
-		 	return this.GetAllExtensions().OfType<TExtension>();
-		}
+	    /// <summary>
+	    /// Gets the extensions.
+	    /// </summary>
+	    /// <typeparam name="TExtension">The type of the extension.</typeparam>	
+	    public IEnumerable<TExtension> GetExtensions<TExtension>()
+	    {
+	        return this.GetAllExtensions().OfType<TExtension>();
+	    }
 	
-		/// <summary>
-		/// Gets a value indicating whether this instance is serializing.
-		/// </summary>
-		public bool IsSerializing
-		{
-			get { return this.Store.InSerializationTransaction;	}
-		}
+	    /// <summary>
+	    /// Gets a value indicating whether this instance is serializing.
+	    /// </summary>
+	    public bool IsSerializing
+	    {
+	        get { return this.Store.InSerializationTransaction;	}
+	    }
 	}
 }
 namespace NuPattern.Runtime.Schema
@@ -1540,40 +1536,40 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The settings for an automation extension..
 	/// </summary>
-	public partial class AutomationSettingsSchema : INotifyPropertyChanged
+	partial class AutomationSettingsSchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IAutomationSettingsSchema.SubscribeChanged(Expression<Func<IAutomationSettingsSchema, object>> propertyExpression, Action<IAutomationSettingsSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IAutomationSettingsSchema.SubscribeChanged(Expression<Func<IAutomationSettingsSchema, object>> propertyExpression, Action<IAutomationSettingsSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IAutomationSettingsInfo.SubscribeChanged(Expression<Func<IAutomationSettingsInfo, object>> propertyExpression, Action<IAutomationSettingsInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IAutomationSettingsInfo.SubscribeChanged(Expression<Func<IAutomationSettingsInfo, object>> propertyExpression, Action<IAutomationSettingsInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -1581,7 +1577,7 @@ namespace NuPattern.Runtime.Schema
 	/// The settings for an automation extension.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class AutomationSettingsSchema : IAutomationSettingsSchema, IAutomationSettingsInfo
+	partial class AutomationSettingsSchema : IAutomationSettingsSchema, IAutomationSettingsInfo
 	{ }
 }
 namespace NuPattern.Runtime.Schema
@@ -1589,74 +1585,74 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// The extension points that this pattern provides..
 	/// </summary>
-	public partial class ProvidedExtensionPointSchema : INotifyPropertyChanged
-	{ 	private PropertyChangeManager propertyChanges;
+	partial class ProvidedExtensionPointSchema : INotifyPropertyChanged
+	{     private PropertyChangeManager propertyChanges;
 	
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IProvidedExtensionPointSchema.SubscribeChanged(Expression<Func<IProvidedExtensionPointSchema, object>> propertyExpression, Action<IProvidedExtensionPointSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IProvidedExtensionPointSchema.SubscribeChanged(Expression<Func<IProvidedExtensionPointSchema, object>> propertyExpression, Action<IProvidedExtensionPointSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IProvidedExtensionPointInfo.SubscribeChanged(Expression<Func<IProvidedExtensionPointInfo, object>> propertyExpression, Action<IProvidedExtensionPointInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IProvidedExtensionPointInfo.SubscribeChanged(Expression<Func<IProvidedExtensionPointInfo, object>> propertyExpression, Action<IProvidedExtensionPointInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
-		/// <summary>
-		/// Gets the manager for property change event subscriptions for this instance 
-		///	and any of its derived classes.
-		/// </summary>
-		protected PropertyChangeManager PropertyChanges
-		{
-			get
-			{
-				if (this.propertyChanges == null)
-				{
-					this.propertyChanges = new PropertyChangeManager(this);
-				}
+	    /// <summary>
+	    /// Gets the manager for property change event subscriptions for this instance 
+	    ///	and any of its derived classes.
+	    /// </summary>
+	    protected PropertyChangeManager PropertyChanges
+	    {
+	        get
+	        {
+	            if (this.propertyChanges == null)
+	            {
+	                this.propertyChanges = new PropertyChangeManager(this);
+	            }
 	
-				return this.propertyChanges;
-			}
-		}
+	            return this.propertyChanges;
+	        }
+	    }
 	}
 	
 	/// <summary>
 	/// The extension points that this pattern provides.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class ProvidedExtensionPointSchema : IProvidedExtensionPointSchema, IProvidedExtensionPointInfo
+	partial class ProvidedExtensionPointSchema : IProvidedExtensionPointSchema, IProvidedExtensionPointInfo
 	{ 
 		/// <summary>
 		/// The owning pattern.
 		/// </summary>
 		IPatternSchema IProvidedExtensionPointSchema.Pattern
 		{
-			get { return this.Pattern; }
-			set { this.Pattern = (PatternSchema)value; }
+		    get { return this.Pattern; }
+		    set { this.Pattern = (PatternSchema)value; }
 		}
 		
 		/// <summary>
@@ -1664,25 +1660,25 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IPatternInfo IProvidedExtensionPointInfo.Pattern
 		{
-			get { return this.Pattern; }
+		    get { return this.Pattern; }
 		}
 	
-		/// <summary>
-		/// Gets the extensions.
-		/// </summary>
-		/// <typeparam name="TExtension">The type of the extension.</typeparam>	
-		public IEnumerable<TExtension> GetExtensions<TExtension>()
-		{
-		 	return this.GetAllExtensions().OfType<TExtension>();
-		}
+	    /// <summary>
+	    /// Gets the extensions.
+	    /// </summary>
+	    /// <typeparam name="TExtension">The type of the extension.</typeparam>	
+	    public IEnumerable<TExtension> GetExtensions<TExtension>()
+	    {
+	        return this.GetAllExtensions().OfType<TExtension>();
+	    }
 	
-		/// <summary>
-		/// Gets a value indicating whether this instance is serializing.
-		/// </summary>
-		public bool IsSerializing
-		{
-			get { return this.Store.InSerializationTransaction;	}
-		}
+	    /// <summary>
+	    /// Gets a value indicating whether this instance is serializing.
+	    /// </summary>
+	    public bool IsSerializing
+	    {
+	        get { return this.Store.InSerializationTransaction;	}
+	    }
 	}
 }
 namespace NuPattern.Runtime.Schema
@@ -1690,40 +1686,40 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// A child extension to the pattern, provided by a pattern of another toolkit..
 	/// </summary>
-	public partial class ExtensionPointSchema : INotifyPropertyChanged
+	partial class ExtensionPointSchema : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IExtensionPointSchema.SubscribeChanged(Expression<Func<IExtensionPointSchema, object>> propertyExpression, Action<IExtensionPointSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IExtensionPointSchema.SubscribeChanged(Expression<Func<IExtensionPointSchema, object>> propertyExpression, Action<IExtensionPointSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IExtensionPointInfo.SubscribeChanged(Expression<Func<IExtensionPointInfo, object>> propertyExpression, Action<IExtensionPointInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IExtensionPointInfo.SubscribeChanged(Expression<Func<IExtensionPointInfo, object>> propertyExpression, Action<IExtensionPointInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -1731,15 +1727,15 @@ namespace NuPattern.Runtime.Schema
 	/// A child extension to the pattern, provided by a pattern of another toolkit.
 	/// </summary>
 	[GeneratedCode("NuPattern.Runtime.Schema", "1.3.0.0")]
-	public partial class ExtensionPointSchema : IExtensionPointSchema, IExtensionPointInfo
+	partial class ExtensionPointSchema : IExtensionPointSchema, IExtensionPointInfo
 	{ 
 		/// <summary>
 		/// The owning element.
 		/// </summary>
 		IAbstractElementSchema IExtensionPointSchema.Owner
 		{
-			get { return this.Owner; }
-			set { this.Owner = (AbstractElementSchema)value; }
+		    get { return this.Owner; }
+		    set { this.Owner = (AbstractElementSchema)value; }
 		}
 		
 		/// <summary>
@@ -1747,7 +1743,7 @@ namespace NuPattern.Runtime.Schema
 		/// </summary>
 		IAbstractElementInfo IExtensionPointInfo.Owner
 		{
-			get { return this.Owner; }
+		    get { return this.Owner; }
 		}
 	}
 }

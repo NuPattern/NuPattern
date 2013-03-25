@@ -325,7 +325,7 @@ namespace NuPattern.Runtime.Store
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
 		/// <returns>The loaded ProductState instance.</returns>
-		public virtual ProductState LoadModel(DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		internal virtual ProductState LoadModel(DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (store == null) 
@@ -353,7 +353,7 @@ namespace NuPattern.Runtime.Store
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
 		/// <returns>The loaded ProductState instance.</returns>
-		public virtual ProductState LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		internal virtual ProductState LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (store == null) 
@@ -382,7 +382,7 @@ namespace NuPattern.Runtime.Store
 		/// </param>
 		/// <returns>The loaded ProductState instance.</returns>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability","CA1506:AvoidExcessiveClassCoupling", Justification="Generated code")]
-		public virtual ProductState LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Partition partition, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		internal virtual ProductState LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Partition partition, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -508,7 +508,7 @@ namespace NuPattern.Runtime.Store
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
 		/// <param name="modelRoot">ProductState instance to be saved.</param>
 		/// <param name="fileName">Name of the file in which the ProductState instance will be saved.</param>
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ProductState modelRoot, string fileName)
+		internal virtual void SaveModel(DslModeling::SerializationResult serializationResult, ProductState modelRoot, string fileName)
 		{
 			this.SaveModel(serializationResult, modelRoot, fileName, global::System.Text.Encoding.UTF8, false);
 		}
@@ -520,7 +520,7 @@ namespace NuPattern.Runtime.Store
 		/// <param name="modelRoot">ProductState instance to be saved.</param>
 		/// <param name="fileName">Name of the file in which the ProductState instance will be saved.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ProductState modelRoot, string fileName, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveModel(DslModeling::SerializationResult serializationResult, ProductState modelRoot, string fileName, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			this.SaveModel(serializationResult, modelRoot, fileName, global::System.Text.Encoding.UTF8, writeOptionalPropertiesWithDefaultValue);
 		}
@@ -534,7 +534,7 @@ namespace NuPattern.Runtime.Store
 		/// <param name="encoding">Encoding to use when saving the ProductState instance.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, ProductState modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveModel(DslModeling::SerializationResult serializationResult, ProductState modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -618,7 +618,7 @@ namespace NuPattern.Runtime.Store
 		/// <summary>
 		/// Helper method to create and initialize a new ProductState.
 		/// </summary>
-		internal protected virtual ProductState CreateModelHelper(DslModeling::Partition modelPartition)
+		internal virtual ProductState CreateModelHelper(DslModeling::Partition modelPartition)
 		{
 			ProductState model = new ProductState(modelPartition);
 			return model;
@@ -875,7 +875,7 @@ namespace NuPattern.Runtime.Store
 		/// <param name="modelRoot">Root instance to be saved.</param>
 		/// <param name="encoding">Encoding to use when saving the root instance.</param>
 		/// <returns>Model in XML form</returns>
-		public virtual string GetSerializedModelString(global::NuPattern.Runtime.Store.ProductState modelRoot, global::System.Text.Encoding encoding)
+		internal virtual string GetSerializedModelString(global::NuPattern.Runtime.Store.ProductState modelRoot, global::System.Text.Encoding encoding)
 		{
 			string result = string.Empty;
 			if (modelRoot == null)
@@ -1005,7 +1005,7 @@ namespace NuPattern.Runtime.Store
 namespace NuPattern.Runtime.Store
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class ProductState
+	internal partial class ProductState
 	{
 		/// <summary>
 		/// Check to make sure all elements in the model will have unambiguous monikers when serialized.

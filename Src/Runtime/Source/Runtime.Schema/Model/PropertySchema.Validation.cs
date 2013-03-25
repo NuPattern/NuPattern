@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Reflection;
 using NuPattern.Runtime.Schema.Properties;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -15,7 +16,7 @@ namespace NuPattern.Runtime.Schema
     /// Customizations for the PropertySchema class.
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class PropertySchema
+    partial class PropertySchema
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<PropertySchema>();
 

@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.UI.UnitTests
 {
@@ -286,8 +287,7 @@ namespace NuPattern.Runtime.UI.UnitTests
             }
         }
 
-        [CLSCompliant(false)]
-        public class TestProductElementViewModel<TElement> : ProductElementViewModel where TElement : IElementContainer
+        internal class TestProductElementViewModel<TElement> : ProductElementViewModel where TElement : IElementContainer
         {
             public TestProductElementViewModel(IProductElement element, SolutionBuilderContext context)
                 : base(element, context)
@@ -324,8 +324,7 @@ namespace NuPattern.Runtime.UI.UnitTests
             { return CanDeleteInstance(); }
         }
 
-        [CLSCompliant(false)]
-        public class TestElementViewModel<TElement> : ElementViewModel where TElement : IElementContainer
+        internal class TestElementViewModel<TElement> : ElementViewModel where TElement : IElementContainer
         {
             public TestElementViewModel(IAbstractElement element, SolutionBuilderContext context)
                 : base(element, context)

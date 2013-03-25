@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Runtime.Store;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.IntegrationTests
 {

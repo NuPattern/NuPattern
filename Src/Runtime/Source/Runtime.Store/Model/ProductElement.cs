@@ -8,12 +8,15 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Store.Properties;
 
 namespace NuPattern.Runtime.Store
 {
     [ValidationState(ValidationState.Enabled)]
-    public partial class ProductElement : IProductElement
+    partial class ProductElement : IProductElement
     {
         private IDynamicBinding<IValidationRule>[] validationBindings;
         private IDynamicBindingContext bindingContext;

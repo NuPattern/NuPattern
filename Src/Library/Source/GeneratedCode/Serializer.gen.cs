@@ -14,7 +14,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer TemplateSettingsSerializer for DomainClass TemplateSettings.
 	/// </summary>
-	public partial class TemplateSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class TemplateSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -1027,7 +1027,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer EventSettingsSerializer for DomainClass EventSettings.
 	/// </summary>
-	public partial class EventSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class EventSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -1862,7 +1862,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer CommandSettingsSerializer for DomainClass CommandSettings.
 	/// </summary>
-	public partial class CommandSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class CommandSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -2613,7 +2613,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer MenuSettingsSerializer for DomainClass MenuSettings.
 	/// </summary>
-	public partial class MenuSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class MenuSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -3504,7 +3504,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer GuidanceExtensionSerializer for DomainClass GuidanceExtension.
 	/// </summary>
-	public partial class GuidanceExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class GuidanceExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -4249,7 +4249,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer WizardSettingsSerializer for DomainClass WizardSettings.
 	/// </summary>
-	public partial class WizardSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class WizardSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -4878,7 +4878,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer ArtifactExtensionSerializer for DomainClass ArtifactExtension.
 	/// </summary>
-	public partial class ArtifactExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class ArtifactExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -5567,7 +5567,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer ValidationExtensionSerializer for DomainClass ValidationExtension.
 	/// </summary>
-	public partial class ValidationExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class ValidationExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -6315,7 +6315,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer DragDropSettingsSerializer for DomainClass DragDropSettings.
 	/// </summary>
-	public partial class DragDropSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class DragDropSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>

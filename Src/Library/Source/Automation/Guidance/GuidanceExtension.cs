@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using NuPattern.Extensibility;
+using NuPattern.Extensibility.Bindings;
 using NuPattern.Extensibility.References;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Conditions;
 using NuPattern.Library.Events;
 using NuPattern.Library.Properties;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
-using Bindings = NuPattern.Extensibility.Binding;
 
 namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Customizations for the <see cref="GuidanceExtension"/> class.
     /// </summary>
-    public partial class GuidanceExtension
+    partial class GuidanceExtension
     {
         private static readonly string guidanceIconPath = ""; //"Resources/CommandShowGuidance.png";
 
@@ -50,15 +50,15 @@ namespace NuPattern.Library.Automation
             if (activateMenu != null)
             {
                 // Set the conditions
-                activateMenu.Conditions = Bindings.BindingSerializer.Serialize(
-                    new List<Bindings.ConditionBindingSettings>
+                activateMenu.Conditions = BindingSerializer.Serialize(
+                    new List<ConditionBindingSettings>
                     {
-                        new Bindings.ConditionBindingSettings
+                        new ConditionBindingSettings
                         {
                             TypeId = typeof(ElementReferenceExistsCondition).FullName,
                             Properties =
                             {
-                                new Bindings.PropertyBindingSettings
+                                new PropertyBindingSettings
                                 {
                                     Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
                                     Value = ReferenceKindConstants.Guidance

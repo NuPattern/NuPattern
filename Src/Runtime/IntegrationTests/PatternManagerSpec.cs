@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
-using NuPattern.Extensibility;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.IntegrationTests
 {
@@ -36,6 +36,16 @@ namespace NuPattern.Runtime.IntegrationTests
             this.patternManager = VsIdeTestHostContext.ServiceProvider.GetService<IPatternManager>();
             var toolkit = this.patternManager.InstalledToolkits.Single(f => f.Id == "NuPattern.Runtime.IntegrationTests.TestToolkit");
             UIThreadInvoker.Invoke(new Action(() => this.product = this.patternManager.CreateProduct(toolkit, "Foo")));
+        }
+
+        [TestCleanup]
+        public void Cleanup()
+        {
+            if (this.solution != null
+                && this.solution.IsOpen)
+            {
+                this.solution.Close(false);
+            }
         }
 
         [HostType("VS IDE")]

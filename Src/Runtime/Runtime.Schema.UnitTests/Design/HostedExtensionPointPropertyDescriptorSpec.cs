@@ -9,6 +9,8 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Extensibility;
+using NuPattern.Reflection;
+using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Schema.UnitTests
 {

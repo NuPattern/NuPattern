@@ -178,24 +178,6 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to run associated Custom Tool on project items..
-        /// </summary>
-        internal static string CustomToolRunnerTemplateWizard_FailedToRunCustomTools {
-            get {
-                return ResourceManager.GetString("CustomToolRunnerTemplateWizard_FailedToRunCustomTools", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Running custom tool {0} on item {1} because it has RunCustomToolOnUnfold..
-        /// </summary>
-        internal static string CustomToolRunnerTemplateWizard_RunningCustomTool {
-            get {
-                return ResourceManager.GetString("CustomToolRunnerTemplateWizard_RunningCustomTool", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Decorating Catalog.
         /// </summary>
         internal static string DecoratingReflectionCatalog_CatalogName {
@@ -255,33 +237,6 @@ namespace NuPattern.Runtime.Properties {
         internal static string EventExportExtensions_InvalidPropertyType {
             get {
                 return ResourceManager.GetString("EventExportExtensions_InvalidPropertyType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to fix linked project item paths..
-        /// </summary>
-        internal static string FixLinkPathTemplateWizard_FailedToFixLinkPaths {
-            get {
-                return ResourceManager.GetString("FixLinkPathTemplateWizard_FailedToFixLinkPaths", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Fixed item {0} to link to {1}..
-        /// </summary>
-        internal static string FixLinkPathTemplateWizard_LinkFixed {
-            get {
-                return ResourceManager.GetString("FixLinkPathTemplateWizard_LinkFixed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Generated new Guid available on template replacement with the key {0}..
-        /// </summary>
-        internal static string GuidGeneratorTemplateWizard_GeneratedNewGuid {
-            get {
-                return ResourceManager.GetString("GuidGeneratorTemplateWizard_GeneratedNewGuid", resourceCulture);
             }
         }
         
@@ -363,33 +318,6 @@ namespace NuPattern.Runtime.Properties {
         internal static string OnSolutionBuilderDrop_DisplayName {
             get {
                 return ResourceManager.GetString("OnSolutionBuilderDrop_DisplayName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Designer item for file {0} was not found..
-        /// </summary>
-        internal static string OpenDesignerTemplateWizard_DesignerItemNotFound {
-            get {
-                return ResourceManager.GetString("OpenDesignerTemplateWizard_DesignerItemNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Opening designer file {0}..
-        /// </summary>
-        internal static string OpenDesignerTemplateWizard_OpeningDesigner {
-            get {
-                return ResourceManager.GetString("OpenDesignerTemplateWizard_OpeningDesigner", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Designer file name with key $patterndefinition$ was not found in the replacement dictionary..
-        /// </summary>
-        internal static string OpenDesignerTemplateWizard_RetrievedDesignerFile {
-            get {
-                return ResourceManager.GetString("OpenDesignerTemplateWizard_RetrievedDesignerFile", resourceCulture);
             }
         }
         
@@ -778,15 +706,6 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Processing custom replacement {0}={1}..
-        /// </summary>
-        internal static string ReplacementTemplateWizard_Replacing {
-            get {
-                return ResourceManager.GetString("ReplacementTemplateWizard_Replacing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The &apos;AssemblyFile&apos; attribute is missing from the &apos;CustomExtension&apos; defined in the VSIX manifest..
         /// </summary>
         internal static string SchemaResource_AssemblyFileAttributeMissing {
@@ -846,24 +765,6 @@ namespace NuPattern.Runtime.Properties {
         internal static string SolutionBuilderViewModel_ServiceNotFound {
             get {
                 return ResourceManager.GetString("SolutionBuilderViewModel_ServiceNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Found contextual solution name {0}..
-        /// </summary>
-        internal static string SolutionNameTemplateWizard_ContextSolutionName {
-            get {
-                return ResourceManager.GetString("SolutionNameTemplateWizard_ContextSolutionName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No existing contextual solution found. Setting {0} as the solution name..
-        /// </summary>
-        internal static string SolutionNameTemplateWizard_NewContextSolution {
-            get {
-                return ResourceManager.GetString("SolutionNameTemplateWizard_NewContextSolution", resourceCulture);
             }
         }
         
@@ -1107,24 +1008,6 @@ namespace NuPattern.Runtime.Properties {
         internal static string VsixExtensionUriProvider_ManifestMissing {
             get {
                 return ResourceManager.GetString("VsixExtensionUriProvider_ManifestMissing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to retrieve registry root suffix of the currently running Visual Studio instance..
-        /// </summary>
-        internal static string VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot {
-            get {
-                return ResourceManager.GetString("VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Determined VS root suffix as {0}..
-        /// </summary>
-        internal static string VsRootSuffixTemplateWizard_RootSuffixDetermined {
-            get {
-                return ResourceManager.GetString("VsRootSuffixTemplateWizard_RootSuffixDetermined", resourceCulture);
             }
         }
         

@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// Provides a TypeConverter for standard data types.
     /// </summary>
-    public class ValueTypesTypeConverter : TypeConverter
+    internal class ValueTypesTypeConverter : TypeConverter
     {
         /// <summary>
         /// Converts from a string representation (i.e. System.Double or "Floating Point Number") to the full type name.

@@ -8,14 +8,14 @@ using Microsoft.VisualStudio.Shell.Settings;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Runtime.Properties;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Settings
 {
     /// <summary>
     /// Default implementation of <see cref="ISettingsManager"/> which uses <see cref="ShellSettingsManager"/>.
     /// </summary>
     [PartCreationPolicy(CreationPolicy.Shared)]
     [Export(typeof(ISettingsManager))]
-    public class SettingsManager : ISettingsManager
+    internal class SettingsManager : ISettingsManager
     {
         private const string RuntimeSettings = "RuntimeSettings";
         private const string Tracing = "Tracing";
@@ -40,12 +40,12 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Event raised when settings are saved.
         /// </summary>
-        public event EventHandler<ChangedEventArgs<RuntimeSettings>> SettingsChanged = (sender, args) => { };
+        public event EventHandler<ChangedEventArgs<IRuntimeSettings>> SettingsChanged = (sender, args) => { };
 
         /// <summary>
         /// Saves the specified settings to the underlying state.
         /// </summary>
-        public void Save(RuntimeSettings settings)
+        public void Save(IRuntimeSettings settings)
         {
             Guard.NotNull(() => settings, settings);
 
@@ -82,13 +82,13 @@ namespace NuPattern.Runtime
                 }
             }
 
-            this.SettingsChanged(this, new ChangedEventArgs<RuntimeSettings>(oldValue, settings));
+            this.SettingsChanged(this, new ChangedEventArgs<IRuntimeSettings>(oldValue, settings));
         }
 
         /// <summary>
         /// Reads the settings from the underlying state.
         /// </summary>
-        public RuntimeSettings Read()
+        public IRuntimeSettings Read()
         {
             return ReadSettings(this.serviceProvider);
         }

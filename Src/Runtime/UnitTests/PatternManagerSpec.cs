@@ -7,7 +7,10 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Extensibility;
 using NuPattern.Runtime.Store;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UnitTests
 {
@@ -93,13 +96,13 @@ namespace NuPattern.Runtime.UnitTests
                 {
                     PhysicalPath = Path.GetTempFileName(),
                     Items =
-					{
-						new SolutionFolder 
-						{
-							PhysicalPath = Path.GetTempPath() + "\\Solution Items",
-							Name = "Solution Items"
-						}
-					}
+                    {
+                        new SolutionFolder 
+                        {
+                            PhysicalPath = Path.GetTempPath() + "\\Solution Items",
+                            Name = "Solution Items"
+                        }
+                    }
                 };
 
                 this.store = new DslTestStore<ProductStateStoreDomainModel>();
@@ -363,19 +366,19 @@ namespace NuPattern.Runtime.UnitTests
                 {
                     PhysicalPath = "Bar.sln",
                     Items = 
-					{
-						new SolutionFolder
-						{
-							Name = "Solution Items", 
-							Items = 
-							{
-								new Item
-								{
-									PhysicalPath = stateFile
-								}
-							}
-						}
-					}
+                    {
+                        new SolutionFolder
+                        {
+                            Name = "Solution Items", 
+                            Items = 
+                            {
+                                new Item
+                                {
+                                    PhysicalPath = stateFile
+                                }
+                            }
+                        }
+                    }
                 }));
 
                 Assert.Equal(stateFile, this.manager.StoreFile);
@@ -390,19 +393,19 @@ namespace NuPattern.Runtime.UnitTests
                 {
                     PhysicalPath = "Bar.sln",
                     Items = 
-					{
-						new SolutionFolder
-						{
-							Name = "My Folder", 
-							Items = 
-							{
-								new Item
-								{
-									PhysicalPath = stateFile
-								}
-							}
-						}
-					}
+                    {
+                        new SolutionFolder
+                        {
+                            Name = "My Folder", 
+                            Items = 
+                            {
+                                new Item
+                                {
+                                    PhysicalPath = stateFile
+                                }
+                            }
+                        }
+                    }
                 }));
 
                 Assert.False(this.manager.IsOpen);
@@ -418,17 +421,17 @@ namespace NuPattern.Runtime.UnitTests
                     Name = "Blank.gen.sln",
                     PhysicalPath = "Blank.gen.sln",
                     Items = 
-					{
-						new SolutionFolder
-						{
-							Name = "Solution Items", 
-							Items = 
-							{
-								new Item { PhysicalPath = "Foo" + StoreConstants.RuntimeStoreExtension },
-								new Item { PhysicalPath = stateFile },
-							}
-						}
-					}
+                    {
+                        new SolutionFolder
+                        {
+                            Name = "Solution Items", 
+                            Items = 
+                            {
+                                new Item { PhysicalPath = "Foo" + StoreConstants.RuntimeStoreExtension },
+                                new Item { PhysicalPath = stateFile },
+                            }
+                        }
+                    }
                 }));
 
                 Assert.Equal(stateFile, this.manager.StoreFile);
@@ -444,18 +447,18 @@ namespace NuPattern.Runtime.UnitTests
                     Name = "Baz.sln",
                     PhysicalPath = "Baz.sln",
                     Items = 
-					{
-						new SolutionFolder
-						{
-							Name = "Solution Items", 
-							Items = 
-							{
-								new Item { PhysicalPath = stateFile },
-								new Item { PhysicalPath = "Foo" + StoreConstants.RuntimeStoreExtension },
-								new Item { PhysicalPath = "Bar" + StoreConstants.RuntimeStoreExtension },
-							}
-						}
-					}
+                    {
+                        new SolutionFolder
+                        {
+                            Name = "Solution Items", 
+                            Items = 
+                            {
+                                new Item { PhysicalPath = stateFile },
+                                new Item { PhysicalPath = "Foo" + StoreConstants.RuntimeStoreExtension },
+                                new Item { PhysicalPath = "Bar" + StoreConstants.RuntimeStoreExtension },
+                            }
+                        }
+                    }
                 }));
 
                 Assert.Equal(stateFile, this.manager.StoreFile);

@@ -11,12 +11,16 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings.Design;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
-using NuPattern.Runtime.UriProviders;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Extensions;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.TypeEditors
 {
@@ -24,8 +28,7 @@ namespace NuPattern.Library.TypeEditors
     /// An editor that allows selection of a T4 template inside a VSIX project, 
     /// that will be converted to a uri.
     /// </summary>
-    [CLSCompliant(false)]
-    public class TextTemplateUriEditor : UITypeEditor
+    internal class TextTemplateUriEditor : UITypeEditor
     {
         private const string FileExtension = ".tt;.t4";
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<TextTemplateUriEditor>();
@@ -102,7 +105,7 @@ namespace NuPattern.Library.TypeEditors
                 path = Path.Combine(Path.GetDirectoryName(path), templateItem.Data.IncludeInVSIXAs);
             }
 
-            return new Uri(new Uri(TextTemplateUriProvider.UriHostPrefix), new Uri(vsixId + path, UriKind.Relative));
+            return new Uri(new Uri(TextTemplateUri.UriHostPrefix), new Uri(vsixId + path, UriKind.Relative));
         }
 
         /// <summary>

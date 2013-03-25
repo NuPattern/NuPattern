@@ -96,7 +96,6 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\VSLangProj.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Build" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -116,36 +115,29 @@
     </Compile>
     <Compile Include="Commands\VsMenuCommand.cs" />
     <Compile Include="Commands\VsMenuCommandAdapter.cs" />
-    <Compile Include="Extensions\FilteredItemContainerExtensions.cs" />
-    <Compile Include="Extensions\MenuCommandServiceExtensions.cs" />
-    <Compile Include="RuntimeShellInfo.gen.cs">
+    <Compile Include="Settings\RuntimeSettings.cs" />
+    <Compile Include="Settings\TraceSourceSetting.cs" />
+    <Compile Include="Settings\TracingSettings.cs" />
+    <Compile Include="UI\FilteredItemContainerExtensions.cs" />
+    <Compile Include="MenuCommandServiceExtensions.cs" />
+    <Compile Include="ShellConstants.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RuntimeShellInfo.tt</DependentUpon>
+      <DependentUpon>ShellConstants.tt</DependentUpon>
     </Compile>
     <Compile Include="ToolkitClassification.cs" />
     <Compile Include="ToolkitInterfaceService.cs" />
-    <Compile Include="ObjectDumper.cs" />
     <Compile Include="ProductStoreValidationController.cs" />
     <Compile Include="Settings\SettingsManager.cs" />
     <Compile Include="Settings\TracingSettingsMonitor.cs" />
     <Compile Include="ShellEvents.cs" />
-    <Compile Include="TemplateWizards\FixLinkPathTemplateWizard.cs" />
-    <Compile Include="TemplateWizards\CustomToolRunnerTemplateWizard.cs" />
-    <Compile Include="TemplateWizards\GuidGeneratorTemplateWizard.cs" />
-    <Compile Include="TemplateWizards\OpenDesignerTemplateWizard.cs" />
-    <Compile Include="TemplateWizards\SolutionNameGetTemplateWizard.cs" />
-    <Compile Include="TemplateWizards\SolutionNameSetTemplateWizard.cs" />
     <Compile Include="TraceOutputWindowManager.cs" />
     <Compile Include="TraceRecordTextListener.cs" />
-    <Compile Include="Extensions\SchemaReaderExtensions.cs" />
-    <Compile Include="Extensions\ToolkitInfoExtensions.cs" />
-    <Compile Include="ToolkitInfoCollection.cs" />
+    <Compile Include="SchemaReaderExtensions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="InstalledToolkitAdapter.cs" />
     <Compile Include="PatternManager.cs" />
     <Compile Include="ToolkitInfo.cs" />
-    <Compile Include="ToolkitInfoSerializer.cs" />
     <Compile Include="InstalledToolkitRepository.cs" />
     <Compile Include="SchemaResource.cs" />
     <Compile Include="SingletonScope.cs" />
@@ -172,7 +164,6 @@
     <Compile Include="UI\Views\SolutionPickerView.xaml.cs">
       <DependentUpon>SolutionPickerView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\UserMessageService.cs" />
     <None Include="UI\ViewModels\AddNewProductViewModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AddNewProductViewModel.gen.cs</LastGenOutput>
@@ -203,7 +194,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="TemplateWizards\ReplacementTemplateWizard.cs" />
     <Compile Include="UI\ViewModels\ElementViewModel.cs" />
     <Compile Include="UI\ViewModels\AutomationMenuOptionViewModel.cs" />
     <Compile Include="UI\ViewModels\IconType.cs" />
@@ -231,7 +221,6 @@
     <Compile Include="UriProviders\UriProviderExtensions.cs" />
     <Compile Include="UriProviders\VsixExtensionUriProvider.cs" />
     <Compile Include="UriProviders\VsTemplateUriProvider.cs" />
-    <Compile Include="TemplateWizards\VsRootSuffixTemplateWizard.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -251,6 +240,10 @@
       <Project>{72CC87F3-2860-45CC-8712-00621F868D60}</Project>
       <Name>Common.Presentation</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Common\Source\Extensibility.Serialization\Extensibility.Serialization.csproj">
       <Project>{B2B1ED0A-60E0-4A5C-822A-605527663E0B}</Project>
       <Name>Extensibility.Serialization</Name>
@@ -259,9 +252,9 @@
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
       <Name>Extensibility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Common\Source\VisualStudio\VisualStudio.csproj">
+    <ProjectReference Include="..\..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
-      <Name>VisualStudio</Name>
+      <Name>Common.VisualStudio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Runtime.Interfaces\Runtime.Interfaces.csproj">
       <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
@@ -343,9 +336,9 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="RuntimeShellInfo.tt">
+    <None Include="ShellConstants.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RuntimeShellInfo.gen.cs</LastGenOutput>
+      <LastGenOutput>ShellConstants.gen.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,14 +5,17 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Extensibility;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// ImplementedExtensionPoints property descriptor
     /// </summary>
-    public class ProvidedExtensionPointsPropertyDescriptor : SimpleNamedPropertyDescriptor
+    internal class ProvidedExtensionPointsPropertyDescriptor : SimpleNamedPropertyDescriptor
     {
         private PatternSchema patternSchema;
 

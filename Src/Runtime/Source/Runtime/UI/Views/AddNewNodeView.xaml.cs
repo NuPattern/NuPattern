@@ -1,14 +1,12 @@
-﻿using System;
-using System.Windows;
-using NuPattern.Common.Presentation;
+﻿using System.Windows;
+using NuPattern.Presentation;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Interaction logic for AddNewNodeView.xaml
     /// </summary>
-    [CLSCompliant(false)]
-    public partial class AddNewNodeView : CommonDialogWindow, IDialogWindow
+    partial class AddNewNodeView : CommonDialogWindow, IDialogWindow
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AddNewNodeView"/> class.

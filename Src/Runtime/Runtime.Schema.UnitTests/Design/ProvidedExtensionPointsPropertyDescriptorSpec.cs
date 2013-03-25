@@ -4,7 +4,9 @@ using System.Drawing.Design;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Extensibility;
+using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Schema.UnitTests
 {

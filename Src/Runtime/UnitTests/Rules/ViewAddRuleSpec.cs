@@ -85,12 +85,12 @@ namespace NuPattern.Runtime.Store.UnitTests
             {
                 this.viewInfo.Setup(v => v.Elements)
                     .Returns(new IAbstractElementInfo[]
-					{
-						Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-						Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
-						Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-						Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
-					});
+                    {
+                        Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                        Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
+                        Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                        Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
+                    });
 
                 var target = this.CreateView();
 
@@ -103,12 +103,12 @@ namespace NuPattern.Runtime.Store.UnitTests
             {
                 this.viewInfo.Setup(v => v.Elements)
                     .Returns(new IAbstractElementInfo[]
-					{
-						Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
-						Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
-						Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
-						Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
-					});
+                    {
+                        Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
+                        Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
+                        Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
+                        Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
+                    });
 
                 var target = this.CreateView();
 
@@ -123,10 +123,10 @@ namespace NuPattern.Runtime.Store.UnitTests
 
                 this.viewInfo.Setup(v => v.Elements)
                     .Returns(new IAbstractElementInfo[]
-				{
-					Mocks.Of<IElementInfo>().First(e => e.Id == elementId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-					Mocks.Of<ICollectionInfo>().First(e => e.Id == collectionId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true)
-				});
+                {
+                    Mocks.Of<IElementInfo>().First(e => e.Id == elementId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                    Mocks.Of<ICollectionInfo>().First(e => e.Id == collectionId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true)
+                });
 
                 var target = this.CreateView();
 
@@ -166,17 +166,17 @@ namespace NuPattern.Runtime.Store.UnitTests
                 viewInfoMock.Setup(x => x.Id).Returns(Guid.NewGuid());
                 viewInfoMock.Setup(e => e.Elements)
                     .Returns(new List<IAbstractElementInfo>
-					{
-						Mocks.Of<IElementInfo>().First(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-						Mocks.Of<ICollectionInfo>().First(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-						Mocks.Of<IElementInfo>().First(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.ZeroToMany)
-					});
+                    {
+                        Mocks.Of<IElementInfo>().First(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                        Mocks.Of<ICollectionInfo>().First(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                        Mocks.Of<IElementInfo>().First(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.ZeroToMany)
+                    });
                 viewInfoMock.Setup(x => x.ExtensionPoints)
                     .Returns(new List<IExtensionPointInfo>
-					{
-						Mocks.Of<IExtensionPointInfo>().First(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true && e.RequiredExtensionPointId == "ext_1"),
-						Mocks.Of<IExtensionPointInfo>().First(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.ZeroToMany && e.RequiredExtensionPointId == "ext_2"),
-					});
+                    {
+                        Mocks.Of<IExtensionPointInfo>().First(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true && e.RequiredExtensionPointId == "ext_1"),
+                        Mocks.Of<IExtensionPointInfo>().First(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.ZeroToMany && e.RequiredExtensionPointId == "ext_2"),
+                    });
 
                 this.viewInfo = viewInfoMock.Object;
 

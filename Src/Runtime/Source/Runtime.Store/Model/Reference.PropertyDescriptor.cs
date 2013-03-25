@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Extensibility;
+using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Store
 {

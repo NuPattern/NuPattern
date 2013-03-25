@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility;
+using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.IntegrationTests
 {
@@ -37,7 +37,7 @@ namespace NuPattern.IntegrationTests
                 // Unzip VSIX content to target dir
                 this.TargetDir = new DirectoryInfo("Target").FullName;
                 Vsix.Unzip(deployedVsixItemPath, this.TargetDir);
-                
+
                 this.VsixIdentifier = Vsix.ReadManifestIdentifier(Path.Combine(this.TargetDir, "extension.vsixmanifest"));
             }
 
@@ -74,7 +74,7 @@ namespace NuPattern.IntegrationTests
                     var uniqueFolderFiles = folderFiles.Select(f => f.Name).Except(filenames);
                     var uniqueFilenames = filenames.Except(folderFiles.Select(f => f.Name));
 
-                    return !(uniqueFolderFiles.Any()) 
+                    return !(uniqueFolderFiles.Any())
                         && !(uniqueFilenames.Any());
                 }
             }
@@ -83,7 +83,7 @@ namespace NuPattern.IntegrationTests
             /// Determines if the given file exists in the VSIX package
             /// </summary>
             /// <returns></returns>
-            protected bool FolderNotEmpty(string relFolderPath, string fileTypes="*.*")
+            protected bool FolderNotEmpty(string relFolderPath, string fileTypes = "*.*")
             {
                 var dirPath = Path.Combine(this.TargetDir, relFolderPath);
                 var exists = Directory.Exists(dirPath);

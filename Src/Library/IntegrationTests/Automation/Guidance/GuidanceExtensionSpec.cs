@@ -7,12 +7,14 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Extensibility.Bindings.Design;
 using NuPattern.Extensibility.References;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Conditions;
 using NuPattern.Library.Events;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Schema;
 
@@ -206,7 +208,7 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
                                 TypeId = typeof(ElementReferenceExistsCondition).FullName,
                                 Properties = 
                                 {
-                                    new Extensibility.Binding.PropertyBindingSettings
+                                    new Extensibility.Bindings.PropertyBindingSettings
                                     {
                                         Name = Reflector<ElementReferenceExistsCondition>.GetPropertyName(cond => cond.Kind),
                                         Value = ReferenceKindConstants.Guidance

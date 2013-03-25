@@ -4,16 +4,17 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
+using NuPattern.Presentation;
+using NuPattern.Reflection;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// The view model for an automation menu.
     /// </summary>
-    [CLSCompliant(false)]
-    public class AutomationMenuOptionViewModel : MenuOptionViewModel
+    internal class AutomationMenuOptionViewModel : MenuOptionViewModel
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AutomationMenuOptionViewModel"/> class.
@@ -52,10 +53,10 @@ namespace NuPattern.Runtime.UI
         {
             private static readonly Dictionary<string, Action<MenuOptionViewModel, IMenuCommand>> propertyMappings =
                 new Dictionary<string, Action<MenuOptionViewModel, IMenuCommand>>
-				{
-					{ Reflector<IMenuCommand>.GetProperty(x => x.Visible).Name, (vm, m) => vm.IsVisible = m.Visible },
-					{ Reflector<IMenuCommand>.GetProperty(x => x.Enabled).Name, (vm, m) => vm.IsEnabled = m.Enabled }
-				};
+                {
+                    { Reflector<IMenuCommand>.GetProperty(x => x.Visible).Name, (vm, m) => vm.IsVisible = m.Visible },
+                    { Reflector<IMenuCommand>.GetProperty(x => x.Enabled).Name, (vm, m) => vm.IsEnabled = m.Enabled }
+                };
 
             private static ITraceSource tracer = Tracer.GetSourceFor<AutomationCommand>();
 
@@ -87,29 +88,29 @@ namespace NuPattern.Runtime.UI
             [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
             public bool CanExecute(object parameter)
             {
-				var propertyChanged = this.automation as INotifyPropertyChanged;
+                var propertyChanged = this.automation as INotifyPropertyChanged;
 
-				try
-				{
-					// Prevent re-entrancy on query status
-					if (propertyChanged != null)
-						propertyChanged.PropertyChanged -= this.OnMenuPropertyChanged;
+                try
+                {
+                    // Prevent re-entrancy on query status
+                    if (propertyChanged != null)
+                        propertyChanged.PropertyChanged -= this.OnMenuPropertyChanged;
 
-					this.status.QueryStatus(this.menu);
-					parent.IsEnabled = this.menu.Enabled;
-					parent.IsVisible = this.menu.Visible;
-				}
-				catch (Exception e)
-				{
-					tracer.TraceError(e, Resources.AutomationCommand_QueryStatusFailed);
-					return false;
-				}
-				finally
-				{
-					// Enable status monitoring again.
-					if (propertyChanged != null)
-						propertyChanged.PropertyChanged += this.OnMenuPropertyChanged;
-				}
+                    this.status.QueryStatus(this.menu);
+                    parent.IsEnabled = this.menu.Enabled;
+                    parent.IsVisible = this.menu.Visible;
+                }
+                catch (Exception e)
+                {
+                    tracer.TraceError(e, Resources.AutomationCommand_QueryStatusFailed);
+                    return false;
+                }
+                finally
+                {
+                    // Enable status monitoring again.
+                    if (propertyChanged != null)
+                        propertyChanged.PropertyChanged += this.OnMenuPropertyChanged;
+                }
 
                 return this.menu.Enabled;
             }

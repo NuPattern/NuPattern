@@ -97,6 +97,9 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -135,11 +138,11 @@
     <Compile Include="Diagram\Shapes\ITailoredShapeElementStyles.cs" />
     <Compile Include="Diagram\Shapes\TailoredShapeStyles.cs" />
     <Compile Include="Diagram\TailoredBackgroundStyles.cs" />
-    <Compile Include="Extensions\CustomizableElementSchemaExtensions.cs" />
-    <Compile Include="Extensions\ContainingLinkSchemaExtensions.cs" />
-    <Compile Include="Extensions\ElementSchemaContainerExtensions.cs" />
-    <Compile Include="Extensions\ModelElementExtensions.cs" />
-    <Compile Include="Extensions\NodeShapeExtensions.cs" />
+    <Compile Include="Model\CustomizableElementSchemaExtensions.cs" />
+    <Compile Include="Model\ContainingLinkSchemaExtensions.cs" />
+    <Compile Include="Model\ElementSchemaContainerExtensions.cs" />
+    <Compile Include="Model\ModelElementExtensions.cs" />
+    <Compile Include="Model\NodeShapeExtensions.cs" />
     <Compile Include="Model\AbstractElementSchema.cs" />
     <Compile Include="Model\AbstractElementSchema.Validation.cs">
       <DependentUpon>AbstractElementSchema.cs</DependentUpon>
@@ -197,9 +200,9 @@
     <Compile Include="Model\Design\ValueTypesTypeConverter.cs" />
     <Compile Include="Diagram\Shapes\PatternElementConnector.cs" />
     <Compile Include="Diagram\Shapes\ShapeExtensions.cs" />
-    <Compile Include="Extensions\Gestures\AuthoringGestureController.cs" />
-    <Compile Include="Extensions\CustomizationExtensions.cs" />
-    <Compile Include="Extensions\Gestures\AuthoringGestureControllerBase.cs" />
+    <Compile Include="Diagram\Gestures\AuthoringGestureController.cs" />
+    <Compile Include="Model\Customization\CustomizationExtensions.cs" />
+    <Compile Include="Diagram\Gestures\AuthoringGestureControllerBase.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Model\Automation\AutomationSettingsSchema.cs" />
     <Compile Include="Model\CollectionSchema.cs" />
@@ -242,9 +245,9 @@
     <Compile Include="Diagram\Shapes\ElementShape.cs" />
     <Compile Include="Diagram\Shapes\CollectionShape.cs" />
     <Compile Include="Diagram\Shapes\ViewShape.cs" />
-    <Compile Include="Extensions\AbstractElementExtensions.cs" />
-    <Compile Include="Extensions\DiagramExtensions.cs" />
-    <Compile Include="Extensions\StoreExtensions.cs" />
+    <Compile Include="Model\AbstractElementExtensions.cs" />
+    <Compile Include="Diagram\DiagramExtensions.cs" />
+    <Compile Include="Model\ModelStoreExtensions.cs" />
     <Compile Include="GeneratedCode\Customization\DesignerConstants.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -255,7 +258,7 @@
     <Compile Include="Model\IInterceptorTarget.cs" />
     <Compile Include="Model\CardinalityConstants.cs" />
     <Compile Include="Model\Rules\PatternSchemaAddRule.cs" />
-    <Compile Include="Extensions\PropertySchemaExtensions.cs" />
+    <Compile Include="Model\PropertySchemaExtensions.cs" />
     <Compile Include="Model\Design\DefaultValuePropertyDescriptor.cs">
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -495,9 +498,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Common\Source\VisualStudio\VisualStudio.csproj">
+    <ProjectReference Include="..\..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
+      <Project>{72cc87f3-2860-45cc-8712-00621f868d60}</Project>
+      <Name>Common.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
-      <Name>VisualStudio</Name>
+      <Name>Common.VisualStudio</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Runtime\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
       <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>

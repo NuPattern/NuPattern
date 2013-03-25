@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using NuPattern.Extensibility;
 
 namespace NuPattern.Runtime.Store
 {
-    public partial class View : IElementContainer
+    partial class View : IElementContainer
     {
         private ElementContainerImplementation<View> containerImplementation;
 

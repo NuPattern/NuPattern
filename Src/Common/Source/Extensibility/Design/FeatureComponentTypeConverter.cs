@@ -5,8 +5,9 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.Runtime;
 
-namespace NuPattern.Extensibility
+namespace NuPattern.Extensibility.Design
 {
 	/// <summary>
 	/// Defines a generic type converter.
@@ -15,7 +16,7 @@ namespace NuPattern.Extensibility
 	public class FeatureComponentTypeConverter<T> : TypeConverter where T : class
 	{
 		private static IEnumerable<Lazy<T, IFeatureComponentMetadata>> components;
-		private static IPlatuProjectTypeProvider projectTypes;
+		private static INuPatternProjectTypeProvider projectTypes;
 
 		/// <summary>
 		/// Components for the <see cref="FeatureComponentTypeConverter{T}"/>
@@ -37,10 +38,10 @@ namespace NuPattern.Extensibility
 		}
 
 		/// <summary>
-		/// Reference to an <see cref="IPlatuProjectTypeProvider"/>
+		/// Reference to an <see cref="INuPatternProjectTypeProvider"/>
 		/// </summary>
 		[Import]
-		protected IPlatuProjectTypeProvider ProjectTypeProvider
+		protected INuPatternProjectTypeProvider ProjectTypeProvider
 		{
 			get
 			{

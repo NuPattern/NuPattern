@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Reflection;
+using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Schema.Properties;
 
 namespace NuPattern.Runtime.Schema
@@ -13,7 +14,7 @@ namespace NuPattern.Runtime.Schema
     /// Customizations for the PropertySchema class.
     /// </summary>
     [TypeDescriptionProvider(typeof(PropertySchemaTypeDescriptorProvider))]
-    public partial class PropertySchema
+    partial class PropertySchema
     {
         private PropertyValueProviderBindingSettings valueProviderSettings;
         private BoundProperty defaultValueProperty;

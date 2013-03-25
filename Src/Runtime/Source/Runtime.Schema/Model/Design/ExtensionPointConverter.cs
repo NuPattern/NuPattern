@@ -9,7 +9,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// ExtensionPoint type converter
     /// </summary>
-    public class ExtensionPointConverter : TypeConverter
+    internal class ExtensionPointConverter : TypeConverter
     {
         private Func<IExtensionPointSchema, bool> filter;
 

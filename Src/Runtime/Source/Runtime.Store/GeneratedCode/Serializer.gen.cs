@@ -14,7 +14,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ProductStateSerializer for DomainClass ProductState.
 	/// </summary>
-	public partial class ProductStateSerializer : DslModeling::DomainClassXmlSerializer
+	internal partial class ProductStateSerializer : DslModeling::DomainClassXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -785,7 +785,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer PropertySerializer for DomainClass Property.
 	/// </summary>
-	public partial class PropertySerializer : InstanceBaseSerializer
+	internal partial class PropertySerializer : InstanceBaseSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -1414,7 +1414,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer CollectionSerializer for DomainClass Collection.
 	/// </summary>
-	public partial class CollectionSerializer : AbstractElementSerializer
+	internal partial class CollectionSerializer : AbstractElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -1977,7 +1977,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ElementSerializer for DomainClass Element.
 	/// </summary>
-	public partial class ElementSerializer : AbstractElementSerializer
+	internal partial class ElementSerializer : AbstractElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -2540,7 +2540,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ProductElementSerializer for DomainClass ProductElement.
 	/// </summary>
-	public partial class ProductElementSerializer : InstanceBaseSerializer
+	internal partial class ProductElementSerializer : InstanceBaseSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -3291,7 +3291,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ProductSerializer for DomainClass Product.
 	/// </summary>
-	public partial class ProductSerializer : ProductElementSerializer
+	internal partial class ProductSerializer : ProductElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -4187,7 +4187,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ViewSerializer for DomainClass View.
 	/// </summary>
-	public partial class ViewSerializer : InstanceBaseSerializer
+	internal partial class ViewSerializer : InstanceBaseSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -5018,7 +5018,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer AbstractElementSerializer for DomainClass AbstractElement.
 	/// </summary>
-	public partial class AbstractElementSerializer : ProductElementSerializer
+	internal partial class AbstractElementSerializer : ProductElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -5703,7 +5703,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer InstanceBaseSerializer for DomainClass InstanceBase.
 	/// </summary>
-	public partial class InstanceBaseSerializer : DslModeling::DomainClassXmlSerializer
+	internal partial class InstanceBaseSerializer : DslModeling::DomainClassXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -6240,7 +6240,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ReferenceSerializer for DomainClass Reference.
 	/// </summary>
-	public partial class ReferenceSerializer : DslModeling::DomainClassXmlSerializer
+	internal partial class ReferenceSerializer : DslModeling::DomainClassXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -6962,7 +6962,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ProductElementHasPropertiesSerializer for DomainClass ProductElementHasProperties.
 	/// </summary>
-	public partial class ProductElementHasPropertiesSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ProductElementHasPropertiesSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -7633,7 +7633,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ProductHasViewsSerializer for DomainClass ProductHasViews.
 	/// </summary>
-	public partial class ProductHasViewsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ProductHasViewsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -8304,7 +8304,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ViewHasElementsSerializer for DomainClass ViewHasElements.
 	/// </summary>
-	public partial class ViewHasElementsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ViewHasElementsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -8975,7 +8975,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ElementHasChildElementsSerializer for DomainClass ElementHasChildElements.
 	/// </summary>
-	public partial class ElementHasChildElementsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ElementHasChildElementsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -9646,7 +9646,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ProductStateHasProductsSerializer for DomainClass ProductStateHasProducts.
 	/// </summary>
-	public partial class ProductStateHasProductsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ProductStateHasProductsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -10317,7 +10317,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ElementHasExtensionsSerializer for DomainClass ElementHasExtensions.
 	/// </summary>
-	public partial class ElementHasExtensionsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ElementHasExtensionsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -10988,7 +10988,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ViewHasExtensionProductsSerializer for DomainClass ViewHasExtensionProducts.
 	/// </summary>
-	public partial class ViewHasExtensionProductsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ViewHasExtensionProductsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -11659,7 +11659,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Serializer ProductElementHasReferencesSerializer for DomainClass ProductElementHasReferences.
 	/// </summary>
-	public partial class ProductElementHasReferencesSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ProductElementHasReferencesSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -12393,7 +12393,7 @@ namespace NuPattern.Runtime.Store
 	/// This is the abstract base of the double-derived implementation.
 	/// </summary>
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]		
-	public abstract class ProductStateStoreSerializationBehaviorBase : DslModeling::DomainXmlSerializationBehavior
+	internal abstract class ProductStateStoreSerializationBehaviorBase : DslModeling::DomainXmlSerializationBehavior
 	{
 		///<summary>
 		/// The xml namespace used by this domain model when serializing
@@ -12506,7 +12506,7 @@ namespace NuPattern.Runtime.Store
 	/// A DomainXmlSerializationBehavior implementation for defined behavior ProductStateStoreSerializationBehavior.
 	/// This is the concrete type of the double-derived implementation.
 	/// </summary>
-	public sealed partial class ProductStateStoreSerializationBehavior : ProductStateStoreSerializationBehaviorBase
+	internal sealed partial class ProductStateStoreSerializationBehavior : ProductStateStoreSerializationBehaviorBase
 	{
 		#region Singleton Instance
 		/// <summary>
@@ -12542,7 +12542,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Moniker resolver for serialization behavior ProductStateStoreSerializationBehavior.
 	/// </summary>
-	public partial class ProductStateStoreSerializationBehaviorMonikerResolver : ProductStateStoreSerializationBehaviorMonikerResolverBase
+	internal partial class ProductStateStoreSerializationBehaviorMonikerResolver : ProductStateStoreSerializationBehaviorMonikerResolverBase
 	{
 		/// <summary>
 		/// Constructor.
@@ -12558,7 +12558,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Base moniker resolver for serialization behavior ProductStateStoreSerializationBehavior.
 	/// </summary>
-	public partial class ProductStateStoreSerializationBehaviorMonikerResolverBase : DslModeling::SimpleMonikerResolver
+	internal partial class ProductStateStoreSerializationBehaviorMonikerResolverBase : DslModeling::SimpleMonikerResolver
 	{
 		#region Member Variables
 		/// <summary>

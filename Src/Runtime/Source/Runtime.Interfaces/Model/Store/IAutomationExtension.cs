@@ -1,4 +1,6 @@
-﻿namespace NuPattern.Runtime
+﻿using NuPattern.Runtime.Bindings;
+
+namespace NuPattern.Runtime
 {
 	/// <summary>
 	/// Represents a runtime behavior of an automation extension.

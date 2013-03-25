@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Xml.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Migration;
-using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.UnitTests.Migration
 {

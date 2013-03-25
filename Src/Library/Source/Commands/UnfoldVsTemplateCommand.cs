@@ -13,14 +13,17 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings;
 using NuPattern.Extensibility.References;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Automation.Template;
 using NuPattern.Library.Properties;
 using NuPattern.Library.TypeEditors;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution;
 using Dsl = Microsoft.VisualStudio.Modeling.Design;
 
 namespace NuPattern.Library.Commands

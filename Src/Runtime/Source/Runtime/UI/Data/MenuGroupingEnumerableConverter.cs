@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.ComponentModel;
 using System.Globalization;
 using System.Windows.Data;
 using Microsoft.VisualStudio.PlatformUI;
-using NuPattern.Extensibility;
+using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.UI.Data
 {
@@ -12,8 +11,7 @@ namespace NuPattern.Runtime.UI.Data
     /// Applies grouping to the given <see cref="IEnumerable"/> collection of menus.
     /// </summary>
     [ValueConversion(typeof(IEnumerable), typeof(ICollectionView))]
-    [CLSCompliant(false)]
-    public class MenuGroupingEnumerableConverter : ValueConverter<IEnumerable, ICollectionView>
+    internal class MenuGroupingEnumerableConverter : ValueConverter<IEnumerable, ICollectionView>
     {
         /// <summary>
         /// Converts the specified value.

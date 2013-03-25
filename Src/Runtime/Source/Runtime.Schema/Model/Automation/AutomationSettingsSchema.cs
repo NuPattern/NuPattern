@@ -9,7 +9,7 @@ namespace NuPattern.Runtime.Schema
     /// Customizations for the <see cref="AutomationSettingsSchema"/> class.
     /// </summary>
     [TypeDescriptionProvider(typeof(AutomationSettingsTypeDescriptorProvider))]
-    public partial class AutomationSettingsSchema
+    partial class AutomationSettingsSchema
     {
         /// <summary>
         /// Tries to convert this settings element to the given typed automation 

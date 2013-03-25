@@ -4,8 +4,11 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.ComponentModel;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Extensibility.Design;
+using NuPattern.Reflection;
 using NuPattern.Runtime.Schema.Properties;
 
 namespace NuPattern.Runtime.Schema
@@ -13,7 +16,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// PropertySchemaType descriptor provider that overrides PropertySchema.DefaultValue type to the PropertySchema.Type type.
     /// </summary>
-    public class PropertySchemaTypeDescriptorProvider : ElementTypeDescriptionProvider
+    internal class PropertySchemaTypeDescriptorProvider : ElementTypeDescriptionProvider
     {
         /// <summary>
         /// Overridables for the derived class to provide a custom type descriptor.

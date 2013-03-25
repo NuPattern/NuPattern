@@ -6,7 +6,7 @@ namespace NuPattern.Runtime.Schema
     /// Triggers this notification rule whether a <see cref="PatternSchema"/> is added.
     /// </summary>
     [RuleOn(typeof(PatternSchema), FireTime = TimeToFire.TopLevelCommit)]
-    public partial class PatternSchemaAddRule : AddRule
+    internal class PatternSchemaAddRule : AddRule
     {
         /// <summary>
         /// Triggers this notification rule whether a <see cref="PatternSchema"/> is added.

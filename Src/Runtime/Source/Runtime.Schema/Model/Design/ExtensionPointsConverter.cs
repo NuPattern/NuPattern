@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// ExtensionPoints type converter
     /// </summary>
-    public class ExtensionPointsConverter : TypeConverter
+    internal class ExtensionPointsConverter : TypeConverter
     {
         private const char Separator = '|';
 

@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.UI
     /// <summary>
     /// Returns the sort descriptions for the treeview.
     /// </summary>
-    public class TreeViewItemOrderingConverter : IValueConverter
+    internal class TreeViewItemOrderingConverter : IValueConverter
     {
         /// <summary>
         /// Converts a value.

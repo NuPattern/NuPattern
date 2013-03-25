@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 
@@ -12,10 +11,8 @@ namespace NuPattern.Runtime.Store
     /// <summary>
     /// The persistence state for all current products in the solution.
     /// </summary>
-    public partial class ProductState
+    partial class ProductState
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductState>();
-
         /// <summary>
         /// Key in the <see cref="PropertyBag"/> that flags 
         /// whether the state is being deserialized.

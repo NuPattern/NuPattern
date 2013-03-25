@@ -3,8 +3,10 @@ using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel;
 using NuPattern.Extensibility;
 using NuPattern.Library.Automation;
+using NuPattern.Reflection;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests.Automation.Guidance

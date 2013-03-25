@@ -1,7 +1,9 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Extensibility;
 using NuPattern.Runtime.Store.Properties;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Store
 {
@@ -9,7 +11,7 @@ namespace NuPattern.Runtime.Store
     /// Triggers this notification rule whether a <see cref="Product"/> is added.
     /// </summary>
     [RuleOn(typeof(Product), FireTime = TimeToFire.LocalCommit)]
-    public partial class ProductAddRule : AddRule
+    internal class ProductAddRule : AddRule
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductAddRule>();
 

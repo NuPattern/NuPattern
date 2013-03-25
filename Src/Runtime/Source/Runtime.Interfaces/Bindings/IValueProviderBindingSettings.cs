@@ -1,5 +1,5 @@
 ﻿
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Bindings
 {
 	/// <summary>
 	/// Represents the settings needed to create a runtime dynamic value provider binding.

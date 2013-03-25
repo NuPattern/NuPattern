@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.Extensibility;
+using NuPattern.Presentation;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Provides a view model for the solution selector
     /// </summary>
-    [CLSCompliant(false)]
-    public class SolutionSelectorViewModel : SolutionPickerBaseViewModel
+    internal class SolutionSelectorViewModel : SolutionPickerBaseViewModel
     {
         /// <summary>
         /// Creates a new instance of the <see cref="SolutionSelectorViewModel"/> class.

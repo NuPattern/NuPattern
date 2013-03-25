@@ -7,19 +7,18 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
+using NuPattern.Presentation;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Provides a view model for the solution builder
     /// </summary>
-    [CLSCompliant(false)]
-    public partial class SolutionBuilderViewModel : ViewModel
+    internal partial class SolutionBuilderViewModel : ViewModel
     {
-        private const string NewSolutionNamePrefix = "Solution";
-
-        internal const string UsingGuidanceFeatureId = RuntimeShellInfo.VsixIdentifier;
+        internal const string UsingGuidanceFeatureId = ShellConstants.VsixIdentifier;
 
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SolutionBuilderViewModel>();
 
@@ -214,7 +213,7 @@ namespace NuPattern.Runtime.UI
 
         private void AddNewProduct()
         {
-            var ex = Extensibility.TracingExtensions.Shield(tracer,
+            var ex = NuPattern.VisualStudio.TraceSourceExtensions.Shield(tracer,
                 () =>
                 {
                     var viewModel = new AddNewProductViewModel(this.context.PatternManager, this.context.UserMessageService);

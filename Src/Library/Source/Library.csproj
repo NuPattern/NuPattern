@@ -144,7 +144,7 @@
     <Compile Include="Commands\DeleteArtifactsCommand.cs" />
     <Compile Include="Commands\Helpers\DeleteAction.cs" />
     <Compile Include="Design\CommandReferencePropertyDescriptor.cs" />
-    <Compile Include="Extensions\PatternElementSchemaExtensions.cs" />
+    <Compile Include="Automation\PatternElementSchemaExtensions.cs" />
     <Compile Include="Automation\Menu\IMenuSettings.cs" />
     <Compile Include="Automation\Guidance\AssociatedGuidanceTypeConverter.cs" />
     <Compile Include="Automation\Guidance\GuidanceExtension.cs" />
@@ -213,7 +213,7 @@
     <Compile Include="ValueComparers\InstanceNameComparer.cs" />
     <Compile Include="Conditions\DropFileCondition.cs" />
     <Compile Include="Conditions\DropItemCondition.cs" />
-    <Compile Include="Extensions\DragDropHelpers.cs" />
+    <Compile Include="Automation\DragDrop\DragDropHelpers.cs" />
     <Compile Include="GuidHelper.cs" />
     <Compile Include="TypeEditors\TextTemplateUriEditor.cs" />
     <Compile Include="Commands\Helpers\ReferenceTag.cs" />
@@ -282,8 +282,8 @@
     <Compile Include="Events\OnElementPropertyChangedEvent.cs" />
     <Compile Include="Events\OnBuildFinishedEvent.cs" />
     <Compile Include="Events\OnBuildStartedEvent.cs" />
-    <Compile Include="Extensions\CommandSettingExtensions.cs" />
-    <Compile Include="Extensions\ProductElementExtensions.cs" />
+    <Compile Include="Automation\Command\CommandSettingExtensions.cs" />
+    <Compile Include="Automation\ProductElementExtensions.cs" />
     <Compile Include="GeneratedCode\Customization\LibraryExports.gen.cs">
       <DependentUpon>LibraryExports.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -529,9 +529,17 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Source\VisualStudio\VisualStudio.csproj">
+    <ProjectReference Include="..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
+      <Project>{72cc87f3-2860-45cc-8712-00621f868d60}</Project>
+      <Name>Common.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Source\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
-      <Name>VisualStudio</Name>
+      <Name>Common.VisualStudio</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Runtime\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
       <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
@@ -540,10 +548,6 @@
     <ProjectReference Include="..\..\Common\Source\Extensibility\Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
       <Name>Extensibility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Runtime\Source\Runtime\Runtime.csproj">
-      <Project>{79A7E018-1A92-47F4-A478-17BCC57CC7AD}</Project>
-      <Name>Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

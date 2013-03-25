@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime
 {
@@ -13,9 +14,8 @@ namespace NuPattern.Runtime
     /// Adapter class that exposes installed toolkits from the <see cref="IVsExtensionManager"/> 
     /// as <see cref="IInstalledToolkitInfo"/> instances.
     /// </summary>
-    [CLSCompliant(false)]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    public class InstalledToolkitAdapter
+    internal class InstalledToolkitAdapter
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<InstalledToolkitAdapter>();
 

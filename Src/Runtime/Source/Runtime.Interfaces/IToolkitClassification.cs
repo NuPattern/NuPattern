@@ -1,4 +1,6 @@
 ﻿
+using NuPattern.VisualStudio.Extensions;
+
 namespace NuPattern.Runtime
 {
     /// <summary>
@@ -14,11 +16,11 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Gets the visibility of the toolkit for customization.
         /// </summary>
-        ToolkitVisibility CustomizeVisibility { get; }
+        ExtensionVisibility CustomizeVisibility { get; }
 
         /// <summary>
         /// Gets the visibility of the toolkit for creation.
         /// </summary>
-        ToolkitVisibility CreateVisibility { get; }
+        ExtensionVisibility CreateVisibility { get; }
     }
 }

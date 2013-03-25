@@ -6,6 +6,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Extensibility;
+using NuPattern.Runtime.Bindings;
 using Dsl = Microsoft.VisualStudio.Modeling;
 
 namespace NuPattern.Runtime.Store.UnitTests
@@ -86,12 +87,12 @@ namespace NuPattern.Runtime.Store.UnitTests
             {
                 this.elementInfo.Setup(e => e.Elements)
                     .Returns(new IAbstractElementInfo[]
-					{
-						Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-						Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
-						Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-						Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
-					});
+                    {
+                        Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                        Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
+                        Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                        Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
+                    });
 
                 var target = this.CreateElement();
 
@@ -103,12 +104,12 @@ namespace NuPattern.Runtime.Store.UnitTests
             {
                 this.elementInfo.Setup(e => e.Elements)
                     .Returns(new IAbstractElementInfo[]
-					{
-						Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
-						Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
-						Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
-						Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
-					});
+                    {
+                        Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
+                        Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
+                        Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
+                        Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
+                    });
 
                 var target = this.CreateElement();
 
@@ -123,10 +124,10 @@ namespace NuPattern.Runtime.Store.UnitTests
 
                 this.elementInfo.Setup(e => e.Elements)
                     .Returns(new IAbstractElementInfo[]
-					{
-						Mocks.Of<IElementInfo>().First(e => e.Id == elementId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-						Mocks.Of<ICollectionInfo>().First(e => e.Id == collectionId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true)
-					});
+                    {
+                        Mocks.Of<IElementInfo>().First(e => e.Id == elementId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                        Mocks.Of<ICollectionInfo>().First(e => e.Id == collectionId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true)
+                    });
 
                 var target = this.CreateElement();
 
@@ -165,9 +166,9 @@ namespace NuPattern.Runtime.Store.UnitTests
             {
                 this.elementInfo.Setup(e => e.Properties)
                     .Returns(new[] { Mocks.Of<IPropertyInfo>().First(p => p.Id == Guid.NewGuid() && 
-						p.Name == "FooBar" &&
-						p.Type == "System.String" &&
-						p.DefaultValue == Mock.Of<IPropertyBindingSettings>(s => s.Value == "Foo") )});
+                        p.Name == "FooBar" &&
+                        p.Type == "System.String" &&
+                        p.DefaultValue == Mock.Of<IPropertyBindingSettings>(s => s.Value == "Foo") )});
 
                 var target = this.CreateElement();
 
@@ -259,12 +260,12 @@ namespace NuPattern.Runtime.Store.UnitTests
             {
                 this.collectionInfo.Setup(e => e.Elements)
                     .Returns(new IAbstractElementInfo[]
-				{
-					Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-					Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
-					Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-					Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
-				});
+                {
+                    Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                    Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
+                    Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                    Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
+                });
 
                 var target = this.CreateCollection();
 
@@ -277,12 +278,12 @@ namespace NuPattern.Runtime.Store.UnitTests
             {
                 this.collectionInfo.Setup(e => e.Elements)
                     .Returns(new IAbstractElementInfo[]
-				{
-					Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
-					Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
-					Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
-					Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
-				});
+                {
+                    Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
+                    Mocks.Of<IElementInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany),
+                    Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.OneToOne),
+                    Mocks.Of<ICollectionInfo>().First(e => e.Cardinality == Cardinality.ZeroToMany)
+                });
 
                 var target = this.CreateCollection();
 
@@ -297,10 +298,10 @@ namespace NuPattern.Runtime.Store.UnitTests
 
                 this.collectionInfo.Setup(e => e.Elements)
                     .Returns(new IAbstractElementInfo[]
-				{
-					Mocks.Of<IElementInfo>().First(e => e.Id == elementId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-					Mocks.Of<ICollectionInfo>().First(e => e.Id == collectionId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true)
-				});
+                {
+                    Mocks.Of<IElementInfo>().First(e => e.Id == elementId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                    Mocks.Of<ICollectionInfo>().First(e => e.Id == collectionId && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true)
+                });
 
                 var target = this.CreateCollection();
 
@@ -368,21 +369,21 @@ namespace NuPattern.Runtime.Store.UnitTests
                     x.Id == Guid.NewGuid() &&
                     x.Cardinality == Cardinality.ZeroToMany &&
                     x.Elements == new List<IAbstractElementInfo>
-					{
-						Mock.Of<IElementInfo>(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-						Mock.Of<ICollectionInfo>(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
-						Mock.Of<ICollectionInfo>(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.ZeroToMany)
-					} &&
+                    {
+                        Mock.Of<IElementInfo>(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                        Mock.Of<ICollectionInfo>(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.OneToOne && e.AutoCreate == true),
+                        Mock.Of<ICollectionInfo>(e => e.Id == Guid.NewGuid() && e.Cardinality == Cardinality.ZeroToMany)
+                    } &&
                     x.Properties == new List<IPropertyInfo>
-					{ 
-						Mock.Of<IPropertyInfo>(p => p.Id == Guid.NewGuid() && p.Name == "Foo" + Guid.NewGuid() && p.Type == "System.String"),
-						Mock.Of<IPropertyInfo>(p => p.Id == Guid.NewGuid() && p.Name == "Foo" + Guid.NewGuid() && p.Type == "System.String")
-					} &&
+                    { 
+                        Mock.Of<IPropertyInfo>(p => p.Id == Guid.NewGuid() && p.Name == "Foo" + Guid.NewGuid() && p.Type == "System.String"),
+                        Mock.Of<IPropertyInfo>(p => p.Id == Guid.NewGuid() && p.Name == "Foo" + Guid.NewGuid() && p.Type == "System.String")
+                    } &&
                     x.ExtensionPoints == new List<IExtensionPointInfo>
-					{
-						Mock.Of<IExtensionPointInfo>(ep => ep.Id == Guid.NewGuid() && ep.Cardinality == Cardinality.OneToOne && ep.RequiredExtensionPointId == "ext_1"),
-						Mock.Of<IExtensionPointInfo>(ep => ep.Id == Guid.NewGuid() && ep.Cardinality == Cardinality.ZeroToMany && ep.RequiredExtensionPointId == "ext_2"),
-					});
+                    {
+                        Mock.Of<IExtensionPointInfo>(ep => ep.Id == Guid.NewGuid() && ep.Cardinality == Cardinality.OneToOne && ep.RequiredExtensionPointId == "ext_1"),
+                        Mock.Of<IExtensionPointInfo>(ep => ep.Id == Guid.NewGuid() && ep.Cardinality == Cardinality.ZeroToMany && ep.RequiredExtensionPointId == "ext_2"),
+                    });
 
                 var providedExtension1 = Mocks.Of<IProvidedExtensionPointInfo>().First(x => x.ExtensionPointId == "ext_1");
                 var extensionPoint1 = Mocks.Of<IInstalledToolkitInfo>().First(x =>

@@ -2,8 +2,8 @@
 using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Extensibility.Bindings.Design;
 using NuPattern.Runtime.Schema.Properties;
 
 namespace NuPattern.Runtime.Schema
@@ -58,11 +58,7 @@ namespace NuPattern.Runtime.Schema
 
             // We know that we're always dealing with a concrete type implementation as it's not 
             // externally set-able and we always instantiate a PropertyBindingSettings.
-            return new DesignProperty(this.schema.DefaultValue)
-            {
-                Type = this.propertyType,
-                Attributes = this.AttributeArray
-            };
+            return new DesignProperty(this.schema.DefaultValue, this.propertyType, this.AttributeArray);
         }
 
         public override void SetValue(object component, object value)

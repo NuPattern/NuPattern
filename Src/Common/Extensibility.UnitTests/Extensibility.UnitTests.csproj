@@ -74,6 +74,9 @@
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="..\Helpers\DslTestStore.cs">
+      <Link>DslTestStore.cs</Link>
+    </Compile>
     <Compile Include="..\Helpers\FakeSolution.cs">
       <Link>FakeSolution.cs</Link>
     </Compile>
@@ -83,15 +86,31 @@
     <Compile Include="Binding\Design\DesignPropertyValueDescriptorSpec.cs" />
     <Compile Include="Binding\Design\DesignPropertySpec.cs" />
     <Compile Include="Binding\PropertyBindingSettingsSpec.cs" />
+    <Compile Include="ModelElementExtensionsSpec.cs" />
+    <Compile Include="Model\Store\AutomationExtensionsSpec.cs" />
+    <Compile Include="Model\Store\StoreEventBufferingScopeSpec.cs" />
+    <Compile Include="PathResolverSpec.cs" />
+    <Compile Include="ProxyServiceProviderSpec.cs" />
+    <Compile Include="ReferenceKindProviderSpec.cs" />
     <Compile Include="SolutionExtensionsSpec.cs" />
+    <Compile Include="ToolkitInterfaceLayerSpec.cs" />
+    <Compile Include="ToolkitInterfaceLayer\Architecture.cs" />
+    <Compile Include="ToolkitInterfaceLayer\DataContract.cs" />
+    <Compile Include="ToolkitInterfaceLayer\Folder.cs" />
+    <Compile Include="ToolkitInterfaceLayer\IArchitecture.cs" />
+    <Compile Include="ToolkitInterfaceLayer\IDataContract.cs" />
+    <Compile Include="ToolkitInterfaceLayer\IFolder.cs" />
+    <Compile Include="ToolkitInterfaceLayer\ISerializer.cs" />
+    <Compile Include="ToolkitInterfaceLayer\IWebService.cs" />
+    <Compile Include="ToolkitInterfaceLayer\Serializer.cs" />
+    <Compile Include="ToolkitInterfaceLayer\TrueConverter.cs" />
+    <Compile Include="ToolkitInterfaceLayer\WebService.cs" />
     <Compile Include="TypeExtensionsSpec.cs" />
+    <Compile Include="UriReferenceServiceSpec.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Helpers\Assertions.cs">
       <Link>Assertions.cs</Link>
-    </Compile>
-    <Compile Include="..\Helpers\VsHostedSpec.cs">
-      <Link>VsHostedSpec.cs</Link>
     </Compile>
     <Compile Include="Binding\BindingFactorySpec.cs" />
     <Compile Include="Binding\BindingPropertyChangesSpec.cs" />
@@ -115,17 +134,42 @@
       <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
       <Name>Runtime.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Runtime\Source\Runtime.Schema\Runtime.Schema.csproj">
+      <Project>{b0f2590a-f583-4883-b701-923b43475bb5}</Project>
+      <Name>Runtime.Schema</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Runtime\Source\Runtime.Store\Runtime.Store.csproj">
+      <Project>{0ef7e7d4-b10b-4fc9-b4d0-66e360f4338a}</Project>
+      <Name>Runtime.Store</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Common\Common.csproj">
+      <Project>{67A9DEA6-D17D-453E-B55A-72B6223DA3A8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Source\Extensibility\Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
       <Name>Extensibility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\VisualStudio\VisualStudio.csproj">
+    <ProjectReference Include="..\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
-      <Name>VisualStudio</Name>
+      <Name>Common.VisualStudio</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="ToolkitInterfaceLayer\PatternModel.gen.patterndefinition">
+      <DependentUpon>PatternModel.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Designer</SubType>
+      <DesignTime>True</DesignTime>
+    </None>
+    <None Include="ToolkitInterfaceLayer\PatternModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PatternModel.gen.patterndefinition</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.TestProjects.targets" />

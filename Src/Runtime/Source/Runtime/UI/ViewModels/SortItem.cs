@@ -5,7 +5,7 @@ namespace NuPattern.Runtime.UI
     /// <summary>
     /// Represents an item used for setting a sorting.
     /// </summary>
-    public class SortItem
+    internal class SortItem
     {
         /// <summary>
         /// Creates a new instance of the <see cref="SortItem"/> class.

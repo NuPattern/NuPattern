@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.Schema
     /// DomainClass PatternModelSchema
     /// The root in which all other elements are embedded. Appears as a diagram.
     /// </summary>
-    public partial class PatternModelSchema
+    partial class PatternModelSchema
     {
         internal Func<PatternModelSchema, Version, PatternModelSchema, PatternModelCloner> ClonerFactory = (b, v, t) => new PatternModelCloner(b, v, t);
 

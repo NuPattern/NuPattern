@@ -37,7 +37,7 @@ namespace NuPattern.Runtime.Schema
 namespace NuPattern.Runtime.Schema
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class PatternSchema
+	internal partial class PatternSchema
 	{
 		/// <summary>
 		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
@@ -61,7 +61,7 @@ namespace NuPattern.Runtime.Schema
 namespace NuPattern.Runtime.Schema
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public abstract partial class CustomizableElementSchemaBase
+	internal abstract partial class CustomizableElementSchemaBase
 	{
 		/// <summary>
 		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Bindings
 {
 	/// <summary>
 	/// The service that provides MEF composition and exports resolution for bound components.

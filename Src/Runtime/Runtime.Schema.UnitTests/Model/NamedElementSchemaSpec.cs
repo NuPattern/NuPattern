@@ -37,7 +37,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
                 });
             }
 
-            protected override NamedElementSchema Element
+            internal override NamedElementSchema Element
             {
                 get
                 {

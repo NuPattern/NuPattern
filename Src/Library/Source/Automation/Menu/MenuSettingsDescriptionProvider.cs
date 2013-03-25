@@ -3,15 +3,16 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.ComponentModel;
+using NuPattern.Extensibility.Bindings;
+using NuPattern.Extensibility.Design;
 
 namespace NuPattern.Library.Automation
 {
     /// <summary>
     /// Defines a type descriptor provider over <see cref="MenuSettings"/>.
     /// </summary>
-    public class MenuSettingsDescriptionProvider : ElementTypeDescriptionProvider
+    internal class MenuSettingsDescriptionProvider : ElementTypeDescriptionProvider
     {
         /// <summary>
         /// Overridables for the derived class to provide a custom type descriptor.

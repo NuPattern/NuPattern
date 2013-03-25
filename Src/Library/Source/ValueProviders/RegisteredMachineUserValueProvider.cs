@@ -2,8 +2,10 @@
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.Win32;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Extensibility;
 using NuPattern.Library.Properties;
+using NuPattern.Win32;
 
 namespace NuPattern.Library.ValueProviders
 {
@@ -26,7 +28,8 @@ namespace NuPattern.Library.ValueProviders
         /// <summary>
         /// Creates a new instance of the <see cref="RegisteredMachineUserValueProvider"/> class.
         /// </summary>
-        public RegisteredMachineUserValueProvider() : this(null)
+        public RegisteredMachineUserValueProvider()
+            : this(null)
         {
             if (this.reader == null)
             {
@@ -37,7 +40,8 @@ namespace NuPattern.Library.ValueProviders
         /// <summary>
         /// Creates a new instance of the <see cref="RegisteredMachineUserValueProvider"/> class.
         /// </summary>
-        internal RegisteredMachineUserValueProvider(IRegistryReader reader) : base()
+        internal RegisteredMachineUserValueProvider(IRegistryReader reader)
+            : base()
         {
             this.reader = reader;
         }

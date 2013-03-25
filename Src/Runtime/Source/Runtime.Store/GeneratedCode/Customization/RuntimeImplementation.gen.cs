@@ -15,63 +15,64 @@ using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.ComponentModel;
 
 namespace NuPattern.Runtime.Store
 { 
 	/// <summary>
 	/// The state of all products in the solution..
 	/// </summary>
-	public partial class ProductState : INotifyPropertyChanged
+	partial class ProductState : INotifyPropertyChanged
 	{ 
-		private PropertyChangeManager propertyChanges;
+	    private PropertyChangeManager propertyChanges;
 	
-		/// <summary>
-		/// Gets the manager for property change event subscriptions for this instance 
-		///	and any of its derived classes.
-		/// </summary>
-		protected PropertyChangeManager PropertyChanges
-		{
-			get
-			{
-				if (this.propertyChanges == null)
-				{
-					this.propertyChanges = new PropertyChangeManager(this);
-				}
+	    /// <summary>
+	    /// Gets the manager for property change event subscriptions for this instance 
+	    ///	and any of its derived classes.
+	    /// </summary>
+	    protected PropertyChangeManager PropertyChanges
+	    {
+	        get
+	        {
+	            if (this.propertyChanges == null)
+	            {
+	                this.propertyChanges = new PropertyChangeManager(this);
+	            }
 	
-				return this.propertyChanges;
-			}
-		}
+	            return this.propertyChanges;
+	        }
+	    }
 	
-		/// <summary>
-		/// Provides property change subscription.
-		/// </summary>
-		IDisposable IProductState.SubscribeChanged(Expression<Func<IProductState, object>> propertyExpression, Action<IProductState> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Provides property change subscription.
+	    /// </summary>
+	    IDisposable IProductState.SubscribeChanged(Expression<Func<IProductState, object>> propertyExpression, Action<IProductState> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	}
 	
 	/// <summary>
 	/// The state of all products in the solution.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial class ProductState : IProductState
+	partial class ProductState : IProductState
 	{ 
 		/// <summary>
 		/// The products in this solution.
 		/// </summary>
 		IEnumerable<IProduct> IProductState.Products
 		{
-			get { return this.Products.Cast<IProduct>(); }
+		    get { return this.Products.Cast<IProduct>(); }
 		}
 		
 		
@@ -81,39 +82,39 @@ namespace NuPattern.Runtime.Store
 		/// </summary>
 		public IProduct CreateProduct(Action<IProduct> initializer = null)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
-			using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
-			{
-				var instance = this.Create<Product>();
-				instance.ProductState = this;
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
+		    using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
+		    {
+		        var instance = this.Create<Product>();
+		        instance.ProductState = this;
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 	
-		/// <summary>
-		/// Deletes an element from the store.
-		/// </summary>
-		void IProductState.Delete()
-		{
-			if (this.Store.TransactionManager.InTransaction)
-			{
-				this.Delete();
-			}
-			else
-			{
-				using (var tx = this.Store.TransactionManager.BeginTransaction())
-				{
-					this.Delete();
-					tx.Commit();
-				}
-			}
-		}
+	    /// <summary>
+	    /// Deletes an element from the store.
+	    /// </summary>
+	    void IProductState.Delete()
+	    {
+	        if (this.Store.TransactionManager.InTransaction)
+	        {
+	            this.Delete();
+	        }
+	        else
+	        {
+	            using (var tx = this.Store.TransactionManager.BeginTransaction())
+	            {
+	                this.Delete();
+	                tx.Commit();
+	            }
+	        }
+	    }
 	}
 }
 namespace NuPattern.Runtime.Store
@@ -121,48 +122,48 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// A property of an element..
 	/// </summary>
-	public partial class Property : INotifyPropertyChanged
+	partial class Property : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Provides property change subscription.
-		/// </summary>
-		IDisposable IProperty.SubscribeChanged(Expression<Func<IProperty, object>> propertyExpression, Action<IProperty> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Provides property change subscription.
+	    /// </summary>
+	    IDisposable IProperty.SubscribeChanged(Expression<Func<IProperty, object>> propertyExpression, Action<IProperty> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	}
 	
 	/// <summary>
 	/// A property of an element.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial class Property : IProperty
+	partial class Property : IProperty
 	{ 
-		/// <summary>
-		/// Provides read-only access to the schema information for this element.
-		/// </summary>
-		public new IPropertyInfo Info
-		{ 
-			get { return (IPropertyInfo)base.Info; }
-			internal set { base.Info = value; }
-		}
+	    /// <summary>
+	    /// Provides read-only access to the schema information for this element.
+	    /// </summary>
+	    public new IPropertyInfo Info
+	    { 
+	        get { return (IPropertyInfo)base.Info; }
+	        internal set { base.Info = value; }
+	    }
 		
 		/// <summary>
 		/// The owning element.
 		/// </summary>
 		IProductElement IProperty.Owner
 		{
-			get { return this.Owner; }
-			set { this.Owner = (ProductElement)value; }
+		    get { return this.Owner; }
+		    set { this.Owner = (ProductElement)value; }
 		}
 	}
 }
@@ -171,40 +172,40 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// A container for elements in a view..
 	/// </summary>
-	public partial class Collection : INotifyPropertyChanged
+	partial class Collection : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Provides property change subscription.
-		/// </summary>
-		IDisposable ICollection.SubscribeChanged(Expression<Func<ICollection, object>> propertyExpression, Action<ICollection> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Provides property change subscription.
+	    /// </summary>
+	    IDisposable ICollection.SubscribeChanged(Expression<Func<ICollection, object>> propertyExpression, Action<ICollection> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	}
 	
 	/// <summary>
 	/// A container for elements in a view.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial class Collection : ICollection
+	partial class Collection : ICollection
 	{ 
-		/// <summary>
-		/// Provides read-only access to the schema information for this element.
-		/// </summary>
-		public new ICollectionInfo Info
-		{ 
-			get { return (ICollectionInfo)base.Info; }
-			internal set { base.Info = value; }
-		}
+	    /// <summary>
+	    /// Provides read-only access to the schema information for this element.
+	    /// </summary>
+	    public new ICollectionInfo Info
+	    { 
+	        get { return (ICollectionInfo)base.Info; }
+	        internal set { base.Info = value; }
+	    }
 	}
 }
 namespace NuPattern.Runtime.Store
@@ -212,40 +213,40 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// An element of a view..
 	/// </summary>
-	public partial class Element : INotifyPropertyChanged
+	partial class Element : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Provides property change subscription.
-		/// </summary>
-		IDisposable IElement.SubscribeChanged(Expression<Func<IElement, object>> propertyExpression, Action<IElement> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Provides property change subscription.
+	    /// </summary>
+	    IDisposable IElement.SubscribeChanged(Expression<Func<IElement, object>> propertyExpression, Action<IElement> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	}
 	
 	/// <summary>
 	/// An element of a view.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial class Element : IElement
+	partial class Element : IElement
 	{ 
-		/// <summary>
-		/// Provides read-only access to the schema information for this element.
-		/// </summary>
-		public new IElementInfo Info
-		{ 
-			get { return (IElementInfo)base.Info; }
-			internal set { base.Info = value; }
-		}
+	    /// <summary>
+	    /// Provides read-only access to the schema information for this element.
+	    /// </summary>
+	    public new IElementInfo Info
+	    { 
+	        get { return (IElementInfo)base.Info; }
+	        internal set { base.Info = value; }
+	    }
 	}
 }
 namespace NuPattern.Runtime.Store
@@ -253,47 +254,47 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// An element within the product..
 	/// </summary>
-	public partial class ProductElement : INotifyPropertyChanged
+	partial class ProductElement : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Provides property change subscription.
-		/// </summary>
-		IDisposable IProductElement.SubscribeChanged(Expression<Func<IProductElement, object>> propertyExpression, Action<IProductElement> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Provides property change subscription.
+	    /// </summary>
+	    IDisposable IProductElement.SubscribeChanged(Expression<Func<IProductElement, object>> propertyExpression, Action<IProductElement> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	}
 	
 	/// <summary>
 	/// An element within the product.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial class ProductElement : IProductElement
+	partial class ProductElement : IProductElement
 	{ 
-		/// <summary>
-		/// Provides read-only access to the schema information for this element.
-		/// </summary>
-		public new IPatternElementInfo Info
-		{ 
-			get { return (IPatternElementInfo)base.Info; }
-			internal set { base.Info = value; }
-		}
+	    /// <summary>
+	    /// Provides read-only access to the schema information for this element.
+	    /// </summary>
+	    public new IPatternElementInfo Info
+	    { 
+	        get { return (IPatternElementInfo)base.Info; }
+	        internal set { base.Info = value; }
+	    }
 		
 		/// <summary>
 		/// The properties of this element.
 		/// </summary>
 		IEnumerable<IProperty> IProductElement.Properties
 		{
-			get { return this.Properties.Cast<IProperty>(); }
+		    get { return this.Properties.Cast<IProperty>(); }
 		}
 		
 		
@@ -303,19 +304,19 @@ namespace NuPattern.Runtime.Store
 		/// </summary>
 		public IProperty CreateProperty(Action<IProperty> initializer = null)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
-			using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
-			{
-				var instance = this.Create<Property>();
-				instance.Owner = this;
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
+		    using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
+		    {
+		        var instance = this.Create<Property>();
+		        instance.Owner = this;
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -323,7 +324,7 @@ namespace NuPattern.Runtime.Store
 		/// </summary>
 		IEnumerable<IReference> IProductElement.References
 		{
-			get { return this.References.Cast<IReference>(); }
+		    get { return this.References.Cast<IReference>(); }
 		}
 		
 		
@@ -333,19 +334,19 @@ namespace NuPattern.Runtime.Store
 		/// </summary>
 		public IReference CreateReference(Action<IReference> initializer = null)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
-			using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
-			{
-				var instance = this.Create<Reference>();
-				instance.Owner = this;
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
+		    using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
+		    {
+		        var instance = this.Create<Reference>();
+		        instance.Owner = this;
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 	}
 }
@@ -354,47 +355,47 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// A product instance in the solution..
 	/// </summary>
-	public partial class Product : INotifyPropertyChanged
+	partial class Product : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Provides property change subscription.
-		/// </summary>
-		IDisposable IProduct.SubscribeChanged(Expression<Func<IProduct, object>> propertyExpression, Action<IProduct> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Provides property change subscription.
+	    /// </summary>
+	    IDisposable IProduct.SubscribeChanged(Expression<Func<IProduct, object>> propertyExpression, Action<IProduct> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	}
 	
 	/// <summary>
 	/// A product instance in the solution.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial class Product : IProduct
+	partial class Product : IProduct
 	{ 
-		/// <summary>
-		/// Provides read-only access to the schema information for this element.
-		/// </summary>
-		public new IPatternInfo Info
-		{ 
-			get { return (IPatternInfo)base.Info; }
-			internal set { base.Info = value; }
-		}
+	    /// <summary>
+	    /// Provides read-only access to the schema information for this element.
+	    /// </summary>
+	    public new IPatternInfo Info
+	    { 
+	        get { return (IPatternInfo)base.Info; }
+	        internal set { base.Info = value; }
+	    }
 		
 		/// <summary>
 		/// The views of this product.
 		/// </summary>
 		IEnumerable<IView> IProduct.Views
 		{
-			get { return this.Views.Cast<IView>(); }
+		    get { return this.Views.Cast<IView>(); }
 		}
 		
 		
@@ -404,19 +405,19 @@ namespace NuPattern.Runtime.Store
 		/// </summary>
 		public IView CreateView(Action<IView> initializer = null)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
-			using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
-			{
-				var instance = this.Create<View>();
-				instance.Product = this;
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
+		    using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
+		    {
+		        var instance = this.Create<View>();
+		        instance.Product = this;
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -424,8 +425,8 @@ namespace NuPattern.Runtime.Store
 		/// </summary>
 		IProductState IProduct.ProductState
 		{
-			get { return this.ProductState; }
-			set { this.ProductState = (ProductState)value; }
+		    get { return this.ProductState; }
+		    set { this.ProductState = (ProductState)value; }
 		}
 		
 		/// <summary>
@@ -433,8 +434,8 @@ namespace NuPattern.Runtime.Store
 		/// </summary>
 		IAbstractElement IProduct.Owner
 		{
-			get { return this.Owner; }
-			set { this.Owner = (AbstractElement)value; }
+		    get { return this.Owner; }
+		    set { this.Owner = (AbstractElement)value; }
 		}
 		
 		/// <summary>
@@ -442,8 +443,8 @@ namespace NuPattern.Runtime.Store
 		/// </summary>
 		IView IProduct.View
 		{
-			get { return this.View; }
-			set { this.View = (View)value; }
+		    get { return this.View; }
+		    set { this.View = (View)value; }
 		}
 	}
 }
@@ -452,48 +453,48 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// A view of a product instance..
 	/// </summary>
-	public partial class View : INotifyPropertyChanged
+	partial class View : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Provides property change subscription.
-		/// </summary>
-		IDisposable IView.SubscribeChanged(Expression<Func<IView, object>> propertyExpression, Action<IView> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Provides property change subscription.
+	    /// </summary>
+	    IDisposable IView.SubscribeChanged(Expression<Func<IView, object>> propertyExpression, Action<IView> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	}
 	
 	/// <summary>
 	/// A view of a product instance.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial class View : IView
+	partial class View : IView
 	{ 
-		/// <summary>
-		/// Provides read-only access to the schema information for this element.
-		/// </summary>
-		public new IViewInfo Info
-		{ 
-			get { return (IViewInfo)base.Info; }
-			internal set { base.Info = value; }
-		}
+	    /// <summary>
+	    /// Provides read-only access to the schema information for this element.
+	    /// </summary>
+	    public new IViewInfo Info
+	    { 
+	        get { return (IViewInfo)base.Info; }
+	        internal set { base.Info = value; }
+	    }
 		
 		/// <summary>
 		/// The owning product.
 		/// </summary>
 		IProduct IView.Product
 		{
-			get { return this.Product; }
-			set { this.Product = (Product)value; }
+		    get { return this.Product; }
+		    set { this.Product = (Product)value; }
 		}
 	}
 }
@@ -502,48 +503,48 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// A child collection or element..
 	/// </summary>
-	public partial class AbstractElement : INotifyPropertyChanged
+	partial class AbstractElement : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Provides property change subscription.
-		/// </summary>
-		IDisposable IAbstractElement.SubscribeChanged(Expression<Func<IAbstractElement, object>> propertyExpression, Action<IAbstractElement> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Provides property change subscription.
+	    /// </summary>
+	    IDisposable IAbstractElement.SubscribeChanged(Expression<Func<IAbstractElement, object>> propertyExpression, Action<IAbstractElement> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	}
 	
 	/// <summary>
 	/// A child collection or element.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial class AbstractElement : IAbstractElement
+	partial class AbstractElement : IAbstractElement
 	{ 
-		/// <summary>
-		/// Provides read-only access to the schema information for this element.
-		/// </summary>
-		public new IAbstractElementInfo Info
-		{ 
-			get { return (IAbstractElementInfo)base.Info; }
-			internal set { base.Info = value; }
-		}
+	    /// <summary>
+	    /// Provides read-only access to the schema information for this element.
+	    /// </summary>
+	    public new IAbstractElementInfo Info
+	    { 
+	        get { return (IAbstractElementInfo)base.Info; }
+	        internal set { base.Info = value; }
+	    }
 		
 		/// <summary>
 		/// The owning view.
 		/// </summary>
 		IView IAbstractElement.View
 		{
-			get { return this.View; }
-			set { this.View = (View)value; }
+		    get { return this.View; }
+		    set { this.View = (View)value; }
 		}
 		
 		/// <summary>
@@ -551,8 +552,8 @@ namespace NuPattern.Runtime.Store
 		/// </summary>
 		IAbstractElement IAbstractElement.Owner
 		{
-			get { return this.Owner; }
-			set { this.Owner = (AbstractElement)value; }
+		    get { return this.Owner; }
+		    set { this.Owner = (AbstractElement)value; }
 		}
 	}
 }
@@ -561,74 +562,74 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// An element instance..
 	/// </summary>
-	public partial class InstanceBase : INotifyPropertyChanged
+	partial class InstanceBase : INotifyPropertyChanged
 	{ 
-		private PropertyChangeManager propertyChanges;
+	    private PropertyChangeManager propertyChanges;
 	
-		/// <summary>
-		/// Gets the manager for property change event subscriptions for this instance 
-		///	and any of its derived classes.
-		/// </summary>
-		protected PropertyChangeManager PropertyChanges
-		{
-			get
-			{
-				if (this.propertyChanges == null)
-				{
-					this.propertyChanges = new PropertyChangeManager(this);
-				}
+	    /// <summary>
+	    /// Gets the manager for property change event subscriptions for this instance 
+	    ///	and any of its derived classes.
+	    /// </summary>
+	    protected PropertyChangeManager PropertyChanges
+	    {
+	        get
+	        {
+	            if (this.propertyChanges == null)
+	            {
+	                this.propertyChanges = new PropertyChangeManager(this);
+	            }
 	
-				return this.propertyChanges;
-			}
-		}
+	            return this.propertyChanges;
+	        }
+	    }
 	
-		/// <summary>
-		/// Provides property change subscription.
-		/// </summary>
-		IDisposable IInstanceBase.SubscribeChanged(Expression<Func<IInstanceBase, object>> propertyExpression, Action<IInstanceBase> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Provides property change subscription.
+	    /// </summary>
+	    IDisposable IInstanceBase.SubscribeChanged(Expression<Func<IInstanceBase, object>> propertyExpression, Action<IInstanceBase> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	}
 	
 	/// <summary>
 	/// An element instance.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial class InstanceBase : IInstanceBase
+	partial class InstanceBase : IInstanceBase
 	{ 
-		/// <summary>
-		/// Provides read-only access to the schema information for this element.
-		/// </summary>
-		public INamedElementInfo Info { get; internal set; }
+	    /// <summary>
+	    /// Provides read-only access to the schema information for this element.
+	    /// </summary>
+	    public INamedElementInfo Info { get; internal set; }
 	
-		/// <summary>
-		/// Deletes an element from the store.
-		/// </summary>
-		void IInstanceBase.Delete()
-		{
-			if (this.Store.TransactionManager.InTransaction)
-			{
-				this.Delete();
-			}
-			else
-			{
-				using (var tx = this.Store.TransactionManager.BeginTransaction())
-				{
-					this.Delete();
-					tx.Commit();
-				}
-			}
-		}
+	    /// <summary>
+	    /// Deletes an element from the store.
+	    /// </summary>
+	    void IInstanceBase.Delete()
+	    {
+	        if (this.Store.TransactionManager.InTransaction)
+	        {
+	            this.Delete();
+	        }
+	        else
+	        {
+	            using (var tx = this.Store.TransactionManager.BeginTransaction())
+	            {
+	                this.Delete();
+	                tx.Commit();
+	            }
+	        }
+	    }
 	}
 }
 namespace NuPattern.Runtime.Store
@@ -636,77 +637,77 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// A reference to external data or service..
 	/// </summary>
-	public partial class Reference : INotifyPropertyChanged
+	partial class Reference : INotifyPropertyChanged
 	{ 
-		private PropertyChangeManager propertyChanges;
+	    private PropertyChangeManager propertyChanges;
 	
-		/// <summary>
-		/// Gets the manager for property change event subscriptions for this instance 
-		///	and any of its derived classes.
-		/// </summary>
-		protected PropertyChangeManager PropertyChanges
-		{
-			get
-			{
-				if (this.propertyChanges == null)
-				{
-					this.propertyChanges = new PropertyChangeManager(this);
-				}
+	    /// <summary>
+	    /// Gets the manager for property change event subscriptions for this instance 
+	    ///	and any of its derived classes.
+	    /// </summary>
+	    protected PropertyChangeManager PropertyChanges
+	    {
+	        get
+	        {
+	            if (this.propertyChanges == null)
+	            {
+	                this.propertyChanges = new PropertyChangeManager(this);
+	            }
 	
-				return this.propertyChanges;
-			}
-		}
+	            return this.propertyChanges;
+	        }
+	    }
 	
-		/// <summary>
-		/// Provides property change subscription.
-		/// </summary>
-		IDisposable IReference.SubscribeChanged(Expression<Func<IReference, object>> propertyExpression, Action<IReference> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Provides property change subscription.
+	    /// </summary>
+	    IDisposable IReference.SubscribeChanged(Expression<Func<IReference, object>> propertyExpression, Action<IReference> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	}
 	
 	/// <summary>
 	/// A reference to external data or service.
 	/// </summary>
 	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial class Reference : IReference
+	partial class Reference : IReference
 	{ 
 		/// <summary>
 		/// The owning element.
 		/// </summary>
 		IProductElement IReference.Owner
 		{
-			get { return this.Owner; }
-			set { this.Owner = (ProductElement)value; }
+		    get { return this.Owner; }
+		    set { this.Owner = (ProductElement)value; }
 		}
 	
-		/// <summary>
-		/// Deletes an element from the store.
-		/// </summary>
-		void IReference.Delete()
-		{
-			if (this.Store.TransactionManager.InTransaction)
-			{
-				this.Delete();
-			}
-			else
-			{
-				using (var tx = this.Store.TransactionManager.BeginTransaction())
-				{
-					this.Delete();
-					tx.Commit();
-				}
-			}
-		}
+	    /// <summary>
+	    /// Deletes an element from the store.
+	    /// </summary>
+	    void IReference.Delete()
+	    {
+	        if (this.Store.TransactionManager.InTransaction)
+	        {
+	            this.Delete();
+	        }
+	        else
+	        {
+	            using (var tx = this.Store.TransactionManager.BeginTransaction())
+	            {
+	                this.Delete();
+	                tx.Commit();
+	            }
+	        }
+	    }
 	}
 }

@@ -4,10 +4,11 @@ using System.ComponentModel;
 using System.Drawing.Design;
 using System.Globalization;
 using System.Linq;
-using NuPattern.Extensibility.Binding;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Extensibility.Bindings;
 using NuPattern.Extensibility.Properties;
 
-namespace NuPattern.Extensibility
+namespace NuPattern.Extensibility.Design
 {
     /// <summary>
     /// Provides a <see cref="PropertyDescriptor"/> that manages a collection that is serialized as a string (JSON)

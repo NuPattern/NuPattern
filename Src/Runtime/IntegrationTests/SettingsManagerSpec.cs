@@ -5,6 +5,8 @@ using Microsoft.VisualStudio.Settings;
 using Microsoft.VisualStudio.Shell.Settings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.Runtime.Settings;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.IntegrationTests
 {
@@ -73,8 +75,8 @@ namespace NuPattern.Runtime.IntegrationTests
             [TestMethod, TestCategory("Integration")]
             public void WhenSettingIsSaved_ThenSettingsChangedPublishesOldAndNewValue()
             {
-                RuntimeSettings oldValue = null;
-                RuntimeSettings newValue = null;
+                IRuntimeSettings oldValue = null;
+                IRuntimeSettings newValue = null;
 
                 this.manager.SettingsChanged += (sender, args) => { oldValue = args.OldValue; newValue = args.NewValue; };
 

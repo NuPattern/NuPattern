@@ -10,8 +10,9 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Properties;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
-using NuPattern.Runtime.UriProviders;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.Commands
 {
@@ -93,7 +94,7 @@ namespace NuPattern.Library.Commands
                             var templateUriString = settings.GetPropertyValue<string>(Reflector<GenerateModelingCodeCommand>.GetPropertyName(u => u.TemplateUri));
                             if (!String.IsNullOrEmpty(templateUriString))
                             {
-                                var templateFilename = TextTemplateUriProvider.ParseFileName(new Uri(templateUriString));
+                                var templateFilename = TextTemplateUri.ParseFileName(new Uri(templateUriString));
                                 if (!templateFilename.Equals(item.Data.IncludeInVSIXAs, StringComparison.OrdinalIgnoreCase))
                                 {
                                     context.LogError(

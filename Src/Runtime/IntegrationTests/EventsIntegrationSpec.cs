@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Runtime.IntegrationTests.SampleVsix;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.IntegrationTests
 {

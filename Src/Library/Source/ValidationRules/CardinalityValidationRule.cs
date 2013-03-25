@@ -5,6 +5,7 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Extensibility;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;

@@ -6,39 +6,39 @@ using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Library.Automation;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Library.IntegrationTests
 {
-	[TestClass]
-    [DeploymentItem("Content\\MyTemplate1.gen.vstemplate")]
-    [DeploymentItem("Content\\MyTemplate2.gen.vstemplate")]
+    [TestClass]
+    [DeploymentItem("Library.IntegrationTests.Content\\MyTemplate1.gen.vstemplate")]
+    [DeploymentItem("Library.IntegrationTests.Content\\MyTemplate2.gen.vstemplate")]
     [CLSCompliant(false)]
-	public class InstantiationTemplateWizardSpec : VsHostedSpec
-	{
-	    private const string TestToolkitTemplateCacheFormat = @"%localappdata%\Microsoft\VisualStudio\{0}Exp\VTC\Library.IntegrationTests";
+    public class InstantiationTemplateWizardSpec : IntegrationTest
+    {
+        private const string TestToolkitTemplateCacheFormat = @"%localappdata%\Microsoft\VisualStudio\{0}Exp\VTC\Library.IntegrationTests";
         private const string TestToolkitId = "NuPattern.Runtime.IntegrationTests.TestToolkit";
-		private static readonly IAssertion Assert = new Assertion();
+        private static readonly IAssertion Assert = new Assertion();
 
-		private IPatternManager manager;
-		private IInstalledToolkitInfo toolkit;
-	    private EnvDTE.DTE dte;
+        private IPatternManager manager;
+        private IInstalledToolkitInfo toolkit;
+        private EnvDTE.DTE dte;
 #if VSVER11
-	    private string testToolkitTemplatePath;
+        private string testToolkitTemplatePath;
 #endif
 
-		[TestInitialize]
-		public override void Initialize()
-		{
-			base.Initialize();
+        [TestInitialize]
+        public void InitializeContext()
+        {
+            this.dte = VsIdeTestHostContext.ServiceProvider.GetService<EnvDTE.DTE>();
+            this.manager = VsIdeTestHostContext.ServiceProvider.GetService<IPatternManager>();
+            var componentModel = VsIdeTestHostContext.ServiceProvider.GetService<SComponentModel, IComponentModel>();
+            var installedToolkits = componentModel.GetService<IEnumerable<IInstalledToolkitInfo>>();
 
-            this.dte = ServiceProvider.GetService<EnvDTE.DTE>();
-			this.manager = ServiceProvider.GetService<IPatternManager>();
-			var componentModel = ServiceProvider.GetService<SComponentModel, IComponentModel>();
-			var installedToolkits = componentModel.GetService<IEnumerable<IInstalledToolkitInfo>>();
-
-			this.toolkit = installedToolkits.SingleOrDefault(t => t.Id == TestToolkitId);
+            this.toolkit = installedToolkits.SingleOrDefault(t => t.Id == TestToolkitId);
 
 #if VSVER11
             //Copy TestToolkit template to VSExp template cache
@@ -54,23 +54,23 @@ namespace NuPattern.Library.IntegrationTests
 
 #if VSVER11
 
-	    [TestCleanup]
-	    public void CleanUp()
-	    {
+        [TestCleanup]
+        public void CleanUp()
+        {
             if (Directory.Exists(Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath)))
-	        {
+            {
                 Directory.Delete(Environment.ExpandEnvironmentVariables(this.testToolkitTemplatePath), true);
-	        }
-	    }
+            }
+        }
 #endif
 
         [HostType("VS IDE")]
-		[TestMethod, TestCategory("Integration")]
+        [TestMethod, TestCategory("Integration")]
         public void WhenFindToolkitOrThrowWithUnknownTemplate_ThenThrows()
-		{
-            Assert.Throws<InvalidOperationException>(()=>
+        {
+            Assert.Throws<InvalidOperationException>(() =>
                 InstantiationTemplateWizard.FindToolkitOrThrow(this.manager, @"C:\undefined.vstemplate"));
-		}
+        }
 
         [HostType("VS IDE")]
         [TestMethod, TestCategory("Integration")]
@@ -78,7 +78,7 @@ namespace NuPattern.Library.IntegrationTests
         {
             var dtePath = Path.GetDirectoryName(this.dte.Application.FullName);
             Assert.Throws<InvalidOperationException>(() =>
-                InstantiationTemplateWizard.FindToolkitOrThrow(this.manager, 
+                InstantiationTemplateWizard.FindToolkitOrThrow(this.manager,
                 Path.Combine(dtePath, @"\ProjectTemplates\CSharp\Windows\1033\ClassLibrary\csClassLibrary.vstemplate")));
         }
 
@@ -86,8 +86,8 @@ namespace NuPattern.Library.IntegrationTests
         [TestMethod, TestCategory("Integration")]
         public void WhenFindToolkitOrThrowWithToolkitTemplateVs2010_ThenReturnsToolkit()
         {
-            var result = InstantiationTemplateWizard.FindToolkitOrThrow(this.manager, 
-                Path.Combine(this.toolkit.Extension.InstallPath, 
+            var result = InstantiationTemplateWizard.FindToolkitOrThrow(this.manager,
+                Path.Combine(this.toolkit.Extension.InstallPath,
                 @"Templates\Projects\~PC\MyTemplate1.gen.zip\MyTemplate1.gen.vstemplate"));
 
             Assert.Equal(result.Id, TestToolkitId);

@@ -129,7 +129,9 @@ namespace NuPattern.Runtime.IntegrationTests
                             "Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll",
 
                             //Runtime Assemblies
-                            "NuPattern.Common.Presentation.dll",
+                            "NuPattern.Common.dll",
+                            "NuPattern.Presentation.dll",
+                            "NuPattern.VisualStudio.dll",
                             "NuPattern.Extensibility.dll",
                             "NuPattern.Extensibility.Serialization.dll",
                             "NuPattern.Library.dll",
@@ -139,19 +141,19 @@ namespace NuPattern.Runtime.IntegrationTests
                             "NuPattern.Runtime.Shell.dll",
                             "NuPattern.Runtime.Shell.pkgdef",
                             "NuPattern.Runtime.Store.dll",
-                            "NuPattern.VisualStudio.dll",
 
                             // XML documentation
-                            //"NuPattern.Common.Presentation.xml",
+                            "NuPattern.Common.xml",
+                            "NuPattern.Presentation.xml",
+                            "NuPattern.VisualStudio.xml",
                             "NuPattern.Extensibility.xml",
                             //"NuPattern.Extensibility.Serialization.xml",
                             "NuPattern.Library.xml",
-                            "NuPattern.Runtime.xml",
+                            //"NuPattern.Runtime.xml",
                             "NuPattern.Runtime.Interfaces.xml",
-                            "NuPattern.Runtime.Schema.xml",
+                            //"NuPattern.Runtime.Schema.xml",
                             //"NuPattern.Runtime.Shell.xml",
                             //"NuPattern.Runtime.Store.xml",
-                            "NuPattern.VisualStudio.xml",
                         }));
             }
         }

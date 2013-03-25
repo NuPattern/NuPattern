@@ -11,7 +11,9 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
 using NuPattern.Library.Properties;
+using NuPattern.Presentation;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 using Application = System.Windows.Application;
 
 namespace NuPattern.Library.Automation
@@ -19,8 +21,7 @@ namespace NuPattern.Library.Automation
     /// <summary>
     /// Defines a wizard automation.
     /// </summary>
-    [CLSCompliant(false)]
-    public class WizardAutomation : AutomationExtension<IWizardSettings>, IWizardAutomationExtension
+    internal class WizardAutomation : AutomationExtension<IWizardSettings>, IWizardAutomationExtension
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<WizardAutomation>();
 
@@ -94,7 +95,7 @@ namespace NuPattern.Library.Automation
 
                 wizard.DataContext = this.Owner;
 
-                using (new Runtime.MouseCursor(System.Windows.Input.Cursors.Arrow))
+                using (new MouseCursor(System.Windows.Input.Cursors.Arrow))
                 {
                     this.IsCanceled = !wizard.ShowDialog().GetValueOrDefault();
                 }

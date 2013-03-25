@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
+using NuPattern.Reflection;
 using NuPattern.Runtime.Schema.Properties;
 
 namespace NuPattern.Runtime.Schema
@@ -14,7 +15,7 @@ namespace NuPattern.Runtime.Schema
     /// Custom validation rules.
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class PatternElementSchema
+    partial class PatternElementSchema
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternElementSchema>();
 

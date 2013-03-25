@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.Store
     /// Performs runtime cardinality validation.
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class InstanceBase
+    partial class InstanceBase
     {
         /// <summary>
         /// Validates the cardinality.

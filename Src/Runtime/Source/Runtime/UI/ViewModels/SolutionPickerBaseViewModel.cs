@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Presentation;
 
 namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Provides a view model for the solution pickers
     /// </summary>
-    [CLSCompliant(false)]
-    public abstract class SolutionPickerBaseViewModel : ViewModel
+    internal abstract class SolutionPickerBaseViewModel : ViewModel
     {
         private string emptyItemsMessage;
 

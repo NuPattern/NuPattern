@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
+using NuPattern.Reflection;
 using NuPattern.Runtime.Schema.Properties;
 
 namespace NuPattern.Runtime.Schema
@@ -12,7 +12,7 @@ namespace NuPattern.Runtime.Schema
     /// Customizations for the PatternSchema class.
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class PatternSchema
+    partial class PatternSchema
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternSchema>();
 

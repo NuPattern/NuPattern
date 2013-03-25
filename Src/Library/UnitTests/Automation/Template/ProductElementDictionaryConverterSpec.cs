@@ -43,7 +43,7 @@ namespace NuPattern.Library.UnitTests
         [TestClass]
         public abstract class GivenAnEmptyProduct
         {
-            public Product Product
+            internal Product Product
             {
                 get;
                 private set;
@@ -67,7 +67,7 @@ namespace NuPattern.Library.UnitTests
         [TestClass]
         public abstract class GivenAFullHierarchy : GivenAnEmptyProduct
         {
-            public View View { get; private set; }
+            internal View View { get; private set; }
 
             [TestInitialize]
             public override void Initialize()
@@ -164,13 +164,13 @@ namespace NuPattern.Library.UnitTests
         [TestClass]
         public class GivenAProductWithAnOneToOneElement : GivenAnEmptyProduct
         {
-            public View View
+            internal View View
             {
                 get;
                 private set;
             }
 
-            public Element Element
+            internal Element Element
             {
                 get;
                 private set;
@@ -211,13 +211,13 @@ namespace NuPattern.Library.UnitTests
         [TestClass]
         public class GivenAProductWithAnOneToManyElement : GivenAnEmptyProduct
         {
-            public View View
+            internal View View
             {
                 get;
                 private set;
             }
 
-            public Element Element
+            internal Element Element
             {
                 get;
                 private set;
@@ -260,13 +260,13 @@ namespace NuPattern.Library.UnitTests
         [TestClass]
         public class GivenAProductWithAnZeroToManyElement : GivenAnEmptyProduct
         {
-            public View View
+            internal View View
             {
                 get;
                 private set;
             }
 
-            public Element Element
+            internal Element Element
             {
                 get;
                 private set;
@@ -337,7 +337,7 @@ namespace NuPattern.Library.UnitTests
         [TestClass]
         public class GivenALeaf : GivenAFullHierarchy
         {
-            public Element Leaf { get; private set; }
+            internal Element Leaf { get; private set; }
 
             [TestInitialize]
             public override void Initialize()
@@ -379,7 +379,7 @@ namespace NuPattern.Library.UnitTests
         [TestClass]
         public class GivenABranch : GivenAFullHierarchy
         {
-            public Element Branch { get; private set; }
+            internal Element Branch { get; private set; }
 
             [TestInitialize]
             public override void Initialize()

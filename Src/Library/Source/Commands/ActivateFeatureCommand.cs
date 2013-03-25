@@ -5,6 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Extensibility;
 using NuPattern.Extensibility.References;
 using NuPattern.Library.Properties;

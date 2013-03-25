@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.Store
     /// <summary>
     /// Helper methods for products.
     /// </summary>
-    public static class ProductExtensions
+    static class ProductExtensions
     {
         /// <summary>
         /// Determines whether the given pattern instance is a valid extension for any 

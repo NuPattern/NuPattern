@@ -7,7 +7,7 @@ namespace NuPattern.Extensibility
 	/// <summary>
 	/// Provides a <see cref="IServiceProvider"/> that wraps another and allow add and remove local services.
 	/// </summary>
-	internal class ProxyServiceProvider : IServiceProvider, IServiceContainer
+	public class ProxyServiceProvider : IServiceProvider, IServiceContainer
 	{
 		private IServiceProvider serviceProvider;
 		private Dictionary<Type, ServiceCreatorCallback> services = new Dictionary<Type, ServiceCreatorCallback>();

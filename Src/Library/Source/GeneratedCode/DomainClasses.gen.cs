@@ -19,9 +19,8 @@ namespace NuPattern.Library.Automation
 	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.TemplateSettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Library.Automation.TemplateSettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("1d522a01-5d23-4d87-8493-dfcbe3d05a9b")]
-	public partial class TemplateSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
+	internal partial class TemplateSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
 	{
 		#region Constructors, domain class Id
 	
@@ -934,7 +933,7 @@ namespace NuPattern.Library.Automation
 		/// value substitution from properties on the current element. (e.g. {InstanceName}
 		/// or {VariablePropertyName}). See guidance documentation for details.
 		/// </summary>
-		[NuPattern.Extensibility.PropertyDescriptor(typeof(NuPattern.Extensibility.Binding.PropertyBindingDescriptor))]
+		[NuPattern.ComponentModel.Design.PropertyDescriptor(typeof(NuPattern.Extensibility.Bindings.PropertyBindingDescriptor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.TemplateSettings/RawTargetFileName.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("d8c350bd-ff83-4000-95c4-961befdb289f")]
@@ -1047,7 +1046,7 @@ namespace NuPattern.Library.Automation
 		/// element and into the 'GeneratedCode' sub-folder of that container (project or
 		/// folder).  See guidance documentation for more example paths and details.
 		/// </summary>
-		[NuPattern.Extensibility.PropertyDescriptor(typeof(NuPattern.Extensibility.Binding.PropertyBindingDescriptor))]
+		[NuPattern.ComponentModel.Design.PropertyDescriptor(typeof(NuPattern.Extensibility.Bindings.PropertyBindingDescriptor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/RawTargetPath.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.TemplateSettings/RawTargetPath.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("e258cc61-f5b7-43fe-a9a9-e08c733c5c40")]
@@ -1259,9 +1258,8 @@ namespace NuPattern.Library.Automation
 	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.EventSettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Library.Automation.EventSettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("d7fce310-a0b0-424c-b439-6e94222544e6")]
-	public partial class EventSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
+	internal partial class EventSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1306,7 +1304,7 @@ namespace NuPattern.Library.Automation
 		/// The type of event which triggers the command to execute when all conditions are
 		/// met.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FeatureComponentTypeConverter<NuPattern.Runtime.IObservableEvent>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FeatureComponentTypeConverter<NuPattern.IObservableEvent>))]
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.EventSettings/EventId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.EventSettings/EventId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -1844,9 +1842,8 @@ namespace NuPattern.Library.Automation
 	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.CommandSettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Library.Automation.CommandSettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("63e8eaf8-6f53-45ea-96f9-b6d8af7276e2")]
-	public partial class CommandSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
+	internal partial class CommandSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1891,7 +1888,7 @@ namespace NuPattern.Library.Automation
 		/// The type of the command. Once selected, the specific properties of the selected
 		/// command can be configured.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FeatureComponentTypeConverter<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FeatureComponentTypeConverter<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand>))]
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.CommandSettings/TypeId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.CommandSettings/TypeId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -2103,9 +2100,8 @@ namespace NuPattern.Library.Automation
 	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.MenuSettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Library.Automation.MenuSettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("29b8619f-8cba-4cdc-98ec-7035d9d2c3f8")]
-	public partial class MenuSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
+	internal partial class MenuSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
 	{
 		#region Constructors, domain class Id
 	
@@ -2363,8 +2359,8 @@ namespace NuPattern.Library.Automation
 		/// Gets or sets the value of Icon domain property.
 		/// The icon that is displayed on the menu to the user.
 		/// </summary>
-		[NuPattern.Extensibility.ImageFilter(NuPattern.Extensibility.ImageKind.Image )]
-		[System.ComponentModel.Editor(typeof(NuPattern.Extensibility.ImageUriEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[NuPattern.Extensibility.Design.ImageFilter(NuPattern.Extensibility.Design.ImageKind.Image )]
+		[System.ComponentModel.Editor(typeof(NuPattern.Extensibility.Design.ImageUriEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.MenuSettings/Icon.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.MenuSettings/Icon.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("4b76d211-4350-4cc8-8bde-c495be238113")]
@@ -2579,7 +2575,7 @@ namespace NuPattern.Library.Automation
 		/// Gets or sets the value of CustomStatus domain property.
 		/// An optional type that provides dynamic menu status updates for this menu.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FeatureComponentTypeConverter<NuPattern.Runtime.ICommandStatus>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FeatureComponentTypeConverter<NuPattern.Runtime.ICommandStatus>))]
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.MenuSettings/CustomStatus.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.MenuSettings/CustomStatus.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -2900,9 +2896,8 @@ namespace NuPattern.Library.Automation
 	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.GuidanceExtension.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Library.Automation.GuidanceExtension.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("99460d09-2d87-47d5-a6b5-56cbf5d299fd")]
-	public partial class GuidanceExtension : global::Microsoft.VisualStudio.Modeling.ExtensionElement
+	internal partial class GuidanceExtension : global::Microsoft.VisualStudio.Modeling.ExtensionElement
 	{
 		#region Constructors, domain class Id
 	
@@ -3496,9 +3491,8 @@ namespace NuPattern.Library.Automation
 	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.WizardSettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Library.Automation.WizardSettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("765329ab-9384-4a2c-b5c2-e2c4b60912f5")]
-	public partial class WizardSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
+	internal partial class WizardSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
 	{
 		#region Constructors, domain class Id
 	
@@ -3543,7 +3537,7 @@ namespace NuPattern.Library.Automation
 		/// The type name of the wizard. 
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FullTypeTypeConverter<System.Windows.Window>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter<System.Windows.Window>))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.WizardSettings/TypeName.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.WizardSettings/TypeName.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("a0d15274-7041-4b71-9e11-2bce1b7ac841")]
@@ -3646,9 +3640,8 @@ namespace NuPattern.Library.Automation
 	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ArtifactExtension.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Library.Automation.ArtifactExtension.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("18f556f4-beef-476c-89dc-f7e63f9dbf48")]
-	public partial class ArtifactExtension : global::Microsoft.VisualStudio.Modeling.ExtensionElement
+	internal partial class ArtifactExtension : global::Microsoft.VisualStudio.Modeling.ExtensionElement
 	{
 		#region Constructors, domain class Id
 	
@@ -4023,9 +4016,8 @@ namespace NuPattern.Library.Automation
 	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ValidationExtension.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Library.Automation.ValidationExtension.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("8aceddb6-1e3a-4d8b-9703-43348f695c8e")]
-	public partial class ValidationExtension : global::Microsoft.VisualStudio.Modeling.ExtensionElement
+	internal partial class ValidationExtension : global::Microsoft.VisualStudio.Modeling.ExtensionElement
 	{
 		#region Constructors, domain class Id
 	
@@ -4510,7 +4502,7 @@ namespace NuPattern.Library.Automation
 		/// A custom event to execute validation on the current element and all its
 		/// descendants.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.FeatureComponentTypeConverter<NuPattern.Runtime.IObservableEvent>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FeatureComponentTypeConverter<NuPattern.IObservableEvent>))]
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -4617,9 +4609,8 @@ namespace NuPattern.Library.Automation
 	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.DragDropSettings.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Library.Automation.DragDropSettings.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Library.Automation.LibraryDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("4aed72c0-e518-4835-9d56-04f3d4e7bc58")]
-	public partial class DragDropSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
+	internal partial class DragDropSettings : global::Microsoft.VisualStudio.Modeling.ExtensionElement
 	{
 		#region Constructors, domain class Id
 	

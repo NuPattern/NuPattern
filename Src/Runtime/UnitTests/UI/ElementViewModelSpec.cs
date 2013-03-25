@@ -4,7 +4,10 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Presentation;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI.UnitTests
 {
@@ -87,7 +90,7 @@ namespace NuPattern.Runtime.UI.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingNewInstance_ThenExposesIconPath()
             {
-                Assert.Equal(string.Format(CultureInfo.InvariantCulture, ElementViewModel.IconPathFormat, this.element.GetType().Name ), this.target.IconPath);
+                Assert.Equal(string.Format(CultureInfo.InvariantCulture, ElementViewModel.IconPathFormat, this.element.GetType().Name), this.target.IconPath);
             }
 
             [TestMethod, TestCategory("Unit")]

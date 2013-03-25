@@ -1,14 +1,14 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
-using NuPattern.Extensibility;
+using NuPattern.ComponentModel;
 
 namespace NuPattern.Library.Design
 {
     /// <summary>
     /// CommandReference type description provider
     /// </summary>
-    public class CommandReferenceTypeDescriptionProvider : TypeDescriptionProvider
+    internal class CommandReferenceTypeDescriptionProvider : TypeDescriptionProvider
     {
         private static TypeDescriptionProvider parent = TypeDescriptor.GetProvider(typeof(CommandReference));
 

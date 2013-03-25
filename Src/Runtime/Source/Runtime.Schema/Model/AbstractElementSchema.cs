@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace NuPattern.Runtime.Schema
 {
-    public partial class AbstractElementSchema
+    partial class AbstractElementSchema
     {
         /// <summary>
         /// Gets the autocreate of the contained element.

@@ -4,7 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Drawing.Design;
 using System.Globalization;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
-using NuPattern.Extensibility;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Extensibility.Design;
 using NuPattern.Library.Properties;
 
 namespace NuPattern.Library.ValidationRules

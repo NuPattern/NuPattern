@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using NuPattern.Extensibility;
 
 namespace NuPattern.Runtime.Schema
 {

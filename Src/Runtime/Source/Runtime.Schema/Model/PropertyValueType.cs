@@ -6,7 +6,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// Represents one of the types of a <see cref="PropertySchema"/>.Type.
     /// </summary>
-    public class PropertyValueType
+    internal class PropertyValueType
     {
         private string displayName;
         private string category;

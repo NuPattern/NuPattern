@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Common.Presentation.Vs;
+using NuPattern.Presentation.VsIde;
 
-namespace NuPattern.Common.Presentation
+namespace NuPattern.Presentation
 {
     /// <summary>
     /// This is a base class for all XAML forms.

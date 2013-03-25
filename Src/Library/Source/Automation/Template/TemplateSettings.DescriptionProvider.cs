@@ -3,7 +3,8 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using NuPattern.Extensibility;
+using NuPattern.ComponentModel;
+using NuPattern.Extensibility.Design;
 
 namespace NuPattern.Library.Automation
 {

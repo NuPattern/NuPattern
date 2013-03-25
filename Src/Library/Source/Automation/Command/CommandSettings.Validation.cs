@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
 using NuPattern.Library.Properties;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
 
 namespace NuPattern.Library.Automation
@@ -16,17 +17,16 @@ namespace NuPattern.Library.Automation
     /// Custom validation rules.
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class CommandSettings
+    partial class CommandSettings
     {
     }
 
     /// <summary>
     /// Exports the validation methods for command settings.
     /// </summary>
-    [CLSCompliant(false)]
     [Export]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    public class CommandSettingsValidations
+    internal class CommandSettingsValidations
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CommandSettingsValidations>();
 
@@ -37,7 +37,7 @@ namespace NuPattern.Library.Automation
         private static ILookup<string, Lazy<ICommandValidationRule, ICommandValidationRuleMetadata>> Validators;
 
         [Import]
-        internal IPlatuProjectTypeProvider ProjectTypeProvider
+        internal INuPatternProjectTypeProvider ProjectTypeProvider
         {
             get;
             set;

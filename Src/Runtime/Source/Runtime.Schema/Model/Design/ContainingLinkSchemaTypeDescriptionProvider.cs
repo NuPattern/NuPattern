@@ -4,14 +4,16 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using NuPattern.Extensibility;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Extensibility.Design;
+using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Schema
 {
     /// <summary>
     /// Provides a custom type descriptor for the <see cref="IContainingLinkSchema" /> class. 
     /// </summary>
-    public class ContainingLinkSchemaTypeDescriptionProvider : ElementTypeDescriptionProvider
+    internal class ContainingLinkSchemaTypeDescriptionProvider : ElementTypeDescriptionProvider
     {
         /// <summary>
         /// Returns an instance of a type descriptor for the given instance of the class.

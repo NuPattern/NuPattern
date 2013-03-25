@@ -45,6 +45,7 @@ else
       <MefComponent>|Runtime.Schema|</MefComponent>
       <MefComponent>|Library|</MefComponent>
       <MefComponent>|Extensibility|</MefComponent>
+      <MefComponent>|Common.VisualStudio|</MefComponent>
       <Assembly AssemblyName="NuPattern.Runtime, Version=<#=VsixInfo.PatternToolkitRuntime.Version#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5">|Runtime|</Assembly>
       <!-- Feature EXtension Runtime -->
       <VsPackage>Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.pkgdef</VsPackage>

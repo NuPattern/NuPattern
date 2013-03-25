@@ -34,7 +34,7 @@ namespace NuPattern.Runtime.Schema
                 }
 
                 // Filter system items (based on diagram state)
-                var diagram = StoreExtensions.GetCurrentDiagram(store);
+                var diagram = ModelStoreExtensions.GetCurrentDiagram(store);
                 if (diagram != null)
                 {
                     if (diagram.ShowHiddenEntries == false)

@@ -89,8 +89,8 @@
     <Compile Include="..\..\Common\Helpers\DslTestStore.cs">
       <Link>DslTestStore.cs</Link>
     </Compile>
-    <Compile Include="..\..\Common\Helpers\VsHostedSpec.cs">
-      <Link>VsHostedSpec.cs</Link>
+    <Compile Include="..\..\Common\Helpers\IntegrationTest.cs">
+      <Link>IntegrationTest.cs</Link>
     </Compile>
     <Compile Include="..\..\Common\Helpers\FakeSolution.cs">
       <Link>FakeSolution.cs</Link>
@@ -108,17 +108,17 @@
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
     <Content Include="..\..\Runtime\IntegrationTests.TestToolkit\Assets\Templates\Projects\MyTemplate1\MyTemplate1.gen.vstemplate">
-      <Link>Content\MyTemplate1.gen.vstemplate</Link>
+      <Link>Library.IntegrationTests.Content\MyTemplate1.gen.vstemplate</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\..\Runtime\IntegrationTests.TestToolkit\Assets\Templates\Projects\MyTemplate2\MyTemplate2.gen.vstemplate">
-      <Link>Content\MyTemplate2.gen.vstemplate</Link>
+      <Link>Library.IntegrationTests.Content\MyTemplate2.gen.vstemplate</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\ClassLibrary\ClassLibrary\Class1.cs">
+    <Content Include="Library.IntegrationTests.Content\ClassLibrary\ClassLibrary\Class1.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\ClassLibrary\ClassLibrary\Properties\AssemblyInfo.cs">
+    <Content Include="Library.IntegrationTests.Content\ClassLibrary\ClassLibrary\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Compile Include="Automation\Validation\ValidationExtensionSpec.cs" />
@@ -128,13 +128,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Source\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common\Source\Extensibility\Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
       <Name>Extensibility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Common\Source\VisualStudio\VisualStudio.csproj">
+    <ProjectReference Include="..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
-      <Name>VisualStudio</Name>
+      <Name>Common.VisualStudio</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Runtime\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
       <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
@@ -151,19 +155,19 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Content\ClassLibrary\ClassLibrary.sln">
+    <Content Include="Library.IntegrationTests.Content\ClassLibrary\ClassLibrary.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\ClassLibrary\ClassLibrary\ClassLibrary.csproj">
+    <Content Include="Library.IntegrationTests.Content\ClassLibrary\ClassLibrary\ClassLibrary.csproj">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\ClassLibrary\ClassLibrary\Folder\FolderItem.txt">
+    <Content Include="Library.IntegrationTests.Content\ClassLibrary\ClassLibrary\Folder\FolderItem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\ClassLibrary\SolutionFolderItem.txt">
+    <Content Include="Library.IntegrationTests.Content\ClassLibrary\SolutionFolderItem.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\EmptySolution.sln">
+    <Content Include="Library.IntegrationTests.Content\EmptySolution.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -14,8 +14,7 @@ namespace NuPattern.Runtime
     /// which resides in the <see cref="IExtensionContent"/> 
     /// part of an extension.
     /// </summary>
-    [CLSCompliant(false)]
-    public class SchemaResource : ISchemaResource
+    internal class SchemaResource : ISchemaResource
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SchemaResource>();
         internal const string AssemblyFileProperty = "AssemblyFile";

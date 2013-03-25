@@ -13,44 +13,44 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 <#
-	// ******************************************************************************************
-	// This template generates the code required for testing generated tracking properties in a DSL.
-	// see the associated text template in the GeneratedCode folder in the DSL Project
-	//
-	// Notes to DSL Implementors:
-	// In order to test a tracking property, you must do the following in addition to unit testing the tracked value.
-	// In Test Code:
-	//		Create  the Spec test class "public partial class MyTrackedPropertyDomainClass" for the DomainClass containing the tracked property.
-	//		Define a context test class 
-	//			Derive the class from the genreated test class "GivenAMyTrackedPropertyDomainClass"
-	//			Implement the property "protected override MyTrackedPropertyDomainClass Element { get; private set; }"
-	//			Implement unit test methods for checking that the tracked property value updates when 
-	//				any of the properties that it calculates it values from are changed (see your implementation of the CalculateMyTrackedPropertyTrackingValue() method.
-	//
-	// ******************************************************************************************
+    // ******************************************************************************************
+    // This template generates the code required for testing generated tracking properties in a DSL.
+    // see the associated text template in the GeneratedCode folder in the DSL Project
+    //
+    // Notes to DSL Implementors:
+    // In order to test a tracking property, you must do the following in addition to unit testing the tracked value.
+    // In Test Code:
+    //		Create  the Spec test class "public partial class MyTrackedPropertyDomainClass" for the DomainClass containing the tracked property.
+    //		Define a context test class 
+    //			Derive the class from the genreated test class "GivenAMyTrackedPropertyDomainClass"
+    //			Implement the property "protected override MyTrackedPropertyDomainClass Element { get; private set; }"
+    //			Implement unit test methods for checking that the tracked property value updates when 
+    //				any of the properties that it calculates it values from are changed (see your implementation of the CalculateMyTrackedPropertyTrackingValue() method.
+    //
+    // ******************************************************************************************
 
-	string dslName = this.DslLibrary.Name;
+    string dslName = this.DslLibrary.Name;
 
-	// Find all domain properties that are named for tracking
-	Dictionary<string, string[]> trackingClasses = new Dictionary<string, string[]>();
-	foreach (var domainClass in this.DslLibrary.Classes)
-	{
-		List<string> trackedProperties = new List<string>();
-		foreach (DomainProperty domainProperty in domainClass.Properties)
-		{
+    // Find all domain properties that are named for tracking
+    Dictionary<string, string[]> trackingClasses = new Dictionary<string, string[]>();
+    foreach (var domainClass in this.DslLibrary.Classes)
+    {
+        List<string> trackedProperties = new List<string>();
+        foreach (DomainProperty domainProperty in domainClass.Properties)
+        {
             if ((domainProperty.Name.StartsWith("Is"))
                 && (domainProperty.Name.EndsWith("Tracking")))
             {
                 string trackedPropertyName = domainProperty.Name.Substring("Is".Length, (domainProperty.Name.Length - "Tracking".Length - 2));
-				trackedProperties.Add(trackedPropertyName);
+                trackedProperties.Add(trackedPropertyName);
             }
-		}
+        }
 
-		if (trackedProperties.Count > 0)
-		{
-			trackingClasses.Add(domainClass.Name, trackedProperties.ToArray<string>());
-		}
-	}
+        if (trackedProperties.Count > 0)
+        {
+            trackingClasses.Add(domainClass.Name, trackedProperties.ToArray<string>());
+        }
+    }
 #>
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NuPattern.Extensibility;
@@ -58,8 +58,8 @@ using NuPattern.Extensibility;
 namespace NuPattern.Runtime.Schema.UnitTests
 {
 <#
-	foreach (KeyValuePair<string, string[]> trackingClass in trackingClasses)
-	{
+    foreach (KeyValuePair<string, string[]> trackingClass in trackingClasses)
+    {
 #>
     public partial class <#= trackingClass.Key #>Spec
     {
@@ -68,13 +68,13 @@ namespace NuPattern.Runtime.Schema.UnitTests
         [TestClass]
         public abstract class GivenA<#= trackingClass.Key #>
         {
-            protected abstract <#= trackingClass.Key #> Element
+            internal abstract <#= trackingClass.Key #> Element
             {
-				get;
+                get;
             }
 <# 
-			foreach (string propertyName in trackingClass.Value)
-			{
+            foreach (string propertyName in trackingClass.Value)
+            {
 #>
 
             [TestMethod, TestCategory("Unit")]
@@ -87,7 +87,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenTrackedPropertyIsChanged_Then<#=propertyName #>NotTracking()
             {
-			    this.Element.Store.TransactionManager.DoWithinTransaction( () =>
+                this.Element.Store.TransactionManager.DoWithinTransaction( () =>
                     {
                         this.Element.<#=propertyName #> = "Test<#=propertyName #>Changed";
                     });
@@ -96,12 +96,12 @@ namespace NuPattern.Runtime.Schema.UnitTests
                 Assert.Equal("Test<#=propertyName #>Changed", this.Element.<#=propertyName #>);
             }
 <#
-			}
+            }
 #>
-		}
-	}
+        }
+    }
 
 <#
-	}
+    }
 #>
 }

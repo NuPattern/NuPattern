@@ -15,8 +15,14 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
+using NuPattern.IO;
+using NuPattern.Presentation;
+using NuPattern.Reflection;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.Store;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution;
 using Dsl = Microsoft.VisualStudio.Modeling;
 
 namespace NuPattern.Runtime
@@ -25,10 +31,9 @@ namespace NuPattern.Runtime
     /// Defines a way to manage patterns in a given instance of Visual Studio.
     /// </summary>
     [Export(typeof(IPatternManager))]
-    [CLSCompliant(false)]
     [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "This class deals with mapping and instantiation of DSL types, which are many.")]
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Disposed automatically by the underlying state when closed. Cannot dispose earlier 'cause that deletes the errors from the error list.")]
-    public class PatternManager : IPatternManager
+    internal class PatternManager : IPatternManager
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternManager>();
         private const string DslVersionAttribute = "dslVersion";

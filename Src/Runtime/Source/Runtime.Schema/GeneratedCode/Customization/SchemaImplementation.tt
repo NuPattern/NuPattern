@@ -19,21 +19,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
-using NuPattern.Extensibility;
-using NuPattern.Runtime;
-using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Extensibility;
+using NuPattern.ComponentModel;
+using NuPattern.Extensibility;
 
 <#
 foreach (var domainClass in this.DslLibrary.Classes)
 {
-	GenerateClass(domainClass);
+    GenerateClass(domainClass);
 }
 
 foreach (var relation in this.DslLibrary.Relationships.Where(r => r.Properties.Count > 0))
 {
-	if (!HasSkipAnnotation(relation.Notes))
-		GenerateRelationClass(relation);
+    if (!HasSkipAnnotation(relation.Notes))
+        GenerateRelationClass(relation);
 }
 
 #>
@@ -54,39 +53,39 @@ var baseInterface = CodeGenerationUtilities.GetBaseClass(domainClass, string.Emp
 /// <#= domainClass.Description #>
 /// </summary>
 [GeneratedCode("<#= domainClass.Namespace #>", "<#= this.DslVersion #>")]
-public partial class <#= domainClass.Name #> : I<#= domainClass.Name #>, I<#= ToInfo(domainClass) #>
+partial class <#= domainClass.Name #> : I<#= domainClass.Name #>, I<#= ToInfo(domainClass) #>
 { <#+
-	foreach (var role in domainClass.RolesPlayed)
-	{
-		GenerateProperty(domainClass, role);
+    foreach (var role in domainClass.RolesPlayed)
+    {
+        GenerateProperty(domainClass, role);
 
-		if (!role.IsMany && role.Relationship.Properties.Count > 0 && !HasSkipAnnotation(role.Relationship.Notes))
-		{
-			GenerateLinkProperty(domainClass, role.Relationship);
-		}
-	}
-	if (string.IsNullOrEmpty(baseInterface))
-	{
+        if (!role.IsMany && role.Relationship.Properties.Count > 0 && !HasSkipAnnotation(role.Relationship.Notes))
+        {
+            GenerateLinkProperty(domainClass, role.Relationship);
+        }
+    }
+    if (string.IsNullOrEmpty(baseInterface))
+    {
 #>
 
-	/// <summary>
-	/// Gets the extensions.
-	/// </summary>
-	/// <typeparam name="TExtension">The type of the extension.</typeparam>	
-	public IEnumerable<TExtension> GetExtensions<TExtension>()
-	{
-	 	return this.GetAllExtensions().OfType<TExtension>();
-	}
+    /// <summary>
+    /// Gets the extensions.
+    /// </summary>
+    /// <typeparam name="TExtension">The type of the extension.</typeparam>	
+    public IEnumerable<TExtension> GetExtensions<TExtension>()
+    {
+        return this.GetAllExtensions().OfType<TExtension>();
+    }
 
-	/// <summary>
-	/// Gets a value indicating whether this instance is serializing.
-	/// </summary>
-	public bool IsSerializing
-	{
-		get { return this.Store.InSerializationTransaction;	}
-	}
+    /// <summary>
+    /// Gets a value indicating whether this instance is serializing.
+    /// </summary>
+    public bool IsSerializing
+    {
+        get { return this.Store.InSerializationTransaction;	}
+    }
 <#+
-	}
+    }
 #>
 }
 <#+	PopIndent(); #>
@@ -108,7 +107,7 @@ PushIndent("\t");
 /// <#= domainClass.Description #>
 /// </summary>
 [GeneratedCode("<#= domainClass.Namespace #>", "<#= this.DslVersion #>")]
-public partial class <#= domainClass.Name #> : I<#= ToInfo(domainClass) #>
+partial class <#= domainClass.Name #> : I<#= ToInfo(domainClass) #>
 {
 }
 <#+	PopIndent(); #>
@@ -118,7 +117,7 @@ public partial class <#= domainClass.Name #> : I<#= ToInfo(domainClass) #>
 
 private void GenerateProperty(DomainProperty property)
 {
-	PushIndent("\t");
+    PushIndent("\t");
 #>
 
 /// <summary>
@@ -126,12 +125,12 @@ private void GenerateProperty(DomainProperty property)
 /// </summary>
 <#= CodeGenerationUtilities.GetDomainTypeFullName(property) #> <#= property.Name #> { get; set; }
 <#+
-	PopIndent();
+    PopIndent();
 }
 
 private void GenerateLinkProperty(DomainClass domainClass, DomainRelationship relationship)
 {
-	PushIndent("\t");
+    PushIndent("\t");
 #>
 
 /// <summary>
@@ -139,74 +138,74 @@ private void GenerateLinkProperty(DomainClass domainClass, DomainRelationship re
 /// </summary>
 I<#= ToInfo(relationship) #> I<#= ToInfo(domainClass) #>.<#= relationship.Name #>
 {
-	get { return DomainRoleInfo.GetElementLinks<<#= relationship.Name #>>(this, <#= relationship.Name #>.<#= relationship.Target.Name #>DomainRoleId).FirstOrDefault(); }
+    get { return DomainRoleInfo.GetElementLinks<<#= relationship.Name #>>(this, <#= relationship.Name #>.<#= relationship.Target.Name #>DomainRoleId).FirstOrDefault(); }
 }
 <#+
-	PopIndent();
+    PopIndent();
 }
 
 private void GenerateProperty(DomainClass domainClass, DomainRole role)
 {
-	if (!role.IsPropertyGenerator) 
-	{
-		return;
-	}
+    if (!role.IsPropertyGenerator) 
+    {
+        return;
+    }
 
-	var opposite = role.Opposite;
-	var castString = string.Empty;
-	var propertyType = opposite.RolePlayer.GetRelativeName(role.RolePlayer.Namespace, true);
-	var typeRole = role;
-	for (var current = role.BaseRole; current != null; current = current.BaseRole)
-	{
-		if (current!= role && current.IsPropertyGenerator && current.PropertyName==role.PropertyName)
-		{
-			if ((current.Relationship.InheritanceModifier==InheritanceModifier.Abstract || role.Relationship.InheritanceModifier==InheritanceModifier.Abstract) &&
-			    current.Relationship.InheritanceModifier != role.Relationship.InheritanceModifier)
-			{
-				break;
-			}
-			else 
-			{
-				typeRole = current;
-			}
-		}
-	}
+    var opposite = role.Opposite;
+    var castString = string.Empty;
+    var propertyType = opposite.RolePlayer.GetRelativeName(role.RolePlayer.Namespace, true);
+    var typeRole = role;
+    for (var current = role.BaseRole; current != null; current = current.BaseRole)
+    {
+        if (current!= role && current.IsPropertyGenerator && current.PropertyName==role.PropertyName)
+        {
+            if ((current.Relationship.InheritanceModifier==InheritanceModifier.Abstract || role.Relationship.InheritanceModifier==InheritanceModifier.Abstract) &&
+                current.Relationship.InheritanceModifier != role.Relationship.InheritanceModifier)
+            {
+                break;
+            }
+            else 
+            {
+                typeRole = current;
+            }
+        }
+    }
 
-	if (typeRole != role)
-	{
-		castString = "(" + propertyType + ")";
-		propertyType = typeRole.Opposite.RolePlayer.GetRelativeName(role.RolePlayer.Namespace, true);
-	}
+    if (typeRole != role)
+    {
+        castString = "(" + propertyType + ")";
+        propertyType = typeRole.Opposite.RolePlayer.GetRelativeName(role.RolePlayer.Namespace, true);
+    }
 
-	// Determine collection type for the property.
-	string linkedElementCollectionType;
-	if (typeRole.CollectionType!=null)
-	{
-		// If a custom collection type was specified, use it.
-		linkedElementCollectionType = StripGenericSpecification(CodeGenerationUtilities.GetDomainTypeFullName(typeRole.CollectionType, role.RolePlayer.Namespace));
-	}
-	else
-	{
-		switch (typeRole.Relationship.InheritanceModifier)
-		{
-			case InheritanceModifier.Abstract:
-				linkedElementCollectionType = "DslModeling::ReadOnlyLinkedElementCollection";
-				break;
-			case InheritanceModifier.None:
-			case InheritanceModifier.Sealed:
-				linkedElementCollectionType = "DslModeling::LinkedElementCollection";
-				break;
-			default:
-				throw new NotSupportedException();
-		}
-	}
+    // Determine collection type for the property.
+    string linkedElementCollectionType;
+    if (typeRole.CollectionType!=null)
+    {
+        // If a custom collection type was specified, use it.
+        linkedElementCollectionType = StripGenericSpecification(CodeGenerationUtilities.GetDomainTypeFullName(typeRole.CollectionType, role.RolePlayer.Namespace));
+    }
+    else
+    {
+        switch (typeRole.Relationship.InheritanceModifier)
+        {
+            case InheritanceModifier.Abstract:
+                linkedElementCollectionType = "DslModeling::ReadOnlyLinkedElementCollection";
+                break;
+            case InheritanceModifier.None:
+            case InheritanceModifier.Sealed:
+                linkedElementCollectionType = "DslModeling::LinkedElementCollection";
+                break;
+            default:
+                throw new NotSupportedException();
+        }
+    }
 
-	PushIndent("\t");
+    PushIndent("\t");
 
-	if (!HasSkipAnnotation(role.Notes))
-	{
-		if (role.Multiplicity == Microsoft.VisualStudio.Modeling.DslDefinition.Multiplicity.One || role.Multiplicity == Microsoft.VisualStudio.Modeling.DslDefinition.Multiplicity.ZeroOne)
-		{
+    if (!HasSkipAnnotation(role.Notes))
+    {
+        if (role.Multiplicity == Microsoft.VisualStudio.Modeling.DslDefinition.Multiplicity.One || role.Multiplicity == Microsoft.VisualStudio.Modeling.DslDefinition.Multiplicity.ZeroOne)
+        {
 #>
 
 /// <summary>
@@ -214,8 +213,8 @@ private void GenerateProperty(DomainClass domainClass, DomainRole role)
 /// </summary>
 I<#= propertyType #> I<#= domainClass.Name #>.<#= role.PropertyName #>
 {
-	get { return this.<#= role.PropertyName #>; }
-	set { this.<#= role.PropertyName #> = (<#= propertyType #>)value; }
+    get { return this.<#= role.PropertyName #>; }
+    set { this.<#= role.PropertyName #> = (<#= propertyType #>)value; }
 }
 
 /// <summary>
@@ -223,14 +222,14 @@ I<#= propertyType #> I<#= domainClass.Name #>.<#= role.PropertyName #>
 /// </summary>
 I<#= ToInfo(propertyType) #> I<#= ToInfo(domainClass) #>.<#= role.PropertyName #>
 {
-	get { return this.<#= role.PropertyName #>; }
+    get { return this.<#= role.PropertyName #>; }
 }
 <#+
-		}
-		else
-		{
-			var schemaField = Char.ToLower(domainClass.Name[0]) + domainClass.Name.Substring(1) + role.PropertyName;
-			var infoField = Char.ToLower(domainClass.Name[0]) + ToInfo(domainClass).Substring(1) + role.PropertyName;
+        }
+        else
+        {
+            var schemaField = Char.ToLower(domainClass.Name[0]) + domainClass.Name.Substring(1) + role.PropertyName;
+            var infoField = Char.ToLower(domainClass.Name[0]) + ToInfo(domainClass).Substring(1) + role.PropertyName;
 #>
 
 /// <summary>
@@ -238,7 +237,7 @@ I<#= ToInfo(propertyType) #> I<#= ToInfo(domainClass) #>.<#= role.PropertyName #
 /// </summary>
 IEnumerable<I<#= propertyType #>> I<#= domainClass.Name #>.<#= role.PropertyName #>
 {
-	get { return this.<#= role.PropertyName #>.Cast<I<#= propertyType #>>(); }
+    get { return this.<#= role.PropertyName #>.Cast<I<#= propertyType #>>(); }
 }
 
 /// <summary>
@@ -247,31 +246,31 @@ IEnumerable<I<#= propertyType #>> I<#= domainClass.Name #>.<#= role.PropertyName
 /// </summary>
 IEnumerable<I<#= ToInfo(propertyType) #>> I<#= ToInfo(domainClass.Name) #>.<#= role.PropertyName #>
 {
-	get { return this.<#= role.PropertyName #>.Cast<I<#= ToInfo(propertyType) #>>(); }
+    get { return this.<#= role.PropertyName #>.Cast<I<#= ToInfo(propertyType) #>>(); }
 }
 
 <#+
-		}
-	}
+        }
+    }
 
-	// Generate Create factory methods.
-	if (opposite.IsEmbedded)
-	{
-		if (opposite.RolePlayer.InheritanceModifier != InheritanceModifier.Abstract)
-		{
-			ImplementCreate(propertyType, role.Opposite.PropertyName);
-			ImplementDelete(propertyType, role.Opposite.PropertyName);
-		}
+    // Generate Create factory methods.
+    if (opposite.IsEmbedded)
+    {
+        if (opposite.RolePlayer.InheritanceModifier != InheritanceModifier.Abstract)
+        {
+            ImplementCreate(propertyType, role.Opposite.PropertyName);
+            ImplementDelete(propertyType, role.Opposite.PropertyName);
+        }
 
-		foreach (var derived in opposite.RolePlayer.AllDescendants.Where(dc => dc.InheritanceModifier != InheritanceModifier.Abstract))
-		{
-			var derivedType = derived.GetRelativeName(derived.Namespace, true);
-			ImplementCreate(derivedType, role.Opposite.PropertyName);
-			ImplementDelete(derivedType, role.Opposite.PropertyName);
-		}
-	}
+        foreach (var derived in opposite.RolePlayer.AllDescendants.Where(dc => dc.InheritanceModifier != InheritanceModifier.Abstract))
+        {
+            var derivedType = derived.GetRelativeName(derived.Namespace, true);
+            ImplementCreate(derivedType, role.Opposite.PropertyName);
+            ImplementDelete(derivedType, role.Opposite.PropertyName);
+        }
+    }
 
-	PopIndent();
+    PopIndent();
 }
 
 private void ImplementCreate(string propertyType, string propertyName)
@@ -283,7 +282,7 @@ private void ImplementCreate(string propertyType, string propertyName)
 /// </summary>
 public I<#= propertyType #> Create<#= propertyType #>()
 {
-	return this.Create<#= propertyType #>(null);
+    return this.Create<#= propertyType #>(null);
 }
 
 /// <summary>
@@ -292,17 +291,17 @@ public I<#= propertyType #> Create<#= propertyType #>()
 /// </summary>
 public I<#= propertyType #> Create<#= propertyType #>(Action<I<#= propertyType #>> initializer)
 {
-	using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of <#= propertyType #>", this.IsSerializing))
-	{
-		var instance = this.Create<<#= propertyType #>>();
-		if (initializer != null)
-		{
-			initializer(instance);
-		}
+    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of <#= propertyType #>", this.IsSerializing))
+    {
+        var instance = this.Create<<#= propertyType #>>();
+        if (initializer != null)
+        {
+            initializer(instance);
+        }
 
-		tx.Commit();
-		return instance;
-	}
+        tx.Commit();
+        return instance;
+    }
 }
 <#+
 }
@@ -316,16 +315,16 @@ private void ImplementDelete(string propertyType, string propertyName)
 /// </summary>
 public void Delete<#= propertyType #>(I<#= propertyType #> instance)
 {
-	using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting <#= propertyType #> instance", this.IsSerializing))
-	{
-		var modelElement = instance as <#= propertyType #>;
-		if (modelElement != null)
-		{
-			modelElement.Delete();
-		}
+    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting <#= propertyType #> instance", this.IsSerializing))
+    {
+        var modelElement = instance as <#= propertyType #>;
+        if (modelElement != null)
+        {
+            modelElement.Delete();
+        }
 
-		tx.Commit();
-	}
+        tx.Commit();
+    }
 }
 <#+
 }
