@@ -209,9 +209,9 @@
       <Project>{0EF7E7D4-B10B-4FC9-B4D0-66E360F4338A}</Project>
       <Name>Runtime.Store</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\Runtime\Runtime.csproj">
+    <ProjectReference Include="..\Source\Runtime.Core\Runtime.Core.csproj">
       <Project>{79A7E018-1A92-47F4-A478-17BCC57CC7AD}</Project>
-      <Name>Runtime</Name>
+      <Name>Runtime.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

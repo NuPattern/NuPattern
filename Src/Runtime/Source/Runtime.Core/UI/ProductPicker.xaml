@@ -1,0 +1,88 @@
+﻿<cp:CommonDialogWindow
+    x:Class="NuPattern.Runtime.UI.ProductPicker"
+    x:ClassModifier="internal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://schemas.microsoft.com/nupattern/2012/xaml/"
+    xmlns:r="clr-namespace:NuPattern.Runtime;assembly=NuPattern.Runtime.Interfaces"
+    xmlns:cp="clr-namespace:NuPattern.Presentation;assembly=NuPattern.Presentation"
+    xmlns:vsfx="clr-namespace:NuPattern.Presentation.VsIde;assembly=NuPattern.Presentation"
+    Title="Select Item"
+    SizeToContent="WidthAndHeight"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterOwner"
+    Foreground="{DynamicResource VsBrush.WindowText}"
+    FocusManager.FocusedElement="{x:Reference solutionItems}"
+    ShowInTaskbar="False">
+    <vsfx:VsDialogWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/CommonStyles.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/VsVersionStyles.gen.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/TreeView.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <p:IconToBitmapSourceConverter x:Key="IconToBitmapSourceConverter" />
+        </ResourceDictionary>
+    </vsfx:VsDialogWindow.Resources>
+
+    <Grid Background="{StaticResource VsVersion.Dialog.Background}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TreeView
+            Grid.Row="0"
+            x:Name="solutionItems"
+            Margin="5,5,5,10"
+            Height="320"
+            Width="410"
+            VirtualizingStackPanel.IsVirtualizing="True"
+            VirtualizingStackPanel.VirtualizationMode="Recycling">
+            <TreeView.Resources>
+                <Style TargetType="TreeView" BasedOn="{StaticResource {x:Type TreeView}}">
+                    <Style.Triggers>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="TreeView">
+                                        <Border Background="{DynamicResource VsBrush.DesignerBackground}" Padding="2">
+                                            <TextBlock
+                                                TextWrapping="WrapWithOverflow"
+                                                TextAlignment="Center"
+                                                Foreground="DarkGray"
+                                                Text="There are no patterns associated in the current solution." />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+
+                <HierarchicalDataTemplate DataType="{x:Type r:IProduct}" ItemsSource="{Binding Views}">
+                    <TextBlock Text="{Binding InstanceName}" Margin="4,0,0,0" />
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type r:IView}" ItemsSource="{Binding Elements}">
+                    <TextBlock Text="{Binding InstanceName}" Margin="4,0,0,0" />
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type r:IAbstractElement}" ItemsSource="{Binding Elements}">
+                    <TextBlock Text="{Binding InstanceName}" Margin="4,0,0,0" />
+                </HierarchicalDataTemplate>
+            </TreeView.Resources>
+        </TreeView>
+
+        <Grid Grid.Row="1" Grid.IsSharedSizeScope="True" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
+                <ColumnDefinition Width="3" />
+                <ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
+            </Grid.ColumnDefinitions>
+            <vsfx:VsDialogButton x:Name="ok" VerticalAlignment="Top" Content="OK" />
+            <vsfx:VsDialogButton Grid.Column="2" VerticalAlignment="Top" Content="Cancel" IsCancel="True"/>
+        </Grid>
+    </Grid>
+</cp:CommonDialogWindow>
