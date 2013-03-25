@@ -5,7 +5,8 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using NuPattern.ComponentModel;
 using NuPattern.ComponentModel.Design;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Library.Automation
 {

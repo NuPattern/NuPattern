@@ -34,10 +34,6 @@
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
-      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -55,7 +51,7 @@
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Bindings\IBindingCompositionService.cs" />
-    <Compile Include="IExportedAutomationMetadata.cs" />
+    <Compile Include="Automation\IExportedAutomationMetadata.cs" />
     <Compile Include="IExpressionEvaluator.cs" />
     <Compile Include="INuPatternProjectTypeProvider.cs" />
     <Compile Include="IPatternModelSchemaUpgradeManager.cs" />
@@ -63,7 +59,7 @@
     <Compile Include="IPropertyEvaluator.cs" />
     <Compile Include="ISchemaUpgradeContext.cs" />
     <Compile Include="ISchemaUpgradeProccesorOptions.cs" />
-    <Compile Include="IWizardAutomationExtension.cs" />
+    <Compile Include="Automation\IWizardAutomationExtension.cs" />
     <Compile Include="SchemaConstants.gen.cs">
       <DependentUpon>SchemaConstants.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -88,15 +84,15 @@
     <Compile Include="Model\Schema\IPatternInfo.cs" />
     <Compile Include="Model\Schema\IPatternModelInfo.cs" />
     <Compile Include="Model\Schema\IPatternModelSchema.cs" />
-    <Compile Include="ToolkitInterfaceLayer\IToolkitInterfaceService.cs" />
+    <Compile Include="ToolkitInterface\IToolkitInterfaceService.cs" />
     <Compile Include="IToolkitRepository.cs" />
-    <Compile Include="IFluentInterface.cs" />
+    <Compile Include="ToolkitInterface\IFluentInterface.cs" />
     <Compile Include="Model\Schema\IPropertySchema.cs" />
     <Compile Include="Model\Store\AutomationExtension.cs" />
     <Compile Include="Model\Schema\AutomationSettingsClassification.cs" />
-    <Compile Include="ToolkitInterfaceLayer\ToolkitInterfaceProxyAttribute.cs" />
-    <Compile Include="ToolkitInterfaceLayer\IToolkitInterface.cs" />
-    <Compile Include="ToolkitInterfaceLayer\IToolkitInterfaceMetadata.cs" />
+    <Compile Include="ToolkitInterface\ToolkitInterfaceProxyAttribute.cs" />
+    <Compile Include="ToolkitInterface\IToolkitInterface.cs" />
+    <Compile Include="ToolkitInterface\IToolkitInterfaceMetadata.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Model\Schema\INamedElementInfo.cs" />
     <Compile Include="Bindings\IBindingFactory.cs" />
@@ -106,7 +102,7 @@
     <Compile Include="Bindings\IPropertyBindingSettings.cs" />
     <Compile Include="Bindings\IValueProviderBindingSettings.cs" />
     <Compile Include="Model\Store\InstanceBaseExtensions.cs" />
-    <Compile Include="ToolkitInterfaceLayer\ToolkitInterfaceAttribute.cs" />
+    <Compile Include="ToolkitInterface\ToolkitInterfaceAttribute.cs" />
     <Compile Include="Model\Store\IAbstractElement.cs" />
     <Compile Include="IPickerFilter.cs" />
     <Compile Include="IProductPicker.cs" />
@@ -120,7 +116,7 @@
     <Compile Include="Model\Schema\IElementSchemaContainer.cs" />
     <Compile Include="Model\Schema\IElementInfoContainer.cs" />
     <Compile Include="Model\Schema\IPropertyInfo.cs" />
-    <Compile Include="IReferenceKindProvider.cs" />
+    <Compile Include="References\IReferenceKindProvider.cs" />
     <Compile Include="Model\Schema\IExtensionPointSchema.cs" />
     <Compile Include="Model\Schema\IAbstractElementInfo.cs" />
     <Compile Include="Model\Schema\IAbstractElementSchema.cs" />
@@ -129,23 +125,21 @@
     <Compile Include="Model\Schema\IExtensionPointInfo.cs" />
     <Compile Include="Model\Store\IInstanceBase.cs" />
     <Compile Include="Model\Schema\IContainedElementInfo.cs" />
-    <Compile Include="ToolkitInterfaceLayer\IAbstractElementProxy.cs" />
-    <Compile Include="ToolkitInterfaceLayer\IContainerProxy.cs" />
-    <Compile Include="ToolkitInterfaceLayer\IProductProxy.cs" />
-    <Compile Include="ToolkitInterfaceLayer\IPropertyProxy.cs" />
-    <Compile Include="IValidationRule.cs" />
+    <Compile Include="ToolkitInterface\IAbstractElementProxy.cs" />
+    <Compile Include="ToolkitInterface\IContainerProxy.cs" />
+    <Compile Include="ToolkitInterface\IProductProxy.cs" />
+    <Compile Include="ToolkitInterface\IPropertyProxy.cs" />
+    <Compile Include="Validation\IValidationRule.cs" />
     <Compile Include="Model\Schema\INamedElementSchema.cs" />
     <Compile Include="Events\EventAttribute.cs" />
     <Compile Include="ICommandStatus.cs" />
-    <Compile Include="ISupportTransaction.cs" />
-    <Compile Include="ITransaction.cs" />
     <Compile Include="PropertyUsages.cs" />
-    <Compile Include="ReferenceKindProviderAttribute.cs" />
-    <Compile Include="RuntimeValidationExtensionAttribute.cs" />
+    <Compile Include="References\ReferenceKindProviderAttribute.cs" />
+    <Compile Include="Validation\RuntimeValidationExtensionAttribute.cs" />
     <Compile Include="Settings\IAutomationMenuCommand.cs" />
-    <Compile Include="Uri\TextTemplateUri.cs" />
-    <Compile Include="Uri\VsTemplateUri.cs" />
-    <Compile Include="ValidationConstants.cs" />
+    <Compile Include="TextTemplateUri.cs" />
+    <Compile Include="VsTemplateUri.cs" />
+    <Compile Include="Validation\ValidationConstants.cs" />
     <Compile Include="ValueEventArgs.cs" />
     <Compile Include="Model\Schema\IAutomationSettingsInfo.cs" />
     <Compile Include="Events\IEventMetadata.cs" />

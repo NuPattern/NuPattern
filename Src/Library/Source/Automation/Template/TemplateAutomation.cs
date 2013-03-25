@@ -4,13 +4,12 @@ using System.Windows.Input;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Events;
 using NuPattern.Library.Properties;
 using NuPattern.Presentation;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation

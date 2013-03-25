@@ -4,7 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility.Serialization;
+using NuPattern.Runtime.Serialization;
 
 namespace NuPattern.Runtime
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.Diagrams.GraphObject;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.Runtime.Schema.Properties;
 
 namespace NuPattern.Runtime.Schema

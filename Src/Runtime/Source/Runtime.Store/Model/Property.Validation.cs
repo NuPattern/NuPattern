@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Store.Properties;
+using NuPattern.Runtime.Validation;
 
 namespace NuPattern.Runtime.Store
 {

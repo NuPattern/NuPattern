@@ -3,7 +3,7 @@ using NuPattern.Presentation;
 using NuPattern.Runtime.Bindings;
 using NuPattern.VisualStudio.Shell;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Defines the needed classes for the <see cref="SolutionBuilderViewModel"/>.

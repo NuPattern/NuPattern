@@ -5,10 +5,10 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility.Bindings;
-using NuPattern.Extensibility.References;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.References;
 
 namespace NuPattern.Library.UnitTests.Commands
 {

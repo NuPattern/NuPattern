@@ -5,10 +5,10 @@ using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Automation;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.UnitTests.Automation.Menu
@@ -297,7 +297,7 @@ namespace NuPattern.Library.UnitTests.Automation.Menu
                 this.statusBinding.Setup(b => b.Evaluate(It.IsAny<IDynamicBindingContext>())).Returns(true);
 
                 this.bindingFactory.Setup(f => f.CreateBinding<ICommandStatus>(It.IsAny<IBindingSettings>())).Returns(this.statusBinding.Object);
-                this.Settings.Setup(x => x.CustomStatus).Returns(BindingSerializer.Serialize(new Extensibility.Bindings.BindingSettings { TypeId = "Foo" }));
+                this.Settings.Setup(x => x.CustomStatus).Returns(BindingSerializer.Serialize(new BindingSettings { TypeId = "Foo" }));
 
                 this.Automation.BindingFactory = this.bindingFactory.Object;
             }

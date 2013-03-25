@@ -1,5 +1,5 @@
 ﻿
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Settings
 {
     /// <summary>
     /// Defines settings for the runtime.

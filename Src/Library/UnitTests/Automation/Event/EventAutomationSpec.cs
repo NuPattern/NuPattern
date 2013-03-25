@@ -5,12 +5,11 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility.Bindings;
-using NuPattern.Extensibility.Design;
 using NuPattern.Library.Automation;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Design;
 
 namespace NuPattern.Library.UnitTests.Automation.Event
 {

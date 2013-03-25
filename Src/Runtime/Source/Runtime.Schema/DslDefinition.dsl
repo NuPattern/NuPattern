@@ -151,14 +151,14 @@
         </DomainProperty>
         <DomainProperty Id="036d59f2-87d1-49f3-aee4-4e73b3566b2e" Description="The icon for this item displayed to the user." Name="Icon" DisplayName="Icon" Category="Appearance">
           <Attributes>
-            <ClrAttribute Name="NuPattern.Extensibility.Design.ImageFilter">
+            <ClrAttribute Name="NuPattern.Runtime.Design.ImageFilter">
               <Parameters>
-                <AttributeParameter Value="NuPattern.Extensibility.Design.ImageKind.Image " />
+                <AttributeParameter Value="NuPattern.Runtime.Design.ImageKind.Image " />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.ImageUriEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.ImageUriEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -252,7 +252,7 @@
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter&lt;System.ComponentModel.TypeConverter&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.ComponentModel.TypeConverter&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
@@ -271,7 +271,7 @@
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter&lt;System.Drawing.Design.UITypeEditor&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Drawing.Design.UITypeEditor&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
@@ -293,7 +293,7 @@
           <Attributes>
             <ClrAttribute Name="NuPattern.ComponentModel.Design.PropertyDescriptor">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Bindings.BindingPropertyDescriptor&lt;Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Bindings.BindingPropertyDescriptor&lt;Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
@@ -682,7 +682,7 @@
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
@@ -779,7 +779,7 @@
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
@@ -850,7 +850,7 @@
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
@@ -904,7 +904,7 @@
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Collections.IComparer&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />

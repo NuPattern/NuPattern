@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Immutability;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 
 namespace NuPattern.Runtime.Schema
 {

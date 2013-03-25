@@ -92,10 +92,6 @@
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
     </Reference>
-    <Reference Include="VSLangProj">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\VSLangProj.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -130,7 +126,7 @@
     <Compile Include="ProductStoreValidationController.cs" />
     <Compile Include="Settings\SettingsManager.cs" />
     <Compile Include="Settings\TracingSettingsMonitor.cs" />
-    <Compile Include="ShellEvents.cs" />
+    <Compile Include="Events\ShellEvents.cs" />
     <Compile Include="TraceOutputWindowManager.cs" />
     <Compile Include="TraceRecordTextListener.cs" />
     <Compile Include="SchemaReaderExtensions.cs" />
@@ -141,7 +137,7 @@
     <Compile Include="InstalledToolkitRepository.cs" />
     <Compile Include="SchemaResource.cs" />
     <Compile Include="SingletonScope.cs" />
-    <Compile Include="SolutionEvents.cs" />
+    <Compile Include="Events\SolutionEvents.cs" />
     <Compile Include="TemplateInstantiationScope.cs" />
     <Compile Include="UI\SolutionSelector.cs" />
     <Compile Include="UI\SolutionPicker.cs" />
@@ -236,6 +232,10 @@
     </CodeAnalysisDictionary>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">
+      <Project>{46f79781-98bc-495a-9e01-559f166a6dff}</Project>
+      <Name>Common.Modeling</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
       <Project>{72CC87F3-2860-45CC-8712-00621F868D60}</Project>
       <Name>Common.Presentation</Name>
@@ -244,13 +244,13 @@
       <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Common\Source\Extensibility.Serialization\Extensibility.Serialization.csproj">
+    <ProjectReference Include="..\Runtime.Extensibility.Serialization\Runtime.Extensibility.Serialization.csproj">
       <Project>{B2B1ED0A-60E0-4A5C-822A-605527663E0B}</Project>
-      <Name>Extensibility.Serialization</Name>
+      <Name>Runtime.Extensibility.Serialization</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Common\Source\Extensibility\Extensibility.csproj">
+    <ProjectReference Include="..\Runtime.Extensibility\Runtime.Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
-      <Name>Extensibility</Name>
+      <Name>Runtime.Extensibility</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>

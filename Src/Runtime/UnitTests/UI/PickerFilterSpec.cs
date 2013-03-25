@@ -3,8 +3,9 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Runtime.UI;
 
-namespace NuPattern.Runtime.UI.UnitTests
+namespace NuPattern.Runtime.UnitTests.UI
 {
     [TestClass]
     public class PickerFilterSpec

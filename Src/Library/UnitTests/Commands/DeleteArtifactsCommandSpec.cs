@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using EnvDTE;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility.References;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
+using NuPattern.Runtime.References;
 
 namespace NuPattern.Library.UnitTests.Commands
 {
@@ -56,7 +52,7 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenReferencesAreInvalid_ThenExecuteReturnsNoItems()
             {
-                this.currentElement.Setup(ce => ce.References).Returns(new[]{Mock.Of<IReference>(re => re.Kind == typeof(SolutionArtifactLinkReference).FullName && re.Value=="solution://foo")});
+                this.currentElement.Setup(ce => ce.References).Returns(new[] { Mock.Of<IReference>(re => re.Kind == typeof(SolutionArtifactLinkReference).FullName && re.Value == "solution://foo") });
 
                 this.command.Execute();
 
@@ -160,7 +156,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 var selectedItem = new Mock<IItem>();
                 selectedItem.Setup(si => si.As<EnvDTE.ProjectItem>()).Returns(selectedProjectItem.Object);
                 this.solutionSelector.Setup(ss => ss.ShowDialog()).Returns(true);
-                this.solutionSelector.Setup(ss => ss.SelectedItems).Returns(new[]{selectedItem.Object});
+                this.solutionSelector.Setup(ss => ss.SelectedItems).Returns(new[] { selectedItem.Object });
 
                 this.command.Execute();
 

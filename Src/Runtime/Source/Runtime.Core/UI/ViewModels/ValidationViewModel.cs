@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Provides the functionality to offer custom error information that a user interface can bind to.

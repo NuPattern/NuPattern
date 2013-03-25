@@ -4,6 +4,7 @@ using EnvDTE;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Runtime.TemplateWizards;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
 namespace NuPattern.Runtime.Shell
@@ -12,7 +13,7 @@ namespace NuPattern.Runtime.Shell
     /// Custom template wizard extension that opens the solution builder toolwindow.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Not Applicable")]
-    internal class OpenSolutionBuilderTemplateWizard : Extensibility.TemplateWizard
+    internal class OpenSolutionBuilderTemplateWizard : TemplateWizard
     {
         private IServiceProvider serviceProvider;
 

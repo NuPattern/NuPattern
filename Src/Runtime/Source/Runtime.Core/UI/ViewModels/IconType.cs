@@ -1,4 +1,4 @@
-﻿namespace NuPattern.Runtime.UI
+﻿namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Defines the icon type to be used in the <see cref="MenuOptionViewModel"/>.

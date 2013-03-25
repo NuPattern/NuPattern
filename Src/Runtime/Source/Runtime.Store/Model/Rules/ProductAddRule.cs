@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Store.Properties;
 using NuPattern.VisualStudio;
 

@@ -9,13 +9,12 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
-using NuPattern.Extensibility.References;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.References;
+using NuPattern.Runtime.TemplateWizards;
 
 namespace NuPattern.Library.Automation
 {
@@ -24,7 +23,7 @@ namespace NuPattern.Library.Automation
     /// the template is unfolded.
     /// </summary>
     [CLSCompliant(false)]
-    public sealed class InstantiationTemplateWizard : Extensibility.TemplateWizard
+    public sealed class InstantiationTemplateWizard : TemplateWizard
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<InstantiationTemplateWizard>();
 

@@ -1,9 +1,9 @@
-﻿using NuPattern.Extensibility.Bindings;
-using NuPattern.Library.Commands;
+﻿using NuPattern.Library.Commands;
 using NuPattern.Library.Conditions;
 using NuPattern.Library.Events;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation
 {

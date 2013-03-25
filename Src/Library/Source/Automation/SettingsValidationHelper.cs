@@ -2,8 +2,8 @@
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.Extensibility;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Library.Automation
 {

@@ -6,12 +6,12 @@ using System.Windows.Data;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
 using NuPattern.Presentation;
+using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio.Solution;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Provides a view model for the solution builder

@@ -1,10 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using NuPattern.Extensibility;
-using NuPattern.Runtime.UI;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Extensions to the <see cref="FilteredItemContainer"/> class.

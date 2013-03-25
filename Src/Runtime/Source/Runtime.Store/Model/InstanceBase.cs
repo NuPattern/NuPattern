@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.Modeling;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Runtime.Store
 {

@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BindingFactory_DefaultCompositionServiceChanged" xml:space="preserve">
+    <value>Default implementation of the IFeatureCompositionService changed and no longer contains the expected composition container named 'container'.</value>
+  </data>
+  <data name="BindingFactory_DefaultCompositionServiceContainerUnavailable" xml:space="preserve">
+    <value>Could not retrieve a valid composition container instance from the 'container' field in the default implementation of the IFeatureCompositionService.</value>
+  </data>
+  <data name="BindingFactory_DynamicContextUnsupported" xml:space="preserve">
+    <value>Binding composition service does not expose an ExportProvider or a CompositionContainer, so dynamic context values cannot be supported.</value>
+  </data>
+  <data name="BindingFactory_UnsupportedDynamicContext" xml:space="preserve">
+    <value>Dynamic evaluation context was not created by this binding.</value>
+  </data>
+  <data name="BitmapFilter" xml:space="preserve">
+    <value>Bitmap files(*.bmp)|*.bmp</value>
+  </data>
+  <data name="StringCollectionPropertyDescriptor_ToString" xml:space="preserve">
+    <value>(Collection)</value>
+  </data>
+  <data name="DynamicBinding_UnsupportedCompositionService" xml:space="preserve">
+    <value>Dynamic context creation is only available for bindings created using the BindingFactory.</value>
+  </data>
+  <data name="FeatureExtensionsTypeConverter_None" xml:space="preserve">
+    <value>(None)</value>
+  </data>
+  <data name="IconFilter" xml:space="preserve">
+    <value>Icon files(*.ico)|*.ico</value>
+  </data>
+  <data name="ImageFilter" xml:space="preserve">
+    <value>Image files(*.gif;*.jpg;*.jpeg;*.bmp;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.png</value>
+  </data>
+  <data name="SelectBitmap" xml:space="preserve">
+    <value>Select Bitmap</value>
+  </data>
+  <data name="SelectIcon" xml:space="preserve">
+    <value>Select Icon</value>
+  </data>
+  <data name="SelectImage" xml:space="preserve">
+    <value>Select Image</value>
+  </data>
+  <data name="CodeGeneration_InitializationFinished" xml:space="preserve">
+    <value>Initialization has already been done. This invocation can only be performed before EndInit is been called.</value>
+  </data>
+  <data name="CodeGeneration_InitializationPending" xml:space="preserve">
+    <value>Initialization has not been finished yet. This invocation can only be performed after EndInit has been called.</value>
+  </data>
+  <data name="BindingSettings_TypeIdDisplayName" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="BindingSettings_TypeIdDescription" xml:space="preserve">
+    <value>The type of the component. Once selected, the specific properties of the selected component can be configured.</value>
+  </data>
+  <data name="DesignProperty_ValueProviderDisplayName" xml:space="preserve">
+    <value>Value Provider</value>
+  </data>
+  <data name="DesignProperty_ValueProviderDescription" xml:space="preserve">
+    <value>A 'Value Provider' that provides a value for this property at runtime. If a 'Value' is also defined then the 'Value Provider' property is ignored.</value>
+  </data>
+  <data name="DesignPropertyValueDescriptor_ValueDescription" xml:space="preserve">
+    <value>A configured value for this property, defined at design-time.</value>
+  </data>
+  <data name="DesignPropertyValueDescriptor_ValueDisplayName" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ConditionBindingSettings_EmptyBinding" xml:space="preserve">
+    <value>(Empty Condition)</value>
+  </data>
+  <data name="ValidationBindingSettings_EmptyBinding" xml:space="preserve">
+    <value>(Empty Validation Rule)</value>
+  </data>
+  <data name="SolutionArtifactLinkReference_Description" xml:space="preserve">
+    <value>A project, folder or file associated to the current element.</value>
+  </data>
+  <data name="SolutionArtifactLinkReference_DisplayName" xml:space="preserve">
+    <value>Solution Item Link</value>
+  </data>
+  <data name="GuidanceReference_Description" xml:space="preserve">
+    <value>A guidance workflow associated to the current element.</value>
+  </data>
+  <data name="GuidanceReference_DisplayName" xml:space="preserve">
+    <value>Guidance Link</value>
+  </data>
+  <data name="UnfoldedArtifactLink_Description" xml:space="preserve">
+    <value>A project, folder or file unfolded as part of a template for the current element.</value>
+  </data>
+  <data name="UnfoldedArtifactLink_DisplayName" xml:space="preserve">
+    <value>Unfolded Artifact Link</value>
+  </data>
+  <data name="PathResolver_ErrorFileNameEvaluatedEmpty" xml:space="preserve">
+    <value>The file name expression '{0}' evaluated to a null or empty string, which is invalid. This may be caused by a reference to a non-existent property or a property that has a null or empty value.</value>
+  </data>
+  <data name="PathResolver_ErrorInvalidArtifactLink" xml:space="preserve">
+    <value>Artifact link '{0}' on element '{1}' could not be resolved to a solution artifact.</value>
+  </data>
+  <data name="PathResolver_ErrorNoAncestorWithArtifactLink" xml:space="preserve">
+    <value>Could not retrieve a solution artifact from the current element '{0}' or any of its ancestors. Element relative path '{1}' cannot be resolved.</value>
+  </data>
+  <data name="PathResolver_ErrorNoArtifactLinkOnParent" xml:space="preserve">
+    <value>Path '{0}' specifies a product store relative path that resolved to element '{1}', but the element does not contain an artifact link.</value>
+  </data>
+  <data name="PathResolver_ErrorNoParentFound" xml:space="preserve">
+    <value>Path '{0}' specifies an explicit product relative path that could not be resolved to a valid parent or ancestor element.</value>
+  </data>
+  <data name="PathResolver_PathEvaluatedEmpty" xml:space="preserve">
+    <value>The path expression '{0}' evaluated to a null or empty string, which is invalid. This may be caused by a reference to a non-existent property or a property that has a null or empty value.</value>
+  </data>
+  <data name="PathResolver_TraceEvaluatedFileName" xml:space="preserve">
+    <value>Evaluated file name '{0}' to '{1}'.</value>
+  </data>
+  <data name="PathResolver_TraceEvaluatedPath" xml:space="preserve">
+    <value>Evaluated path '{0}' to '{1}'.</value>
+  </data>
+  <data name="PathResolver_TraceResolvedArtifactLink" xml:space="preserve">
+    <value>Resolved artifact link in path '{0}', which resolved to '{1}'.</value>
+  </data>
+  <data name="ValueProviderBindingSettings_EmptyBinding" xml:space="preserve">
+    <value>(Empty Value Provider)</value>
+  </data>
+  <data name="SolutionArtifactLinkReference_EditorTitle" xml:space="preserve">
+    <value>Select an Associated Solution Item</value>
+  </data>
+  <data name="BindingSerializationException_DeserializationFailed" xml:space="preserve">
+    <value>Failed to deserialize to an instance of {0} the serialized value: {1}</value>
+  </data>
+  <data name="ValueProviderBinding_FailedToEvaluate" xml:space="preserve">
+    <value>Value provider binding for property {0} on element {1} failed to evaluate.</value>
+  </data>
+  <data name="TemplateWizard_Disposed" xml:space="preserve">
+    <value>Wizard extension {0} has been disposed.</value>
+  </data>
+  <data name="TemplateWizard_Unfolding" xml:space="preserve">
+    <value>Wizard extension {0} started processing for template {1}.</value>
+  </data>
+  <data name="TemplateWizard_CompletingScope" xml:space="preserve">
+    <value>Completing existing active scope.</value>
+  </data>
+  <data name="CoordinatorTemplateWizard_FailedToLoadAssembly" xml:space="preserve">
+    <value>Configured assembly '{0}' could not be loaded.</value>
+  </data>
+  <data name="CoordinatorTemplateWizard_FailedToLoadType" xml:space="preserve">
+    <value>Configured type '{0}' was not found in assembly '{1}'.</value>
+  </data>
+  <data name="CoordinatorTemplateWizard_LoadingWizardType" xml:space="preserve">
+    <value>Loading wizard type '{0}, {1}'.</value>
+  </data>
+  <data name="CoordinatorTemplateWizard_NotIWizard" xml:space="preserve">
+    <value>Configured wizard type '{0}' does not implement required interface '{1}'.</value>
+  </data>
+  <data name="CoordinatorTemplateWizard_FailedToDispose" xml:space="preserve">
+    <value>Failed to dispose wizard extension '{0}'.</value>
+  </data>
+  <data name="BindingCompositionService_FailedToInitialize" xml:space="preserve">
+    <value>Failed to initialize root binding composition service.</value>
+  </data>
+  <data name="BindingCompositionService_CatalogsNotAvailable" xml:space="preserve">
+    <value>Both the Visual Studio default catalog and the Feature Builder catalogs must be present in the system.</value>
+  </data>
+  <data name="PathResolver_TraceResolveInitial" xml:space="preserve">
+    <value>Resolving path='{0}', filename='{1}'</value>
+  </data>
+  <data name="PathResolver_TraceResolveApplyingExpression" xml:space="preserve">
+    <value>	Applying expression '{0}' to element '{1}'</value>
+  </data>
+  <data name="PathResolver_TraceResolveFailedExpressionEvaluation" xml:space="preserve">
+    <value>	Couldn't evaluate expression</value>
+  </data>
+  <data name="PathResolver_TraceResolveEvaluatedPath" xml:space="preserve">
+    <value>	Evaluated path to '{0}'</value>
+  </data>
+  <data name="PathResolver_TraceResolvePath" xml:space="preserve">
+    <value>Path resolved to '{0}'</value>
+  </data>
+  <data name="PathResolver_TraceResolveEvaluatedFileName2" xml:space="preserve">
+    <value>	Evaluated file name to '{0}'</value>
+  </data>
+  <data name="PathResolver_TraceResolveResolvedFileName" xml:space="preserve">
+    <value>File name resolved to '{0}'</value>
+  </data>
+  <data name="PathResolver_TraceResolveLinkInPathResolvingElement" xml:space="preserve">
+    <value>	Resolving for element '{0}'</value>
+  </data>
+  <data name="PathResolver_TraceResolveLinkInPathDefaulting" xml:space="preserve">
+    <value>	Path to resolve is null, default to '{0}'</value>
+  </data>
+  <data name="PathResolver_TraceResolveLinkInPathUsiingElementReference" xml:space="preserve">
+    <value>	Using references from element '{0}'</value>
+  </data>
+  <data name="PathResolver_TraceLocateParentResolvingElement" xml:space="preserve">
+    <value>	Resolving '{0}' to element '{1}'</value>
+  </data>
+  <data name="PathResolver_TraceLocateParentUsingRelativePath" xml:space="preserve">
+    <value>	Using solution item relative path '{0}'</value>
+  </data>
+  <data name="PathResolver_TraceInvalidArtifactLink" xml:space="preserve">
+    <value>Couldn't find solution item references of the element '{0}'</value>
+  </data>
+  <data name="PathResolver_TraceInvalidParentArtifactLink" xml:space="preserve">
+    <value>Couldn't find solution item references in the parent element</value>
+  </data>
+  <data name="PathResolver_TraceNoParent" xml:space="preserve">
+    <value>Couldn't find a parent for the element.</value>
+  </data>
+  <data name="PathResolver_TraceNoAncestor" xml:space="preserve">
+    <value>Couldn't find solution item references in ancestor elements.</value>
+  </data>
+  <data name="CoordinatorTemplateWizard_TryFailed" xml:space="preserve">
+    <value>Template wizard unexpectedly failed.</value>
+  </data>
+  <data name="TemplateWizard_ItemTemplateNoItem" xml:space="preserve">
+    <value>The item template '{0}' but no unfolded item(s) were found in the solution.</value>
+  </data>
+  <data name="TemplateWizard_ProjectTemplateNoProject" xml:space="preserve">
+    <value>The project template '{0}' but no unfolded projects(s) were found in the solution.</value>
+  </data>
+  <data name="AssemblyDiscoveryService_GetAssemblies_TraceAssembliesFound" xml:space="preserve">
+    <value>Found '{0}' distinct referenced assemblies from all projects in the solution.</value>
+  </data>
+  <data name="AssemblyDiscoveryService_GetAssemblies_TraceInitial" xml:space="preserve">
+    <value>Fetching referenced assemblies from all projects in the solution</value>
+  </data>
+  <data name="AssemblyDiscoveryService_GetAssemblies_TraceNoSolution" xml:space="preserve">
+    <value>Solution could not be opened</value>
+  </data>
+  <data name="ImageUriEditor_PickerTitle" xml:space="preserve">
+    <value>Select an Image from the Solution</value>
+  </data>
+  <data name="DefaultCategory" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="DesignProperty_ToStringValueProviderFormat" xml:space="preserve">
+    <value>(provided by: '{0}')</value>
+  </data>
+  <data name="FeatureManagerExtensions_ErrorGuidanceInstantiationFailed" xml:space="preserve">
+    <value>Failed to create a new instance of the guidance workflow '{0} ({1})'. </value>
+  </data>
+  <data name="FeatureManagerExtensions_ErrorNoRegistration" xml:space="preserve">
+    <value>Failed to activate an instance of the feature extension '{0}'. It is not installed.</value>
+  </data>
+  <data name="FeatureManagerExtensions_TraceShowingGuidanceWindows" xml:space="preserve">
+    <value>Showing guidance windows</value>
+  </data>
+  <data name="FeatureManagerExtensions_TraceActivation" xml:space="preserve">
+    <value>Activating guidance workflow '{0}'</value>
+  </data>
+  <data name="ImageUriEditor_EmptyItemsMessage" xml:space="preserve">
+    <value>There were no image files ({0}) found in the current solution.
+Please add a new or existing image file {0} to the project and try again.</value>
+  </data>
+  <data name="ImageUriEditor_FailedToEdit" xml:space="preserve">
+    <value>Failed to edit file.</value>
+  </data>
+  <data name="DesignCollectionPropertyDescriptor_ToString" xml:space="preserve">
+    <value>(Collection)</value>
+  </data>
+  <data name="ValidationBindingSettings_Description" xml:space="preserve">
+    <value>A validation rule.</value>
+  </data>
+  <data name="ValidationBindingSettings_DisplayName" xml:space="preserve">
+    <value>Validation Rule</value>
+  </data>
+  <data name="ConditionBindingSettings_Description" xml:space="preserve">
+    <value>A condition of execution</value>
+  </data>
+  <data name="ConditionBindingSettings_DisplayName" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="DynamicBinding_ValidatorDefaultMessage" xml:space="preserve">
+    <value>'{0}' validation failed.</value>
+  </data>
+  <data name="SolutionItemUriConverter_MissingService" xml:space="preserve">
+    <value>Service '{0}' is required.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_InstancePropertyNotFound" xml:space="preserve">
+    <value>The element of type '{0}' does not have a class property or variable property named '{1}'.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_InstanceTypeDoesNotHaveInterfaceLayer" xml:space="preserve">
+    <value>The type {0} does not support a generated interface layer.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_InterfaceLayerNotFound" xml:space="preserve">
+    <value>The type '{0}' is not a valid interface layer type.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_InvalidPropertyExpression" xml:space="preserve">
+    <value>Expression must be of the form 'this.PropertyName'. Invalid expression '{0}'.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_PropertyNotFound" xml:space="preserve">
+    <value>Interface '{0}' does not contain expected property '{1}'.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_ProxyImplementationConstructorMissing" xml:space="preserve">
+    <value>Interface layer concrete implementation type '{0}' does not provide expected public constructor receiving exactly one argument of type '{1}'.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_ProxyMissingInterface" xml:space="preserve">
+    <value>Interface layer concrete implementation '{0}' specified on interface '{1}' does not implement that interface.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_ServiceUnavailable" xml:space="preserve">
+    <value>Cannot add interface layer because the service providing the available interfaces was not found.</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_ViewNotFound" xml:space="preserve">
+    <value>The product does not have a view named '{0}'.</value>
+  </data>
+  <data name="ResourcePack_Error_InvalidResourceType" xml:space="preserve">
+    <value>Wrong resource type.</value>
+  </data>
+  <data name="ResourcePack_Error_UnknownResourceType" xml:space="preserve">
+    <value>Unknown resource type.</value>
+  </data>
+  <data name="ReferenceKindProvider_CanNotConvertFromString" xml:space="preserve">
+    <value>The TypeConverter on this ReferenceKindProvider type does not support convert from System.String to of its declared type. The reference value cannot be read.</value>
+  </data>
+  <data name="ReferenceKindProvider_CanNotConvertString" xml:space="preserve">
+    <value>The TypeConverter on this ReferenceKindProvider type {0} or its typed value {1} does not support convert of its declared type to and from System.String. The reference value cannot be set.</value>
+  </data>
+  <data name="ReferenceKindProvider_UnsupportedReferenceKind" xml:space="preserve">
+    <value>Reference of kind {0} is not supported. Reference must be of type {1}.</value>
+  </data>
+  <data name="StoreEventBufferingScope_BufferingEvent" xml:space="preserve">
+    <value>Buffering scope is active, event will be delayed until Dispose.</value>
+  </data>
+  <data name="StoreEventBufferingScope_CancelledScopeIgnoringEvent" xml:space="preserve">
+    <value>Buffering scope is cancelled. Events will be ignored.</value>
+  </data>
+  <data name="StoreEventBufferingScope_CompleteEnqueingOnParent" xml:space="preserve">
+    <value>Parent buffering scope is active. Events will be enqueued on parent scope until it's disposed.</value>
+  </data>
+  <data name="StoreEventBufferingScope_DisposingNonComplete" xml:space="preserve">
+    <value>Current scope has not been marked as completed. Buffered events are being discarded.</value>
+  </data>
+  <data name="StoreEventBufferingScope_Initialized" xml:space="preserve">
+    <value>Initialized new event buffering scope.</value>
+  </data>
+  <data name="StoreEventBufferingScope_MarkedCanceled" xml:space="preserve">
+    <value>Scope marked as canceled. Events will not be raised on Dispose.</value>
+  </data>
+  <data name="StoreEventBufferingScope_MarkedCompleted" xml:space="preserve">
+    <value>Scope marked as completed. Events will be raised on Dispose.</value>
+  </data>
+  <data name="StoreEventBufferingScope_RaisingEvents" xml:space="preserve">
+    <value>Buffering scope is the topmost scope. Events firing now.</value>
+  </data>
+  <data name="ElementContainerExtensions_UnknownElementContainer" xml:space="preserve">
+    <value>This element container is of an unknown type.</value>
+  </data>
+  <data name="ElementContainerExtensions_ViewInstanceNameFormat" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="ProductElementExtensions_CreateChildElement_InvalidType" xml:space="preserve">
+    <value>Cannot create child element of given type. Only collections and elements supported.</value>
+  </data>
+  <data name="ProductElementExtensions_DisconnectedObject" xml:space="preserve">
+    <value>The element must have an owner or a parent view.</value>
+  </data>
+  <data name="ProductElementExtensions_ErrorNotChildElement" xml:space="preserve">
+    <value>'{0}' is not defined as having child elements named '{1}'.</value>
+  </data>
+  <data name="ProductElementExtensions_ErrorNotElementContainer" xml:space="preserve">
+    <value>'{0}' does not allow creation of child elements '{1}'.</value>
+  </data>
+  <data name="CustomToolRunnerTemplateWizard_FailedToRunCustomTools" xml:space="preserve">
+    <value>Failed to run associated Custom Tool on project items.</value>
+  </data>
+  <data name="CustomToolRunnerTemplateWizard_RunningCustomTool" xml:space="preserve">
+    <value>Running custom tool {0} on item {1} because it has RunCustomToolOnUnfold.</value>
+  </data>
+  <data name="FixLinkPathTemplateWizard_FailedToFixLinkPaths" xml:space="preserve">
+    <value>Failed to fix linked project item paths.</value>
+  </data>
+  <data name="FixLinkPathTemplateWizard_LinkFixed" xml:space="preserve">
+    <value>Fixed item {0} to link to {1}.</value>
+  </data>
+  <data name="SolutionNameTemplateWizard_ContextSolutionName" xml:space="preserve">
+    <value>Found contextual solution name {0}.</value>
+  </data>
+  <data name="SolutionNameTemplateWizard_NewContextSolution" xml:space="preserve">
+    <value>No existing contextual solution found. Setting {0} as the solution name.</value>
+  </data>
+  <data name="VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot" xml:space="preserve">
+    <value>Failed to retrieve registry root suffix of the currently running Visual Studio instance.</value>
+  </data>
+  <data name="VsRootSuffixTemplateWizard_RootSuffixDetermined" xml:space="preserve">
+    <value>Determined VS root suffix as {0}.</value>
+  </data>
+  <data name="GuidGeneratorTemplateWizard_GeneratedNewGuid" xml:space="preserve">
+    <value>Generated new Guid available on template replacement with the key {0}.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_DesignerItemNotFound" xml:space="preserve">
+    <value>Designer item for file {0} was not found.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_OpeningDesigner" xml:space="preserve">
+    <value>Opening designer file {0}.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_RetrievedDesignerFile" xml:space="preserve">
+    <value>Designer file name with key $patterndefinition$ was not found in the replacement dictionary.</value>
+  </data>
+  <data name="ReplacementTemplateWizard_Replacing" xml:space="preserve">
+    <value>Processing custom replacement {0}={1}.</value>
+  </data>
+</root>

@@ -8,8 +8,9 @@ using Microsoft.VisualStudio.Modeling.Immutability;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.Reflection;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Schema.UnitTests

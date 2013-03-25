@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Settings
 {
     /// <summary>
     /// Manages runtime settings.

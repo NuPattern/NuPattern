@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 
-namespace NuPattern.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests.UriProviders
 {
     [TestClass]
     public class VsTemplateUriProviderSpec

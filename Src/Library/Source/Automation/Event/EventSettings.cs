@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Conditions;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;

@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Windows.Data;
 using Microsoft.VisualStudio.PlatformUI;
 using NuPattern.Reflection;
+using NuPattern.Runtime.UI.ViewModels;
 
 namespace NuPattern.Runtime.UI.Data
 {

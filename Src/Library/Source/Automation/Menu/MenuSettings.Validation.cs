@@ -7,12 +7,12 @@ using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Properties;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Authoring;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Library.Automation
 {

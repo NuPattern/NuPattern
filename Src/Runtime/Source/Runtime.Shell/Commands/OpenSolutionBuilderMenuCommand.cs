@@ -1,4 +1,5 @@
 ﻿using System;
+using NuPattern.Runtime.Commands;
 using NuPattern.VisualStudio.Commands;
 
 namespace NuPattern.Runtime.Shell

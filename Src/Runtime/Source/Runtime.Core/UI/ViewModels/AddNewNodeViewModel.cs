@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.Extensibility;
 using NuPattern.Presentation;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio.Shell;
 using NuPattern.VisualStudio.Solution;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Provides a view model to create a new node.

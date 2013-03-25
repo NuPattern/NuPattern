@@ -1,6 +1,7 @@
 ﻿using System;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Runtime.Store.Properties;
+using NuPattern.Runtime.ToolkitInterface;
 
 namespace NuPattern.Runtime
 {

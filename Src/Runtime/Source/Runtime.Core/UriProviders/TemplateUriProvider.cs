@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.VsIde;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.UriProviders
 {
     /// <summary>
     /// A <see cref="IFxrUriReferenceProvider"/> that resolves 

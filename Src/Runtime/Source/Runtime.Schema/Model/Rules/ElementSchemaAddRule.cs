@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.Modeling;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 
 namespace NuPattern.Runtime.Schema
 {

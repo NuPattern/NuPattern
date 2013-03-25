@@ -59,7 +59,7 @@
           <Attributes>
             <ClrAttribute Name="NuPattern.ComponentModel.Design.PropertyDescriptor">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Bindings.PropertyBindingDescriptor)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Bindings.PropertyBindingDescriptor)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -71,7 +71,7 @@
           <Attributes>
             <ClrAttribute Name="NuPattern.ComponentModel.Design.PropertyDescriptor">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Bindings.PropertyBindingDescriptor)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Bindings.PropertyBindingDescriptor)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -96,7 +96,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.FeatureComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -143,7 +143,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.FeatureComponentTypeConverter&lt;Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -184,14 +184,14 @@
         </DomainProperty>
         <DomainProperty Id="4b76d211-4350-4cc8-8bde-c495be238113" Description="The icon that is displayed on the menu to the user." Name="Icon" DisplayName="Icon">
           <Attributes>
-            <ClrAttribute Name="NuPattern.Extensibility.Design.ImageFilter">
+            <ClrAttribute Name="NuPattern.Runtime.Design.ImageFilter">
               <Parameters>
-                <AttributeParameter Value="NuPattern.Extensibility.Design.ImageKind.Image " />
+                <AttributeParameter Value="NuPattern.Runtime.Design.ImageKind.Image " />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.ImageUriEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.ImageUriEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -209,7 +209,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.FeatureComponentTypeConverter&lt;NuPattern.Runtime.ICommandStatus&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.Runtime.ICommandStatus&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -290,7 +290,7 @@
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter&lt;System.Windows.Window&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Windows.Window&gt;)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -365,7 +365,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Design.FeatureComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">

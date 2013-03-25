@@ -6,9 +6,9 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
 using NuPattern.ComponentModel;
 using NuPattern.ComponentModel.Design;
-using NuPattern.Extensibility.Bindings;
-using NuPattern.Extensibility.Design;
 using NuPattern.Reflection;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Design;
 using NuPattern.Runtime.Schema.Properties;
 
 namespace NuPattern.Runtime.Schema

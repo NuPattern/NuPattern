@@ -4,8 +4,8 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility.Bindings;
-using NuPattern.Extensibility.Design;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Design;
 
 namespace NuPattern.Library.IntegrationTests
 {

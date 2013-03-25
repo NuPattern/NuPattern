@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
-using NuPattern.Extensibility.Bindings.Design;
 using NuPattern.Library.Automation;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Bindings.Design;
 
 namespace NuPattern.Library.Commands
 {

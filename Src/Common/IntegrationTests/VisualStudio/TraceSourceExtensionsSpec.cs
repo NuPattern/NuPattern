@@ -6,7 +6,7 @@ using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Moq;
 using NuPattern.VisualStudio;
 
-namespace NuPattern.Common.IntegrationTests.VisualStudio
+namespace NuPattern.IntegrationTests.VisualStudio
 {
     [TestClass]
     public class TraceSourceExtensionsSpec

@@ -4,8 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Immutability;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
+using NuPattern.Modeling;
 using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Runtime.Schema

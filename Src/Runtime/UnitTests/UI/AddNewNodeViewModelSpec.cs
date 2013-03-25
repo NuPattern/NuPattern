@@ -4,9 +4,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
+using NuPattern.Runtime.UI.ViewModels;
 using NuPattern.VisualStudio.Shell;
 
-namespace NuPattern.Runtime.UI.UnitTests
+namespace NuPattern.Runtime.UnitTests.UI
 {
     public class AddNewNodeViewModelSpec
     {

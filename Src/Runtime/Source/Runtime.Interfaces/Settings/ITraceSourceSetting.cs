@@ -1,7 +1,7 @@
 ﻿
 using System.Diagnostics;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Settings
 {
     /// <summary>
     /// Defines settings for a conifguration of a <see cref="TraceSource"/>.

@@ -5,11 +5,13 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.Runtime.Bindings;
-using Dsl = Microsoft.VisualStudio.Modeling;
+using NuPattern.Runtime.Comparers;
+using NuPattern.Runtime.Store;
+using NuPattern.Runtime.Validation;
 
-namespace NuPattern.Runtime.Store.UnitTests
+namespace NuPattern.Runtime.UnitTests.Store
 {
     public class ProductElementSpec
     {
@@ -141,7 +143,7 @@ namespace NuPattern.Runtime.Store.UnitTests
         {
             private IView view;
             private IElement mainElement;
-            private Dsl.Store store;
+            private Microsoft.VisualStudio.Modeling.Store store;
             private ProductState productStore;
             private string storeFilePath = Path.GetTempFileName();
 
@@ -273,7 +275,7 @@ namespace NuPattern.Runtime.Store.UnitTests
                         })
                     );
 
-                using (var store = new Dsl.Store(serviceProvider, typeof(Dsl.CoreDomainModel), typeof(ProductStateStoreDomainModel)))
+                using (var store = new Microsoft.VisualStudio.Modeling.Store(serviceProvider, typeof(Microsoft.VisualStudio.Modeling.CoreDomainModel), typeof(ProductStateStoreDomainModel)))
                 using (var tx = store.TransactionManager.BeginTransaction())
                 {
                     var productStore = store.ElementFactory.CreateElement<ProductState>();
@@ -282,11 +284,11 @@ namespace NuPattern.Runtime.Store.UnitTests
                         .CreateView(v => v.DefinitionId = Ids.MainViewId)
                         .CreateElement(e => e.DefinitionId = Ids.MainElementId);
 
-                    ProductStateStoreSerializationHelper.Instance.SaveModel(new Dsl.SerializationResult(), productStore, this.storeFilePath);
+                    ProductStateStoreSerializationHelper.Instance.SaveModel(new Microsoft.VisualStudio.Modeling.SerializationResult(), productStore, this.storeFilePath);
                     tx.Commit();
                 }
 
-                this.store = new Dsl.Store(serviceProvider, typeof(Dsl.CoreDomainModel), typeof(ProductStateStoreDomainModel));
+                this.store = new Microsoft.VisualStudio.Modeling.Store(serviceProvider, typeof(Microsoft.VisualStudio.Modeling.CoreDomainModel), typeof(ProductStateStoreDomainModel));
                 using (var tx = this.store.TransactionManager.BeginTransaction("Loading", true))
                 {
                     ProductStateStoreSerializationHelper.Instance.LoadModel(this.store, this.storeFilePath, null, null, null);

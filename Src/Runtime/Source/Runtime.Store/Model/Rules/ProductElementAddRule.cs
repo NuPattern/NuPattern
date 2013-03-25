@@ -4,10 +4,9 @@ using System.ComponentModel.Composition;
 using System.Diagnostics;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Store.Properties;
+using NuPattern.Runtime.ToolkitInterface;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Store

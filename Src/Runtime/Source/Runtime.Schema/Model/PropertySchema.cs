@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Schema.Properties;

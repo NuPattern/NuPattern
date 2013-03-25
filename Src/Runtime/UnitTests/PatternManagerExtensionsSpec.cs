@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Runtime.UnitTests
 {

@@ -9,9 +9,9 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Design;
 using NuPattern.Library.Properties;
+using NuPattern.Runtime.Design;
+using NuPattern.Runtime.Guidance;
 
 namespace NuPattern.Library.Commands
 {

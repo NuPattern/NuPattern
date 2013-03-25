@@ -1,7 +1,8 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Store;
 
 namespace NuPattern.Runtime.UnitTests.Store

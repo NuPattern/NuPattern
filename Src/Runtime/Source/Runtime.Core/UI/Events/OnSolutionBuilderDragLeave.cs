@@ -2,7 +2,9 @@
 using System.ComponentModel.Composition;
 using System.Windows;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime.Events;
 using NuPattern.Runtime.Properties;
+using NuPattern.Runtime.UI.Views;
 
 namespace NuPattern.Runtime.UI.Events
 {

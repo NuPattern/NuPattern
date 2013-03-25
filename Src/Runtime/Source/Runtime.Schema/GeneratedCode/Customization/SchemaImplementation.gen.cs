@@ -16,7 +16,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using NuPattern.ComponentModel;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 
 namespace NuPattern.Runtime.Schema
 {/// <summary>

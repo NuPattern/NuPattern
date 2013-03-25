@@ -26,10 +26,6 @@
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
     </Reference>
@@ -91,17 +87,11 @@
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Xaml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -143,18 +133,18 @@
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="RuntimeElementUriProviderSpec.cs" />
-    <Compile Include="PatternElementValidationSpec.cs" />
+    <Compile Include="UriProviders\RuntimeElementUriProviderSpec.cs" />
+    <Compile Include="Store\PatternElementValidationSpec.cs" />
     <Compile Include="PatternManagerExtensionsSpec.cs" />
     <Compile Include="PatternManagerSpec.cs" />
-    <Compile Include="ProductStateSpec.cs" />
+    <Compile Include="Store\ProductStateSpec.cs" />
     <Compile Include="Rules\ProductElementAddRuleSpec.cs" />
     <Compile Include="Rules\PropertyAddRuleSpec.cs" />
     <Compile Include="Rules\AbstractElementAddRuleSpec.cs" />
     <Compile Include="Rules\ViewAddRuleSpec.cs" />
     <Compile Include="Rules\ProductAddRuleSpec.cs" />
     <Compile Include="RuntimeModelSpec.cs" />
-    <Compile Include="SchemaSpec.cs" />
+    <Compile Include="SchemaResourceSpec.cs" />
     <Compile Include="InstalledToolkitInfoSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Store\AbstractElementSpec.cs" />
@@ -179,12 +169,15 @@
     <Compile Include="UriProviders\PackUriProviderSpec.cs" />
     <Compile Include="UriProviders\TextTemplateUriProviderSpec.cs" />
     <Compile Include="UriProviders\VsixExtensionUriProviderSpec.cs" />
-    <Compile Include="VsMenuCommandAdapterSpec.cs">
+    <Compile Include="Commands\VsMenuCommandAdapterSpec.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="VsTemplateUriProviderSpec.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">
+      <Project>{46F79781-98BC-495A-9E01-559F166A6DFF}</Project>
+      <Name>Common.Modeling</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
       <Project>{72CC87F3-2860-45CC-8712-00621F868D60}</Project>
       <Name>Common.Presentation</Name>
@@ -193,9 +186,9 @@
       <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Common\Source\Extensibility\Extensibility.csproj">
+    <ProjectReference Include="..\Source\Runtime.Extensibility\Runtime.Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
-      <Name>Extensibility</Name>
+      <Name>Runtime.Extensibility</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>

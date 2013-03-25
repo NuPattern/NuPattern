@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
 using NuPattern.ComponentModel;
-using NuPattern.Extensibility.Design;
+using NuPattern.Runtime.Design;
 
 namespace NuPattern.Library.Automation
 {

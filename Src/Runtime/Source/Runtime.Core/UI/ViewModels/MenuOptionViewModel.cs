@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Defines behavior for dynamic menu options.

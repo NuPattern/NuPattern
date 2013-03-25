@@ -6,7 +6,7 @@ using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.ComponentModel.Design;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Shell;
 

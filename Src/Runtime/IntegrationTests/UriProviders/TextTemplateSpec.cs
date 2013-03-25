@@ -8,12 +8,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Moq;
-using NuPattern.Extensibility;
 using NuPattern.Runtime.UriProviders;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
-namespace NuPattern.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests.UriProviders
 {
     [TestClass]
     public class TextTemplateSpec

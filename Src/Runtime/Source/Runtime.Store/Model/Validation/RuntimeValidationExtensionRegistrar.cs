@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
+using NuPattern.Runtime.Validation;
 
 namespace NuPattern.Runtime.Store
 {

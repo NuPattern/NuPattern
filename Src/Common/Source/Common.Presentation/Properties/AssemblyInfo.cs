@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Markup;
 
-[assembly: AssemblyTitle("NuPattern.Resources")]
+[assembly: AssemblyTitle("NuPattern.Presentation")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 

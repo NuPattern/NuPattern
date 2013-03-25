@@ -4,7 +4,8 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Store;
 using Dsl = Microsoft.VisualStudio.Modeling;
 

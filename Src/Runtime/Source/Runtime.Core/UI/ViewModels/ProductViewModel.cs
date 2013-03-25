@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Provides a view model for a pattern instance in the solution builder view.

@@ -1,4 +1,4 @@
-﻿namespace NuPattern.Runtime.UI
+﻿namespace NuPattern.Runtime.UI.ViewModels
 {
     partial class AddNewProductViewModel
     {

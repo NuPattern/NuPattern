@@ -4,11 +4,10 @@ using System.Globalization;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.ToolkitInterface;
 
 namespace NuPattern.Library.Automation
 {

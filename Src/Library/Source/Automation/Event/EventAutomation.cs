@@ -8,13 +8,13 @@ using System.Linq;
 using System.Windows.Input;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Properties;
 using NuPattern.Presentation;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Events;
+using NuPattern.Runtime.ToolkitInterface;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Library.Automation

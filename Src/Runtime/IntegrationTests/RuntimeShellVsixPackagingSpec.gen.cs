@@ -130,10 +130,11 @@ namespace NuPattern.Runtime.IntegrationTests
 
                             //Runtime Assemblies
                             "NuPattern.Common.dll",
+                            "NuPattern.Modeling.dll",
                             "NuPattern.Presentation.dll",
                             "NuPattern.VisualStudio.dll",
-                            "NuPattern.Extensibility.dll",
-                            "NuPattern.Extensibility.Serialization.dll",
+                            "NuPattern.Runtime.Extensibility.dll",
+                            "NuPattern.Runtime.Extensibility.Serialization.dll",
                             "NuPattern.Library.dll",
                             "NuPattern.Runtime.Core.dll",
                             "NuPattern.Runtime.Interfaces.dll",
@@ -144,10 +145,11 @@ namespace NuPattern.Runtime.IntegrationTests
 
                             // XML documentation
                             "NuPattern.Common.xml",
+                            "NuPattern.Modeling.xml",
                             "NuPattern.Presentation.xml",
                             "NuPattern.VisualStudio.xml",
-                            "NuPattern.Extensibility.xml",
-                            //"NuPattern.Extensibility.Serialization.xml",
+                            "NuPattern.Runtime.Extensibility.xml",
+                            //"NuPattern.Runtime.Extensibility.Serialization.xml",
                             "NuPattern.Library.xml",
                             //"NuPattern.Runtime.Core.xml",
                             "NuPattern.Runtime.Interfaces.xml",

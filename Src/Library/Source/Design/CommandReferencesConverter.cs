@@ -2,8 +2,8 @@
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using NuPattern.Extensibility.Bindings.Design;
 using NuPattern.Library.Automation;
+using NuPattern.Runtime.Bindings.Design;
 
 namespace NuPattern.Library.Design
 {

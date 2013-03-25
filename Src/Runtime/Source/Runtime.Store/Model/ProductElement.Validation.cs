@@ -5,9 +5,10 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Modeling.Validation;
-using NuPattern.Extensibility;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Store.Properties;
+using NuPattern.Runtime.ToolkitInterface;
+using NuPattern.Runtime.Validation;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Store

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Data;
+using NuPattern.Runtime.UI.ViewModels;
 
 namespace NuPattern.Runtime.UI
 {

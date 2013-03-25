@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Immutability;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 
 namespace NuPattern.Runtime.Schema
 {

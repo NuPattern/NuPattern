@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Runtime.Schema.UnitTests
 {

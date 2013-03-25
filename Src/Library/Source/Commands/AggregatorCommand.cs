@@ -9,13 +9,13 @@ using System.Windows.Input;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
-using NuPattern.Extensibility;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Automation;
 using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Library.Commands

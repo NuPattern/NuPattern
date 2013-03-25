@@ -4,9 +4,10 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.ComponentModel;
-using NuPattern.Extensibility;
 using NuPattern.Library.Automation;
+using NuPattern.Modeling;
 using NuPattern.Reflection;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests.Automation.Artifact

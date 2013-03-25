@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VsSDK.IntegrationTestLibrary;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 
-namespace NuPattern.Common.IntegrationTests.VisualStudio
+namespace NuPattern.IntegrationTests.VisualStudio
 {
     [TestClass]
     public class Misc

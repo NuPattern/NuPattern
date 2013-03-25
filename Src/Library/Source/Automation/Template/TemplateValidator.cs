@@ -6,11 +6,11 @@ using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Library.Automation.Template

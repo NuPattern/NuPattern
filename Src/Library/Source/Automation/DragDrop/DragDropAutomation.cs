@@ -11,12 +11,12 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Properties;
 using NuPattern.Presentation;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Events;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Library.Automation

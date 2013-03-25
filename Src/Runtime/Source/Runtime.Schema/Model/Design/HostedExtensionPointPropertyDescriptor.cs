@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.Runtime.Schema.Properties;
 using NuPattern.VisualStudio.Shell;
 

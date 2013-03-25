@@ -6,8 +6,8 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
 using NuPattern.ComponentModel;
-using NuPattern.Extensibility.Bindings;
-using NuPattern.Extensibility.Design;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Design;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Shell;
 

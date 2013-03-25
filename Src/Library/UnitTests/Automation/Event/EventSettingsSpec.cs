@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Conditions;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests.Automation.Event

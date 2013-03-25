@@ -10,6 +10,8 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Shell.Properties;
 using NuPattern.Runtime.UI;
+using NuPattern.Runtime.UI.ViewModels;
+using NuPattern.Runtime.UI.Views;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Shell;
 

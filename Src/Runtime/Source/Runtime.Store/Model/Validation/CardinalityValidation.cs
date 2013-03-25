@@ -1,8 +1,9 @@
 ﻿using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Store.Properties;
+using NuPattern.Runtime.Validation;
 
 namespace NuPattern.Runtime.Store
 {

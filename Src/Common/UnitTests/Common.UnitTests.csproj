@@ -7,7 +7,7 @@
     <ProjectGuid>{DBB67587-6B46-469E-B427-C8CAFAC513A3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NuPattern.Common.UnitTests</RootNamespace>
+    <RootNamespace>NuPattern.UnitTests</RootNamespace>
     <AssemblyName>NuPattern.Common.UnitTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -19,6 +19,10 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
+    <Reference Include="EnvDTE">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
       <Private>True</Private>
@@ -33,6 +37,11 @@
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
+
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
     </Reference>
@@ -43,7 +52,6 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
@@ -68,12 +76,14 @@
     <Compile Include="EventSpec.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Misc.cs" />
-    <Compile Include="ObjectValidatorSpec.cs" />
+    <Compile Include="ComponentModel\ObjectValidatorSpec.cs" />
     <Compile Include="ObservableEventExtensionsSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyChangedManagerSpec.cs" />
+    <Compile Include="ComponentModel\PropertyChangedManagerSpec.cs" />
     <Compile Include="ReflectionExtensionsSpec.cs" />
     <Compile Include="StaticWeakReferenceSpec.cs" />
+    <Compile Include="TypeExtensionsSpec.cs" />
+    <Compile Include="VisualStudio\Solution\SolutionExtensionsSpec.cs" />
     <Compile Include="WeakObservableEventSpec.cs" />
     <Compile Include="WeakObservableSpec.cs" />
     <Compile Include="WeakObserverEventSpec.cs" />
@@ -84,17 +94,9 @@
     </CodeAnalysisDictionary>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Source\Extensibility\Extensibility.csproj">
-      <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
-      <Name>Extensibility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Runtime\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
-      <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
-      <Name>Runtime.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Runtime\Source\Runtime.Schema\Runtime.Schema.csproj">
-      <Project>{B0F2590A-F583-4883-B701-923B43475BB5}</Project>
-      <Name>Runtime.Schema</Name>
+    <ProjectReference Include="..\Source\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5DCC5923-F1D8-43F1-B23F-178C7618819E}</Project>
+      <Name>Common.VisualStudio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Source\Common\Common.csproj">
       <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>

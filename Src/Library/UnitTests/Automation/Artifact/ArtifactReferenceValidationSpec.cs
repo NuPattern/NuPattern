@@ -4,12 +4,11 @@ using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
 using NuPattern.Library.Automation;
-using NuPattern.Runtime;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Extensibility;
+using NuPattern.Runtime.References;
 using NuPattern.Runtime.Store;
-using ModelElementExtensions = NuPattern.Extensibility.ModelElementExtensions;
 
 namespace NuPattern.Library.UnitTests.Automation.Artifact
 {
@@ -37,7 +36,7 @@ namespace NuPattern.Library.UnitTests.Automation.Artifact
                 this.store.TransactionManager.DoWithinTransaction(() =>
                 {
                     var productStore = this.store.ElementFactory.CreateElement<ProductState>();
-                    this.product = ModelElementExtensions.Create<Product>(productStore);
+                    this.product = productStore.Create<Product>();
                 });
 
                 validationContext = new ValidationContext(ValidationCategories.Custom, this.product);

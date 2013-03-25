@@ -3,9 +3,9 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility.References;
 using NuPattern.Library.ValidationRules;
 using NuPattern.Runtime;
+using NuPattern.Runtime.References;
 
 namespace NuPattern.Library.UnitTests
 {

@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using NuPattern.Presentation;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.Views
 {
     /// <summary>
     /// Interaction logic for AddNewNodeView.xaml

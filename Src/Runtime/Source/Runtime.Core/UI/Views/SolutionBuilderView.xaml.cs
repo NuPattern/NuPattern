@@ -10,9 +10,10 @@ using System.Windows.Media;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Presentation;
+using NuPattern.Runtime.UI.ViewModels;
 using NuPattern.VisualStudio;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.Views
 {
     /// <summary>
     /// Interaction logic for SolutionBuilderView.xaml.

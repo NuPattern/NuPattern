@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using NuPattern.Extensibility.Bindings.Design;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Design;
 using NuPattern.Reflection;
+using NuPattern.Runtime.Bindings.Design;
 
 namespace NuPattern.Library.Automation
 {

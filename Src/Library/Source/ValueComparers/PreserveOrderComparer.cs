@@ -1,7 +1,7 @@
 ﻿using NuPattern.ComponentModel.Design;
-using NuPattern.Extensibility;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Comparers;
 
 namespace NuPattern.Library.Comparers
 {

@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Runtime.UnitTests

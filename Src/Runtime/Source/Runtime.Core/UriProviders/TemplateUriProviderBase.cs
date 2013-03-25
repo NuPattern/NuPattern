@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Runtime.Properties;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.UriProviders
 {
     /// <summary>
     /// Defines the base class for all URI reference providers based in templates.

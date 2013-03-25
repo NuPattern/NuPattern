@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Linq;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Defines a view model for a <see cref="IAbstractElement"/>.

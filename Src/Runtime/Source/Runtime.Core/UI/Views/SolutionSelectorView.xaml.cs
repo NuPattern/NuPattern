@@ -1,6 +1,6 @@
 ﻿using NuPattern.Presentation;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.Views
 {
     /// <summary>
     /// The view for the <see cref="SolutionSelector"/>.

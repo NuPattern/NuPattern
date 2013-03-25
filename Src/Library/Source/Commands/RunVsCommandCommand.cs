@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
-using NuPattern.Extensibility;
 using NuPattern.Library.Properties;
 using NuPattern.VisualStudio.Solution;
 

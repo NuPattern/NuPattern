@@ -6,7 +6,7 @@ using Moq;
 using NuPattern.VisualStudio.Solution;
 using NuPattern.Win32;
 
-namespace NuPattern.Common.IntegrationTests.VisualStudio
+namespace NuPattern.IntegrationTests.VisualStudio.Solution
 {
     public class DteExtensionsSpec
     {

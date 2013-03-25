@@ -1,5 +1,5 @@
 ﻿using System;
-using NuPattern.Extensibility.Bindings;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Commands
 {

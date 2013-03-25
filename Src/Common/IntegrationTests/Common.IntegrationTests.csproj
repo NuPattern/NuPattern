@@ -9,7 +9,7 @@
     <ProjectGuid>{30CFE347-2CCA-4F54-8DAA-7CE639EA8A8F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NuPattern.Common.IntegrationTests</RootNamespace>
+    <RootNamespace>NuPattern.IntegrationTests</RootNamespace>
     <AssemblyName>NuPattern.Common.IntegrationTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -37,9 +37,15 @@
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
-      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
@@ -115,6 +121,7 @@
     <Compile Include="VisualStudio\Misc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VisualStudio\TraceSourceExtensionsSpec.cs" />
+    <Compile Include="VisualStudio\VsixSpec.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\CodeAnalysis.Dictionary.xml">
@@ -126,9 +133,9 @@
       <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\Extensibility\Extensibility.csproj">
+    <ProjectReference Include="..\..\Runtime\Source\Runtime.Extensibility\Runtime.Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
-      <Name>Extensibility</Name>
+      <Name>Runtime.Extensibility</Name>
     </ProjectReference>
     <ProjectReference Include="..\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5DCC5923-F1D8-43F1-B23F-178C7618819E}</Project>

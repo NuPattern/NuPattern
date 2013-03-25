@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Automation;
 
 namespace NuPattern.Library.Automation
 {

@@ -6,9 +6,10 @@ using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
 using NuPattern.Library.Commands;
+using NuPattern.Modeling;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Store;
 
 namespace NuPattern.Library.UnitTests.Commands

@@ -8,15 +8,15 @@ using System.Globalization;
 using System.Linq;
 using System.Windows.Data;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.Extensibility;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio.Extensions;
 using NuPattern.VisualStudio.Shell;
 using NuPattern.VisualStudio.Solution;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Provides a view model to create a new pattern.

@@ -62,15 +62,10 @@
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\CodeAnalysis.Dictionary.xml">
@@ -96,6 +91,7 @@
     <Compile Include="Design\PatternSchemaTypeDescriptorProviderSpec.cs" />
     <Compile Include="Design\ProvidedExtensionPointsPropertyDescriptorSpec.cs" />
     <Compile Include="Design\ValueTypesTypeConverterSpec.cs" />
+    <Compile Include="ModelElementExtensionsSpec.cs" />
     <Compile Include="Model\PatternModelSpec.cs" />
     <Compile Include="PatternModelClonerSpec.cs" />
     <Compile Include="PatternModelSerializationHelperSpec.cs" />
@@ -140,6 +136,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">
+      <Project>{46F79781-98BC-495A-9E01-559F166A6DFF}</Project>
+      <Name>Common.Modeling</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
       <Project>{72cc87f3-2860-45cc-8712-00621f868d60}</Project>
       <Name>Common.Presentation</Name>
@@ -148,9 +148,9 @@
       <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Common\Source\Extensibility\Extensibility.csproj">
+    <ProjectReference Include="..\Source\Runtime.Extensibility\Runtime.Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
-      <Name>Extensibility</Name>
+      <Name>Runtime.Extensibility</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>

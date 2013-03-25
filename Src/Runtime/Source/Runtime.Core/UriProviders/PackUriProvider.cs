@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UriProviders

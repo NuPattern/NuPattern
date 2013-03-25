@@ -1,8 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility;
 using NuPattern.Library.Automation;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.IntegrationTests

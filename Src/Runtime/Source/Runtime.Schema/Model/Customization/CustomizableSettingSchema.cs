@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using Microsoft.VisualStudio.Modeling;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Schema

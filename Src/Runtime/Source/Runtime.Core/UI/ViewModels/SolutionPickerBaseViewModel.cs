@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Presentation;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Provides a view model for the solution pickers

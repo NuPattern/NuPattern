@@ -1,8 +1,7 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Settings
 {
     /// <summary>
     /// Defines settings for the runtime.

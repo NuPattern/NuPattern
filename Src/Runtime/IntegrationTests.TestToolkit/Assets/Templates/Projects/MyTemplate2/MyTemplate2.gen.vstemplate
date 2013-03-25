@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
-	<TemplateData>
-		<Name>MyTemplate2</Name>
-		<Description>A test template.</Description>
-		<TemplateID>NuPattern.Runtime.IntegrationTests.TestToolkit.MyTemplate2</TemplateID>
-		<ProjectType>CSharp</ProjectType>
-		<ProjectSubType></ProjectSubType>
-		<SortOrder>1000</SortOrder>
-		<CreateNewFolder>false</CreateNewFolder>
-		<DefaultName>MyTemplate2</DefaultName>
-		<ProvideDefaultName>true</ProvideDefaultName>
-		<LocationField>Enabled</LocationField>
-		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
-		<Icon />
-		<RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
-	</TemplateData>
-	<TemplateContent>
-		<Project File="MyTemplate2Project.gen.csproj" TargetFileName="MyTemplate2.csproj" ReplaceParameters="true">
-			<ProjectItem ReplaceParameters="true">source.vsixmanifest</ProjectItem>
-			<Folder Name="Properties">
-				<ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
-			</Folder>
-		</Project>
-	</TemplateContent>
-	<WizardData>
-		<Replacement Key="$schemaId$" Value="$guid3$" />
-	</WizardData>
-	<WizardExtension>
-		<Assembly>NuPattern.Extensibility, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-		<FullClassName>NuPattern.Extensibility.TemplateWizards.ReplacementTemplateWizard</FullClassName>
-	</WizardExtension>
+  <TemplateData>
+    <Name>MyTemplate2</Name>
+    <Description>A test template.</Description>
+    <TemplateID>NuPattern.Runtime.IntegrationTests.TestToolkit.MyTemplate2</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType></ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>MyTemplate2</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon />
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="MyTemplate2Project.gen.csproj" TargetFileName="MyTemplate2.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true">source.vsixmanifest</ProjectItem>
+      <Folder Name="Properties">
+        <ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardData>
+    <Replacement Key="$schemaId$" Value="$guid3$" />
+  </WizardData>
+  <WizardExtension>
+    <Assembly>
+      NuPattern.Runtime.Extensibility, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+    <FullClassName>NuPattern.Runtime.TemplateWizards.ReplacementTemplateWizard</FullClassName>
+  </WizardExtension>
 </VSTemplate>

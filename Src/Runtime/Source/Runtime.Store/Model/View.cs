@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Runtime.Store
 {

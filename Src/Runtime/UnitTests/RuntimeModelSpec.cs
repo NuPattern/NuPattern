@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Store;
 
 namespace NuPattern.Runtime.UnitTests

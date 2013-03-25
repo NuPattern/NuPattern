@@ -44,7 +44,7 @@ else
       <MefComponent>|Runtime.Store|</MefComponent>
       <MefComponent>|Runtime.Schema|</MefComponent>
       <MefComponent>|Library|</MefComponent>
-      <MefComponent>|Extensibility|</MefComponent>
+      <MefComponent>|Runtime.Extensibility|</MefComponent>
       <MefComponent>|Common.VisualStudio|</MefComponent>
       <Assembly AssemblyName="NuPattern.Runtime.Core, Version=<#=VsixInfo.PatternToolkitRuntime.Version#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5">|Runtime.Core|</Assembly>
       <!-- Feature EXtension Runtime -->

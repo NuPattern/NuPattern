@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Globalization;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.Runtime.Store.Properties;
 
 namespace NuPattern.Runtime.Store

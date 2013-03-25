@@ -7,9 +7,10 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Properties;
+using NuPattern.Runtime.Settings;
 using NuPattern.VisualStudio;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// The view model for an automation menu.
@@ -25,7 +26,7 @@ namespace NuPattern.Runtime.UI
         {
             this.Command = new AutomationCommand(this, automation);
             this.ImagePath = ((IAutomationMenuCommand)automation).IconPath;
-            this.IconType = string.IsNullOrEmpty(this.ImagePath) ? UI.IconType.None : UI.IconType.Image;
+            this.IconType = string.IsNullOrEmpty(this.ImagePath) ? IconType.None : IconType.Image;
             this.SortOrder = ((IAutomationMenuCommand)automation).SortOrder;
         }
 

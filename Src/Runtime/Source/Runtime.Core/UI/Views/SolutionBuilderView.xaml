@@ -1,5 +1,5 @@
 <cp:CommonUserControl
-    x:Class="NuPattern.Runtime.UI.SolutionBuilderView"
+    x:Class="NuPattern.Runtime.UI.Views.SolutionBuilderView"
     x:ClassModifier="internal"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,6 +7,7 @@
     xmlns:l="clr-namespace:NuPattern.Runtime.UI"
     xmlns:k="clr-namespace:NuPattern.Runtime.UI.Data"
     xmlns:cp="clr-namespace:NuPattern.Presentation;assembly=NuPattern.Presentation"
+    xmlns:viewModels="clr-namespace:NuPattern.Runtime.UI.ViewModels"
     Background="{DynamicResource VsBrush.ToolWindowBackground}">
     <UserControl.Resources>
         <ResourceDictionary>
@@ -203,7 +204,7 @@
 
                         <ContentControl Name="display" Margin="3,0,0,0" Padding="0" Content="{Binding}" Focusable="False">
                             <ContentControl.Resources>
-                                <DataTemplate DataType="{x:Type l:ProductViewModel}">
+                                <DataTemplate DataType="{x:Type viewModels:ProductViewModel}">
                                     <TextBlock Name="displayText">
                                         <TextBlock.Text>
                                             <MultiBinding StringFormat="{}{0} [{1}]">
@@ -232,7 +233,7 @@
                                     </DataTemplate.Triggers>
                                 </DataTemplate>
 
-                                <DataTemplate DataType="{x:Type l:ProductElementViewModel}">
+                                <DataTemplate DataType="{x:Type viewModels:ProductElementViewModel}">
                                     <TextBlock Text="{Binding Model.InstanceName}">
                                         <TextBlock.ToolTip >
                                             <ToolTip>

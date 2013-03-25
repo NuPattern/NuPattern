@@ -5,12 +5,13 @@ using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
+using NuPattern.Modeling;
 using NuPattern.Reflection;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests.Commands

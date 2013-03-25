@@ -6,7 +6,7 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
 using NuPattern.ComponentModel.Design;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Schema

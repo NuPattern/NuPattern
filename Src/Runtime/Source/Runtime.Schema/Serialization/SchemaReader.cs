@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Shell;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Schema

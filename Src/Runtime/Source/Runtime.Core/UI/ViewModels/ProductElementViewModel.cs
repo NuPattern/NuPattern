@@ -9,20 +9,17 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Properties;
+using NuPattern.Runtime.Settings;
 using NuPattern.Runtime.Store;
 using NuPattern.VisualStudio;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
-    using ElementFactory = Func<IElementContainer, IPatternElementInfo, string, IProductElement>;
-    using ViewModelFactory = Func<IProductElement, SolutionBuilderContext, ProductElementViewModel>;
-
     /// <summary>
     /// Base view model for <see cref="ProductElement"/> elements.
     /// </summary>
@@ -624,24 +621,24 @@ namespace NuPattern.Runtime.UI
         {
             #region Element factories
 
-            private static readonly KeyValuePair<Type, ElementFactory>[] elementFactories = new[]
+            private static readonly KeyValuePair<Type, Func<IElementContainer, IPatternElementInfo, string, IProductElement>>[] elementFactories = new[]
             {
-                new KeyValuePair<Type, ElementFactory>(typeof(IElementInfo), NewElement),
-                new KeyValuePair<Type, ElementFactory>(typeof(ICollectionInfo), NewCollection),
-                new KeyValuePair<Type, ElementFactory>(typeof(IPatternInfo), NewExtension)
+                new KeyValuePair<Type, Func<IElementContainer, IPatternElementInfo, string, IProductElement>>(typeof(IElementInfo), NewElement),
+                new KeyValuePair<Type, Func<IElementContainer, IPatternElementInfo, string, IProductElement>>(typeof(ICollectionInfo), NewCollection),
+                new KeyValuePair<Type, Func<IElementContainer, IPatternElementInfo, string, IProductElement>>(typeof(IPatternInfo), NewExtension)
             };
 
             #endregion
 
             #region ViewModel factories
 
-            private static readonly KeyValuePair<Type, ViewModelFactory>[] vmFactories = new[]
+            private static readonly KeyValuePair<Type, Func<IProductElement, SolutionBuilderContext, ProductElementViewModel>>[] vmFactories = new[]
             {
-                new KeyValuePair<Type, ViewModelFactory>(
+                new KeyValuePair<Type, Func<IProductElement, SolutionBuilderContext, ProductElementViewModel>>(
                     typeof(IAbstractElement),
                     (e, ctx) => new ElementViewModel((IAbstractElement)e, ctx)),
 
-                new KeyValuePair<Type, ViewModelFactory>(
+                new KeyValuePair<Type, Func<IProductElement, SolutionBuilderContext, ProductElementViewModel>>(
                     typeof(IProduct),
                     (e, ctx) => new ProductViewModel((IProduct)e, ctx))
             };
@@ -654,7 +651,7 @@ namespace NuPattern.Runtime.UI
                 return factory(child, ctx).With(vm => vm.IsExpanded = true);
             }
 
-            private static ViewModelFactory FindFactory(IProductElement element)
+            private static Func<IProductElement, SolutionBuilderContext, ProductElementViewModel> FindFactory(IProductElement element)
             {
                 return vmFactories.Where(f => f.Key.IsAssignableFrom(element.GetType())).Select(f => f.Value).First();
             }
@@ -666,7 +663,7 @@ namespace NuPattern.Runtime.UI
                 return factory(parent, info, name);
             }
 
-            private static ElementFactory FindFactory(IPatternElementInfo info)
+            private static Func<IElementContainer, IPatternElementInfo, string, IProductElement> FindFactory(IPatternElementInfo info)
             {
                 return elementFactories.Where(f => f.Key.IsAssignableFrom(info.GetType())).Select(f => f.Value).First();
             }

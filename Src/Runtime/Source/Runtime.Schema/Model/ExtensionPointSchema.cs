@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Runtime.Schema

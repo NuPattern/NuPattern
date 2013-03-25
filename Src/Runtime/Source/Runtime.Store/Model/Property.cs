@@ -6,11 +6,11 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Store.Properties;
+using NuPattern.Runtime.ToolkitInterface;
+using NuPattern.Runtime.Validation;
 
 namespace NuPattern.Runtime.Store
 {

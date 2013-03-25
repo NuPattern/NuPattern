@@ -6,9 +6,9 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Extensibility;
+using NuPattern.Runtime.References;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 

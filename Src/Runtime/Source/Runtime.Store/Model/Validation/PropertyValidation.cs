@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.Modeling.Validation;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Runtime.Store
 {

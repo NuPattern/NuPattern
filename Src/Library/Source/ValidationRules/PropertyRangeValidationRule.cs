@@ -5,8 +5,8 @@ using System.Drawing.Design;
 using System.Globalization;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using NuPattern.ComponentModel.Design;
-using NuPattern.Extensibility.Design;
 using NuPattern.Library.Properties;
+using NuPattern.Runtime.Design;
 
 namespace NuPattern.Library.ValidationRules
 {

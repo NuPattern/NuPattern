@@ -4,7 +4,8 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Store;
 using Dsl = Microsoft.VisualStudio.Modeling;
 
@@ -43,65 +44,65 @@ namespace NuPattern.Runtime.UnitTests.Store
                 var serviceProvider = Mocks.Of<IServiceProvider>().First(provider =>
                     provider.GetService(typeof(IPatternManager)) == Mocks.Of<IPatternManager>().First(manager =>
                         manager.InstalledToolkits == new IInstalledToolkitInfo[] 
-						{
-							Mocks.Of<IInstalledToolkitInfo>().First(toolkitInfo => 
-								toolkitInfo.Id == Ids.ValidExtensionToolkitId &&
-								toolkitInfo.Schema.Pattern.Id == Ids.ValidExtensionProductId &&
-								toolkitInfo.Schema.Pattern.ExtensionId == Ids.ValidExtensionToolkitId &&
-								toolkitInfo.Schema.Pattern.ProvidedExtensionPoints == new[]
-								{
-									Mocks.Of<IProvidedExtensionPointInfo>().First(extensionPoint => extensionPoint.ExtensionPointId == "ValidExtensionPointId")
-								}),
-							Mocks.Of<IInstalledToolkitInfo>().First(toolkitInfo => 
-								toolkitInfo.Id == Ids.InvalidExtensionToolkitId &&
-								toolkitInfo.Schema.Pattern.Id == Ids.InvalidExtensionProductId &&
-								toolkitInfo.Schema.Pattern.ExtensionId == Ids.InvalidExtensionToolkitId &&
-								toolkitInfo.Schema.Pattern.ProvidedExtensionPoints == new[]
-								{
-									Mocks.Of<IProvidedExtensionPointInfo>().First(extensionPoint => extensionPoint.ExtensionPointId == "InvalidExtensionPointId")
-								}),
-							Mocks.Of<IInstalledToolkitInfo>().First(toolkitInfo => 
-								toolkitInfo.Id == Ids.MainToolkitId &&
-								toolkitInfo.Schema.Pattern.Id == Ids.MainProductId &&
-								toolkitInfo.Schema.Pattern.Name == "Pattern" &&
-								toolkitInfo.Schema.Pattern.ExtensionId == Ids.MainToolkitId &&
-								toolkitInfo.Schema.Pattern.Views == new []
-								{
-									Mocks.Of<IViewInfo>().First(view => 
-										view.Id == Ids.MainViewId && 
-										view.Name == "View" &&
-										view.Elements == new IAbstractElementInfo[]
-										{
-											Mocks.Of<IElementInfo>().First(element =>
-												element.Id == Ids.MainElementId && 
-												element.Name == "Element" && 
-												element.Cardinality == Cardinality.ZeroToMany && 
-												element.ExtensionPoints == new [] 
-												{
-													Mocks.Of<IExtensionPointInfo>().First(extensionPoint => 
-														extensionPoint.Id == Guid.NewGuid() && 
-														extensionPoint.Name == "ExtensionPoint" && 
-														extensionPoint.Cardinality == Cardinality.ZeroToMany && 
-														extensionPoint.RequiredExtensionPointId == "ValidExtensionPointId"
-														),
-												}), 
-											Mocks.Of<ICollectionInfo>().First(element =>
-												element.Id == Ids.MainCollectionId && 
-												element.Name == "Collection" && 
-												element.Cardinality == Cardinality.ZeroToMany
-												), 
-										} &&
-										view.ExtensionPoints == new [] 
-										{
-											Mocks.Of<IExtensionPointInfo>().First(extensionPoint => 
-												extensionPoint.Id == Guid.NewGuid() && 
-												extensionPoint.Name == "ExtensionPoint" && 
-												extensionPoint.Cardinality == Cardinality.ZeroToMany && 
-												extensionPoint.RequiredExtensionPointId == "ValidExtensionPointId"
-												),
-										})
-								}),
-						})
+                        {
+                            Mocks.Of<IInstalledToolkitInfo>().First(toolkitInfo => 
+                                toolkitInfo.Id == Ids.ValidExtensionToolkitId &&
+                                toolkitInfo.Schema.Pattern.Id == Ids.ValidExtensionProductId &&
+                                toolkitInfo.Schema.Pattern.ExtensionId == Ids.ValidExtensionToolkitId &&
+                                toolkitInfo.Schema.Pattern.ProvidedExtensionPoints == new[]
+                                {
+                                    Mocks.Of<IProvidedExtensionPointInfo>().First(extensionPoint => extensionPoint.ExtensionPointId == "ValidExtensionPointId")
+                                }),
+                            Mocks.Of<IInstalledToolkitInfo>().First(toolkitInfo => 
+                                toolkitInfo.Id == Ids.InvalidExtensionToolkitId &&
+                                toolkitInfo.Schema.Pattern.Id == Ids.InvalidExtensionProductId &&
+                                toolkitInfo.Schema.Pattern.ExtensionId == Ids.InvalidExtensionToolkitId &&
+                                toolkitInfo.Schema.Pattern.ProvidedExtensionPoints == new[]
+                                {
+                                    Mocks.Of<IProvidedExtensionPointInfo>().First(extensionPoint => extensionPoint.ExtensionPointId == "InvalidExtensionPointId")
+                                }),
+                            Mocks.Of<IInstalledToolkitInfo>().First(toolkitInfo => 
+                                toolkitInfo.Id == Ids.MainToolkitId &&
+                                toolkitInfo.Schema.Pattern.Id == Ids.MainProductId &&
+                                toolkitInfo.Schema.Pattern.Name == "Pattern" &&
+                                toolkitInfo.Schema.Pattern.ExtensionId == Ids.MainToolkitId &&
+                                toolkitInfo.Schema.Pattern.Views == new []
+                                {
+                                    Mocks.Of<IViewInfo>().First(view => 
+                                        view.Id == Ids.MainViewId && 
+                                        view.Name == "View" &&
+                                        view.Elements == new IAbstractElementInfo[]
+                                        {
+                                            Mocks.Of<IElementInfo>().First(element =>
+                                                element.Id == Ids.MainElementId && 
+                                                element.Name == "Element" && 
+                                                element.Cardinality == Cardinality.ZeroToMany && 
+                                                element.ExtensionPoints == new [] 
+                                                {
+                                                    Mocks.Of<IExtensionPointInfo>().First(extensionPoint => 
+                                                        extensionPoint.Id == Guid.NewGuid() && 
+                                                        extensionPoint.Name == "ExtensionPoint" && 
+                                                        extensionPoint.Cardinality == Cardinality.ZeroToMany && 
+                                                        extensionPoint.RequiredExtensionPointId == "ValidExtensionPointId"
+                                                        ),
+                                                }), 
+                                            Mocks.Of<ICollectionInfo>().First(element =>
+                                                element.Id == Ids.MainCollectionId && 
+                                                element.Name == "Collection" && 
+                                                element.Cardinality == Cardinality.ZeroToMany
+                                                ), 
+                                        } &&
+                                        view.ExtensionPoints == new [] 
+                                        {
+                                            Mocks.Of<IExtensionPointInfo>().First(extensionPoint => 
+                                                extensionPoint.Id == Guid.NewGuid() && 
+                                                extensionPoint.Name == "ExtensionPoint" && 
+                                                extensionPoint.Cardinality == Cardinality.ZeroToMany && 
+                                                extensionPoint.RequiredExtensionPointId == "ValidExtensionPointId"
+                                                ),
+                                        })
+                                }),
+                        })
                     );
 
                 using (var store = new Dsl.Store(serviceProvider, typeof(Dsl.CoreDomainModel), typeof(ProductStateStoreDomainModel)))

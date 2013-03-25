@@ -6,10 +6,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Presentation;
 using NuPattern.Runtime.Properties;
+using NuPattern.Runtime.UI.ViewModels;
 using NuPattern.VisualStudio.Shell;
 using NuPattern.VisualStudio.Solution;
 
-namespace NuPattern.Runtime.UI.UnitTests
+namespace NuPattern.Runtime.UnitTests.UI
 {
     public class ElementViewModelSpec
     {

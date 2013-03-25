@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.Extensibility.Bindings.Design;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings.Design;
 
 namespace NuPattern.Library.Automation
 {

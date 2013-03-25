@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.UriProviders
 {
     /// <summary>
     /// A <see cref="IFxrUriReferenceProvider"/> that resolves and creates Uris from 

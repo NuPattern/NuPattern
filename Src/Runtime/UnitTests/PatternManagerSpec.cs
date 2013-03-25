@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Store;
 using NuPattern.VisualStudio.Shell;
 using NuPattern.VisualStudio.Solution;

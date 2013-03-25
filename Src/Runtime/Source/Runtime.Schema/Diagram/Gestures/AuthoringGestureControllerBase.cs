@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Authoring;
 
 namespace NuPattern.Runtime.Schema
 {

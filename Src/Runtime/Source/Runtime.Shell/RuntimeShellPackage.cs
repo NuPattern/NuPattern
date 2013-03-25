@@ -28,6 +28,7 @@ using NuPattern.Runtime.Settings;
 using NuPattern.Runtime.Shell.OptionPages;
 using NuPattern.Runtime.Shell.Properties;
 using NuPattern.Runtime.Store;
+using NuPattern.Runtime.ToolkitInterface;
 using NuPattern.Runtime.UI;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Shell;

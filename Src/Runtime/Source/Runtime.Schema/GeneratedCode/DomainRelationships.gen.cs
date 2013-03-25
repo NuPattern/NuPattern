@@ -1356,7 +1356,7 @@ namespace NuPattern.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -2611,7 +2611,7 @@ namespace NuPattern.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -3429,7 +3429,7 @@ namespace NuPattern.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -4009,7 +4009,7 @@ namespace NuPattern.Runtime.Schema
 		/// by their 'InstanceName' property.
 		/// </summary>
 		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Extensibility.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]

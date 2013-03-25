@@ -5,11 +5,11 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.Runtime.Bindings;
-using Dsl = Microsoft.VisualStudio.Modeling;
+using NuPattern.Runtime.Store;
 
-namespace NuPattern.Runtime.Store.UnitTests
+namespace NuPattern.Runtime.UnitTests.Rules
 {
     public class AbstractElementAddRuleSpec
     {
@@ -355,7 +355,7 @@ namespace NuPattern.Runtime.Store.UnitTests
             private IElementInfo elementInfo;
             private Guid elementId;
             private string storeFilePath;
-            private Dsl.Store store;
+            private Microsoft.VisualStudio.Modeling.Store store;
 
             [TestInitialize]
             [SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode")]
@@ -415,7 +415,7 @@ namespace NuPattern.Runtime.Store.UnitTests
                 serviceProvider.Setup(x => x.GetService(typeof(IPatternManager)))
                     .Returns(patternManager.Object);
 
-                using (var store = new Dsl.Store(serviceProvider.Object, typeof(Dsl.CoreDomainModel), typeof(ProductStateStoreDomainModel)))
+                using (var store = new Microsoft.VisualStudio.Modeling.Store(serviceProvider.Object, typeof(Microsoft.VisualStudio.Modeling.CoreDomainModel), typeof(ProductStateStoreDomainModel)))
                 using (var tx = store.TransactionManager.BeginTransaction())
                 {
                     var productStore = store.ElementFactory.CreateElement<ProductState>();
@@ -450,11 +450,11 @@ namespace NuPattern.Runtime.Store.UnitTests
                         x.ExtensionId = extensionPoint2.Schema.Pattern.ExtensionId;
                     });
 
-                    ProductStateStoreSerializationHelper.Instance.SaveModel(new Dsl.SerializationResult(), productStore, this.storeFilePath);
+                    ProductStateStoreSerializationHelper.Instance.SaveModel(new Microsoft.VisualStudio.Modeling.SerializationResult(), productStore, this.storeFilePath);
                     tx.Commit();
                 }
 
-                this.store = new Dsl.Store(serviceProvider.Object, typeof(Dsl.CoreDomainModel), typeof(ProductStateStoreDomainModel));
+                this.store = new Microsoft.VisualStudio.Modeling.Store(serviceProvider.Object, typeof(Microsoft.VisualStudio.Modeling.CoreDomainModel), typeof(ProductStateStoreDomainModel));
             }
 
             [TestMethod, TestCategory("Unit")]

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace NuPattern.Runtime.UI
+namespace NuPattern.Runtime.UI.ViewModels
 {
     /// <summary>
     /// Represents an item used for setting a sorting.

@@ -3,10 +3,10 @@ using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
 using NuPattern.Library.Automation;
-using NuPattern.Runtime;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Extensibility;
+using NuPattern.Runtime.References;
 using NuPattern.Runtime.Store;
 
 namespace NuPattern.Library.UnitTests.Automation.Guidance

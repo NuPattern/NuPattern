@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace NuPattern.Common.UnitTests
+namespace NuPattern.UnitTests
 {
     [TestClass]
     public class Misc

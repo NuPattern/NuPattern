@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility.References;
 using NuPattern.Library.Conditions;
 using NuPattern.Runtime;
+using NuPattern.Runtime.References;
 
 namespace NuPattern.Library.UnitTests.Conditions
 {

@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using NuPattern.VisualStudio.Commands;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Commands
 {
     /// <summary>
     /// Provides a generic way to executes commands in Visual Studio.

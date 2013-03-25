@@ -6,14 +6,14 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings.Design;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Events;
 using NuPattern.Library.Properties;
+using NuPattern.Modeling;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings.Design;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.IntegrationTests.Automation.Validation

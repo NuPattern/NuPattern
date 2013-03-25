@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.VisualStudio.Commands;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.Commands
 {
     /// <summary>
     /// Provide an adapter between an <see cref="IVsMenuCommand"/> and a <see cref="IMenuCommand"/>.

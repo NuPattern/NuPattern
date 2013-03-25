@@ -5,9 +5,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.ComponentModel.Design;
-using NuPattern.Extensibility;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Validation;
 
 namespace NuPattern.Library.ValidationRules
 {

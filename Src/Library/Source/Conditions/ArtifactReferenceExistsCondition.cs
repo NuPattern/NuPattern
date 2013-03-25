@@ -5,10 +5,9 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.Runtime.References;
 
 namespace NuPattern.Library.Conditions
 {

@@ -10,6 +10,7 @@ using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Events;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.UnitTests
@@ -85,7 +86,7 @@ namespace NuPattern.Library.UnitTests
                 this.wizard = Mock.Get(Mock.Of<IWizardAutomationExtension>(w => w.Name == "Wizard" && w.IsCanceled == false));
 
                 this.owner = Mock.Get(Mock.Of<IProductElement>(o =>
-                    o.BeginTransaction() == Mock.Of<NuPattern.Runtime.ITransaction>() &&
+                    o.BeginTransaction() == Mock.Of<ITransaction>() &&
                     o.InstanceName == "ElementWithTemplateAutomation" &&
                     o.Info.AutomationSettings == new[] { commandInfo, wizardInfo } &&
                     o.AutomationExtensions == new[] { this.command.Object, this.wizard.Object }

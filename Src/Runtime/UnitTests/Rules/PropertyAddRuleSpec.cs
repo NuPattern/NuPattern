@@ -2,9 +2,10 @@
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Store;
 
-namespace NuPattern.Runtime.Store.UnitTests
+namespace NuPattern.Runtime.UnitTests.Rules
 {
     [TestClass]
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test CleanUp")]

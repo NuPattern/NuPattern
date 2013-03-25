@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Runtime.UriProviders;
 
-namespace NuPattern.Runtime.IntegrationTests
+namespace NuPattern.Runtime.IntegrationTests.UriProviders
 {
     [TestClass]
     [CLSCompliant(false)]

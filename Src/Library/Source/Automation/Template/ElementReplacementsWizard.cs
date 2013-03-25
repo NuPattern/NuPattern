@@ -7,6 +7,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
+using NuPattern.Runtime.TemplateWizards;
 
 namespace NuPattern.Library.Automation
 {
@@ -14,7 +15,7 @@ namespace NuPattern.Library.Automation
     /// Wizard extension that adds element properties to the replacements dictionary.
     /// </summary>
     [CLSCompliant(false)]
-    public class ElementReplacementsWizard : Extensibility.TemplateWizard
+    public class ElementReplacementsWizard : TemplateWizard
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor(typeof(ElementReplacementsWizard));
 

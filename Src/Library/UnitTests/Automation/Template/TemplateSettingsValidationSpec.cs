@@ -2,11 +2,12 @@
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Automation.Template;
 using NuPattern.Library.Commands;
+using NuPattern.Modeling;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests

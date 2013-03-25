@@ -4,8 +4,9 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.Reflection;
+using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Runtime.Schema.UnitTests
 {

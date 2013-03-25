@@ -5,9 +5,10 @@ using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Store;
+using NuPattern.Runtime.Validation;
 
 namespace NuPattern.Runtime.UnitTests.Store
 {

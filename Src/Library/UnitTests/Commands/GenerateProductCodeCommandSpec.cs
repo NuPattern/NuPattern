@@ -9,13 +9,13 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Moq.Protected;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
+using NuPattern.Modeling;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.References;
 using NuPattern.Runtime.Store;
 
 namespace NuPattern.Library.UnitTests.Commands

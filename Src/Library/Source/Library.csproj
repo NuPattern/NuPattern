@@ -141,6 +141,7 @@
     <Compile Include="Automation\Guidance\GuidanceInstanceNameTypeConverter.cs" />
     <Compile Include="Automation\Rules\CommandChange\ICommandChangeRule.cs" />
     <Compile Include="Automation\Rules\CommandChange\ICommandChangeRuleMetadata.cs" />
+    <Compile Include="BindingSettingsExtensions.cs" />
     <Compile Include="Commands\DeleteArtifactsCommand.cs" />
     <Compile Include="Commands\Helpers\DeleteAction.cs" />
     <Compile Include="Design\CommandReferencePropertyDescriptor.cs" />
@@ -209,6 +210,7 @@
     <Compile Include="Conditions\XmlNodeExistsCondition.cs" />
     <Compile Include="Migration\CommandSettingsUpgradeProcessor.cs" />
     <Compile Include="Migration\AggregatorCommandUpgradeProcessor.cs" />
+    <Compile Include="ValidationContextExtensions.cs" />
     <Compile Include="ValueComparers\PreserveOrderComparer.cs" />
     <Compile Include="ValueComparers\InstanceNameComparer.cs" />
     <Compile Include="Conditions\DropFileCondition.cs" />
@@ -529,6 +531,10 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">
+      <Project>{46f79781-98bc-495a-9e01-559f166a6dff}</Project>
+      <Name>Common.Modeling</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
       <Project>{72cc87f3-2860-45cc-8712-00621f868d60}</Project>
       <Name>Common.Presentation</Name>
@@ -545,9 +551,9 @@
       <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
       <Name>Runtime.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Common\Source\Extensibility\Extensibility.csproj">
+    <ProjectReference Include="..\..\Runtime\Source\Runtime.Extensibility\Runtime.Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
-      <Name>Extensibility</Name>
+      <Name>Runtime.Extensibility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using NuPattern.Extensibility.Bindings;
-using NuPattern.Extensibility.References;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Conditions;
 using NuPattern.Library.Events;
 using NuPattern.Library.Properties;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.References;
 
 namespace NuPattern.Library.Automation
 {

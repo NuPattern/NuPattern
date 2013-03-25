@@ -10,13 +10,14 @@ using System.Linq.Expressions;
 using System.Windows.Input;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Bindings;
 using NuPattern.Library.Properties;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Settings;
+using NuPattern.Runtime.ToolkitInterface;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Library.Automation

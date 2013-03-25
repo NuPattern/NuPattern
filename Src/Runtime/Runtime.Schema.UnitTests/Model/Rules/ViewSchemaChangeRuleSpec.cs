@@ -1,7 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Immutability;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Runtime.Schema.UnitTests
 {

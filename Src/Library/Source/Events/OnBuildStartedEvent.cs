@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
-using NuPattern.Runtime;
+using NuPattern.Runtime.Events;
 
 namespace NuPattern.Library.Events
 {
