@@ -7,7 +7,7 @@ namespace NuPattern.Runtime.Schema
     /// Layout diagram command.
     /// </summary>
     [AuthoringCommandExtension]
-    public class LayoutDiagramCommand : ModelingCommand<INamedElementSchema>
+    internal class LayoutDiagramCommand : ModelingCommand<INamedElementSchema>
     {
         /// <summary>
         /// Gets the text.

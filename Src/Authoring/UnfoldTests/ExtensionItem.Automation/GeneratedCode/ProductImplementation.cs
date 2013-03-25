@@ -14,6 +14,7 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
+using NuPattern.Extensibility;
 using NuPattern.Runtime;
 
 namespace ExtensionItem.Automation.GeneratedCode

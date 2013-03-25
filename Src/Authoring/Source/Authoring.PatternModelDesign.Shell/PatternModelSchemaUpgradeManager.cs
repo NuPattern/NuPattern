@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
 using NuPattern.Runtime.Schema.Properties;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -26,7 +26,7 @@ namespace NuPattern.Runtime.Schema
 
             tracer.TraceInformation(ShellResources.PatternModelSchemaUpgradeManager_TraceExecute, context.SchemaFilePath);
 
-            Extensibility.TracingExtensions.Shield(tracer, () =>
+            TraceSourceExtensions.Shield(tracer, () =>
             {
                 if (context.UpgradeProcessors != null && context.UpgradeProcessors.Any())
                 {

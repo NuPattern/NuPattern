@@ -10,7 +10,10 @@ using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using NuPattern.Common.Presentation;
 using NuPattern.Extensibility;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -18,7 +21,7 @@ namespace NuPattern.Runtime.Schema
     /// Add automation extension command.
     /// </summary>
     [AuthoringCommandExtension]
-    public class AddAutomationExtensionCommand : ModelingCommand<IPatternElementSchema>
+    internal class AddAutomationExtensionCommand : ModelingCommand<IPatternElementSchema>
     {
         [Import(typeof(SVsServiceProvider))]
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]

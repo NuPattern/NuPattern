@@ -5,7 +5,7 @@ namespace NuPattern.Authoring.WorkflowDesign
     /// <summary>
     /// WorkflowDesign Designer.
     /// </summary>
-    public partial class WorkflowDesignDomainModel
+    partial class WorkflowDesignDomainModel
     {
         /// <summary>
         /// Gets the list of non-generated domain model types.
@@ -14,10 +14,10 @@ namespace NuPattern.Authoring.WorkflowDesign
         protected override Type[] GetCustomDomainModelTypes()
         {
             return new[]
-			{ 
+            { 
                 typeof(SuppliedAssetPropertyChangeRule),
                 typeof(ProducedAssetPropertyChangeRule),
-			};
+            };
         }
     }
 }

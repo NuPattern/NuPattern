@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Modeling.Shell;
 using NuPattern.Extensibility;
+using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -12,7 +13,7 @@ namespace NuPattern.Runtime.Schema
     /// Add variable property command.
     /// </summary>
     [AuthoringCommandExtension]
-    public class AddVariablePropertyCommand : ModelingCommand<IPatternElementSchema>
+    internal class AddVariablePropertyCommand : ModelingCommand<IPatternElementSchema>
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Called by MEF.")]
         [Import]

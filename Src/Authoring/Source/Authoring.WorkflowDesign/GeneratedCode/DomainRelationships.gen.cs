@@ -19,10 +19,9 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
 	[DslModeling::DomainObjectId("91409b5f-6b3a-4a3d-a8b7-e347eccee8a6")]
-	public partial class ProductionToolReferencesVariabilityRequirements : DslModeling::ElementLink
+	internal partial class ProductionToolReferencesVariabilityRequirements : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -38,7 +37,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		/// <param name="source">ProductionTool to use as the source of the relationship.</param>
 		/// <param name="target">VariabilityRequirement to use as the target of the relationship.</param>
-		public ProductionToolReferencesVariabilityRequirements(ProductionTool source, VariabilityRequirement target)
+		internal ProductionToolReferencesVariabilityRequirements(ProductionTool source, VariabilityRequirement target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ProductionToolReferencesVariabilityRequirements.ProductionToolDomainRoleId, source), new DslModeling::RoleAssignment(ProductionToolReferencesVariabilityRequirements.VariabilityRequirementDomainRoleId, target)}, null)
 		{
 		}
@@ -101,7 +100,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/ProductionTool.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "VariabilityRequirements", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/ProductionTool.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("4c5bf749-6e50-4f84-9f9a-fd4329f1a2dc")]
-		public virtual ProductionTool ProductionTool
+		internal virtual ProductionTool ProductionTool
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -122,7 +121,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ProductionTool> GetProductionTools(VariabilityRequirement element)
+		internal static DslModeling::LinkedElementCollection<ProductionTool> GetProductionTools(VariabilityRequirement element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(element, VariabilityRequirementDomainRoleId);
 		}
@@ -143,7 +142,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/VariabilityRequirement.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ProductionTools", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements/VariabilityRequirement.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("f42ef571-400e-416c-8e44-66a92e1a0afd")]
-		public virtual VariabilityRequirement VariabilityRequirement
+		internal virtual VariabilityRequirement VariabilityRequirement
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -164,7 +163,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<VariabilityRequirement> GetVariabilityRequirements(ProductionTool element)
+		internal static DslModeling::LinkedElementCollection<VariabilityRequirement> GetVariabilityRequirements(ProductionTool element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<VariabilityRequirement>, VariabilityRequirement>(element, ProductionToolDomainRoleId);
 		}
@@ -175,7 +174,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements> GetLinksToVariabilityRequirements ( global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements> GetLinksToVariabilityRequirements ( global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements>(productionToolInstance, global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionToolDomainRoleId);
 		}
@@ -186,7 +185,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements> GetLinksToProductionTools ( global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement variabilityRequirementInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements> GetLinksToProductionTools ( global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement variabilityRequirementInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements>(variabilityRequirementInstance, global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirementDomainRoleId);
 		}
@@ -198,7 +197,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements> GetLinks( global::NuPattern.Authoring.WorkflowDesign.ProductionTool source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements> GetLinks( global::NuPattern.Authoring.WorkflowDesign.ProductionTool source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements>();
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements>(source, global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionToolDomainRoleId);
@@ -216,7 +215,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements GetLink( global::NuPattern.Authoring.WorkflowDesign.ProductionTool source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
+		internal static global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements GetLink( global::NuPattern.Authoring.WorkflowDesign.ProductionTool source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements>(source, global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionToolDomainRoleId);
 			foreach ( global::NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements link in links )
@@ -242,10 +241,9 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
 	[DslModeling::DomainObjectId("4e0787f5-1b90-4962-af22-34b462ca1993")]
-	public partial class ProductionToolProducesProducedAssets : DslModeling::ElementLink
+	internal partial class ProductionToolProducesProducedAssets : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -261,7 +259,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		/// <param name="source">ProductionTool to use as the source of the relationship.</param>
 		/// <param name="target">ProducedAsset to use as the target of the relationship.</param>
-		public ProductionToolProducesProducedAssets(ProductionTool source, ProducedAsset target)
+		internal ProductionToolProducesProducedAssets(ProductionTool source, ProducedAsset target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ProductionToolProducesProducedAssets.ProductionToolDomainRoleId, source), new DslModeling::RoleAssignment(ProductionToolProducesProducedAssets.ProducedAssetDomainRoleId, target)}, null)
 		{
 		}
@@ -324,7 +322,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProductionTool.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ProducedProducedAssets", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProductionTool.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("a410ff8e-d1ac-468f-927a-a97dbd2f981c")]
-		public virtual ProductionTool ProductionTool
+		internal virtual ProductionTool ProductionTool
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -345,7 +343,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ProductionTool> GetProducingProductionTools(ProducedAsset element)
+		internal static DslModeling::LinkedElementCollection<ProductionTool> GetProducingProductionTools(ProducedAsset element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(element, ProducedAssetDomainRoleId);
 		}
@@ -366,7 +364,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProducedAsset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ProducingProductionTools", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets/ProducedAsset.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("ea75f6de-6b2d-4b7b-9c5a-081104bf2fbd")]
-		public virtual ProducedAsset ProducedAsset
+		internal virtual ProducedAsset ProducedAsset
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -387,7 +385,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ProducedAsset> GetProducedProducedAssets(ProductionTool element)
+		internal static DslModeling::LinkedElementCollection<ProducedAsset> GetProducedProducedAssets(ProductionTool element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ProducedAsset>, ProducedAsset>(element, ProductionToolDomainRoleId);
 		}
@@ -398,7 +396,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets> GetLinksToProducedProducedAssets ( global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets> GetLinksToProducedProducedAssets ( global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets>(productionToolInstance, global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionToolDomainRoleId);
 		}
@@ -409,7 +407,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets> GetLinksToProducingProductionTools ( global::NuPattern.Authoring.WorkflowDesign.ProducedAsset producedAssetInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets> GetLinksToProducingProductionTools ( global::NuPattern.Authoring.WorkflowDesign.ProducedAsset producedAssetInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets>(producedAssetInstance, global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAssetDomainRoleId);
 		}
@@ -421,7 +419,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets> GetLinks( global::NuPattern.Authoring.WorkflowDesign.ProductionTool source, global::NuPattern.Authoring.WorkflowDesign.ProducedAsset target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets> GetLinks( global::NuPattern.Authoring.WorkflowDesign.ProductionTool source, global::NuPattern.Authoring.WorkflowDesign.ProducedAsset target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets>();
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets>(source, global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionToolDomainRoleId);
@@ -439,7 +437,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets GetLink( global::NuPattern.Authoring.WorkflowDesign.ProductionTool source, global::NuPattern.Authoring.WorkflowDesign.ProducedAsset target )
+		internal static global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets GetLink( global::NuPattern.Authoring.WorkflowDesign.ProductionTool source, global::NuPattern.Authoring.WorkflowDesign.ProducedAsset target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets>(source, global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionToolDomainRoleId);
 			foreach ( global::NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets link in links )
@@ -465,10 +463,9 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
 	[DslModeling::DomainObjectId("b7c9e653-7d6f-4370-9ae1-d86964397b7d")]
-	public partial class ProducedAssetSuppliesProductionTools : AssetSuppliesAllProducingTools
+	internal partial class ProducedAssetSuppliesProductionTools : AssetSuppliesAllProducingTools
 	{
 		#region Constructors, domain class Id
 		
@@ -484,7 +481,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		/// <param name="source">ProducedAsset to use as the source of the relationship.</param>
 		/// <param name="target">ProductionTool to use as the target of the relationship.</param>
-		public ProducedAssetSuppliesProductionTools(ProducedAsset source, ProductionTool target)
+		internal ProducedAssetSuppliesProductionTools(ProducedAsset source, ProductionTool target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ProducedAssetSuppliesProductionTools.ProducedAssetDomainRoleId, source), new DslModeling::RoleAssignment(ProducedAssetSuppliesProductionTools.ProductionToolDomainRoleId, target)}, null)
 		{
 		}
@@ -547,7 +544,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProducedAsset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ProductionTools", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProducedAsset.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("41648a11-e24d-4726-a802-1e31e2e2d526")]
-		public virtual ProducedAsset ProducedAsset
+		internal virtual ProducedAsset ProducedAsset
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -568,7 +565,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ProducedAsset> GetSuppliedProducedAssets(ProductionTool element)
+		internal static DslModeling::LinkedElementCollection<ProducedAsset> GetSuppliedProducedAssets(ProductionTool element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ProducedAsset>, ProducedAsset>(element, ProductionToolDomainRoleId);
 		}
@@ -580,7 +577,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// Description for
 		/// NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset
 		/// </summary>
-		public override Asset Asset
+		internal override Asset Asset
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -611,7 +608,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProductionTool.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SuppliedProducedAssets", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools/ProductionTool.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("c7d26b7c-5f73-404f-9f97-dbe3e98bcf71")]
-		public override ProductionTool ProductionTool
+		internal override ProductionTool ProductionTool
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -632,7 +629,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ProductionTool> GetProductionTools(ProducedAsset element)
+		internal static DslModeling::LinkedElementCollection<ProductionTool> GetProductionTools(ProducedAsset element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(element, ProducedAssetDomainRoleId);
 		}
@@ -643,7 +640,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools> GetLinksToProductionTools ( global::NuPattern.Authoring.WorkflowDesign.ProducedAsset producedAssetInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools> GetLinksToProductionTools ( global::NuPattern.Authoring.WorkflowDesign.ProducedAsset producedAssetInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools>(producedAssetInstance, global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAssetDomainRoleId);
 		}
@@ -654,7 +651,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools> GetLinksToSuppliedProducedAssets ( global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools> GetLinksToSuppliedProducedAssets ( global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools>(productionToolInstance, global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionToolDomainRoleId);
 		}
@@ -666,7 +663,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools> GetLinks( global::NuPattern.Authoring.WorkflowDesign.ProducedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools> GetLinks( global::NuPattern.Authoring.WorkflowDesign.ProducedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools>();
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools>(source, global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAssetDomainRoleId);
@@ -684,7 +681,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools GetLink( global::NuPattern.Authoring.WorkflowDesign.ProducedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
+		internal static global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools GetLink( global::NuPattern.Authoring.WorkflowDesign.ProducedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools>(source, global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAssetDomainRoleId);
 			foreach ( global::NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools link in links )
@@ -710,10 +707,9 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
 	[DslModeling::DomainObjectId("6103e751-0edc-4bde-9870-bcb0af30910b")]
-	public partial class SuppliedAssetCopiesToProducedAssets : DslModeling::ElementLink
+	internal partial class SuppliedAssetCopiesToProducedAssets : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -729,7 +725,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		/// <param name="source">SuppliedAsset to use as the source of the relationship.</param>
 		/// <param name="target">ProducedAsset to use as the target of the relationship.</param>
-		public SuppliedAssetCopiesToProducedAssets(SuppliedAsset source, ProducedAsset target)
+		internal SuppliedAssetCopiesToProducedAssets(SuppliedAsset source, ProducedAsset target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(SuppliedAssetCopiesToProducedAssets.SuppliedAssetDomainRoleId, source), new DslModeling::RoleAssignment(SuppliedAssetCopiesToProducedAssets.ProducedAssetDomainRoleId, target)}, null)
 		{
 		}
@@ -792,7 +788,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/SuppliedAsset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ProducedAssets", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/SuppliedAsset.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("e16620b7-aae0-44a0-9b84-fcbc5a275f2d")]
-		public virtual SuppliedAsset SuppliedAsset
+		internal virtual SuppliedAsset SuppliedAsset
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -813,7 +809,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<SuppliedAsset> GetSuppliedAssets(ProducedAsset element)
+		internal static DslModeling::LinkedElementCollection<SuppliedAsset> GetSuppliedAssets(ProducedAsset element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<SuppliedAsset>, SuppliedAsset>(element, ProducedAssetDomainRoleId);
 		}
@@ -834,7 +830,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/ProducedAsset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SuppliedAssets", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets/ProducedAsset.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("202d77ab-7b4e-4139-b3d8-89167ee1b327")]
-		public virtual ProducedAsset ProducedAsset
+		internal virtual ProducedAsset ProducedAsset
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -855,7 +851,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ProducedAsset> GetProducedAssets(SuppliedAsset element)
+		internal static DslModeling::LinkedElementCollection<ProducedAsset> GetProducedAssets(SuppliedAsset element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ProducedAsset>, ProducedAsset>(element, SuppliedAssetDomainRoleId);
 		}
@@ -866,7 +862,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets> GetLinksToProducedAssets ( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset suppliedAssetInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets> GetLinksToProducedAssets ( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset suppliedAssetInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets>(suppliedAssetInstance, global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAssetDomainRoleId);
 		}
@@ -877,7 +873,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets> GetLinksToSuppliedAssets ( global::NuPattern.Authoring.WorkflowDesign.ProducedAsset producedAssetInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets> GetLinksToSuppliedAssets ( global::NuPattern.Authoring.WorkflowDesign.ProducedAsset producedAssetInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets>(producedAssetInstance, global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAssetDomainRoleId);
 		}
@@ -889,7 +885,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets> GetLinks( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProducedAsset target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets> GetLinks( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProducedAsset target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets>();
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets>(source, global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAssetDomainRoleId);
@@ -907,7 +903,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets GetLink( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProducedAsset target )
+		internal static global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets GetLink( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProducedAsset target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets>(source, global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAssetDomainRoleId);
 			foreach ( global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets link in links )
@@ -933,10 +929,9 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
 	[DslModeling::DomainObjectId("c884ef2a-69d3-4df7-9595-b270b3a54a5b")]
-	public partial class SuppliedAssetSuppliesProductionTools : AssetSuppliesAllProducingTools
+	internal partial class SuppliedAssetSuppliesProductionTools : AssetSuppliesAllProducingTools
 	{
 		#region Constructors, domain class Id
 		
@@ -952,7 +947,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		/// <param name="source">SuppliedAsset to use as the source of the relationship.</param>
 		/// <param name="target">ProductionTool to use as the target of the relationship.</param>
-		public SuppliedAssetSuppliesProductionTools(SuppliedAsset source, ProductionTool target)
+		internal SuppliedAssetSuppliesProductionTools(SuppliedAsset source, ProductionTool target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(SuppliedAssetSuppliesProductionTools.SuppliedAssetDomainRoleId, source), new DslModeling::RoleAssignment(SuppliedAssetSuppliesProductionTools.ProductionToolDomainRoleId, target)}, null)
 		{
 		}
@@ -1015,7 +1010,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/SuppliedAsset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ProductionTools", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/SuppliedAsset.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("9f26c80d-04ab-4b84-adfa-672fc88246d6")]
-		public virtual SuppliedAsset SuppliedAsset
+		internal virtual SuppliedAsset SuppliedAsset
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1036,7 +1031,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<SuppliedAsset> GetSuppliedSuppliedAssets(ProductionTool element)
+		internal static DslModeling::LinkedElementCollection<SuppliedAsset> GetSuppliedSuppliedAssets(ProductionTool element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<SuppliedAsset>, SuppliedAsset>(element, ProductionToolDomainRoleId);
 		}
@@ -1048,7 +1043,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// Description for
 		/// NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset
 		/// </summary>
-		public override Asset Asset
+		internal override Asset Asset
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1079,7 +1074,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/ProductionTool.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "SuppliedSuppliedAssets", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools/ProductionTool.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("8d8cfed6-33f9-45b1-8132-6b8791cfc218")]
-		public override ProductionTool ProductionTool
+		internal override ProductionTool ProductionTool
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1100,7 +1095,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ProductionTool> GetProductionTools(SuppliedAsset element)
+		internal static DslModeling::LinkedElementCollection<ProductionTool> GetProductionTools(SuppliedAsset element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(element, SuppliedAssetDomainRoleId);
 		}
@@ -1111,7 +1106,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools> GetLinksToProductionTools ( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset suppliedAssetInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools> GetLinksToProductionTools ( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset suppliedAssetInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools>(suppliedAssetInstance, global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAssetDomainRoleId);
 		}
@@ -1122,7 +1117,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools> GetLinksToSuppliedSuppliedAssets ( global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools> GetLinksToSuppliedSuppliedAssets ( global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools>(productionToolInstance, global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionToolDomainRoleId);
 		}
@@ -1134,7 +1129,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools> GetLinks( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools> GetLinks( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools>();
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools>(source, global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAssetDomainRoleId);
@@ -1152,7 +1147,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools GetLink( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
+		internal static global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools GetLink( global::NuPattern.Authoring.WorkflowDesign.SuppliedAsset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools>(source, global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAssetDomainRoleId);
 			foreach ( global::NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools link in links )
@@ -1178,10 +1173,9 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship()]
 	[DslModeling::DomainObjectId("dc20e99c-5f1d-4a9c-81af-eec621f4c3ec")]
-	public abstract partial class AssetSuppliesAllProducingTools : DslModeling::ElementLink
+	internal abstract partial class AssetSuppliesAllProducingTools : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -1217,7 +1211,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/Asset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "AllProducingTools", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/Asset.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("6fe991a6-e1b0-4fc3-b36a-810bfefd791e")]
-		public abstract Asset Asset
+		internal abstract Asset Asset
 		{
 			get;
 			set;
@@ -1230,7 +1224,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::ReadOnlyLinkedElementCollection<Asset> GetAllSuppliedAssets(ProductionTool element)
+		internal static DslModeling::ReadOnlyLinkedElementCollection<Asset> GetAllSuppliedAssets(ProductionTool element)
 		{
 			return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<Asset>, Asset>(element, ProductionToolDomainRoleId);
 		}
@@ -1251,7 +1245,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/ProductionTool.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "AllSuppliedAssets", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools/ProductionTool.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("09210d13-2037-4f79-aeda-2e04e49ba3ca")]
-		public abstract ProductionTool ProductionTool
+		internal abstract ProductionTool ProductionTool
 		{
 			get;
 			set;
@@ -1264,7 +1258,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::ReadOnlyLinkedElementCollection<ProductionTool> GetAllProducingTools(Asset element)
+		internal static DslModeling::ReadOnlyLinkedElementCollection<ProductionTool> GetAllProducingTools(Asset element)
 		{
 			return GetRoleCollection<DslModeling::ReadOnlyLinkedElementCollection<ProductionTool>, ProductionTool>(element, AssetDomainRoleId);
 		}
@@ -1275,7 +1269,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools> GetLinksToAllProducingTools ( global::NuPattern.Authoring.WorkflowDesign.Asset assetInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools> GetLinksToAllProducingTools ( global::NuPattern.Authoring.WorkflowDesign.Asset assetInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools>(assetInstance, global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.AssetDomainRoleId);
 		}
@@ -1286,7 +1280,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools> GetLinksToAllSuppliedAssets ( global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools> GetLinksToAllSuppliedAssets ( global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools>(productionToolInstance, global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.ProductionToolDomainRoleId);
 		}
@@ -1298,7 +1292,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools> GetLinks( global::NuPattern.Authoring.WorkflowDesign.Asset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools> GetLinks( global::NuPattern.Authoring.WorkflowDesign.Asset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools>();
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools>(source, global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.AssetDomainRoleId);
@@ -1316,7 +1310,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools GetLink( global::NuPattern.Authoring.WorkflowDesign.Asset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
+		internal static global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools GetLink( global::NuPattern.Authoring.WorkflowDesign.Asset source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools>(source, global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.AssetDomainRoleId);
 			foreach ( global::NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools link in links )
@@ -1341,10 +1335,9 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("80b044c8-3478-4387-8ae4-b1f78fbd6475")]
-	public partial class DesignHasProductionTools : DslModeling::ElementLink
+	internal partial class DesignHasProductionTools : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -1360,7 +1353,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		/// <param name="source">Design to use as the source of the relationship.</param>
 		/// <param name="target">ProductionTool to use as the target of the relationship.</param>
-		public DesignHasProductionTools(Design source, ProductionTool target)
+		internal DesignHasProductionTools(Design source, ProductionTool target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(DesignHasProductionTools.DesignDomainRoleId, source), new DslModeling::RoleAssignment(DesignHasProductionTools.ProductionToolDomainRoleId, target)}, null)
 		{
 		}
@@ -1423,7 +1416,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools/Design.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ProductionTools", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools/Design.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("c5ee3106-0130-492a-86d8-0c3ef3532520")]
-		public virtual Design Design
+		internal virtual Design Design
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1444,7 +1437,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Design GetDesign(ProductionTool element)
+		internal static Design GetDesign(ProductionTool element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ProductionToolDomainRoleId) as Design;
 		}
@@ -1454,7 +1447,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetDesign(ProductionTool element, Design newDesign)
+		internal static void SetDesign(ProductionTool element, Design newDesign)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, ProductionToolDomainRoleId, newDesign);
 		}
@@ -1475,7 +1468,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools/ProductionTool.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Design", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools/ProductionTool.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("3f6e20bf-ff82-4b55-aafe-8f4930e47800")]
-		public virtual ProductionTool ProductionTool
+		internal virtual ProductionTool ProductionTool
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1496,7 +1489,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<ProductionTool> GetProductionTools(Design element)
+		internal static DslModeling::LinkedElementCollection<ProductionTool> GetProductionTools(Design element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ProductionTool>, ProductionTool>(element, DesignDomainRoleId);
 		}
@@ -1507,7 +1500,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools> GetLinksToProductionTools ( global::NuPattern.Authoring.WorkflowDesign.Design designInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools> GetLinksToProductionTools ( global::NuPattern.Authoring.WorkflowDesign.Design designInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools>(designInstance, global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.DesignDomainRoleId);
 		}
@@ -1518,7 +1511,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools GetLinkToDesign (global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance)
+		internal static global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools GetLinkToDesign (global::NuPattern.Authoring.WorkflowDesign.ProductionTool productionToolInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools>(productionToolInstance, global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionToolDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ProductionTool not obeyed.");
@@ -1539,7 +1532,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools> GetLinks( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools> GetLinks( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools>();
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools>(source, global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.DesignDomainRoleId);
@@ -1557,7 +1550,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools GetLink( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
+		internal static global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools GetLink( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.ProductionTool target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools>(source, global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.DesignDomainRoleId);
 			foreach ( global::NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools link in links )
@@ -1582,10 +1575,9 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.DesignHasAssets.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("425ce70d-ec0b-4add-ab06-0368a05904e4")]
-	public partial class DesignHasAssets : DslModeling::ElementLink
+	internal partial class DesignHasAssets : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -1601,7 +1593,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		/// <param name="source">Design to use as the source of the relationship.</param>
 		/// <param name="target">Asset to use as the target of the relationship.</param>
-		public DesignHasAssets(Design source, Asset target)
+		internal DesignHasAssets(Design source, Asset target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(DesignHasAssets.DesignDomainRoleId, source), new DslModeling::RoleAssignment(DesignHasAssets.AssetDomainRoleId, target)}, null)
 		{
 		}
@@ -1663,7 +1655,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignHasAssets/Design.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Assets", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.DesignHasAssets/Design.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("915f6d0f-3ba1-4216-a0bf-37f21f50fcbf")]
-		public virtual Design Design
+		internal virtual Design Design
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1684,7 +1676,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Design GetDesign(Asset element)
+		internal static Design GetDesign(Asset element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AssetDomainRoleId) as Design;
 		}
@@ -1694,7 +1686,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetDesign(Asset element, Design newDesign)
+		internal static void SetDesign(Asset element, Design newDesign)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, AssetDomainRoleId, newDesign);
 		}
@@ -1714,7 +1706,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignHasAssets/Asset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Design", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.DesignHasAssets/Asset.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("826f0f43-41df-4f3e-b574-faf6d13b69b6")]
-		public virtual Asset Asset
+		internal virtual Asset Asset
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1735,7 +1727,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Asset> GetAssets(Design element)
+		internal static DslModeling::LinkedElementCollection<Asset> GetAssets(Design element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Asset>, Asset>(element, DesignDomainRoleId);
 		}
@@ -1746,7 +1738,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets> GetLinksToAssets ( global::NuPattern.Authoring.WorkflowDesign.Design designInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets> GetLinksToAssets ( global::NuPattern.Authoring.WorkflowDesign.Design designInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets>(designInstance, global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets.DesignDomainRoleId);
 		}
@@ -1757,7 +1749,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets GetLinkToDesign (global::NuPattern.Authoring.WorkflowDesign.Asset assetInstance)
+		internal static global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets GetLinkToDesign (global::NuPattern.Authoring.WorkflowDesign.Asset assetInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets>(assetInstance, global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets.AssetDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Asset not obeyed.");
@@ -1778,7 +1770,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets> GetLinks( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.Asset target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets> GetLinks( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.Asset target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets>();
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets>(source, global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets.DesignDomainRoleId);
@@ -1796,7 +1788,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets GetLink( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.Asset target )
+		internal static global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets GetLink( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.Asset target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets>(source, global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets.DesignDomainRoleId);
 			foreach ( global::NuPattern.Authoring.WorkflowDesign.DesignHasAssets link in links )
@@ -1822,10 +1814,9 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("0c15cee8-4ab6-4fe8-8218-6ffca2d22dc9")]
-	public partial class DesignHasVariabilityRequirements : DslModeling::ElementLink
+	internal partial class DesignHasVariabilityRequirements : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -1841,7 +1832,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		/// <param name="source">Design to use as the source of the relationship.</param>
 		/// <param name="target">VariabilityRequirement to use as the target of the relationship.</param>
-		public DesignHasVariabilityRequirements(Design source, VariabilityRequirement target)
+		internal DesignHasVariabilityRequirements(Design source, VariabilityRequirement target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(DesignHasVariabilityRequirements.DesignDomainRoleId, source), new DslModeling::RoleAssignment(DesignHasVariabilityRequirements.VariabilityRequirementDomainRoleId, target)}, null)
 		{
 		}
@@ -1904,7 +1895,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/Design.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "VariabilityRequirements", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/Design.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("341c3a81-81ad-485d-82b4-17d5472f56e3")]
-		public virtual Design Design
+		internal virtual Design Design
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1925,7 +1916,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Design GetDesign(VariabilityRequirement element)
+		internal static Design GetDesign(VariabilityRequirement element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, VariabilityRequirementDomainRoleId) as Design;
 		}
@@ -1935,7 +1926,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetDesign(VariabilityRequirement element, Design newDesign)
+		internal static void SetDesign(VariabilityRequirement element, Design newDesign)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, VariabilityRequirementDomainRoleId, newDesign);
 		}
@@ -1956,7 +1947,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/VariabilityRequirement.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "Design", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements/VariabilityRequirement.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("bf7f9257-8bf9-470d-adef-a9922c3a93d5")]
-		public virtual VariabilityRequirement VariabilityRequirement
+		internal virtual VariabilityRequirement VariabilityRequirement
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1977,7 +1968,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<VariabilityRequirement> GetVariabilityRequirements(Design element)
+		internal static DslModeling::LinkedElementCollection<VariabilityRequirement> GetVariabilityRequirements(Design element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<VariabilityRequirement>, VariabilityRequirement>(element, DesignDomainRoleId);
 		}
@@ -1988,7 +1979,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements> GetLinksToVariabilityRequirements ( global::NuPattern.Authoring.WorkflowDesign.Design designInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements> GetLinksToVariabilityRequirements ( global::NuPattern.Authoring.WorkflowDesign.Design designInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements>(designInstance, global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DesignDomainRoleId);
 		}
@@ -1999,7 +1990,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements GetLinkToDesign (global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement variabilityRequirementInstance)
+		internal static global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements GetLinkToDesign (global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement variabilityRequirementInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements>(variabilityRequirementInstance, global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirementDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of VariabilityRequirement not obeyed.");
@@ -2020,7 +2011,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements> GetLinks( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements> GetLinks( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements>();
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements>(source, global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DesignDomainRoleId);
@@ -2038,7 +2029,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements GetLink( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
+		internal static global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements GetLink( global::NuPattern.Authoring.WorkflowDesign.Design source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements>(source, global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.DesignDomainRoleId);
 			foreach ( global::NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements link in links )
@@ -2064,10 +2055,9 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainRelationship(IsEmbedding=true)]
 	[DslModeling::DomainObjectId("60c1f1f1-e7cf-4ab5-927f-9864d9ba40e9")]
-	public partial class ParentVariabilityRequirementHasParentVariabilityRequirements : DslModeling::ElementLink
+	internal partial class ParentVariabilityRequirementHasParentVariabilityRequirements : DslModeling::ElementLink
 	{
 		#region Constructors, domain class Id
 		
@@ -2083,7 +2073,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		/// <param name="source">VariabilityRequirement to use as the source of the relationship.</param>
 		/// <param name="target">VariabilityRequirement to use as the target of the relationship.</param>
-		public ParentVariabilityRequirementHasParentVariabilityRequirements(VariabilityRequirement source, VariabilityRequirement target)
+		internal ParentVariabilityRequirementHasParentVariabilityRequirements(VariabilityRequirement source, VariabilityRequirement target)
 			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirementDomainRoleId, source), new DslModeling::RoleAssignment(ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirementDomainRoleId, target)}, null)
 		{
 		}
@@ -2146,7 +2136,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/SourceVariabilityRequirement.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "VariabilityRequirements", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/SourceVariabilityRequirement.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("d938a687-573c-4f75-b7de-f8b2a6ecc53c")]
-		public virtual VariabilityRequirement SourceVariabilityRequirement
+		internal virtual VariabilityRequirement SourceVariabilityRequirement
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2167,7 +2157,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static VariabilityRequirement GetParentVariabilityRequirement(VariabilityRequirement element)
+		internal static VariabilityRequirement GetParentVariabilityRequirement(VariabilityRequirement element)
 		{
 			return DslModeling::DomainRoleInfo.GetLinkedElement(element, TargetVariabilityRequirementDomainRoleId) as VariabilityRequirement;
 		}
@@ -2177,7 +2167,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetParentVariabilityRequirement(VariabilityRequirement element, VariabilityRequirement newSourceVariabilityRequirement)
+		internal static void SetParentVariabilityRequirement(VariabilityRequirement element, VariabilityRequirement newSourceVariabilityRequirement)
 		{
 			DslModeling::DomainRoleInfo.SetLinkedElement(element, TargetVariabilityRequirementDomainRoleId, newSourceVariabilityRequirement);
 		}
@@ -2198,7 +2188,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/TargetVariabilityRequirement.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ParentVariabilityRequirement", PropertyDisplayNameKey="NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements/TargetVariabilityRequirement.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("216e3b31-177b-40b6-b217-697beb5799f3")]
-		public virtual VariabilityRequirement TargetVariabilityRequirement
+		internal virtual VariabilityRequirement TargetVariabilityRequirement
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2219,7 +2209,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<VariabilityRequirement> GetVariabilityRequirements(VariabilityRequirement element)
+		internal static DslModeling::LinkedElementCollection<VariabilityRequirement> GetVariabilityRequirements(VariabilityRequirement element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<VariabilityRequirement>, VariabilityRequirement>(element, SourceVariabilityRequirementDomainRoleId);
 		}
@@ -2230,7 +2220,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements> GetLinksToVariabilityRequirements ( global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirementInstance )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements> GetLinksToVariabilityRequirements ( global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement sourceVariabilityRequirementInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements>(sourceVariabilityRequirementInstance, global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirementDomainRoleId);
 		}
@@ -2241,7 +2231,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements GetLinkToParentVariabilityRequirement (global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement targetVariabilityRequirementInstance)
+		internal static global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements GetLinkToParentVariabilityRequirement (global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement targetVariabilityRequirementInstance)
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements>(targetVariabilityRequirementInstance, global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirementDomainRoleId);
 			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of TargetVariabilityRequirement not obeyed.");
@@ -2262,7 +2252,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements> GetLinks( global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
+		internal static global::System.Collections.ObjectModel.ReadOnlyCollection<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements> GetLinks( global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
 		{
 			global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements> outLinks = new global::System.Collections.Generic.List<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements>();
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements>(source, global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirementDomainRoleId);
@@ -2280,7 +2270,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements GetLink( global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
+		internal static global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements GetLink( global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement source, global::NuPattern.Authoring.WorkflowDesign.VariabilityRequirement target )
 		{
 			global::System.Collections.Generic.IList<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements> links = DslModeling::DomainRoleInfo.GetElementLinks<global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements>(source, global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirementDomainRoleId);
 			foreach ( global::NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements link in links )

@@ -14,107 +14,108 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
+using NuPattern.Extensibility;
 using NuPattern.Runtime;
 
 namespace MainTestToolkit.Automation.GeneratedCode
 {
-	///	<summary>
-	///	A Description of MainTest
-	///	</summary>
-	[Description("A Description of MainTest")]
-	[ToolkitInterfaceProxy(ExtensionId = "cb6a7b60-ec95-42dd-8f01-28ff11dcf800", DefinitionId = "815a9f7c-09bb-4970-b241-91a30b45292f", ProxyType = typeof(MainTest))]
-	internal partial class MainTest : IMainTest
-	{
-		private IProduct target;
-		private IProductProxy<IMainTest> proxy;
+    ///	<summary>
+    ///	A Description of MainTest
+    ///	</summary>
+    [Description("A Description of MainTest")]
+    [ToolkitInterfaceProxy(ExtensionId = "cb6a7b60-ec95-42dd-8f01-28ff11dcf800", DefinitionId = "815a9f7c-09bb-4970-b241-91a30b45292f", ProxyType = typeof(MainTest))]
+    internal partial class MainTest : IMainTest
+    {
+        private IProduct target;
+        private IProductProxy<IMainTest> proxy;
 
-		/// <summary>
-		/// For MEF.
-		/// </summary>
-		[ImportingConstructor]
-		private MainTest() { }
+        /// <summary>
+        /// For MEF.
+        /// </summary>
+        [ImportingConstructor]
+        private MainTest() { }
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="MainTest"/> class.
-		/// </summary>
-		public MainTest(IProduct target)
-		{
-			this.target = target;
-			this.proxy = target.ProxyFor<IMainTest>();
-		}
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainTest"/> class.
+        /// </summary>
+        public MainTest(IProduct target)
+        {
+            this.target = target;
+            this.proxy = target.ProxyFor<IMainTest>();
+        }
 
-		///	<summary>
-		///	Provides registration information for the product
-		///	</summary>
-		[Description("Provides registration information for the product")]
-		public IProductToolkitInfo ToolkitInfo
-		{
-			get { return this.proxy.GetValue(() => this.ToolkitInfo); }
-		}
+        ///	<summary>
+        ///	Provides registration information for the product
+        ///	</summary>
+        [Description("Provides registration information for the product")]
+        public IProductToolkitInfo ToolkitInfo
+        {
+            get { return this.proxy.GetValue(() => this.ToolkitInfo); }
+        }
 
-		///	<summary>
-		///	The name of this element instance.
-		///	</summary>
-		[Description("The name of this element instance.")]
-		[ParenthesizePropertyName(true)]
-		public String InstanceName
-		{
-			get { return this.proxy.GetValue(() => this.InstanceName); }
-			set { this.proxy.SetValue(() => this.InstanceName, value); }
-		}
+        ///	<summary>
+        ///	The name of this element instance.
+        ///	</summary>
+        [Description("The name of this element instance.")]
+        [ParenthesizePropertyName(true)]
+        public String InstanceName
+        {
+            get { return this.proxy.GetValue(() => this.InstanceName); }
+            set { this.proxy.SetValue(() => this.InstanceName, value); }
+        }
 
-		///	<summary>
-		///	Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement
-		///	</summary>
-		[Description("Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement")]
-		public IEnumerable<IReference> References
-		{
-			get { return this.proxy.GetValue(() => this.References); }
-		}
+        ///	<summary>
+        ///	Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement
+        ///	</summary>
+        [Description("Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement")]
+        public IEnumerable<IReference> References
+        {
+            get { return this.proxy.GetValue(() => this.References); }
+        }
 
-		///	<summary>
-		///	Notes for this element.
-		///	</summary>
-		[Description("Notes for this element.")]
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
-		public String Notes
-		{
-			get { return this.proxy.GetValue(() => this.Notes); }
-			set { this.proxy.SetValue(() => this.Notes, value); }
-		}
+        ///	<summary>
+        ///	Notes for this element.
+        ///	</summary>
+        [Description("Notes for this element.")]
+        [Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
+        public String Notes
+        {
+            get { return this.proxy.GetValue(() => this.Notes); }
+            set { this.proxy.SetValue(() => this.Notes, value); }
+        }
 
-		///	<summary>
-		///	Description for MainTest.DefaultView
-		///	</summary>
-		[Description("Description for MainTest.DefaultView")]
-		public IDefaultView DefaultView
-		{
-			get { return this.proxy.GetView(() => this.DefaultView, view => new DefaultView(view)); }
-		}
+        ///	<summary>
+        ///	Description for MainTest.DefaultView
+        ///	</summary>
+        [Description("Description for MainTest.DefaultView")]
+        public IDefaultView DefaultView
+        {
+            get { return this.proxy.GetView(() => this.DefaultView, view => new DefaultView(view)); }
+        }
 
-		/// <summary>
-		/// Gets the generic <see cref="IProduct"/> underlying element.
-		/// </summary>
-		public IProduct AsProduct()
-		{
-			return this.target;
-		}
+        /// <summary>
+        /// Gets the generic <see cref="IProduct"/> underlying element.
+        /// </summary>
+        public IProduct AsProduct()
+        {
+            return this.target;
+        }
 
-		/// <summary>
-		/// Gets the generic underlying element as the given type if possible.
-		/// </summary>
-		public TRuntimeInterface As<TRuntimeInterface>()
-			where TRuntimeInterface : class
-		{
-			return this.target as TRuntimeInterface;
-		}
+        /// <summary>
+        /// Gets the generic underlying element as the given type if possible.
+        /// </summary>
+        public TRuntimeInterface As<TRuntimeInterface>()
+            where TRuntimeInterface : class
+        {
+            return this.target as TRuntimeInterface;
+        }
 
-		/// <summary>
-		/// Deletes this instance.
-		/// </summary>
-		public void Delete()
-		{
-			this.target.Delete();
-		}
-	}
+        /// <summary>
+        /// Deletes this instance.
+        /// </summary>
+        public void Delete()
+        {
+            this.target.Delete();
+        }
+    }
 }

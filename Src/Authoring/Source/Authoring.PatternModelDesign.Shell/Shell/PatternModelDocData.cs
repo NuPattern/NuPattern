@@ -12,10 +12,10 @@ using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Extensibility;
 using NuPattern.Extensibility.References;
 using NuPattern.Library.Commands;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -24,7 +24,6 @@ namespace NuPattern.Runtime.Schema
     /// </summary>
     internal partial class PatternModelDocData
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternModelDocData>();
         private bool modelCloned;
 
         [Import]

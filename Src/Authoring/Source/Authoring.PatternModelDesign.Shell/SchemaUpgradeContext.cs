@@ -7,8 +7,8 @@ using System.Linq;
 using System.Xml.Linq;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
 using NuPattern.Runtime.Schema.Properties;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Schema
 {

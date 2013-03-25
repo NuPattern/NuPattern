@@ -24,6 +24,10 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="NuPattern.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>

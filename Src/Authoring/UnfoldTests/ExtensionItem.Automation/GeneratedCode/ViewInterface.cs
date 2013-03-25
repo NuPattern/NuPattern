@@ -10,30 +10,30 @@
 
 namespace ExtensionItem.Automation.GeneratedCode
 {
-	using System.ComponentModel;
-	using NuPattern.Runtime;
+    using System.ComponentModel;
+    using NuPattern.Runtime;
 
-	///	<summary>
-	///	Description for ExtensionItem.DefaultView
-	///	</summary>
-	[Description("Description for ExtensionItem.DefaultView")]
-	[ToolkitInterface(ExtensionId = "8b378a9d-d437-4ca7-8dd3-318c38dc0969", DefinitionId = "b8523980-b898-49e5-a0f2-109dcd9380c5", ProxyType = typeof(DefaultView))]
-	public partial interface IDefaultView : IToolkitInterface
-	{
-		/// <summary>
-		/// Gets the parent element.
-		/// </summary>
-		IExtensionItem Parent { get; }
+    ///	<summary>
+    ///	Description for ExtensionItem.DefaultView
+    ///	</summary>
+    [Description("Description for ExtensionItem.DefaultView")]
+    [ToolkitInterface(ExtensionId = "8b378a9d-d437-4ca7-8dd3-318c38dc0969", DefinitionId = "b8523980-b898-49e5-a0f2-109dcd9380c5", ProxyType = typeof(DefaultView))]
+    public partial interface IDefaultView : IToolkitInterface
+    {
+        /// <summary>
+        /// Gets the parent element.
+        /// </summary>
+        IExtensionItem Parent { get; }
 
-		///	<summary>
-		///	Deletes this element from the store.
-		///	</summary>
-		void Delete();
+        ///	<summary>
+        ///	Deletes this element from the store.
+        ///	</summary>
+        void Delete();
 
-		/// <summary>
-		/// Gets the generic <see cref="IView"/> underlying element.
-		/// </summary>
-		IView AsView();
-	}
+        /// <summary>
+        /// Gets the generic <see cref="IView"/> underlying element.
+        /// </summary>
+        IView AsView();
+    }
 }
 

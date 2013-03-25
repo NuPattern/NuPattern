@@ -22,6 +22,14 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Common.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.VisualStudio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="NuPattern.Library">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>false</Private>
@@ -32,10 +40,6 @@
     </Reference>
     <Reference Include="NuPattern.Extensibility">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="NuPattern.VisualStudio">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="NuPattern.Runtime.Schema">

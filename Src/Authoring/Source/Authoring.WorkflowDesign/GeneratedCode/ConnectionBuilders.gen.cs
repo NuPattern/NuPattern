@@ -15,7 +15,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// ConnectionBuilder class to provide logic for constructing connections between elements.
 	/// </summary>
-	public static partial class ProductionWorkflow
+	internal static partial class ProductionWorkflow
 	{
 		#region Accept Connection Methods
 		/// <summary>

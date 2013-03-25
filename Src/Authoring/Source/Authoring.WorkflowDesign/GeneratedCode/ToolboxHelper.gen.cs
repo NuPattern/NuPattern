@@ -23,7 +23,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <remarks>
 	/// Double-derived class to allow easier code customization.
 	/// </remarks>
-	public partial class WorkflowDesignToolboxHelper : WorkflowDesignToolboxHelperBase 
+	internal partial class WorkflowDesignToolboxHelper : WorkflowDesignToolboxHelperBase 
 	{
 		/// <summary>
 		/// Constructs a new WorkflowDesignToolboxHelper.
@@ -37,7 +37,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// </summary>
 	
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "The store is disposed on domain shut down")]
-	public abstract class WorkflowDesignToolboxHelperBase
+	internal abstract class WorkflowDesignToolboxHelperBase
 	{
 		/// <summary>
 		/// Toolbox item filter string used to identify WorkflowDesign toolbox items.  

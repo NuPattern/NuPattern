@@ -24,6 +24,10 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="NuPattern.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />

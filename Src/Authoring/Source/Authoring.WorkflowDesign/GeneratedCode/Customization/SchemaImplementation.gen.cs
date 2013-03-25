@@ -23,40 +23,40 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// A requirement for a point of variability in the product line..
 	/// </summary>
-	public partial class VariabilityRequirement : INotifyPropertyChanged
+	partial class VariabilityRequirement : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IVariabilityRequirement.SubscribeChanged(Expression<Func<IVariabilityRequirement, object>> propertyExpression, Action<IVariabilityRequirement> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IVariabilityRequirement.SubscribeChanged(Expression<Func<IVariabilityRequirement, object>> propertyExpression, Action<IVariabilityRequirement> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IVariabilityRequirementInfo.SubscribeChanged(Expression<Func<IVariabilityRequirementInfo, object>> propertyExpression, Action<IVariabilityRequirementInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IVariabilityRequirementInfo.SubscribeChanged(Expression<Func<IVariabilityRequirementInfo, object>> propertyExpression, Action<IVariabilityRequirementInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -64,14 +64,14 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// A requirement for a point of variability in the product line.
 	/// </summary>
 	[GeneratedCode("NuPattern.Authoring.WorkflowDesign", "1.2.0.0")]
-	public partial class VariabilityRequirement : IVariabilityRequirement, IVariabilityRequirementInfo
+	partial class VariabilityRequirement : IVariabilityRequirement, IVariabilityRequirementInfo
 	{ 
 		/// <summary>
 		/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirement
 		/// </summary>
 		IEnumerable<IProductionTool> IVariabilityRequirement.ProductionTools
 		{
-			get { return this.ProductionTools.Cast<IProductionTool>(); }
+		    get { return this.ProductionTools.Cast<IProductionTool>(); }
 		}
 		
 		/// <summary>
@@ -80,7 +80,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProductionToolInfo> IVariabilityRequirementInfo.ProductionTools
 		{
-			get { return this.ProductionTools.Cast<IProductionToolInfo>(); }
+		    get { return this.ProductionTools.Cast<IProductionToolInfo>(); }
 		}
 		
 		
@@ -89,8 +89,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IDesign IVariabilityRequirement.Design
 		{
-			get { return this.Design; }
-			set { this.Design = (Design)value; }
+		    get { return this.Design; }
+		    set { this.Design = (Design)value; }
 		}
 		
 		/// <summary>
@@ -98,7 +98,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IDesignInfo IVariabilityRequirementInfo.Design
 		{
-			get { return this.Design; }
+		    get { return this.Design; }
 		}
 		
 		/// <summary>
@@ -106,7 +106,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IVariabilityRequirement> IVariabilityRequirement.VariabilityRequirements
 		{
-			get { return this.VariabilityRequirements.Cast<IVariabilityRequirement>(); }
+		    get { return this.VariabilityRequirements.Cast<IVariabilityRequirement>(); }
 		}
 		
 		/// <summary>
@@ -115,7 +115,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IVariabilityRequirementInfo> IVariabilityRequirementInfo.VariabilityRequirements
 		{
-			get { return this.VariabilityRequirements.Cast<IVariabilityRequirementInfo>(); }
+		    get { return this.VariabilityRequirements.Cast<IVariabilityRequirementInfo>(); }
 		}
 		
 		
@@ -124,7 +124,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public IVariabilityRequirement CreateVariabilityRequirement()
 		{
-			return this.CreateVariabilityRequirement(null);
+		    return this.CreateVariabilityRequirement(null);
 		}
 		
 		/// <summary>
@@ -133,17 +133,17 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public IVariabilityRequirement CreateVariabilityRequirement(Action<IVariabilityRequirement> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of VariabilityRequirement", this.IsSerializing()))
-			{
-				var instance = this.Create<VariabilityRequirement>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of VariabilityRequirement", this.IsSerializing()))
+		    {
+		        var instance = this.Create<VariabilityRequirement>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -151,16 +151,16 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public void DeleteVariabilityRequirement(IVariabilityRequirement instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting VariabilityRequirement instance", this.IsSerializing()))
-			{
-				var modelElement = instance as VariabilityRequirement;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting VariabilityRequirement instance", this.IsSerializing()))
+		    {
+		        var modelElement = instance as VariabilityRequirement;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 		
 		/// <summary>
@@ -168,8 +168,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IVariabilityRequirement IVariabilityRequirement.ParentVariabilityRequirement
 		{
-			get { return this.ParentVariabilityRequirement; }
-			set { this.ParentVariabilityRequirement = (VariabilityRequirement)value; }
+		    get { return this.ParentVariabilityRequirement; }
+		    set { this.ParentVariabilityRequirement = (VariabilityRequirement)value; }
 		}
 		
 		/// <summary>
@@ -177,7 +177,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IVariabilityRequirementInfo IVariabilityRequirementInfo.ParentVariabilityRequirement
 		{
-			get { return this.ParentVariabilityRequirement; }
+		    get { return this.ParentVariabilityRequirement; }
 		}
 	}
 }
@@ -186,40 +186,40 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// An asset that is produced by a production tool..
 	/// </summary>
-	public partial class ProducedAsset : INotifyPropertyChanged
+	partial class ProducedAsset : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IProducedAsset.SubscribeChanged(Expression<Func<IProducedAsset, object>> propertyExpression, Action<IProducedAsset> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IProducedAsset.SubscribeChanged(Expression<Func<IProducedAsset, object>> propertyExpression, Action<IProducedAsset> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IProducedAssetInfo.SubscribeChanged(Expression<Func<IProducedAssetInfo, object>> propertyExpression, Action<IProducedAssetInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IProducedAssetInfo.SubscribeChanged(Expression<Func<IProducedAssetInfo, object>> propertyExpression, Action<IProducedAssetInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -227,14 +227,14 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// An asset that is produced by a production tool.
 	/// </summary>
 	[GeneratedCode("NuPattern.Authoring.WorkflowDesign", "1.2.0.0")]
-	public partial class ProducedAsset : IProducedAsset, IProducedAssetInfo
+	partial class ProducedAsset : IProducedAsset, IProducedAssetInfo
 	{ 
 		/// <summary>
 		/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAsset
 		/// </summary>
 		IEnumerable<IProductionTool> IProducedAsset.ProducingProductionTools
 		{
-			get { return this.ProducingProductionTools.Cast<IProductionTool>(); }
+		    get { return this.ProducingProductionTools.Cast<IProductionTool>(); }
 		}
 		
 		/// <summary>
@@ -243,7 +243,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProductionToolInfo> IProducedAssetInfo.ProducingProductionTools
 		{
-			get { return this.ProducingProductionTools.Cast<IProductionToolInfo>(); }
+		    get { return this.ProducingProductionTools.Cast<IProductionToolInfo>(); }
 		}
 		
 		
@@ -252,7 +252,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProductionTool> IProducedAsset.ProductionTools
 		{
-			get { return this.ProductionTools.Cast<IProductionTool>(); }
+		    get { return this.ProductionTools.Cast<IProductionTool>(); }
 		}
 		
 		/// <summary>
@@ -261,7 +261,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProductionToolInfo> IProducedAssetInfo.ProductionTools
 		{
-			get { return this.ProductionTools.Cast<IProductionToolInfo>(); }
+		    get { return this.ProductionTools.Cast<IProductionToolInfo>(); }
 		}
 		
 		
@@ -270,7 +270,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<ISuppliedAsset> IProducedAsset.SuppliedAssets
 		{
-			get { return this.SuppliedAssets.Cast<ISuppliedAsset>(); }
+		    get { return this.SuppliedAssets.Cast<ISuppliedAsset>(); }
 		}
 		
 		/// <summary>
@@ -279,7 +279,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<ISuppliedAssetInfo> IProducedAssetInfo.SuppliedAssets
 		{
-			get { return this.SuppliedAssets.Cast<ISuppliedAssetInfo>(); }
+		    get { return this.SuppliedAssets.Cast<ISuppliedAssetInfo>(); }
 		}
 		
 	}
@@ -289,40 +289,40 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// A tool that is supplied assets that produces more assets..
 	/// </summary>
-	public partial class ProductionTool : INotifyPropertyChanged
+	partial class ProductionTool : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IProductionTool.SubscribeChanged(Expression<Func<IProductionTool, object>> propertyExpression, Action<IProductionTool> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IProductionTool.SubscribeChanged(Expression<Func<IProductionTool, object>> propertyExpression, Action<IProductionTool> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IProductionToolInfo.SubscribeChanged(Expression<Func<IProductionToolInfo, object>> propertyExpression, Action<IProductionToolInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IProductionToolInfo.SubscribeChanged(Expression<Func<IProductionToolInfo, object>> propertyExpression, Action<IProductionToolInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -330,14 +330,14 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// A tool that is supplied assets that produces more assets.
 	/// </summary>
 	[GeneratedCode("NuPattern.Authoring.WorkflowDesign", "1.2.0.0")]
-	public partial class ProductionTool : IProductionTool, IProductionToolInfo
+	partial class ProductionTool : IProductionTool, IProductionToolInfo
 	{ 
 		/// <summary>
 		/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionTool
 		/// </summary>
 		IEnumerable<IVariabilityRequirement> IProductionTool.VariabilityRequirements
 		{
-			get { return this.VariabilityRequirements.Cast<IVariabilityRequirement>(); }
+		    get { return this.VariabilityRequirements.Cast<IVariabilityRequirement>(); }
 		}
 		
 		/// <summary>
@@ -346,7 +346,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IVariabilityRequirementInfo> IProductionToolInfo.VariabilityRequirements
 		{
-			get { return this.VariabilityRequirements.Cast<IVariabilityRequirementInfo>(); }
+		    get { return this.VariabilityRequirements.Cast<IVariabilityRequirementInfo>(); }
 		}
 		
 		
@@ -355,7 +355,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProducedAsset> IProductionTool.ProducedProducedAssets
 		{
-			get { return this.ProducedProducedAssets.Cast<IProducedAsset>(); }
+		    get { return this.ProducedProducedAssets.Cast<IProducedAsset>(); }
 		}
 		
 		/// <summary>
@@ -364,7 +364,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProducedAssetInfo> IProductionToolInfo.ProducedProducedAssets
 		{
-			get { return this.ProducedProducedAssets.Cast<IProducedAssetInfo>(); }
+		    get { return this.ProducedProducedAssets.Cast<IProducedAssetInfo>(); }
 		}
 		
 		
@@ -373,7 +373,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProducedAsset> IProductionTool.SuppliedProducedAssets
 		{
-			get { return this.SuppliedProducedAssets.Cast<IProducedAsset>(); }
+		    get { return this.SuppliedProducedAssets.Cast<IProducedAsset>(); }
 		}
 		
 		/// <summary>
@@ -382,7 +382,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProducedAssetInfo> IProductionToolInfo.SuppliedProducedAssets
 		{
-			get { return this.SuppliedProducedAssets.Cast<IProducedAssetInfo>(); }
+		    get { return this.SuppliedProducedAssets.Cast<IProducedAssetInfo>(); }
 		}
 		
 		
@@ -391,7 +391,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<ISuppliedAsset> IProductionTool.SuppliedSuppliedAssets
 		{
-			get { return this.SuppliedSuppliedAssets.Cast<ISuppliedAsset>(); }
+		    get { return this.SuppliedSuppliedAssets.Cast<ISuppliedAsset>(); }
 		}
 		
 		/// <summary>
@@ -400,7 +400,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<ISuppliedAssetInfo> IProductionToolInfo.SuppliedSuppliedAssets
 		{
-			get { return this.SuppliedSuppliedAssets.Cast<ISuppliedAssetInfo>(); }
+		    get { return this.SuppliedSuppliedAssets.Cast<ISuppliedAssetInfo>(); }
 		}
 		
 		
@@ -409,7 +409,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IAsset> IProductionTool.AllSuppliedAssets
 		{
-			get { return this.AllSuppliedAssets.Cast<IAsset>(); }
+		    get { return this.AllSuppliedAssets.Cast<IAsset>(); }
 		}
 		
 		/// <summary>
@@ -418,7 +418,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IAssetInfo> IProductionToolInfo.AllSuppliedAssets
 		{
-			get { return this.AllSuppliedAssets.Cast<IAssetInfo>(); }
+		    get { return this.AllSuppliedAssets.Cast<IAssetInfo>(); }
 		}
 		
 		
@@ -427,8 +427,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IDesign IProductionTool.Design
 		{
-			get { return this.Design; }
-			set { this.Design = (Design)value; }
+		    get { return this.Design; }
+		    set { this.Design = (Design)value; }
 		}
 		
 		/// <summary>
@@ -436,7 +436,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IDesignInfo IProductionToolInfo.Design
 		{
-			get { return this.Design; }
+		    get { return this.Design; }
 		}
 	}
 }
@@ -445,40 +445,40 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// An asset that is supplied to a production tool..
 	/// </summary>
-	public partial class SuppliedAsset : INotifyPropertyChanged
+	partial class SuppliedAsset : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable ISuppliedAsset.SubscribeChanged(Expression<Func<ISuppliedAsset, object>> propertyExpression, Action<ISuppliedAsset> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable ISuppliedAsset.SubscribeChanged(Expression<Func<ISuppliedAsset, object>> propertyExpression, Action<ISuppliedAsset> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable ISuppliedAssetInfo.SubscribeChanged(Expression<Func<ISuppliedAssetInfo, object>> propertyExpression, Action<ISuppliedAssetInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable ISuppliedAssetInfo.SubscribeChanged(Expression<Func<ISuppliedAssetInfo, object>> propertyExpression, Action<ISuppliedAssetInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -486,14 +486,14 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// An asset that is supplied to a production tool.
 	/// </summary>
 	[GeneratedCode("NuPattern.Authoring.WorkflowDesign", "1.2.0.0")]
-	public partial class SuppliedAsset : ISuppliedAsset, ISuppliedAssetInfo
+	partial class SuppliedAsset : ISuppliedAsset, ISuppliedAssetInfo
 	{ 
 		/// <summary>
 		/// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAsset
 		/// </summary>
 		IEnumerable<IProducedAsset> ISuppliedAsset.ProducedAssets
 		{
-			get { return this.ProducedAssets.Cast<IProducedAsset>(); }
+		    get { return this.ProducedAssets.Cast<IProducedAsset>(); }
 		}
 		
 		/// <summary>
@@ -502,7 +502,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProducedAssetInfo> ISuppliedAssetInfo.ProducedAssets
 		{
-			get { return this.ProducedAssets.Cast<IProducedAssetInfo>(); }
+		    get { return this.ProducedAssets.Cast<IProducedAssetInfo>(); }
 		}
 		
 		
@@ -511,7 +511,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProductionTool> ISuppliedAsset.ProductionTools
 		{
-			get { return this.ProductionTools.Cast<IProductionTool>(); }
+		    get { return this.ProductionTools.Cast<IProductionTool>(); }
 		}
 		
 		/// <summary>
@@ -520,7 +520,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProductionToolInfo> ISuppliedAssetInfo.ProductionTools
 		{
-			get { return this.ProductionTools.Cast<IProductionToolInfo>(); }
+		    get { return this.ProductionTools.Cast<IProductionToolInfo>(); }
 		}
 		
 	}
@@ -530,40 +530,40 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// A supplied or fabricated asset in the product line..
 	/// </summary>
-	public partial class Asset : INotifyPropertyChanged
+	partial class Asset : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IAsset.SubscribeChanged(Expression<Func<IAsset, object>> propertyExpression, Action<IAsset> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IAsset.SubscribeChanged(Expression<Func<IAsset, object>> propertyExpression, Action<IAsset> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IAssetInfo.SubscribeChanged(Expression<Func<IAssetInfo, object>> propertyExpression, Action<IAssetInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IAssetInfo.SubscribeChanged(Expression<Func<IAssetInfo, object>> propertyExpression, Action<IAssetInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -571,14 +571,14 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// A supplied or fabricated asset in the product line.
 	/// </summary>
 	[GeneratedCode("NuPattern.Authoring.WorkflowDesign", "1.2.0.0")]
-	public partial class Asset : IAsset, IAssetInfo
+	partial class Asset : IAsset, IAssetInfo
 	{ 
 		/// <summary>
 		/// Description for NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset
 		/// </summary>
 		IEnumerable<IProductionTool> IAsset.AllProducingTools
 		{
-			get { return this.AllProducingTools.Cast<IProductionTool>(); }
+		    get { return this.AllProducingTools.Cast<IProductionTool>(); }
 		}
 		
 		/// <summary>
@@ -587,7 +587,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProductionToolInfo> IAssetInfo.AllProducingTools
 		{
-			get { return this.AllProducingTools.Cast<IProductionToolInfo>(); }
+		    get { return this.AllProducingTools.Cast<IProductionToolInfo>(); }
 		}
 		
 		
@@ -596,8 +596,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IDesign IAsset.Design
 		{
-			get { return this.Design; }
-			set { this.Design = (Design)value; }
+		    get { return this.Design; }
+		    set { this.Design = (Design)value; }
 		}
 		
 		/// <summary>
@@ -605,7 +605,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IDesignInfo IAssetInfo.Design
 		{
-			get { return this.Design; }
+		    get { return this.Design; }
 		}
 	}
 }
@@ -614,73 +614,73 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// A production line design..
 	/// </summary>
-	public partial class Design : INotifyPropertyChanged
-	{ 	private NuPattern.Runtime.PropertyChangeManager propertyChanges;
+	partial class Design : INotifyPropertyChanged
+	{     private NuPattern.ComponentModel.PropertyChangeManager propertyChanges;
 	
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IDesign.SubscribeChanged(Expression<Func<IDesign, object>> propertyExpression, Action<IDesign> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IDesign.SubscribeChanged(Expression<Func<IDesign, object>> propertyExpression, Action<IDesign> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IDesignInfo.SubscribeChanged(Expression<Func<IDesignInfo, object>> propertyExpression, Action<IDesignInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IDesignInfo.SubscribeChanged(Expression<Func<IDesignInfo, object>> propertyExpression, Action<IDesignInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
-		/// <summary>
-		/// Gets the manager for property change event subscriptions for this instance 
-		///	and any of its derived classes.
-		/// </summary>
-		protected NuPattern.Runtime.PropertyChangeManager PropertyChanges
-		{
-			get
-			{
-				if (this.propertyChanges == null)
-				{
-					this.propertyChanges = new NuPattern.Runtime.PropertyChangeManager(this);
-				}
+	    /// <summary>
+	    /// Gets the manager for property change event subscriptions for this instance 
+	    ///	and any of its derived classes.
+	    /// </summary>
+	    protected NuPattern.ComponentModel.PropertyChangeManager PropertyChanges
+	    {
+	        get
+	        {
+	            if (this.propertyChanges == null)
+	            {
+	                this.propertyChanges = new NuPattern.ComponentModel.PropertyChangeManager(this);
+	            }
 	
-				return this.propertyChanges;
-			}
-		}
+	            return this.propertyChanges;
+	        }
+	    }
 	}
 	
 	/// <summary>
 	/// A production line design.
 	/// </summary>
 	[GeneratedCode("NuPattern.Authoring.WorkflowDesign", "1.2.0.0")]
-	public partial class Design : IDesign, IDesignInfo
+	partial class Design : IDesign, IDesignInfo
 	{ 
 		/// <summary>
 		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.Design
 		/// </summary>
 		IEnumerable<IProductionTool> IDesign.ProductionTools
 		{
-			get { return this.ProductionTools.Cast<IProductionTool>(); }
+		    get { return this.ProductionTools.Cast<IProductionTool>(); }
 		}
 		
 		/// <summary>
@@ -689,7 +689,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IProductionToolInfo> IDesignInfo.ProductionTools
 		{
-			get { return this.ProductionTools.Cast<IProductionToolInfo>(); }
+		    get { return this.ProductionTools.Cast<IProductionToolInfo>(); }
 		}
 		
 		
@@ -698,7 +698,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public IProductionTool CreateProductionTool()
 		{
-			return this.CreateProductionTool(null);
+		    return this.CreateProductionTool(null);
 		}
 		
 		/// <summary>
@@ -707,17 +707,17 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public IProductionTool CreateProductionTool(Action<IProductionTool> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ProductionTool", this.IsSerializing()))
-			{
-				var instance = this.Create<ProductionTool>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ProductionTool", this.IsSerializing()))
+		    {
+		        var instance = this.Create<ProductionTool>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -725,16 +725,16 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public void DeleteProductionTool(IProductionTool instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ProductionTool instance", this.IsSerializing()))
-			{
-				var modelElement = instance as ProductionTool;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ProductionTool instance", this.IsSerializing()))
+		    {
+		        var modelElement = instance as ProductionTool;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 		
 		/// <summary>
@@ -742,7 +742,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IAsset> IDesign.Assets
 		{
-			get { return this.Assets.Cast<IAsset>(); }
+		    get { return this.Assets.Cast<IAsset>(); }
 		}
 		
 		/// <summary>
@@ -751,7 +751,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IAssetInfo> IDesignInfo.Assets
 		{
-			get { return this.Assets.Cast<IAssetInfo>(); }
+		    get { return this.Assets.Cast<IAssetInfo>(); }
 		}
 		
 		
@@ -760,7 +760,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public IProducedAsset CreateProducedAsset()
 		{
-			return this.CreateProducedAsset(null);
+		    return this.CreateProducedAsset(null);
 		}
 		
 		/// <summary>
@@ -769,17 +769,17 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public IProducedAsset CreateProducedAsset(Action<IProducedAsset> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ProducedAsset", this.IsSerializing()))
-			{
-				var instance = this.Create<ProducedAsset>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of ProducedAsset", this.IsSerializing()))
+		    {
+		        var instance = this.Create<ProducedAsset>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -787,16 +787,16 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public void DeleteProducedAsset(IProducedAsset instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ProducedAsset instance", this.IsSerializing()))
-			{
-				var modelElement = instance as ProducedAsset;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting ProducedAsset instance", this.IsSerializing()))
+		    {
+		        var modelElement = instance as ProducedAsset;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 		
 		/// <summary>
@@ -804,7 +804,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public ISuppliedAsset CreateSuppliedAsset()
 		{
-			return this.CreateSuppliedAsset(null);
+		    return this.CreateSuppliedAsset(null);
 		}
 		
 		/// <summary>
@@ -813,17 +813,17 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public ISuppliedAsset CreateSuppliedAsset(Action<ISuppliedAsset> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of SuppliedAsset", this.IsSerializing()))
-			{
-				var instance = this.Create<SuppliedAsset>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of SuppliedAsset", this.IsSerializing()))
+		    {
+		        var instance = this.Create<SuppliedAsset>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -831,16 +831,16 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public void DeleteSuppliedAsset(ISuppliedAsset instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting SuppliedAsset instance", this.IsSerializing()))
-			{
-				var modelElement = instance as SuppliedAsset;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting SuppliedAsset instance", this.IsSerializing()))
+		    {
+		        var modelElement = instance as SuppliedAsset;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 		
 		/// <summary>
@@ -848,7 +848,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IVariabilityRequirement> IDesign.VariabilityRequirements
 		{
-			get { return this.VariabilityRequirements.Cast<IVariabilityRequirement>(); }
+		    get { return this.VariabilityRequirements.Cast<IVariabilityRequirement>(); }
 		}
 		
 		/// <summary>
@@ -857,7 +857,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		IEnumerable<IVariabilityRequirementInfo> IDesignInfo.VariabilityRequirements
 		{
-			get { return this.VariabilityRequirements.Cast<IVariabilityRequirementInfo>(); }
+		    get { return this.VariabilityRequirements.Cast<IVariabilityRequirementInfo>(); }
 		}
 		
 		
@@ -866,7 +866,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public IVariabilityRequirement CreateVariabilityRequirement()
 		{
-			return this.CreateVariabilityRequirement(null);
+		    return this.CreateVariabilityRequirement(null);
 		}
 		
 		/// <summary>
@@ -875,17 +875,17 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public IVariabilityRequirement CreateVariabilityRequirement(Action<IVariabilityRequirement> initializer)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of VariabilityRequirement", this.IsSerializing()))
-			{
-				var instance = this.Create<VariabilityRequirement>();
-				if (initializer != null)
-				{
-					initializer(instance);
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Creating new instance of VariabilityRequirement", this.IsSerializing()))
+		    {
+		        var instance = this.Create<VariabilityRequirement>();
+		        if (initializer != null)
+		        {
+		            initializer(instance);
+		        }
 		
-				tx.Commit();
-				return instance;
-			}
+		        tx.Commit();
+		        return instance;
+		    }
 		}
 		
 		/// <summary>
@@ -893,38 +893,38 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </summary>
 		public void DeleteVariabilityRequirement(IVariabilityRequirement instance)
 		{
-			using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting VariabilityRequirement instance", this.IsSerializing()))
-			{
-				var modelElement = instance as VariabilityRequirement;
-				if (modelElement != null)
-				{
-					modelElement.Delete();
-				}
+		    using (var tx = this.Store.TransactionManager.BeginTransaction("Deleting VariabilityRequirement instance", this.IsSerializing()))
+		    {
+		        var modelElement = instance as VariabilityRequirement;
+		        if (modelElement != null)
+		        {
+		            modelElement.Delete();
+		        }
 		
-				tx.Commit();
-			}
+		        tx.Commit();
+		    }
 		}
 	
-		/// <summary>
-		/// Gets the extensions.
-		/// </summary>
-		/// <typeparam name="TExtension">The type of the extension.</typeparam>	
-		public IEnumerable<TExtension> GetExtensions<TExtension>()
-		{
-		 	return this.GetAllExtensions().OfType<TExtension>();
-		}
+	    /// <summary>
+	    /// Gets the extensions.
+	    /// </summary>
+	    /// <typeparam name="TExtension">The type of the extension.</typeparam>	
+	    public IEnumerable<TExtension> GetExtensions<TExtension>()
+	    {
+	        return this.GetAllExtensions().OfType<TExtension>();
+	    }
 	
-		/// <summary>
-		/// Gets a value indicating whether this instance is serializing.
-		/// </summary>
-		/// <value>
-		/// <c>true</c> if this instance is serializing; otherwise, <c>false</c>.
-		/// </value>
-		protected bool IsSerializing()
-		{
-			return this.Store.TransactionManager.InTransaction &&
-				this.Store.TransactionManager.CurrentTransaction.IsSerializing;
-		}
+	    /// <summary>
+	    /// Gets a value indicating whether this instance is serializing.
+	    /// </summary>
+	    /// <value>
+	    /// <c>true</c> if this instance is serializing; otherwise, <c>false</c>.
+	    /// </value>
+	    protected bool IsSerializing()
+	    {
+	        return this.Store.TransactionManager.InTransaction &&
+	            this.Store.TransactionManager.CurrentTransaction.IsSerializing;
+	    }
 	}
 }
 namespace NuPattern.Authoring.WorkflowDesign
@@ -932,87 +932,87 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// An element that has a unique name..
 	/// </summary>
-	public partial class NamedElementSchema : INotifyPropertyChanged
-	{ 	private NuPattern.Runtime.PropertyChangeManager propertyChanges;
+	partial class NamedElementSchema : INotifyPropertyChanged
+	{     private NuPattern.ComponentModel.PropertyChangeManager propertyChanges;
 	
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable INamedElementSchema.SubscribeChanged(Expression<Func<INamedElementSchema, object>> propertyExpression, Action<INamedElementSchema> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable INamedElementSchema.SubscribeChanged(Expression<Func<INamedElementSchema, object>> propertyExpression, Action<INamedElementSchema> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable INamedElementInfo.SubscribeChanged(Expression<Func<INamedElementInfo, object>> propertyExpression, Action<INamedElementInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable INamedElementInfo.SubscribeChanged(Expression<Func<INamedElementInfo, object>> propertyExpression, Action<INamedElementInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
-		/// <summary>
-		/// Gets the manager for property change event subscriptions for this instance 
-		///	and any of its derived classes.
-		/// </summary>
-		protected NuPattern.Runtime.PropertyChangeManager PropertyChanges
-		{
-			get
-			{
-				if (this.propertyChanges == null)
-				{
-					this.propertyChanges = new NuPattern.Runtime.PropertyChangeManager(this);
-				}
+	    /// <summary>
+	    /// Gets the manager for property change event subscriptions for this instance 
+	    ///	and any of its derived classes.
+	    /// </summary>
+	    protected NuPattern.ComponentModel.PropertyChangeManager PropertyChanges
+	    {
+	        get
+	        {
+	            if (this.propertyChanges == null)
+	            {
+	                this.propertyChanges = new NuPattern.ComponentModel.PropertyChangeManager(this);
+	            }
 	
-				return this.propertyChanges;
-			}
-		}
+	            return this.propertyChanges;
+	        }
+	    }
 	}
 	
 	/// <summary>
 	/// An element that has a unique name.
 	/// </summary>
 	[GeneratedCode("NuPattern.Authoring.WorkflowDesign", "1.2.0.0")]
-	public partial class NamedElementSchema : INamedElementSchema, INamedElementInfo
+	partial class NamedElementSchema : INamedElementSchema, INamedElementInfo
 	{ 
-		/// <summary>
-		/// Gets the extensions.
-		/// </summary>
-		/// <typeparam name="TExtension">The type of the extension.</typeparam>	
-		public IEnumerable<TExtension> GetExtensions<TExtension>()
-		{
-		 	return this.GetAllExtensions().OfType<TExtension>();
-		}
+	    /// <summary>
+	    /// Gets the extensions.
+	    /// </summary>
+	    /// <typeparam name="TExtension">The type of the extension.</typeparam>	
+	    public IEnumerable<TExtension> GetExtensions<TExtension>()
+	    {
+	        return this.GetAllExtensions().OfType<TExtension>();
+	    }
 	
-		/// <summary>
-		/// Gets a value indicating whether this instance is serializing.
-		/// </summary>
-		/// <value>
-		/// <c>true</c> if this instance is serializing; otherwise, <c>false</c>.
-		/// </value>
-		protected bool IsSerializing()
-		{
-			return this.Store.TransactionManager.InTransaction &&
-				this.Store.TransactionManager.CurrentTransaction.IsSerializing;
-		}
+	    /// <summary>
+	    /// Gets a value indicating whether this instance is serializing.
+	    /// </summary>
+	    /// <value>
+	    /// <c>true</c> if this instance is serializing; otherwise, <c>false</c>.
+	    /// </value>
+	    protected bool IsSerializing()
+	    {
+	        return this.Store.TransactionManager.InTransaction &&
+	            this.Store.TransactionManager.CurrentTransaction.IsSerializing;
+	    }
 	}
 }
 namespace NuPattern.Authoring.WorkflowDesign
@@ -1020,40 +1020,40 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// An element used for realization..
 	/// </summary>
-	public partial class DesignElement : INotifyPropertyChanged
+	partial class DesignElement : INotifyPropertyChanged
 	{ 
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IDesignElement.SubscribeChanged(Expression<Func<IDesignElement, object>> propertyExpression, Action<IDesignElement> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IDesignElement.SubscribeChanged(Expression<Func<IDesignElement, object>> propertyExpression, Action<IDesignElement> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable IDesignElementInfo.SubscribeChanged(Expression<Func<IDesignElementInfo, object>> propertyExpression, Action<IDesignElementInfo> callbackAction)
-		{
-			return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
-		}
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable IDesignElementInfo.SubscribeChanged(Expression<Func<IDesignElementInfo, object>> propertyExpression, Action<IDesignElementInfo> callbackAction)
+	    {
+	        return this.PropertyChanges.SubscribeChanged(propertyExpression, callbackAction);
+	    }
 	
-		/// <summary>
-		/// Exposes the property changed event.
-		/// </summary>
-		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
-		{
-			add { this.PropertyChanges.AddHandler(value); }
-			remove { this.PropertyChanges.RemoveHandler(value); }
-		}
+	    /// <summary>
+	    /// Exposes the property changed event.
+	    /// </summary>
+	    event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
+	    {
+	        add { this.PropertyChanges.AddHandler(value); }
+	        remove { this.PropertyChanges.RemoveHandler(value); }
+	    }
 	
 	}
 	
@@ -1061,6 +1061,6 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// An element used for realization.
 	/// </summary>
 	[GeneratedCode("NuPattern.Authoring.WorkflowDesign", "1.2.0.0")]
-	public partial class DesignElement : IDesignElement, IDesignElementInfo
+	partial class DesignElement : IDesignElement, IDesignElementInfo
 	{ }
 }

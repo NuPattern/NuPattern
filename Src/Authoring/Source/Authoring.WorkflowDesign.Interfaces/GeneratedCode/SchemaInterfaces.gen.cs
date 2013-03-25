@@ -19,16 +19,16 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	/// <summary>
 	/// A requirement for a point of variability in the product line.
 	/// </summary>
-	public partial interface IVariabilityRequirement : INotifyPropertyChanged
+	partial interface IVariabilityRequirement : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IVariabilityRequirement, object>> propertyExpression, Action<IVariabilityRequirement> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IVariabilityRequirement, object>> propertyExpression, Action<IVariabilityRequirement> callbackAction);
 	}
 	
 	/// <summary>
@@ -79,16 +79,16 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	/// <summary>
 	/// An asset that is produced by a production tool.
 	/// </summary>
-	public partial interface IProducedAsset : INotifyPropertyChanged
+	partial interface IProducedAsset : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IProducedAsset, object>> propertyExpression, Action<IProducedAsset> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IProducedAsset, object>> propertyExpression, Action<IProducedAsset> callbackAction);
 	}
 	
 	/// <summary>
@@ -129,16 +129,16 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	/// <summary>
 	/// A tool that is supplied assets that produces more assets.
 	/// </summary>
-	public partial interface IProductionTool : INotifyPropertyChanged
+	partial interface IProductionTool : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IProductionTool, object>> propertyExpression, Action<IProductionTool> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IProductionTool, object>> propertyExpression, Action<IProductionTool> callbackAction);
 	}
 	
 	/// <summary>
@@ -197,16 +197,16 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	/// <summary>
 	/// An asset that is supplied to a production tool.
 	/// </summary>
-	public partial interface ISuppliedAsset : INotifyPropertyChanged
+	partial interface ISuppliedAsset : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<ISuppliedAsset, object>> propertyExpression, Action<ISuppliedAsset> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<ISuppliedAsset, object>> propertyExpression, Action<ISuppliedAsset> callbackAction);
 	}
 	
 	/// <summary>
@@ -241,16 +241,16 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	/// <summary>
 	/// A supplied or fabricated asset in the product line.
 	/// </summary>
-	public partial interface IAsset : INotifyPropertyChanged
+	partial interface IAsset : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IAsset, object>> propertyExpression, Action<IAsset> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IAsset, object>> propertyExpression, Action<IAsset> callbackAction);
 	}
 	
 	/// <summary>
@@ -285,16 +285,16 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	/// <summary>
 	/// A production line design.
 	/// </summary>
-	public partial interface IDesign : INotifyPropertyChanged
+	partial interface IDesign : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IDesign, object>> propertyExpression, Action<IDesign> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IDesign, object>> propertyExpression, Action<IDesign> callbackAction);
 	}
 	
 	/// <summary>
@@ -304,11 +304,11 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface IDesign  
 	{
-		/// <summary>
-		/// Gets the identifier for this element.
-		/// </summary>
-		[Description("Gets the identifier for this element.")]
-		global::System.Guid Id { get; } 
+	    /// <summary>
+	    /// Gets the identifier for this element.
+	    /// </summary>
+	    [Description("Gets the identifier for this element.")]
+	    global::System.Guid Id { get; } 
 		/// <summary>
 		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.Design
 		/// </summary>
@@ -357,10 +357,10 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 		/// </summary>
 		void DeleteVariabilityRequirement(IVariabilityRequirement instance);
 	
-		/// <summary>
-		/// Gets the model extensions injected via Modeling extensions infrastructure.
-		/// </summary>
-		IEnumerable<TExtension> GetExtensions<TExtension>();
+	    /// <summary>
+	    /// Gets the model extensions injected via Modeling extensions infrastructure.
+	    /// </summary>
+	    IEnumerable<TExtension> GetExtensions<TExtension>();
 	}
 }
 
@@ -369,16 +369,16 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	/// <summary>
 	/// An element that has a unique name.
 	/// </summary>
-	public partial interface INamedElementSchema : INotifyPropertyChanged
+	partial interface INamedElementSchema : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<INamedElementSchema, object>> propertyExpression, Action<INamedElementSchema> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<INamedElementSchema, object>> propertyExpression, Action<INamedElementSchema> callbackAction);
 	}
 	
 	/// <summary>
@@ -388,11 +388,11 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	[GeneratedCode("NuPattern", "1.2.0.0")]
 	public partial interface INamedElementSchema  
 	{
-		/// <summary>
-		/// Gets the identifier for this element.
-		/// </summary>
-		[Description("Gets the identifier for this element.")]
-		global::System.Guid Id { get; } 
+	    /// <summary>
+	    /// Gets the identifier for this element.
+	    /// </summary>
+	    [Description("Gets the identifier for this element.")]
+	    global::System.Guid Id { get; } 
 		/// <summary>
 		/// The well-known name of this item in this model.
 		/// </summary>
@@ -425,10 +425,10 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 		[System.ComponentModel.ReadOnly(true)]
 		global::System.Boolean IsInheritedFromBase { get; }
 	
-		/// <summary>
-		/// Gets the model extensions injected via Modeling extensions infrastructure.
-		/// </summary>
-		IEnumerable<TExtension> GetExtensions<TExtension>();
+	    /// <summary>
+	    /// Gets the model extensions injected via Modeling extensions infrastructure.
+	    /// </summary>
+	    IEnumerable<TExtension> GetExtensions<TExtension>();
 	}
 }
 
@@ -437,16 +437,16 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	/// <summary>
 	/// An element used for realization.
 	/// </summary>
-	public partial interface IDesignElement : INotifyPropertyChanged
+	partial interface IDesignElement : INotifyPropertyChanged
 	{
-		/// <summary>
-		/// Subscribes to changes in the property referenced in the given 
-		/// <paramref name="propertyExpression"/> with the given 
-		/// <paramref name="callbackAction"/> delegate.
-		/// </summary>
-		/// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-		/// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-		IDisposable SubscribeChanged(Expression<Func<IDesignElement, object>> propertyExpression, Action<IDesignElement> callbackAction);
+	    /// <summary>
+	    /// Subscribes to changes in the property referenced in the given 
+	    /// <paramref name="propertyExpression"/> with the given 
+	    /// <paramref name="callbackAction"/> delegate.
+	    /// </summary>
+	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+	    IDisposable SubscribeChanged(Expression<Func<IDesignElement, object>> propertyExpression, Action<IDesignElement> callbackAction);
 	}
 	
 	/// <summary>

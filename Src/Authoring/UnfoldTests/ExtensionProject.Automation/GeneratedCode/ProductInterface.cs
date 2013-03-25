@@ -17,53 +17,53 @@ using NuPattern.Runtime;
 
 namespace ExtensionProject.Automation.GeneratedCode
 {
-	///	<summary>
-	///	A Description of ExtensionProject
-	///	</summary>
-	[Description("A Description of ExtensionProject")]
-	[ToolkitInterface(ExtensionId = "7bab16a4-5604-441c-bb71-7b0091f96ba3", DefinitionId = "0a7c0dc0-eab1-41a4-8556-c269fc314e02", ProxyType = typeof(ExtensionProject))]
-	public partial interface IExtensionProject : IToolkitInterface
-	{
-		///	<summary>
-		///	Provides registration information for the product
-		///	</summary>
-		[Description("Provides registration information for the product")]
-		IProductToolkitInfo ToolkitInfo { get; }
+    ///	<summary>
+    ///	A Description of ExtensionProject
+    ///	</summary>
+    [Description("A Description of ExtensionProject")]
+    [ToolkitInterface(ExtensionId = "7bab16a4-5604-441c-bb71-7b0091f96ba3", DefinitionId = "0a7c0dc0-eab1-41a4-8556-c269fc314e02", ProxyType = typeof(ExtensionProject))]
+    public partial interface IExtensionProject : IToolkitInterface
+    {
+        ///	<summary>
+        ///	Provides registration information for the product
+        ///	</summary>
+        [Description("Provides registration information for the product")]
+        IProductToolkitInfo ToolkitInfo { get; }
 
-		///	<summary>
-		///	The name of this element instance.
-		///	</summary>
-		[Description("The name of this element instance.")]
-		[ParenthesizePropertyName(true)]
-		String InstanceName { get; set; }
+        ///	<summary>
+        ///	The name of this element instance.
+        ///	</summary>
+        [Description("The name of this element instance.")]
+        [ParenthesizePropertyName(true)]
+        String InstanceName { get; set; }
 
-		///	<summary>
-		///	Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement
-		///	</summary>
-		[Description("Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement")]
-		IEnumerable<IReference> References { get; }
+        ///	<summary>
+        ///	Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement
+        ///	</summary>
+        [Description("Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement")]
+        IEnumerable<IReference> References { get; }
 
-		///	<summary>
-		///	Notes for this element.
-		///	</summary>
-		[Description("Notes for this element.")]
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
-		String Notes { get; set; }
+        ///	<summary>
+        ///	Notes for this element.
+        ///	</summary>
+        [Description("Notes for this element.")]
+        [Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
+        String Notes { get; set; }
 
-		///	<summary>
-		///	Description for ExtensionProject.DefaultView
-		///	</summary>
-		[Description("Description for ExtensionProject.DefaultView")]
-		IDefaultView DefaultView { get; }
+        ///	<summary>
+        ///	Description for ExtensionProject.DefaultView
+        ///	</summary>
+        [Description("Description for ExtensionProject.DefaultView")]
+        IDefaultView DefaultView { get; }
 
-		///	<summary>
-		///	Deletes this element from the store.
-		///	</summary>
-		void Delete();
+        ///	<summary>
+        ///	Deletes this element from the store.
+        ///	</summary>
+        void Delete();
 
-		/// <summary>
-		/// Gets the generic <see cref="IProduct"/> underlying element.
-		/// </summary>
-		IProduct AsProduct();
-	}
+        /// <summary>
+        /// Gets the generic <see cref="IProduct"/> underlying element.
+        /// </summary>
+        IProduct AsProduct();
+    }
 }

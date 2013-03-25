@@ -18,12 +18,11 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// </summary>
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.CoreDomainModel))]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.Diagrams.CoreDesignSurfaceDomainModel))]
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 	[DslModeling::DomainObjectId("c0712d75-bf72-45f5-9b7b-bf7ad51c42c8")]
-	public partial class WorkflowDesignDomainModel : DslModeling::DomainModel
+	internal partial class WorkflowDesignDomainModel : DslModeling::DomainModel
 	{
 		#region Constructor, domain model Id
 	
@@ -419,8 +418,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Remove closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class WorkflowDesignDeleteClosure : WorkflowDesignDeleteClosureBase, DslModeling::IElementVisitorFilter
+	internal partial class WorkflowDesignDeleteClosure : WorkflowDesignDeleteClosureBase, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor
@@ -433,8 +431,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Base class for remove closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class WorkflowDesignDeleteClosureBase : DslModeling::IElementVisitorFilter
+	internal partial class WorkflowDesignDeleteClosureBase : DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// DomainRoles
@@ -498,8 +495,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Copy closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class WorkflowDesignCopyClosure : WorkflowDesignCopyClosureBase, DslModeling::IElementVisitorFilter
+	internal partial class WorkflowDesignCopyClosure : WorkflowDesignCopyClosureBase, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor
@@ -511,8 +507,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Base class for copy closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class WorkflowDesignCopyClosureBase : DslModeling::CopyClosureFilter, DslModeling::IElementVisitorFilter
+	internal partial class WorkflowDesignCopyClosureBase : DslModeling::CopyClosureFilter, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor

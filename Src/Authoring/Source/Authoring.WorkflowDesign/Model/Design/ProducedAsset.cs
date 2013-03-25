@@ -8,7 +8,7 @@ namespace NuPattern.Authoring.WorkflowDesign
     /// Cutomizes the <see cref="ProducedAsset"/> class.
     /// </summary>
     [ValidationState(ValidationState.Enabled)]
-    public partial class ProducedAsset
+    partial class ProducedAsset
     {
         /// <summary>
         /// Validates that a produced asset that is not an input to a tool, is final.

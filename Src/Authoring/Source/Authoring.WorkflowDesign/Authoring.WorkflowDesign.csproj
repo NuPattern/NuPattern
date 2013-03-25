@@ -19,16 +19,20 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NuPattern.Common.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.VisualStudio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="NuPattern.Runtime.Interfaces">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="NuPattern.Extensibility">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="NuPattern.VisualStudio">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
@@ -78,8 +82,8 @@
     <Compile Include="Diagram\ITailoredBackgroundStyles.cs" />
     <Compile Include="Diagram\WorkflowDesignDiagram.cs" />
     <Compile Include="Diagram\TailoredBackgroundStyles.cs" />
-    <Compile Include="Extensions\DiagramExtensions.cs" />
-    <Compile Include="Extensions\StoreExtensions.cs" />
+    <Compile Include="Diagram\DiagramExtensions.cs" />
+    <Compile Include="Model\ModelStoreExtensions.cs" />
     <Compile Include="GeneratedCode\Customization\SchemaImplementation.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -188,10 +192,10 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Model\Design\Asset.cs" />
     <Compile Include="Model\Design\ProducedAsset.cs" />
-    <Compile Include="Model\Design\ProducedAssetValidation.cs" />
+    <Compile Include="Model\Design\ProducedAsset.Validation.cs" />
     <Compile Include="Model\Design\ProductionTool.cs" />
-    <Compile Include="Model\Design\ProductionToolValidation.cs" />
-    <Compile Include="Model\Design\SuppliedAssetValidation.cs" />
+    <Compile Include="Model\Design\ProductionTool.Validation.cs" />
+    <Compile Include="Model\Design\SuppliedAsset.Validation.cs" />
     <Compile Include="Model\Design\VariabilityRequirement.cs" />
     <Compile Include="Model\Rules\ProducedAssetPropertyChangeRule.cs" />
     <Compile Include="Model\Rules\SuppliedAssetPropertyChangeRule.cs" />
