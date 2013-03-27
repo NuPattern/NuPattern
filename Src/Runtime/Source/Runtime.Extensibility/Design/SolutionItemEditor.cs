@@ -7,6 +7,7 @@ using System.Windows;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.UI;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Design

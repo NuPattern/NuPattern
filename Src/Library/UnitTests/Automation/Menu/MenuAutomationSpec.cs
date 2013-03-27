@@ -10,6 +10,7 @@ using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.UI;
 
 namespace NuPattern.Library.UnitTests.Automation.Menu
 {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
-namespace NuPattern.Runtime
+namespace NuPattern.Runtime.UI
 {
     /// <summary>
     /// Defines a selector used for selecting multiple solution artifacts from a filtered subset of solution artifacts.

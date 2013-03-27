@@ -6,7 +6,7 @@ namespace NuPattern.Runtime.Settings
     /// <summary>
     /// Defines settings for a conifguration of a <see cref="TraceSource"/>.
     /// </summary>
-    public interface ITraceSourceSetting
+    internal interface ITraceSourceSetting
     {
         /// <summary>
         /// Gets the name of the tracing source.

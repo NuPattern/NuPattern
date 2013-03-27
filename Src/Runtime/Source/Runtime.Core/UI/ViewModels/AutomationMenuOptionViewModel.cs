@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
+using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.Settings;
 using NuPattern.VisualStudio;

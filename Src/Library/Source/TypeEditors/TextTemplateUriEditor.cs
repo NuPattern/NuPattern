@@ -16,6 +16,7 @@ using NuPattern.Library.Properties;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings.Design;
+using NuPattern.Runtime.UI;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Extensions;
 using NuPattern.VisualStudio.Shell;

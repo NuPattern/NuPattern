@@ -17,6 +17,7 @@ using NuPattern.Library.Properties;
 using NuPattern.Presentation;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
+using NuPattern.Runtime.UI;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 

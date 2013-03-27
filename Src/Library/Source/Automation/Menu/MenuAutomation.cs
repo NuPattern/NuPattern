@@ -16,8 +16,8 @@ using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
-using NuPattern.Runtime.Settings;
 using NuPattern.Runtime.ToolkitInterface;
+using NuPattern.Runtime.UI;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Library.Automation

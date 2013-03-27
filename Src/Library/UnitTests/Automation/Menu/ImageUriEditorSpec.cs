@@ -9,6 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Design;
+using NuPattern.Runtime.UI;
 using NuPattern.Runtime.UriProviders;
 using NuPattern.VisualStudio.Solution;
 

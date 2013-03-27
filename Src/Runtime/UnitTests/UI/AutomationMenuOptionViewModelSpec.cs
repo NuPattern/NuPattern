@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Settings;
+using NuPattern.Runtime.UI;
 using NuPattern.Runtime.UI.ViewModels;
 
 namespace NuPattern.Runtime.UnitTests.UI

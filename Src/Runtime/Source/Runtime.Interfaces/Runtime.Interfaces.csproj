@@ -66,15 +66,12 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="SchemaUpgradeProcessorOptionsAttribute.cs" />
-    <Compile Include="Settings\ITraceSourceSetting.cs" />
-    <Compile Include="Settings\ITracingSettings.cs" />
-    <Compile Include="Settings\IRuntimeSettings.cs" />
     <Compile Include="StoreConstants.gen.cs">
       <DependentUpon>StoreConstants.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="ISolutionSelector.cs" />
+    <Compile Include="UI\ISolutionSelector.cs" />
     <Compile Include="Events\IEventCondition.cs" />
     <Compile Include="Events\IOnSolutionBuilderDragEnter.cs" />
     <Compile Include="Events\IOnSolutionBuilderDragLeave.cs" />
@@ -85,7 +82,6 @@
     <Compile Include="Model\Schema\IPatternModelInfo.cs" />
     <Compile Include="Model\Schema\IPatternModelSchema.cs" />
     <Compile Include="ToolkitInterface\IToolkitInterfaceService.cs" />
-    <Compile Include="IToolkitRepository.cs" />
     <Compile Include="ToolkitInterface\IFluentInterface.cs" />
     <Compile Include="Model\Schema\IPropertySchema.cs" />
     <Compile Include="Model\Store\AutomationExtension.cs" />
@@ -104,9 +100,9 @@
     <Compile Include="Model\Store\InstanceBaseExtensions.cs" />
     <Compile Include="ToolkitInterface\ToolkitInterfaceAttribute.cs" />
     <Compile Include="Model\Store\IAbstractElement.cs" />
-    <Compile Include="IPickerFilter.cs" />
-    <Compile Include="IProductPicker.cs" />
-    <Compile Include="ISolutionPicker.cs" />
+    <Compile Include="UI\IPickerFilter.cs" />
+    <Compile Include="UI\IProductPicker.cs" />
+    <Compile Include="UI\ISolutionPicker.cs" />
     <Compile Include="Model\Store\IProduct.cs" />
     <Compile Include="Model\Store\IProductToolkitInfo.cs" />
     <Compile Include="Model\Store\IProperty.cs" />
@@ -132,11 +128,11 @@
     <Compile Include="Validation\IValidationRule.cs" />
     <Compile Include="Model\Schema\INamedElementSchema.cs" />
     <Compile Include="Events\EventAttribute.cs" />
-    <Compile Include="ICommandStatus.cs" />
+    <Compile Include="UI\ICommandStatus.cs" />
     <Compile Include="PropertyUsages.cs" />
     <Compile Include="References\ReferenceKindProviderAttribute.cs" />
     <Compile Include="Validation\RuntimeValidationExtensionAttribute.cs" />
-    <Compile Include="Settings\IAutomationMenuCommand.cs" />
+    <Compile Include="Automation\IAutomationMenuCommand.cs" />
     <Compile Include="TextTemplateUri.cs" />
     <Compile Include="VsTemplateUri.cs" />
     <Compile Include="Validation\ValidationConstants.cs" />
@@ -149,7 +145,6 @@
     <Compile Include="IPatternManager.cs" />
     <Compile Include="Model\Store\IProductState.cs" />
     <Compile Include="Model\Schema\IPatternElementInfo.cs" />
-    <Compile Include="Settings\ISettingsManager.cs" />
     <Compile Include="Model\Schema\Cardinality.cs" />
     <Compile Include="Model\Store\IProductElement.cs" />
     <Compile Include="Model\Store\IAutomationExtension.cs" />
@@ -163,7 +158,6 @@
     <Compile Include="Model\Schema\CustomizationState.cs" />
     <Compile Include="Model\Schema\CustomizedLevel.cs" />
     <Compile Include="ISchemaReader.cs" />
-    <Compile Include="ISchemaResource.cs" />
     <Compile Include="GeneratedCode\SchemaInterfaces.gen.cs">
       <DependentUpon>SchemaInterfaces.tt</DependentUpon>
       <AutoGen>True</AutoGen>

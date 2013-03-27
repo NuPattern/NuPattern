@@ -6,6 +6,7 @@ using Moq;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
+using NuPattern.Runtime.UI;
 
 namespace NuPattern.Library.UnitTests.Commands
 {

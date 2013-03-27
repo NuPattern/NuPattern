@@ -11,6 +11,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
+using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Properties;

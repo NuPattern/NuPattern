@@ -111,6 +111,12 @@
     </Compile>
     <Compile Include="Commands\VsMenuCommand.cs" />
     <Compile Include="Commands\VsMenuCommandAdapter.cs" />
+    <Compile Include="ISchemaResource.cs" />
+    <Compile Include="IToolkitRepository.cs" />
+    <Compile Include="Settings\IRuntimeSettings.cs" />
+    <Compile Include="Settings\ISettingsManager.cs" />
+    <Compile Include="Settings\ITraceSourceSetting.cs" />
+    <Compile Include="Settings\ITracingSettings.cs" />
     <Compile Include="Settings\RuntimeSettings.cs" />
     <Compile Include="Settings\TraceSourceSetting.cs" />
     <Compile Include="Settings\TracingSettings.cs" />

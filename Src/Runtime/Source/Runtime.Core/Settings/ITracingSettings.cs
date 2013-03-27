@@ -6,7 +6,7 @@ namespace NuPattern.Runtime.Settings
     /// <summary>
     /// Defines settings for the runtime.
     /// </summary>
-    public interface ITracingSettings
+    internal interface ITracingSettings
     {
         /// <summary>
         /// Gets or sets the logging level for the catch-all root trace source ("NuPattern").
