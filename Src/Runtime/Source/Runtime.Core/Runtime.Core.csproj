@@ -89,9 +89,6 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
-      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -133,8 +130,8 @@
     <Compile Include="Settings\SettingsManager.cs" />
     <Compile Include="Settings\TracingSettingsMonitor.cs" />
     <Compile Include="Events\ShellEvents.cs" />
-    <Compile Include="TraceOutputWindowManager.cs" />
-    <Compile Include="TraceRecordTextListener.cs" />
+    <Compile Include="Diagnostics\TraceOutputWindowManager.cs" />
+    <Compile Include="Diagnostics\TraceRecordTextListener.cs" />
     <Compile Include="SchemaReaderExtensions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="InstalledToolkitAdapter.cs" />
@@ -261,10 +258,6 @@
     <ProjectReference Include="..\..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
       <Name>Common.VisualStudio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Runtime.Interfaces\Runtime.Interfaces.csproj">
-      <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
-      <Name>Runtime.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\Runtime.Store\Runtime.Store.csproj">
       <Project>{0EF7E7D4-B10B-4FC9-B4D0-66E360F4338A}</Project>

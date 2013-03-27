@@ -77,9 +77,6 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.TextTemplating.Modeling.10.0.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
-      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
     </Reference>
@@ -152,7 +149,7 @@
     <Compile Include="Store\ProductElementSpec.cs" />
     <Compile Include="Store\PropertySpec.cs" />
     <Compile Include="Store\ViewSpec.cs" />
-    <Compile Include="TraceOutputWindowManagerSpec.cs" />
+    <Compile Include="Diagnostics\TraceOutputWindowManagerSpec.cs" />
     <Compile Include="Settings\TracingSettingsMonitorSpec.cs" />
     <Compile Include="UI\AddNewProductViewModelSpec.cs" />
     <Compile Include="UI\AutomationMenuOptionViewModelSpec.cs" />
@@ -193,10 +190,6 @@
     <ProjectReference Include="..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
       <Name>Common.VisualStudio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
-      <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
-      <Name>Runtime.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\Source\Runtime.Store\Runtime.Store.csproj">
       <Project>{0EF7E7D4-B10B-4FC9-B4D0-66E360F4338A}</Project>

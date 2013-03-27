@@ -53,9 +53,6 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.TextTemplating.Modeling.10.0.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
-      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
     </Reference>
@@ -76,9 +73,6 @@
     </Compile>
     <Compile Include="..\..\Common\Helpers\DslTestStore.cs">
       <Link>DslTestStore.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\Helpers\FakeSolution.cs">
-      <Link>FakeSolution.cs</Link>
     </Compile>
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
@@ -155,10 +149,6 @@
     <ProjectReference Include="..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
       <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
       <Name>Common.VisualStudio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
-      <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
-      <Name>Runtime.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\Source\Runtime.Schema\Runtime.Schema.csproj">
       <Project>{B0F2590A-F583-4883-B701-923B43475BB5}</Project>

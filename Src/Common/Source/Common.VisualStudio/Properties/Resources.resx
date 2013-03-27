@@ -166,4 +166,76 @@ The solution item has instead been renamed to: '{1}'.</value>
   <data name="TraceSourceExtensions_SeeDiagnosticsWindow" xml:space="preserve">
     <value>Please see the Output Window ('NuPattern Toolkit Extensions' pane) for more information..</value>
   </data>
+  <data name="CoordinatorTemplateWizard_FailedToDispose" xml:space="preserve">
+    <value>Failed to dispose wizard extension '{0}'.</value>
+  </data>
+  <data name="CoordinatorTemplateWizard_FailedToLoadAssembly" xml:space="preserve">
+    <value>Configured assembly '{0}' could not be loaded.</value>
+  </data>
+  <data name="CoordinatorTemplateWizard_FailedToLoadType" xml:space="preserve">
+    <value>Configured type '{0}' was not found in assembly '{1}'.</value>
+  </data>
+  <data name="CoordinatorTemplateWizard_LoadingWizardType" xml:space="preserve">
+    <value>Loading wizard type '{0}, {1}'.</value>
+  </data>
+  <data name="CoordinatorTemplateWizard_NotIWizard" xml:space="preserve">
+    <value>Configured wizard type '{0}' does not implement required interface '{1}'.</value>
+  </data>
+  <data name="CoordinatorTemplateWizard_TryFailed" xml:space="preserve">
+    <value>Template wizard unexpectedly failed.</value>
+  </data>
+  <data name="CustomToolRunnerTemplateWizard_FailedToRunCustomTools" xml:space="preserve">
+    <value>Failed to run associated Custom Tool on project items.</value>
+  </data>
+  <data name="CustomToolRunnerTemplateWizard_RunningCustomTool" xml:space="preserve">
+    <value>Running custom tool {0} on item {1} because it has RunCustomToolOnUnfold.</value>
+  </data>
+  <data name="FixLinkPathTemplateWizard_FailedToFixLinkPaths" xml:space="preserve">
+    <value>Failed to fix linked project item paths.</value>
+  </data>
+  <data name="FixLinkPathTemplateWizard_LinkFixed" xml:space="preserve">
+    <value>Fixed item {0} to link to {1}.</value>
+  </data>
+  <data name="GuidGeneratorTemplateWizard_GeneratedNewGuid" xml:space="preserve">
+    <value>Generated new Guid available on template replacement with the key {0}.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_DesignerItemNotFound" xml:space="preserve">
+    <value>Designer item for file {0} was not found.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_OpeningDesigner" xml:space="preserve">
+    <value>Opening designer file {0}.</value>
+  </data>
+  <data name="OpenDesignerTemplateWizard_RetrievedDesignerFile" xml:space="preserve">
+    <value>Designer file name with key $patterndefinition$ was not found in the replacement dictionary.</value>
+  </data>
+  <data name="ReplacementTemplateWizard_Replacing" xml:space="preserve">
+    <value>Processing custom replacement {0}={1}.</value>
+  </data>
+  <data name="SolutionNameTemplateWizard_ContextSolutionName" xml:space="preserve">
+    <value>Found contextual solution name {0}.</value>
+  </data>
+  <data name="SolutionNameTemplateWizard_NewContextSolution" xml:space="preserve">
+    <value>No existing contextual solution found. Setting {0} as the solution name.</value>
+  </data>
+  <data name="TemplateWizard_CompletingScope" xml:space="preserve">
+    <value>Completing existing active scope.</value>
+  </data>
+  <data name="TemplateWizard_Disposed" xml:space="preserve">
+    <value>Wizard extension {0} has been disposed.</value>
+  </data>
+  <data name="TemplateWizard_ItemTemplateNoItem" xml:space="preserve">
+    <value>The item template '{0}' but no unfolded item(s) were found in the solution.</value>
+  </data>
+  <data name="TemplateWizard_ProjectTemplateNoProject" xml:space="preserve">
+    <value>The project template '{0}' but no unfolded projects(s) were found in the solution.</value>
+  </data>
+  <data name="TemplateWizard_Unfolding" xml:space="preserve">
+    <value>Wizard extension {0} started processing for template {1}.</value>
+  </data>
+  <data name="VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot" xml:space="preserve">
+    <value>Failed to retrieve registry root suffix of the currently running Visual Studio instance.</value>
+  </data>
+  <data name="VsRootSuffixTemplateWizard_RootSuffixDetermined" xml:space="preserve">
+    <value>Determined VS root suffix as {0}.</value>
+  </data>
 </root>

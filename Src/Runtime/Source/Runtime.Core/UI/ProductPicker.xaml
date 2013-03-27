@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:p="http://schemas.microsoft.com/nupattern/2012/xaml/"
-    xmlns:r="clr-namespace:NuPattern.Runtime;assembly=NuPattern.Runtime.Interfaces"
+    xmlns:r="clr-namespace:NuPattern.Runtime;assembly=NuPattern.Runtime.Extensibility"
     xmlns:cp="clr-namespace:NuPattern.Presentation;assembly=NuPattern.Presentation"
     xmlns:vsfx="clr-namespace:NuPattern.Presentation.VsIde;assembly=NuPattern.Presentation"
     Title="Select Item"

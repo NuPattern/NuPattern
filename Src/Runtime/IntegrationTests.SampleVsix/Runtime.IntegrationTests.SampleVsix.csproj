@@ -60,14 +60,9 @@
       <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
-      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
-      <Name>Common.VisualStudio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
-      <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
-      <Name>Runtime.Interfaces</Name>
-      <Private>False</Private>
+    <ProjectReference Include="..\Source\Runtime.Extensibility\Runtime.Extensibility.csproj">
+      <Project>{76718f52-8f7e-43b4-9085-ef08db52ac46}</Project>
+      <Name>Runtime.Extensibility</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

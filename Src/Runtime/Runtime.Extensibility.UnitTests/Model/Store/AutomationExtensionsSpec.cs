@@ -36,19 +36,19 @@ namespace NuPattern.Runtime.UnitTests.Model.Store
         public void WhenResolvingExtension_ThenReturnsMatchingByTypeAndIdAndName()
         {
             var extensions = new List<IAutomationExtension>
-			{
-				Mocks.Of<IAutomationExtension>().First(x => x.Name == "Foo"), 
-				new TestAutomation { Name = "Foo" }, 
-				new TestAutomation { Name = "Bar" },
-			};
+            {
+                Mocks.Of<IAutomationExtension>().First(x => x.Name == "Foo"), 
+                new TestAutomation { Name = "Foo" }, 
+                new TestAutomation { Name = "Bar" },
+            };
 
             var extensionGuid = Guid.NewGuid();
 
             var settings = new List<IAutomationSettingsInfo>
-			{
-				Mocks.Of<IAutomationSettingsInfo>().First(x => x.Id == Guid.Empty && x.Name == "Foo"), 
-				Mocks.Of<IAutomationSettingsInfo>().First(x => x.Id == extensionGuid && x.Name == "Bar"), 
-			};
+            {
+                Mocks.Of<IAutomationSettingsInfo>().First(x => x.Id == Guid.Empty && x.Name == "Foo"), 
+                Mocks.Of<IAutomationSettingsInfo>().First(x => x.Id == extensionGuid && x.Name == "Bar"), 
+            };
 
             Mock.Get(settings[0]).Setup(i => i.As<IAutomationSettings>()).Returns(
                 Mocks.Of<IAutomationSettings>().First(x => x.Id == Guid.Empty && x.Name == "Foo"));

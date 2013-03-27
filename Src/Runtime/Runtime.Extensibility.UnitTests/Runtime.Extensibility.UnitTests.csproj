@@ -63,9 +63,6 @@
     <Compile Include="..\..\Common\Helpers\DslTestStore.cs">
       <Link>DslTestStore.cs</Link>
     </Compile>
-    <Compile Include="..\..\Common\Helpers\FakeSolution.cs">
-      <Link>FakeSolution.cs</Link>
-    </Compile>
     <Compile Include="Binding\BindingPropertyDescriptorSpec.cs" />
     <Compile Include="Binding\BoundPropertySpec.cs" />
     <Compile Include="Binding\Design\DesignPropertyValueProviderDescriptorSpec.cs" />
@@ -115,10 +112,6 @@
     <ProjectReference Include="..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">
       <Project>{46F79781-98BC-495A-9E01-559F166A6DFF}</Project>
       <Name>Common.Modeling</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Runtime\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
-      <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
-      <Name>Runtime.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Runtime\Source\Runtime.Store\Runtime.Store.csproj">
       <Project>{0ef7e7d4-b10b-4fc9-b4d0-66e360f4338a}</Project>

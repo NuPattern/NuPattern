@@ -14,7 +14,7 @@ using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.References;
-using NuPattern.Runtime.TemplateWizards;
+using NuPattern.VisualStudio.TemplateWizards;
 
 namespace NuPattern.Library.Automation
 {

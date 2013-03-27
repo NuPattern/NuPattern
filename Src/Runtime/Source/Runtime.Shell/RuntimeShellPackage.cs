@@ -24,6 +24,7 @@ using NuPattern.IO;
 using NuPattern.Library;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Diagnostics;
 using NuPattern.Runtime.Settings;
 using NuPattern.Runtime.Shell.OptionPages;
 using NuPattern.Runtime.Shell.Properties;

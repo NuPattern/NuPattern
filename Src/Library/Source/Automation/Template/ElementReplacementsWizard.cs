@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
-using NuPattern.Runtime.TemplateWizards;
+using NuPattern.VisualStudio.TemplateWizards;
 
 namespace NuPattern.Library.Automation
 {

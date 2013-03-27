@@ -61,6 +61,78 @@ namespace NuPattern.VisualStudio.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to dispose wizard extension &apos;{0}&apos;..
+        /// </summary>
+        internal static string CoordinatorTemplateWizard_FailedToDispose {
+            get {
+                return ResourceManager.GetString("CoordinatorTemplateWizard_FailedToDispose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configured assembly &apos;{0}&apos; could not be loaded..
+        /// </summary>
+        internal static string CoordinatorTemplateWizard_FailedToLoadAssembly {
+            get {
+                return ResourceManager.GetString("CoordinatorTemplateWizard_FailedToLoadAssembly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configured type &apos;{0}&apos; was not found in assembly &apos;{1}&apos;..
+        /// </summary>
+        internal static string CoordinatorTemplateWizard_FailedToLoadType {
+            get {
+                return ResourceManager.GetString("CoordinatorTemplateWizard_FailedToLoadType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading wizard type &apos;{0}, {1}&apos;..
+        /// </summary>
+        internal static string CoordinatorTemplateWizard_LoadingWizardType {
+            get {
+                return ResourceManager.GetString("CoordinatorTemplateWizard_LoadingWizardType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configured wizard type &apos;{0}&apos; does not implement required interface &apos;{1}&apos;..
+        /// </summary>
+        internal static string CoordinatorTemplateWizard_NotIWizard {
+            get {
+                return ResourceManager.GetString("CoordinatorTemplateWizard_NotIWizard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Template wizard unexpectedly failed..
+        /// </summary>
+        internal static string CoordinatorTemplateWizard_TryFailed {
+            get {
+                return ResourceManager.GetString("CoordinatorTemplateWizard_TryFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to run associated Custom Tool on project items..
+        /// </summary>
+        internal static string CustomToolRunnerTemplateWizard_FailedToRunCustomTools {
+            get {
+                return ResourceManager.GetString("CustomToolRunnerTemplateWizard_FailedToRunCustomTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Running custom tool {0} on item {1} because it has RunCustomToolOnUnfold..
+        /// </summary>
+        internal static string CustomToolRunnerTemplateWizard_RunningCustomTool {
+            get {
+                return ResourceManager.GetString("CustomToolRunnerTemplateWizard_RunningCustomTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to create a new empty solution, an error occurred creating and saving the new solution to &apos;{0}&apos;. Verify that you have permissions to create new subfolders in the parent directory..
         /// </summary>
         internal static string DteExtensions_CreateNewSolution_FailedCreate {
@@ -75,6 +147,69 @@ namespace NuPattern.VisualStudio.Properties {
         internal static string DteExtensions_CreateNewSolution_FailedDirSearch {
             get {
                 return ResourceManager.GetString("DteExtensions_CreateNewSolution_FailedDirSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to fix linked project item paths..
+        /// </summary>
+        internal static string FixLinkPathTemplateWizard_FailedToFixLinkPaths {
+            get {
+                return ResourceManager.GetString("FixLinkPathTemplateWizard_FailedToFixLinkPaths", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fixed item {0} to link to {1}..
+        /// </summary>
+        internal static string FixLinkPathTemplateWizard_LinkFixed {
+            get {
+                return ResourceManager.GetString("FixLinkPathTemplateWizard_LinkFixed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generated new Guid available on template replacement with the key {0}..
+        /// </summary>
+        internal static string GuidGeneratorTemplateWizard_GeneratedNewGuid {
+            get {
+                return ResourceManager.GetString("GuidGeneratorTemplateWizard_GeneratedNewGuid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Designer item for file {0} was not found..
+        /// </summary>
+        internal static string OpenDesignerTemplateWizard_DesignerItemNotFound {
+            get {
+                return ResourceManager.GetString("OpenDesignerTemplateWizard_DesignerItemNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Opening designer file {0}..
+        /// </summary>
+        internal static string OpenDesignerTemplateWizard_OpeningDesigner {
+            get {
+                return ResourceManager.GetString("OpenDesignerTemplateWizard_OpeningDesigner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Designer file name with key $patterndefinition$ was not found in the replacement dictionary..
+        /// </summary>
+        internal static string OpenDesignerTemplateWizard_RetrievedDesignerFile {
+            get {
+                return ResourceManager.GetString("OpenDesignerTemplateWizard_RetrievedDesignerFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Processing custom replacement {0}={1}..
+        /// </summary>
+        internal static string ReplacementTemplateWizard_Replacing {
+            get {
+                return ResourceManager.GetString("ReplacementTemplateWizard_Replacing", resourceCulture);
             }
         }
         
@@ -179,6 +314,69 @@ namespace NuPattern.VisualStudio.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Found contextual solution name {0}..
+        /// </summary>
+        internal static string SolutionNameTemplateWizard_ContextSolutionName {
+            get {
+                return ResourceManager.GetString("SolutionNameTemplateWizard_ContextSolutionName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No existing contextual solution found. Setting {0} as the solution name..
+        /// </summary>
+        internal static string SolutionNameTemplateWizard_NewContextSolution {
+            get {
+                return ResourceManager.GetString("SolutionNameTemplateWizard_NewContextSolution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Completing existing active scope..
+        /// </summary>
+        internal static string TemplateWizard_CompletingScope {
+            get {
+                return ResourceManager.GetString("TemplateWizard_CompletingScope", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wizard extension {0} has been disposed..
+        /// </summary>
+        internal static string TemplateWizard_Disposed {
+            get {
+                return ResourceManager.GetString("TemplateWizard_Disposed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The item template &apos;{0}&apos; but no unfolded item(s) were found in the solution..
+        /// </summary>
+        internal static string TemplateWizard_ItemTemplateNoItem {
+            get {
+                return ResourceManager.GetString("TemplateWizard_ItemTemplateNoItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The project template &apos;{0}&apos; but no unfolded projects(s) were found in the solution..
+        /// </summary>
+        internal static string TemplateWizard_ProjectTemplateNoProject {
+            get {
+                return ResourceManager.GetString("TemplateWizard_ProjectTemplateNoProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wizard extension {0} started processing for template {1}..
+        /// </summary>
+        internal static string TemplateWizard_Unfolding {
+            get {
+                return ResourceManager.GetString("TemplateWizard_Unfolding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please see the Output Window (&apos;NuPattern Toolkit Extensions&apos; pane) for more information...
         /// </summary>
         internal static string TraceSourceExtensions_SeeDiagnosticsWindow {
@@ -202,6 +400,24 @@ namespace NuPattern.VisualStudio.Properties {
         internal static string Vsix_ManifestMissing {
             get {
                 return ResourceManager.GetString("Vsix_ManifestMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to retrieve registry root suffix of the currently running Visual Studio instance..
+        /// </summary>
+        internal static string VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot {
+            get {
+                return ResourceManager.GetString("VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Determined VS root suffix as {0}..
+        /// </summary>
+        internal static string VsRootSuffixTemplateWizard_RootSuffixDetermined {
+            get {
+                return ResourceManager.GetString("VsRootSuffixTemplateWizard_RootSuffixDetermined", resourceCulture);
             }
         }
     }

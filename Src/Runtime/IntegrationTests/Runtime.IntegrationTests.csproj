@@ -239,10 +239,6 @@
       <Project>{cb2872d6-f4b1-493c-be4e-b590c03f5fef}</Project>
       <Name>Runtime.IntegrationTests.TestToolkit</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
-      <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
-      <Name>Runtime.Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Source\Runtime.Shell\Runtime.Shell.csproj">
       <Project>{D3E93083-99C9-4186-95B5-339A822C63EE}</Project>
       <Name>Runtime.Shell</Name>

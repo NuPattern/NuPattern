@@ -4,7 +4,7 @@ using EnvDTE;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TemplateWizard;
-using NuPattern.Runtime.TemplateWizards;
+using NuPattern.VisualStudio.TemplateWizards;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
 namespace NuPattern.Runtime.Shell

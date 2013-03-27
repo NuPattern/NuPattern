@@ -29,8 +29,7 @@
     <Replacement Key="$schemaId$" Value="$guid3$" />
   </WizardData>
   <WizardExtension>
-    <Assembly>
-      NuPattern.Runtime.Extensibility, Version=<#=VersionInfo.AssemblyVersion #>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-    <FullClassName>NuPattern.Runtime.TemplateWizards.ReplacementTemplateWizard</FullClassName>
+    <Assembly>NuPattern.VisualStudio, Version=<#=VersionInfo.AssemblyVersion #>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.ReplacementTemplateWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>
