@@ -3,7 +3,7 @@
     /// <summary>
     /// Constants for designer.
     /// </summary>
-    static partial class DesignerConstants
+    internal static class DesignerConstants
     {
         /// <summary>
         /// Model extension.

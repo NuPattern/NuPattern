@@ -117,6 +117,7 @@
     </Compile>
     <Compile Include="Extensions\ExtensionContentExtensions.cs" />
     <Compile Include="Extensions\ExtensionVisibility.cs" />
+    <Compile Include="Shell\Windows\WindowExtensions.cs" />
     <Compile Include="Solution\AssemblyReference.cs" />
     <Compile Include="Solution\AssemblyResource.cs" />
     <Compile Include="Solution\BuildAction.cs" />

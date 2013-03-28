@@ -17,6 +17,14 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
+    <Reference Include="EnvDTE">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE80">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\envdte80.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
@@ -84,6 +92,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TransactionManagerExtensions.cs" />
+    <Compile Include="Windows\WindowExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
@@ -94,6 +103,10 @@
     <ProjectReference Include="..\..\..\Common\Source\Common\Common.csproj">
       <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>Common.VisualStudio</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
