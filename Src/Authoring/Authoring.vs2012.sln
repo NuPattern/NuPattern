@@ -37,7 +37,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.WorkflowDesign", 
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.WorkflowDesign.Interfaces", "Source\Authoring.WorkflowDesign.Interfaces\Authoring.WorkflowDesign.Interfaces.csproj", "{A55CFA2E-1519-4719-BAFB-D67F3C67E375}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.WorkflowDesign.Extensibility", "Source\Authoring.WorkflowDesign.Extensibility\Authoring.WorkflowDesign.Extensibility.csproj", "{A55CFA2E-1519-4719-BAFB-D67F3C67E375}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AE530C9B-34B7-416F-8477-15B8257CDAC0} = {AE530C9B-34B7-416F-8477-15B8257CDAC0}
 	EndProjectSection

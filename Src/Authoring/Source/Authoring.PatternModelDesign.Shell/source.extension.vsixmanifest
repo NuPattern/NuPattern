@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-	<Identifier Id="95d8dad7-be4a-42ae-9cb1-a48bc0eb77c0">
-		<Name>Pattern Toolkit Designer</Name>
-		<Author>NuPattern</Author>
-		<Version>1.3.20.0</Version>
-		<Description>The designer for defining pattern toolkits.</Description>
-		<Locale>1033</Locale>
-		<InstalledByMsi>false</InstalledByMsi>
-		<SupportedProducts>
-			<VisualStudio Version="10.0">
-				<Edition>Pro</Edition>
-			</VisualStudio>
-			<VisualStudio Version="11.0">
-				<Edition>Pro</Edition>
-			</VisualStudio>
-		</SupportedProducts>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
-	</Identifier>
-	<References>
-		<Reference Id="93373818-600f-414b-8181-3a0cb79fa785" MinVersion="1.3.20.0">
-			<Name>NuPattern Toolkit Manager</Name>
-			<VsixPath>NuPatternToolkitManager.vsix</VsixPath>
-		</Reference>
-	</References>
-	<Content>
-		<VsPackage>|Authroing.PatternModelDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
-		<MefComponent>|Authroing.PatternModelDesign.Shell|</MefComponent>
-		<ProjectTemplate>Templates\Projects</ProjectTemplate>
-		<ItemTemplate>Templates\Items</ItemTemplate>
-		<Assembly AssemblyName="NuPattern.Authoring.PatternModelDesign.Shell, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5">|Authroing.PatternModelDesign.Shell|</Assembly>
-	</Content>
+    <Identifier Id="95d8dad7-be4a-42ae-9cb1-a48bc0eb77c0">
+        <Name>Pattern Toolkit Designer</Name>
+        <Author>NuPattern</Author>
+        <Version>1.3.20.0</Version>
+        <Description>The designer for defining pattern toolkits.</Description>
+        <Locale>1033</Locale>
+        <InstalledByMsi>false</InstalledByMsi>
+        <SupportedProducts>
+            <VisualStudio Version="10.0">
+                <Edition>Pro</Edition>
+            </VisualStudio>
+            <VisualStudio Version="11.0">
+                <Edition>Pro</Edition>
+            </VisualStudio>
+        </SupportedProducts>
+        <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
+    </Identifier>
+    <References>
+        <Reference Id="93373818-600f-414b-8181-3a0cb79fa785" MinVersion="1.3.20.0">
+            <Name>NuPattern Toolkit Manager</Name>
+            <VsixPath>NuPatternToolkitManager.vsix</VsixPath>
+        </Reference>
+    </References>
+    <Content>
+        <VsPackage>|Authroing.PatternModelDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
+        <MefComponent>|Authroing.PatternModelDesign.Shell|</MefComponent>
+        <ProjectTemplate>Templates\Projects</ProjectTemplate>
+        <ItemTemplate>Templates\Items</ItemTemplate>
+        <Assembly AssemblyName="NuPattern.Authoring.PatternModelDesign.Shell, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5">|Authroing.PatternModelDesign.Shell|</Assembly>
+    </Content>
 </Vsix>

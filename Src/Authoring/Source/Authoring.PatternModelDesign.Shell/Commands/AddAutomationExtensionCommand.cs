@@ -10,12 +10,16 @@ using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using NuPattern.Common.Presentation;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
+using NuPattern.Presentation;
+using NuPattern.Runtime.Authoring;
+using NuPattern.Runtime.Automation;
+using NuPattern.Runtime.Schema.UI.ViewModels;
+using NuPattern.Runtime.Schema.UI.Views;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Shell;
 
-namespace NuPattern.Runtime.Schema
+namespace NuPattern.Runtime.Schema.Commands
 {
     /// <summary>
     /// Add automation extension command.

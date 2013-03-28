@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.Common.Presentation;
-using Input = System.Windows.Input;
+using NuPattern.Presentation;
+using NuPattern.Runtime.Automation;
 
-namespace NuPattern.Runtime.Schema
+namespace NuPattern.Runtime.Schema.UI.ViewModels
 {
     /// <summary>
     /// View model for add automation extension
@@ -47,7 +47,7 @@ namespace NuPattern.Runtime.Schema
         /// Gets or sets the select automation extension command.
         /// </summary>
         /// <value>The select automation extension command.</value>
-        public Input.ICommand SelectAutomationExtensionCommand
+        public System.Windows.Input.ICommand SelectAutomationExtensionCommand
         {
             get;
             private set;

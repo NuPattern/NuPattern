@@ -11,7 +11,7 @@
     <p:WizardWindow.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommonStyles.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/CommonStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </p:WizardWindow.Resources>

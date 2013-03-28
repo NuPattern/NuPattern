@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Authoring;
 
-namespace NuPattern.Runtime.Schema
+namespace NuPattern.Runtime.Schema.Validation
 {
     /// <summary>
     /// Double-derived class to allow easier code customization.

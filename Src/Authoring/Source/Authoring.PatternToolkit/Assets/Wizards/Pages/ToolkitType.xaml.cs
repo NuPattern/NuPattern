@@ -9,15 +9,18 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
-using NuPattern.Extensibility;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.ToolkitInterface;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Authoring.PatternToolkit.Assets.Wizards.Pages
 {
     /// <summary>
     /// A custom wizard page that edits the properties of the current element.
     /// </summary>
-    public partial class ToolkitType : Page, INotifyPropertyChanged
+    partial class ToolkitType : Page, INotifyPropertyChanged
     {
         private const string DefaultSortFilter = "Name";
         private ObservableCollection<IInstalledToolkitInfo> allToolkits;
@@ -141,7 +144,7 @@ namespace NuPattern.Authoring.PatternToolkit.Assets.Wizards.Pages
                 this.toolkitsView.Filter += new Predicate<object>(delegate(object x)
                     {
                         var toolkitInfo = (IInstalledToolkitInfo)x;
-                        return toolkitInfo.Classification.CustomizeVisibility != ToolkitVisibility.Hidden;
+                        return toolkitInfo.Classification.CustomizeVisibility != ExtensionVisibility.Hidden;
                     });
             }
             else
@@ -150,7 +153,7 @@ namespace NuPattern.Authoring.PatternToolkit.Assets.Wizards.Pages
                 this.toolkitsView.Filter += new Predicate<object>(delegate(object x)
                 {
                     var toolkitInfo = (IInstalledToolkitInfo)x;
-                    return toolkitInfo.Classification.CustomizeVisibility == ToolkitVisibility.Expanded;
+                    return toolkitInfo.Classification.CustomizeVisibility == ExtensionVisibility.Expanded;
                 });
             }
 

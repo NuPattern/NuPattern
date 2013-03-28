@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Modeling.Validation;
+using NuPattern.Runtime.Schema.Validation;
 
 namespace NuPattern.Runtime.Schema
 {

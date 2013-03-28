@@ -8,85 +8,87 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+
 namespace NuPattern.Authoring.HandsOnLabs
 {
-	using global::NuPattern.Runtime;
-	using global::System;
-	using global::System.Collections.Generic;
-	using global::System.ComponentModel;
-	using global::System.ComponentModel.Design;
-	using global::System.Drawing.Design;
-	using Runtime = global::NuPattern.Runtime;
+    using global::NuPattern.Runtime;
+    using global::NuPattern.Runtime.ToolkitInterface;
+    using global::System;
+    using global::System.Collections.Generic;
+    using global::System.ComponentModel;
+    using global::System.ComponentModel.Design;
+    using global::System.Drawing.Design;
+    using Runtime = global::NuPattern.Runtime;
 
-	///	<summary>
-	///	Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.
-	///	</summary>
-	[Description("Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.")]
-	[ToolkitInterface(ExtensionId ="97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "71309920-c4ac-4283-b6bf-3cec975eca86", ProxyType = typeof(PatternToolkitHandsOnLabs))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
-	public partial interface IPatternToolkitHandsOnLabs : IToolkitInterface
-	{ 
-		///	<summary>
-		///	The ToolkitInfo.
-		///	</summary>
-		IProductToolkitInfo ToolkitInfo { get;  }
-		
-		///	<summary>
-		///	The CurrentView.
-		///	</summary>
-		IView CurrentView { get; set; }
-		
-		///	<summary>
-		///	The name of this element instance.
-		///	</summary>
-		[Description("The name of this element instance.")]
-		[ParenthesizePropertyName(true)]
-		String InstanceName { get; set; }
-		
-		///	<summary>
-		///	The order of this element relative to its siblings.
-		///	</summary>
-		[Description("The order of this element relative to its siblings.")]
-		[ReadOnly(true)]
-		Double InstanceOrder { get; set; }
-		
-		///	<summary>
-		///	The references of this element.
-		///	</summary>
-		[Description("The references of this element.")]
-		IEnumerable<IReference> References { get;  }
-		
-		///	<summary>
-		///	Notes for this element.
-		///	</summary>
-		[Description("Notes for this element.")]
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
-		String Notes { get; set; }
-		
-		///	<summary>
-		///	The InTransaction.
-		///	</summary>
-		Boolean InTransaction { get;  }
-		
-		///	<summary>
-		///	The IsSerializing.
-		///	</summary>
-		Boolean IsSerializing { get;  }
+    ///	<summary>
+    ///	Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.
+    ///	</summary>
+    [Description("Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.")]
+    [ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "71309920-c4ac-4283-b6bf-3cec975eca86", ProxyType = typeof(PatternToolkitHandsOnLabs))]
+    [System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+    public partial interface IPatternToolkitHandsOnLabs : IToolkitInterface
+    {
+        ///	<summary>
+        ///	The ToolkitInfo.
+        ///	</summary>
+        IProductToolkitInfo ToolkitInfo { get; }
 
-		///	<summary>
-		///	Description for PatternToolkitHandsOnLabs.DefaultView
-		///	</summary>
-		[Description("Description for PatternToolkitHandsOnLabs.DefaultView")]
-		IDefaultView DefaultView { get; }
-		
-		///	<summary>
-		///	Deletes this element from the store.
-		///	</summary>
-		void Delete();
+        ///	<summary>
+        ///	The CurrentView.
+        ///	</summary>
+        IView CurrentView { get; set; }
 
-		/// <summary>
-		/// Gets the generic <see cref="IProduct"/> underlying element.
-		/// </summary>
-		Runtime.IProduct AsProduct();
-	}
+        ///	<summary>
+        ///	The name of this element instance.
+        ///	</summary>
+        [Description("The name of this element instance.")]
+        [ParenthesizePropertyName(true)]
+        String InstanceName { get; set; }
+
+        ///	<summary>
+        ///	The order of this element relative to its siblings.
+        ///	</summary>
+        [Description("The order of this element relative to its siblings.")]
+        [ReadOnly(true)]
+        Double InstanceOrder { get; set; }
+
+        ///	<summary>
+        ///	The references of this element.
+        ///	</summary>
+        [Description("The references of this element.")]
+        IEnumerable<IReference> References { get; }
+
+        ///	<summary>
+        ///	Notes for this element.
+        ///	</summary>
+        [Description("Notes for this element.")]
+        [Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
+        String Notes { get; set; }
+
+        ///	<summary>
+        ///	The InTransaction.
+        ///	</summary>
+        Boolean InTransaction { get; }
+
+        ///	<summary>
+        ///	The IsSerializing.
+        ///	</summary>
+        Boolean IsSerializing { get; }
+
+        ///	<summary>
+        ///	Description for PatternToolkitHandsOnLabs.DefaultView
+        ///	</summary>
+        [Description("Description for PatternToolkitHandsOnLabs.DefaultView")]
+        IDefaultView DefaultView { get; }
+
+        ///	<summary>
+        ///	Deletes this element from the store.
+        ///	</summary>
+        void Delete();
+
+        /// <summary>
+        /// Gets the generic <see cref="IProduct"/> underlying element.
+        /// </summary>
+        Runtime.IProduct AsProduct();
+    }
 }

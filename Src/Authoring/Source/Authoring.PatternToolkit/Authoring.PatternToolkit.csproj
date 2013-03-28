@@ -26,27 +26,23 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="NuPattern.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="NuPattern.Common.Presentation">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.Presentation.dll</HintPath>
+    <Reference Include="NuPattern.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="NuPattern.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="NuPattern.VisualStudio">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="NuPattern.Runtime.Schema">
-			<HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
-			<Private>True</Private>
-		</Reference>
-		<Reference Include="System" />
+    <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xaml" />
@@ -1299,9 +1295,9 @@
       <IncludeOutputGroupsInVSIX>PkgdefProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="..\Authoring.WorkflowDesign.Interfaces\Authoring.WorkflowDesign.Interfaces.csproj">
+    <ProjectReference Include="..\Authoring.WorkflowDesign.Extensibility\Authoring.WorkflowDesign.Extensibility.csproj">
       <Project>{A55CFA2E-1519-4719-BAFB-D67F3C67E375}</Project>
-      <Name>Authoring.WorkflowDesign.Interfaces</Name>
+      <Name>Authoring.WorkflowDesign.Extensibility</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>

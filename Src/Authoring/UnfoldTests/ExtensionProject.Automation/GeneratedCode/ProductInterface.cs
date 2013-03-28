@@ -14,6 +14,7 @@ using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
 using NuPattern.Runtime;
+using NuPattern.Runtime.ToolkitInterface;
 
 namespace ExtensionProject.Automation.GeneratedCode
 {

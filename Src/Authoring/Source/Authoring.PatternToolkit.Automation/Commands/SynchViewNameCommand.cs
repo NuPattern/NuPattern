@@ -7,8 +7,9 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.Authoring.PatternToolkit.Automation.UriProviders;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime;
+using NuPattern.Runtime.References;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
@@ -56,32 +57,28 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             {
                 using (tracer.StartActivity(Resources.SynchViewNameCommand_TraceSynchronizingViewName, patternModel.InstanceName, this.CurrentElement.InstanceName))
                 {
-                    DesignerCommandHelper.DoActionOnDesigner(
-                        reference.PhysicalPath,
-                        docdata =>
-                        {
-                            var viewReference = ViewArtifactLinkReference.GetReferences(this.CurrentElement.AsElement()).FirstOrDefault();
-
-                            if (viewReference != null)
+                    var viewReference = ViewArtifactLinkReference.GetReferences(this.CurrentElement.AsElement()).FirstOrDefault();
+                    if (viewReference != null)
+                    {
+                        ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, pm =>
                             {
-                                var viewSchema = docdata.Store.GetViews().FirstOrDefault(v => v.Id == new Guid(viewReference.Host));
-
-                                if (viewSchema != null)
+                                var view = pm.Pattern.GetView(new Guid(viewReference.Host));
+                                if (view != null)
                                 {
-                                    viewSchema.Name = this.CurrentElement.InstanceName;
+                                    ((INamedElementSchema)view).Name = this.CurrentElement.InstanceName;
                                 }
                                 else
                                 {
                                     tracer.TraceWarning(
-                                        Resources.SyncViewNameCommand_TraceViewNotFound, patternModel.InstanceName, viewReference.Host);
+                                        Resources.SetAsDefaultViewCommand_TraceViewNotFound, patternModel.InstanceName, viewReference.Host);
                                 }
-                            }
-                            else
-                            {
-                                tracer.TraceWarning(
-                                    Resources.SyncViewNameCommand_TraceReferenceNotFound, patternModel.InstanceName);
-                            }
-                        });
+                            }, false);
+                    }
+                    else
+                    {
+                        tracer.TraceWarning(
+                            Resources.SetAsDefaultViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
+                    }
                 }
             }
             else

@@ -26,28 +26,28 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="NuPattern.Common.VisualStudio">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.VisualStudio.dll</HintPath>
+    <Reference Include="NuPattern.Modeling">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Modeling.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="NuPattern.Library">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="NuPattern.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="NuPattern.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="NuPattern.Runtime.Schema">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NuPattern.Common.Presentation">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.Presentation.dll</HintPath>
+    <Reference Include="NuPattern.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="EnvDTE">
@@ -158,19 +158,20 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Extensions\Commands\AuthoringCommandExtensionRegistrar.cs" />
-    <Compile Include="Extensions\Commands\AuthoringCommandExtensionRegistrarBase.cs" />
-    <Compile Include="Extensions\CompartmentShapeExtension.cs" />
-    <Compile Include="Extensions\Validation\AuthoringValidationExtensionRegistrar.cs" />
-    <Compile Include="Extensions\Validation\AuthoringValidationExtensionRegistrarBase.cs" />
+    <Compile Include="Commands\AuthoringCommandExtensionRegistrar.cs" />
+    <Compile Include="Commands\AuthoringCommandExtensionRegistrarBase.cs" />
+    <Compile Include="CompartmentShapeExtension.cs" />
+    <Compile Include="Shell\PatternModelDocHelper.cs" />
+    <Compile Include="Validation\AuthoringValidationExtensionRegistrar.cs" />
+    <Compile Include="Validation\AuthoringValidationExtensionRegistrarBase.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="ModelingCommands\AddAutomationExtensionCommand.cs" />
-    <Compile Include="ModelingCommands\AddVariablePropertyCommand.cs" />
-    <Compile Include="ModelingCommands\LayoutDiagramCommand.cs" />
-    <Compile Include="ModelingCommands\UI\Views\AddAutomationExtensionView.xaml.cs">
+    <Compile Include="Commands\AddAutomationExtensionCommand.cs" />
+    <Compile Include="Commands\AddVariablePropertyCommand.cs" />
+    <Compile Include="Commands\LayoutDiagramCommand.cs" />
+    <Compile Include="UI\Views\AddAutomationExtensionView.xaml.cs">
       <DependentUpon>AddAutomationExtensionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ModelingCommands\UI\ViewModels\AddAutomationExtensionViewModel.cs" />
+    <Compile Include="UI\ViewModels\AddAutomationExtensionViewModel.cs" />
     <Compile Include="Properties\ShellResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -193,6 +194,7 @@
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
     <Compile Include="PatternModelSchemaUpgradeManager.cs" />
+    <Compile Include="ViewSchemaExtensions.cs" />
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
@@ -301,7 +303,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GeneratedVSCT.tt</DependentUpon>
     </None>
-    <Page Include="ModelingCommands\UI\Views\AddAutomationExtensionView.xaml">
+    <Page Include="UI\Views\AddAutomationExtensionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

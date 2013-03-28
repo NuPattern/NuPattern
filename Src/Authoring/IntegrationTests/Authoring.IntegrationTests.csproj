@@ -24,20 +24,20 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NuPattern.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NuPattern.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="NuPattern.VisualStudio">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="NuPattern.Runtime.Schema">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="Moq">

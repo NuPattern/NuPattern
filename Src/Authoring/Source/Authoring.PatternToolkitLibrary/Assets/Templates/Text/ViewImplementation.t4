@@ -55,7 +55,7 @@ namespace <#=library.ToolkitProjectRootNamespace #>
 	internal partial class <#=view.CodeIdentifier#> : I<#=view.CodeIdentifier#>
 	{
 		private Runtime.IView target;
-		private Runtime.IContainerProxy<I<#=view.CodeIdentifier#>> proxy;
+		private Runtime.ToolkitInterface.IContainerProxy<I<#=view.CodeIdentifier#>> proxy;
 
 		/// <summary>
 		/// For MEF.

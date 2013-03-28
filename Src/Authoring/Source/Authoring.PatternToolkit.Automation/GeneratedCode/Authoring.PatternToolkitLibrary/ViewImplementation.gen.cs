@@ -11,7 +11,8 @@
 namespace NuPattern.Authoring.PatternToolkitLibrary
 {
 	using global::NuPattern.Runtime;
-	using global::System;
+    using global::NuPattern.Runtime.ToolkitInterface;
+    using global::System;
 	using global::System.Collections.Generic;
 	using global::System.ComponentModel;
 	using global::System.ComponentModel.Composition;
@@ -29,7 +30,7 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 	internal partial class Development : IDevelopment
 	{
 		private Runtime.IView target;
-		private Runtime.IContainerProxy<IDevelopment> proxy;
+		private Runtime.ToolkitInterface.IContainerProxy<IDevelopment> proxy;
 
 		/// <summary>
 		/// For MEF.

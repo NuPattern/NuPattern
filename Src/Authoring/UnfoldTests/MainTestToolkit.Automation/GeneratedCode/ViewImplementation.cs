@@ -7,12 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+
 namespace MainTestToolkit.Automation.GeneratedCode
 {
     using System.ComponentModel;
     using System.ComponentModel.Composition;
-    using NuPattern.Extensibility;
     using NuPattern.Runtime;
+    using NuPattern.Runtime.ToolkitInterface;
 
     ///	<summary>
     ///	Description for MainTest.DefaultView

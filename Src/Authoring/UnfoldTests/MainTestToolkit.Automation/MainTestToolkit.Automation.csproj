@@ -20,12 +20,12 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
-    <Reference Include="NuPattern.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="NuPattern.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">

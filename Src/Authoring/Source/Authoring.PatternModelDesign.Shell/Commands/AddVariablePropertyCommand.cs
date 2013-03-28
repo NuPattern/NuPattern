@@ -4,10 +4,11 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Modeling.Shell;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Authoring;
 using NuPattern.VisualStudio.Shell;
 
-namespace NuPattern.Runtime.Schema
+namespace NuPattern.Runtime.Schema.Commands
 {
     /// <summary>
     /// Add variable property command.

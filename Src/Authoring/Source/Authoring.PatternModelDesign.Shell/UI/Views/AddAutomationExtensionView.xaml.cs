@@ -1,6 +1,6 @@
-﻿using NuPattern.Common.Presentation;
+﻿using NuPattern.Presentation;
 
-namespace NuPattern.Runtime.Schema
+namespace NuPattern.Runtime.Schema.UI.Views
 {
     /// <summary>
     /// Interaction logic for AddAutomationExtensionView.xaml.

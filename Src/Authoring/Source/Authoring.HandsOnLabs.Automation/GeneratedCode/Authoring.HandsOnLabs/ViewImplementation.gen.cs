@@ -8,79 +8,76 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+
 namespace NuPattern.Authoring.HandsOnLabs
 {
-	using global::NuPattern.Runtime;
-	using global::System;
-	using global::System.Collections.Generic;
-	using global::System.ComponentModel;
-	using global::System.ComponentModel.Composition;
-	using global::System.ComponentModel.Design;
-	using global::System.Drawing.Design;
-	using Runtime = global::NuPattern.Runtime;
+    using global::NuPattern.Runtime.ToolkitInterface;
+    using global::System.ComponentModel;
+    using global::System.ComponentModel.Composition;
+    using Runtime = global::NuPattern.Runtime;
 
-	///	<summary>
-	///	Description for PatternToolkitHandsOnLabs.DefaultView
-	///	</summary>
-	[Description("Description for PatternToolkitHandsOnLabs.DefaultView")]
-	[ToolkitInterfaceProxy(ExtensionId ="97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "ac1fde3b-bfa2-4fcf-a1c5-50167323063d", ProxyType = typeof(DefaultView))]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
-	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	internal partial class DefaultView : IDefaultView
-	{
-		private Runtime.IView target;
-		private Runtime.IContainerProxy<IDefaultView> proxy;
+    ///	<summary>
+    ///	Description for PatternToolkitHandsOnLabs.DefaultView
+    ///	</summary>
+    [Description("Description for PatternToolkitHandsOnLabs.DefaultView")]
+    [ToolkitInterfaceProxy(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "ac1fde3b-bfa2-4fcf-a1c5-50167323063d", ProxyType = typeof(DefaultView))]
+    [System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+    internal partial class DefaultView : IDefaultView
+    {
+        private Runtime.IView target;
+        private Runtime.ToolkitInterface.IContainerProxy<IDefaultView> proxy;
 
-		/// <summary>
-		/// For MEF.
-		/// </summary>
-		[ImportingConstructor]
-		private DefaultView() { }
+        /// <summary>
+        /// For MEF.
+        /// </summary>
+        [ImportingConstructor]
+        private DefaultView() { }
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="DefaultView"/> class.
-		/// </summary>
-		public DefaultView(Runtime.IView target)
-		{
-			this.target = target;
-			this.proxy = target.ProxyFor<IDefaultView>();
-			OnCreated();
-		}	
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DefaultView"/> class.
+        /// </summary>
+        public DefaultView(Runtime.IView target)
+        {
+            this.target = target;
+            this.proxy = target.ProxyFor<IDefaultView>();
+            OnCreated();
+        }
 
-		partial void OnCreated();
+        partial void OnCreated();
 
-		/// <summary>
-		/// Gets the parent element.
-		/// </summary>
-		public virtual IPatternToolkitHandsOnLabs Parent
-		{ 
-			get { return this.target.Parent.As<IPatternToolkitHandsOnLabs>(); }
-		}
+        /// <summary>
+        /// Gets the parent element.
+        /// </summary>
+        public virtual IPatternToolkitHandsOnLabs Parent
+        {
+            get { return this.target.Parent.As<IPatternToolkitHandsOnLabs>(); }
+        }
 
-		/// <summary>
-		/// Gets the generic <see cref="Runtime.IView"/> underlying element.
-		/// </summary>
-		public virtual Runtime.IView AsView()
-		{
-			return this.target;
-		}
+        /// <summary>
+        /// Gets the generic <see cref="Runtime.IView"/> underlying element.
+        /// </summary>
+        public virtual Runtime.IView AsView()
+        {
+            return this.target;
+        }
 
-		/// <summary>
-		/// Gets the generic underlying element as the given type if possible.
-		/// </summary>
-		public virtual TRuntimeInterface As<TRuntimeInterface>()
-			where TRuntimeInterface : class
-		{
-			return this.target as TRuntimeInterface;
-		}
+        /// <summary>
+        /// Gets the generic underlying element as the given type if possible.
+        /// </summary>
+        public virtual TRuntimeInterface As<TRuntimeInterface>()
+            where TRuntimeInterface : class
+        {
+            return this.target as TRuntimeInterface;
+        }
 
-		/// <summary>
-		/// Deletes this instance.
-		/// </summary>
-		public virtual void Delete()
-		{
-			this.target.Delete();
-		}
-	}
+        /// <summary>
+        /// Deletes this instance.
+        /// </summary>
+        public virtual void Delete()
+        {
+            this.target.Delete();
+        }
+    }
 }
 

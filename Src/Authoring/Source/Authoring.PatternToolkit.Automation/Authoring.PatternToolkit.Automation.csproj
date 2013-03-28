@@ -20,20 +20,20 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="NuPattern.Library">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="NuPattern.Runtime.Schema">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="NuPattern.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="NuPattern.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="NuPattern.VisualStudio">
@@ -136,7 +136,6 @@
     <Compile Include="Commands\DeleteViewCommand.cs">
       <ItemGuid>ecab76ce-abe2-4b98-a12f-159a604156a1</ItemGuid>
     </Compile>
-    <Compile Include="Commands\Helpers\DesignerCommandHelper.cs" />
     <Compile Include="Commands\SetAsDefaultViewCommand.cs">
       <ItemGuid>44b3688a-3176-4e1d-9b2f-4bf23c82f317</ItemGuid>
     </Compile>

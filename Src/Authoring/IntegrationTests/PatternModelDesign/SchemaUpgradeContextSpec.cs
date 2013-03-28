@@ -5,7 +5,7 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility;
+using NuPattern.Runtime;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Authoring.IntegrationTests.PatternModelDesign

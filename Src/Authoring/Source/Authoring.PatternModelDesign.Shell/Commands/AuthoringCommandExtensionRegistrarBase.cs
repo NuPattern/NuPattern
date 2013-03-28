@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Modeling.Shell.ExtensionEnablement;
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Authoring;
 
-namespace NuPattern.Runtime.Schema
+namespace NuPattern.Runtime.Schema.Commands
 {
     /// <summary>
     /// Double-derived class to allow easier code customization.

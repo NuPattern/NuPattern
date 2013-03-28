@@ -4,42 +4,42 @@
 <#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude"#>
 <#
 /***************************************************************************
-	Note that the these project name variables represent the VS Project 
-	names. They need to be updated if those projects are renamed in the Solution.
+    Note that the these project name variables represent the VS Project 
+    names. They need to be updated if those projects are renamed in the Solution.
 ***************************************************************************/
 string VsPackageProject = "Authroing.PatternModelDesign.Shell";
 string vsPackageAssembly = "NuPattern.Authoring.PatternModelDesign.Shell";
 #>
 <?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-	<Identifier Id="<#=this.Dsl.PackageGuid#>">
-		<Name>Pattern Toolkit Designer</Name>
-		<Author><#=VsixInfo.PatternToolkitBuilder.Author#></Author>
-		<Version><#=VsixInfo.PatternToolkitBuilder.Version#></Version>
-		<Description>The designer for defining pattern toolkits.</Description>
-		<Locale>1033</Locale>
-		<InstalledByMsi>false</InstalledByMsi>
-		<SupportedProducts>
-			<VisualStudio Version="10.0">
-				<Edition>Pro</Edition>
-			</VisualStudio>
-			<VisualStudio Version="11.0">
-				<Edition>Pro</Edition>
-			</VisualStudio>
-		</SupportedProducts>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
-	</Identifier>
-	<References>
-		<Reference Id="<#=VsixInfo.PatternToolkitRuntime.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitRuntime.Version #>">
-			<Name><#=VsixInfo.PatternToolkitRuntime.Name #></Name>
-			<VsixPath><#=VsixInfo.PatternToolkitRuntime.VsixFileName #></VsixPath>
-		</Reference>
-	</References>
-	<Content>
-		<VsPackage>|<#=VsPackageProject#>;PkgdefProjectOutputGroup|</VsPackage>
-		<MefComponent>|<#=VsPackageProject#>|</MefComponent>
-		<ProjectTemplate>Templates\Projects</ProjectTemplate>
-		<ItemTemplate>Templates\Items</ItemTemplate>
-		<Assembly AssemblyName="<#=vsPackageAssembly#>, Version=<#=VsixInfo.PatternToolkitBuilder.Version#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5">|<#=VsPackageProject#>|</Assembly>
-	</Content>
+    <Identifier Id="<#=this.Dsl.PackageGuid#>">
+        <Name>Pattern Toolkit Designer</Name>
+        <Author><#=VsixInfo.PatternToolkitBuilder.Author#></Author>
+        <Version><#=VsixInfo.PatternToolkitBuilder.Version#></Version>
+        <Description>The designer for defining pattern toolkits.</Description>
+        <Locale>1033</Locale>
+        <InstalledByMsi>false</InstalledByMsi>
+        <SupportedProducts>
+            <VisualStudio Version="10.0">
+                <Edition>Pro</Edition>
+            </VisualStudio>
+            <VisualStudio Version="11.0">
+                <Edition>Pro</Edition>
+            </VisualStudio>
+        </SupportedProducts>
+        <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
+    </Identifier>
+    <References>
+        <Reference Id="<#=VsixInfo.PatternToolkitRuntime.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitRuntime.Version #>">
+            <Name><#=VsixInfo.PatternToolkitRuntime.Name #></Name>
+            <VsixPath><#=VsixInfo.PatternToolkitRuntime.VsixFileName #></VsixPath>
+        </Reference>
+    </References>
+    <Content>
+        <VsPackage>|<#=VsPackageProject#>;PkgdefProjectOutputGroup|</VsPackage>
+        <MefComponent>|<#=VsPackageProject#>|</MefComponent>
+        <ProjectTemplate>Templates\Projects</ProjectTemplate>
+        <ItemTemplate>Templates\Items</ItemTemplate>
+        <Assembly AssemblyName="<#=vsPackageAssembly#>, Version=<#=VsixInfo.PatternToolkitBuilder.Version#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5">|<#=VsPackageProject#>|</Assembly>
+    </Content>
 </Vsix>

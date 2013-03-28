@@ -13,7 +13,6 @@ using System.Linq;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using NuPattern.Extensibility;
 using NuPattern.Reflection;
 
 namespace NuPattern.Authoring.WorkflowDesign

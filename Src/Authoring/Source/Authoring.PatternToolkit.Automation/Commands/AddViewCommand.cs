@@ -11,10 +11,9 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.Authoring.PatternToolkit.Automation.UriProviders;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Runtime;
-using NuPattern.Runtime.Schema;
+using NuPattern.Runtime.References;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 {
@@ -61,65 +60,68 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             {
                 using (tracer.StartActivity(Resources.AddViewCommand_TraceAddingView, patternModel.InstanceName, this.CurrentElement.InstanceName))
                 {
-                    DesignerCommandHelper.DoActionOnDesigner(
-                        reference.PhysicalPath,
-                        docdata =>
-                        {
-                            var viewSchema = docdata.Store.GetViews().FirstOrDefault(v => v.Name == this.CurrentElement.InstanceName);
-                            if (viewSchema != null)
-                            {
-                                var view = viewSchema as IViewSchema;
-                                if (ViewArtifactLinkReference.GetReference(this.CurrentElement.AsElement()) == null)
-                                {
-                                    tracer.TraceInformation(
-                                        Resources.AddViewCommand_TraceAddingReference, patternModel.InstanceName);
 
-                                    ViewArtifactLinkReference.AddReference(this.CurrentElement.AsElement(), this.UriService.CreateUri(view));
-                                }
-                            }
-                            else
-                            {
-                                var patternSchema = docdata.Store.GetRootElement().Pattern;
-                                var docview = docdata.DocViews.First() as SingleDiagramDocView;
 
-                                PatternModelSchemaDiagram diagram = null;
 
-                                docdata.Store.TransactionManager.DoWithinTransaction(() =>
-                                    {
-                                        diagram = PatternModelSerializationHelper.CreatePatternModelSchemaDiagram(
-                                            new SerializationResult(),
-                                            docdata.Store.DefaultPartition,
-                                            docdata.Store.GetRootElement(),
-                                            string.Empty);
-                                    });
+                    //DesignerCommandHelper.DoActionOnDesigner(
+                    //    reference.PhysicalPath,
+                    //    docdata =>
+                    //    {
+                    //        var viewSchema = docdata.Store.GetViews().FirstOrDefault(v => v.Name == this.CurrentElement.InstanceName);
+                    //        if (viewSchema != null)
+                    //        {
+                    //            var view = viewSchema as IViewSchema;
+                    //            if (ViewArtifactLinkReference.GetReference(this.CurrentElement.AsElement()) == null)
+                    //            {
+                    //                tracer.TraceInformation(
+                    //                    Resources.AddViewCommand_TraceAddingReference, patternModel.InstanceName);
 
-                                if (diagram != null)
-                                {
-                                    SetCurrentDiagram(docview, diagram, patternSchema);
+                    //                ViewArtifactLinkReference.AddReference(this.CurrentElement.AsElement(), this.UriService.CreateUri(view));
+                    //            }
+                    //        }
+                    //        else
+                    //        {
+                    //            var patternSchema = docdata.Store.GetRootElement().Pattern;
+                    //            var docview = docdata.DocViews.First() as SingleDiagramDocView;
 
-                                    FixUpDiagram(
-                                        patternSchema.PatternModel,
-                                        patternSchema,
-                                        diagram.Id.ToString(),
-                                        PresentationViewsSubject.GetPresentation(patternSchema).OfType<ShapeElement>());
+                    //            PatternModelSchemaDiagram diagram = null;
 
-                                    docdata.Store.TransactionManager.DoWithinTransaction(() =>
-                                        {
-                                            var view = patternSchema.CreateViewSchema(
-                                                vw =>
-                                                {
-                                                    ((INamedElementSchema)vw).Name = this.CurrentElement.InstanceName;
-                                                    vw.DiagramId = diagram.Id.ToString();
-                                                });
+                    //            docdata.Store.TransactionManager.DoWithinTransaction(() =>
+                    //                {
+                    //                    diagram = PatternModelSerializationHelper.CreatePatternModelSchemaDiagram(
+                    //                        new SerializationResult(),
+                    //                        docdata.Store.DefaultPartition,
+                    //                        docdata.Store.GetRootElement(),
+                    //                        string.Empty);
+                    //                });
 
-                                            tracer.TraceInformation(
-                                                Resources.AddViewCommand_TraceAddingReference, patternModel.InstanceName);
+                    //            if (diagram != null)
+                    //            {
+                    //                SetCurrentDiagram(docview, diagram, patternSchema);
 
-                                            ViewArtifactLinkReference.AddReference(this.CurrentElement.AsElement(), this.UriService.CreateUri(view));
-                                        });
-                                }
-                            }
-                        });
+                    //                FixUpDiagram(
+                    //                    patternSchema.PatternModel,
+                    //                    patternSchema,
+                    //                    diagram.Id.ToString(),
+                    //                    PresentationViewsSubject.GetPresentation(patternSchema).OfType<ShapeElement>());
+
+                    //                docdata.Store.TransactionManager.DoWithinTransaction(() =>
+                    //                    {
+                    //                        var view = patternSchema.CreateViewSchema(
+                    //                            vw =>
+                    //                            {
+                    //                                ((INamedElementSchema)vw).Name = this.CurrentElement.InstanceName;
+                    //                                vw.DiagramId = diagram.Id.ToString();
+                    //                            });
+
+                    //                        tracer.TraceInformation(
+                    //                            Resources.AddViewCommand_TraceAddingReference, patternModel.InstanceName);
+
+                    //                        ViewArtifactLinkReference.AddReference(this.CurrentElement.AsElement(), this.UriService.CreateUri(view));
+                    //                    });
+                    //            }
+                    //        }
+                    //    });
                 }
             }
             else
@@ -129,20 +131,20 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             }
         }
 
-        private static void SetCurrentDiagram(SingleDiagramDocView docview, PatternModelSchemaDiagram diagram, PatternSchema pattern)
-        {
-            docview.Diagram = diagram;
+        //private static void SetCurrentDiagram(SingleDiagramDocView docview, PatternModelSchemaDiagram diagram, PatternSchema pattern)
+        //{
+        //    docview.Diagram = diagram;
 
-            pattern.WithTransaction(prod => prod.CurrentDiagramId = diagram.Id.ToString());
-        }
+        //    pattern.WithTransaction(prod => prod.CurrentDiagramId = diagram.Id.ToString());
+        //}
 
-        private static void FixUpDiagram(ModelElement root, ModelElement child, string diagramId, IEnumerable<ShapeElement> shapes)
-        {
-            if (shapes.Count() == 0 ||
-                !shapes.Any(shape => ((PatternModelSchemaDiagram)shape.Diagram).Id.ToString().Equals(diagramId, StringComparison.OrdinalIgnoreCase)))
-            {
-                root.Store.TransactionManager.DoWithinTransaction(() => Diagram.FixUpDiagram(root, child));
-            }
-        }
+        //private static void FixUpDiagram(ModelElement root, ModelElement child, string diagramId, IEnumerable<ShapeElement> shapes)
+        //{
+        //    if (shapes.Count() == 0 ||
+        //        !shapes.Any(shape => ((PatternModelSchemaDiagram)shape.Diagram).Id.ToString().Equals(diagramId, StringComparison.OrdinalIgnoreCase)))
+        //    {
+        //        root.Store.TransactionManager.DoWithinTransaction(() => Diagram.FixUpDiagram(root, child));
+        //    }
+        //}
     }
 }

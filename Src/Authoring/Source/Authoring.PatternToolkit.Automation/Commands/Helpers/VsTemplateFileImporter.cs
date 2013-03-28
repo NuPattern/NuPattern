@@ -7,9 +7,9 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.Zip;
 using Microsoft.Win32;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
-using NuPattern.Extensibility;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 {

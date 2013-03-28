@@ -17,8 +17,8 @@ namespace MainTestToolkit.Automation.GeneratedCode
     using System.ComponentModel.Composition;
     using System.ComponentModel.Design;
     using System.Drawing.Design;
-    using NuPattern.Extensibility;
     using NuPattern.Runtime;
+    using NuPattern.Runtime.ToolkitInterface;
 
     ///	<summary>
     ///	Description for MainTest.DefaultView.ExtensionItem

@@ -1,5 +1,5 @@
 ﻿
-namespace NuPattern.Runtime.Schema
+namespace NuPattern.Runtime.Schema.Validation
 {
     /// <summary>
     /// Authoring Validation Extension Registration.

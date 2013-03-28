@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-[assembly: AssemblyTitle(@"NuPattern.Authoring.WorkflowDesign.Interfaces")]
+[assembly: AssemblyTitle(@"NuPattern.Authoring.WorkflowDesign.Extensibility")]
 [assembly: AssemblyDescription(@"")]
 [assembly: AssemblyConfiguration("")]
 

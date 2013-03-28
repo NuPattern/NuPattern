@@ -4,16 +4,16 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using EnvDTE;
-using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
-using NuPattern.Extensibility;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Runtime;
-using NuPattern.Runtime.Schema;
+using NuPattern.Runtime.Schema.Shell;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 {
@@ -90,55 +90,13 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 
                 if (itemContainer != null)
                 {
-                    var rdt = new RunningDocumentTable(ServiceProvider.GlobalProvider);
-                    var documentInfo = rdt.FirstOrDefault(info =>
-                        info.Moniker.Equals(itemContainer.PhysicalPath, StringComparison.OrdinalIgnoreCase));
+                    tracer.TraceInformation(
+                        Resources.ValidatePatternModelCommand_TraceValidating, this.CurrentElement.InstanceName, itemContainer.PhysicalPath);
 
-                    if (!string.IsNullOrEmpty(documentInfo.Moniker))
+                    if (!PatternModelDocHelper.ValidateDocument(itemContainer.PhysicalPath))
                     {
-                        var docdata = documentInfo.DocData as PatternModelDocData;
-
-                        if (docdata == null)
-                        {
-                            //File is opened but not in designer view
-                            var projectItem = dte.Solution.FindProjectItem(documentInfo.Moniker);
-
-                            projectItem.Document.Close(vsSaveChanges.vsSaveChangesYes);
-
-                            var document = DesignerCommandHelper.OpenDesigner(this.Dte, itemContainer.PhysicalPath, false);
-
-                            docdata = DesignerCommandHelper.GetModelingDocData(rdt, document) as PatternModelDocData;
-                        }
-
                         tracer.TraceInformation(
-                            Resources.ValidatePatternModelCommand_TraceValidating, this.CurrentElement.InstanceName, documentInfo.Moniker);
-
-                        if (!docdata.ValidationController.Validate(docdata.GetAllElementsForValidation(), ValidationCategories.Save))
-                        {
-                            DesignerCommandHelper.ActivateDocument(dte, documentInfo.Moniker);
-                        }
-                    }
-                    else
-                    {
-                        var window = OpenDesigner(this.Dte, itemContainer.PhysicalPath);
-                        var document = window.Document;
-                        var docdata = DesignerCommandHelper.GetModelingDocData(rdt, document) as PatternModelDocData;
-
-                        tracer.TraceInformation(
-                            Resources.ValidatePatternModelCommand_TraceValidating, this.CurrentElement.InstanceName, itemContainer.Name);
-
-                        if (!docdata.ValidationController.Validate(docdata.GetAllElementsForValidation(), ValidationCategories.Save))
-                        {
-                            tracer.TraceInformation(
-                                Resources.ValidatePatternModelCommand_TraceOpeningForResolution, this.CurrentElement.InstanceName, itemContainer.Name);
-
-                            window.Visible = true;
-                            window.Activate();
-                        }
-                        else
-                        {
-                            document.Close(vsSaveChanges.vsSaveChangesNo);
-                        }
+                            Resources.ValidatePatternModelCommand_TraceOpeningForResolution, this.CurrentElement.InstanceName, itemContainer.Name);
                     }
                 }
             }

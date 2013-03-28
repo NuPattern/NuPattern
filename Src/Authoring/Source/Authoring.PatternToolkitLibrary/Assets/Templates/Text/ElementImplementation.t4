@@ -30,7 +30,7 @@ var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternT
 var toolkitInfo = developmentView.PatternToolkitInfo;
 
 if (toolkitInfo == null)
-	throw new Exception("ToolkitInfo element not found");
+    throw new Exception("ToolkitInfo element not found");
 
 var patternModel = developmentView.PatternModel;
 var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
@@ -41,56 +41,56 @@ var pluralizer = PluralizationService.CreateService(new System.Globalization.Cul
 
 foreach (var element in store.DefaultPartition.ElementDirectory.AllElements.OfType<IElementInfo>())
 {
-	var codegen = new ProductCodeGeneration<IElementInfo, IElement>(element);
-	codegen.AddType(typeof(Action));
-	codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
-	codegen.EndInit();
+    var codegen = new ProductCodeGeneration<IElementInfo, IElement>(element);
+    codegen.AddType(typeof(Action));
+    codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
+    codegen.EndInit();
 #>
 namespace <#=library.ToolkitProjectRootNamespace #>
 {
 <#GenerateUsings(codegen);#>
 
-	<#GenerateToolkitCommentsAndAttributes(AttributeTargets.Class, library, toolkitInfo, element); #>
-	internal partial class <#=element.CodeIdentifier #> : I<#=element.CodeIdentifier #>
-	{
-		private Runtime.IAbstractElement target;
-		private Runtime.IAbstractElementProxy<I<#=element.CodeIdentifier #>> proxy;
+    <#GenerateToolkitCommentsAndAttributes(AttributeTargets.Class, library, toolkitInfo, element); #>
+    internal partial class <#=element.CodeIdentifier #> : I<#=element.CodeIdentifier #>
+    {
+        private Runtime.IAbstractElement target;
+        private Runtime.ToolkitInterface.IAbstractElementProxy<I<#=element.CodeIdentifier #>> proxy;
 
-		/// <summary>
-		/// For MEF.
-		/// </summary>
-		[ImportingConstructor]
-		private <#=element.CodeIdentifier#>() { }
+        /// <summary>
+        /// For MEF.
+        /// </summary>
+        [ImportingConstructor]
+        private <#=element.CodeIdentifier#>() { }
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="<#=element.CodeIdentifier #>"/> class.
-		/// </summary>
-		public <#=element.CodeIdentifier #>(Runtime.IAbstractElement target)
-		{
-			this.target = target;
-			this.proxy = target.ProxyFor<I<#=element.CodeIdentifier #>>();
-			OnCreated();
-		}	
+        /// <summary>
+        /// Initializes a new instance of the <see cref="<#=element.CodeIdentifier #>"/> class.
+        /// </summary>
+        public <#=element.CodeIdentifier #>(Runtime.IAbstractElement target)
+        {
+            this.target = target;
+            this.proxy = target.ProxyFor<I<#=element.CodeIdentifier #>>();
+            OnCreated();
+        }	
 
-		partial void OnCreated();
+        partial void OnCreated();
 <#GenerateParentProperty(element, false); #>
 
-		/// <summary>
-		/// Gets the generic <see cref="Runtime.IElement"/> underlying element.
-		/// </summary>
-		public virtual Runtime.IElement AsElement()
-		{
-			return this.As<Runtime.IElement>();
-		}
+        /// <summary>
+        /// Gets the generic <see cref="Runtime.IElement"/> underlying element.
+        /// </summary>
+        public virtual Runtime.IElement AsElement()
+        {
+            return this.As<Runtime.IElement>();
+        }
 
-		/// <summary>
-		/// Gets the generic underlying element as the given type if possible.
-		/// </summary>
-		public virtual TRuntimeInterface As<TRuntimeInterface>()
-			where TRuntimeInterface : class
-		{
-			return this.target as TRuntimeInterface;
-		}
+        /// <summary>
+        /// Gets the generic underlying element as the given type if possible.
+        /// </summary>
+        public virtual TRuntimeInterface As<TRuntimeInterface>()
+            where TRuntimeInterface : class
+        {
+            return this.target as TRuntimeInterface;
+        }
 <#GenerateProperties(codegen, element, false); #>
 <#
 PushIndent("\t");
@@ -102,14 +102,14 @@ PopIndent();
 PopIndent();
 #>
 
-		/// <summary>
-		/// Deletes this instance.
-		/// </summary>
-		public virtual void Delete()
-		{
-			this.target.Delete();
-		}
-	}
+        /// <summary>
+        /// Deletes this instance.
+        /// </summary>
+        public virtual void Delete()
+        {
+            this.target.Delete();
+        }
+    }
 }
 
 <#

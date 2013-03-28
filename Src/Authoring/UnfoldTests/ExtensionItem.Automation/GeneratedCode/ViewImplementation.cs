@@ -7,11 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using NuPattern.Runtime.ToolkitInterface;
+
 namespace ExtensionItem.Automation.GeneratedCode
 {
     using System.ComponentModel;
     using System.ComponentModel.Composition;
-    using NuPattern.Extensibility;
     using NuPattern.Runtime;
 
     ///	<summary>

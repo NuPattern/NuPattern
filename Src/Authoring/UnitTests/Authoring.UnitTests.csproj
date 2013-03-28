@@ -19,13 +19,21 @@
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
     <!---->
-    <Reference Include="NuPattern.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NuPattern.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Modeling">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Modeling.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="NuPattern.VisualStudio">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
@@ -119,7 +127,7 @@
       <Project>{A999A0EB-246C-4B63-8BC1-405020026CAB}</Project>
       <Name>Authoring.PatternModelDesign.Shell</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Source\Authoring.WorkflowDesign.Interfaces\Authoring.WorkflowDesign.Interfaces.csproj">
+    <ProjectReference Include="..\Source\Authoring.WorkflowDesign.Extensibility\Authoring.WorkflowDesign.Extensibility.csproj">
       <Project>{A55CFA2E-1519-4719-BAFB-D67F3C67E375}</Project>
       <Name>Authoring.WorkflowDesign.Interfaces</Name>
     </ProjectReference>

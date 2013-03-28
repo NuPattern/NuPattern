@@ -297,10 +297,8 @@
   <data name="DeleteViewCommand_TraceReferenceNotFound" xml:space="preserve">
     <value>Reference for existing view on pattern element '{0}' was not found.</value>
   </data>
-  <data name="DeleteViewCommand_TraceSetOtherViewDefault" xml:space="preserve">
-    <value>Setting remaining view '{0}' as default view.</value>
-  </data>
-  <data name="DeleteViewCommand_TraceDeleteingView" xml:space="preserve">
+
+  <data name="DeleteViewCommand_TraceDeletingView" xml:space="preserve">
     <value>Deleting existing view of pattern element '{0} with name '{1}'.</value>
   </data>
   <data name="DeleteViewCommand_TraceViewNotFound" xml:space="preserve">

@@ -23,16 +23,16 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="NuPattern.Common.VisualStudio">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.VisualStudio.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="NuPattern.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
+    <Reference Include="NuPattern.Modeling">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Modeling.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="NuPattern.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
@@ -309,9 +309,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Authoring.WorkflowDesign.Interfaces\Authoring.WorkflowDesign.Interfaces.csproj">
+    <ProjectReference Include="..\Authoring.WorkflowDesign.Extensibility\Authoring.WorkflowDesign.Extensibility.csproj">
       <Project>{A55CFA2E-1519-4719-BAFB-D67F3C67E375}</Project>
-      <Name>Authoring.WorkflowDesign.Interfaces</Name>
+      <Name>Authoring.WorkflowDesign.Extensibility</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

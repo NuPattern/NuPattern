@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Modeling.Shell;
+using NuPattern.Runtime.Schema.Commands;
 
 namespace NuPattern.Runtime.Schema
 {

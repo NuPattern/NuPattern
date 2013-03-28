@@ -16,7 +16,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using NuPattern.Authoring.WorkflowDesign.Interfaces;
 using Microsoft.VisualStudio.Modeling.Extensibility;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
 
 namespace NuPattern.Authoring.WorkflowDesign
 {

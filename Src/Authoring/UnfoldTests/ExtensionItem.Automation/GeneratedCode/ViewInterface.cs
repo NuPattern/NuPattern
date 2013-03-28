@@ -12,6 +12,7 @@ namespace ExtensionItem.Automation.GeneratedCode
 {
     using System.ComponentModel;
     using NuPattern.Runtime;
+    using NuPattern.Runtime.ToolkitInterface;
 
     ///	<summary>
     ///	Description for ExtensionItem.DefaultView

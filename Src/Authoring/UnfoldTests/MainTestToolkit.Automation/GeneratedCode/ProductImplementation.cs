@@ -14,8 +14,8 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Design;
 using System.Drawing.Design;
-using NuPattern.Extensibility;
 using NuPattern.Runtime;
+using NuPattern.Runtime.ToolkitInterface;
 
 namespace MainTestToolkit.Automation.GeneratedCode
 {
