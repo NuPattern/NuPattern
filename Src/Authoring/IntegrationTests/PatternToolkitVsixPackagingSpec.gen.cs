@@ -16,16 +16,16 @@ namespace NuPattern.Authoring.IntegrationTests
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]
         public class GivenTheCompiledVsix : VsixPackagingSpec.GivenAVsix
         {
-			/// <summary>
-			/// Returns the relative path to the deployed Vsix file in the project
-			/// </summary>
-			protected override string DeployedVsixItemPath
-			{
-				get
-				{
-					return DeployedVsixItem;
-				}
-			}
+            /// <summary>
+            /// Returns the relative path to the deployed Vsix file in the project
+            /// </summary>
+            protected override string DeployedVsixItemPath
+            {
+                get
+                {
+                    return DeployedVsixItem;
+                }
+            }
          
             [TestMethod, TestCategory("Integration")]
             public void ThenVsixInfoCorrect()
@@ -36,20 +36,20 @@ namespace NuPattern.Authoring.IntegrationTests
                 Assert.Equal(@"An extension for building NuPattern Toolkits, which automate design patterns for rapid and consistent custom solution development.", this.VsixInfo.Header.Description);
                 Assert.Equal(@"NuPattern", this.VsixInfo.Header.Author);
                 Assert.Equal("1.3.20.0", this.VsixInfo.Header.Version.ToString());
-				
-				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
-				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
-				Assert.Equal(@"Resources\VsixIconPatternToolkit.png", this.VsixInfo.Header.Icon);
-				Assert.Equal(@"Resources\VsixPreviewPatternToolkit.png", this.VsixInfo.Header.PreviewImage);
-				Assert.Equal(new Uri(@"http://nupattern.codeplex.com"), this.VsixInfo.Header.MoreInfoUrl);
-				Assert.Equal(new Uri(@"http://nupattern.codeplex.com/wikipage?title=Getting%20Started"), this.VsixInfo.Header.GettingStartedGuide);
+                
+                //License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
+                Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
+                Assert.Equal(@"Resources\VsixIconPatternToolkit.png", this.VsixInfo.Header.Icon);
+                Assert.Equal(@"Resources\VsixPreviewPatternToolkit.png", this.VsixInfo.Header.PreviewImage);
+                Assert.Equal(new Uri(@"http://nupattern.codeplex.com"), this.VsixInfo.Header.MoreInfoUrl);
+                Assert.Equal(new Uri(@"http://nupattern.codeplex.com/wikipage?title=Getting%20Started"), this.VsixInfo.Header.GettingStartedGuide);
 
 #if VSVER10
-				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMinVersion.ToString());
-				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMaxVersion.ToString());
+                Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMinVersion.ToString());
+                Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMaxVersion.ToString());
 #endif
 #if VSVER11
-				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
+                Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
                 Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
 #endif
                 //SupportedProducts
@@ -59,7 +59,7 @@ namespace NuPattern.Authoring.IntegrationTests
 #if VSVER11
                 Assert.Equal(1, this.VsixInfo.Targets.Count(t => t.VersionRange.Minimum.ToString() == "11.0"));
 #endif
-			}
+            }
 
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsSchemas()
@@ -70,83 +70,83 @@ namespace NuPattern.Authoring.IntegrationTests
                         {
                             "WorkflowDesignSchema.xsd",
                         }));
-			}
+            }
 
-			[TestMethod, TestCategory("Integration")]
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsGuidance()
             {
                 //Guidance (\\GeneratedCode\Gudiance\Content\*
-				Assert.True(this.FolderNotEmpty(@"GeneratedCode\Guidance\Content", "*.mht"));
+                Assert.True(this.FolderNotEmpty(@"GeneratedCode\Guidance\Content", "*.mht"));
 
                 //Assets (\\Assets\Guidance\*
-				Assert.True(this.FolderContainsExclusive(@"Assets\Guidance",
+                Assert.True(this.FolderContainsExclusive(@"Assets\Guidance",
                     new[]
                         {
-							"AuthoringToolkitGuidance.pdf",
-							"PatternToolkitGuidanceTemplate.dotm",
-						}));
-			}
+                            "AuthoringToolkitGuidance.pdf",
+                            "PatternToolkitGuidanceTemplate.dotm",
+                        }));
+            }
                 
-			[TestMethod, TestCategory("Integration")]
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsAssets()
             {
-				 //Templates (\\Assets\Templates\*
-				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Projects\Extensibility",
+                 //Templates (\\Assets\Templates\*
+                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Projects\Extensibility",
                     new[]
                         {
-							"Authoring.zip",
-						}));
-				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Items\Extensibility",
+                            "Authoring.zip",
+                        }));
+                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Items\Extensibility",
                     new[]
                         {
-							"ItemTemplate.zip",
-							"PatternTooling.zip",
-							"ProjectTemplate.zip",
-							"TextTemplate.zip",
-							"Wizard.zip",
-							"WizardPage.zip",
-						}));
+                            "ItemTemplate.zip",
+                            "PatternTooling.zip",
+                            "ProjectTemplate.zip",
+                            "TextTemplate.zip",
+                            "Wizard.zip",
+                            "WizardPage.zip",
+                        }));
 
-				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text",
+                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text",
                     new[]
                         {
-							"Header.t4",
-						}));
+                            "Header.t4",
+                        }));
 
-				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\Guidance",
+                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\Guidance",
                     new[]
                         {
-							"GuidanceWorkflow.t4",
-							"ToolkitGuidance.t4",
-						}));
+                            "GuidanceWorkflow.t4",
+                            "ToolkitGuidance.t4",
+                        }));
 
-				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\ItemTemplate",
+                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\ItemTemplate",
                     new[]
                         {
-							"ItemTemplate.vstemplate.t4",
-						}));
+                            "ItemTemplate.vstemplate.t4",
+                        }));
 
-				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\PatternModel",
+                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\PatternModel",
                     new[]
                         {
-							"PatternModel.patterndefinition.t4",
-						}));
-				
-				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\ProjectTemplate",
+                            "PatternModel.patterndefinition.t4",
+                        }));
+                
+                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\ProjectTemplate",
                     new[]
                         {
-							"ProjectTemplate.vstemplate.t4",
-						}));
-				
-				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\VsixManifest",
+                            "ProjectTemplate.vstemplate.t4",
+                        }));
+                
+                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\VsixManifest",
                     new[]
                         {
-							"source.extension.t4",
-							"source.extension.include.t4",
-						}));
-			}
+                            "source.extension.t4",
+                            "source.extension.include.t4",
+                        }));
+            }
 
-			[TestMethod, TestCategory("Integration")]
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsResources()
             {
                 //Schema files (\Resources\*)
@@ -156,20 +156,20 @@ namespace NuPattern.Authoring.IntegrationTests
                             "VsixIconPatternToolkit.png",
                             "VsixPreviewPatternToolkit.png",
                         }));
-			}
-			
-			[TestMethod, TestCategory("Integration")]
+            }
+            
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsRedistributables()
             {
                 //Redist files
                 Assert.True(this.FolderContainsExclusive("",
                     new[]
                         {
-							"extension.vsixmanifest",
-							//"[Content_Types].xml",
+                            "extension.vsixmanifest",
+                            //"[Content_Types].xml",
                             "LICENSE.txt",
-							"redist.txt",
-							"Release%20Notes.docx",
+                            "redist.txt",
+                            "Release%20Notes.docx",
 
                             //Authoring Assemblies
                             "NuPattern.Authoring.Guidance.dll",
@@ -182,14 +182,14 @@ namespace NuPattern.Authoring.IntegrationTests
                             "NuPattern.Authoring.WorkflowDesign.dll",
                             "NuPattern.Authoring.WorkflowDesign.Interfaces.dll",
                             "NuPattern.Authoring.WorkflowDesign.Shell.dll",
-							"NuPattern.Authoring.WorkflowDesign.Shell.pkgdef",
+                            "NuPattern.Authoring.WorkflowDesign.Shell.pkgdef",
 
                             //Runtime Assemblies
-							"NuPattern.Runtime.Schema.dll",
+                            "NuPattern.Runtime.Schema.dll",
 
-							//Embedded VSIXes
-							"NuPatternToolkitLibrary.vsix",
-							"NuPatternToolkitManager.vsix",
+                            //Embedded VSIXes
+                            "NuPatternToolkitLibrary.vsix",
+                            "NuPatternToolkitManager.vsix",
                         }));
             }
         }

@@ -2,38 +2,38 @@
 <#@ Include File="..\..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
-	<TemplateData>
-		<Name>Item Template Asset</Name>
-		<Description>Creates a custom item template asset.</Description>
-		<TemplateID>b69b847487b3-opment.Assets.Templates.ItemTemplates.ItemTemplate</TemplateID>
-		<ProjectType>CSharp</ProjectType>
-		<ProjectSubType>Extensibility</ProjectSubType>
-		<SortOrder>10</SortOrder>
-		<Icon></Icon>
-		<DefaultName>ItemTemplate</DefaultName>
-		<Hidden>true</Hidden>
-	</TemplateData>
-	<TemplateContent>
-		<ProjectItem ItemType="Content" TargetFileName="Content.cs" ReplaceParameters="false">ItemTemplate.cs</ProjectItem>
-		<ProjectItem ItemType="Content" TargetFileName="__TemplateIcon.ico" ReplaceParameters="false">VsTemplateIconItemTemplate.ico</ProjectItem>
-	</TemplateContent>
-	<WizardExtension>
-		<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-		<FullClassName>NuPattern.Runtime.GuidGeneratorTemplateWizard</FullClassName>
-	</WizardExtension>
-	<WizardExtension>
-		<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-		<FullClassName>NuPattern.Runtime.ReplacementTemplateWizard</FullClassName>
-	</WizardExtension>
-	<WizardExtension>
-	  <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-	  <FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
-	</WizardExtension>
-	<WizardData>
-		<NewGuid Key="$guid11$" />
-		<NewGuid Key="$guid12$" />
-		<NewGuid Key="$guid13$" />
-		<NewGuid Key="$guid14$" />
-		<NewGuid Key="$guid15$" />
-	</WizardData>
+  <TemplateData>
+    <Name>Item Template Asset</Name>
+    <Description>Creates a custom item template asset.</Description>
+    <TemplateID>b69b847487b3-opment.Assets.Templates.ItemTemplates.ItemTemplate</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Extensibility</ProjectSubType>
+    <SortOrder>10</SortOrder>
+    <Icon></Icon>
+    <DefaultName>ItemTemplate</DefaultName>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ItemType="Content" TargetFileName="Content.cs" ReplaceParameters="false">ItemTemplate.cs</ProjectItem>
+    <ProjectItem ItemType="Content" TargetFileName="__TemplateIcon.ico" ReplaceParameters="false">VsTemplateIconItemTemplate.ico</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuPattern.VisualStudio, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.GuidGeneratorTemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardExtension>
+    <Assembly>NuPattern.VisualStudio, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.ReplacementTemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardExtension>
+    <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+    <FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <NewGuid Key="$guid11$" />
+    <NewGuid Key="$guid12$" />
+    <NewGuid Key="$guid13$" />
+    <NewGuid Key="$guid14$" />
+    <NewGuid Key="$guid15$" />
+  </WizardData>
 </VSTemplate>
