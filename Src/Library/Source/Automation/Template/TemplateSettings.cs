@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using NuPattern.Library.Design;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;

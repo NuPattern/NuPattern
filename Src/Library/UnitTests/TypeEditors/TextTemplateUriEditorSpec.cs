@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Library.TypeEditors;
+using NuPattern.Library.Design;
 using NuPattern.Runtime;
 
 namespace NuPattern.Library.UnitTests

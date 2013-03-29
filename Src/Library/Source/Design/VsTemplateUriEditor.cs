@@ -21,7 +21,7 @@ using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Shell;
 using NuPattern.VisualStudio.Solution.Templates;
 
-namespace NuPattern.Library.TypeEditors
+namespace NuPattern.Library.Design
 {
     /// <summary>
     /// Representes the editor to change a VsTemplate Uri.

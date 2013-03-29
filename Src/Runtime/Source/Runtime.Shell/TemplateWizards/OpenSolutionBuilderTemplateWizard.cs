@@ -12,8 +12,8 @@ namespace NuPattern.Runtime.Shell
     /// <summary>
     /// Custom template wizard extension that opens the solution builder toolwindow.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Not Applicable")]
-    internal class OpenSolutionBuilderTemplateWizard : TemplateWizard
+    [CLSCompliant(false)]
+    public class OpenSolutionBuilderTemplateWizard : TemplateWizard
     {
         private IServiceProvider serviceProvider;
 

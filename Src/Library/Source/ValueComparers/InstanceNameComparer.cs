@@ -3,7 +3,7 @@ using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Comparers;
 
-namespace NuPattern.Library.Comparers
+namespace NuPattern.Library.ValueComparers
 {
     /// <summary>
     /// Compares the <see cref="IProductElement.InstanceName"/> of two elements alphabetically.

@@ -176,9 +176,7 @@
     <Compile Include="TemplateWizards\InstantiationTemplateWizard.cs" />
     <Compile Include="Automation\Template\TemplateAutomation.cs" />
     <Compile Include="Automation\Template\TemplateSettings.cs" />
-    <Compile Include="Automation\Template\TemplateSettings.DescriptionProvider.cs">
-      <DependentUpon>TemplateSettings.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Design\TemplateSettingsDescriptionProvider.cs" />
     <Compile Include="Automation\Template\TemplateValidator.cs" />
     <Compile Include="Automation\Template\UnfoldPathHelper.cs" />
     <Compile Include="Automation\Template\UnfoldParentResolver.cs" />
@@ -217,11 +215,11 @@
     <Compile Include="Conditions\DropItemCondition.cs" />
     <Compile Include="Automation\DragDrop\DragDropHelpers.cs" />
     <Compile Include="GuidHelper.cs" />
-    <Compile Include="TypeEditors\TextTemplateUriEditor.cs" />
+    <Compile Include="Design\TextTemplateUriEditor.cs" />
     <Compile Include="ReferenceTag.cs" />
     <Compile Include="Commands\SaveArtifactCommand.cs" />
     <Compile Include="Commands\RunVsCommandCommand.cs" />
-    <Compile Include="TypeEditors\VsTemplateUriEditor.cs" />
+    <Compile Include="Design\VsTemplateUriEditor.cs" />
     <Compile Include="Commands\TransformTemplatesCommand.cs" />
     <Compile Include="UnfoldKind.cs" />
     <Compile Include="Automation\DragDrop\DragDropSettings.Validation.cs">

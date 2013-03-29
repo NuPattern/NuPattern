@@ -64,7 +64,7 @@ namespace NuPattern.Library.Automation
 		/// Gets or sets the value of TemplateUri domain property.
 		/// The project or item template to unfold.
 		/// </summary>
-		[System.ComponentModel.Editor(typeof(NuPattern.Library.TypeEditors.VsTemplateUriEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.Library.Design.VsTemplateUriEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.TemplateSettings/TemplateUri.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.TemplateSettings/TemplateUri.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("cf977d69-f13b-4deb-a6c7-2a2e954637dc")]
