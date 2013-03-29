@@ -6,7 +6,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Automation;
 using NuPattern.Modeling;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests.Automation.Command

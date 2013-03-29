@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.ToolkitInterface;
 using NuPattern.VisualStudio;
 

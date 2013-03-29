@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
+using NuPattern.Modeling;
 
 namespace NuPattern.Runtime.Schema
 {

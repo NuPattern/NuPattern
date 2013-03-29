@@ -10,7 +10,6 @@ using System.Windows.Data;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio.Extensions;
 using NuPattern.VisualStudio.Shell;

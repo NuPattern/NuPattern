@@ -543,7 +543,7 @@
             <ClrAttribute Name="NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute" />
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(AutomationSettingsTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Schema.Design.AutomationSettingsTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>

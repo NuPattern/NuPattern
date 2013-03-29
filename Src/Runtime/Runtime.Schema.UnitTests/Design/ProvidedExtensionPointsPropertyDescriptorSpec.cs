@@ -6,10 +6,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Modeling;
-using NuPattern.Runtime.Extensibility;
+using NuPattern.Runtime.Schema.Design;
 using NuPattern.VisualStudio.Shell;
 
-namespace NuPattern.Runtime.Schema.UnitTests
+namespace NuPattern.Runtime.Schema.UnitTests.Design
 {
     public class ProvidedExtensionPointsPropertyDescriptorSpec
     {

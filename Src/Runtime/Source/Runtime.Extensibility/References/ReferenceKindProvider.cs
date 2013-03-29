@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.References

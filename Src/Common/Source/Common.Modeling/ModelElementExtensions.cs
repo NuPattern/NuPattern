@@ -4,8 +4,9 @@ using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.VisualStudio.Modeling;
-using NuPattern.Reflection;
+using Microsoft.VisualStudio.Modeling.Diagrams;
 using NuPattern.Modeling.Properties;
+using NuPattern.Reflection;
 
 namespace NuPattern.Modeling
 {
@@ -14,6 +15,27 @@ namespace NuPattern.Modeling
     /// </summary>
     public static class ModelElementExtensions
     {
+        /// <summary>
+        /// Gets the (first) shape representing the given element, in the given diagram
+        /// </summary>
+        public static NodeShape GetShape(this ModelElement element, Diagram diagram)
+        {
+            Guard.NotNull(() => element, element);
+            Guard.NotNull(() => diagram, diagram);
+
+            return PresentationViewsSubject.GetPresentation(element)
+                .OfType<NodeShape>()
+                .FirstOrDefault(s => s.Diagram == diagram);
+        }
+
+        /// <summary>
+        /// Gets the (first) shape representing the given element, in the given diagram
+        /// </summary>
+        public static T GetShape<T>(this ModelElement element, Diagram diagram) where T : NodeShape
+        {
+            return element.GetShape(diagram) as T;
+        }
+
         /// <summary>
         /// Returns the default value of a property of the given element.
         /// </summary>

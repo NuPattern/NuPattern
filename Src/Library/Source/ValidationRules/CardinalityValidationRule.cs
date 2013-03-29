@@ -8,7 +8,6 @@ using System.Linq;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Validation;
 
 namespace NuPattern.Library.ValidationRules

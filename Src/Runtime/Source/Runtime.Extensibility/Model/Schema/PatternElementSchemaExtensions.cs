@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 
-namespace NuPattern.Runtime.Extensibility
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Extension methods over <see cref="PatternElementSchemaExtensions"/> class.

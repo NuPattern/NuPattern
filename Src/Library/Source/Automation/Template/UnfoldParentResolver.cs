@@ -7,7 +7,6 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.VsTemplateSchema;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.References;
 using NuPattern.VisualStudio.Solution;
 

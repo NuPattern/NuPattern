@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Automation;
 using NuPattern.Modeling;
-using NuPattern.Runtime.Extensibility;
+using NuPattern.Runtime;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.Store;
 

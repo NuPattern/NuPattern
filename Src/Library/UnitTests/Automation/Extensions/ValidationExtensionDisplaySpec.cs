@@ -7,7 +7,6 @@ using NuPattern.ComponentModel;
 using NuPattern.Library.Automation;
 using NuPattern.Modeling;
 using NuPattern.Reflection;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests.Automation.Validation

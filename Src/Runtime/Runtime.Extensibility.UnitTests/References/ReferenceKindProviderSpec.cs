@@ -4,7 +4,6 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Modeling;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.Store;
 

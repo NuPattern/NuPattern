@@ -41,7 +41,7 @@
       <Attributes>
         <ClrAttribute Name="System.ComponentModel.TypeDescriptionProvider">
           <Parameters>
-            <AttributeParameter Value="typeof(ProductElementTypeDescriptionProvider)" />
+            <AttributeParameter Value="typeof(NuPattern.Runtime.Store.Design.ProductElementTypeDescriptionProvider)" />
           </Parameters>
         </ClrAttribute>
       </Attributes>
@@ -397,7 +397,7 @@ SkipCreate=true</Notes>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(ProductElementTypeDescriptor.ReferencesTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Store.Design.ProductElementTypeDescriptor.ReferencesTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </propertyAttributes>

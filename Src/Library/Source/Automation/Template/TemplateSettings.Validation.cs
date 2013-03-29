@@ -10,7 +10,6 @@ using NuPattern.Library.Properties;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
-using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Library.Automation
 {

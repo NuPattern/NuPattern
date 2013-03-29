@@ -1,6 +1,5 @@
 ﻿using NuPattern.Library.Commands;
 using NuPattern.Runtime;
-using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Library.Automation
 {

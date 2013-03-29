@@ -11,7 +11,6 @@ using NuPattern.Library.Properties;
 using NuPattern.Library.TemplateWizards;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Library.Automation.Template

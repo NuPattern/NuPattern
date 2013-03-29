@@ -1,7 +1,7 @@
 ﻿using System;
 using NuPattern.Runtime.Comparers;
 
-namespace NuPattern.Runtime.Extensibility
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Extensions to the <see cref="IContainedElementInfo"/> interface.

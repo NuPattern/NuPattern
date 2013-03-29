@@ -18,7 +18,6 @@ using NuPattern.IO;
 using NuPattern.Modeling;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.Store;
 using NuPattern.Runtime.Validation;

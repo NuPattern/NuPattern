@@ -102,11 +102,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdapterManager.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ProductElement.Descriptor.cs">
-      <DependentUpon>ProductElement.cs</DependentUpon>
+    <Compile Include="Design\ProductElementDescriptor.cs">
     </Compile>
-    <Compile Include="Model\ProductElement.DescriptionProvider.cs">
-      <DependentUpon>ProductElement.cs</DependentUpon>
+    <Compile Include="Design\ProductElementDescriptionProvider.cs">
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="GeneratedCode\Customization\RuntimeImplementation.gen.cs">
@@ -114,42 +112,41 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Model\AbstractElement.cs" />
-    <Compile Include="Model\ElementContainerImplementation.cs" />
-    <Compile Include="Model\InstanceBase.cs" />
-    <Compile Include="Model\ProductExtensions.cs" />
-    <Compile Include="Model\ProductToolkitInfo.cs" />
-    <Compile Include="Model\Property.cs" />
-    <Compile Include="Model\ProductElement.cs" />
-    <Compile Include="Model\ProductElement.Validation.cs">
+    <Compile Include="DomainModel\AbstractElement.cs" />
+    <Compile Include="ElementContainerImplementation.cs" />
+    <Compile Include="DomainModel\InstanceBase.cs" />
+    <Compile Include="DomainModel\ProductExtensions.cs" />
+    <Compile Include="ProductToolkitInfo.cs" />
+    <Compile Include="DomainModel\Property.cs" />
+    <Compile Include="DomainModel\ProductElement.cs" />
+    <Compile Include="DomainModel\ProductElement.Validation.cs">
       <DependentUpon>ProductElement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Property.Descriptor.cs">
+    <Compile Include="Design\PropertyDescriptor.cs">
+    </Compile>
+    <Compile Include="Design\PropertyUnavailableDescriptor.cs">
+    </Compile>
+    <Compile Include="DomainModel\Property.Validation.cs">
       <DependentUpon>Property.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Property.UnavailableDescriptor.cs">
-      <DependentUpon>Property.cs</DependentUpon>
+    <Compile Include="PropertyTypeLoader.cs" />
+    <Compile Include="DomainModel\Reference.cs" />
+    <Compile Include="Rules\NullDynamicBindingContext.cs" />
+    <Compile Include="DomainModel\InstanceBase.Validation.cs">
+      <DependentUpon>InstanceBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Property.Validation.cs">
-      <DependentUpon>Property.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\PropertyTypeLoader.cs" />
-    <Compile Include="Model\Reference.cs" />
-    <Compile Include="Model\Rules\NullDynamicBindingContext.cs" />
-    <Compile Include="Model\Validation\CardinalityValidation.cs" />
-    <Compile Include="Model\Validation\PropertyValidation.cs" />
-    <Compile Include="Model\StorePropertyBag.cs" />
-    <Compile Include="Model\Validation\RuntimeValidationExtensionRegistrar.cs" />
-    <Compile Include="Model\Product.cs" />
-    <Compile Include="Model\View.cs" />
-    <Compile Include="Model\ProductState.cs" />
-    <Compile Include="Model\Rules\ProductElementAddRule.cs" />
-    <Compile Include="Model\Rules\ElementMapper.cs" />
-    <Compile Include="Model\Rules\PropertyAddRule.cs" />
-    <Compile Include="Model\Rules\AbstractElementAddRule.cs" />
-    <Compile Include="Model\Rules\ViewAddRule.cs" />
-    <Compile Include="Model\ProductStateStoreDomainModel.cs" />
-    <Compile Include="Model\Rules\ProductAddRule.cs" />
+    <Compile Include="StorePropertyBag.cs" />
+    <Compile Include="RuntimeValidationExtensionRegistrar.cs" />
+    <Compile Include="DomainModel\Product.cs" />
+    <Compile Include="DomainModel\View.cs" />
+    <Compile Include="DomainModel\ProductState.cs" />
+    <Compile Include="Rules\ProductElementAddRule.cs" />
+    <Compile Include="Rules\ElementMapper.cs" />
+    <Compile Include="Rules\PropertyAddRule.cs" />
+    <Compile Include="Rules\AbstractElementAddRule.cs" />
+    <Compile Include="Rules\ViewAddRule.cs" />
+    <Compile Include="DomainModel\ProductStateStoreDomainModel.cs" />
+    <Compile Include="Rules\ProductAddRule.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -257,8 +254,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RuntimeImplementation.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="Model\Reference.PropertyDescriptor.cs">
-      <DependentUpon>Reference.cs</DependentUpon>
+    <Compile Include="Design\ReferencePropertyDescriptor.cs">
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -373,6 +369,7 @@
       <Name>Common.VisualStudio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
     <StartAction>Program</StartAction>

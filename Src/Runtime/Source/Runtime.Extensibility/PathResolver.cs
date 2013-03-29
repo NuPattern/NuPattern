@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.References;
 using NuPattern.VisualStudio.Solution;

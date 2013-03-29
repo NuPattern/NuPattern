@@ -5,11 +5,9 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Library.Automation;
 using NuPattern.Library.Design;
 using NuPattern.Modeling;
 using NuPattern.Runtime;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Store;
 
 namespace NuPattern.Library.UnitTests

@@ -6861,7 +6861,7 @@ namespace NuPattern.Runtime.Schema
 		/// The specific settings for this Automation Type.
 		/// </summary>
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
-		[System.ComponentModel.TypeConverter(typeof(AutomationSettingsTypeConverter))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Schema.Design.AutomationSettingsTypeConverter))]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/Settings.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/Settings.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.AutomationSettingsSchema/Settings.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]

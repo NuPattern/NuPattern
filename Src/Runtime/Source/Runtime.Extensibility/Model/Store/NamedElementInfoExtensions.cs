@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace NuPattern.Runtime.Extensibility
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Extensions for named element information.

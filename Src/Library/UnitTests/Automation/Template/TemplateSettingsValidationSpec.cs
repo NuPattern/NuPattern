@@ -7,7 +7,6 @@ using NuPattern.Library.Automation.Template;
 using NuPattern.Library.Commands;
 using NuPattern.Modeling;
 using NuPattern.Runtime;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests

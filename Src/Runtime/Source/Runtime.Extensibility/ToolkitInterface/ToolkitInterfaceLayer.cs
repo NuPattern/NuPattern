@@ -8,7 +8,6 @@ using System.Threading;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Runtime.Bindings;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio;
 
@@ -308,7 +307,7 @@ namespace NuPattern.Runtime.ToolkitInterface
             if (initializer == null)
                 initializer = e => { };
 
-            var toolkitInterface = GetToolkitInterfaceAttributeOrThrow(typeof(TInterface));
+            GetToolkitInterfaceAttributeOrThrow(typeof(TInterface));
             using (var transaction = target.BeginTransaction())
             {
                 var element = elementFactory(e =>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
 
-namespace NuPattern.Runtime.Extensibility
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Provides extension methods for working with an <see cref="IInstalledToolkitInfo"/>.

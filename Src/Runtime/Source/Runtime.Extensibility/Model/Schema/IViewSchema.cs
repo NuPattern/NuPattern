@@ -1,6 +1,6 @@
 namespace NuPattern.Runtime
 {
-	public partial interface IViewSchema : IElementSchemaContainer, IElementInfoContainer
-	{
-	}
+    public partial interface IViewSchema : IElementSchemaContainer, IElementInfoContainer
+    {
+    }
 }

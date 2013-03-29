@@ -117,15 +117,15 @@
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="ComponentModelExportsSpec.cs" />
-    <None Include="RuntimeShellVsixPackagingSpec.tt">
+    <Compile Include="Shell\ComponentModelExportsSpec.cs" />
+    <None Include="Shell\RuntimeShellVsixPackagingSpec.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RuntimeShellVsixPackagingSpec.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="FeatureExtensionSpec.cs" />
+    <Compile Include="Shell\FeatureExtensionSpec.cs" />
     <Compile Include="InstalledToolkitInfoSpec.cs" />
-    <Compile Include="UriProviders\PackUriProviderSpec.cs" />
-    <Compile Include="RuntimeShellVsixPackagingSpec.gen.cs">
+    <Compile Include="Core\UriProviders\PackUriProviderSpec.cs" />
+    <Compile Include="Shell\RuntimeShellVsixPackagingSpec.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RuntimeShellVsixPackagingSpec.tt</DependentUpon>
@@ -164,17 +164,17 @@
     <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\TopProjectItem.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="PatternManagerSpec.cs" />
+    <Compile Include="Core\PatternManagerSpec.cs" />
     <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders2\TopProjectItemWithItemGuid.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="RuntimeShellPackageSpec.cs" />
-    <Compile Include="Events\ShellEventsSpec.cs" />
-    <Compile Include="StoreAdapterSpec.cs" />
+    <Compile Include="Shell\RuntimeShellPackageSpec.cs" />
+    <Compile Include="Core\Events\ShellEventsSpec.cs" />
+    <Compile Include="Store\StoreAdapterSpec.cs" />
     <Compile Include="EventsIntegrationSpec.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="UriProviders\SolutionUriProviderSpec.cs" />
-    <Compile Include="MefLogger.cs" />
+    <Compile Include="Core\UriProviders\SolutionUriProviderSpec.cs" />
+    <Compile Include="Shell\MefLogger.cs" />
     <Content Include="Runtime.IntegrationTests.Content\Sample\Sample.sln">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -193,13 +193,13 @@
     <Content Include="Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="Settings\SettingsManagerSpec.cs" />
-    <Compile Include="Events\SolutionEventsSpec.cs" />
-    <Compile Include="UriProviders\TemplateUriProviderSpec.cs" />
+    <Compile Include="Core\Settings\SettingsManagerSpec.cs" />
+    <Compile Include="Core\Events\SolutionEventsSpec.cs" />
+    <Compile Include="Core\UriProviders\TemplateUriProviderSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UriProviders\TextTemplateSpec.cs" />
-    <Compile Include="UriProviders\VsixExtensionUriProviderSpec.cs" />
-    <Compile Include="UriProviders\VsTemplateUriProviderSpec.cs" />
+    <Compile Include="Core\UriProviders\TextTemplateSpec.cs" />
+    <Compile Include="Core\UriProviders\VsixExtensionUriProviderSpec.cs" />
+    <Compile Include="Core\UriProviders\VsTemplateUriProviderSpec.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\CodeAnalysis.Dictionary.xml">
@@ -265,6 +265,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Runtime.IntegrationTests.Content\Sample\SolutionFolder\Library\Folder\" />
+    <Folder Include="Schema\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Binaries\$(TargetVSVersion)\$(RuntimeShellVsixFileName)">

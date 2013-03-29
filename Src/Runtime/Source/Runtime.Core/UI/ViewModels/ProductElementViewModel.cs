@@ -13,9 +13,7 @@ using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Properties;
-using NuPattern.Runtime.Settings;
 using NuPattern.Runtime.Store;
 using NuPattern.VisualStudio;
 

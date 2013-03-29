@@ -10,10 +10,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Modeling;
 using NuPattern.Reflection;
-using NuPattern.Runtime.Extensibility;
+using NuPattern.Runtime.Schema.Design;
 using NuPattern.VisualStudio.Shell;
 
-namespace NuPattern.Runtime.Schema.UnitTests
+namespace NuPattern.Runtime.Schema.UnitTests.Design
 {
     [TestClass]
     public class HostedExtensionPointPropertyDescriptorSpec

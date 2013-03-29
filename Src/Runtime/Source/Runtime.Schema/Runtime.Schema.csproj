@@ -132,29 +132,28 @@
     <Compile Include="Diagram\Shapes\ITailoredShapeElementStyles.cs" />
     <Compile Include="Diagram\Shapes\TailoredShapeStyles.cs" />
     <Compile Include="Diagram\TailoredBackgroundStyles.cs" />
-    <Compile Include="Model\CustomizableElementSchemaExtensions.cs" />
-    <Compile Include="Model\ContainingLinkSchemaExtensions.cs" />
-    <Compile Include="Model\ElementSchemaContainerExtensions.cs" />
-    <Compile Include="Model\ModelElementExtensions.cs" />
-    <Compile Include="Model\NodeShapeExtensions.cs" />
-    <Compile Include="Model\AbstractElementSchema.cs" />
-    <Compile Include="Model\AbstractElementSchema.Validation.cs">
+    <Compile Include="DomainModel\CustomizableElementSchemaExtensions.cs" />
+    <Compile Include="DomainModel\ContainingLinkSchemaExtensions.cs" />
+    <Compile Include="DomainModel\ElementSchemaContainerExtensions.cs" />
+    <Compile Include="ModelElementExtensions.cs" />
+    <Compile Include="DomainModel\AbstractElementSchema.cs" />
+    <Compile Include="DomainModel\AbstractElementSchema.Validation.cs">
       <DependentUpon>AbstractElementSchema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\PatternModelSchema.cs" />
-    <Compile Include="Model\PropertyValueProviderBindingSettings.cs" />
-    <Compile Include="Model\ExtensionPointSchema.Validation.cs">
+    <Compile Include="DomainModel\PatternModelSchema.cs" />
+    <Compile Include="PropertyValueProviderBindingSettings.cs" />
+    <Compile Include="DomainModel\ExtensionPointSchema.Validation.cs">
       <DependentUpon>ExtensionPointSchema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\PatternElementSchema.Validation.cs">
+    <Compile Include="DomainModel\PatternElementSchema.Validation.cs">
       <DependentUpon>PatternElementSchema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Design\ValueTypesPropertyDescriptor.cs" />
-    <Compile Include="Model\PropertyValueType.cs" />
-    <Compile Include="Model\Rules\NamedElementSchemaAddRule.cs" />
-    <Compile Include="Model\Design\SimpleNamedPropertyDescriptor.cs" />
-    <Compile Include="Model\Automation\AutomationSettingsTypeDescriptorProvider.cs" />
-    <Compile Include="Model\Automation\AutomationSettingsTypeConverter.cs" />
+    <Compile Include="Design\ValueTypesPropertyDescriptor.cs" />
+    <Compile Include="PropertyValueType.cs" />
+    <Compile Include="Rules\NamedElementSchemaAddRule.cs" />
+    <Compile Include="Design\SimpleNamedPropertyDescriptor.cs" />
+    <Compile Include="Design\AutomationSettingsTypeDescriptorProvider.cs" />
+    <Compile Include="Design\AutomationSettingsTypeConverter.cs" />
     <None Include="AdapterManager.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AdapterManager.gen.cs</LastGenOutput>
@@ -163,72 +162,73 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PropertyTracking.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="Model\PropertySchema.Validation.cs">
+    <Compile Include="DomainModel\PropertySchema.Validation.cs">
       <DependentUpon>PropertySchema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Design\ExtensionPointConverter.cs" />
-    <Compile Include="Model\Design\HostedExtensionPointPropertyDescriptor.cs" />
-    <Compile Include="Model\Design\PatternElementSchemaTypeDescriptionProvider.cs">
+    <Compile Include="Design\ExtensionPointConverter.cs" />
+    <Compile Include="Design\HostedExtensionPointPropertyDescriptor.cs" />
+    <Compile Include="Design\PatternElementSchemaTypeDescriptionProvider.cs">
     </Compile>
-    <Compile Include="Model\Design\ExtensionPointsConverter.cs" />
-    <Compile Include="Model\ExtensionPointSchema.cs" />
-    <Compile Include="Model\Design\ExtensionPointSchemaTypeDescriptionProvider.cs">
+    <Compile Include="Design\ExtensionPointsConverter.cs" />
+    <Compile Include="DomainModel\ExtensionPointSchema.cs" />
+    <Compile Include="Design\ExtensionPointSchemaTypeDescriptionProvider.cs">
     </Compile>
     <Compile Include="GeneratedCode\Customization\PropertyTracking.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PropertyTracking.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Design\ProvidedExtensionPointsPropertyDescriptor.cs" />
-    <Compile Include="Model\PatternSchema.cs" />
-    <Compile Include="Model\Design\PatternSchemaTypeDescriptionProvider.cs">
+    <Compile Include="Design\ProvidedExtensionPointsPropertyDescriptor.cs" />
+    <Compile Include="DomainModel\PatternSchema.cs" />
+    <Compile Include="Design\PatternSchemaTypeDescriptionProvider.cs">
     </Compile>
-    <Compile Include="Model\Rules\ExtensionPointSchemaAddRule.cs" />
-    <Compile Include="Model\Rules\ElementSchemaAddRule.cs" />
-    <Compile Include="Model\NamedElementSchemaNameProvider.cs" />
-    <Compile Include="Model\ViewHasExtensionPoints.cs" />
-    <Compile Include="Model\ElementHasExtensionPoints.cs" />
-    <Compile Include="Model\PatternSchema.Validation.cs">
+    <Compile Include="Rules\ExtensionPointSchemaAddRule.cs" />
+    <Compile Include="Rules\ElementSchemaAddRule.cs" />
+    <Compile Include="DomainModel\NamedElementSchemaNameProvider.cs" />
+    <Compile Include="DomainModel\ViewHasExtensionPoints.cs" />
+    <Compile Include="DomainModel\ElementHasExtensionPoints.cs" />
+    <Compile Include="DomainModel\PatternSchema.Validation.cs">
       <DependentUpon>PatternSchema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Design\ValueTypesTypeConverter.cs" />
+    <Compile Include="Design\ValueTypesTypeConverter.cs" />
     <Compile Include="Diagram\Shapes\PatternElementConnector.cs" />
     <Compile Include="Diagram\Shapes\ShapeExtensions.cs" />
     <Compile Include="Diagram\Gestures\AuthoringGestureController.cs" />
-    <Compile Include="Model\Customization\CustomizationExtensions.cs" />
     <Compile Include="Diagram\Gestures\AuthoringGestureControllerBase.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Model\Automation\AutomationSettingsSchema.cs" />
-    <Compile Include="Model\CollectionSchema.cs" />
-    <Compile Include="Model\CollectionSchema.Validation.cs">
+    <Compile Include="DomainModel\AutomationSettingsSchema.cs" />
+    <Compile Include="DomainModel\CollectionSchema.cs" />
+    <Compile Include="DomainModel\CollectionSchema.Validation.cs">
       <DependentUpon>CollectionSchema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Automation\AutomationSettingsSchema.Validation.cs" />
-    <Compile Include="Model\Design\NamedElementTypeDescriptionProvider.cs">
+    <Compile Include="DomainModel\AutomationSettingsSchema.Validation.cs" />
+    <Compile Include="Design\NamedElementTypeDescriptionProvider.cs">
     </Compile>
-    <Compile Include="Model\ElementSchema.cs" />
-    <Compile Include="Model\ElementSchema.Validation.cs">
+    <Compile Include="DomainModel\ElementSchema.cs" />
+    <Compile Include="DomainModel\ElementSchema.Validation.cs">
       <DependentUpon>ElementSchema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Design\PropertySchemaTypeDescriptorProvider.cs">
+    <Compile Include="Design\PropertySchemaTypeDescriptorProvider.cs">
     </Compile>
-    <Compile Include="Model\Rules\PatternElementHasPatternElementsChangeRule.cs" />
-    <Compile Include="Model\Rules\CustomizableElementChangeRule.cs" />
-    <Compile Include="Model\Rules\PropertySchemaChangeRule.cs" />
-    <Compile Include="Model\ViewSchema.Validation.cs">
+    <Compile Include="Rules\PatternElementHasPatternElementsChangeRule.cs" />
+    <Compile Include="Rules\CustomizableElementChangeRule.cs" />
+    <Compile Include="Rules\PropertySchemaChangeRule.cs" />
+    <Compile Include="DomainModel\ViewSchema.Validation.cs">
       <DependentUpon>ViewSchema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Design\ContainingLinkSchemaTypeDescriptionProvider.cs" />
-    <Compile Include="Model\NamedElementSchema.Validation.cs">
+    <Compile Include="Design\ContainingLinkSchemaTypeDescriptionProvider.cs" />
+    <Compile Include="DomainModel\NamedElementSchema.Validation.cs">
       <DependentUpon>NamedElementSchema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Customization\CustomizableElementSchemaValidation.cs" />
-    <Compile Include="Model\Customization\CustomizableDomainElementSettingAttribute.cs" />
-    <Compile Include="Model\Customization\CustomizableSettingAttribute.cs" />
-    <Compile Include="Model\Customization\CustomizationPolicyTypeDescriptionProvider.cs" />
-    <Compile Include="Model\Customization\CustomizationPolicySchema.cs" />
-    <Compile Include="Model\Customization\CustomizableSettingSchema.cs" />
-    <Compile Include="Model\Customization\CustomizableElementSchema.cs" />
+    <Compile Include="DomainModel\CustomizableElementSchema.Validation.cs">
+      <DependentUpon>CustomizableElementSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizableDomainElementSettingAttribute.cs" />
+    <Compile Include="CustomizableSettingAttribute.cs" />
+    <Compile Include="Design\CustomizationPolicyTypeDescriptionProvider.cs" />
+    <Compile Include="DomainModel\CustomizationPolicySchema.cs" />
+    <Compile Include="DomainModel\CustomizableSettingSchema.cs" />
+    <Compile Include="DomainModel\CustomizableElementSchema.cs" />
     <Compile Include="Diagram\PatternModelSchemaDiagram.cs" />
     <Compile Include="Diagram\FixUpMultipleDiagram.cs" />
     <Compile Include="Diagram\MultipleDiagramsFixup.gen.cs">
@@ -239,21 +239,21 @@
     <Compile Include="Diagram\Shapes\ElementShape.cs" />
     <Compile Include="Diagram\Shapes\CollectionShape.cs" />
     <Compile Include="Diagram\Shapes\ViewShape.cs" />
-    <Compile Include="Model\AbstractElementExtensions.cs" />
+    <Compile Include="DomainModel\AbstractElementExtensions.cs" />
     <Compile Include="Diagram\DiagramExtensions.cs" />
-    <Compile Include="Model\ModelStoreExtensions.cs" />
+    <Compile Include="ModelStoreExtensions.cs" />
     <Compile Include="GeneratedCode\Customization\DesignerConstants.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DesignerConstants.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ElementHasElements.cs" />
-    <Compile Include="Model\Customization\CustomizableElementTypeDescriptionProvider.cs" />
-    <Compile Include="Model\IInterceptorTarget.cs" />
-    <Compile Include="Model\CardinalityConstants.cs" />
-    <Compile Include="Model\Rules\PatternSchemaAddRule.cs" />
-    <Compile Include="Model\PropertySchemaExtensions.cs" />
-    <Compile Include="Model\Design\DefaultValuePropertyDescriptor.cs">
+    <Compile Include="DomainModel\ElementHasElements.cs" />
+    <Compile Include="Design\CustomizableElementTypeDescriptionProvider.cs" />
+    <Compile Include="IInterceptorTarget.cs" />
+    <Compile Include="CardinalityConstants.cs" />
+    <Compile Include="Rules\PatternSchemaAddRule.cs" />
+    <Compile Include="DomainModel\PropertySchemaExtensions.cs" />
+    <Compile Include="Design\DefaultValuePropertyDescriptor.cs">
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -306,17 +306,17 @@
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Diagram\FixUpDiagram.cs" />
-    <Compile Include="Model\PatternModelDomainModel.cs" />
+    <Compile Include="DomainModel\PatternModelDomainModel.cs" />
     <Compile Include="Diagram\Shapes\PatternShape.cs" />
-    <Compile Include="Model\PropertySchema.cs" />
-    <Compile Include="Model\PatternElementSchema.cs" />
-    <Compile Include="Model\Rules\CustomizableElementAddRule.cs" />
-    <Compile Include="Model\Rules\ViewSchemaAddRule.cs" />
-    <Compile Include="Model\Rules\ViewSchemaChangeRule.cs" />
-    <Compile Include="Model\NamedElementSchema.cs" />
-    <Compile Include="Model\ViewSchema.cs" />
-    <Compile Include="Model\ViewSchemaBase.cs" />
-    <Compile Include="Model\ViewHasElements.cs" />
+    <Compile Include="DomainModel\PropertySchema.cs" />
+    <Compile Include="DomainModel\PatternElementSchema.cs" />
+    <Compile Include="Rules\CustomizableElementAddRule.cs" />
+    <Compile Include="Rules\ViewSchemaAddRule.cs" />
+    <Compile Include="Rules\ViewSchemaChangeRule.cs" />
+    <Compile Include="DomainModel\NamedElementSchema.cs" />
+    <Compile Include="DomainModel\ViewSchema.cs" />
+    <Compile Include="DomainModel\ViewSchemaBase.cs" />
+    <Compile Include="DomainModel\ViewHasElements.cs" />
     <Compile Include="GeneratedCode\Customization\SchemaImplementation.gen.cs">
       <DependentUpon>SchemaImplementation.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -513,6 +513,7 @@
       <Name>Runtime.Extensibility</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
     <StartAction>Program</StartAction>

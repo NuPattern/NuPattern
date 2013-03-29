@@ -1,5 +1,5 @@
 ﻿
-namespace NuPattern.Runtime.Extensibility
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Extends <see cref="IProperty"/> behavior.

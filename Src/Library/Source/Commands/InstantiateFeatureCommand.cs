@@ -12,7 +12,6 @@ using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Design;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.References;
 

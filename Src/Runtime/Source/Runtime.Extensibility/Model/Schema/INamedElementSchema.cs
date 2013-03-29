@@ -21,12 +21,12 @@ namespace NuPattern.Runtime
         /// <returns></returns>
         string GetSchemaPathValue();
 
-		/// <summary>
-		/// Gets the root pattern ancestor for this instance. Note that for a pattern, 
-		/// this may be an ancestor pattern if it has been instantiated as an 
-		/// extension point.
-		/// </summary>
-		/// <remarks>The returned value may be null if the element is not rooted in any pattern.</remarks>
-		IPatternSchema Root { get; }
+        /// <summary>
+        /// Gets the root pattern ancestor for this instance. Note that for a pattern, 
+        /// this may be an ancestor pattern if it has been instantiated as an 
+        /// extension point.
+        /// </summary>
+        /// <remarks>The returned value may be null if the element is not rooted in any pattern.</remarks>
+        IPatternSchema Root { get; }
     }
 }

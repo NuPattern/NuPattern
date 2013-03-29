@@ -85,47 +85,47 @@
     <Compile Include="Design\PatternSchemaTypeDescriptorProviderSpec.cs" />
     <Compile Include="Design\ProvidedExtensionPointsPropertyDescriptorSpec.cs" />
     <Compile Include="Design\ValueTypesTypeConverterSpec.cs" />
-    <Compile Include="ModelElementExtensionsSpec.cs" />
-    <Compile Include="Model\PatternModelSpec.cs" />
-    <Compile Include="PatternModelClonerSpec.cs" />
-    <Compile Include="PatternModelSerializationHelperSpec.cs" />
-    <Compile Include="Model\AbstractElementSchemaSpec.cs" />
-    <Compile Include="Model\Automation\AutomationSettingsSchemaSpec.cs" />
-    <Compile Include="Model\Automation\AutomationSettingsSchemaValidationSpec.cs" />
-    <Compile Include="Model\CollectionSchemaValidationSpec.cs" />
-    <Compile Include="Model\Customization\CustomizableElementSchemaSpec.cs" />
-    <Compile Include="Model\Customization\CustomizableElementSchemaValidationSpec.cs" />
-    <Compile Include="Model\Customization\CustomizableSettingSchemaSpec.cs" />
-    <Compile Include="Model\Customization\CustomizationDisplaySpec.cs" />
-    <Compile Include="Model\Customization\CustomizationPolicySchemaSpec.cs" />
-    <Compile Include="Model\ElementSchemaValidationSpec.cs" />
-    <Compile Include="Model\ExtensionPointSchemaSpec.cs" />
-    <Compile Include="Model\CardinalityDisplaySpec.cs" />
-    <Compile Include="Model\NamedElementSchemaDisplaySpec.cs" />
-    <Compile Include="Model\NamedElementSchemaSpec.cs" />
-    <Compile Include="Model\NamedElementSchemaValidationSpec.cs" />
-    <Compile Include="Model\PatternElementSchemaDisplaySpec.cs" />
-    <Compile Include="Model\PatternSchemaSpec.cs" />
-    <Compile Include="Model\PatternSchemaValidationSpec.cs" />
-    <Compile Include="Model\PropertySchemaDisplaySpec.cs" />
-    <Compile Include="Model\PropertySchemaSpec.cs" />
-    <Compile Include="Model\PropertySchemaValidationSpec.cs" />
-    <Compile Include="Model\PropertyTrackingSpec.gen.cs">
+    <Compile Include="DomainModel\ModelElementExtensionsSpec.cs" />
+    <Compile Include="DomainModel\PatternModelSpec.cs" />
+    <Compile Include="Rehydration\PatternModelClonerSpec.cs" />
+    <Compile Include="Serialization\PatternModelSerializationHelperSpec.cs" />
+    <Compile Include="DomainModel\AbstractElementSchemaSpec.cs" />
+    <Compile Include="DomainModel\AutomationSettingsSchemaSpec.cs" />
+    <Compile Include="DomainModel\AutomationSettingsSchemaValidationSpec.cs" />
+    <Compile Include="DomainModel\CollectionSchemaValidationSpec.cs" />
+    <Compile Include="DomainModel\CustomizableElementSchemaSpec.cs" />
+    <Compile Include="DomainModel\CustomizableElementSchemaValidationSpec.cs" />
+    <Compile Include="DomainModel\CustomizableSettingSchemaSpec.cs" />
+    <Compile Include="DomainModel\CustomizationDisplaySpec.cs" />
+    <Compile Include="DomainModel\CustomizationPolicySchemaSpec.cs" />
+    <Compile Include="DomainModel\ElementSchemaValidationSpec.cs" />
+    <Compile Include="DomainModel\ExtensionPointSchemaSpec.cs" />
+    <Compile Include="DomainModel\CardinalityDisplaySpec.cs" />
+    <Compile Include="DomainModel\NamedElementSchemaDisplaySpec.cs" />
+    <Compile Include="DomainModel\NamedElementSchemaSpec.cs" />
+    <Compile Include="DomainModel\NamedElementSchemaValidationSpec.cs" />
+    <Compile Include="DomainModel\PatternElementSchemaDisplaySpec.cs" />
+    <Compile Include="DomainModel\PatternSchemaSpec.cs" />
+    <Compile Include="DomainModel\PatternSchemaValidationSpec.cs" />
+    <Compile Include="DomainModel\PropertySchemaDisplaySpec.cs" />
+    <Compile Include="DomainModel\PropertySchemaSpec.cs" />
+    <Compile Include="DomainModel\PropertySchemaValidationSpec.cs" />
+    <Compile Include="DomainModel\PropertyTrackingSpec.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PropertyTrackingSpec.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Rules\AutomationSettingsAddRuleSpec.cs" />
-    <Compile Include="Model\Rules\CollectionSchemaAddRuleSpec.cs" />
-    <Compile Include="Model\Rules\ElementSchemaAddRuleSpec.cs" />
-    <Compile Include="Model\Rules\ExtensionPointSchemaAddRuleSpec.cs" />
-    <Compile Include="Model\Rules\PatternSchemaAddRuleSpec.cs" />
-    <Compile Include="Model\Rules\PropertySchemaAddRuleSpec.cs" />
-    <Compile Include="Model\Rules\PropertySchemaChangeRuleSpec.cs" />
-    <Compile Include="Model\Rules\ViewSchemaAddRuleSpec.cs" />
-    <Compile Include="Model\Rules\ViewSchemaChangeRuleSpec.cs" />
-    <Compile Include="Model\ViewSchemaSpec.cs" />
-    <Compile Include="Model\ViewSchemaValidationSpec.cs" />
+    <Compile Include="Rules\AutomationSettingsAddRuleSpec.cs" />
+    <Compile Include="Rules\CollectionSchemaAddRuleSpec.cs" />
+    <Compile Include="Rules\ElementSchemaAddRuleSpec.cs" />
+    <Compile Include="Rules\ExtensionPointSchemaAddRuleSpec.cs" />
+    <Compile Include="Rules\PatternSchemaAddRuleSpec.cs" />
+    <Compile Include="Rules\PropertySchemaAddRuleSpec.cs" />
+    <Compile Include="Rules\PropertySchemaChangeRuleSpec.cs" />
+    <Compile Include="Rules\ViewSchemaAddRuleSpec.cs" />
+    <Compile Include="Rules\ViewSchemaChangeRuleSpec.cs" />
+    <Compile Include="DomainModel\ViewSchemaSpec.cs" />
+    <Compile Include="DomainModel\ViewSchemaValidationSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -156,8 +156,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\PropertySchemaDefaultValueDescriptorSpec.cs" />
-    <None Include="Model\PropertyTrackingSpec.tt">
+    <Compile Include="Design\PropertySchemaDefaultValueDescriptorSpec.cs" />
+    <None Include="DomainModel\PropertyTrackingSpec.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PropertyTrackingSpec.gen.cs</LastGenOutput>
     </None>

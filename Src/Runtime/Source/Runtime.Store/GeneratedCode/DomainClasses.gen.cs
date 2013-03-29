@@ -419,7 +419,7 @@ namespace NuPattern.Runtime.Store
 	/// DomainClass ProductElement
 	/// An element within the product.
 	/// </summary>
-	[System.ComponentModel.TypeDescriptionProvider(typeof(ProductElementTypeDescriptionProvider))]
+	[System.ComponentModel.TypeDescriptionProvider(typeof(NuPattern.Runtime.Store.Design.ProductElementTypeDescriptionProvider))]
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.ProductElement.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.ProductElement.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
@@ -688,7 +688,7 @@ namespace NuPattern.Runtime.Store
 		[System.ComponentModel.Editor(typeof(System.Drawing.Design.UITypeEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("ProductElement_ReferencesDisplayName", typeof(Properties.Resources))]
 		[DslDesign::DescriptionResource("ProductElement_ReferencesDescription", typeof(Properties.Resources))]
-		[System.ComponentModel.TypeConverter(typeof(ProductElementTypeDescriptor.ReferencesTypeConverter))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Store.Design.ProductElementTypeDescriptor.ReferencesTypeConverter))]
 		public virtual DslModeling::LinkedElementCollection<Reference> References
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]

@@ -5,7 +5,6 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Runtime;
-using NuPattern.Runtime.Extensibility;
 
 namespace NuPattern.Library.Automation
 {

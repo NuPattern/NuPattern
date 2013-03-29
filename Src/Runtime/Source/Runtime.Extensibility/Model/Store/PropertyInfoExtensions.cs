@@ -1,5 +1,5 @@
 ﻿
-namespace NuPattern.Runtime.Extensibility
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Provides helper methods for property schemas.

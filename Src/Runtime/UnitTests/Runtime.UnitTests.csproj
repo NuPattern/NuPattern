@@ -92,28 +92,28 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Blank.gen.slnbldr">
+    <None Include="Core\Blank.gen.slnbldr">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Blank.tt</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Blank.tt">
+    <None Include="Core\Blank.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Blank.gen.slnbldr</LastGenOutput>
     </None>
-    <Content Include="UriProviders\TemplateWithTemplatePath.t4">
+    <Content Include="Core\UriProviders\TemplateWithTemplatePath.t4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
-    <None Include="InvalidVersion.slnbldr">
+    <None Include="Core\InvalidVersion.slnbldr">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Invalid.slnbldr">
+    <None Include="Core\Invalid.slnbldr">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="OldVersion.slnbldr">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="Core\OldVersion.slnbldr">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -130,43 +130,43 @@
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="UriProviders\RuntimeElementUriProviderSpec.cs" />
-    <Compile Include="Store\PatternElementValidationSpec.cs" />
-    <Compile Include="PatternManagerExtensionsSpec.cs" />
-    <Compile Include="PatternManagerSpec.cs" />
-    <Compile Include="Store\ProductStateSpec.cs" />
-    <Compile Include="Rules\ProductElementAddRuleSpec.cs" />
-    <Compile Include="Rules\PropertyAddRuleSpec.cs" />
-    <Compile Include="Rules\AbstractElementAddRuleSpec.cs" />
-    <Compile Include="Rules\ViewAddRuleSpec.cs" />
-    <Compile Include="Rules\ProductAddRuleSpec.cs" />
-    <Compile Include="RuntimeModelSpec.cs" />
-    <Compile Include="SchemaResourceSpec.cs" />
-    <Compile Include="InstalledToolkitInfoSpec.cs" />
+    <Compile Include="Core\UriProviders\RuntimeElementUriProviderSpec.cs" />
+    <Compile Include="Store\DomainModel\PatternElementValidationSpec.cs" />
+    <Compile Include="Core\PatternManagerExtensionsSpec.cs" />
+    <Compile Include="Core\PatternManagerSpec.cs" />
+    <Compile Include="Store\DomainModel\ProductStateSpec.cs" />
+    <Compile Include="Core\Rules\ProductElementAddRuleSpec.cs" />
+    <Compile Include="Core\Rules\PropertyAddRuleSpec.cs" />
+    <Compile Include="Core\Rules\AbstractElementAddRuleSpec.cs" />
+    <Compile Include="Core\Rules\ViewAddRuleSpec.cs" />
+    <Compile Include="Core\Rules\ProductAddRuleSpec.cs" />
+    <Compile Include="Core\RuntimeModelSpec.cs" />
+    <Compile Include="Core\SchemaResourceSpec.cs" />
+    <Compile Include="Core\InstalledToolkitInfoSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Store\AbstractElementSpec.cs" />
-    <Compile Include="Store\InstanceBaseSpecs.cs" />
-    <Compile Include="Store\ProductElementSpec.cs" />
-    <Compile Include="Store\PropertySpec.cs" />
-    <Compile Include="Store\ViewSpec.cs" />
-    <Compile Include="Diagnostics\TraceOutputWindowManagerSpec.cs" />
-    <Compile Include="Settings\TracingSettingsMonitorSpec.cs" />
-    <Compile Include="UI\AddNewProductViewModelSpec.cs" />
-    <Compile Include="UI\AutomationMenuOptionViewModelSpec.cs" />
-    <Compile Include="UI\AddNewNodeViewModelSpec.cs" />
-    <Compile Include="UI\ElementViewModelSpec.cs" />
-    <Compile Include="UI\FilteredItemContainerSpec.cs" />
-    <Compile Include="UI\PickerFilterSpec.cs" />
-    <Compile Include="UI\SolutionBuilderViewModelSpec.cs" />
-    <Compile Include="UI\ProductViewModelSpec.cs" />
-    <Compile Include="Store\ProductElementTypeDescriptorSpec.cs" />
-    <Compile Include="UI\ProductElementViewModelSpec.cs" />
-    <Compile Include="UI\SolutionPickerViewModelSpec.cs" />
-    <Compile Include="UriProviders\VsTemplateUriProviderSpec.cs" />
-    <Compile Include="UriProviders\PackUriProviderSpec.cs" />
-    <Compile Include="UriProviders\TextTemplateUriProviderSpec.cs" />
-    <Compile Include="UriProviders\VsixExtensionUriProviderSpec.cs" />
-    <Compile Include="Commands\VsMenuCommandAdapterSpec.cs">
+    <Compile Include="Store\DomainModel\AbstractElementSpec.cs" />
+    <Compile Include="Store\DomainModel\InstanceBaseSpecs.cs" />
+    <Compile Include="Store\DomainModel\ProductElementSpec.cs" />
+    <Compile Include="Store\DomainModel\PropertySpec.cs" />
+    <Compile Include="Store\DomainModel\ViewSpec.cs" />
+    <Compile Include="Core\Diagnostics\TraceOutputWindowManagerSpec.cs" />
+    <Compile Include="Core\Settings\TracingSettingsMonitorSpec.cs" />
+    <Compile Include="Core\UI\AddNewProductViewModelSpec.cs" />
+    <Compile Include="Core\UI\AutomationMenuOptionViewModelSpec.cs" />
+    <Compile Include="Core\UI\AddNewNodeViewModelSpec.cs" />
+    <Compile Include="Core\UI\ElementViewModelSpec.cs" />
+    <Compile Include="Core\UI\FilteredItemContainerSpec.cs" />
+    <Compile Include="Core\UI\PickerFilterSpec.cs" />
+    <Compile Include="Core\UI\SolutionBuilderViewModelSpec.cs" />
+    <Compile Include="Core\UI\ProductViewModelSpec.cs" />
+    <Compile Include="Store\Design\ProductElementTypeDescriptorSpec.cs" />
+    <Compile Include="Core\UI\ProductElementViewModelSpec.cs" />
+    <Compile Include="Core\UI\SolutionPickerViewModelSpec.cs" />
+    <Compile Include="Core\UriProviders\VsTemplateUriProviderSpec.cs" />
+    <Compile Include="Core\UriProviders\PackUriProviderSpec.cs" />
+    <Compile Include="Core\UriProviders\TextTemplateUriProviderSpec.cs" />
+    <Compile Include="Core\UriProviders\VsixExtensionUriProviderSpec.cs" />
+    <Compile Include="Core\Commands\VsMenuCommandAdapterSpec.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

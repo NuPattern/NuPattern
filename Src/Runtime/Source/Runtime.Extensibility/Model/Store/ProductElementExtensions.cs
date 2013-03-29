@@ -5,7 +5,7 @@ using System.Linq;
 using NuPattern.Runtime.Comparers;
 using NuPattern.Runtime.Properties;
 
-namespace NuPattern.Runtime.Extensibility
+namespace NuPattern.Runtime
 {
     /// <summary>
     /// Provides helper methods for for automation extension containers.
