@@ -16,9 +16,8 @@
     <vsfx:VsDialogWindow.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/CommonStyles.xaml" />
-                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/VsVersionStyles.gen.xaml" />
-                <ResourceDictionary Source="/NuPattern.Common.Presentation;component/Resources/ListBox.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/CommonStyles.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/ListBox.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />

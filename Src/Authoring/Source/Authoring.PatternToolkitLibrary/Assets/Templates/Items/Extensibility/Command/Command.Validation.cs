@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Globalization;
 using Microsoft.VisualStudio.Modeling;
-using NuPattern.Extensibility;
 using NuPattern.Library;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
@@ -31,12 +30,12 @@ namespace $rootnamespace$
             {
                 // TODO: Validate a setting on the command
                 // Note that a propValue1 may still not have a value if it was configured with a ValueProvider.
-				//var propValue1 = settings.GetOrCreatePropertyValue(Reflector<$safeitemname$>.GetPropertyName(s => s.AProperty), String.Empty);
-				//if (String.IsNullOrEmpty(propValue1))
-				//{
-				//    context.LogError(String.Format(CultureInfo.CurrentCulture, 
-				//        "{0} is configured with an invalid value for its 'AProperty'. This value must be valid.", settingsElement.Name), "1", settingsElement as ModelElement);
-				//}
+                //var propValue1 = settings.GetOrCreatePropertyValue(Reflector<$safeitemname$>.GetPropertyName(s => s.AProperty), String.Empty);
+                //if (String.IsNullOrEmpty(propValue1))
+                //{
+                //    context.LogError(String.Format(CultureInfo.CurrentCulture, 
+                //        "{0} is configured with an invalid value for its 'AProperty'. This value must be valid.", settingsElement.Name), "1", settingsElement as ModelElement);
+                //}
 
             }
             catch (Exception ex)

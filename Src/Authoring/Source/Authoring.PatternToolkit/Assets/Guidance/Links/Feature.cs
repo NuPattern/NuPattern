@@ -20,23 +20,23 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance
                 if (this.commands == null)
                 {
                     this.commands = new CommandBinding[]
-	                {
-	                    new CommandBinding(
-	                        this.FeatureComposition, 
-							typeof(InstantiateSolutionElementCommand).FullName,
-	                        new FixedValuePropertyBinding(Reflect<InstantiateSolutionElementCommand>.GetProperty(t => t.ToolkitIdentifier).Name, HandsOnLabsToolkitInfo.Identifier), 
+                    {
+                        new CommandBinding(
+                            this.FeatureComposition, 
+                            typeof(InstantiateSolutionElementCommand).FullName,
+                            new FixedValuePropertyBinding(Reflect<InstantiateSolutionElementCommand>.GetProperty(t => t.ToolkitIdentifier).Name, HandsOnLabsToolkitInfo.Identifier), 
                             new FixedValuePropertyBinding(Reflect<InstantiateSolutionElementCommand>.GetProperty(t => t.InstanceName).Name, Resources.InstantiateHolLink_InstanceName))
-	                    {
-	                        Name = InstantiateHolLink.CommandBindingName
-	                    },
-	                    new CommandBinding(
-	                        this.FeatureComposition, 
-							typeof(ActivateOrInstantiateSharedFeatureCommand).FullName,
-							new FixedValuePropertyBinding(Reflect<ActivateOrInstantiateSharedFeatureCommand>.GetProperty(t => t.FeatureId).Name, RuntimeShellInfo.VsixIdentifier))
-	                    {
-	                        Name = InstantiateUsingGuidanceLink.CommandBindingName
-	                    },
-	                };
+                        {
+                            Name = InstantiateHolLink.CommandBindingName
+                        },
+                        new CommandBinding(
+                            this.FeatureComposition, 
+                            typeof(ActivateOrInstantiateSharedFeatureCommand).FullName,
+                            new FixedValuePropertyBinding(Reflect<ActivateOrInstantiateSharedFeatureCommand>.GetProperty(t => t.FeatureId).Name, RuntimeShellInfo.VsixIdentifier))
+                        {
+                            Name = InstantiateUsingGuidanceLink.CommandBindingName
+                        },
+                    };
                 }
 
                 return this.commands;

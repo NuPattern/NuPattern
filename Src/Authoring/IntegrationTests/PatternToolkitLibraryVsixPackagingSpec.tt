@@ -72,23 +72,23 @@ namespace NuPattern.Authoring.IntegrationTests
             public void ThenContainsGuidance()
             {
                 //Assets (\\Assets\Guidance\*
-                Assert.True(this.FolderContainsExclusive(@"Assets\Guidance",
+                this.AssertFolderContainsExclusive(@"Assets\Guidance",
                     new[]
                         {
                             "ToolkitGuidance.doc",
-                        }));
+                        });
             }
                 
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsAssets()
             {
                  //Templates (\\Assets\Templates\*
-                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Projects\Extensibility",
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Projects\Extensibility",
                     new[]
                         {
                             "Library.zip",
-                        }));
-                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Items\Extensibility",
+                        });
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Items\Extensibility",
                     new[]
                         {
                             "Command.zip",
@@ -102,9 +102,9 @@ namespace NuPattern.Authoring.IntegrationTests
                             "TypePickerEditor.zip",
                             "UIEditor.zip",
                             "ValueProvider.zip",
-                        }));
+                        });
 
-                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text",
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Text",
                     new[]
                         {
                             "CollectionImplementation.t4",
@@ -123,26 +123,26 @@ namespace NuPattern.Authoring.IntegrationTests
                             "ProductInterface.t4",
                             "ViewImplementation.t4",
                             "ViewInterface.t4",
-                        }));
+                        });
             }
 
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsResources()
             {
                 //Schema files (\Resources\*)
-                Assert.True(this.FolderContainsExclusive(@"Resources",
+                this.AssertFolderContainsExclusive(@"Resources",
                     new[]
                         {
                             "VsixIconPatternToolkitLibrary.png",
                             "VsixPreviewPatternToolkitLibrary.png",
-                        }));
+                        });
             }
 
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsRedistributables()
             {
                 //Redist files
-                Assert.True(this.FolderContainsExclusive("",
+                this.AssertFolderContainsExclusive("",
                     new[]
                         {
                             "extension.vsixmanifest",
@@ -151,7 +151,7 @@ namespace NuPattern.Authoring.IntegrationTests
 
                             //Library Assemblies
                             "NuPattern.Authoring.PatternToolkitLibrary.dll",
-                        }));
+                        });
             }
         }
     }

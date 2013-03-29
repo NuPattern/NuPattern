@@ -111,7 +111,7 @@
     <Compile Include="Commands\AddViewCommand.cs">
       <ItemGuid>8dee48be-ef08-4afa-915e-4ef665d8c1e6</ItemGuid>
     </Compile>
-    <Compile Include="Commands\Helpers\VsTemplateFileImporter.cs" />
+    <Compile Include="VsTemplateFileImporter.cs" />
     <Compile Include="Commands\ImportVSTemplateCommand.cs">
       <ItemGuid>3942a382-5e8c-4d8f-a226-cbc545829ff5</ItemGuid>
     </Compile>
@@ -122,7 +122,7 @@
     <Compile Include="Commands\CreateViewElementsCommand.cs">
       <ItemGuid>d36159cf-7425-4b2c-a2d9-08282301b2c7</ItemGuid>
     </Compile>
-    <Compile Include="Commands\Helpers\PatternToolkitLibraryInfo.gen.cs">
+    <Compile Include="PatternToolkitLibraryInfo.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PatternToolkitLibraryInfo.tt</DependentUpon>
@@ -247,7 +247,7 @@
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Commands\Helpers\PatternToolkitLibraryInfo.tt">
+    <None Include="PatternToolkitLibraryInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PatternToolkitLibraryInfo.gen.cs</LastGenOutput>
     </None>

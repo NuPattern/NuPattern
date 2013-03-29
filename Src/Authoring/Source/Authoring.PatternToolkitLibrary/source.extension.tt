@@ -4,45 +4,45 @@
 <#@ include  File="..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-	<Identifier Id="<#=VsixInfo.PatternToolkitLibrary.Identifier#>">
-		<Name><#=VsixInfo.PatternToolkitLibrary.Name#></Name>
-		<Author><#=VsixInfo.PatternToolkitLibrary.Author#></Author>
-		<Version><#=VsixInfo.PatternToolkitLibrary.Version#></Version>
-		<Description xml:space="preserve"><#=VsixInfo.PatternToolkitLibrary.Description#></Description>
-		<Locale>1033</Locale>
-		<License>LICENSE.txt</License>
-		<Icon>Resources\VsixIconPatternToolkitLibrary.png</Icon>
-		<MoreInfoUrl><#=VsixInfo.PatternToolkitLibrary.MoreInfoUrl#></MoreInfoUrl>
-		<GettingStartedGuide><#=VsixInfo.PatternToolkitLibrary.GettingStartedUrl#></GettingStartedGuide>
-		<PreviewImage>Resources\VsixPreviewPatternToolkitLibrary.png</PreviewImage>
-		<SupportedProducts>
-		  <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
-			<Edition>Pro</Edition>
-		  </VisualStudio>
-		</SupportedProducts>
+    <Identifier Id="<#=VsixInfo.PatternToolkitLibrary.Identifier#>">
+        <Name><#=VsixInfo.PatternToolkitLibrary.Name#></Name>
+        <Author><#=VsixInfo.PatternToolkitLibrary.Author#></Author>
+        <Version><#=VsixInfo.PatternToolkitLibrary.Version#></Version>
+        <Description xml:space="preserve"><#=VsixInfo.PatternToolkitLibrary.Description#></Description>
+        <Locale>1033</Locale>
+        <License>LICENSE.txt</License>
+        <Icon>Resources\VsixIconPatternToolkitLibrary.png</Icon>
+        <MoreInfoUrl><#=VsixInfo.PatternToolkitLibrary.MoreInfoUrl#></MoreInfoUrl>
+        <GettingStartedGuide><#=VsixInfo.PatternToolkitLibrary.GettingStartedUrl#></GettingStartedGuide>
+        <PreviewImage>Resources\VsixPreviewPatternToolkitLibrary.png</PreviewImage>
+        <SupportedProducts>
+          <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
+            <Edition>Pro</Edition>
+          </VisualStudio>
+        </SupportedProducts>
 <# 
 if (VersionInfo.TargetVsVersion == "11.0")
 { 
 #>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
+        <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
 <# 
 } 
 else
 {
 #>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0"/>
+        <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0"/>
 <#
 }
 #>
-	</Identifier>
-	<References>
-	</References>
-	<Content>
-		<MefComponent>|%CurrentProject%|</MefComponent>
-		<MefComponent>|<#=libraryProjectName #>|</MefComponent>
-		<CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="<#= assemblyName #>.dll"><#= rootNamespace #>.PatternModel.patterndefinition</CustomExtension>
-		<CustomExtension Type="NuPattern.Toolkit.Classification" Category="Authoring" CreateVisibility="Expanded" CustomizeVisibility="Collapsed"/>
-		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
-		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
-	</Content>
+    </Identifier>
+    <References>
+    </References>
+    <Content>
+        <MefComponent>|%CurrentProject%|</MefComponent>
+        <MefComponent>|<#=libraryProjectName #>|</MefComponent>
+        <CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="<#= assemblyName #>.dll"><#= rootNamespace #>.PatternModel.patterndefinition</CustomExtension>
+        <CustomExtension Type="NuPattern.Toolkit.Classification" Category="Authoring" CreateVisibility="Expanded" CustomizeVisibility="Collapsed"/>
+        <ItemTemplate>Assets\Templates\Items</ItemTemplate>
+        <ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
+    </Content>
 </Vsix>

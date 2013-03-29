@@ -21,19 +21,19 @@
   <ItemGroup>
     <Reference Include="NuPattern.Common">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NuPattern.Modeling">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Modeling.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NuPattern.VisualStudio">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
-      <Private>false</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NuPattern.Runtime.Extensibility">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
-      <Private>false</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>

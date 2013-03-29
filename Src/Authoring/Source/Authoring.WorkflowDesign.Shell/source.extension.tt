@@ -10,7 +10,7 @@
     <Version><#=VsixInfo.PatternToolkitRuntime.Version #></Version>
     <Description>The design time experience for creating pattern toolkits that guide and automate the creation of elements in a solution.</Description>
     <Locale>1033</Locale>
-	<InstalledByMsi>false</InstalledByMsi>
+    <InstalledByMsi>false</InstalledByMsi>
     <SupportedProducts>
       <VisualStudio Version="10.0">
         <Edition>Pro</Edition>
@@ -21,12 +21,12 @@
     </SupportedProducts>
     <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
   </Identifier>
-	<References>
+    <References>
         <Reference Id="<#=VsixInfo.PatternToolkitRuntime.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitRuntime.Version #>">
             <Name><#=VsixInfo.PatternToolkitRuntime.Name #></Name>
             <VsixPath><#=VsixInfo.PatternToolkitRuntime.VsixFileName #></VsixPath>
         </Reference>
-	</References>
+    </References>
   <Content>
     <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
     <MefComponent>|WorkflowDesign|</MefComponent>

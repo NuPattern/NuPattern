@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.ComponentModel;
-using NuPattern.Extensibility.UI;
+using NuPattern.Runtime.Design;
 
 namespace $rootnamespace$
 {

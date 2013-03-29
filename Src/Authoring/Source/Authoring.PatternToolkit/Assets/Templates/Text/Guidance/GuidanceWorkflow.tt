@@ -6,7 +6,7 @@
 \<#@ output extension=".gen.cs" \#>
 \<#@ Assembly Name="NuPattern.Authoring.Guidance.dll" \#>
 \<#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" \#>
-\<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" \#>
+\<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" \#>
 \<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll" \#>
 \<#@ Import Namespace="NuPattern.Authoring.PatternToolkit" \#>
 \<#@ Import Namespace="NuPattern.Authoring.Guidance" \#>
@@ -25,132 +25,132 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace \<#=rootNamespace \#>.Guidance
 {
-	/// <summary>
-	/// Defines a base class for the guidance workflow for this feature.
-	/// </summary>
-	[CLSCompliant(false)]
+    /// <summary>
+    /// Defines a base class for the guidance workflow for this feature.
+    /// </summary>
+    [CLSCompliant(false)]
 \<#
-	if (excludeFromCodeCoverage)
-	{ 
+    if (excludeFromCodeCoverage)
+    { 
 \#>
-	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 \<#
-	}
+    }
 \#>
-	[System.CodeDom.Compiler.GeneratedCode("<#= VsixInfo.PatternToolkitBuilder.Name #>", "<#= VsixInfo.PatternToolkitBuilder.Version #>")]
-	public partial class ProcessWorkflow : GuidanceWorkflow
-	{
-		/// <summary>
-		/// Gets the feature composition service.
-		/// </summary>
-		[Import]
-		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-		private IFeatureCompositionService FeatureComposition
-		{
-			get;
-			set;
-		}
+    [System.CodeDom.Compiler.GeneratedCode("<#= VsixInfo.PatternToolkitBuilder.Name #>", "<#= VsixInfo.PatternToolkitBuilder.Version #>")]
+    public partial class ProcessWorkflow : GuidanceWorkflow
+    {
+        /// <summary>
+        /// Gets the feature composition service.
+        /// </summary>
+        [Import]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        private IFeatureCompositionService FeatureComposition
+        {
+            get;
+            set;
+        }
 
-		/// <summary>
-		/// Gets whether to ignore all post conditions and enable all actions.
-		/// </summary>
-		public override bool IgnorePostConditions
-		{
-			get
-			{
-				return true;
-			}
-		}
+        /// <summary>
+        /// Gets whether to ignore all post conditions and enable all actions.
+        /// </summary>
+        public override bool IgnorePostConditions
+        {
+            get
+            {
+                return true;
+            }
+        }
 
-		/// <summary>
-		/// Initializes the workflow.
-		/// </summary>
-		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1809:AvoidExcessiveLocals")]
-		protected override void OnInitialize()
-		{
-			base.OnInitialize();
-			this.Name = "GuidanceWorkflow";
+        /// <summary>
+        /// Initializes the workflow.
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1809:AvoidExcessiveLocals")]
+        protected override void OnInitialize()
+        {
+            base.OnInitialize();
+            this.Name = "GuidanceWorkflow";
 \<#
-	var controller = new TocProcessWorkflowController(this, guidance.DocumentFilePath, new Guid(guidance.Parent.Parent.PatternToolkitInfo.Identifier).ToString() , guidance.ProjectContentPath);
-	controller.RenderWorkflow();
+    var controller = new TocProcessWorkflowController(this, guidance.DocumentFilePath, new Guid(guidance.Parent.Parent.PatternToolkitInfo.Identifier).ToString() , guidance.ProjectContentPath);
+    controller.RenderWorkflow();
 \#>
 
-			this.OnPostInitialize();
-		}
+            this.OnPostInitialize();
+        }
 
-		partial void OnPostInitialize();
-	}
+        partial void OnPostInitialize();
+    }
 
-	/// <summary>
-	/// Defines the feature extension containing the guidance workflow.
-	/// </summary>
-	[Feature("\<#= new Guid(guidance.Parent.Parent.PatternToolkitInfo.Identifier).ToString() \#>", DefaultName="\<#=guidance.DefaultInstanceName\#>")]
-	[Export(typeof(IFeatureExtension))]
-	[PartCreationPolicy(CreationPolicy.NonShared)]
-	[CLSCompliant(false)]
+    /// <summary>
+    /// Defines the feature extension containing the guidance workflow.
+    /// </summary>
+    [Feature("\<#= new Guid(guidance.Parent.Parent.PatternToolkitInfo.Identifier).ToString() \#>", DefaultName="\<#=guidance.DefaultInstanceName\#>")]
+    [Export(typeof(IFeatureExtension))]
+    [PartCreationPolicy(CreationPolicy.NonShared)]
+    [CLSCompliant(false)]
 \<#
-	if (excludeFromCodeCoverage)
-	{ 
+    if (excludeFromCodeCoverage)
+    { 
 \#>
-	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 \<#
-	}
+    }
 \#>
-	[System.CodeDom.Compiler.GeneratedCode("<#= VsixInfo.PatternToolkitBuilder.Name #>", "<#= VsixInfo.PatternToolkitBuilder.Version #>")]
-	public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
-	{
-		/// <summary>
-		/// Initializes a new instance of the <see cref="Feature"/> class.
-		/// </summary>
-		public Feature()
-			: base()
-		{
-		}
+    [System.CodeDom.Compiler.GeneratedCode("<#= VsixInfo.PatternToolkitBuilder.Name #>", "<#= VsixInfo.PatternToolkitBuilder.Version #>")]
+    public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Feature"/> class.
+        /// </summary>
+        public Feature()
+            : base()
+        {
+        }
 
-		/// <summary>
-		/// Gets or sets the ServiceProvider.
-		/// </summary>
-		[Import]
-		public SVsServiceProvider ServiceProvider { get; set; }
-	}
+        /// <summary>
+        /// Gets or sets the ServiceProvider.
+        /// </summary>
+        [Import]
+        public SVsServiceProvider ServiceProvider { get; set; }
+    }
 }
 
 \<#+
 public override void WriteInitialConnectionCode(string initialIdentifier)
 {
 \#>
-			this.ConnectTo(\<#=initialIdentifier \#>);
+            this.ConnectTo(\<#=initialIdentifier \#>);
 \<#+
 }
 
 public override void WriteNodeConnectionCode(string predecessorIdentifier, string nodeIdentifier)
 {
 \#>
-			\<#=predecessorIdentifier \#>.ConnectTo(\<#=nodeIdentifier \#>);
+            \<#=predecessorIdentifier \#>.ConnectTo(\<#=nodeIdentifier \#>);
 \<#+
 }
 
 public override void WriteNodeVariableCode(INode node, string nodeIdentifier)
 {
 \#>
-			var \<#=nodeIdentifier \#> = new \<#=node.GetType().Name \#>
-			{
-				Name = "\<#=node.Name \#>",
+            var \<#=nodeIdentifier \#> = new \<#=node.GetType().Name \#>
+            {
+                Name = "\<#=node.Name \#>",
 \<#+				
 if (!String.IsNullOrEmpty(node.Description))
 {
 \#>
-				Description = "\<#=node.Description \#>",
+                Description = "\<#=node.Description \#>",
 \<#+
 }
 if (!String.IsNullOrEmpty(node.Link))
 {
 \#>
-				Link = "\<#=node.Link \#>",
+                Link = "\<#=node.Link \#>",
 \<#+
 }
 \#>
-			};
+            };
 \<#+
 }
 \#>

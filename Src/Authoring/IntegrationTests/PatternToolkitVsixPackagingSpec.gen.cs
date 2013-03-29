@@ -65,38 +65,38 @@ namespace NuPattern.Authoring.IntegrationTests
             public void ThenContainsSchemas()
             {
                 //Schema files (\GeneratedCode\*)
-                Assert.True(this.FolderContainsExclusive(@"GeneratedCode",
+                this.AssertFolderContainsExclusive(@"GeneratedCode",
                     new[]
                         {
                             "WorkflowDesignSchema.xsd",
-                        }));
+                        });
             }
 
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsGuidance()
             {
                 //Guidance (\\GeneratedCode\Gudiance\Content\*
-                Assert.True(this.FolderNotEmpty(@"GeneratedCode\Guidance\Content", "*.mht"));
+                this.AssertFolderNotEmpty(@"GeneratedCode\Guidance\Content", "*.mht");
 
                 //Assets (\\Assets\Guidance\*
-                Assert.True(this.FolderContainsExclusive(@"Assets\Guidance",
+                this.AssertFolderContainsExclusive(@"Assets\Guidance",
                     new[]
                         {
                             "AuthoringToolkitGuidance.pdf",
                             "PatternToolkitGuidanceTemplate.dotm",
-                        }));
+                        });
             }
                 
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsAssets()
             {
                  //Templates (\\Assets\Templates\*
-                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Projects\Extensibility",
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Projects\Extensibility",
                     new[]
                         {
                             "Authoring.zip",
-                        }));
-                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Items\Extensibility",
+                        });
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Items\Extensibility",
                     new[]
                         {
                             "ItemTemplate.zip",
@@ -105,64 +105,64 @@ namespace NuPattern.Authoring.IntegrationTests
                             "TextTemplate.zip",
                             "Wizard.zip",
                             "WizardPage.zip",
-                        }));
+                        });
 
-                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text",
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Text",
                     new[]
                         {
                             "Header.t4",
-                        }));
+                        });
 
-                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\Guidance",
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Text\Guidance",
                     new[]
                         {
                             "GuidanceWorkflow.t4",
                             "ToolkitGuidance.t4",
-                        }));
+                        });
 
-                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\ItemTemplate",
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Text\ItemTemplate",
                     new[]
                         {
                             "ItemTemplate.vstemplate.t4",
-                        }));
+                        });
 
-                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\PatternModel",
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Text\PatternModel",
                     new[]
                         {
                             "PatternModel.patterndefinition.t4",
-                        }));
+                        });
                 
-                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\ProjectTemplate",
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Text\ProjectTemplate",
                     new[]
                         {
                             "ProjectTemplate.vstemplate.t4",
-                        }));
+                        });
                 
-                Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text\VsixManifest",
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Text\VsixManifest",
                     new[]
                         {
                             "source.extension.t4",
                             "source.extension.include.t4",
-                        }));
+                        });
             }
 
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsResources()
             {
                 //Schema files (\Resources\*)
-                Assert.True(this.FolderContainsExclusive(@"Resources",
+                this.AssertFolderContainsExclusive(@"Resources",
                     new[]
                         {
                             "VsixIconPatternToolkit.png",
                             "VsixPreviewPatternToolkit.png",
-                        }));
+                        });
             }
             
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsRedistributables()
             {
                 //Redist files
-                Assert.True(this.FolderContainsExclusive("",
+                this.AssertFolderContainsExclusive("",
                     new[]
                         {
                             "extension.vsixmanifest",
@@ -180,7 +180,7 @@ namespace NuPattern.Authoring.IntegrationTests
                             "NuPattern.Authoring.PatternToolkit.pkgdef",
                             "NuPattern.Authoring.PatternToolkit.targets",
                             "NuPattern.Authoring.WorkflowDesign.dll",
-                            "NuPattern.Authoring.WorkflowDesign.Interfaces.dll",
+                            "NuPattern.Authoring.WorkflowDesign.Extensibility.dll",
                             "NuPattern.Authoring.WorkflowDesign.Shell.dll",
                             "NuPattern.Authoring.WorkflowDesign.Shell.pkgdef",
 
@@ -190,7 +190,7 @@ namespace NuPattern.Authoring.IntegrationTests
                             //Embedded VSIXes
                             "NuPatternToolkitLibrary.vsix",
                             "NuPatternToolkitManager.vsix",
-                        }));
+                        });
             }
         }
     }

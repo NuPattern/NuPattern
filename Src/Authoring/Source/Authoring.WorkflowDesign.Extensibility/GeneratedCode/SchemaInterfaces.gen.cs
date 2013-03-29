@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq.Expressions;
 
-namespace NuPattern.Authoring.WorkflowDesign.Interfaces
+namespace NuPattern.Authoring.WorkflowDesign
 { 
 	/// <summary>
 	/// A requirement for a point of variability in the product line.
@@ -74,7 +74,7 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	}
 }
 
-namespace NuPattern.Authoring.WorkflowDesign.Interfaces
+namespace NuPattern.Authoring.WorkflowDesign
 { 
 	/// <summary>
 	/// An asset that is produced by a production tool.
@@ -124,7 +124,7 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	}
 }
 
-namespace NuPattern.Authoring.WorkflowDesign.Interfaces
+namespace NuPattern.Authoring.WorkflowDesign
 { 
 	/// <summary>
 	/// A tool that is supplied assets that produces more assets.
@@ -192,7 +192,7 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	}
 }
 
-namespace NuPattern.Authoring.WorkflowDesign.Interfaces
+namespace NuPattern.Authoring.WorkflowDesign
 { 
 	/// <summary>
 	/// An asset that is supplied to a production tool.
@@ -236,7 +236,7 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	}
 }
 
-namespace NuPattern.Authoring.WorkflowDesign.Interfaces
+namespace NuPattern.Authoring.WorkflowDesign
 { 
 	/// <summary>
 	/// A supplied or fabricated asset in the product line.
@@ -280,7 +280,7 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	}
 }
 
-namespace NuPattern.Authoring.WorkflowDesign.Interfaces
+namespace NuPattern.Authoring.WorkflowDesign
 { 
 	/// <summary>
 	/// A production line design.
@@ -364,7 +364,7 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	}
 }
 
-namespace NuPattern.Authoring.WorkflowDesign.Interfaces
+namespace NuPattern.Authoring.WorkflowDesign
 { 
 	/// <summary>
 	/// An element that has a unique name.
@@ -432,7 +432,7 @@ namespace NuPattern.Authoring.WorkflowDesign.Interfaces
 	}
 }
 
-namespace NuPattern.Authoring.WorkflowDesign.Interfaces
+namespace NuPattern.Authoring.WorkflowDesign
 { 
 	/// <summary>
 	/// An element used for realization.

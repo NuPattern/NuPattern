@@ -2126,7 +2126,7 @@
       </settings>
     </customizationPolicy>
     <properties>
-      <property Id="96a8d40e-c7e5-47ba-b550-489745d95cd2" name="TransformOnBuild" displayName="Transform On Build" description="When to transform all code generation templates in this library, to ensure that all library artifacts are up to date." codeIdentifier="TransformOnBuild" category="Code Generation" typeConverterTypeName="NuPattern.Extensibility.TransformOnBuildConverter, NuPattern.Extensibility">
+      <property Id="96a8d40e-c7e5-47ba-b550-489745d95cd2" name="TransformOnBuild" displayName="Transform On Build" description="When to transform all code generation templates in this library, to ensure that all library artifacts are up to date." codeIdentifier="TransformOnBuild" category="Code Generation" typeConverterTypeName="NuPattern.Runtime.Design.TransformOnBuildConverter, NuPattern.Runtime.Extensibility">
         <customizationPolicy name="CustomizationPolicySchema1">
           <settings>
             <setting propertyId="RawValueProvider" />

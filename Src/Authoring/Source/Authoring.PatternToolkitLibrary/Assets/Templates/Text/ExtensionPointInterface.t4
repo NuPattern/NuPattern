@@ -3,15 +3,13 @@
 <#@ output extension=".gen.cs" #>
 <#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
 <#@ Assembly Name="NuPattern.Runtime.Schema.dll" #>
-<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
+<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
 <#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
-<#@ Assembly Name="NuPattern.Extensibility.dll" #>
 <#@ Assembly Name="System.ComponentModel.Composition" #>
 <#@ Assembly Name="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
 <#@ Import Namespace="Microsoft.VisualStudio.Modeling" #>
 <#@ Import Namespace="NuPattern.Runtime" #>
 <#@ Import Namespace="NuPattern.Runtime.Schema" #>
-<#@ Import Namespace="NuPattern.Extensibility" #>
 <#@ Import Namespace="NuPattern.Authoring.PatternToolkitLibrary" #>
 <#@ Import Namespace="System.Linq" #>
 <#@ Import Namespace="System.Collections.Generic" #>
@@ -24,30 +22,30 @@
 <#@ Include File="NamedElementParent.t4include" #>
 <#@ Include File="ProductElement.t4include" #>
 <#
-	var library = this.Element.As<IPatternToolkitLibrary>();
-	var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
-	var toolkitInfo = developmentView.PatternToolkitInfo;
+    var library = this.Element.As<IPatternToolkitLibrary>();
+    var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternToolkit.IDevelopment>();
+    var toolkitInfo = developmentView.PatternToolkitInfo;
 
-	if (toolkitInfo == null)
-		throw new Exception("ToolkitInfo element not found");
+    if (toolkitInfo == null)
+        throw new Exception("ToolkitInfo element not found");
 
-	var patternModel = developmentView.PatternModel;
-	var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
-	var store = pattern.Store;
+    var patternModel = developmentView.PatternModel;
+    var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
+    var store = pattern.Store;
 
-	foreach (var extensionPoint in store.DefaultPartition.ElementDirectory.AllElements.OfType<IExtensionPointInfo>())
-	{
-		var codegen = new ProductCodeGeneration<IExtensionPointInfo, IProduct>(extensionPoint);
-		codegen.AddType(typeof(Action));
-	codegen.EndInit();
+    foreach (var extensionPoint in store.DefaultPartition.ElementDirectory.AllElements.OfType<IExtensionPointInfo>())
+    {
+        var codegen = new ProductCodeGeneration<IExtensionPointInfo, IProduct>(extensionPoint);
+        codegen.AddType(typeof(Action));
+    codegen.EndInit();
 #>
 namespace <#=library.ToolkitProjectRootNamespace #>
 {
 <#GenerateUsings(codegen);#>
 
-	<#GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, extensionPoint); #>
-	public partial interface I<#=extensionPoint.CodeIdentifier #> : IToolkitInterface
-	{ <# 
+    <#GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, extensionPoint); #>
+    public partial interface I<#=extensionPoint.CodeIdentifier #> : IToolkitInterface
+    { <# 
 GenerateProperties(codegen, extensionPoint, true);
 GenerateParentProperty(extensionPoint, true);
 
@@ -60,13 +58,13 @@ PopIndent();
 PopIndent();
 #>
 
-		/// <summary>
-		/// Gets the generic <see cref="Runtime.IProduct"/> underlying element.
-		/// </summary>
-		Runtime.IProduct AsProduct();
-	}
+        /// <summary>
+        /// Gets the generic <see cref="Runtime.IProduct"/> underlying element.
+        /// </summary>
+        Runtime.IProduct AsProduct();
+    }
 }
 
 <#
-																}
+                                                                }
 #>

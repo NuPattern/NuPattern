@@ -25,19 +25,19 @@
     </Reference>
     <Reference Include="NuPattern.Common">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
-      <Private>false</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NuPattern.Presentation">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
-      <Private>false</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NuPattern.Modeling">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Modeling.dll</HintPath>
-      <Private>false</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NuPattern.VisualStudio">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
-      <Private>false</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
@@ -101,7 +101,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Toolkit.Automation\AddAutomationExtensionViewModelSpec.cs" />
     <Compile Include="Toolkit.Automation\Commands\CreateAutomationLibraryExtensionCommandSpec.cs" />
-    <Compile Include="WorkflowDesign\AssetSpec.cs" />
     <Compile Include="WorkflowDesign\ProducedAssetSpec.cs" />
     <Compile Include="WorkflowDesign\ProducedAssetValidationSpec.cs" />
     <Compile Include="WorkflowDesign\ProductionToolSpec.cs" />

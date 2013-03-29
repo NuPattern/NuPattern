@@ -19,16 +19,16 @@ namespace NuPattern.Authoring.HandsOnLabs.Guidance
                 if (this.commands == null)
                 {
                     this.commands = new CommandBinding[]
-	                {
-	                    new CommandBinding(
-	                        this.FeatureComposition, 
-	                        "NuPattern.Library.Commands.InstantiateSolutionElementCommand",
-	                        new FixedValuePropertyBinding("ToolkitIdentifier", PatternToolkitId), 
+                    {
+                        new CommandBinding(
+                            this.FeatureComposition, 
+                            "NuPattern.Library.Commands.InstantiateSolutionElementCommand",
+                            new FixedValuePropertyBinding("ToolkitIdentifier", PatternToolkitId), 
                             new FixedValuePropertyBinding("InstanceName", WidgetPatternToolkitName))
-	                    {
-	                        Name = "InstantiatePatternToolkit"
-	                    }
-	                };
+                        {
+                            Name = "InstantiatePatternToolkit"
+                        }
+                    };
                 }
 
                 return this.commands;

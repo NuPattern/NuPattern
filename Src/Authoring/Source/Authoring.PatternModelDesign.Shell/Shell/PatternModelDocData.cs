@@ -12,6 +12,7 @@ using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Library;
 using NuPattern.Library.Commands;
 using NuPattern.Modeling;
 using NuPattern.Runtime.References;

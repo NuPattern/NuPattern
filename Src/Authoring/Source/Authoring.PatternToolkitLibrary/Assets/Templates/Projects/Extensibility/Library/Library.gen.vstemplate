@@ -31,8 +31,8 @@
   </Project>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>NuPattern.Extensibility, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-    <FullClassName>NuPattern.Extensibility.CoordinatorTemplateWizard</FullClassName>
+    <Assembly>NuPattern.VisualStudio, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.CoordinatorTemplateWizard</FullClassName>
   </WizardExtension>	
   <WizardData>
     <Replacement Key="$runtimeVSIXVersion$"  Value="1.3.20.0" />
@@ -47,11 +47,11 @@
       </WizardExtension>
       <WizardExtension>
         <Assembly>NuPattern.Library, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-        <FullClassName>NuPattern.Library.Automation.InstantiationTemplateWizard</FullClassName>
+        <FullClassName>NuPattern.Library.TemplateWizards.InstantiationTemplateWizard</FullClassName>
       </WizardExtension>
       <WizardExtension>
         <Assembly>NuPattern.Library, Version=1.3.20.0, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-        <FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
+        <FullClassName>NuPattern.Library.TemplateWizards.ElementReplacementsWizard</FullClassName>
       </WizardExtension>
     </CoordinatedWizards>
   </WizardData>

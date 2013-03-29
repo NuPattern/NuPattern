@@ -1613,17 +1613,17 @@
       </extendedElement>
       <conditions>
 [
-	{
-		"Properties":
-		[
-			{
-				"Name":"Kind",
-				"Value":"NuPattern.Extensibility.References.GuidanceReference",
-				"ValueProvider":null
-			}
-		],
-		"TypeId":"NuPattern.Library.Conditions.ElementReferenceExistsCondition"
-	}
+  {
+    "Properties":
+    [
+      {
+        "Name":"Kind",
+        "Value":"NuPattern.Runtime.References.GuidanceReference",
+        "ValueProvider":null
+      }
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ElementReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1638,14 +1638,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1655,14 +1655,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1672,14 +1672,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1689,14 +1689,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1706,14 +1706,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1723,14 +1723,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1740,14 +1740,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1757,14 +1757,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1774,14 +1774,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1791,14 +1791,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1808,14 +1808,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1825,14 +1825,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1842,14 +1842,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1859,14 +1859,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1876,14 +1876,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1916,14 +1916,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -1933,14 +1933,14 @@
       </extendedElement>
       <conditions>
 [
-	
-	{
-		"Properties":
-		[
-			
-		],
-		"TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
-	}
+  
+  {
+    "Properties":
+    [
+      
+    ],
+    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+  }
 ]
 </conditions>
     </menuSettings>
@@ -2336,7 +2336,7 @@
       </settings>
     </customizationPolicy>
     <properties>
-      <property Id="7ce5ad5a-88c2-4336-b038-e4998aa02b03" name="TransformOnBuild" displayName="Transform On Build" description="When to transform all code generation templates in this toolkit, to ensure that all toolkit artifacts are up to date." codeIdentifier="TransformOnBuild" category="Code Generation" typeConverterTypeName="NuPattern.Extensibility.TransformOnBuildConverter, NuPattern.Extensibility">
+      <property Id="7ce5ad5a-88c2-4336-b038-e4998aa02b03" name="TransformOnBuild" displayName="Transform On Build" description="When to transform all code generation templates in this toolkit, to ensure that all toolkit artifacts are up to date." codeIdentifier="TransformOnBuild" category="Code Generation" typeConverterTypeName="NuPattern.Runtime.Design.TransformOnBuildConverter, NuPattern.Runtime.Extensibility">
         <customizationPolicy name="CustomizationPolicySchema1">
           <settings>
             <setting propertyId="DisplayName" />
@@ -3755,7 +3755,7 @@
               </settings>
             </customizationPolicy>
             <properties>
-              <property Id="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" name="ValidateOnBuild" displayName="Validate On Build" description="When to validate the pattern model, to ensure that its configuration is valid and up to date." codeIdentifier="ValidateOnBuild" typeConverterTypeName="NuPattern.Extensibility.ValidateOnBuildConverter, NuPattern.Extensibility">
+              <property Id="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" name="ValidateOnBuild" displayName="Validate On Build" description="When to validate the pattern model, to ensure that its configuration is valid and up to date." codeIdentifier="ValidateOnBuild" typeConverterTypeName="NNuPattern.Runtime.Design.ValidateOnBuildConverter, NuPattern.Runtime.Extensibility">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -4293,7 +4293,7 @@
   "Properties": []
 }</valueProvider>
               </property>
-              <property Id="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" name="Icon" displayName="Icon" description="An optional icon for the toolkit." codeIdentifier="Icon" category="Identification" typeConverterTypeName="NuPattern.Extensibility.ItemRelativePathConverter, NuPattern.Extensibility" editorTypeName="NuPattern.Extensibility.IconEditor, NuPattern.Extensibility">
+              <property Id="30e4ae03-67bb-4bcb-ac9d-aa71601bfe7e" name="Icon" displayName="Icon" description="An optional icon for the toolkit." codeIdentifier="Icon" category="Identification" typeConverterTypeName="NuPattern.Runtime.Design.ItemRelativePathConverter, NuPattern.Runtime.Extensibility" editorTypeName="NuPattern.Runtime.Design.IconEditor, NuPattern.Runtime.Extensibility">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />
@@ -4318,7 +4318,7 @@
   "Properties": []
 }</valueProvider>
               </property>
-              <property Id="c9e003d7-cb45-4865-a511-de29c04b5b2d" name="Eula" displayName="Eula" description="The license terms governing the use and distribution of this toolkit." codeIdentifier="Eula" category="Identification" typeConverterTypeName="NuPattern.Extensibility.ItemRelativePathConverter, NuPattern.Extensibility" editorTypeName="NuPattern.Extensibility.SolutionItemEditor, NuPattern.Extensibility">
+              <property Id="c9e003d7-cb45-4865-a511-de29c04b5b2d" name="Eula" displayName="Eula" description="The license terms governing the use and distribution of this toolkit." codeIdentifier="Eula" category="Identification" typeConverterTypeName="NuPattern.Runtime.Design.ItemRelativePathConverter, NuPattern.Runtime.Extensibility" editorTypeName="NuPattern.Runtime.Design.SolutionItemEditor, NuPattern.Runtime.Extensibility">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />

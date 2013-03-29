@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq.Expressions;
 
-namespace NuPattern.Authoring.WorkflowDesign.Interfaces
+namespace NuPattern.Authoring.WorkflowDesign
 {
 	
 	/// <summary>

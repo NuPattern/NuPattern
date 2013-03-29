@@ -66,20 +66,20 @@ namespace NuPattern.Runtime.IntegrationTests
             public void ThenContainsSchemas()
             {
                 //Schema files (\GeneratedCode\*)
-                Assert.True(this.FolderContainsExclusive(@"GeneratedCode",
+                this.AssertFolderContainsExclusive(@"GeneratedCode",
                     new[]
                         {
                             "LibrarySchema.xsd",
                             "PatternModelSchema.xsd",
                             "ProductStateSchema.xsd",
-                        }));
+                        });
             }
 
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsGuidance()
             {
                 //Guidance (\\GeneratedCode\Gudiance\Content\*
-                Assert.True(this.FolderNotEmpty(@"GeneratedCode\Guidance\Content", "*.mht"));
+                this.AssertFolderNotEmpty(@"GeneratedCode\Guidance\Content", "*.mht");
             }
 
             [TestMethod, TestCategory("Integration")]
@@ -91,19 +91,19 @@ namespace NuPattern.Runtime.IntegrationTests
             public void ThenContainsResources()
             {
                 //Schema files (\Resources\*)
-                Assert.True(this.FolderContainsExclusive(@"Resources",
+                this.AssertFolderContainsExclusive(@"Resources",
                     new[]
                         {
                             "VsixIconRunTime.png",
                             "VsixPreviewRunTime.png",
-                        }));
+                        });
             }
                         
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsRedistributables()
             {
                 //Redist files
-                Assert.True(this.FolderContainsExclusive("",
+                this.AssertFolderContainsExclusive("",
                     new[]
                         {
                             "extension.vsixmanifest",
@@ -154,7 +154,7 @@ namespace NuPattern.Runtime.IntegrationTests
                             //"NuPattern.Runtime.Schema.xml",
                             //"NuPattern.Runtime.Shell.xml",
                             //"NuPattern.Runtime.Store.xml",
-                        }));
+                        });
             }
         }
     }

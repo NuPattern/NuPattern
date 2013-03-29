@@ -24,10 +24,10 @@
   </TemplateContent>
   <WizardExtension>
     <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-    <FullClassName>NuPattern.Library.Automation.InstantiationTemplateWizard</FullClassName>
+    <FullClassName>NuPattern.Library.TemplateWizards.InstantiationTemplateWizard</FullClassName>
   </WizardExtension>
   <WizardExtension>
     <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-    <FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
+    <FullClassName>NuPattern.Library.TemplateWizards.ElementReplacementsWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

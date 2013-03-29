@@ -42,6 +42,10 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="NuPattern.Runtime.Schema">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -129,11 +133,16 @@
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplate.gen.vstemplate">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectTemplate.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ItemTemplate>
     <Content Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplateProject.gen.csproj">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjectTemplateProject.tt</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Templates\Text\Guidance\GuidanceWorkflow.gen.t4">
       <AutoGen>True</AutoGen>
@@ -868,14 +877,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ItemGuid>25a95e13-8628-403d-a209-d21ee15d1dad</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplate.gen.vstemplate">
-      <DependentUpon>ProjectTemplate.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Designer</SubType>
-      <DesignTime>True</DesignTime>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ItemGuid>e36d91f5-33a4-4762-831d-4120774ba1fc</ItemGuid>
-    </ItemTemplate>
     <ItemTemplate Include="Assets\Templates\Items\Extensibility\TextTemplate\TextTemplate.gen.vstemplate">
       <DependentUpon>TextTemplate.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -908,7 +909,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplateProject.tt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ProjectTemplateProject.gen.csproj</LastGenOutput>
     </None>
@@ -923,11 +923,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Templates\Items\Extensibility\WizardPage\WizardPage.xaml.cs">
-      <DependentUpon>WizardPage.xaml</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Templates\Items\Extensibility\Wizard\Wizard.xaml.cs">
-      <DependentUpon>Wizard.xaml</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplate.cs">
@@ -1318,7 +1316,6 @@
     <Content Include="Assets\Templates\Items\Extensibility\Wizard\Wizard.xaml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
@@ -1326,7 +1323,6 @@
     <Content Include="Assets\Templates\Items\Extensibility\WizardPage\WizardPage.xaml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>

@@ -8,157 +8,157 @@
 <#+
 
 private void GenerateProperties<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, TInfo element, bool noImpl)
-	where TInfo : IPatternElementInfo
-	where TRuntime : IProductElement
+    where TInfo : IPatternElementInfo
+    where TRuntime : IProductElement
 {
-	PushIndent("\t");	
+    PushIndent("\t");	
 
-	// Generate the user defined properties on element
-	var elementProperties = element.Properties;
-	foreach (var property in elementProperties)
-	{
-		GenerateProperty(codegen, property, noImpl);
-	}
+    // Generate the user defined properties on element
+    var elementProperties = element.Properties;
+    foreach (var property in elementProperties)
+    {
+        GenerateProperty(codegen, property, noImpl);
+    }
 
-	// Generate generic runtime properties
-	var type = typeof(TRuntime);
-	var genericProperties = type.GetProperties()
-		.Concat(type.GetInterfaces().SelectMany(t => t.GetProperties()))
-		.Where(prop => !prop.IsDefined(typeof(HiddenAttribute), true))
-		.Distinct(new SelectorEqualityComparer<PropertyInfo, string>(prop => prop.Name));
-	foreach (var property in genericProperties)
-	{
-		PushIndent("\t");	
+    // Generate generic runtime properties
+    var type = typeof(TRuntime);
+    var genericProperties = type.GetProperties()
+        .Concat(type.GetInterfaces().SelectMany(t => t.GetProperties()))
+        .Where(prop => !prop.IsDefined(typeof(HiddenAttribute), true))
+        .Distinct(new SelectorEqualityComparer<PropertyInfo, string>(prop => prop.Name));
+    foreach (var property in genericProperties)
+    {
+        PushIndent("\t");	
 #>
 <#= "" #>
 <#+
-		GenerateComments(property);
-		GenerateAttributes(codegen, property);
-		// Generate property signature
-		if (noImpl)
-		{
+        GenerateComments(property);
+        GenerateAttributes(codegen, property);
+        // Generate property signature
+        if (noImpl)
+        {
 #><#= codegen.GetTypeName(property.PropertyType) #> <#= property.Name #> { <#= property.CanRead ? "get;" : "" #> <#= property.CanWrite ? "set;" : "" #> }
 <#+
-		}
-		else
-		{
+        }
+        else
+        {
 #>public virtual <#= codegen.GetTypeName(property.PropertyType) #> <#= property.Name #> 
 { 
 <#+
-		// Generate get and set signatures
-		if (property.CanRead)
-		{
+        // Generate get and set signatures
+        if (property.CanRead)
+        {
 #>
-	get { return this.proxy.GetValue(() => this.<#= property.Name #>); }
+    get { return this.proxy.GetValue(() => this.<#= property.Name #>); }
 <#+
-		}
-		if (property.CanWrite)
-		{
+        }
+        if (property.CanWrite)
+        {
 #>
-	set { this.proxy.SetValue(() => this.<#= property.Name #>, value); }
+    set { this.proxy.SetValue(() => this.<#= property.Name #>, value); }
 <#+
-		}
+        }
 #>
 }
 <#+
-		}
-		PopIndent();
-	}
+        }
+        PopIndent();
+    }
 
-	PopIndent();
+    PopIndent();
 }
 
 private void GenerateAttributes<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, MemberInfo typeOrMember)
-	where TInfo : IPatternElementInfo
-	where TRuntime : IProductElement
+    where TInfo : IPatternElementInfo
+    where TRuntime : IProductElement
 {
-	// Order the attibutess alphabetically
-	var attributes = typeOrMember.GetCustomAttributesData()
-		.Where(attr => attr.Constructor.DeclaringType.Namespace == typeof(IComponent).Namespace)
-		.OrderBy(attr => codegen.GetTypeName(attr.Constructor.DeclaringType));
-	foreach (var attribute in attributes)
-	{
-		var ctorParams = string.Join(", ", attribute
-			.ConstructorArguments
-			.Select(prm => codegen.ToCSharpString(prm))
-			.ToList());
+    // Order the attibutess alphabetically
+    var attributes = typeOrMember.GetCustomAttributesData()
+        .Where(attr => attr.Constructor.DeclaringType.Namespace == typeof(IComponent).Namespace)
+        .OrderBy(attr => codegen.GetTypeName(attr.Constructor.DeclaringType));
+    foreach (var attribute in attributes)
+    {
+        var ctorParams = string.Join(", ", attribute
+            .ConstructorArguments
+            .Select(prm => codegen.ToCSharpString(prm))
+            .ToList());
 
-		var namedParams = string.Join(", ", attribute
-			.NamedArguments
-			.Select(named => named.MemberInfo.Name + " = " + codegen.ToCSharpString(named.TypedValue)));
+        var namedParams = string.Join(", ", attribute
+            .NamedArguments
+            .Select(named => named.MemberInfo.Name + " = " + codegen.ToCSharpString(named.TypedValue)));
 
-		var constructorArgs = ctorParams;
-		if (!string.IsNullOrEmpty(namedParams) && !string.IsNullOrEmpty(ctorParams))
-			constructorArgs += ", ";
+        var constructorArgs = ctorParams;
+        if (!string.IsNullOrEmpty(namedParams) && !string.IsNullOrEmpty(ctorParams))
+            constructorArgs += ", ";
 
-		constructorArgs += namedParams;
+        constructorArgs += namedParams;
 
-		var attrName = codegen.GetTypeName(attribute.Constructor.DeclaringType);
-		if (attrName.IndexOf("Attribute") != -1)
-			attrName = attrName.Substring(0, attrName.LastIndexOf("Attribute"));
-		
-		// Generate the attribute signature
+        var attrName = codegen.GetTypeName(attribute.Constructor.DeclaringType);
+        if (attrName.IndexOf("Attribute") != -1)
+            attrName = attrName.Substring(0, attrName.LastIndexOf("Attribute"));
+        
+        // Generate the attribute signature
 #>[<#= attrName #><#+
-		if (!string.IsNullOrEmpty(constructorArgs))
-		{
+        if (!string.IsNullOrEmpty(constructorArgs))
+        {
 #>(<#= constructorArgs #>)<#+
-		}
+        }
 #>]
 <#+
-	}
+    }
 }
 
 private void GenerateProperty<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, IPropertyInfo property, bool noImpl)
-	where TInfo : IPatternElementInfo
-	where TRuntime : IProductElement
+    where TInfo : IPatternElementInfo
+    where TRuntime : IProductElement
 {
-	PushIndent("\t");
-	this.WriteLine("");
-	GenerateComments(property);
+    PushIndent("\t");
+    this.WriteLine("");
+    GenerateComments(property);
 
-	// Generate configured attributes
-	if (!string.IsNullOrEmpty(property.DisplayName))
-	{
+    // Generate configured attributes
+    if (!string.IsNullOrEmpty(property.DisplayName))
+    {
 #>
 [DisplayName("<#= property.DisplayName #>")]
 <#+
-	}
-	if (!string.IsNullOrEmpty(property.Category))
-	{
+    }
+    if (!string.IsNullOrEmpty(property.Category))
+    {
 #>
 [Category("<#= property.Category #>")]
 <#+
-	}
-	if (!string.IsNullOrEmpty(property.TypeConverterTypeName))
-	{
+    }
+    if (!string.IsNullOrEmpty(property.TypeConverterTypeName))
+    {
 #>
 [TypeConverter(typeof(<#= codegen.GetTypeName(property.TypeConverterTypeName) #>))]
 <#+
-	}
-	if (!string.IsNullOrEmpty(property.EditorTypeName))
-	{
+    }
+    if (!string.IsNullOrEmpty(property.EditorTypeName))
+    {
 #>
 [Editor(typeof(<#= codegen.GetTypeName(property.EditorTypeName) #>), typeof(UITypeEditor))]
 <#+
-	}
+    }
 
-	// Generate property signature
-	if (noImpl)
-	{
+    // Generate property signature
+    if (noImpl)
+    {
 #>
 <#= codegen.GetTypeName(property.Type) #> <#= property.CodeIdentifier #> { get; set; }
 <#+
-	}
-	else
-	{
+    }
+    else
+    {
 #>
 public virtual <#= codegen.GetTypeName(property.Type) #> <#= property.CodeIdentifier #> 
 {
-	get { return this.proxy.GetValue(() => this.<#= property.CodeIdentifier #>); }
-	set { this.proxy.SetValue(() => this.<#= property.CodeIdentifier #>, value); }
+    get { return this.proxy.GetValue(() => this.<#= property.CodeIdentifier #>); }
+    set { this.proxy.SetValue(() => this.<#= property.CodeIdentifier #>, value); }
 }
 <#+
-	}
-	PopIndent();
+    }
+    PopIndent();
 }
 #>

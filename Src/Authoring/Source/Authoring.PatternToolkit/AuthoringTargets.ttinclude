@@ -2,12 +2,12 @@
 // Targets Info
 public static class AuthoringTargetsInfo
 {
-	public const string MsBuildPath = "$(localappdata)\\Microsoft\\MSBuild";
-	public const string VersionTargets = "NuPattern.Authoring.PatternToolkitVersion.targets";
+    public const string MsBuildPath = "$(localappdata)\\Microsoft\\MSBuild";
+    public const string VersionTargets = "NuPattern.Authoring.PatternToolkitVersion.targets";
 
-	public static string FormatVsEnvVarToMachineEnvVar(string path)
-	{
-		return path.Replace("$(", "%").Replace(")", "%");
-	}
+    public static string FormatVsEnvVarToMachineEnvVar(string path)
+    {
+        return path.Replace("$(", "%").Replace(")", "%");
+    }
 }
 #>
