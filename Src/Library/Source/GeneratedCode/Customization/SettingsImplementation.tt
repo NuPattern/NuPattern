@@ -39,7 +39,7 @@ private void GenerateInterface(DomainClass domainClass)
 
 namespace <#=this.DslLibrary.Namespace #>
 { <#+
-PushIndent("\t");
+PushIndent("    ");
 
 GeneratePropertyChanged(domainClass);
 
@@ -178,7 +178,7 @@ private void GenerateProperty(DomainClass domainClass, DomainRole role)
         }
     }
 
-    PushIndent("\t");
+    PushIndent("    ");
 
     if (role.Multiplicity == Microsoft.VisualStudio.Modeling.DslDefinition.Multiplicity.One || role.Multiplicity == Microsoft.VisualStudio.Modeling.DslDefinition.Multiplicity.ZeroOne)
     {

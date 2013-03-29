@@ -16,372 +16,372 @@ using System.Linq.Expressions;
 
 namespace NuPattern.Authoring.WorkflowDesign
 {
-	
-	/// <summary>
-	/// A requirement for a point of variability in the product line.
-	/// </summary>
-	partial interface IVariabilityRequirementInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IVariabilityRequirementInfo, object>> propertyExpression, Action<IVariabilityRequirementInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// A requirement for a point of variability in the product line.
-	/// </summary>
-	[Description("A requirement for a point of variability in the product line.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial interface IVariabilityRequirementInfo : IDesignElementInfo 
-	{
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirement
-		/// </summary>
-		IEnumerable<IProductionToolInfo> ProductionTools { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirement
-		/// </summary>
-		IDesignInfo Design { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirement
-		/// </summary>
-		IEnumerable<IVariabilityRequirementInfo> VariabilityRequirements { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirement
-		/// </summary>
-		IVariabilityRequirementInfo ParentVariabilityRequirement { get; }
-	}
-	
-	
-	/// <summary>
-	/// An asset that is produced by a production tool.
-	/// </summary>
-	partial interface IProducedAssetInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IProducedAssetInfo, object>> propertyExpression, Action<IProducedAssetInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// An asset that is produced by a production tool.
-	/// </summary>
-	[Description("An asset that is produced by a production tool.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial interface IProducedAssetInfo : IAssetInfo 
-	{
-		/// <summary>
-		/// Whether the asset is part of the final delivered product.
-		/// </summary>
-		[Description("Whether the asset is part of the final delivered product.")]
-		global::System.Boolean IsFinal { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAsset
-		/// </summary>
-		IEnumerable<IProductionToolInfo> ProducingProductionTools { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAsset
-		/// </summary>
-		IEnumerable<IProductionToolInfo> ProductionTools { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAsset
-		/// </summary>
-		IEnumerable<ISuppliedAssetInfo> SuppliedAssets { get; }
-	}
-	
-	
-	/// <summary>
-	/// A tool that is supplied assets that produces more assets.
-	/// </summary>
-	partial interface IProductionToolInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IProductionToolInfo, object>> propertyExpression, Action<IProductionToolInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// A tool that is supplied assets that produces more assets.
-	/// </summary>
-	[Description("A tool that is supplied assets that produces more assets.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial interface IProductionToolInfo : IDesignElementInfo 
-	{
-		/// <summary>
-		/// The intended classification of this tool, defining how it processes and produces its assets.
-		/// </summary>
-		[Description("The intended classification of this tool, defining how it processes and produces its assets.")]
-		global::System.String Classification { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionTool
-		/// </summary>
-		IEnumerable<IVariabilityRequirementInfo> VariabilityRequirements { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionTool
-		/// </summary>
-		IEnumerable<IProducedAssetInfo> ProducedProducedAssets { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionTool
-		/// </summary>
-		IEnumerable<IProducedAssetInfo> SuppliedProducedAssets { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionTool
-		/// </summary>
-		IEnumerable<ISuppliedAssetInfo> SuppliedSuppliedAssets { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.ComponentModel.AssetSuppliesAllProducingTools.ProductionTool
-		/// </summary>
-		IEnumerable<IAssetInfo> AllSuppliedAssets { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionTool
-		/// </summary>
-		IDesignInfo Design { get; }
-	}
-	
-	
-	/// <summary>
-	/// An asset that is supplied to a production tool.
-	/// </summary>
-	partial interface ISuppliedAssetInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<ISuppliedAssetInfo, object>> propertyExpression, Action<ISuppliedAssetInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// An asset that is supplied to a production tool.
-	/// </summary>
-	[Description("An asset that is supplied to a production tool.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial interface ISuppliedAssetInfo : IAssetInfo 
-	{
-		/// <summary>
-		/// Whether this asset is supplied by the user as configuration to the product, or a supplied artifact as input to the product line.
-		/// </summary>
-		[Description("Whether this asset is supplied by the user as configuration to the product, or a supplied artifact as input to the product line.")]
-		global::System.Boolean IsUserSupplied { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAsset
-		/// </summary>
-		IEnumerable<IProducedAssetInfo> ProducedAssets { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAsset
-		/// </summary>
-		IEnumerable<IProductionToolInfo> ProductionTools { get; }
-	}
-	
-	
-	/// <summary>
-	/// A supplied or fabricated asset in the product line.
-	/// </summary>
-	partial interface IAssetInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IAssetInfo, object>> propertyExpression, Action<IAssetInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// A supplied or fabricated asset in the product line.
-	/// </summary>
-	[Description("A supplied or fabricated asset in the product line.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial interface IAssetInfo : IDesignElementInfo 
-	{
-		/// <summary>
-		/// A reference to a known physical artifact that is represented by this asset.
-		/// </summary>
-		[Description("A reference to a known physical artifact that is represented by this asset.")]
-		global::System.String SourceReference { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset
-		/// </summary>
-		IEnumerable<IProductionToolInfo> AllProducingTools { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Asset
-		/// </summary>
-		IDesignInfo Design { get; }
-	}
-	
-	
-	/// <summary>
-	/// A production line design.
-	/// </summary>
-	partial interface IDesignInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IDesignInfo, object>> propertyExpression, Action<IDesignInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// A production line design.
-	/// </summary>
-	[Description("A production line design.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial interface IDesignInfo  
-	{
-	    /// <summary>
-	    /// Gets the identifier of the element.
-	    /// </summary>
-	    [Description("Gets the identifier for this element.")]
-	    global::System.Guid Id { get; } 
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.Design
-		/// </summary>
-		IEnumerable<IProductionToolInfo> ProductionTools { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Design
-		/// </summary>
-		IEnumerable<IAssetInfo> Assets { get; }
-		
-		/// <summary>
-		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Design
-		/// </summary>
-		IEnumerable<IVariabilityRequirementInfo> VariabilityRequirements { get; }
-	}
-	
-	
-	/// <summary>
-	/// An element that has a unique name.
-	/// </summary>
-	partial interface INamedElementInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<INamedElementInfo, object>> propertyExpression, Action<INamedElementInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// An element that has a unique name.
-	/// </summary>
-	[Description("An element that has a unique name.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial interface INamedElementInfo  
-	{
-	    /// <summary>
-	    /// Gets the identifier of the element.
-	    /// </summary>
-	    [Description("Gets the identifier for this element.")]
-	    global::System.Guid Id { get; } 
-		/// <summary>
-		/// The well-known name of this item in this model.
-		/// </summary>
-		[Description("The well-known name of this item in this model.")]
-		global::System.String Name { get; }
-		
-		/// <summary>
-		/// The identifier of the inherited variability model.
-		/// </summary>
-		[Description("The identifier of the inherited variability model.")]
-		global::System.String BaseId { get; }
-		
-		/// <summary>
-		/// The name used for instances of this item, as seen by the user. Also used to name associated artifacts/configuration created for this item.
-		/// </summary>
-		[Description("The name used for instances of this item, as seen by the user. Also used to name associated artifacts/configuration created for this item.")]
-		global::System.String DisplayName { get; }
-		
-		/// <summary>
-		/// The description of this item displayed to the user.
-		/// </summary>
-		[Description("The description of this item displayed to the user.")]
-		global::System.String Description { get; }
-		
-		/// <summary>
-		/// Whether the element is derived from a base variability model definition.
-		/// </summary>
-		[Description("Whether the element is derived from a base variability model definition.")]
-		global::System.Boolean IsInheritedFromBase { get; }
-	}
-	
-	
-	/// <summary>
-	/// An element used for realization.
-	/// </summary>
-	partial interface IDesignElementInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IDesignElementInfo, object>> propertyExpression, Action<IDesignElementInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// An element used for realization.
-	/// </summary>
-	[Description("An element used for realization.")]
-	[GeneratedCode("NuPattern", "1.2.0.0")]
-	public partial interface IDesignElementInfo : INamedElementInfo 
-	{
-		/// <summary>
-		/// Design notes for this element.
-		/// </summary>
-		[Description("Design notes for this element.")]
-		global::System.String DesignNotes { get; }
-		
-		/// <summary>
-		/// Whether to ignore this item. Ignored items will not be considered part of the current design.
-		/// </summary>
-		[Description("Whether to ignore this item. Ignored items will not be considered part of the current design.")]
-		global::System.Boolean IsIgnored { get; }
-	}
-	
+    
+    /// <summary>
+    /// A requirement for a point of variability in the product line.
+    /// </summary>
+    partial interface IVariabilityRequirementInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IVariabilityRequirementInfo, object>> propertyExpression, Action<IVariabilityRequirementInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// A requirement for a point of variability in the product line.
+    /// </summary>
+    [Description("A requirement for a point of variability in the product line.")]
+    [GeneratedCode("NuPattern", "1.2.0.0")]
+    public partial interface IVariabilityRequirementInfo : IDesignElementInfo 
+    {
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.VariabilityRequirement
+        /// </summary>
+        IEnumerable<IProductionToolInfo> ProductionTools { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirement
+        /// </summary>
+        IDesignInfo Design { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.SourceVariabilityRequirement
+        /// </summary>
+        IEnumerable<IVariabilityRequirementInfo> VariabilityRequirements { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirement
+        /// </summary>
+        IVariabilityRequirementInfo ParentVariabilityRequirement { get; }
+    }
+    
+    
+    /// <summary>
+    /// An asset that is produced by a production tool.
+    /// </summary>
+    partial interface IProducedAssetInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IProducedAssetInfo, object>> propertyExpression, Action<IProducedAssetInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// An asset that is produced by a production tool.
+    /// </summary>
+    [Description("An asset that is produced by a production tool.")]
+    [GeneratedCode("NuPattern", "1.2.0.0")]
+    public partial interface IProducedAssetInfo : IAssetInfo 
+    {
+        /// <summary>
+        /// Whether the asset is part of the final delivered product.
+        /// </summary>
+        [Description("Whether the asset is part of the final delivered product.")]
+        global::System.Boolean IsFinal { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProducedAsset
+        /// </summary>
+        IEnumerable<IProductionToolInfo> ProducingProductionTools { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProducedAsset
+        /// </summary>
+        IEnumerable<IProductionToolInfo> ProductionTools { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.ProducedAsset
+        /// </summary>
+        IEnumerable<ISuppliedAssetInfo> SuppliedAssets { get; }
+    }
+    
+    
+    /// <summary>
+    /// A tool that is supplied assets that produces more assets.
+    /// </summary>
+    partial interface IProductionToolInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IProductionToolInfo, object>> propertyExpression, Action<IProductionToolInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// A tool that is supplied assets that produces more assets.
+    /// </summary>
+    [Description("A tool that is supplied assets that produces more assets.")]
+    [GeneratedCode("NuPattern", "1.2.0.0")]
+    public partial interface IProductionToolInfo : IDesignElementInfo 
+    {
+        /// <summary>
+        /// The intended classification of this tool, defining how it processes and produces its assets.
+        /// </summary>
+        [Description("The intended classification of this tool, defining how it processes and produces its assets.")]
+        global::System.String Classification { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolReferencesVariabilityRequirements.ProductionTool
+        /// </summary>
+        IEnumerable<IVariabilityRequirementInfo> VariabilityRequirements { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolProducesProducedAssets.ProductionTool
+        /// </summary>
+        IEnumerable<IProducedAssetInfo> ProducedProducedAssets { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetSuppliesProductionTools.ProductionTool
+        /// </summary>
+        IEnumerable<IProducedAssetInfo> SuppliedProducedAssets { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.ProductionTool
+        /// </summary>
+        IEnumerable<ISuppliedAssetInfo> SuppliedSuppliedAssets { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.ComponentModel.AssetSuppliesAllProducingTools.ProductionTool
+        /// </summary>
+        IEnumerable<IAssetInfo> AllSuppliedAssets { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionTool
+        /// </summary>
+        IDesignInfo Design { get; }
+    }
+    
+    
+    /// <summary>
+    /// An asset that is supplied to a production tool.
+    /// </summary>
+    partial interface ISuppliedAssetInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<ISuppliedAssetInfo, object>> propertyExpression, Action<ISuppliedAssetInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// An asset that is supplied to a production tool.
+    /// </summary>
+    [Description("An asset that is supplied to a production tool.")]
+    [GeneratedCode("NuPattern", "1.2.0.0")]
+    public partial interface ISuppliedAssetInfo : IAssetInfo 
+    {
+        /// <summary>
+        /// Whether this asset is supplied by the user as configuration to the product, or a supplied artifact as input to the product line.
+        /// </summary>
+        [Description("Whether this asset is supplied by the user as configuration to the product, or a supplied artifact as input to the product line.")]
+        global::System.Boolean IsUserSupplied { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetCopiesToProducedAssets.SuppliedAsset
+        /// </summary>
+        IEnumerable<IProducedAssetInfo> ProducedAssets { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetSuppliesProductionTools.SuppliedAsset
+        /// </summary>
+        IEnumerable<IProductionToolInfo> ProductionTools { get; }
+    }
+    
+    
+    /// <summary>
+    /// A supplied or fabricated asset in the product line.
+    /// </summary>
+    partial interface IAssetInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IAssetInfo, object>> propertyExpression, Action<IAssetInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// A supplied or fabricated asset in the product line.
+    /// </summary>
+    [Description("A supplied or fabricated asset in the product line.")]
+    [GeneratedCode("NuPattern", "1.2.0.0")]
+    public partial interface IAssetInfo : IDesignElementInfo 
+    {
+        /// <summary>
+        /// A reference to a known physical artifact that is represented by this asset.
+        /// </summary>
+        [Description("A reference to a known physical artifact that is represented by this asset.")]
+        global::System.String SourceReference { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.AssetSuppliesAllProducingTools.Asset
+        /// </summary>
+        IEnumerable<IProductionToolInfo> AllProducingTools { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Asset
+        /// </summary>
+        IDesignInfo Design { get; }
+    }
+    
+    
+    /// <summary>
+    /// A production line design.
+    /// </summary>
+    partial interface IDesignInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IDesignInfo, object>> propertyExpression, Action<IDesignInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// A production line design.
+    /// </summary>
+    [Description("A production line design.")]
+    [GeneratedCode("NuPattern", "1.2.0.0")]
+    public partial interface IDesignInfo  
+    {
+        /// <summary>
+        /// Gets the identifier of the element.
+        /// </summary>
+        [Description("Gets the identifier for this element.")]
+        global::System.Guid Id { get; } 
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.Design
+        /// </summary>
+        IEnumerable<IProductionToolInfo> ProductionTools { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Design
+        /// </summary>
+        IEnumerable<IAssetInfo> Assets { get; }
+        
+        /// <summary>
+        /// Description for NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.Design
+        /// </summary>
+        IEnumerable<IVariabilityRequirementInfo> VariabilityRequirements { get; }
+    }
+    
+    
+    /// <summary>
+    /// An element that has a unique name.
+    /// </summary>
+    partial interface INamedElementInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<INamedElementInfo, object>> propertyExpression, Action<INamedElementInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// An element that has a unique name.
+    /// </summary>
+    [Description("An element that has a unique name.")]
+    [GeneratedCode("NuPattern", "1.2.0.0")]
+    public partial interface INamedElementInfo  
+    {
+        /// <summary>
+        /// Gets the identifier of the element.
+        /// </summary>
+        [Description("Gets the identifier for this element.")]
+        global::System.Guid Id { get; } 
+        /// <summary>
+        /// The well-known name of this item in this model.
+        /// </summary>
+        [Description("The well-known name of this item in this model.")]
+        global::System.String Name { get; }
+        
+        /// <summary>
+        /// The identifier of the inherited variability model.
+        /// </summary>
+        [Description("The identifier of the inherited variability model.")]
+        global::System.String BaseId { get; }
+        
+        /// <summary>
+        /// The name used for instances of this item, as seen by the user. Also used to name associated artifacts/configuration created for this item.
+        /// </summary>
+        [Description("The name used for instances of this item, as seen by the user. Also used to name associated artifacts/configuration created for this item.")]
+        global::System.String DisplayName { get; }
+        
+        /// <summary>
+        /// The description of this item displayed to the user.
+        /// </summary>
+        [Description("The description of this item displayed to the user.")]
+        global::System.String Description { get; }
+        
+        /// <summary>
+        /// Whether the element is derived from a base variability model definition.
+        /// </summary>
+        [Description("Whether the element is derived from a base variability model definition.")]
+        global::System.Boolean IsInheritedFromBase { get; }
+    }
+    
+    
+    /// <summary>
+    /// An element used for realization.
+    /// </summary>
+    partial interface IDesignElementInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IDesignElementInfo, object>> propertyExpression, Action<IDesignElementInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// An element used for realization.
+    /// </summary>
+    [Description("An element used for realization.")]
+    [GeneratedCode("NuPattern", "1.2.0.0")]
+    public partial interface IDesignElementInfo : INamedElementInfo 
+    {
+        /// <summary>
+        /// Design notes for this element.
+        /// </summary>
+        [Description("Design notes for this element.")]
+        global::System.String DesignNotes { get; }
+        
+        /// <summary>
+        /// Whether to ignore this item. Ignored items will not be considered part of the current design.
+        /// </summary>
+        [Description("Whether to ignore this item. Ignored items will not be considered part of the current design.")]
+        global::System.Boolean IsIgnored { get; }
+    }
+    
 }

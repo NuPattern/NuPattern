@@ -31,7 +31,7 @@ private void GenerateInterface(DomainClass domainClass)
 #>
 namespace NuPattern.Authoring.WorkflowDesign
 { <#+
-PushIndent("\t"); 
+PushIndent("    "); 
 
 GeneratePropertyChanged(domainClass, domainClass.Name);
 
@@ -92,7 +92,7 @@ private void GenerateProperty(DomainProperty property)
     if (!PropertyHasGetter(property) && !PropertyHasSetter(property))
         return;
 
-    PushIndent("\t");
+    PushIndent("    ");
 #>
 
 /// <summary>
@@ -189,7 +189,7 @@ private void GenerateProperty(DomainRole role)
         }
     }
 
-    PushIndent("\t");
+    PushIndent("    ");
 
     if (!HasSkipAnnotation(role.Notes))
     {

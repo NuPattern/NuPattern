@@ -17,7 +17,7 @@ using NuPattern.Runtime.Automation;
 namespace <#= this.DslLibrary.Namespace #>
 {
 <#
-PushIndent("\t");
+PushIndent("    ");
 
 foreach(DomainClass domainClass in this.DslLibrary.Classes.Where(dc => IsModelElementExtension(dc)))
 {

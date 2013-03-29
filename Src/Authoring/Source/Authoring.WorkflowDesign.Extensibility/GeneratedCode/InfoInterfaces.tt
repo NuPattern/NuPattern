@@ -42,7 +42,7 @@ private void GenerateInterface(DomainClass domainClass, bool generatePropertyCha
 {
 #>
 <#+
-PushIndent("\t"); 
+PushIndent("    "); 
 
 if (generatePropertyChanged)
 {
@@ -99,7 +99,7 @@ public partial interface I<#= ToInfo(domainClass) #> <#+ if(!string.IsNullOrEmpt
 
 private void GenerateLinkProperty(DomainRelationship relationship)
 {
-    PushIndent("\t");
+    PushIndent("    ");
 #>
 
 /// <summary>
@@ -116,7 +116,7 @@ private void GenerateProperty(DomainProperty property)
     if (!PropertyHasGetter(property))
         return;
 
-    PushIndent("\t");
+    PushIndent("    ");
 #>
 
 /// <summary>
@@ -191,7 +191,7 @@ private void GenerateProperty(DomainRole role)
                 throw new NotSupportedException();
         }
     }
-    PushIndent("\t");
+    PushIndent("    ");
 #>
 
 /// <summary>

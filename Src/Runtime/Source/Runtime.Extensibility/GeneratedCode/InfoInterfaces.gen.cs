@@ -16,724 +16,724 @@ using System.Linq.Expressions;
 
 namespace NuPattern.Runtime
 {
-	
-	/// <summary>
-	/// The definition of the pattern in this toolkit.
-	/// </summary>
-	partial interface IPatternModelInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IPatternModelInfo, object>> propertyExpression, Action<IPatternModelInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// The definition of the pattern in this toolkit.
-	/// </summary>
-	[Description("The definition of the pattern in this toolkit.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IPatternModelInfo  
-	{
-		/// <summary>
-		/// Gets the identifier of the element.
-		/// </summary>
-		[Description("Gets the identifier for this element.")]
-		global::System.Guid Id { get; } 
-		/// <summary>
-		/// The version of the base pattern line that this pattern line derives from.
-		/// </summary>
-		[Description("The version of the base pattern line that this pattern line derives from.")]
-		global::System.String BaseVersion { get; }
-		
-		/// <summary>
-		/// The unique identifier of the base pattern line that this pattern line derives from.
-		/// </summary>
-		[Description("The unique identifier of the base pattern line that this pattern line derives from.")]
-		global::System.String BaseId { get; }
-		
-		/// <summary>
-		/// The pattern in this definition.
-		/// </summary>
-		IPatternInfo Pattern { get; }
-	}
-	
-	
-	/// <summary>
-	/// The definition of the pattern.
-	/// </summary>
-	partial interface IPatternInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IPatternInfo, object>> propertyExpression, Action<IPatternInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// The definition of the pattern.
-	/// </summary>
-	[Description("The definition of the pattern.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IPatternInfo : IPatternElementInfo 
-	{
-		/// <summary>
-		/// The identifier of the Visual Studio extension that deploys this pattern.
-		/// </summary>
-		[Description("The identifier of the Visual Studio extension that deploys this pattern.")]
-		global::System.String ExtensionId { get; }
-		
-		/// <summary>
-		/// Gets the currently opened diagram identifier.
-		/// </summary>
-		[Description("Gets the currently opened diagram identifier.")]
-		global::System.String CurrentDiagramId { get; }
-		
-		/// <summary>
-		/// The identifier of the instance of this pattern.
-		/// </summary>
-		[Description("The identifier of the instance of this pattern.")]
-		global::System.String PatternLink { get; }
-		
-		/// <summary>
-		/// The definition of the pattern.
-		/// </summary>
-		IPatternModelInfo PatternModel { get; }
-		
-		/// <summary>
-		/// The views of this pattern.
-		/// </summary>
-		IEnumerable<IViewInfo> Views { get; }
-		
-		/// <summary>
-		/// The extension points of other patterns that this pattern extends.
-		/// </summary>
-		IEnumerable<IProvidedExtensionPointInfo> ProvidedExtensionPoints { get; }
-	}
-	
-	
-	/// <summary>
-	/// An element that has a unique name.
-	/// </summary>
-	partial interface INamedElementInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<INamedElementInfo, object>> propertyExpression, Action<INamedElementInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// An element that has a unique name.
-	/// </summary>
-	[Description("An element that has a unique name.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface INamedElementInfo  
-	{
-		/// <summary>
-		/// Gets the identifier of the element.
-		/// </summary>
-		[Description("Gets the identifier for this element.")]
-		global::System.Guid Id { get; } 
-		/// <summary>
-		/// The well-known name of this item in this model.
-		/// </summary>
-		[Description("The well-known name of this item in this model.")]
-		global::System.String Name { get; }
-		
-		/// <summary>
-		/// The identifier of the inherited variability model.
-		/// </summary>
-		[Description("The identifier of the inherited variability model.")]
-		global::System.String BaseId { get; }
-		
-		/// <summary>
-		/// The name used for instances of this item, as seen by the user. Also used to name associated artifacts/configuration created for this item.
-		/// </summary>
-		[Description("The name used for instances of this item, as seen by the user. Also used to name associated artifacts/configuration created for this item.")]
-		global::System.String DisplayName { get; }
-		
-		/// <summary>
-		/// The description of this item displayed to the user.
-		/// </summary>
-		[Description("The description of this item displayed to the user.")]
-		global::System.String Description { get; }
-		
-		/// <summary>
-		/// Whether the element is derived from a base variability model definition.
-		/// </summary>
-		[Description("Whether the element is derived from a base variability model definition.")]
-		global::System.Boolean IsInheritedFromBase { get; }
-		
-		/// <summary>
-		/// Whether this element is hidden from the design-view. Used by automation extensions.
-		/// </summary>
-		[Description("Whether this element is hidden from the design-view. Used by automation extensions.")]
-		global::System.Boolean IsSystem { get; }
-		
-		/// <summary>
-		/// The identifier used for naming generating code artifacts that represent this element. This identifier must be unique across the whole model.
-		/// </summary>
-		[Description("The identifier used for naming generating code artifacts that represent this element. This identifier must be unique across the whole model.")]
-		global::System.String CodeIdentifier { get; }
-	}
-	
-	
-	/// <summary>
-	/// A container of properties and automation.
-	/// </summary>
-	partial interface IPatternElementInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IPatternElementInfo, object>> propertyExpression, Action<IPatternElementInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// A container of properties and automation.
-	/// </summary>
-	[Description("A container of properties and automation.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IPatternElementInfo : ICustomizableElementInfo 
-	{
-		/// <summary>
-		/// The icon for this item displayed to the user.
-		/// </summary>
-		[Description("The icon for this item displayed to the user.")]
-		global::System.String Icon { get; }
-		
-		/// <summary>
-		/// The properties of this element.
-		/// </summary>
-		IEnumerable<IPropertyInfo> Properties { get; }
-		
-		/// <summary>
-		/// The automation settings of this element.
-		/// </summary>
-		IEnumerable<IAutomationSettingsInfo> AutomationSettings { get; }
-	}
-	
-	
-	/// <summary>
-	/// A property of an element.
-	/// </summary>
-	partial interface IPropertyInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IPropertyInfo, object>> propertyExpression, Action<IPropertyInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// A property of an element.
-	/// </summary>
-	[Description("A property of an element.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IPropertyInfo : ICustomizableElementInfo 
-	{
-		/// <summary>
-		/// The initial value of this property when created.
-		/// </summary>
-		[Description("The initial value of this property when created.")]
-		global::System.String RawDefaultValue { get; }
-		
-		/// <summary>
-		/// The data type of this property, which determines the type of its value.
-		/// </summary>
-		[Description("The data type of this property, which determines the type of its value.")]
-		global::System.String Type { get; }
-		
-		/// <summary>
-		/// Whether this property is shown to the user.
-		/// </summary>
-		[Description("Whether this property is shown to the user.")]
-		global::System.Boolean IsVisible { get; }
-		
-		/// <summary>
-		/// Whether this property is read-only to the user.
-		/// </summary>
-		[Description("Whether this property is read-only to the user.")]
-		global::System.Boolean IsReadOnly { get; }
-		
-		/// <summary>
-		/// The category for this property, used to organize similar properties shown in the Properties Window.
-		/// </summary>
-		[Description("The category for this property, used to organize similar properties shown in the Properties Window.")]
-		global::System.String Category { get; }
-		
-		/// <summary>
-		/// The primary usage of this property,
-		/// </summary>
-		[Description("The primary usage of this property,")]
-		global::NuPattern.Runtime.PropertyUsages PropertyUsage { get; }
-		
-		/// <summary>
-		/// A System.ComponentModel.TypeConverter that converts from the string value of this property, that the user enters, to an instance of the Type of this property (and visa-versa). This Type Converter can also be used to provide a list of acceptable values.
-		/// </summary>
-		[Description("A System.ComponentModel.TypeConverter that converts from the string value of this property, that the user enters, to an instance of the Type of this property (and visa-versa). This Type Converter can also be used to provide a list of acceptable values.")]
-		global::System.String TypeConverterTypeName { get; }
-		
-		/// <summary>
-		/// A System.Drawing.Design.UITypeEditor that provides a custom UI for editing the value of this property.
-		/// </summary>
-		[Description("A System.Drawing.Design.UITypeEditor that provides a custom UI for editing the value of this property.")]
-		global::System.String EditorTypeName { get; }
-		
-		/// <summary>
-		/// A value provider that calculates the value of this property dynamically.
-		/// </summary>
-		[Description("A value provider that calculates the value of this property dynamically.")]
-		global::System.String RawValueProvider { get; }
-	}
-	
-	
-	/// <summary>
-	/// A distinct view of the pattern.
-	/// </summary>
-	partial interface IViewInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IViewInfo, object>> propertyExpression, Action<IViewInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// A distinct view of the pattern.
-	/// </summary>
-	[Description("A distinct view of the pattern.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IViewInfo : ICustomizableElementInfo 
-	{
-		/// <summary>
-		/// Whether this view is shown to the user.
-		/// </summary>
-		[Description("Whether this view is shown to the user.")]
-		global::System.Boolean IsVisible { get; }
-		
-		/// <summary>
-		/// Whether this is the default view
-		/// </summary>
-		[Description("Whether this is the default view")]
-		global::System.Boolean IsDefault { get; }
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Description("")]
-		global::System.String DiagramId { get; }
-		
-		/// <summary>
-		/// 
-		/// </summary>
-		[Description("")]
-		global::System.String Caption { get; }
-		
-		/// <summary>
-		/// The owning pattern.
-		/// </summary>
-		IPatternInfo Pattern { get; }
-	}
-	
-	
-	/// <summary>
-	/// A child collection element.
-	/// </summary>
-	partial interface ICollectionInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<ICollectionInfo, object>> propertyExpression, Action<ICollectionInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// A child collection element.
-	/// </summary>
-	[Description("A child collection element.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface ICollectionInfo : IAbstractElementInfo 
-	{}
-	
-	
-	/// <summary>
-	/// A child element.
-	/// </summary>
-	partial interface IElementInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IElementInfo, object>> propertyExpression, Action<IElementInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// A child element.
-	/// </summary>
-	[Description("A child element.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IElementInfo : IAbstractElementInfo 
-	{}
-	
-	
-	/// <summary>
-	/// An element that supports customization of its properties.
-	/// </summary>
-	partial interface ICustomizableElementInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<ICustomizableElementInfo, object>> propertyExpression, Action<ICustomizableElementInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// An element that supports customization of its properties.
-	/// </summary>
-	[Description("An element that supports customization of its properties.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface ICustomizableElementInfo : INamedElementInfo 
-	{
-		/// <summary>
-		/// Whether customization is permitted for this element, all its policy settings, and any child elements.
-		/// </summary>
-		[Description("Whether customization is permitted for this element, all its policy settings, and any child elements.")]
-		global::NuPattern.Runtime.CustomizationState IsCustomizable { get; }
-		
-		/// <summary>
-		/// Whether customization is enabled for the tailor.
-		/// </summary>
-		[Description("Whether customization is enabled for the tailor.")]
-		global::System.Boolean IsCustomizationEnabled { get; }
-		
-		/// <summary>
-		/// Whether the policy can be modified.
-		/// </summary>
-		[Description("Whether the policy can be modified.")]
-		global::System.Boolean IsCustomizationPolicyModifyable { get; }
-		
-		/// <summary>
-		/// The customization policy that applies to the element.
-		/// </summary>
-		ICustomizationPolicyInfo Policy { get; }
-	}
-	
-	
-	/// <summary>
-	/// A child element or collection of the pattern.
-	/// </summary>
-	partial interface IAbstractElementInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IAbstractElementInfo, object>> propertyExpression, Action<IAbstractElementInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// A child element or collection of the pattern.
-	/// </summary>
-	[Description("A child element or collection of the pattern.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IAbstractElementInfo : IPatternElementInfo 
-	{
-		/// <summary>
-		/// Whether this item is shown to the user.
-		/// </summary>
-		[Description("Whether this item is shown to the user.")]
-		global::System.Boolean IsVisible { get; }
-	}
-	
-	
-	/// <summary>
-	/// The policy that controls what properties are customizable on an element.
-	/// </summary>
-	partial interface ICustomizationPolicyInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<ICustomizationPolicyInfo, object>> propertyExpression, Action<ICustomizationPolicyInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// The policy that controls what properties are customizable on an element.
-	/// </summary>
-	[Description("The policy that controls what properties are customizable on an element.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface ICustomizationPolicyInfo  
-	{
-		/// <summary>
-		/// Gets the identifier of the element.
-		/// </summary>
-		[Description("Gets the identifier for this element.")]
-		global::System.Guid Id { get; } 
-		/// <summary>
-		/// Whether any of the settings in the policy have been modified from their default values.
-		/// </summary>
-		[Description("Whether any of the settings in the policy have been modified from their default values.")]
-		global::System.Boolean IsModified { get; }
-		
-		/// <summary>
-		/// The extent to which settings have been customized.
-		/// </summary>
-		[Description("The extent to which settings have been customized.")]
-		global::NuPattern.Runtime.CustomizedLevel CustomizationLevel { get; }
-		
-		/// <summary>
-		/// The individual settings of the customization policy
-		/// </summary>
-		IEnumerable<ICustomizableSettingInfo> Settings { get; }
-		
-		/// <summary>
-		/// The owning element.
-		/// </summary>
-		ICustomizableElementInfo Owner { get; }
-	}
-	
-	
-	/// <summary>
-	/// The settings for a customizable property.
-	/// </summary>
-	partial interface ICustomizableSettingInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<ICustomizableSettingInfo, object>> propertyExpression, Action<ICustomizableSettingInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// The settings for a customizable property.
-	/// </summary>
-	[Description("The settings for a customizable property.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface ICustomizableSettingInfo  
-	{
-		/// <summary>
-		/// Gets the identifier of the element.
-		/// </summary>
-		[Description("Gets the identifier for this element.")]
-		global::System.Guid Id { get; } 
-		/// <summary>
-		/// Whether this setting can be further customized by a tailor.
-		/// </summary>
-		[Description("Whether this setting can be further customized by a tailor.")]
-		global::System.Boolean IsEnabled { get; }
-		
-		/// <summary>
-		/// The displayed caption shown to the user.
-		/// </summary>
-		[Description("The displayed caption shown to the user.")]
-		global::System.String Caption { get; }
-		
-		/// <summary>
-		/// The formatter used for the caption.
-		/// </summary>
-		[Description("The formatter used for the caption.")]
-		global::System.String CaptionFormatter { get; }
-		
-		/// <summary>
-		/// Whether the settings has been modified from its default value.
-		/// </summary>
-		[Description("Whether the settings has been modified from its default value.")]
-		global::System.Boolean IsModified { get; }
-		
-		/// <summary>
-		/// Whether this setting can be customized by a tailor by default.
-		/// </summary>
-		[Description("Whether this setting can be customized by a tailor by default.")]
-		global::System.Boolean DefaultValue { get; }
-		
-		/// <summary>
-		/// Whether this setting can be customized by a tailor.
-		/// </summary>
-		[Description("Whether this setting can be customized by a tailor.")]
-		global::System.Boolean Value { get; }
-		
-		/// <summary>
-		/// The associated property name for the setting.
-		/// </summary>
-		[Description("The associated property name for the setting.")]
-		global::System.String PropertyId { get; }
-		
-		/// <summary>
-		/// The formatter used for the description.
-		/// </summary>
-		[Description("The formatter used for the description.")]
-		global::System.String DescriptionFormatter { get; }
-		
-		/// <summary>
-		/// The displayed description shown to the user.
-		/// </summary>
-		[Description("The displayed description shown to the user.")]
-		global::System.String Description { get; }
-		
-		/// <summary>
-		/// The owning policy.
-		/// </summary>
-		ICustomizationPolicyInfo Policy { get; }
-	}
-	
-	
-	/// <summary>
-	/// The settings for an automation extension.
-	/// </summary>
-	partial interface IAutomationSettingsInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IAutomationSettingsInfo, object>> propertyExpression, Action<IAutomationSettingsInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// The settings for an automation extension.
-	/// </summary>
-	[Description("The settings for an automation extension.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IAutomationSettingsInfo : ICustomizableElementInfo 
-	{
-		/// <summary>
-		/// The name of this type of automation.
-		/// </summary>
-		[Description("The name of this type of automation.")]
-		global::System.String AutomationType { get; }
-		
-		/// <summary>
-		/// The classification of this automation.
-		/// </summary>
-		[Description("The classification of this automation.")]
-		global::NuPattern.Runtime.AutomationSettingsClassification Classification { get; }
-	}
-	
-	
-	/// <summary>
-	/// The extension points that this pattern provides.
-	/// </summary>
-	partial interface IProvidedExtensionPointInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IProvidedExtensionPointInfo, object>> propertyExpression, Action<IProvidedExtensionPointInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// The extension points that this pattern provides.
-	/// </summary>
-	[Description("The extension points that this pattern provides.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IProvidedExtensionPointInfo  
-	{
-		/// <summary>
-		/// Gets the identifier of the element.
-		/// </summary>
-		[Description("Gets the identifier for this element.")]
-		global::System.Guid Id { get; } 
-		/// <summary>
-		/// The extension point provided by this pattern.
-		/// </summary>
-		[Description("The extension point provided by this pattern.")]
-		global::System.String ExtensionPointId { get; }
-		
-		/// <summary>
-		/// The owning pattern.
-		/// </summary>
-		IPatternInfo Pattern { get; }
-	}
-	
-	
-	/// <summary>
-	/// A child extension to the pattern, provided by a pattern of another toolkit.
-	/// </summary>
-	partial interface IExtensionPointInfo : INotifyPropertyChanged
-	{
-	    /// <summary>
-	    /// Subscribes to changes in the property referenced in the given 
-	    /// <paramref name="propertyExpression"/> with the given 
-	    /// <paramref name="callbackAction"/> delegate.
-	    /// </summary>
-	    /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
-	    /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
-	    IDisposable SubscribeChanged(Expression<Func<IExtensionPointInfo, object>> propertyExpression, Action<IExtensionPointInfo> callbackAction);
-	}
-	
-	/// <summary>
-	/// A child extension to the pattern, provided by a pattern of another toolkit.
-	/// </summary>
-	[Description("A child extension to the pattern, provided by a pattern of another toolkit.")]
-	[GeneratedCode("NuPattern", "1.3.0.0")]
-	public partial interface IExtensionPointInfo : IPatternElementInfo 
-	{
-		/// <summary>
-		/// The unique type of this extension point, that other patterns would provide extensions to.
-		/// </summary>
-		[Description("The unique type of this extension point, that other patterns would provide extensions to.")]
-		global::System.String RequiredExtensionPointId { get; }
-		
-		/// <summary>
-		/// The owning element.
-		/// </summary>
-		IAbstractElementInfo Owner { get; }
-	}
-	
+    
+    /// <summary>
+    /// The definition of the pattern in this toolkit.
+    /// </summary>
+    partial interface IPatternModelInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IPatternModelInfo, object>> propertyExpression, Action<IPatternModelInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// The definition of the pattern in this toolkit.
+    /// </summary>
+    [Description("The definition of the pattern in this toolkit.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface IPatternModelInfo  
+    {
+        /// <summary>
+        /// Gets the identifier of the element.
+        /// </summary>
+        [Description("Gets the identifier for this element.")]
+        global::System.Guid Id { get; } 
+        /// <summary>
+        /// The version of the base pattern line that this pattern line derives from.
+        /// </summary>
+        [Description("The version of the base pattern line that this pattern line derives from.")]
+        global::System.String BaseVersion { get; }
+        
+        /// <summary>
+        /// The unique identifier of the base pattern line that this pattern line derives from.
+        /// </summary>
+        [Description("The unique identifier of the base pattern line that this pattern line derives from.")]
+        global::System.String BaseId { get; }
+        
+        /// <summary>
+        /// The pattern in this definition.
+        /// </summary>
+        IPatternInfo Pattern { get; }
+    }
+    
+    
+    /// <summary>
+    /// The definition of the pattern.
+    /// </summary>
+    partial interface IPatternInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IPatternInfo, object>> propertyExpression, Action<IPatternInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// The definition of the pattern.
+    /// </summary>
+    [Description("The definition of the pattern.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface IPatternInfo : IPatternElementInfo 
+    {
+        /// <summary>
+        /// The identifier of the Visual Studio extension that deploys this pattern.
+        /// </summary>
+        [Description("The identifier of the Visual Studio extension that deploys this pattern.")]
+        global::System.String ExtensionId { get; }
+        
+        /// <summary>
+        /// Gets the currently opened diagram identifier.
+        /// </summary>
+        [Description("Gets the currently opened diagram identifier.")]
+        global::System.String CurrentDiagramId { get; }
+        
+        /// <summary>
+        /// The identifier of the instance of this pattern.
+        /// </summary>
+        [Description("The identifier of the instance of this pattern.")]
+        global::System.String PatternLink { get; }
+        
+        /// <summary>
+        /// The definition of the pattern.
+        /// </summary>
+        IPatternModelInfo PatternModel { get; }
+        
+        /// <summary>
+        /// The views of this pattern.
+        /// </summary>
+        IEnumerable<IViewInfo> Views { get; }
+        
+        /// <summary>
+        /// The extension points of other patterns that this pattern extends.
+        /// </summary>
+        IEnumerable<IProvidedExtensionPointInfo> ProvidedExtensionPoints { get; }
+    }
+    
+    
+    /// <summary>
+    /// An element that has a unique name.
+    /// </summary>
+    partial interface INamedElementInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<INamedElementInfo, object>> propertyExpression, Action<INamedElementInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// An element that has a unique name.
+    /// </summary>
+    [Description("An element that has a unique name.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface INamedElementInfo  
+    {
+        /// <summary>
+        /// Gets the identifier of the element.
+        /// </summary>
+        [Description("Gets the identifier for this element.")]
+        global::System.Guid Id { get; } 
+        /// <summary>
+        /// The well-known name of this item in this model.
+        /// </summary>
+        [Description("The well-known name of this item in this model.")]
+        global::System.String Name { get; }
+        
+        /// <summary>
+        /// The identifier of the inherited variability model.
+        /// </summary>
+        [Description("The identifier of the inherited variability model.")]
+        global::System.String BaseId { get; }
+        
+        /// <summary>
+        /// The name used for instances of this item, as seen by the user. Also used to name associated artifacts/configuration created for this item.
+        /// </summary>
+        [Description("The name used for instances of this item, as seen by the user. Also used to name associated artifacts/configuration created for this item.")]
+        global::System.String DisplayName { get; }
+        
+        /// <summary>
+        /// The description of this item displayed to the user.
+        /// </summary>
+        [Description("The description of this item displayed to the user.")]
+        global::System.String Description { get; }
+        
+        /// <summary>
+        /// Whether the element is derived from a base variability model definition.
+        /// </summary>
+        [Description("Whether the element is derived from a base variability model definition.")]
+        global::System.Boolean IsInheritedFromBase { get; }
+        
+        /// <summary>
+        /// Whether this element is hidden from the design-view. Used by automation extensions.
+        /// </summary>
+        [Description("Whether this element is hidden from the design-view. Used by automation extensions.")]
+        global::System.Boolean IsSystem { get; }
+        
+        /// <summary>
+        /// The identifier used for naming generating code artifacts that represent this element. This identifier must be unique across the whole model.
+        /// </summary>
+        [Description("The identifier used for naming generating code artifacts that represent this element. This identifier must be unique across the whole model.")]
+        global::System.String CodeIdentifier { get; }
+    }
+    
+    
+    /// <summary>
+    /// A container of properties and automation.
+    /// </summary>
+    partial interface IPatternElementInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IPatternElementInfo, object>> propertyExpression, Action<IPatternElementInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// A container of properties and automation.
+    /// </summary>
+    [Description("A container of properties and automation.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface IPatternElementInfo : ICustomizableElementInfo 
+    {
+        /// <summary>
+        /// The icon for this item displayed to the user.
+        /// </summary>
+        [Description("The icon for this item displayed to the user.")]
+        global::System.String Icon { get; }
+        
+        /// <summary>
+        /// The properties of this element.
+        /// </summary>
+        IEnumerable<IPropertyInfo> Properties { get; }
+        
+        /// <summary>
+        /// The automation settings of this element.
+        /// </summary>
+        IEnumerable<IAutomationSettingsInfo> AutomationSettings { get; }
+    }
+    
+    
+    /// <summary>
+    /// A property of an element.
+    /// </summary>
+    partial interface IPropertyInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IPropertyInfo, object>> propertyExpression, Action<IPropertyInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// A property of an element.
+    /// </summary>
+    [Description("A property of an element.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface IPropertyInfo : ICustomizableElementInfo 
+    {
+        /// <summary>
+        /// The initial value of this property when created.
+        /// </summary>
+        [Description("The initial value of this property when created.")]
+        global::System.String RawDefaultValue { get; }
+        
+        /// <summary>
+        /// The data type of this property, which determines the type of its value.
+        /// </summary>
+        [Description("The data type of this property, which determines the type of its value.")]
+        global::System.String Type { get; }
+        
+        /// <summary>
+        /// Whether this property is shown to the user.
+        /// </summary>
+        [Description("Whether this property is shown to the user.")]
+        global::System.Boolean IsVisible { get; }
+        
+        /// <summary>
+        /// Whether this property is read-only to the user.
+        /// </summary>
+        [Description("Whether this property is read-only to the user.")]
+        global::System.Boolean IsReadOnly { get; }
+        
+        /// <summary>
+        /// The category for this property, used to organize similar properties shown in the Properties Window.
+        /// </summary>
+        [Description("The category for this property, used to organize similar properties shown in the Properties Window.")]
+        global::System.String Category { get; }
+        
+        /// <summary>
+        /// The primary usage of this property,
+        /// </summary>
+        [Description("The primary usage of this property,")]
+        global::NuPattern.Runtime.PropertyUsages PropertyUsage { get; }
+        
+        /// <summary>
+        /// A System.ComponentModel.TypeConverter that converts from the string value of this property, that the user enters, to an instance of the Type of this property (and visa-versa). This Type Converter can also be used to provide a list of acceptable values.
+        /// </summary>
+        [Description("A System.ComponentModel.TypeConverter that converts from the string value of this property, that the user enters, to an instance of the Type of this property (and visa-versa). This Type Converter can also be used to provide a list of acceptable values.")]
+        global::System.String TypeConverterTypeName { get; }
+        
+        /// <summary>
+        /// A System.Drawing.Design.UITypeEditor that provides a custom UI for editing the value of this property.
+        /// </summary>
+        [Description("A System.Drawing.Design.UITypeEditor that provides a custom UI for editing the value of this property.")]
+        global::System.String EditorTypeName { get; }
+        
+        /// <summary>
+        /// A value provider that calculates the value of this property dynamically.
+        /// </summary>
+        [Description("A value provider that calculates the value of this property dynamically.")]
+        global::System.String RawValueProvider { get; }
+    }
+    
+    
+    /// <summary>
+    /// A distinct view of the pattern.
+    /// </summary>
+    partial interface IViewInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IViewInfo, object>> propertyExpression, Action<IViewInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// A distinct view of the pattern.
+    /// </summary>
+    [Description("A distinct view of the pattern.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface IViewInfo : ICustomizableElementInfo 
+    {
+        /// <summary>
+        /// Whether this view is shown to the user.
+        /// </summary>
+        [Description("Whether this view is shown to the user.")]
+        global::System.Boolean IsVisible { get; }
+        
+        /// <summary>
+        /// Whether this is the default view
+        /// </summary>
+        [Description("Whether this is the default view")]
+        global::System.Boolean IsDefault { get; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        [Description("")]
+        global::System.String DiagramId { get; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        [Description("")]
+        global::System.String Caption { get; }
+        
+        /// <summary>
+        /// The owning pattern.
+        /// </summary>
+        IPatternInfo Pattern { get; }
+    }
+    
+    
+    /// <summary>
+    /// A child collection element.
+    /// </summary>
+    partial interface ICollectionInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<ICollectionInfo, object>> propertyExpression, Action<ICollectionInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// A child collection element.
+    /// </summary>
+    [Description("A child collection element.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface ICollectionInfo : IAbstractElementInfo 
+    {}
+    
+    
+    /// <summary>
+    /// A child element.
+    /// </summary>
+    partial interface IElementInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IElementInfo, object>> propertyExpression, Action<IElementInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// A child element.
+    /// </summary>
+    [Description("A child element.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface IElementInfo : IAbstractElementInfo 
+    {}
+    
+    
+    /// <summary>
+    /// An element that supports customization of its properties.
+    /// </summary>
+    partial interface ICustomizableElementInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<ICustomizableElementInfo, object>> propertyExpression, Action<ICustomizableElementInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// An element that supports customization of its properties.
+    /// </summary>
+    [Description("An element that supports customization of its properties.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface ICustomizableElementInfo : INamedElementInfo 
+    {
+        /// <summary>
+        /// Whether customization is permitted for this element, all its policy settings, and any child elements.
+        /// </summary>
+        [Description("Whether customization is permitted for this element, all its policy settings, and any child elements.")]
+        global::NuPattern.Runtime.CustomizationState IsCustomizable { get; }
+        
+        /// <summary>
+        /// Whether customization is enabled for the tailor.
+        /// </summary>
+        [Description("Whether customization is enabled for the tailor.")]
+        global::System.Boolean IsCustomizationEnabled { get; }
+        
+        /// <summary>
+        /// Whether the policy can be modified.
+        /// </summary>
+        [Description("Whether the policy can be modified.")]
+        global::System.Boolean IsCustomizationPolicyModifyable { get; }
+        
+        /// <summary>
+        /// The customization policy that applies to the element.
+        /// </summary>
+        ICustomizationPolicyInfo Policy { get; }
+    }
+    
+    
+    /// <summary>
+    /// A child element or collection of the pattern.
+    /// </summary>
+    partial interface IAbstractElementInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IAbstractElementInfo, object>> propertyExpression, Action<IAbstractElementInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// A child element or collection of the pattern.
+    /// </summary>
+    [Description("A child element or collection of the pattern.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface IAbstractElementInfo : IPatternElementInfo 
+    {
+        /// <summary>
+        /// Whether this item is shown to the user.
+        /// </summary>
+        [Description("Whether this item is shown to the user.")]
+        global::System.Boolean IsVisible { get; }
+    }
+    
+    
+    /// <summary>
+    /// The policy that controls what properties are customizable on an element.
+    /// </summary>
+    partial interface ICustomizationPolicyInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<ICustomizationPolicyInfo, object>> propertyExpression, Action<ICustomizationPolicyInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// The policy that controls what properties are customizable on an element.
+    /// </summary>
+    [Description("The policy that controls what properties are customizable on an element.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface ICustomizationPolicyInfo  
+    {
+        /// <summary>
+        /// Gets the identifier of the element.
+        /// </summary>
+        [Description("Gets the identifier for this element.")]
+        global::System.Guid Id { get; } 
+        /// <summary>
+        /// Whether any of the settings in the policy have been modified from their default values.
+        /// </summary>
+        [Description("Whether any of the settings in the policy have been modified from their default values.")]
+        global::System.Boolean IsModified { get; }
+        
+        /// <summary>
+        /// The extent to which settings have been customized.
+        /// </summary>
+        [Description("The extent to which settings have been customized.")]
+        global::NuPattern.Runtime.CustomizedLevel CustomizationLevel { get; }
+        
+        /// <summary>
+        /// The individual settings of the customization policy
+        /// </summary>
+        IEnumerable<ICustomizableSettingInfo> Settings { get; }
+        
+        /// <summary>
+        /// The owning element.
+        /// </summary>
+        ICustomizableElementInfo Owner { get; }
+    }
+    
+    
+    /// <summary>
+    /// The settings for a customizable property.
+    /// </summary>
+    partial interface ICustomizableSettingInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<ICustomizableSettingInfo, object>> propertyExpression, Action<ICustomizableSettingInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// The settings for a customizable property.
+    /// </summary>
+    [Description("The settings for a customizable property.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface ICustomizableSettingInfo  
+    {
+        /// <summary>
+        /// Gets the identifier of the element.
+        /// </summary>
+        [Description("Gets the identifier for this element.")]
+        global::System.Guid Id { get; } 
+        /// <summary>
+        /// Whether this setting can be further customized by a tailor.
+        /// </summary>
+        [Description("Whether this setting can be further customized by a tailor.")]
+        global::System.Boolean IsEnabled { get; }
+        
+        /// <summary>
+        /// The displayed caption shown to the user.
+        /// </summary>
+        [Description("The displayed caption shown to the user.")]
+        global::System.String Caption { get; }
+        
+        /// <summary>
+        /// The formatter used for the caption.
+        /// </summary>
+        [Description("The formatter used for the caption.")]
+        global::System.String CaptionFormatter { get; }
+        
+        /// <summary>
+        /// Whether the settings has been modified from its default value.
+        /// </summary>
+        [Description("Whether the settings has been modified from its default value.")]
+        global::System.Boolean IsModified { get; }
+        
+        /// <summary>
+        /// Whether this setting can be customized by a tailor by default.
+        /// </summary>
+        [Description("Whether this setting can be customized by a tailor by default.")]
+        global::System.Boolean DefaultValue { get; }
+        
+        /// <summary>
+        /// Whether this setting can be customized by a tailor.
+        /// </summary>
+        [Description("Whether this setting can be customized by a tailor.")]
+        global::System.Boolean Value { get; }
+        
+        /// <summary>
+        /// The associated property name for the setting.
+        /// </summary>
+        [Description("The associated property name for the setting.")]
+        global::System.String PropertyId { get; }
+        
+        /// <summary>
+        /// The formatter used for the description.
+        /// </summary>
+        [Description("The formatter used for the description.")]
+        global::System.String DescriptionFormatter { get; }
+        
+        /// <summary>
+        /// The displayed description shown to the user.
+        /// </summary>
+        [Description("The displayed description shown to the user.")]
+        global::System.String Description { get; }
+        
+        /// <summary>
+        /// The owning policy.
+        /// </summary>
+        ICustomizationPolicyInfo Policy { get; }
+    }
+    
+    
+    /// <summary>
+    /// The settings for an automation extension.
+    /// </summary>
+    partial interface IAutomationSettingsInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IAutomationSettingsInfo, object>> propertyExpression, Action<IAutomationSettingsInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// The settings for an automation extension.
+    /// </summary>
+    [Description("The settings for an automation extension.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface IAutomationSettingsInfo : ICustomizableElementInfo 
+    {
+        /// <summary>
+        /// The name of this type of automation.
+        /// </summary>
+        [Description("The name of this type of automation.")]
+        global::System.String AutomationType { get; }
+        
+        /// <summary>
+        /// The classification of this automation.
+        /// </summary>
+        [Description("The classification of this automation.")]
+        global::NuPattern.Runtime.AutomationSettingsClassification Classification { get; }
+    }
+    
+    
+    /// <summary>
+    /// The extension points that this pattern provides.
+    /// </summary>
+    partial interface IProvidedExtensionPointInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IProvidedExtensionPointInfo, object>> propertyExpression, Action<IProvidedExtensionPointInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// The extension points that this pattern provides.
+    /// </summary>
+    [Description("The extension points that this pattern provides.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface IProvidedExtensionPointInfo  
+    {
+        /// <summary>
+        /// Gets the identifier of the element.
+        /// </summary>
+        [Description("Gets the identifier for this element.")]
+        global::System.Guid Id { get; } 
+        /// <summary>
+        /// The extension point provided by this pattern.
+        /// </summary>
+        [Description("The extension point provided by this pattern.")]
+        global::System.String ExtensionPointId { get; }
+        
+        /// <summary>
+        /// The owning pattern.
+        /// </summary>
+        IPatternInfo Pattern { get; }
+    }
+    
+    
+    /// <summary>
+    /// A child extension to the pattern, provided by a pattern of another toolkit.
+    /// </summary>
+    partial interface IExtensionPointInfo : INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Subscribes to changes in the property referenced in the given 
+        /// <paramref name="propertyExpression"/> with the given 
+        /// <paramref name="callbackAction"/> delegate.
+        /// </summary>
+        /// <param name="propertyExpression">A lambda expression that accesses a property, such as <c>x => x.Name</c>.</param>
+        /// <param name="callbackAction">The callback action to invoke when the given property changes.</param>
+        IDisposable SubscribeChanged(Expression<Func<IExtensionPointInfo, object>> propertyExpression, Action<IExtensionPointInfo> callbackAction);
+    }
+    
+    /// <summary>
+    /// A child extension to the pattern, provided by a pattern of another toolkit.
+    /// </summary>
+    [Description("A child extension to the pattern, provided by a pattern of another toolkit.")]
+    [GeneratedCode("NuPattern", "1.3.0.0")]
+    public partial interface IExtensionPointInfo : IPatternElementInfo 
+    {
+        /// <summary>
+        /// The unique type of this extension point, that other patterns would provide extensions to.
+        /// </summary>
+        [Description("The unique type of this extension point, that other patterns would provide extensions to.")]
+        global::System.String RequiredExtensionPointId { get; }
+        
+        /// <summary>
+        /// The owning element.
+        /// </summary>
+        IAbstractElementInfo Owner { get; }
+    }
+    
 }

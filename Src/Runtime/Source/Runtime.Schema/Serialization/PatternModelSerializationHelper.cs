@@ -72,6 +72,39 @@ namespace NuPattern.Runtime.Schema
         }
 
         /// <summary>
+        /// Loads the pattern model file, and returns the schema.
+        /// </summary>
+        /// <param name="modelFilePath">Full path to the pattern model file.</param>
+        public static IPatternModelSchema LoadPatternModelFromFile(string modelFilePath)
+        {
+            var patternModel = (IPatternModelSchema)null;
+            var store = new DslModeling.Store(null, new[] { typeof(PatternModelDomainModel) });
+            DslModeling.Transaction tx = null;
+
+            try
+            {
+                var serializationResult = new DslModeling.SerializationResult();
+                tx = store.TransactionManager.BeginTransaction("Loading pattern model", true);
+                patternModel = Instance.LoadModel(serializationResult, store, modelFilePath, null, null, null);
+                if (serializationResult.Failed)
+                {
+                    throw new DslModeling.SerializationException(serializationResult);
+                }
+
+                tx.Commit();
+            }
+            finally
+            {
+                if ((tx != null))
+                {
+                    tx.Dispose();
+                }
+            }
+
+            return patternModel;
+        }
+
+        /// <summary>
         /// Read an element from the root of XML.
         /// </summary>
         /// <param name="serializationContext">Serialization context.</param>

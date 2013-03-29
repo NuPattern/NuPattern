@@ -37,7 +37,7 @@ private void GenerateInterface(DomainClass domainClass)
 #>
 namespace <#=this.DslLibrary.Namespace #>
 { <#+
-PushIndent("\t");
+PushIndent("    ");
 
 GeneratePropertyChanged(domainClass, domainClass.Name);
 
@@ -94,7 +94,7 @@ private void GenerateProperty(DomainProperty property)
     if (!PropertyHasGetter(property) && !PropertyHasSetter(property))
         return;
 
-    PushIndent("\t");
+    PushIndent("    ");
 #>
 
 /// <summary>
@@ -199,7 +199,7 @@ private void GenerateProperty(DomainRole role)
                 throw new NotSupportedException();
         }
     }
-    PushIndent("\t");
+    PushIndent("    ");
 #>
 
 /// <summary>

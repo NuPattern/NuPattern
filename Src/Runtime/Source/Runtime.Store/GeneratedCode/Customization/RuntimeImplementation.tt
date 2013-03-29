@@ -34,7 +34,7 @@ private void GenerateClass(DomainClass domainClass)
 #>
 namespace <#= domainClass.Namespace #>
 { <#+
-PushIndent("\t"); 
+PushIndent("    "); 
 
 GeneratePropertyChanged(domainClass);
 
@@ -112,7 +112,7 @@ partial class <#= domainClass.Name #> : I<#= domainClass.Name #>
 }
 private void GenerateProperty(DomainProperty property)
 {
-    PushIndent("\t");
+    PushIndent("    ");
 #>
 
 /// <summary>
@@ -179,7 +179,7 @@ private void GenerateProperty(DomainClass domainClass, DomainRole role)
         }
     }
 
-    PushIndent("\t");
+    PushIndent("    ");
 
     if (!HasSkipAnnotation(role.Notes))
     {

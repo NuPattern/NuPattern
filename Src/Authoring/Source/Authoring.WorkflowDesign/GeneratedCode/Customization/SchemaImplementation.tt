@@ -42,7 +42,7 @@ private void GenerateClass(DomainClass domainClass)
 #>
 namespace <#= domainClass.Namespace #>
 {<#+
-PushIndent("\t"); 
+PushIndent("    "); 
 
 GeneratePropertyChanged(domainClass);
 
@@ -103,7 +103,7 @@ private void GenerateRelationClass(DomainClass domainClass)
 namespace <#= domainClass.Namespace #>
 {
 <#+
-PushIndent("\t"); 
+PushIndent("    "); 
 
 #>
 
@@ -121,7 +121,7 @@ partial class <#= domainClass.Name #> : I<#= ToInfo(domainClass) #>
 
 private void GenerateProperty(DomainProperty property)
 {
-    PushIndent("\t");
+    PushIndent("    ");
 #>
 
 /// <summary>
@@ -134,7 +134,7 @@ private void GenerateProperty(DomainProperty property)
 
 private void GenerateLinkProperty(DomainClass domainClass, DomainRelationship relationship)
 {
-    PushIndent("\t");
+    PushIndent("    ");
 #>
 
 /// <summary>
@@ -204,7 +204,7 @@ private void GenerateProperty(DomainClass domainClass, DomainRole role)
         }
     }
 
-    PushIndent("\t");
+    PushIndent("    ");
 
     if (!HasSkipAnnotation(role.Notes))
     {
