@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.ComponentModel;
+using System.Linq;
+using NuPattern.ComponentModel.Design.UI;
 using NuPattern.Runtime.Design;
 
 namespace $rootnamespace$

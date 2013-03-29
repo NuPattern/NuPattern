@@ -1,7 +1,8 @@
 ﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" #>
 <#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
+<#@ Assembly Name="NuPattern.Common.dll" #>
 <#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
-<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" #>
 <#@ Assembly Name="$Parent.Parent.Parent.Parent.AutomationCollection.AutomationLibrary.ProjectAssemblyName$.dll" #>
 <#@ Import Namespace="$Parent.Parent.Parent.Parent.Parent.ProjectRootNamespace$" #>
 <#@ Import Namespace="System.Linq" #>

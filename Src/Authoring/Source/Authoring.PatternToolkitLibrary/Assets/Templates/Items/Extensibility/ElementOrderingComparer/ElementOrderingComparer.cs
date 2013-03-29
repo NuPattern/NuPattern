@@ -1,7 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
-using NuPattern.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Comparers;
 
 namespace $rootnamespace$
 {
@@ -27,7 +28,7 @@ namespace $rootnamespace$
                 "Comparer $safeitemname$ between element '{0}' and element '{1}'", x.InstanceName, y.InstanceName);
 
             // TODO: Implement comparison automation code to determine the result
-            var result = String.Compare(x.InstanceName, y.InstanceName, true);
+            var result = String.Compare(x.InstanceName, y.InstanceName, StringComparison.OrdinalIgnoreCase);
 
             //	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
             //	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions

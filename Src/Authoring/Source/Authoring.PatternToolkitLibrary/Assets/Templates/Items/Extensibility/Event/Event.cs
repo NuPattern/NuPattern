@@ -2,9 +2,9 @@
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Linq;
-using NuPattern.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern;
+using NuPattern.Runtime.Events;
 
 namespace $rootnamespace$
 {

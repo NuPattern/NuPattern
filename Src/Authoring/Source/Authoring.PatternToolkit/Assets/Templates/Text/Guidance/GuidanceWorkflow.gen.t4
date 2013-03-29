@@ -1,13 +1,14 @@
 ﻿<#@ Template inherits="NuPattern.Authoring.Guidance.TocProcessWorkflowTextTransformation" HostSpecific="True" #>
 <#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ output extension=".gen.cs" #>
+<#@ Assembly Name="NuPattern.Common.dll" #>
 <#@ Assembly Name="NuPattern.Authoring.Guidance.dll" #>
 <#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
 <#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
 <#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll" #>
 <#@ Import Namespace="NuPattern.Authoring.PatternToolkit" #>
 <#@ Import Namespace="NuPattern.Authoring.Guidance" #>
-<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" #>
 <#@ Import Namespace="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features" #>
 <#@ Include File="..\Header.t4" #>
 <#

@@ -1,8 +1,12 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Globalization;
+using System.ComponentModel.Composition;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern;
+using NuPattern.Runtime;
 
 namespace $rootnamespace$
 {
@@ -27,7 +31,7 @@ namespace $rootnamespace$
         public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)
         {
             if ((sourceType == typeof(string))
-                || (typeof(CustomDataType).IsAssignableFrom(sourceType)))
+                || (typeof(YourCustomDataType).IsAssignableFrom(sourceType)))
             {
                 return true;
             }
@@ -43,7 +47,7 @@ namespace $rootnamespace$
         public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)
         {
             if ((destinationType == typeof(string))
-                || (destinationType == typeof(CustomDataType)))
+                || (destinationType == typeof(YourCustomDataType)))
             {
                 return true;
             }
@@ -74,7 +78,7 @@ namespace $rootnamespace$
         /// </summary>
         public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
         {
-            var instance =  value as CustomDataType;
+            var instance =  value as YourCustomDataType;
             if ((destinationType == typeof(string)) && (instance != null))
             {
                 // TODO: Return the string representation of an the instance of the custom data type.
@@ -100,27 +104,27 @@ namespace $rootnamespace$
             }
             else
             {
-                return (value is CustomDataType);
+                return (value is YourCustomDataType);
             }
         }
 
         /// <summary>
         /// Determines if the string value represents an instance of the custom data type.
         /// </summary>
-        private CustomDataType TryCreate(object value)
+        private YourCustomDataType TryCreate(object value)
         {
             var stringValue = value as string;
             if (stringValue != null)
             {
                 // TODO: Parse and construct a new instance of the custom data type with the string value.
-                return new CustomDataType(stringValue);
+                return new YourCustomDataType(stringValue);
             }
             else
             {
-                if (value is CustomDataType)
+                if (value is YourCustomDataType)
                 {
                     // TODO: Construct a new instance of the custom data type with the existing instance data.
-                    return new CustomDataType(value);
+                    return new YourCustomDataType(value);
                 }
                 else
                 {

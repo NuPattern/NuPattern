@@ -1,10 +1,11 @@
 ﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" #>
 <#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ output extension=".gen.ttinclude" #>
+<#@ Assembly Name="NuPattern.Common.dll" #>
 <#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
 <#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
 <#@ Import Namespace="System.Linq" #>
-<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" #>
 <#@ Import Namespace="NuPattern.Authoring.PatternToolkit" #>
 <#@ Import Namespace="NuPattern.Authoring.PatternToolkitLibrary" #>
 <#

@@ -5,8 +5,10 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
-using NuPattern.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Validation;
 
 namespace $rootnamespace$
 {

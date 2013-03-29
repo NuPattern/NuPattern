@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace $rootnamespace$
@@ -67,9 +66,9 @@ namespace $rootnamespace$
 
                 return new StandardValuesCollection(items);
             }
-            catch (SomeExpectedException ex)
+            catch (YourExpectedException ex)
             {
-                // TODO: Only catch expected exceptions, and trace them before re-throwing.
+                // TODO: Only catch expected exceptions that you can handle, and trace them before re-throwing.
                 // TODO: Remove this 'catch' if no expections are expected
                 tracer.TraceError(
                     ex, "Some error calculating or fetching values");
