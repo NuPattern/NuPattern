@@ -1,4 +1,4 @@
-﻿<#@ Template inherits="NuPattern.Authoring.Guidance.TocProcessWorkflowTextTransformation" HostSpecific="True" Debug="True" #>
+﻿<#@ Template inherits="NuPattern.Authoring.Guidance.TocProcessWorkflowTextTransformation" HostSpecific="True" #>
 <#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ output extension=".gen.cs" #>
 <#@ Assembly Name="NuPattern.Authoring.Guidance.dll" #>

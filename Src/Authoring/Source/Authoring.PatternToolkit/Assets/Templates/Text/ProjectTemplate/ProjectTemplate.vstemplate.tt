@@ -1,6 +1,6 @@
 ﻿<#@ output extension=".gen.t4" #>
 <#@ Include File="..\..\..\..\..\..\..\MasterVersion.gen.ttinclude" #>
-\<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" \#>
+\<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" \#>
 \<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
 \<#@ Output extension=".vstemplate" \#>
 \<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" \#>

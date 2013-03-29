@@ -2,7 +2,7 @@
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ output extension=".gen.t4" #>
 <#@ Include File="..\..\..\..\..\..\..\Common\Helpers\DslVersion.tt" #>
-\<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" \#>
+\<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" \#>
 \<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" \#>
 \<#@ Output extension=".patterndefinition" \#>
 \<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" \#>
