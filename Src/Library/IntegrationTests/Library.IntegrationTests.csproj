@@ -96,11 +96,11 @@
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Automation\StringCollectionPropertyDescriptorSpec.cs" />
-    <Compile Include="Automation\Template\InstantiationTemplateWizardSpec.cs" />
-    <Compile Include="Automation\Template\TemplateAutomationExtensionSpec.cs" />
+    <Compile Include="TemplateWizards\InstantiationTemplateWizardSpec.cs" />
+    <Compile Include="TemplateWizards\TemplateAutomationExtensionSpec.cs" />
     <Compile Include="Automation\Rules\PatternElementSchemaAddRuleSpec.cs" />
-    <Compile Include="Automation\Artifact\ArtifactExtensionSpec.cs" />
-    <Compile Include="Automation\Guidance\GuidanceExtensionSpec.cs" />
+    <Compile Include="Automation\Extensions\ArtifactExtensionSpec.cs" />
+    <Compile Include="Automation\Extensions\GuidanceExtensionSpec.cs" />
     <CodeAnalysisDictionary Include="..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
@@ -118,7 +118,7 @@
     <Content Include="Library.IntegrationTests.Content\ClassLibrary\ClassLibrary\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="Automation\Validation\ValidationExtensionSpec.cs" />
+    <Compile Include="Automation\Extensions\ValidationExtensionSpec.cs" />
     <Compile Include="Events\OnBuildFinishedSpec.cs" />
     <Compile Include="Events\OnBuildStartedSpec.cs" />
     <Compile Include="GlobalSuppressions.cs" />

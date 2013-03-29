@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
+using NuPattern.Library.TemplateWizards;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Extensibility;

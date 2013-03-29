@@ -2,7 +2,6 @@
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using NuPattern.Library.Commands;
-using NuPattern.Library.Design;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings.Design;
 

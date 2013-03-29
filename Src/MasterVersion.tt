@@ -7,47 +7,47 @@
 <#@ import namespace="EnvDTE" #>
 <#@ parameter name="VsVer" type="System.String" #>
 <#
-	var vsVersion = "";
-	if (String.IsNullOrEmpty(VsVer))
-	{
-		// This code detects the target version of Visual Studio by reading the 
-		// MSBUILD variables of the "Versioning" project that are determined by the current build configuration (see BuildConfiguration.CSharp.props)
-		// This template will only work correctly when transformed within Visual Studio
-		var projectName = "Versioning";
-		var buildConstantName = "DefineConstants";
-		var buildConstantPrefix = "VSVER";
+    var vsVersion = "";
+    if (String.IsNullOrEmpty(VsVer))
+    {
+        // This code detects the target version of Visual Studio by reading the 
+        // MSBUILD variables of the "Versioning" project that are determined by the current build configuration (see BuildConfiguration.CSharp.props)
+        // This template will only work correctly when transformed within Visual Studio
+        var projectName = "Versioning";
+        var buildConstantName = "DefineConstants";
+        var buildConstantPrefix = "VSVER";
 
-		var serviceProvider = (IServiceProvider)this.Host;
-		var dte = serviceProvider.GetService(typeof(EnvDTE.DTE)) as EnvDTE.DTE;
+        var serviceProvider = (IServiceProvider)this.Host;
+        var dte = serviceProvider.GetService(typeof(EnvDTE.DTE)) as EnvDTE.DTE;
 
-		// Determine the VSVERXX build constant
-		var projects = GetProjectsFromSolution(dte.Solution).Where(p => p != null);
+        // Determine the VSVERXX build constant
+        var projects = GetProjectsFromSolution(dte.Solution).Where(p => p != null);
 
-		var versionProject = projects.First(p => p.Name == projectName);
-		var buildConstants = versionProject.ConfigurationManager.ActiveConfiguration.Properties.Item(buildConstantName).Value.ToString();
-		vsVersion = buildConstants.Substring(buildConstants.IndexOf(buildConstantPrefix), buildConstantPrefix.Length + 2);
-	}
-	else
-	{
-		vsVersion = VsVer;
-	}
+        var versionProject = projects.First(p => p.Name == projectName);
+        var buildConstants = versionProject.ConfigurationManager.ActiveConfiguration.Properties.Item(buildConstantName).Value.ToString();
+        vsVersion = buildConstants.Substring(buildConstants.IndexOf(buildConstantPrefix), buildConstantPrefix.Length + 2);
+    }
+    else
+    {
+        vsVersion = VsVer;
+    }
 
-	var targetVsVersion = "";
+    var targetVsVersion = "";
 
-	switch (vsVersion)
-	{
-		case "VSVER10":
-			targetVsVersion = "10.0";
-			break;
+    switch (vsVersion)
+    {
+        case "VSVER10":
+            targetVsVersion = "10.0";
+            break;
 
-		case "VSVER11":
-			targetVsVersion = "11.0";
-			break;
+        case "VSVER11":
+            targetVsVersion = "11.0";
+            break;
 
-		default:
-			targetVsVersion = vsVersion;
-			break;
-	}
+        default:
+            targetVsVersion = vsVersion;
+            break;
+    }
  #>
 \<#+
 // Product Version Info
@@ -71,47 +71,47 @@ public static class VersionInfo
     
     // Ownership
     public const string VsixAuthor = "NuPattern";
-	public const string AssemblyAuthor = "NuPattern";
-	public const string AssemblyCopyright = "Copyright 2012, NuPattern under Apache 2.0 license.";
-	public const string ProjectHomePage = @"http://www.nupattern.org/";
-	
-	// Assembly Identity
-	public const string AssemblyProductName = "NuPattern";
+    public const string AssemblyAuthor = "NuPattern";
+    public const string AssemblyCopyright = "Copyright 2012, NuPattern under Apache 2.0 license.";
+    public const string ProjectHomePage = @"http://www.nupattern.org/";
+    
+    // Assembly Identity
+    public const string AssemblyProductName = "NuPattern";
 }
 \#><#+
  private static IEnumerable<EnvDTE.Project> GetProjectsFromSolution(EnvDTE.Solution solution)
  {
-	var projects = new List<EnvDTE.Project>();
+    var projects = new List<EnvDTE.Project>();
 
-	foreach (var p in solution.Projects.OfType<EnvDTE.Project>())
-	{
-		if (p.Kind == Constants.vsProjectKindSolutionItems)
-		{
-			projects.AddRange(GetSubProjects(p.ProjectItems.OfType<EnvDTE.ProjectItem>()));
-		}
-		else
-		{
-			projects.Add(p);
-		}
-	}
+    foreach (var p in solution.Projects.OfType<EnvDTE.Project>())
+    {
+        if (p.Kind == Constants.vsProjectKindSolutionItems)
+        {
+            projects.AddRange(GetSubProjects(p.ProjectItems.OfType<EnvDTE.ProjectItem>()));
+        }
+        else
+        {
+            projects.Add(p);
+        }
+    }
 
-	return projects;
+    return projects;
  }
 
  private static IEnumerable<EnvDTE.Project> GetSubProjects(IEnumerable<EnvDTE.ProjectItem> projectItems)
  {
-	var projects = new List<EnvDTE.Project>();
-	foreach (var pi in projectItems)
-	{
-		if (pi.Kind == Constants.vsProjectItemKindSolutionItems)
-		{
-			projects.Add(pi.SubProject);
-		}
-		else if (pi.Kind == Constants.vsProjectKindSolutionItems)
-		{
-			projects.AddRange(GetSubProjects(pi.ProjectItems.OfType<EnvDTE.ProjectItem>()));
-		}
-	}
-	return projects;
+    var projects = new List<EnvDTE.Project>();
+    foreach (var pi in projectItems)
+    {
+        if (pi.Kind == Constants.vsProjectItemKindSolutionItems)
+        {
+            projects.Add(pi.SubProject);
+        }
+        else if (pi.Kind == Constants.vsProjectKindSolutionItems)
+        {
+            projects.AddRange(GetSubProjects(pi.ProjectItems.OfType<EnvDTE.ProjectItem>()));
+        }
+    }
+    return projects;
  }
 #>

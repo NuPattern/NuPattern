@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 using NuPattern.Library.Conditions;
+using NuPattern.Library.Design;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
 

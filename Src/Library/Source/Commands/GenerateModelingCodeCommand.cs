@@ -17,7 +17,6 @@ using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Library.TypeEditors;
 using NuPattern.Runtime;
-using NuPattern.Runtime.Extensibility;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 

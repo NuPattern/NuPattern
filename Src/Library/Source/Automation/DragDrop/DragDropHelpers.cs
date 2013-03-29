@@ -10,7 +10,7 @@ namespace NuPattern.Library
     /// <summary>
     /// Extension for helping with Drag and Drop automation.
     /// </summary>
-    public static class DragDropHelpers
+    internal static class DragDropHelpers
     {
         internal const char ExtensionDelimiter = ';';
         internal const string ProjectItemDataFormat = "CF_VSSTGPROJECTITEMS";

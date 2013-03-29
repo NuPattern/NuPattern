@@ -244,7 +244,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Library.Automation.AssociatedGuidanceTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.Design.AssociatedGuidanceTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -309,7 +309,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Library.Automation.AssociatedArtifactsTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.Design.AssociatedArtifactsTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -338,7 +338,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Library.Automation.ValidationExecutionTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.Design.ValidationExecutionTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>

@@ -98,23 +98,23 @@
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Automation\Artifact\ArtifactExtensionDisplaySpec.cs" />
-    <Compile Include="Automation\Artifact\ArtifactReferenceValidationSpec.cs" />
+    <Compile Include="Automation\Extensions\ArtifactExtensionDisplaySpec.cs" />
+    <Compile Include="Automation\Extensions\ArtifactReferenceValidationSpec.cs" />
     <Compile Include="Automation\Command\CommandAutomationSpec.cs" />
     <Compile Include="Automation\Command\CommandSettingsValidationSpec.cs" />
     <Compile Include="Automation\DragDrop\DragDropSettingsValidationSpec.cs" />
     <Compile Include="Automation\Event\EventSettingsSpec.cs" />
     <Compile Include="Automation\Event\EventAutomationSpec.cs" />
     <Compile Include="Automation\Event\EventSettingsValidationSpec.cs" />
-    <Compile Include="Automation\Guidance\GuidanceExtensionDisplaySpec.cs" />
-    <Compile Include="Automation\Guidance\GuidanceReferenceValidationSpec.cs" />
+    <Compile Include="Automation\Extensions\GuidanceExtensionDisplaySpec.cs" />
+    <Compile Include="Automation\Extensions\GuidanceReferenceValidationSpec.cs" />
     <Compile Include="Automation\Menu\ImageUriEditorSpec.cs" />
     <Compile Include="Automation\Menu\MenuAutomationSpec.cs" />
     <Compile Include="Automation\Menu\MenuSettingsValidationSpec.cs" />
-    <Compile Include="Automation\Template\ProductElementDictionaryConverterSpec.cs" />
+    <Compile Include="Design\ProductElementDictionaryConverterSpec.cs" />
     <Compile Include="Automation\Template\TemplateAutomationSpec.cs" />
     <Compile Include="Automation\Template\TemplateSettingsValidationSpec.cs" />
-    <Compile Include="Automation\Validation\ValidationExtensionDisplaySpec.cs" />
+    <Compile Include="Automation\Extensions\ValidationExtensionDisplaySpec.cs" />
     <Compile Include="Automation\Wizard\WizardSettingsValidationSpec.cs" />
     <Compile Include="Automation\Wizard\WizardAutomationSpec.cs" />
     <Compile Include="Commands\ActivateFeatureCommandSpec.cs" />
