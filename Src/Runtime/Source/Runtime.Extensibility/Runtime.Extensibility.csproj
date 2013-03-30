@@ -112,6 +112,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
@@ -147,6 +148,7 @@
     <Compile Include="Bindings\IPropertyBindingSettings.cs" />
     <Compile Include="Bindings\IValueProviderBindingSettings.cs" />
     <Compile Include="Bindings\PropertyBindingDescriptor.cs" />
+    <Compile Include="CodeGen\Pluralizer.cs" />
     <Compile Include="Comparers\FirstPropertyValueProductElementComparer.cs" />
     <Compile Include="Comparers\ProductElementComparer.cs" />
     <Compile Include="Comparers\ProductElementInstanceNameComparer.cs" />
@@ -185,7 +187,7 @@
     <Compile Include="ISchemaUpgradeProccesorOptions.cs" />
     <Compile Include="IToolkitClassification.cs" />
     <Compile Include="IToolkitInfo.cs" />
-    <Compile Include="Schema\NamedElementSchemaExtensions.cs" />
+    <Compile Include="Schema\NamedElementInfoExtensions.cs" />
     <Compile Include="Store\AutomationExtension.cs" />
     <Compile Include="Store\IAbstractElement.cs" />
     <Compile Include="Store\IAutomationExtension.cs" />
@@ -244,10 +246,9 @@
     <Compile Include="Design\StringCollectionPropertyDescriptor.cs" />
     <Compile Include="Design\PropertyDescriptorExtensions.cs" />
     <Compile Include="Store\InstalledToolkitInfoExtensions.cs" />
-    <Compile Include="Store\ContainedElementInfoExtensions.cs" />
-    <Compile Include="Store\NamedElementInfoExtensions.cs" />
+    <Compile Include="Schema\ContainedElementInfoExtensions.cs" />
     <Compile Include="Schema\PatternElementSchemaExtensions.cs" />
-    <Compile Include="Store\PropertyInfoExtensions.cs" />
+    <Compile Include="Schema\PropertyInfoExtensions.cs" />
     <Compile Include="Automation\AutomationExtensionExtensions.cs" />
     <Compile Include="Automation\AutomationSettingsExtensions.cs" />
     <Compile Include="Store\ElementContainerExtensions.cs" />

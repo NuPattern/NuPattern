@@ -1,30 +1,30 @@
 ﻿<#+
-private void GenerateContainedElements(PluralizationService pluralizer, IElementInfoContainer infoElement, bool noImpl)
+private void GenerateContainedElements(IElementInfoContainer infoElement, bool noImpl)
 {
     foreach (var element in infoElement.Elements)
     {
-        GenerateContainedElementProperty(pluralizer, element, "GetElement", "GetElements", noImpl);
+        GenerateContainedElementProperty(element, "GetElement", "GetElements", noImpl);
     }
 
     foreach (var extension in infoElement.ExtensionPoints)
     {
-        GenerateContainedElementProperty(pluralizer, extension, "GetExtension", "GetExtensions", noImpl);
+        GenerateContainedElementProperty(extension, "GetExtension", "GetExtensions", noImpl);
     }
 
     foreach (var element in infoElement.Elements)
     {
-        GenerateContainedElementCreate(pluralizer, element, noImpl);
+        GenerateContainedElementCreate(element, noImpl);
     }
 
     foreach (var element in infoElement.ExtensionPoints)
     {
-        GenerateContainedExtensionCreate(pluralizer, element, noImpl);
+        GenerateContainedExtensionCreate(element, noImpl);
     }
 }
 
-private void GenerateContainedElementCreate(PluralizationService pluralizer, IContainedElementInfo element, bool noImpl)
+private void GenerateContainedElementCreate(IContainedElementInfo element, bool noImpl)
 {
-    var name = Pluralize(pluralizer, element);
+    var name = Pluralize(element);
 #>
 
 /// <summary>
@@ -67,9 +67,9 @@ public virtual I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(st
     }
 }
 
-private void GenerateContainedExtensionCreate(PluralizationService pluralizer, IContainedElementInfo element, bool noImpl)
+private void GenerateContainedExtensionCreate(IContainedElementInfo element, bool noImpl)
 {
-    var name = Pluralize(pluralizer, element);
+    var name = Pluralize(element);
 #>
 
 /// <summary>
@@ -106,7 +106,7 @@ public virtual I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(st
     }
 }
 
-private void GenerateContainedElementProperty(PluralizationService pluralizer, IContainedElementInfo element, string singularMethod, string pluralMethod, bool noImpl)
+private void GenerateContainedElementProperty(IContainedElementInfo element, string singularMethod, string pluralMethod, bool noImpl)
 {
     if (element.Cardinality == NuPattern.Runtime.Cardinality.ZeroToOne ||
         element.Cardinality == NuPattern.Runtime.Cardinality.OneToOne)
@@ -135,7 +135,7 @@ public virtual I<#=element.CodeIdentifier#> <#=element.CodeIdentifier#>
     }
     else
     {
-        var name = Pluralize(pluralizer, element);
+        var name = Pluralize(element);
 #>
 
 /// <summary>
@@ -160,9 +160,9 @@ public virtual IEnumerable<I<#=element.CodeIdentifier#>> <#=name#>
     }
 }
 
-private string Pluralize(PluralizationService pluralizer, IContainedElementInfo element)
+private string Pluralize(IContainedElementInfo element)
 {
-    var name = pluralizer.IsSingular(element.CodeIdentifier) ? pluralizer.Pluralize(element.CodeIdentifier) : element.CodeIdentifier;
+    var name = Pluralizer.IsSingular(element.CodeIdentifier) ? Pluralizer.Pluralize(element.CodeIdentifier) : element.CodeIdentifier;
     if (name == element.Parent.CodeIdentifier)
         // Do not change if the pluralized version ends up being the same as the containing class.
         name = element.CodeIdentifier;

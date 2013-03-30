@@ -1,14 +1,15 @@
 ﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True"#>
 <#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ output extension=".gen.cs" #>
+<#@ Assembly Name="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" #>
 <#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
 <#@ Assembly Name="NuPattern.Common.dll" #>
 <#@ Assembly Name="NuPattern.Runtime.Schema.dll" #>
 <#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
 <#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
 <#@ Assembly Name="System.ComponentModel.Composition" #>
-<#@ Assembly Name="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
 <#@ Import Namespace="Microsoft.VisualStudio.Modeling" #>
+<#@ Import Namespace="NuPattern" #>
 <#@ Import Namespace="NuPattern.Runtime" #>
 <#@ Import Namespace="NuPattern.Runtime.CodeGen" #>
 <#@ Import Namespace="NuPattern.Runtime.Schema" #>
@@ -18,7 +19,6 @@
 <#@ Import Namespace="System.Collections.Generic" #>
 <#@ Import Namespace="System.ComponentModel" #>
 <#@ Import Namespace="System.Reflection" #>
-<#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
 <#@ Include File="Constants.t4" #>
 <#@ Include File="Helpers.t4include" #>
 <#@ Include File="Header.t4include" #>
@@ -34,17 +34,14 @@ if (toolkitInfo == null)
     throw new Exception("ToolkitInfo element not found");
 
 var patternModel = developmentView.PatternModel;
-var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
-var store = pattern.Store;
+var patternModelInfo = LoadPatternModel(patternModel.ToolkitDefinitionFile);
 
-// The pluralizer in .NET 4.0 only supports English.
-var pluralizer = PluralizationService.CreateService(new System.Globalization.CultureInfo("en-US"));
-
-foreach (var element in store.DefaultPartition.ElementDirectory.AllElements.OfType<IElementInfo>())
+foreach (var element in patternModelInfo.FindAll<IElementInfo>())
 {
     var codegen = new ProductCodeGeneration<IElementInfo, IElement>(element);
     codegen.AddType(typeof(Action));
     codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
+    codegen.AddType(typeof(NuPattern.Runtime.ToolkitInterface.ToolkitInterfaceLayer));
     codegen.EndInit();
 #>
 namespace <#=library.ToolkitProjectRootNamespace #>
@@ -55,7 +52,7 @@ namespace <#=library.ToolkitProjectRootNamespace #>
     internal partial class <#=element.CodeIdentifier #> : I<#=element.CodeIdentifier #>
     {
         private Runtime.IAbstractElement target;
-        private Runtime.ToolkitInterface.IAbstractElementProxy<I<#=element.CodeIdentifier #>> proxy;
+        private IAbstractElementProxy<I<#=element.CodeIdentifier #>> proxy;
 
         /// <summary>
         /// For MEF.
@@ -97,7 +94,7 @@ namespace <#=library.ToolkitProjectRootNamespace #>
 PushIndent("\t");
 PushIndent("\t");
 
-GenerateContainedElements(pluralizer, element, false);
+GenerateContainedElements(element, false);
 
 PopIndent();
 PopIndent();

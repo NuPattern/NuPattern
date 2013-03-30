@@ -41,6 +41,18 @@ namespace NuPattern.Runtime.CodeGen
         }
 
         /// <summary>
+        /// Gets the characters used for indenting generated code.
+        /// </summary>
+        public static string IndentCharacters
+        {
+            get
+            {
+                // TODO: Read this setting from VS settings for: Tools | Options | Text Editor | All Languages | Tabs (Inserts Spaces| Keep Tabs)
+                return @"\t";
+            }
+        }
+
+        /// <summary>
         /// Gets the type map built so far, where the keys are the full type names, 
         /// and the value is the type name to use in code generation.
         /// </summary>
@@ -91,7 +103,12 @@ namespace NuPattern.Runtime.CodeGen
         /// </summary>
         public void AddType(string typeFullName)
         {
-            this.TypeNameMap[typeFullName] = typeFullName;
+            Guard.NotNullOrEmpty(() => typeFullName, typeFullName);
+
+            if (!this.TypeNameMap.ContainsKey(typeFullName))
+            {
+                this.TypeNameMap[typeFullName] = typeFullName;
+            }
         }
 
         /// <summary>

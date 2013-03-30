@@ -75,9 +75,9 @@ namespace NuPattern.Runtime.Schema
         /// Loads the pattern model file, and returns the schema.
         /// </summary>
         /// <param name="modelFilePath">Full path to the pattern model file.</param>
-        public static IPatternModelSchema LoadPatternModelFromFile(string modelFilePath)
+        public static PatternModelSchema LoadPatternModelFromFile(string modelFilePath)
         {
-            var patternModel = (IPatternModelSchema)null;
+            var patternModel = (PatternModelSchema)null;
             var store = new DslModeling.Store(null, new[] { typeof(PatternModelDomainModel) });
             DslModeling.Transaction tx = null;
 

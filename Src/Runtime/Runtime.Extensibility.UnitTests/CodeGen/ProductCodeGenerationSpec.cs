@@ -12,21 +12,21 @@ namespace NuPattern.Runtime.UnitTests.CodeGen
         internal static readonly IAssertion Assert = new Assertion();
 
         [TestClass]
-        public class GivenAnElementSchemaWithAVariableProperty
+        public class GivenAnElementInfoWithAVariableProperty
         {
-            private IElementSchema element;
+            private IElementInfo element;
 
             [TestInitialize]
             public void Initialize()
             {
-                var mockElement = new Mock<IElementSchema>();
+                var mockElement = new Mock<IElementInfo>();
                 mockElement.Setup(x => x.Properties)
                     .Returns(new[] 
                     {
-                        Mocks.Of<IPropertySchema>().First(p => p.Type == "System.String"), 
-                        Mocks.Of<IPropertySchema>().First(p => p.Type == "System.Boolean" && p.TypeConverterTypeName == "System.ComponentModel.StringConverter, System"), 
-                        Mocks.Of<IPropertySchema>().First(p => p.Type == "System.Int32" && p.TypeConverterTypeName == "NuPattern.StringConverter, Microsoft"), 
-                        Mocks.Of<IPropertySchema>().First(p => p.Type == "System.Boolean" && p.EditorTypeName == "System.ComponentModel.UIEditor, System"), 
+                        Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.String"), 
+                        Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.Boolean" && p.TypeConverterTypeName == "System.ComponentModel.StringConverter, System"), 
+                        Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.Int32" && p.TypeConverterTypeName == "NuPattern.StringConverter, Microsoft"), 
+                        Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.Boolean" && p.EditorTypeName == "System.ComponentModel.UIEditor, System"), 
                     });
 
                 this.element = mockElement.Object;
@@ -35,7 +35,7 @@ namespace NuPattern.Runtime.UnitTests.CodeGen
             [TestMethod, TestCategory("Unit")]
             public void WhenBuildingTypeMap_ThenContainsVariablePropertiesUsedTypes()
             {
-                var codegen = new ProductCodeGeneration<IElementSchema, IElement>(this.element);
+                var codegen = new ProductCodeGeneration<IElementInfo, IElement>(this.element);
                 codegen.EndInit();
 
                 Assert.Equal("String", codegen.TypeNameMap["System.String"], "Unique type name should be in simple form.");
@@ -51,14 +51,14 @@ namespace NuPattern.Runtime.UnitTests.CodeGen
             [TestMethod, TestCategory("Unit")]
             public void WhenBuildingTypeMap_ThenHasStandardValuesEditor()
             {
-                var pattern = new Mock<IPatternSchema>();
+                var pattern = new Mock<IPatternInfo>();
                 pattern.Setup(x => x.Properties)
                     .Returns(new[] 
                     {
-                        Mocks.Of<IPropertySchema>().First(p => p.Type == "System.String"), 
+                        Mocks.Of<IPropertyInfo>().First(p => p.Type == "System.String"), 
                     });
 
-                var codegen = new ProductCodeGeneration<IPatternSchema, IProduct>(pattern.Object);
+                var codegen = new ProductCodeGeneration<IPatternInfo, IProduct>(pattern.Object);
                 var typeName = typeof(StandardValuesEditor).FullName + ", " + typeof(StandardValuesEditor).Assembly.GetName().Name;
                 codegen.AddType(typeName);
                 codegen.EndInit();

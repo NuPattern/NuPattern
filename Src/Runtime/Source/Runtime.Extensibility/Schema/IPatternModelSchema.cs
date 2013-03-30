@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 
 namespace NuPattern.Runtime
 {
@@ -7,10 +6,10 @@ namespace NuPattern.Runtime
     /// </summary>
     public partial interface IPatternModelSchema
     {
-        /// <summary>
-        /// Gets instances of a given type.
-        /// </summary>
-        IEnumerable<T> FindAll<T>();
+        ///// <summary>
+        ///// Gets instances of a given type.
+        ///// </summary>
+        //IEnumerable<T> FindAll<T>();
 
         /// <summary>
         /// Determines whether pattern line is being tailored or authored.

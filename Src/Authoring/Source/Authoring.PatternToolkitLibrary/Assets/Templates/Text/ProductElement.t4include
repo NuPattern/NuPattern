@@ -11,7 +11,7 @@ private void GenerateProperties<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TR
     where TInfo : IPatternElementInfo
     where TRuntime : IProductElement
 {
-    PushIndent("\t");	
+    PushIndent("\t");
 
     // Generate the user defined properties on element
     var elementProperties = element.Properties;
@@ -28,7 +28,7 @@ private void GenerateProperties<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TR
         .Distinct(new SelectorEqualityComparer<PropertyInfo, string>(prop => prop.Name));
     foreach (var property in genericProperties)
     {
-        PushIndent("\t");	
+        PushIndent("\t");
 #>
 <#= "" #>
 <#+

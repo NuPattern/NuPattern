@@ -40,11 +40,11 @@ namespace NuPattern.Runtime.CodeGen
             base.TypeNameMap[typeof(UITypeEditor).FullName] = typeof(UITypeEditor).FullName;
         }
 
-        /// <devdoc>
+        /// <summary>
         /// Gets all the unique type names used by the element variable properties, 
         /// its reflection properties which are not hidden, as well as all the 
         /// used types in any of those property attributes.
-        /// </devdoc>
+        /// </summary>
         private static IEnumerable<string> GetUsedTypesFromVariableProperties(TInfo element)
         {
             Guard.NotNull(() => element, element);
