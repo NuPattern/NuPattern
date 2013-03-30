@@ -69,8 +69,8 @@
     <Compile Include="Binding\Design\DesignPropertyValueDescriptorSpec.cs" />
     <Compile Include="Binding\Design\DesignPropertySpec.cs" />
     <Compile Include="Binding\PropertyBindingSettingsSpec.cs" />
-    <Compile Include="Model\Store\AutomationExtensionsSpec.cs" />
-    <Compile Include="Model\Store\StoreEventBufferingScopeSpec.cs" />
+    <Compile Include="Store\AutomationExtensionsSpec.cs" />
+    <Compile Include="Store\StoreEventBufferingScopeSpec.cs" />
     <Compile Include="PathResolverSpec.cs" />
     <Compile Include="ToolkitInterface\ProxyServiceProviderSpec.cs" />
     <Compile Include="References\ReferenceKindProviderSpec.cs" />
