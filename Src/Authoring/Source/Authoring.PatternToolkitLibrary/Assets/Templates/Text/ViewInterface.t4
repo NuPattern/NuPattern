@@ -1,27 +1,7 @@
 ﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True"#>
 <#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ output extension=".gen.cs" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" #>
-<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
-<#@ Assembly Name="NuPattern.Common.dll" #>
-<#@ Assembly Name="NuPattern.Runtime.Schema.dll" #>
-<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
-<#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
-<#@ Assembly Name="System.ComponentModel.Composition" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Modeling" #>
-<#@ Import Namespace="NuPattern" #>
-<#@ Import Namespace="NuPattern.Runtime" #>
-<#@ Import Namespace="NuPattern.Runtime.CodeGen" #>
-<#@ Import Namespace="NuPattern.Runtime.Schema" #>
-<#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" #>
-<#@ Import Namespace="NuPattern.Authoring.PatternToolkitLibrary" #>
-<#@ Import Namespace="System.Linq" #>
-<#@ Import Namespace="System.Collections.Generic" #>
-<#@ Import Namespace="System.ComponentModel" #>
-<#@ Import Namespace="System.Reflection" #>
-<#@ Include File="Constants.t4" #>
-<#@ Include File="Helpers.t4include" #>
-<#@ Include File="Header.t4include" #>
+<#@ Include File="Common.t4include" #>
 <#@ Include File="NamedElementParent.t4include" #>
 <#@ Include File="ElementContainer.t4include" #>
 <#
@@ -35,43 +15,24 @@ if (toolkitInfo == null)
 var patternModel = developmentView.PatternModel;
 var patternModelInfo = LoadPatternModel(patternModel.ToolkitDefinitionFile);
 var pattern = patternModelInfo.Pattern;
-#>
 
-<#
-foreach(var view in pattern.Views)
+foreach (var view in pattern.Views)
 {
     var codegen = new ViewCodeGeneration<IViewInfo, IView>(view);
     codegen.AddType(typeof(Action));
     codegen.AddType(typeof(System.Collections.Generic.IEnumerable<object>));
     codegen.AddType(typeof(NuPattern.Runtime.ToolkitInterface.ToolkitInterfaceLayer));
     codegen.EndInit();
-#>
-namespace <#= library.ToolkitProjectRootNamespace #>
-{
-<#GenerateUsings(codegen);#>
 
-    <#GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, view); #>
-    public partial interface I<#=view.CodeIdentifier#> : IToolkitInterface
-    { <#
-GenerateParentProperty(view, true);
-
-PushIndent("\t");
-PushIndent("\t");
-
-GenerateContainedElements(view, true);
-GenerateDeleteInterfaceMethod();
-
-PopIndent();
-PopIndent();
-#>
-
-        /// <summary>
-        /// Gets the generic <see cref="Runtime.IView"/> underlying element.
-        /// </summary>
-        Runtime.IView AsView();
-    }
-}
-
-<#
+    GenerateNamespaceBegin(library);
+    GenerateUsings(codegen);
+    GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, view);
+    GenerateClassBegin(view, true);
+    GenerateParentProperty(view, true);
+    GenerateContainedElements(view, true);
+    GenerateDeleteMethod(true);
+    GenerateAutoGeneralizedInterfaceMethod("View", true);
+    GenerateClassEnd();
+    GenerateNamespaceEnd();
 }
 #>

@@ -1,27 +1,7 @@
 ﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True"#>
 <#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ output extension=".gen.cs" #>
-<#@ Assembly Name="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" #>
-<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
-<#@ Assembly Name="NuPattern.Common.dll" #>
-<#@ Assembly Name="NuPattern.Runtime.Schema.dll" #>
-<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
-<#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
-<#@ Assembly Name="System.ComponentModel.Composition" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Modeling" #>
-<#@ Import Namespace="NuPattern" #>
-<#@ Import Namespace="NuPattern.Runtime" #>
-<#@ Import Namespace="NuPattern.Runtime.CodeGen" #>
-<#@ Import Namespace="NuPattern.Runtime.Schema" #>
-<#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" #>
-<#@ Import Namespace="NuPattern.Authoring.PatternToolkitLibrary" #>
-<#@ Import Namespace="System.Linq" #>
-<#@ Import Namespace="System.Collections.Generic" #>
-<#@ Import Namespace="System.ComponentModel" #>
-<#@ Import Namespace="System.Reflection" #>
-<#@ Include File="Constants.t4" #>
-<#@ Include File="Helpers.t4include" #>
-<#@ Include File="Header.t4include" #>
+<#@ Include File="Common.t4include" #>
 <#@ Include File="NamedElementParent.t4include" #>
 <#@ Include File="ProductElement.t4include" #>
 <#
@@ -41,33 +21,16 @@ foreach (var extensionPoint in patternModelInfo.FindAll<IExtensionPointInfo>())
     codegen.AddType(typeof(Action));
     codegen.AddType(typeof(NuPattern.Runtime.ToolkitInterface.ToolkitInterfaceLayer));
     codegen.EndInit();
-#>
-namespace <#=library.ToolkitProjectRootNamespace #>
-{
-<#GenerateUsings(codegen);#>
 
-    <#GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, extensionPoint); #>
-    public partial interface I<#=extensionPoint.CodeIdentifier #> : IToolkitInterface
-    { <# 
-GenerateProperties(codegen, extensionPoint, true);
-GenerateParentProperty(extensionPoint, true);
-
-PushIndent("\t");
-PushIndent("\t");
-
-GenerateDeleteInterfaceMethod();
-
-PopIndent();
-PopIndent();
-#>
-
-        /// <summary>
-        /// Gets the generic <see cref="Runtime.IProduct"/> underlying element.
-        /// </summary>
-        Runtime.IProduct AsProduct();
-    }
+    GenerateNamespaceBegin(library);
+    GenerateUsings(codegen);
+    GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, extensionPoint);
+    GenerateClassBegin(extensionPoint, true);
+    GenerateProperties(codegen, extensionPoint, true);
+    GenerateParentProperty(extensionPoint, true);
+    GenerateDeleteMethod(true);
+    GenerateAutoGeneralizedInterfaceMethod("Product", true);
+    GenerateClassEnd();
+    GenerateNamespaceEnd();
 }
-
-<#
-                                                                }
 #>

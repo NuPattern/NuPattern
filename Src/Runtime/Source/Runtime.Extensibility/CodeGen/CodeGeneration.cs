@@ -43,13 +43,10 @@ namespace NuPattern.Runtime.CodeGen
         /// <summary>
         /// Gets the characters used for indenting generated code.
         /// </summary>
-        public static string IndentCharacters
+        public static string GetIndentation(string language = "c#")
         {
-            get
-            {
-                // TODO: Read this setting from VS settings for: Tools | Options | Text Editor | All Languages | Tabs (Inserts Spaces| Keep Tabs)
-                return @"\t";
-            }
+            // TODO: Read this setting from VS settings for: Tools | Options | Text Editor | <language> | Tabs (Inserts Spaces| Keep Tabs)
+            return "\t";
         }
 
         /// <summary>

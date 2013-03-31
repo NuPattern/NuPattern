@@ -3755,7 +3755,7 @@
               </settings>
             </customizationPolicy>
             <properties>
-              <property Id="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" name="ValidateOnBuild" displayName="Validate On Build" description="When to validate the pattern model, to ensure that its configuration is valid and up to date." codeIdentifier="ValidateOnBuild" typeConverterTypeName="NNuPattern.Runtime.Design.ValidateOnBuildConverter, NuPattern.Runtime.Extensibility">
+              <property Id="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" name="ValidateOnBuild" displayName="Validate On Build" description="When to validate the pattern model, to ensure that its configuration is valid and up to date." codeIdentifier="ValidateOnBuild" typeConverterTypeName="NuPattern.Runtime.Design.ValidateOnBuildConverter, NuPattern.Runtime.Extensibility">
                 <customizationPolicy name="CustomizationPolicySchema1">
                   <settings>
                     <setting propertyId="DisplayName" />

@@ -25,12 +25,14 @@ private void GenerateContainedElements(IElementInfoContainer infoElement, bool n
 private void GenerateContainedElementCreate(IContainedElementInfo element, bool noImpl)
 {
     var name = Pluralize(element);
+    WriteBlankLine();
+    Indent();
+    Indent();
 #>
-
 /// <summary>
-///	Creates a new <see cref="I<#=element.CodeIdentifier#>"/> <#+if (element.Cardinality == NuPattern.Runtime.Cardinality.OneToMany || element.Cardinality == NuPattern.Runtime.Cardinality.ZeroToMany) { #> and adds it to the <see cref="<#=name#>"/> collection, <#+}#> 
+/// Creates a new <see cref="I<#=element.CodeIdentifier#>"/> <#+if (element.Cardinality == NuPattern.Runtime.Cardinality.OneToMany || element.Cardinality == NuPattern.Runtime.Cardinality.ZeroToMany) { #> and adds it to the <see cref="<#=name#>"/> collection, <#+}#> 
 /// executing the optional <paramref name="initializer"/> if not <see langword="null"/>.
-///	</summary>
+/// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 <#+
     if (noImpl)
@@ -47,15 +49,19 @@ public virtual I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(st
 <#+
         if (element is IElementInfo)
         {
+            Indent();
 #>
-    return proxy.CreateElement<I<#=element.CodeIdentifier#>>(name, initializer, raiseInstantiateEvents);
+return proxy.CreateElement<I<#=element.CodeIdentifier#>>(name, initializer, raiseInstantiateEvents);
 <#+
+            UnIndent();
         }
         else if (element is ICollectionInfo)
         {
+            Indent();
 #>
-    return proxy.CreateCollection<I<#=element.CodeIdentifier#>>(name, initializer, raiseInstantiateEvents);
+return proxy.CreateCollection<I<#=element.CodeIdentifier#>>(name, initializer, raiseInstantiateEvents);
 <#+
+            UnIndent();
         }
         else
         {
@@ -65,17 +71,22 @@ public virtual I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(st
 }
 <#+
     }
+
+    UnIndent();
+    UnIndent();
 }
 
 private void GenerateContainedExtensionCreate(IContainedElementInfo element, bool noImpl)
 {
     var name = Pluralize(element);
+    WriteBlankLine();
+    Indent();
+    Indent();
 #>
-
 /// <summary>
-///	Creates a new <see cref="I<#=element.CodeIdentifier#>"/> <#+if (element.Cardinality == NuPattern.Runtime.Cardinality.OneToMany || element.Cardinality == NuPattern.Runtime.Cardinality.ZeroToMany) { #> and adds it to the <see cref="<#=name#>"/> collection, <#+}#> 
+/// Creates a new <see cref="I<#=element.CodeIdentifier#>"/> <#+if (element.Cardinality == NuPattern.Runtime.Cardinality.OneToMany || element.Cardinality == NuPattern.Runtime.Cardinality.ZeroToMany) { #> and adds it to the <see cref="<#=name#>"/> collection, <#+}#> 
 /// executing the optional <paramref name="initializer"/> if not <see langword="null"/>.
-///	</summary>
+/// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
 <#+
     if (noImpl)
@@ -92,9 +103,11 @@ public virtual I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(st
 <#+
         if (element is IExtensionPointInfo)
         {
+            Indent();
 #>
-    return proxy.CreateExtension<I<#=element.CodeIdentifier#>>(name, productId, toolkitId, initializer, raiseInstantiateEvents);
+return proxy.CreateExtension<I<#=element.CodeIdentifier#>>(name, productId, toolkitId, initializer, raiseInstantiateEvents);
 <#+
+            UnIndent();
         }
         else
         {
@@ -104,15 +117,21 @@ public virtual I<#=element.CodeIdentifier#> Create<#=element.CodeIdentifier#>(st
 }
 <#+
     }
+    
+    UnIndent();
+    UnIndent();
 }
 
 private void GenerateContainedElementProperty(IContainedElementInfo element, string singularMethod, string pluralMethod, bool noImpl)
 {
+    WriteBlankLine();
+    Indent();
+    Indent();
+
     if (element.Cardinality == NuPattern.Runtime.Cardinality.ZeroToOne ||
         element.Cardinality == NuPattern.Runtime.Cardinality.OneToOne)
     {
 #>
-
 /// <summary>
 /// Gets the <see cref="I<#=element.CodeIdentifier#>"/> contained in this element.
 /// </summary>
@@ -126,9 +145,15 @@ I<#=element.CodeIdentifier#> <#=element.CodeIdentifier#> { get; }
         else
         {
 #>
-public virtual I<#=element.CodeIdentifier#> <#=element.CodeIdentifier#> 
-{ 
-    get { return proxy.<#= singularMethod #>(() => this.<#=element.CodeIdentifier#>, element => new <#=element.CodeIdentifier#>(element)); }
+public virtual I<#=element.CodeIdentifier#> <#=element.CodeIdentifier#>
+{
+<#+
+        Indent();
+#>
+get { return proxy.<#= singularMethod #>(() => this.<#=element.CodeIdentifier#>, element => new <#=element.CodeIdentifier#>(element)); }
+<#+
+        UnIndent();
+#>
 }
 <#+
         }
@@ -137,7 +162,6 @@ public virtual I<#=element.CodeIdentifier#> <#=element.CodeIdentifier#>
     {
         var name = Pluralize(element);
 #>
-
 /// <summary>
 /// Gets all instances of <see cref="I<#=element.CodeIdentifier#>"/> contained in this element.
 /// </summary>
@@ -151,22 +175,20 @@ IEnumerable<I<#=element.CodeIdentifier#>> <#=name#> { get; }
         else
         {
 #>
-public virtual IEnumerable<I<#=element.CodeIdentifier#>> <#=name#> 
+public virtual IEnumerable<I<#=element.CodeIdentifier#>> <#=name#>
 { 
-    get { return proxy.<#= pluralMethod #>(() => this.<#=name#>, element => new <#=element.CodeIdentifier#>(element)); }
+<#+
+        Indent();
+#>
+get { return proxy.<#= pluralMethod #>(() => this.<#=name#>, element => new <#=element.CodeIdentifier#>(element)); }
+<#+
+        UnIndent();
+#>
 }
 <#+
         }
     }
-}
 
-private string Pluralize(IContainedElementInfo element)
-{
-    var name = Pluralizer.IsSingular(element.CodeIdentifier) ? Pluralizer.Pluralize(element.CodeIdentifier) : element.CodeIdentifier;
-    if (name == element.Parent.CodeIdentifier)
-        // Do not change if the pluralized version ends up being the same as the containing class.
-        name = element.CodeIdentifier;
-
-    return name;
-}
-#>
+    UnIndent();
+    UnIndent();
+}#>

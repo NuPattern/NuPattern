@@ -4,15 +4,11 @@
 <#@ Import Namespace="System.Collections.Generic" #>
 <#@ Import Namespace="System.ComponentModel" #>
 <#@ Import Namespace="System.Reflection" #>
-<#@ Import Namespace="System.IO" #>
-<#+
-
+<#@ Import Namespace="System.IO" #><#+
 private void GenerateProperties<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, TInfo element, bool noImpl)
     where TInfo : IPatternElementInfo
     where TRuntime : IProductElement
 {
-    PushIndent("\t");
-
     // Generate the user defined properties on element
     var elementProperties = element.Properties;
     foreach (var property in elementProperties)
@@ -28,44 +24,48 @@ private void GenerateProperties<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TR
         .Distinct(new SelectorEqualityComparer<PropertyInfo, string>(prop => prop.Name));
     foreach (var property in genericProperties)
     {
-        PushIndent("\t");
-#>
-<#= "" #>
-<#+
+        WriteBlankLine();
+        Indent();
+        Indent();
         GenerateComments(property);
         GenerateAttributes(codegen, property);
+
         // Generate property signature
         if (noImpl)
         {
-#><#= codegen.GetTypeName(property.PropertyType) #> <#= property.Name #> { <#= property.CanRead ? "get;" : "" #> <#= property.CanWrite ? "set;" : "" #> }
+#><#= codegen.GetTypeName(property.PropertyType) #> <#= property.Name #> {<#= property.CanRead ? " get;" : "" #><#= property.CanWrite ? " set;" : "" #> }
 <#+
         }
         else
         {
-#>public virtual <#= codegen.GetTypeName(property.PropertyType) #> <#= property.Name #> 
+#>public virtual <#= codegen.GetTypeName(property.PropertyType) #> <#= property.Name #>
 { 
 <#+
-        // Generate get and set signatures
-        if (property.CanRead)
-        {
+            // Generate get and set signatures
+            if (property.CanRead)
+            {
+                Indent();
 #>
-    get { return this.proxy.GetValue(() => this.<#= property.Name #>); }
+get { return this.proxy.GetValue(() => this.<#= property.Name #>); }
 <#+
-        }
-        if (property.CanWrite)
-        {
+                UnIndent();
+            }
+            if (property.CanWrite)
+            {
+                Indent();
 #>
-    set { this.proxy.SetValue(() => this.<#= property.Name #>, value); }
+set { this.proxy.SetValue(() => this.<#= property.Name #>, value); }
 <#+
-        }
+                UnIndent();
+            }
 #>
 }
 <#+
         }
-        PopIndent();
-    }
 
-    PopIndent();
+        UnIndent();
+        UnIndent();
+    }
 }
 
 private void GenerateAttributes<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRuntime> codegen, MemberInfo typeOrMember)
@@ -112,8 +112,9 @@ private void GenerateProperty<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRun
     where TInfo : IPatternElementInfo
     where TRuntime : IProductElement
 {
-    PushIndent("\t");
-    this.WriteLine("");
+    this.WriteBlankLine();
+    Indent();
+    Indent();
     GenerateComments(property);
 
     // Generate configured attributes
@@ -152,13 +153,20 @@ private void GenerateProperty<TInfo, TRuntime>(ProductCodeGeneration<TInfo, TRun
     else
     {
 #>
-public virtual <#= codegen.GetTypeName(property.Type) #> <#= property.CodeIdentifier #> 
+public virtual <#= codegen.GetTypeName(property.Type) #> <#= property.CodeIdentifier #>
 {
-    get { return this.proxy.GetValue(() => this.<#= property.CodeIdentifier #>); }
-    set { this.proxy.SetValue(() => this.<#= property.CodeIdentifier #>, value); }
+<#+
+        Indent();
+#>
+get { return this.proxy.GetValue(() => this.<#= property.CodeIdentifier #>); }
+set { this.proxy.SetValue(() => this.<#= property.CodeIdentifier #>, value); }
+<#+
+        UnIndent();
+#>
 }
 <#+
     }
-    PopIndent();
-}
-#>
+
+    UnIndent();
+    UnIndent();
+}#>
