@@ -1,0 +1,16 @@
+﻿<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
+<#@ Import Namespace="NuPattern.Runtime.CodeGen" #><#+
+
+private void WriteBlankLine()
+{
+    WriteLine("");
+}
+private void Indent()
+{
+    PushIndent(CodeGeneration.GetIndentation("csharp"));
+}
+
+private void UnIndent()
+{
+    PopIndent();
+}#>

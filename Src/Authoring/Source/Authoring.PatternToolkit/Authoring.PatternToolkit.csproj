@@ -166,6 +166,9 @@
     <None Include="3e44e242-5b47-4338-827f-ca394a899c57.patterndefinition.diagram">
       <DependentUpon>PatternModel.patterndefinition</DependentUpon>
     </None>
+    <Content Include="Assets\Templates\Text\Utilities.t4include">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8.patterndefinition.diagram">
       <DependentUpon>PatternModel.patterndefinition</DependentUpon>
     </None>
@@ -1049,7 +1052,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>GuidanceWorkflow.gen.t4</LastGenOutput>
     </None>
-    <Content Include="Assets\Templates\Text\Header.t4">
+    <Content Include="Assets\Templates\Text\Header.t4include">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="Assets\Templates\Text\ItemTemplate\ItemTemplate.vstemplate.tt">

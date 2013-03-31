@@ -10,9 +10,8 @@
 \<#@ Import Namespace="NuPattern.Authoring.PatternToolkit" \#>
 \<#@ Import Namespace="System.Linq" \#>
 \<#
-    IProjectTemplate template = ((IProductElement)this.Element).As<IProjectTemplate>();
-
-    var fileName = template.InstanceName.Replace(" ", string.Empty);
+IProjectTemplate template = ((IProductElement)this.Element).As<IProjectTemplate>();
+var fileName = template.InstanceName.Replace(" ", string.Empty);
 \#><?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     <TemplateData>
@@ -38,7 +37,7 @@
         </Project>
     </TemplateContent>
     <WizardExtension>
-      <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-      <FullClassName>NuPattern.Library.TemplateWizards.ElementReplacementsWizard</FullClassName>
+        <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+        <FullClassName>NuPattern.Library.TemplateWizards.ElementReplacementsWizard</FullClassName>
     </WizardExtension>
 </VSTemplate>

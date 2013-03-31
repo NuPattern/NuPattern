@@ -7,9 +7,9 @@
 <#@ Import Namespace="NuPattern.Authoring.PatternToolkit" #>
 <#@ output extension=".doc" #>
 <#
-	IGuidance guidance = this.Element.As<IGuidance>();
-	var author = guidance.Parent.Parent.PatternToolkitInfo.Author;
-	var pattern = guidance.Parent.Parent.Parent.InstanceName;
+IGuidance guidance = this.Element.As<IGuidance>();
+var author = guidance.Parent.Parent.PatternToolkitInfo.Author;
+var pattern = guidance.Parent.Parent.Parent.InstanceName;
 #>
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <?mso-application progid="Word.Document"?>

@@ -8,7 +8,7 @@
 <#@ Import Namespace="NuPattern.Authoring.PatternToolkit" #>
 <#@ Import Namespace="System.Linq" #>
 <#
-    var element = this.Element.As<IPatternModel>();
+var element = this.Element.As<IPatternModel>();
 #><?xml version="1.0" encoding="utf-8"?>
 <patternModel 
     xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel"
