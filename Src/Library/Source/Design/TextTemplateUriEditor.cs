@@ -43,7 +43,7 @@ namespace NuPattern.Library.Design
             Guard.NotNull(() => provider, provider);
             Guard.NotNull(() => value, value);
 
-            var templateUri = (Uri)value;
+            var templateUri = (value is Uri) ? (Uri)value : (Uri)null;
 
             tracer.ShieldUI(() =>
             {

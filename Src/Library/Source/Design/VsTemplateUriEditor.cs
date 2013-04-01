@@ -52,7 +52,7 @@ namespace NuPattern.Library.Design
 
             var uriService = provider.GetService<IFxrUriReferenceService>();
 
-            var templateUri = value as string;
+            var templateUri = (value is string) ? (string)value : (string)null;
 
             tracer.ShieldUI(() =>
             {

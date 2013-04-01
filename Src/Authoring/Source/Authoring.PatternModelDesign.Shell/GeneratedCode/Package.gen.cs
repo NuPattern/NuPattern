@@ -145,15 +145,15 @@ namespace NuPattern.Runtime.Schema
 	/// </summary>
 	[VSShell::ProvideMenuResource("1000.ctmenu", 1)]
 	[VSShell::ProvideToolboxItems(1)]
-    [global::Microsoft.VisualStudio.Modeling.Shell.ProvideXmlEditorChooserDesignerView(
-        "PatternModel",
-        Constants.DesignerFileExtension,
-        EnvDTE.Constants.vsViewKindDesigner,
-        1,
-        CodeLogicalViewEditor = Constants.PatternModelEditorFactoryId,
-        DebuggingLogicalViewEditor = Constants.PatternModelEditorFactoryId,
-        DesignerLogicalViewEditor = Constants.PatternModelEditorFactoryId,
-        TextLogicalViewEditor = Constants.PatternModelEditorFactoryId)]
+	[global::Microsoft.VisualStudio.Modeling.Shell.ProvideXmlEditorChooserDesignerView(
+		"PatternModel",
+		Constants.DesignerFileExtension,
+		EnvDTE.Constants.vsViewKindDesigner,
+		1,
+		CodeLogicalViewEditor = Constants.PatternModelEditorFactoryId,
+		DebuggingLogicalViewEditor = Constants.PatternModelEditorFactoryId,
+		DesignerLogicalViewEditor = Constants.PatternModelEditorFactoryId,
+		TextLogicalViewEditor = Constants.PatternModelEditorFactoryId)]
 	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::NuPattern.Runtime.Schema.PatternModelDirectiveProcessor), global::NuPattern.Runtime.Schema.PatternModelDirectiveProcessor.PatternModelDirectiveProcessorName, "A directive processor that provides access to PatternModel files")]
 	[global::System.Runtime.InteropServices.Guid(Constants.PatternModelPackageId)]
 	internal sealed partial class PatternModelPackage : PatternModelPackageBase

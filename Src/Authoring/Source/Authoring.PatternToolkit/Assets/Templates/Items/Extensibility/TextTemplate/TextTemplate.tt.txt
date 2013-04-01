@@ -1,7 +1,8 @@
-﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" Debug="True" #>
+﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" Debug="False" #>
 <#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ Assembly Name="NuPattern.Common.dll" #>
 <#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
 <#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" #>
 <#@ Assembly Name="$Parent.Parent.Parent.Parent.AutomationCollection.AutomationLibrary.ProjectAssemblyName$.dll" #>
 <#@ Import Namespace="$Parent.Parent.Parent.Parent.Parent.ProjectRootNamespace$" #>
@@ -15,7 +16,7 @@
 // TODO: Change the extension in the < Output > directive above to output the file type you need. 
 //	By default this template generates a C# code file.
     
-// TODO: Replace IYourPatternName in the lines below with the CodeIdentifier of the pattern element upon which this template is configured.
+// TODO: Replace IMyPattern in the lines below with the CodeIdentifier of the pattern element upon which this template is configured.
 // Note: this could be the root pattern element, or any other element in your pattern model. 
 //	Each element has its own interface using the CodeIdentifier property, preceeded with a captial I
     

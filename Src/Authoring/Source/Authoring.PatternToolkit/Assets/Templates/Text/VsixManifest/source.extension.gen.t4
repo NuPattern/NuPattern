@@ -4,6 +4,7 @@
 <#@ Assembly Name="NuPattern.Common.dll" #>
 <#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
 <#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
 <#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" #>
 <#@ Import Namespace="NuPattern.Authoring.PatternToolkit" #>
 \<#@ output extension=".vsixmanifest" \#>

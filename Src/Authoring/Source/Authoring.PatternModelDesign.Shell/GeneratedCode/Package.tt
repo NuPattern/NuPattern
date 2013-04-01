@@ -4,7 +4,7 @@
 	//This value is initially set to the default AssemblyName of the Dsl.csproj 
 	//If you update the DSL Assembly name, please update the following string value to the new name.
 	//Failure to do so may result in your Toolbox items not appearing correctly.
-    string dslAssembly = "NuPattern.Runtime.Schema.dll";
+	string dslAssembly = "NuPattern.Runtime.Schema.dll";
 #>
 <#@ include file="DslPackage\Package.tt" #>
 <#
@@ -20,15 +20,15 @@ namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>
 	/// </summary>
 	[VSShell::ProvideMenuResource("1000.ctmenu", 1)]
 	[VSShell::ProvideToolboxItems(1)]
-    [global::Microsoft.VisualStudio.Modeling.Shell.ProvideXmlEditorChooserDesignerView(
-        "<#=directiveName#>",
-        Constants.DesignerFileExtension,
-        EnvDTE.Constants.vsViewKindDesigner,
-        1,
-        CodeLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId,
-        DebuggingLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId,
-        DesignerLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId,
-        TextLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId)]
+	[global::Microsoft.VisualStudio.Modeling.Shell.ProvideXmlEditorChooserDesignerView(
+		"<#=directiveName#>",
+		Constants.DesignerFileExtension,
+		EnvDTE.Constants.vsViewKindDesigner,
+		1,
+		CodeLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId,
+		DebuggingLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId,
+		DesignerLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId,
+		TextLogicalViewEditor = Constants.<#= dslName #>EditorFactoryId)]
 	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::<#= this.Dsl.Namespace #>.<#= directiveName #>DirectiveProcessor), global::<#= this.Dsl.Namespace #>.<#= directiveName #>DirectiveProcessor.<#= directiveName #>DirectiveProcessorName, "A directive processor that provides access to <#= directiveName #> files")]
 	[global::System.Runtime.InteropServices.Guid(Constants.<#= dslName #>PackageId)]
 	internal sealed partial class <#= dslName #>Package : <#= dslName #>PackageBase

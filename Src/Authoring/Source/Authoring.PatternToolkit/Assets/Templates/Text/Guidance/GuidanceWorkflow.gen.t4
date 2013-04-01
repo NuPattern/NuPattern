@@ -8,6 +8,7 @@
 <#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll" #>
 <#@ Import Namespace="NuPattern.Authoring.PatternToolkit" #>
 <#@ Import Namespace="NuPattern.Authoring.Guidance" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
 <#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" #>
 <#@ Import Namespace="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features" #>
 <#@ Include File="..\Utilities.t4include" #>
