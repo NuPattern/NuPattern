@@ -184,9 +184,6 @@ namespace NuPattern.Authoring.IntegrationTests
                             "NuPattern.Authoring.WorkflowDesign.Shell.dll",
                             "NuPattern.Authoring.WorkflowDesign.Shell.pkgdef",
 
-                            //Runtime Assemblies
-                            "NuPattern.Runtime.Schema.dll",
-
                             //Embedded VSIXes
                             "NuPatternToolkitLibrary.vsix",
                             "NuPatternToolkitManager.vsix",

@@ -286,6 +286,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DesignerConstants.gen.cs</LastGenOutput>
     </None>
+    <None Include="GeneratedCode\Customization\ToolboxItemsResx.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ToolboxItemsResx.gen.resx</LastGenOutput>
+    </None>
     <None Include="GeneratedCode\PatternModelSchema.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PatternModelSchema.gen.xsd</LastGenOutput>
@@ -477,6 +481,12 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GeneratedCode\Customization\ToolboxItemsResx.gen.resx">
+      <DependentUpon>ToolboxItemsResx.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneratedCode\DomainModelResx.gen.resx">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

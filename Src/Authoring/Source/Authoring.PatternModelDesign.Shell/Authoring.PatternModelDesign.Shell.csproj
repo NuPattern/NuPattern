@@ -195,6 +195,7 @@
     </CodeAnalysisDictionary>
     <Compile Include="PatternModelSchemaUpgradeManager.cs" />
     <Compile Include="ViewSchemaExtensions.cs" />
+    <None Include="GeneratedCode\Customization\Package.tt" />
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
@@ -276,6 +277,9 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="..\..\..\Runtime\Source\Runtime.Schema\GeneratedCode\Customization\ToolboxItemsResx.gen.resx">
+      <Link>GeneratedCode\Customization\ToolboxItemsResx.gen.resx</Link>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\ShellResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ShellResources.Designer.cs</LastGenOutput>
