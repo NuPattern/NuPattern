@@ -5,6 +5,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Workflow", "_Workflow", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D575697-5894-42D6-B3D0-C0D65605209F}"
 	ProjectSection(SolutionItems) = preProject
+		Assemblies.dgml = Assemblies.dgml
 		Authoring.slnbldr = Authoring.slnbldr
 		Authoring.vs2010.guidancestate = Authoring.vs2010.guidancestate
 		Authoring.vs2010.testsettings = Authoring.vs2010.testsettings
@@ -120,7 +121,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authoring.HandsOnLabs", "So
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versioning", "..\Common\Source\Versioning\Versioning.csproj", "{AE530C9B-34B7-416F-8477-15B8257CDAC0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Authoring", "_Authoring", "{D283BB26-C5A2-46E1-AA9D-799FF3F16445}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Toolkits", "_Toolkits", "{D283BB26-C5A2-46E1-AA9D-799FF3F16445}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Designers", "Designers", "{774C4C25-1863-4064-ADBE-5A7C5E9F41D5}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -482,6 +485,9 @@ Global
 		{2F73D922-E3C5-49F8-AB6D-AF54E76EE47E} = {D283BB26-C5A2-46E1-AA9D-799FF3F16445}
 		{67257A67-4ECB-4D70-92EE-445835343670} = {D283BB26-C5A2-46E1-AA9D-799FF3F16445}
 		{63F04D57-AC8A-4813-A98F-9927AA7C3C6C} = {D283BB26-C5A2-46E1-AA9D-799FF3F16445}
+		{774C4C25-1863-4064-ADBE-5A7C5E9F41D5} = {D283BB26-C5A2-46E1-AA9D-799FF3F16445}
+		{0990606D-3AB2-4D61-B4FB-C5C999D6C4AF} = {774C4C25-1863-4064-ADBE-5A7C5E9F41D5}
+		{068158BB-5542-42A5-B5CC-934B7352385A} = {774C4C25-1863-4064-ADBE-5A7C5E9F41D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		Features = 9f6dc301-6f66-4d21-9f9c-b37412b162f6:Creating Pattern Toolkits:1.3.20.0
