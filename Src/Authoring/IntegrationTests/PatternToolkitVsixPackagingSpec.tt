@@ -112,7 +112,8 @@ namespace NuPattern.Authoring.IntegrationTests
                 this.AssertFolderContainsExclusive(@"Assets\Templates\Text",
                     new[]
                         {
-                            "Header.t4",
+                            "Header.t4include",
+                            "Utilities.t4include",
                         });
 
                 this.AssertFolderContainsExclusive(@"Assets\Templates\Text\Guidance",
