@@ -1,13 +1,11 @@
 ﻿using System.ComponentModel.Design;
-using NuPattern.Runtime.Commands;
-using NuPattern.VisualStudio.Commands;
 
-namespace NuPattern.Runtime
+namespace NuPattern.VisualStudio.Commands
 {
     /// <summary>
     /// Define extension methods related to <see cref="IMenuCommandService"/>.
     /// </summary>
-    internal static class MenuCommandServiceExtensions
+    public static class MenuCommandServiceExtensions
     {
         /// <summary>
         /// Adds the command.

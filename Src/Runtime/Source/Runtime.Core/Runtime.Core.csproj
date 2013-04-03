@@ -73,10 +73,6 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Immutable.10.0.dll</HintPath>
@@ -106,8 +102,6 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Commands\VsMenuCommand.cs" />
-    <Compile Include="Commands\VsMenuCommandAdapter.cs" />
     <Compile Include="ISchemaResource.cs" />
     <Compile Include="IToolkitRepository.cs" />
     <Compile Include="Settings\IRuntimeSettings.cs" />
@@ -118,7 +112,6 @@
     <Compile Include="Settings\TraceSourceSetting.cs" />
     <Compile Include="Settings\TracingSettings.cs" />
     <Compile Include="UI\FilteredItemContainerExtensions.cs" />
-    <Compile Include="MenuCommandServiceExtensions.cs" />
     <Compile Include="ShellConstants.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,7 +122,6 @@
     <Compile Include="ProductStoreValidationController.cs" />
     <Compile Include="Settings\SettingsManager.cs" />
     <Compile Include="Settings\TracingSettingsMonitor.cs" />
-    <Compile Include="Events\ShellEvents.cs" />
     <Compile Include="Diagnostics\TraceOutputWindowManager.cs" />
     <Compile Include="Diagnostics\TraceRecordTextListener.cs" />
     <Compile Include="SchemaReaderExtensions.cs" />
@@ -140,7 +132,6 @@
     <Compile Include="InstalledToolkitRepository.cs" />
     <Compile Include="SchemaResource.cs" />
     <Compile Include="SingletonScope.cs" />
-    <Compile Include="Events\SolutionEvents.cs" />
     <Compile Include="TemplateInstantiationScope.cs" />
     <Compile Include="UI\SolutionSelector.cs" />
     <Compile Include="UI\SolutionPicker.cs" />

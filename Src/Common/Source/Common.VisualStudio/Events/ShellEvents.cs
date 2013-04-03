@@ -2,10 +2,9 @@
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Shell;
 
-namespace NuPattern.Runtime.Events
+namespace NuPattern.VisualStudio.Events
 {
     /// <summary>
     /// Default implementation of <see cref="IShellEvents"/>.

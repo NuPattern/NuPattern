@@ -45,18 +45,6 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell$(VsxVersionSuffix).dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell.10.0" Condition="'$(TargetVsVersion)' == '10.0'">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VMSDK\10.0\Microsoft.VisualStudio.Modeling.Sdk.Shell.10.0.dll</HintPath>
@@ -166,9 +154,6 @@
     <Compile Include="Core\UriProviders\PackUriProviderSpec.cs" />
     <Compile Include="Core\UriProviders\TextTemplateUriProviderSpec.cs" />
     <Compile Include="Core\UriProviders\VsixExtensionUriProviderSpec.cs" />
-    <Compile Include="Core\Commands\VsMenuCommandAdapterSpec.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">

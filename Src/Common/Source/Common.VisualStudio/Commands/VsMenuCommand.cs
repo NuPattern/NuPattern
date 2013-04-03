@@ -1,13 +1,12 @@
 ﻿using System;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
-using NuPattern.VisualStudio.Commands;
 
-namespace NuPattern.Runtime.Commands
+namespace NuPattern.VisualStudio.Commands
 {
     /// <summary>
     /// Provides a generic way to executes commands in Visual Studio.
     /// </summary>
-    internal class VsMenuCommand : IVsMenuCommand
+    public class VsMenuCommand : IVsMenuCommand
     {
         private ICommand command;
 

@@ -58,10 +58,6 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Settings.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" Condition="'$(TargetVsVersion)' == '10.0'">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
@@ -77,10 +73,6 @@
     <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.OLE.Interop">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface" Condition="'$(TargetVsVersion)' == '10.0'">
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
@@ -169,7 +161,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Compile Include="Shell\RuntimeShellPackageSpec.cs" />
-    <Compile Include="Core\Events\ShellEventsSpec.cs" />
     <Compile Include="Store\StoreAdapterSpec.cs" />
     <Compile Include="EventsIntegrationSpec.cs" />
     <Compile Include="GlobalSuppressions.cs" />
@@ -194,7 +185,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Compile Include="Core\Settings\SettingsManagerSpec.cs" />
-    <Compile Include="Core\Events\SolutionEventsSpec.cs" />
     <Compile Include="Core\UriProviders\TemplateUriProviderSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\UriProviders\TextTemplateSpec.cs" />

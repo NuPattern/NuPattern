@@ -115,6 +115,12 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="Commands\MenuCommandServiceExtensions.cs" />
+    <Compile Include="Commands\VsMenuCommand.cs" />
+    <Compile Include="Commands\VsMenuCommandAdapter.cs" />
+    <Compile Include="Events\ItemEvents.cs" />
+    <Compile Include="Events\ShellEvents.cs" />
+    <Compile Include="Events\SolutionEvents.cs" />
     <Compile Include="Extensions\ExtensionContentExtensions.cs" />
     <Compile Include="Extensions\ExtensionVisibility.cs" />
     <Compile Include="Shell\Windows\WindowExtensions.cs" />

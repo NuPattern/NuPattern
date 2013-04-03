@@ -1,14 +1,15 @@
-﻿using System.ComponentModel.Design;
+﻿using System;
+using System.ComponentModel.Design;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Shell;
-using NuPattern.VisualStudio.Commands;
 
-namespace NuPattern.Runtime.Commands
+namespace NuPattern.VisualStudio.Commands
 {
     /// <summary>
     /// Provide an adapter between an <see cref="IVsMenuCommand"/> and a <see cref="IMenuCommand"/>.
     /// </summary>
-    internal class VsMenuCommandAdapter : OleMenuCommand, IMenuCommand
+    [CLSCompliant(false)]
+    public class VsMenuCommandAdapter : OleMenuCommand, IMenuCommand
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VsMenuCommandAdapter"/> class.

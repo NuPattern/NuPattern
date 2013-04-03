@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Runtime.Commands;
+using NuPattern.VisualStudio.Commands;
 
-namespace NuPattern.Runtime.UnitTests.Commands
+namespace NuPattern.VisualStudio.UnitTests.Commands
 {
     [TestClass]
     public class VsMenuCommandAdapterSpec

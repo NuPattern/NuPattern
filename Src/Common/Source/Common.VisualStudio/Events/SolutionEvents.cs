@@ -5,10 +5,9 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
-namespace NuPattern.Runtime.Events
+namespace NuPattern.VisualStudio.Events
 {
     /// <summary>
     /// Provides a listener to general events in the solution.

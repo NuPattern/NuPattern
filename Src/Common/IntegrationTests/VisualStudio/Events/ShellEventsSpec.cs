@@ -3,9 +3,9 @@ using System.Diagnostics.CodeAnalysis;
 using System.Threading;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Runtime.Events;
+using NuPattern.VisualStudio.Events;
 
-namespace NuPattern.Runtime.IntegrationTests.Events
+namespace NuPattern.IntegrationTests.VisualStudio.Events
 {
     [TestClass]
     [SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Justification = "Test Code")]

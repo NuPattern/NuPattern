@@ -1,14 +1,13 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using EnvDTE;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.VisualStudio.Solution;
-using SolutionEvents = NuPattern.Runtime.Events.SolutionEvents;
+using SolutionEvents = NuPattern.VisualStudio.Events.SolutionEvents;
 
-namespace NuPattern.Runtime.IntegrationTests.Events
+namespace NuPattern.IntegrationTests.VisualStudio.Events
 {
     public class SolutionEventsSpec
     {
@@ -89,7 +88,7 @@ namespace NuPattern.Runtime.IntegrationTests.Events
             [TestMethod, TestCategory("Integration")]
             public void WhenClosingTheSolution_ThenIsSolutionOpenedTurnsFalse()
             {
-                this.solution.As<Solution>().Close();
+                this.solution.As<EnvDTE.Solution>().Close();
 
                 Assert.False(this.solutionEvents.IsSolutionOpened);
             }
@@ -101,7 +100,7 @@ namespace NuPattern.Runtime.IntegrationTests.Events
                 var eventRaised = false;
 
                 this.solutionEvents.SolutionClosing += (s, e) => eventRaised = true;
-                this.solution.As<Solution>().Close();
+                this.solution.As<EnvDTE.Solution>().Close();
 
                 Assert.True(eventRaised);
             }
@@ -113,7 +112,7 @@ namespace NuPattern.Runtime.IntegrationTests.Events
                 var eventRaised = false;
 
                 this.solutionEvents.SolutionClosed += (s, e) => eventRaised = true;
-                this.solution.As<Solution>().Close();
+                this.solution.As<EnvDTE.Solution>().Close();
 
                 Assert.True(eventRaised);
             }
@@ -138,7 +137,7 @@ namespace NuPattern.Runtime.IntegrationTests.Events
                         index++;
                     }
                 };
-                this.solution.As<Solution>().Close();
+                this.solution.As<EnvDTE.Solution>().Close();
 
                 Assert.Equal(2, index);
             }
@@ -161,16 +160,16 @@ namespace NuPattern.Runtime.IntegrationTests.Events
                 // Create a new solution and close it
                 var fileName = Path.GetFileName(Path.GetRandomFileName());
                 this.solution.CreateInstance(Path.GetTempPath(), fileName);
-                this.solution.As<Solution>().SaveAs(fileName);
+                this.solution.As<EnvDTE.Solution>().SaveAs(fileName);
                 this.solutionPath = this.solution.PhysicalPath;
-                this.solution.As<Solution>().Close();
+                this.solution.As<EnvDTE.Solution>().Close();
             }
 
             [HostType("VS IDE")]
             [TestMethod, TestCategory("Integration")]
             public void WhenOpeningSolution_ThenIsSolutionOpenedTurnsTrue()
             {
-                this.solution.As<Solution>().Open(this.solutionPath);
+                this.solution.As<EnvDTE.Solution>().Open(this.solutionPath);
 
                 Assert.True(this.solutionEvents.IsSolutionOpened);
             }
@@ -182,7 +181,7 @@ namespace NuPattern.Runtime.IntegrationTests.Events
                 var eventRaised = false;
 
                 this.solutionEvents.SolutionOpened += (s, e) => eventRaised = true;
-                this.solution.As<Solution>().Open(this.solutionPath);
+                this.solution.As<EnvDTE.Solution>().Open(this.solutionPath);
 
                 Assert.True(eventRaised);
             }
@@ -194,7 +193,7 @@ namespace NuPattern.Runtime.IntegrationTests.Events
                 var sequenceAchived = false;
 
                 this.solutionEvents.SolutionOpened += (s, e) => sequenceAchived = this.solutionEvents.IsSolutionOpened;
-                this.solution.As<Solution>().Open(this.solutionPath);
+                this.solution.As<EnvDTE.Solution>().Open(this.solutionPath);
 
                 Assert.True(sequenceAchived);
             }
