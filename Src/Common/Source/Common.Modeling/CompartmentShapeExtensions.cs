@@ -2,15 +2,15 @@
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 
-namespace NuPattern.Runtime.Schema
+namespace NuPattern.Modeling
 {
     /// <summary>
     /// Extension methods over <see cref="CompartmentShape"/>
     /// </summary>
-    internal static class CompartmentShapeExtension
+    public static class CompartmentShapeExtensions
     {
         /// <summary>
-        /// Finds the diagram item.
+        /// Finds the diagram item for the element in teh compartment with given selector.
         /// </summary>
         /// <typeparam name="TModelElement">The type of the model element.</typeparam>
         /// <param name="shape">The shape.</param>

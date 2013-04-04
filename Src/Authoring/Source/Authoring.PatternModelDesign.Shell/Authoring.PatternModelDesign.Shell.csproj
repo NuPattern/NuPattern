@@ -160,8 +160,7 @@
     </Compile>
     <Compile Include="Commands\AuthoringCommandExtensionRegistrar.cs" />
     <Compile Include="Commands\AuthoringCommandExtensionRegistrarBase.cs" />
-    <Compile Include="CompartmentShapeExtension.cs" />
-    <Compile Include="Shell\PatternModelDocHelper.cs" />
+    <Compile Include="PatternModelDocHelper.cs" />
     <Compile Include="Validation\AuthoringValidationExtensionRegistrar.cs" />
     <Compile Include="Validation\AuthoringValidationExtensionRegistrarBase.cs" />
     <Compile Include="GlobalSuppressions.cs" />
@@ -178,23 +177,23 @@
       <DependentUpon>ShellResources.resx</DependentUpon>
     </Compile>
     <Compile Include="SchemaUpgradeContext.cs" />
-    <Compile Include="Shell\PatternModelClipboardCommandSet.cs" />
-    <Compile Include="Shell\PatternModelCommandSet.cs" />
-    <Compile Include="Shell\PatternModelDocData.cs" />
-    <Compile Include="Shell\PatternModelDocDataBase.cs" />
-    <Compile Include="Shell\PatternModelDocView.cs" />
+    <Compile Include="PatternModelClipboardCommandSet.cs" />
+    <Compile Include="PatternModelCommandSet.cs" />
+    <Compile Include="PatternModelDocData.cs" />
+    <Compile Include="PatternModelDocDataBase.cs" />
+    <Compile Include="PatternModelDocView.cs" />
     <Compile Include="GeneratedCode\CommandSet.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CommandSet.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shell\PatternModelPackage.cs" />
-    <Compile Include="Shell\PatternModelPackageBase.cs" />
+    <Compile Include="PatternModelPackage.cs" />
+    <Compile Include="PatternModelPackageBase.cs" />
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
     <Compile Include="PatternModelSchemaUpgradeManager.cs" />
-    <Compile Include="ViewSchemaExtensions.cs" />
+    <Compile Include="DomainModel\ViewSchemaHelper.cs" />
     <None Include="GeneratedCode\Customization\Package.tt" />
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

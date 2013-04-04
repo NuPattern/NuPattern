@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.Modeling.Validation;
 
-namespace NuPattern.Runtime.Schema.Shell
+namespace NuPattern.Runtime.Schema
 {
     internal static class PatternModelDocHelper
     {

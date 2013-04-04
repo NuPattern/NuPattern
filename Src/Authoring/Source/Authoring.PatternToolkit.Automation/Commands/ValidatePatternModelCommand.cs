@@ -12,7 +12,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Runtime;
-using NuPattern.Runtime.Schema.Shell;
+using NuPattern.Runtime.Schema;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
