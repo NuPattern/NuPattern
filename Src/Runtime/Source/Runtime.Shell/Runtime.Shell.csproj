@@ -79,6 +79,7 @@
     <Reference Include="Microsoft.VisualStudio.Settings" Condition="'$(TargetVsVersion)' == '10.0'">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Settings.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -153,8 +154,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Constants.tt</DependentUpon>
     </Compile>
-    <Compile Include="Events\ItemEvents.cs" />
-    <Compile Include="Extensions\IPatternManagerExtensions.cs" />
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.gen.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Runtime/Element/C:\Projects\NUPATTERN\sprint20\Src\Runtime\Runtime.slnbldr%252f29623964-bb7b-4778-b7d4-d79652ac5a5e</SourceModelReference>
       <ItemGuid>ae551abf-1da3-405b-8d82-c2ccb986c7f8</ItemGuid>
@@ -459,15 +458,27 @@
     <Content Include="Registry.pkgdef" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Common\Source\Extensibility.Serialization\Extensibility.Serialization.csproj">
+    <ProjectReference Include="..\..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">
+      <Project>{46f79781-98bc-495a-9e01-559f166a6dff}</Project>
+      <Name>Common.Modeling</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bDocumentationProjectOutputGroup</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bDocumentationProjectOutputGroup</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
+    <ProjectReference Include="..\Runtime.Extensibility.Serialization\Runtime.Extensibility.Serialization.csproj">
       <Project>{B2B1ED0A-60E0-4A5C-822A-605527663E0B}</Project>
-      <Name>Extensibility.Serialization</Name>
+      <Name>Runtime.Extensibility.Serialization</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Common\Source\Extensibility\Extensibility.csproj">
+    <ProjectReference Include="..\Runtime.Extensibility\Runtime.Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
-      <Name>Extensibility</Name>
+      <Name>Runtime.Extensibility</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bDocumentationProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
@@ -475,7 +486,13 @@
       <Project>{72CC87F3-2860-45CC-8712-00621F868D60}</Project>
       <Name>Common.Presentation</Name>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bDocumentationProjectOutputGroup</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>Common.VisualStudio</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bDocumentationProjectOutputGroup</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Library\Source\Library.csproj">
       <Project>{C6519E4A-2077-4E80-A280-E8BA90D53A3E}</Project>
@@ -483,16 +500,10 @@
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bDocumentationProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="..\Runtime.Interfaces\Runtime.Interfaces.csproj">
-      <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
-      <Name>Runtime.Interfaces</Name>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bDocumentationProjectOutputGroup</IncludeOutputGroupsInVSIX>
-      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
-    </ProjectReference>
     <ProjectReference Include="..\Runtime.Schema\Runtime.Schema.csproj">
       <Project>{b0f2590a-f583-4883-b701-923b43475bb5}</Project>
       <Name>Runtime.Schema</Name>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bDocumentationProjectOutputGroup</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
     <ProjectReference Include="..\Runtime.Store\Runtime.Store.csproj">
@@ -501,10 +512,10 @@
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
     </ProjectReference>
-    <ProjectReference Include="..\Runtime\Runtime.csproj">
+    <ProjectReference Include="..\Runtime.Core\Runtime.Core.csproj">
       <Project>{79A7E018-1A92-47F4-A478-17BCC57CC7AD}</Project>
-      <Name>Runtime</Name>
-      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bDocumentationProjectOutputGroup</IncludeOutputGroupsInVSIX>
+      <Name>Runtime.Core</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
   </ItemGroup>

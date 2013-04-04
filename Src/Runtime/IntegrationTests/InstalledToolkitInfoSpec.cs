@@ -4,7 +4,8 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
-using NuPattern.Extensibility;
+using NuPattern.VisualStudio.Extensions;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.IntegrationTests
 {
@@ -32,6 +33,16 @@ namespace NuPattern.Runtime.IntegrationTests
                     .SingleOrDefault(t => t.Id == "NuPattern.Runtime.IntegrationTests.TestToolkit");
             }
 
+            [TestCleanup]
+            public void Cleanup()
+            {
+                if (this.solution != null
+                    && this.solution.IsOpen)
+                {
+                    this.solution.Close(false);
+                }
+            }
+
             [HostType("VS IDE")]
             [TestMethod, TestCategory("Integration")]
             public void ThenTemplatesReturned()
@@ -47,8 +58,8 @@ namespace NuPattern.Runtime.IntegrationTests
             public void ThenClassificationReturned()
             {
                 Assert.Equal("Test", this.toolkit.Classification.Category);
-                Assert.Equal(ToolkitVisibility.Collapsed, this.toolkit.Classification.CreateVisibility);
-                Assert.Equal(ToolkitVisibility.Hidden, this.toolkit.Classification.CustomizeVisibility);
+                Assert.Equal(ExtensionVisibility.Collapsed, this.toolkit.Classification.CreateVisibility);
+                Assert.Equal(ExtensionVisibility.Hidden, this.toolkit.Classification.CustomizeVisibility);
             }
         }
     }

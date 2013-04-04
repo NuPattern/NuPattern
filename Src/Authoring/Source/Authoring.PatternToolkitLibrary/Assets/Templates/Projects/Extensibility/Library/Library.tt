@@ -3,58 +3,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-	  <Name>Pattern Toolkit Library</Name>
-	  <Description>Creates a new Pattern Toolkit Library project, which contains reusable automation types for sharing between Pattern Toolkit projects.</Description>
-	  <TemplateID>6d6b3308cc34-AutomationLibrary</TemplateID>
-	  <ProjectType>CSharp</ProjectType>
-	  <ProjectSubType>Extensibility</ProjectSubType>
-	  <SortOrder>1000</SortOrder>
-	  <CreateNewFolder>false</CreateNewFolder>
-	  <DefaultName>PatternToolkitLibrary</DefaultName>
-	  <ProvideDefaultName>true</ProvideDefaultName>
-	  <LocationField>Enabled</LocationField>
-	  <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
-	  <Icon>VsTemplateIconPatternToolkitLibraryProject.ico</Icon>
-	  <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
-	  <Hidden>false</Hidden>
+    <Name>Pattern Toolkit Library</Name>
+    <Description>Creates a new Pattern Toolkit Library project, which contains reusable automation types for sharing between Pattern Toolkit projects.</Description>
+    <TemplateID>6d6b3308cc34-AutomationLibrary</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Extensibility</ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>PatternToolkitLibrary</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>VsTemplateIconPatternToolkitLibraryProject.ico</Icon>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <Hidden>false</Hidden>
   </TemplateData>
   <TemplateContent>
-	<Project File="LibraryProject.gen.csproj" ReplaceParameters="true" TargetFileName="LibraryProject.csproj">
-	  <Folder Name="Properties">
-		<ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
-	  </Folder>
-	  <Folder Name="Commands"/>
-	  <Folder Name="Conditions"/>
-	  <Folder Name="Events"/>
-	  <Folder Name="TypeEditors"/>
-	  <Folder Name="TypeConverters"/>
-	  <Folder Name="ValueProviders"/>
-	  <Folder Name="ValidationRules"/>
-	</Project>
+  <Project File="LibraryProject.gen.csproj" ReplaceParameters="true" TargetFileName="LibraryProject.csproj">
+    <Folder Name="Properties">
+    <ProjectItem ReplaceParameters="true">AssemblyInfo.cs</ProjectItem>
+    </Folder>
+    <Folder Name="Commands"/>
+    <Folder Name="Conditions"/>
+    <Folder Name="Events"/>
+    <Folder Name="TypeEditors"/>
+    <Folder Name="TypeConverters"/>
+    <Folder Name="ValueProviders"/>
+    <Folder Name="ValidationRules"/>
+  </Project>
   </TemplateContent>
-	<WizardExtension>
-		<Assembly>NuPattern.Extensibility, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-		<FullClassName>NuPattern.Extensibility.CoordinatorTemplateWizard</FullClassName>
-	</WizardExtension>	
-	<WizardData>
-		<Replacement Key="$runtimeVSIXVersion$"  Value="<#=VersionInfo.RuntimeVSIXVersion#>" />
-		<CoordinatedWizards>
-			<WizardExtension>
-				<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-				<FullClassName>NuPattern.Runtime.VsRootSuffixTemplateWizard</FullClassName>
-			</WizardExtension>
-			<WizardExtension>
-				<Assembly>NuPattern.Runtime, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-				<FullClassName>NuPattern.Runtime.ReplacementTemplateWizard</FullClassName>
-			</WizardExtension>
-			<WizardExtension>
-				<Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-				<FullClassName>NuPattern.Library.Automation.InstantiationTemplateWizard</FullClassName>
-			</WizardExtension>
-			<WizardExtension>
-				<Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
-				<FullClassName>NuPattern.Library.Automation.ElementReplacementsWizard</FullClassName>
-			</WizardExtension>
-		</CoordinatedWizards>
-	</WizardData>
+  <WizardExtension>
+    <Assembly>NuPattern.VisualStudio, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+    <FullClassName>NuPattern.VisualStudio.TemplateWizards.CoordinatorTemplateWizard</FullClassName>
+  </WizardExtension>	
+  <WizardData>
+    <Replacement Key="$runtimeVSIXVersion$"  Value="<#=VersionInfo.RuntimeVSIXVersion#>" />
+    <CoordinatedWizards>
+      <WizardExtension>
+        <Assembly>NuPattern.VisualStudio, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+        <FullClassName>NuPattern.VisualStudio.TemplateWizards.VsRootSuffixTemplateWizard</FullClassName>
+      </WizardExtension>
+      <WizardExtension>
+        <Assembly>NuPattern.VisualStudio, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+        <FullClassName>NuPattern.VisualStudio.TemplateWizards.ReplacementTemplateWizard</FullClassName>
+      </WizardExtension>
+      <WizardExtension>
+        <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+        <FullClassName>NuPattern.Library.TemplateWizards.InstantiationTemplateWizard</FullClassName>
+      </WizardExtension>
+      <WizardExtension>
+        <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5</Assembly>
+        <FullClassName>NuPattern.Library.TemplateWizards.ElementReplacementsWizard</FullClassName>
+      </WizardExtension>
+    </CoordinatedWizards>
+  </WizardData>
 </VSTemplate>

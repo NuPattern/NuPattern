@@ -18,9 +18,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.VariabilityRequirement.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.VariabilityRequirement.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("19c7bdb0-d161-487c-bd32-38fb3f9bb023")]
-	public partial class VariabilityRequirement : DesignElement
+	internal partial class VariabilityRequirement : DesignElement
 	{
 		#region Constructors, domain class Id
 	
@@ -138,7 +137,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// Description for
 		/// NuPattern.Authoring.WorkflowDesign.DesignHasVariabilityRequirements.VariabilityRequirement
 		/// </summary>
-		public virtual Design Design
+		internal virtual Design Design
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -174,7 +173,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// Description for
 		/// NuPattern.Authoring.WorkflowDesign.ParentVariabilityRequirementHasParentVariabilityRequirements.TargetVariabilityRequirement
 		/// </summary>
-		public virtual VariabilityRequirement ParentVariabilityRequirement
+		internal virtual VariabilityRequirement ParentVariabilityRequirement
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -296,9 +295,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProducedAsset.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProducedAsset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("82cf2129-d420-41dc-8b95-12a99a5d20c9")]
-	public partial class ProducedAsset : Asset
+	internal partial class ProducedAsset : Asset
 	{
 		#region Constructors, domain class Id
 	
@@ -473,9 +471,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProductionTool.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionTool.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("67726e9a-a7da-4c26-b642-b4065710cee0")]
-	public partial class ProductionTool : DesignElement
+	internal partial class ProductionTool : DesignElement
 	{
 		#region Constructors, domain class Id
 	
@@ -746,7 +743,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// Description for
 		/// NuPattern.Authoring.WorkflowDesign.DesignHasProductionTools.ProductionTool
 		/// </summary>
-		public virtual Design Design
+		internal virtual Design Design
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -771,9 +768,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAsset.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAsset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a395e79e-1a6d-4132-9724-671c4413ddab")]
-	public partial class SuppliedAsset : Asset
+	internal partial class SuppliedAsset : Asset
 	{
 		#region Constructors, domain class Id
 	
@@ -933,9 +929,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.Asset.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.Asset.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("245abfec-9096-464a-a73b-358748042100")]
-	public abstract partial class Asset : DesignElement
+	internal abstract partial class Asset : DesignElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1129,7 +1124,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// Gets or sets Design.
 		/// Description for NuPattern.Authoring.WorkflowDesign.DesignHasAssets.Asset
 		/// </summary>
-		public virtual Design Design
+		internal virtual Design Design
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1154,9 +1149,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.Design.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.Design.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("fedd3e36-d9ec-4f70-85b9-16728700f201")]
-	public partial class Design : DslModeling::ModelElement
+	internal partial class Design : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1395,10 +1389,9 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.NamedElementSchema.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Name = {namePropertyStorage})")]
 	[DslModeling::DomainObjectId("6665aba9-d5b1-4412-9757-e5172874d63b")]
-	public abstract partial class NamedElementSchema : DslModeling::ModelElement
+	internal abstract partial class NamedElementSchema : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1940,9 +1933,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.DesignElement.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignElement.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("865cf412-cfa1-4e9f-b6ec-bf02f69bea74")]
-	public abstract partial class DesignElement : NamedElementSchema
+	internal abstract partial class DesignElement : NamedElementSchema
 	{
 		#region Constructors, domain class Id
 	

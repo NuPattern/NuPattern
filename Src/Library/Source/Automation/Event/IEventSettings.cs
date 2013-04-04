@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation
 {
-    public partial interface IEventSettings
+    partial interface IEventSettings
     {
         /// <summary>
         /// Gets the condition settings.

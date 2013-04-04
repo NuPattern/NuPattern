@@ -4,63 +4,63 @@
 <#@ include  File="..\..\..\MasterVersion.gen.ttinclude" #>
 <?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-	<Identifier Id="<#=VsixInfo.PatternToolkitBuilder.Identifier#>">
-		<Name><#=VsixInfo.PatternToolkitBuilder.Name#></Name>
-		<Author><#=VsixInfo.PatternToolkitBuilder.Author#></Author>
-		<Version><#=VsixInfo.PatternToolkitBuilder.Version#></Version>
-		<Description xml:space="preserve"><#=VsixInfo.PatternToolkitBuilder.Description#></Description>
-		<Locale>1033</Locale>
-		<License>LICENSE.txt</License>
-		<Icon>Resources\VsixIconPatternToolkit.png</Icon>
-		<MoreInfoUrl><#=VsixInfo.PatternToolkitBuilder.MoreInfoUrl#></MoreInfoUrl>
-		<GettingStartedGuide><#=VsixInfo.PatternToolkitBuilder.GettingStartedUrl#></GettingStartedGuide>
-		<PreviewImage>Resources\VsixPreviewPatternToolkit.png</PreviewImage>
-		<SupportedProducts>
-		  <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
-			<Edition>Pro</Edition>
-		  </VisualStudio>
-		</SupportedProducts>
+    <Identifier Id="<#=VsixInfo.PatternToolkitBuilder.Identifier#>">
+        <Name><#=VsixInfo.PatternToolkitBuilder.Name#></Name>
+        <Author><#=VsixInfo.PatternToolkitBuilder.Author#></Author>
+        <Version><#=VsixInfo.PatternToolkitBuilder.Version#></Version>
+        <Description xml:space="preserve"><#=VsixInfo.PatternToolkitBuilder.Description#></Description>
+        <Locale>1033</Locale>
+        <License>LICENSE.txt</License>
+        <Icon>Resources\VsixIconPatternToolkit.png</Icon>
+        <MoreInfoUrl><#=VsixInfo.PatternToolkitBuilder.MoreInfoUrl#></MoreInfoUrl>
+        <GettingStartedGuide><#=VsixInfo.PatternToolkitBuilder.GettingStartedUrl#></GettingStartedGuide>
+        <PreviewImage>Resources\VsixPreviewPatternToolkit.png</PreviewImage>
+        <SupportedProducts>
+          <VisualStudio Version="<#=VersionInfo.TargetVsVersion #>">
+            <Edition>Pro</Edition>
+          </VisualStudio>
+        </SupportedProducts>
 <# 
 if (VersionInfo.TargetVsVersion == "11.0")
 { 
 #>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
+        <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.5"/>
 <# 
 } 
 else
 {
 #>
-		<SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0"/>
+        <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0"/>
 <#
 }
 #>
-	</Identifier>
-	<References>
-		<Reference Id="<#=VsixInfo.VsSdk.Identifier #>" MinVersion="<#=VsixInfo.VsSdk.Version#>">
-			<Name><#=VsixInfo.VsSdk.Name #></Name>
-			<MoreInfoUrl><#=VsixInfo.VsSdk.MoreInfoUrl#></MoreInfoUrl>
-		</Reference>
-		<Reference Id="<#=VsixInfo.PatternToolkitRuntime.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitRuntime.Version #>">
-			<Name><#=VsixInfo.PatternToolkitRuntime.Name #></Name>
-			<VsixPath><#=VsixInfo.PatternToolkitRuntime.VsixFileName #></VsixPath>
-		</Reference>
-		<Reference Id="<#=VsixInfo.PatternToolkitLibrary.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitLibrary.Version #>">
-			<Name><#=VsixInfo.PatternToolkitLibrary.Name #></Name>
-			<VsixPath><#=VsixInfo.PatternToolkitLibrary.VsixFileName #></VsixPath>
-		</Reference>
-	</References>
-	<Content>
-		<VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
-		<MefComponent>|%CurrentProject%|</MefComponent>
-		<VsPackage>|Authoring.WorkflowDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
-		<MefComponent>|Authoring.WorkflowDesign.Shell|</MefComponent>
-		<MefComponent>|Authoring.WorkflowDesign|</MefComponent>
-		<VsPackage>|Authoring.PatternModelDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
-		<MefComponent>|Authoring.PatternModelDesign.Shell|</MefComponent>
-		<MefComponent>|<#=libraryProjectName #>|</MefComponent>
-		<CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternModel.patterndefinition</CustomExtension>
-		<CustomExtension Type="NuPattern.Toolkit.Classification" Category="Authoring" CreateVisibility="Expanded" CustomizeVisibility="Collapsed"/>
-		<ItemTemplate>Assets\Templates\Items</ItemTemplate>
-		<ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
-	</Content>
+    </Identifier>
+    <References>
+        <Reference Id="<#=VsixInfo.VsSdk.Identifier #>" MinVersion="<#=VsixInfo.VsSdk.Version#>">
+            <Name><#=VsixInfo.VsSdk.Name #></Name>
+            <MoreInfoUrl><#=VsixInfo.VsSdk.MoreInfoUrl#></MoreInfoUrl>
+        </Reference>
+        <Reference Id="<#=VsixInfo.PatternToolkitRuntime.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitRuntime.Version #>">
+            <Name><#=VsixInfo.PatternToolkitRuntime.Name #></Name>
+            <VsixPath><#=VsixInfo.PatternToolkitRuntime.VsixFileName #></VsixPath>
+        </Reference>
+        <Reference Id="<#=VsixInfo.PatternToolkitLibrary.Identifier #>" MinVersion="<#=VsixInfo.PatternToolkitLibrary.Version #>">
+            <Name><#=VsixInfo.PatternToolkitLibrary.Name #></Name>
+            <VsixPath><#=VsixInfo.PatternToolkitLibrary.VsixFileName #></VsixPath>
+        </Reference>
+    </References>
+    <Content>
+        <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+        <MefComponent>|%CurrentProject%|</MefComponent>
+        <VsPackage>|Authoring.WorkflowDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
+        <MefComponent>|Authoring.WorkflowDesign.Shell|</MefComponent>
+        <MefComponent>|Authoring.WorkflowDesign|</MefComponent>
+        <VsPackage>|Authoring.PatternModelDesign.Shell;PkgdefProjectOutputGroup|</VsPackage>
+        <MefComponent>|Authoring.PatternModelDesign.Shell|</MefComponent>
+        <MefComponent>|<#=libraryProjectName #>|</MefComponent>
+        <CustomExtension Type="NuPattern.Toolkit.PatternModel" AssemblyFile="<#=assemblyName #>.dll"><#=rootNamespace #>.PatternModel.patterndefinition</CustomExtension>
+        <CustomExtension Type="NuPattern.Toolkit.Classification" Category="Authoring" CreateVisibility="Expanded" CustomizeVisibility="Collapsed"/>
+        <ItemTemplate>Assets\Templates\Items</ItemTemplate>
+        <ProjectTemplate>Assets\Templates\Projects</ProjectTemplate>
+    </Content>
 </Vsix>

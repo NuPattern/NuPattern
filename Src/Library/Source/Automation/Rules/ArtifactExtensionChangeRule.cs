@@ -6,7 +6,7 @@ namespace NuPattern.Library.Automation
     /// Change rule for <see cref="ArtifactExtension"/> domain class.
     /// </summary>
     [RuleOn(typeof(ArtifactExtension), FireTime = TimeToFire.TopLevelCommit)]
-    public partial class ArtifactExtensionChangeRule : ChangeRule
+    internal class ArtifactExtensionChangeRule : ChangeRule
     {
         /// <summary>
         /// Handles the property change event for the AssociatedArtifact properties.

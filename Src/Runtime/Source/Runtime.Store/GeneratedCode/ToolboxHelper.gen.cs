@@ -22,7 +22,7 @@ namespace NuPattern.Runtime.Store
 	/// <remarks>
 	/// Double-derived class to allow easier code customization.
 	/// </remarks>
-	public partial class ProductStateStoreToolboxHelper : ProductStateStoreToolboxHelperBase 
+	internal partial class ProductStateStoreToolboxHelper : ProductStateStoreToolboxHelperBase 
 	{
 		/// <summary>
 		/// Constructs a new ProductStateStoreToolboxHelper.
@@ -34,7 +34,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Helper class used to create and initialize toolbox items for this DSL.
 	/// </summary>
-	public abstract class ProductStateStoreToolboxHelperBase
+	internal abstract class ProductStateStoreToolboxHelperBase
 	{
 		/// <summary>
 		/// Toolbox item filter string used to identify ProductStateStore toolbox items.  

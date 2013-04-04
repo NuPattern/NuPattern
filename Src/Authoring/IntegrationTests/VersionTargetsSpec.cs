@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Authoring.PatternToolkit;
-using NuPattern.Extensibility;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Authoring.IntegrationTests
 {

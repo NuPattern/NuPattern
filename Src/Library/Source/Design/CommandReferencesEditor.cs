@@ -1,5 +1,5 @@
 ﻿using System;
-using NuPattern.Extensibility;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Automation;
 
 namespace NuPattern.Library.Design
@@ -7,7 +7,7 @@ namespace NuPattern.Library.Design
     /// <summary>
     /// Command references type editor
     /// </summary>
-    public class CommandReferencesEditor : DesignCollectionEditor
+    internal class CommandReferencesEditor : DesignCollectionEditor
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandReferencesEditor"/> class.

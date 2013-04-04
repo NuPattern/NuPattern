@@ -1,26 +1,7 @@
 ﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True"#>
 <#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ output extension=".gen.cs" #>
-<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
-<#@ Assembly Name="NuPattern.Runtime.Schema.dll" #>
-<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
-<#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
-<#@ Assembly Name="NuPattern.Extensibility.dll" #>
-<#@ Assembly Name="System.ComponentModel.Composition" #>
-<#@ Assembly Name="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Modeling" #>
-<#@ Import Namespace="NuPattern.Runtime" #>
-<#@ Import Namespace="NuPattern.Runtime.Schema" #>
-<#@ Import Namespace="NuPattern.Extensibility" #>
-<#@ Import Namespace="NuPattern.Authoring.PatternToolkitLibrary" #>
-<#@ Import Namespace="System.Linq" #>
-<#@ Import Namespace="System.Collections.Generic" #>
-<#@ Import Namespace="System.ComponentModel" #>
-<#@ Import Namespace="System.Reflection" #>
-<#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
-<#@ Include File="Constants.t4" #>
-<#@ Include File="Helpers.t4include" #>
-<#@ Include File="Header.t4include" #>
+<#@ Include File="Common.t4include" #>
 <#@ Include File="NamedElementParent.t4include" #>
 <#@ Include File="ElementContainer.t4include" #>
 <#@ Include File="ProductElement.t4include" #>
@@ -30,48 +11,28 @@ var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternT
 var toolkitInfo = developmentView.PatternToolkitInfo;
 
 if (toolkitInfo == null)
-	throw new Exception("ToolkitInfo element not found");
+    throw new Exception("ToolkitInfo element not found");
 
 var patternModel = developmentView.PatternModel;
-var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
-var store = pattern.Store;
+var patternModelInfo = LoadPatternModel(patternModel.ToolkitDefinitionFile);
 
-// The pluralizer in .NET 4.0 only supports English.
-var pluralizer = PluralizationService.CreateService(new System.Globalization.CultureInfo("en-US"));
-
-foreach (var collection in store.DefaultPartition.ElementDirectory.AllElements.OfType<ICollectionInfo>())
+foreach (var collection in patternModelInfo.FindAll<ICollectionInfo>())
 {
-	var codegen = new ProductCodeGeneration<ICollectionInfo, ICollection>(collection);
-	codegen.AddType(typeof(Action));
-	codegen.EndInit();
-#>
-namespace <#=library.ToolkitProjectRootNamespace #>
-{
-<#GenerateUsings(codegen);#>
+    var codegen = new ProductCodeGeneration<ICollectionInfo, ICollection>(collection);
+    codegen.AddType(typeof(Action));
+    codegen.AddType(typeof(NuPattern.Runtime.ToolkitInterface.ToolkitInterfaceLayer));
+    codegen.EndInit();
 
-	<#GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, collection); #>
-	public partial interface I<#=collection.CodeIdentifier #> : IToolkitInterface
-	{ <# 
-GenerateProperties(codegen, collection, true);
-GenerateParentProperty(collection, true);
-
-PushIndent("\t");
-PushIndent("\t");
-
-GenerateContainedElements(pluralizer, collection, true);
-GenerateDeleteInterfaceMethod();
-
-PopIndent();
-PopIndent();
-#>
-
-		/// <summary>
-		/// Gets the generic <see cref="Runtime.ICollection"/> underlying element.
-		/// </summary>
-		Runtime.ICollection AsCollection();
-	}
-}
-
-<#
+    GenerateNamespaceBegin(library);
+    GenerateUsings(codegen);
+    GenerateToolkitCommentsAndAttributes(AttributeTargets.Interface, library, toolkitInfo, collection);
+    GenerateClassBegin(collection, true);
+    GenerateProperties(codegen, collection, true);
+    GenerateParentProperty(collection, true);
+    GenerateContainedElements(collection, true);
+    GenerateDeleteMethod(true);
+    GenerateAutoGeneralizedInterfaceMethod("Collection", true);
+    GenerateClassEnd();
+    GenerateNamespaceEnd();
 }
 #>

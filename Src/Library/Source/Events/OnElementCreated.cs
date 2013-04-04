@@ -1,8 +1,9 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using NuPattern.Extensibility;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Events;
 
 namespace NuPattern.Library.Events
 {

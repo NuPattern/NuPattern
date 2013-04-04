@@ -18,16 +18,16 @@ namespace NuPattern.Authoring.IntegrationTests
         [DeploymentItem(DeployedContentDirectory, DeployedContentDirectory)]
         public class GivenTheCompiledVsix : VsixPackagingSpec.GivenAVsix
         {
-			/// <summary>
-			/// Returns the relative path to the deployed Vsix file in the project
-			/// </summary>
-			protected override string DeployedVsixItemPath
-			{
-				get
-				{
-					return DeployedVsixItem;
-				}
-			}
+            /// <summary>
+            /// Returns the relative path to the deployed Vsix file in the project
+            /// </summary>
+            protected override string DeployedVsixItemPath
+            {
+                get
+                {
+                    return DeployedVsixItem;
+                }
+            }
          
             [TestMethod, TestCategory("Integration")]
             public void ThenVsixInfoCorrect()
@@ -38,20 +38,20 @@ namespace NuPattern.Authoring.IntegrationTests
                 Assert.Equal(@"<#=VsixInfo.PatternToolkitLibrary.Description#>", this.VsixInfo.Header.Description);
                 Assert.Equal(@"<#=VsixInfo.PatternToolkitLibrary.Author#>", this.VsixInfo.Header.Author);
                 Assert.Equal("<#=VsixInfo.PatternToolkitLibrary.Version#>", this.VsixInfo.Header.Version.ToString());
-				
-				//License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
-				Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
-				Assert.Equal(@"Resources\VsixIconPatternToolkitLibrary.png", this.VsixInfo.Header.Icon);
-				Assert.Equal(@"Resources\VsixPreviewPatternToolkitLibrary.png", this.VsixInfo.Header.PreviewImage);
-				Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitLibrary.MoreInfoUrl#>"), this.VsixInfo.Header.MoreInfoUrl);
-				Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitLibrary.GettingStartedUrl#>"), this.VsixInfo.Header.GettingStartedGuide);
+                
+                //License, Icon, PreviewImage, MoreInfoUrl, GettingStartedGuide
+                Assert.Equal(@"LICENSE.txt", this.VsixInfo.Header.License);
+                Assert.Equal(@"Resources\VsixIconPatternToolkitLibrary.png", this.VsixInfo.Header.Icon);
+                Assert.Equal(@"Resources\VsixPreviewPatternToolkitLibrary.png", this.VsixInfo.Header.PreviewImage);
+                Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitLibrary.MoreInfoUrl#>"), this.VsixInfo.Header.MoreInfoUrl);
+                Assert.Equal(new Uri(@"<#=VsixInfo.PatternToolkitLibrary.GettingStartedUrl#>"), this.VsixInfo.Header.GettingStartedGuide);
 
 #if VSVER10
-				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMinVersion.ToString());
-				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMaxVersion.ToString());
+                Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMinVersion.ToString());
+                Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkMaxVersion.ToString());
 #endif
 #if VSVER11
-				Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
+                Assert.Equal(@"4.0", this.VsixInfo.Header.SupportedFrameworkVersionRange.Minimum.ToString());
                 Assert.Equal(@"4.5", this.VsixInfo.Header.SupportedFrameworkVersionRange.Maximum.ToString());
 #endif
                 //SupportedProducts
@@ -66,92 +66,93 @@ namespace NuPattern.Authoring.IntegrationTests
             [TestMethod, TestCategory("Integration")]
             public void ThenContainsSchemas()
             {
-			}
+            }
 
-			[TestMethod, TestCategory("Integration")]
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsGuidance()
             {
                 //Assets (\\Assets\Guidance\*
-				Assert.True(this.FolderContainsExclusive(@"Assets\Guidance",
+                this.AssertFolderContainsExclusive(@"Assets\Guidance",
                     new[]
                         {
-							"ToolkitGuidance.doc",
-						}));
-			}
+                            "ToolkitGuidance.doc",
+                        });
+            }
                 
-			[TestMethod, TestCategory("Integration")]
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsAssets()
             {
-				 //Templates (\\Assets\Templates\*
-				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Projects\Extensibility",
+                 //Templates (\\Assets\Templates\*
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Projects\Extensibility",
                     new[]
                         {
-							"Library.zip",
-						}));
-				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Items\Extensibility",
+                            "Library.zip",
+                        });
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Items\Extensibility",
                     new[]
                         {
-							"Command.zip",
-							"Condition.zip",
-							"DataTypeConverter.zip",
-							"ElementOrderingComparer.zip",
-							"ElementValidationRule.zip",
-							"EnumTypeConverter.zip",
-							"Event.zip",
-							"PropertyValidationRule.zip",
-							"TypePickerEditor.zip",
-							"UIEditor.zip",
-							"ValueProvider.zip",
-						}));
+                            "Command.zip",
+                            "Condition.zip",
+                            "DataTypeConverter.zip",
+                            "ElementOrderingComparer.zip",
+                            "ElementValidationRule.zip",
+                            "EnumTypeConverter.zip",
+                            "Event.zip",
+                            "PropertyValidationRule.zip",
+                            "TypePickerEditor.zip",
+                            "UIEditor.zip",
+                            "ValueProvider.zip",
+                        });
 
-				Assert.True(this.FolderContainsExclusive(@"Assets\Templates\Text",
+                this.AssertFolderContainsExclusive(@"Assets\Templates\Text",
                     new[]
                         {
-							"CollectionImplementation.t4",
-							"CollectionInterface.t4",
-							"Constants.t4",
-							"ElementContainer.t4include",
-							"ElementImplementation.t4",
-							"ElementInterface.t4",
-							"ExtensionPointImplementation.t4",
-							"ExtensionPointInterface.t4",
-							"Header.t4include",
-							"Helpers.t4include",
-							"NamedElementParent.t4include",
-							"ProductElement.t4include",
-							"ProductImplementation.t4",
-							"ProductInterface.t4",
-							"ViewImplementation.t4",
-							"ViewInterface.t4",
-						}));
-			}
+                            "CollectionImplementation.t4",
+                            "CollectionInterface.t4",
+                            "Common.t4include",
+                            "Constants.t4include",
+                            "ElementContainer.t4include",
+                            "ElementImplementation.t4",
+                            "ElementInterface.t4",
+                            "ExtensionPointImplementation.t4",
+                            "ExtensionPointInterface.t4",
+                            "Header.t4include",
+                            "NamedElementParent.t4include",
+                            "ProductElement.t4include",
+                            "ProductImplementation.t4",
+                            "ProductInterface.t4",
+                            "Utilities.t4include",
+                            "ViewImplementation.t4",
+                            "ViewInterface.t4",
+                        });
+            }
 
-			[TestMethod, TestCategory("Integration")]
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsResources()
             {
                 //Schema files (\Resources\*)
-                Assert.True(this.FolderContainsExclusive(@"Resources",
+                this.AssertFolderContainsExclusive(@"Resources",
                     new[]
                         {
                             "VsixIconPatternToolkitLibrary.png",
                             "VsixPreviewPatternToolkitLibrary.png",
-                        }));
-			}
+                        });
+            }
 
-			[TestMethod, TestCategory("Integration")]
+            [TestMethod, TestCategory("Integration")]
             public void ThenContainsRedistributables()
             {
                 //Redist files
-                Assert.True(this.FolderContainsExclusive("",
+                this.AssertFolderContainsExclusive("",
                     new[]
                         {
-							"extension.vsixmanifest",
-							//"[Content_Types].xml",
+                            "extension.vsixmanifest",
+                            //"[Content_Types].xml",
                             "LICENSE.txt",
 
                             //Library Assemblies
                             "NuPattern.Authoring.PatternToolkitLibrary.dll",
-                        }));
+                        });
             }
         }
     }

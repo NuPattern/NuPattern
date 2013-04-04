@@ -7,69 +7,71 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using NuPattern.Runtime.ToolkitInterface;
+
 namespace ExtensionItem.Automation.GeneratedCode
 {
     using System.ComponentModel;
-	using System.ComponentModel.Composition;
+    using System.ComponentModel.Composition;
     using NuPattern.Runtime;
 
-	///	<summary>
-	///	Description for ExtensionItem.DefaultView
-	///	</summary>
-	[Description("Description for ExtensionItem.DefaultView")]
-	[ToolkitInterfaceProxy(ExtensionId ="8b378a9d-d437-4ca7-8dd3-318c38dc0969", DefinitionId = "b8523980-b898-49e5-a0f2-109dcd9380c5", ProxyType = typeof(DefaultView))]
-	public partial class DefaultView : IDefaultView
-	{
-		private IView target;
-		private IContainerProxy<IDefaultView> proxy;
+    ///	<summary>
+    ///	Description for ExtensionItem.DefaultView
+    ///	</summary>
+    [Description("Description for ExtensionItem.DefaultView")]
+    [ToolkitInterfaceProxy(ExtensionId = "8b378a9d-d437-4ca7-8dd3-318c38dc0969", DefinitionId = "b8523980-b898-49e5-a0f2-109dcd9380c5", ProxyType = typeof(DefaultView))]
+    public partial class DefaultView : IDefaultView
+    {
+        private IView target;
+        private IContainerProxy<IDefaultView> proxy;
 
-		/// <summary>
-		/// For MEF.
-		/// </summary>
-		[ImportingConstructor]
-		private DefaultView() { }
+        /// <summary>
+        /// For MEF.
+        /// </summary>
+        [ImportingConstructor]
+        private DefaultView() { }
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="DefaultView"/> class.
-		/// </summary>
-		public DefaultView(IView target)
-		{
-			this.target = target;
-			this.proxy = target.ProxyFor<IDefaultView>();
-		}
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DefaultView"/> class.
+        /// </summary>
+        public DefaultView(IView target)
+        {
+            this.target = target;
+            this.proxy = target.ProxyFor<IDefaultView>();
+        }
 
-		/// <summary>
-		/// Gets the parent element.
-		/// </summary>
-		public IExtensionItem Parent
-		{ 
-			get { return this.target.Parent.As<IExtensionItem>(); }
-		}
+        /// <summary>
+        /// Gets the parent element.
+        /// </summary>
+        public IExtensionItem Parent
+        {
+            get { return this.target.Parent.As<IExtensionItem>(); }
+        }
 
-		/// <summary>
-		/// Gets the generic <see cref="IView"/> underlying element.
-		/// </summary>
-		public IView AsView()
-		{
-			return this.target;
-		}
+        /// <summary>
+        /// Gets the generic <see cref="IView"/> underlying element.
+        /// </summary>
+        public IView AsView()
+        {
+            return this.target;
+        }
 
-		/// <summary>
-		/// Gets the generic underlying element as the given type if possible.
-		/// </summary>
-		public TRuntimeInterface As<TRuntimeInterface>()
-			where TRuntimeInterface : class
-		{
-			return this.target as TRuntimeInterface;
-		}
+        /// <summary>
+        /// Gets the generic underlying element as the given type if possible.
+        /// </summary>
+        public TRuntimeInterface As<TRuntimeInterface>()
+            where TRuntimeInterface : class
+        {
+            return this.target as TRuntimeInterface;
+        }
 
-		/// <summary>
-		/// Deletes this instance.
-		/// </summary>
-		public void Delete()
-		{
-			this.target.Delete();
-		}
-	}
+        /// <summary>
+        /// Deletes this instance.
+        /// </summary>
+        public void Delete()
+        {
+            this.target.Delete();
+        }
+    }
 }
 

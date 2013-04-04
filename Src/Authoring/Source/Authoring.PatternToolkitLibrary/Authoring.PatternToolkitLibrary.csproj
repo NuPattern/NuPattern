@@ -26,12 +26,16 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="NuPattern.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
+      <Private>false</Private>
     </Reference>
-    <Reference Include="NuPattern.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Runtime.Schema">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="System" />
@@ -237,13 +241,13 @@
     </None>
     <None Include="Assets\Templates\Text\Constants.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Constants.gen.t4</LastGenOutput>
+      <LastGenOutput>Constants.gen.t4include</LastGenOutput>
     </None>
-    <Content Include="Assets\Templates\Text\Constants.gen.t4">
+    <Content Include="Assets\Templates\Text\Constants.gen.t4include">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Constants.tt</DependentUpon>
-      <IncludeInVSIXAs>Constants.t4</IncludeInVSIXAs>
+      <IncludeInVSIXAs>Constants.t4include</IncludeInVSIXAs>
     </Content>
     <Content Include="Assets\Templates\Text\ProductElement.t4include">
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -252,6 +256,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Assets\Templates\Text\ElementContainer.t4include">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Assets\Templates\Text\Utilities.t4include">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="source.extension.gen.ttinclude">
@@ -318,7 +325,7 @@
       <IncludeInVSIX>true</IncludeInVSIX>
       <ItemGuid>ec407639-4851-4333-97ac-40bb6e3768f0</ItemGuid>
     </Content>
-    <Content Include="Assets\Templates\Text\Helpers.t4include">
+    <Content Include="Assets\Templates\Text\Common.t4include">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Assets\Templates\Text\Header.t4include">

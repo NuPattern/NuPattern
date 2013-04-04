@@ -21,9 +21,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("1e053907-f125-4a0f-bc82-0cfe32cb32d6")]
-	public abstract partial class WorkflowDesignDiagramBase : DslDiagrams::Diagram
+	internal abstract partial class WorkflowDesignDiagramBase : DslDiagrams::Diagram
 	{
 		#region Diagram boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -1116,9 +1115,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// DomainClass WorkflowDesignDiagram
 	/// Description for NuPattern.Authoring.WorkflowDesign.WorkflowDesignDiagram
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class WorkflowDesignDiagram : WorkflowDesignDiagramBase
+	internal partial class WorkflowDesignDiagram : WorkflowDesignDiagramBase
 	{
 		#region Constructors
 		/// <summary>

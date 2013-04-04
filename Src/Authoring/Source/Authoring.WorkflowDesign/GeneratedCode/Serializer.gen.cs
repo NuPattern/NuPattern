@@ -15,7 +15,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer VariabilityRequirementSerializer for DomainClass VariabilityRequirement.
 	/// </summary>
-	public partial class VariabilityRequirementSerializer : DesignElementSerializer
+	internal partial class VariabilityRequirementSerializer : DesignElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -737,7 +737,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ProducedAssetSerializer for DomainClass ProducedAsset.
 	/// </summary>
-	public partial class ProducedAssetSerializer : AssetSerializer
+	internal partial class ProducedAssetSerializer : AssetSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -1526,7 +1526,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ProductionToolSerializer for DomainClass ProductionTool.
 	/// </summary>
-	public partial class ProductionToolSerializer : DesignElementSerializer
+	internal partial class ProductionToolSerializer : DesignElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -2392,7 +2392,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer SuppliedAssetSerializer for DomainClass SuppliedAsset.
 	/// </summary>
-	public partial class SuppliedAssetSerializer : AssetSerializer
+	internal partial class SuppliedAssetSerializer : AssetSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -3259,7 +3259,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer AssetSerializer for DomainClass Asset.
 	/// </summary>
-	public partial class AssetSerializer : DesignElementSerializer
+	internal partial class AssetSerializer : DesignElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -3742,7 +3742,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer DesignSerializer for DomainClass Design.
 	/// </summary>
-	public partial class DesignSerializer : DslModeling::DomainClassXmlSerializer
+	internal partial class DesignSerializer : DslModeling::DomainClassXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -4652,7 +4652,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer NamedElementSchemaSerializer for DomainClass NamedElementSchema.
 	/// </summary>
-	public partial class NamedElementSchemaSerializer : DslModeling::DomainClassXmlSerializer
+	internal partial class NamedElementSchemaSerializer : DslModeling::DomainClassXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -5257,7 +5257,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer DesignElementSerializer for DomainClass DesignElement.
 	/// </summary>
-	public partial class DesignElementSerializer : NamedElementSchemaSerializer
+	internal partial class DesignElementSerializer : NamedElementSchemaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -5770,7 +5770,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ProductionToolReferencesVariabilityRequirementsSerializer for DomainClass ProductionToolReferencesVariabilityRequirements.
 	/// </summary>
-	public partial class ProductionToolReferencesVariabilityRequirementsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ProductionToolReferencesVariabilityRequirementsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -6644,7 +6644,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ProductionToolProducesProducedAssetsSerializer for DomainClass ProductionToolProducesProducedAssets.
 	/// </summary>
-	public partial class ProductionToolProducesProducedAssetsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ProductionToolProducesProducedAssetsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -7518,7 +7518,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ProducedAssetSuppliesProductionToolsSerializer for DomainClass ProducedAssetSuppliesProductionTools.
 	/// </summary>
-	public partial class ProducedAssetSuppliesProductionToolsSerializer : AssetSuppliesAllProducingToolsSerializer
+	internal partial class ProducedAssetSuppliesProductionToolsSerializer : AssetSuppliesAllProducingToolsSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -8264,7 +8264,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer SuppliedAssetCopiesToProducedAssetsSerializer for DomainClass SuppliedAssetCopiesToProducedAssets.
 	/// </summary>
-	public partial class SuppliedAssetCopiesToProducedAssetsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class SuppliedAssetCopiesToProducedAssetsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -9138,7 +9138,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer SuppliedAssetSuppliesProductionToolsSerializer for DomainClass SuppliedAssetSuppliesProductionTools.
 	/// </summary>
-	public partial class SuppliedAssetSuppliesProductionToolsSerializer : AssetSuppliesAllProducingToolsSerializer
+	internal partial class SuppliedAssetSuppliesProductionToolsSerializer : AssetSuppliesAllProducingToolsSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -9884,7 +9884,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer AssetSuppliesAllProducingToolsSerializer for DomainClass AssetSuppliesAllProducingTools.
 	/// </summary>
-	public partial class AssetSuppliesAllProducingToolsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class AssetSuppliesAllProducingToolsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -10525,7 +10525,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer DesignHasProductionToolsSerializer for DomainClass DesignHasProductionTools.
 	/// </summary>
-	public partial class DesignHasProductionToolsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class DesignHasProductionToolsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -11310,7 +11310,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer DesignHasAssetsSerializer for DomainClass DesignHasAssets.
 	/// </summary>
-	public partial class DesignHasAssetsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class DesignHasAssetsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -12095,7 +12095,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer DesignHasVariabilityRequirementsSerializer for DomainClass DesignHasVariabilityRequirements.
 	/// </summary>
-	public partial class DesignHasVariabilityRequirementsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class DesignHasVariabilityRequirementsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -12880,7 +12880,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ParentVariabilityRequirementHasParentVariabilityRequirementsSerializer for DomainClass ParentVariabilityRequirementHasParentVariabilityRequirements.
 	/// </summary>
-	public partial class ParentVariabilityRequirementHasParentVariabilityRequirementsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ParentVariabilityRequirementHasParentVariabilityRequirementsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -13665,7 +13665,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ProductionToolShapeSerializerBase for DomainClass ProductionToolShape.
 	/// </summary>
-	public abstract partial class ProductionToolShapeSerializerBase : DslDiagrams::NodeShapeSerializer
+	internal abstract partial class ProductionToolShapeSerializerBase : DslDiagrams::NodeShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -14262,7 +14262,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ProductionToolShapeSerializer for DomainClass ProductionToolShape.
 	/// </summary>
-	public partial class ProductionToolShapeSerializer : ProductionToolShapeSerializerBase
+	internal partial class ProductionToolShapeSerializer : ProductionToolShapeSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -14281,7 +14281,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ProducedAssetShapeSerializerBase for DomainClass ProducedAssetShape.
 	/// </summary>
-	public abstract partial class ProducedAssetShapeSerializerBase : DslDiagrams::NodeShapeSerializer
+	internal abstract partial class ProducedAssetShapeSerializerBase : DslDiagrams::NodeShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -14988,7 +14988,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ProducedAssetShapeSerializer for DomainClass ProducedAssetShape.
 	/// </summary>
-	public partial class ProducedAssetShapeSerializer : ProducedAssetShapeSerializerBase
+	internal partial class ProducedAssetShapeSerializer : ProducedAssetShapeSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -15007,7 +15007,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer SuppliedAssetShapeSerializerBase for DomainClass SuppliedAssetShape.
 	/// </summary>
-	public abstract partial class SuppliedAssetShapeSerializerBase : DslDiagrams::NodeShapeSerializer
+	internal abstract partial class SuppliedAssetShapeSerializerBase : DslDiagrams::NodeShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -15784,7 +15784,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer SuppliedAssetShapeSerializer for DomainClass SuppliedAssetShape.
 	/// </summary>
-	public partial class SuppliedAssetShapeSerializer : SuppliedAssetShapeSerializerBase
+	internal partial class SuppliedAssetShapeSerializer : SuppliedAssetShapeSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -15803,7 +15803,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer DesignConnectorSerializer for DomainClass DesignConnector.
 	/// </summary>
-	public partial class DesignConnectorSerializer : DslDiagrams::BinaryLinkShapeSerializer
+	internal partial class DesignConnectorSerializer : DslDiagrams::BinaryLinkShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -16220,7 +16220,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ToolInputConnectorSerializer for DomainClass ToolInputConnector.
 	/// </summary>
-	public partial class ToolInputConnectorSerializer : DesignConnectorSerializer
+	internal partial class ToolInputConnectorSerializer : DesignConnectorSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -16783,7 +16783,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ToolOutputConnectorSerializer for DomainClass ToolOutputConnector.
 	/// </summary>
-	public partial class ToolOutputConnectorSerializer : DesignConnectorSerializer
+	internal partial class ToolOutputConnectorSerializer : DesignConnectorSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -17346,7 +17346,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer ToolCopyConnectorSerializer for DomainClass ToolCopyConnector.
 	/// </summary>
-	public partial class ToolCopyConnectorSerializer : DesignConnectorSerializer
+	internal partial class ToolCopyConnectorSerializer : DesignConnectorSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -17909,7 +17909,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer WorkflowDesignDiagramSerializerBase for DomainClass WorkflowDesignDiagram.
 	/// </summary>
-	public abstract partial class WorkflowDesignDiagramSerializerBase : DslDiagrams::DiagramSerializer
+	internal abstract partial class WorkflowDesignDiagramSerializerBase : DslDiagrams::DiagramSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -18760,7 +18760,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Serializer WorkflowDesignDiagramSerializer for DomainClass WorkflowDesignDiagram.
 	/// </summary>
-	public partial class WorkflowDesignDiagramSerializer : WorkflowDesignDiagramSerializerBase
+	internal partial class WorkflowDesignDiagramSerializer : WorkflowDesignDiagramSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -18781,7 +18781,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// This is the abstract base of the double-derived implementation.
 	/// </summary>
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]		
-	public abstract class WorkflowDesignSerializationBehaviorBase : DslModeling::DomainXmlSerializationBehavior
+	internal abstract class WorkflowDesignSerializationBehaviorBase : DslModeling::DomainXmlSerializationBehavior
 	{
 		///<summary>
 		/// The xml namespace used by this domain model when serializing
@@ -18902,7 +18902,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// A DomainXmlSerializationBehavior implementation for defined behavior WorkflowDesignSerializationBehavior.
 	/// This is the concrete type of the double-derived implementation.
 	/// </summary>
-	public sealed partial class WorkflowDesignSerializationBehavior : WorkflowDesignSerializationBehaviorBase
+	internal sealed partial class WorkflowDesignSerializationBehavior : WorkflowDesignSerializationBehaviorBase
 	{
 		#region Singleton Instance
 		/// <summary>
@@ -18938,7 +18938,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Moniker resolver for serialization behavior WorkflowDesignSerializationBehavior.
 	/// </summary>
-	public partial class WorkflowDesignSerializationBehaviorMonikerResolver : WorkflowDesignSerializationBehaviorMonikerResolverBase
+	internal partial class WorkflowDesignSerializationBehaviorMonikerResolver : WorkflowDesignSerializationBehaviorMonikerResolverBase
 	{
 		/// <summary>
 		/// Constructor.
@@ -18954,7 +18954,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Base moniker resolver for serialization behavior WorkflowDesignSerializationBehavior.
 	/// </summary>
-	public partial class WorkflowDesignSerializationBehaviorMonikerResolverBase : DslModeling::SimpleMonikerResolver
+	internal partial class WorkflowDesignSerializationBehaviorMonikerResolverBase : DslModeling::SimpleMonikerResolver
 	{
 		#region Member Variables
 		/// <summary>

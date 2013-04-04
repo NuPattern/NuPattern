@@ -1,26 +1,7 @@
 ﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True"#>
 <#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
 <#@ output extension=".gen.cs" #>
-<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.dll" #>
-<#@ Assembly Name="NuPattern.Runtime.Schema.dll" #>
-<#@ Assembly Name="NuPattern.Runtime.Interfaces.dll" #>
-<#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" #>
-<#@ Assembly Name="NuPattern.Extensibility.dll" #>
-<#@ Assembly Name="System.ComponentModel.Composition" #>
-<#@ Assembly Name="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" #>
-<#@ Import Namespace="Microsoft.VisualStudio.Modeling" #>
-<#@ Import Namespace="NuPattern.Runtime" #>
-<#@ Import Namespace="NuPattern.Runtime.Schema" #>
-<#@ Import Namespace="NuPattern.Extensibility" #>
-<#@ Import Namespace="NuPattern.Authoring.PatternToolkitLibrary" #>
-<#@ Import Namespace="System.Linq" #>
-<#@ Import Namespace="System.Collections.Generic" #>
-<#@ Import Namespace="System.ComponentModel" #>
-<#@ Import Namespace="System.Reflection" #>
-<#@ Import Namespace="System.Data.Entity.Design.PluralizationServices" #>
-<#@ Include File="Constants.t4" #>
-<#@ Include File="Helpers.t4include" #>
-<#@ Include File="Header.t4include" #>
+<#@ Include File="Common.t4include" #>
 <#@ Include File="NamedElementParent.t4include" #>
 <#@ Include File="ElementContainer.t4include" #>
 <#
@@ -29,89 +10,32 @@ var developmentView = this.Element.Parent.Parent.As<NuPattern.Authoring.PatternT
 var toolkitInfo = developmentView.PatternToolkitInfo;
 
 if (toolkitInfo == null)
-	throw new Exception("ToolkitInfo element not found");
+    throw new Exception("ToolkitInfo element not found");
 
 var patternModel = developmentView.PatternModel;
-var pattern = LoadModel(patternModel.ToolkitDefinitionFile).Pattern;
+var patternModelInfo = LoadPatternModel(patternModel.ToolkitDefinitionFile);
+var pattern = patternModelInfo.Pattern;
 
-// The pluralizer in .NET 4.0 only supports English.
-var pluralizer = PluralizationService.CreateService(new System.Globalization.CultureInfo("en-US"));
-#>
-
-<#
 foreach (var view in pattern.Views)
 {
-	var codegen = new ViewCodeGeneration<IViewInfo, IView>(view);
-	codegen.AddType(typeof(Action));
-	codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
-	codegen.AddType(typeof(System.Collections.Generic.IEnumerable<object>));
-	codegen.EndInit();
-#>
-namespace <#=library.ToolkitProjectRootNamespace #>
-{
-<#GenerateUsings(codegen);#>
+    var codegen = new ViewCodeGeneration<IViewInfo, IView>(view);
+    codegen.AddType(typeof(Action));
+    codegen.AddType(typeof(System.ComponentModel.Composition.ImportingConstructorAttribute));
+    codegen.AddType(typeof(System.Collections.Generic.IEnumerable<object>));
+    codegen.AddType(typeof(NuPattern.Runtime.ToolkitInterface.ToolkitInterfaceLayer));
+    codegen.EndInit();
 
-	<#GenerateToolkitCommentsAndAttributes(AttributeTargets.Class, library, toolkitInfo, view); #>
-	internal partial class <#=view.CodeIdentifier#> : I<#=view.CodeIdentifier#>
-	{
-		private Runtime.IView target;
-		private Runtime.IContainerProxy<I<#=view.CodeIdentifier#>> proxy;
-
-		/// <summary>
-		/// For MEF.
-		/// </summary>
-		[ImportingConstructor]
-		private <#=view.CodeIdentifier#>() { }
-
-		/// <summary>
-		/// Initializes a new instance of the <see cref="<#=view.CodeIdentifier#>"/> class.
-		/// </summary>
-		public <#=view.CodeIdentifier#>(Runtime.IView target)
-		{
-			this.target = target;
-			this.proxy = target.ProxyFor<I<#=view.CodeIdentifier#>>();
-			OnCreated();
-		}	
-
-		partial void OnCreated();
-<#GenerateParentProperty(view, false); #>
-
-		/// <summary>
-		/// Gets the generic <see cref="Runtime.IView"/> underlying element.
-		/// </summary>
-		public virtual Runtime.IView AsView()
-		{
-			return this.target;
-		}
-
-		/// <summary>
-		/// Gets the generic underlying element as the given type if possible.
-		/// </summary>
-		public virtual TRuntimeInterface As<TRuntimeInterface>()
-			where TRuntimeInterface : class
-		{
-			return this.target as TRuntimeInterface;
-		}
-<#
-PushIndent("\t");
-PushIndent("\t");
-
-GenerateContainedElements(pluralizer, view, false);
-
-PopIndent();
-PopIndent();
-#>
-
-		/// <summary>
-		/// Deletes this instance.
-		/// </summary>
-		public virtual void Delete()
-		{
-			this.target.Delete();
-		}
-	}
-}
-
-<#
+    GenerateNamespaceBegin(library);
+    GenerateUsings(codegen);
+    GenerateToolkitCommentsAndAttributes(AttributeTargets.Class, library, toolkitInfo, view);
+    GenerateClassBegin(view, false);
+    GenerateImplementationConstructors("View", "Container", view);
+    GenerateParentProperty(view, false);
+    GenerateContainedElements(view, false);
+    GenerateDeleteMethod(false);
+    GenerateAutoGeneralizedInterfaceMethod("View", false);
+    GenerateGenericGeneralizedInterfaceMethod();
+    GenerateClassEnd();
+    GenerateNamespaceEnd();
 }
 #>

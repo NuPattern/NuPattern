@@ -3,11 +3,10 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using NuPattern;
-using NuPattern.Extensibility;
-using NuPattern.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern;
+using NuPattern.Runtime;
 
 namespace $rootnamespace$
 {
@@ -63,23 +62,23 @@ namespace $rootnamespace$
         public override bool Evaluate()
         {
             // Verify all [Required] and [Import]ed properties have valid values.
-			this.ValidateObject();
+            this.ValidateObject();
 
             // Make initial trace statement for this command
             tracer.TraceInformation(
-				"Determining $safeitemname$ on current element '{0}' with AProperty '{1}'", this.CurrentElement.InstanceName, this.AProperty);
+                "Determining $safeitemname$ on current element '{0}' with AProperty '{1}'", this.CurrentElement.InstanceName, this.AProperty);
 
             // TODO: Implement condition automation code to determine the evaluated result
-			var result = true;
+            var result = true;
 
-			//	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-			//	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-			//	TODO: Use tracer.TraceInformation() to note key results of execution
-			//	TODO: Raise exceptions for all other errors
+            //	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
+            //	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
+            //	TODO: Use tracer.TraceInformation() to note key results of execution
+            //	TODO: Raise exceptions for all other errors
 
             // Make resulting trace statement for this condition
             tracer.TraceInformation(
-				"Determined $safeitemname$ on current element '{0}' with AProperty '{1}', as '{2}'", this.CurrentElement.InstanceName, this.AProperty, result);
+                "Determined $safeitemname$ on current element '{0}' with AProperty '{1}', as '{2}'", this.CurrentElement.InstanceName, this.AProperty, result);
 
             return result;
         }

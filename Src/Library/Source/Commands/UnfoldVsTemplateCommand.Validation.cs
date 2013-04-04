@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Automation.Template;
 using NuPattern.Library.Properties;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
 
 namespace NuPattern.Library.Commands

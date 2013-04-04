@@ -3,9 +3,11 @@ using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Schema.Design;
+using NuPattern.VisualStudio.Shell;
 
-namespace NuPattern.Runtime.Schema.UnitTests
+namespace NuPattern.Runtime.Schema.UnitTests.Design
 {
     public class PatternSchemaTypeDescriptorProviderSpec
     {

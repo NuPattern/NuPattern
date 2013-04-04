@@ -5,7 +5,7 @@ namespace NuPattern.Library.Automation
     /// <summary>
     /// Library domain model customization.
     /// </summary>
-    public partial class LibraryDomainModel
+    partial class LibraryDomainModel
     {
         /// <summary>
         /// Gets the list of non-generated domain model types.
@@ -14,16 +14,16 @@ namespace NuPattern.Library.Automation
         protected override Type[] GetCustomDomainModelTypes()
         {
             return new[]
-			{ 
-				typeof(PatternElementSchemaAddRule),
-				typeof(GuidanceExtensionChangeRule),
-				typeof(ArtifactExtensionChangeRule),
-				typeof(ValidationExtensionChangeRule),
+            { 
+                typeof(PatternElementSchemaAddRule),
+                typeof(GuidanceExtensionChangeRule),
+                typeof(ArtifactExtensionChangeRule),
+                typeof(ValidationExtensionChangeRule),
                 typeof(EventSettingsChangeRule),
                 typeof(AggregatorCommandCommandSettingsDeletingRule),
-				typeof(TemplateSettingsChangeRule),
+                typeof(TemplateSettingsChangeRule),
                 typeof(UnfoldVsTemplateCommandChangeRule),
-			};
+            };
         }
     }
 }

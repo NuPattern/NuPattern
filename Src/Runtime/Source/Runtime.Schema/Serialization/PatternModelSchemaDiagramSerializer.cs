@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// PatternModel diagram serializer extension class.
     /// </summary>
-    public partial class PatternModelSchemaDiagramSerializer
+    partial class PatternModelSchemaDiagramSerializer
     {
         /// <summary>
         /// Public Write() method that serializes one PatternModelSchemaDiagram instance into XML.

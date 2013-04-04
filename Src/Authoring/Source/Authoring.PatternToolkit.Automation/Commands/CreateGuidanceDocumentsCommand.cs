@@ -10,8 +10,10 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.Guidance;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 {

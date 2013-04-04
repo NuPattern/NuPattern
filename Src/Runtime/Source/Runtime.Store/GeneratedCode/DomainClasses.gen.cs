@@ -18,9 +18,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.ProductState.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.ProductState.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("567410f3-5e44-4211-8623-bd9ee337dd82")]
-	public partial class ProductState : DslModeling::ModelElement
+	internal partial class ProductState : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -173,9 +172,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Property.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Property.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("9d160ca6-f94d-4cb7-956d-e2f537a0e33d")]
-	public partial class Property : InstanceBase
+	internal partial class Property : InstanceBase
 	{
 		#region Constructors, domain class Id
 	
@@ -228,89 +226,89 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("e0bdc7da-54bd-4b50-a3df-4b26e569b88d")]
 		public global::System.String RawValue
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return rawValuePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				RawValuePropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return rawValuePropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    set
+		    {
+		        RawValuePropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the Property.RawValue domain property.
 		/// </summary>
 		internal sealed partial class RawValuePropertyHandler : DslModeling::DomainPropertyValueHandler<Property, global::System.String>
 		{
-			private RawValuePropertyHandler() { }
+		    private RawValuePropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the Property.RawValue domain property value handler.
-			/// </summary>
-			public static readonly RawValuePropertyHandler Instance = new RawValuePropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the Property.RawValue domain property value handler.
+		    /// </summary>
+		    public static readonly RawValuePropertyHandler Instance = new RawValuePropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the Property.RawValue domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return RawValueDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Property element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.rawValuePropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the Property.RawValue domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return RawValueDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.String GetValue(Property element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.rawValuePropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Property element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(Property element, global::System.String newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.String oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(Property element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.rawValuePropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<Property>(x => x.RawValue);
-			}
+		    private void SetValue(Property element, global::System.String oldValue, global::System.String newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.rawValuePropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<Property>(x => x.RawValue);
+		    }
 		}
 		
 		#endregion
@@ -319,7 +317,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual ProductElement Owner
+		internal virtual ProductElement Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -344,9 +342,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Collection.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Collection.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("4d1f8038-151c-461d-97cc-3eaf779f50eb")]
-	public partial class Collection : AbstractElement
+	internal partial class Collection : AbstractElement
 	{
 		#region Constructors, domain class Id
 	
@@ -385,9 +382,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Element.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Element.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("375050fd-908d-47b2-9494-7626fee46113")]
-	public partial class Element : AbstractElement
+	internal partial class Element : AbstractElement
 	{
 		#region Constructors, domain class Id
 	
@@ -423,13 +419,12 @@ namespace NuPattern.Runtime.Store
 	/// DomainClass ProductElement
 	/// An element within the product.
 	/// </summary>
-	[System.ComponentModel.TypeDescriptionProvider(typeof(ProductElementTypeDescriptionProvider))]
+	[System.ComponentModel.TypeDescriptionProvider(typeof(NuPattern.Runtime.Store.Design.ProductElementTypeDescriptionProvider))]
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.ProductElement.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.ProductElement.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("ce0a63a4-80a0-4a07-b9d1-d97fd206a8f1")]
-	public abstract partial class ProductElement : InstanceBase
+	internal abstract partial class ProductElement : InstanceBase
 	{
 		#region Constructors, domain class Id
 	
@@ -472,89 +467,89 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("5ed95450-9b27-4485-92c7-862e2c0721d1")]
 		public global::System.String InstanceName
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return instanceNamePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				InstanceNamePropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return instanceNamePropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    set
+		    {
+		        InstanceNamePropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the ProductElement.InstanceName domain property.
 		/// </summary>
 		internal sealed partial class InstanceNamePropertyHandler : DslModeling::DomainPropertyValueHandler<ProductElement, global::System.String>
 		{
-			private InstanceNamePropertyHandler() { }
+		    private InstanceNamePropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the ProductElement.InstanceName domain property value handler.
-			/// </summary>
-			public static readonly InstanceNamePropertyHandler Instance = new InstanceNamePropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the ProductElement.InstanceName domain property value handler.
+		    /// </summary>
+		    public static readonly InstanceNamePropertyHandler Instance = new InstanceNamePropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the ProductElement.InstanceName domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return InstanceNameDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ProductElement element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.instanceNamePropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the ProductElement.InstanceName domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return InstanceNameDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.String GetValue(ProductElement element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.instanceNamePropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ProductElement element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(ProductElement element, global::System.String newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.String oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(ProductElement element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.instanceNamePropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<ProductElement>(x => x.InstanceName);
-			}
+		    private void SetValue(ProductElement element, global::System.String oldValue, global::System.String newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.instanceNamePropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<ProductElement>(x => x.InstanceName);
+		    }
 		}
 		
 		#endregion
@@ -582,90 +577,90 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("01523a35-435b-40a4-a24e-7656b71c1ad6")]
 		public global::System.Double InstanceOrder
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return instanceOrderPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				InstanceOrderPropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return instanceOrderPropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    set
+		    {
+		        InstanceOrderPropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the ProductElement.InstanceOrder domain property.
 		/// </summary>
 		internal sealed partial class InstanceOrderPropertyHandler : DslModeling::DomainPropertyValueHandler<ProductElement, global::System.Double>
 		{
-			private InstanceOrderPropertyHandler() { }
+		    private InstanceOrderPropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the ProductElement.InstanceOrder domain property value handler.
-			/// </summary>
-			public static readonly InstanceOrderPropertyHandler Instance = new InstanceOrderPropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the ProductElement.InstanceOrder domain property value handler.
+		    /// </summary>
+		    public static readonly InstanceOrderPropertyHandler Instance = new InstanceOrderPropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the ProductElement.InstanceOrder domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return InstanceOrderDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.Double GetValue(ProductElement element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.instanceOrderPropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the ProductElement.InstanceOrder domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return InstanceOrderDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.Double GetValue(ProductElement element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.instanceOrderPropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ProductElement element, global::System.Double newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(ProductElement element, global::System.Double newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.Double oldValue = GetValue(element);
-				// double type precision is guaranteed only to 15th digit.
-				if (global::System.Math.Abs(newValue - oldValue) > 1e-15)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.Double oldValue = GetValue(element);
+		        // double type precision is guaranteed only to 15th digit.
+		        if (global::System.Math.Abs(newValue - oldValue) > 1e-15)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(ProductElement element, global::System.Double oldValue, global::System.Double newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.instanceOrderPropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<ProductElement>(x => x.InstanceOrder);
-			}
+		    private void SetValue(ProductElement element, global::System.Double oldValue, global::System.Double newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.instanceOrderPropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<ProductElement>(x => x.InstanceOrder);
+		    }
 		}
 		
 		#endregion
@@ -693,7 +688,7 @@ namespace NuPattern.Runtime.Store
 		[System.ComponentModel.Editor(typeof(System.Drawing.Design.UITypeEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("ProductElement_ReferencesDisplayName", typeof(Properties.Resources))]
 		[DslDesign::DescriptionResource("ProductElement_ReferencesDescription", typeof(Properties.Resources))]
-		[System.ComponentModel.TypeConverter(typeof(ProductElementTypeDescriptor.ReferencesTypeConverter))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Store.Design.ProductElementTypeDescriptor.ReferencesTypeConverter))]
 		public virtual DslModeling::LinkedElementCollection<Reference> References
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
@@ -811,9 +806,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Product.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Product.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("f7b1afaf-b90d-411b-9792-1b402d72dfaf")]
-	public partial class Product : ProductElement
+	internal partial class Product : ProductElement
 	{
 		#region Constructors, domain class Id
 	
@@ -865,89 +859,89 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("8f8d39a6-537c-4b79-b9fe-49636a5a88bb")]
 		public global::System.String ExtensionId
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return extensionIdPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				ExtensionIdPropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return extensionIdPropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    set
+		    {
+		        ExtensionIdPropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the Product.ExtensionId domain property.
 		/// </summary>
 		internal sealed partial class ExtensionIdPropertyHandler : DslModeling::DomainPropertyValueHandler<Product, global::System.String>
 		{
-			private ExtensionIdPropertyHandler() { }
+		    private ExtensionIdPropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the Product.ExtensionId domain property value handler.
-			/// </summary>
-			public static readonly ExtensionIdPropertyHandler Instance = new ExtensionIdPropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the Product.ExtensionId domain property value handler.
+		    /// </summary>
+		    public static readonly ExtensionIdPropertyHandler Instance = new ExtensionIdPropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the Product.ExtensionId domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return ExtensionIdDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Product element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.extensionIdPropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the Product.ExtensionId domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return ExtensionIdDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.String GetValue(Product element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.extensionIdPropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Product element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(Product element, global::System.String newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.String oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(Product element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.extensionIdPropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<Product>(x => x.ExtensionId);
-			}
+		    private void SetValue(Product element, global::System.String oldValue, global::System.String newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.extensionIdPropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<Product>(x => x.ExtensionId);
+		    }
 		}
 		
 		#endregion
@@ -975,89 +969,89 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("f69e7d29-03b1-41c8-ab04-f6137567f952")]
 		public global::System.String ExtensionName
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return extensionNamePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			internal set
-			{
-				ExtensionNamePropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return extensionNamePropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    internal set
+		    {
+		        ExtensionNamePropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the Product.ExtensionName domain property.
 		/// </summary>
 		internal sealed partial class ExtensionNamePropertyHandler : DslModeling::DomainPropertyValueHandler<Product, global::System.String>
 		{
-			private ExtensionNamePropertyHandler() { }
+		    private ExtensionNamePropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the Product.ExtensionName domain property value handler.
-			/// </summary>
-			public static readonly ExtensionNamePropertyHandler Instance = new ExtensionNamePropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the Product.ExtensionName domain property value handler.
+		    /// </summary>
+		    public static readonly ExtensionNamePropertyHandler Instance = new ExtensionNamePropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the Product.ExtensionName domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return ExtensionNameDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Product element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.extensionNamePropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the Product.ExtensionName domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return ExtensionNameDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.String GetValue(Product element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.extensionNamePropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Product element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(Product element, global::System.String newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.String oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(Product element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.extensionNamePropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<Product>(x => x.ExtensionName);
-			}
+		    private void SetValue(Product element, global::System.String oldValue, global::System.String newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.extensionNamePropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<Product>(x => x.ExtensionName);
+		    }
 		}
 		
 		#endregion
@@ -1085,89 +1079,89 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("7871da94-2979-4616-9a84-a0bc6a7e5b65")]
 		public global::System.String Author
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return authorPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			internal set
-			{
-				AuthorPropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return authorPropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    internal set
+		    {
+		        AuthorPropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the Product.Author domain property.
 		/// </summary>
 		internal sealed partial class AuthorPropertyHandler : DslModeling::DomainPropertyValueHandler<Product, global::System.String>
 		{
-			private AuthorPropertyHandler() { }
+		    private AuthorPropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the Product.Author domain property value handler.
-			/// </summary>
-			public static readonly AuthorPropertyHandler Instance = new AuthorPropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the Product.Author domain property value handler.
+		    /// </summary>
+		    public static readonly AuthorPropertyHandler Instance = new AuthorPropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the Product.Author domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return AuthorDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Product element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.authorPropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the Product.Author domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return AuthorDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.String GetValue(Product element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.authorPropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Product element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(Product element, global::System.String newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.String oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(Product element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.authorPropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<Product>(x => x.Author);
-			}
+		    private void SetValue(Product element, global::System.String oldValue, global::System.String newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.authorPropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<Product>(x => x.Author);
+		    }
 		}
 		
 		#endregion
@@ -1195,89 +1189,89 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("b55b9568-ce0e-47cb-8110-543e5ad9c692")]
 		public global::System.String Version
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return versionPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			internal set
-			{
-				VersionPropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return versionPropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    internal set
+		    {
+		        VersionPropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the Product.Version domain property.
 		/// </summary>
 		internal sealed partial class VersionPropertyHandler : DslModeling::DomainPropertyValueHandler<Product, global::System.String>
 		{
-			private VersionPropertyHandler() { }
+		    private VersionPropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the Product.Version domain property value handler.
-			/// </summary>
-			public static readonly VersionPropertyHandler Instance = new VersionPropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the Product.Version domain property value handler.
+		    /// </summary>
+		    public static readonly VersionPropertyHandler Instance = new VersionPropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the Product.Version domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return VersionDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Product element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.versionPropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the Product.Version domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return VersionDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.String GetValue(Product element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.versionPropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Product element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(Product element, global::System.String newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.String oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(Product element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.versionPropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<Product>(x => x.Version);
-			}
+		    private void SetValue(Product element, global::System.String oldValue, global::System.String newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.versionPropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<Product>(x => x.Version);
+		    }
 		}
 		
 		#endregion
@@ -1301,7 +1295,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets ProductState.
 		/// The owning state model.
 		/// </summary>
-		public virtual ProductState ProductState
+		internal virtual ProductState ProductState
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1320,7 +1314,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual AbstractElement Owner
+		internal virtual AbstractElement Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1339,7 +1333,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets View.
 		/// The owning view.
 		/// </summary>
-		public virtual View View
+		internal virtual View View
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1364,9 +1358,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.View.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.View.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("f02be9bc-9733-4d6c-a35c-8460b2d6e310")]
-	public partial class View : InstanceBase
+	internal partial class View : InstanceBase
 	{
 		#region Constructors, domain class Id
 	
@@ -1399,7 +1392,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets Product.
 		/// The owning product.
 		/// </summary>
-		public virtual Product Product
+		internal virtual Product Product
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1551,9 +1544,8 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.AbstractElement.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.AbstractElement.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("fb175123-6a49-496b-88b4-4c82c6d2e6ca")]
-	public abstract partial class AbstractElement : ProductElement
+	internal abstract partial class AbstractElement : ProductElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1576,7 +1568,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets View.
 		/// The owning view.
 		/// </summary>
-		public virtual View View
+		internal virtual View View
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1610,7 +1602,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual AbstractElement Owner
+		internal virtual AbstractElement Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1747,10 +1739,9 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.InstanceBase.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.InstanceBase.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (DefinitionName = {DefinitionName})")]
 	[DslModeling::DomainObjectId("30b2207d-bb9a-456f-82ee-a116d74598ef")]
-	public abstract partial class InstanceBase : DslModeling::ModelElement
+	internal abstract partial class InstanceBase : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -1792,89 +1783,89 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("d029965b-4622-4b05-853b-95cc6d163e0b")]
 		public global::System.Guid DefinitionId
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return definitionIdPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DefinitionIdPropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return definitionIdPropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    set
+		    {
+		        DefinitionIdPropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the InstanceBase.DefinitionId domain property.
 		/// </summary>
 		internal sealed partial class DefinitionIdPropertyHandler : DslModeling::DomainPropertyValueHandler<InstanceBase, global::System.Guid>
 		{
-			private DefinitionIdPropertyHandler() { }
+		    private DefinitionIdPropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the InstanceBase.DefinitionId domain property value handler.
-			/// </summary>
-			public static readonly DefinitionIdPropertyHandler Instance = new DefinitionIdPropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the InstanceBase.DefinitionId domain property value handler.
+		    /// </summary>
+		    public static readonly DefinitionIdPropertyHandler Instance = new DefinitionIdPropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the InstanceBase.DefinitionId domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return DefinitionIdDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.Guid GetValue(InstanceBase element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.definitionIdPropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the InstanceBase.DefinitionId domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return DefinitionIdDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.Guid GetValue(InstanceBase element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.definitionIdPropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(InstanceBase element, global::System.Guid newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(InstanceBase element, global::System.Guid newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.Guid oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.Guid oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(InstanceBase element, global::System.Guid oldValue, global::System.Guid newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.definitionIdPropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<InstanceBase>(x => x.DefinitionId);
-			}
+		    private void SetValue(InstanceBase element, global::System.Guid oldValue, global::System.Guid newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.definitionIdPropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<InstanceBase>(x => x.DefinitionId);
+		    }
 		}
 		
 		#endregion
@@ -1899,95 +1890,95 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("5cbc79d5-4132-4486-8370-1e03bd033112")]
 		public global::System.String DefinitionName
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return DefinitionNamePropertyHandler.Instance.GetValue(this);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DefinitionNamePropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return DefinitionNamePropertyHandler.Instance.GetValue(this);
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    set
+		    {
+		        DefinitionNamePropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the InstanceBase.DefinitionName domain property.
 		/// </summary>
 		internal sealed partial class DefinitionNamePropertyHandler : DslModeling::DomainPropertyValueHandler<InstanceBase, global::System.String>
 		{
-			private DefinitionNamePropertyHandler() { }
+		    private DefinitionNamePropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the InstanceBase.DefinitionName domain property value handler.
-			/// </summary>
-			public static readonly DefinitionNamePropertyHandler Instance = new DefinitionNamePropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the InstanceBase.DefinitionName domain property value handler.
+		    /// </summary>
+		    public static readonly DefinitionNamePropertyHandler Instance = new DefinitionNamePropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the InstanceBase.DefinitionName domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return DefinitionNameDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(InstanceBase element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				// There is no storage for DefinitionName because its Kind is
-				// set to CustomStorage. Please provide the GetDefinitionNameValue()
-				// method on the domain class.
-				return element.GetDefinitionNameValue();
-			}
+		    /// <summary>
+		    /// Gets the Id of the InstanceBase.DefinitionName domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return DefinitionNameDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.String GetValue(InstanceBase element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        // There is no storage for DefinitionName because its Kind is
+		        // set to CustomStorage. Please provide the GetDefinitionNameValue()
+		        // method on the domain class.
+		        return element.GetDefinitionNameValue();
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(InstanceBase element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(InstanceBase element, global::System.String newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.String oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(InstanceBase element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				// There is no storage for DefinitionName because its Kind is
-				// set to CustomStorage. Please provide the SetDefinitionNameValue()
-				// method on the domain class.
-				element.SetDefinitionNameValue(newValue);
-				ValueChanged(element, oldValue, GetValue(element));
-				element.PropertyChanges.NotifyChanged<InstanceBase>(x => x.DefinitionName);
-			}
+		    private void SetValue(InstanceBase element, global::System.String oldValue, global::System.String newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        // There is no storage for DefinitionName because its Kind is
+		        // set to CustomStorage. Please provide the SetDefinitionNameValue()
+		        // method on the domain class.
+		        element.SetDefinitionNameValue(newValue);
+		        ValueChanged(element, oldValue, GetValue(element));
+		        element.PropertyChanges.NotifyChanged<InstanceBase>(x => x.DefinitionName);
+		    }
 		}
 		
 		#endregion
@@ -2014,89 +2005,89 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("277f2180-34d8-49f7-a33b-0497da7c5cbc")]
 		public global::System.String Notes
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return notesPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				NotesPropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return notesPropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    set
+		    {
+		        NotesPropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the InstanceBase.Notes domain property.
 		/// </summary>
 		internal sealed partial class NotesPropertyHandler : DslModeling::DomainPropertyValueHandler<InstanceBase, global::System.String>
 		{
-			private NotesPropertyHandler() { }
+		    private NotesPropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the InstanceBase.Notes domain property value handler.
-			/// </summary>
-			public static readonly NotesPropertyHandler Instance = new NotesPropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the InstanceBase.Notes domain property value handler.
+		    /// </summary>
+		    public static readonly NotesPropertyHandler Instance = new NotesPropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the InstanceBase.Notes domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return NotesDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(InstanceBase element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.notesPropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the InstanceBase.Notes domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return NotesDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.String GetValue(InstanceBase element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.notesPropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(InstanceBase element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(InstanceBase element, global::System.String newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.String oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(InstanceBase element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.notesPropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<InstanceBase>(x => x.Notes);
-			}
+		    private void SetValue(InstanceBase element, global::System.String oldValue, global::System.String newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.notesPropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<InstanceBase>(x => x.Notes);
+		    }
 		}
 		
 		#endregion
@@ -2112,10 +2103,9 @@ namespace NuPattern.Runtime.Store
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Store.Reference.DisplayName", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Store.Reference.Description", typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel), "NuPattern.Runtime.Store.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Store.ProductStateStoreDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[global::System.Diagnostics.DebuggerDisplay("{GetType().Name,nq} (Kind = {kindPropertyStorage})")]
 	[DslModeling::DomainObjectId("3fcc5eb5-c492-48ba-84a1-9172012c8f5f")]
-	public partial class Reference : DslModeling::ModelElement
+	internal partial class Reference : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
@@ -2164,89 +2154,89 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("f7d5f1f0-6498-42a2-b0c4-622d3770af4d")]
 		public global::System.String Value
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return valuePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				ValuePropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return valuePropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    set
+		    {
+		        ValuePropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the Reference.Value domain property.
 		/// </summary>
 		internal sealed partial class ValuePropertyHandler : DslModeling::DomainPropertyValueHandler<Reference, global::System.String>
 		{
-			private ValuePropertyHandler() { }
+		    private ValuePropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the Reference.Value domain property value handler.
-			/// </summary>
-			public static readonly ValuePropertyHandler Instance = new ValuePropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the Reference.Value domain property value handler.
+		    /// </summary>
+		    public static readonly ValuePropertyHandler Instance = new ValuePropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the Reference.Value domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return ValueDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Reference element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.valuePropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the Reference.Value domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return ValueDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.String GetValue(Reference element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.valuePropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Reference element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(Reference element, global::System.String newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.String oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(Reference element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.valuePropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<Reference>(x => x.Value);
-			}
+		    private void SetValue(Reference element, global::System.String oldValue, global::System.String newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.valuePropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<Reference>(x => x.Value);
+		    }
 		}
 		
 		#endregion
@@ -2274,89 +2264,89 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("5b404e8a-2ac5-4470-950f-203b4e8099a6")]
 		public global::System.String Kind
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return kindPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				KindPropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return kindPropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    set
+		    {
+		        KindPropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the Reference.Kind domain property.
 		/// </summary>
 		internal sealed partial class KindPropertyHandler : DslModeling::DomainPropertyValueHandler<Reference, global::System.String>
 		{
-			private KindPropertyHandler() { }
+		    private KindPropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the Reference.Kind domain property value handler.
-			/// </summary>
-			public static readonly KindPropertyHandler Instance = new KindPropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the Reference.Kind domain property value handler.
+		    /// </summary>
+		    public static readonly KindPropertyHandler Instance = new KindPropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the Reference.Kind domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return KindDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Reference element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.kindPropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the Reference.Kind domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return KindDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.String GetValue(Reference element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.kindPropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Reference element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(Reference element, global::System.String newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.String oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(Reference element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.kindPropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<Reference>(x => x.Kind);
-			}
+		    private void SetValue(Reference element, global::System.String oldValue, global::System.String newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.kindPropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<Reference>(x => x.Kind);
+		    }
 		}
 		
 		#endregion
@@ -2381,89 +2371,89 @@ namespace NuPattern.Runtime.Store
 		[DslModeling::DomainObjectId("304e2b4e-b105-47dd-bb81-027a220c37e2")]
 		public global::System.String Tag
 		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return tagPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				TagPropertyHandler.Instance.SetValue(this, value);
-			}
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    get
+		    {
+		        return tagPropertyStorage;
+		    }
+		    [global::System.Diagnostics.DebuggerStepThrough]
+		    set
+		    {
+		        TagPropertyHandler.Instance.SetValue(this, value);
+		    }
 		}
 		/// <summary>
 		/// Value handler for the Reference.Tag domain property.
 		/// </summary>
 		internal sealed partial class TagPropertyHandler : DslModeling::DomainPropertyValueHandler<Reference, global::System.String>
 		{
-			private TagPropertyHandler() { }
+		    private TagPropertyHandler() { }
 		
-			/// <summary>
-			/// Gets the singleton instance of the Reference.Tag domain property value handler.
-			/// </summary>
-			public static readonly TagPropertyHandler Instance = new TagPropertyHandler();
+		    /// <summary>
+		    /// Gets the singleton instance of the Reference.Tag domain property value handler.
+		    /// </summary>
+		    public static readonly TagPropertyHandler Instance = new TagPropertyHandler();
 		
-			/// <summary>
-			/// Gets the Id of the Reference.Tag domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return TagDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Reference element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.tagPropertyStorage;
-			}
+		    /// <summary>
+		    /// Gets the Id of the Reference.Tag domain property.
+		    /// </summary>
+		    public sealed override global::System.Guid DomainPropertyId
+		    {
+		        [global::System.Diagnostics.DebuggerStepThrough]
+		        get
+		        {
+		            return TagDomainPropertyId;
+		        }
+		    }
+		    
+		    /// <summary>
+		    /// Gets a strongly-typed value of the property on specified element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <returns>Property value.</returns>
+		    public override sealed global::System.String GetValue(Reference element)
+		    {
+		        if (element == null) throw new global::System.ArgumentNullException("element");
+		        return element.tagPropertyStorage;
+		    }
 		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Reference element, global::System.String newValue)
-			{
-				if (element == null)
-				{
-					throw new global::System.ArgumentNullException("element");
-				}
+		    /// <summary>
+		    /// Sets property value on an element.
+		    /// </summary>
+		    /// <param name="element">Element which owns the property.</param>
+		    /// <param name="newValue">New property value.</param>
+		    public override sealed void SetValue(Reference element, global::System.String newValue)
+		    {
+		        if (element == null)
+		        {
+		            throw new global::System.ArgumentNullException("element");
+		        }
 		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
-					{
-						this.SetValue(element, oldValue, newValue);
-					}
-					else
-					{
-						using (var tx = element.Store.TransactionManager.BeginTransaction())
-						{
-							this.SetValue(element, oldValue, newValue);
-							tx.Commit();
-						}
-					}
-				}
-			}
+		        global::System.String oldValue = GetValue(element);
+		        if (newValue != oldValue)
+		        {
+		            if (element.Store.InUndoRedoOrRollback || element.Store.TransactionManager.InTransaction || element.Store.TransactionManager.CurrentTransaction != null && element.Store.TransactionManager.CurrentTransaction.InRollback)
+		            {
+		                this.SetValue(element, oldValue, newValue);
+		            }
+		            else
+		            {
+		                using (var tx = element.Store.TransactionManager.BeginTransaction())
+		                {
+		                    this.SetValue(element, oldValue, newValue);
+		                    tx.Commit();
+		                }
+		            }
+		        }
+		    }
 		
-			private void SetValue(Reference element, global::System.String oldValue, global::System.String newValue)
-			{
-				this.ValueChanging(element, oldValue, newValue);
-				element.tagPropertyStorage = newValue;
-				ValueChanged(element, oldValue, newValue);
-				element.PropertyChanges.NotifyChanged<Reference>(x => x.Tag);
-			}
+		    private void SetValue(Reference element, global::System.String oldValue, global::System.String newValue)
+		    {
+		        this.ValueChanging(element, oldValue, newValue);
+		        element.tagPropertyStorage = newValue;
+		        ValueChanged(element, oldValue, newValue);
+		        element.PropertyChanges.NotifyChanged<Reference>(x => x.Tag);
+		    }
 		}
 		
 		#endregion
@@ -2472,7 +2462,7 @@ namespace NuPattern.Runtime.Store
 		/// Gets or sets Owner.
 		/// The owning element.
 		/// </summary>
-		public virtual ProductElement Owner
+		internal virtual ProductElement Owner
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get

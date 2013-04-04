@@ -1,0 +1,9 @@
+﻿<#@ output extension=".gen.cs" #>
+<#@ include file="..\..\..\..\..\MasterVersion.gen.ttinclude" #>
+namespace NuPattern.Runtime.UI.ViewModels
+{
+    partial class SolutionBuilderViewModel
+    {
+        private const string HomePageUrl = @"<#=VersionInfo.ProjectHomePage #>";
+    }
+}

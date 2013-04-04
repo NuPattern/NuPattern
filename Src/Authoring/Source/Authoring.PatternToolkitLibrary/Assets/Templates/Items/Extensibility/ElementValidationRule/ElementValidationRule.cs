@@ -5,22 +5,23 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
-using NuPattern.Extensibility;
-using NuPattern.Runtime;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern;
+using NuPattern.Runtime;
+using NuPattern.Runtime.Validation;
 
 namespace $rootnamespace$
 {
-	/// <summary>
-	/// A custom element validation rule that verifies instances of elements.
-	/// </summary>
-	[DisplayName("$safeitemname$ is Valid")]
-	[Category("General")]
-	[Description("Validates that the current element has correct configuration.")]
-	[CLSCompliant(false)]
-	public class $safeitemname$ : ValidationRule
-	{
-		private static readonly ITraceSource tracer = Tracer.GetSourceFor<$safeitemname$>();
+    /// <summary>
+    /// A custom element validation rule that verifies instances of elements.
+    /// </summary>
+    [DisplayName("$safeitemname$ is Valid")]
+    [Category("General")]
+    [Description("Validates that the current element has correct configuration.")]
+    [CLSCompliant(false)]
+    public class $safeitemname$ : ValidationRule
+    {
+        private static readonly ITraceSource tracer = Tracer.GetSourceFor<$safeitemname$>();
 
         /// <summary>
         /// Gets or sets a configurable property for this rule.
@@ -56,20 +57,20 @@ namespace $rootnamespace$
             set;
         }
 
-		/// <summary>
-		/// Evaluates the violations for the rule.
-		/// </summary>
-		/// <remarks></remarks>
-		public override IEnumerable<ValidationResult> Validate()
-		{
-			List<ValidationResult> errors = new List<ValidationResult>();
+        /// <summary>
+        /// Evaluates the violations for the rule.
+        /// </summary>
+        /// <remarks></remarks>
+        public override IEnumerable<ValidationResult> Validate()
+        {
+            List<ValidationResult> errors = new List<ValidationResult>();
 
-			// Verify all [Required] and [Import]ed properties have valid values.
-			this.ValidateObject();
+            // Verify all [Required] and [Import]ed properties have valid values.
+            this.ValidateObject();
 
             // Make initial trace statement for this rule
             tracer.TraceInformation(
-				"Validating $safeitemname$ on current element '{0}' with AProperty '{1}'", this.CurrentElement.InstanceName, this.AProperty);
+                "Validating $safeitemname$ on current element '{0}' with AProperty '{1}'", this.CurrentElement.InstanceName, this.AProperty);
 
             // TODO: Implement provider automation code to determine the violations
             errors.Add(new ValidationResult(
@@ -77,15 +78,15 @@ namespace $rootnamespace$
                 "The element '{0}' is not valid in some way. <Some prescriptive action to make it valid.>",
                 this.CurrentElement.InstanceName)));
 
-			//	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-			//	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-			//	TODO: Use tracer.TraceInformation() to note key results of execution
-			//	TODO: Raise exceptions for all other errors
+            //	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
+            //	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
+            //	TODO: Use tracer.TraceInformation() to note key results of execution
+            //	TODO: Raise exceptions for all other errors
 
-			tracer.TraceInformation(
-				"Validated $safeitemname$ on current element '{0}' with AProperty '{1}', as '{2}'", this.CurrentElement.InstanceName, this.AProperty, !errors.Any());
+            tracer.TraceInformation(
+                "Validated $safeitemname$ on current element '{0}' with AProperty '{1}', as '{2}'", this.CurrentElement.InstanceName, this.AProperty, !errors.Any());
 
-			return errors;
-		}
-	}
+            return errors;
+        }
+    }
 }

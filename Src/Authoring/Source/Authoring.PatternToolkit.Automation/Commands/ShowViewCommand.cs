@@ -2,14 +2,13 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.Authoring.PatternToolkit.Automation.UriProviders;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime.References;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
@@ -57,40 +56,28 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             {
                 using (tracer.StartActivity(Resources.ShowViewCommand_TraceShowingView, patternModel.InstanceName, this.CurrentElement.InstanceName))
                 {
-                    DesignerCommandHelper.DoActionOnDesigner(
-                    reference.PhysicalPath,
-                    docdata =>
+                    var viewReference = ViewArtifactLinkReference.GetReferences(this.CurrentElement.AsElement()).FirstOrDefault();
+                    if (viewReference != null)
                     {
-                        var viewReference = ViewArtifactLinkReference.GetReferences(this.CurrentElement.AsElement()).FirstOrDefault();
-
-                        if (viewReference != null)
+                        ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, pm =>
                         {
-                            var viewSchema = docdata.Store.GetViews().FirstOrDefault(v => v.Id == new Guid(viewReference.Host));
-
-                            if (viewSchema != null)
+                            var view = pm.Pattern.GetView(new Guid(viewReference.Host));
+                            if (view != null)
                             {
-                                var docview = docdata.DocViews.First() as SingleDiagramDocView;
-                                var diagram = docdata.Store.GetDiagramForView(viewSchema);
-
-                                if (docview != null && diagram != null)
-                                {
-                                    docview.Diagram = diagram;
-                                    viewSchema.Pattern.CurrentDiagramId = diagram.Id.ToString();
-                                }
+                                ViewSchemaHelper.SelectViewDiagram(reference.PhysicalPath, view);
                             }
                             else
                             {
                                 tracer.TraceWarning(
-                                    Resources.ShowViewCommand_TraceViewNotFound, patternModel.InstanceName, viewReference.Host);
+                                    Resources.SetAsDefaultViewCommand_TraceViewNotFound, patternModel.InstanceName, viewReference.Host);
                             }
-                        }
-                        else
-                        {
-                            tracer.TraceWarning(
-                                Resources.ShowViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
-                        }
-                    },
-                    true);
+                        }, true);
+                    }
+                    else
+                    {
+                        tracer.TraceWarning(
+                            Resources.SetAsDefaultViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
+                    }
                 }
             }
             else

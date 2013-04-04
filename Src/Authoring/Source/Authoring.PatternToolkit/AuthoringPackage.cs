@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using NuPattern.Runtime;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Authoring.PatternToolkit
 {

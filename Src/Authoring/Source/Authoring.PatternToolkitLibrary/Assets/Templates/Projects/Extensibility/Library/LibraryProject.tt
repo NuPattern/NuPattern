@@ -5,129 +5,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 <#
-	if (VersionInfo.TargetVsVersion == "11.0")
-	{
+    if (VersionInfo.TargetVsVersion == "11.0")
+    {
 #>
-	<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
 <#
-	}
+    }
 #>
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>$guid2$</ProjectGuid>
-		<OutputType>Library</OutputType>
-		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<RootNamespace>$safeprojectname$</RootNamespace>
-		<AssemblyName>$safeprojectname$</AssemblyName>
-		<TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
-		<FileAlignment>512</FileAlignment>
-		<GeneratePkgDefFile>false</GeneratePkgDefFile>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug\</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<DebugType>pdbonly</DebugType>
-		<Optimize>true</Optimize>
-		<OutputPath>bin\Release\</OutputPath>
-		<DefineConstants>TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="System" />
-		<Reference Include="Microsoft.CSharp" />
-		<Reference Include="System.ComponentModel.Composition" />
-		<Reference Include="System.ComponentModel.DataAnnotations" />
-		<Reference Include="System.Core" />
-		<Reference Include="System.Drawing" />
-		<Reference Include="System.Design" />
-		<Reference Include="System.Xml" />
-		<Reference Include="System.Xaml" />
-		<Reference Include="PresentationCore" />
-		<Reference Include="PresentationFramework" />
-		<Reference Include="WindowsBase" />
-		<Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-			<EmbedInteropTypes>False</EmbedInteropTypes>
-		</Reference>
-		<Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
-		<Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=10.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-			<SpecificVersion>True</SpecificVersion>
-		</Reference>
-		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.<#=VersionInfo.TargetVsVersion#>" />
-		<Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.<#=VersionInfo.TargetVsVersion#>" />
-		<Reference Include="NuPattern.Library">
-			<HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="NuPattern.Runtime.Interfaces">
-			<HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="NuPattern.Common.Presentation">
-			<HintPath>$(PatternToolkitRuntime)\NuPattern.Common.Presentation.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="NuPattern.Extensibility">
-			<HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
-			<HintPath>$(PatternToolkitRuntime)\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime">
-			<HintPath>$(PatternToolkitRuntime)\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-			<HintPath>$(FeatureExtensionRuntime)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-			<SpecificVersion>False</SpecificVersion>
-			<HintPath>$(FeatureExtensionRuntime)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="Properties\AssemblyInfo.cs" />
-		<Folder Include="Commands\"/>
-		<Folder Include="Conditions\"/>
-		<Folder Include="Events\"/>
-		<Folder Include="TypeConverters\"/>
-		<Folder Include="TypeEditors\"/>
-		<Folder Include="ValidationRules\"/>
-		<Folder Include="ValueComparers\"/>
-		<Folder Include="ValueProviders\"/>
-	</ItemGroup>
-	<ItemGroup>
-		<Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
-	</ItemGroup>
-	<!-- Properties for Toolkit Targets -->
-	<PropertyGroup>
-		<CopyVsixDebuggingDependencies>false</CopyVsixDebuggingDependencies>
-	</PropertyGroup>
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-	<Import Project="<#=AuthoringTargetsInfo.MsBuildPath#>\\<#=VsixInfo.PatternToolkitBuilder.Author#>\\<#=VsixInfo.PatternToolkitBuilder.Name#>\\<#=AuthoringTargetsInfo.VersionTargets#>"/>
-	<!-- Properties for VSSDK/DSL Targets -->
-	<PropertyGroup>
-		<StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
-		<StartAction>Program</StartAction>
-		<StartArguments>/rootsuffix Exp</StartArguments>
-	</PropertyGroup>
-	<!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-			 Other similar extension points exist, see Microsoft.Common.targets.
-	<Target Name="BeforeBuild">
-	</Target>
-	<Target Name="AfterBuild">
-	</Target>
-	-->
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>$guid2$</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>$safeprojectname$</RootNamespace>
+        <AssemblyName>$safeprojectname$</AssemblyName>
+        <TargetFrameworkVersion>v$targetframeworkversion$</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="System.ComponentModel.Composition" />
+        <Reference Include="System.ComponentModel.DataAnnotations" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Design" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Xaml" />
+        <Reference Include="PresentationCore" />
+        <Reference Include="PresentationFramework" />
+        <Reference Include="WindowsBase" />
+        <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+            <EmbedInteropTypes>False</EmbedInteropTypes>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
+        <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=10.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+            <SpecificVersion>True</SpecificVersion>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.<#=VersionInfo.TargetVsVersion#>" />
+        <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.<#=VersionInfo.TargetVsVersion#>" />
+        <Reference Include="NuPattern.Library">
+            <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="NuPattern.Common">
+          <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+          <Private>false</Private>
+        </Reference>
+        <Reference Include="NuPattern.Presentation">
+            <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="NuPattern.Runtime.Extensibility">
+            <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+            <HintPath>$(PatternToolkitRuntime)\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime">
+            <HintPath>$(PatternToolkitRuntime)\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
+            <HintPath>$(FeatureExtensionRuntime)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
+            <SpecificVersion>False</SpecificVersion>
+            <HintPath>$(FeatureExtensionRuntime)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Folder Include="Commands\"/>
+        <Folder Include="Conditions\"/>
+        <Folder Include="Events\"/>
+        <Folder Include="TypeConverters\"/>
+        <Folder Include="TypeEditors\"/>
+        <Folder Include="ValidationRules\"/>
+        <Folder Include="ValueComparers\"/>
+        <Folder Include="ValueProviders\"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
+    </ItemGroup>
+    <!-- Properties for Toolkit Targets -->
+    <PropertyGroup>
+        <CopyVsixDebuggingDependencies>false</CopyVsixDebuggingDependencies>
+    </PropertyGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Import Project="<#=AuthoringTargetsInfo.MsBuildPath#>\\<#=VsixInfo.PatternToolkitBuilder.Author#>\\<#=VsixInfo.PatternToolkitBuilder.Name#>\\<#=AuthoringTargetsInfo.VersionTargets#>"/>
+    <!-- Properties for VSSDK/DSL Targets -->
+    <PropertyGroup>
+        <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
+        <StartAction>Program</StartAction>
+        <StartArguments>/rootsuffix Exp</StartArguments>
+    </PropertyGroup>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+             Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
 </Project>

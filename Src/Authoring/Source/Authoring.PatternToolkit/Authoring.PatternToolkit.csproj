@@ -26,23 +26,23 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="NuPattern.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="NuPattern.Common.Presentation">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.Presentation.dll</HintPath>
+    <Reference Include="NuPattern.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="NuPattern.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
       <Private>false</Private>
     </Reference>
-		<Reference Include="NuPattern.Runtime.Schema">
-			<HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
-			<Private>True</Private>
-		</Reference>
-		<Reference Include="System" />
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xaml" />
@@ -129,6 +129,12 @@
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplate.gen.vstemplate">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectTemplate.tt</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ItemTemplate>
     <Content Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplateProject.gen.csproj">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -156,6 +162,9 @@
     <None Include="3e44e242-5b47-4338-827f-ca394a899c57.patterndefinition.diagram">
       <DependentUpon>PatternModel.patterndefinition</DependentUpon>
     </None>
+    <Content Include="Assets\Templates\Text\Utilities.t4include">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8.patterndefinition.diagram">
       <DependentUpon>PatternModel.patterndefinition</DependentUpon>
     </None>
@@ -868,14 +877,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ItemGuid>25a95e13-8628-403d-a209-d21ee15d1dad</ItemGuid>
     </ItemTemplate>
-    <ItemTemplate Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplate.gen.vstemplate">
-      <DependentUpon>ProjectTemplate.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Designer</SubType>
-      <DesignTime>True</DesignTime>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ItemGuid>e36d91f5-33a4-4762-831d-4120774ba1fc</ItemGuid>
-    </ItemTemplate>
     <ItemTemplate Include="Assets\Templates\Items\Extensibility\TextTemplate\TextTemplate.gen.vstemplate">
       <DependentUpon>TextTemplate.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -908,7 +909,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplateProject.tt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ProjectTemplateProject.gen.csproj</LastGenOutput>
     </None>
@@ -923,11 +923,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Templates\Items\Extensibility\WizardPage\WizardPage.xaml.cs">
-      <DependentUpon>WizardPage.xaml</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Templates\Items\Extensibility\Wizard\Wizard.xaml.cs">
-      <DependentUpon>Wizard.xaml</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Templates\Items\Extensibility\ProjectTemplate\ProjectTemplate.cs">
@@ -1050,7 +1048,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>GuidanceWorkflow.gen.t4</LastGenOutput>
     </None>
-    <Content Include="Assets\Templates\Text\Header.t4">
+    <Content Include="Assets\Templates\Text\Header.t4include">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="Assets\Templates\Text\ItemTemplate\ItemTemplate.vstemplate.tt">
@@ -1295,9 +1293,9 @@
       <IncludeOutputGroupsInVSIX>PkgdefProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="..\Authoring.WorkflowDesign.Interfaces\Authoring.WorkflowDesign.Interfaces.csproj">
+    <ProjectReference Include="..\Authoring.WorkflowDesign.Extensibility\Authoring.WorkflowDesign.Extensibility.csproj">
       <Project>{A55CFA2E-1519-4719-BAFB-D67F3C67E375}</Project>
-      <Name>Authoring.WorkflowDesign.Interfaces</Name>
+      <Name>Authoring.WorkflowDesign.Extensibility</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
@@ -1318,7 +1316,6 @@
     <Content Include="Assets\Templates\Items\Extensibility\Wizard\Wizard.xaml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
@@ -1326,7 +1323,6 @@
     <Content Include="Assets\Templates\Items\Extensibility\WizardPage\WizardPage.xaml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>

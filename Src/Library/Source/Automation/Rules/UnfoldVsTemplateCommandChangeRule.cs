@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Library.Automation
 {
@@ -11,7 +11,7 @@ namespace NuPattern.Library.Automation
     /// Change rule to keep command solution item name in sync
     /// </summary>
     [RuleOn(typeof(CommandSettings), FireTime = TimeToFire.TopLevelCommit)]
-    public class UnfoldVsTemplateCommandChangeRule : ChangeRule
+    internal class UnfoldVsTemplateCommandChangeRule : ChangeRule
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<UnfoldVsTemplateCommandChangeRule>();
 

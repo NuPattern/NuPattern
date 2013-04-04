@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
-using NuPattern.Extensibility;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Library;
 using NuPattern.Library.Commands;
 

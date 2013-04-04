@@ -6,14 +6,16 @@ using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
+using NuPattern.Library.TemplateWizards;
+using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Library.Automation.Template
 {
-    class TemplateValidator
+    internal class TemplateValidator
     {
         private UnfoldVsTemplateCommand.UnfoldVsTemplateSettings settings;
         private ITraceSource tracer;
@@ -182,9 +184,9 @@ namespace NuPattern.Library.Automation.Template
                             Resources.Validate_TemplateSettingsTemplateIdDoesNotMatchReferencedTemplateCode, settings.SettingsElement as ModelElement);
                         }
 
-                        if (!((template.Type == VsTemplateType.Item && settings.TemplateUri.StartsWith(VsTemplateUriProvider.GetUriBase(VsTemplateType.Item), StringComparison.OrdinalIgnoreCase)) ||
-                            (template.Type == VsTemplateType.Project && settings.TemplateUri.StartsWith(VsTemplateUriProvider.GetUriBase(VsTemplateType.Project), StringComparison.OrdinalIgnoreCase)) ||
-                            (template.Type == VsTemplateType.ProjectGroup && settings.TemplateUri.StartsWith(VsTemplateUriProvider.GetUriBase(VsTemplateType.ProjectGroup), StringComparison.OrdinalIgnoreCase))))
+                        if (!((template.Type == VsTemplateType.Item && settings.TemplateUri.StartsWith(VsTemplateUri.GetUriBase(VsTemplateType.Item), StringComparison.OrdinalIgnoreCase)) ||
+                            (template.Type == VsTemplateType.Project && settings.TemplateUri.StartsWith(VsTemplateUri.GetUriBase(VsTemplateType.Project), StringComparison.OrdinalIgnoreCase)) ||
+                            (template.Type == VsTemplateType.ProjectGroup && settings.TemplateUri.StartsWith(VsTemplateUri.GetUriBase(VsTemplateType.ProjectGroup), StringComparison.OrdinalIgnoreCase))))
                         {
                             //wrong uri for type
                             context.LogError(

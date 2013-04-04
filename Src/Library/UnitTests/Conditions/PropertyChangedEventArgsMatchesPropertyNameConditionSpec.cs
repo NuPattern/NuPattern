@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Conditions;
-using NuPattern.Runtime;
 
 namespace NuPattern.Library.UnitTests.Conditions
 {

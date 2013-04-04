@@ -3,11 +3,10 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using NuPattern;
-using NuPattern.Runtime;
-using NuPattern.Extensibility;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern;
+using NuPattern.Runtime;
 
 namespace $rootnamespace$
 {
@@ -63,23 +62,23 @@ namespace $rootnamespace$
         public override object Evaluate()
         {
             // Verify all [Required] and [Import]ed properties have valid values.
-			this.ValidateObject();
+            this.ValidateObject();
 
             // Make initial trace statement for this value provider
             tracer.TraceInformation(
-				"Evaluating $safeitemname$ on current element '{0}' with AProperty '{1}'", this.CurrentElement.InstanceName, this.AProperty);
+                "Evaluating $safeitemname$ on current element '{0}' with AProperty '{1}'", this.CurrentElement.InstanceName, this.AProperty);
 
             // TODO: Implement provider automation code to determine the evaluated result
-			var result = "Some value";
+            var result = "Some value";
 
-			//	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-			//	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-			//	TODO: Use tracer.TraceInformation() to note key results of execution
-			//	TODO: Raise exceptions for all other errors
+            //	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
+            //	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
+            //	TODO: Use tracer.TraceInformation() to note key results of execution
+            //	TODO: Raise exceptions for all other errors
 
             // Make resulting trace statement for this value provider
             tracer.TraceInformation(
-				"Evaluated $safeitemname$ on current element '{0}' with AProperty '{1}', as '{2}'", this.CurrentElement.InstanceName, this.AProperty, result);
+                "Evaluated $safeitemname$ on current element '{0}' with AProperty '{1}', as '{2}'", this.CurrentElement.InstanceName, this.AProperty, result);
 
             return result;
         }

@@ -28,6 +28,6 @@ using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 // Generate code for all the classes in this domain model
 foreach(DomainClass domainClass in this.DslLibrary.Classes)
 {
-	GenerateDomainClass(domainClass);
+    GenerateDomainClass(domainClass);
 }
 #>

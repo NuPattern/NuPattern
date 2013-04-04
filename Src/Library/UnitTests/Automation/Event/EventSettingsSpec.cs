@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Conditions;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests.Automation.Event
@@ -70,12 +70,12 @@ namespace NuPattern.Library.UnitTests.Automation.Event
                 {
                     this.settings.Conditions = BindingSerializer.Serialize(
                         new[]
-						{
-							new ConditionBindingSettings
-							{
-								TypeId = typeof(EventSenderMatchesElementCondition).FullName
-							}
-						});
+                        {
+                            new ConditionBindingSettings
+                            {
+                                TypeId = typeof(EventSenderMatchesElementCondition).FullName
+                            }
+                        });
                     this.settings.FilterForCurrentElement = true;
                 });
 

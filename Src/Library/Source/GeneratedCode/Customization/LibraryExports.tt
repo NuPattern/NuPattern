@@ -12,16 +12,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using NuPattern.Extensibility;
+using NuPattern.Runtime.Automation;
 
 namespace <#= this.DslLibrary.Namespace #>
 {
 <#
-PushIndent("\t");
+PushIndent("    ");
 
 foreach(DomainClass domainClass in this.DslLibrary.Classes.Where(dc => IsModelElementExtension(dc)))
 {
-	GenerateExportAttributes(domainClass);
+    GenerateExportAttributes(domainClass);
 }
 
 PopIndent();
@@ -32,8 +32,8 @@ PopIndent();
 // TODO: move to Helpers.tt
 private bool IsModelElementExtension(DomainClass domainClass)
 {
-	return domainClass.BaseClass != null && (domainClass.BaseClass.Name == "ExtensionElement" || domainClass.BaseClass.Name.Equals("BindingSettings"))  && domainClass.InheritanceModifier != InheritanceModifier.Abstract &&
-		domainClass.Notes.Equals("IsAutomationExtension=True", StringComparison.OrdinalIgnoreCase);
+    return domainClass.BaseClass != null && (domainClass.BaseClass.Name == "ExtensionElement" || domainClass.BaseClass.Name.Equals("BindingSettings"))  && domainClass.InheritanceModifier != InheritanceModifier.Abstract &&
+        domainClass.Notes.Equals("IsAutomationExtension=True", StringComparison.OrdinalIgnoreCase);
 }
 
 private void GenerateExportAttributes(DomainClass domainClass)
@@ -44,7 +44,7 @@ private void GenerateExportAttributes(DomainClass domainClass)
 /// Exports the '<#= domainClass.Name #>' extension element.
 /// </summary>
 [ExportedAutomation(ExportingType = typeof(<#= domainClass.Name #>), IconPath = "pack://application:,,,/NuPattern.Library;component/Resources/AutomationSettings<#= domainClass.Name #>.png")]
-public partial class <#= domainClass.Name #>
+partial class <#= domainClass.Name #>
 {
 }
 <#+
@@ -52,6 +52,6 @@ public partial class <#= domainClass.Name #>
 
 public Version DslVersion
 {
-	get { return new Version(this.DslLibrary.MajorVersion, this.DslLibrary.MinorVersion, this.DslLibrary.Build, this.DslLibrary.Revision); }
+    get { return new Version(this.DslLibrary.MajorVersion, this.DslLibrary.MinorVersion, this.DslLibrary.Build, this.DslLibrary.Revision); }
 }
 #>

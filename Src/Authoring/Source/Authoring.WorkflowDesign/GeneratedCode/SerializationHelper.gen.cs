@@ -325,7 +325,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
 		/// <returns>The loaded Design instance.</returns>
-		public virtual Design LoadModel(DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		internal virtual Design LoadModel(DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (store == null) 
@@ -353,7 +353,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
 		/// <returns>The loaded Design instance.</returns>
-		public virtual Design LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		internal virtual Design LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (store == null) 
@@ -382,7 +382,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </param>
 		/// <returns>The loaded Design instance.</returns>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability","CA1506:AvoidExcessiveClassCoupling", Justification="Generated code")]
-		public virtual Design LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Partition partition, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		internal virtual Design LoadModel(DslModeling::SerializationResult serializationResult, DslModeling::Partition partition, string fileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -508,7 +508,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
 		/// <param name="modelRoot">Design instance to be saved.</param>
 		/// <param name="fileName">Name of the file in which the Design instance will be saved.</param>
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, Design modelRoot, string fileName)
+		internal virtual void SaveModel(DslModeling::SerializationResult serializationResult, Design modelRoot, string fileName)
 		{
 			this.SaveModel(serializationResult, modelRoot, fileName, global::System.Text.Encoding.UTF8, false);
 		}
@@ -520,7 +520,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// <param name="modelRoot">Design instance to be saved.</param>
 		/// <param name="fileName">Name of the file in which the Design instance will be saved.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, Design modelRoot, string fileName, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveModel(DslModeling::SerializationResult serializationResult, Design modelRoot, string fileName, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			this.SaveModel(serializationResult, modelRoot, fileName, global::System.Text.Encoding.UTF8, writeOptionalPropertiesWithDefaultValue);
 		}
@@ -534,7 +534,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// <param name="encoding">Encoding to use when saving the Design instance.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		public virtual void SaveModel(DslModeling::SerializationResult serializationResult, Design modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveModel(DslModeling::SerializationResult serializationResult, Design modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -643,7 +643,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// <summary>
 		/// Helper method to create and initialize a new Design.
 		/// </summary>
-		internal protected virtual Design CreateModelHelper(DslModeling::Partition modelPartition)
+		internal virtual Design CreateModelHelper(DslModeling::Partition modelPartition)
 		{
 			Design model = new Design(modelPartition);
 			return model;
@@ -667,7 +667,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
 		/// <returns>The loaded Design instance.</returns>
-		public virtual Design LoadModelAndDiagram(DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		internal virtual Design LoadModelAndDiagram(DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			return this.LoadModelAndDiagram(new DslModeling::SerializationResult(), store, modelFileName, diagramFileName, schemaResolver, validationController, serializerLocator);
 		}
@@ -691,7 +691,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// An ISerializerLocator that will be used to locate any additional domain model types required to load the model. Can be null.
 		/// </param>
 		/// <returns>The loaded Design instance.</returns>
-		public virtual Design LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		internal virtual Design LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Store store, string modelFileName, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (store == null)
@@ -723,7 +723,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// </param>
 		/// <returns>The loaded Design instance.</returns>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
-		public virtual Design LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Partition modelPartition, string modelFileName, DslModeling::Partition diagramPartition, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
+		internal virtual Design LoadModelAndDiagram(DslModeling::SerializationResult serializationResult, DslModeling::Partition modelPartition, string modelFileName, DslModeling::Partition diagramPartition, string diagramFileName, DslModeling::ISchemaResolver schemaResolver, DslValidation::ValidationController validationController, DslModeling::ISerializerLocator serializerLocator)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -849,7 +849,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// Helper method to create and initialize a new WorkflowDesignDiagram.
 		/// </summary>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId="modelRoot", Justification = "Signature enforced by caller.")]
-		internal protected virtual WorkflowDesignDiagram CreateDiagramHelper(DslModeling::Partition diagramPartition, DslModeling::ModelElement modelRoot)
+		internal virtual WorkflowDesignDiagram CreateDiagramHelper(DslModeling::Partition diagramPartition, DslModeling::ModelElement modelRoot)
 		{
 			WorkflowDesignDiagram diagram = new WorkflowDesignDiagram(diagramPartition);
 			return diagram;
@@ -865,7 +865,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// <param name="modelFileName">Name of the file in which the CanonicalSampleRoot instance will be saved.</param>
 		/// <param name="diagram">WorkflowDesignDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, Design modelRoot, string modelFileName, WorkflowDesignDiagram diagram, string diagramFileName)
+		internal virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, Design modelRoot, string modelFileName, WorkflowDesignDiagram diagram, string diagramFileName)
 		{
 			this.SaveModelAndDiagram(serializationResult, modelRoot, modelFileName, diagram, diagramFileName, global::System.Text.Encoding.UTF8, false);
 		}
@@ -879,7 +879,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// <param name="diagram">WorkflowDesignDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, Design modelRoot, string modelFileName, WorkflowDesignDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, Design modelRoot, string modelFileName, WorkflowDesignDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			this.SaveModelAndDiagram(serializationResult, modelRoot, modelFileName, diagram, diagramFileName, global::System.Text.Encoding.UTF8, writeOptionalPropertiesWithDefaultValue);
 		}
@@ -895,7 +895,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// <param name="encoding">Encoding to use when saving the diagram.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, Design modelRoot, string modelFileName, WorkflowDesignDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, Design modelRoot, string modelFileName, WorkflowDesignDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -954,7 +954,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
 		/// <param name="diagram">WorkflowDesignDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
-		public virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, WorkflowDesignDiagram diagram, string diagramFileName)
+		internal virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, WorkflowDesignDiagram diagram, string diagramFileName)
 		{
 			this.SaveDiagram(serializationResult, diagram, diagramFileName, global::System.Text.Encoding.UTF8, false);
 		}
@@ -966,7 +966,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// <param name="diagram">WorkflowDesignDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		public virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, WorkflowDesignDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, WorkflowDesignDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			this.SaveDiagram(serializationResult, diagram, diagramFileName, global::System.Text.Encoding.UTF8, writeOptionalPropertiesWithDefaultValue);
 		}
@@ -980,7 +980,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// <param name="encoding">Encoding to use when saving the diagram.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		public virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, WorkflowDesignDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, WorkflowDesignDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -1267,7 +1267,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 		/// <param name="modelRoot">Root instance to be saved.</param>
 		/// <param name="encoding">Encoding to use when saving the root instance.</param>
 		/// <returns>Model in XML form</returns>
-		public virtual string GetSerializedModelString(global::NuPattern.Authoring.WorkflowDesign.Design modelRoot, global::System.Text.Encoding encoding)
+		internal virtual string GetSerializedModelString(global::NuPattern.Authoring.WorkflowDesign.Design modelRoot, global::System.Text.Encoding encoding)
 		{
 			string result = string.Empty;
 			if (modelRoot == null)
@@ -1470,7 +1470,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 namespace NuPattern.Authoring.WorkflowDesign
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class Design
+	internal partial class Design
 	{
 		/// <summary>
 		/// Check to make sure all elements in the model will have unambiguous monikers when serialized.

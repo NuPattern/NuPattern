@@ -22,24 +22,32 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Modeling">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Modeling.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="NuPattern.Library">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="NuPattern.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="NuPattern.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="NuPattern.Runtime.Schema">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NuPattern.Common.Presentation">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.Presentation.dll</HintPath>
+    <Reference Include="NuPattern.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="EnvDTE">
@@ -150,41 +158,43 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Extensions\Commands\AuthoringCommandExtensionRegistrar.cs" />
-    <Compile Include="Extensions\Commands\AuthoringCommandExtensionRegistrarBase.cs" />
-    <Compile Include="Extensions\CompartmentShapeExtension.cs" />
-    <Compile Include="Extensions\Validation\AuthoringValidationExtensionRegistrar.cs" />
-    <Compile Include="Extensions\Validation\AuthoringValidationExtensionRegistrarBase.cs" />
+    <Compile Include="Commands\AuthoringCommandExtensionRegistrar.cs" />
+    <Compile Include="Commands\AuthoringCommandExtensionRegistrarBase.cs" />
+    <Compile Include="PatternModelDocHelper.cs" />
+    <Compile Include="Validation\AuthoringValidationExtensionRegistrar.cs" />
+    <Compile Include="Validation\AuthoringValidationExtensionRegistrarBase.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="ModelingCommands\AddAutomationExtensionCommand.cs" />
-    <Compile Include="ModelingCommands\AddVariablePropertyCommand.cs" />
-    <Compile Include="ModelingCommands\LayoutDiagramCommand.cs" />
-    <Compile Include="ModelingCommands\UI\Views\AddAutomationExtensionView.xaml.cs">
+    <Compile Include="Commands\AddAutomationExtensionCommand.cs" />
+    <Compile Include="Commands\AddVariablePropertyCommand.cs" />
+    <Compile Include="Commands\LayoutDiagramCommand.cs" />
+    <Compile Include="UI\Views\AddAutomationExtensionView.xaml.cs">
       <DependentUpon>AddAutomationExtensionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ModelingCommands\UI\ViewModels\AddAutomationExtensionViewModel.cs" />
+    <Compile Include="UI\ViewModels\AddAutomationExtensionViewModel.cs" />
     <Compile Include="Properties\ShellResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ShellResources.resx</DependentUpon>
     </Compile>
     <Compile Include="SchemaUpgradeContext.cs" />
-    <Compile Include="Shell\PatternModelClipboardCommandSet.cs" />
-    <Compile Include="Shell\PatternModelCommandSet.cs" />
-    <Compile Include="Shell\PatternModelDocData.cs" />
-    <Compile Include="Shell\PatternModelDocDataBase.cs" />
-    <Compile Include="Shell\PatternModelDocView.cs" />
+    <Compile Include="PatternModelClipboardCommandSet.cs" />
+    <Compile Include="PatternModelCommandSet.cs" />
+    <Compile Include="PatternModelDocData.cs" />
+    <Compile Include="PatternModelDocDataBase.cs" />
+    <Compile Include="PatternModelDocView.cs" />
     <Compile Include="GeneratedCode\CommandSet.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CommandSet.tt</DependentUpon>
     </Compile>
-    <Compile Include="Shell\PatternModelPackage.cs" />
-    <Compile Include="Shell\PatternModelPackageBase.cs" />
+    <Compile Include="PatternModelPackage.cs" />
+    <Compile Include="PatternModelPackageBase.cs" />
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
       <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
     </CodeAnalysisDictionary>
     <Compile Include="PatternModelSchemaUpgradeManager.cs" />
+    <Compile Include="DomainModel\ViewSchemaHelper.cs" />
+    <None Include="GeneratedCode\Customization\Package.tt" />
     <None Include="source.extension.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
@@ -266,6 +276,9 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="..\..\..\Runtime\Source\Runtime.Schema\GeneratedCode\Customization\ToolboxItemsResx.gen.resx">
+      <Link>GeneratedCode\Customization\ToolboxItemsResx.gen.resx</Link>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\ShellResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ShellResources.Designer.cs</LastGenOutput>
@@ -293,7 +306,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GeneratedVSCT.tt</DependentUpon>
     </None>
-    <Page Include="ModelingCommands\UI\Views\AddAutomationExtensionView.xaml">
+    <Page Include="UI\Views\AddAutomationExtensionView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

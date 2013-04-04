@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NuPattern.Runtime</RootNamespace>
+    <AssemblyName>NuPattern.Runtime.Extensibility</AssemblyName>
+    <GacTargetOutput>false</GacTargetOutput>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BranchRoot>..\..\..\</BranchRoot>
+  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(BranchReferencesPath)\EntLib5\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapterV5">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(BranchReferencesPath)\EntLib5\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapterV5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(BranchReferencesPath)\EntLib5\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
+      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
+      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell">
+      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Settings" Condition="'$(TargetVsVersion)' == '10.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Design">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0" Condition="'$(TargetVsVersion)' &gt; '10.0'">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop$(VsxVersionSuffix)">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell.Interop$(VsxVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell$(VsxVersionSuffix).dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Immutable.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
+    </Compile>
+    <Compile Include="Automation\AutomationExtensionAddRule.cs" />
+    <Compile Include="Authoring\AuthoringCommandExtensionAttribute.cs" />
+    <Compile Include="Automation\IAutomationMenuCommand.cs" />
+    <Compile Include="Automation\IExportedAutomationMetadata.cs" />
+    <Compile Include="Automation\IWizardAutomationExtension.cs" />
+    <Compile Include="Bindings\BindingCompositionService.cs" />
+    <Compile Include="Bindings\BindingFactory.cs" />
+    <Compile Include="Bindings\BindingPropertyDescriptor.cs" />
+    <Compile Include="Bindings\Design\DesignCollectionConverter.cs" />
+    <Compile Include="Bindings\Design\DesignComponentTypeDescriptor.cs" />
+    <Compile Include="Bindings\Design\DesignOnlyPropertyDescriptor.cs" />
+    <Compile Include="Bindings\Design\DesignCollectionPropertyDescriptor.cs" />
+    <Compile Include="Bindings\DynamicBindingExtensions.cs" />
+    <Compile Include="Bindings\IBindingCompositionService.cs" />
+    <Compile Include="Bindings\IBindingFactory.cs" />
+    <Compile Include="Bindings\IBindingSettings.cs" />
+    <Compile Include="Bindings\IDynamicBinding.cs" />
+    <Compile Include="Bindings\IDynamicBindingContext.cs" />
+    <Compile Include="Bindings\IPropertyBindingSettings.cs" />
+    <Compile Include="Bindings\IValueProviderBindingSettings.cs" />
+    <Compile Include="Bindings\PropertyBindingDescriptor.cs" />
+    <Compile Include="CodeGen\Pluralizer.cs" />
+    <Compile Include="Comparers\FirstPropertyValueProductElementComparer.cs" />
+    <Compile Include="Comparers\ProductElementComparer.cs" />
+    <Compile Include="Comparers\ProductElementInstanceNameComparer.cs" />
+    <Compile Include="ComponentMetadataExtensions.cs" />
+    <Compile Include="Events\EventAttribute.cs" />
+    <Compile Include="Events\IEventCondition.cs" />
+    <Compile Include="Events\IEventMetadata.cs" />
+    <Compile Include="Events\IOnSolutionBuilderDragEnter.cs" />
+    <Compile Include="Events\IOnSolutionBuilderDragLeave.cs" />
+    <Compile Include="Events\IOnSolutionBuilderDrop.cs" />
+    <Compile Include="GeneratedCode\InfoInterfaces.gen.cs">
+      <DependentUpon>InfoInterfaces.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="GeneratedCode\RuntimeInterfaces.gen.cs">
+      <DependentUpon>RuntimeInterfaces.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="GeneratedCode\SchemaInterfaces.gen.cs">
+      <DependentUpon>SchemaInterfaces.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IExpressionEvaluator.cs" />
+    <Compile Include="IIdMetadata.cs" />
+    <Compile Include="IInstalledToolkitInfo.cs" />
+    <Compile Include="INuPatternProjectTypeProvider.cs" />
+    <Compile Include="IPatternManager.cs" />
+    <Compile Include="IPatternModelSchemaUpgradeManager.cs" />
+    <Compile Include="IPatternModelSchemaUpgradeProcessor.cs" />
+    <Compile Include="IPropertyEvaluator.cs" />
+    <Compile Include="ISchemaReader.cs" />
+    <Compile Include="ISchemaUpgradeContext.cs" />
+    <Compile Include="ISchemaUpgradeProccesorOptions.cs" />
+    <Compile Include="IToolkitClassification.cs" />
+    <Compile Include="IToolkitInfo.cs" />
+    <Compile Include="Schema\NamedElementInfoExtensions.cs" />
+    <Compile Include="Store\AutomationExtension.cs" />
+    <Compile Include="Store\IAbstractElement.cs" />
+    <Compile Include="Store\IAutomationExtension.cs" />
+    <Compile Include="Store\IAutomationSettings.cs" />
+    <Compile Include="Store\IElementContainer.cs" />
+    <Compile Include="Store\IInstanceBase.cs" />
+    <Compile Include="Store\InstanceBaseExtensions.cs" />
+    <Compile Include="Store\IProduct.cs" />
+    <Compile Include="Store\IProductElement.cs" />
+    <Compile Include="Store\IProductState.cs" />
+    <Compile Include="Store\IProductToolkitInfo.cs" />
+    <Compile Include="Store\IProperty.cs" />
+    <Compile Include="Store\IView.cs" />
+    <Compile Include="ProductCollectionChangedEventArgs.cs" />
+    <Compile Include="PropertyUsages.cs" />
+    <Compile Include="References\IReferenceKindProvider.cs" />
+    <Compile Include="References\ReferenceKindProviderAttribute.cs" />
+    <Compile Include="SchemaConstants.gen.cs">
+      <DependentUpon>SchemaConstants.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SchemaUpgradeProcessorOptionsAttribute.cs" />
+    <Compile Include="Schema\AutomationSettingsClassification.cs" />
+    <Compile Include="Schema\Cardinality.cs" />
+    <Compile Include="Schema\CustomizationState.cs" />
+    <Compile Include="Schema\CustomizedLevel.cs" />
+    <Compile Include="Schema\IAbstractElementInfo.cs" />
+    <Compile Include="Schema\IAbstractElementSchema.cs" />
+    <Compile Include="Schema\IAutomationSettingsInfo.cs" />
+    <Compile Include="Schema\IAutomationSettingsSchema.cs" />
+    <Compile Include="Schema\IContainedElementInfo.cs" />
+    <Compile Include="Schema\IContainedElementSchema.cs" />
+    <Compile Include="Schema\IContainingLinkSchema.cs" />
+    <Compile Include="Schema\IElementInfoContainer.cs" />
+    <Compile Include="Schema\IElementSchemaContainer.cs" />
+    <Compile Include="Schema\IExtensionPointInfo.cs" />
+    <Compile Include="Schema\IExtensionPointSchema.cs" />
+    <Compile Include="Schema\INamedElementInfo.cs" />
+    <Compile Include="Schema\INamedElementSchema.cs" />
+    <Compile Include="Schema\IPatternElementInfo.cs" />
+    <Compile Include="Schema\IPatternInfo.cs" />
+    <Compile Include="Schema\IPatternModelInfo.cs" />
+    <Compile Include="Schema\IPatternModelSchema.cs" />
+    <Compile Include="Schema\IPropertyInfo.cs" />
+    <Compile Include="Schema\IPropertySchema.cs" />
+    <Compile Include="Schema\IViewInfo.cs" />
+    <Compile Include="Schema\IViewSchema.cs" />
+    <Compile Include="StoreConstants.gen.cs">
+      <DependentUpon>StoreConstants.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Design\FullTypeTypeConverter.cs" />
+    <Compile Include="Design\PropertyDescriptorTypeDescriptor.cs" />
+    <Compile Include="Design\StringCollectionPropertyDescriptor.cs" />
+    <Compile Include="Design\PropertyDescriptorExtensions.cs" />
+    <Compile Include="Store\InstalledToolkitInfoExtensions.cs" />
+    <Compile Include="Schema\ContainedElementInfoExtensions.cs" />
+    <Compile Include="Schema\PatternElementSchemaExtensions.cs" />
+    <Compile Include="Schema\PropertyInfoExtensions.cs" />
+    <Compile Include="Automation\AutomationExtensionExtensions.cs" />
+    <Compile Include="Automation\AutomationSettingsExtensions.cs" />
+    <Compile Include="Store\ElementContainerExtensions.cs" />
+    <Compile Include="Store\ProductElementExtensions.cs" />
+    <Compile Include="Store\PropertyExtensions.cs" />
+    <Compile Include="StoreEventBufferingScope.cs" />
+    <Compile Include="PatternManagerExtensions.cs" />
+    <Compile Include="PropertyEvaluator.cs" />
+    <Compile Include="References\ReferenceKindProvider.cs" />
+    <Compile Include="ResourcePack.cs" />
+    <Compile Include="TextTemplateUri.cs" />
+    <Compile Include="ToolkitInterface\AbstractElementProxy.cs" />
+    <Compile Include="ToolkitInterface\ContainerProxy.cs" />
+    <Compile Include="ToolkitInterface\IAbstractElementProxy.cs" />
+    <Compile Include="ToolkitInterface\IContainerProxy.cs" />
+    <Compile Include="ToolkitInterface\IFluentInterface.cs" />
+    <Compile Include="ToolkitInterface\IProductProxy.cs" />
+    <Compile Include="ToolkitInterface\IPropertyProxy.cs" />
+    <Compile Include="ToolkitInterface\IToolkitInterface.cs" />
+    <Compile Include="ToolkitInterface\IToolkitInterfaceMetadata.cs" />
+    <Compile Include="ToolkitInterface\IToolkitInterfaceService.cs" />
+    <Compile Include="ToolkitInterface\ProductProxy.cs" />
+    <Compile Include="ToolkitInterface\ToolkitInterfaceAttribute.cs" />
+    <Compile Include="ToolkitInterface\ToolkitInterfaceLayer.cs" />
+    <Compile Include="ToolkitInterface\ToolkitInterfaceLayerCacheKey.cs" />
+    <Compile Include="CodeGen\ViewCodeGeneration.cs" />
+    <Compile Include="NuPatternProjectTypeProvider.cs" />
+    <Compile Include="Design\ValidateOnBuildConverter.cs" />
+    <Compile Include="Bindings\BindingSerializationException.cs" />
+    <Compile Include="Bindings\BoundProperty.cs" />
+    <Compile Include="Bindings\PropertyBindingSettingsExtensions.cs" />
+    <Compile Include="Bindings\BindingSettings.cs" />
+    <Compile Include="Bindings\ConditionBindingSettings.cs" />
+    <Compile Include="Bindings\CompositionServiceBindingContext.cs" />
+    <Compile Include="Bindings\ContainerCompositionServiceAdapter.cs" />
+    <Compile Include="Bindings\ValidationBindingSettings.cs" />
+    <Compile Include="Bindings\DelegatingCompositionService.cs" />
+    <Compile Include="Bindings\Design\BindingSettingsTypeDescriptionProvider.cs" />
+    <Compile Include="Bindings\Design\DesignProperty.cs" />
+    <Compile Include="Bindings\Design\DesignProperty.Descriptor.cs">
+      <DependentUpon>DesignProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bindings\Design\DesignProperty.DescriptionProvider.cs">
+      <DependentUpon>DesignProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bindings\Design\DesignProperty.ValueDescriptor.cs">
+      <DependentUpon>DesignProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bindings\Design\DesignProperty.ValueProviderDescriptor.cs">
+      <DependentUpon>DesignProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bindings\Design\DesignValueProvider.cs" />
+    <Compile Include="Bindings\Design\DesignValueProvider.Converter.cs">
+      <DependentUpon>DesignValueProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bindings\Design\DesignValueProvider.DescriptionProvider.cs">
+      <DependentUpon>DesignValueProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bindings\DynamicBinding.cs" />
+    <Compile Include="Bindings\FixedBinding.cs" />
+    <Compile Include="Bindings\PropertyBindingSettings.cs" />
+    <Compile Include="Bindings\ValueProviderBindingSettings.cs" />
+    <Compile Include="CodeGen\CodeGeneration.cs" />
+    <Compile Include="Design\FeatureComponentTypeConverter.cs" />
+    <Compile Include="Design\TransformOnBuildConverter.cs" />
+    <Compile Include="Automation\ExportedAutomationAttribute.cs" />
+    <Compile Include="ExpressionEvaluator.cs" />
+    <Compile Include="Bindings\BindingSettingsExtensions.cs" />
+    <Compile Include="References\ReferenceExtensions.cs" />
+    <Compile Include="Bindings\BindingSerializer.cs" />
+    <Compile Include="Guidance\FeatureManagerExtensions.cs" />
+    <Compile Include="ToolkitInterface\ToolkitInterfaceProxyAttribute.cs" />
+    <Compile Include="UI\ICommandStatus.cs" />
+    <Compile Include="UI\IPickerFilter.cs" />
+    <Compile Include="UI\IProductPicker.cs" />
+    <Compile Include="UI\ISolutionPicker.cs" />
+    <Compile Include="UI\ISolutionSelector.cs" />
+    <Compile Include="UriReferenceServiceExtensions.cs" />
+    <Compile Include="ToolkitInterface\ProxyServiceProvider.cs" />
+    <Compile Include="References\SolutionArtifactLinkReference.cs" />
+    <Compile Include="References\GuidanceReference.cs" />
+    <Compile Include="References\ReferenceKindConstants.cs" />
+    <Compile Include="PathResolver.cs" />
+    <Compile Include="AssemblyDiscoveryService.cs" />
+    <Compile Include="Design\ImageUriEditor.cs" />
+    <Compile Include="Design\SolutionItemUriEditor.cs" />
+    <Compile Include="Design\TypePicker.cs" />
+    <Compile Include="CodeGen\ProductCodeGeneration.cs" />
+    <Compile Include="Design\IconEditor.cs" />
+    <Compile Include="Design\FeatureExtensionsTypeConverter.cs" />
+    <Compile Include="Design\ImageFilterAttribute.cs" />
+    <Compile Include="Design\ImageKind.cs" />
+    <Compile Include="Design\ImageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\ImageDialog.Designer.cs">
+      <DependentUpon>ImageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\ImageEditor.cs" />
+    <Compile Include="Design\ItemRelativePathConverter.cs" />
+    <Compile Include="Design\SolutionEditorSettingsAttribute.cs" />
+    <Compile Include="Design\SolutionItemEditor.cs" />
+    <Compile Include="Authoring\ExtensibilityConstants.cs" />
+    <Compile Include="Authoring\AuthoringGestureExtensionAttribute.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Authoring\AuthoringValidationExtensionAttribute.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Design\SettingsReferencePropertyDescriptor.cs" />
+    <Compile Include="Design\SettingsReferenceTypeConverter.cs" />
+    <Compile Include="Design\SolutionItemUriConverter.cs" />
+    <Compile Include="Validation\IValidationRule.cs" />
+    <Compile Include="Validation\RuntimeValidationExtensionAttribute.cs" />
+    <Compile Include="Validation\ValidationConstants.cs" />
+    <Compile Include="Validation\ValidationRule.cs" />
+    <Compile Include="Validation\ValidationRuleAttribute.cs" />
+    <Compile Include="ValueEventArgs.cs" />
+    <Compile Include="VsTemplateUri.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
+      <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">
+      <Project>{46f79781-98bc-495a-9e01-559f166a6dff}</Project>
+      <Name>Common.Modeling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
+      <Project>{72CC87F3-2860-45CC-8712-00621F868D60}</Project>
+      <Name>Common.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Runtime.Extensibility.Serialization\Runtime.Extensibility.Serialization.csproj">
+      <Project>{B2B1ED0A-60E0-4A5C-822A-605527663E0B}</Project>
+      <Name>Runtime.Extensibility.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>Common.VisualStudio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\ImageDialog.resx">
+      <DependentUpon>ImageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\common\helpers\Helpers.tt">
+      <Link>GeneratedCode\Helpers.tt</Link>
+    </None>
+    <None Include="..\..\..\common\helpers\PropertyChangedInterface.tt">
+      <Link>GeneratedCode\PropertyChangedInterface.tt</Link>
+    </None>
+    <None Include="GeneratedCode\InfoInterfaces.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>InfoInterfaces.gen.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\RuntimeInterfaces.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RuntimeInterfaces.gen.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\SchemaInterfaces.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SchemaInterfaces.gen.cs</LastGenOutput>
+    </None>
+    <None Include="SchemaConstants.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SchemaConstants.gen.cs</LastGenOutput>
+    </None>
+    <None Include="StoreConstants.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>StoreConstants.gen.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.DslProjects.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

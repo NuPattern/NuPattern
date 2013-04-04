@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
 using NuPattern.Library.Commands;
-using NuPattern.Library.Design;
+using NuPattern.Reflection;
+using NuPattern.Runtime.Bindings.Design;
 
 namespace NuPattern.Library.Automation
 {
@@ -12,7 +11,7 @@ namespace NuPattern.Library.Automation
     /// Deleting rule to keep command aggregator on sync
     /// </summary>
     [RuleOn(typeof(CommandSettings), FireTime = TimeToFire.TopLevelCommit)]
-    public class AggregatorCommandCommandSettingsDeletingRule : DeletingRule
+    internal class AggregatorCommandCommandSettingsDeletingRule : DeletingRule
     {
         /// <summary>
         /// Handles the element deleting rule

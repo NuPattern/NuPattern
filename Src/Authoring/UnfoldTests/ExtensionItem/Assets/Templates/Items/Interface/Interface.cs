@@ -5,7 +5,7 @@ using System.Text;
 
 namespace $rootnamespace$
 {
-	interface $safeitemrootname$
-	{
-	}
+    interface $safeitemrootname$
+    {
+    }
 }

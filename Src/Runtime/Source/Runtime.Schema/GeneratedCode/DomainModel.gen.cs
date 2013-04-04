@@ -18,12 +18,11 @@ namespace NuPattern.Runtime.Schema
 	/// </summary>
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelDomainModel.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelDomainModel.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.CoreDomainModel))]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.Diagrams.CoreDesignSurfaceDomainModel))]
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 	[DslModeling::DomainObjectId("15a342fd-f046-4b7a-9dc8-73b0a8eec119")]
-	public partial class PatternModelDomainModel : DslModeling::DomainModel
+	internal partial class PatternModelDomainModel : DslModeling::DomainModel
 	{
 		#region Constructor, domain model Id
 	
@@ -547,8 +546,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Remove closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class PatternModelDeleteClosure : PatternModelDeleteClosureBase, DslModeling::IElementVisitorFilter
+	internal partial class PatternModelDeleteClosure : PatternModelDeleteClosureBase, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor
@@ -561,8 +559,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Base class for remove closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class PatternModelDeleteClosureBase : DslModeling::IElementVisitorFilter
+	internal partial class PatternModelDeleteClosureBase : DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// DomainRoles
@@ -633,8 +630,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Copy closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class PatternModelCopyClosure : PatternModelCopyClosureBase, DslModeling::IElementVisitorFilter
+	internal partial class PatternModelCopyClosure : PatternModelCopyClosureBase, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor
@@ -646,8 +642,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Base class for copy closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class PatternModelCopyClosureBase : DslModeling::CopyClosureFilter, DslModeling::IElementVisitorFilter
+	internal partial class PatternModelCopyClosureBase : DslModeling::CopyClosureFilter, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor

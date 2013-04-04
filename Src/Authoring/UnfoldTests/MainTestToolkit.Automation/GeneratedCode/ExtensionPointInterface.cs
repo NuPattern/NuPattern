@@ -8,62 +8,64 @@
 //------------------------------------------------------------------------------
 
 
+
 namespace MainTestToolkit.Automation.GeneratedCode
 {
-	using System;
-	using System.Collections.Generic;
-	using System.ComponentModel;
-	using System.ComponentModel.Design;
-	using System.Drawing.Design;
-	using NuPattern.Runtime;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.Design;
+    using System.Drawing.Design;
+    using NuPattern.Runtime;
+    using NuPattern.Runtime.ToolkitInterface;
 
-	///	<summary>
-	///	Description for MainTest.DefaultView.ExtensionItem
-	///	</summary>
-	[Description("Description for MainTest.DefaultView.ExtensionItem")]
-	[ToolkitInterface(ExtensionId = "cb6a7b60-ec95-42dd-8f01-28ff11dcf800", DefinitionId = "7e8f0339-2192-4b2d-a11a-dd2d22928bd9", ProxyType = typeof(ExtensionItem))]
-	public partial interface IExtensionItem : IToolkitInterface
-	{
-		///	<summary>
-		///	Provides registration information for the product
-		///	</summary>
-		[Description("Provides registration information for the product")]
-		IProductToolkitInfo ToolkitInfo { get; }
+    ///	<summary>
+    ///	Description for MainTest.DefaultView.ExtensionItem
+    ///	</summary>
+    [Description("Description for MainTest.DefaultView.ExtensionItem")]
+    [ToolkitInterface(ExtensionId = "cb6a7b60-ec95-42dd-8f01-28ff11dcf800", DefinitionId = "7e8f0339-2192-4b2d-a11a-dd2d22928bd9", ProxyType = typeof(ExtensionItem))]
+    public partial interface IExtensionItem : IToolkitInterface
+    {
+        ///	<summary>
+        ///	Provides registration information for the product
+        ///	</summary>
+        [Description("Provides registration information for the product")]
+        IProductToolkitInfo ToolkitInfo { get; }
 
-		///	<summary>
-		///	The name of this element instance.
-		///	</summary>
-		[Description("The name of this element instance.")]
-		[ParenthesizePropertyName(true)]
-		String InstanceName { get; set; }
+        ///	<summary>
+        ///	The name of this element instance.
+        ///	</summary>
+        [Description("The name of this element instance.")]
+        [ParenthesizePropertyName(true)]
+        String InstanceName { get; set; }
 
-		///	<summary>
-		///	Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement
-		///	</summary>
-		[Description("Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement")]
-		IEnumerable<IReference> References { get; }
+        ///	<summary>
+        ///	Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement
+        ///	</summary>
+        [Description("Description for NuPattern.Runtime.Store.ProductElementHasReferences.ProductElement")]
+        IEnumerable<IReference> References { get; }
 
-		///	<summary>
-		///	Notes for this element.
-		///	</summary>
-		[Description("Notes for this element.")]
-		[Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
-		String Notes { get; set; }
+        ///	<summary>
+        ///	Notes for this element.
+        ///	</summary>
+        [Description("Notes for this element.")]
+        [Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
+        String Notes { get; set; }
 
-		/// <summary>
-		/// Gets the parent element.
-		/// </summary>
-		IDefaultView Parent { get; }
+        /// <summary>
+        /// Gets the parent element.
+        /// </summary>
+        IDefaultView Parent { get; }
 
-		///	<summary>
-		///	Deletes this element from the store.
-		///	</summary>
-		void Delete();
+        ///	<summary>
+        ///	Deletes this element from the store.
+        ///	</summary>
+        void Delete();
 
-		/// <summary>
-		/// Gets the generic <see cref="IProduct"/> underlying element.
-		/// </summary>
-		IProduct AsProduct();
-	}
+        /// <summary>
+        /// Gets the generic <see cref="IProduct"/> underlying element.
+        /// </summary>
+        IProduct AsProduct();
+    }
 }
 

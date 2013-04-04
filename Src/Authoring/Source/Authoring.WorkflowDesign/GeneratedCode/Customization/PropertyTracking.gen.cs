@@ -13,63 +13,63 @@ using System.Linq;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using NuPattern.Extensibility;
+using NuPattern.Reflection;
 
 namespace NuPattern.Authoring.WorkflowDesign
 {
     /// <summary>
     /// Customizations for the WorkflowDesignSerializationHelper class.
     /// </summary>
-	public partial class WorkflowDesignSerializationHelper
-	{
-		/// <summary>
-		/// Resets all tracking properties.
-		/// </summary>
-		private static void ResetTrackingProperties(Store store)
-		{
-			// Two passes required - once to set all elements to storage-based
-			// then another to set some back to being tracking.
-			var namedElementSchemas = store.ElementDirectory.AllElements.OfType<NamedElementSchema>();
-			foreach (var element in namedElementSchemas)
-			{
-				NamedElementSchema.IsDisplayNameTrackingPropertyHandler.Instance.PreResetValue(element);
-			}
+    partial class WorkflowDesignSerializationHelper
+    {
+        /// <summary>
+        /// Resets all tracking properties.
+        /// </summary>
+        private static void ResetTrackingProperties(Store store)
+        {
+            // Two passes required - once to set all elements to storage-based
+            // then another to set some back to being tracking.
+            var namedElementSchemas = store.ElementDirectory.AllElements.OfType<NamedElementSchema>();
+            foreach (var element in namedElementSchemas)
+            {
+                NamedElementSchema.IsDisplayNameTrackingPropertyHandler.Instance.PreResetValue(element);
+            }
 
-			foreach (var element in namedElementSchemas)
-			{
-				NamedElementSchema.IsDisplayNameTrackingPropertyHandler.Instance.ResetValue(element);
-			}
-		}
-	}
+            foreach (var element in namedElementSchemas)
+            {
+                NamedElementSchema.IsDisplayNameTrackingPropertyHandler.Instance.ResetValue(element);
+            }
+        }
+    }
 
     /// <summary>
     /// Customizations for the NamedElementSchema class.
     /// </summary>
-    public partial class NamedElementSchema
+    partial class NamedElementSchema
     {
         private string displayNameStorage = string.Empty;
 
         /// <summary>
         /// Replaces the property descriptors for the tracking property.
         /// </summary>
-		/// <remarks>
-		/// Returned descriptors allow the properties to be reset with tracked value and resume tracking once modified.
-		/// </remarks>
-		internal PropertyDescriptorCollection ReplaceTrackingPropertyDescriptors(PropertyDescriptorCollection properties)
-		{
-			// Replace the existing descriptor for the DisplayName property
-			DomainPropertyInfo displayNameProperty = this.Store.DomainDataDirectory.GetDomainProperty(NamedElementSchema.DisplayNameDomainPropertyId);
-			DomainPropertyInfo displayNameTrackingProperty = this.Store.DomainDataDirectory.GetDomainProperty(NamedElementSchema.IsDisplayNameTrackingDomainPropertyId);
+        /// <remarks>
+        /// Returned descriptors allow the properties to be reset with tracked value and resume tracking once modified.
+        /// </remarks>
+        internal PropertyDescriptorCollection ReplaceTrackingPropertyDescriptors(PropertyDescriptorCollection properties)
+        {
+            // Replace the existing descriptor for the DisplayName property
+            DomainPropertyInfo displayNameProperty = this.Store.DomainDataDirectory.GetDomainProperty(NamedElementSchema.DisplayNameDomainPropertyId);
+            DomainPropertyInfo displayNameTrackingProperty = this.Store.DomainDataDirectory.GetDomainProperty(NamedElementSchema.IsDisplayNameTrackingDomainPropertyId);
             var displayNameDescriptor = properties[Reflector<NamedElementSchema>.GetProperty(e => e.DisplayName).Name];
-			if (displayNameDescriptor != null)
-			{
-				properties.Remove(displayNameDescriptor);
-				properties.Add(new TrackingPropertyDescriptor(this, displayNameProperty, displayNameTrackingProperty, 
-					displayNameDescriptor.Attributes.Cast<Attribute>().ToArray<Attribute>()));
-			}
+            if (displayNameDescriptor != null)
+            {
+                properties.Remove(displayNameDescriptor);
+                properties.Add(new TrackingPropertyDescriptor(this, displayNameProperty, displayNameTrackingProperty, 
+                    displayNameDescriptor.Attributes.Cast<Attribute>().ToArray<Attribute>()));
+            }
 
-			return properties;
-		}
+            return properties;
+        }
 
         /// <summary>
         /// Gets the DisplayName property value.
@@ -79,24 +79,24 @@ namespace NuPattern.Authoring.WorkflowDesign
             // Ensure we are not tracking
             if (this.IsDisplayNameTracking && !this.IsSerializing())
             {
-				// *******************************************************************
-				// Note to implementors:
-				// You must provide this method, to return the calculated text when the property is tracked
-				// Signature: 
-				// public partial class NamedElementSchema
-				// {
-				//		/// <summary>
-				//		/// Returns the calculated value of the DisplayName property while being tracked.
-				//		/// </summary>
-				//		private string CalculateDisplayNameTrackingValue()
-				// }
-				// *******************************************************************
+                // *******************************************************************
+                // Note to implementors:
+                // You must provide this method, to return the calculated text when the property is tracked
+                // Signature: 
+                // public partial class NamedElementSchema
+                // {
+                //		/// <summary>
+                //		/// Returns the calculated value of the DisplayName property while being tracked.
+                //		/// </summary>
+                //		private string CalculateDisplayNameTrackingValue()
+                // }
+                // *******************************************************************
                 return this.CalculateDisplayNameTrackingValue();
             }
 
             return this.displayNameStorage;
         }
-		
+        
         /// <summary>
         /// Sets the DisplayName property value.
         /// </summary>
@@ -115,7 +115,7 @@ namespace NuPattern.Authoring.WorkflowDesign
             }
         }
 
-		/// <summary>
+        /// <summary>
         /// Customizes the DisplayName property handler.
         /// </summary>
         internal partial class IsDisplayNameTrackingPropertyHandler
@@ -178,6 +178,6 @@ namespace NuPattern.Authoring.WorkflowDesign
             }
         }
 
-	}
+    }
 
 }

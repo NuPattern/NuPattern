@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Library.Design;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation
 {
@@ -13,7 +13,7 @@ namespace NuPattern.Library.Automation
     /// Double-derived class to allow easier code customization.
     /// </summary>
     [TypeDescriptionProvider(typeof(CommandSettingsDescriptionProvider))]
-    public partial class CommandSettings : IBindingSettings
+    partial class CommandSettings : IBindingSettings
     {
         private ObservableCollection<IPropertyBindingSettings> propertySettings;
 

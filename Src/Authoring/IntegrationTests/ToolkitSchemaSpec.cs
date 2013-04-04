@@ -3,7 +3,6 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
-using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Authoring.IntegrationTests
 {
@@ -27,7 +26,7 @@ namespace NuPattern.Authoring.IntegrationTests
 
                 var designer = new DslDesigner(VsIdeTestHostContext.ServiceProvider);
 
-                var patternShape = PresentationViewsSubject.GetPresentation(((PatternModelSchema)designer.DocData.RootElement).Pattern)
+                var patternShape = PresentationViewsSubject.GetPresentation((designer.DocData.RootElement))
                     .OfType<ShapeElement>().First();
 
                 var tailorableProperty = patternShape.FindLastChild(true).Shape.FindLastChild(true);

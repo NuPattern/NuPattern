@@ -13,7 +13,7 @@ using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
 namespace NuPattern.Runtime.Store
 {
 	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
-	public partial class Product
+	internal partial class Product
 	{
 		/// <summary>
 		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.

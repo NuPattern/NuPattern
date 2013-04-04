@@ -6,9 +6,9 @@ using System.Xml.XPath;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
 using NuPattern.Library.Conditions;
 using NuPattern.Runtime;
+using NuPattern.Xml;
 
 namespace NuPattern.Library.UnitTests.Conditions
 {

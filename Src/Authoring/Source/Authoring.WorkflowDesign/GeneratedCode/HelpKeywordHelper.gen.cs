@@ -19,7 +19,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <remarks>
 	/// Double-derived class to allow easier code customization.
 	/// </remarks>
-	public partial class WorkflowDesignHelpKeywordHelper : WorkflowDesignHelpKeywordHelperBase 
+	internal partial class WorkflowDesignHelpKeywordHelper : WorkflowDesignHelpKeywordHelperBase 
 	{
 		
 		/// <summary>
@@ -43,7 +43,7 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// <summary>
 	/// Helper class used to map shapes and model elements to F1 help keywords.
 	/// </summary>
-	public abstract class WorkflowDesignHelpKeywordHelperBase
+	internal abstract class WorkflowDesignHelpKeywordHelperBase
 	{
 		private global::System.Collections.Generic.Dictionary<string, string> helpKeywords;
 		

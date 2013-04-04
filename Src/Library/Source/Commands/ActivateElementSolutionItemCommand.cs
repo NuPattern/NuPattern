@@ -4,9 +4,10 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 using Dsl = Microsoft.VisualStudio.Modeling.Design;
 
 namespace NuPattern.Library.Commands

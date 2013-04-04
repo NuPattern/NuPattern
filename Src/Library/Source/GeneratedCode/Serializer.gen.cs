@@ -14,7 +14,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer TemplateSettingsSerializer for DomainClass TemplateSettings.
 	/// </summary>
-	public partial class TemplateSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class TemplateSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -1027,7 +1027,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer EventSettingsSerializer for DomainClass EventSettings.
 	/// </summary>
-	public partial class EventSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class EventSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -1862,7 +1862,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer CommandSettingsSerializer for DomainClass CommandSettings.
 	/// </summary>
-	public partial class CommandSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class CommandSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -2613,7 +2613,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer MenuSettingsSerializer for DomainClass MenuSettings.
 	/// </summary>
-	public partial class MenuSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class MenuSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -3504,7 +3504,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer GuidanceExtensionSerializer for DomainClass GuidanceExtension.
 	/// </summary>
-	public partial class GuidanceExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class GuidanceExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -4249,7 +4249,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer WizardSettingsSerializer for DomainClass WizardSettings.
 	/// </summary>
-	public partial class WizardSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class WizardSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -4878,7 +4878,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer ArtifactExtensionSerializer for DomainClass ArtifactExtension.
 	/// </summary>
-	public partial class ArtifactExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class ArtifactExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -5567,7 +5567,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer ValidationExtensionSerializer for DomainClass ValidationExtension.
 	/// </summary>
-	public partial class ValidationExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class ValidationExtensionSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -6315,7 +6315,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Serializer DragDropSettingsSerializer for DomainClass DragDropSettings.
 	/// </summary>
-	public partial class DragDropSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
+	internal partial class DragDropSettingsSerializer : Microsoft.VisualStudio.Modeling.ExtensionElementSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -7124,102 +7124,102 @@ namespace NuPattern.Library.Automation
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]		
 	public abstract class LibrarySerializationBehaviorBase : DslModeling::DomainXmlSerializationBehavior
 	{
-		///<summary>
-		/// The xml namespace used by this domain model when serializing
-		///</summary>
-		public const string DomainModelXmlNamespace = @"http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions";
+	    ///<summary>
+	    /// The xml namespace used by this domain model when serializing
+	    ///</summary>
+	    public const string DomainModelXmlNamespace = @"http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions";
 	
-		#region Member Variables
-		/// <summary>
-		/// A list of DomainClass Ids mapped to DomainClassXmlSerializer types.
-		/// </summary>
-		private static global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry> serializerTypes;
+	    #region Member Variables
+	    /// <summary>
+	    /// A list of DomainClass Ids mapped to DomainClassXmlSerializer types.
+	    /// </summary>
+	    private static global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry> serializerTypes;
 	
-		/// <summary>
-		/// A list of xml namespaces mapped to domain model types.
-		/// </summary>
-		private static global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerNamespaceEntry> namespaceEntries;
+	    /// <summary>
+	    /// A list of xml namespaces mapped to domain model types.
+	    /// </summary>
+	    private static global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerNamespaceEntry> namespaceEntries;
 	
-		#endregion
+	    #endregion
 	
-		#region Constructor
-		/// <summary>
-		/// Protected constructor to prevent public instantiation.
-		/// </summary>
-		protected LibrarySerializationBehaviorBase() : base() { }
-		#endregion
-		
-		#region Protected Methods
-		/// <summary>
-		/// Allows custom serializers to be added.
-		/// Base implementation doesn't do anything.
-		/// </summary>
-		/// <returns>Custom serializer types, null or empty list if there's no custom serializer types.</returns>
-		[global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-		protected virtual global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerDirectoryEntry> CustomSerializerTypes
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return null; }
-		}
-		#endregion
+	    #region Constructor
+	    /// <summary>
+	    /// Protected constructor to prevent public instantiation.
+	    /// </summary>
+	    protected LibrarySerializationBehaviorBase() : base() { }
+	    #endregion
+	    
+	    #region Protected Methods
+	    /// <summary>
+	    /// Allows custom serializers to be added.
+	    /// Base implementation doesn't do anything.
+	    /// </summary>
+	    /// <returns>Custom serializer types, null or empty list if there's no custom serializer types.</returns>
+	    [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+	    protected virtual global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerDirectoryEntry> CustomSerializerTypes
+	    {
+	        [global::System.Diagnostics.DebuggerStepThrough]
+	        get { return null; }
+	    }
+	    #endregion
 	
-		#region Public Methods
-		/// <summary>
-		/// This provides a mapping from DomainClass Id to DomainXmlSerializer implementation types.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]	// Will trigger creation otherwise.
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]		
-		public override global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerDirectoryEntry> AllSerializers
-		{
-			get
-			{
-				if (LibrarySerializationBehavior.serializerTypes == null)
-				{
-					global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerDirectoryEntry> customSerializerTypes = this.CustomSerializerTypes;
-					int customSerializerCount = (customSerializerTypes == null ? 0 : customSerializerTypes.Count);
-					LibrarySerializationBehavior.serializerTypes = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry>(9 + customSerializerCount);
+	    #region Public Methods
+	    /// <summary>
+	    /// This provides a mapping from DomainClass Id to DomainXmlSerializer implementation types.
+	    /// </summary>
+	    [global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]	// Will trigger creation otherwise.
+	    [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]		
+	    public override global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerDirectoryEntry> AllSerializers
+	    {
+	        get
+	        {
+	            if (LibrarySerializationBehavior.serializerTypes == null)
+	            {
+	                global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerDirectoryEntry> customSerializerTypes = this.CustomSerializerTypes;
+	                int customSerializerCount = (customSerializerTypes == null ? 0 : customSerializerTypes.Count);
+	                LibrarySerializationBehavior.serializerTypes = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerDirectoryEntry>(9 + customSerializerCount);
 	
-					#region Serializers defined in this model
-					LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(TemplateSettings.DomainClassId, typeof(TemplateSettingsSerializer)));
-					LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(EventSettings.DomainClassId, typeof(EventSettingsSerializer)));
-					LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(CommandSettings.DomainClassId, typeof(CommandSettingsSerializer)));
-					LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MenuSettings.DomainClassId, typeof(MenuSettingsSerializer)));
-					LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(GuidanceExtension.DomainClassId, typeof(GuidanceExtensionSerializer)));
-					LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(WizardSettings.DomainClassId, typeof(WizardSettingsSerializer)));
-					LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ArtifactExtension.DomainClassId, typeof(ArtifactExtensionSerializer)));
-					LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ValidationExtension.DomainClassId, typeof(ValidationExtensionSerializer)));
-					LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(DragDropSettings.DomainClassId, typeof(DragDropSettingsSerializer)));
-					#endregion
-					
-					// Custom ones
-					if (customSerializerCount > 0)
-					{
-						LibrarySerializationBehavior.serializerTypes.AddRange(customSerializerTypes);
-					}
-				}
-				return LibrarySerializationBehavior.serializerTypes.AsReadOnly();
-			}
-		}
-		
-		/// <summary>
-		/// This provides a mapping from xml namespaces to domain model implementation types.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]	// Will trigger creation otherwise.
-		//[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]		
-		public override global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerNamespaceEntry> AllNamespaces
-		{
-			get
-			{
-				if (LibrarySerializationBehavior.namespaceEntries == null)
-				{
-					LibrarySerializationBehavior.namespaceEntries = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerNamespaceEntry>();
-					LibrarySerializationBehavior.namespaceEntries.Add(new DslModeling::DomainXmlSerializerNamespaceEntry(DomainModelXmlNamespace, typeof(global::NuPattern.Library.Automation.LibraryDomainModel)));
-				}
-				return LibrarySerializationBehavior.namespaceEntries.AsReadOnly();
-			}
-		}
-		
-		#endregion
+	                #region Serializers defined in this model
+	                LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(TemplateSettings.DomainClassId, typeof(TemplateSettingsSerializer)));
+	                LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(EventSettings.DomainClassId, typeof(EventSettingsSerializer)));
+	                LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(CommandSettings.DomainClassId, typeof(CommandSettingsSerializer)));
+	                LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MenuSettings.DomainClassId, typeof(MenuSettingsSerializer)));
+	                LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(GuidanceExtension.DomainClassId, typeof(GuidanceExtensionSerializer)));
+	                LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(WizardSettings.DomainClassId, typeof(WizardSettingsSerializer)));
+	                LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ArtifactExtension.DomainClassId, typeof(ArtifactExtensionSerializer)));
+	                LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(ValidationExtension.DomainClassId, typeof(ValidationExtensionSerializer)));
+	                LibrarySerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(DragDropSettings.DomainClassId, typeof(DragDropSettingsSerializer)));
+	                #endregion
+	                
+	                // Custom ones
+	                if (customSerializerCount > 0)
+	                {
+	                    LibrarySerializationBehavior.serializerTypes.AddRange(customSerializerTypes);
+	                }
+	            }
+	            return LibrarySerializationBehavior.serializerTypes.AsReadOnly();
+	        }
+	    }
+	    
+	    /// <summary>
+	    /// This provides a mapping from xml namespaces to domain model implementation types.
+	    /// </summary>
+	    [global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]	// Will trigger creation otherwise.
+	    //[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]		
+	    public override global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainXmlSerializerNamespaceEntry> AllNamespaces
+	    {
+	        get
+	        {
+	            if (LibrarySerializationBehavior.namespaceEntries == null)
+	            {
+	                LibrarySerializationBehavior.namespaceEntries = new global::System.Collections.Generic.List<DslModeling::DomainXmlSerializerNamespaceEntry>();
+	                LibrarySerializationBehavior.namespaceEntries.Add(new DslModeling::DomainXmlSerializerNamespaceEntry(DomainModelXmlNamespace, typeof(global::NuPattern.Library.Automation.LibraryDomainModel)));
+	            }
+	            return LibrarySerializationBehavior.namespaceEntries.AsReadOnly();
+	        }
+	    }
+	    
+	    #endregion
 	}
 	
 	/// <summary>
@@ -7228,32 +7228,32 @@ namespace NuPattern.Library.Automation
 	/// </summary>
 	public sealed partial class LibrarySerializationBehavior : LibrarySerializationBehaviorBase
 	{
-		#region Singleton Instance
-		/// <summary>
-		/// Singleton instance.
-		/// </summary>
-		private static LibrarySerializationBehavior instance;
+	    #region Singleton Instance
+	    /// <summary>
+	    /// Singleton instance.
+	    /// </summary>
+	    private static LibrarySerializationBehavior instance;
 	
-		/// <summary>
-		/// Singleton instance.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]	// Will trigger creation otherwise.
-		public static LibrarySerializationBehavior Instance
-		{
-			get
-			{	// No need for synchronization. Most likely running in single-thread environment, and creating an extra instance
-				// doesn't really hurt.
-				if (LibrarySerializationBehavior.instance == null)
-					LibrarySerializationBehavior.instance = new LibrarySerializationBehavior ();
-				return LibrarySerializationBehavior.instance;
-			}
-		}
+	    /// <summary>
+	    /// Singleton instance.
+	    /// </summary>
+	    [global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]	// Will trigger creation otherwise.
+	    public static LibrarySerializationBehavior Instance
+	    {
+	        get
+	        {	// No need for synchronization. Most likely running in single-thread environment, and creating an extra instance
+	            // doesn't really hurt.
+	            if (LibrarySerializationBehavior.instance == null)
+	                LibrarySerializationBehavior.instance = new LibrarySerializationBehavior ();
+	            return LibrarySerializationBehavior.instance;
+	        }
+	    }
 	
-		/// <summary>
-		/// Private constructor to prevent public instantiation.
-		/// </summary>
-		private LibrarySerializationBehavior() : base() { }
-		#endregion
+	    /// <summary>
+	    /// Private constructor to prevent public instantiation.
+	    /// </summary>
+	    private LibrarySerializationBehavior() : base() { }
+	    #endregion
 	}
 }
 

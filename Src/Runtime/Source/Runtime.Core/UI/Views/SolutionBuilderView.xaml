@@ -1,0 +1,290 @@
+<cp:CommonUserControl
+    x:Class="NuPattern.Runtime.UI.Views.SolutionBuilderView"
+    x:ClassModifier="internal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://schemas.microsoft.com/nupattern/2012/xaml/"
+    xmlns:l="clr-namespace:NuPattern.Runtime.UI"
+    xmlns:k="clr-namespace:NuPattern.Runtime.UI.Data"
+    xmlns:cp="clr-namespace:NuPattern.Presentation;assembly=NuPattern.Presentation"
+    xmlns:viewModels="clr-namespace:NuPattern.Runtime.UI.ViewModels"
+    Background="{DynamicResource VsBrush.ToolWindowBackground}">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/CommonStyles.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/ContextMenu.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/CommandBar.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/TreeView.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <UserControl.InputBindings>
+        <KeyBinding Key="S" Modifiers="Control" Command="{Binding SaveCommand}" />
+    </UserControl.InputBindings>
+
+    <Grid Focusable="False">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Style="{DynamicResource CommandBar.Panel}">
+            <StackPanel Orientation="Horizontal" Margin="2">
+                <Button ToolTip="New Solution Element" Command="{Binding AddNewProductCommand}" Focusable="false">
+                    <BitmapImage UriSource="../../Resources/CommandAddNewProduct.png" />
+                </Button>
+                <Button ToolTip="Save All" Command="{Binding SaveCommand}" Focusable="false">
+                    <BitmapImage UriSource="../../Resources/CommandSave.png" />
+                </Button>
+                <Separator />
+                <Button ToolTip="Expand All" Command="{Binding ExpandAllCommand}" Focusable="false">
+                    <BitmapImage UriSource="../../Resources/CommandExpandAll.png" />
+                </Button>
+                <Button ToolTip="Collapse All" Command="{Binding CollapseAllCommand}" Focusable="false">
+                    <BitmapImage UriSource="../../Resources/CommandCollapseAll.png" />
+                </Button>
+                <Separator />
+                <Button ToolTip="Help for Getting Started" Command="{Binding GuidanceCommand}" Focusable="false">
+                    <BitmapImage UriSource="../../Resources/CommandShowGuidance.png" />
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1">
+            <TreeView
+                Name="explorer"
+                Focusable="false"
+                SnapsToDevicePixels="True"
+                ItemsSource="{Binding Nodes}"
+                PreviewMouseLeftButtonDown="OnPreviewMouseLeftButtonDown"
+                PreviewMouseMove="OnPreviewMouseMove"
+                p:ControlBehavior.DoubleClickCommand="{Binding ActivateCommand}" >
+                
+            <TreeView.InputBindings>
+                <KeyBinding Command="{Binding DeleteCommand}" Gesture="Delete" />
+                <KeyBinding Command="{Binding BeginEditCommand}" Gesture="F2" />
+                <KeyBinding Command="{Binding ActivateCommand}" Gesture="Enter" />
+            </TreeView.InputBindings>
+
+            <TreeView.Resources>
+                <BooleanToVisibilityConverter x:Key="VisibilityConverter" />
+                <k:MenuGroupingEnumerableConverter x:Key="MenuGroupingConverter" />
+                <p:UriToCachedImageConverter x:Key="UriToCachedImageConverter" />
+                <l:ItemIconWithDefaultConverter x:Key="ItemIconWithDefault" />
+                <l:TreeViewItemOrderingConverter x:Key="TreeViewItemOrderingConverter" />
+
+                <ContentControl
+                    x:Key="MenuItem.Image"
+                    x:Shared="false"
+                    Style="{StaticResource MenuItem.Icon}"
+                    Content="{Binding ImagePath,Converter={StaticResource UriToCachedImageConverter}}" />
+
+                <RadioButton x:Key="MenuItem.ViewButton" x:Shared="false" IsChecked="{Binding IsSelected,Mode=TwoWay}" GroupName="MenuOptions" IsHitTestVisible="False" />
+
+                <Style TargetType="TreeView" BasedOn="{StaticResource {x:Type TreeView}}">
+                    <Style.Triggers>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="TreeView">
+                                        <Border Background="{DynamicResource VsBrush.DesignerBackground}">
+                                            <ContentControl x:Name="text" Background="{x:Null}" Margin="10" Focusable="False">
+                                                <DockPanel Focusable="False">
+                                                    <TextBlock DockPanel.Dock="Bottom" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment="Bottom"  Foreground="{DynamicResource VsBrush.GrayText}">
+                                                        <Run Text="Solution elements in this window are provided by pattern toolkits, built with NuPattern"/>
+                                                        <Hyperlink Command="{Binding HomePageCommand}" Focusable="False">learn more...</Hyperlink>
+                                                    </TextBlock>
+                                                    <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource VsBrush.GrayText}">
+                                                        <Run Text="There are no solution elements in the current solution to view in this window. " />
+                                                        <LineBreak/>
+                                                        <LineBreak/>
+                                                        <Run Text="Add a"/>
+                                                        <Hyperlink Command="{Binding AddNewProductCommand}" Focusable="false">New Solution Element</Hyperlink>
+                                                        <Run Text="to the current solution, or browse the"/>
+                                                        <Hyperlink Command="{Binding GuidanceCommand}" Focusable="false">Help for Getting Started</Hyperlink>
+                                                        <Run Text="with the Solution Builder window."/>
+                                                    </TextBlock>
+                                                </DockPanel>
+                                            </ContentControl>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <DataTrigger Binding="{Binding IsSolutionOpened}" Value="False">
+                                                <Setter TargetName="text" Property="Content">
+                                                    <Setter.Value>
+                                                        <DockPanel Focusable="False">
+                                                            <TextBlock DockPanel.Dock="Bottom" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment="Bottom"  Foreground="{DynamicResource VsBrush.GrayText}">
+                                                                <Run Text="Solution elements in this window are provided by pattern toolkits, built with NuPattern"/>
+                                                                <Hyperlink Command="{Binding HomePageCommand}" Focusable="False">learn more...</Hyperlink>
+                                                            </TextBlock>
+                                                            <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource VsBrush.GrayText}">
+                                                                <Run Text="A solution must be open to view or create elements in this window. " />
+                                                                <LineBreak/>
+                                                                <LineBreak/>
+                                                                <Run Text="Create a"/>
+                                                                <Hyperlink Command="{Binding CreateNewSolutionCommand}" Focusable="false">New Empty Solution</Hyperlink>
+                                                                <Run Text=", or browse the"/>
+                                                                <Hyperlink Command="{Binding GuidanceCommand}" Focusable="false">Help for Getting Started</Hyperlink>
+                                                                <Run Text="with the Solution Builder window."/>
+                                                            </TextBlock>
+                                                        </DockPanel>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </DataTrigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+
+                <Style x:Key="DynamicMenuItem" TargetType="MenuItem" BasedOn="{StaticResource {x:Type MenuItem}}">
+                    <Setter Property="InputGestureText" Value="{Binding InputGestureText}" />
+                    <Setter Property="Command" Value="{Binding Command}" />
+                    <Setter Property="CommandParameter" Value="{Binding Model}" />
+                    <Setter Property="IsEnabled" Value="{Binding IsEnabled}" />
+                    <Setter Property="Visibility" Value="{Binding IsVisible,Converter={StaticResource VisibilityConverter}}" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IconType}" Value="Image">
+                            <Setter Property="Icon" Value="{Binding Icon, Converter={StaticResource UriToCachedImageConverter}, FallbackValue={StaticResource MenuItem.Image}}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IconType}" Value="SingleSelect">
+                            <Setter Property="Icon" Value="{StaticResource MenuItem.ViewButton}" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+
+                <p:MenuItemSeparatorStyleSelector x:Key="SeparatorStyleSelector">
+                    <p:MenuItemSeparatorStyleSelector.EmptyTemplate>
+                        <DataTemplate />
+                    </p:MenuItemSeparatorStyleSelector.EmptyTemplate>
+                    <p:MenuItemSeparatorStyleSelector.SeparatorTemplate>
+                        <DataTemplate>
+                            <Separator Style="{StaticResource {x:Static MenuItem.SeparatorStyleKey}}" />
+                        </DataTemplate>
+                    </p:MenuItemSeparatorStyleSelector.SeparatorTemplate>
+                </p:MenuItemSeparatorStyleSelector>
+
+                <Style TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
+                    <Setter Property="IsExpanded" Value="{Binding IsExpanded,Mode=TwoWay}" />
+                    <Setter Property="IsSelected" Value="{Binding IsSelected,Mode=TwoWay}" />
+                    <Setter Property="SnapsToDevicePixels" Value="True"/>
+                    <EventSetter Event="MouseRightButtonDown" Handler="OnItemMouseRightButtonDown" />
+                    <EventSetter Event="ContextMenuOpening" Handler="OnContextMenuOpening" />
+                    <EventSetter Event="TreeViewItem.DragEnter"  Handler="OnDragEnter"/>
+                    <EventSetter Event="TreeViewItem.DragLeave"  Handler="OnDragLeave"/>
+                    <EventSetter Event="TreeViewItem.DragOver"  Handler="OnDragOver"/>
+                    <EventSetter Event="TreeViewItem.Drop" Handler="OnDragDrop"/>
+                    <Setter Property="ContextMenu">
+                        <Setter.Value>
+                            <ContextMenu
+                                ItemsSource="{Binding MenuOptions,Converter={StaticResource MenuGroupingConverter}}"
+                                ItemContainerStyle="{StaticResource DynamicMenuItem}">
+                                <ContextMenu.ItemTemplate>
+                                    <HierarchicalDataTemplate ItemsSource="{Binding MenuOptions}">
+                                        <!--<TextBlock Text="{Binding Caption}" />-->
+                                        <ContentPresenter Content="{Binding Caption}" RecognizesAccessKey="True" />
+                                    </HierarchicalDataTemplate>
+                                </ContextMenu.ItemTemplate>
+                                <ContextMenu.GroupStyle>
+                                    <GroupStyle HidesIfEmpty="True" HeaderTemplateSelector="{StaticResource SeparatorStyleSelector}" />
+                                </ContextMenu.GroupStyle>
+                            </ContextMenu>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TreeView.Resources>
+
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Nodes, Converter={StaticResource TreeViewItemOrderingConverter}, ConverterParameter=Model.InstanceOrder}">
+                    <StackPanel Name="panel" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,1">
+                        <Image Source="{Binding Converter={StaticResource ItemIconWithDefault}}" SnapsToDevicePixels="True" Width="16" Height="16" Margin="0,0,1,0" Focusable="False" />
+
+                        <ContentControl Name="display" Margin="3,0,0,0" Padding="0" Content="{Binding}" Focusable="False">
+                            <ContentControl.Resources>
+                                <DataTemplate DataType="{x:Type viewModels:ProductViewModel}">
+                                    <TextBlock Name="displayText">
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="{}{0} [{1}]">
+                                                <Binding Path="Model.InstanceName" />
+                                                <Binding Path="CurrentView.Info.DisplayName" />
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                        <TextBlock.ToolTip >
+                                            <ToolTip>
+                                                <TextBlock Name="descriptionText">
+                                                    <TextBlock.Text>
+                                                        <MultiBinding StringFormat="{}{0} [{1}]">
+                                                            <Binding Path="Model.Info.Description" />
+                                                            <Binding Path="CurrentView.Info.Description" />
+                                                        </MultiBinding>
+                                                    </TextBlock.Text>
+                                                </TextBlock>
+                                            </ToolTip>
+                                        </TextBlock.ToolTip>
+                                    </TextBlock>
+                                    <DataTemplate.Triggers>
+                                        <DataTrigger Binding="{Binding HasSingleView}" Value="True">
+                                            <Setter TargetName="displayText" Property="Text" Value="{Binding Model.InstanceName}" />
+                                            <Setter TargetName="descriptionText" Property="Text" Value="{Binding Model.Info.Description}" />
+                                        </DataTrigger>
+                                    </DataTemplate.Triggers>
+                                </DataTemplate>
+
+                                <DataTemplate DataType="{x:Type viewModels:ProductElementViewModel}">
+                                    <TextBlock Text="{Binding Model.InstanceName}">
+                                        <TextBlock.ToolTip >
+                                            <ToolTip>
+                                                <TextBlock Text="{Binding Model.Info.Description}"/>
+                                            </ToolTip>
+                                        </TextBlock.ToolTip>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </ContentControl.Resources>
+                        </ContentControl>
+
+                        <TextBox
+                            Name="edit"
+                            Text="{Binding Model.InstanceName}"
+                            Margin="0,-1,-1,0"
+                            Visibility="Collapsed"
+                            GotFocus="OnItemEditBoxGotFocus"
+                            LostFocus="OnItemEditBoxLostFocus">
+                            <TextBox.InputBindings>
+                                <KeyBinding Command="{Binding DataContext.EndEditCommand, ElementName=explorer}" Gesture="Enter" />
+                                <KeyBinding Command="{Binding DataContext.CancelEditCommand, ElementName=explorer}" Gesture="Escape" />
+                            </TextBox.InputBindings>
+                        </TextBox>
+                    </StackPanel>
+
+                    <HierarchicalDataTemplate.Triggers>
+                        <DataTrigger Binding="{Binding IsEditing}" Value="True">
+                            <Setter TargetName="display" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="edit" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="panel" Property="FocusManager.FocusedElement" Value="{Binding ElementName=edit}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Model.Info}" Value="{x:Null}">
+                            <Setter Property="ToolTip">
+                                <Setter.Value>
+                                    <TextBlock>
+                                        <Run Text="Extension Name: " />
+                                        <Run Text="{Binding Model.ExtensionName}" />
+                                        <LineBreak />
+                                        <Run Text="Author: " />
+                                        <Run Text="{Binding Model.Author}" />
+                                        <LineBreak />
+                                        <Run Text="Version: " />
+                                        <Run Text="{Binding Model.Version}" />
+                                    </TextBlock>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                    </HierarchicalDataTemplate.Triggers>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+        </ScrollViewer>
+    </Grid>
+</cp:CommonUserControl>

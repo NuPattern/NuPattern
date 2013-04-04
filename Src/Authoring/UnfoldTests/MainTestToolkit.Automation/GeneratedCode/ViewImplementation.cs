@@ -7,77 +7,79 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+
 namespace MainTestToolkit.Automation.GeneratedCode
 {
     using System.ComponentModel;
-	using System.ComponentModel.Composition;
+    using System.ComponentModel.Composition;
     using NuPattern.Runtime;
+    using NuPattern.Runtime.ToolkitInterface;
 
-	///	<summary>
-	///	Description for MainTest.DefaultView
-	///	</summary>
-	[Description("Description for MainTest.DefaultView")]
-	[ToolkitInterfaceProxy(ExtensionId ="cb6a7b60-ec95-42dd-8f01-28ff11dcf800", DefinitionId = "27b6576e-dbb8-481b-aa4a-573f595a380a", ProxyType = typeof(DefaultView))]
-	public partial class DefaultView : IDefaultView
-	{
-		private IView target;
-		private IContainerProxy<IDefaultView> proxy;
+    ///	<summary>
+    ///	Description for MainTest.DefaultView
+    ///	</summary>
+    [Description("Description for MainTest.DefaultView")]
+    [ToolkitInterfaceProxy(ExtensionId = "cb6a7b60-ec95-42dd-8f01-28ff11dcf800", DefinitionId = "27b6576e-dbb8-481b-aa4a-573f595a380a", ProxyType = typeof(DefaultView))]
+    public partial class DefaultView : IDefaultView
+    {
+        private IView target;
+        private IContainerProxy<IDefaultView> proxy;
 
-		/// <summary>
-		/// For MEF.
-		/// </summary>
-		[ImportingConstructor]
-		private DefaultView() { }
+        /// <summary>
+        /// For MEF.
+        /// </summary>
+        [ImportingConstructor]
+        private DefaultView() { }
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="DefaultView"/> class.
-		/// </summary>
-		public DefaultView(IView target)
-		{
-			this.target = target;
-			this.proxy = target.ProxyFor<IDefaultView>();
-		}
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DefaultView"/> class.
+        /// </summary>
+        public DefaultView(IView target)
+        {
+            this.target = target;
+            this.proxy = target.ProxyFor<IDefaultView>();
+        }
 
-		/// <summary>
-		/// Gets the parent element.
-		/// </summary>
-		public IMainTest Parent
-		{ 
-			get { return this.target.Parent.As<IMainTest>(); }
-		}
+        /// <summary>
+        /// Gets the parent element.
+        /// </summary>
+        public IMainTest Parent
+        {
+            get { return this.target.Parent.As<IMainTest>(); }
+        }
 
-		/// <summary>
-		/// Gets the generic <see cref="IView"/> underlying element.
-		/// </summary>
-		public IView AsView()
-		{
-			return this.target;
-		}
+        /// <summary>
+        /// Gets the generic <see cref="IView"/> underlying element.
+        /// </summary>
+        public IView AsView()
+        {
+            return this.target;
+        }
 
-		/// <summary>
-		/// Gets the generic underlying element as the given type if possible.
-		/// </summary>
-		public TRuntimeInterface As<TRuntimeInterface>()
-			where TRuntimeInterface : class
-		{
-			return this.target as TRuntimeInterface;
-		}
-		
-		/// <summary>
-		/// Gets the <see cref="IExtensionItem"/> contained in this element.
-		/// </summary>
-		public IExtensionItem ExtensionItem 
-		{ 
-			get { return proxy.GetExtension(() => this.ExtensionItem, element => new ExtensionItem(element)); }
-		}
+        /// <summary>
+        /// Gets the generic underlying element as the given type if possible.
+        /// </summary>
+        public TRuntimeInterface As<TRuntimeInterface>()
+            where TRuntimeInterface : class
+        {
+            return this.target as TRuntimeInterface;
+        }
 
-		/// <summary>
-		/// Deletes this instance.
-		/// </summary>
-		public void Delete()
-		{
-			this.target.Delete();
-		}
-	}
+        /// <summary>
+        /// Gets the <see cref="IExtensionItem"/> contained in this element.
+        /// </summary>
+        public IExtensionItem ExtensionItem
+        {
+            get { return proxy.GetExtension(() => this.ExtensionItem, element => new ExtensionItem(element)); }
+        }
+
+        /// <summary>
+        /// Deletes this instance.
+        /// </summary>
+        public void Delete()
+        {
+            this.target.Delete();
+        }
+    }
 }
 

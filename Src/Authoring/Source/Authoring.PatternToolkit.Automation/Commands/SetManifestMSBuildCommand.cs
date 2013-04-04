@@ -11,9 +11,9 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
-using NuPattern.Runtime;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime.References;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 {

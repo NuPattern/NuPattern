@@ -6,8 +6,9 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime;
+using NuPattern.Runtime.References;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
@@ -53,18 +54,17 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             {
                 using (tracer.StartActivity(Resources.CreateViewElementsCommand_TraceAddingViews, this.CurrentElement.InstanceName))
                 {
-                    DesignerCommandHelper.DoActionOnDesigner(
-                        reference.PhysicalPath,
-                        docdata =>
+                    ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, patternModel =>
                         {
-                            foreach (var view in docdata.Store.GetViews())
+                            patternModel.Pattern.Views.ForEach(v =>
                             {
+                                var viewName = ((INamedElementSchema)v).Name;
                                 tracer.TraceInformation(
-                                    Resources.CreateViewElementsCommand_TraceCreatingView, this.CurrentElement.InstanceName, view.Name);
+                                    Resources.CreateViewElementsCommand_TraceCreatingView, this.CurrentElement.InstanceName, viewName);
 
-                                this.CurrentElement.Views.CreateViewModel(view.Name);
-                            }
-                        });
+                                this.CurrentElement.Views.CreateViewModel(viewName);
+                            });
+                        }, false);
                 }
             }
             else

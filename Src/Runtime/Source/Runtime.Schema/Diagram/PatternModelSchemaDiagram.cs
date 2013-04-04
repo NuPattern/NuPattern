@@ -11,7 +11,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// Class that represents the main diagram.
     /// </summary>
-    public partial class PatternModelSchemaDiagram
+    partial class PatternModelSchemaDiagram
     {
         internal const string DiagramTitleShapeName = "Title";
         internal const string DiagramBackgroundShapeName = "Background";

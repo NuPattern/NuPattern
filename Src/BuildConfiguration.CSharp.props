@@ -67,35 +67,35 @@
   </PropertyGroup>
 
   <!-- Build Configurations -->
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-VS2010|x86' or '$(Configuration)|$(Platform)' == 'Debug-VS2012|x86' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-VS2010|AnyCPU' or '$(Configuration)|$(Platform)' == 'Debug-VS2012|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-VS2010|x86' or '$(Configuration)|$(Platform)' == 'Release-VS2012|x86' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-VS2010|AnyCPU' or '$(Configuration)|$(Platform)' == 'Release-VS2012|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2010' ">
-    <OutputPath>bin\x86\Debug-VS2010\</OutputPath>
+    <OutputPath>bin\AnyCPU\Debug-VS2010\</OutputPath>
     <DefineConstants>DEBUG;TRACE;VSVER10</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug-VS2012' ">
-    <OutputPath>bin\x86\Debug-VS2012\</OutputPath>
+    <OutputPath>bin\AnyCPU\Debug-VS2012\</OutputPath>
     <DefineConstants>DEBUG;TRACE;VSVER11</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2010' ">
-    <OutputPath>bin\x86\Release-VS2010\</OutputPath>
+    <OutputPath>bin\AnyCPU\Release-VS2010\</OutputPath>
     <DefineConstants>TRACE;VSVER10</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release-VS2012' ">
-    <OutputPath>bin\x86\Release-VS2012\</OutputPath>
+    <OutputPath>bin\AnyCPU\Release-VS2012\</OutputPath>
     <DefineConstants>TRACE;VSVER11</DefineConstants>
   </PropertyGroup>
 </Project>

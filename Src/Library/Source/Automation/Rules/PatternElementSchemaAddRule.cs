@@ -8,7 +8,7 @@ namespace NuPattern.Library.Automation
     /// Change rule for the <see cref="T:NuPattern.Runtime.Schema.PatternElementSchema"/> domain class.
     /// </summary>
     [RuleOn(PatternElementSchemaDomainClassId, FireTime = TimeToFire.TopLevelCommit)]
-    public partial class PatternElementSchemaAddRule : AddRule
+    internal class PatternElementSchemaAddRule : AddRule
     {
         private const string PatternElementSchemaDomainClassId = "dbe13a31-7dcd-4fbd-a601-18ca765e264e";
 

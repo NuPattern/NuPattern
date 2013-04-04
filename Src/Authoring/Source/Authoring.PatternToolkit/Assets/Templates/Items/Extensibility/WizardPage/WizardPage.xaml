@@ -20,10 +20,10 @@
         <!-- Display the Name of the current element -->
         <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" FontWeight="Bold">General</Label>
         <Label Grid.Column="0" Grid.Row="1">Name:</Label>
-		<p:ValueEditor Name="InstanceNameEditor" Value="{Binding InstanceName, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="1"/>
-		
-		<!-- Bind to your other variable properties, and other elements in your pattern model here -->
-		<!-- <Label Grid.Column="0" Grid.Row="1">Variable Property1:</Label>
-		<p:ValueEditor Name="VariableProperty1Editor" Value="{Binding VariableProperty1, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="1"/>-->
-	</Grid>
+        <p:ValueEditor Name="InstanceNameEditor" Value="{Binding InstanceName, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="1"/>
+        
+        <!-- Bind to your other variable properties, and other elements in your pattern model here -->
+        <!-- <Label Grid.Column="0" Grid.Row="1">Variable Property1:</Label>
+        <p:ValueEditor Name="VariableProperty1Editor" Value="{Binding VariableProperty1, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="1"/>-->
+    </Grid>
 </Page>

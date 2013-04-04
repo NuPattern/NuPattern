@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using NuPattern.Extensibility.Binding;
+using NuPattern.Library.Design;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation
 {
@@ -9,7 +10,7 @@ namespace NuPattern.Library.Automation
     /// Double-derived class to allow easier code customization.
     /// </summary>
     [TypeDescriptionProvider(typeof(MenuSettingsDescriptionProvider))]
-    public partial class MenuSettings
+    partial class MenuSettings
     {
         private List<ConditionBindingSettings> conditionSettings;
 

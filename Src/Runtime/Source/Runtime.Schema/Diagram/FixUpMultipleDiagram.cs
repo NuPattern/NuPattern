@@ -18,16 +18,16 @@ namespace NuPattern.Runtime.Schema
             return root.GetViewForAbstractElement().Pattern.PatternModel;
         }
 
-		private static ModelElement GetParentForExtensionPointSchema(ExtensionPointSchema root)
-		{
-			if(root.View != null)
-			{
-				return root.View.Pattern.PatternModel;
-			}
-			else
-			{
-				return root.Owner.GetViewForAbstractElement().Pattern.PatternModel;
-			}
-		}
+        private static ModelElement GetParentForExtensionPointSchema(ExtensionPointSchema root)
+        {
+            if (root.View != null)
+            {
+                return root.View.Pattern.PatternModel;
+            }
+            else
+            {
+                return root.Owner.GetViewForAbstractElement().Pattern.PatternModel;
+            }
+        }
     }
 }

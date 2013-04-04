@@ -19,13 +19,21 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
-    <Reference Include="NuPattern.Runtime.Interfaces">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Interfaces.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="NuPattern.Extensibility">
-      <HintPath>$(PatternToolkitRuntime)\NuPattern.Extensibility.dll</HintPath>
-      <Private>false</Private>
+    <Reference Include="NuPattern.Modeling">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Modeling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
@@ -74,8 +82,8 @@
     <Compile Include="Diagram\ITailoredBackgroundStyles.cs" />
     <Compile Include="Diagram\WorkflowDesignDiagram.cs" />
     <Compile Include="Diagram\TailoredBackgroundStyles.cs" />
-    <Compile Include="Extensions\DiagramExtensions.cs" />
-    <Compile Include="Extensions\StoreExtensions.cs" />
+    <Compile Include="Diagram\DiagramExtensions.cs" />
+    <Compile Include="Model\ModelStoreExtensions.cs" />
     <Compile Include="GeneratedCode\Customization\SchemaImplementation.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -184,10 +192,10 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Model\Design\Asset.cs" />
     <Compile Include="Model\Design\ProducedAsset.cs" />
-    <Compile Include="Model\Design\ProducedAssetValidation.cs" />
+    <Compile Include="Model\Design\ProducedAsset.Validation.cs" />
     <Compile Include="Model\Design\ProductionTool.cs" />
-    <Compile Include="Model\Design\ProductionToolValidation.cs" />
-    <Compile Include="Model\Design\SuppliedAssetValidation.cs" />
+    <Compile Include="Model\Design\ProductionTool.Validation.cs" />
+    <Compile Include="Model\Design\SuppliedAsset.Validation.cs" />
     <Compile Include="Model\Design\VariabilityRequirement.cs" />
     <Compile Include="Model\Rules\ProducedAssetPropertyChangeRule.cs" />
     <Compile Include="Model\Rules\SuppliedAssetPropertyChangeRule.cs" />
@@ -301,9 +309,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Authoring.WorkflowDesign.Interfaces\Authoring.WorkflowDesign.Interfaces.csproj">
+    <ProjectReference Include="..\Authoring.WorkflowDesign.Extensibility\Authoring.WorkflowDesign.Extensibility.csproj">
       <Project>{A55CFA2E-1519-4719-BAFB-D67F3C67E375}</Project>
-      <Name>Authoring.WorkflowDesign.Interfaces</Name>
+      <Name>Authoring.WorkflowDesign.Extensibility</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

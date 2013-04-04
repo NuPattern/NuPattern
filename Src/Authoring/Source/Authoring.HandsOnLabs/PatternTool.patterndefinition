@@ -63,7 +63,7 @@
     "Properties": [
       {
         "Name": "Kind",
-        "Value": "NuPattern.Extensibility.References.GuidanceReference",
+        "Value": "NuPattern.Runtime.References.GuidanceReference",
         "ValueProvider": null
       }
     ]

@@ -10,34 +10,34 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
-		</Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="260"/>
         </Grid.ColumnDefinitions>
 
-		<Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" FontWeight="Bold">Toolkit Information</Label>
-		<Label FontStyle="Italic" Grid.Row="1" Grid.ColumnSpan="2" Margin="20,0,-308,0">This information describes the toolkit packaging (VSIX extension), which is built for you and deploys your pattern.</Label>
-		<Label Grid.Column="0" Grid.Row="2">Name:</Label>
-		<TextBox Name="ToolkitNameEditor" Text="{Binding InstanceName}" IsEnabled="False" Grid.Column="1" Grid.Row="2" />
-		<Label Grid.Column="0" Grid.Row="3">Description:</Label>
-		<p:ValueEditor Name="ToolkitDescriptionEditor" Value="{Binding ToolkitInfo.Description, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="3" Margin="0,0,-268,0" />
-		<Label Grid.Column="0" Grid.Row="4">Author:</Label>
-		<p:ValueEditor Name="ToolkitAuthorNameEditor" Value="{Binding ToolkitInfo.Author, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="4"/>
-		<Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" FontWeight="Bold" VerticalAlignment="Bottom">Pattern Information</Label>
-		<Label FontStyle="Italic" Grid.Row="6" Grid.ColumnSpan="2" Margin="20,0,-308,0">This information describes the pattern that you are designing and developing.</Label>
-		<Label Grid.Column="0" Grid.Row="7">Name:</Label>
-		<p:ValueEditor Name="PatternNameEditor" Value="{Binding PatternName, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="7"/>
-		<Label Grid.Column="0" Grid.Row="8">Description:</Label>
-		<p:ValueEditor Name="PatternDescriptionEditor" Value="{Binding PatternDescription, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="8" Margin="0,0,-268,0" />
-	</Grid>
+        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" FontWeight="Bold">Toolkit Information</Label>
+        <Label FontStyle="Italic" Grid.Row="1" Grid.ColumnSpan="2" Margin="20,0,-308,0">This information describes the toolkit packaging (VSIX extension), which is built for you and deploys your pattern.</Label>
+        <Label Grid.Column="0" Grid.Row="2">Name:</Label>
+        <TextBox Name="ToolkitNameEditor" Text="{Binding InstanceName}" IsEnabled="False" Grid.Column="1" Grid.Row="2" />
+        <Label Grid.Column="0" Grid.Row="3">Description:</Label>
+        <p:ValueEditor Name="ToolkitDescriptionEditor" Value="{Binding ToolkitInfo.Description, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="3" Margin="0,0,-268,0" />
+        <Label Grid.Column="0" Grid.Row="4">Author:</Label>
+        <p:ValueEditor Name="ToolkitAuthorNameEditor" Value="{Binding ToolkitInfo.Author, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="4"/>
+        <Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" FontWeight="Bold" VerticalAlignment="Bottom">Pattern Information</Label>
+        <Label FontStyle="Italic" Grid.Row="6" Grid.ColumnSpan="2" Margin="20,0,-308,0">This information describes the pattern that you are designing and developing.</Label>
+        <Label Grid.Column="0" Grid.Row="7">Name:</Label>
+        <p:ValueEditor Name="PatternNameEditor" Value="{Binding PatternName, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="7"/>
+        <Label Grid.Column="0" Grid.Row="8">Description:</Label>
+        <p:ValueEditor Name="PatternDescriptionEditor" Value="{Binding PatternDescription, ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="8" Margin="0,0,-268,0" />
+    </Grid>
 </Page>

@@ -7,8 +7,8 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.Authoring.PatternToolkit.Automation.UriProviders;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.References;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime.References;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
@@ -56,31 +56,28 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
             {
                 using (tracer.StartActivity(Resources.SetAsDefaultViewCommand_TraceSettingAsDefault, patternModel.InstanceName, this.CurrentElement.InstanceName))
                 {
-                    DesignerCommandHelper.DoActionOnDesigner(
-                        reference.PhysicalPath,
-                        docdata =>
-                        {
-                            var viewReference = ViewArtifactLinkReference.GetReferences(this.CurrentElement.AsElement()).FirstOrDefault();
-                            if (viewReference != null)
+                    var viewReference = ViewArtifactLinkReference.GetReferences(this.CurrentElement.AsElement()).FirstOrDefault();
+                    if (viewReference != null)
+                    {
+                        ViewSchemaHelper.WithPatternModel(reference.PhysicalPath, pm =>
                             {
-                                var viewSchema = docdata.Store.GetViews().FirstOrDefault(v => v.Id == new Guid(viewReference.Host));
-
-                                if (viewSchema != null)
+                                var view = pm.Pattern.GetView(new Guid(viewReference.Host));
+                                if (view != null)
                                 {
-                                    viewSchema.IsDefault = true;
+                                    pm.Pattern.SetDefaultView(new Guid(viewReference.Host));
                                 }
                                 else
                                 {
                                     tracer.TraceWarning(
                                         Resources.SetAsDefaultViewCommand_TraceViewNotFound, patternModel.InstanceName, viewReference.Host);
                                 }
-                            }
-                            else
-                            {
-                                tracer.TraceWarning(
-                                    Resources.SetAsDefaultViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
-                            }
-                        });
+                            }, true);
+                    }
+                    else
+                    {
+                        tracer.TraceWarning(
+                            Resources.SetAsDefaultViewCommand_TraceReferenceNotFound, patternModel.InstanceName);
+                    }
                 }
             }
             else

@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
-using NuPattern.Runtime;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation
 {
-	public partial interface IDragDropSettings
-	{
-		/// <summary>
-		/// Gets the condition settings.
-		/// </summary>
-		IEnumerable<IBindingSettings> ConditionSettings { get; }
-	}
+    partial interface IDragDropSettings
+    {
+        /// <summary>
+        /// Gets the condition settings.
+        /// </summary>
+        IEnumerable<IBindingSettings> ConditionSettings { get; }
+    }
 }

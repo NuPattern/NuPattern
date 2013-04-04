@@ -19,7 +19,7 @@ namespace NuPattern.Runtime.Store
 	/// <remarks>
 	/// Double-derived class to allow easier code customization.
 	/// </remarks>
-	public partial class ProductStateStoreHelpKeywordHelper : ProductStateStoreHelpKeywordHelperBase 
+	internal partial class ProductStateStoreHelpKeywordHelper : ProductStateStoreHelpKeywordHelperBase 
 	{
 		
 		/// <summary>
@@ -43,7 +43,7 @@ namespace NuPattern.Runtime.Store
 	/// <summary>
 	/// Helper class used to map shapes and model elements to F1 help keywords.
 	/// </summary>
-	public abstract class ProductStateStoreHelpKeywordHelperBase
+	internal abstract class ProductStateStoreHelpKeywordHelperBase
 	{
 		private global::System.Collections.Generic.Dictionary<string, string> helpKeywords;
 		

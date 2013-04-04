@@ -172,9 +172,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Authoring.WorkflowDesign.Interfaces\Authoring.WorkflowDesign.Interfaces.csproj">
+    <ProjectReference Include="..\Authoring.WorkflowDesign.Extensibility\Authoring.WorkflowDesign.Extensibility.csproj">
       <Project>{A55CFA2E-1519-4719-BAFB-D67F3C67E375}</Project>
-      <Name>Authoring.WorkflowDesign.Interfaces</Name>
+      <Name>Authoring.WorkflowDesign.Extensibility</Name>
     </ProjectReference>
     <ProjectReference Include="..\Authoring.WorkflowDesign\Authoring.WorkflowDesign.csproj">
       <Project>{B29AC5FA-1276-46C3-A6F5-C0F8D2F8914A}</Project>

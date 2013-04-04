@@ -12,7 +12,7 @@ using Microsoft.VisualStudio.Modeling.Integration;
 namespace <#=CodeGenerationUtilities.GetPackageNamespace(this.Dsl)#>
 {
 	[System.CodeDom.Compiler.GeneratedCode("T4", "1.0")]
-	public partial class AdapterManager
+	partial class AdapterManager
 	{
 		/// <summary>
 		/// Gets the file extension.

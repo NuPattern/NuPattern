@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Customizations for the <see cref=" ElementShapeBase"/> class.
 	/// </summary>
-	public partial class ElementShapeBase
+	partial class ElementShapeBase
 	{
 		/// <summary>
 		/// Returns the list of elements valid at this time.
@@ -35,7 +35,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Customizations for the <see cref=" ElementShape"/> class.
 	/// </summary>
-	public partial class ElementShape : ElementShapeBase, IDisposable
+	partial class ElementShape : ElementShapeBase, IDisposable
 	{
 		private SquaredBottomCornerShapeGeometry geometry = new SquaredBottomCornerShapeGeometry();
 

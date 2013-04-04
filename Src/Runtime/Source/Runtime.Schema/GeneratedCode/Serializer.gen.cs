@@ -818,7 +818,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternSchemaSerializer for DomainClass PatternSchema.
 	/// </summary>
-	public partial class PatternSchemaSerializer : PatternElementSchemaSerializer
+	internal partial class PatternSchemaSerializer : PatternElementSchemaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -1746,7 +1746,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer NamedElementSchemaSerializer for DomainClass NamedElementSchema.
 	/// </summary>
-	public partial class NamedElementSchemaSerializer : DslModeling::DomainClassXmlSerializer
+	internal partial class NamedElementSchemaSerializer : DslModeling::DomainClassXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -2363,7 +2363,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternElementSchemaSerializer for DomainClass PatternElementSchema.
 	/// </summary>
-	public partial class PatternElementSchemaSerializer : CustomizableElementSchemaSerializer
+	internal partial class PatternElementSchemaSerializer : CustomizableElementSchemaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -3185,7 +3185,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PropertySchemaSerializer for DomainClass PropertySchema.
 	/// </summary>
-	public partial class PropertySchemaSerializer : CustomizableElementSchemaSerializer
+	internal partial class PropertySchemaSerializer : CustomizableElementSchemaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -4182,7 +4182,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ViewSchemaSerializerBase for DomainClass ViewSchema.
 	/// </summary>
-	public abstract partial class ViewSchemaSerializerBase : CustomizableElementSchemaSerializer
+	internal abstract partial class ViewSchemaSerializerBase : CustomizableElementSchemaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -5006,7 +5006,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ViewSchemaSerializer for DomainClass ViewSchema.
 	/// </summary>
-	public partial class ViewSchemaSerializer : ViewSchemaSerializerBase
+	internal partial class ViewSchemaSerializer : ViewSchemaSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -5026,7 +5026,7 @@ namespace NuPattern.Runtime.Schema
 	/// Serializer CollectionSchemaSerializer for DomainClass CollectionSchema.
 	/// </summary>
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1501:AvoidExcessiveInheritance", Justification = "Generated code.")]
-	public partial class CollectionSchemaSerializer : AbstractElementSchemaSerializer
+	internal partial class CollectionSchemaSerializer : AbstractElementSchemaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -5590,7 +5590,7 @@ namespace NuPattern.Runtime.Schema
 	/// Serializer ElementSchemaSerializer for DomainClass ElementSchema.
 	/// </summary>
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1501:AvoidExcessiveInheritance", Justification = "Generated code.")]
-	public partial class ElementSchemaSerializer : AbstractElementSchemaSerializer
+	internal partial class ElementSchemaSerializer : AbstractElementSchemaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -6153,7 +6153,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer CustomizableElementSchemaSerializerBase for DomainClass CustomizableElementSchema.
 	/// </summary>
-	public abstract partial class CustomizableElementSchemaSerializerBase : NamedElementSchemaSerializer
+	internal abstract partial class CustomizableElementSchemaSerializerBase : NamedElementSchemaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -6790,7 +6790,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer CustomizableElementSchemaSerializer for DomainClass CustomizableElementSchema.
 	/// </summary>
-	public partial class CustomizableElementSchemaSerializer : CustomizableElementSchemaSerializerBase
+	internal partial class CustomizableElementSchemaSerializer : CustomizableElementSchemaSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -6809,7 +6809,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer AbstractElementSchemaSerializer for DomainClass AbstractElementSchema.
 	/// </summary>
-	public partial class AbstractElementSchemaSerializer : PatternElementSchemaSerializer
+	internal partial class AbstractElementSchemaSerializer : PatternElementSchemaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -7424,7 +7424,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer CustomizationPolicySchemaSerializerBase for DomainClass CustomizationPolicySchema.
 	/// </summary>
-	public abstract partial class CustomizationPolicySchemaSerializerBase : DslModeling::DomainClassXmlSerializer
+	internal abstract partial class CustomizationPolicySchemaSerializerBase : DslModeling::DomainClassXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -8171,7 +8171,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer CustomizationPolicySchemaSerializer for DomainClass CustomizationPolicySchema.
 	/// </summary>
-	public partial class CustomizationPolicySchemaSerializer : CustomizationPolicySchemaSerializerBase
+	internal partial class CustomizationPolicySchemaSerializer : CustomizationPolicySchemaSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -8190,7 +8190,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer CustomizableSettingSchemaSerializerBase for DomainClass CustomizableSettingSchema.
 	/// </summary>
-	public abstract partial class CustomizableSettingSchemaSerializerBase : DslModeling::DomainClassXmlSerializer
+	internal abstract partial class CustomizableSettingSchemaSerializerBase : DslModeling::DomainClassXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -8888,7 +8888,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer CustomizableSettingSchemaSerializer for DomainClass CustomizableSettingSchema.
 	/// </summary>
-	public partial class CustomizableSettingSchemaSerializer : CustomizableSettingSchemaSerializerBase
+	internal partial class CustomizableSettingSchemaSerializer : CustomizableSettingSchemaSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -8907,7 +8907,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer AutomationSettingsSchemaSerializer for DomainClass AutomationSettingsSchema.
 	/// </summary>
-	public partial class AutomationSettingsSchemaSerializer : CustomizableElementSchemaSerializer
+	internal partial class AutomationSettingsSchemaSerializer : CustomizableElementSchemaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -9600,7 +9600,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ProvidedExtensionPointSchemaSerializer for DomainClass ProvidedExtensionPointSchema.
 	/// </summary>
-	public partial class ProvidedExtensionPointSchemaSerializer : DslModeling::DomainClassXmlSerializer
+	internal partial class ProvidedExtensionPointSchemaSerializer : DslModeling::DomainClassXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -10266,7 +10266,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ExtensionPointSchemaSerializer for DomainClass ExtensionPointSchema.
 	/// </summary>
-	public partial class ExtensionPointSchemaSerializer : PatternElementSchemaSerializer
+	internal partial class ExtensionPointSchemaSerializer : PatternElementSchemaSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -11023,7 +11023,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternModelHasPatternSerializer for DomainClass PatternModelHasPattern.
 	/// </summary>
-	public partial class PatternModelHasPatternSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class PatternModelHasPatternSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -11694,7 +11694,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternElementHasPropertiesSerializer for DomainClass PatternElementHasProperties.
 	/// </summary>
-	public partial class PatternElementHasPropertiesSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class PatternElementHasPropertiesSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -12365,7 +12365,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternHasViewsSerializer for DomainClass PatternHasViews.
 	/// </summary>
-	public partial class PatternHasViewsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class PatternHasViewsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -13036,7 +13036,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ViewHasElementsSerializer for DomainClass ViewHasElements.
 	/// </summary>
-	public partial class ViewHasElementsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ViewHasElementsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -13909,7 +13909,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PolicyHasSettingsSerializer for DomainClass PolicyHasSettings.
 	/// </summary>
-	public partial class PolicyHasSettingsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class PolicyHasSettingsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -14580,7 +14580,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer CustomizableElementHasPolicySerializer for DomainClass CustomizableElementHasPolicy.
 	/// </summary>
-	public partial class CustomizableElementHasPolicySerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class CustomizableElementHasPolicySerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -15251,7 +15251,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ElementHasElementsSerializer for DomainClass ElementHasElements.
 	/// </summary>
-	public partial class ElementHasElementsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ElementHasElementsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -16124,7 +16124,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternHasProvidedExtensionPointsSerializer for DomainClass PatternHasProvidedExtensionPoints.
 	/// </summary>
-	public partial class PatternHasProvidedExtensionPointsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class PatternHasProvidedExtensionPointsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -16856,7 +16856,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ElementHasExtensionPointsSerializer for DomainClass ElementHasExtensionPoints.
 	/// </summary>
-	public partial class ElementHasExtensionPointsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ElementHasExtensionPointsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -17733,7 +17733,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ViewHasExtensionPointsSerializer for DomainClass ViewHasExtensionPoints.
 	/// </summary>
-	public partial class ViewHasExtensionPointsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class ViewHasExtensionPointsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -18610,7 +18610,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternElementHasAutomationSettingsSerializer for DomainClass PatternElementHasAutomationSettings.
 	/// </summary>
-	public partial class PatternElementHasAutomationSettingsSerializer : DslModeling::DomainRelationshipXmlSerializer
+	internal partial class PatternElementHasAutomationSettingsSerializer : DslModeling::DomainRelationshipXmlSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -19342,7 +19342,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternShapeSerializerBase for DomainClass PatternShape.
 	/// </summary>
-	public abstract partial class PatternShapeSerializerBase : CustomizableElementShapeSerializer
+	internal abstract partial class PatternShapeSerializerBase : CustomizableElementShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -20085,7 +20085,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternShapeSerializer for DomainClass PatternShape.
 	/// </summary>
-	public partial class PatternShapeSerializer : PatternShapeSerializerBase
+	internal partial class PatternShapeSerializer : PatternShapeSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -20104,7 +20104,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ElementShapeSerializerBase for DomainClass ElementShape.
 	/// </summary>
-	public abstract partial class ElementShapeSerializerBase : CustomizableElementShapeSerializer
+	internal abstract partial class ElementShapeSerializerBase : CustomizableElementShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -20847,7 +20847,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ElementShapeSerializer for DomainClass ElementShape.
 	/// </summary>
-	public partial class ElementShapeSerializer : ElementShapeSerializerBase
+	internal partial class ElementShapeSerializer : ElementShapeSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -20866,7 +20866,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ViewShapeSerializerBase for DomainClass ViewShape.
 	/// </summary>
-	public abstract partial class ViewShapeSerializerBase : DslDiagrams::NodeShapeSerializer
+	internal abstract partial class ViewShapeSerializerBase : DslDiagrams::NodeShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -21645,7 +21645,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ViewShapeSerializer for DomainClass ViewShape.
 	/// </summary>
-	public partial class ViewShapeSerializer : ViewShapeSerializerBase
+	internal partial class ViewShapeSerializer : ViewShapeSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -21664,7 +21664,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer CollectionShapeSerializerBase for DomainClass CollectionShape.
 	/// </summary>
-	public abstract partial class CollectionShapeSerializerBase : CustomizableElementShapeSerializer
+	internal abstract partial class CollectionShapeSerializerBase : CustomizableElementShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -22407,7 +22407,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer CollectionShapeSerializer for DomainClass CollectionShape.
 	/// </summary>
-	public partial class CollectionShapeSerializer : CollectionShapeSerializerBase
+	internal partial class CollectionShapeSerializer : CollectionShapeSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -22426,7 +22426,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer CustomizableElementShapeSerializer for DomainClass CustomizableElementShape.
 	/// </summary>
-	public partial class CustomizableElementShapeSerializer : DslDiagrams::CompartmentShapeSerializer
+	internal partial class CustomizableElementShapeSerializer : DslDiagrams::CompartmentShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -22843,7 +22843,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ExtensionPointShapeSerializerBase for DomainClass ExtensionPointShape.
 	/// </summary>
-	public abstract partial class ExtensionPointShapeSerializerBase : CustomizableElementShapeSerializer
+	internal abstract partial class ExtensionPointShapeSerializerBase : CustomizableElementShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -23586,7 +23586,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ExtensionPointShapeSerializer for DomainClass ExtensionPointShape.
 	/// </summary>
-	public partial class ExtensionPointShapeSerializer : ExtensionPointShapeSerializerBase
+	internal partial class ExtensionPointShapeSerializer : ExtensionPointShapeSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -23605,7 +23605,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ViewHasElementsConnectorSerializer for DomainClass ViewHasElementsConnector.
 	/// </summary>
-	public partial class ViewHasElementsConnectorSerializer : PatternElementConnectorSerializer
+	internal partial class ViewHasElementsConnectorSerializer : PatternElementConnectorSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -24109,7 +24109,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ElementHasElementsConnectorSerializer for DomainClass ElementHasElementsConnector.
 	/// </summary>
-	public partial class ElementHasElementsConnectorSerializer : PatternElementConnectorSerializer
+	internal partial class ElementHasElementsConnectorSerializer : PatternElementConnectorSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -24613,7 +24613,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternElementConnectorSerializerBase for DomainClass PatternElementConnector.
 	/// </summary>
-	public abstract partial class PatternElementConnectorSerializerBase : DslDiagrams::BinaryLinkShapeSerializer
+	internal abstract partial class PatternElementConnectorSerializerBase : DslDiagrams::BinaryLinkShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -25129,7 +25129,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternElementConnectorSerializer for DomainClass PatternElementConnector.
 	/// </summary>
-	public partial class PatternElementConnectorSerializer : PatternElementConnectorSerializerBase
+	internal partial class PatternElementConnectorSerializer : PatternElementConnectorSerializerBase
 	{
 		#region Constructor
 		/// <summary>
@@ -25148,7 +25148,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ElementHasExtensionPointsConnectorSerializer for DomainClass ElementHasExtensionPointsConnector.
 	/// </summary>
-	public partial class ElementHasExtensionPointsConnectorSerializer : PatternElementConnectorSerializer
+	internal partial class ElementHasExtensionPointsConnectorSerializer : PatternElementConnectorSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -25652,7 +25652,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer ViewHasExtensionPointsConnectorSerializer for DomainClass ViewHasExtensionPointsConnector.
 	/// </summary>
-	public partial class ViewHasExtensionPointsConnectorSerializer : PatternElementConnectorSerializer
+	internal partial class ViewHasExtensionPointsConnectorSerializer : PatternElementConnectorSerializer
 	{
 		#region Constructor
 		/// <summary>

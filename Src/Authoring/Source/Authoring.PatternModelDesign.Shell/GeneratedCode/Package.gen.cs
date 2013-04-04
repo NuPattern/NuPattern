@@ -25,27 +25,27 @@ namespace NuPattern.Runtime.Schema
 	/// </summary>
 	[VSShell::DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\11.0")]
 	[VSShell::PackageRegistration(RegisterUsing = VSShell::RegistrationMethod.Assembly, UseManagedResourcesOnly = true)]
-	[VSShell::ProvideStaticToolboxGroup("@Pattern Model DesignerToolboxTab;NuPattern.Runtime.Schema.dll", "NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab")]
+	[VSShell::ProvideStaticToolboxGroup("@Pattern Model DesignerToolboxTab;NuPattern.Authoring.PatternModelDesign.Shell.dll", "NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab",
-					"@CollectionToolboxItem;NuPattern.Runtime.Schema.dll", 
+					"@CollectionToolboxItem;NuPattern.Authoring.PatternModelDesign.Shell.dll", 
 					"NuPattern.Runtime.Schema.CollectionToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Collection", 
-					"@CollectionToolboxBitmap;NuPattern.Runtime.Schema.dll", 
+					"@CollectionToolboxBitmap;NuPattern.Authoring.PatternModelDesign.Shell.dll", 
 					0xff00ff)]
 	[VSShell::ProvideStaticToolboxItem("NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab",
-					"@ElementToolboxItem;NuPattern.Runtime.Schema.dll", 
+					"@ElementToolboxItem;NuPattern.Authoring.PatternModelDesign.Shell.dll", 
 					"NuPattern.Runtime.Schema.ElementToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"Element", 
-					"@ElementToolboxBitmap;NuPattern.Runtime.Schema.dll", 
+					"@ElementToolboxBitmap;NuPattern.Authoring.PatternModelDesign.Shell.dll", 
 					0xff00ff)]
 	[VSShell::ProvideStaticToolboxItem("NuPattern.Runtime.Schema.Pattern Model DesignerToolboxTab",
-					"@ExtensionPointToolboxItem;NuPattern.Runtime.Schema.dll", 
+					"@ExtensionPointToolboxItem;NuPattern.Authoring.PatternModelDesign.Shell.dll", 
 					"NuPattern.Runtime.Schema.ExtensionPointToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
 					"ExtensionPoint", 
-					"@ExtensionPointToolboxBitmap;NuPattern.Runtime.Schema.dll", 
+					"@ExtensionPointToolboxBitmap;NuPattern.Authoring.PatternModelDesign.Shell.dll", 
 					0xff00ff)]
 	[VSShell::ProvideEditorFactory(typeof(PatternModelEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(PatternModelEditorFactory), "." + Constants.DesignerFileExtension, 50)]
@@ -145,15 +145,15 @@ namespace NuPattern.Runtime.Schema
 	/// </summary>
 	[VSShell::ProvideMenuResource("1000.ctmenu", 1)]
 	[VSShell::ProvideToolboxItems(1)]
-    [global::Microsoft.VisualStudio.Modeling.Shell.ProvideXmlEditorChooserDesignerView(
-        "PatternModel",
-        Constants.DesignerFileExtension,
-        EnvDTE.Constants.vsViewKindDesigner,
-        1,
-        CodeLogicalViewEditor = Constants.PatternModelEditorFactoryId,
-        DebuggingLogicalViewEditor = Constants.PatternModelEditorFactoryId,
-        DesignerLogicalViewEditor = Constants.PatternModelEditorFactoryId,
-        TextLogicalViewEditor = Constants.PatternModelEditorFactoryId)]
+	[global::Microsoft.VisualStudio.Modeling.Shell.ProvideXmlEditorChooserDesignerView(
+		"PatternModel",
+		Constants.DesignerFileExtension,
+		EnvDTE.Constants.vsViewKindDesigner,
+		1,
+		CodeLogicalViewEditor = Constants.PatternModelEditorFactoryId,
+		DebuggingLogicalViewEditor = Constants.PatternModelEditorFactoryId,
+		DesignerLogicalViewEditor = Constants.PatternModelEditorFactoryId,
+		TextLogicalViewEditor = Constants.PatternModelEditorFactoryId)]
 	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::NuPattern.Runtime.Schema.PatternModelDirectiveProcessor), global::NuPattern.Runtime.Schema.PatternModelDirectiveProcessor.PatternModelDirectiveProcessorName, "A directive processor that provides access to PatternModel files")]
 	[global::System.Runtime.InteropServices.Guid(Constants.PatternModelPackageId)]
 	internal sealed partial class PatternModelPackage : PatternModelPackageBase

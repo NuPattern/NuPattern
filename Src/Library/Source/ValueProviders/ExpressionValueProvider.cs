@@ -2,7 +2,7 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 

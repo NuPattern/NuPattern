@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.Modeling.Integration;
 namespace NuPattern.Runtime.Schema
 {
 	[System.CodeDom.Compiler.GeneratedCode("T4", "1.0")]
-	public partial class AdapterManager
+	partial class AdapterManager
 	{
 		/// <summary>
 		/// Gets the file extension.

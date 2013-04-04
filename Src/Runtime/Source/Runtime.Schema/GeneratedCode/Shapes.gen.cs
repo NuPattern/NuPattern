@@ -19,9 +19,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("6d4c3263-f5e1-49e0-b1be-d7188c1157eb")]
-	public abstract partial class PatternShapeBase : CustomizableElementShape
+	internal abstract partial class PatternShapeBase : CustomizableElementShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -719,9 +718,8 @@ namespace NuPattern.Runtime.Schema
 	/// DomainClass PatternShape
 	/// Description for NuPattern.Runtime.Schema.PatternShape
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class PatternShape : PatternShapeBase
+	internal partial class PatternShape : PatternShapeBase
 	{
 		#region Constructors
 		/// <summary>
@@ -754,9 +752,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ElementShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("c5328ad8-6b7c-4688-97aa-dd2e25d8b1fc")]
-	public abstract partial class ElementShapeBase : CustomizableElementShape
+	internal abstract partial class ElementShapeBase : CustomizableElementShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -1469,9 +1466,8 @@ namespace NuPattern.Runtime.Schema
 	/// DomainClass ElementShape
 	/// Description for NuPattern.Runtime.Schema.ElementShape
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class ElementShape : ElementShapeBase
+	internal partial class ElementShape : ElementShapeBase
 	{
 		#region Constructors
 		/// <summary>
@@ -1504,9 +1500,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ViewShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("bc4bc41e-9104-45be-b98b-ee0caf55331f")]
-	public abstract partial class ViewShapeBase : DslDiagrams::Port
+	internal abstract partial class ViewShapeBase : DslDiagrams::Port
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -2150,9 +2145,8 @@ namespace NuPattern.Runtime.Schema
 	/// DomainClass ViewShape
 	/// Description for NuPattern.Runtime.Schema.ViewShape
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class ViewShape : ViewShapeBase
+	internal partial class ViewShape : ViewShapeBase
 	{
 		#region Constructors
 		/// <summary>
@@ -2185,9 +2179,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CollectionShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CollectionShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("33005d46-3de2-402a-bca3-9b7e89fa8486")]
-	public abstract partial class CollectionShapeBase : CustomizableElementShape
+	internal abstract partial class CollectionShapeBase : CustomizableElementShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -2902,9 +2895,8 @@ namespace NuPattern.Runtime.Schema
 	/// DomainClass CollectionShape
 	/// Description for NuPattern.Runtime.Schema.CollectionShape
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class CollectionShape : CollectionShapeBase
+	internal partial class CollectionShape : CollectionShapeBase
 	{
 		#region Constructors
 		/// <summary>
@@ -2938,9 +2930,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.CustomizableElementShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.CustomizableElementShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("c7199c01-4aad-496c-b124-f7016fba3749")]
-	public abstract partial class CustomizableElementShape : DslDiagrams::CompartmentShape
+	internal abstract partial class CustomizableElementShape : DslDiagrams::CompartmentShape
 	{
 		#region Shape size
 		
@@ -3181,9 +3172,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ExtensionPointShape.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.ExtensionPointShape.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("268f9015-d395-4b5c-bc4f-2f671b82e04d")]
-	public abstract partial class ExtensionPointShapeBase : CustomizableElementShape
+	internal abstract partial class ExtensionPointShapeBase : CustomizableElementShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -3834,9 +3824,8 @@ namespace NuPattern.Runtime.Schema
 	/// DomainClass ExtensionPointShape
 	/// Description for NuPattern.Runtime.Schema.ExtensionPointShape
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class ExtensionPointShape : ExtensionPointShapeBase
+	internal partial class ExtensionPointShape : ExtensionPointShapeBase
 	{
 		#region Constructors
 		/// <summary>

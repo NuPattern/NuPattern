@@ -31,10 +31,6 @@
       <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
       <Private>True</Private>
@@ -102,23 +98,23 @@
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Automation\Artifact\ArtifactExtensionDisplaySpec.cs" />
-    <Compile Include="Automation\Artifact\ArtifactReferenceValidationSpec.cs" />
+    <Compile Include="Automation\Extensions\ArtifactExtensionDisplaySpec.cs" />
+    <Compile Include="Automation\Extensions\ArtifactReferenceValidationSpec.cs" />
     <Compile Include="Automation\Command\CommandAutomationSpec.cs" />
     <Compile Include="Automation\Command\CommandSettingsValidationSpec.cs" />
     <Compile Include="Automation\DragDrop\DragDropSettingsValidationSpec.cs" />
     <Compile Include="Automation\Event\EventSettingsSpec.cs" />
     <Compile Include="Automation\Event\EventAutomationSpec.cs" />
     <Compile Include="Automation\Event\EventSettingsValidationSpec.cs" />
-    <Compile Include="Automation\Guidance\GuidanceExtensionDisplaySpec.cs" />
-    <Compile Include="Automation\Guidance\GuidanceReferenceValidationSpec.cs" />
+    <Compile Include="Automation\Extensions\GuidanceExtensionDisplaySpec.cs" />
+    <Compile Include="Automation\Extensions\GuidanceReferenceValidationSpec.cs" />
     <Compile Include="Automation\Menu\ImageUriEditorSpec.cs" />
     <Compile Include="Automation\Menu\MenuAutomationSpec.cs" />
     <Compile Include="Automation\Menu\MenuSettingsValidationSpec.cs" />
-    <Compile Include="Automation\Template\ProductElementDictionaryConverterSpec.cs" />
+    <Compile Include="Design\ProductElementDictionaryConverterSpec.cs" />
     <Compile Include="Automation\Template\TemplateAutomationSpec.cs" />
     <Compile Include="Automation\Template\TemplateSettingsValidationSpec.cs" />
-    <Compile Include="Automation\Validation\ValidationExtensionDisplaySpec.cs" />
+    <Compile Include="Automation\Extensions\ValidationExtensionDisplaySpec.cs" />
     <Compile Include="Automation\Wizard\WizardSettingsValidationSpec.cs" />
     <Compile Include="Automation\Wizard\WizardAutomationSpec.cs" />
     <Compile Include="Commands\ActivateFeatureCommandSpec.cs" />
@@ -164,17 +160,25 @@
     <Compile Include="ValueProviders\XmlNodeValueProviderSpec.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Source\Extensibility\Extensibility.csproj">
+    <ProjectReference Include="..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">
+      <Project>{46F79781-98BC-495A-9E01-559F166A6DFF}</Project>
+      <Name>Common.Modeling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Source\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Runtime\Source\Runtime.Extensibility\Runtime.Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
-      <Name>Extensibility</Name>
+      <Name>Runtime.Extensibility</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
       <Project>{72CC87F3-2860-45CC-8712-00621F868D60}</Project>
       <Name>Common.Presentation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Runtime\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
-      <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
-      <Name>Runtime.Interfaces</Name>
+    <ProjectReference Include="..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>Common.VisualStudio</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Runtime\Source\Runtime.Schema\Runtime.Schema.csproj">
       <Project>{B0F2590A-F583-4883-B701-923B43475BB5}</Project>
@@ -184,9 +188,9 @@
       <Project>{0EF7E7D4-B10B-4FC9-B4D0-66E360F4338A}</Project>
       <Name>Runtime.Store</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Runtime\Source\Runtime\Runtime.csproj">
+    <ProjectReference Include="..\..\Runtime\Source\Runtime.Core\Runtime.Core.csproj">
       <Project>{79A7E018-1A92-47F4-A478-17BCC57CC7AD}</Project>
-      <Name>Runtime</Name>
+      <Name>Runtime.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Source\Library.csproj">
       <Project>{C6519E4A-2077-4E80-A280-E8BA90D53A3E}</Project>

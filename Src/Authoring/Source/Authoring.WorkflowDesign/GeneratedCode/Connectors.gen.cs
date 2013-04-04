@@ -20,9 +20,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.DesignConnector.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.DesignConnector.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("1a58d220-af4d-465b-8aff-a62573131fd1")]
-	public abstract partial class DesignConnector : DslDiagrams::BinaryLinkShape
+	internal abstract partial class DesignConnector : DslDiagrams::BinaryLinkShape
 	{
 		
 		#region Connector styles
@@ -88,9 +87,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ToolInputConnector.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ToolInputConnector.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a1da0e63-fd65-4168-b144-9e9d9ef08824")]
-	public partial class ToolInputConnector : DesignConnector
+	internal partial class ToolInputConnector : DesignConnector
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -255,9 +253,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ToolOutputConnector.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ToolOutputConnector.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("bfe9b906-3fdc-4c62-9e64-27567c7a82a1")]
-	public partial class ToolOutputConnector : DesignConnector
+	internal partial class ToolOutputConnector : DesignConnector
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -422,9 +419,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ToolCopyConnector.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ToolCopyConnector.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("d5a4626d-0dd7-4d2b-8a95-7f4e9e14bec4")]
-	public partial class ToolCopyConnector : DesignConnector
+	internal partial class ToolCopyConnector : DesignConnector
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;

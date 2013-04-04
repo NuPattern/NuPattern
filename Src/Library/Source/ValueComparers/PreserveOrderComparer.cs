@@ -1,8 +1,9 @@
-﻿using NuPattern.Extensibility;
+﻿using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Comparers;
 
-namespace NuPattern.Library.Comparers
+namespace NuPattern.Library.ValueComparers
 {
     /// <summary>
     /// Compares the already established <see cref="IProductElement.InstanceOrder"/> of two elements.

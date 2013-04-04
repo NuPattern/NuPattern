@@ -17,11 +17,10 @@ namespace NuPattern.Library.Automation
 	/// </summary>
 	[DslDesign::DisplayNameResource("NuPattern.Library.Automation.LibraryDomainModel.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Library.Automation.LibraryDomainModel.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DependsOnDomainModel(typeof(global::Microsoft.VisualStudio.Modeling.CoreDomainModel))]
 	[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Generated code.")]
 	[DslModeling::DomainObjectId("47c59fea-739b-4a85-8f6f-e9e260340928")]
-	public partial class LibraryDomainModel : DslModeling::DomainModel
+	internal partial class LibraryDomainModel : DslModeling::DomainModel
 	{
 		#region Constructor, domain model Id
 	
@@ -330,8 +329,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Remove closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class LibraryDeleteClosure : LibraryDeleteClosureBase, DslModeling::IElementVisitorFilter
+	internal partial class LibraryDeleteClosure : LibraryDeleteClosureBase, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor
@@ -344,8 +342,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Base class for remove closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class LibraryDeleteClosureBase : DslModeling::IElementVisitorFilter
+	internal partial class LibraryDeleteClosureBase : DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// DomainRoles
@@ -405,8 +402,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Copy closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class LibraryCopyClosure : LibraryCopyClosureBase, DslModeling::IElementVisitorFilter
+	internal partial class LibraryCopyClosure : LibraryCopyClosureBase, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor
@@ -418,8 +414,7 @@ namespace NuPattern.Library.Automation
 	/// <summary>
 	/// Base class for copy closure visitor filter
 	/// </summary>
-	[global::System.CLSCompliant(true)]
-	public partial class LibraryCopyClosureBase : DslModeling::CopyClosureFilter, DslModeling::IElementVisitorFilter
+	internal partial class LibraryCopyClosureBase : DslModeling::CopyClosureFilter, DslModeling::IElementVisitorFilter
 	{
 		/// <summary>
 		/// Constructor

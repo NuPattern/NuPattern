@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// Customizations for the <see cref=" PatternShapeBase"/> class.
     /// </summary>
-    public partial class PatternShapeBase
+    partial class PatternShapeBase
     {
         /// <summary>
         /// Returns the list of elements valid at this time.
@@ -35,7 +35,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// Customizations for the <see cref=" PatternShape"/> class.
     /// </summary>
-    public partial class PatternShape : PatternShapeBase, IDisposable
+    partial class PatternShape : PatternShapeBase, IDisposable
     {
         /// <summary>
         /// The initial position of the shape.

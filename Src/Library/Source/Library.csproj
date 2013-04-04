@@ -111,49 +111,50 @@
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Automation\Artifact\ArtifactExtension.cs" />
-    <Compile Include="Automation\Artifact\ArtifactReferencesValidation.cs" />
-    <Compile Include="Automation\Artifact\AssociatedArtifactsTypeConverter.cs" />
-    <Compile Include="Automation\Command\CommandSettingsCollectionPropertyDescriptor.cs" />
+    <Compile Include="Automation\Extensions\ArtifactExtension.cs" />
+    <Compile Include="Automation\Extensions\ArtifactReferencesValidation.cs" />
+    <Compile Include="Design\AssociatedArtifactsTypeConverter.cs" />
+    <Compile Include="Design\CommandSettingsCollectionPropertyDescriptor.cs" />
     <Compile Include="Automation\Command\ICommandSettings.cs" />
     <Compile Include="Automation\LibraryDomainModel.cs" />
     <Compile Include="Automation\Rules\CommandChange\CommandChangeRuleAttribute.cs" />
-    <Compile Include="Automation\Command\CommandSettingsDescriptionContext.cs">
+    <Compile Include="Design\CommandSettingsDescriptionContext.cs">
     </Compile>
     <Compile Include="Automation\Command\Validation\CommandValidationRuleAttribute.cs" />
     <Compile Include="Automation\Command\Validation\ICommandValidationRule.cs" />
     <Compile Include="Automation\Command\Validation\ICommandValidationRuleMetadata.cs" />
     <Compile Include="Automation\Command\CommandAutomation.cs" />
-    <Compile Include="Automation\Command\CommandSettingsDescriptionProvider.cs">
+    <Compile Include="Design\CommandSettingsDescriptionProvider.cs">
     </Compile>
     <Compile Include="Automation\Command\CommandSettings.Validation.cs">
       <DependentUpon>CommandSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Automation\DomainModelProvider.cs" />
     <Compile Include="Automation\DragDrop\DragDropAutomation.cs" />
-    <Compile Include="Automation\DragDrop\DragDropEventSettingsDescriptionProvider.cs" />
+    <Compile Include="Design\DragDropEventSettingsDescriptionProvider.cs" />
     <Compile Include="Automation\DragDrop\DragDropSettings.cs" />
     <Compile Include="Automation\DragDrop\IDragDropSettings.cs" />
     <Compile Include="Automation\Event\EventSettings.Validation.cs">
       <DependentUpon>EventSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Automation\Guidance\GuidanceReferenceValidation.cs" />
-    <Compile Include="Automation\Guidance\GuidanceInstanceNameTypeConverter.cs" />
+    <Compile Include="Automation\Extensions\GuidanceReferenceValidation.cs" />
+    <Compile Include="Design\GuidanceInstanceNameTypeConverter.cs" />
     <Compile Include="Automation\Rules\CommandChange\ICommandChangeRule.cs" />
     <Compile Include="Automation\Rules\CommandChange\ICommandChangeRuleMetadata.cs" />
+    <Compile Include="BindingSettingsExtensions.cs" />
     <Compile Include="Commands\DeleteArtifactsCommand.cs" />
-    <Compile Include="Commands\Helpers\DeleteAction.cs" />
+    <Compile Include="DeleteAction.cs" />
     <Compile Include="Design\CommandReferencePropertyDescriptor.cs" />
-    <Compile Include="Extensions\PatternElementSchemaExtensions.cs" />
+    <Compile Include="Automation\PatternElementSchemaExtensions.cs" />
     <Compile Include="Automation\Menu\IMenuSettings.cs" />
-    <Compile Include="Automation\Guidance\AssociatedGuidanceTypeConverter.cs" />
-    <Compile Include="Automation\Guidance\GuidanceExtension.cs" />
+    <Compile Include="Design\AssociatedGuidanceTypeConverter.cs" />
+    <Compile Include="Automation\Extensions\GuidanceExtension.cs" />
     <Compile Include="Automation\Menu\MenuSettings.Validation.cs">
       <DependentUpon>MenuSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Automation\Rules\ArtifactExtensionChangeRule.cs" />
     <Compile Include="Automation\Rules\AggregatorCommandCommandSettingsDeletingRule.cs" />
-    <Compile Include="Automation\SyncName\SyncNameExtension.cs" />
+    <Compile Include="Automation\Extensions\SyncNameExtension.cs" />
     <Compile Include="Automation\Rules\UnfoldVsTemplateCommandChangeRule.cs" />
     <Compile Include="Automation\Rules\ValidationExtensionChangeRule.cs" />
     <Compile Include="Automation\Rules\EventSettingsChangeRule.cs" />
@@ -161,23 +162,21 @@
     <Compile Include="Automation\SettingsValidationHelper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Automation\Template\ElementReplacementsWizard.cs" />
+    <Compile Include="TemplateWizards\ElementReplacementsWizard.cs" />
     <Compile Include="Automation\Template\ITemplateSettings.cs" />
-    <Compile Include="Automation\Template\ProductElementDictionaryConverter.cs" />
+    <Compile Include="Design\ProductElementDictionaryConverter.cs" />
     <Compile Include="Automation\Template\TemplateSettings.Validation.cs">
       <DependentUpon>TemplateSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Automation\Event\EventSettingsDescriptionProvider.cs" />
+    <Compile Include="Design\EventSettingsDescriptionProvider.cs" />
     <Compile Include="Automation\Event\EventAutomation.cs" />
     <Compile Include="Automation\Menu\MenuAutomation.cs" />
     <Compile Include="Automation\Menu\MenuSettings.cs" />
-    <Compile Include="Automation\Menu\MenuSettingsDescriptionProvider.cs" />
-    <Compile Include="Automation\Template\InstantiationTemplateWizard.cs" />
+    <Compile Include="Design\MenuSettingsDescriptionProvider.cs" />
+    <Compile Include="TemplateWizards\InstantiationTemplateWizard.cs" />
     <Compile Include="Automation\Template\TemplateAutomation.cs" />
     <Compile Include="Automation\Template\TemplateSettings.cs" />
-    <Compile Include="Automation\Template\TemplateSettings.DescriptionProvider.cs">
-      <DependentUpon>TemplateSettings.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Design\TemplateSettingsDescriptionProvider.cs" />
     <Compile Include="Automation\Template\TemplateValidator.cs" />
     <Compile Include="Automation\Template\UnfoldPathHelper.cs" />
     <Compile Include="Automation\Template\UnfoldParentResolver.cs" />
@@ -187,7 +186,7 @@
     <Compile Include="Commands\AggregatorCommand.cs" />
     <Compile Include="Commands\CollapseSolutionItemsCommand.cs" />
     <Compile Include="Commands\CreateElementFromDroppedItemCommand.cs" />
-    <Compile Include="Commands\Helpers\IWindowsFileImporter.cs" />
+    <Compile Include="IWindowsFileImporter.cs" />
     <Compile Include="Commands\CreateElementFromPickedWindowsFileCommand.cs" />
     <Compile Include="Commands\CreateElementFromDroppedWindowsFileCommand.cs" />
     <Compile Include="Commands\CopyFolderCommand.cs" />
@@ -200,36 +199,37 @@
     <Compile Include="Commands\GenerateProductCodeCommand.Validation.cs">
       <DependentUpon>GenerateProductCodeCommand.cs</DependentUpon>
     </Compile>
-    <Compile Include="Commands\Helpers\WindowsFileImporter.cs" />
-    <Compile Include="Commands\Helpers\XmlNamespace.cs" />
+    <Compile Include="WindowsFileImporter.cs" />
+    <Compile Include="XmlNamespace.cs" />
     <Compile Include="Commands\InstantiateSolutionElementCommand.cs" />
-    <Compile Include="Commands\Helpers\ModifyAction.cs" />
+    <Compile Include="ModifyAction.cs" />
     <Compile Include="Commands\ModifyXmlCommand.cs" />
     <Compile Include="Commands\SetBuildActionCommand.cs" />
     <Compile Include="Conditions\XmlNodeExistsCondition.cs" />
     <Compile Include="Migration\CommandSettingsUpgradeProcessor.cs" />
     <Compile Include="Migration\AggregatorCommandUpgradeProcessor.cs" />
+    <Compile Include="ValidationContextExtensions.cs" />
     <Compile Include="ValueComparers\PreserveOrderComparer.cs" />
     <Compile Include="ValueComparers\InstanceNameComparer.cs" />
     <Compile Include="Conditions\DropFileCondition.cs" />
     <Compile Include="Conditions\DropItemCondition.cs" />
-    <Compile Include="Extensions\DragDropHelpers.cs" />
+    <Compile Include="Automation\DragDrop\DragDropHelpers.cs" />
     <Compile Include="GuidHelper.cs" />
-    <Compile Include="TypeEditors\TextTemplateUriEditor.cs" />
-    <Compile Include="Commands\Helpers\ReferenceTag.cs" />
+    <Compile Include="Design\TextTemplateUriEditor.cs" />
+    <Compile Include="ReferenceTag.cs" />
     <Compile Include="Commands\SaveArtifactCommand.cs" />
     <Compile Include="Commands\RunVsCommandCommand.cs" />
-    <Compile Include="TypeEditors\VsTemplateUriEditor.cs" />
+    <Compile Include="Design\VsTemplateUriEditor.cs" />
     <Compile Include="Commands\TransformTemplatesCommand.cs" />
-    <Compile Include="Commands\Helpers\UnfoldKind.cs" />
+    <Compile Include="UnfoldKind.cs" />
     <Compile Include="Automation\DragDrop\DragDropSettings.Validation.cs">
       <DependentUpon>DragDropSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="ValueProviders\XmlNodeValueProvider.cs" />
-    <None Include="Commands\Helpers\UnfoldContext.cs" />
-    <Compile Include="Commands\Helpers\UnfoldScope.cs" />
-    <Compile Include="Automation\Validation\ValidationExecutionTypeConverter.cs" />
-    <Compile Include="Automation\Validation\ValidationExtension.cs" />
+    <None Include="UnfoldContext.cs" />
+    <Compile Include="UnfoldScope.cs" />
+    <Compile Include="Design\ValidationExecutionTypeConverter.cs" />
+    <Compile Include="Automation\Extensions\ValidationExtension.cs" />
     <Compile Include="Automation\Wizard\WizardSettings.Validation.cs">
       <DependentUpon>WizardSettings.cs</DependentUpon>
     </Compile>
@@ -246,7 +246,7 @@
     <Compile Include="Commands\GenerateModelingCodeCommand.cs" />
     <Compile Include="Commands\InstantiateFeatureCommand.cs" />
     <Compile Include="Commands\SynchArtifactNameCommand.cs" />
-    <Compile Include="Commands\Helpers\VsTemplateConfigurator.cs" />
+    <Compile Include="VsTemplateConfigurator.cs" />
     <Compile Include="Conditions\ArtifactReferenceExistsCondition.cs" />
     <Compile Include="Conditions\ArtifactsSavedCondition.cs" />
     <Compile Include="Conditions\DropSolutionItemCondition.cs" />
@@ -258,9 +258,9 @@
     <Compile Include="Conditions\ElementPropertyExistsCondition.cs" />
     <Compile Include="Conditions\EventSenderMatchesElementCondition.cs" />
     <Compile Include="Automation\Event\IEventSettings.cs" />
-    <Compile Include="Conditions\StringValueEquals.cs" />
+    <Compile Include="Conditions\StringValueEqualsCondition.cs" />
     <Compile Include="Conditions\ValidElementCondition.cs" />
-    <Compile Include="Design\CommandReference.cs" />
+    <Compile Include="CommandReference.cs" />
     <Compile Include="Design\CommandReferenceConverter.cs" />
     <Compile Include="Design\CommandReferencesConverter.cs" />
     <Compile Include="Design\CommandReferencesEditor.cs" />
@@ -282,8 +282,8 @@
     <Compile Include="Events\OnElementPropertyChangedEvent.cs" />
     <Compile Include="Events\OnBuildFinishedEvent.cs" />
     <Compile Include="Events\OnBuildStartedEvent.cs" />
-    <Compile Include="Extensions\CommandSettingExtensions.cs" />
-    <Compile Include="Extensions\ProductElementExtensions.cs" />
+    <Compile Include="Automation\Command\CommandSettingExtensions.cs" />
+    <Compile Include="Automation\ProductElementExtensions.cs" />
     <Compile Include="GeneratedCode\Customization\LibraryExports.gen.cs">
       <DependentUpon>LibraryExports.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -529,17 +529,25 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Runtime\Source\Runtime.Interfaces\Runtime.Interfaces.csproj">
-      <Project>{446F0156-39D1-4B11-9B15-BE9637CB057F}</Project>
-      <Name>Runtime.Interfaces</Name>
+    <ProjectReference Include="..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">
+      <Project>{46f79781-98bc-495a-9e01-559f166a6dff}</Project>
+      <Name>Common.Modeling</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Common\Source\Extensibility\Extensibility.csproj">
+    <ProjectReference Include="..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
+      <Project>{72cc87f3-2860-45cc-8712-00621f868d60}</Project>
+      <Name>Common.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Source\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>Common.VisualStudio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Runtime\Source\Runtime.Extensibility\Runtime.Extensibility.csproj">
       <Project>{76718F52-8F7E-43B4-9085-EF08DB52AC46}</Project>
-      <Name>Extensibility</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Runtime\Source\Runtime\Runtime.csproj">
-      <Project>{79A7E018-1A92-47F4-A478-17BCC57CC7AD}</Project>
-      <Name>Runtime</Name>
+      <Name>Runtime.Extensibility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

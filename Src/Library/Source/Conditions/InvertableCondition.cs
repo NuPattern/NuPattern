@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.Extensibility;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
 
 namespace NuPattern.Library.Conditions

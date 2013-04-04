@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DslLibrary xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="47c59fea-739b-4a85-8f6f-e9e260340928" Description="Library" Name="Library" DisplayName="Library" Namespace="NuPattern.Library.Automation" MinorVersion="3" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
+<DslLibrary xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="47c59fea-739b-4a85-8f6f-e9e260340928" Description="Library" Name="Library" DisplayName="Library" Namespace="NuPattern.Library.Automation" AccessModifier="Assembly" MinorVersion="3" xmlns="http://schemas.microsoft.com/VisualStudio/2005/DslTools/DslDefinitionModel">
   <Classes>
-    <DomainClass Id="1d522a01-5d23-4d87-8493-dfcbe3d05a9b" Description="Configures the settings for adding a project or item template to unfold, and execute other automation on this element." Name="TemplateSettings" DisplayName="VS Template Launch Point" Namespace="NuPattern.Library.Automation">
+    <DomainClass Id="1d522a01-5d23-4d87-8493-dfcbe3d05a9b" Description="Configures the settings for adding a project or item template to unfold, and execute other automation on this element." Name="TemplateSettings" DisplayName="VS Template Launch Point" AccessModifier="Assembly" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
@@ -11,7 +11,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Library.TypeEditors.VsTemplateUriEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.Design.VsTemplateUriEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -57,9 +57,9 @@
         </DomainProperty>
         <DomainProperty Id="d8c350bd-ff83-4000-95c4-961befdb289f" Description="The name of the unfolded artifact. For an item template, if no extension is provided, it is taken from the vstemplate file. This property supports property value substitution from properties on the current element. (e.g. {InstanceName} or {VariablePropertyName}). See guidance documentation for details." Name="RawTargetFileName" DisplayName="Target File Name">
           <Attributes>
-            <ClrAttribute Name="NuPattern.Extensibility.PropertyDescriptor">
+            <ClrAttribute Name="NuPattern.ComponentModel.Design.PropertyDescriptor">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Binding.PropertyBindingDescriptor)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Bindings.PropertyBindingDescriptor)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -69,9 +69,9 @@
         </DomainProperty>
         <DomainProperty Id="e258cc61-f5b7-43fe-a9a9-e08c733c5c40" Description="The path to the target file, project, folder or solution folder in the current solution where the artifact is to be unfolded. Folders that don't currently exist are created automatically. i.e. ..\~\GeneratedCode, navigates up to the parent element, and traverses the first artifact link found on the parent element and into the 'GeneratedCode' sub-folder of that container (project or folder).  See guidance documentation for more example paths and details." Name="RawTargetPath" DisplayName="Target Path">
           <Attributes>
-            <ClrAttribute Name="NuPattern.Extensibility.PropertyDescriptor">
+            <ClrAttribute Name="NuPattern.ComponentModel.Design.PropertyDescriptor">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.Binding.PropertyBindingDescriptor)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Bindings.PropertyBindingDescriptor)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -86,7 +86,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="d7fce310-a0b0-424c-b439-6e94222544e6" Description="Configures the settings for handling an event for executing other automation on this element." Name="EventSettings" DisplayName="Event Launch Point" Namespace="NuPattern.Library.Automation">
+    <DomainClass Id="d7fce310-a0b0-424c-b439-6e94222544e6" Description="Configures the settings for handling an event for executing other automation on this element." Name="EventSettings" DisplayName="Event Launch Point" AccessModifier="Assembly" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
@@ -96,7 +96,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.FeatureComponentTypeConverter&lt;NuPattern.Runtime.IObservableEvent&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -133,7 +133,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="63e8eaf8-6f53-45ea-96f9-b6d8af7276e2" Description="Configures the settings for adding a command that can be executed on this element." Name="CommandSettings" DisplayName="Command" Namespace="NuPattern.Library.Automation">
+    <DomainClass Id="63e8eaf8-6f53-45ea-96f9-b6d8af7276e2" Description="Configures the settings for adding a command that can be executed on this element." Name="CommandSettings" DisplayName="Command" AccessModifier="Assembly" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
@@ -143,7 +143,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.FeatureComponentTypeConverter&lt;Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -165,7 +165,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="29b8619f-8cba-4cdc-98ec-7035d9d2c3f8" Description="Configures the settings for adding a context menu item for executing other automation on this element." Name="MenuSettings" DisplayName="ContextMenu Launch Point" Namespace="NuPattern.Library.Automation">
+    <DomainClass Id="29b8619f-8cba-4cdc-98ec-7035d9d2c3f8" Description="Configures the settings for adding a context menu item for executing other automation on this element." Name="MenuSettings" DisplayName="ContextMenu Launch Point" AccessModifier="Assembly" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
@@ -184,14 +184,14 @@
         </DomainProperty>
         <DomainProperty Id="4b76d211-4350-4cc8-8bde-c495be238113" Description="The icon that is displayed on the menu to the user." Name="Icon" DisplayName="Icon">
           <Attributes>
-            <ClrAttribute Name="NuPattern.Extensibility.ImageFilter">
+            <ClrAttribute Name="NuPattern.Runtime.Design.ImageFilter">
               <Parameters>
-                <AttributeParameter Value="NuPattern.Extensibility.ImageKind.Image " />
+                <AttributeParameter Value="NuPattern.Runtime.Design.ImageKind.Image " />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.ImageUriEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.ImageUriEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -209,7 +209,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.FeatureComponentTypeConverter&lt;NuPattern.Runtime.ICommandStatus&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.Runtime.UI.ICommandStatus&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -235,7 +235,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="99460d09-2d87-47d5-a6b5-56cbf5d299fd" Description="Configures the settings for associating guidance to this element." Name="GuidanceExtension" DisplayName="Guidance Extension" Namespace="NuPattern.Library.Automation">
+    <DomainClass Id="99460d09-2d87-47d5-a6b5-56cbf5d299fd" Description="Configures the settings for associating guidance to this element." Name="GuidanceExtension" DisplayName="Guidance Extension" AccessModifier="Assembly" Namespace="NuPattern.Library.Automation">
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
       </BaseClass>
@@ -244,7 +244,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Library.Automation.AssociatedGuidanceTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.Design.AssociatedGuidanceTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -274,7 +274,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="765329ab-9384-4a2c-b5c2-e2c4b60912f5" Description="Configures the settings for adding a wizard to gather and initialize data for properties on this element." Name="WizardSettings" DisplayName="Wizard" Namespace="NuPattern.Library.Automation">
+    <DomainClass Id="765329ab-9384-4a2c-b5c2-e2c4b60912f5" Description="Configures the settings for adding a wizard to gather and initialize data for properties on this element." Name="WizardSettings" DisplayName="Wizard" AccessModifier="Assembly" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
@@ -290,7 +290,7 @@
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.FullTypeTypeConverter&lt;System.Windows.Window&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FullTypeTypeConverter&lt;System.Windows.Window&gt;)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -300,7 +300,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="18f556f4-beef-476c-89dc-f7e63f9dbf48" Description="Configures settings for managing associated artifacts to this element." Name="ArtifactExtension" DisplayName="Artifact Extension" Namespace="NuPattern.Library.Automation">
+    <DomainClass Id="18f556f4-beef-476c-89dc-f7e63f9dbf48" Description="Configures settings for managing associated artifacts to this element." Name="ArtifactExtension" DisplayName="Artifact Extension" AccessModifier="Assembly" Namespace="NuPattern.Library.Automation">
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
       </BaseClass>
@@ -309,7 +309,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Library.Automation.AssociatedArtifactsTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.Design.AssociatedArtifactsTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -329,7 +329,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="8aceddb6-1e3a-4d8b-9703-43348f695c8e" Description="Configures settings for managing validation of this element." Name="ValidationExtension" DisplayName="Validation Extension" Namespace="NuPattern.Library.Automation">
+    <DomainClass Id="8aceddb6-1e3a-4d8b-9703-43348f695c8e" Description="Configures settings for managing validation of this element." Name="ValidationExtension" DisplayName="Validation Extension" AccessModifier="Assembly" Namespace="NuPattern.Library.Automation">
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />
       </BaseClass>
@@ -338,7 +338,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Library.Automation.ValidationExecutionTypeConverter)" />
+                <AttributeParameter Value="typeof(NuPattern.Library.Design.ValidationExecutionTypeConverter)" />
               </Parameters>
             </ClrAttribute>
           </Attributes>
@@ -365,7 +365,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Extensibility.FeatureComponentTypeConverter&lt;NuPattern.Runtime.IObservableEvent&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -381,7 +381,7 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
-    <DomainClass Id="4aed72c0-e518-4835-9d56-04f3d4e7bc58" Description="Configures settings for handling a drag drop operations on this element." Name="DragDropSettings" DisplayName="Drag Drop Launch Point" Namespace="NuPattern.Library.Automation">
+    <DomainClass Id="4aed72c0-e518-4835-9d56-04f3d4e7bc58" Description="Configures settings for handling a drag drop operations on this element." Name="DragDropSettings" DisplayName="Drag Drop Launch Point" AccessModifier="Assembly" Namespace="NuPattern.Library.Automation">
       <Notes>IsAutomationExtension=True</Notes>
       <BaseClass>
         <DomainClassMoniker Name="/Microsoft.VisualStudio.Modeling/ExtensionElement" />

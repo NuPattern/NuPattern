@@ -2,14 +2,14 @@
 
 namespace $rootnamespace$
 {
-	/// <summary>
-	/// A custom wizard page that edits the properties of the current element.
-	/// </summary>
-    public partial class $safeitemname$ : Page
+    /// <summary>
+    /// A custom wizard page that edits the properties of the current element.
+    /// </summary>
+    partial class $safeitemname$ : Page
     {
-		/// <summary>
-		/// Initializes a new instance of the <see cref="$safeitemname$"/> class.
-		/// </summary>
+        /// <summary>
+        /// Initializes a new instance of the <see cref="$safeitemname$"/> class.
+        /// </summary>
         public $safeitemname$()
         {
             InitializeComponent();

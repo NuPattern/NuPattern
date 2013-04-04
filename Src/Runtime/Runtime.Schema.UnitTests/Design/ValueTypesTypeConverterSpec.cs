@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Runtime.Schema.Design;
 
-namespace NuPattern.Runtime.Schema.UnitTests
+namespace NuPattern.Runtime.Schema.UnitTests.Design
 {
     [TestClass]
     public class ValueTypesTypeConverterSpec

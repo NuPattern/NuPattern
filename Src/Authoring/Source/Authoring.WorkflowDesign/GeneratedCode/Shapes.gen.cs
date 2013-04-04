@@ -19,9 +19,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProductionToolShape.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProductionToolShape.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("38a6bf9c-4b83-43e7-b028-30eaa21d1ee8")]
-	public abstract partial class ProductionToolShapeBase : DslDiagrams::NodeShape
+	internal abstract partial class ProductionToolShapeBase : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -296,9 +295,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// DomainClass ProductionToolShape
 	/// Description for NuPattern.Authoring.WorkflowDesign.ProductionToolShape
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class ProductionToolShape : ProductionToolShapeBase
+	internal partial class ProductionToolShape : ProductionToolShapeBase
 	{
 		#region Constructors
 		/// <summary>
@@ -331,9 +329,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetShape.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.ProducedAssetShape.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("a2bcd210-b675-4fac-aa78-d57e942ad65d")]
-	public abstract partial class ProducedAssetShapeBase : DslDiagrams::NodeShape
+	internal abstract partial class ProducedAssetShapeBase : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -764,9 +761,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// DomainClass ProducedAssetShape
 	/// Description for NuPattern.Authoring.WorkflowDesign.ProducedAssetShape
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class ProducedAssetShape : ProducedAssetShapeBase
+	internal partial class ProducedAssetShape : ProducedAssetShapeBase
 	{
 		#region Constructors
 		/// <summary>
@@ -799,9 +795,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	[DslDesign::DisplayNameResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape.DisplayName", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape.Description", typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel), "NuPattern.Authoring.WorkflowDesign.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Authoring.WorkflowDesign.WorkflowDesignDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("b9afa446-5e10-4f35-9489-7bdd0cf307d7")]
-	public abstract partial class SuppliedAssetShapeBase : DslDiagrams::NodeShape
+	internal abstract partial class SuppliedAssetShapeBase : DslDiagrams::NodeShape
 	{
 		#region DiagramElement boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -1478,9 +1473,8 @@ namespace NuPattern.Authoring.WorkflowDesign
 	/// DomainClass SuppliedAssetShape
 	/// Description for NuPattern.Authoring.WorkflowDesign.SuppliedAssetShape
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class SuppliedAssetShape : SuppliedAssetShapeBase
+	internal partial class SuppliedAssetShape : SuppliedAssetShapeBase
 	{
 		#region Constructors
 		/// <summary>

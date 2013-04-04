@@ -4,12 +4,13 @@ using System.Windows.Input;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
-using NuPattern.Extensibility;
-using NuPattern.Extensibility.Binding;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Events;
 using NuPattern.Library.Properties;
+using NuPattern.Presentation;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Automation;
+using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.Automation
 {
@@ -17,8 +18,7 @@ namespace NuPattern.Library.Automation
     /// Implements the runtime automation behavior for both project and
     /// item template automation.
     /// </summary>
-    [CLSCompliant(false)]
-    public class TemplateAutomation : AutomationExtension<ITemplateSettings>
+    internal class TemplateAutomation : AutomationExtension<ITemplateSettings>
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<EventAutomation>();
 
@@ -92,7 +92,7 @@ namespace NuPattern.Library.Automation
                     Id = this.Settings.Id,
                 };
 
-                using (var scope = new UnfoldScope(this, tag, this.Settings.TemplateUri))
+                using (new UnfoldScope(this, tag, this.Settings.TemplateUri))
                 {
                     // Run the wizard so that the template can do replacements if necessary.
                     if (ExecuteWizard())
@@ -103,7 +103,7 @@ namespace NuPattern.Library.Automation
                             // and command at the right times.
                             using (tracer.StartActivity(Resources.TemplateAutomation_TraceUnfoldingAsset, this.Settings.TemplateUri))
                             {
-                                tracer.ShieldUI(() =>
+                                NuPattern.VisualStudio.TraceSourceExtensions.ShieldUI(tracer, () =>
                                 {
                                     Action<IDynamicBindingContext> initializer = context =>
                                     {
@@ -111,8 +111,8 @@ namespace NuPattern.Library.Automation
                                         context.AddExportsFromInterfaces(this.Owner);
                                     };
 
-                                    var fileName = this.Settings.TargetFileName.Evaluate(this.BindingFactory, tracer, initializer);
-                                    var targetPath = this.Settings.TargetPath.Evaluate(this.BindingFactory, tracer, initializer);
+                                    var fileName = PropertyBindingSettingsExtensions.Evaluate(this.Settings.TargetFileName, this.BindingFactory, tracer, initializer);
+                                    var targetPath = PropertyBindingSettingsExtensions.Evaluate(this.Settings.TargetPath, this.BindingFactory, tracer, initializer);
 
                                     UnfoldVsTemplateCommand.UnfoldTemplate(this.Solution, this.UriService, this.ServiceProvider, this.Owner,
                                         new UnfoldVsTemplateCommand.UnfoldVsTemplateSettings

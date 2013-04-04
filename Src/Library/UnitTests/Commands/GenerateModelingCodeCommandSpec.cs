@@ -6,8 +6,8 @@ using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Extensibility;
 using NuPattern.Library.Commands;
+using NuPattern.Modeling;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Store;
 
@@ -201,21 +201,21 @@ namespace NuPattern.Library.UnitTests.Commands
                     Name = "Solution.sln",
                     PhysicalPath = "C:\\Temp",
                     Items = 
-					{
-						new SolutionFolder
-						{
-							Name = "Solution Items", 
-						},
-						new Project
-						{
-							Name = "Project",
-							Items = 
-							{
-								new Folder { Name = "Folder" },
-								new Folder { Name = "Foo" },
-							}
-						},
-					}
+                    {
+                        new SolutionFolder
+                        {
+                            Name = "Solution Items", 
+                        },
+                        new Project
+                        {
+                            Name = "Project",
+                            Items = 
+                            {
+                                new Folder { Name = "Folder" },
+                                new Folder { Name = "Foo" },
+                            }
+                        },
+                    }
                 };
             }
         }

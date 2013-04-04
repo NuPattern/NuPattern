@@ -1,0 +1,149 @@
+﻿<cp:CommonDialogWindow
+    x:Class="NuPattern.Runtime.UI.Views.SolutionSelectorView"
+    x:ClassModifier="internal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://schemas.microsoft.com/nupattern/2012/xaml/"
+    xmlns:l="clr-namespace:NuPattern.Runtime.UI"
+    xmlns:cp="clr-namespace:NuPattern.Presentation;assembly=NuPattern.Presentation"
+    xmlns:vsfx="clr-namespace:NuPattern.Presentation.VsIde;assembly=NuPattern.Presentation"
+    Name="solutionSelector"
+    Title="Select Item"
+    SizeToContent="WidthAndHeight"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterOwner"
+    Foreground="{DynamicResource VsBrush.WindowText}"
+    FocusManager.FocusedElement="{x:Reference solutionItems}"
+    ShowInTaskbar="False">
+    <vsfx:VsDialogWindow.Resources>
+        <ResourceDictionary>
+            <BooleanToVisibilityConverter x:Key="VisibilityConverter" />
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/CommonStyles.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/CommandBar.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/TreeView.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </vsfx:VsDialogWindow.Resources>
+
+    <Grid Background="{StaticResource VsVersion.Dialog.Background}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Style="{DynamicResource CommandBar.Panel}">
+            <StackPanel Orientation="Horizontal" Margin="2">
+                <Button ToolTip="Select All" Command="{Binding SelectAllCommand}" Focusable="false">
+                    <BitmapImage UriSource="../../Resources/CommandSelectAll.png" />
+                </Button>
+                <Separator />
+                <Button ToolTip="Expand All" Command="{Binding ExpandAllCommand}" Focusable="false">
+                    <BitmapImage UriSource="../../Resources/CommandExpandAll.png" />
+                </Button>
+                <Button ToolTip="Collapse All" Command="{Binding CollapseAllCommand}" Focusable="false">
+                    <BitmapImage UriSource="../../Resources/CommandCollapseAll.png" />
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        
+        <TextBlock x:Name="userMessage" Grid.Row="1" 
+                    Margin="5,5,5,10"
+                    Width="400"
+                    Focusable="False"
+                    TextWrapping="Wrap"
+                    TextAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="{Binding UserMessage}"
+                    Visibility="{ Binding IsUserMessage, Converter={StaticResource VisibilityConverter}}"/>
+        
+        <TreeView
+            Grid.Row="2"
+            x:Name="solutionItems"
+            Margin="5,5,5,10"
+            Height="280"
+            Width="410"
+            Focusable="True"
+            SnapsToDevicePixels="True"
+            ItemsSource="{Binding Items}"
+            VirtualizingStackPanel.IsVirtualizing="True"
+            VirtualizingStackPanel.VirtualizationMode="Recycling">
+            <TreeView.Resources>
+                <Style TargetType="TreeView" BasedOn="{StaticResource {x:Type TreeView}}">
+                    <Style.Triggers>
+                        <Trigger Property="HasItems" Value="False">
+                            <Setter Property="Focusable" Value="False"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="TreeView">
+                                        <Border Background="{DynamicResource VsBrush.DesignerBackground}" Padding="2" Focusable="False">
+                                            <TextBlock
+                                                Focusable="False"
+                                                TextWrapping="WrapWithOverflow"
+                                                TextAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Foreground="{DynamicResource VsBrush.GrayText}"
+                                                Text="{Binding EmptyItemsMessage}"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+
+                <Style TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
+                    <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                    <Setter Property="p:ControlBehavior.DoubleClickCommand" Value="{Binding DataContext.CheckItemCommand, ElementName=solutionSelector}" />
+                    <Setter Property="p:ControlBehavior.DoubleClickCommandParameter" Value="{Binding}" />
+                </Style>
+
+            </TreeView.Resources>
+            
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate DataType="{x:Type l:FilteredItemContainer}" ItemsSource="{Binding Items}">
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox 
+                            Margin="0,0,4,0"
+                            VerticalAlignment="Center"
+                            Focusable="False" 
+                            IsChecked="{Binding IsChecked}" 
+                            Visibility="{ Binding IsSelectable, Converter={StaticResource VisibilityConverter}}"/>
+                        <Image 
+                            Source="{Binding Icon}" />
+                        <TextBlock 
+                            Margin="4,0,0,0"
+                            Text="{Binding Item.Name}"/>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+
+        <Grid Grid.Row="3" Grid.IsSharedSizeScope="True" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
+                <ColumnDefinition Width="3" />
+                <ColumnDefinition Width="*" SharedSizeGroup="CmdBtn" />
+            </Grid.ColumnDefinitions>
+            <vsfx:VsDialogButton
+                    Grid.Column="0" 
+                    Margin="0,6,10,6"
+                    AutomationProperties.AutomationId="Ok"
+                    VerticalAlignment="Top"
+                    Content="OK"
+                    IsDefault="True"
+                    Command="{Binding SubmitCommand}"
+                    CommandParameter="{Binding ElementName=solutionSelector}" />
+            <vsfx:VsDialogButton 
+                    Grid.Column="2" 
+                    Margin="0,6,10,6" 
+                    VerticalAlignment="Top" 
+                    Content="Cancel" 
+                    IsCancel="True" />
+        </Grid>
+    </Grid>
+</cp:CommonDialogWindow>

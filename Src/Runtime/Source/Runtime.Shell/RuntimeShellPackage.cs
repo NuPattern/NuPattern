@@ -20,12 +20,21 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
-using NuPattern.Extensibility;
+using NuPattern.IO;
 using NuPattern.Library;
+using NuPattern.Reflection;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Diagnostics;
+using NuPattern.Runtime.Settings;
 using NuPattern.Runtime.Shell.OptionPages;
 using NuPattern.Runtime.Shell.Properties;
 using NuPattern.Runtime.Store;
+using NuPattern.Runtime.ToolkitInterface;
 using NuPattern.Runtime.UI;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Commands;
+using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio.Solution;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
 namespace NuPattern.Runtime.Shell
@@ -43,7 +52,7 @@ namespace NuPattern.Runtime.Shell
     [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
-    [ProvideService(typeof(IPlatuProjectTypeProvider), ServiceName = "IPlatuProjectTypeProvider")]
+    [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = "IPlatuProjectTypeProvider")]
     [ProvideService(typeof(IPatternManager), ServiceName = "IPatternManager")]
     [ProvideService(typeof(IPackageToolWindow), ServiceName = "IPackageToolWindow")]
     [ProvideService(typeof(ISolutionEvents), ServiceName = "ISolutionEvents")]
@@ -69,7 +78,7 @@ namespace NuPattern.Runtime.Shell
 
         [Import]
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
-        private IPlatuProjectTypeProvider ProjectTypes { get; set; }
+        private INuPatternProjectTypeProvider ProjectTypes { get; set; }
 
         [Import]
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
@@ -243,7 +252,7 @@ namespace NuPattern.Runtime.Shell
             serviceContainer.AddService(typeof(RuntimeShellPackage), this, true);
             serviceContainer.AddService(typeof(IPackageToolWindow), new PackageToolWindow(this), true);
             serviceContainer.AddService(typeof(IPatternManager), new ServiceCreatorCallback((s, t) => this.PatternManager), true);
-            serviceContainer.AddService(typeof(IPlatuProjectTypeProvider), new ServiceCreatorCallback((s, t) => this.ProjectTypes), true);
+            serviceContainer.AddService(typeof(INuPatternProjectTypeProvider), new ServiceCreatorCallback((s, t) => this.ProjectTypes), true);
             serviceContainer.AddService(typeof(ISolutionEvents), new ServiceCreatorCallback((s, t) => this.SolutionEvents), true);
             serviceContainer.AddService(typeof(IUserMessageService), new ServiceCreatorCallback((s, t) => this.UserMessageService), true);
             serviceContainer.AddService(typeof(IBindingFactory), new ServiceCreatorCallback((s, t) => this.BindingFactory), true);
@@ -312,7 +321,7 @@ namespace NuPattern.Runtime.Shell
             Process.Start(tempFile);
         }
 
-        private static IEnumerable<string> GetConfiguredSourceNames(RuntimeSettings settings)
+        private static IEnumerable<string> GetConfiguredSourceNames(IRuntimeSettings settings)
         {
             var sourceNames = settings.Tracing.TraceSources.Select(s => s.SourceName);
             sourceNames = sourceNames.Concat(new[] { TracingSettings.DefaultRootSourceName });
@@ -320,7 +329,7 @@ namespace NuPattern.Runtime.Shell
             return sourceNames;
         }
 
-        private void OnSettingsChanged(object sender, ChangedEventArgs<RuntimeSettings> e)
+        private void OnSettingsChanged(object sender, ChangedEventArgs<IRuntimeSettings> e)
         {
             var sourceNames = GetConfiguredSourceNames(e.NewValue);
             this.traceOutputWindowManager.SetTraceSourceNames(sourceNames);

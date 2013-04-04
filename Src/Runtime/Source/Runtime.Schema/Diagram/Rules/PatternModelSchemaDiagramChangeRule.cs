@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
+using NuPattern.Modeling;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -7,7 +8,7 @@ namespace NuPattern.Runtime.Schema
     /// Change rule for properties on the <see cref="PatternModelSchemaDiagram"/> class.
     /// </summary>
     [RuleOn(typeof(PatternModelSchemaDiagram), FireTime = TimeToFire.TopLevelCommit)]
-    public partial class PatternModelSchemaDiagramChangeRule : ChangeRule
+    internal class PatternModelSchemaDiagramChangeRule : ChangeRule
     {
         /// <summary>
         /// Handles property change events for the listed classes of this rule.

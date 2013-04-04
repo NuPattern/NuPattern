@@ -15,7 +15,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// Helper class for serializing and deserializing pattern models.
     /// </summary>
-    public sealed partial class PatternModelSerializationHelper
+    partial class PatternModelSerializationHelper
     {
         private MemoryStream InternalSaveModel2(DslModeling::SerializationResult serializationResult, PatternModelSchema modelRoot, string fileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
         {
@@ -69,6 +69,39 @@ namespace NuPattern.Runtime.Schema
             }
 
             return newFileContent;
+        }
+
+        /// <summary>
+        /// Loads the pattern model file, and returns the schema.
+        /// </summary>
+        /// <param name="modelFilePath">Full path to the pattern model file.</param>
+        public static PatternModelSchema LoadPatternModelFromFile(string modelFilePath)
+        {
+            var patternModel = (PatternModelSchema)null;
+            var store = new DslModeling.Store(null, new[] { typeof(PatternModelDomainModel) });
+            DslModeling.Transaction tx = null;
+
+            try
+            {
+                var serializationResult = new DslModeling.SerializationResult();
+                tx = store.TransactionManager.BeginTransaction("Loading pattern model", true);
+                patternModel = Instance.LoadModel(serializationResult, store, modelFilePath, null, null, null);
+                if (serializationResult.Failed)
+                {
+                    throw new DslModeling.SerializationException(serializationResult);
+                }
+
+                tx.Commit();
+            }
+            finally
+            {
+                if ((tx != null))
+                {
+                    tx.Dispose();
+                }
+            }
+
+            return patternModel;
         }
 
         /// <summary>
@@ -235,7 +268,7 @@ namespace NuPattern.Runtime.Schema
         /// </summary>
         /// <param name="modelRoot">The model root.</param>
         /// <param name="stream">The stream.</param>
-        public void SaveModel(PatternModelSchema modelRoot, Stream stream)
+        internal void SaveModel(PatternModelSchema modelRoot, Stream stream)
         {
             Guard.NotNull(() => modelRoot, modelRoot);
             Guard.NotNull(() => stream, stream);
@@ -263,7 +296,7 @@ namespace NuPattern.Runtime.Schema
         /// <param name="validationController">The validation controller.</param>
         /// <param name="serializerLocator">The serializer locator.</param>
         [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "DSL")]
-        public PatternModelSchema LoadModelAndDiagrams(
+        internal PatternModelSchema LoadModelAndDiagrams(
             DslModeling.SerializationResult serializationResult,
             DslModeling.Partition modelPartition,
             string modelFileName,
@@ -330,7 +363,7 @@ namespace NuPattern.Runtime.Schema
         /// <param name="encoding">The encoding.</param>
         /// <param name="writeOptionalPropertiesWithDefaultValue">If set to <c>true</c> [write optional properties with default value].</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times", Justification = "NotApplicable")]
-        public void SaveModelAndDiagrams(
+        internal void SaveModelAndDiagrams(
             DslModeling.SerializationResult serializationResult,
             PatternModelSchema modelRoot,
             string modelFileName,
