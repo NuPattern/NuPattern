@@ -40,6 +40,7 @@ else
     <Content>
       <VsPackage>|Runtime.Shell;PkgdefProjectOutputGroup|</VsPackage>
       <MefComponent>|Runtime.Core|</MefComponent>
+      <MefComponent>|Runtime.Guidance|</MefComponent>
       <MefComponent>|Runtime.Shell|</MefComponent>
       <MefComponent>|Runtime.Store|</MefComponent>
       <MefComponent>|Runtime.Schema|</MefComponent>

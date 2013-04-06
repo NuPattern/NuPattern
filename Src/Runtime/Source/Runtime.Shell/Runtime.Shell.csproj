@@ -500,6 +500,12 @@
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bDocumentationProjectOutputGroup</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
+    <ProjectReference Include="..\Runtime.Guidance\Runtime.Guidance.csproj">
+      <Project>{6dde6662-d037-45c1-8e80-960828ceb21c}</Project>
+      <Name>Runtime.Guidance</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
     <ProjectReference Include="..\Runtime.Schema\Runtime.Schema.csproj">
       <Project>{b0f2590a-f583-4883-b701-923b43475bb5}</Project>
       <Name>Runtime.Schema</Name>
