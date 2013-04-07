@@ -1,4 +1,4 @@
-﻿namespace NuPattern.VisualStudio.Shell
+﻿namespace NuPattern.VisualStudio
 {
     /// <summary>
     /// Provides a contract to send messages to the user.

@@ -3,9 +3,8 @@ using System.Windows;
 using System.Windows.Interop;
 using Microsoft.Internal.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell.Interop;
-using NuPattern.Presentation;
 
-namespace NuPattern.VisualStudio.Shell
+namespace NuPattern.VisualStudio
 {
     /// <summary>
     /// Defines extension methods related to <see cref="IVsUIShell"/>.
@@ -21,29 +20,6 @@ namespace NuPattern.VisualStudio.Shell
             IntPtr hwnd;
             Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(shell.GetDialogOwnerHwnd(out hwnd));
             return HwndSource.FromHwnd(hwnd).RootVisual as Window;
-        }
-
-        /// <summary>
-        /// Creates a <see cref="Window"/> dialog as child of the main Visual Studio window.
-        /// </summary>
-        /// <typeparam name="T">The type of the window to create.</typeparam>
-        /// <param name="shell">The UI shell service.</param>
-        /// <param name="dataContext">The data context.</param>
-        /// <returns>
-        /// The created <see cref="Window"/> dialog.
-        /// </returns>
-        public static T CreateDialog<T>(this IVsUIShell shell, object dataContext) where T : IDialogWindow, new()
-        {
-            var dialog = new T { DataContext = dataContext };
-
-            //// Note that we are not using Window as a constraint in order to not add all WPF references in all the assemblies that reference this assembly
-            var dialogWindow = dialog as Window;
-            if (dialogWindow != null)
-            {
-                dialogWindow.Owner = shell.GetMainWindow();
-            }
-
-            return dialog;
         }
 
         /// <summary>

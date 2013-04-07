@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NuPattern.VisualStudio.Shell
+namespace NuPattern.VisualStudio
 {
     /// <summary>
     /// Extension methods for an Error List.

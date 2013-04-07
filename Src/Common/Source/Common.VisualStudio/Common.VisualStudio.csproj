@@ -123,34 +123,34 @@
     <Compile Include="Events\SolutionEvents.cs" />
     <Compile Include="Extensions\ExtensionContentExtensions.cs" />
     <Compile Include="Extensions\ExtensionVisibility.cs" />
-    <Compile Include="Shell\Windows\WindowExtensions.cs" />
+    <Compile Include="Windows\WindowExtensions.cs" />
     <Compile Include="Solution\AssemblyReference.cs" />
     <Compile Include="Solution\AssemblyResource.cs" />
     <Compile Include="Solution\BuildAction.cs" />
     <Compile Include="Solution\CollapseOptions.cs" />
     <Compile Include="Solution\CopyToOutput.cs" />
     <Compile Include="Solution\DataFormats.cs" />
-    <Compile Include="Shell\ErrorCategory.cs" />
-    <Compile Include="Shell\ErrorList.cs" />
+    <Compile Include="ErrorCategory.cs" />
+    <Compile Include="ErrorList.cs" />
     <Compile Include="Solution\Constants.cs" />
     <Compile Include="Solution\DteExtensions.cs" />
-    <Compile Include="Shell\IErrorListExtensions.cs" />
+    <Compile Include="IErrorListExtensions.cs" />
     <Compile Include="Solution\IVsHierarchyExtensions.cs" />
     <Compile Include="Solution\Templates\IVsTemplateExtensions.cs" />
     <Compile Include="Solution\ProjectExtensions.cs" />
     <Compile Include="ServiceProviderExtensions.cs" />
     <Compile Include="Solution\SolutionExtensions.cs" />
     <Compile Include="Solution\UIHierarchyExtensions.cs" />
-    <Compile Include="Shell\VsUIShellExtensions.cs" />
+    <Compile Include="VsUIShellExtensions.cs" />
     <Compile Include="Solution\IAssemblyReference.cs" />
     <Compile Include="Solution\IAssemblyResource.cs" />
     <Compile Include="Commands\ICommand.cs" />
-    <Compile Include="Shell\IErrorList.cs" />
+    <Compile Include="IErrorList.cs" />
     <Compile Include="Solution\IItemEvents.cs" />
-    <Compile Include="Shell\IShellEvents.cs" />
+    <Compile Include="IShellEvents.cs" />
     <Compile Include="Solution\ISolutionEvents.cs" />
-    <Compile Include="Shell\IStatusBar.cs" />
-    <Compile Include="Shell\IUserMessageService.cs" />
+    <Compile Include="IStatusBar.cs" />
+    <Compile Include="IUserMessageService.cs" />
     <Compile Include="Commands\IVsMenuCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -159,8 +159,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Solution\SolutionEventArgs.cs" />
-    <Compile Include="Shell\StatusBar.cs" />
-    <Compile Include="Shell\UserMessageService.cs" />
+    <Compile Include="StatusBar.cs" />
+    <Compile Include="UserMessageService.cs" />
     <Compile Include="Solution\VsHelper.cs" />
     <Compile Include="Extensions\Vsix.cs" />
     <Compile Include="TemplateWizards\CoordinatorTemplateWizard.cs" />
@@ -176,10 +176,6 @@
     <Compile Include="TraceSourceExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common.Presentation\Common.Presentation.csproj">
-      <Project>{72cc87f3-2860-45cc-8712-00621f868d60}</Project>
-      <Name>Common.Presentation</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
       <Name>Common</Name>

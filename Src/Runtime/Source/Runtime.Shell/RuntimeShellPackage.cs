@@ -33,7 +33,6 @@ using NuPattern.Runtime.ToolkitInterface;
 using NuPattern.Runtime.UI;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Commands;
-using NuPattern.VisualStudio.Shell;
 using NuPattern.VisualStudio.Solution;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 

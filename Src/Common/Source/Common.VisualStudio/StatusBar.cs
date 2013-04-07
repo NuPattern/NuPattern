@@ -3,7 +3,7 @@ using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace NuPattern.VisualStudio.Shell
+namespace NuPattern.VisualStudio
 {
     /// <summary>
     /// Class to interact with the VS status bar

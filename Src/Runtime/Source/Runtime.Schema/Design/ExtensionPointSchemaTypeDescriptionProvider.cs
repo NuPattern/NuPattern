@@ -9,7 +9,6 @@ using NuPattern.ComponentModel;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Design;
 using NuPattern.VisualStudio;
-using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Schema.Design
 {

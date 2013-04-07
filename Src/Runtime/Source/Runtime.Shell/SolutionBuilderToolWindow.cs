@@ -7,13 +7,12 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.Shell.Settings;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Presentation.VsIde;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Shell.Properties;
-using NuPattern.Runtime.UI;
 using NuPattern.Runtime.UI.ViewModels;
 using NuPattern.Runtime.UI.Views;
 using NuPattern.VisualStudio;
-using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Shell
 {

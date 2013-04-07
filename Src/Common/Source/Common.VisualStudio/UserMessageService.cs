@@ -2,9 +2,8 @@
 using System.ComponentModel.Composition;
 using System.Windows;
 using Microsoft.VisualStudio.Shell;
-using VsInterop = Microsoft.VisualStudio.Shell.Interop;
 
-namespace NuPattern.VisualStudio.Shell
+namespace NuPattern.VisualStudio
 {
     /// <summary>
     /// Provides an implementation to send messages to the user using a message box.
@@ -14,7 +13,7 @@ namespace NuPattern.VisualStudio.Shell
     internal class UserMessageService : IUserMessageService
     {
         private IServiceProvider serviceProvider;
-        private VsInterop.IVsUIShell shell;
+        private Microsoft.VisualStudio.Shell.Interop.IVsUIShell shell;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="UserMessageService"/> class.
@@ -26,7 +25,7 @@ namespace NuPattern.VisualStudio.Shell
             Guard.NotNull(() => serviceProvider, serviceProvider);
 
             this.serviceProvider = serviceProvider;
-            this.shell = this.serviceProvider.GetService<VsInterop.SVsUIShell, VsInterop.IVsUIShell>();
+            this.shell = this.serviceProvider.GetService<Microsoft.VisualStudio.Shell.Interop.SVsUIShell, Microsoft.VisualStudio.Shell.Interop.IVsUIShell>();
         }
 
         /// <summary>

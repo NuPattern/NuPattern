@@ -22,7 +22,6 @@ using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.Store;
 using NuPattern.Runtime.Validation;
 using NuPattern.VisualStudio;
-using NuPattern.VisualStudio.Shell;
 using NuPattern.VisualStudio.Solution;
 using Dsl = Microsoft.VisualStudio.Modeling;
 

@@ -15,7 +15,6 @@ using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
 using NuPattern.VisualStudio;
-using NuPattern.VisualStudio.Shell;
 using VSLangProj;
 
 namespace NuPattern.Library.Commands

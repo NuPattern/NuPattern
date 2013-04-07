@@ -11,7 +11,7 @@ using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings.Design;
-using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio;
 using NuPattern.Xml;
 
 namespace NuPattern.Library.Commands

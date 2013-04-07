@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NuPattern.VisualStudio.Shell
+namespace NuPattern.VisualStudio
 {
     /// <summary>
     /// Interface for interacting with the VS Error List window.

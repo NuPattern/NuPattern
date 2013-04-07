@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using Microsoft.VisualStudio.Modeling.Shell;
 using NuPattern.Modeling;
 using NuPattern.Runtime.Authoring;
-using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Schema.Commands
 {

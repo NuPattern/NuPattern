@@ -1,5 +1,5 @@
 ﻿
-namespace NuPattern.VisualStudio.Shell
+namespace NuPattern.VisualStudio
 {
     /// <summary>
     /// Categories of errors for <see cref="IErrorList"/>.

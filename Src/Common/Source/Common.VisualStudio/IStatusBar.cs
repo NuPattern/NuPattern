@@ -1,5 +1,5 @@
 ﻿
-namespace NuPattern.VisualStudio.Shell
+namespace NuPattern.VisualStudio
 {
     /// <summary>
     /// Interface to nteract with the VS status bar
