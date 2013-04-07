@@ -157,7 +157,6 @@
     <Compile Include="Automation\Extensions\SyncNameExtension.cs" />
     <Compile Include="Automation\Rules\UnfoldVsTemplateCommandChangeRule.cs" />
     <Compile Include="Automation\Rules\ValidationExtensionChangeRule.cs" />
-    <Compile Include="Automation\Rules\EventSettingsChangeRule.cs" />
     <Compile Include="Automation\Rules\GuidanceExtensionChangeRule.cs" />
     <Compile Include="Automation\SettingsValidationHelper.cs">
       <SubType>Code</SubType>

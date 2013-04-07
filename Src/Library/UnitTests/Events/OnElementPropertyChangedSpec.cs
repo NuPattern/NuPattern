@@ -11,15 +11,16 @@ namespace NuPattern.Library.UnitTests.Events
     [TestClass]
     public class OnElementPropertyChangedEventSpec
     {
-        private Mock<IProductElement> productElement;
+        private Mock<IProductElement> current;
         private OnElementPropertyChangedEvent publisher;
 
         [TestInitialize]
         public void Initialize()
         {
-            this.productElement = new Mock<IProductElement>();
+            this.current = new Mock<IProductElement>();
+            this.current.Setup(x => x.InstanceName).Returns("current");
 
-            this.publisher = new OnElementPropertyChangedEvent(this.productElement.Object);
+            this.publisher = new OnElementPropertyChangedEvent(this.current.Object);
         }
 
         [TestCleanup]
@@ -34,10 +35,30 @@ namespace NuPattern.Library.UnitTests.Events
             var subscriber = new Mock<ISubscriber>();
             this.publisher.Subscribe(subscriber.Object.OnNext);
 
-            this.productElement.Raise(x => x.PropertyChanged += null, new PropertyChangedEventArgs("Foo"));
+            this.current.Raise(x => x.PropertyChanged += null, new PropertyChangedEventArgs("Foo"));
 
             subscriber.Verify(x => x.OnNext(
                 It.Is<IEvent<PropertyChangedEventArgs>>(e => e.EventArgs.PropertyName == "Foo")));
+        }
+
+        [TestMethod, TestCategory("Unit")]
+        public void WhenManagerOpenedThenPropertyChangedForOtherElement_ThenSubscriberIsNotNotified()
+        {
+            var subscriber = new Mock<ISubscriber>();
+            this.publisher.Subscribe(subscriber.Object.OnNext);
+
+            var otherElement = new Mock<IProductElement>();
+            otherElement.Setup(x => x.InstanceName).Returns("other");
+            var otherPublisher = new OnElementPropertyChangedEvent(otherElement.Object);
+            otherPublisher.Subscribe(subscriber.Object.OnNext);
+
+            otherElement.Raise(x => x.PropertyChanged += null, new PropertyChangedEventArgs("Foo"));
+
+            subscriber.Verify(x => x.OnNext(
+                It.Is<IEvent<PropertyChangedEventArgs>>(e => e.EventArgs.PropertyName == "Foo")));
+
+            subscriber.Verify(x => x.OnNext(
+                It.Is<IEvent<PropertyChangedEventArgs>>(e => e.Sender == this.current)), Times.Never());
         }
 
         [TestMethod, TestCategory("Unit")]
@@ -48,7 +69,7 @@ namespace NuPattern.Library.UnitTests.Events
 
             subscription.Dispose();
 
-            this.productElement.Raise(x => x.PropertyChanged += null, new PropertyChangedEventArgs("Foo"));
+            this.current.Raise(x => x.PropertyChanged += null, new PropertyChangedEventArgs("Foo"));
 
             subscriber.Verify(x => x.OnNext(It.IsAny<IEvent<PropertyChangedEventArgs>>()), Times.Never());
         }

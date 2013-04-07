@@ -29,7 +29,6 @@ namespace NuPattern.Library.Automation
             pattern.EnsureEventLaunchPoint<IOnElementPropertyChangedEvent>(
                 Resources.SyncNameExtension_SyncNameEventName,
                 syncCommand,
-                true,
                 () => ShouldSyncName(pattern));
         }
 

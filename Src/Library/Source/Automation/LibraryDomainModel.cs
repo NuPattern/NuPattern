@@ -19,7 +19,6 @@ namespace NuPattern.Library.Automation
                 typeof(GuidanceExtensionChangeRule),
                 typeof(ArtifactExtensionChangeRule),
                 typeof(ValidationExtensionChangeRule),
-                typeof(EventSettingsChangeRule),
                 typeof(AggregatorCommandCommandSettingsDeletingRule),
                 typeof(TemplateSettingsChangeRule),
                 typeof(UnfoldVsTemplateCommandChangeRule),

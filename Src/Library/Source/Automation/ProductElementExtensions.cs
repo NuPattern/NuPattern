@@ -27,14 +27,13 @@ namespace NuPattern.Library.Automation
         /// Adds a new Event Launch Point to the pattern.
         /// </summary>
         /// <returns>Returns an <see cref="IEventSettings"/> for the added event.</returns>
-        public static IEventSettings CreateEvent<T>(this IProductElement product, string name, bool filterForCurrentElement)
+        public static IEventSettings CreateEvent<T>(this IProductElement product, string name)
         {
             Guard.NotNull(() => product, product);
 
             var patternSchema = product.Info as IPatternElementSchema;
             var eventSettings = patternSchema.CreateAutomationSettings<IEventSettings>(name);
             eventSettings.EventId = typeof(T).ToString();
-            eventSettings.FilterForCurrentElement = filterForCurrentElement;
             product.AddAutomationExtension(new EventAutomation(product, eventSettings));
             return eventSettings;
         }

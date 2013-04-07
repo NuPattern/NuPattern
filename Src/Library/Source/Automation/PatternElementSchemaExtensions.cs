@@ -62,15 +62,15 @@ namespace NuPattern.Library.Automation
         /// <summary>
         /// Ensures specified event is either: present and configured correctly on the element, or removed from element, based on the evaluation of the given function. 
         /// </summary>
-        public static EventSettings EnsureEventLaunchPoint<TEvent>(this IPatternElementSchema container, string instanceName, CommandSettings command, bool filterForCurrentElement, Func<bool> exists) where TEvent : IObservableEvent
+        public static EventSettings EnsureEventLaunchPoint<TEvent>(this IPatternElementSchema container, string instanceName, CommandSettings command, Func<bool> exists) where TEvent : IObservableEvent
         {
-            return EnsureEventLaunchPoint(container, typeof(TEvent).FullName, instanceName, command, filterForCurrentElement, exists);
+            return EnsureEventLaunchPoint(container, typeof(TEvent).FullName, instanceName, command, exists);
         }
 
         /// <summary>
         /// Ensures specified event is either: present and configured correctly on the element, or removed from element, based on the evaluation of the given function. 
         /// </summary>
-        public static EventSettings EnsureEventLaunchPoint(this IPatternElementSchema container, string eventTypeName, string instanceName, CommandSettings command, bool filterForCurrentElement, Func<bool> exists)
+        public static EventSettings EnsureEventLaunchPoint(this IPatternElementSchema container, string eventTypeName, string instanceName, CommandSettings command, Func<bool> exists)
         {
             var settings = container.GetAutomationSettings<EventSettings>(instanceName);
             if (exists() == true)
@@ -85,7 +85,6 @@ namespace NuPattern.Library.Automation
                 if (settings != null)
                 {
                     settings.EventId = eventTypeName;
-                    settings.FilterForCurrentElement = filterForCurrentElement;
                     if (command != null)
                     {
                         settings.CommandId = command.Id;

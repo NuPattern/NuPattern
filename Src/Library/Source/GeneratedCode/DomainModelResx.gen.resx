@@ -253,14 +253,6 @@
     <value>Conditions</value>
     <comment>DisplayName for DomainProperty &apos;Conditions&apos; on DomainClass &apos;EventSettings&apos;</comment>
   </data>
-  <data name="NuPattern.Library.Automation.EventSettings/FilterForCurrentElement.Description" xml:space="preserve">
-    <value>Whether to add a condition that filters the events to the current element only. Typically required for element instantiation and property change events types as examples.</value>
-    <comment>Description for DomainProperty &apos;FilterForCurrentElement&apos; on DomainClass &apos;EventSettings&apos;</comment>
-  </data>
-  <data name="NuPattern.Library.Automation.EventSettings/FilterForCurrentElement.DisplayName" xml:space="preserve">
-    <value>Current Element Only</value>
-    <comment>DisplayName for DomainProperty &apos;FilterForCurrentElement&apos; on DomainClass &apos;EventSettings&apos;</comment>
-  </data>
   <data name="NuPattern.Library.Automation.EventSettings/WizardId.Description" xml:space="preserve">
     <value>A wizard to gather input from the user, that configures the properties of this element, when the event is raised.</value>
     <comment>Description for DomainProperty &apos;WizardId&apos; on DomainClass &apos;EventSettings&apos;</comment>

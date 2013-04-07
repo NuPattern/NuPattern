@@ -71,7 +71,6 @@ namespace NuPattern.Library.Automation
             element.EnsureEventLaunchPoint<IOnElementActivatedEvent>(
                 Resources.ArtifactExtension_ActivateEventName,
                 eventCommand,
-                true,
                 () => this.OnArtifactActivation != ArtifactActivatedAction.None);
         }
 
@@ -96,7 +95,6 @@ namespace NuPattern.Library.Automation
             element.EnsureEventLaunchPoint<IOnElementDeletingEvent>(
                 Resources.ArtifactExtension_DeleteEventName,
                 deleteCommand,
-                true,
                 () => this.OnArtifactDeletion != ArtifactDeletedAction.None);
         }
         private static string GetSerializedLinkExistsCondition()

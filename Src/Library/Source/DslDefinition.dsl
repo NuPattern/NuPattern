@@ -121,11 +121,6 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="ce20a268-439b-46cc-8021-fd9b261cd15d" Description="Whether to add a condition that filters the events to the current element only. Typically required for element instantiation and property change events types as examples." Name="FilterForCurrentElement" DisplayName="Current Element Only" DefaultValue="false" IsBrowsable="false">
-          <Type>
-            <ExternalTypeMoniker Name="/System/Boolean" />
-          </Type>
-        </DomainProperty>
         <DomainProperty Id="dfaa6346-fd67-4861-8814-a1731142aee5" Description="A wizard to gather input from the user, that configures the properties of this element, when the event is raised." Name="WizardId" DisplayName="Wizard">
           <Type>
             <ExternalTypeMoniker Name="/System/Guid" />
@@ -493,9 +488,6 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="conditions" Representation="Element">
             <DomainPropertyMoniker Name="EventSettings/Conditions" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="filterForCurrentElement">
-            <DomainPropertyMoniker Name="EventSettings/FilterForCurrentElement" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="wizardId">
             <DomainPropertyMoniker Name="EventSettings/WizardId" />

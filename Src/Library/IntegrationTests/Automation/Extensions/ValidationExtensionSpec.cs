@@ -164,7 +164,6 @@ namespace NuPattern.Library.IntegrationTests.Automation.Validation
                     Assert.True(event1.IsSystem);
 
                     Assert.Equal(eventSettings.EventId, typeof(IOnBuildStartedEvent).FullName);
-                    Assert.Equal(eventSettings.FilterForCurrentElement, false);
 
                     var commandSettings = command.GetExtensions<ICommandSettings>().FirstOrDefault();
                     Assert.NotNull(commandSettings);
@@ -189,7 +188,6 @@ namespace NuPattern.Library.IntegrationTests.Automation.Validation
                     Assert.True(event1.IsSystem);
 
                     Assert.Equal(eventSettings.EventId, typeof(IOnProductStoreSavedEvent).FullName);
-                    Assert.Equal(eventSettings.FilterForCurrentElement, false);
 
                     var commandSettings = command.GetExtensions<ICommandSettings>().FirstOrDefault();
                     Assert.NotNull(commandSettings);
@@ -214,7 +212,6 @@ namespace NuPattern.Library.IntegrationTests.Automation.Validation
                     Assert.True(event1.IsSystem);
 
                     Assert.Equal(eventSettings.EventId, this.validationExtension.ValidationOnCustomEvent);
-                    Assert.Equal(eventSettings.FilterForCurrentElement, false);
 
                     var commandSettings = command.GetExtensions<ICommandSettings>().FirstOrDefault();
                     Assert.NotNull(commandSettings);
