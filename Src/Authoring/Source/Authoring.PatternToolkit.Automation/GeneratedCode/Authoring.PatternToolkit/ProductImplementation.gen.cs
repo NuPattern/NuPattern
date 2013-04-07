@@ -45,9 +45,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public PatternToolkit(Runtime.IProduct target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IPatternToolkit>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IPatternToolkit>();
+			OnCreated();
 		}
 
 		/// <summary>

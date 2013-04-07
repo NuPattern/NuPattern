@@ -44,9 +44,9 @@ namespace NuPattern.Authoring.HandsOnLabs
 		/// </summary>
 		public PatternToolkitHandsOnLabs(Runtime.IProduct target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IPatternToolkitHandsOnLabs>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IPatternToolkitHandsOnLabs>();
+			OnCreated();
 		}
 
 		/// <summary>

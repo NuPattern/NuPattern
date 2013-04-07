@@ -44,9 +44,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public Assets(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IAssets>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IAssets>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -237,9 +237,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public Templates(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<ITemplates>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<ITemplates>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -430,9 +430,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public ItemTemplates(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IItemTemplates>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IItemTemplates>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -587,9 +587,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public ProjectTemplates(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IProjectTemplates>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IProjectTemplates>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -744,9 +744,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public TextTemplates(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<ITextTemplates>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<ITextTemplates>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -901,9 +901,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public Wizards(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IWizards>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IWizards>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -1076,9 +1076,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public WizardPages(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IWizardPages>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IWizardPages>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -1233,9 +1233,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public AutomationCollection(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IAutomationCollection>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IAutomationCollection>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -1390,9 +1390,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public Views(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IViews>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IViews>();
+			OnCreated();
 		}
 
 		/// <summary>

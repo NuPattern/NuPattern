@@ -44,9 +44,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public ItemTemplate(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IItemTemplate>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IItemTemplate>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -183,9 +183,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public ProjectTemplate(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IProjectTemplate>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IProjectTemplate>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -322,9 +322,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public TextTemplate(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<ITextTemplate>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<ITextTemplate>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -461,9 +461,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public Wizard(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IWizard>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IWizard>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -600,9 +600,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public WizardPage(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IWizardPage>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IWizardPage>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -739,9 +739,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public Guidance(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IGuidance>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IGuidance>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -915,9 +915,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public PatternModel(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IPatternModel>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IPatternModel>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -1097,9 +1097,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public ViewModel(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IViewModel>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IViewModel>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -1237,9 +1237,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public PatternToolkitInfo(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IPatternToolkitInfo>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IPatternToolkitInfo>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -1464,9 +1464,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public ProductionTooling(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IProductionTooling>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IProductionTooling>();
+			OnCreated();
 		}
 
 		/// <summary>

@@ -22,7 +22,7 @@
             <element Id="1186d3f3-8e0e-4d15-a439-35c493f9c1c3" definitionId="5da53e5a-0ba8-48f8-a922-1712244c388c" definitionName="PatternModel" instanceName="Pattern Tool">
               <properties>
                 <property Id="5ea97f86-b4c5-45ad-8f7c-f77034ddabf3" definitionId="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" definitionName="ValidateOnBuild" rawValue="Never" />
-                <property Id="7b13891c-b529-4fb6-ba08-3cb686e0d71b" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="C:\Projects\CodePlex\NuPattern\sprint20\Src\Authoring\Source\Authoring.PatternToolkit\PatternModel.patterndefinition" />
+                <property Id="7b13891c-b529-4fb6-ba08-3cb686e0d71b" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="C:\Projects\CodePlex\NuPattern\Sprint20\Src\Authoring\Source\Authoring.PatternToolkit\PatternModel.patterndefinition" />
               </properties>
               <references>
                 <reference Id="b5108fe9-3080-4839-92c2-cb6d482d9527" value="solution://0216A624-C5C5-4335-8361-F640B91B4DEA/aa404b57-5bb4-4521-95fa-b103034d26e3" kind="NuPattern.Runtime.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;PatternModel.patterndefinition&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;e52d1228-39f9-422d-b667-1e6f26249aa0&quot;&#xD;&#xA;}" />
@@ -183,7 +183,7 @@
                 <element Id="b05cc972-cb01-4a17-9627-cf110c7b376c" definitionId="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" definitionName="Guidance" instanceName="Guidance">
                   <properties>
                     <property Id="bc1d478c-4349-4375-8641-e6a79c36a351" definitionId="70d70df3-799d-4107-b77b-0001119484a6" definitionName="ProjectContentPath" rawValue="GeneratedCode\Guidance\Content" />
-                    <property Id="73b42b09-6666-41fa-87cf-b93d8eeebcc6" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\sprint20\Src\Common\Guidance\AuthoringToolkitGuidance.doc" />
+                    <property Id="73b42b09-6666-41fa-87cf-b93d8eeebcc6" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\Sprint20\Src\Common\Guidance\AuthoringToolkitGuidance.doc" />
                     <property Id="7c57a0ac-d732-4feb-a523-cb5ba694a472" definitionId="81c7a831-97e3-4067-9d15-8d7fb671a755" definitionName="DefaultInstanceName" rawValue="Working with Pattern Toolkits" />
                   </properties>
                   <references>
@@ -241,7 +241,7 @@
             <element Id="d3cfafe7-ae36-419a-853e-1b496681c616" definitionId="5da53e5a-0ba8-48f8-a922-1712244c388c" definitionName="PatternModel" instanceName="Pattern Model">
               <properties>
                 <property Id="f5ec9071-911f-4ec0-811f-522e6ab07dbe" definitionId="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" definitionName="ValidateOnBuild" rawValue="Never" />
-                <property Id="cfe0e0a4-09bc-44d5-8d1a-a8842ce5b940" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="C:\Projects\CodePlex\NuPattern\sprint20\Src\Authoring\Source\Authoring.PatternToolkitLibrary\PatternModel.patterndefinition" />
+                <property Id="cfe0e0a4-09bc-44d5-8d1a-a8842ce5b940" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="C:\Projects\CodePlex\NuPattern\Sprint20\Src\Authoring\Source\Authoring.PatternToolkitLibrary\PatternModel.patterndefinition" />
               </properties>
               <references>
                 <reference Id="ac774585-f116-433c-9c1c-36b14ef3b859" value="solution://2f73d922-e3c5-49f8-ab6d-af54e76ee47e/c8131dba-0954-41b1-bf71-defcc7035456" kind="NuPattern.Runtime.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;PatternModel.patterndefinition&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;e52d1228-39f9-422d-b667-1e6f26249aa0&quot;&#xD;&#xA;}" />
@@ -275,7 +275,7 @@
                 <element Id="64a27b45-faa5-48fc-8aac-8acbaad5964b" definitionId="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" definitionName="Guidance" instanceName="Guidance">
                   <properties>
                     <property Id="c0ff273a-f4c5-4ed4-89e7-1cccf20ccb50" definitionId="70d70df3-799d-4107-b77b-0001119484a6" definitionName="ProjectContentPath" rawValue="GeneratedCode\Guidance\Content" />
-                    <property Id="c32bf7e6-a844-4975-a0e1-82cbb7ef9846" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\sprint20\Src\Authoring\Source\Authoring.PatternToolkitLibrary\Assets\Guidance\ToolkitGuidance.doc" />
+                    <property Id="c32bf7e6-a844-4975-a0e1-82cbb7ef9846" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\Sprint20\Src\Authoring\Source\Authoring.PatternToolkitLibrary\Assets\Guidance\ToolkitGuidance.doc" />
                     <property Id="07fa19c6-9f70-4ea1-a9ef-f03e16215870" definitionId="81c7a831-97e3-4067-9d15-8d7fb671a755" definitionName="DefaultInstanceName" rawValue="Working with Automation Libraries" />
                   </properties>
                   <references>
@@ -373,7 +373,7 @@
             <element Id="2f0598c8-7344-48b5-b47b-c5dd40c3cbab" definitionId="5da53e5a-0ba8-48f8-a922-1712244c388c" definitionName="PatternModel" instanceName="Pattern Model">
               <properties>
                 <property Id="920ee9e9-a8ff-409b-982d-a3c1b28f8161" definitionId="53ef780a-fc40-40dd-8c5c-34c70f7b9c90" definitionName="ValidateOnBuild" rawValue="Never" />
-                <property Id="29897012-50e9-4715-a368-8669ddd5367d" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="C:\Projects\CodePlex\NuPattern\sprint20\Src\Authoring\Source\Authoring.HandsOnLabs\PatternTool.patterndefinition" />
+                <property Id="29897012-50e9-4715-a368-8669ddd5367d" definitionId="a3436f96-4d42-4ad4-92c4-07a16502b397" definitionName="ToolkitDefinitionFile" rawValue="C:\Projects\CodePlex\NuPattern\Sprint20\Src\Authoring\Source\Authoring.HandsOnLabs\PatternTool.patterndefinition" />
               </properties>
               <references>
                 <reference Id="0689686d-5e84-4b2f-a119-638540ccd42c" value="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/02473a51-4ef9-46d1-b712-e4e4d53fc61a" kind="NuPattern.Runtime.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;PatternModel.patterndefinition&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;e52d1228-39f9-422d-b667-1e6f26249aa0&quot;&#xD;&#xA;}" />
@@ -415,7 +415,7 @@
                 <element Id="14fc43ef-9d28-4b36-905f-adc76a9c92f3" definitionId="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" definitionName="Guidance" instanceName="Guidance">
                   <properties>
                     <property Id="b6cea843-c8f8-40bd-96e1-42745e1e9fe1" definitionId="70d70df3-799d-4107-b77b-0001119484a6" definitionName="ProjectContentPath" rawValue="GeneratedCode\Guidance\Content" />
-                    <property Id="147e02fd-b0ff-45fa-9ec1-43bc7b164ba5" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\sprint20\Src\Authoring\Source\Authoring.HandsOnLabs\Assets\Guidance\ToolkitGuidance.doc" />
+                    <property Id="147e02fd-b0ff-45fa-9ec1-43bc7b164ba5" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\Sprint20\Src\Authoring\Source\Authoring.HandsOnLabs\Assets\Guidance\ToolkitGuidance.doc" />
                     <property Id="3902e61e-e096-40f6-afde-0822585c51e7" definitionId="81c7a831-97e3-4067-9d15-8d7fb671a755" definitionName="DefaultInstanceName" />
                   </properties>
                   <references>

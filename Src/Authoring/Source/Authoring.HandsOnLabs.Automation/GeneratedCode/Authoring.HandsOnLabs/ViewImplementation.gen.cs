@@ -43,9 +43,9 @@ namespace NuPattern.Authoring.HandsOnLabs
 		/// </summary>
 		public DefaultView(Runtime.IView target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IDefaultView>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IDefaultView>();
+			OnCreated();
 		}
 
 		/// <summary>

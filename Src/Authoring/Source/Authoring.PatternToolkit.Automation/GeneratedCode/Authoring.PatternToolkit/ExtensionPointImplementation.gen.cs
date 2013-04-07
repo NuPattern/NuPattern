@@ -44,9 +44,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public AutomationLibrary(Runtime.IProduct target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IAutomationLibrary>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IAutomationLibrary>();
+			OnCreated();
 		}
 
 		/// <summary>
