@@ -40,6 +40,6 @@ string vsPackageAssembly = "NuPattern.Authoring.PatternModelDesign.Shell";
         <MefComponent>|<#=VsPackageProject#>|</MefComponent>
         <ProjectTemplate>Templates\Projects</ProjectTemplate>
         <ItemTemplate>Templates\Items</ItemTemplate>
-        <Assembly AssemblyName="<#=vsPackageAssembly#>, Version=<#=VsixInfo.PatternToolkitBuilder.Version#>, Culture=neutral, PublicKeyToken=ecdd31353928a4a5">|<#=VsPackageProject#>|</Assembly>
+        <Assembly AssemblyName="<#=vsPackageAssembly#>, Version=<#=VsixInfo.PatternToolkitBuilder.Version#>, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88">|<#=VsPackageProject#>|</Assembly>
     </Content>
 </Vsix>
