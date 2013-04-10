@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using NuPattern.Library.Conditions;
 using NuPattern.Library.Design;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
@@ -14,8 +12,6 @@ namespace NuPattern.Library.Automation
     [TypeDescriptionProvider(typeof(EventSettingsDescriptionProvider))]
     partial class EventSettings
     {
-        private static readonly string ConditionTypeId = typeof(EventSenderMatchesElementCondition).FullName;
-
         private List<ConditionBindingSettings> conditionSettings;
 
         /// <summary>
@@ -40,34 +36,6 @@ namespace NuPattern.Library.Automation
         public IAutomationExtension CreateAutomation(IProductElement owner)
         {
             return new EventAutomation(owner, this);
-        }
-
-        /// <summary>
-        /// Deletes the condition for filtering.
-        /// </summary>
-        internal void DeleteConditionForFiltering()
-        {
-            // Delete the condition (if exists)
-            var condition = this.ConditionSettings.SingleOrDefault(cond => cond.TypeId == ConditionTypeId) as ConditionBindingSettings;
-            if (condition != null)
-            {
-                this.conditionSettings.Remove(condition);
-                this.Conditions = BindingSerializer.Serialize(this.conditionSettings);
-            }
-        }
-
-        /// <summary>
-        /// Ensures the condition for filtering is applied to element.
-        /// </summary>
-        internal void EnsureConditionForFiltering()
-        {
-            var condition = this.ConditionSettings.SingleOrDefault(cond => cond.TypeId == ConditionTypeId);
-            if (condition == null)
-            {
-                // Add the condition
-                this.conditionSettings.Add(new ConditionBindingSettings { TypeId = ConditionTypeId });
-                this.Conditions = BindingSerializer.Serialize(this.conditionSettings);
-            }
         }
 
         private List<ConditionBindingSettings> GetConditionSettings()

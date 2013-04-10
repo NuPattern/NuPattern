@@ -139,6 +139,7 @@ namespace NuPattern.Runtime.IntegrationTests
                             "NuPattern.Runtime.Extensibility.Serialization.dll",
                             "NuPattern.Library.dll",
                             "NuPattern.Runtime.Core.dll",
+                            "NuPattern.Runtime.Guidance.dll",
                             "NuPattern.Runtime.Schema.dll",
                             "NuPattern.Runtime.Shell.dll",
                             "NuPattern.Runtime.Shell.pkgdef",

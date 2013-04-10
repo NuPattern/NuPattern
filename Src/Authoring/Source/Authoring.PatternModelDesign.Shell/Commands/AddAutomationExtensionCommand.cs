@@ -12,12 +12,12 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using NuPattern.Modeling;
 using NuPattern.Presentation;
+using NuPattern.Presentation.VsIde;
 using NuPattern.Runtime.Authoring;
 using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Schema.UI.ViewModels;
 using NuPattern.Runtime.Schema.UI.Views;
 using NuPattern.VisualStudio;
-using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Schema.Commands
 {

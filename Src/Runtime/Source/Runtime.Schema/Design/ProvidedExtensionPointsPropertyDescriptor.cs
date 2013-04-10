@@ -8,7 +8,6 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Modeling;
 using NuPattern.VisualStudio;
-using NuPattern.VisualStudio.Shell;
 
 namespace NuPattern.Runtime.Schema.Design
 {

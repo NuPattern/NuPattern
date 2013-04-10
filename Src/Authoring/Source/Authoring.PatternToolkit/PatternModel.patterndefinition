@@ -291,6 +291,51 @@
         <automationSettingsSchemaMoniker Id="535ea2ed-01a2-4108-b53a-c7ee81ac5899" />
       </extendedElement>
     </eventSettings>
+    <eventSettings Id="6dbd0af5-7577-4954-8cf3-3aa903ce5b63" commandId="230d1e34-7c4f-400a-b212-9c75757f3274" eventId="NuPattern.Library.Events.IOnElementDeletingEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="deca6801-659c-4a62-8cfd-1bc4b3c9d7ea" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="b766b30e-1605-4c86-849b-f60293ed86bd" commandId="f5568d6a-a16a-4bb7-bd09-5d755763ed6b" eventId="NuPattern.Library.Events.IOnElementDeletingEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="636400a7-aaeb-48f7-8b75-e18d111bba10" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="a3fb382f-f199-43ff-8eb7-7be45fe48e70" commandId="7e3e7737-0478-47b6-8562-b00afe7c87ab" eventId="NuPattern.Library.Events.IOnElementDeletingEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="e75a3ae3-f133-4ce4-95c4-c6e83f524b87" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="ac60331c-7c32-47f6-a49a-35525f155b67" commandId="c9d18bea-aa08-4c5a-b959-830dc8f2f007" eventId="NuPattern.Library.Events.IOnElementDeletingEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="6fceaf7d-f897-4df0-bd12-ef18b2717590" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="b8ee7baa-ff7d-4765-917f-e0e38e65c5f7" commandId="da1db796-af87-4334-b26a-07ecf64c9397" eventId="NuPattern.Library.Events.IOnElementDeletingEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="331727ed-3e1b-4445-a9b2-cb09a1250d48" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="8691c7c3-8cb6-4116-ab4a-ef74c2b71071" commandId="58cb71f0-32a8-4eae-a3c7-1fd85b7d92fa" eventId="NuPattern.Library.Events.IOnElementDeletingEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="ba85ead1-e834-4bcc-9c5e-db42b0f3b080" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="098f2c38-d388-4b63-b4f3-8377aa91000c" commandId="78ee30bb-44dd-451f-9eb3-231541d7a883" eventId="NuPattern.Library.Events.IOnElementDeletingEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="a48e0517-73b9-43d2-9745-94a55b8fd42b" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="902cc9d4-5157-48cb-afd5-5ec192b9ce91" commandId="b0db0615-2243-4052-98d8-dd94b164be47" eventId="NuPattern.Library.Events.IOnElementDeletingEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="b093db1e-4836-49f2-bdfe-3c20272829c6" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="bb7a0665-d973-4633-8fa0-09bd18202745" commandId="43e18f85-c006-4ecc-9539-b6b249625397" eventId="NuPattern.Library.Events.IOnElementDeletingEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="6f1080d0-9d65-41ab-a7f0-46047fa23c45" />
+      </extendedElement>
+    </eventSettings>
     <commandSettings Id="0ce3faef-945e-4d35-8d9c-6fad10c26823" typeId="NuPattern.Library.Commands.InstantiateFeatureCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="637a727b-f99f-48de-8bae-aef51fd397fb" />
@@ -1607,6 +1652,114 @@
   }
 ]</properties>
     </commandSettings>
+    <commandSettings Id="230d1e34-7c4f-400a-b212-9c75757f3274" typeId="NuPattern.Library.Commands.DeleteArtifactsCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="31bf21be-7af0-4d4e-9f8e-aadc655d6939" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "Action",
+    "Value": "PromptUser",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
+    <commandSettings Id="f5568d6a-a16a-4bb7-bd09-5d755763ed6b" typeId="NuPattern.Library.Commands.DeleteArtifactsCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="fd8c84eb-222d-4860-b850-3c719ec35882" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "Action",
+    "Value": "PromptUser",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
+    <commandSettings Id="7e3e7737-0478-47b6-8562-b00afe7c87ab" typeId="NuPattern.Library.Commands.DeleteArtifactsCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="a84fee8e-045e-4984-b947-2ee131145129" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "Action",
+    "Value": "PromptUser",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
+    <commandSettings Id="c9d18bea-aa08-4c5a-b959-830dc8f2f007" typeId="NuPattern.Library.Commands.DeleteArtifactsCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="d26a5fd3-357f-43bb-b9bd-a0445ef8656c" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "Action",
+    "Value": "PromptUser",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
+    <commandSettings Id="da1db796-af87-4334-b26a-07ecf64c9397" typeId="NuPattern.Library.Commands.DeleteArtifactsCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="8c68bfd6-04a8-4c0f-8a9e-f4fcdb3424ca" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "Action",
+    "Value": "PromptUser",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
+    <commandSettings Id="58cb71f0-32a8-4eae-a3c7-1fd85b7d92fa" typeId="NuPattern.Library.Commands.DeleteArtifactsCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="56c58f25-d9f8-49ea-81b9-024b5cea0fcb" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "Action",
+    "Value": "PromptUser",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
+    <commandSettings Id="78ee30bb-44dd-451f-9eb3-231541d7a883" typeId="NuPattern.Library.Commands.DeleteArtifactsCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="bfa8e6be-dc29-4644-82c0-4dee5f1e3b66" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "Action",
+    "Value": "PromptUser",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
+    <commandSettings Id="b0db0615-2243-4052-98d8-dd94b164be47" typeId="NuPattern.Library.Commands.DeleteArtifactsCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="ab89f464-6be6-4a53-9d2b-5eb0c7ea8610" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "Action",
+    "Value": "PromptUser",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
+    <commandSettings Id="43e18f85-c006-4ecc-9539-b6b249625397" typeId="NuPattern.Library.Commands.DeleteArtifactsCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="e51af120-3032-473e-a163-c3814c7d2535" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "Action",
+    "Value": "PromptUser",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
     <menuSettings Id="11e7a8a4-db6a-484b-b6c7-f497a7774ea1" text="Show Guidance" commandId="049e298a-8525-40a8-9fe8-f74fe455c307" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="7d95388a-15c4-4386-81c2-43266e6de085" />
@@ -1632,56 +1785,38 @@
         <automationSettingsSchemaMoniker Id="13d13a0e-b8da-402e-8f8c-657313945a37" />
       </extendedElement>
     </menuSettings>
-    <menuSettings Id="4eb58cf0-2b47-4151-8a23-ebe1462af9e3" text="Go To Solution Items" commandId="eadcd298-57cf-423b-9c1b-3d515413c77f" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="4eb58cf0-2b47-4151-8a23-ebe1462af9e3" text="Show Solution Items" commandId="eadcd298-57cf-423b-9c1b-3d515413c77f" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d618b784-7a9e-463c-a73b-4ad6f8914ecc" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="75f42eab-515f-4c78-ab8d-cc0ef311a032" text="Open Solution Items" commandId="6ddf673a-92e9-479a-91b1-e183ed1bcc7e" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="75f42eab-515f-4c78-ab8d-cc0ef311a032" text="Open Solution Items" commandId="6ddf673a-92e9-479a-91b1-e183ed1bcc7e" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="29df6ba1-eed6-46aa-9489-73a3c5db1965" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="423da5b2-ffea-4b02-bc76-948fd7058b0b" text="Go To Solution Items" commandId="b5a0762e-07e6-493a-a8f4-5a7c6e634bd7" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="423da5b2-ffea-4b02-bc76-948fd7058b0b" text="Show Solution Items" commandId="b5a0762e-07e6-493a-a8f4-5a7c6e634bd7" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="7241785a-4a7c-4b8d-a567-395a81c136b1" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
     <menuSettings Id="9b605754-1cce-4384-98bc-8647e03c6507" text="Go To Solution Items" commandId="cca56d5e-ebff-4f89-8ea8-95acc2bc62da" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
@@ -1717,175 +1852,115 @@
 ]
 </conditions>
     </menuSettings>
-    <menuSettings Id="48115236-25d2-44ff-8c6b-3652637d6ba4" text="Open Solution Items" commandId="419b51a5-d552-4d15-bc67-0368cdee105b" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="48115236-25d2-44ff-8c6b-3652637d6ba4" text="Open Solution Items" commandId="419b51a5-d552-4d15-bc67-0368cdee105b" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="5ef7348b-ca10-4e90-a10d-4de87e8bca8e" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="bf1b1bcd-96ba-44ad-8f6d-66b1b335748c" text="Go To Solution Items" commandId="831ca27a-01ac-4862-bf3a-5e8908ed1f67" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="bf1b1bcd-96ba-44ad-8f6d-66b1b335748c" text="Show Solution Items" commandId="831ca27a-01ac-4862-bf3a-5e8908ed1f67" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f617451f-7980-46b5-bcd2-1096e8b8645d" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="491eedb2-46bb-47bc-9343-6470ca5b2400" text="Open Solution Items" commandId="19a18c3a-2e35-41b5-801a-3632d0c7c0d4" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="491eedb2-46bb-47bc-9343-6470ca5b2400" text="Open Solution Items" commandId="19a18c3a-2e35-41b5-801a-3632d0c7c0d4" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="7ca19f02-fcda-433d-9c5a-93c716b4885e" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="01525460-33f7-486f-9fef-c7aab4a8e842" text="Go To Solution Items" commandId="e07b4470-a2d3-4749-ad5a-6d276a32b515" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="01525460-33f7-486f-9fef-c7aab4a8e842" text="Show Solution Items" commandId="e07b4470-a2d3-4749-ad5a-6d276a32b515" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="2e5e102d-a179-40a3-8c84-0e6491d1fb6b" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="52edf834-da9d-4ff8-afd3-30b4766e4dbe" text="Open Solution Items" commandId="2e00fd3b-2b8f-40e4-ac67-bf0ceef140a6" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="52edf834-da9d-4ff8-afd3-30b4766e4dbe" text="Open Solution Items" commandId="2e00fd3b-2b8f-40e4-ac67-bf0ceef140a6" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d889cd16-1b23-4245-8b2b-3e3f596c2b77" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="a72b0855-2784-47e7-82d9-157c55a630a6" text="Go To Solution Items" commandId="397b704f-685b-4469-8dcb-dcf3c952fef4" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="a72b0855-2784-47e7-82d9-157c55a630a6" text="Show Solution Items" commandId="397b704f-685b-4469-8dcb-dcf3c952fef4" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="0dba7274-d8e8-4d87-9f69-3a3f82179405" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="19abc17e-d85a-4e15-a99a-c97d5ae5c800" text="Open Solution Items" commandId="3ff5c4dd-f7ec-4ee3-a3e1-fe12d70120c3" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="19abc17e-d85a-4e15-a99a-c97d5ae5c800" text="Open Solution Items" commandId="3ff5c4dd-f7ec-4ee3-a3e1-fe12d70120c3" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="9b8c2286-0be7-4364-b4c6-4719bcc91dd9" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="86ca81b6-1198-4f29-9d4f-5f2323498b21" text="Go To Solution Items" commandId="c3cc82f1-62d0-4f8b-895c-e2e2fb5695a2" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="86ca81b6-1198-4f29-9d4f-5f2323498b21" text="Show Solution Items" commandId="c3cc82f1-62d0-4f8b-895c-e2e2fb5695a2" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="911a546f-80dc-4823-bb03-f73754e5f1e9" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="b39b02f7-5668-48eb-b0f7-ccea19047f14" text="Open Solution Items" commandId="a3b93464-fee6-4066-9eae-8292b5a0201d" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="b39b02f7-5668-48eb-b0f7-ccea19047f14" text="Open Solution Items" commandId="a3b93464-fee6-4066-9eae-8292b5a0201d" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="ea5198af-d52b-486d-bcb1-c1fb9ec95fdf" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="05c5bee6-8d44-46a1-a7a1-e609bc42cecb" text="Go To Solution Items" commandId="18e244c7-76ad-4430-a987-c37c609452dc" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="05c5bee6-8d44-46a1-a7a1-e609bc42cecb" text="Show Solution Items" commandId="18e244c7-76ad-4430-a987-c37c609452dc" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="f43ccab1-9160-4ee4-9cb2-29ed8d023e66" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
     <menuSettings Id="14e6671c-5125-44dd-833f-7b9477eb6974" text="Show" commandId="2117689e-fec7-4f36-94ad-ec14f0184428" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
@@ -1910,39 +1985,27 @@
 ]
 </conditions>
     </menuSettings>
-    <menuSettings Id="b8d7e219-f458-4714-99a8-5d0112ca0fb1" text="Open Solution Items" commandId="16edcd41-7f26-4332-afbc-db279696a30f" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="b8d7e219-f458-4714-99a8-5d0112ca0fb1" text="Open Solution Items" commandId="16edcd41-7f26-4332-afbc-db279696a30f" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="c0bdd067-4947-48f2-ae35-879f20cc3cf1" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
-    <menuSettings Id="2533c487-c8c5-4839-8359-5b5704b6c69a" text="Go To Solution Items" commandId="fa8be218-d6de-4ed7-a197-7b42f127db4b" wizardId="00000000-0000-0000-0000-000000000000">
+    <menuSettings Id="2533c487-c8c5-4839-8359-5b5704b6c69a" text="Show Solution Items" commandId="fa8be218-d6de-4ed7-a197-7b42f127db4b" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="fa8f61b9-b783-456c-b884-ef9b755fd79e" />
       </extendedElement>
-      <conditions>
-[
-  
+      <conditions>[
   {
-    "Properties":
-    [
-      
-    ],
-    "TypeId":"NuPattern.Library.Conditions.ArtifactReferenceExistsCondition"
+    "TypeId": "NuPattern.Library.Conditions.ArtifactReferenceExistsCondition",
+    "Properties": []
   }
-]
-</conditions>
+]</conditions>
     </menuSettings>
     <menuSettings Id="50cbb339-338b-4276-9e58-93567a64f2a7" text="Build Guidance" icon="pack://application:,,,/NuPattern.Authoring.PatternToolkit;component/Resources/CommandBuildGuidance.png" commandId="5a814601-5260-42a6-94fd-1e8a7a178ace" wizardId="00000000-0000-0000-0000-000000000000">
       <extendedElement>
@@ -2084,7 +2147,7 @@
         <automationSettingsSchemaMoniker Id="6bf40086-559a-48d8-8aa5-67a7b026968c" />
       </extendedElement>
     </wizardSettings>
-    <artifactExtension Id="fa72f9a1-cc73-47fe-84cc-08d473f3efa8" onArtifactActivation="Select">
+    <artifactExtension Id="fa72f9a1-cc73-47fe-84cc-08d473f3efa8" onArtifactActivation="Select" onArtifactDeletion="PromptUser">
       <extendedElement>
         <patternSchemaMoniker Id="c034429e-01f9-48dd-a478-0321fb708dd3" />
       </extendedElement>
@@ -2099,7 +2162,7 @@
         <collectionSchemaMoniker Id="994965b7-d2b1-4460-8947-44ca73227b5f" />
       </extendedElement>
     </artifactExtension>
-    <artifactExtension Id="401fdb05-e380-4168-bc65-a0ed3e8e125e" onArtifactActivation="Open">
+    <artifactExtension Id="401fdb05-e380-4168-bc65-a0ed3e8e125e" onArtifactActivation="Open" onArtifactDeletion="PromptUser">
       <extendedElement>
         <elementSchemaMoniker Id="5da53e5a-0ba8-48f8-a922-1712244c388c" />
       </extendedElement>
@@ -2134,7 +2197,7 @@
         <collectionSchemaMoniker Id="81dde21d-392a-4c60-a048-5c5445bf6542" />
       </extendedElement>
     </artifactExtension>
-    <artifactExtension Id="8ced9a2b-05f1-47cd-a3c5-a0cc4a234509" onArtifactActivation="Open">
+    <artifactExtension Id="8ced9a2b-05f1-47cd-a3c5-a0cc4a234509" onArtifactActivation="Open" onArtifactDeletion="PromptUser">
       <extendedElement>
         <elementSchemaMoniker Id="b013c2ba-e9e0-484d-a0bc-e821c38c192b" />
       </extendedElement>
@@ -2144,22 +2207,22 @@
         <collectionSchemaMoniker Id="3906075a-6263-4e5d-be94-3750e6fc1e57" />
       </extendedElement>
     </artifactExtension>
-    <artifactExtension Id="e24b57bd-5a67-407a-9582-432ba6017f62" onArtifactActivation="Open">
+    <artifactExtension Id="e24b57bd-5a67-407a-9582-432ba6017f62" onArtifactActivation="Open" onArtifactDeletion="PromptUser">
       <extendedElement>
         <elementSchemaMoniker Id="7475fa2d-8033-461c-a460-7e0793491874" />
       </extendedElement>
     </artifactExtension>
-    <artifactExtension Id="ef55bd35-3a5a-478f-ba1b-9817400f244c" onArtifactActivation="Open">
+    <artifactExtension Id="ef55bd35-3a5a-478f-ba1b-9817400f244c" onArtifactActivation="Open" onArtifactDeletion="PromptUser">
       <extendedElement>
         <elementSchemaMoniker Id="f03d48a2-2377-4e56-a2c4-ae24d34302d3" />
       </extendedElement>
     </artifactExtension>
-    <artifactExtension Id="d7e0db5e-d950-420b-8d23-a6dc018f3aba" onArtifactActivation="Open">
+    <artifactExtension Id="d7e0db5e-d950-420b-8d23-a6dc018f3aba" onArtifactActivation="Open" onArtifactDeletion="PromptUser">
       <extendedElement>
         <elementSchemaMoniker Id="c6a0f8d4-59df-4dad-b92e-c6a1e54be5e2" />
       </extendedElement>
     </artifactExtension>
-    <artifactExtension Id="01fb8118-0231-450d-af7a-f08bb1c9266c" onArtifactActivation="Open">
+    <artifactExtension Id="01fb8118-0231-450d-af7a-f08bb1c9266c" onArtifactActivation="Open" onArtifactDeletion="PromptUser">
       <extendedElement>
         <elementSchemaMoniker Id="93ee656b-6308-42d1-a5d7-e10fcea47ee7" />
       </extendedElement>
@@ -2169,7 +2232,7 @@
         <collectionSchemaMoniker Id="739aef21-5f1e-421b-804a-47f11f93c9c3" />
       </extendedElement>
     </artifactExtension>
-    <artifactExtension Id="9fc1f294-bc08-467e-9fcd-61489ef33442">
+    <artifactExtension Id="9fc1f294-bc08-467e-9fcd-61489ef33442" onArtifactDeletion="PromptUser">
       <extendedElement>
         <elementSchemaMoniker Id="6a596dea-529b-4cd5-9eea-7e856a2b332c" />
       </extendedElement>
@@ -2179,7 +2242,7 @@
         <extensionPointSchemaMoniker Id="fcfa4452-7e09-4f57-b35b-b9f1ee6179ca" />
       </extendedElement>
     </artifactExtension>
-    <artifactExtension Id="ffa93729-cc0a-4a62-a0f5-7928d0bef2b8" onArtifactActivation="Open">
+    <artifactExtension Id="ffa93729-cc0a-4a62-a0f5-7928d0bef2b8" onArtifactActivation="Open" onArtifactDeletion="PromptUser">
       <extendedElement>
         <elementSchemaMoniker Id="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" />
       </extendedElement>
@@ -2679,6 +2742,24 @@
           </settings>
         </customizationPolicy>
       </automationSettings>
+      <automationSettings Id="31bf21be-7af0-4d4e-9f8e-aadc655d6939" name="DeleteArtifactsCommand" displayName="Delete Artifacts Command" description="" isSystem="true" codeIdentifier="DeleteArtifactsCommand" isCustomizable="False" automationType="Command">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+      <automationSettings Id="deca6801-659c-4a62-8cfd-1bc4b3c9d7ea" name="DeleteArtifactsEvent" displayName="Delete Artifacts Event" description="" isSystem="true" codeIdentifier="DeleteArtifactsEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
     </automationSettings>
     <views>
       <view Id="e4f9702a-3b97-4b11-bb76-037a32de07c7" name="Development" displayName="Development" description="The development view of a toolkit." codeIdentifier="Development" isDefault="true" diagramId="b6d2a705-07fa-4a9b-86ea-b80e1c8214a8">
@@ -2890,6 +2971,24 @@
                               </settings>
                             </customizationPolicy>
                           </automationSettings>
+                          <automationSettings Id="56c58f25-d9f8-49ea-81b9-024b5cea0fcb" name="DeleteArtifactsCommand" displayName="Delete Artifacts Command" description="" isSystem="true" codeIdentifier="DeleteArtifactsCommand" isCustomizable="False" automationType="Command">
+                            <customizationPolicy name="CustomizationPolicySchema1">
+                              <settings>
+                                <setting propertyId="DisplayName" />
+                                <setting propertyId="Description" />
+                                <setting propertyId="Settings" />
+                              </settings>
+                            </customizationPolicy>
+                          </automationSettings>
+                          <automationSettings Id="ba85ead1-e834-4bcc-9c5e-db42b0f3b080" name="DeleteArtifactsEvent" displayName="Delete Artifacts Event" description="" isSystem="true" codeIdentifier="DeleteArtifactsEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
+                            <customizationPolicy name="CustomizationPolicySchema1">
+                              <settings>
+                                <setting propertyId="DisplayName" />
+                                <setting propertyId="Description" />
+                                <setting propertyId="Settings" />
+                              </settings>
+                            </customizationPolicy>
+                          </automationSettings>
                         </automationSettings>
                       </element>
                     </childElement>
@@ -3073,6 +3172,24 @@
                               </settings>
                             </customizationPolicy>
                           </automationSettings>
+                          <automationSettings Id="bfa8e6be-dc29-4644-82c0-4dee5f1e3b66" name="DeleteArtifactsCommand" displayName="Delete Artifacts Command" description="" isSystem="true" codeIdentifier="DeleteArtifactsCommand" isCustomizable="False" automationType="Command">
+                            <customizationPolicy name="CustomizationPolicySchema1">
+                              <settings>
+                                <setting propertyId="DisplayName" />
+                                <setting propertyId="Description" />
+                                <setting propertyId="Settings" />
+                              </settings>
+                            </customizationPolicy>
+                          </automationSettings>
+                          <automationSettings Id="a48e0517-73b9-43d2-9745-94a55b8fd42b" name="DeleteArtifactsEvent" displayName="Delete Artifacts Event" description="" isSystem="true" codeIdentifier="DeleteArtifactsEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
+                            <customizationPolicy name="CustomizationPolicySchema1">
+                              <settings>
+                                <setting propertyId="DisplayName" />
+                                <setting propertyId="Description" />
+                                <setting propertyId="Settings" />
+                              </settings>
+                            </customizationPolicy>
+                          </automationSettings>
                         </automationSettings>
                       </element>
                     </childElement>
@@ -3194,6 +3311,24 @@
                             </customizationPolicy>
                           </automationSettings>
                           <automationSettings Id="71046858-7e40-4c2f-8677-934f8c87b1dc" name="SyncArtifactNamesEvent" displayName="Sync Artifact Names Event" description="" isSystem="true" codeIdentifier="SyncArtifactNamesEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
+                            <customizationPolicy name="CustomizationPolicySchema1">
+                              <settings>
+                                <setting propertyId="DisplayName" />
+                                <setting propertyId="Description" />
+                                <setting propertyId="Settings" />
+                              </settings>
+                            </customizationPolicy>
+                          </automationSettings>
+                          <automationSettings Id="ab89f464-6be6-4a53-9d2b-5eb0c7ea8610" name="DeleteArtifactsCommand" displayName="Delete Artifacts Command" description="" isSystem="true" codeIdentifier="DeleteArtifactsCommand" isCustomizable="False" automationType="Command">
+                            <customizationPolicy name="CustomizationPolicySchema1">
+                              <settings>
+                                <setting propertyId="DisplayName" />
+                                <setting propertyId="Description" />
+                                <setting propertyId="Settings" />
+                              </settings>
+                            </customizationPolicy>
+                          </automationSettings>
+                          <automationSettings Id="b093db1e-4836-49f2-bdfe-3c20272829c6" name="DeleteArtifactsEvent" displayName="Delete Artifacts Event" description="" isSystem="true" codeIdentifier="DeleteArtifactsEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
                             <customizationPolicy name="CustomizationPolicySchema1">
                               <settings>
                                 <setting propertyId="DisplayName" />
@@ -3333,6 +3468,24 @@
                           </settings>
                         </customizationPolicy>
                       </automationSettings>
+                      <automationSettings Id="d26a5fd3-357f-43bb-b9bd-a0445ef8656c" name="DeleteArtifactsCommand" displayName="Delete Artifacts Command" description="" isSystem="true" codeIdentifier="DeleteArtifactsCommand" isCustomizable="False" automationType="Command">
+                        <customizationPolicy name="CustomizationPolicySchema1">
+                          <settings>
+                            <setting propertyId="DisplayName" />
+                            <setting propertyId="Description" />
+                            <setting propertyId="Settings" />
+                          </settings>
+                        </customizationPolicy>
+                      </automationSettings>
+                      <automationSettings Id="6fceaf7d-f897-4df0-bd12-ef18b2717590" name="DeleteArtifactsEvent" displayName="Delete Artifacts Event" description="" isSystem="true" codeIdentifier="DeleteArtifactsEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
+                        <customizationPolicy name="CustomizationPolicySchema1">
+                          <settings>
+                            <setting propertyId="DisplayName" />
+                            <setting propertyId="Description" />
+                            <setting propertyId="Settings" />
+                          </settings>
+                        </customizationPolicy>
+                      </automationSettings>
                     </automationSettings>
                   </element>
                 </childElement>
@@ -3452,6 +3605,24 @@
                             </customizationPolicy>
                           </automationSettings>
                           <automationSettings Id="535ea2ed-01a2-4108-b53a-c7ee81ac5899" name="SyncArtifactNamesEvent" displayName="Sync Artifact Names Event" description="" isSystem="true" codeIdentifier="SyncArtifactNamesEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
+                            <customizationPolicy name="CustomizationPolicySchema1">
+                              <settings>
+                                <setting propertyId="DisplayName" />
+                                <setting propertyId="Description" />
+                                <setting propertyId="Settings" />
+                              </settings>
+                            </customizationPolicy>
+                          </automationSettings>
+                          <automationSettings Id="8c68bfd6-04a8-4c0f-8a9e-f4fcdb3424ca" name="DeleteArtifactsCommand" displayName="Delete Artifacts Command" description="" isSystem="true" codeIdentifier="DeleteArtifactsCommand" isCustomizable="False" automationType="Command">
+                            <customizationPolicy name="CustomizationPolicySchema1">
+                              <settings>
+                                <setting propertyId="DisplayName" />
+                                <setting propertyId="Description" />
+                                <setting propertyId="Settings" />
+                              </settings>
+                            </customizationPolicy>
+                          </automationSettings>
+                          <automationSettings Id="331727ed-3e1b-4445-a9b2-cb09a1250d48" name="DeleteArtifactsEvent" displayName="Delete Artifacts Event" description="" isSystem="true" codeIdentifier="DeleteArtifactsEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
                             <customizationPolicy name="CustomizationPolicySchema1">
                               <settings>
                                 <setting propertyId="DisplayName" />
@@ -3642,6 +3813,24 @@
                     </customizationPolicy>
                   </automationSettings>
                   <automationSettings Id="b920c776-ac6c-42fd-a058-cc56b0dc1c94" name="ShredGuidanceDocuments" displayName="Shred Guidance Documents" description="" codeIdentifier="ShredGuidanceDocuments" automationType="Command">
+                    <customizationPolicy name="CustomizationPolicySchema1">
+                      <settings>
+                        <setting propertyId="DisplayName" />
+                        <setting propertyId="Description" />
+                        <setting propertyId="Settings" />
+                      </settings>
+                    </customizationPolicy>
+                  </automationSettings>
+                  <automationSettings Id="e51af120-3032-473e-a163-c3814c7d2535" name="DeleteArtifactsCommand" displayName="Delete Artifacts Command" description="" isSystem="true" codeIdentifier="DeleteArtifactsCommand" isCustomizable="False" automationType="Command">
+                    <customizationPolicy name="CustomizationPolicySchema1">
+                      <settings>
+                        <setting propertyId="DisplayName" />
+                        <setting propertyId="Description" />
+                        <setting propertyId="Settings" />
+                      </settings>
+                    </customizationPolicy>
+                  </automationSettings>
+                  <automationSettings Id="6f1080d0-9d65-41ab-a7f0-46047fa23c45" name="DeleteArtifactsEvent" displayName="Delete Artifacts Event" description="" isSystem="true" codeIdentifier="DeleteArtifactsEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
                     <customizationPolicy name="CustomizationPolicySchema1">
                       <settings>
                         <setting propertyId="DisplayName" />
@@ -3945,6 +4134,24 @@
                   </settings>
                 </customizationPolicy>
               </automationSettings>
+              <automationSettings Id="fd8c84eb-222d-4860-b850-3c719ec35882" name="DeleteArtifactsCommand" displayName="Delete Artifacts Command" description="" isSystem="true" codeIdentifier="DeleteArtifactsCommand" isCustomizable="False" automationType="Command">
+                <customizationPolicy name="CustomizationPolicySchema1">
+                  <settings>
+                    <setting propertyId="DisplayName" />
+                    <setting propertyId="Description" />
+                    <setting propertyId="Settings" />
+                  </settings>
+                </customizationPolicy>
+              </automationSettings>
+              <automationSettings Id="636400a7-aaeb-48f7-8b75-e18d111bba10" name="DeleteArtifactsEvent" displayName="Delete Artifacts Event" description="" isSystem="true" codeIdentifier="DeleteArtifactsEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
+                <customizationPolicy name="CustomizationPolicySchema1">
+                  <settings>
+                    <setting propertyId="DisplayName" />
+                    <setting propertyId="Description" />
+                    <setting propertyId="Settings" />
+                  </settings>
+                </customizationPolicy>
+              </automationSettings>
             </automationSettings>
             <childElement>
               <collection Id="739aef21-5f1e-421b-804a-47f11f93c9c3" name="Views" displayName="Views" description="The views (or aspects) being modeled in the pattern." codeIdentifier="Views">
@@ -4060,6 +4267,24 @@
                         </customizationPolicy>
                       </automationSettings>
                       <automationSettings Id="efb2b684-ac9b-4d4d-b661-a2b56178f535" name="ShowViewOnActivate" displayName="Show View On Activate" description="" codeIdentifier="ShowViewOnActivate" automationType="Event Launch Point" classification="LaunchPoint">
+                        <customizationPolicy name="CustomizationPolicySchema1">
+                          <settings>
+                            <setting propertyId="DisplayName" />
+                            <setting propertyId="Description" />
+                            <setting propertyId="Settings" />
+                          </settings>
+                        </customizationPolicy>
+                      </automationSettings>
+                      <automationSettings Id="a84fee8e-045e-4984-b947-2ee131145129" name="DeleteArtifactsCommand" displayName="Delete Artifacts Command" description="" isSystem="true" codeIdentifier="DeleteArtifactsCommand" isCustomizable="False" automationType="Command">
+                        <customizationPolicy name="CustomizationPolicySchema1">
+                          <settings>
+                            <setting propertyId="DisplayName" />
+                            <setting propertyId="Description" />
+                            <setting propertyId="Settings" />
+                          </settings>
+                        </customizationPolicy>
+                      </automationSettings>
+                      <automationSettings Id="e75a3ae3-f133-4ce4-95c4-c6e83f524b87" name="DeleteArtifactsEvent" displayName="Delete Artifacts Event" description="" isSystem="true" codeIdentifier="DeleteArtifactsEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
                         <customizationPolicy name="CustomizationPolicySchema1">
                           <settings>
                             <setting propertyId="DisplayName" />

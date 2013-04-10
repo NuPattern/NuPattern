@@ -299,7 +299,6 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
                     Assert.True(event1.IsSystem);
 
                     Assert.Equal(eventSettings.EventId, typeof(IOnElementActivatedEvent).FullName);
-                    Assert.Equal(eventSettings.FilterForCurrentElement, true);
 
                     var commandSettings = command.GetExtensions<ICommandSettings>().FirstOrDefault();
                     Assert.NotNull(commandSettings);
@@ -347,7 +346,6 @@ namespace NuPattern.Library.IntegrationTests.Automation.Artifact
                     Assert.True(event1.IsSystem);
 
                     Assert.Equal(eventSettings.EventId, typeof(IOnElementDeletingEvent).FullName);
-                    Assert.Equal(eventSettings.FilterForCurrentElement, true);
 
                     var commandSettings = command.GetExtensions<ICommandSettings>().FirstOrDefault();
                     Assert.NotNull(commandSettings);

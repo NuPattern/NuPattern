@@ -1,7 +1,7 @@
 ﻿using System;
 using NuPattern.Presentation;
 using NuPattern.Runtime.Bindings;
-using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UI.ViewModels
 {

@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NuPattern.Library.Automation;
-using NuPattern.Library.Conditions;
 using NuPattern.Modeling;
-using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests.Automation.Event
@@ -44,65 +41,6 @@ namespace NuPattern.Library.UnitTests.Automation.Event
             public void ThenConditionAreEmpty()
             {
                 Assert.True(String.IsNullOrEmpty(this.settings.Conditions));
-            }
-
-            [TestMethod, TestCategory("Unit")]
-            public void ThenFilterForCurrentElementIsFalse()
-            {
-                Assert.False(this.settings.FilterForCurrentElement);
-            }
-
-            [TestMethod, TestCategory("Unit")]
-            public void WhenFilterForCurrentElementIsTrue_ThenAddsFilteringCondition()
-            {
-                this.settings.WithTransaction(setting => setting.FilterForCurrentElement = true);
-
-                var result = BindingSerializer.Deserialize<List<ConditionBindingSettings>>(this.settings.Conditions);
-
-                Assert.Equal(1, result.Count);
-                Assert.Equal(typeof(EventSenderMatchesElementCondition).FullName, result[0].TypeId);
-            }
-
-            [TestMethod, TestCategory("Unit")]
-            public void WhenFilteringConditionExistsAndFilterForCurrentElementIsTrue_ThenDoesNotAddFilteringCondition()
-            {
-                this.store.TransactionManager.DoWithinTransaction(() =>
-                {
-                    this.settings.Conditions = BindingSerializer.Serialize(
-                        new[]
-                        {
-                            new ConditionBindingSettings
-                            {
-                                TypeId = typeof(EventSenderMatchesElementCondition).FullName
-                            }
-                        });
-                    this.settings.FilterForCurrentElement = true;
-                });
-
-                var result = BindingSerializer.Deserialize<List<ConditionBindingSettings>>(this.settings.Conditions);
-
-                Assert.Equal(1, result.Count);
-                Assert.Equal(typeof(EventSenderMatchesElementCondition).FullName, result[0].TypeId);
-            }
-
-            [TestMethod, TestCategory("Unit")]
-            public void WhenFilteringConditionExistsAndFilterForCurrentElementIsChangedToFalse_ThenRemovesFilteringCondition()
-            {
-                this.store.TransactionManager.DoWithinTransaction(() =>
-                {
-                    var condition = new ConditionBindingSettings
-                    {
-                        TypeId = typeof(EventSenderMatchesElementCondition).FullName
-                    };
-
-                    this.settings.Conditions = BindingSerializer.Serialize(new List<ConditionBindingSettings> { condition });
-                    this.settings.FilterForCurrentElement = true;
-                    this.settings.FilterForCurrentElement = false;
-                });
-
-                var result = BindingSerializer.Deserialize<List<ConditionBindingSettings>>(this.settings.Conditions);
-
-                Assert.Equal(0, result.Count);
             }
         }
     }

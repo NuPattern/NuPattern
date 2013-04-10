@@ -1200,23 +1200,6 @@ namespace NuPattern.Library.Automation
 					}
 				}
 			}
-			// FilterForCurrentElement
-			if (!serializationContext.Result.Failed)
-			{
-				string attribFilterForCurrentElement = LibrarySerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "filterForCurrentElement");
-				if (attribFilterForCurrentElement != null)
-				{
-					global::System.Boolean valueOfFilterForCurrentElement;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.Boolean>(serializationContext, attribFilterForCurrentElement, out valueOfFilterForCurrentElement))
-					{
-						instanceOfEventSettings.FilterForCurrentElement = valueOfFilterForCurrentElement;
-					}
-					else
-					{	// Invalid property value, ignored.
-						LibrarySerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "filterForCurrentElement", typeof(global::System.Boolean), attribFilterForCurrentElement);
-					}
-				}
-			}
 			// WizardId
 			if (!serializationContext.Result.Failed)
 			{
@@ -1735,19 +1718,6 @@ namespace NuPattern.Library.Automation
 					if (!string.IsNullOrEmpty(propValue))
 						LibrarySerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "eventId", propValue);
 	
-				}
-			}
-			// FilterForCurrentElement
-			if (!serializationContext.Result.Failed)
-			{
-				global::System.Boolean propValue = instanceOfEventSettings.FilterForCurrentElement;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<global::System.Boolean>(serializationContext, propValue);
-				if (!serializationContext.Result.Failed)
-				{
-					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "false") != 0)
-					{	// No need to write the value out if it's the same as default value.
-						LibrarySerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "filterForCurrentElement", serializedPropValue);
-					}
 				}
 			}
 			// WizardId

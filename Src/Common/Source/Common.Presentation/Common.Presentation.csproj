@@ -78,6 +78,7 @@
     <Compile Include="VsIde\VsSystemDropShadowChrome.cs" />
     <Compile Include="SortBehavior.cs" />
     <Compile Include="ValueEditor.cs" />
+    <Compile Include="VsIde\VsUIShellExtensions.cs" />
     <Compile Include="WizardCommands.cs" />
     <Compile Include="WizardWindow.cs" />
   </ItemGroup>
@@ -157,6 +158,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5DCC5923-F1D8-43F1-B23F-178C7618819E}</Project>
+      <Name>Common.VisualStudio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />

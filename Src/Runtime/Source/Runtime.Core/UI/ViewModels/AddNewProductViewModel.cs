@@ -11,8 +11,8 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Extensions;
-using NuPattern.VisualStudio.Shell;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI.ViewModels

@@ -18,7 +18,6 @@ using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings.Design;
 using NuPattern.Runtime.UI;
 using NuPattern.VisualStudio;
-using NuPattern.VisualStudio.Shell;
 using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Library.Design

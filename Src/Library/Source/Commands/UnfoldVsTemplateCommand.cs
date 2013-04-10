@@ -21,7 +21,7 @@ using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.References;
-using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 using Dsl = Microsoft.VisualStudio.Modeling.Design;
 

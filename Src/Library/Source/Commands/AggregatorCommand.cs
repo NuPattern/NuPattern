@@ -16,7 +16,7 @@ using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Automation;
-using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Library.Commands
 {

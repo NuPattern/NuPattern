@@ -29,11 +29,11 @@ namespace NuPattern.Library.Automation
 
             // Configure events.
             element.EnsureEventLaunchPoint<IOnProductStoreSavedEvent>(Resources.ValidationExtension_OnSaveEventName, validateCommand,
-                false, () => this.ValidationOnSave);
+                () => this.ValidationOnSave);
             element.EnsureEventLaunchPoint<IOnBuildStartedEvent>(Resources.ValidationExtension_OnBuildEventName, validateCommand,
-                false, () => this.ValidationOnBuild);
+                () => this.ValidationOnBuild);
             element.EnsureEventLaunchPoint(this.ValidationOnCustomEvent, Resources.ValidationExtension_OnCustomEventName, validateCommand,
-                false, () => !String.IsNullOrEmpty(this.ValidationOnCustomEvent));
+                () => !String.IsNullOrEmpty(this.ValidationOnCustomEvent));
 
             // Configure menu.
             element.EnsureMenuLaunchPoint(Resources.ValidationExtension_OnMenuContextMenuName, validateCommand,

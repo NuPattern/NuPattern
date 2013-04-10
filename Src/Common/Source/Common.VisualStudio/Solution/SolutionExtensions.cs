@@ -15,7 +15,6 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.HierarchyNodes;
 using NuPattern.VisualStudio.Properties;
-using NuPattern.VisualStudio.Shell;
 using VSLangProj;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 

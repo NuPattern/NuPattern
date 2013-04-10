@@ -44,9 +44,9 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		/// </summary>
 		public Command(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<ICommand>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<ICommand>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -183,9 +183,9 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		/// </summary>
 		public Condition(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<ICondition>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<ICondition>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -322,9 +322,9 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		/// </summary>
 		public Event(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IEvent>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IEvent>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -461,9 +461,9 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		/// </summary>
 		public EnumTypeConverter(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IEnumTypeConverter>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IEnumTypeConverter>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -600,9 +600,9 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		/// </summary>
 		public DataTypeConverter(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IDataTypeConverter>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IDataTypeConverter>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -739,9 +739,9 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		/// </summary>
 		public TypePickerEditor(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<ITypePickerEditor>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<ITypePickerEditor>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -878,9 +878,9 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		/// </summary>
 		public UIEditor(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IUIEditor>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IUIEditor>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -1017,9 +1017,9 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		/// </summary>
 		public ElementValidationRule(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IElementValidationRule>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IElementValidationRule>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -1156,9 +1156,9 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		/// </summary>
 		public PropertyValidationRule(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IPropertyValidationRule>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IPropertyValidationRule>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -1295,9 +1295,9 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		/// </summary>
 		public ValueProvider(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IValueProvider>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IValueProvider>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -1434,9 +1434,9 @@ namespace NuPattern.Authoring.PatternToolkitLibrary
 		/// </summary>
 		public ElementOrderingComparer(Runtime.IAbstractElement target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IElementOrderingComparer>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IElementOrderingComparer>();
+			OnCreated();
 		}
 
 		/// <summary>

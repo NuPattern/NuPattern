@@ -237,7 +237,6 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
                     Assert.True(event1.IsSystem);
 
                     Assert.Equal(eventSettings.EventId, typeof(IOnElementInstantiatedEvent).FullName);
-                    Assert.Equal(eventSettings.FilterForCurrentElement, true);
 
                     var commandSettings = command.GetExtensions<ICommandSettings>().FirstOrDefault();
                     Assert.NotNull(commandSettings);

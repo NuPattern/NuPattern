@@ -43,9 +43,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public Development(Runtime.IView target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IDevelopment>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IDevelopment>();
+			OnCreated();
 		}
 
 		/// <summary>
@@ -195,9 +195,9 @@ namespace NuPattern.Authoring.PatternToolkit
 		/// </summary>
 		public Design(Runtime.IView target)
 		{
-		this.target = target;
-		this.proxy = target.ProxyFor<IDesign>();
-		OnCreated();
+			this.target = target;
+			this.proxy = target.ProxyFor<IDesign>();
+			OnCreated();
 		}
 
 		/// <summary>

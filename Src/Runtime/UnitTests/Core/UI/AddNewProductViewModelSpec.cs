@@ -6,7 +6,7 @@ using Moq;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime.UI.ViewModels;
-using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UnitTests.UI
 {

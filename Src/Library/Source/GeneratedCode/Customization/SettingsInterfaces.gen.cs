@@ -130,11 +130,6 @@ namespace NuPattern.Library.Automation
         global::System.Guid CommandId { get; set; }
         
         /// <summary>
-        /// Whether to add a condition that filters the events to the current element only. Typically required for element instantiation and property change events types as examples.
-        /// </summary>
-        global::System.Boolean FilterForCurrentElement { get; set; }
-        
-        /// <summary>
         /// A wizard to gather input from the user, that configures the properties of this element, when the event is raised.
         /// </summary>
         global::System.Guid WizardId { get; set; }

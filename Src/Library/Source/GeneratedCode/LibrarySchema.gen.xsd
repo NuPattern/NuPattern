@@ -138,12 +138,6 @@
             <xsd:documentation>The type of event which triggers the command to execute when all conditions are met.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: FilterForCurrentElement -->
-        <xsd:attribute name="filterForCurrentElement" type="xsd:boolean" >
-          <xsd:annotation>
-            <xsd:documentation>Whether to add a condition that filters the events to the current element only. Typically required for element instantiation and property change events types as examples.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:attribute>
         <!-- Property: WizardId -->
         <xsd:attribute name="wizardId" type="xsd:string" >
           <xsd:annotation>

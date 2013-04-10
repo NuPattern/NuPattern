@@ -98,7 +98,6 @@ namespace NuPattern.Library.Automation
 				new DomainMemberInfo(typeof(EventSettings), "EventId", EventSettings.EventIdDomainPropertyId, typeof(EventSettings.EventIdPropertyHandler)),
 				new DomainMemberInfo(typeof(EventSettings), "CommandId", EventSettings.CommandIdDomainPropertyId, typeof(EventSettings.CommandIdPropertyHandler)),
 				new DomainMemberInfo(typeof(EventSettings), "Conditions", EventSettings.ConditionsDomainPropertyId, typeof(EventSettings.ConditionsPropertyHandler)),
-				new DomainMemberInfo(typeof(EventSettings), "FilterForCurrentElement", EventSettings.FilterForCurrentElementDomainPropertyId, typeof(EventSettings.FilterForCurrentElementPropertyHandler)),
 				new DomainMemberInfo(typeof(EventSettings), "WizardId", EventSettings.WizardIdDomainPropertyId, typeof(EventSettings.WizardIdPropertyHandler)),
 				new DomainMemberInfo(typeof(CommandSettings), "TypeId", CommandSettings.TypeIdDomainPropertyId, typeof(CommandSettings.TypeIdPropertyHandler)),
 				new DomainMemberInfo(typeof(CommandSettings), "Properties", CommandSettings.PropertiesDomainPropertyId, typeof(CommandSettings.PropertiesPropertyHandler)),

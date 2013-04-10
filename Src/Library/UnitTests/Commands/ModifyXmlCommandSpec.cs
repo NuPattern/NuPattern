@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
-using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio;
 using NuPattern.Xml;
 
 namespace NuPattern.Library.UnitTests.Commands

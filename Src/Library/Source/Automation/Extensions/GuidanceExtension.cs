@@ -38,7 +38,7 @@ namespace NuPattern.Library.Automation
             }
 
             element.EnsureEventLaunchPoint<IOnElementInstantiatedEvent>(Properties.Resources.GuidanceExtension_InstantiateEventName,
-                instantiateCommand, true, () => !String.IsNullOrEmpty(this.GuidanceFeatureId));
+                instantiateCommand, () => !String.IsNullOrEmpty(this.GuidanceFeatureId));
 
             // Configure the activate command and menu.
             var activateCommand = element.EnsureCommandAutomation<ActivateFeatureCommand>(Properties.Resources.GuidanceExtension_ActivateCommandName,

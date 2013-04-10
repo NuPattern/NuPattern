@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.Diagnostics;
-using NuPattern.VisualStudio.Shell;
+using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UnitTests.Diagnostics
 {
