@@ -18,22 +18,16 @@
         <ProjectItem ItemType="Content" TargetFileName="Properties\AssemblyInfo.cs" ReplaceParameters="false">Properties\AssemblyInfo.cs</ProjectItem>
       </TemplateContent>
       <WizardExtension>
-        <Assembly>
-          NuPattern.VisualStudio, Version=1.3.20.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88
-        </Assembly>
+        <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
         <FullClassName>NuPattern.VisualStudio.TemplateWizards.GuidGeneratorTemplateWizard</FullClassName>
       </WizardExtension>
       <WizardExtension>
-        <Assembly>
-          NuPattern.VisualStudio, Version=1.3.20.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88
-        </Assembly>
+        <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
         <FullClassName>NuPattern.VisualStudio.TemplateWizards.ReplacementTemplateWizard</FullClassName>
       </WizardExtension>
       <WizardExtension>
-        <Assembly>
-          NuPattern.Library, Version=1.3.20.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88
-        </Assembly>
-        <FullClassName>NuPattern.Library.TemplateWizards.ElementReplacementsWizard</FullClassName>
+        <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
+        <FullClassName>NuPattern.VisualStudio.TemplateWizards.ElementReplacementsTemplateWizard</FullClassName>
       </WizardExtension>
       <WizardData>
         <NewGuid Key="$guid11$" />

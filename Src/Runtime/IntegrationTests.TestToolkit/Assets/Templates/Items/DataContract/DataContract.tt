@@ -20,11 +20,11 @@
     <ProjectItem SubType="Code" ReplaceParameters="true" TargetFileName="$fileinputname$.cs">DataContract.cs</ProjectItem>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.AssemblyVersion #>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion #>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
     <FullClassName>NuPattern.VisualStudio.TemplateWizards.InstantiationTemplateWizard</FullClassName>
   </WizardExtension>
   <WizardExtension>
-    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.AssemblyVersion #>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion #>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
     <FullClassName>NuPattern.VisualStudio.TemplateWizards.ElementReplacementsTemplateWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

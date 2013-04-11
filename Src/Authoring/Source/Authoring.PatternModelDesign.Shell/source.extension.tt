@@ -2,6 +2,7 @@
 <#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
 <#@ output extension=".vsixmanifest" #>
 <#@ Include File="..\..\..\MasterVSIXInfo.gen.ttinclude"#>
+<#@ Include File="..\..\..\MasterVersion.gen.ttinclude"#>
 <#
 /***************************************************************************
     Note that the these project name variables represent the VS Project 
@@ -40,6 +41,6 @@ string vsPackageAssembly = "NuPattern.Authoring.PatternModelDesign.Shell";
         <MefComponent>|<#=VsPackageProject#>|</MefComponent>
         <ProjectTemplate>Templates\Projects</ProjectTemplate>
         <ItemTemplate>Templates\Items</ItemTemplate>
-        <Assembly AssemblyName="<#=vsPackageAssembly#>, Version=<#=VsixInfo.PatternToolkitBuilder.Version#>, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88">|<#=VsPackageProject#>|</Assembly>
+        <Assembly AssemblyName="<#=vsPackageAssembly#>, Version=<#=VsixInfo.PatternToolkitBuilder.Version#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#>">|<#=VsPackageProject#>|</Assembly>
     </Content>
 </Vsix>
