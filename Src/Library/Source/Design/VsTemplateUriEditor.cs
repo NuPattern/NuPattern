@@ -12,13 +12,13 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
-using NuPattern.Library.TemplateWizards;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings.Design;
 using NuPattern.Runtime.UI;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution.Templates;
+using NuPattern.VisualStudio.TemplateWizards;
 
 namespace NuPattern.Library.Design
 {
@@ -90,14 +90,14 @@ namespace NuPattern.Library.Design
                     // Update the vstemplate
                     var template = configurator.Configure(selectedItem, owner.DisplayName, owner.Description, owner.GetSchemaPathValue());
 
-                    template.RemoveWizardExtension(typeof(InstantiationTemplateWizard));
-                    template.RemoveWizardExtension(typeof(ElementReplacementsWizard));
+                    template.RemoveWizardExtension(TemplateWizardInfo.InstantiationTemplateWizardFullTypeName);
+                    template.RemoveWizardExtension(TemplateWizardInfo.ElementReplacementsTemplateWizardFullTypeName);
 
                     if (context.Instance is ITemplateSettings)
                     {
                         // The editor is being used from the template launchpoint, so we add 
                         // the template wizard 
-                        template.AddWizardExtension(typeof(InstantiationTemplateWizard));
+                        template.AddWizardExtension(TemplateWizardInfo.InstantiationTemplateWizardFullTypeName);
                         template.SetHidden(!((ITemplateSettings)context.Instance).CreateElementOnUnfold);
                     }
                     else
@@ -106,7 +106,7 @@ namespace NuPattern.Library.Design
                         template.SetHidden(true);
                     }
 
-                    template.AddWizardExtension(typeof(ElementReplacementsWizard));
+                    template.AddWizardExtension(TemplateWizardInfo.ElementReplacementsTemplateWizardFullTypeName);
 
                     // Set also the authoring URI value.
                     SetAuthoringUri(context, uriService.CreateUri(selectedItem));

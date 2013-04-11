@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Library.Properties
-{
-
-
+namespace NuPattern.Library.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -5787,7 +5787,7 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; template launch point or unfold command is configured with a &apos;Template&apos; property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the &apos;InstantiationTemplateWizard&apos; should appear before the &lt;WizardExtension&gt; element for the &apos;ElementReplacementsWizard&apos;. You must correct the ordering of these &lt;TemplateWizard&gt; elements in the contents of the *.vstemplate file..
+        ///   Looks up a localized string similar to &apos;{0}&apos; template launch point or unfold command is configured with a &apos;Template&apos; property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the &apos;InstantiationTemplateWizard&apos; should appear before the &lt;WizardExtension&gt; element for the &apos;ElementReplacementsTemplateWizard&apos;. You must correct the ordering of these &lt;TemplateWizard&gt; elements in the contents of the *.vstemplate file..
         /// </summary>
         internal static string Validate_TemplateSettingsWizardOrderIsNotCorrect {
             get {
@@ -5805,7 +5805,7 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; template launch point or unfold command is configured with a &apos;Template&apos; property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the &apos;InstantiationTemplateWizard&apos; or the &lt;WizardExtension&gt; element for the &apos;ElementReplacementsWizard&apos; are missing from the contents of the file, or are not declared correctly. You can re-select the template in the &apos;Template&apos; property in the &apos;Settings&apos; to automatically correct this..
+        ///   Looks up a localized string similar to &apos;{0}&apos; template launch point or unfold command is configured with a &apos;Template&apos; property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the &apos;InstantiationTemplateWizard&apos; or the &lt;WizardExtension&gt; element for the &apos;ElementReplacementsTemplateWizard&apos; are missing from the contents of the file, or are not declared correctly. You can re-select the template in the &apos;Template&apos; property in the &apos;Settings&apos; to automatically correct this..
         /// </summary>
         internal static string Validate_TemplateSettingsWizardsNotPresentInTemplate {
             get {

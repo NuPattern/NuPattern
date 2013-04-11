@@ -1,0 +1,41 @@
+﻿<#@ output extension=".gen.cs" #>
+<#@ Include File="..\..\..\MasterVersion.gen.ttinclude" #>
+<#
+var ns = "NuPattern.VisualStudio.TemplateWizards";
+var assemblyName = ns + ", Version=" + VersionInfo.TemplateWizardVersion.ToString(4) + ", Culture=neutral, PublicKeyToken=" + VersionInfo.AssemblyPublicKeyToken;
+
+var templateWizards = new[]
+{
+    "CoordinatorTemplateWizard",
+    "CustomToolRunnerTemplateWizard",
+    "ElementReplacementsTemplateWizard",
+    "FixLinkPathTemplateWizard",
+    "GuidGeneratorTemplateWizard",
+    "InstantiationTemplateWizard",
+    "OpenDesignerTemplateWizard",
+    "ReplacementTemplateWizard",
+    "SolutionNameGetTemplateWizard",
+    "SolutionNameSetTemplateWizard",
+    "VsRootSuffixTemplateWizard",
+};
+
+#>
+
+namespace <#=ns #>
+{
+    /// <summary>
+    /// Information about TemplateWizards.
+    /// </summary>
+    internal class TemplateWizardInfo
+    {
+<#
+    foreach (var templateWizard in templateWizards)
+    {
+#>
+        public const string <#=templateWizard#>FullTypeName = "<#=ns#>.<#=templateWizard#>, <#=assemblyName #>";
+<#
+
+    }
+#>
+    } 
+}

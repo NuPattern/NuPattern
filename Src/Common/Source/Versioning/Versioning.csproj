@@ -22,6 +22,12 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\GlobalAssemblyInfo.NoVersion.gen.cs">
+      <Link>GlobalAssemblyInfo.NoVersion.gen.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalAssemblyInfo.NoVersion.tt</DependentUpon>
+    </None>
     <None Include="..\..\..\..\Docs\Release Notes.docx">
       <Link>Docs\Release Notes.docx</Link>
     </None>
@@ -30,6 +36,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BuildConfiguration.CSharp.VsixProjects.tt</DependentUpon>
+    </None>
+    <None Include="..\..\..\GlobalAssemblyInfo.NoVersion.tt">
+      <Link>GlobalAssemblyInfo.NoVersion.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GlobalAssemblyInfo.NoVersion.gen.cs</LastGenOutput>
     </None>
     <None Include="..\..\..\MasterVersion.tt">
       <Link>MasterVersion.tt</Link>

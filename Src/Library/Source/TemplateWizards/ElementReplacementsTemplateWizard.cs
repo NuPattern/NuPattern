@@ -15,9 +15,9 @@ namespace NuPattern.Library.TemplateWizards
     /// Wizard extension that adds element properties to the replacements dictionary.
     /// </summary>
     [CLSCompliant(false)]
-    public class ElementReplacementsWizard : TemplateWizard
+    public class ElementReplacementsTemplateWizard : TemplateWizard
     {
-        private static readonly ITraceSource tracer = Tracer.GetSourceFor(typeof(ElementReplacementsWizard));
+        private static readonly ITraceSource tracer = Tracer.GetSourceFor(typeof(ElementReplacementsTemplateWizard));
 
         /// <summary>
         /// Runs custom wizard logic at the beginning of a template wizard run.

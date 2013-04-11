@@ -8,10 +8,10 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
-using NuPattern.Library.TemplateWizards;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.VisualStudio.Solution.Templates;
+using NuPattern.VisualStudio.TemplateWizards;
 
 namespace NuPattern.Library.Automation.Template
 {
@@ -197,11 +197,11 @@ namespace NuPattern.Library.Automation.Template
                             Resources.Validate_TemplateSettingsTemplateTypeDoesNotMatchReferencedTemplateCode, settings.SettingsElement as ModelElement);
                         }
 
-                        var elementReplacementsWizard = template.WizardExtension.GetExtension(typeof(ElementReplacementsWizard));
+                        var elementReplacementsWizard = template.WizardExtension.GetExtension(TemplateWizardInfo.ElementReplacementsTemplateWizardFullTypeName);
 
                         if (validatingTemplate)
                         {
-                            var instantiationWizard = template.WizardExtension.GetExtension(typeof(InstantiationTemplateWizard));
+                            var instantiationWizard = template.WizardExtension.GetExtension(TemplateWizardInfo.InstantiationTemplateWizardFullTypeName);
                             if (instantiationWizard == null || elementReplacementsWizard == null)
                             {
                                 //wizards not present

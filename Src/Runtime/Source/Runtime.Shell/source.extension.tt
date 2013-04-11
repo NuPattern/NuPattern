@@ -50,7 +50,7 @@ else
       <!--<MefComponent>|Common.Modeling|</MefComponent>
       <MefComponent>|Common.Presentation|</MefComponent>-->
       <MefComponent>|Common.VisualStudio|</MefComponent>
-      <Assembly AssemblyName="NuPattern.Runtime.Core, Version=<#=VsixInfo.PatternToolkitRuntime.Version#>, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88">|Runtime.Core|</Assembly>
+      <Assembly AssemblyName="NuPattern.Runtime.Core, Version=<#=VsixInfo.PatternToolkitRuntime.Version#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#>">|Runtime.Core|</Assembly>
       <!-- Feature EXtension Runtime -->
       <VsPackage>Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.pkgdef</VsPackage>
       <VsPackage>Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.pkgdef</VsPackage>

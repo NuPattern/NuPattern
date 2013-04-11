@@ -108,6 +108,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Common\Source\Common.VisualStudio.TemplateWizards\TemplateWizardInfo.gen.cs">
+      <Link>TemplateWizards\TemplateWizardInfo.gen.cs</Link>
+    </Compile>
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
@@ -161,7 +164,7 @@
     <Compile Include="Automation\SettingsValidationHelper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TemplateWizards\ElementReplacementsWizard.cs" />
+    <Compile Include="TemplateWizards\ElementReplacementsTemplateWizard.cs" />
     <Compile Include="Automation\Template\ITemplateSettings.cs" />
     <Compile Include="Design\ProductElementDictionaryConverter.cs" />
     <Compile Include="Automation\Template\TemplateSettings.Validation.cs">

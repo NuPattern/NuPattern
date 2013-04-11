@@ -23,7 +23,7 @@ namespace NuPattern.Library.TemplateWizards
     /// the template is unfolded.
     /// </summary>
     [CLSCompliant(false)]
-    public sealed class InstantiationTemplateWizard : TemplateWizard
+    public class InstantiationTemplateWizard : TemplateWizard
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<InstantiationTemplateWizard>();
 

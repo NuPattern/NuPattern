@@ -136,7 +136,7 @@
     <Compile Include="Solution\DteExtensions.cs" />
     <Compile Include="IErrorListExtensions.cs" />
     <Compile Include="Solution\IVsHierarchyExtensions.cs" />
-    <Compile Include="Solution\Templates\IVsTemplateExtensions.cs" />
+    <Compile Include="Solution\Templates\VsTemplateExtensions.cs" />
     <Compile Include="Solution\ProjectExtensions.cs" />
     <Compile Include="ServiceProviderExtensions.cs" />
     <Compile Include="Solution\SolutionExtensions.cs" />

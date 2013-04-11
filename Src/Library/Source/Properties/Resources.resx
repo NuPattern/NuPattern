@@ -1026,13 +1026,13 @@ Please open and make a note of the updates that were automatically made to the *
     <value>339</value>
   </data>
   <data name="Validate_TemplateSettingsWizardOrderIsNotCorrect" xml:space="preserve">
-    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' should appear before the &lt;WizardExtension&gt; element for the 'ElementReplacementsWizard'. You must correct the ordering of these &lt;TemplateWizard&gt; elements in the contents of the *.vstemplate file.</value>
+    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' should appear before the &lt;WizardExtension&gt; element for the 'ElementReplacementsTemplateWizard'. You must correct the ordering of these &lt;TemplateWizard&gt; elements in the contents of the *.vstemplate file.</value>
   </data>
   <data name="Validate_TemplateSettingsWizardOrderIsNotCorrectCode" xml:space="preserve">
     <value>341</value>
   </data>
   <data name="Validate_TemplateSettingsWizardsNotPresentInTemplate" xml:space="preserve">
-    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' or the &lt;WizardExtension&gt; element for the 'ElementReplacementsWizard' are missing from the contents of the file, or are not declared correctly. You can re-select the template in the 'Template' property in the 'Settings' to automatically correct this.</value>
+    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' or the &lt;WizardExtension&gt; element for the 'ElementReplacementsTemplateWizard' are missing from the contents of the file, or are not declared correctly. You can re-select the template in the 'Template' property in the 'Settings' to automatically correct this.</value>
   </data>
   <data name="Validate_TemplateSettingsWizardsNotPresentInTemplateCode" xml:space="preserve">
     <value>340</value>

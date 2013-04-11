@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Reflection;
 using System.Xml;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.VsTemplateSchema;
@@ -11,10 +10,28 @@ using NuPattern.Reflection;
 namespace NuPattern.VisualStudio.Solution.Templates
 {
     /// <summary>
-    /// IVsTemplate extension methods.
+    /// Extension methods to the <see cref="IVsTemplate"/> class.
     /// </summary>
-    public static class IVsTemplateExtensions
+    public static class VsTemplateExtensions
     {
+        /// <summary>
+        /// Removes a Wizard Extension if it exists.
+        /// </summary>
+        /// <param name="template">The template.</param>
+        /// <param name="templateExtensionFullTypeName">Type full name of the type of the template extension to remove.</param>
+        [CLSCompliant(false)]
+        public static void RemoveWizardExtension(this IVsTemplate template, string templateExtensionFullTypeName)
+        {
+            Guard.NotNull(() => template, template);
+            Guard.NotNullOrEmpty(() => templateExtensionFullTypeName, templateExtensionFullTypeName);
+
+            var templateType = Type.GetType(templateExtensionFullTypeName, false, true);
+            if (templateType != null)
+            {
+                template.RemoveWizardExtension(templateType);
+            }
+        }
+
         /// <summary>
         /// Removes a Wizard Extension if it exists.
         /// </summary>
@@ -48,10 +65,28 @@ namespace NuPattern.VisualStudio.Solution.Templates
         }
 
         /// <summary>
-        /// Sets the wizard extension.
+        /// Adds a new  wizard extension, if not already exists.
         /// </summary>
         /// <param name="template">The template.</param>
-        /// <param name="templateExtensionType">Type of the template extension.</param>
+        /// <param name="templateExtensionFullTypeName">Type full name of the type of the template extension to add.</param>
+        [CLSCompliant(false)]
+        public static void AddWizardExtension(this IVsTemplate template, string templateExtensionFullTypeName)
+        {
+            Guard.NotNull(() => template, template);
+            Guard.NotNullOrEmpty(() => templateExtensionFullTypeName, templateExtensionFullTypeName);
+
+            var templateType = Type.GetType(templateExtensionFullTypeName, false, true);
+            if (templateType != null)
+            {
+                template.AddWizardExtension(templateType);
+            }
+        }
+
+        /// <summary>
+        /// Adds a new  wizard extension, if not already exists.
+        /// </summary>
+        /// <param name="template">The template.</param>
+        /// <param name="templateExtensionType">Type of the template extension to add.</param>
         [CLSCompliant(false)]
         public static void AddWizardExtension(this IVsTemplate template, Type templateExtensionType)
         {
@@ -99,7 +134,28 @@ namespace NuPattern.VisualStudio.Solution.Templates
         /// Returns an <see cref="IVsTemplateWizardExtension"/> of the appropriate type, if present
         /// </summary>
         /// <param name="extensions">The collection of extensions in the template</param>
-        /// <param name="extensionType">The type of the extension to return</param>
+        /// <param name="templateExtensionFullTypeName">The full name of the type of the template extension to return</param>
+        /// <returns>If a wizard extension of the appropriate type exists, returns the <see cref="IVsTemplateWizardExtension"/> for that wizard. Returns null if it doesn't exist.</returns>
+        [CLSCompliant(false)]
+        public static IVsTemplateWizardExtension GetExtension(this IEnumerable<IVsTemplateWizardExtension> extensions, string templateExtensionFullTypeName)
+        {
+            Guard.NotNull(() => extensions, extensions);
+            Guard.NotNullOrEmpty(() => templateExtensionFullTypeName, templateExtensionFullTypeName);
+
+            var templateType = Type.GetType(templateExtensionFullTypeName, false, true);
+            if (templateType != null)
+            {
+                return extensions.GetExtension(templateType);
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Returns an <see cref="IVsTemplateWizardExtension"/> of the appropriate type, if present
+        /// </summary>
+        /// <param name="extensions">The collection of extensions in the template</param>
+        /// <param name="extensionType">The type of the template extension to return</param>
         /// <returns>If a wizard extension of the appropriate type exists, returns the <see cref="IVsTemplateWizardExtension"/> for that wizard. Returns null if it doesn't exist.</returns>
         [CLSCompliant(false)]
         public static IVsTemplateWizardExtension GetExtension(this IEnumerable<IVsTemplateWizardExtension> extensions, Type extensionType)
