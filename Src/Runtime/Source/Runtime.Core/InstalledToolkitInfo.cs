@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.VisualStudio.Extensions;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Runtime
 {

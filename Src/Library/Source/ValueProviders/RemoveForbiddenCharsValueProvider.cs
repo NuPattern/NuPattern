@@ -1,8 +1,9 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 
@@ -15,7 +16,7 @@ namespace NuPattern.Library.ValueProviders
     [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("RemoveForbiddenCharsExpressionValueProvider_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class RemoveForbiddenCharsExpressionValueProvider : Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ValueProvider
+    public class RemoveForbiddenCharsExpressionValueProvider : ValueProvider
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<RemoveForbiddenCharsExpressionValueProvider>();
 

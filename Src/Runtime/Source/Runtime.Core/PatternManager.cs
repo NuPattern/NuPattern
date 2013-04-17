@@ -12,8 +12,7 @@ using System.Xml.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.IO;
 using NuPattern.Modeling;
 using NuPattern.Presentation;
@@ -460,7 +459,7 @@ namespace NuPattern.Runtime
                         {
                             document.Root.Attribute(DslVersionAttribute).Value = StoreConstants.DslVersion.ToString();
 
-                            VsHelper.CheckOut(this.serviceProvider, storeFile);
+                            VsHelper.CheckOut(storeFile);
 
                             document.Save(storeFile);
                         }

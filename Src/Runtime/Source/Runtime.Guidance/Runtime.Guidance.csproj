@@ -17,6 +17,9 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
+    </Reference>
     <Reference Include="EnvDTE">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
@@ -25,14 +28,7 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\envdte80.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="Microsoft.Build" />
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
@@ -63,6 +59,10 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Settings.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Design">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell.Design.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
@@ -70,6 +70,14 @@
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.8.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -83,19 +91,102 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="CommandBinding.cs" />
+    <Compile Include="CommandBindingExtensions.cs" />
+    <Compile Include="ConditionBinding.cs" />
+    <Compile Include="DefaultFeatureInstanceLocator.cs" />
+    <Compile Include="DefaultQueryStatusStrategy.cs" />
+    <Compile Include="DefaultTemplateInstantiationScope.cs" />
+    <Compile Include="FeatureCallContext.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewModels\GuidanceBrowserContext.cs" />
+    <Compile Include="UI\ViewModels\GuidanceWorkflowContext.cs" />
+    <Compile Include="FeatureContent.cs" />
+    <Compile Include="FeatureInstantiationScope.cs" />
+    <Compile Include="ModelingFeatureInstantiationScope.cs" />
+    <Compile Include="TemplateExtensionAttribute.cs" />
+    <Compile Include="TemplateWizards\ProjectExtensions.cs" />
+    <Compile Include="TemplateWizards\TemplateCommandFailedException.cs" />
+    <Compile Include="TemplateWizards\TracingExtensions.cs" />
+    <Compile Include="UriProviders\FeatureContentUriReferenceProvider.cs" />
+    <Compile Include="FeatureInstantiation.cs" />
+    <Compile Include="FeatureManager.cs" />
+    <Compile Include="IFeatureInstanceLocator.cs" />
+    <Compile Include="ILaunchPoint.cs" />
+    <Compile Include="InstantiationScope.cs" />
+    <Compile Include="IQueryStatusStrategy.cs" />
+    <Compile Include="IVsLaunchPointLocationProvider.cs" />
+    <Compile Include="LaunchPointAttribute.cs" />
+    <Compile Include="UriProviders\LaunchPointUriReferenceProvider.cs" />
+    <Compile Include="LinkLaunchPoint.cs" />
+    <Compile Include="ModelImagesProvider.cs" />
+    <Compile Include="ModelingLaunchPoint.cs" />
+    <Compile Include="UI\ActivityIcons.cs" />
+    <Compile Include="UI\ViewModels\BindingResultViewModel.cs" />
+    <Compile Include="UI\ViewModels\ConditionViewModel.cs" />
+    <Compile Include="UI\ViewModels\DefaultWorkflowViewModelBuilder.cs" />
+    <Compile Include="UI\EnumToDescriptionValueConverter.cs" />
+    <Compile Include="UI\ViewModels\GuidanceActionViewModel.cs" />
+    <Compile Include="UI\GuidanceBrowser.cs" />
+    <Compile Include="UI\Views\GuidanceBrowserView.xaml.cs">
+      <DependentUpon>GuidanceBrowserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewModels\GuidanceBrowserViewModel.cs" />
+    <Compile Include="UI\Views\GuidanceWorkflowPanelView.xaml.cs">
+      <DependentUpon>GuidanceWorkflowPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewModels\GuidanceWorkflowPanelViewModel.cs" />
+    <Compile Include="UI\Views\GuidanceWorkflowView.xaml.cs">
+      <DependentUpon>GuidanceWorkflowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewModels\GuidanceWorkflowViewModel.cs" />
+    <Compile Include="UI\ViewModels\IWorkflowViewModelBuilder.cs" />
+    <Compile Include="UI\ViewModels\LabelViewModel.cs" />
+    <Compile Include="UI\NodeChangedEventArgs.cs" />
+    <Compile Include="UI\NodeStateToBrushValueConverter.cs" />
+    <Compile Include="UI\ViewModels\NodeViewModel.cs" />
+    <Compile Include="UI\ViewModels\TreeNodeViewModel.cs" />
+    <Compile Include="ProjectTypeProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStatus.cs" />
+    <Compile Include="SolutionDataState.cs" />
+    <Compile Include="SolutionFeatureState.cs" />
+    <Compile Include="TemplateWizards\StandardFeatureTemplateExtension.cs" />
+    <Compile Include="TemplateUnfoldScope.cs" />
+    <Compile Include="UserAcceptanceBinding.cs" />
+    <Compile Include="NullServiceProvider.cs" />
+    <Compile Include="TemplateWizards\VsBananaTemplateExtension.cs" />
+    <Compile Include="VsLaunchPoint.cs" />
+    <Compile Include="VsLaunchPointLocation.cs" />
+    <Compile Include="VsTemplateLaunchPoint.cs" />
+    <Compile Include="VsTemplateLaunchPointExtensions.cs" />
+    <Compile Include="VsTemplateParameters.cs" />
+    <Compile Include="Workflow\GuidanceConditionsEvaluator.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
@@ -103,6 +194,57 @@
       <SubType>Designer</SubType>
     </CodeAnalysisDictionary>
   </ItemGroup>
+  <ItemGroup>
+    <Page Include="UI\Views\GuidanceBrowserView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\GuidanceWorkflowPanelView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Views\GuidanceWorkflowView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandRefresh.png">
+      <Link>Resources\CommandRefresh.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandCollapseAll.png">
+      <Link>Resources\CommandCollapseAll.png</Link>
+    </Resource>
+    <Resource Include="$(BranchRoot)\Images\$(TargetVsVersion)\CommandExpandAll.png">
+      <Link>Resources\CommandExpandAll.png</Link>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
+      <Project>{72CC87F3-2860-45CC-8712-00621F868D60}</Project>
+      <Name>Common.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5DCC5923-F1D8-43F1-B23F-178C7618819E}</Project>
+      <Name>Common.VisualStudio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Source\Common\Common.csproj">
+      <Project>{67A9DEA6-D17D-453E-B55A-72B6223DA3A8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Runtime.Extensibility\Runtime.Extensibility.csproj">
+      <Project>{76718f52-8f7e-43b4-9085-ef08db52ac46}</Project>
+      <Name>Runtime.Extensibility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

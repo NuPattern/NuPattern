@@ -5,15 +5,16 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using EnvDTE;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
+using NuPattern.VisualStudio.Solution.Templates;
 using NuPattern.VisualStudio.TemplateWizards;
 
 namespace NuPattern.Library.TemplateWizards
@@ -59,7 +60,7 @@ namespace NuPattern.Library.TemplateWizards
         /// Gets the URI service.
         /// </summary>
         [Import]
-        public IFxrUriReferenceService UriService { get; internal set; }
+        public IUriReferenceService UriService { get; internal set; }
 
         /// <summary>
         /// Gets or sets the binding factory.

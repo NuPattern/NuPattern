@@ -2,8 +2,6 @@
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Integration;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using Microsoft.VSSDK.Tools.VsIdeTesting;

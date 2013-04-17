@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.Win32;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Win32;
 

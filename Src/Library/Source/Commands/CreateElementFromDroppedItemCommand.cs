@@ -2,7 +2,7 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Windows;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 
 namespace NuPattern.Library.Commands
 {

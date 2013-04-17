@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.XPath;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Conditions;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 using NuPattern.Xml;
 
 namespace NuPattern.Library.UnitTests.Conditions
@@ -29,7 +29,7 @@ namespace NuPattern.Library.UnitTests.Conditions
                 this.command = new XmlNodeExistsCondition
                     {
                         Solution = Mock.Of<ISolution>(),
-                        UriReferenceService = Mock.Of<IFxrUriReferenceService>(),
+                        UriReferenceService = Mock.Of<IUriReferenceService>(),
                         XmlProcessor = this.xmlProcessor.Object,
                         CurrentElement = Mock.Of<IProductElement>(),
                     };
@@ -61,7 +61,7 @@ namespace NuPattern.Library.UnitTests.Conditions
         public class GivenAnXmlFile
         {
             private XmlNodeExistsCondition condition;
-            private Mock<IFxrUriReferenceService> uriService = new Mock<IFxrUriReferenceService>();
+            private Mock<IUriReferenceService> uriService = new Mock<IUriReferenceService>();
             private Mock<IXmlProcessor> xmlProcessor = new Mock<IXmlProcessor>();
             private Mock<IProductElement> currentElement = new Mock<IProductElement>();
 

@@ -120,8 +120,11 @@
   <data name="CanNotCreateWindow" xml:space="preserve">
     <value>Can not create tool window.</value>
   </data>
-  <data name="ExplorerWindowTitle" xml:space="preserve">
-    <value>Solution Builder</value>
+  <data name="GuidanceBrowserToolWindow_WindowTitle" xml:space="preserve">
+    <value>Guidance Browser</value>
+  </data>
+  <data name="GuidanceExplorerToolWindow_WindowTitle" xml:space="preserve">
+    <value>Guidance Explorer</value>
   </data>
   <data name="RuntimeShellPackage_CheckFertInstalled_Enabled" xml:space="preserve">
     <value>The following extension is currently installed and enabled: 
@@ -155,6 +158,9 @@ To remedy this problem, open the 'Extension Manager' window in Visual Studio (To
   <data name="RuntimeShellPackage_OnAssemblyResolved_UnexpectedError" xml:space="preserve">
     <value>Unexpected error resolving partially named assembly, the error was: {0}</value>
   </data>
+  <data name="SolutionBuilderToolWindow_WindowTitle" xml:space="preserve">
+    <value>Solution Builder</value>
+  </data>
   <data name="ToolkitReferencesFolderName" xml:space="preserve">
     <value>Pattern Toolkit References</value>
   </data>
@@ -169,5 +175,8 @@ To remedy this problem, open the 'Extension Manager' window in Visual Studio (To
   </data>
   <data name="TraceOptionsPageControl_SourceNameTitle" xml:space="preserve">
     <value>Source Name</value>
+  </data>
+  <data name="VsIdleTaskHost_ErrorRegistration" xml:space="preserve">
+    <value>Failed to register task to perform on VS idle time.</value>
   </data>
 </root>

@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Presentation;
+using NuPattern.Reflection;
 using NuPattern.Runtime.UI.ViewModels;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;

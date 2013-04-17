@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel;
 using NuPattern.Runtime.Schema.Design;
 
 namespace NuPattern.Runtime.Schema.UnitTests.Design

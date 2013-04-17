@@ -37,8 +37,11 @@
     </Compile>
     <Compile Include="AnonymousDisposable.cs" />
     <Compile Include="ChangedEventArgs.cs" />
-    <Compile Include="ComponentModel\BananaComponentAttribute.cs" />
-    <Compile Include="ComponentModel\BananaComponentTypeExtensions.cs" />
+    <Compile Include="ComponentModel\Composition\Catalog.cs" />
+    <Compile Include="ComponentModel\Composition\DecoratingReflectionCatalog.cs" />
+    <Compile Include="ComponentModel\Composition\FeatureComponentAttribute.cs" />
+    <Compile Include="ComponentModel\Composition\FeatureComponentCatalog.cs" />
+    <Compile Include="ComponentModel\Composition\FeatureComponentTypeExtensions.cs" />
     <Compile Include="ComponentModel\Design\AnonymousPropertyDescriptor.cs" />
     <Compile Include="ComponentModel\Design\CancelableCollectionEditor.cs" />
     <Compile Include="ComponentModel\Design\CategoryResourceAttribute.cs" />
@@ -58,8 +61,8 @@
     <Compile Include="ComponentModel\Design\DisplayNameResourceAttribute.cs" />
     <Compile Include="ComponentModel\Design\EditorBaseTypeAttribute.cs" />
     <Compile Include="ComponentModel\Design\ExpandableObjectStringConverter.cs" />
-    <Compile Include="ComponentModel\ExportedStandardValue.cs" />
-    <Compile Include="ComponentModel\BananaComponentMetadataExtensions.cs" />
+    <Compile Include="ComponentModel\Composition\ExportedStandardValue.cs" />
+    <Compile Include="ComponentModel\Composition\FeatureComponentMetadataExtensions.cs" />
     <Compile Include="ComponentModel\StandardValue.cs" />
     <Compile Include="ComponentModel\UI\StandardValuesDropDown.cs">
       <SubType>UserControl</SubType>
@@ -68,7 +71,8 @@
       <DependentUpon>StandardValuesDropDown.cs</DependentUpon>
     </Compile>
     <Compile Include="ComponentModel\Design\StandardValuesEditor.cs" />
-    <Compile Include="ComponentModel\IBananaComponentMetadata.cs" />
+    <Compile Include="ComponentModel\Composition\FilteringReflectionCatalog.cs" />
+    <Compile Include="ComponentModel\Composition\IFeatureComponentMetadata.cs" />
     <Compile Include="ComponentModel\IComponentModelInfo.cs" />
     <Compile Include="ComponentModel\PropertyChangeManager.cs" />
     <Compile Include="Diagnostics\CompositeTraceSource.cs" />
@@ -84,6 +88,8 @@
     <Compile Include="Diagnostics\TraceRecordDefaultTraceListener.cs" />
     <Compile Include="Diagnostics\TraceRecordTextListener.cs" />
     <Compile Include="Diagnostics\TraceRecordXmlListener.cs" />
+    <Compile Include="IFluentInterface.cs" />
+    <Compile Include="IO\RelativePathBuilder.cs" />
     <Compile Include="ISupportTransaction.cs" />
     <Compile Include="ITransaction.cs" />
     <Compile Include="IUriReferenceProvider.cs" />
@@ -92,8 +98,12 @@
     <Compile Include="ObjectExtensions.cs" />
     <Compile Include="Reflection\Reflect.cs" />
     <Compile Include="Reflection\ReflectionHelper.cs" />
+    <Compile Include="SelectorEqualityComparer.cs" />
+    <Compile Include="ServiceProviderExtensions.cs" />
     <Compile Include="TypeUriReferenceProvider.cs" />
     <Compile Include="UriReferenceService.cs" />
+    <Compile Include="UriReferenceServiceExtensions.cs" />
+    <Compile Include="UriReferenceServiceFactory.cs" />
     <Compile Include="ValidatorExtensions.cs" />
     <Compile Include="Diagnostics\TraceSourceExtensions.cs" />
     <Compile Include="Event.cs" />

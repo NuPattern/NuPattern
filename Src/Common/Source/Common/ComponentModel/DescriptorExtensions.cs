@@ -174,7 +174,7 @@ namespace NuPattern.ComponentModel
                 }
                 else
                 {
-                    throw new NotSupportedException(string.Format(
+                    throw new NotSupportedException(String.Format(
                         CultureInfo.CurrentCulture,
                         Resources.DescriptorExtensions_MustBeDelegatingDescriptor,
                         typeof(DelegatingPropertyDescriptor).FullName,
@@ -183,6 +183,17 @@ namespace NuPattern.ComponentModel
             }
 
             return property;
+        }
+
+        /// <summary>
+        /// Whether the type is browsable.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static bool IsBrowsable(this Type type)
+        {
+            var browsable = type.GetCustomAttribute<BrowsableAttribute>();
+            return browsable == null || browsable.Browsable;
         }
     }
 }

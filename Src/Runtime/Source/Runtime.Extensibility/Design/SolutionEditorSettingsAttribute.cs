@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Resources;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design
 {

@@ -4,7 +4,8 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.ComponentModel;
+using NuPattern.ComponentModel.Composition;
 
 namespace NuPattern.Runtime.Design
 {
@@ -45,7 +46,9 @@ namespace NuPattern.Runtime.Design
             get
             {
                 if (projectTypes == null)
+                {
                     FeatureCompositionService.Instance.SatisfyImportsOnce(this);
+                }
 
                 return projectTypes;
             }

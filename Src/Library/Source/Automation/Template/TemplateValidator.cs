@@ -3,13 +3,12 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 using NuPattern.VisualStudio.Solution.Templates;
 using NuPattern.VisualStudio.TemplateWizards;
 
@@ -132,7 +131,7 @@ namespace NuPattern.Library.Automation.Template
 
         private IItemContainer GetVsTemplateProjectItem()
         {
-            var uriService = serviceProvider.GetService<IFxrUriReferenceService>();
+            var uriService = serviceProvider.GetService<IUriReferenceService>();
             IItemContainer item = null;
             try
             {
@@ -259,7 +258,7 @@ namespace NuPattern.Library.Automation.Template
             {
                 if (!string.IsNullOrEmpty(settings.TemplateAuthoringUri))
                 {
-                    var uriService = serviceProvider.GetService<IFxrUriReferenceService>();
+                    var uriService = serviceProvider.GetService<IUriReferenceService>();
                     IItem item = null;
                     try
                     {

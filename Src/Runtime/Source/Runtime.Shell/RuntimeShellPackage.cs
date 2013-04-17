@@ -16,18 +16,21 @@ using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Diagnostics;
 using NuPattern.IO;
 using NuPattern.Library;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Diagnostics;
+using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.Settings;
+using NuPattern.Runtime.Shell.Commands;
 using NuPattern.Runtime.Shell.OptionPages;
 using NuPattern.Runtime.Shell.Properties;
+using NuPattern.Runtime.Shell.ToolWindows;
 using NuPattern.Runtime.Store;
 using NuPattern.Runtime.ToolkitInterface;
 using NuPattern.Runtime.UI;
@@ -46,14 +49,17 @@ namespace NuPattern.Runtime.Shell
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [ProvideToolWindow(typeof(SolutionBuilderToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed)]
+    [ProvideToolWindow(typeof(GuidanceExplorerToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed)]
+    [ProvideToolWindow(typeof(GuidanceBrowserToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Bottom, Style = VsDockStyle.Tabbed)]
     [ProvideDirectiveProcessor(typeof(ProductStateStoreDirectiveProcessor), ProductStateStoreDirectiveProcessor.ProductStateStoreDirectiveProcessorName, Constants.ProductStateStoreDirectiveProcessorDescription)]
     [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
-    [ProvideService(typeof(IModelingService), ServiceName = "ModelingService")]
-    [ProvideService(typeof(ITemplateService), ServiceName = "TemplateService")]
     [ProvideService(typeof(IUriReferenceService), ServiceName = "UriReferenceService")]
     [ProvideService(typeof(ISolution), ServiceName = "Solution")]
+    [ProvideService(typeof(IFeatureManager), ServiceName = "FeatureManager")]
+    [ProvideService(typeof(IFeatureCompositionService), ServiceName = "FeatureCompositionService")]
+    [ProvideService(typeof(IGuidanceWindowsService), ServiceName = "GuidanceWindows")]
     [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = "IPlatuProjectTypeProvider")]
     [ProvideService(typeof(IPatternManager), ServiceName = "IPatternManager")]
     [ProvideService(typeof(IPackageToolWindow), ServiceName = "IPackageToolWindow")]
@@ -67,8 +73,12 @@ namespace NuPattern.Runtime.Shell
     public sealed class RuntimeShellPackage : Package
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<RuntimeShellPackage>();
+        private const int IdleTimeout = 5000;
+        private const int GuidanceEvalTimeGovernor = 1; // In Seconds
         private static readonly Guid OutputPaneGuid = new Guid(Constants.VsOutputWindowPaneId);
         private ProductStateValidator productStateValidator;
+        private VsIdleTaskHost idleTaskHost;
+        private bool showWindows = false;
 
         [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Justification = "Not sure if it's OK to leave this container unreferenced by anyone.")]
         private TracingSettingsMonitor tracingMonitor;
@@ -76,13 +86,17 @@ namespace NuPattern.Runtime.Shell
 
 #pragma warning disable 0649
         [Import]
-        private ITemplateService TemplateService;
+        private IUriReferenceService UriReferenceService { get; set; }
         [Import]
-        private IModelingService ModelingService;
+        private ISolution Solution { get; set; }
         [Import]
-        private IUriReferenceService UriReferenceService;
+        private IFeatureManager FeatureManager { get; set; }
         [Import]
-        private ISolution Solution;
+        private IFeatureCompositionService FeatureCompositionService { get; set; }
+        [Import]
+        private IGuidanceWindowsService GuidanceWindowService { get; set; }
+        [ImportMany(typeof(ILaunchPoint))]
+        private IEnumerable<Lazy<ILaunchPoint>> LaunchPoints { get; set; }
         [Import]
         private IPatternManager PatternManager { get; set; }
         [Import]
@@ -173,6 +187,12 @@ namespace NuPattern.Runtime.Shell
             this.ShellEvents.ShellInitialized += OnShellInitialized;
             this.SolutionEvents.SolutionOpened += OnSolutionOpened;
             this.SolutionEvents.SolutionClosed += OnSolutionClosed;
+
+            // If initializing other packages launchpoints worked, 
+            // they wouldn't need to do this themselves.
+            this.RegisterRefreshGuidanceStates();
+            FeatureManager.InstantiatedFeaturesChanged += this.OnInstantiatedFeaturesChanged;
+            FeatureManager.ActiveFeatureChanged += this.OnActiveFeatureChanged;
         }
 
         /// <summary>
@@ -200,6 +220,11 @@ namespace NuPattern.Runtime.Shell
                     this.productStateValidator.Dispose();
                 }
 
+                if (this.idleTaskHost != null)
+                {
+                    this.idleTaskHost.Dispose();
+                }
+
                 this.ShellEvents.ShellInitialized -= OnShellInitialized;
                 this.SolutionEvents.SolutionOpened -= OnSolutionOpened;
                 this.SolutionEvents.SolutionClosed -= OnSolutionClosed;
@@ -222,10 +247,11 @@ namespace NuPattern.Runtime.Shell
         private void AddServices()
         {
             var serviceContainer = (IServiceContainer)this;
-            serviceContainer.AddService(typeof(IModelingService), new ServiceCreatorCallback((c, s) => this.ModelingService), true);
-            serviceContainer.AddService(typeof(ITemplateService), new ServiceCreatorCallback((c, s) => this.TemplateService), true);
             serviceContainer.AddService(typeof(IUriReferenceService), new ServiceCreatorCallback((c, s) => this.UriReferenceService), true);
             serviceContainer.AddService(typeof(ISolution), new ServiceCreatorCallback((c, s) => this.Solution), true);
+            serviceContainer.AddService(typeof(IFeatureManager), new ServiceCreatorCallback((c, s) => this.FeatureManager), true);
+            serviceContainer.AddService(typeof(IFeatureCompositionService), new ServiceCreatorCallback((c, s) => this.FeatureCompositionService), true);
+            serviceContainer.AddService(typeof(IGuidanceWindowsService), new ServiceCreatorCallback((c, s) => this.GuidanceWindowService), true);
             serviceContainer.AddService(typeof(RuntimeShellPackage), this, true);
             serviceContainer.AddService(typeof(IPackageToolWindow), new PackageToolWindow(this), true);
             serviceContainer.AddService(typeof(IPatternManager), new ServiceCreatorCallback((s, t) => this.PatternManager), true);
@@ -247,6 +273,7 @@ namespace NuPattern.Runtime.Shell
         private void OnSolutionClosed(object sender, SolutionEventArgs e)
         {
             SolutionBuilderToolWindow.AutoHideWindow(this);
+            this.GuidanceWindowService.HideGuidanceWindows(this);
         }
 
         private void OnSolutionOpened(object sender, SolutionEventArgs e)
@@ -273,6 +300,12 @@ namespace NuPattern.Runtime.Shell
                     }
                 }
             }
+
+            // Open guidance windows
+            if (!this.FeatureManager.IsOpened)
+            {
+                this.FeatureManager.Open(new SolutionDataState(this.Solution));
+            }
         }
 
         [Conditional("DEBUG")]
@@ -292,7 +325,7 @@ namespace NuPattern.Runtime.Shell
             using (var writer = new StreamWriter(tempFile, false))
             {
                 CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.GetCatalog(
-                    Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName), componentModel.DefaultExportProvider), writer);
+                    Catalog.CatalogName), componentModel.DefaultExportProvider), writer);
             }
 
             Process.Start(tempFile);
@@ -318,6 +351,8 @@ namespace NuPattern.Runtime.Shell
             if (menuCommandService != null)
             {
                 menuCommandService.AddCommand(new OpenSolutionBuilderMenuCommand(this.GetService<IPackageToolWindow>()));
+                menuCommandService.AddCommand(new OpenGuidanceExplorerMenuCommand(this.GetService<IPackageToolWindow>()));
+                menuCommandService.AddCommand(new OpenGuidanceBrowserMenuCommand(this.GetService<IPackageToolWindow>()));
             }
         }
 
@@ -470,5 +505,27 @@ namespace NuPattern.Runtime.Shell
             return assembly;
         }
 #endif
+
+        private void OnInstantiatedFeaturesChanged(object sender, EventArgs args)
+        {
+            this.showWindows = true;
+        }
+
+        private void OnActiveFeatureChanged(object sender, EventArgs args)
+        {
+            var activeFeature = this.FeatureManager.ActiveFeature;
+            if (activeFeature != null && this.showWindows && activeFeature.GuidanceWorkflow != null)
+            {
+                this.GuidanceWindowService.ShowGuidanceExplorer(this);
+                this.GuidanceWindowService.ShowGuidanceBrowser(this);
+            }
+        }
+
+        private void RegisterRefreshGuidanceStates()
+        {
+            var conditionsEvaluator = new GuidanceConditionsEvaluator(this.FeatureManager);
+            this.idleTaskHost = new VsIdleTaskHost(this, () => conditionsEvaluator.EvaluateGraphs(), TimeSpan.FromSeconds(GuidanceEvalTimeGovernor));
+            this.idleTaskHost.Start(TimeSpan.FromMilliseconds(IdleTimeout));
+        }
     }
 }

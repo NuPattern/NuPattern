@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.ComponentModel.Composition;
 using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime

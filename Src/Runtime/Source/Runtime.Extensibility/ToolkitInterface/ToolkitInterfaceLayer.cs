@@ -4,9 +4,9 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Threading;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio;
@@ -437,7 +437,7 @@ namespace NuPattern.Runtime.ToolkitInterface
 
         private static ToolkitInterfaceAttribute GetToolkitInterfaceAttributeOrThrow(Type type)
         {
-            var toolkitInterface = ReflectionExtensions.GetCustomAttribute<ToolkitInterfaceAttribute>(type);
+            var toolkitInterface = type.GetCustomAttribute<ToolkitInterfaceAttribute>();
             if (toolkitInterface == null)
                 throw new NotSupportedException(string.Format(
                     CultureInfo.CurrentCulture,

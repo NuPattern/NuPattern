@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Serialization;
 
 namespace NuPattern.Runtime.Diagnostics

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.XPath;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
 using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 using NuPattern.Xml;
 
 namespace NuPattern.Library.UnitTests.Commands
@@ -30,7 +30,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 this.command = new ModifyXmlCommand
                     {
                         Solution = Mock.Of<ISolution>(),
-                        UriReferenceService = Mock.Of<IFxrUriReferenceService>(),
+                        UriReferenceService = Mock.Of<IUriReferenceService>(),
                         XmlProcessor = Mock.Of<IXmlProcessor>(),
                         ErrorList = this.errorList.Object,
                         CurrentElement = Mock.Of<IProductElement>(),
@@ -69,7 +69,7 @@ namespace NuPattern.Library.UnitTests.Commands
         {
             private ModifyXmlCommand command;
             private Mock<IErrorList> errorList = new Mock<IErrorList>();
-            private Mock<IFxrUriReferenceService> uriService = new Mock<IFxrUriReferenceService>();
+            private Mock<IUriReferenceService> uriService = new Mock<IUriReferenceService>();
             private Mock<IXmlProcessor> xmlProcessor = new Mock<IXmlProcessor>();
             private Mock<IProductElement> currentElement = new Mock<IProductElement>();
 

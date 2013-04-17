@@ -2,7 +2,6 @@
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.UriProviders;
@@ -29,7 +28,7 @@ namespace NuPattern.Runtime.UnitTests.UriProviders
         [TestClass]
         public class GivenAnExtensionManager
         {
-            IFxrUriReferenceProvider<IInstalledExtension> provider;
+            IUriReferenceProvider<IInstalledExtension> provider;
             Mock<IVsExtensionManager> manager;
             Action<string> openFileAction = file => { };
 

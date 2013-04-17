@@ -14,7 +14,7 @@ namespace NuPattern
     /// See the ReadMe.html for additional information
     /// taken from the Linq samples.
     /// </remarks>
-    internal class ObjectDumper
+    public class ObjectDumper
     {
         /// <summary>
         /// Returns a <see cref="System.String"/> that represents the element.
@@ -87,7 +87,7 @@ namespace NuPattern
         private void WriteTab()
         {
             Write("  ");
-            while (pos%8 != 0) Write(" ");
+            while (pos % 8 != 0) Write(" ");
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity",
@@ -150,13 +150,13 @@ namespace NuPattern
                             Write(m.Name);
                             Write("=");
                             Type t = f != null ? f.FieldType : p.PropertyType;
-                            if (t.IsValueType || t == typeof (string))
+                            if (t.IsValueType || t == typeof(string))
                             {
                                 WriteValue(f != null ? f.GetValue(element) : p.GetValue(element, null));
                             }
                             else
                             {
-                                if (typeof (IEnumerable).IsAssignableFrom(t))
+                                if (typeof(IEnumerable).IsAssignableFrom(t))
                                 {
                                     Write("...");
                                 }
@@ -177,7 +177,7 @@ namespace NuPattern
                             if (f != null || p != null)
                             {
                                 Type t = f != null ? f.FieldType : p.PropertyType;
-                                if (!(t.IsValueType || t == typeof (string)))
+                                if (!(t.IsValueType || t == typeof(string)))
                                 {
                                     object value = f != null ? f.GetValue(element) : p.GetValue(element, null);
                                     if (value != null)
@@ -202,7 +202,7 @@ namespace NuPattern
             }
             else if (o is DateTime)
             {
-                Write(((DateTime) o).ToShortDateString());
+                Write(((DateTime)o).ToShortDateString());
             }
             else if (o is ValueType || o is string)
             {

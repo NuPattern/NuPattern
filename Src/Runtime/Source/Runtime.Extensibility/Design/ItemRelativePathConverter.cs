@@ -3,8 +3,9 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.IO;
 using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design
 {

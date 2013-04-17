@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Globalization;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Bindings

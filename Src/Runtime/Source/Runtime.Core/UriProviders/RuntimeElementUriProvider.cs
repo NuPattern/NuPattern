@@ -3,8 +3,6 @@ using System.ComponentModel.Composition;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace NuPattern.Runtime.UriProviders
 {
@@ -13,9 +11,9 @@ namespace NuPattern.Runtime.UriProviders
     /// </summary>
     // TODO: Fix FERT so that this class does not have ot be public to register itself.
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [Export(typeof(IFxrUriReferenceProvider))]
+    [Export(typeof(IUriReferenceProvider))]
     [CLSCompliant(false)]
-    public class RuntimeElementUriProvider : IFxrUriReferenceProvider<IInstanceBase>
+    public class RuntimeElementUriProvider : IUriReferenceProvider<IInstanceBase>
     {
         private const string ElementUriScheme = "patternmanager";
 

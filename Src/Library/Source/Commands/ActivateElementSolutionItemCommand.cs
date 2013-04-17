@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 using Dsl = Microsoft.VisualStudio.Modeling.Design;
 
 namespace NuPattern.Library.Commands

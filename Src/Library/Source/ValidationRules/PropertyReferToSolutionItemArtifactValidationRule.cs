@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Validation;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.ValidationRules
 {

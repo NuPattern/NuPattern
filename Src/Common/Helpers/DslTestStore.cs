@@ -2,7 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
-
+using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Moq;
 
 namespace NuPattern

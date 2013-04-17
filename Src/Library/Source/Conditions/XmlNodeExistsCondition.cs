@@ -4,13 +4,13 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.XPath;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings.Design;
+using NuPattern.VisualStudio.Solution;
 using NuPattern.Xml;
 
 namespace NuPattern.Library.Conditions
@@ -53,7 +53,7 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriReferenceService { get; set; }
+        public IUriReferenceService UriReferenceService { get; set; }
 
         /// <summary>
         /// Gets or sets the XML Processor.

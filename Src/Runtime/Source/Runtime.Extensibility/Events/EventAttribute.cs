@@ -1,5 +1,6 @@
 using System;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.ComponentModel.Composition;
 
 namespace NuPattern.Runtime.Events
 {

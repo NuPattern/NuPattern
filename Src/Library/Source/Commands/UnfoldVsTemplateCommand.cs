@@ -9,11 +9,10 @@ using System.IO;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Automation.Template;
 using NuPattern.Library.Design;
@@ -23,6 +22,7 @@ using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.References;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
+using NuPattern.VisualStudio.Solution.Templates;
 using Dsl = Microsoft.VisualStudio.Modeling.Design;
 
 namespace NuPattern.Library.Commands
@@ -138,7 +138,7 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public virtual IFxrUriReferenceService UriService
+        public virtual IUriReferenceService UriService
         {
             get;
             set;
@@ -235,7 +235,7 @@ namespace NuPattern.Library.Commands
         /// Unfolds the specified template.
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times"), System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Dispose is avoided when events should not fire at all")]
-        internal static IItemContainer UnfoldTemplate(ISolution solution, IFxrUriReferenceService uriService, IServiceProvider serviceProvider, IProductElement owner, UnfoldVsTemplateSettings settings, bool fromWizard)
+        internal static IItemContainer UnfoldTemplate(ISolution solution, IUriReferenceService uriService, IServiceProvider serviceProvider, IProductElement owner, UnfoldVsTemplateSettings settings, bool fromWizard)
         {
             var eventScope = new StoreEventBufferingScope();
             try

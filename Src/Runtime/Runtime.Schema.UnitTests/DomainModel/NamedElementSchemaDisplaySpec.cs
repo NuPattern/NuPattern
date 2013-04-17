@@ -22,7 +22,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             [TestInitialize]
             public virtual void InitializeContext()
             {
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                     p.ToolkitInfo.Identifier == "ToolkitId"));
 

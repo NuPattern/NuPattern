@@ -3,13 +3,12 @@ using System.ComponentModel.Composition;
 using System.Globalization;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.Validation;
-using ReflectionExtensions = Microsoft.VisualStudio.TeamArchitect.PowerTools.ReflectionExtensions;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.Automation
 {
@@ -26,7 +25,7 @@ namespace NuPattern.Library.Automation
         /// Gets the UriReferenceService.
         /// </summary>
         [Import]
-        internal IFxrUriReferenceService UriReferenceService { get; set; }
+        internal IUriReferenceService UriReferenceService { get; set; }
 
         /// <summary>
         /// Verifies that artifact links on elements are valid.

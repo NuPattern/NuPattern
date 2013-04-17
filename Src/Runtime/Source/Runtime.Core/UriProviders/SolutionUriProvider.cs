@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using EnvDTE;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UriProviders
@@ -14,9 +13,9 @@ namespace NuPattern.Runtime.UriProviders
     /// </summary>
     // TODO: Fix FERT so that this class does not have ot be public to register itself.
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [Export(typeof(IFxrUriReferenceProvider))]
+    [Export(typeof(IUriReferenceProvider))]
     [CLSCompliant(false)]
-    public class SolutionUriProvider : IFxrUriReferenceProvider<IItemContainer>
+    public class SolutionUriProvider : IUriReferenceProvider<IItemContainer>
     {
         /// <summary>
         /// The default scheme for this provider.

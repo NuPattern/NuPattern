@@ -4,10 +4,9 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Configuration.Design.HostAdapterV5;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime

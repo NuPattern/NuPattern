@@ -77,5 +77,14 @@ namespace NuPattern.Presentation.Properties {
                 return ResourceManager.GetString("GroupingEnumerableConverter_InvalidPropertyName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The expression &apos;{0}&apos; does not contain a valid property..
+        /// </summary>
+        internal static string ViewModel_InvalidExpressionProperty {
+            get {
+                return ResourceManager.GetString("ViewModel_InvalidExpressionProperty", resourceCulture);
+            }
+        }
     }
 }

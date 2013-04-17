@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.UI;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UnitTests.UI
 {

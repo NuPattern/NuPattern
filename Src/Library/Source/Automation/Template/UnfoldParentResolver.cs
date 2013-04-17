@@ -2,24 +2,22 @@
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.VsTemplateSchema;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
 using NuPattern.VisualStudio.Solution;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Library.Automation.Template
 {
     internal class UnfoldParentResolver
     {
         private ISolution solution;
-        private IFxrUriReferenceService uriService;
+        private IUriReferenceService uriService;
         private IProductElement currentElement;
         private IVsTemplate theTemplate;
 
-        public UnfoldParentResolver(ISolution solution, IFxrUriReferenceService uriService, IProductElement currentElement, IVsTemplate template)
+        public UnfoldParentResolver(ISolution solution, IUriReferenceService uriService, IProductElement currentElement, IVsTemplate template)
         {
             this.solution = solution;
             this.uriService = uriService;

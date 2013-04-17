@@ -103,5 +103,41 @@ namespace NuPattern.Runtime.Bindings
         public void Dispose()
         {
         }
+
+
+        public Lazy<T> GetExport<T>(string contractName)
+        {
+            return this.CompositionService.GetExport<T>(contractName);
+        }
+
+        public Lazy<T, TMetadataView> GetExport<T, TMetadataView>(string contractName)
+        {
+            return this.CompositionService.GetExport<T, TMetadataView>(contractName);
+        }
+
+        public T GetExportedValue<T>(string contractName)
+        {
+            return this.CompositionService.GetExportedValue<T>(contractName);
+        }
+
+        public T GetExportedValueOrDefault<T>(string contractName)
+        {
+            return this.CompositionService.GetExportedValueOrDefault<T>(contractName);
+        }
+
+        public IEnumerable<T> GetExportedValues<T>(string contractName)
+        {
+            return this.CompositionService.GetExportedValues<T>(contractName);
+        }
+
+        public IEnumerable<Lazy<T>> GetExports<T>(string contractName)
+        {
+            return this.CompositionService.GetExports<T>(contractName);
+        }
+
+        public IEnumerable<Lazy<T, TMetadataView>> GetExports<T, TMetadataView>(string contractName)
+        {
+            return this.CompositionService.GetExports<T, TMetadataView>(contractName);
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace NuPattern.VisualStudio.Solution
     /// <summary>
     /// Provides usability helpers for <see cref="IItemContainer"/>.
     /// </summary>
-    internal static class VsItemContainerExtensions
+    public static class VsItemContainerExtensions
     {
         /// <summary>
         /// Gets the item that represents the file currently opened in an editor.

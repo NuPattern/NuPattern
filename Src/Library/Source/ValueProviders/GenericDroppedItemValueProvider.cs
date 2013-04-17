@@ -3,8 +3,8 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Windows;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 
 namespace NuPattern.Library.ValueProviders

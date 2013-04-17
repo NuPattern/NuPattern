@@ -1401,7 +1401,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
-    internal partial class VSTemplateTemplateContentProjectItem
+    public partial class VSTemplateTemplateContentProjectItem
     {
 
         private string subTypeField;

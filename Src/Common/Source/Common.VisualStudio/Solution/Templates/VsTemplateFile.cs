@@ -11,7 +11,8 @@ namespace NuPattern.VisualStudio.Solution.Templates
     /// Provides static helper methods to manage template files 
     /// within a feature.
     /// </summary>
-    internal static class VsTemplateFile
+    [CLSCompliant(false)]
+    public static class VsTemplateFile
     {
         private static readonly XmlSerializer Serializer = new XmlSerializer(typeof(NuPattern.VisualStudio.Solution.Templates.VsTemplate));
 

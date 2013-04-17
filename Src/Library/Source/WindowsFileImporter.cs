@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library
 {
@@ -17,14 +17,14 @@ namespace NuPattern.Library
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<WindowsFileImporter>();
         private ISolution solution;
-        private IFxrUriReferenceService uriService;
+        private IUriReferenceService uriService;
         private IProductElement currentElement;
         private string targetPath;
 
         /// <summary>
         /// Creates a new instance of the <see cref="WindowsFileImporter"/> class.
         /// </summary>
-        public WindowsFileImporter(ISolution solution, IFxrUriReferenceService uriService, IProductElement currentElement, string targetPath)
+        public WindowsFileImporter(ISolution solution, IUriReferenceService uriService, IProductElement currentElement, string targetPath)
         {
             this.solution = solution;
             this.uriService = uriService;

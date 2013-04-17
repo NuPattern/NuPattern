@@ -1305,7 +1305,7 @@ namespace NuPattern.Library.Automation
 		/// met.
 		/// </summary>
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<NuPattern.IObservableEvent>))]
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.EventSettings/EventId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.EventSettings/EventId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("4564d86b-cf9d-4fa2-9a11-339596bdf65c")]
@@ -1779,7 +1779,7 @@ namespace NuPattern.Library.Automation
 		/// command can be configured.
 		/// </summary>
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand>))]
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.CommandSettings/TypeId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.CommandSettings/TypeId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("dc701988-b2bd-4576-97b6-93813069620f")]
@@ -2466,7 +2466,7 @@ namespace NuPattern.Library.Automation
 		/// An optional type that provides dynamic menu status updates for this menu.
 		/// </summary>
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<NuPattern.Runtime.UI.ICommandStatus>))]
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.MenuSettings/CustomStatus.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.MenuSettings/CustomStatus.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
@@ -3426,7 +3426,7 @@ namespace NuPattern.Library.Automation
 		/// Gets or sets the value of TypeName domain property.
 		/// The type name of the wizard. 
 		/// </summary>
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.Windows.Window>))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.WizardSettings/TypeName.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.WizardSettings/TypeName.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -4393,7 +4393,7 @@ namespace NuPattern.Library.Automation
 		/// descendants.
 		/// </summary>
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<NuPattern.IObservableEvent>))]
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]

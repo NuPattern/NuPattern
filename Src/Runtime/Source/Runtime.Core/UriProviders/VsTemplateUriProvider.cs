@@ -1,20 +1,19 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Runtime.UriProviders
 {
     /// <summary>
-    /// A <see cref="IFxrUriReferenceProvider"/> that resolves and creates Uris from 
+    /// A <see cref="IUriReferenceProvider"/> that resolves and creates Uris from 
     /// <see cref="IVsTemplate"/> instances. The Uri format is: 
     /// Example: <c>template://[Project | Item | ProjectGroup | Custom]/category/[id | name]</c>.
     /// </summary>
     // TODO: Fix FERT so that this class does not have ot be public to register itself.
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", MessageId = "VsTemplate", Justification = "Can't get the dictionary entry right.")]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [Export(typeof(IFxrUriReferenceProvider))]
+    [Export(typeof(IUriReferenceProvider))]
     [CLSCompliant(false)]
     public class VsTemplateUriProvider : TemplateUriProviderBase<IVsTemplate>
     {

@@ -34,7 +34,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
                 serviceProvider.Setup(s => s.GetService(typeof(IPatternManager))).Returns(
                     Mock.Of<IPatternManager>(p => p.InstalledToolkits == new List<IInstalledToolkitInfo>()));
 
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                         p.ToolkitInfo.Identifier == "AuthoredToolkit"));
 
@@ -104,7 +104,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
                     authoredPatternModel = store.ElementFactory.CreateElement<PatternModelSchema>();
                 });
 
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                         p.ToolkitInfo.Identifier == "AuthoredToolkit"));
 
@@ -124,7 +124,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
                 });
 
                 // Customize Toolkit
-                var tailoredUriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var tailoredUriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                         p.ToolkitInfo.Identifier == "TailoredToolkit"));
 
@@ -197,7 +197,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             [TestInitialize]
             public void InitializeContext()
             {
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                     p.ToolkitInfo.Identifier == "AuthoredToolkit"));
 
@@ -268,7 +268,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             [TestInitialize]
             public void InitializeContext()
             {
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                     p.ToolkitInfo.Identifier == "AuthoredToolkit"));
 
@@ -330,7 +330,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             [TestInitialize]
             public void InitializeContext()
             {
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                     p.ToolkitInfo.Identifier == "AuthoredToolkit"));
 
@@ -385,7 +385,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             [TestInitialize]
             public void InitializeContext()
             {
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                     p.ToolkitInfo.Identifier == "AuthoredToolkit"));
 
@@ -443,7 +443,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             [TestInitialize]
             public void InitializeContext()
             {
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                     p.ToolkitInfo.Identifier == "AuthoredToolkit"));
 
@@ -501,7 +501,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
             [TestInitialize]
             public void InitializeContext()
             {
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                     p.ToolkitInfo.Identifier == "AuthoredToolkit"));
 

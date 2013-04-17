@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Schema.Properties;

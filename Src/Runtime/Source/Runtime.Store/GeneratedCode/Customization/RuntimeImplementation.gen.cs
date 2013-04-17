@@ -14,8 +14,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.ComponentModel;
+using NuPattern.Modeling;
 
 namespace NuPattern.Runtime.Store
 { 

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Runtime.UnitTests.Binding

@@ -8,11 +8,18 @@ using NuPattern.VisualStudio.Properties;
 
 namespace NuPattern.VisualStudio.Solution
 {
-    internal class VsItemTemplate : ITemplate
+    /// <summary>
+    /// A VS Project Template
+    /// </summary>
+    public class VsItemTemplate : ITemplate
     {
         string templatePath;
         string defaultExtension;
 
+        /// <summary>
+        /// Creates a new instance of the <see cref="VsItemTemplate"/> class.
+        /// </summary>
+        /// <param name="path"></param>
         public VsItemTemplate(string path)
         {
             if (!File.Exists(path))
@@ -32,6 +39,9 @@ namespace NuPattern.VisualStudio.Solution
             }
         }
 
+        /// <summary>
+        /// Unfolds the template
+        /// </summary>
         public IItemContainer Unfold(string name, IItemContainer parent)
         {
             if (!Path.HasExtension(name) && !String.IsNullOrEmpty(defaultExtension))
@@ -66,6 +76,9 @@ namespace NuPattern.VisualStudio.Solution
                          .FirstOrDefault();
         }
 
+        /// <summary>
+        /// Gets the parameters of the template.
+        /// </summary>
         public dynamic Parameters
         {
             get { throw new NotSupportedException(); }

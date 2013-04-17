@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.UI.ViewModels;
 using NuPattern.Runtime.UI.Views;
 using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI
 {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Runtime.UriProviders;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.IntegrationTests.UriProviders
 {
@@ -16,14 +16,14 @@ namespace NuPattern.Runtime.IntegrationTests.UriProviders
     {
         private static readonly IAssertion Assert = new Assertion();
         private ISolution solution;
-        private IFxrUriReferenceService service;
+        private IUriReferenceService service;
 
         [TestInitialize]
         public void Initialize()
         {
             VsIdeTestHostContext.Dte.Solution.Open(this.PathTo(@"Runtime.IntegrationTests.Content\SolutionUriProvider\TestProviders.sln"));
             this.solution = VsIdeTestHostContext.ServiceProvider.GetService<ISolution>();
-            this.service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
+            this.service = VsIdeTestHostContext.ServiceProvider.GetService<IUriReferenceService>();
         }
 
         [HostType("VS IDE")]

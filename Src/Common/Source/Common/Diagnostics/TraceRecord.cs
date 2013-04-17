@@ -8,11 +8,20 @@ using System.Xml.XPath;
 
 namespace NuPattern.Diagnostics
 {
+    /// <summary>
+    /// A record for tracing
+    /// </summary>
     [DebuggerStepThrough]
-    internal class TraceRecord : ICloneable
+    public class TraceRecord : ICloneable
     {
+        /// <summary>
+        /// XML Namespace
+        /// </summary>
         public const string RecordXmlNamespace = "http://schemas.microsoft.com/2004/10/E2ETraceEvent/TraceRecord";
 
+        /// <summary>
+        /// Creates a new instance of the <see cref="TraceRecord"/> class.
+        /// </summary>
         public TraceRecord(TraceEventType severity, string traceIdentifier, string description = null)
         {
             Guard.NotNullOrEmpty(() => traceIdentifier, traceIdentifier);
@@ -23,6 +32,9 @@ namespace NuPattern.Diagnostics
             this.AppDomain = System.AppDomain.CurrentDomain.FriendlyName;
         }
 
+        /// <summary>
+        /// Creates a new instance of the <see cref="TraceRecord"/> class.
+        /// </summary>
         public TraceRecord(TraceEventType severity, string traceIdentifier, Exception exception)
             : this(severity, traceIdentifier, description: exception.Message)
         {
@@ -31,10 +43,29 @@ namespace NuPattern.Diagnostics
             this.Exception = exception;
         }
 
+        /// <summary>
+        /// Gets or sets the Severity of the record.
+        /// </summary>
         public virtual TraceEventType Severity { get; protected set; }
+
+        /// <summary>
+        /// Gets or sets the identifier of the record.
+        /// </summary>
         public virtual string TraceIdentifier { get; protected set; }
+
+        /// <summary>
+        /// Gets or sets the description of the record.
+        /// </summary>
         public virtual string Description { get; protected set; }
+
+        /// <summary>
+        /// Gets or sets the <see cref="AppDomain"/> of the record.
+        /// </summary>
         public virtual string AppDomain { get; protected set; }
+
+        /// <summary>
+        /// Gets or sets the optional <see cref="Exception"/> of the record.
+        /// </summary>
         public virtual Exception Exception { get; protected set; }
 
         #region ICloneable
@@ -46,6 +77,10 @@ namespace NuPattern.Diagnostics
         {
         }
 
+        /// <summary>
+        /// Clones the record.
+        /// </summary>
+        /// <returns></returns>
         public object Clone()
         {
             var clone = DoClone();
@@ -53,11 +88,19 @@ namespace NuPattern.Diagnostics
             return clone;
         }
 
+        /// <summary>
+        /// Clones the record.
+        /// </summary>
+        /// <returns></returns>
         protected virtual TraceRecord DoClone()
         {
             return new TraceRecord();
         }
 
+        /// <summary>
+        /// Copies the record to another.
+        /// </summary>
+        /// <param name="clone"></param>
         protected virtual void DoCopyTo(TraceRecord clone)
         {
             clone.AppDomain = this.AppDomain;
@@ -179,6 +222,10 @@ namespace NuPattern.Diagnostics
 
         #endregion
 
+        /// <summary>
+        /// Writes to the record.
+        /// </summary>
+        /// <param name="writer"></param>
         protected virtual void WriteTo(XmlWriter writer)
         {
         }

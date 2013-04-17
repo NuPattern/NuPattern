@@ -5,8 +5,8 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 
 namespace NuPattern.Library.Commands

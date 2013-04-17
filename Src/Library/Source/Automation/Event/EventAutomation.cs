@@ -7,7 +7,7 @@ using System.Globalization;
 using System.Linq;
 using System.Windows.Input;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Presentation;
 using NuPattern.Runtime;

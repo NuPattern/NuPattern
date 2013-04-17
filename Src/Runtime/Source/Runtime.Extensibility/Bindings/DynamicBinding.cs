@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Bindings
@@ -109,7 +109,7 @@ namespace NuPattern.Runtime.Bindings
 
                 foreach (var result in results)
                 {
-                    tracer.TraceError("Dynamic binding '{0}' failed on imported property '{1}': {2}", this.componentTypeId, property.Name, result.ErrorMessage);
+                    tracer.TraceError("Dynamic binding '{0}' failed on imported property '{1}': {2}", this.ComponentTypeId, property.Name, result.ErrorMessage);
                     evaluationResult = false;
                 }
             }

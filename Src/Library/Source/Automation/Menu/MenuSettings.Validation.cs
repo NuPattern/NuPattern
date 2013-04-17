@@ -4,9 +4,9 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
@@ -316,7 +316,7 @@ namespace NuPattern.Library.Automation
             {
                 if (!string.IsNullOrEmpty(settings.Icon))
                 {
-                    var uriService = ((IServiceProvider)settings.Store).GetService<IFxrUriReferenceService>();
+                    var uriService = ((IServiceProvider)settings.Store).GetService<IUriReferenceService>();
                     var resolvedIcon = uriService.ResolveUri<ResourcePack>(new Uri(settings.Icon));
 
                     if (resolvedIcon == null)

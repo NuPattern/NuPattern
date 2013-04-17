@@ -4,9 +4,8 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime
 {

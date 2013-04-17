@@ -223,6 +223,15 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; validation failed..
+        /// </summary>
+        internal static string DataAnnotationsValidator_ValidationFailed {
+            get {
+                return ResourceManager.GetString("DataAnnotationsValidator_ValidationFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to General.
         /// </summary>
         internal static string DefaultCategory {
@@ -322,6 +331,15 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        internal static string FeatureComponentAttribute_DefaultCategory {
+            get {
+                return ResourceManager.GetString("FeatureComponentAttribute_DefaultCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to (None).
         /// </summary>
         internal static string FeatureExtensionsTypeConverter_None {
@@ -363,6 +381,51 @@ namespace NuPattern.Runtime.Properties {
         internal static string FeatureManagerExtensions_TraceShowingGuidanceWindows {
             get {
                 return ResourceManager.GetString("FeatureManagerExtensions_TraceShowingGuidanceWindows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The node &apos;{0}&apos; does not allow more incoming connections..
+        /// </summary>
+        internal static string GuidanceNode_InputCardinalityExceed {
+            get {
+                return ResourceManager.GetString("GuidanceNode_InputCardinalityExceed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The state of the target guidance node  is invalid..
+        /// </summary>
+        internal static string GuidanceNode_InvalidTargetGuidanceNodeState {
+            get {
+                return ResourceManager.GetString("GuidanceNode_InvalidTargetGuidanceNodeState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The node &apos;{0}&apos; does not allow more outgoing connections..
+        /// </summary>
+        internal static string GuidanceNode_OutputCardinalityExceed {
+            get {
+                return ResourceManager.GetString("GuidanceNode_OutputCardinalityExceed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter cannot be empty..
+        /// </summary>
+        internal static string GuidanceNode_ParameterNotEmpty {
+            get {
+                return ResourceManager.GetString("GuidanceNode_ParameterNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The property &apos;{0}&apos; only supports one set..
+        /// </summary>
+        internal static string GuidanceNode_PropertyAlreadySet {
+            get {
+                return ResourceManager.GetString("GuidanceNode_PropertyAlreadySet", resourceCulture);
             }
         }
         
@@ -427,6 +490,51 @@ namespace NuPattern.Runtime.Properties {
         internal static string ImageUriEditor_PickerTitle {
             get {
                 return ResourceManager.GetString("ImageUriEditor_PickerTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blocked.
+        /// </summary>
+        internal static string NodeState_Blocked {
+            get {
+                return ResourceManager.GetString("NodeState_Blocked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Completed.
+        /// </summary>
+        internal static string NodeState_Completed {
+            get {
+                return ResourceManager.GetString("NodeState_Completed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disabled.
+        /// </summary>
+        internal static string NodeState_Disabled {
+            get {
+                return ResourceManager.GetString("NodeState_Disabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enabled.
+        /// </summary>
+        internal static string NodeState_Enabled {
+            get {
+                return ResourceManager.GetString("NodeState_Enabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        internal static string NodeState_Unknown {
+            get {
+                return ResourceManager.GetString("NodeState_Unknown", resourceCulture);
             }
         }
         

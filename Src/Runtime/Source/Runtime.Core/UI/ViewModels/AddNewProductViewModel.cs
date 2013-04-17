@@ -7,7 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Data;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Properties;

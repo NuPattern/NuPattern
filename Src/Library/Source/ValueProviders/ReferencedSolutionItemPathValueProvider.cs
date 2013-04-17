@@ -2,10 +2,9 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
@@ -37,7 +36,7 @@ namespace NuPattern.Library.ValueProviders
         /// Gets the URI reference service.
         /// </summary>
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriReferenceService
+        public IUriReferenceService UriReferenceService
         {
             get;
             set;

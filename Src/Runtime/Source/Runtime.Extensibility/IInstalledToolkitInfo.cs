@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Runtime
 {

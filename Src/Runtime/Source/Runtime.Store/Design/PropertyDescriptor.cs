@@ -6,7 +6,6 @@ using System.Drawing.Design;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Bindings;
@@ -360,13 +359,13 @@ namespace NuPattern.Runtime.Store.Design
         private static Attribute[] BuildAttributes(IPropertyInfo info)
         {
             var attributes = new List<Attribute>
-			{
-				new BrowsableAttribute(info.IsVisible),
-				new ReadOnlyAttribute(info.IsReadOnly),
-				new CategoryAttribute(info.Category),
-				new DescriptionAttribute(info.Description),
-				new DisplayNameAttribute(info.DisplayName), 
-			};
+            {
+                new BrowsableAttribute(info.IsVisible),
+                new ReadOnlyAttribute(info.IsReadOnly),
+                new CategoryAttribute(info.Category),
+                new DescriptionAttribute(info.Description),
+                new DisplayNameAttribute(info.DisplayName), 
+            };
 
             if (!string.IsNullOrEmpty(info.TypeConverterTypeName))
             {

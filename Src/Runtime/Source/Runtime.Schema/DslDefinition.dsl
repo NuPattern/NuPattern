@@ -246,7 +246,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -265,7 +265,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -676,7 +676,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -773,7 +773,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -844,7 +844,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -898,7 +898,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>

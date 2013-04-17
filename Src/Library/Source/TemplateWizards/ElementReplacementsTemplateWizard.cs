@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Design;
 using NuPattern.Library.Properties;
 using NuPattern.VisualStudio.TemplateWizards;

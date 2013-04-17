@@ -11,7 +11,7 @@ namespace NuPattern.Diagnostics
     /// constructor.
     /// </remarks>
     [DebuggerStepThrough]
-    internal class TraceActivity : IDisposable
+    public class TraceActivity : IDisposable
     {
         string activityName;
         bool disposed;
@@ -19,6 +19,11 @@ namespace NuPattern.Diagnostics
         Guid oldId;
         Guid newId;
 
+        /// <summary>
+        /// Creates a new instance of the <see cref="TraceActivity"/> class.
+        /// </summary>
+        /// <param name="activityName"></param>
+        /// <param name="source"></param>
         public TraceActivity(string activityName, ITraceSource source)
         {
             Guard.NotNullOrEmpty(() => activityName, activityName);
@@ -41,18 +46,26 @@ namespace NuPattern.Diagnostics
             source.TraceEvent(TraceEventType.Start, 0, activityName);
         }
 
+        /// <summary>
+        /// Destroys this instance of the class.
+        /// </summary>
         ~TraceActivity()
         {
             Dispose(false);
         }
 
-
+        /// <summary>
+        /// Disposes of this instance
+        /// </summary>
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
 
+        /// <summary>
+        /// Disposes of this instance
+        /// </summary>
         protected virtual void Dispose(bool disposing)
         {
             if (disposing && !disposed)

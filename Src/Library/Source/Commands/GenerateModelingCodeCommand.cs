@@ -10,14 +10,12 @@ using System.Runtime.Remoting.Messaging;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.Commands
@@ -143,7 +141,7 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public virtual IFxrUriReferenceService UriService { get; set; }
+        public virtual IUriReferenceService UriService { get; set; }
 
         /// <summary>
         /// Gets or sets the current solution.

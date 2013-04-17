@@ -439,4 +439,40 @@ Please add a new or existing image file {0} to the project and try again.</value
   <data name="ProductElementExtensions_ErrorNotElementContainer" xml:space="preserve">
     <value>'{0}' does not allow creation of child elements '{1}'.</value>
   </data>
+  <data name="NodeState_Blocked" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="NodeState_Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="NodeState_Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="NodeState_Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="NodeState_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="FeatureComponentAttribute_DefaultCategory" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="DataAnnotationsValidator_ValidationFailed" xml:space="preserve">
+    <value>'{0}' validation failed.</value>
+  </data>
+  <data name="GuidanceNode_InputCardinalityExceed" xml:space="preserve">
+    <value>The node '{0}' does not allow more incoming connections.</value>
+  </data>
+  <data name="GuidanceNode_InvalidTargetGuidanceNodeState" xml:space="preserve">
+    <value>The state of the target guidance node  is invalid.</value>
+  </data>
+  <data name="GuidanceNode_OutputCardinalityExceed" xml:space="preserve">
+    <value>The node '{0}' does not allow more outgoing connections.</value>
+  </data>
+  <data name="GuidanceNode_PropertyAlreadySet" xml:space="preserve">
+    <value>The property '{0}' only supports one set.</value>
+  </data>
+  <data name="GuidanceNode_ParameterNotEmpty" xml:space="preserve">
+    <value>Parameter cannot be empty.</value>
+  </data>
 </root>

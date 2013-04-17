@@ -83,6 +83,7 @@
     <Compile Include="ReflectionExtensionsSpec.cs" />
     <Compile Include="StaticWeakReferenceSpec.cs" />
     <Compile Include="TypeExtensionsSpec.cs" />
+    <Compile Include="UriReferenceServiceSpec.cs" />
     <Compile Include="VisualStudio\Commands\VsMenuCommandAdapterSpec.cs" />
     <Compile Include="VisualStudio\Solution\SolutionExtensionsSpec.cs" />
     <Compile Include="WeakObservableEventSpec.cs" />

@@ -5,8 +5,6 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio;
 
@@ -20,9 +18,9 @@ namespace NuPattern.Runtime.UriProviders
     /// </remarks>
     // TODO: Fix FERT so that this class does not have ot be public to register itself.
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [Export(typeof(IFxrUriReferenceProvider))]
+    [Export(typeof(IUriReferenceProvider))]
     [CLSCompliant(false)]
-    public class VsixExtensionUriProvider : IFxrUriReferenceProvider<IInstalledExtension>
+    public class VsixExtensionUriProvider : IUriReferenceProvider<IInstalledExtension>
     {
         /// <summary>
         /// Uri scheme for this provider, which is <c>vsix://</c>.

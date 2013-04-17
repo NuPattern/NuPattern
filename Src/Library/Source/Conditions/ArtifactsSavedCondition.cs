@@ -2,13 +2,13 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.Conditions
 {
@@ -35,7 +35,7 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriReferenceService { get; set; }
+        public IUriReferenceService UriReferenceService { get; set; }
 
         /// <summary>
         /// Evaluates the condition by verifying the existence of any artifact references.

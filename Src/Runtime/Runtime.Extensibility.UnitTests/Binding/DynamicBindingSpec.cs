@@ -7,6 +7,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel.Composition;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
 
@@ -119,7 +120,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
                         new Lazy<IFoo, IFeatureComponentMetadata>(
                         () => new Foo(), 
                         Mocks.Of<IFeatureComponentMetadata>().First(m => 
-                            m.CatalogName == Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName && 
+                            m.CatalogName == Catalog.CatalogName && 
                             m.Id == "Foo"))
                     });
 
@@ -227,7 +228,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
 
             public static string CatalogName
             {
-                get { return Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName; }
+                get { return Catalog.CatalogName; }
             }
         }
     }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.UriProviders;
@@ -68,7 +67,7 @@ namespace NuPattern.Runtime.UnitTests.UriProviders
             this.item1 = this.solution.Find<IItem>().First();
             this.item2 = this.solution.Find<IItem>().Last();
             this.serviceProvider = new Mock<IServiceProvider>();
-            this.serviceProvider.Setup(s => s.GetService(typeof(IFxrUriReferenceService))).Returns(new UriReferenceService(new[] { new SolutionUriProvider() }));
+            this.serviceProvider.Setup(s => s.GetService(typeof(IUriReferenceService))).Returns(UriReferenceServiceFactory.CreateService(new[] { new SolutionUriProvider() }));
         }
 
         [TestMethod, TestCategory("Unit")]

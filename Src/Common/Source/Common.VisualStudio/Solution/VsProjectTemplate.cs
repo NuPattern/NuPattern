@@ -7,15 +7,25 @@ using NuPattern.VisualStudio.Properties;
 
 namespace NuPattern.VisualStudio.Solution
 {
-    internal class VsProjectTemplate : ITemplate
+    /// <summary>
+    /// A VS Project Template
+    /// </summary>
+    public class VsProjectTemplate : ITemplate
     {
         private string path;
 
+        /// <summary>
+        /// Creates a new instance of the <see cref="VsProjectTemplate"/> class.
+        /// </summary>
+        /// <param name="path"></param>
         public VsProjectTemplate(string path)
         {
             this.path = path;
         }
 
+        /// <summary>
+        /// Unfolds the template
+        /// </summary>
         public IItemContainer Unfold(string name, IItemContainer parent)
         {
             if (parent.Kind == ItemKind.Solution)
@@ -38,6 +48,9 @@ namespace NuPattern.VisualStudio.Solution
             return parent.Items.FirstOrDefault(item => item.Kind == ItemKind.Project && item.Name == name);
         }
 
+        /// <summary>
+        /// Gets the parameters of the template.
+        /// </summary>
         public dynamic Parameters
         {
             get { throw new NotSupportedException(); }

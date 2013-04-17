@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NuPattern.Library.Design;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.UnitTests
 {
