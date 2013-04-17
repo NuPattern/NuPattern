@@ -7,9 +7,10 @@ using System.Xml;
 using EnvDTE;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Diagnostics;
 using NuPattern.VisualStudio.Properties;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.VisualStudio.TemplateWizards
 {
@@ -79,7 +80,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
         /// <summary>
         /// Executed before a file is opened.
         /// </summary>
-        public override void BeforeOpeningFile(ProjectItem projectItem)
+        public override void BeforeOpeningFile(EnvDTE.ProjectItem projectItem)
         {
             base.BeforeOpeningFile(projectItem);
 
@@ -107,7 +108,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
         /// Runs custom wizard logic when a project item has finished generating.
         /// </summary>
         /// <param name="projectItem">The project item that finished generating.</param>
-        public override void ProjectItemFinishedGenerating(ProjectItem projectItem)
+        public override void ProjectItemFinishedGenerating(EnvDTE.ProjectItem projectItem)
         {
             base.ProjectItemFinishedGenerating(projectItem);
 
@@ -154,7 +155,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
             }
         }
 
-        private void LoadWizards(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IVsTemplateWizardData wizardData)
+        private void LoadWizards(IVsTemplateWizardData wizardData)
         {
             var wizardElements = from coordinator in wizardData.Elements
                                  where coordinator.Name.Equals("CoordinatedWizards", StringComparison.OrdinalIgnoreCase)

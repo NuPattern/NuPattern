@@ -2,10 +2,9 @@ using System;
 using System.Linq;
 using EnvDTE;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.VisualStudio.Properties;
+using NuPattern.VisualStudio.Solution;
 using VSLangProj;
 
 namespace NuPattern.VisualStudio.TemplateWizards

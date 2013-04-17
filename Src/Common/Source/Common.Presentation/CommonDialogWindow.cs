@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+﻿using NuPattern.Diagnostics;
 using NuPattern.Presentation.VsIde;
 
 namespace NuPattern.Presentation

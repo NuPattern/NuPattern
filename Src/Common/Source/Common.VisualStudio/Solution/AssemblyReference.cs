@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
 namespace NuPattern.VisualStudio.Solution
 {

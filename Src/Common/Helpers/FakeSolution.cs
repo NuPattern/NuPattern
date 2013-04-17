@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.VisualStudio.Solution;
 
 public abstract class ItemContainer : IItemContainer
 {

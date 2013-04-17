@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace NuPattern.VisualStudio
 {
@@ -8,6 +7,17 @@ namespace NuPattern.VisualStudio
     /// </summary>
     public static class ServiceProviderExtensions
     {
+        /// <summary>
+        /// Gets the specified service
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="serviceProvider"></param>
+        /// <returns></returns>
+        public static T GetService<T>(this IServiceProvider serviceProvider)
+        {
+            return (T)serviceProvider.GetService(typeof(T));
+        }
+
         /// <summary>
         /// Attemps to retrieve the given service, and returns null if it's not present 
         /// or it fails for whatever reason.

@@ -61,6 +61,15 @@ namespace NuPattern.Modeling.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Model bus could not create an adapter for the reference {0}.
+        /// </summary>
+        internal static string ModelBusUriReferenceProvider_CantCreateAdapterFromReference {
+            get {
+                return ResourceManager.GetString("ModelBusUriReferenceProvider_CantCreateAdapterFromReference", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The domain class {0} doesn&apos;t have a Name domain property.
         /// </summary>
         internal static string ModelElementExtensions_ElementNameNotSupported {

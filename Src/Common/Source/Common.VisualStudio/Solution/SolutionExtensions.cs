@@ -11,10 +11,8 @@ using EnvDTE;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Design;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.HierarchyNodes;
 using NuPattern.VisualStudio.Properties;
+using NuPattern.VisualStudio.Solution.Hierarchy;
 using VSLangProj;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
@@ -430,9 +428,7 @@ namespace NuPattern.VisualStudio.Solution
         {
             Guard.NotNull(() => item, item);
 
-            var serviceProvider = new ServiceProvider(item.As<ProjectItem>().DTE as Ole.IServiceProvider);
-
-            VsHelper.CheckOut(serviceProvider, item.PhysicalPath);
+            VsHelper.CheckOut(item.PhysicalPath);
         }
 
         /// <summary>

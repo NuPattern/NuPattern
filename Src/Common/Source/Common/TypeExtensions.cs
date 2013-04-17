@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace NuPattern
 {
@@ -135,6 +136,37 @@ namespace NuPattern
             Guard.NotNull(() => type, type);
 
             return (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>));
+        }
+
+        /// <summary>
+        /// Gets the simple type name for the type, 
+        /// which is a C#-like rendering for generic 
+        /// types.
+        /// </summary>
+        public static string ToSimpleName(this Type type)
+        {
+            if (type.IsGenericType || type.IsGenericTypeDefinition)
+            {
+                return type.FullName.Substring(0, type.FullName.IndexOf('`')) +
+                    "<" + String.Join(",",
+                            type.GetGenericArguments()
+                                .Select(t => t.ToSimpleName())
+                                .ToArray()) +
+                    ">";
+            }
+            else
+            {
+                return type.FullName ?? type.Name;
+            }
+        }
+
+        /// <summary>
+        /// Determines if a type is anonymous by looking for a <see cref="CompilerGeneratedAttribute"/> 
+        /// attribute declaration on it.
+        /// </summary>
+        public static bool IsAnonymous(this Type type)
+        {
+            return type.GetCustomAttributes(typeof(CompilerGeneratedAttribute), true).Any();
         }
     }
 }

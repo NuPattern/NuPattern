@@ -126,6 +126,9 @@
   <data name="CollectionDropDownEditor_ValueCollectionException" xml:space="preserve">
     <value>The value must implement ICollection.</value>
   </data>
+  <data name="ComponentAttribute_DefaultCategory" xml:space="preserve">
+    <value>General</value>
+  </data>
   <data name="DescriptorExtensions_MustBeDelegatingDescriptor" xml:space="preserve">
     <value>The descriptor must inherit from {0} or provide a constructor receiving a single parameter of type {1}, which is the original one to be replaced.</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="ObjectValidator_ValidatorDefaultMessage" xml:space="preserve">
     <value>'{0}' validation failed.</value>
+  </data>
+  <data name="StandardValue_DefaultGroupName" xml:space="preserve">
+    <value>General</value>
   </data>
   <data name="XmlProcessor_ErrorLoadFailed" xml:space="preserve">
     <value>XML document load failed for file '{0}'.</value>

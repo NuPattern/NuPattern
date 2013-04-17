@@ -178,6 +178,15 @@ namespace NuPattern.VisualStudio.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Project with GUID &apos;{0}&apos; does not exist.
+        /// </summary>
+        internal static string HierarchyNode_ProjectDoesNotExist {
+            get {
+                return ResourceManager.GetString("HierarchyNode_ProjectDoesNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Designer item for file {0} was not found..
         /// </summary>
         internal static string OpenDesignerTemplateWizard_DesignerItemNotFound {
@@ -201,6 +210,69 @@ namespace NuPattern.VisualStudio.Properties {
         internal static string OpenDesignerTemplateWizard_RetrievedDesignerFile {
             get {
                 return ResourceManager.GetString("OpenDesignerTemplateWizard_RetrievedDesignerFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot create project item with an empty name.
+        /// </summary>
+        internal static string ProjectNode_CannotCreateItemWithEmptyName {
+            get {
+                return ResourceManager.GetString("ProjectNode_CannotCreateItemWithEmptyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid name &apos;{0}&apos; for a file.
+        /// </summary>
+        internal static string ProjectNode_InvalidFileName {
+            get {
+                return ResourceManager.GetString("ProjectNode_InvalidFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The project name &apos;{0}&apos; was not found in the solution..
+        /// </summary>
+        internal static string ProjectNode_InvalidProjectUniqueName {
+            get {
+                return ResourceManager.GetString("ProjectNode_InvalidProjectUniqueName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The property &apos;{0}&apos; was not found in the project &apos;{1}&apos;.
+        /// </summary>
+        internal static string ProjectNode_PropertyNameNotFound {
+            get {
+                return ResourceManager.GetString("ProjectNode_PropertyNameNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project kind is unsupported..
+        /// </summary>
+        internal static string ProjectNode_UnsupportedProjectKind {
+            get {
+                return ResourceManager.GetString("ProjectNode_UnsupportedProjectKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code generator:  {0}, {1}.
+        /// </summary>
+        internal static string ProvideCodeGeneratorAttribute_RegisterLog {
+            get {
+                return ResourceManager.GetString("ProvideCodeGeneratorAttribute_RegisterLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code generator:  {0}, {1}.
+        /// </summary>
+        internal static string ProvideCodeGeneratorAttribute_UnregisterLog {
+            get {
+                return ResourceManager.GetString("ProvideCodeGeneratorAttribute_UnregisterLog", resourceCulture);
             }
         }
         
@@ -386,6 +458,33 @@ namespace NuPattern.VisualStudio.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There is already an item named &apos;{0}&apos; inside &apos;{1}&apos;. Please choose a different name..
+        /// </summary>
+        internal static string VsItem_DuplicateItemName {
+            get {
+                return ResourceManager.GetString("VsItem_DuplicateItemName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified template file does not exist..
+        /// </summary>
+        internal static string VsItemTemplate_FileNotExists {
+            get {
+                return ResourceManager.GetString("VsItemTemplate_FileNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can only unfold item templates directly to projects..
+        /// </summary>
+        internal static string VsItemTemplate_UnsupportedTarget {
+            get {
+                return ResourceManager.GetString("VsItemTemplate_UnsupportedTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vsix manifest file &apos;{0}&apos; does not contain required Identifier element..
         /// </summary>
         internal static string Vsix_InvalidManifest {
@@ -400,6 +499,15 @@ namespace NuPattern.VisualStudio.Properties {
         internal static string Vsix_ManifestMissing {
             get {
                 return ResourceManager.GetString("Vsix_ManifestMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can only unfold project templates directly to solution or solution folders..
+        /// </summary>
+        internal static string VsProjectTemplate_UnsupportedTarget {
+            get {
+                return ResourceManager.GetString("VsProjectTemplate_UnsupportedTarget", resourceCulture);
             }
         }
         

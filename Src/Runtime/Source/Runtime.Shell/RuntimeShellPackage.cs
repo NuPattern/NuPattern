@@ -34,7 +34,6 @@ using NuPattern.Runtime.UI;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Commands;
 using NuPattern.VisualStudio.Solution;
-using Ole = Microsoft.VisualStudio.OLE.Interop;
 
 namespace NuPattern.Runtime.Shell
 {
@@ -51,6 +50,10 @@ namespace NuPattern.Runtime.Shell
     [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
+    [ProvideService(typeof(IModelingService), ServiceName = "ModelingService")]
+    [ProvideService(typeof(ITemplateService), ServiceName = "TemplateService")]
+    [ProvideService(typeof(IUriReferenceService), ServiceName = "UriReferenceService")]
+    [ProvideService(typeof(ISolution), ServiceName = "Solution")]
     [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = "IPlatuProjectTypeProvider")]
     [ProvideService(typeof(IPatternManager), ServiceName = "IPatternManager")]
     [ProvideService(typeof(IPackageToolWindow), ServiceName = "IPackageToolWindow")]
@@ -71,41 +74,34 @@ namespace NuPattern.Runtime.Shell
         private TracingSettingsMonitor tracingMonitor;
         private TraceOutputWindowManager traceOutputWindowManager;
 
+#pragma warning disable 0649
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
+        private ITemplateService TemplateService;
+        [Import]
+        private IModelingService ModelingService;
+        [Import]
+        private IUriReferenceService UriReferenceService;
+        [Import]
+        private ISolution Solution;
+        [Import]
         private IPatternManager PatternManager { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private INuPatternProjectTypeProvider ProjectTypes { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IBindingFactory BindingFactory { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IBindingCompositionService BindingComposition { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private ISolutionEvents SolutionEvents { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IShellEvents ShellEvents { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private ISettingsManager SettingsManager { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IUserMessageService UserMessageService { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IToolkitInterfaceService ToolkitInterfaceService { get; set; }
+#pragma warning restore 0649
 
 #if VSVER11
         private ResolveEventHandler assemblyResolve = OnAssemblyResolve;
@@ -177,28 +173,6 @@ namespace NuPattern.Runtime.Shell
             this.ShellEvents.ShellInitialized += OnShellInitialized;
             this.SolutionEvents.SolutionOpened += OnSolutionOpened;
             this.SolutionEvents.SolutionClosed += OnSolutionClosed;
-
-            EnsureVsHelperInitializedHack();
-        }
-
-        private void EnsureVsHelperInitializedHack()
-        {
-            var helperType = Type.GetType("Microsoft.VisualStudio.TeamArchitect.PowerTools.VsIde.VsHelper, Microsoft.VisualStudio.TeamArchitect.PowerTools");
-            if (helperType != null)
-            {
-                var providerField = helperType.GetField("serviceProvider", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
-                if (providerField != null)
-                {
-                    var value = providerField.GetValue(null);
-                    if (value == null)
-                    {
-                        using (var provider = new ServiceProvider((Ole.IServiceProvider)this.GetService<SDTE, EnvDTE.DTE>()))
-                        {
-                            providerField.SetValue(null, provider);
-                        }
-                    }
-                }
-            }
         }
 
         /// <summary>
@@ -248,6 +222,10 @@ namespace NuPattern.Runtime.Shell
         private void AddServices()
         {
             var serviceContainer = (IServiceContainer)this;
+            serviceContainer.AddService(typeof(IModelingService), new ServiceCreatorCallback((c, s) => this.ModelingService), true);
+            serviceContainer.AddService(typeof(ITemplateService), new ServiceCreatorCallback((c, s) => this.TemplateService), true);
+            serviceContainer.AddService(typeof(IUriReferenceService), new ServiceCreatorCallback((c, s) => this.UriReferenceService), true);
+            serviceContainer.AddService(typeof(ISolution), new ServiceCreatorCallback((c, s) => this.Solution), true);
             serviceContainer.AddService(typeof(RuntimeShellPackage), this, true);
             serviceContainer.AddService(typeof(IPackageToolWindow), new PackageToolWindow(this), true);
             serviceContainer.AddService(typeof(IPatternManager), new ServiceCreatorCallback((s, t) => this.PatternManager), true);

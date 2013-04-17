@@ -1,5 +1,5 @@
 ﻿using System.Windows.Controls;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 
 namespace NuPattern.Presentation
 {

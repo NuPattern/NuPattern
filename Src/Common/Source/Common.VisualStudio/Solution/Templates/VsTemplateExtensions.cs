@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Xml;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.VsTemplateSchema;
 using NuPattern.Reflection;
 
 namespace NuPattern.VisualStudio.Solution.Templates
@@ -42,9 +40,9 @@ namespace NuPattern.VisualStudio.Solution.Templates
         {
             Guard.NotNull(() => template, template);
             Guard.NotNull(() => templateExtensionType, templateExtensionType);
-            Guard.OfType(() => template, template, typeof(VSTemplate));
+            Guard.OfType(() => template, template, typeof(VsTemplate));
 
-            var temp = (VSTemplate)template;
+            var temp = (VsTemplate)template;
 
             if (temp.WizardExtension == null)
             {
@@ -92,9 +90,9 @@ namespace NuPattern.VisualStudio.Solution.Templates
         {
             Guard.NotNull(() => template, template);
             Guard.NotNull(() => templateExtensionType, templateExtensionType);
-            Guard.OfType(() => template, template, typeof(VSTemplate));
+            Guard.OfType(() => template, template, typeof(VsTemplate));
 
-            var temp = (VSTemplate)template;
+            var temp = (VsTemplate)template;
             var doc = new XmlDocument();
 
             var newExtension = new VSTemplateWizardExtension[]
@@ -176,9 +174,9 @@ namespace NuPattern.VisualStudio.Solution.Templates
         public static void SetTemplateId(this IVsTemplate template, string templateId)
         {
             Guard.NotNull(() => template, template);
-            Guard.OfType(() => template, template, typeof(VSTemplate));
+            Guard.OfType(() => template, template, typeof(VsTemplate));
 
-            var temp = (VSTemplate)template;
+            var temp = (VsTemplate)template;
 
             temp.TemplateData.TemplateID = templateId;
         }
@@ -192,9 +190,9 @@ namespace NuPattern.VisualStudio.Solution.Templates
         public static void SetDescription(this IVsTemplate template, string description)
         {
             Guard.NotNull(() => template, template);
-            Guard.OfType(() => template, template, typeof(VSTemplate));
+            Guard.OfType(() => template, template, typeof(VsTemplate));
 
-            var temp = (VSTemplate)template;
+            var temp = (VsTemplate)template;
 
             temp.TemplateData.Description.Value = description;
         }
@@ -208,9 +206,9 @@ namespace NuPattern.VisualStudio.Solution.Templates
         public static void SetName(this IVsTemplate template, string name)
         {
             Guard.NotNull(() => template, template);
-            Guard.OfType(() => template, template, typeof(VSTemplate));
+            Guard.OfType(() => template, template, typeof(VsTemplate));
 
-            var temp = (VSTemplate)template;
+            var temp = (VsTemplate)template;
 
             temp.TemplateData.Name.Value = name;
         }
@@ -224,9 +222,9 @@ namespace NuPattern.VisualStudio.Solution.Templates
         public static void SetDefaultName(this IVsTemplate template, string defaultName)
         {
             Guard.NotNull(() => template, template);
-            Guard.OfType(() => template, template, typeof(VSTemplate));
+            Guard.OfType(() => template, template, typeof(VsTemplate));
 
-            var temp = (VSTemplate)template;
+            var temp = (VsTemplate)template;
 
             temp.TemplateData.DefaultName = defaultName;
         }
@@ -240,9 +238,9 @@ namespace NuPattern.VisualStudio.Solution.Templates
         public static void SetHidden(this IVsTemplate template, bool hidden)
         {
             Guard.NotNull(() => template, template);
-            Guard.OfType(() => template, template, typeof(VSTemplate));
+            Guard.OfType(() => template, template, typeof(VsTemplate));
 
-            var temp = (VSTemplate)template;
+            var temp = (VsTemplate)template;
 
             temp.TemplateData.HiddenSpecified = hidden;
             temp.TemplateData.Hidden = hidden;
@@ -261,9 +259,9 @@ namespace NuPattern.VisualStudio.Solution.Templates
             Guard.NotNull(() => template, template);
             Guard.NotNull(() => name, name);
             Guard.NotNull(() => value, value);
-            Guard.OfType(() => template, template, typeof(VSTemplate));
+            Guard.OfType(() => template, template, typeof(VsTemplate));
 
-            var temp = (VSTemplate)template;
+            var temp = (VsTemplate)template;
 
             var doc = new XmlDocument();
             var dataElement = doc.CreateElement(name, "http://schemas.microsoft.com/developer/vstemplate/2005");

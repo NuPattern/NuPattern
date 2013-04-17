@@ -88,6 +88,15 @@ namespace NuPattern.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        internal static string ComponentAttribute_DefaultCategory {
+            get {
+                return ResourceManager.GetString("ComponentAttribute_DefaultCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The descriptor must inherit from {0} or provide a constructor receiving a single parameter of type {1}, which is the original one to be replaced..
         /// </summary>
         internal static string DescriptorExtensions_MustBeDelegatingDescriptor {
@@ -147,6 +156,15 @@ namespace NuPattern.Properties {
         internal static string ObjectValidator_ValidatorDefaultMessage {
             get {
                 return ResourceManager.GetString("ObjectValidator_ValidatorDefaultMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        internal static string StandardValue_DefaultGroupName {
+            get {
+                return ResourceManager.GetString("StandardValue_DefaultGroupName", resourceCulture);
             }
         }
         

@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using EnvDTE;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Diagnostics;
 using NuPattern.VisualStudio.Properties;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.VisualStudio.TemplateWizards
 {
@@ -63,7 +63,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
         /// <summary>
         /// Executed before a file is opened.
         /// </summary>
-        public virtual void BeforeOpeningFile(ProjectItem projectItem)
+        public virtual void BeforeOpeningFile(EnvDTE.ProjectItem projectItem)
         {
             Guard.NotNull(() => projectItem, projectItem);
         }
@@ -88,7 +88,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
         /// Runs custom wizard logic when a project item has finished generating.
         /// </summary>
         /// <param name="projectItem">The project item that finished generating.</param>
-        public virtual void ProjectItemFinishedGenerating(ProjectItem projectItem)
+        public virtual void ProjectItemFinishedGenerating(EnvDTE.ProjectItem projectItem)
         {
             if (projectItem == null)
             {
