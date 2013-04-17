@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.UriProviders
@@ -12,9 +11,9 @@ namespace NuPattern.Runtime.UriProviders
     {
         /// <summary>
         /// Throws <see cref="NotSupportedException"/> if the <see cref="Uri.Scheme"/> does 
-        /// not match the <see cref="IFxrUriReferenceProvider.UriScheme"/>.
+        /// not match the <see cref="IUriReferenceProvider.UriScheme"/>.
         /// </summary>
-        public static void ThrowIfNotSupportedUriScheme(this IFxrUriReferenceProvider provider, Uri uri)
+        public static void ThrowIfNotSupportedUriScheme(this IUriReferenceProvider provider, Uri uri)
         {
             Guard.NotNull(() => provider, provider);
             Guard.NotNull(() => uri, uri);

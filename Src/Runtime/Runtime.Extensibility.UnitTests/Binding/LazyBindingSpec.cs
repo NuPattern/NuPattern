@@ -4,8 +4,10 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Runtime.UnitTests.Binding
 {
@@ -105,7 +107,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
             {
                 get
                 {
-                    return Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName;
+                    return Catalog.CatalogName;
                 }
             }
         }

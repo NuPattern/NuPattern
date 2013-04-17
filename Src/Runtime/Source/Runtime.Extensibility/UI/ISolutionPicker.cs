@@ -1,6 +1,6 @@
 using System;
 using System.Windows;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI
 {
@@ -18,7 +18,7 @@ namespace NuPattern.Runtime.UI
         /// <summary>
         /// Gets or sets the root item to pick from.
         /// </summary>
-        IItemContainer RootItem { get; set; }
+        ISolution RootItem { get; set; }
 
         /// <summary>
         /// The title of the picker.

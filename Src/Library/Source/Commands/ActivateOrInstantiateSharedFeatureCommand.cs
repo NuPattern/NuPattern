@@ -5,11 +5,10 @@ using System.ComponentModel.DataAnnotations;
 using System.Drawing.Design;
 using System.Linq;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 using NuPattern.Runtime.Design;
 using NuPattern.Runtime.Guidance;
 
@@ -83,7 +82,7 @@ namespace NuPattern.Library.Commands
                 }
 
                 // Ensure we are not sharing
-                var featureInstance = this.FeatureManager.InstantiatedFeatures.Where(f => f.FeatureId.Equals(this.FeatureId, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+                var featureInstance = this.FeatureManager.InstantiatedFeatures.FirstOrDefault(f => f.FeatureId.Equals(this.FeatureId, StringComparison.OrdinalIgnoreCase));
                 if (featureInstance == null)
                 {
                     // Create a default name

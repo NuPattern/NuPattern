@@ -1,10 +1,10 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
-using System.Windows;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
 namespace NuPattern.Library.Conditions
 {
@@ -15,7 +15,7 @@ namespace NuPattern.Library.Conditions
     [DescriptionResource("DropItemFormatCondition_Description", typeof(Resources))]
     [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
-    public class DropItemFormatCondition : Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Condition
+    public class DropItemFormatCondition : Condition
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<DropItemFormatCondition>();
 
@@ -24,7 +24,7 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public DragEventArgs DragArgs { get; set; }
+        public System.Windows.DragEventArgs DragArgs { get; set; }
 
         /// <summary>
         /// The format to check for

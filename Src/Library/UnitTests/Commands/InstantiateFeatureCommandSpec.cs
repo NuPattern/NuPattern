@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.References;
 
 namespace NuPattern.Library.UnitTests.Commands

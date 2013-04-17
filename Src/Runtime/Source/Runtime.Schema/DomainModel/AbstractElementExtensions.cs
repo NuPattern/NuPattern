@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-
+﻿
 namespace NuPattern.Runtime.Schema
 {
     /// <summary>

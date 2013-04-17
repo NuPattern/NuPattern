@@ -27,7 +27,7 @@ namespace NuPattern.Runtime.Schema.UnitTests.Design
             [TestInitialize]
             public void InitializeContext()
             {
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                     p.ToolkitInfo.Identifier == "ToolkitId"));
 
@@ -148,7 +148,7 @@ namespace NuPattern.Runtime.Schema.UnitTests.Design
                 {
                     var patternModel = this.store.ElementFactory.CreateElement<PatternModelSchema>();
 
-                    var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                    var uriService = Mock.Of<IUriReferenceService>(
                         u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                             p.ToolkitInfo.Identifier == "ToolkitId"));
 
@@ -229,7 +229,7 @@ namespace NuPattern.Runtime.Schema.UnitTests.Design
                 {
                     var patternModel = this.store.ElementFactory.CreateElement<PatternModelSchema>();
 
-                    var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                    var uriService = Mock.Of<IUriReferenceService>(
                         u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                             p.ToolkitInfo.Identifier == "ToolkitId"));
 
@@ -324,7 +324,7 @@ namespace NuPattern.Runtime.Schema.UnitTests.Design
                 {
                     var patternModel = this.store.ElementFactory.CreateElement<PatternModelSchema>();
 
-                    var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                    var uriService = Mock.Of<IUriReferenceService>(
                         u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                             p.ToolkitInfo.Identifier == "ToolkitId"));
 
@@ -416,7 +416,7 @@ namespace NuPattern.Runtime.Schema.UnitTests.Design
                 {
                     var patternModel = this.store.ElementFactory.CreateElement<PatternModelSchema>();
 
-                    var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                    var uriService = Mock.Of<IUriReferenceService>(
                         u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                             p.ToolkitInfo.Identifier == "ToolkitId"));
 

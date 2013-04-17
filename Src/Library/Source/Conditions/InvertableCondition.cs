@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
 namespace NuPattern.Library.Conditions
 {

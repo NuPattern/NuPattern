@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Windows;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
 namespace NuPattern.Library.Conditions
 {
@@ -13,7 +13,7 @@ namespace NuPattern.Library.Conditions
     /// Checks if the dragged data contains items that can be dropped
     /// </summary>
     [CLSCompliant(false)]
-    public abstract class DropItemCondition : Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Condition
+    public abstract class DropItemCondition : Condition
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<DropItemCondition>();
 
@@ -22,7 +22,7 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        protected DragEventArgs DragArgs
+        protected System.Windows.DragEventArgs DragArgs
         {
             get;
             set;

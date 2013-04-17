@@ -41,9 +41,6 @@
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
-      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
@@ -119,13 +116,28 @@
     <Compile Include="Commands\MenuCommandServiceExtensions.cs" />
     <Compile Include="Commands\VsMenuCommand.cs" />
     <Compile Include="Commands\VsMenuCommandAdapter.cs" />
-    <Compile Include="Composition\Catalog.cs" />
     <Compile Include="Diagnostics\OutputWindowTextWriter.cs" />
     <Compile Include="Events\ItemEvents.cs" />
     <Compile Include="Events\ShellEvents.cs" />
     <Compile Include="Events\SolutionEvents.cs" />
+    <Compile Include="Extensions\EnabledState.cs" />
     <Compile Include="Extensions\ExtensionContentExtensions.cs" />
+    <Compile Include="Extensions\ExtensionFactory.cs" />
     <Compile Include="Extensions\ExtensionVisibility.cs" />
+    <Compile Include="Extensions\IExtension.cs" />
+    <Compile Include="Extensions\IExtensionHeader.cs" />
+    <Compile Include="Extensions\IExtensionReference.cs" />
+    <Compile Include="Extensions\IExtensionRequirement.cs" />
+    <Compile Include="Extensions\IInstalledExtension.cs" />
+    <Compile Include="Extensions\IExtensionContent.cs" />
+    <Compile Include="Extensions\IVersionRange.cs" />
+    <Compile Include="Extensions\VsExtension.cs" />
+    <Compile Include="Extensions\VsExtensionContent.cs" />
+    <Compile Include="Extensions\VsExtensionHeader.cs" />
+    <Compile Include="Extensions\VsExtensionReference.cs" />
+    <Compile Include="Extensions\VsExtensionRequirement.cs" />
+    <Compile Include="Extensions\VsInstalledExtension.cs" />
+    <Compile Include="Extensions\VsVersionRange.cs" />
     <Compile Include="IBananaMetadata.cs" />
     <Compile Include="IBananaRegistration.cs" />
     <Compile Include="ProvideCodeGeneratorAttribute.cs" />
@@ -156,7 +168,6 @@
     <Compile Include="Solution\ITemplate.cs" />
     <Compile Include="Solution\ProjectConfiguration.cs" />
     <Compile Include="Solution\ProjectPlatform.cs" />
-    <Compile Include="Solution\RelativePathBuilder.cs" />
     <Compile Include="Solution\Scope.cs" />
     <Compile Include="Solution\Templates\IVsTemplate.cs" />
     <Compile Include="Solution\Templates\IVsTemplateContent.cs" />
@@ -188,6 +199,7 @@
     <Compile Include="Solution\VsTemplate.cs" />
     <Compile Include="Solution\VsTemplateService.cs" />
     <Compile Include="Solution\VsUnknownItem.cs" />
+    <Compile Include="TemplateWizards\ITemplateWizard.cs" />
     <Compile Include="Windows\WindowExtensions.cs" />
     <Compile Include="Solution\AssemblyReference.cs" />
     <Compile Include="Solution\AssemblyResource.cs" />
@@ -203,7 +215,6 @@
     <Compile Include="Solution\Hierarchy\VsHierarchyExtensions.cs" />
     <Compile Include="Solution\Templates\VsTemplateExtensions.cs" />
     <Compile Include="Solution\ProjectExtensions.cs" />
-    <Compile Include="ServiceProviderExtensions.cs" />
     <Compile Include="Solution\SolutionExtensions.cs" />
     <Compile Include="Solution\UIHierarchyExtensions.cs" />
     <Compile Include="VsUIShellExtensions.cs" />
@@ -260,6 +271,7 @@
   <ItemGroup>
     <None Include="Solution\Templates\runxsd.bat" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

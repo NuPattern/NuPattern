@@ -3,11 +3,12 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.ComponentModel.Composition;
 using NuPattern.Library.Automation;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings.Design;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Library.Design
 {

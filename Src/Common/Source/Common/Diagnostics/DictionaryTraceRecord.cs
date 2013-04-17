@@ -32,9 +32,9 @@ namespace NuPattern.Diagnostics
     /// Null values are not emitted.
     /// </remarks>
     [DebuggerStepThrough]
-    internal class DictionaryTraceRecord : TraceRecord
+    public class DictionaryTraceRecord : TraceRecord
     {
-        public const string DictionaryXmlNamespace = "http://schemas.microsoft.com/2006/08/ServiceModel/DictionaryTraceRecord";
+        internal const string DictionaryXmlNamespace = "http://schemas.microsoft.com/2006/08/ServiceModel/DictionaryTraceRecord";
 
         private static Dictionary<Type, Delegate> XmlConverters;
 
@@ -60,6 +60,9 @@ namespace NuPattern.Diagnostics
                     });
         }
 
+        /// <summary>
+        /// Creates a new instance of the <see cref="DictionaryTraceRecord"/> class.
+        /// </summary>
         public DictionaryTraceRecord(TraceEventType severity, string traceIdentifier,
             string description = null,
             object extendedData = null)
@@ -90,17 +93,26 @@ namespace NuPattern.Diagnostics
         {
         }
 
+        /// <summary>
+        /// Clones the record.
+        /// </summary>
         protected override TraceRecord DoClone()
         {
             return new DictionaryTraceRecord();
         }
 
+        /// <summary>
+        /// Copies the record.
+        /// </summary>
         protected override void DoCopyTo(TraceRecord clone)
         {
             base.DoCopyTo(clone);
             ((DictionaryTraceRecord)clone).Data = new Dictionary<string, object>(this.Data);
         }
 
+        /// <summary>
+        /// Writes to the record.
+        /// </summary>
         protected override void WriteTo(XmlWriter writer)
         {
             base.WriteTo(writer);
@@ -185,8 +197,14 @@ namespace NuPattern.Diagnostics
             writer.WriteEndElement();
         }
 
+        /// <summary>
+        /// Gets the data or the record.
+        /// </summary>
         public Dictionary<string, object> Data { get; private set; }
 
+        /// <summary>
+        /// Gets the extended data for the record.
+        /// </summary>
         public object ExtendedData
         {
             get

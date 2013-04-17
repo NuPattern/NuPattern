@@ -3234,7 +3234,7 @@ namespace NuPattern.Runtime.Schema
 		/// (and visa-versa). This Type Converter can also be used to provide a list of
 		/// acceptable values.
 		/// </summary>
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.ComponentModel.TypeConverter>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/TypeConverterTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -3346,7 +3346,7 @@ namespace NuPattern.Runtime.Schema
 		/// A System.Drawing.Design.UITypeEditor that provides a custom UI for editing the
 		/// value of this property.
 		/// </summary>
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.Drawing.Design.UITypeEditor>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/EditorTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -3566,7 +3566,7 @@ namespace NuPattern.Runtime.Schema
 		/// Gets or sets the value of RawValueProvider domain property.
 		/// A value provider that calculates the value of this property dynamically.
 		/// </summary>
-		[NuPattern.ComponentModel.Design.PropertyDescriptor(typeof(NuPattern.Runtime.Bindings.BindingPropertyDescriptor<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider>))]
+		[NuPattern.ComponentModel.Design.PropertyDescriptor(typeof(NuPattern.Runtime.Bindings.BindingPropertyDescriptor<NuPattern.Runtime.IValueProvider>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PropertySchema/RawValueProvider.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Runtime.Schema.PropertySchema/RawValueProvider.Category", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]

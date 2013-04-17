@@ -1,0 +1,174 @@
+﻿<UserControl
+    x:Class="NuPattern.Runtime.Guidance.UI.Views.GuidanceWorkflowView"
+    x:ClassModifier="internal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cp="clr-namespace:NuPattern.Presentation;assembly=NuPattern.Presentation"
+    xmlns:ui="clr-namespace:NuPattern.Runtime.Guidance.UI"
+    xmlns:viewModels="clr-namespace:NuPattern.Runtime.Guidance.UI.ViewModels"
+    Name="GuidanceWorkflowExplorer"
+    Background="{DynamicResource VsBrush.ToolWindowBackground}">
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/CommonStyles.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/ContextMenu.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/CommandBar.xaml" />
+                <ResourceDictionary Source="/NuPattern.Presentation;component/Resources/TreeView.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </UserControl.Resources>
+
+  <Grid>
+    <Grid.Resources>
+      <ui:EnumToDescriptionValueConverter x:Key="EnumToDescriptionValueConverter" />
+      <ui:NodeStateToBrushValueConverter x:Key="NodeStateToBrushValueConverter" />
+      <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+      <Style x:Key="NodeIcon" TargetType="Image">
+        <Setter Property="Margin" Value="3,0" />
+        <Setter Property="Width" Value="16" />
+        <Setter Property="Height" Value="16" />
+      </Style>
+
+      <Style x:Key="StateIcon" TargetType="Rectangle">
+        <Setter Property="Margin" Value="3,0" />
+        <Setter Property="Width" Value="10" />
+        <Setter Property="Height" Value="10" />
+        <Setter Property="RadiusX" Value="3" />
+        <Setter Property="RadiusY" Value="3" />
+        <Setter Property="Fill" Value="{Binding State, Converter={StaticResource NodeStateToBrushValueConverter}}" />
+        <Setter Property="Stroke" Value="{Binding State, Converter={StaticResource NodeStateToBrushValueConverter}, ConverterParameter=true}" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="ToolTip" Value="{Binding State, Converter={StaticResource EnumToDescriptionValueConverter}}" />
+        <Style.Triggers>
+          <DataTrigger Binding="{Binding State}" Value="Unknown">
+            <Setter Property="Visibility" Value="Collapsed" />
+          </DataTrigger>
+        </Style.Triggers>
+      </Style>
+    </Grid.Resources>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="3*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <TreeView
+            x:Name="guidanceWorkflow" ItemsSource="{Binding Nodes}"
+            VirtualizingStackPanel.IsVirtualizing="True"
+            VirtualizingStackPanel.VirtualizationMode="Recycling">
+      <TreeView.Resources>
+        <Style TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
+          <Setter Property="ToolTip" Value="{Binding ToolTip}" />
+          <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+          <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+        </Style>
+
+        <HierarchicalDataTemplate ItemsSource="{Binding Nodes}" DataType="{x:Type viewModels:NodeViewModel}">
+          <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+            <Rectangle Style="{StaticResource StateIcon}" />
+            <!-- ##MAR11FIXES## Removing all icons from Guidance Workflow Explorer 
+                        <Image Source="{Binding Icon}" Style="{StaticResource NodeIcon}" />
+            -->
+            <TextBlock Text="{Binding Name}" />
+          </StackPanel>
+        </HierarchicalDataTemplate>
+
+        <HierarchicalDataTemplate ItemsSource="{Binding Nodes}" DataType="{x:Type viewModels:GuidanceActionViewModel}">
+          <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+            <Rectangle Style="{StaticResource StateIcon}" />
+            <CheckBox
+  SnapsToDevicePixels="True"
+  VerticalAlignment="Center"
+  IsChecked="{Binding IsUserAccepted}"
+  Visibility="{Binding RequiresUserAcceptance, Converter={StaticResource BooleanToVisibilityConverter}}" />
+            <!-- ##MAR11FIXES## Removing all icons from Guidance Workflow Explorer 
+                        <Image Source="{Binding Icon}" Style="{StaticResource NodeIcon}" />
+            -->
+            <TextBlock Text="{Binding Name}" />
+            <StackPanel.ContextMenu>
+              <ContextMenu>
+                <ContextMenu.Items>
+                  <MenuItem
+                                        Header="Override"
+                                        IsCheckable="True"
+                                        IsChecked="{Binding HasStateOverride}" />
+                </ContextMenu.Items>
+              </ContextMenu>
+            </StackPanel.ContextMenu>
+          </StackPanel>
+        </HierarchicalDataTemplate>
+      </TreeView.Resources>
+    </TreeView>
+
+    <GridSplitter
+            Grid.Row="1"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Center"
+            Background="{StaticResource VsBrush.EnvironmentBackground}"
+            ShowsPreview="True"
+            Height="5" />
+
+    <DockPanel Grid.Row="2" DataContext="{Binding SelectedItem, ElementName=guidanceWorkflow}">
+      <DockPanel.Resources>
+        <Style TargetType="DockPanel">
+          <Style.Triggers>
+            <DataTrigger Binding="{Binding .}" Value="{x:Null}">
+              <Setter Property="IsEnabled" Value="False" />
+            </DataTrigger>
+          </Style.Triggers>
+        </Style>
+      </DockPanel.Resources>
+      <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Style="{StaticResource CommandBar.Panel}">
+        <Button ToolTip="Refresh" Command="{Binding RefreshDetailsCommand}" Margin="2">
+          <BitmapImage UriSource="../../Resources/CommandRefresh.png" />
+        </Button>
+      </StackPanel>
+      <TextBlock Text="{Binding Description}" DockPanel.Dock="Top" Margin="2" TextWrapping="Wrap" />
+      <TreeView
+                Visibility="{Binding IsConditionalNode, Converter={StaticResource BooleanToVisibilityConverter}}"
+                ItemsSource="{Binding Conditions}"
+                VirtualizingStackPanel.IsVirtualizing="True"
+                VirtualizingStackPanel.VirtualizationMode="Recycling">
+        <TreeView.Resources>
+          <Style TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
+            <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+          </Style>
+
+          <HierarchicalDataTemplate ItemsSource="{Binding Conditions}" DataType="{x:Type viewModels:LabelViewModel}">
+            <TextBlock Text="{Binding Label}" />
+          </HierarchicalDataTemplate>
+
+          <HierarchicalDataTemplate ItemsSource="{Binding EvaluationResults}"  DataType="{x:Type viewModels:ConditionViewModel}">
+            <TextBlock Text="{Binding UserMessage}">
+              <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                  <Setter Property="Foreground" Value="Green" />
+                  <Style.Triggers>
+                    <DataTrigger Binding="{Binding HasErrors}" Value="True">
+                      <Setter Property="Foreground" Value="Red" />
+                    </DataTrigger>
+                  </Style.Triggers>
+                </Style>
+              </TextBlock.Style>
+            </TextBlock>
+          </HierarchicalDataTemplate>
+
+          <HierarchicalDataTemplate ItemsSource="{Binding Results}" DataType="{x:Type viewModels:BindingResultViewModel}">
+            <TextBlock>
+              <TextBlock.Text>
+                <MultiBinding StringFormat="{}{0}: {1}">
+                  <Binding Path="PropertyName" />
+                  <Binding Path="Value" />
+                </MultiBinding>
+              </TextBlock.Text>
+            </TextBlock>
+          </HierarchicalDataTemplate>
+
+        </TreeView.Resources>
+      </TreeView>
+    </DockPanel>
+  </Grid>
+</UserControl>

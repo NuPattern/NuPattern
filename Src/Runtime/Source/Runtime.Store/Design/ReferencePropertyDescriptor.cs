@@ -1,8 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.ComponentModel.Composition;
 using NuPattern.Reflection;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.References;
 
 namespace NuPattern.Runtime.Store.Design
@@ -17,7 +18,7 @@ namespace NuPattern.Runtime.Store.Design
         /// Initializes a new instance of the <see cref="ReferencePropertyDescriptor"/> class.
         /// </summary>
         /// <param name="reference">The property.</param>
-        /// <param name="service">The <see cref="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCompositionService"/>.</param>
+        /// <param name="service">The <see cref="IFeatureCompositionService"/>.</param>
         public ReferencePropertyDescriptor(IFeatureCompositionService service, Reference reference)
             : base(reference.Kind, BuildAttributes(service, reference))
         {

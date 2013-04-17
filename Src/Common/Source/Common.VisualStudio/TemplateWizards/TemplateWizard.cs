@@ -13,7 +13,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
     /// Base template wizard that performs basic tracing.
     /// </summary>
     [CLSCompliant(false)]
-    public abstract class TemplateWizard : IWizard, IDisposable
+    public abstract class TemplateWizard : IDisposable, ITemplateWizard
     {
         private ITraceSource tracer;
         private IDisposable activity;
@@ -29,12 +29,12 @@ namespace NuPattern.VisualStudio.TemplateWizards
         /// <summary>
         /// Gets the template file being unfolded.
         /// </summary>
-        public string TemplateFile { get; private set; }
+        public string TemplateFile { get; protected set; }
 
         /// <summary>
         /// Gets the schema of the template being unfolded.
         /// </summary>
-        public IVsTemplate TemplateSchema { get; private set; }
+        public IVsTemplate TemplateSchema { get; protected set; }
 
         /// <summary>
         /// Executes when the wizard ends.

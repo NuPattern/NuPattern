@@ -35,7 +35,7 @@ namespace NuPattern.Runtime.Schema.UnitTests
                     var pattern = this.PatternModel.Create<PatternSchema>();
                     pattern.PatternLink = "patternmanager://foo";
 
-                    var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                    var uriService = Mock.Of<IUriReferenceService>(
                         u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                             p.ToolkitInfo.Identifier == "ToolkitId"));
 

@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.Composition.Hosting;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Runtime.UnitTests.Binding
 {

@@ -4,13 +4,12 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.Validation;
-using ReflectionExtensions = Microsoft.VisualStudio.TeamArchitect.PowerTools.ReflectionExtensions;
 
 namespace NuPattern.Library.Automation
 {

@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Properties;
-using NuPattern.Runtime.Settings;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UI.ViewModels

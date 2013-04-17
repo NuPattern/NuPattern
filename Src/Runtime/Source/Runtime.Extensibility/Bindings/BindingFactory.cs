@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Diagnostics.CodeAnalysis;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Runtime.Bindings
 {
@@ -71,7 +71,7 @@ namespace NuPattern.Runtime.Bindings
                     bindings.Add(
                         new ValueProviderPropertyBinding(
                             property.Name,
-                            new DynamicBinding<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider>(
+                            new DynamicBinding<IValueProvider>(
                                 composition,
                                 property.ValueProvider.TypeId,
                                 this.GetPropertyBindings(property.ValueProvider.Properties, composition))));

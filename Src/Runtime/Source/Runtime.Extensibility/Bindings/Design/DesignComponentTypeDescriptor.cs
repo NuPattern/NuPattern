@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.ComponentModel;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Design;
 
 namespace NuPattern.Runtime.Bindings.Design

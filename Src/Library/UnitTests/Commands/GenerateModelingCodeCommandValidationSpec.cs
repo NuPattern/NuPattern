@@ -2,7 +2,6 @@
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Automation;
@@ -13,6 +12,7 @@ using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Schema;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.UnitTests.Commands
 {
@@ -27,7 +27,7 @@ namespace NuPattern.Library.UnitTests.Commands
             private DslTestStore<PatternModelDomainModel> store = new DslTestStore<PatternModelDomainModel>(typeof(LibraryDomainModel));
             private GenerateModelingCodeCommandValidation validation;
             private Mock<IServiceProvider> serviceProvider;
-            private Mock<IFxrUriReferenceService> uriService;
+            private Mock<IUriReferenceService> uriService;
             private ValidationContext validationContext;
             private CommandSettings settings;
             private AutomationSettingsSchema element;
@@ -75,8 +75,8 @@ namespace NuPattern.Library.UnitTests.Commands
                 });
 
                 this.serviceProvider = new Mock<IServiceProvider>();
-                this.uriService = new Mock<IFxrUriReferenceService>();
-                this.serviceProvider.Setup(sp => sp.GetService(typeof(IFxrUriReferenceService))).Returns(this.uriService.Object);
+                this.uriService = new Mock<IUriReferenceService>();
+                this.serviceProvider.Setup(sp => sp.GetService(typeof(IUriReferenceService))).Returns(this.uriService.Object);
                 this.validation = new GenerateModelingCodeCommandValidation
                 {
                     serviceProvider = this.serviceProvider.Object,

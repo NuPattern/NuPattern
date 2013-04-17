@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Linq;
 using System.Runtime.Serialization;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.ComponentModel;
 using NuPattern.Runtime.Bindings.Design;
 using NuPattern.Runtime.Design;

@@ -7,13 +7,13 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Presentation;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.ToolkitInterface;
 using Application = System.Windows.Application;
 

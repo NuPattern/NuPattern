@@ -1,8 +1,6 @@
 ﻿using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.Globalization;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;

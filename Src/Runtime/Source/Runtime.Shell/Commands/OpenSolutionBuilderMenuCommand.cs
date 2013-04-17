@@ -1,7 +1,8 @@
 ﻿using System;
+using NuPattern.Runtime.Shell.ToolWindows;
 using NuPattern.VisualStudio.Commands;
 
-namespace NuPattern.Runtime.Shell
+namespace NuPattern.Runtime.Shell.Commands
 {
     /// <summary>
     /// Provides a Visual Studio command to open the pattern explorer tool window.

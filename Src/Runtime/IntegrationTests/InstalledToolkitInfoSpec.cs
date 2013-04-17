@@ -1,9 +1,8 @@
 ﻿using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Extensions;
 using NuPattern.VisualStudio.Solution;
 

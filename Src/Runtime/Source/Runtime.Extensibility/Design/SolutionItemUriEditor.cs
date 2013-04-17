@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design
 {
@@ -18,7 +18,7 @@ namespace NuPattern.Runtime.Design
         {
             if (value != null)
             {
-                var uriService = provider.GetService<IFxrUriReferenceService>();
+                var uriService = provider.GetService<IUriReferenceService>();
                 return uriService.CreateUri(value, "solution");
             }
 

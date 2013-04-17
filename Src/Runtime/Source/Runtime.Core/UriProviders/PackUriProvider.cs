@@ -3,7 +3,6 @@ using System.ComponentModel.Composition;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UriProviders
@@ -13,9 +12,9 @@ namespace NuPattern.Runtime.UriProviders
     /// </summary>
     // TODO: Fix FERT so that this class does not have ot be public to register itself.
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [Export(typeof(IFxrUriReferenceProvider))]
+    [Export(typeof(IUriReferenceProvider))]
     [CLSCompliant(false)]
-    public class PackUriProvider : IFxrUriReferenceProvider<ResourcePack>
+    public class PackUriProvider : IUriReferenceProvider<ResourcePack>
     {
         private const string PackUriScheme = "pack";
         private const string PackUriFormat = PackUriScheme + "://application:,,,/{0};component/{1}";

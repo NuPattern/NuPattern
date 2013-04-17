@@ -12,7 +12,8 @@ namespace NuPattern.VisualStudio.Solution
     /// <summary>
     /// Helper for common calling patterns in VS-COM.
     /// </summary>
-    internal static class VsHelper
+    [CLSCompliant(false)]
+    public static class VsHelper
     {
         /// <summary>
         /// Method signature for methods that retrieve properties.
@@ -86,7 +87,7 @@ namespace NuPattern.VisualStudio.Solution
                 }
                 frame.Show();
             }
-        }   
+        }
 
         /// <summary>
         /// Checks-out the file from source control.

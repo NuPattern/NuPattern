@@ -20,22 +20,11 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
-      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface" Condition="'$(TargetVsVersion)' == '10.0'">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -86,7 +75,6 @@
     <Compile Include="ToolkitInterface\Serializer.cs" />
     <Compile Include="ToolkitInterface\TrueConverter.cs" />
     <Compile Include="ToolkitInterface\WebService.cs" />
-    <Compile Include="UriReferenceServiceSpec.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\Common\Helpers\Assertions.cs">
@@ -112,6 +100,10 @@
     <ProjectReference Include="..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">
       <Project>{46F79781-98BC-495A-9E01-559F166A6DFF}</Project>
       <Name>Common.Modeling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Source\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>Common.VisualStudio</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Runtime\Source\Runtime.Store\Runtime.Store.csproj">
       <Project>{0ef7e7d4-b10b-4fc9-b4d0-66e360f4338a}</Project>

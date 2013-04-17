@@ -2,8 +2,7 @@
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.References;
 using NuPattern.VisualStudio.Solution;
@@ -41,14 +40,14 @@ namespace NuPattern.Runtime
         public object Context { get; set; }
 
         /// <summary>
-        /// Gets or sets the <see cref="IFxrUriReferenceService"/>.
+        /// Gets or sets the <see cref="IUriReferenceService"/>.
         /// </summary>
-        public IFxrUriReferenceService UriService { get; private set; }
+        public IUriReferenceService UriService { get; private set; }
 
         /// <summary>
         /// Creates a new instance of the <see cref="PathResolver"/> class.
         /// </summary>
-        public PathResolver(object context, IFxrUriReferenceService uriService, string path = null, string fileName = null)
+        public PathResolver(object context, IUriReferenceService uriService, string path = null, string fileName = null)
         {
             Guard.NotNull(() => context, context);
             Guard.NotNull(() => uriService, uriService);
@@ -83,7 +82,7 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Resolves the current element paths and filename.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
         public void Resolve(Func<IItemContainer, bool> artifactReferenceFilter = null)
         {
             tracer.TraceVerbose(
@@ -343,7 +342,7 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Resolves the current element paths and filename, and returns the item if exists.
         /// </summary>
-        public static IItemContainer ResolveToSolutionItem<T>(object context, ISolution solution, IFxrUriReferenceService uriService, string path = null, string fileName = null) where T : IItemContainer
+        public static IItemContainer ResolveToSolutionItem<T>(object context, ISolution solution, IUriReferenceService uriService, string path = null, string fileName = null) where T : IItemContainer
         {
             // Resolve SourcePath
             var resolver = new PathResolver(context, uriService, path, fileName);
@@ -400,7 +399,7 @@ namespace NuPattern.Runtime
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
         private static void ThrowIfNoLinkOnParent(IProductElement context, string path)
         {
             if (string.IsNullOrEmpty(context.TryGetReference(ReferenceKindConstants.ArtifactLink)))
@@ -416,7 +415,7 @@ namespace NuPattern.Runtime
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
         private static void ThrowIfNoRelativeParent(IProductElement context, string path)
         {
             if (context == null)
@@ -431,7 +430,7 @@ namespace NuPattern.Runtime
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Features.Diagnostics.ITraceSource.TraceVerbose(System.String)")]
         private static void ThrowIfNoAncestorWithLink(IProductElement context, IProductElement ancestor, string path)
         {
             if (ancestor == null)

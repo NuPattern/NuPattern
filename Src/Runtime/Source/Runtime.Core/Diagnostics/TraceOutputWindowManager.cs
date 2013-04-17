@@ -5,9 +5,10 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Diagnostics;
 
 namespace NuPattern.Runtime.Diagnostics
 {

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio.Solution;
 

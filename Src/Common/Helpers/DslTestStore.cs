@@ -2,8 +2,8 @@
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
-
 using Moq;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern
 {

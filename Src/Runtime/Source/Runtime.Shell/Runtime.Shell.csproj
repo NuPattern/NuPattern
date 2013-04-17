@@ -36,26 +36,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\EntLib5\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Library">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Library.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensionManager">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
@@ -66,12 +46,6 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
-      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
-      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix).dll</HintPath>
@@ -149,18 +123,23 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="Commands\OpenGuidanceBrowserMenuCommand.cs" />
+    <Compile Include="Commands\OpenGuidanceExplorerMenuCommand.cs" />
     <Compile Include="Constants.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Constants.tt</DependentUpon>
     </Compile>
+    <Compile Include="GuidanceWindowsService.cs" />
+    <Compile Include="ToolWindows\GuidanceBrowserToolWindow.cs" />
+    <Compile Include="ToolWindows\GuidanceExplorerToolWindow.cs" />
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.gen.cs">
       <SourceModelReference>modelbus://NuPattern.Runtime.Store/Runtime/Element/C:\Projects\NUPATTERN\sprint20\Src\Runtime\Runtime.slnbldr%252f29623964-bb7b-4778-b7d4-d79652ac5a5e</SourceModelReference>
       <ItemGuid>ae551abf-1da3-405b-8d82-c2ccb986c7f8</ItemGuid>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Guidance\Feature.cs" />
-    <Compile Include="IPackageToolWindow.cs" />
+    <Compile Include="ToolWindows\IPackageToolWindow.cs" />
     <Compile Include="OptionPages\TraceOptionsPage.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -170,7 +149,7 @@
     <Compile Include="OptionPages\TraceOptionsPageControl.Designer.cs">
       <DependentUpon>TraceOptionsPageControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="SolutionBuilderToolWindow.cs" />
+    <Compile Include="ToolWindows\SolutionBuilderToolWindow.cs" />
     <Compile Include="Commands\OpenSolutionBuilderMenuCommand.cs" />
     <Compile Include="ProductStateEditorFactory.cs" />
     <Compile Include="ProductStateValidator.cs" />
@@ -181,8 +160,14 @@
     </Compile>
     <Compile Include="RuntimeShellPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PackageToolWindow.cs" />
+    <Compile Include="ToolWindows\PackageToolWindow.cs" />
     <Compile Include="TemplateWizards\OpenSolutionBuilderTemplateWizard.cs" />
+    <Compile Include="VsIdleTaskHost.cs" />
+    <Content Include="RuntimeShellVSCT.gen.vsct">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RuntimeShellVSCT.tt</DependentUpon>
+    </Content>
     <None Include="..\..\..\Common\Guidance\Creating the PDF Guidance.txt">
       <Link>Guidance\Creating the PDF Guidance.txt</Link>
     </None>
@@ -202,12 +187,6 @@
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.pkgdef">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.pkgdef">
-      <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="..\Runtime.Store\GeneratedCode\ProductStateSchema.gen.xsd">
       <Link>GeneratedCode\ProductStateSchema.gen.xsd</Link>
@@ -374,17 +353,16 @@
       <LastGenOutput>VSPackage.gen.resx</LastGenOutput>
     </None>
     <None Include="VsPackageInfo.ttinclude" />
-    <VSCTCompile Include="RuntimeShellVSCT.gen.vsct">
-      <ResourceName>Menus.ctmenu</ResourceName>
-      <SubType>Designer</SubType>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RuntimeShellVSCT.tt</DependentUpon>
-    </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\ToolWindowSolutionBuilder.bmp">
       <Link>Resources\ToolWindowSolutionBuilder.bmp</Link>
+    </Content>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\ToolWindowGuidanceExplorer.bmp">
+      <Link>Resources\ToolWindowGuidanceExplorer.bmp</Link>
+    </Content>
+    <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\ToolWindowGuidanceBrowser.bmp">
+      <Link>Resources\ToolWindowGuidanceBrowser.bmp</Link>
     </Content>
     <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\VsixIconRunTime.png">
       <Link>Resources\VsixIconRunTime.png</Link>

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Presentation;
+using NuPattern.Reflection;
+using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.UI.ViewModels;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;

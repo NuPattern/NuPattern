@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel.Composition;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
 
@@ -42,14 +42,14 @@ namespace NuPattern.Runtime.UnitTests.Binding
                     .Returns(new[]
                     {
                         new Lazy<IFoo, IFeatureComponentMetadata>(() => value.Object, 
-                            Mocks.Of<IFeatureComponentMetadata>().First(m => m.CatalogName ==  Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName && m.Id == "Foo"))
+                            Mocks.Of<IFeatureComponentMetadata>().First(m => m.CatalogName ==  Catalog.CatalogName && m.Id == "Foo"))
                     });
 
                 compositionService.Setup(cs => cs.GetExports<IValueProvider, IFeatureComponentMetadata>())
                     .Returns(new[]
                     {
                         new Lazy<IValueProvider, IFeatureComponentMetadata>(() => valueProvider.Object, 
-                            Mocks.Of<IFeatureComponentMetadata>().First(m => m.CatalogName == Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName && m.Id == "ValueProvider"))
+                            Mocks.Of<IFeatureComponentMetadata>().First(m => m.CatalogName == Catalog.CatalogName && m.Id == "ValueProvider"))
                     });
 
 

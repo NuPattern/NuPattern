@@ -4,12 +4,12 @@ using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Language.Intellisense;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Moq;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.IntegrationTests.Binding
 {

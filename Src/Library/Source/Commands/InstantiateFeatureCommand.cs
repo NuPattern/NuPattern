@@ -5,10 +5,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Drawing.Design;
 using System.Linq;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Design;
@@ -114,7 +112,7 @@ namespace NuPattern.Library.Commands
                 string instanceName = string.Empty;
 
                 // Ensure we are not sharing
-                var sharedInstance = this.FeatureManager.InstantiatedFeatures.Where(f => f.FeatureId.Equals(this.FeatureId, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+                var sharedInstance = this.FeatureManager.InstantiatedFeatures.FirstOrDefault(f => f.FeatureId.Equals(this.FeatureId, StringComparison.OrdinalIgnoreCase));
                 if (this.SharedInstance && sharedInstance != null)
                 {
                     instanceName = sharedInstance.InstanceName;

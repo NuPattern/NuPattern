@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.Modeling;
 
 namespace NuPattern.Runtime.Schema

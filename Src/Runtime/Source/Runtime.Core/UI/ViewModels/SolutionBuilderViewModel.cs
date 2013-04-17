@@ -3,9 +3,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Data;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Presentation;
 using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.Properties;
@@ -40,7 +38,7 @@ namespace NuPattern.Runtime.UI.ViewModels
             Guard.NotNull(() => serviceProvider, serviceProvider);
 
             this.context = context;
-            this.context.SolutionBuilder = this;
+            this.context.ViewModel = this;
             this.serviceProvider = serviceProvider;
 
             this.context.SetSelected = p => this.CurrentNode = p;

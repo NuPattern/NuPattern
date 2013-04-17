@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio;
 
@@ -10,9 +9,34 @@ namespace NuPattern.Runtime.Guidance
     /// <summary>
     /// Extensions for the FeatureManager.
     /// </summary>
+    [CLSCompliant(false)]
     public static class FeatureManagerExtensions
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<IFeatureManager>();
+
+        /// <summary>
+        /// Gets whether the given feature is installed in the system.
+        /// </summary>
+        public static bool IsInstalled(this IFeatureManager manager, string featureId)
+        {
+            return manager.InstalledFeatures.Any(registration => registration.FeatureId == featureId);
+        }
+
+        /// <summary>
+        /// Gets whether the given feature has been instantiated in the solution.
+        /// </summary>
+        public static bool IsInstantiated(this IFeatureManager manager, string featureId)
+        {
+            return manager.InstantiatedFeatures.Any(feature => feature.FeatureId == featureId);
+        }
+
+        /// <summary>
+        /// Gets whether the given feature has been instantiated in the solution.
+        /// </summary>
+        public static bool IsInstantiated(this IFeatureManager manager, IFeatureRegistration featureRegistration)
+        {
+            return manager.IsInstantiated(featureRegistration.FeatureId);
+        }
 
         /// <summary>
         /// Returns a unique name for the feature instance.
@@ -41,8 +65,8 @@ namespace NuPattern.Runtime.Guidance
             {
                 tracer.TraceVerbose(Resources.FeatureManagerExtensions_TraceShowingGuidanceWindows);
 
-                toolWindows.ShowGuidanceExplorer();
-                toolWindows.ShowGuidanceBrowser();
+                toolWindows.ShowGuidanceExplorer(provider);
+                toolWindows.ShowGuidanceBrowser(provider);
             }
         }
 

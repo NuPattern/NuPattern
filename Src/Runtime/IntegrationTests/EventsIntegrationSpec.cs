@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.IntegrationTests.SampleVsix;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.IntegrationTests
 {

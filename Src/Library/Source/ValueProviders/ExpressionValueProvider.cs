@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 
@@ -15,7 +15,7 @@ namespace NuPattern.Library.ValueProviders
     [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("ExpressionValueProvider_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class ExpressionValueProvider : Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ValueProvider
+    public class ExpressionValueProvider : ValueProvider
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ExpressionValueProvider>();
 

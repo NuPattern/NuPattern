@@ -7,7 +7,7 @@ using EnvDTE;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-
+using NuPattern.IO;
 using NuPattern.VisualStudio.Solution.Hierarchy;
 
 namespace NuPattern.VisualStudio.Solution

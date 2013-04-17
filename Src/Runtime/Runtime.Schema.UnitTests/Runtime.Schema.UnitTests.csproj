@@ -20,14 +20,6 @@
   </PropertyGroup>
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
     </Reference>
@@ -133,10 +125,6 @@
     <ProjectReference Include="..\..\Common\Source\Common.Modeling\Common.Modeling.csproj">
       <Project>{46F79781-98BC-495A-9E01-559F166A6DFF}</Project>
       <Name>Common.Modeling</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Common\Source\Common.Presentation\Common.Presentation.csproj">
-      <Project>{72cc87f3-2860-45cc-8712-00621f868d60}</Project>
-      <Name>Common.Presentation</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Common\Source\Common\Common.csproj">
       <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>

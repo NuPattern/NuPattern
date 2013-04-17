@@ -6,7 +6,6 @@ using System.ComponentModel;
 using System.Drawing.Design;
 using System.Linq;
 using System.Runtime.Serialization;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using NuPattern.ComponentModel;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Runtime.Properties;

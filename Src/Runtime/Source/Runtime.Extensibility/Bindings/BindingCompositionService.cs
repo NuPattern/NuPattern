@@ -7,10 +7,10 @@ using System.ComponentModel.Composition.ReflectionModel;
 using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Diagnostics;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Properties;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Bindings
 {
@@ -64,7 +64,7 @@ namespace NuPattern.Runtime.Bindings
         {
             // We leverage the Feature Runtime container, where all their components and extensions publish already.
             var defaultCatalog = this.componentModel.GetCatalog("Microsoft.VisualStudio.Default");
-            var featuresCatalog = this.componentModel.GetCatalog(Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName);
+            var featuresCatalog = this.componentModel.GetCatalog(Catalog.CatalogName);
             if (defaultCatalog == null || featuresCatalog == null)
                 throw new InvalidOperationException(Resources.BindingCompositionService_CatalogsNotAvailable);
 

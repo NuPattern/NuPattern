@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
+using NuPattern.VisualStudio.Extensions;
+using ExtMan =Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime
 {
     /// <summary>
-    /// Adapter class that exposes installed toolkits from the <see cref="IVsExtensionManager"/> 
+    /// Adapter class that exposes installed toolkits from the <see cref="ExtMan.IVsExtensionManager"/> 
     /// as <see cref="IInstalledToolkitInfo"/> instances.
     /// </summary>
     [PartCreationPolicy(CreationPolicy.Shared)]
@@ -29,7 +29,7 @@ namespace NuPattern.Runtime
             [Import(typeof(SVsServiceProvider))] IServiceProvider serviceProvider,
             [Import(typeof(ISchemaReader))] ISchemaReader reader)
         {
-            var extensionManager = serviceProvider.GetService<SVsExtensionManager, IVsExtensionManager>();
+            var extensionManager = serviceProvider.GetService<ExtMan.SVsExtensionManager, ExtMan.IVsExtensionManager>();
 
             this.InstalledToolkits = GetInstalledToolkits(extensionManager, reader);
         }
@@ -40,7 +40,7 @@ namespace NuPattern.Runtime
         [Export]
         public IEnumerable<IInstalledToolkitInfo> InstalledToolkits { get; private set; }
 
-        private static IEnumerable<IInstalledToolkitInfo> GetInstalledToolkits(IVsExtensionManager extensionManager, ISchemaReader reader)
+        private static IEnumerable<IInstalledToolkitInfo> GetInstalledToolkits(ExtMan.IVsExtensionManager extensionManager, ISchemaReader reader)
         {
             Guard.NotNull(() => extensionManager, extensionManager);
 
@@ -50,18 +50,18 @@ namespace NuPattern.Runtime
                 .Where(registration => registration != null);
         }
 
-        private static bool IsToolkit(IInstalledExtension extension)
+        private static bool IsToolkit(ExtMan.IInstalledExtension extension)
         {
             return extension.Content.Any(c => c.ContentTypeName.Equals(InstalledToolkitInfo.PatternModelCustomExtensionName, StringComparison.OrdinalIgnoreCase));
         }
 
-        private static InstalledToolkitInfo TryCreateRegistration(ISchemaReader reader, IInstalledExtension extension)
+        private static InstalledToolkitInfo TryCreateRegistration(ISchemaReader reader, ExtMan.IInstalledExtension extension)
         {
             try
             {
                 var resource = AsSchemaResource(extension);
 
-                return new InstalledToolkitInfo(extension, reader, resource);
+                return new InstalledToolkitInfo(ExtensionFactory.CreateInstalledExtension(extension), reader, resource);
             }
             catch (Exception ex)
             {
@@ -73,7 +73,7 @@ namespace NuPattern.Runtime
             }
         }
 
-        private static ISchemaResource AsSchemaResource(IInstalledExtension extension)
+        private static ISchemaResource AsSchemaResource(ExtMan.IInstalledExtension extension)
         {
             Guard.NotNull(() => extension, extension);
 

@@ -10,7 +10,10 @@
 using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Composition;
+using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.Extensions;
+using NuPattern.Runtime.Guidance.Workflow;
 
 namespace NuPattern.Runtime.Shell.Guidance
 {

@@ -7,8 +7,8 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design
 {
@@ -151,7 +151,7 @@ namespace NuPattern.Runtime.Design
 
                 if (item != null)
                 {
-                    var uriReferenceService = this.provider.GetService<IFxrUriReferenceService>();
+                    var uriReferenceService = this.provider.GetService<IUriReferenceService>();
 
                     if (uriReferenceService.CanCreateUri<IItemContainer>(item))
                     {
@@ -165,7 +165,7 @@ namespace NuPattern.Runtime.Design
 
         private string ResolveItemReference(Uri reference)
         {
-            var uriReferenceService = this.provider.GetService<IFxrUriReferenceService>();
+            var uriReferenceService = this.provider.GetService<IUriReferenceService>();
 
             var item = uriReferenceService.ResolveUri<IItemContainer>(reference);
             if (item != null)

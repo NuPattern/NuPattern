@@ -7,9 +7,7 @@ using System.IO;
 using System.Text;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
@@ -47,7 +45,7 @@ namespace NuPattern.Library.Design
             tracer.ShieldUI(() =>
             {
                 var componentModel = provider.GetService<SComponentModel, IComponentModel>();
-                var uriService = componentModel.GetService<IFxrUriReferenceService>();
+                var uriService = componentModel.GetService<IUriReferenceService>();
 
                 var picker = componentModel.GetService<Func<ISolutionPicker>>()();
                 picker.Owner = provider.GetService<SVsUIShell, IVsUIShell>().GetMainWindow();
@@ -168,7 +166,7 @@ namespace NuPattern.Library.Design
                 && (!String.IsNullOrEmpty(selectedItem.Data.IncludeInVSIXAs)));
         }
 
-        private static void SetSelectedItem(ITypeDescriptorContext context, ISolutionPicker picker, IFxrUriReferenceService uriService, DesignProperty prop)
+        private static void SetSelectedItem(ITypeDescriptorContext context, ISolutionPicker picker, IUriReferenceService uriService, DesignProperty prop)
         {
             if (prop != null)
             {

@@ -1,5 +1,4 @@
 using System;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace NuPattern.Runtime
 {

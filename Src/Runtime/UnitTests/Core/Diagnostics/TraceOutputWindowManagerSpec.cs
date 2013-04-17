@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Diagnostics;
 using NuPattern.VisualStudio;
 

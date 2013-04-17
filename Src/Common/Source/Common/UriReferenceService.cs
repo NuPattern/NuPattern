@@ -32,7 +32,7 @@ namespace NuPattern
             try
             {
                 dynamic provider = GetProvidersAssignableTo(uri.Scheme, typeof(T)).Single();
-                // it is not ok to cast provider to IFxrUriReferenceProvider<T> this would only be valid of IFxrUriReferenceProvider<T> is covariant.
+                // it is not ok to cast provider to IUriReferenceProvider<T> this would only be valid of IUriReferenceProvider<T> is covariant.
                 return provider.ResolveUri(uri);
             }
             catch (Exception ex)

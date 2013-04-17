@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.ComponentModel.Composition;
 using System.Drawing.Design;
 using System.Linq;
 using NuPattern.ComponentModel;
@@ -43,6 +44,19 @@ namespace NuPattern.Runtime.Design
                                       (converter is DesignCollectionConverter));
 
             return (supportedCollectionType && supportedEditor && supportedConverter);
+        }
+
+        /// <summary>
+        /// Determines whether the property is bindable or not
+        /// </summary>
+        /// <param name="descriptor"></param>
+        /// <returns></returns>
+        public static bool IsBindableProperty(this PropertyDescriptor descriptor)
+        {
+            var browsable = descriptor.Attributes.OfType<BrowsableAttribute>().FirstOrDefault();
+            return (browsable == null || browsable.Browsable) &&
+                !descriptor.Attributes.OfType<ImportAttribute>().Any() &&
+                !descriptor.Attributes.OfType<ImportManyAttribute>().Any();
         }
     }
 }

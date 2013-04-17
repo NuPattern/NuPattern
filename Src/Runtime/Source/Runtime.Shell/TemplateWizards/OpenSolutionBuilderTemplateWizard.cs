@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using EnvDTE;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TemplateWizard;
 using NuPattern.VisualStudio.TemplateWizards;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
