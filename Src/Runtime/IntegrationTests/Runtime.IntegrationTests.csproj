@@ -218,6 +218,10 @@
       <Project>{cb2872d6-f4b1-493c-be4e-b590c03f5fef}</Project>
       <Name>Runtime.IntegrationTests.TestToolkit</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Source\Runtime.Guidance\Runtime.Guidance.csproj">
+      <Project>{6DDE6662-D037-45C1-8E80-960828CEB21C}</Project>
+      <Name>Runtime.Guidance</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Source\Runtime.Shell\Runtime.Shell.csproj">
       <Project>{D3E93083-99C9-4186-95B5-339A822C63EE}</Project>
       <Name>Runtime.Shell</Name>
