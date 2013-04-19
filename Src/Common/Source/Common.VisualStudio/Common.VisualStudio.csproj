@@ -151,7 +151,7 @@
     <Compile Include="Solution\IDataContainer.cs" />
     <Compile Include="Solution\IFolder.cs" />
     <Compile Include="Solution\IFolderContainer.cs" />
-    <Compile Include="Solution\IFxrTemplateService.cs" />
+    <Compile Include="Solution\ITemplateService.cs" />
     <Compile Include="Solution\IHierarchyNodeFactory.cs" />
     <Compile Include="Solution\IItem.cs" />
     <Compile Include="Solution\IItemContainer.cs" />

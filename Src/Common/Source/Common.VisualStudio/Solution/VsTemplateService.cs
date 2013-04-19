@@ -8,8 +8,8 @@ using Microsoft.VisualStudio.Shell;
 
 namespace NuPattern.VisualStudio.Solution
 {
-    [Export(typeof(IFxrTemplateService))]
-    internal class VsTemplateService : IFxrTemplateService
+    [Export(typeof(ITemplateService))]
+    internal class VsTemplateService : ITemplateService
     {
         DTE dte;
 

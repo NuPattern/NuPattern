@@ -8,7 +8,7 @@ namespace NuPattern.VisualStudio.Solution
     /// Provides access to templates registered in an environment.
     /// </summary>
     [Guid("C2D64735-E15D-42B7-A6E5-6EBC6A632277")]
-    public interface IFxrTemplateService
+    public interface ITemplateService
     {
         /// <summary>
         /// Tries to find a registered Visual Studio template.

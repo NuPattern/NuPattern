@@ -96,7 +96,7 @@ namespace NuPattern.Runtime.Guidance.Extensions
         /// Gets the template service.
         /// </summary>
         [Import]
-        protected virtual IFxrTemplateService Templates { get; private set; }
+        protected virtual ITemplateService Templates { get; private set; }
 
         /// <summary>
         /// Instantiates the guidance extension in a solution.

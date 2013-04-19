@@ -20,7 +20,7 @@ namespace NuPattern.IntegrationTests.TemplateWizards
             this.solution = (ISolution)VsIdeTestHostContext.ServiceProvider.GetService(typeof(ISolution));
             this.solution.CreateInstance(this.DeploymentDirectory, "EmptySolution");
 
-            var templates = (IFxrTemplateService)VsIdeTestHostContext.ServiceProvider.GetService(typeof(IFxrTemplateService));
+            var templates = (ITemplateService)VsIdeTestHostContext.ServiceProvider.GetService(typeof(ITemplateService));
             this.toolkitTemplate = templates.Find("MyTemplate2", "CSharp");
         }
 

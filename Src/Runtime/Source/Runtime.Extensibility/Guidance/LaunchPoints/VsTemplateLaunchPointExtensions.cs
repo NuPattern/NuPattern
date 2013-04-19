@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
 {
     internal static class VsTemplateLaunchPointExtensions
     {
-        public static ITemplate Find(this IFxrTemplateService templates, VsTemplateLaunchPoint launchPoint)
+        public static ITemplate Find(this ITemplateService templates, VsTemplateLaunchPoint launchPoint)
         {
             return templates.Find(
                 string.IsNullOrEmpty(launchPoint.Id) ? launchPoint.Name : launchPoint.Id,
