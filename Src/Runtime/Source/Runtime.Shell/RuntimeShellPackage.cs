@@ -88,17 +88,17 @@ namespace NuPattern.Runtime.Shell
 
 #pragma warning disable 0649
         [Import]
+        private INuPatternCompositionService CompositionService { get; set; }
+        [Import]
+        private IGuidanceManager GuidanceManager { get; set; }
+        [Import]
         private IUriReferenceService UriReferenceService { get; set; }
         [Import]
         private ISolution Solution { get; set; }
         [Import]
-        private IGuidanceManager GuidanceManager { get; set; }
-        [Import]
-        private INuPatternCompositionService CompositionService { get; set; }
-        [Import]
         private IGuidanceWindowsService GuidanceWindowsService { get; set; }
-        [ImportMany(typeof(ILaunchPoint))]
-        private IEnumerable<Lazy<ILaunchPoint>> LaunchPoints { get; set; }
+        //[ImportMany(typeof(ILaunchPoint))]
+        //private IEnumerable<Lazy<ILaunchPoint>> LaunchPoints { get; set; }
         [Import]
         private IPatternManager PatternManager { get; set; }
         [Import]
@@ -227,10 +227,15 @@ namespace NuPattern.Runtime.Shell
                     this.idleTaskHost.Dispose();
                 }
 
-                this.ShellEvents.ShellInitialized -= OnShellInitialized;
-                this.SolutionEvents.SolutionOpened -= OnSolutionOpened;
-                this.SolutionEvents.SolutionClosed -= OnSolutionClosed;
-
+                if (this.ShellEvents != null)
+                {
+                    this.ShellEvents.ShellInitialized -= OnShellInitialized;
+                }
+                if (this.SolutionEvents != null)
+                {
+                    this.SolutionEvents.SolutionOpened -= OnSolutionOpened;
+                    this.SolutionEvents.SolutionClosed -= OnSolutionClosed;
+                }
 #if VSVER11
                 _isResolveAssemblyRunningOnThisThread = false;
                 if (this.assemblyResolve != null)

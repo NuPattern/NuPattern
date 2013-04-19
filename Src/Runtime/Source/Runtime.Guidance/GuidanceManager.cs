@@ -30,19 +30,40 @@ namespace NuPattern.Runtime.Guidance
         private List<Tuple<IGuidanceExtension, INuPatternCompositionService>> instantiatedGuidanceExtensions = new List<Tuple<IGuidanceExtension, INuPatternCompositionService>>();
         private ISolutionState solutionState;
         private IGuidanceExtension activeExtension;
-        public static string FeatureBuilderDSLPath = string.Empty;
+        private static string FeatureBuilderDSLPath = string.Empty;
 
 #pragma warning disable 0414
         private int inTemplateWizard = 0;
 #pragma warning restore 0414
 
+        /// <summary>
+        /// Gets the InTemplateWzard
+        /// </summary>
         public int InTemplateWizard { get; set; }
 
+        /// <summary>
+        /// Raises when a property is changed.
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = (sender, args) => { };
+
+        /// <summary>
+        /// Raised when the instantiated extension is changed.
+        /// </summary>
         public event EventHandler InstantiatedExtensionsChanged = (sender, args) => { };
+
+        /// <summary>
+        /// Raised when the state is opened.
+        /// </summary>
         public event EventHandler IsOpenedChanged = (sender, args) => { };
+
+        /// <summary>
+        /// Raised when the active extension is changed.
+        /// </summary>
         public event EventHandler ActiveExtensionChanged = (sender, args) => { };
 
+        /// <summary>
+        /// Creates a new instance of the <see cref="GuidanceManager"/> class.
+        /// </summary>
         [ImportingConstructor]
         public GuidanceManager(
             [Import(typeof(NuPatternGlobalContainer))]
@@ -338,9 +359,10 @@ namespace NuPattern.Runtime.Guidance
             }
         }
 
-        //
-        // Semi-public version which allows control over call to postInitialize
-        //
+        /// <summary>
+        /// Initiailizes the given extension
+        /// </summary>
+        /// <remarks>Semi-public version which allows control over call to postInitialize</remarks>
         protected IGuidanceExtension InitializeExtension(string extensionId,
             string instanceName,
             IGuidanceExtensionRegistration registration,
@@ -436,6 +458,10 @@ namespace NuPattern.Runtime.Guidance
             return compositionService;
         }
 
+        /// <summary>
+        /// Refreshes the guidance workflow
+        /// </summary>
+        /// <param name="extension"></param>
         public void RefreshWorkflow(IGuidanceExtension extension)
         {
             var realExt = extension as GuidanceExtension;
@@ -462,7 +488,11 @@ namespace NuPattern.Runtime.Guidance
             this.ActiveGuidanceExtension = extension;
         }
 
-        public void RemoveExtensionInstance(IGuidanceExtension extension)
+        /// <summary>
+        /// Removes the given guidance workflow
+        /// </summary>
+        /// <param name="extension"></param>
+        public void RemoveWorkflow(IGuidanceExtension extension)
         {
             extension.Finish();
             instantiatedGuidanceExtensions.RemoveAll(state => state.Item1.ExtensionId == extension.ExtensionId && state.Item1.InstanceName == extension.InstanceName);
@@ -642,9 +672,9 @@ namespace NuPattern.Runtime.Guidance
                 ISolution theSolution = ((SolutionDataState)solutionState).Solution;
                 var dslFile = theSolution.Find("*.commands").FirstOrDefault();
                 if (dslFile != null)
-                    GuidanceManager.FeatureBuilderDSLPath = dslFile.PhysicalPath;
+                    FeatureBuilderDSLPath = dslFile.PhysicalPath;
                 else
-                    GuidanceManager.FeatureBuilderDSLPath = null;
+                    FeatureBuilderDSLPath = null;
             }
         }
 
