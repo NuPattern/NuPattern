@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows.Input;
 using NuPattern.Presentation;
 using NuPattern.Runtime.Guidance.Workflow;
 

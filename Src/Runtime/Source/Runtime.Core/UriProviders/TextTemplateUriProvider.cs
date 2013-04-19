@@ -8,7 +8,6 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UriProviders

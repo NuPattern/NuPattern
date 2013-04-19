@@ -7,7 +7,6 @@ using NuPattern.Diagnostics;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Store.Properties;
 using NuPattern.Runtime.ToolkitInterface;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Store
 {

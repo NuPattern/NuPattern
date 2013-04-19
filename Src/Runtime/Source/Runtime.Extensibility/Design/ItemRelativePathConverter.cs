@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.IO;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design

@@ -2,7 +2,6 @@
 using Microsoft.VisualStudio.Modeling;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Store.Properties;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Store
 {

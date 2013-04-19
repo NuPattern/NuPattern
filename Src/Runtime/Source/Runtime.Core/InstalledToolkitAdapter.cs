@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
-using NuPattern.VisualStudio.Extensions;
-using ExtMan =Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio.Extensions;
+using ExtMan = Microsoft.VisualStudio.ExtensionManager;
 
 namespace NuPattern.Runtime
 {

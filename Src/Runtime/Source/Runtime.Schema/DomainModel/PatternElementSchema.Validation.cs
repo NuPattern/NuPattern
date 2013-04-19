@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.Modeling.Validation;
 using NuPattern.Diagnostics;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Schema.Properties;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Schema
 {

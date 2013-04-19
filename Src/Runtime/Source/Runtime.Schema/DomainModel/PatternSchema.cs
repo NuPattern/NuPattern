@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using NuPattern.Runtime.Schema.Design;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Schema
 {

@@ -9,7 +9,6 @@ using System.Threading;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Properties;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.ToolkitInterface
 {

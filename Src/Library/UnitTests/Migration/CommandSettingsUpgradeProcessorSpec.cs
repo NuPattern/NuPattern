@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Xml.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Library.Commands;
 using NuPattern.Library.Migration;
 using NuPattern.Runtime.Bindings;
 

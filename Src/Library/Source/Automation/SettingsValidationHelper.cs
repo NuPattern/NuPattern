@@ -2,7 +2,6 @@
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using NuPattern.Runtime;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Library.Automation
 {

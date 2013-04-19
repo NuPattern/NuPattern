@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design

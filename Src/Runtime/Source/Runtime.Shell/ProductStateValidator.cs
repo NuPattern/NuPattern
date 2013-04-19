@@ -1,7 +1,6 @@
 ﻿using System;
 using EnvDTE;
 using Microsoft.VisualStudio.Shell.Interop;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Shell
 {

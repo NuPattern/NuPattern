@@ -6,7 +6,6 @@ using System.Linq;
 using System.Windows;
 using Microsoft.VisualStudio.ComponentModelHost;
 using NuPattern.Runtime.UI;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design

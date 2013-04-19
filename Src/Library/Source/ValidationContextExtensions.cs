@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.ComponentModel.Composition;
 using NuPattern.Runtime;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Library
 {

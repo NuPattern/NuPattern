@@ -2,7 +2,6 @@
 using System.ComponentModel.Composition;
 using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.Shell.ToolWindows;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Shell
 {

@@ -7,7 +7,6 @@ using System.Windows.Forms;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Runtime.Settings;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Shell.OptionPages
 {

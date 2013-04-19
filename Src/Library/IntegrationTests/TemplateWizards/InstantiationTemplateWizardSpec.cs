@@ -8,7 +8,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Library.TemplateWizards;
 using NuPattern.Runtime;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Library.IntegrationTests
 {

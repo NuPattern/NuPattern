@@ -11,7 +11,6 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Presentation;
 using NuPattern.Runtime.UI.ViewModels;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UI.Views
 {

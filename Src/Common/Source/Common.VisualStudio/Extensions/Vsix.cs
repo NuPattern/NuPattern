@@ -5,7 +5,6 @@ using System.IO;
 using System.IO.Packaging;
 using System.Linq;
 using System.Xml;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Settings;
 using NuPattern.VisualStudio.Properties;
 

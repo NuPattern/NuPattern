@@ -2,7 +2,6 @@
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 using SolutionEvents = NuPattern.VisualStudio.Events.SolutionEvents;
 

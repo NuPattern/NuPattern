@@ -6,7 +6,6 @@ using System.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Runtime.Properties;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UriProviders
 {

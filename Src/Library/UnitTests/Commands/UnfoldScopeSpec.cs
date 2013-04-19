@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using NuPattern.Library.Commands;
 using NuPattern.Runtime;
 
 namespace NuPattern.Library.UnitTests.Commands

@@ -6,7 +6,6 @@ using System.Windows.Input;
 using NuPattern.ComponentModel;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design

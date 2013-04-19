@@ -6,7 +6,6 @@ using Microsoft.VisualStudio.Shell.Settings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Runtime.Settings;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.IntegrationTests.Settings
 {

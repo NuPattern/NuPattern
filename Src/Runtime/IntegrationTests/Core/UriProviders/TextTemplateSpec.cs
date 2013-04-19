@@ -7,7 +7,6 @@ using Microsoft.VisualStudio.TextTemplating.VSHost;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Moq;
 using NuPattern.Runtime.UriProviders;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.IntegrationTests.UriProviders

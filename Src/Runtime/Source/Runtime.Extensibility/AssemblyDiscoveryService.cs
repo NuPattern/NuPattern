@@ -6,7 +6,6 @@ using System.Reflection;
 using Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Configuration.Design.HostAdapterV5;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime

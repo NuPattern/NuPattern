@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using NuPattern.VisualStudio.Extensions;
 using NuPattern.VisualStudio.Solution.Templates;
