@@ -1,4 +1,5 @@
-﻿using System;
+﻿#pragma warning disable 1591
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
@@ -6,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace NuPattern.VisualStudio.Solution.Templates
 {
-    partial class VsTemplate : NuPattern.VisualStudio.Solution.Templates.IVsTemplate
+    partial class VSTemplate : NuPattern.VisualStudio.Solution.Templates.IVsTemplate
     {
         [XmlIgnore]
         public string PhysicalPath { get; set; }
@@ -183,3 +184,5 @@ namespace NuPattern.VisualStudio.Solution.Templates
         }
     }
 }
+
+#pragma warning restore 1591

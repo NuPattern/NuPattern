@@ -126,7 +126,7 @@ namespace NuPattern.Library.TemplateWizards
         /// Runs custom wizard logic when a project item has finished generating.
         /// </summary>
         /// <param name="projectItem">The project item that finished generating.</param>
-        public override void ProjectItemFinishedGenerating(ProjectItem projectItem)
+        public override void ProjectItemFinishedGenerating(EnvDTE.ProjectItem projectItem)
         {
             base.ProjectItemFinishedGenerating(projectItem);
 

@@ -22,7 +22,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005", IsNullable = false)]
-    internal partial class VsTemplate
+    public partial class VSTemplate
     {
 
         private VSTemplateTemplateData templateDataField;
@@ -126,7 +126,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
-    internal partial class VSTemplateTemplateData
+    public partial class VSTemplateTemplateData
     {
 
         private NameDescriptionIcon nameField;
@@ -765,7 +765,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
-    internal partial class NameDescriptionIcon
+    public partial class NameDescriptionIcon
     {
 
         private string packageField;
@@ -888,7 +888,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
-    internal partial class VSTemplateTemplateContent
+    public partial class VSTemplateTemplateContent
     {
 
         private object[] itemsField;
@@ -933,7 +933,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
-    internal partial class VSTemplateTemplateContentProject
+    public partial class VSTemplateTemplateContentProject
     {
 
         private object[] itemsField;
@@ -1025,7 +1025,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005", IsNullable = false)]
-    internal partial class Folder
+    public partial class Folder
     {
 
         private object[] itemsField;
@@ -1085,7 +1085,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005", IsNullable = false)]
-    internal partial class ProjectItem
+    public partial class ProjectItem
     {
 
         private string targetFileNameField;
@@ -1287,7 +1287,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
-    internal partial class VSTemplateTemplateContentProjectCollection
+    public partial class VSTemplateTemplateContentProjectCollection
     {
 
         private object[] itemsField;
@@ -1315,7 +1315,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005", IsNullable = false)]
-    internal partial class ProjectTemplateLink
+    public partial class ProjectTemplateLink
     {
 
         private string projectNameField;
@@ -1358,7 +1358,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005", IsNullable = false)]
-    internal partial class SolutionFolder
+    public partial class SolutionFolder
     {
 
         private object[] itemsField;
@@ -1491,7 +1491,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
-    internal partial class VSTemplateTemplateContentReferences
+    public partial class VSTemplateTemplateContentReferences
     {
 
         private VSTemplateTemplateContentReferencesReference referenceField;
@@ -1516,7 +1516,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
-    internal partial class VSTemplateTemplateContentReferencesReference
+    public partial class VSTemplateTemplateContentReferencesReference
     {
 
         private string assemblyField;
@@ -1541,7 +1541,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
-    internal partial class VSTemplateTemplateContentCustomParameter
+    public partial class VSTemplateTemplateContentCustomParameter
     {
 
         private string nameField;
@@ -1583,7 +1583,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
-    internal partial class VSTemplateWizardExtension
+    public partial class VSTemplateWizardExtension
     {
 
         private object[] assemblyField;
@@ -1625,7 +1625,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://schemas.microsoft.com/developer/vstemplate/2005")]
-    internal partial class VSTemplateWizardData
+    public partial class VSTemplateWizardData
     {
 
         private System.Xml.XmlElement[] anyField;

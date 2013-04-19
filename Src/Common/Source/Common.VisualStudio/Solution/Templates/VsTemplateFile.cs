@@ -18,7 +18,7 @@ namespace NuPattern.VisualStudio.Solution.Templates
         private static readonly XmlQualifiedName TemplateDefaultNamespace = new XmlQualifiedName("", "http://schemas.microsoft.com/developer/vstemplate/2005");
         private const string TemplateFileExtension = ".vstemplate";
         private const string TemplateArchiveFileExtension = ".zip";
-        private static readonly XmlSerializer Serializer = new XmlSerializer(typeof(VsTemplate));
+        private static readonly XmlSerializer Serializer = new XmlSerializer(typeof(VSTemplate));
 
         /// <summary>
         /// Reads the .vstemplate file
@@ -70,11 +70,11 @@ namespace NuPattern.VisualStudio.Solution.Templates
             throw new InvalidOperationException(Resources.VsTemplateFile_ErrorUnsupportedVsTemplateExtension);
         }
 
-        private static VsTemplate ReadVsTemplate(string templateFilename)
+        private static VSTemplate ReadVsTemplate(string templateFilename)
         {
             using (var reader = XmlReader.Create(templateFilename))
             {
-                var template = (VsTemplate)Serializer.Deserialize(reader);
+                var template = (VSTemplate)Serializer.Deserialize(reader);
                 template.PhysicalPath = new FileInfo(templateFilename).FullName;
                 template.TemplateFileName = Path.GetFileName(template.PhysicalPath);
                 return template;

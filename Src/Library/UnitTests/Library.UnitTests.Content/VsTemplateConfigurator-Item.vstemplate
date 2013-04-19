@@ -12,11 +12,11 @@
     <DefaultName>Class.cs</DefaultName>
   </TemplateData>
   <TemplateContent>
-		<References>
-			<Reference>
-				<Assembly>System</Assembly>
-			</Reference>
-		</References>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+    </References>
 
     <ProjectItem ReplaceParameters="true">Class.cs</ProjectItem>
   </TemplateContent>
