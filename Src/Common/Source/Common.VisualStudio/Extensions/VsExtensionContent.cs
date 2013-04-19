@@ -19,11 +19,6 @@ namespace NuPattern.VisualStudio.Extensions
             this.vsContent = vsContent;
         }
 
-        public IList<XmlElement> AdditionalElements
-        {
-            get { return this.vsContent.AdditionalElements; }
-        }
-
         public IDictionary<string, string> Attributes
         {
             get { return this.vsContent.Attributes; }
@@ -38,5 +33,12 @@ namespace NuPattern.VisualStudio.Extensions
         {
             get { return this.vsContent.RelativePath; }
         }
+
+#if VSVER11
+        public IList<XmlElement> AdditionalElements
+        {
+            get { return this.vsContent.AdditionalElements; }
+        }
+#endif
     }
 }

@@ -11,11 +11,6 @@ namespace NuPattern.VisualStudio.Extensions
     public interface IExtension
     {
         /// <summary>
-        /// Gets the addtional unsupported elements defined in the VSIX manifest
-        /// </summary>
-        IList<XmlElement> AdditionalElements { get; }
-
-        /// <summary>
         /// Gets the content of the VSIX
         /// </summary>
         IEnumerable<IExtensionContent> Content { get; }
@@ -24,11 +19,6 @@ namespace NuPattern.VisualStudio.Extensions
         /// Gets the header of the VSIX
         /// </summary>
         IExtensionHeader Header { get; }
-
-        /// <summary>
-        /// Gets the localized version of the unsupported element defined in the VSIX manifest
-        /// </summary>
-        IList<XmlElement> LocalizedAdditionalElements { get; }
 
         /// <summary>
         /// Gets the dependencies
@@ -41,14 +31,15 @@ namespace NuPattern.VisualStudio.Extensions
         Version SchemaVersion { get; }
 
         /// <summary>
-        /// Gets the targets for the VSIX
-        /// </summary>
-        IEnumerable<IExtensionRequirement> Targets { get; }
-
-        /// <summary>
         /// Gets the type of the VSIX
         /// </summary>
         string Type { get; }
+
+#if VSVER11
+        /// <summary>
+        /// Gets the addtional unsupported elements defined in the VSIX manifest
+        /// </summary>
+        IList<XmlElement> AdditionalElements { get; }
 
         /// <summary>
         /// Gets a value to indicate whether the current product is supported
@@ -57,5 +48,16 @@ namespace NuPattern.VisualStudio.Extensions
         /// <param name="version"></param>
         /// <returns></returns>
         bool IsProductSupported(string productId, Version version);
+
+        /// <summary>
+        /// Gets the localized version of the unsupported element defined in the VSIX manifest
+        /// </summary>
+        IList<XmlElement> LocalizedAdditionalElements { get; }
+
+        /// <summary>
+        /// Gets the targets for the VSIX
+        /// </summary>
+        IEnumerable<IExtensionRequirement> Targets { get; }
+#endif
     }
 }

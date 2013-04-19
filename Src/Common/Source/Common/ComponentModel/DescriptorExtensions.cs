@@ -6,6 +6,9 @@ using System.Linq;
 using System.Reflection;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Properties;
+#if VSVER10
+using NuPattern.Reflection;
+#endif
 
 namespace NuPattern.ComponentModel
 {
@@ -192,7 +195,7 @@ namespace NuPattern.ComponentModel
         /// <returns></returns>
         public static bool IsBrowsable(this Type type)
         {
-            var browsable = type.GetCustomAttribute<BrowsableAttribute>();
+            var browsable = type.GetCustomAttribute<BrowsableAttribute>(true);
             return browsable == null || browsable.Browsable;
         }
     }

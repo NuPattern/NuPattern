@@ -22,11 +22,6 @@ namespace NuPattern.VisualStudio.Extensions
             this.vsExtension = vsExtension;
         }
 
-        public IList<XmlElement> AdditionalElements
-        {
-            get { return this.vsExtension.AdditionalElements; }
-        }
-
         public IEnumerable<IExtensionContent> Content
         {
             get { return this.vsExtension.Content.Select(c => new VsExtensionContent(c)); }
@@ -35,16 +30,6 @@ namespace NuPattern.VisualStudio.Extensions
         public IExtensionHeader Header
         {
             get { return new VsExtensionHeader(this.vsExtension.Header); }
-        }
-
-        public bool IsProductSupported(string productId, Version version)
-        {
-            return this.vsExtension.IsProductSupported(productId, version);
-        }
-
-        public IList<XmlElement> LocalizedAdditionalElements
-        {
-            get { return this.vsExtension.LocalizedAdditionalElements; }
         }
 
         public IEnumerable<IExtensionReference> References
@@ -57,14 +42,31 @@ namespace NuPattern.VisualStudio.Extensions
             get { return this.vsExtension.SchemaVersion; }
         }
 
-        public IEnumerable<IExtensionRequirement> Targets
-        {
-            get { return this.vsExtension.Targets.Select(t => new VsExtensionRequirement(t)); }
-        }
-
         public string Type
         {
             get { return this.vsExtension.Type; }
         }
+
+#if VSVER11
+        public IList<XmlElement> AdditionalElements
+        {
+            get { return this.vsExtension.AdditionalElements; }
+        }
+
+        public bool IsProductSupported(string productId, Version version)
+        {
+            return this.vsExtension.IsProductSupported(productId, version);
+        }
+
+        public IList<XmlElement> LocalizedAdditionalElements
+        {
+            get { return this.vsExtension.LocalizedAdditionalElements; }
+        }
+
+        public IEnumerable<IExtensionRequirement> Targets
+        {
+            get { return this.vsExtension.Targets.Select(t => new VsExtensionRequirement(t)); }
+        }
+#endif
     }
 }

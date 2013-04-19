@@ -9,6 +9,9 @@ using System.Threading;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Properties;
+#if VSVER10
+using NuPattern.Reflection;
+#endif
 
 namespace NuPattern.Runtime.ToolkitInterface
 {
@@ -436,7 +439,7 @@ namespace NuPattern.Runtime.ToolkitInterface
 
         private static ToolkitInterfaceAttribute GetToolkitInterfaceAttributeOrThrow(Type type)
         {
-            var toolkitInterface = type.GetCustomAttribute<ToolkitInterfaceAttribute>();
+            var toolkitInterface = type.GetCustomAttribute<ToolkitInterfaceAttribute>(true);
             if (toolkitInterface == null)
                 throw new NotSupportedException(string.Format(
                     CultureInfo.CurrentCulture,

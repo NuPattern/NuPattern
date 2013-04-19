@@ -11,11 +11,6 @@ namespace NuPattern.VisualStudio.Extensions
     public interface IExtensionHeader
     {
         /// <summary>
-        /// Gets the addtional unsupported elements in the header
-        /// </summary>
-        IList<XmlElement> AdditionalElements { get; }
-
-        /// <summary>
         /// Gets a value to indicate whether the VSIX will be installed for all users. 
         /// </summary>
         bool AllUsers { get; }
@@ -34,11 +29,6 @@ namespace NuPattern.VisualStudio.Extensions
         /// Gets a 'Getting Started' URI for the VSIX
         /// </summary>
         Uri GettingStartedGuide { get; }
-
-        /// <summary>
-        /// Gets a value to indicate whether the the VSIX has global scope
-        /// </summary>
-        bool GlobalScope { get; }
 
         /// <summary>
         /// Gets the icon for the VSIX
@@ -76,11 +66,6 @@ namespace NuPattern.VisualStudio.Extensions
         CultureInfo Locale { get; }
 
         /// <summary>
-        /// Gets the localized version of the addtional unsupported elements in the header.
-        /// </summary>
-        IList<XmlElement> LocalizedAdditionalElements { get; }
-
-        /// <summary>
         /// Gets the localized description.
         /// </summary>
         string LocalizedDescription { get; }
@@ -106,6 +91,49 @@ namespace NuPattern.VisualStudio.Extensions
         string PreviewImage { get; }
 
         /// <summary>
+        /// Gets a value to indicate whether the VSIX is a system component.
+        /// </summary>
+        bool SystemComponent { get; }
+
+        /// <summary>
+        /// Gets the version of the VSIX.
+        /// </summary>
+        Version Version { get; }
+
+#if VSVER10
+        /// <summary>
+        /// Gets the maximum supported framework version
+        /// </summary>
+        Version SupportedFrameworkMaxVersion { get; }
+
+        /// <summary>
+        /// Gets the minimum supported framework version
+        /// </summary>
+        Version SupportedFrameworkMinVersion { get; }
+
+        /// <summary>
+        /// Gets the supported VS versions
+        /// </summary>
+        IEnumerable<Version> SupportedVSVersions { get; }
+#endif
+
+#if VSVER11
+        /// <summary>
+        /// Gets the addtional unsupported elements in the header
+        /// </summary>
+        IList<XmlElement> AdditionalElements { get; }
+
+        /// <summary>
+        /// Gets a value to indicate whether the the VSIX has global scope
+        /// </summary>
+        bool GlobalScope { get; }
+
+        /// <summary>
+        /// Gets the localized version of the addtional unsupported elements in the header.
+        /// </summary>
+        IList<XmlElement> LocalizedAdditionalElements { get; }
+
+        /// <summary>
         /// Gets the release notes for the VSIX.
         /// </summary>
         Uri ReleaseNotes { get; }
@@ -126,18 +154,9 @@ namespace NuPattern.VisualStudio.Extensions
         IVersionRange SupportedFrameworkVersionRange { get; }
 
         /// <summary>
-        /// Gets a value to indicate whether the VSIX is a system component.
-        /// </summary>
-        bool SystemComponent { get; }
-
-        /// <summary>
         /// Gets the tags for the VSIX
         /// </summary>
         IEnumerable<string> Tags { get; }
-
-        /// <summary>
-        /// Gets the version of the VSIX.
-        /// </summary>
-        Version Version { get; }
+#endif
     }
 }

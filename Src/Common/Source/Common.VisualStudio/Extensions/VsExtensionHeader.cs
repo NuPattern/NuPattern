@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Xml;
 using ExtMan = Microsoft.VisualStudio.ExtensionManager;
+using System.Globalization;
 
 namespace NuPattern.VisualStudio.Extensions
 {
@@ -18,11 +19,6 @@ namespace NuPattern.VisualStudio.Extensions
         public VsExtensionHeader(ExtMan.IExtensionHeader vsHeader)
         {
             this.vsHeader = vsHeader;
-        }
-
-        public IList<XmlElement> AdditionalElements
-        {
-            get { return this.vsHeader.AdditionalElements; }
         }
 
         public bool AllUsers
@@ -43,11 +39,6 @@ namespace NuPattern.VisualStudio.Extensions
         public Uri GettingStartedGuide
         {
             get { return this.vsHeader.GettingStartedGuide; }
-        }
-
-        public bool GlobalScope
-        {
-            get { return this.vsHeader.GlobalScope; }
         }
 
         public string Icon
@@ -80,14 +71,9 @@ namespace NuPattern.VisualStudio.Extensions
             get { return this.vsHeader.LicenseFormat; }
         }
 
-        public System.Globalization.CultureInfo Locale
+        public CultureInfo Locale
         {
             get { return this.vsHeader.Locale; }
-        }
-
-        public IList<System.Xml.XmlElement> LocalizedAdditionalElements
-        {
-            get { return this.vsHeader.LocalizedAdditionalElements; }
         }
 
         public string LocalizedDescription
@@ -115,6 +101,66 @@ namespace NuPattern.VisualStudio.Extensions
             get { return this.vsHeader.PreviewImage; }
         }
 
+        public bool SystemComponent
+        {
+            get { return this.vsHeader.SystemComponent; }
+        }
+
+        public Version Version
+        {
+            get { return this.vsHeader.Version; }
+        }
+
+#if VSVER10
+        /// <summary>
+        /// Gets the maximum supported framework version
+        /// </summary>
+        public Version SupportedFrameworkMaxVersion 
+        { 
+            get 
+            {
+                return this.vsHeader.SupportedFrameworkMaxVersion;
+            } 
+        }
+
+        /// <summary>
+        /// Gets the minimum supported framework version
+        /// </summary>
+        public Version SupportedFrameworkMinVersion
+        {
+            get
+            {
+                return this.vsHeader.SupportedFrameworkMinVersion;
+            }
+        }
+
+        /// <summary>
+        /// Gets the supported VS versions
+        /// </summary>
+        public IEnumerable<Version> SupportedVSVersions
+        {
+            get
+            {
+                return this.vsHeader.SupportedVSVersions;
+            }
+        }
+#endif
+#if VSVER11
+        public IList<XmlElement> AdditionalElements
+        {
+            get { return this.vsHeader.AdditionalElements; }
+        }
+
+        public bool GlobalScope
+        {
+            get { return this.vsHeader.GlobalScope; }
+        }
+        
+        public IList<XmlElement> LocalizedAdditionalElements
+        {
+            get { return this.vsHeader.LocalizedAdditionalElements; }
+        }
+        
         public Uri ReleaseNotes
         {
             get { return this.vsHeader.ReleaseNotes; }
@@ -135,19 +181,10 @@ namespace NuPattern.VisualStudio.Extensions
             get { return new VsVersionRange(this.vsHeader.SupportedFrameworkVersionRange); }
         }
 
-        public bool SystemComponent
-        {
-            get { return this.vsHeader.SystemComponent; }
-        }
-
         public IEnumerable<string> Tags
         {
             get { return this.vsHeader.Tags; }
         }
-
-        public Version Version
-        {
-            get { return this.vsHeader.Version; }
-        }
+#endif
     }
 }

@@ -36,11 +36,6 @@ namespace NuPattern.VisualStudio.Extensions
             get { return this.vsInstalledExtension.InstallPath; }
         }
 
-        public bool IsPackComponent
-        {
-            get { return this.vsInstalledExtension.IsPackComponent; }
-        }
-
         public int SizeInBytes
         {
             get { return Convert.ToInt32(this.vsInstalledExtension.SizeInBytes); }
@@ -49,11 +44,6 @@ namespace NuPattern.VisualStudio.Extensions
         public EnabledState State
         {
             get { return (EnabledState)this.vsInstalledExtension.State; }
-        }
-
-        public IList<XmlElement> AdditionalElements
-        {
-            get { return this.vsInstalledExtension.AdditionalElements; }
         }
 
         public IEnumerable<IExtensionContent> Content
@@ -66,11 +56,6 @@ namespace NuPattern.VisualStudio.Extensions
             get { return new VsExtensionHeader(this.vsInstalledExtension.Header); }
         }
 
-        public IList<XmlElement> LocalizedAdditionalElements
-        {
-            get { return this.vsInstalledExtension.LocalizedAdditionalElements; }
-        }
-
         public IEnumerable<IExtensionReference> References
         {
             get { return this.vsInstalledExtension.References.Select(r => new VsExtensionReference(r)); }
@@ -81,19 +66,36 @@ namespace NuPattern.VisualStudio.Extensions
             get { return this.vsInstalledExtension.SchemaVersion; }
         }
 
-        public IEnumerable<IExtensionRequirement> Targets
-        {
-            get { return this.vsInstalledExtension.Targets.Select(t => new VsExtensionRequirement(t)); }
-        }
-
         public string Type
         {
             get { return this.vsInstalledExtension.Type; }
+        }
+
+#if VSVER11
+        public bool IsPackComponent
+        {
+            get { return this.vsInstalledExtension.IsPackComponent; }
+        }
+
+        public IList<XmlElement> AdditionalElements
+        {
+            get { return this.vsInstalledExtension.AdditionalElements; }
+        }
+        
+        public IList<XmlElement> LocalizedAdditionalElements
+        {
+            get { return this.vsInstalledExtension.LocalizedAdditionalElements; }
+        }
+        
+        public IEnumerable<IExtensionRequirement> Targets
+        {
+            get { return this.vsInstalledExtension.Targets.Select(t => new VsExtensionRequirement(t)); }
         }
 
         public bool IsProductSupported(string productId, Version version)
         {
             return this.vsInstalledExtension.IsProductSupported(productId, version);
         }
+#endif
     }
 }

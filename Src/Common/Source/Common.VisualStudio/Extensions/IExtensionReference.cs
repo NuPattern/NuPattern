@@ -9,16 +9,6 @@ namespace NuPattern.VisualStudio.Extensions
     public interface IExtensionReference
     {
         /// <summary>
-        /// Gets a value to indicate whether the dependency can be downloaded automatically.
-        /// </summary>
-        bool CanAutoDownload { get; }
-
-        /// <summary>
-        /// Gets a value to indicate whether the dependency is required.
-        /// </summary>
-        bool IsRequired { get; }
-
-        /// <summary>
         /// Gets a 'More Information' URI.
         /// </summary>
         Uri MoreInfoUrl { get; }
@@ -32,5 +22,17 @@ namespace NuPattern.VisualStudio.Extensions
         /// Gets the nested path to the dependency in the VSIX package
         /// </summary>
         string NestedExtensionPath { get; }
+
+#if VSVER11
+        /// <summary>
+        /// Gets a value to indicate whether the dependency can be downloaded automatically.
+        /// </summary>
+        bool CanAutoDownload { get; }
+
+        /// <summary>
+        /// Gets a value to indicate whether the dependency is required.
+        /// </summary>
+        bool IsRequired { get; }
+#endif
     }
 }

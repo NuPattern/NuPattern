@@ -14,7 +14,7 @@ namespace NuPattern.VisualStudio.Extensions
         DateTimeOffset? InstalledOn { get; }
 
         /// <summary>
-        /// Gets a value to to indicate whether the extension is installed for all users.
+        /// Gets a value to indicate whether the extension is installed for all users.
         /// </summary>
         bool InstalledPerMachine { get; }
 
@@ -22,11 +22,6 @@ namespace NuPattern.VisualStudio.Extensions
         /// Gets the path where the extension is installed
         /// </summary>
         string InstallPath { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        bool IsPackComponent { get; }
 
         /// <summary>
         /// The size of the extension package
@@ -37,5 +32,12 @@ namespace NuPattern.VisualStudio.Extensions
         /// Gets the state of the extension.
         /// </summary>
         EnabledState State { get; }
+
+#if VSVER11
+        /// <summary>
+        /// Gets a value to indicate whether the extension is a pack component.
+        /// </summary>
+        bool IsPackComponent { get; }
+#endif
     }
 }

@@ -3,6 +3,9 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using NuPattern.Properties;
+#if VSVER10
+using NuPattern.Reflection;
+#endif
 
 namespace NuPattern.ComponentModel.Composition
 {
@@ -19,7 +22,7 @@ namespace NuPattern.ComponentModel.Composition
         /// </summary>
         public static IComponentMetadata AsComponent(this Type componentType)
         {
-            var metadata = componentType.GetCustomAttribute<ComponentAttribute>();
+            var metadata = componentType.GetCustomAttribute<ComponentAttribute>(true);
             if (metadata == null)
                 metadata = componentType.ComponentDynamic();
 

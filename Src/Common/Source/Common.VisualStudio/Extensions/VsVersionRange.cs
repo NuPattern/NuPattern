@@ -3,6 +3,7 @@ using ExtMan = Microsoft.VisualStudio.ExtensionManager;
 
 namespace NuPattern.VisualStudio.Extensions
 {
+#if VSVER11
     /// <summary>
     /// A wrapper for a VS VSIX registration <see cref="ExtMan.VersionRange"/>
     /// </summary>
@@ -42,4 +43,5 @@ namespace NuPattern.VisualStudio.Extensions
             return this.vsVersionRange.Contains(value);
         }
     }
+#endif
 }

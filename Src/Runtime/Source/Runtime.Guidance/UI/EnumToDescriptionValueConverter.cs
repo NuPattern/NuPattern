@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Globalization;
-using System.Reflection;
 using System.Windows.Data;
+using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Guidance.UI
 {
@@ -13,7 +13,7 @@ namespace NuPattern.Runtime.Guidance.UI
         {
             if (value is Enum)
             {
-                var description = value.GetType().GetField(value.ToString()).GetCustomAttribute<DescriptionAttribute>();
+                var description = value.GetType().GetField(value.ToString()).GetCustomAttribute<DescriptionAttribute>(true);
                 return description != null ? description.Description : value.ToString();
             }
 

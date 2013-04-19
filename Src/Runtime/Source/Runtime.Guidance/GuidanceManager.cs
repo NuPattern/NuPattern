@@ -7,7 +7,6 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Reflection;
 using System.Xml;
 using NuPattern.Diagnostics;
 using NuPattern.Reflection;
@@ -638,7 +637,7 @@ namespace NuPattern.Runtime.Guidance
                 return null;
             }
 
-            var extensionAttribute = type.Assembly.GetCustomAttribute<GuidanceExtensionAttribute>();
+            var extensionAttribute = type.Assembly.GetCustomAttribute<GuidanceExtensionAttribute>(true);
             if (extensionAttribute != null)
             {
                 return this.InstalledGuidanceExtensions.FirstOrDefault(extension => extension.ExtensionId == extensionAttribute.ExtensionId);

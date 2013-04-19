@@ -15,16 +15,6 @@ namespace NuPattern.VisualStudio.Extensions
             this.vsReference = vsReference;
         }
 
-        public bool CanAutoDownload
-        {
-            get { return this.vsReference.CanAutoDownload; }
-        }
-
-        public bool IsRequired
-        {
-            get { return this.vsReference.IsRequired; }
-        }
-
         public Uri MoreInfoUrl
         {
             get { return this.vsReference.MoreInfoUrl; }
@@ -39,5 +29,17 @@ namespace NuPattern.VisualStudio.Extensions
         {
             get { return this.vsReference.NestedExtensionPath; }
         }
+
+#if VSVER11
+        public bool CanAutoDownload
+        {
+            get { return this.vsReference.CanAutoDownload; }
+        }
+
+        public bool IsRequired
+        {
+            get { return this.vsReference.IsRequired; }
+        }
+#endif
     }
 }

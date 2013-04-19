@@ -9,11 +9,6 @@ namespace NuPattern.VisualStudio.Extensions
     public interface IExtensionContent
     {
         /// <summary>
-        /// Gets the addtional unsupported elements of the content
-        /// </summary>
-        IList<XmlElement> AdditionalElements { get; }
-
-        /// <summary>
         /// Gets the attributes of the content.
         /// </summary>
         IDictionary<string, string> Attributes { get; }
@@ -27,5 +22,12 @@ namespace NuPattern.VisualStudio.Extensions
         /// Gets the relative path of the content
         /// </summary>
         string RelativePath { get; }
+
+#if VSVER11
+        /// <summary>
+        /// Gets the addtional unsupported elements of the content
+        /// </summary>
+        IList<XmlElement> AdditionalElements { get; }
+#endif
     }
 }
