@@ -10,32 +10,32 @@ namespace NuPattern.Runtime.Guidance.Workflow
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceConditionsEvaluator>();
         public static bool TraceStateChanges = false;
 
-        private IFeatureManager featureManager;
-        private Queue<IFeatureExtension> queuedFeatures = new Queue<IFeatureExtension>();
+        private IGuidanceManager guidanceManager;
+        private Queue<IGuidanceExtension> queuedExtensions = new Queue<IGuidanceExtension>();
         private Queue<IConditionalNode> queuedActions = new Queue<IConditionalNode>();
-        private string currentFeature;
-        private static IFeatureExtension currentFeatureInstance;
+        private string currentExtensionName;
+        private static IGuidanceExtension currentExtensionInstance;
         private static GuidanceConditionsEvaluator Current;
 
-        public GuidanceConditionsEvaluator(IFeatureManager featureManager)
+        public GuidanceConditionsEvaluator(IGuidanceManager guidanceManager)
         {
-            Guard.NotNull(() => featureManager, featureManager);
+            Guard.NotNull(() => guidanceManager, guidanceManager);
 
-            this.featureManager = featureManager;
+            this.guidanceManager = guidanceManager;
             Current = this;
         }
 
-        public static void EvaluateGraph(IFeatureExtension feature)
+        public static void EvaluateGraph(IGuidanceExtension extension)
         {
-            Guard.NotNull(() => feature, feature);
+            Guard.NotNull(() => extension, extension);
 
-            currentFeatureInstance = feature;
+            currentExtensionInstance = extension;
 
-            var workflow = feature.GuidanceWorkflow;
+            var workflow = extension.GuidanceWorkflow;
             if (workflow != null)
             {
-                TraceStateChanges = FeatureManagerSettings.VerboseTracing = workflow.Successors.ToArray<INode>()[0].Name.StartsWith("DebugTrace");
-                FeatureManagerSettings.VerboseBindingTracing = workflow.Successors.ToArray<INode>()[0].Name == "DebugTraceWithBindings";
+                TraceStateChanges = GuidanceManagerSettings.VerboseTracing = workflow.Successors.ToArray<INode>()[0].Name.StartsWith("DebugTrace");
+                GuidanceManagerSettings.VerboseBindingTracing = workflow.Successors.ToArray<INode>()[0].Name == "DebugTraceWithBindings";
 
                 EvaluateNode(workflow);
 
@@ -54,23 +54,23 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <returns><see langword="true"/>, if there is more activities to process; otherwise <see langword="false"/>.</returns>
         public virtual bool EvaluateGraphs()
         {
-            if (this.featureManager.IsOpened)
+            if (this.guidanceManager.IsOpened)
             {
-                if (queuedFeatures.Count == 0 && queuedActions.Count == 0)
+                if (queuedExtensions.Count == 0 && queuedActions.Count == 0)
                 {
                     if (TraceStateChanges)
                         tracer.TraceVerbose("========================== Evaluating Conditions for '{0}.{1}'.",
-                            currentFeatureInstance.InstanceName,
+                            currentExtensionInstance.InstanceName,
                             "Workflow");
-                    EnqueueAll<IFeatureExtension>(queuedFeatures, this.featureManager.InstantiatedFeatures);
+                    EnqueueAll<IGuidanceExtension>(queuedExtensions, this.guidanceManager.InstantiatedGuidanceExtensions);
                     return false;
                 }
                 else
                 {
                     if (queuedActions.Count == 0)
                     {
-                        var feature = queuedFeatures.Dequeue();
-                        this.currentFeature = feature.InstanceName;
+                        var feature = queuedExtensions.Dequeue();
+                        this.currentExtensionName = feature.InstanceName;
 
                         var workflow = feature.GuidanceWorkflow;
                         if (workflow != null)
@@ -119,7 +119,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
             // First, set the node into the FeatureCallContext so the
             // conditions can know
             //
-            FeatureCallContext.Current.DefaultConditionTarget = node as INode;
+            GuidanceCallContext.Current.DefaultConditionTarget = node as INode;
 
             //
             // Then, check the preconditions.
@@ -136,7 +136,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
                 if (TraceStateChanges &&
                     node.State != NodeState.Blocked)
                     tracer.TraceVerbose("Setting state to BLOCKED '{0}.{1}'.",
-                        currentFeatureInstance.InstanceName,
+                        currentExtensionInstance.InstanceName,
                         node.Name);
                 node.SetState(NodeState.Blocked, false);
             }
@@ -144,20 +144,20 @@ namespace NuPattern.Runtime.Guidance.Workflow
             {
                 NodeState postConditionsState = NodeState.Enabled;
 
-                if (currentFeatureInstance != null)
+                if (currentExtensionInstance != null)
                 {
-                    if ((currentFeatureInstance.GuidanceWorkflow != null) &&
-                    ((GuidanceWorkflow)currentFeatureInstance.GuidanceWorkflow).IgnorePostConditions)
+                    if ((currentExtensionInstance.GuidanceWorkflow != null) &&
+                    ((GuidanceWorkflow)currentExtensionInstance.GuidanceWorkflow).IgnorePostConditions)
                         postConditionsState = NodeState.Enabled;
                     else
                         postConditionsState = EvaluateBindings(node.Postconditions) ? NodeState.Completed : NodeState.Enabled;
                 }
                 else if (GuidanceConditionsEvaluator.Current != null &&
-                         GuidanceConditionsEvaluator.Current.featureManager != null &&
-                         GuidanceConditionsEvaluator.Current.featureManager.ActiveFeature != null)
+                         GuidanceConditionsEvaluator.Current.guidanceManager != null &&
+                         GuidanceConditionsEvaluator.Current.guidanceManager.ActiveGuidanceExtension != null)
                 {
-                    if ((GuidanceConditionsEvaluator.Current.featureManager.ActiveFeature.GuidanceWorkflow != null) &&
-                    ((GuidanceWorkflow)GuidanceConditionsEvaluator.Current.featureManager.ActiveFeature.GuidanceWorkflow).IgnorePostConditions)
+                    if ((GuidanceConditionsEvaluator.Current.guidanceManager.ActiveGuidanceExtension.GuidanceWorkflow != null) &&
+                    ((GuidanceWorkflow)GuidanceConditionsEvaluator.Current.guidanceManager.ActiveGuidanceExtension.GuidanceWorkflow).IgnorePostConditions)
                         postConditionsState = NodeState.Enabled;
                     else
                         postConditionsState = EvaluateBindings(node.Postconditions) ? NodeState.Completed : NodeState.Enabled;
@@ -176,7 +176,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
                 if (TraceStateChanges &&
                     node.State != postConditionsState)
                     tracer.TraceVerbose("Setting state to " + postConditionsState.ToString() + " '{0}.{1}'.",
-                        currentFeatureInstance.InstanceName,
+                        currentExtensionInstance.InstanceName,
                         node.Name);
                 node.SetState(postConditionsState, false);
             }

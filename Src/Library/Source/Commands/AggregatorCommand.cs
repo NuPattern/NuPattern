@@ -26,7 +26,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("AggregatorCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class AggregatorCommand : FeatureCommand
+    public class AggregatorCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<AggregatorCommand>();
 

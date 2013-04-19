@@ -331,65 +331,65 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to General.
+        ///   Looks up a localized string similar to Showing guidance windows.
         /// </summary>
-        internal static string FeatureComponentAttribute_DefaultCategory {
+        internal static string GudianceManagerExtensions_TraceShowingGuidanceWindows {
             get {
-                return ResourceManager.GetString("FeatureComponentAttribute_DefaultCategory", resourceCulture);
+                return ResourceManager.GetString("GudianceManagerExtensions_TraceShowingGuidanceWindows", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Feature &apos;{0}&apos; project template could not be located. Please reinstall the feature..
+        ///   Looks up a localized string similar to General.
         /// </summary>
-        internal static string FeatureExtension_NoFeatureProjectTemplate {
+        internal static string GuidanceComponentAttribute_DefaultCategory {
             get {
-                return ResourceManager.GetString("FeatureExtension_NoFeatureProjectTemplate", resourceCulture);
+                return ResourceManager.GetString("GuidanceComponentAttribute_DefaultCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guidance extension &apos;{0}&apos; project template could not be located. Please reinstall the extension..
+        /// </summary>
+        internal static string GuidanceExtension_NoProjectTemplate {
+            get {
+                return ResourceManager.GetString("GuidanceExtension_NoProjectTemplate", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to (None).
         /// </summary>
-        internal static string FeatureExtensionsTypeConverter_None {
+        internal static string GuidanceExtensionsTypeConverter_None {
             get {
-                return ResourceManager.GetString("FeatureExtensionsTypeConverter_None", resourceCulture);
+                return ResourceManager.GetString("GuidanceExtensionsTypeConverter_None", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Failed to create a new instance of the guidance workflow &apos;{0} ({1})&apos;. .
         /// </summary>
-        internal static string FeatureManagerExtensions_ErrorGuidanceInstantiationFailed {
+        internal static string GuidanceManagerExtensions_ErrorGuidanceInstantiationFailed {
             get {
-                return ResourceManager.GetString("FeatureManagerExtensions_ErrorGuidanceInstantiationFailed", resourceCulture);
+                return ResourceManager.GetString("GuidanceManagerExtensions_ErrorGuidanceInstantiationFailed", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to activate an instance of the feature extension &apos;{0}&apos;. It is not installed..
+        ///   Looks up a localized string similar to Failed to activate an instance of the guidance extension &apos;{0}&apos;. It is not installed..
         /// </summary>
-        internal static string FeatureManagerExtensions_ErrorNoRegistration {
+        internal static string GuidanceManagerExtensions_ErrorNoRegistration {
             get {
-                return ResourceManager.GetString("FeatureManagerExtensions_ErrorNoRegistration", resourceCulture);
+                return ResourceManager.GetString("GuidanceManagerExtensions_ErrorNoRegistration", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Activating guidance workflow &apos;{0}&apos;.
         /// </summary>
-        internal static string FeatureManagerExtensions_TraceActivation {
+        internal static string GuidanceManagerExtensions_TraceActivation {
             get {
-                return ResourceManager.GetString("FeatureManagerExtensions_TraceActivation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Showing guidance windows.
-        /// </summary>
-        internal static string FeatureManagerExtensions_TraceShowingGuidanceWindows {
-            get {
-                return ResourceManager.GetString("FeatureManagerExtensions_TraceShowingGuidanceWindows", resourceCulture);
+                return ResourceManager.GetString("GuidanceManagerExtensions_TraceActivation", resourceCulture);
             }
         }
         

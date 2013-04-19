@@ -3,7 +3,7 @@
 namespace NuPattern.Runtime.Guidance.UI.ViewModels
 {
     /// <summary>
-    /// Allows implement a custom view of the nodes for the Guidance Explorer tool window. If the <see cref="IFeatureExtension"/>
+    /// Allows implement a custom view of the nodes for the Guidance Explorer tool window. If the <see cref="IGuidanceExtension"/>
     /// implements this interface that feature can override the default way to show the nodes in the tool window.
     /// </summary>
     internal interface IWorkflowViewModelBuilder

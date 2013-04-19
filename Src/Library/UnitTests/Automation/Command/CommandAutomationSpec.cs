@@ -36,8 +36,8 @@ namespace NuPattern.Library.UnitTests.Automation.Command
         public class GivenACommandAutomation
         {
             private CommandAutomation commandAutomation;
-            private IFeatureCommand featureCommand;
-            private Mock<IDynamicBinding<IFeatureCommand>> binding;
+            private ICommand featureCommand;
+            private Mock<IDynamicBinding<ICommand>> binding;
             private Mock<IDynamicBindingContext> dynamicContext;
 
             [TestInitialize]
@@ -49,12 +49,12 @@ namespace NuPattern.Library.UnitTests.Automation.Command
 
                 var factory = new Mock<IBindingFactory>();
 
-                this.featureCommand = new Mock<IFeatureCommand>().Object;
+                this.featureCommand = new Mock<ICommand>().Object;
 
-                this.binding = new Mock<IDynamicBinding<IFeatureCommand>>();
+                this.binding = new Mock<IDynamicBinding<ICommand>>();
                 this.binding.Setup(b => b.Value).Returns(this.featureCommand);
 
-                factory.Setup(f => f.CreateBinding<IFeatureCommand>(It.IsAny<IBindingSettings>())).Returns(this.binding.Object);
+                factory.Setup(f => f.CreateBinding<ICommand>(It.IsAny<IBindingSettings>())).Returns(this.binding.Object);
 
                 this.dynamicContext = new Mock<IDynamicBindingContext> { DefaultValue = DefaultValue.Mock };
                 this.binding.Setup(x => x.CreateDynamicContext()).Returns(this.dynamicContext.Object);

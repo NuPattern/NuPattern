@@ -3,9 +3,9 @@
 namespace NuPattern.Runtime.Guidance
 {
     /// <summary>
-    /// A binding to a feature command
+    /// A binding to a guidance extension command
     /// </summary>
-    public interface ICommandBinding : IBinding<IFeatureCommand>
+    public interface ICommandBinding : IBinding<ICommand>
     {
         /// <summary>
         /// Gets or sets the name of the binding.

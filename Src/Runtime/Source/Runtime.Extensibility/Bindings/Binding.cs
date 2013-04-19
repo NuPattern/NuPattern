@@ -22,37 +22,37 @@ namespace NuPattern.Runtime.Bindings
     {
         private Dictionary<string, BindingResult> evaluationResults = new Dictionary<string, BindingResult>();
         private ITraceSource tracer;
-        private IFeatureCompositionService featureComposition;
+        private INuPatternCompositionService composition;
         private PropertyBinding[] propertyBindings;
-        private Lazy<T, IFeatureComponentMetadata> lazyValue;
+        private Lazy<T, IComponentMetadata> lazyValue;
         private string userMessage;
         private string componentTypeId;
 
         /// <summary>
         /// Creates a new instance of the <see cref="Binding{T}"/> class.
         /// </summary>
-        /// <param name="featureComposition"></param>
+        /// <param name="composition"></param>
         /// <param name="componentTypeId"></param>
         /// <param name="propertyBindings"></param>
-        public Binding(IFeatureCompositionService featureComposition, string componentTypeId, params PropertyBinding[] propertyBindings)
+        public Binding(INuPatternCompositionService composition, string componentTypeId, params PropertyBinding[] propertyBindings)
         {
-            Guard.NotNull(() => featureComposition, featureComposition);
+            Guard.NotNull(() => composition, composition);
             Guard.NotNullOrEmpty(() => componentTypeId, componentTypeId);
 
             this.componentTypeId = componentTypeId;
-            this.featureComposition = featureComposition;
+            this.composition = composition;
             this.propertyBindings = propertyBindings;
             this.InitializeTracer();
 
             ResolveComponentTypeId();
 
-            featureComposition.SatisfyImportsOnce(this);
+            composition.SatisfyImportsOnce(this);
         }
 
         private void ResolveComponentTypeId()
         {
-            this.lazyValue = featureComposition.GetExports<T, IFeatureComponentMetadata>()
-                        .FromFeaturesCatalog()
+            this.lazyValue = composition.GetExports<T, IComponentMetadata>()
+                        .FromComponentCatalog()
                         .FirstOrDefault(component => component.Metadata.Id == componentTypeId);
         }
 
@@ -65,11 +65,11 @@ namespace NuPattern.Runtime.Bindings
         }
 
         /// <summary>
-        /// Gets the <see cref="IFeatureCompositionService"/> allowing access to MEF.
+        /// Gets the <see cref="INuPatternCompositionService"/> allowing access to MEF.
         /// </summary>
-        protected IFeatureCompositionService FeatureComposition
+        protected INuPatternCompositionService CompositionService
         {
-            get { return this.featureComposition; }
+            get { return this.composition; }
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NuPattern.Runtime.Bindings
         /// <returns><see langword="true"/>, if the evaluation of the binding succeded; otherwise <see langword="false"/>.</returns>
         public virtual bool Evaluate()
         {
-            if (FeatureManagerSettings.VerboseBindingTracing)
+            if (GuidanceManagerSettings.VerboseBindingTracing)
             {
                 tracer.TraceVerbose("Evaluating binding {0}",
                                     this.lazyValue == null ? this.ToString() : this.lazyValue.Metadata.Id, this);
@@ -151,7 +151,7 @@ namespace NuPattern.Runtime.Bindings
                 if (editable != null)
                     editable.BeginEdit();
 
-                featureComposition.SatisfyImportsOnce(this.Value);
+                composition.SatisfyImportsOnce(this.Value);
                 evaluationResult = this.EvaluateProperties();
 
                 if (evaluationResult)
@@ -180,7 +180,7 @@ namespace NuPattern.Runtime.Bindings
 
             this.HasErrors = !evaluationResult;
 
-            if (FeatureManagerSettings.VerboseBindingTracing)
+            if (GuidanceManagerSettings.VerboseBindingTracing)
             {
                 tracer.TraceData(TraceEventType.Verbose, 0, this);
             }
@@ -237,13 +237,13 @@ namespace NuPattern.Runtime.Bindings
 
         private void InitializeTracer()
         {
-            var featureManager = featureComposition.GetExportedValueOrDefault<IFeatureManager>();
-            if (featureManager != null)
+            var guidanceManager = composition.GetExportedValueOrDefault<IGuidanceManager>();
+            if (guidanceManager != null)
             {
-                var featureRegistration = featureManager.FindFeature(this.GetType());
-                if (featureRegistration != null)
+                var registration = guidanceManager.FindGuidanceExtension(this.GetType());
+                if (registration != null)
                 {
-                    tracer = FeatureTracer.GetSourceFor<Binding<T>>(featureRegistration.FeatureId);
+                    tracer = GuidanceExtensionTracer.GetSourceFor<Binding<T>>(registration.ExtensionId);
                 }
             }
 

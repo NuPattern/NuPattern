@@ -24,7 +24,7 @@ namespace NuPattern.Runtime.Shell.Commands
         /// <summary>
         /// Defines a command to open the Guidance Explorer.
         /// </summary>
-        private class OpenGuidanceExplorerCommand : ICommand
+        private class OpenGuidanceExplorerCommand : NuPattern.VisualStudio.Commands.ICommand
         {
             private IPackageToolWindow toolWindow;
 

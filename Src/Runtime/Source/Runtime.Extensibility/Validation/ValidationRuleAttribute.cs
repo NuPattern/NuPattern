@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.Validation
     /// </summary>
     [CLSCompliant(false)]
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
-    public sealed class ValidationRuleAttribute : FeatureComponentAttribute
+    public sealed class ValidationRuleAttribute : ComponentAttribute
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidationRuleAttribute"/> class.

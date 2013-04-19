@@ -28,7 +28,7 @@ namespace NuPattern.Library.Automation
         /// <summary>
         /// Ensures specified command is either: present and configured correctly on the element, or removed from element, based on the evaluation of the given function. 
         /// </summary>
-        public static CommandSettings EnsureCommandAutomation<TCommand>(this IPatternElementSchema container, string instanceName, Func<bool> exists) where TCommand : IFeatureCommand
+        public static CommandSettings EnsureCommandAutomation<TCommand>(this IPatternElementSchema container, string instanceName, Func<bool> exists) where TCommand : ICommand
         {
             var settings = container.GetAutomationSettings<CommandSettings>(instanceName);
             if (exists() == true)

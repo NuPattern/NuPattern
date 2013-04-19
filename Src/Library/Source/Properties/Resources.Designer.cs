@@ -142,11 +142,11 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Guidance instance with feature id &apos;{0}&apos; not found in solution..
+        ///   Looks up a localized string similar to Guidance instance with id &apos;{0}&apos; was not found in solution..
         /// </summary>
-        internal static string ActivateFeatureCommand_TraceFeatureNotFound {
+        internal static string ActivateFeatureCommand_TraceGuidanceNotFound {
             get {
-                return ResourceManager.GetString("ActivateFeatureCommand_TraceFeatureNotFound", resourceCulture);
+                return ResourceManager.GetString("ActivateFeatureCommand_TraceGuidanceNotFound", resourceCulture);
             }
         }
         
@@ -178,7 +178,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activates the a shared instance of a feature, or instantiates it,  if it does not yet exist..
+        ///   Looks up a localized string similar to Activates the a shared instance of a guidance workflow, or instantiates it,  if it does not yet exist..
         /// </summary>
         internal static string ActivateOrInstantiateSharedFeatureCommand_Description {
             get {
@@ -187,7 +187,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activates or Instantiates a Shared Feature.
+        ///   Looks up a localized string similar to Activates or Instantiates a Shared Guidance Workflow.
         /// </summary>
         internal static string ActivateOrInstantiateSharedFeatureCommand_DisplayName {
             get {
@@ -196,16 +196,16 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Feature Id of the feature to activate (or instantiate)..
+        ///   Looks up a localized string similar to The Id of the extension containing the guidance to activate (or instantiate)..
         /// </summary>
-        internal static string ActivateOrInstantiateSharedFeatureCommand_FeatureId_Description {
+        internal static string ActivateOrInstantiateSharedFeatureCommand_GuidanceExtensionId_Description {
             get {
-                return ResourceManager.GetString("ActivateOrInstantiateSharedFeatureCommand_FeatureId_Description", resourceCulture);
+                return ResourceManager.GetString("ActivateOrInstantiateSharedFeatureCommand_GuidanceExtensionId_Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activated feature named &apos;{0}&apos;.
+        ///   Looks up a localized string similar to Activated guidance workflow named &apos;{0}&apos;.
         /// </summary>
         internal static string ActivateOrInstantiateSharedFeatureCommand_TraceActivate {
             get {
@@ -214,7 +214,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Feature with id &apos;{0}&apos; not registered..
+        ///   Looks up a localized string similar to Guidance Workflow with id &apos;{0}&apos; not registered..
         /// </summary>
         internal static string ActivateOrInstantiateSharedFeatureCommand_TraceFeatureNotFound {
             get {
@@ -223,7 +223,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Executing activation or instantiation of feature &apos;{0}&apos;.
+        ///   Looks up a localized string similar to Executing activation or instantiation of guidance workflow &apos;{0}&apos;.
         /// </summary>
         internal static string ActivateOrInstantiateSharedFeatureCommand_TraceInitial {
             get {
@@ -232,7 +232,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Instantiated new feature &apos;{0}&apos;, named &apos;{1}&apos;.
+        ///   Looks up a localized string similar to Instantiated new guidance workflow &apos;{0}&apos;, named &apos;{1}&apos;.
         /// </summary>
         internal static string ActivateOrInstantiateSharedFeatureCommand_TraceInstantiate {
             get {
@@ -2816,18 +2816,18 @@ namespace NuPattern.Library.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The identifier of the Feature Extension containing the guidance process to instantiate..
         /// </summary>
-        internal static string InstantiateFeatureCommand_FeatureId_Description {
+        internal static string InstantiateFeatureCommand_GuidanceExtensionId_Description {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_FeatureId_Description", resourceCulture);
+                return ResourceManager.GetString("InstantiateFeatureCommand_GuidanceExtensionId_Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Feature Id.
+        ///   Looks up a localized string similar to Extension Id.
         /// </summary>
-        internal static string InstantiateFeatureCommand_FeatureId_DisplayName {
+        internal static string InstantiateFeatureCommand_GuidanceExtensionId_DisplayName {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_FeatureId_DisplayName", resourceCulture);
+                return ResourceManager.GetString("InstantiateFeatureCommand_GuidanceExtensionId_DisplayName", resourceCulture);
             }
         }
         

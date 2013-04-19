@@ -12,7 +12,7 @@ namespace NuPattern.Runtime.Bindings
     [Export(typeof(IBindingFactory))]
     internal class BindingFactory : IBindingFactory
     {
-        private IFeatureCompositionService compositionService;
+        private INuPatternCompositionService compositionService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BindingFactory"/> class.
@@ -53,7 +53,7 @@ namespace NuPattern.Runtime.Bindings
             return new CompositionServiceBindingContext(this.compositionService);
         }
 
-        private PropertyBinding[] GetPropertyBindings(IEnumerable<IPropertyBindingSettings> properties, IFeatureCompositionService composition)
+        private PropertyBinding[] GetPropertyBindings(IEnumerable<IPropertyBindingSettings> properties, INuPatternCompositionService composition)
         {
             var bindings = new List<PropertyBinding>();
 

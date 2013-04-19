@@ -13,7 +13,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
         private GuidanceWorkflowContext context;
         private IServiceProvider serviceProvider;
         private GuidanceWorkflowViewModel currentWorkflow;
-        private IFeatureManager featureManager;
+        private IGuidanceManager guidanceManager;
 
         public GuidanceWorkflowPanelViewModel(GuidanceWorkflowContext context, IServiceProvider serviceProvider)
         {
@@ -22,15 +22,15 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
 
             this.context = context;
             this.serviceProvider = serviceProvider;
-            this.featureManager = context.FeatureExtension.FeatureManager;
+            this.guidanceManager = context.Extension.GuidanceManager;
             this.Workflows = new ObservableCollection<GuidanceWorkflowViewModel>();
-            this.SubscribeToFeaturesChanges(featureManager);
+            this.SubscribeToExtensionChanges(guidanceManager);
             this.InitializeCommands();
         }
 
         public event EventHandler<NodeChangedEventArgs> CurrentNodeChanged = (s, e) => { };
 
-        public ICommand CollapseAllCommand { get; private set; }
+        public System.Windows.Input.ICommand CollapseAllCommand { get; private set; }
 
         public GuidanceWorkflowViewModel CurrentWorkflow
         {
@@ -43,7 +43,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                 if (this.currentWorkflow != value)
                 {
                     var previousWorkflow = this.currentWorkflow;
-                    this.featureManager.ActiveFeature = value == null ? null : value.Feature;
+                    this.guidanceManager.ActiveGuidanceExtension = value == null ? null : value.Extension;
                     this.currentWorkflow = value;
                     this.OnPropertyChanged(() => this.CurrentWorkflow);
                     if (previousWorkflow != null && previousWorkflow.CurrentNode != null && value == null)
@@ -54,13 +54,13 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             }
         }
 
-        public ICommand ExpandAllCommand { get; private set; }
+        public System.Windows.Input.ICommand ExpandAllCommand { get; private set; }
 
         public ObservableCollection<GuidanceWorkflowViewModel> Workflows { get; private set; }
 
-        public ICommand GoToFocusedCommand { get; private set; }
+        public System.Windows.Input.ICommand GoToFocusedCommand { get; private set; }
 
-        public ICommand RefreshGraphCommand { get; private set; }
+        public System.Windows.Input.ICommand RefreshGraphCommand { get; private set; }
 
         private void InitializeCommands()
         {
@@ -94,7 +94,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             this.CurrentNodeChanged(this, new NodeChangedEventArgs(this.CurrentWorkflow.CurrentNode.Node));
         }
 
-        private void SetWorkflows(IEnumerable<IFeatureExtension> features)
+        private void SetWorkflows(IEnumerable<IGuidanceExtension> features)
         {
             // Match the untouched ViewModels
             var inmutedWorkflows = this.Workflows.Where(w => features.Any(f => f.GuidanceWorkflow == w.Model));
@@ -114,7 +114,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                 {
                     var workflow = new GuidanceWorkflowViewModel(new GuidanceWorkflowContext
                         {
-                            FeatureExtension = feature,
+                            Extension = feature,
                             UserMessageService = this.context.UserMessageService,
                         }, this.serviceProvider);
                     this.Workflows.Add(workflow);
@@ -128,21 +128,21 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             }
         }
 
-        private void SubscribeToFeaturesChanges(IFeatureManager featureManager)
+        private void SubscribeToExtensionChanges(IGuidanceManager guidanceManager)
         {
-            featureManager.InstantiatedFeaturesChanged += (s, e) => this.SetWorkflows(featureManager.InstantiatedFeatures);
-            this.SetWorkflows(featureManager.InstantiatedFeatures);
+            guidanceManager.InstantiatedExtensionsChanged += (s, e) => this.SetWorkflows(guidanceManager.InstantiatedGuidanceExtensions);
+            this.SetWorkflows(guidanceManager.InstantiatedGuidanceExtensions);
 
-            featureManager.ActiveFeatureChanged += (s, e) =>
+            guidanceManager.ActiveExtensionChanged += (s, e) =>
             {
-                if (featureManager.ActiveFeature == null)
+                if (guidanceManager.ActiveGuidanceExtension == null)
                     this.CurrentWorkflow = null;
                 else
                 {
-                    if (featureManager.ActiveFeature.GuidanceWorkflow != null)
+                    if (guidanceManager.ActiveGuidanceExtension.GuidanceWorkflow != null)
                     {
-                        this.CurrentWorkflow = this.Workflows.FirstOrDefault(w => w.Model == featureManager.ActiveFeature.GuidanceWorkflow);
-                        GuidanceConditionsEvaluator.EvaluateGraph(featureManager.ActiveFeature);
+                        this.CurrentWorkflow = this.Workflows.FirstOrDefault(w => w.Model == guidanceManager.ActiveGuidanceExtension.GuidanceWorkflow);
+                        GuidanceConditionsEvaluator.EvaluateGraph(guidanceManager.ActiveGuidanceExtension);
                     }
                 }
             };

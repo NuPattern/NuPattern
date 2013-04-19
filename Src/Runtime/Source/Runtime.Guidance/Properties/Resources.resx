@@ -117,25 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FeatureManager_DefaultFeaturesProjectName" xml:space="preserve">
+  <data name="GuidanceManager_DefaultExtensionProjectName" xml:space="preserve">
     <value>Models</value>
   </data>
-  <data name="FeatureManager_DuplicateFeatureName" xml:space="preserve">
-    <value>Feature with name '{0}' already exists in the solution.</value>
+  <data name="GuidanceManager_DuplicateGuidanceName" xml:space="preserve">
+    <value>Guidance extension with name '{0}' already exists in the solution.</value>
   </data>
-  <data name="FeatureManager_FeatureNotInstalled" xml:space="preserve">
-    <value>Feature with identifier '{0}' is not installed or it is not properly registered.</value>
+  <data name="GuidanceManager_ExtensionNotInstalled" xml:space="preserve">
+    <value>Guidance extension with identifier '{0}' is not installed or it is not properly registered.</value>
   </data>
-  <data name="FeatureManager_MustInitializeSolutionState" xml:space="preserve">
+  <data name="GuidanceManager_MustInitializeSolutionState" xml:space="preserve">
     <value>Manager has not been initialized with a solution state yet.</value>
   </data>
-  <data name="FeatureManager_NullGuidanceWorkflow" xml:space="preserve">
-    <value>The feature guidance workflow cannot be null.</value>
+  <data name="GuidanceManager_NullGuidanceWorkflow" xml:space="preserve">
+    <value>The guidance workflow cannot be null.</value>
   </data>
   <data name="UserAcceptanceBinding_UserMessage" xml:space="preserve">
     <value>Requires User Acceptance</value>
   </data>
-  <data name="FeatureManager_FeatureAlreadyInstantiated" xml:space="preserve">
-    <value>Feature '{0}' instance name '{1}' is already instantiated.</value>
+  <data name="GuidanceManager_ExtensionAlreadyInstantiated" xml:space="preserve">
+    <value>Guidance extension'{0}' instance name '{1}' is already instantiated.</value>
   </data>
 </root>

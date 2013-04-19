@@ -48,7 +48,7 @@ namespace NuPattern.Library.Automation
         /// Initializes a new instance of the <see cref="MenuSettingsValidations"/> class.
         /// </summary>
         [ImportingConstructor]
-        public MenuSettingsValidations(IFeatureCompositionService composition)
+        public MenuSettingsValidations(INuPatternCompositionService composition)
         {
             Guard.NotNull(() => composition, composition);
 
@@ -56,8 +56,8 @@ namespace NuPattern.Library.Automation
             // TODO: this could be refactored into a separate global service.
             if (ValueProviders == null || Conditions == null || Events == null)
             {
-                var valueProviders = composition.GetExports<IValueProvider, IFeatureComponentMetadata>();
-                var conditions = composition.GetExports<ICondition, IFeatureComponentMetadata>();
+                var valueProviders = composition.GetExports<IValueProvider, IComponentMetadata>();
+                var conditions = composition.GetExports<ICondition, IComponentMetadata>();
                 var events = composition.GetExports<IObservableEvent, IIdMetadata>();
 
                 ValueProviders = valueProviders.ToLookup(item => item.Metadata.Id, item => item.Metadata.ExportingType);

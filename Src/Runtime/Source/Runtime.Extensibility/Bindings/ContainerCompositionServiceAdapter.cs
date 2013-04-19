@@ -8,10 +8,10 @@ using NuPattern.Runtime.Composition;
 namespace NuPattern.Runtime.Bindings
 {
     /// <summary>
-    /// Exposes the <see cref="IFeatureCompositionService"/> API on top of 
+    /// Exposes the <see cref="INuPatternCompositionService"/> API on top of 
     /// a <see cref="CompositionContainer"/>.
     /// </summary>
-    internal class ContainerCompositionServiceAdapter : IFeatureCompositionService
+    internal class ContainerCompositionServiceAdapter : INuPatternCompositionService
     {
         private CompositionContainer container;
 

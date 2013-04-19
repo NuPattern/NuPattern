@@ -24,7 +24,7 @@ namespace NuPattern.Library.Automation
         /// Gets the feature manager.
         /// </summary>
         [Import]
-        internal IFeatureManager FeatureManager { get; set; }
+        internal IGuidanceManager GuidanceManager { get; set; }
 
         [RuntimeValidationExtension]
         [ValidationMethod(CustomCategory = ValidationConstants.RuntimeValidationCategory)]
@@ -32,7 +32,7 @@ namespace NuPattern.Library.Automation
         {
             try
             {
-                if (this.FeatureManager == null)
+                if (this.GuidanceManager == null)
                 {
                     return;
                 }
@@ -40,7 +40,7 @@ namespace NuPattern.Library.Automation
                 var reference = element.TryGetReference(ReferenceKindConstants.Guidance);
                 if (!string.IsNullOrEmpty(reference))
                 {
-                    var uri = GuidanceReference.GetResolvedReferences(element, this.FeatureManager).FirstOrDefault();
+                    var uri = GuidanceReference.GetResolvedReferences(element, this.GuidanceManager).FirstOrDefault();
                     if (uri == null)
                     {
                         context.LogError(

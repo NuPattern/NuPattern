@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using System.Windows.Navigation;
 
 namespace NuPattern.Runtime.Guidance.UI
@@ -27,13 +26,13 @@ namespace NuPattern.Runtime.Guidance.UI
             this.webBrowser.Navigating += this.OnNavigating;
 
             this.Content = this.webBrowser;
-            FeatureCallContext.Current.GuidanceBrowserControl = this;
+            GuidanceCallContext.Current.GuidanceBrowserControl = this;
 
         }
 
-        public ICommand Command
+        public System.Windows.Input.ICommand Command
         {
-            get { return (ICommand)this.GetValue(CommandProperty); }
+            get { return (System.Windows.Input.ICommand)this.GetValue(CommandProperty); }
             set { this.SetValue(CommandProperty, value); }
         }
 
@@ -78,9 +77,9 @@ namespace NuPattern.Runtime.Guidance.UI
                 //
                 // Anyway, we must make sure this is set before the call to Execute
                 //
-                if (FeatureCallContext.Current != null &&
-                    FeatureCallContext.Current.GuidanceBrowserControl == null)
-                    FeatureCallContext.Current.GuidanceBrowserControl = this;
+                if (GuidanceCallContext.Current != null &&
+                    GuidanceCallContext.Current.GuidanceBrowserControl == null)
+                    GuidanceCallContext.Current.GuidanceBrowserControl = this;
 
                 this.Command.Execute(this.CommandParameter);
             }

@@ -40,7 +40,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
         private IUserMessageService UserMessageService { get; set; }
 
         [Import]
-        private IFeatureManager FeatureManager { get; set; }
+        private IGuidanceManager GuidanceManager { get; set; }
 
         [Import(typeof(SVsServiceProvider))]
         private IServiceProvider ServiceProvider { get; set; }
@@ -65,7 +65,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
             var context = new GuidanceWorkflowContext
             {
-                FeatureExtension = this.FeatureManager.ActiveFeature,
+                Extension = this.GuidanceManager.ActiveGuidanceExtension,
                 UserMessageService = this.UserMessageService,
             };
 

@@ -40,13 +40,13 @@ namespace NuPattern.Runtime.Guidance.Workflow
         IList<IConditionalNode> AllNodesToEvaluate { get; }
 
         /// <summary>
-        /// Gets the identifier of the owning feature
+        /// Gets the identifier of the owning extension
         /// </summary>
-        string OwningFeatureId { get; set; }
+        string OwnerId { get; set; }
 
         /// <summary>
-        /// Gets the owning feature.
+        /// Gets the owning guidance extension.
         /// </summary>
-        IFeatureExtension OwningFeature { get; set; }
+        IGuidanceExtension OwningExtension { get; set; }
     }
 }

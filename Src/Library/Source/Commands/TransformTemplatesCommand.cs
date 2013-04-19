@@ -25,7 +25,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("TransformTemplatesCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class TransformTemplatesCommand : FeatureCommand
+    public class TransformTemplatesCommand : NuPattern.Runtime.Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<TransformTemplatesCommand>();
 

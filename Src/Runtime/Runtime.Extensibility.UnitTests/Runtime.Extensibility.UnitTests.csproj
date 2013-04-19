@@ -91,7 +91,7 @@
     <Compile Include="Binding\LazyBindingSpec.cs" />
     <Compile Include="Binding\PropertyBindingSettingsExtensionsSpec.cs" />
     <Compile Include="CodeGen\CodeGenerationSpec.cs" />
-    <Compile Include="Design\FeatureExtensionsTypeConverterSpec.cs" />
+    <Compile Include="Design\GuidanceExtensionsTypeConverterSpec.cs" />
     <Compile Include="Binding\BindingSerializerSpec.cs" />
     <Compile Include="CodeGen\ProductCodeGenerationSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

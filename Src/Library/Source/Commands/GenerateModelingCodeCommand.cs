@@ -26,7 +26,7 @@ namespace NuPattern.Library.Commands
     [DisplayNameResource("GenerateModelingCodeCommand_DisplayName", typeof(Resources))]
     [CategoryResource("AutomationCategory_DslAutomation", typeof(Resources))]
     [DescriptionResource("GenerateModelingCodeCommand_Description", typeof(Resources))]
-    public class GenerateModelingCodeCommand : FeatureCommand
+    public class GenerateModelingCodeCommand : Command
     {
         private const bool DefaultSantizeName = true;
         private const string DefaultTargetBuildAction = "";

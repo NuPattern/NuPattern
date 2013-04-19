@@ -22,7 +22,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
     [DescriptionResource("InstantiateFeatureCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class InstantiateFeatureCommand : FeatureCommand
+    public class InstantiateFeatureCommand : Command
     {
         private const bool DefaultActivateOnInstantiation = true;
         private const bool DefaultSharedInstance = false;
@@ -39,14 +39,14 @@ namespace NuPattern.Library.Commands
         }
 
         /// <summary>
-        /// Gets or sets the feature id.
+        /// Gets or sets the guidance extension id.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [TypeConverter(typeof(FeatureExtensionsTypeConverter))]
+        [TypeConverter(typeof(GuidanceExtensionsTypeConverter))]
         [Editor(typeof(StandardValuesEditor), typeof(UITypeEditor))]
-        [DisplayNameResource("InstantiateFeatureCommand_FeatureId_DisplayName", typeof(Resources))]
-        [DescriptionResource("InstantiateFeatureCommand_FeatureId_Description", typeof(Resources))]
-        public string FeatureId { get; set; }
+        [DisplayNameResource("InstantiateFeatureCommand_GuidanceExtensionId_DisplayName", typeof(Resources))]
+        [DescriptionResource("InstantiateFeatureCommand_GuidanceExtensionId_Description", typeof(Resources))]
+        public string GuidanceExtensionId { get; set; }
 
         /// <summary>
         /// Gets or sets the default instance name.
@@ -79,11 +79,11 @@ namespace NuPattern.Library.Commands
         public IProductElement CurrentElement { get; set; }
 
         /// <summary>
-        /// Gets or sets the feature extension manager.
+        /// Gets or sets the guidance extension manager.
         /// </summary>
         [Required]
         [Import]
-        public IFeatureManager FeatureManager { get; set; }
+        public IGuidanceManager GuidanceManager { get; set; }
 
         /// <summary>
         /// Gets or sets the service provider.
@@ -101,18 +101,18 @@ namespace NuPattern.Library.Commands
 
             tracer.TraceInformation(
                 Resources.InstantiateFeatureCommand_TraceInitial,
-                this.CurrentElement.InstanceName, this.FeatureId, this.DefaultInstanceName, this.SharedInstance, this.ActivateOnInstantiation);
+                this.CurrentElement.InstanceName, this.GuidanceExtensionId, this.DefaultInstanceName, this.SharedInstance, this.ActivateOnInstantiation);
 
             // Ensure the feature type exists
             var featureRegistration =
-                this.FeatureManager.InstalledFeatures.FirstOrDefault(
-                    feature => feature.FeatureId.Equals(this.FeatureId, StringComparison.OrdinalIgnoreCase));
+                this.GuidanceManager.InstalledGuidanceExtensions.FirstOrDefault(
+                    feature => feature.ExtensionId.Equals(this.GuidanceExtensionId, StringComparison.OrdinalIgnoreCase));
             if (featureRegistration != null)
             {
                 string instanceName = string.Empty;
 
                 // Ensure we are not sharing
-                var sharedInstance = this.FeatureManager.InstantiatedFeatures.FirstOrDefault(f => f.FeatureId.Equals(this.FeatureId, StringComparison.OrdinalIgnoreCase));
+                var sharedInstance = this.GuidanceManager.InstantiatedGuidanceExtensions.FirstOrDefault(f => f.ExtensionId.Equals(this.GuidanceExtensionId, StringComparison.OrdinalIgnoreCase));
                 if (this.SharedInstance && sharedInstance != null)
                 {
                     instanceName = sharedInstance.InstanceName;
@@ -123,32 +123,32 @@ namespace NuPattern.Library.Commands
                         tracer.TraceInformation(
                             Resources.InstantiateFeatureCommand_TraceActivateShared, this.CurrentElement.InstanceName, instanceName);
 
-                        this.FeatureManager.ActivateGuidanceInstance(this.ServiceProvider, sharedInstance);
+                        this.GuidanceManager.ActivateGuidanceInstance(this.ServiceProvider, sharedInstance);
                     }
                 }
                 else
                 {
                     // Create a default name
-                    instanceName = this.FeatureManager.GetUniqueInstanceName(featureRegistration.DefaultName);
+                    instanceName = this.GuidanceManager.GetUniqueInstanceName(featureRegistration.DefaultName);
                     if (!string.IsNullOrEmpty(this.DefaultInstanceName))
                     {
-                        instanceName = this.FeatureManager.GetUniqueInstanceName(this.DefaultInstanceName);
+                        instanceName = this.GuidanceManager.GetUniqueInstanceName(this.DefaultInstanceName);
 
                         tracer.TraceVerbose(
                             Resources.InstantiateFeatureCommand_TraceCreateUniqueInstanceName, this.CurrentElement.InstanceName, instanceName);
                     }
 
                     tracer.TraceInformation(
-                        Resources.InstantiateFeatureCommand_TraceInstantiateNew, this.CurrentElement.InstanceName, this.FeatureId, instanceName);
+                        Resources.InstantiateFeatureCommand_TraceInstantiateNew, this.CurrentElement.InstanceName, this.GuidanceExtensionId, instanceName);
 
                     // Instantiate the feature and activate it.
-                    var feature = this.FeatureManager.Instantiate(this.FeatureId, instanceName);
+                    var feature = this.GuidanceManager.Instantiate(this.GuidanceExtensionId, instanceName);
                     if (this.ActivateOnInstantiation)
                     {
                         tracer.TraceInformation(
                             Resources.InstantiateFeatureCommand_TraceActivateNew, this.CurrentElement.InstanceName, instanceName);
 
-                        this.FeatureManager.ActivateGuidanceInstance(this.ServiceProvider, feature);
+                        this.GuidanceManager.ActivateGuidanceInstance(this.ServiceProvider, feature);
                     }
 
                     instanceName = feature.InstanceName;
@@ -163,7 +163,7 @@ namespace NuPattern.Library.Commands
             else
             {
                 tracer.TraceWarning(
-                    Resources.InstantiateFeatureCommand_TraceFeatureNotFound, this.CurrentElement.InstanceName, this.FeatureId);
+                    Resources.InstantiateFeatureCommand_TraceFeatureNotFound, this.CurrentElement.InstanceName, this.GuidanceExtensionId);
             }
         }
     }

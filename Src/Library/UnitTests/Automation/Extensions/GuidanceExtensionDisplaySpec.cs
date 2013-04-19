@@ -48,7 +48,7 @@ namespace NuPattern.Library.UnitTests.Automation.Guidance
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void ThenFeatureIdIsNotExist()
+            public void ThenGuidanceExtensionIdIsNotExist()
             {
                 var descriptor = TypedDescriptor.GetProperty(this.guidanceExtension, extension => extension.GuidanceFeatureId);
 

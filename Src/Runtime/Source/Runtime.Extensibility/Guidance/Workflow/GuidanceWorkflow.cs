@@ -25,13 +25,13 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <summary>
         /// Gets the identifier of the owning feature
         /// </summary>
-        public virtual string OwningFeatureId { get; set; }
+        public virtual string OwnerId { get; set; }
 
         /// <summary>
         /// Gets the Owning feature
         /// </summary>
         [CLSCompliant(false)]
-        public virtual IFeatureExtension OwningFeature { get; set; }
+        public virtual IGuidanceExtension OwningExtension { get; set; }
 
         /// <summary>
         /// Gets all the nodes to evaluate in the workflow

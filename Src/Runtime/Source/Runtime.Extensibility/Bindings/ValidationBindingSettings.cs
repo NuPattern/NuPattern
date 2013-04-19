@@ -22,7 +22,7 @@ namespace NuPattern.Runtime.Bindings
         /// Gets or sets the identifier for the runtime implementation type of the binding.
         /// </summary>
         [DataMember]
-        [TypeConverter(typeof(FeatureComponentTypeConverter<IValidationRule>))]
+        [TypeConverter(typeof(NuPatternComponentTypeConverter<IValidationRule>))]
         public override string TypeId
         {
             get { return base.TypeId; }

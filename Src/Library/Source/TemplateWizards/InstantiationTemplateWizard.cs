@@ -150,7 +150,7 @@ namespace NuPattern.Library.TemplateWizards
 
             if (this.PatternManager == null)
             {
-                FeatureCompositionService.Instance.SatisfyImportsOnce(this);
+                NuPatternCompositionService.Instance.SatisfyImportsOnce(this);
             }
 
             Guard.NotNull(() => this.PatternManager, this.PatternManager);

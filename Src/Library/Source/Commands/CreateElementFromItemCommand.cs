@@ -15,7 +15,7 @@ namespace NuPattern.Library.Commands
     /// Creates a new instance of a child element for each item.
     /// </summary>
     [CLSCompliant(false)]
-    public abstract class CreateElementFromItemCommand : FeatureCommand
+    public abstract class CreateElementFromItemCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateElementFromItemCommand>();
 

@@ -16,10 +16,10 @@ namespace NuPattern.Runtime.Guidance.UriProviders
         private Dictionary<Uri, ILaunchPoint> launchPoints;
 
         [Import]
-        private IFeatureManager FeatureManager { get; set; }
+        private IGuidanceManager GudianceManager { get; set; }
 
         [Import]
-        private IFeatureCompositionService FeatureComposition { get; set; }
+        private INuPatternCompositionService CompositionService { get; set; }
 
         public string UriScheme
         {
@@ -54,13 +54,13 @@ namespace NuPattern.Runtime.Guidance.UriProviders
 
         private void Initialize()
         {
-            var exports = this.FeatureComposition.GetExports<ILaunchPoint, IFeatureComponentMetadata>();
+            var exports = this.CompositionService.GetExports<ILaunchPoint, IComponentMetadata>();
             this.launchPoints = new Dictionary<Uri, ILaunchPoint>();
             foreach (var export in exports)
             {
                 var launchPoint = export.Value;
-                var feature = this.FeatureManager.FindFeature(launchPoint.GetType());
-                var uri = new Uri(this.UriScheme + Uri.SchemeDelimiter + feature.FeatureId + "/" + export.Metadata.Id);
+                var feature = this.GudianceManager.FindGuidanceExtension(launchPoint.GetType());
+                var uri = new Uri(this.UriScheme + Uri.SchemeDelimiter + feature.ExtensionId + "/" + export.Metadata.Id);
 
                 tracer.TraceVerbose("Registering launch point uri {0}", uri);
                 this.launchPoints.Add(uri, launchPoint);

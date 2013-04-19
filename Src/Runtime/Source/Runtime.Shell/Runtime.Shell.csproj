@@ -138,7 +138,7 @@
       <ItemGuid>ae551abf-1da3-405b-8d82-c2ccb986c7f8</ItemGuid>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Guidance\Feature.cs" />
+    <Compile Include="Guidance\GuidanceExtension.cs" />
     <Compile Include="ToolWindows\IPackageToolWindow.cs" />
     <Compile Include="OptionPages\TraceOptionsPage.cs">
       <SubType>Component</SubType>

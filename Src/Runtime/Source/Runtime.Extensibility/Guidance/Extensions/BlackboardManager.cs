@@ -9,7 +9,7 @@ namespace NuPattern.Runtime.Guidance.Extensions
 {
     /// <summary>
     /// BlackboardManager provides a single, global, key/string value pair API available to all
-    /// FeatureExtension instances.
+    /// guidance extension instances.
     /// Updated 2010-05-19 to not persist until IsPersistent is set to true
     /// <para/>
     /// Note:  It is *not* threadsafe (at least not yet) so do not WRITE to the Blackboard in background threads
@@ -51,7 +51,7 @@ namespace NuPattern.Runtime.Guidance.Extensions
 
         /// <summary>
         /// Initializes a new instance of the BlackboardManager class.
-        /// Used by MEF to instantiate BlackboardManager in Feature.cs
+        /// Used by MEF to instantiate BlackboardManager in GuidanceExtension.cs
         /// </summary>
         public BlackboardManager()
         {
@@ -63,7 +63,7 @@ namespace NuPattern.Runtime.Guidance.Extensions
         /// Gets the singleton instance of the Blackboard
         /// Static property returning singleton instance of BlackboardManager.
         /// Note:  We do it this way instead of accessing the instance of BlackboardManager
-        /// saved in Feature.cs because commands can't directly reference the specific feature
+        /// saved in GuidanceExtension.cs because commands can't directly reference the specific guidance extension
         /// type since they are in a referred-to assembly.
         /// </summary>
         public static BlackboardManager Current
@@ -83,7 +83,7 @@ namespace NuPattern.Runtime.Guidance.Extensions
                 this.isPersisted = value;
                 if (value)
                 {
-                    // Note: processSolutionFolder both creates the FeatureExtensionData solution folder (if necessary)
+                    // Note: processSolutionFolder both creates the GuidanceExtensionData solution folder (if necessary)
                     // and returns the path to the Blackboard File
                     this.blackboardFileName = this.ProcessSolutionFolder(this.Solution);
                     this.WriteBlackboardDataToFile();
@@ -132,7 +132,7 @@ namespace NuPattern.Runtime.Guidance.Extensions
 
         /// <summary>
         /// Reinitializes the Blackboard to an empty state.
-        /// Called by the FeatureManager.Close method.
+        /// Called by the GuidanceManager.Close method.
         /// </summary>
         public void Clear()
         {

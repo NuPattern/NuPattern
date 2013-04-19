@@ -123,8 +123,8 @@
   <data name="ActivateFeatureCommand_DisplayName" xml:space="preserve">
     <value>Activates an Associated Guidance Workflow.</value>
   </data>
-  <data name="ActivateFeatureCommand_TraceFeatureNotFound" xml:space="preserve">
-    <value>Guidance instance with feature id '{0}' not found in solution.</value>
+  <data name="ActivateFeatureCommand_TraceGuidanceNotFound" xml:space="preserve">
+    <value>Guidance instance with id '{0}' was not found in solution.</value>
   </data>
   <data name="AddCommandCommand_AddCommandCommandText" xml:space="preserve">
     <value>Add New Command</value>
@@ -201,11 +201,11 @@
   <data name="InstantiateFeatureCommand_DisplayName" xml:space="preserve">
     <value>Instantiates an Associated Guidance Workflow.</value>
   </data>
-  <data name="InstantiateFeatureCommand_FeatureId_Description" xml:space="preserve">
+  <data name="InstantiateFeatureCommand_GuidanceExtensionId_Description" xml:space="preserve">
     <value>The identifier of the Feature Extension containing the guidance process to instantiate.</value>
   </data>
-  <data name="InstantiateFeatureCommand_FeatureId_DisplayName" xml:space="preserve">
-    <value>Feature Id</value>
+  <data name="InstantiateFeatureCommand_GuidanceExtensionId_DisplayName" xml:space="preserve">
+    <value>Extension Id</value>
   </data>
   <data name="InstantiateFeatureCommand_TraceFeatureNotFound" xml:space="preserve">
     <value>Installed feature for current element '{0} with identifier '{1}' not installed.</value>
@@ -1872,25 +1872,25 @@ Evaluation results:
     <value>Condition '{0}' evaluated to false with the following configuration:</value>
   </data>
   <data name="ActivateOrInstantiateSharedFeatureCommand_Description" xml:space="preserve">
-    <value>Activates the a shared instance of a feature, or instantiates it,  if it does not yet exist.</value>
+    <value>Activates the a shared instance of a guidance workflow, or instantiates it,  if it does not yet exist.</value>
   </data>
   <data name="ActivateOrInstantiateSharedFeatureCommand_DisplayName" xml:space="preserve">
-    <value>Activates or Instantiates a Shared Feature</value>
+    <value>Activates or Instantiates a Shared Guidance Workflow</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_FeatureId_Description" xml:space="preserve">
-    <value>The Feature Id of the feature to activate (or instantiate).</value>
+  <data name="ActivateOrInstantiateSharedFeatureCommand_GuidanceExtensionId_Description" xml:space="preserve">
+    <value>The Id of the extension containing the guidance to activate (or instantiate).</value>
   </data>
   <data name="ActivateOrInstantiateSharedFeatureCommand_TraceActivate" xml:space="preserve">
-    <value>Activated feature named '{0}'</value>
+    <value>Activated guidance workflow named '{0}'</value>
   </data>
   <data name="ActivateOrInstantiateSharedFeatureCommand_TraceFeatureNotFound" xml:space="preserve">
-    <value>Feature with id '{0}' not registered.</value>
+    <value>Guidance Workflow with id '{0}' not registered.</value>
   </data>
   <data name="ActivateOrInstantiateSharedFeatureCommand_TraceInitial" xml:space="preserve">
-    <value>Executing activation or instantiation of feature '{0}'</value>
+    <value>Executing activation or instantiation of guidance workflow '{0}'</value>
   </data>
   <data name="ActivateOrInstantiateSharedFeatureCommand_TraceInstantiate" xml:space="preserve">
-    <value>Instantiated new feature '{0}', named '{1}'</value>
+    <value>Instantiated new guidance workflow '{0}', named '{1}'</value>
   </data>
   <data name="ActivateOrInstantiateSharedFeatureCommand_TraceShowingGuidanceExplorer" xml:space="preserve">
     <value>Opening guidance windows.</value>

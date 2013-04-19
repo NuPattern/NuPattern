@@ -38,7 +38,7 @@ namespace NuPattern.Library.UnitTests.Automation.Command
 
                 validationContext = new ValidationContext(ValidationCategories.Save, this.settings);
 
-                this.validators = new CommandSettingsValidations(Mock.Of<IFeatureCompositionService>());
+                this.validators = new CommandSettingsValidations(Mock.Of<INuPatternCompositionService>());
             }
 
             [TestCleanup]

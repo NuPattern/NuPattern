@@ -6,13 +6,13 @@ namespace NuPattern.Runtime.Guidance
     /// <summary>
     /// A binding for a command
     /// </summary>
-    internal class CommandBinding : Binding<IFeatureCommand>, ICommandBinding
+    internal class CommandBinding : Binding<ICommand>, ICommandBinding
     {
         /// <summary>
         /// Creates a new instance of the <see cref="CommandBinding"/> class.
         /// </summary>
         public CommandBinding(
-            IFeatureCompositionService featureComposition,
+            INuPatternCompositionService featureComposition,
             string componentTypeId,
             params PropertyBinding[] propertyBindings)
             : base(featureComposition, componentTypeId, propertyBindings)

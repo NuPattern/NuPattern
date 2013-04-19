@@ -13,9 +13,9 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
         public GuidanceBrowserViewModel ViewModel { get; internal set; }
 
         /// <summary>
-        /// Gets the feature manager.
+        /// Gets the guidance manager.
         /// </summary>
-        public IFeatureManager FeatureManager { get; internal set; }
+        public IGuidanceManager GuidanceManager { get; internal set; }
 
         /// <summary>
         /// Gets the URI reference service

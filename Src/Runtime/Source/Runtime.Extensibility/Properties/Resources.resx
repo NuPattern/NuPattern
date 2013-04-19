@@ -138,7 +138,7 @@
   <data name="DynamicBinding_UnsupportedCompositionService" xml:space="preserve">
     <value>Dynamic context creation is only available for bindings created using the BindingFactory.</value>
   </data>
-  <data name="FeatureExtensionsTypeConverter_None" xml:space="preserve">
+  <data name="GuidanceExtensionsTypeConverter_None" xml:space="preserve">
     <value>(None)</value>
   </data>
   <data name="IconFilter" xml:space="preserve">
@@ -315,16 +315,16 @@
   <data name="DesignProperty_ToStringValueProviderFormat" xml:space="preserve">
     <value>(provided by: '{0}')</value>
   </data>
-  <data name="FeatureManagerExtensions_ErrorGuidanceInstantiationFailed" xml:space="preserve">
+  <data name="GuidanceManagerExtensions_ErrorGuidanceInstantiationFailed" xml:space="preserve">
     <value>Failed to create a new instance of the guidance workflow '{0} ({1})'. </value>
   </data>
-  <data name="FeatureManagerExtensions_ErrorNoRegistration" xml:space="preserve">
-    <value>Failed to activate an instance of the feature extension '{0}'. It is not installed.</value>
+  <data name="GuidanceManagerExtensions_ErrorNoRegistration" xml:space="preserve">
+    <value>Failed to activate an instance of the guidance extension '{0}'. It is not installed.</value>
   </data>
-  <data name="FeatureManagerExtensions_TraceShowingGuidanceWindows" xml:space="preserve">
+  <data name="GudianceManagerExtensions_TraceShowingGuidanceWindows" xml:space="preserve">
     <value>Showing guidance windows</value>
   </data>
-  <data name="FeatureManagerExtensions_TraceActivation" xml:space="preserve">
+  <data name="GuidanceManagerExtensions_TraceActivation" xml:space="preserve">
     <value>Activating guidance workflow '{0}'</value>
   </data>
   <data name="ImageUriEditor_EmptyItemsMessage" xml:space="preserve">
@@ -454,7 +454,7 @@ Please add a new or existing image file {0} to the project and try again.</value
   <data name="NodeState_Unknown" xml:space="preserve">
     <value>Unknown</value>
   </data>
-  <data name="FeatureComponentAttribute_DefaultCategory" xml:space="preserve">
+  <data name="GuidanceComponentAttribute_DefaultCategory" xml:space="preserve">
     <value>General</value>
   </data>
   <data name="DataAnnotationsValidator_ValidationFailed" xml:space="preserve">
@@ -475,7 +475,7 @@ Please add a new or existing image file {0} to the project and try again.</value
   <data name="GuidanceNode_ParameterNotEmpty" xml:space="preserve">
     <value>Parameter cannot be empty.</value>
   </data>
-  <data name="FeatureExtension_NoFeatureProjectTemplate" xml:space="preserve">
-    <value>Feature '{0}' project template could not be located. Please reinstall the feature.</value>
+  <data name="GuidanceExtension_NoProjectTemplate" xml:space="preserve">
+    <value>Guidance extension '{0}' project template could not be located. Please reinstall the extension.</value>
   </data>
 </root>

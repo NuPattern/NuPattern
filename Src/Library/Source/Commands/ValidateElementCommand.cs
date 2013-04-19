@@ -18,7 +18,7 @@ namespace NuPattern.Library.Commands
     [DescriptionResource("ValidateElementCommand_Description", typeof(Resources))]
     [DisplayNameResource("ValidateElementCommand_DisplayName", typeof(Resources))]
     [CLSCompliant(false)]
-    public class ValidateElementCommand : FeatureCommand
+    public class ValidateElementCommand : Command
     {
         private const bool DefaultValidateDescendants = true;
 

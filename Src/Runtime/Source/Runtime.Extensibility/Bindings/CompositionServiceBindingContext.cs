@@ -8,7 +8,7 @@ using NuPattern.Runtime.Properties;
 namespace NuPattern.Runtime.Bindings
 {
     /// <summary>
-    /// Implements a <see cref="IDynamicBindingContext"/> over an <see cref="IFeatureCompositionService"/> 
+    /// Implements a <see cref="IDynamicBindingContext"/> over an <see cref="INuPatternCompositionService"/> 
     /// so that dynamic exports can be added on top of it.
     /// </summary>
     /// <remarks>
@@ -20,7 +20,7 @@ namespace NuPattern.Runtime.Bindings
         /// <summary>
         /// Initializes a new instance of the <see cref="CompositionServiceBindingContext"/> class.
         /// </summary>
-        public CompositionServiceBindingContext(IFeatureCompositionService compositionService)
+        public CompositionServiceBindingContext(INuPatternCompositionService compositionService)
         {
             try
             {
@@ -34,10 +34,10 @@ namespace NuPattern.Runtime.Bindings
                 // TODO: \o/ when BlueTab-PLATU10 is fixed, this workaround should be removed.
                 // Note: we don't go straight for this behavior because otherwise anything that uses dynamic 
                 // bindings would become untestable automatically.
-                var defaultImplementation = compositionService as FeatureCompositionService;
+                var defaultImplementation = compositionService as NuPatternCompositionService;
                 if (defaultImplementation != null)
                 {
-                    var containerField = typeof(FeatureCompositionService).GetField("container", BindingFlags.Instance | BindingFlags.NonPublic);
+                    var containerField = typeof(NuPatternCompositionService).GetField("container", BindingFlags.Instance | BindingFlags.NonPublic);
                     if (containerField == null)
                     {
                         throw new NotSupportedException(Resources.BindingFactory_DefaultCompositionServiceChanged);

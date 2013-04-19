@@ -22,7 +22,7 @@ namespace NuPattern.Library.Commands
         public static void SetPropertyValue<TFeatureCommand, TProperty>(
             this CommandSettings commandSettings,
             Expression<Func<TFeatureCommand, TProperty>> expression,
-            object value) where TFeatureCommand : IFeatureCommand
+            object value) where TFeatureCommand : ICommand
         {
             var descriptors = TypeDescriptor.GetProperties(commandSettings);
             var descriptor = descriptors[Reflector<TFeatureCommand>.GetPropertyName(expression)];

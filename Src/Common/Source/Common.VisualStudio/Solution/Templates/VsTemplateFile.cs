@@ -4,6 +4,7 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
 using Microsoft.VisualStudio.Zip;
+using NuPattern.VisualStudio.Properties;
 
 namespace NuPattern.VisualStudio.Solution.Templates
 {
@@ -14,60 +15,17 @@ namespace NuPattern.VisualStudio.Solution.Templates
     [CLSCompliant(false)]
     public static class VsTemplateFile
     {
-        private static readonly XmlSerializer Serializer = new XmlSerializer(typeof(NuPattern.VisualStudio.Solution.Templates.VsTemplate));
+        private static readonly XmlQualifiedName TemplateDefaultNamespace = new XmlQualifiedName("", "http://schemas.microsoft.com/developer/vstemplate/2005");
+        private const string TemplateFileExtension = ".vstemplate";
+        private const string TemplateArchiveFileExtension = ".zip";
+        private static readonly XmlSerializer Serializer = new XmlSerializer(typeof(VsTemplate));
 
         /// <summary>
-        /// The .vstemplate ProjectSubType template data that signals a template 
-        /// as the one that represents a Banana (modeling) state and is used 
-        /// for its instantiation, and equals the value "BananaExtension".
+        /// Reads the .vstemplate file
         /// </summary>
-        public const string BananaExtensionProjectSubType = "BananaExtension";
-
-        /// <summary>
-        /// Determines whether the given template is the feature (modeling) state by 
-        /// checking for its project subtype for the <see cref="BananaExtensionProjectSubType"/> value.
-        /// </summary>
-        public static bool IsBananaExtensionProject(NuPattern.VisualStudio.Solution.Templates.IVsTemplate template, IBananaRegistration registration)
+        public static IVsTemplate Read(string templateFilename)
         {
-            return template.TemplateData.ProjectSubType == BananaExtensionProjectSubType || IsProjectFlavorTemplate(template);
-        }
-
-        private static bool IsProjectFlavorTemplate(NuPattern.VisualStudio.Solution.Templates.IVsTemplate template)
-        {
-            return false;
-
-            //var projectContent = template.TemplateContent.Items.OfType<VSTemplateTemplateContentProject>().FirstOrDefault();
-            //return template.Type == VsTemplateType.Project &&
-            //    template.TemplateData.ProjectType == ModelingFeatureExtension.FeatureProjectCategory &&
-            //    projectContent != null &&
-            //    ReadProjectTypeGuids(Path.Combine(Path.GetDirectoryName(template.PhysicalPath), projectContent.File))
-            //        .Contains(ModelingFeatureExtension.FeatureProjectFlavorGuid);
-        }
-
-        private static string ReadProjectTypeGuids(string modelingProjectFile)
-        {
-            try
-            {
-                using (var reader = XmlReader.Create(modelingProjectFile))
-                {
-                    reader.MoveToContent();
-                    if (reader.ReadToDescendant("ProjectTypeGuids", "http://schemas.microsoft.com/developer/msbuild/2003"))
-                        return reader.ReadElementContentAsString();
-                }
-            }
-            catch
-            {
-            }
-
-            return string.Empty;
-        }
-
-        /// <summary>
-        /// Reads a .vstemplate file
-        /// </summary>
-        public static NuPattern.VisualStudio.Solution.Templates.IVsTemplate Read(string templateFilename)
-        {
-            if (templateFilename.EndsWith(".zip", StringComparison.InvariantCultureIgnoreCase))
+            if (templateFilename.EndsWith(TemplateArchiveFileExtension, StringComparison.InvariantCultureIgnoreCase))
             {
                 var decompressor = new ZipFileDecompressor(templateFilename);
                 try
@@ -79,12 +37,14 @@ namespace NuPattern.VisualStudio.Solution.Templates
                     var templateZipEntry = decompressor.ZipFileEntries
                         .OfType<ZipEntry>()
                         .FirstOrDefault(entry =>
-                            entry.FileName.EndsWith(".vstemplate", StringComparison.InvariantCultureIgnoreCase) &&
+                            entry.FileName.EndsWith(TemplateFileExtension, StringComparison.InvariantCultureIgnoreCase) &&
                             !entry.FileName.Contains("/")
                             );
 
                     if (templateZipEntry == null)
-                        throw new ArgumentException("The .zip file does not contain any .vstemplate file");
+                    {
+                        throw new InvalidOperationException(Resources.VsTemplateFile_ErrorNoTemplateInArchive);
+                    }
 
                     var tempPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
                     Directory.CreateDirectory(tempPath);
@@ -102,19 +62,19 @@ namespace NuPattern.VisualStudio.Solution.Templates
                     decompressor.Close();
                 }
             }
-            else if (templateFilename.EndsWith(".vstemplate", StringComparison.InvariantCultureIgnoreCase))
+            else if (templateFilename.EndsWith(TemplateFileExtension, StringComparison.InvariantCultureIgnoreCase))
             {
                 return ReadVsTemplate(templateFilename);
             }
 
-            throw new ArgumentException("Template must have a .zip or .vstemplate extension", "templateFilename");
+            throw new InvalidOperationException(Resources.VsTemplateFile_ErrorUnsupportedVsTemplateExtension);
         }
 
-        private static NuPattern.VisualStudio.Solution.Templates.VsTemplate ReadVsTemplate(string templateFilename)
+        private static VsTemplate ReadVsTemplate(string templateFilename)
         {
             using (var reader = XmlReader.Create(templateFilename))
             {
-                var template = (NuPattern.VisualStudio.Solution.Templates.VsTemplate)Serializer.Deserialize(reader);
+                var template = (VsTemplate)Serializer.Deserialize(reader);
                 template.PhysicalPath = new FileInfo(templateFilename).FullName;
                 template.TemplateFileName = Path.GetFileName(template.PhysicalPath);
                 return template;
@@ -124,10 +84,10 @@ namespace NuPattern.VisualStudio.Solution.Templates
         /// <summary>
         /// Writes a .vstemplate file from the given instance.
         /// </summary>
-        public static void Write(NuPattern.VisualStudio.Solution.Templates.IVsTemplate templateInstance, string templateFilename)
+        public static void Write(IVsTemplate templateInstance, string templateFilename)
         {
             var hasFragment = templateFilename.Contains('?');
-            if (hasFragment || templateFilename.EndsWith(".zip", StringComparison.InvariantCultureIgnoreCase))
+            if (hasFragment || templateFilename.EndsWith(TemplateArchiveFileExtension, StringComparison.InvariantCultureIgnoreCase))
             {
                 var vsTemplateFileName = templateInstance.TemplateFileName;
 
@@ -150,20 +110,20 @@ namespace NuPattern.VisualStudio.Solution.Templates
                     true,
                     true);
             }
-            else if (templateFilename.EndsWith(".vstemplate", StringComparison.InvariantCultureIgnoreCase))
+            else if (templateFilename.EndsWith(TemplateFileExtension, StringComparison.InvariantCultureIgnoreCase))
             {
                 VsHelper.CheckOut(templateFilename);
 
                 using (var file = new StreamWriter(templateFilename, false))
                 using (var writer = XmlWriter.Create(file, new XmlWriterSettings { Indent = true }))
                 {
-                    var namespaces = new XmlSerializerNamespaces(new[] { new XmlQualifiedName("", "http://schemas.microsoft.com/developer/vstemplate/2005") });
+                    var namespaces = new XmlSerializerNamespaces(new[] { TemplateDefaultNamespace });
                     Serializer.Serialize(writer, templateInstance, namespaces);
                 }
             }
             else
             {
-                throw new ArgumentException("Template must have a .zip or .vstemplate extension", "templateFilename");
+                throw new InvalidOperationException(Resources.VsTemplateFile_ErrorUnsupportedVsTemplateExtension);
             }
         }
 
@@ -190,9 +150,9 @@ namespace NuPattern.VisualStudio.Solution.Templates
         }
 
         /// <summary>
-        /// Writes a .vstemplate file back to its <see cref="NuPattern.VisualStudio.Solution.Templates.IVsTemplate.PhysicalPath"/> location.
+        /// Writes a .vstemplate file back to its <see cref="IVsTemplate.PhysicalPath"/> location.
         /// </summary>
-        public static void Write(NuPattern.VisualStudio.Solution.Templates.IVsTemplate templateInstance)
+        public static void Write(IVsTemplate templateInstance)
         {
             Write(templateInstance, templateInstance.PhysicalPath);
         }

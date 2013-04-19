@@ -13,9 +13,9 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
         public GuidanceWorkflowViewModel ViewModel { get; internal set; }
 
         /// <summary>
-        /// Gets the current feature extension
+        /// Gets the current guidance extension
         /// </summary>
-        public IFeatureExtension FeatureExtension { get; internal set; }
+        public IGuidanceExtension Extension { get; internal set; }
 
         /// <summary>
         /// Gets the user message service.

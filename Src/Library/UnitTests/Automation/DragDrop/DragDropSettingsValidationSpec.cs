@@ -36,7 +36,7 @@ namespace NuPattern.Library.UnitTests.Automation.Event
                     this.settings = automationSettings.AddExtension<DragDropSettings>();
                 });
 
-                this.validator = new DragDropSettingsValidations(Mock.Of<IFeatureCompositionService>())
+                this.validator = new DragDropSettingsValidations(Mock.Of<INuPatternCompositionService>())
                 {
                     ProjectTypeProvider = Mock.Of<INuPatternProjectTypeProvider>(),
                 };

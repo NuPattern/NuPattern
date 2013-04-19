@@ -21,7 +21,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_General", typeof(Resources))]
     [DescriptionResource("CopyFolderCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class CopyFolderCommand : FeatureCommand
+    public class CopyFolderCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CopyFolderCommand>();
         private const bool DefaultOverwriteIfExists = true;

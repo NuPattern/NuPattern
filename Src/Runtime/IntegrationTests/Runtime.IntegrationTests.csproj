@@ -103,7 +103,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RuntimeShellVsixPackagingSpec.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="Shell\FeatureExtensionSpec.cs" />
+    <Compile Include="Shell\GuidanceExtensionSpec.cs" />
     <Compile Include="InstalledToolkitInfoSpec.cs" />
     <Compile Include="Core\UriProviders\PackUriProviderSpec.cs" />
     <Compile Include="Shell\RuntimeShellVsixPackagingSpec.gen.cs">

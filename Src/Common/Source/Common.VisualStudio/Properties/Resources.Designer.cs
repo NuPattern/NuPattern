@@ -528,5 +528,23 @@ namespace NuPattern.VisualStudio.Properties {
                 return ResourceManager.GetString("VsRootSuffixTemplateWizard_RootSuffixDetermined", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The .zip file does not contain any .vstemplate file.
+        /// </summary>
+        internal static string VsTemplateFile_ErrorNoTemplateInArchive {
+            get {
+                return ResourceManager.GetString("VsTemplateFile_ErrorNoTemplateInArchive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Template must have a .zip or .vstemplate extension.
+        /// </summary>
+        internal static string VsTemplateFile_ErrorUnsupportedVsTemplateExtension {
+            get {
+                return ResourceManager.GetString("VsTemplateFile_ErrorUnsupportedVsTemplateExtension", resourceCulture);
+            }
+        }
     }
 }

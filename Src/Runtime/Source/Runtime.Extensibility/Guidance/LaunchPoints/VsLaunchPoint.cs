@@ -9,36 +9,36 @@ using NuPattern.Runtime.Guidance.Diagnostics;
 namespace NuPattern.Runtime.Guidance.LaunchPoints
 {
     /// <summary>
-    /// Represents the base implementation of a Feature Command Extension launch point
+    /// Represents the base implementation of a Command Extension launch point
     /// that is shown at arbitrary menu locations in Visual Studio menu system.
     /// </summary>
     internal abstract class VsLaunchPoint : OleMenuCommand, ILaunchPoint
     {
-        protected VsLaunchPoint(IFeatureManager featureManager, CommandID id)
+        protected VsLaunchPoint(IGuidanceManager guidanceManager, CommandID id)
             : base(OnExecute, id)
         {
-            Guard.NotNull(() => featureManager, featureManager);
+            Guard.NotNull(() => guidanceManager, guidanceManager);
 
             this.BeforeQueryStatus += this.OnBeforeQueryStatus;
-            this.FeatureManager = featureManager;
+            this.GuidanceManager = guidanceManager;
             this.QueryStatusStrategy = new DefaultQueryStatusStrategy(this.GetType().Name);
-            this.FeatureInstanceLocator = new DefaultFeatureInstanceLocator(featureManager, this.GetType());
+            this.GuidanceInstanceLocator = new DefaultGuidanceInstanceLocator(guidanceManager, this.GetType());
         }
 
         protected abstract string BindingName { get; }
-        protected virtual IFeatureInstanceLocator FeatureInstanceLocator { get; set; }
-        protected virtual IFeatureManager FeatureManager { get; private set; }
+        protected virtual IGuidanceInstanceLocator GuidanceInstanceLocator { get; set; }
+        protected virtual IGuidanceManager GuidanceManager { get; private set; }
         protected virtual IQueryStatusStrategy QueryStatusStrategy { get; set; }
 
         /// <summary>
         /// Optionally implements additional logic to determine if the command can be executed 
         /// for the given feature.
         /// </summary>
-        public virtual bool CanExecute(IFeatureExtension feature)
+        public virtual bool CanExecute(IGuidanceExtension extension)
         {
-            if (feature != null)
+            if (extension != null)
             {
-                var commandBinding = feature.Commands.FindByName(this.BindingName);
+                var commandBinding = extension.Commands.FindByName(this.BindingName);
                 if (commandBinding != null)
                 {
                     return true;
@@ -55,9 +55,9 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
         /// <summary>
         /// Implements the execution logic for the launch point.
         /// </summary>
-        public virtual void Execute(IFeatureExtension feature)
+        public virtual void Execute(IGuidanceExtension extension)
         {
-            if (!this.CanExecute(feature))
+            if (!this.CanExecute(extension))
             {
                 throw new InvalidOperationException(string.Format(
                     CultureInfo.CurrentCulture,
@@ -65,17 +65,17 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
                     this.BindingName));
             }
 
-            var commandBindingForEval = feature.Commands.FindByName(this.BindingName);
+            var commandBindingForEval = extension.Commands.FindByName(this.BindingName);
             if (commandBindingForEval != null)
             {
                 commandBindingForEval.Evaluate();
             }
 
-            var tracer = FeatureTracer.GetSourceFor(this, feature.FeatureId, feature.InstanceName);
+            var tracer = GuidanceExtensionTracer.GetSourceFor(this, extension.ExtensionId, extension.InstanceName);
 
             using (tracer.StartActivity("Executing command {0}", BindingName))
             {
-                var commandBinding = feature.Commands.FindByName(this.BindingName);
+                var commandBinding = extension.Commands.FindByName(this.BindingName);
                 commandBinding.Value.Execute();
             }
         }
@@ -84,16 +84,16 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
         {
             var launchPoint = (VsLaunchPoint)sender;
             var command = new VsMenuCommand { Enabled = launchPoint.Enabled, Text = launchPoint.Text, Visible = launchPoint.Visible };
-            var feature = launchPoint.OnQueryStatus(command);
+            var extension = launchPoint.OnQueryStatus(command);
 
             if (command.Enabled)
             {
-                launchPoint.Execute(feature);
+                launchPoint.Execute(extension);
             }
             else
             {
-                var tracer = feature != null ?
-                    FeatureTracer.GetSourceFor<VsLaunchPoint>(feature.FeatureId) :
+                var tracer = extension != null ?
+                    GuidanceExtensionTracer.GetSourceFor<VsLaunchPoint>(extension.ExtensionId) :
                     Tracer.GetSourceFor<VsLaunchPoint>();
 
                 tracer.TraceWarning("Attempted to execute launch point {0} but its querystatus did not return Enabled.", launchPoint);
@@ -101,19 +101,19 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
         }
 
         /// <summary>
-        /// Implements the query status behavior, and determines which feature 
+        /// Implements the query status behavior, and determines which guidance extension 
         /// owns the given command for the purposes of execution.
         /// </summary>
-        protected virtual IFeatureExtension OnQueryStatus(IMenuCommand command)
+        protected virtual IGuidanceExtension OnQueryStatus(IMenuCommand command)
         {
-            var feature = this.FeatureInstanceLocator.LocateInstance();
-            var status = this.QueryStatusStrategy.QueryStatus(feature);
+            var extension = this.GuidanceInstanceLocator.LocateInstance();
+            var status = this.QueryStatusStrategy.QueryStatus(extension);
 
-            var canExecute = this.CanExecute(feature);
+            var canExecute = this.CanExecute(extension);
             command.Enabled = status.Enabled && canExecute;
             command.Visible = status.Visible && canExecute;
 
-            return feature;
+            return extension;
         }
 
         private void OnBeforeQueryStatus(object sender, EventArgs e)

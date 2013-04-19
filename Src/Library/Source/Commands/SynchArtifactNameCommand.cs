@@ -23,7 +23,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("SynchArtifactNameCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class SynchArtifactNameCommand : FeatureCommand
+    public class SynchArtifactNameCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SynchArtifactNameCommand>();
         internal const string FilteredReferenceTagValue = "FilteredByTag";

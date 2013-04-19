@@ -15,17 +15,17 @@ namespace NuPattern.Runtime.Guidance.Extensions
 
         private readonly ITraceSource tracer;
         private readonly IGuidanceWorkflow guidanceWorkflow;
-        private IFeatureExtension feature;
+        private IGuidanceExtension feature;
 
         /// <summary>
         /// Binds the state of the guidance workflow to Blackboard data, 
         /// and starts tracking changes in the workflow to update the underlying 
         /// storage in the Blackboard
         /// </summary>
-        public BlackboardWorkflowBinder(IFeatureExtension feature, IGuidanceWorkflow guidanceWorkflow)
+        public BlackboardWorkflowBinder(IGuidanceExtension feature, IGuidanceWorkflow guidanceWorkflow)
         {
 
-            this.tracer = FeatureTracer.GetSourceFor<BlackboardWorkflowBinder>(feature.FeatureId, feature.InstanceName);
+            this.tracer = GuidanceExtensionTracer.GetSourceFor<BlackboardWorkflowBinder>(feature.ExtensionId, feature.InstanceName);
             this.guidanceWorkflow = guidanceWorkflow;
 
             this.feature = feature;
@@ -81,14 +81,14 @@ namespace NuPattern.Runtime.Guidance.Extensions
             }
         }
 
-        public static string UserAcceptedKey(IFeatureExtension feature, object node)
+        public static string UserAcceptedKey(IGuidanceExtension feature, object node)
         {
             var guidanceNode = node as IConditionalNode;
 
             return (feature.InstanceName + "." + guidanceNode.Name + ".UserAccepted");
         }
 
-        public static string StateOverrideKey(IFeatureExtension feature, object node)
+        public static string StateOverrideKey(IGuidanceExtension feature, object node)
         {
             var guidanceNode = node as IConditionalNode;
 

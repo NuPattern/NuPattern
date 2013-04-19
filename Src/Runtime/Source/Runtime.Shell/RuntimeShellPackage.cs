@@ -57,12 +57,12 @@ namespace NuPattern.Runtime.Shell
     [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
-    [ProvideService(typeof(IUriReferenceService), ServiceName = "UriReferenceService")]
-    [ProvideService(typeof(ISolution), ServiceName = "Solution")]
-    [ProvideService(typeof(IFeatureManager), ServiceName = "FeatureManager")]
-    [ProvideService(typeof(IFeatureCompositionService), ServiceName = "FeatureCompositionService")]
-    [ProvideService(typeof(IGuidanceWindowsService), ServiceName = "GuidanceWindows")]
-    [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = "IPlatuProjectTypeProvider")]
+    [ProvideService(typeof(IUriReferenceService), ServiceName = "IUriReferenceService")]
+    [ProvideService(typeof(ISolution), ServiceName = "ISolution")]
+    [ProvideService(typeof(IGuidanceManager), ServiceName = "IGuidanceManager")]
+    [ProvideService(typeof(INuPatternCompositionService), ServiceName = "INuPatternCompositionService")]
+    [ProvideService(typeof(IGuidanceWindowsService), ServiceName = "IGuidanceWindowsService")]
+    [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = "INuPatternProjectTypeProvider")]
     [ProvideService(typeof(IPatternManager), ServiceName = "IPatternManager")]
     [ProvideService(typeof(IPackageToolWindow), ServiceName = "IPackageToolWindow")]
     [ProvideService(typeof(ISolutionEvents), ServiceName = "ISolutionEvents")]
@@ -92,11 +92,11 @@ namespace NuPattern.Runtime.Shell
         [Import]
         private ISolution Solution { get; set; }
         [Import]
-        private IFeatureManager FeatureManager { get; set; }
+        private IGuidanceManager GuidanceManager { get; set; }
         [Import]
-        private IFeatureCompositionService FeatureCompositionService { get; set; }
+        private INuPatternCompositionService CompositionService { get; set; }
         [Import]
-        private IGuidanceWindowsService GuidanceWindowService { get; set; }
+        private IGuidanceWindowsService GuidanceWindowsService { get; set; }
         [ImportMany(typeof(ILaunchPoint))]
         private IEnumerable<Lazy<ILaunchPoint>> LaunchPoints { get; set; }
         [Import]
@@ -193,8 +193,8 @@ namespace NuPattern.Runtime.Shell
             // If initializing other packages launchpoints worked, 
             // they wouldn't need to do this themselves.
             this.RegisterRefreshGuidanceStates();
-            FeatureManager.InstantiatedFeaturesChanged += this.OnInstantiatedFeaturesChanged;
-            FeatureManager.ActiveFeatureChanged += this.OnActiveFeatureChanged;
+            GuidanceManager.InstantiatedExtensionsChanged += this.OnInstantiatedGudianceExtensionChanged;
+            GuidanceManager.ActiveExtensionChanged += this.OnActiveGuidanceExtensionChanged;
         }
 
         /// <summary>
@@ -251,9 +251,9 @@ namespace NuPattern.Runtime.Shell
             var serviceContainer = (IServiceContainer)this;
             serviceContainer.AddService(typeof(IUriReferenceService), new ServiceCreatorCallback((c, s) => this.UriReferenceService), true);
             serviceContainer.AddService(typeof(ISolution), new ServiceCreatorCallback((c, s) => this.Solution), true);
-            serviceContainer.AddService(typeof(IFeatureManager), new ServiceCreatorCallback((c, s) => this.FeatureManager), true);
-            serviceContainer.AddService(typeof(IFeatureCompositionService), new ServiceCreatorCallback((c, s) => this.FeatureCompositionService), true);
-            serviceContainer.AddService(typeof(IGuidanceWindowsService), new ServiceCreatorCallback((c, s) => this.GuidanceWindowService), true);
+            serviceContainer.AddService(typeof(IGuidanceManager), new ServiceCreatorCallback((c, s) => this.GuidanceManager), true);
+            serviceContainer.AddService(typeof(INuPatternCompositionService), new ServiceCreatorCallback((c, s) => this.CompositionService), true);
+            serviceContainer.AddService(typeof(IGuidanceWindowsService), new ServiceCreatorCallback((c, s) => this.GuidanceWindowsService), true);
             serviceContainer.AddService(typeof(RuntimeShellPackage), this, true);
             serviceContainer.AddService(typeof(IPackageToolWindow), new PackageToolWindow(this), true);
             serviceContainer.AddService(typeof(IPatternManager), new ServiceCreatorCallback((s, t) => this.PatternManager), true);
@@ -275,7 +275,7 @@ namespace NuPattern.Runtime.Shell
         private void OnSolutionClosed(object sender, SolutionEventArgs e)
         {
             SolutionBuilderToolWindow.AutoHideWindow(this);
-            this.GuidanceWindowService.HideGuidanceWindows(this);
+            this.GuidanceWindowsService.HideGuidanceWindows(this);
         }
 
         private void OnSolutionOpened(object sender, SolutionEventArgs e)
@@ -304,9 +304,9 @@ namespace NuPattern.Runtime.Shell
             }
 
             // Open guidance windows
-            if (!this.FeatureManager.IsOpened)
+            if (!this.GuidanceManager.IsOpened)
             {
-                this.FeatureManager.Open(new SolutionDataState(this.Solution));
+                this.GuidanceManager.Open(new SolutionDataState(this.Solution));
             }
         }
 
@@ -508,24 +508,24 @@ namespace NuPattern.Runtime.Shell
         }
 #endif
 
-        private void OnInstantiatedFeaturesChanged(object sender, EventArgs args)
+        private void OnInstantiatedGudianceExtensionChanged(object sender, EventArgs args)
         {
             this.showWindows = true;
         }
 
-        private void OnActiveFeatureChanged(object sender, EventArgs args)
+        private void OnActiveGuidanceExtensionChanged(object sender, EventArgs args)
         {
-            var activeFeature = this.FeatureManager.ActiveFeature;
-            if (activeFeature != null && this.showWindows && activeFeature.GuidanceWorkflow != null)
+            var activeExtension = this.GuidanceManager.ActiveGuidanceExtension;
+            if (activeExtension != null && this.showWindows && activeExtension.GuidanceWorkflow != null)
             {
-                this.GuidanceWindowService.ShowGuidanceExplorer(this);
-                this.GuidanceWindowService.ShowGuidanceBrowser(this);
+                this.GuidanceWindowsService.ShowGuidanceExplorer(this);
+                this.GuidanceWindowsService.ShowGuidanceBrowser(this);
             }
         }
 
         private void RegisterRefreshGuidanceStates()
         {
-            var conditionsEvaluator = new GuidanceConditionsEvaluator(this.FeatureManager);
+            var conditionsEvaluator = new GuidanceConditionsEvaluator(this.GuidanceManager);
             this.idleTaskHost = new VsIdleTaskHost(this, () => conditionsEvaluator.EvaluateGraphs(), TimeSpan.FromSeconds(GuidanceEvalTimeGovernor));
             this.idleTaskHost.Start(TimeSpan.FromMilliseconds(IdleTimeout));
         }

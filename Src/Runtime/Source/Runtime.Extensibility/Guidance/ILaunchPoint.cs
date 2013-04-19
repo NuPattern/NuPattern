@@ -11,12 +11,12 @@ namespace NuPattern.Runtime.Guidance
         /// </summary>
         /// <param name="feature"></param>
         /// <returns></returns>
-        bool CanExecute(IFeatureExtension feature);
+        bool CanExecute(IGuidanceExtension feature);
 
         /// <summary>
         /// Executes the launch point
         /// </summary>
         /// <param name="feature"></param>
-        void Execute(IFeatureExtension feature);
+        void Execute(IGuidanceExtension feature);
     }
 }

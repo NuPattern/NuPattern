@@ -22,7 +22,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_General", typeof(Resources))]
     [DescriptionResource("ModifyXmlCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class ModifyXmlCommand : FeatureCommand
+    public class ModifyXmlCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ModifyXmlCommand>();
 

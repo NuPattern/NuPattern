@@ -24,7 +24,7 @@ namespace NuPattern.Runtime.Shell.Commands
         /// <summary>
         /// Defines a command to open the Pattern Explorer.
         /// </summary>
-        private class OpenSolutionBuilderCommand : ICommand
+        private class OpenSolutionBuilderCommand : NuPattern.VisualStudio.Commands.ICommand
         {
             private IPackageToolWindow toolWindow;
 

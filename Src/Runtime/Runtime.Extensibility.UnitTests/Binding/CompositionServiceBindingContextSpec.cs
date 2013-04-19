@@ -17,7 +17,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         {
             var catalog = new TypeCatalog(typeof(Foo));
             var container = new CompositionContainer(catalog);
-            var compositionService = new Mock<IFeatureCompositionService>();
+            var compositionService = new Mock<INuPatternCompositionService>();
             compositionService.Setup(x => x.GetExportedValue<ExportProvider>()).Returns(container);
 
             var service = new CompositionServiceBindingContext(compositionService.Object);
@@ -35,7 +35,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         {
             var catalog = new TypeCatalog(typeof(Foo));
             var container = new CompositionContainer(catalog);
-            var compositionService = new Mock<IFeatureCompositionService>();
+            var compositionService = new Mock<INuPatternCompositionService>();
             compositionService.Setup(x => x.GetExportedValue<ExportProvider>()).Returns(container);
 
             var service = new CompositionServiceBindingContext(compositionService.Object);

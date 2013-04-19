@@ -7,7 +7,7 @@ namespace NuPattern.Runtime
     public static class PropertyExtensions
     {
         /// <summary>
-        /// If the property has a <see cref="T:Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IValueProvider"/> configured, this method 
+        /// If the property has a <see cref="IValueProvider"/> configured, this method 
         /// will re-evaluate the value provider and save this value so that the property 
         /// last-known provided value reflects the current one.
         /// </summary>

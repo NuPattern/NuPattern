@@ -19,7 +19,7 @@ namespace NuPattern.Library.Commands
     [DescriptionResource("CreateArtifactLinkCommand_Description", typeof(Resources))]
     [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
-    public class CreateArtifactLinkCommand : FeatureCommand
+    public class CreateArtifactLinkCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateArtifactLinkCommand>();
 

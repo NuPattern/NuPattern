@@ -27,7 +27,7 @@ namespace NuPattern.Runtime.Bindings
         private CompositionContainer defaultCompositionProvider;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FeatureCompositionService"/> class 
+        /// Initializes a new instance of the <see cref="NuPatternCompositionService"/> class 
         /// with the given underlying container.
         /// </summary>
         [ImportingConstructor]
@@ -64,22 +64,22 @@ namespace NuPattern.Runtime.Bindings
         {
             // We leverage the Feature Runtime container, where all their components and extensions publish already.
             var defaultCatalog = this.componentModel.GetCatalog("Microsoft.VisualStudio.Default");
-            var featuresCatalog = this.componentModel.GetCatalog(Catalog.CatalogName);
-            if (defaultCatalog == null || featuresCatalog == null)
+            var ourCatalog = this.componentModel.GetCatalog(Catalog.CatalogName);
+            if (defaultCatalog == null || ourCatalog == null)
                 throw new InvalidOperationException(Resources.BindingCompositionService_CatalogsNotAvailable);
 
             try
             {
-                // Transparently change the IFeatureCompositionService implementation for all components 
+                // Transparently change the INuPatternCompositionService implementation for all components 
                 // without code changes by providing an instance earlier in the chain.
                 // See http://codebetter.com/blogs/glenn.block/archive/2009/05/14/customizing-container-behavior-part-2-of-n-defaults.aspx
                 this.defaultCompositionProvider = new CompositionContainer();
-                defaultCompositionProvider.ComposeExportedValue<IFeatureCompositionService>(this);
+                defaultCompositionProvider.ComposeExportedValue<INuPatternCompositionService>(this);
                 defaultCompositionProvider.ComposeExportedValue<SVsServiceProvider>((SVsServiceProvider)serviceProvider);
 
                 // Decorated catalog of parts.
                 // NOTE: caching the catalog also caches the instantiated shared parts, if any.
-                this.bindingCatalog = new BindingComponentCatalog(new AggregateCatalog(featuresCatalog, defaultCatalog));
+                this.bindingCatalog = new BindingComponentCatalog(new AggregateCatalog(ourCatalog, defaultCatalog));
                 var bindingProvider = new CatalogExportProvider(this.bindingCatalog);
 
                 this.container = new CompositionContainer(
@@ -221,9 +221,9 @@ namespace NuPattern.Runtime.Bindings
         }
 
         /// <summary>
-        /// This catalog only provides the exports for things that have the <see cref="FeatureComponentAttribute"/> attribute.
+        /// This catalog only provides the exports for things that have the <see cref="ComponentAttribute"/> attribute.
         /// </summary>
-        private class BindingComponentCatalog : FeatureComponentCatalog
+        private class BindingComponentCatalog : ComponentCatalog
         {
             private bool initialized;
             private List<ComposablePartDefinition> sharedParts = new List<ComposablePartDefinition>();

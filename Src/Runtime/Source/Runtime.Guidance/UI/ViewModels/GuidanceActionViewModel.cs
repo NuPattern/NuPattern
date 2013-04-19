@@ -8,9 +8,9 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
 {
     internal class GuidanceActionViewModel : NodeViewModel
     {
-        private IFeatureExtension feature;
+        private IGuidanceExtension feature;
 
-        internal GuidanceActionViewModel(IFeatureExtension feature, IGuidanceAction model, ImageSource icon)
+        internal GuidanceActionViewModel(IGuidanceExtension feature, IGuidanceAction model, ImageSource icon)
             : base(model, icon)
         {
             this.Node.HasStateOverrideChanged += (s, e) => this.OnPropertyChanged(() => this.HasStateOverride);

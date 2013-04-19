@@ -17,7 +17,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("InstantiateSolutionElementCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class InstantiateSolutionElementCommand : FeatureCommand
+    public class InstantiateSolutionElementCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<InstantiateSolutionElementCommand>();
 

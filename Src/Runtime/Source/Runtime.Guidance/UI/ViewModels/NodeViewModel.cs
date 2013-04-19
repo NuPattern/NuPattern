@@ -1,5 +1,4 @@
-﻿using System.Windows.Input;
-using System.Windows.Media;
+﻿using System.Windows.Media;
 using NuPattern.Presentation;
 using NuPattern.Runtime.Guidance.Workflow;
 
@@ -38,7 +37,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             get { return this.Model; }
         }
 
-        public ICommand RefreshDetailsCommand { get; protected set; }
+        public System.Windows.Input.ICommand RefreshDetailsCommand { get; protected set; }
 
         public virtual NodeState State
         {

@@ -23,12 +23,12 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
 
             this.context = context;
             this.serviceProvider = serviceProvider;
-            this.Feature = context.FeatureExtension;
+            this.Extension = context.Extension;
             Current = this;
         }
         public event EventHandler CurrentNodeChanged = (s, e) => { };
 
-        public IFeatureExtension Feature { get; private set; }
+        public IGuidanceExtension Extension { get; private set; }
 
         public NodeViewModel CurrentNode
         {
@@ -65,12 +65,12 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
 
         public IGuidanceWorkflow Model
         {
-            get { return this.Feature.GuidanceWorkflow; }
+            get { return this.Extension.GuidanceWorkflow; }
         }
 
         public string Name
         {
-            get { return this.Feature.InstanceName; }
+            get { return this.Extension.InstanceName; }
         }
 
         public IEnumerable<TreeNodeViewModel<INode>> Nodes
@@ -107,12 +107,12 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
 
         public void RefreshGraphStates()
         {
-            GuidanceConditionsEvaluator.EvaluateGraph(this.Feature);
+            GuidanceConditionsEvaluator.EvaluateGraph(this.Extension);
         }
 
         private void LoadGuidanceTree()
         {
-            var viewModelBuilder = this.Feature as IWorkflowViewModelBuilder ?? new DefaultWorkflowViewModelBuilder(this.Feature);
+            var viewModelBuilder = this.Extension as IWorkflowViewModelBuilder ?? new DefaultWorkflowViewModelBuilder(this.Extension);
             this.nodes = new ObservableCollection<NodeViewModel>(viewModelBuilder.GetNodes());
 
             foreach (var node in this.nodes.Traverse(node => node.Nodes))

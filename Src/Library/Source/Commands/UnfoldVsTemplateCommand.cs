@@ -34,7 +34,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("UnfoldVsTemplateCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public partial class UnfoldVsTemplateCommand : FeatureCommand
+    public partial class UnfoldVsTemplateCommand : Command
     {
         private const bool DefaultSyncName = false;
         private const bool DefaultSanitizeName = true;

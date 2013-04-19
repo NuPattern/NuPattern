@@ -16,7 +16,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// </summary>
     internal partial class SolutionBuilderViewModel : ViewModel
     {
-        internal const string UsingGuidanceFeatureId = ShellConstants.VsixIdentifier;
+        internal const string UsingGuidanceExtensionId = ShellConstants.VsixIdentifier;
 
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SolutionBuilderViewModel>();
 
@@ -279,10 +279,10 @@ namespace NuPattern.Runtime.UI.ViewModels
 
         private bool CanShowGuidance()
         {
-            var featureManager = this.serviceProvider.GetService<IFeatureManager>();
-            if (featureManager != null)
+            var guidanceManager = this.serviceProvider.GetService<IGuidanceManager>();
+            if (guidanceManager != null)
             {
-                return featureManager.IsGuidanceRegistered(UsingGuidanceFeatureId);
+                return guidanceManager.IsGuidanceRegistered(UsingGuidanceExtensionId);
             }
 
             return false;
@@ -469,10 +469,10 @@ namespace NuPattern.Runtime.UI.ViewModels
 
         private void ShowGuidance()
         {
-            var featureManager = this.serviceProvider.GetService<IFeatureManager>();
-            if (featureManager != null)
+            var guidanceManager = this.serviceProvider.GetService<IGuidanceManager>();
+            if (guidanceManager != null)
             {
-                featureManager.ActivateSharedGuidanceWorkflow(this.serviceProvider, UsingGuidanceFeatureId);
+                guidanceManager.ActivateSharedGuidanceWorkflow(this.serviceProvider, UsingGuidanceExtensionId);
             }
         }
 

@@ -55,7 +55,7 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
 
             [HostType("VS IDE")]
             [TestMethod, TestCategory("Integration")]
-            public void WhenSettingGuidanceFeatureIdProperty_ThenCreatesAutomationSettings()
+            public void WhenSettingGuidanceExtensionIdProperty_ThenCreatesAutomationSettings()
             {
                 this.guidanceExtension.GuidanceFeatureId = "Foo";
                 Assert.Equal(4, this.container.AutomationSettings.Count());
@@ -68,7 +68,7 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
 
             [HostType("VS IDE")]
             [TestMethod, TestCategory("Integration")]
-            public void WhenChangingGuidanceFeatureIdProperty_ThenUpdatedCommandSettings()
+            public void WhenChangingGuidanceGuidanceExtensionIdProperty_ThenUpdatedCommandSettings()
             {
                 this.guidanceExtension.GuidanceFeatureId = "Foo";
                 this.guidanceExtension.GuidanceFeatureId = "Foo1";
@@ -117,7 +117,7 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
 
             [HostType("VS IDE")]
             [TestMethod, TestCategory("Integration")]
-            public void WhenResettingGuidanceFeatureId_ThenDeletesCommandSettingAndEventSettings()
+            public void WhenResettingGuidanceGuidanceExtensionId_ThenDeletesCommandSettingAndEventSettings()
             {
                 this.guidanceExtension.GuidanceFeatureId = "Foo";
                 this.guidanceExtension.GuidanceFeatureId = string.Empty;
@@ -141,9 +141,9 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
 
                     Assert.Equal(commandSettings.TypeId, typeof(InstantiateFeatureCommand).FullName);
 
-                    var featureIdProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.FeatureId).Name]
+                    var extensionProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.GuidanceExtensionId).Name]
                         .GetValue(commandSettings) as DesignProperty;
-                    Assert.Equal(this.guidanceExtension.GuidanceFeatureId, featureIdProperty.GetValue());
+                    Assert.Equal(this.guidanceExtension.GuidanceFeatureId, extensionProperty.GetValue());
 
                     var defaultInstanceProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.DefaultInstanceName).Name]
                         .GetValue(commandSettings) as DesignProperty;

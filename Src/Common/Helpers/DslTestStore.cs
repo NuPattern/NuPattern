@@ -19,7 +19,7 @@ namespace NuPattern
         public DslTestStore(Type extendedDomainModel)
         {
             this.ServiceProvider = Mock.Of<IServiceProvider>(sp =>
-                sp.GetService(typeof(IFeatureCompositionService)) == Mock.Of<IFeatureCompositionService>());
+                sp.GetService(typeof(INuPatternCompositionService)) == Mock.Of<INuPatternCompositionService>());
 
             if (extendedDomainModel == null)
             {

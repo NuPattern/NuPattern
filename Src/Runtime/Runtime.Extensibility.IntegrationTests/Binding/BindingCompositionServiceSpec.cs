@@ -88,7 +88,7 @@ namespace NuPattern.Runtime.IntegrationTests.Binding
         {
             var composition = this.serviceProvider.GetService<IBindingCompositionService>();
 
-            var service = composition.GetExportedValue<IFeatureCompositionService>();
+            var service = composition.GetExportedValue<INuPatternCompositionService>();
 
             Assert.Same(composition, service);
         }

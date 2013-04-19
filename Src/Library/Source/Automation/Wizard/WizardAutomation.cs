@@ -49,7 +49,7 @@ namespace NuPattern.Library.Automation
         /// </summary>
         [Import]
         [Required]
-        public IFeatureCompositionService FeatureComposition { get; set; }
+        public INuPatternCompositionService CompositionService { get; set; }
 
         [Import(typeof(SVsServiceProvider))]
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
@@ -82,7 +82,7 @@ namespace NuPattern.Library.Automation
                 }
 
                 var wizard = (Window)Activator.CreateInstance(wizardType, this.GetArguments(wizardType));
-                this.FeatureComposition.SatisfyImportsOnce(wizard);
+                this.CompositionService.SatisfyImportsOnce(wizard);
 
                 if (Application.Current != null)
                 {

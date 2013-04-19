@@ -4,34 +4,34 @@ using System.Collections.Generic;
 namespace NuPattern.Runtime.Guidance
 {
     /// <summary>
-    /// Keeps the list of instantiated features in a solution in a permanent storage.
+    /// Keeps the list of instantiated guidance extension in a persisted storage.
     /// </summary>
     public interface ISolutionState
     {
         /// <summary>
-        /// Gets the sttes of the instantiated features.
+        /// Gets the states of the instantiated guidance extension.
         /// </summary>
-        IEnumerable<ISolutionFeatureState> InstantiatedFeatures { get; }
+        IEnumerable<IGuidanceExtensionPersistState> InstantiatedGuidanceExtensions { get; }
 
         /// <summary>
-        /// Adds a new feature to the solution
+        /// Adds a new guidance extension to the solution
         /// </summary>
-        /// <param name="featureId"></param>
+        /// <param name="extensionId"></param>
         /// <param name="instanceName"></param>
         /// <param name="version"></param>
-        void AddFeature(string featureId, string instanceName, Version version);
+        void AddExtension(string extensionId, string instanceName, Version version);
 
         /// <summary>
-        /// Removes a feature from the solution.
+        /// Removes a guidance extension from the solution.
         /// </summary>
-        /// <param name="featureId"></param>
+        /// <param name="extensionId"></param>
         /// <param name="instanceName"></param>
-        void RemoveFeature(string featureId, string instanceName);
+        void RemoveExtension(string extensionId, string instanceName);
 
         /// <summary>
-        /// Updates the feature state with the given id and name with the 
+        /// Updates the guidance extension state with the given id and name with the 
         /// specified version.
         /// </summary>
-        void Update(string featureId, string instanceName, Version newVersion);
+        void Update(string extensionId, string instanceName, Version newVersion);
     }
 }

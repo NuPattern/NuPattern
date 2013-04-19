@@ -5,7 +5,7 @@ namespace NuPattern.Runtime.Guidance
 {
     internal class ConditionBinding : Binding<ICondition>
     {
-        public ConditionBinding(IFeatureCompositionService featureComposition, string componentTypeId, params PropertyBinding[] propertyBindings)
+        public ConditionBinding(INuPatternCompositionService featureComposition, string componentTypeId, params PropertyBinding[] propertyBindings)
             : base(featureComposition, componentTypeId, propertyBindings)
         {
         }

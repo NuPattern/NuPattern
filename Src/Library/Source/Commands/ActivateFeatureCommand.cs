@@ -19,7 +19,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
     [DescriptionResource("ActivateFeatureCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class ActivateFeatureCommand : FeatureCommand
+    public class ActivateFeatureCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ActivateFeatureCommand>();
 
@@ -31,11 +31,11 @@ namespace NuPattern.Library.Commands
         public IProductElement CurrentElement { get; set; }
 
         /// <summary>
-        /// Gets or sets the feature extension manager.
+        /// Gets or sets the guidance extension manager.
         /// </summary>
         [Required]
         [Import]
-        public IFeatureManager FeatureManager { get; set; }
+        public IGuidanceManager GuidanceManager { get; set; }
 
         /// <summary>
         /// Gets or sets the service provider.
@@ -62,18 +62,18 @@ namespace NuPattern.Library.Commands
                     Resources.ActivateFeatureCommand_TraceReferenceFound, this.CurrentElement.InstanceName, instanceName);
 
                 // Get associated feature (if exists in solution)
-                var featureInstance = GuidanceReference.GetResolvedReferences(this.CurrentElement, this.FeatureManager).FirstOrDefault();
+                var featureInstance = GuidanceReference.GetResolvedReferences(this.CurrentElement, this.GuidanceManager).FirstOrDefault();
                 if (featureInstance != null)
                 {
                     tracer.TraceInformation(
                         Resources.ActivateFeatureCommand_TraceActivation, this.CurrentElement.InstanceName, instanceName);
 
-                    this.FeatureManager.ActivateGuidanceInstance(this.ServiceProvider, featureInstance);
+                    this.GuidanceManager.ActivateGuidanceInstance(this.ServiceProvider, featureInstance);
                 }
                 else
                 {
                     tracer.TraceWarning(
-                        Resources.ActivateFeatureCommand_TraceFeatureNotFound, instanceName);
+                        Resources.ActivateFeatureCommand_TraceGuidanceNotFound, instanceName);
                 }
             }
             else

@@ -18,8 +18,8 @@ namespace NuPattern.Runtime.Store.Design
         /// Initializes a new instance of the <see cref="ReferencePropertyDescriptor"/> class.
         /// </summary>
         /// <param name="reference">The property.</param>
-        /// <param name="service">The <see cref="IFeatureCompositionService"/>.</param>
-        public ReferencePropertyDescriptor(IFeatureCompositionService service, Reference reference)
+        /// <param name="service">The <see cref="INuPatternCompositionService"/>.</param>
+        public ReferencePropertyDescriptor(INuPatternCompositionService service, Reference reference)
             : base(reference.Kind, BuildAttributes(service, reference))
         {
             this.reference = reference;
@@ -110,12 +110,12 @@ namespace NuPattern.Runtime.Store.Design
             return true;
         }
 
-        private static Attribute[] BuildAttributes(IFeatureCompositionService service, Reference reference)
+        private static Attribute[] BuildAttributes(INuPatternCompositionService service, Reference reference)
         {
             if (service != null)
             {
                 // Find KindProvider for this kind
-                var exportedProviderRef = service.GetExports<IReferenceKindProvider, IFeatureComponentMetadata>()
+                var exportedProviderRef = service.GetExports<IReferenceKindProvider, IComponentMetadata>()
                     .Where(provider => provider.Metadata.Id == reference.Kind)
                     .Select(provider => provider.Value)
                     .FirstOrDefault();

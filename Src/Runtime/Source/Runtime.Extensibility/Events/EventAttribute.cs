@@ -14,7 +14,7 @@ namespace NuPattern.Runtime.Events
     /// </remarks>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1018:MarkAttributesWithAttributeUsage", Justification = "Base class provides supported usage.")]
     [CLSCompliant(false)]
-    public sealed class EventAttribute : FeatureComponentAttribute
+    public sealed class EventAttribute : ComponentAttribute
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EventAttribute"/> class.

@@ -21,7 +21,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
     [DescriptionResource("ActivateOrInstantiateSharedFeatureCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class ActivateOrInstantiateSharedFeatureCommand : FeatureCommand
+    public class ActivateOrInstantiateSharedFeatureCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ActivateOrInstantiateSharedFeatureCommand>();
 
@@ -29,18 +29,18 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the feature id.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [TypeConverter(typeof(FeatureExtensionsTypeConverter))]
+        [TypeConverter(typeof(GuidanceExtensionsTypeConverter))]
         [Editor(typeof(StandardValuesEditor), typeof(UITypeEditor))]
-        [DisplayNameResource("InstantiateFeatureCommand_FeatureId_DisplayName", typeof(Resources))]
-        [DescriptionResource("ActivateFeatureCommand_FeatureId_Description", typeof(Resources))]
-        public string FeatureId { get; set; }
+        [DisplayNameResource("InstantiateFeatureCommand_GuidanceExtensionId_DisplayName", typeof(Resources))]
+        [DescriptionResource("ActivateFeatureCommand_GuidanceExtensionId_Description", typeof(Resources))]
+        public string GuidanceExtensionId { get; set; }
 
         /// <summary>
-        /// Gets or sets the feature extension manager.
+        /// Gets or sets the guidance extension manager.
         /// </summary>
         [Required]
         [Import]
-        public IFeatureManager FeatureManager
+        public IGuidanceManager GuidanceManager
         {
             get;
             set;
@@ -65,11 +65,11 @@ namespace NuPattern.Library.Commands
             this.ValidateObject();
 
             tracer.TraceInformation(
-                Resources.ActivateOrInstantiateSharedFeatureCommand_TraceInitial, this.FeatureId);
+                Resources.ActivateOrInstantiateSharedFeatureCommand_TraceInitial, this.GuidanceExtensionId);
 
             // Ensure the feature type exists
-            var featureRegistration = this.FeatureManager.InstalledFeatures
-                .FirstOrDefault(feature => feature.FeatureId.Equals(this.FeatureId, StringComparison.OrdinalIgnoreCase));
+            var featureRegistration = this.GuidanceManager.InstalledGuidanceExtensions
+                .FirstOrDefault(feature => feature.ExtensionId.Equals(this.GuidanceExtensionId, StringComparison.OrdinalIgnoreCase));
             if (featureRegistration != null)
             {
                 // Show the guidance windows
@@ -78,33 +78,33 @@ namespace NuPattern.Library.Commands
                     tracer.TraceVerbose(
                         Resources.ActivateOrInstantiateSharedFeatureCommand_TraceShowingGuidanceExplorer);
 
-                    this.FeatureManager.ShowGuidanceWindows(this.ServiceProvider);
+                    this.GuidanceManager.ShowGuidanceWindows(this.ServiceProvider);
                 }
 
                 // Ensure we are not sharing
-                var featureInstance = this.FeatureManager.InstantiatedFeatures.FirstOrDefault(f => f.FeatureId.Equals(this.FeatureId, StringComparison.OrdinalIgnoreCase));
+                var featureInstance = this.GuidanceManager.InstantiatedGuidanceExtensions.FirstOrDefault(f => f.ExtensionId.Equals(this.GuidanceExtensionId, StringComparison.OrdinalIgnoreCase));
                 if (featureInstance == null)
                 {
                     // Create a default name
-                    var instanceName = this.FeatureManager.GetUniqueInstanceName(featureRegistration.DefaultName);
+                    var instanceName = this.GuidanceManager.GetUniqueInstanceName(featureRegistration.DefaultName);
 
                     tracer.TraceInformation(
-                        Resources.ActivateOrInstantiateSharedFeatureCommand_TraceInstantiate, this.FeatureId, instanceName);
+                        Resources.ActivateOrInstantiateSharedFeatureCommand_TraceInstantiate, this.GuidanceExtensionId, instanceName);
 
                     // Instantiate the feature
-                    featureInstance = this.FeatureManager.Instantiate(this.FeatureId, instanceName);
+                    featureInstance = this.GuidanceManager.Instantiate(this.GuidanceExtensionId, instanceName);
                 }
 
                 tracer.TraceInformation(
                         Resources.ActivateOrInstantiateSharedFeatureCommand_TraceActivate, featureInstance.InstanceName);
 
                 // Activate feature
-                this.FeatureManager.ActiveFeature = featureInstance;
+                this.GuidanceManager.ActiveGuidanceExtension = featureInstance;
             }
             else
             {
                 tracer.TraceError(
-                    Resources.ActivateOrInstantiateSharedFeatureCommand_TraceFeatureNotFound, this.FeatureId);
+                    Resources.ActivateOrInstantiateSharedFeatureCommand_TraceFeatureNotFound, this.GuidanceExtensionId);
             }
         }
     }

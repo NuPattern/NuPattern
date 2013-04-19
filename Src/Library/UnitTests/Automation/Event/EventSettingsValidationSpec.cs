@@ -36,7 +36,7 @@ namespace NuPattern.Library.UnitTests.Automation.Event
                     this.settings = automationSettings.AddExtension<EventSettings>();
                 });
 
-                this.validator = new EventSettingsValidations(Mock.Of<IFeatureCompositionService>())
+                this.validator = new EventSettingsValidations(Mock.Of<INuPatternCompositionService>())
                 {
                     ProjectTypeProvider = Mock.Of<INuPatternProjectTypeProvider>(),
                 };

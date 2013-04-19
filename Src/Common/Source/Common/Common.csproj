@@ -39,9 +39,9 @@
     <Compile Include="ChangedEventArgs.cs" />
     <Compile Include="ComponentModel\Composition\Catalog.cs" />
     <Compile Include="ComponentModel\Composition\DecoratingReflectionCatalog.cs" />
-    <Compile Include="ComponentModel\Composition\FeatureComponentAttribute.cs" />
-    <Compile Include="ComponentModel\Composition\FeatureComponentCatalog.cs" />
-    <Compile Include="ComponentModel\Composition\FeatureComponentTypeExtensions.cs" />
+    <Compile Include="ComponentModel\Composition\ComponentAttribute.cs" />
+    <Compile Include="ComponentModel\Composition\ComponentCatalog.cs" />
+    <Compile Include="ComponentModel\Composition\ComponentTypeExtensions.cs" />
     <Compile Include="ComponentModel\Design\AnonymousPropertyDescriptor.cs" />
     <Compile Include="ComponentModel\Design\CancelableCollectionEditor.cs" />
     <Compile Include="ComponentModel\Design\CategoryResourceAttribute.cs" />
@@ -62,7 +62,7 @@
     <Compile Include="ComponentModel\Design\EditorBaseTypeAttribute.cs" />
     <Compile Include="ComponentModel\Design\ExpandableObjectStringConverter.cs" />
     <Compile Include="ComponentModel\Composition\ExportedStandardValue.cs" />
-    <Compile Include="ComponentModel\Composition\FeatureComponentMetadataExtensions.cs" />
+    <Compile Include="ComponentModel\Composition\ComponentMetadataExtensions.cs" />
     <Compile Include="ComponentModel\StandardValue.cs" />
     <Compile Include="ComponentModel\UI\StandardValuesDropDown.cs">
       <SubType>UserControl</SubType>
@@ -72,7 +72,7 @@
     </Compile>
     <Compile Include="ComponentModel\Design\StandardValuesEditor.cs" />
     <Compile Include="ComponentModel\Composition\FilteringReflectionCatalog.cs" />
-    <Compile Include="ComponentModel\Composition\IFeatureComponentMetadata.cs" />
+    <Compile Include="ComponentModel\Composition\IComponentMetadata.cs" />
     <Compile Include="ComponentModel\IComponentModelInfo.cs" />
     <Compile Include="ComponentModel\PropertyChangeManager.cs" />
     <Compile Include="Diagnostics\CompositeTraceSource.cs" />

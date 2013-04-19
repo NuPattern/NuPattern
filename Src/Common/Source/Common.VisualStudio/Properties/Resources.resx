@@ -274,4 +274,10 @@ The solution item has instead been renamed to: '{1}'.</value>
   <data name="ProvideCodeGeneratorAttribute_UnregisterLog" xml:space="preserve">
     <value>Code generator:  {0}, {1}</value>
   </data>
+  <data name="VsTemplateFile_ErrorUnsupportedVsTemplateExtension" xml:space="preserve">
+    <value>Template must have a .zip or .vstemplate extension</value>
+  </data>
+  <data name="VsTemplateFile_ErrorNoTemplateInArchive" xml:space="preserve">
+    <value>The .zip file does not contain any .vstemplate file</value>
+  </data>
 </root>

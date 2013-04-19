@@ -14,26 +14,26 @@ namespace NuPattern.Library.UnitTests.Commands
         //// internal static readonly IAssertion Assert = new Assertion();
 
         [TestClass]
-        public class GivenAnInstantiatedFeature
+        public class GivenAnInstantiatedGuidanceExtension
         {
             private Mock<IProductElement> mockOwner;
-            private Mock<IFeatureManager> mockManager = null;
+            private Mock<IGuidanceManager> mockManager = null;
             private ActivateFeatureCommand command;
 
             [TestInitialize]
             public void Initialize()
             {
                 this.mockOwner = new Mock<IProductElement>();
-                this.mockManager = new Mock<IFeatureManager>();
-                var testInstance = new Mock<IFeatureExtension>();
+                this.mockManager = new Mock<IGuidanceManager>();
+                var testInstance = new Mock<IGuidanceExtension>();
 
-                testInstance.SetupGet(reg => reg.FeatureId).Returns("FeatureId");
+                testInstance.SetupGet(reg => reg.ExtensionId).Returns("AnId");
                 testInstance.SetupGet(reg => reg.InstanceName).Returns("InstanceName");
 
-                this.mockManager.SetupGet(m => m.InstantiatedFeatures).Returns(new IFeatureExtension[] { testInstance.Object });
+                this.mockManager.SetupGet(m => m.InstantiatedGuidanceExtensions).Returns(new IGuidanceExtension[] { testInstance.Object });
 
                 this.command = new ActivateFeatureCommand();
-                this.command.FeatureManager = this.mockManager.Object;
+                this.command.GuidanceManager = this.mockManager.Object;
                 this.command.CurrentElement = mockOwner.Object;
                 this.command.ServiceProvider = new Mock<IServiceProvider>().Object;
             }
@@ -43,7 +43,7 @@ namespace NuPattern.Library.UnitTests.Commands
             {
                 this.command.Execute();
 
-                this.mockManager.VerifySet(fm => fm.ActiveFeature = It.IsAny<IFeatureExtension>(), Times.Never());
+                this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = It.IsAny<IGuidanceExtension>(), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -56,7 +56,7 @@ namespace NuPattern.Library.UnitTests.Commands
 
                 this.command.Execute();
 
-                this.mockManager.VerifySet(fm => fm.ActiveFeature = It.IsAny<IFeatureExtension>(), Times.Never());
+                this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = It.IsAny<IGuidanceExtension>(), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
@@ -66,13 +66,13 @@ namespace NuPattern.Library.UnitTests.Commands
                 mockRef.Setup(r => r.Kind).Returns(ReferenceKindConstants.Guidance);
                 mockRef.Setup(r => r.Value).Returns("Foo");
                 this.mockOwner.Setup(o => o.References).Returns(new[] { mockRef.Object });
-                Mock<IFeatureExtension> mockFeature = new Mock<IFeatureExtension>();
+                Mock<IGuidanceExtension> mockFeature = new Mock<IGuidanceExtension>();
                 mockFeature.Setup(f => f.InstanceName).Returns("Foo");
-                this.mockManager.Setup(m => m.InstantiatedFeatures).Returns(new[] { mockFeature.Object });
+                this.mockManager.Setup(m => m.InstantiatedGuidanceExtensions).Returns(new[] { mockFeature.Object });
 
                 this.command.Execute();
 
-                this.mockManager.VerifySet(fm => fm.ActiveFeature = mockFeature.Object, Times.Once());
+                this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = mockFeature.Object, Times.Once());
             }
         }
     }

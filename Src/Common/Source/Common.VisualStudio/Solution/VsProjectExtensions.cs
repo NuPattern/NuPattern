@@ -25,12 +25,5 @@ namespace NuPattern.VisualStudio.Solution
 
             return projectTypeGuids;
         }
-
-        public static bool IsFeatureProject(this VsProject project)
-        {
-            return false;
-            //return project != null && project.GetProjectTypeGuids().ToLower().Contains(
-            //    new Guid(ModelingFeatureExtension.FeatureProjectFlavorGuid).ToString().ToLower());
-        }
     }
 }

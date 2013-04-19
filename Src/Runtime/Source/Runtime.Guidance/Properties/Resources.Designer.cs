@@ -63,54 +63,54 @@ namespace NuPattern.Runtime.Guidance.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Models.
         /// </summary>
-        internal static string FeatureManager_DefaultFeaturesProjectName {
+        internal static string GuidanceManager_DefaultExtensionProjectName {
             get {
-                return ResourceManager.GetString("FeatureManager_DefaultFeaturesProjectName", resourceCulture);
+                return ResourceManager.GetString("GuidanceManager_DefaultExtensionProjectName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Feature with name &apos;{0}&apos; already exists in the solution..
+        ///   Looks up a localized string similar to Guidance extension with name &apos;{0}&apos; already exists in the solution..
         /// </summary>
-        internal static string FeatureManager_DuplicateFeatureName {
+        internal static string GuidanceManager_DuplicateGuidanceName {
             get {
-                return ResourceManager.GetString("FeatureManager_DuplicateFeatureName", resourceCulture);
+                return ResourceManager.GetString("GuidanceManager_DuplicateGuidanceName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Feature &apos;{0}&apos; instance name &apos;{1}&apos; is already instantiated..
+        ///   Looks up a localized string similar to Guidance extension&apos;{0}&apos; instance name &apos;{1}&apos; is already instantiated..
         /// </summary>
-        internal static string FeatureManager_FeatureAlreadyInstantiated {
+        internal static string GuidanceManager_ExtensionAlreadyInstantiated {
             get {
-                return ResourceManager.GetString("FeatureManager_FeatureAlreadyInstantiated", resourceCulture);
+                return ResourceManager.GetString("GuidanceManager_ExtensionAlreadyInstantiated", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Feature with identifier &apos;{0}&apos; is not installed or it is not properly registered..
+        ///   Looks up a localized string similar to Guidance extension with identifier &apos;{0}&apos; is not installed or it is not properly registered..
         /// </summary>
-        internal static string FeatureManager_FeatureNotInstalled {
+        internal static string GuidanceManager_ExtensionNotInstalled {
             get {
-                return ResourceManager.GetString("FeatureManager_FeatureNotInstalled", resourceCulture);
+                return ResourceManager.GetString("GuidanceManager_ExtensionNotInstalled", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Manager has not been initialized with a solution state yet..
         /// </summary>
-        internal static string FeatureManager_MustInitializeSolutionState {
+        internal static string GuidanceManager_MustInitializeSolutionState {
             get {
-                return ResourceManager.GetString("FeatureManager_MustInitializeSolutionState", resourceCulture);
+                return ResourceManager.GetString("GuidanceManager_MustInitializeSolutionState", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The feature guidance workflow cannot be null..
+        ///   Looks up a localized string similar to The guidance workflow cannot be null..
         /// </summary>
-        internal static string FeatureManager_NullGuidanceWorkflow {
+        internal static string GuidanceManager_NullGuidanceWorkflow {
             get {
-                return ResourceManager.GetString("FeatureManager_NullGuidanceWorkflow", resourceCulture);
+                return ResourceManager.GetString("GuidanceManager_NullGuidanceWorkflow", resourceCulture);
             }
         }
         

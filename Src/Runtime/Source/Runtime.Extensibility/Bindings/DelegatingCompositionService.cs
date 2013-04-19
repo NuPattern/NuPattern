@@ -6,16 +6,16 @@ using NuPattern.Runtime.Composition;
 namespace NuPattern.Runtime.Bindings
 {
     /// <summary>
-    /// Implements a <see cref="IFeatureCompositionService"/> that delegates 
-    /// all its members to an inner <see cref="IFeatureCompositionService"/>.
+    /// Implements a <see cref="INuPatternCompositionService"/> that delegates 
+    /// all its members to an inner <see cref="INuPatternCompositionService"/>.
     /// </summary>
-    internal class DelegatingCompositionService : IFeatureCompositionService
+    internal class DelegatingCompositionService : INuPatternCompositionService
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DelegatingCompositionService"/> class.
         /// </summary>
         /// <param name="compositionService">The composition service.</param>
-        public DelegatingCompositionService(IFeatureCompositionService compositionService)
+        public DelegatingCompositionService(INuPatternCompositionService compositionService)
         {
             this.CompositionService = compositionService;
         }
@@ -23,7 +23,7 @@ namespace NuPattern.Runtime.Bindings
         /// <summary>
         /// Gets or sets the composition service used for delegation.
         /// </summary>
-        public IFeatureCompositionService CompositionService { get; set; }
+        public INuPatternCompositionService CompositionService { get; set; }
 
         /// <summary>
         /// Composes the parts.

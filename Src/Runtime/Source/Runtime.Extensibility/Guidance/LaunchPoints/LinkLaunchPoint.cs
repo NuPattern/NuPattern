@@ -10,26 +10,26 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
     internal abstract class LinkLaunchPoint : ILaunchPoint
     {
         protected virtual IQueryStatusStrategy QueryStatusStrategy { get; set; }
-        protected IFeatureManager ourFeatureManager;
+        protected IGuidanceManager GuidanceManager;
 
-        protected LinkLaunchPoint(IFeatureManager featureManager)
+        protected LinkLaunchPoint(IGuidanceManager guidanceManager)
         {
-            Guard.NotNull(() => featureManager, featureManager);
-            ourFeatureManager = featureManager;
+            Guard.NotNull(() => guidanceManager, guidanceManager);
+            GuidanceManager = guidanceManager;
             this.QueryStatusStrategy = new DefaultQueryStatusStrategy(this.GetType().Name);
         }
 
         protected abstract string BindingName { get; }
 
-        public virtual bool CanExecute(IFeatureExtension feature)
+        public virtual bool CanExecute(IGuidanceExtension extension)
         {
-            if (feature != null && this.QueryStatusStrategy.QueryStatus(feature).Enabled)
+            if (extension != null && this.QueryStatusStrategy.QueryStatus(extension).Enabled)
             {
                 //
                 // Ok, the default strategy said we're go.  Let's look at the active node
                 // in the workflow
                 //
-                IGuidanceWorkflow activeWorkflow = feature.GuidanceWorkflow != null ? feature.GuidanceWorkflow : ourFeatureManager.ActiveFeature.GuidanceWorkflow;
+                IGuidanceWorkflow activeWorkflow = extension.GuidanceWorkflow != null ? extension.GuidanceWorkflow : GuidanceManager.ActiveGuidanceExtension.GuidanceWorkflow;
                 if (activeWorkflow != null)
                 {
                     INode node = activeWorkflow.FocusedAction as INode;
@@ -52,9 +52,9 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
             MessageBox.Show("Unable to execute command because the associated guidance action is not in the Enabled (green) state.");
         }
 
-        public virtual void Execute(IFeatureExtension feature)
+        public virtual void Execute(IGuidanceExtension extension)
         {
-            if (!this.CanExecute(feature))
+            if (!this.CanExecute(extension))
             {
                 throw new InvalidOperationException(string.Format(
                     CultureInfo.CurrentCulture,
@@ -62,11 +62,11 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
                     this.BindingName));
             }
 
-            var tracer = FeatureTracer.GetSourceFor(this, feature.FeatureId, feature.InstanceName);
+            var tracer = GuidanceExtensionTracer.GetSourceFor(this, extension.ExtensionId, extension.InstanceName);
 
             using (tracer.StartActivity("Executing command {0}", BindingName))
             {
-                var commandBinding = feature.Commands.FindByName(this.BindingName);
+                var commandBinding = extension.Commands.FindByName(this.BindingName);
                 if (commandBinding != null)
                 {
                     commandBinding.Evaluate();

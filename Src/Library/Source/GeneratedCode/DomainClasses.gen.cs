@@ -1304,7 +1304,7 @@ namespace NuPattern.Library.Automation
 		/// The type of event which triggers the command to execute when all conditions are
 		/// met.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<NuPattern.IObservableEvent>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter<NuPattern.IObservableEvent>))]
 		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.EventSettings/EventId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.EventSettings/EventId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -1778,7 +1778,7 @@ namespace NuPattern.Library.Automation
 		/// The type of the command. Once selected, the specific properties of the selected
 		/// command can be configured.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<NuPattern.Runtime.IFeatureCommand>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter<NuPattern.Runtime.ICommand>))]
 		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.CommandSettings/TypeId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.CommandSettings/TypeId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -2465,7 +2465,7 @@ namespace NuPattern.Library.Automation
 		/// Gets or sets the value of CustomStatus domain property.
 		/// An optional type that provides dynamic menu status updates for this menu.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<NuPattern.Runtime.UI.ICommandStatus>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter<NuPattern.Runtime.UI.ICommandStatus>))]
 		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.MenuSettings/CustomStatus.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.MenuSettings/CustomStatus.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -4392,7 +4392,7 @@ namespace NuPattern.Library.Automation
 		/// A custom event to execute validation on the current element and all its
 		/// descendants.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<NuPattern.IObservableEvent>))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter<NuPattern.IObservableEvent>))]
 		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]

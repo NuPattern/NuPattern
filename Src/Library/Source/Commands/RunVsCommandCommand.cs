@@ -16,7 +16,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [DescriptionResource("RunVsCommandCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class RunVsCommandCommand : FeatureCommand
+    public class RunVsCommandCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<RunVsCommandCommand>();
 

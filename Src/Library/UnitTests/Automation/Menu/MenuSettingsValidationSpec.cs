@@ -37,7 +37,7 @@ namespace NuPattern.Library.UnitTests.Automation.Menu
                     this.settings = automationSettings.AddExtension<MenuSettings>();
                 });
 
-                this.validator = new MenuSettingsValidations(Mock.Of<IFeatureCompositionService>())
+                this.validator = new MenuSettingsValidations(Mock.Of<INuPatternCompositionService>())
                 {
                     ProjectTypeProvider = Mock.Of<INuPatternProjectTypeProvider>(),
                 };

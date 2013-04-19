@@ -26,14 +26,14 @@ namespace NuPattern.Runtime.UnitTests.Binding
             [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
             public void Initialize()
             {
-                Reflector<FeaturesGlobalContainer>.GetProperty(x => FeaturesGlobalContainer.Instance).SetValue(
+                Reflector<NuPatternGlobalContainer>.GetProperty(x => NuPatternGlobalContainer.Instance).SetValue(
                     null,
                     new CompositionContainer(),
                     null);
 
                 var catalog = new TypeCatalog(typeof(Foo));
                 var container = new CompositionContainer(catalog);
-                var compositionService = new FeatureCompositionService(container);
+                var compositionService = new NuPatternCompositionService(container);
 
                 this.binding = new DynamicBinding<IFoo>(new DelegatingCompositionService(compositionService), "Foo");
             }
@@ -112,14 +112,14 @@ namespace NuPattern.Runtime.UnitTests.Binding
             {
                 var catalog = new TypeCatalog(typeof(Foo));
                 var container = new CompositionContainer(catalog);
-                var compositionService = new Mock<IFeatureCompositionService>();
+                var compositionService = new Mock<INuPatternCompositionService>();
                 compositionService.Setup(x => x.GetExportedValue<ExportProvider>()).Returns(container);
-                compositionService.Setup(x => x.GetExports<IFoo, IFeatureComponentMetadata>())
+                compositionService.Setup(x => x.GetExports<IFoo, IComponentMetadata>())
                     .Returns(new[] 
                     { 
-                        new Lazy<IFoo, IFeatureComponentMetadata>(
+                        new Lazy<IFoo, IComponentMetadata>(
                         () => new Foo(), 
-                        Mocks.Of<IFeatureComponentMetadata>().First(m => 
+                        Mocks.Of<IComponentMetadata>().First(m => 
                             m.CatalogName == Catalog.CatalogName && 
                             m.Id == "Foo"))
                     });
@@ -146,7 +146,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
             {
                 var catalog = new TypeCatalog(typeof(Foo), typeof(Bar));
                 var container = new CompositionContainer(catalog);
-                var compositionService = new FeatureCompositionService(container);
+                var compositionService = new NuPatternCompositionService(container);
 
                 var binding = new DynamicBinding<IFoo>(new DelegatingCompositionService(compositionService), "Foo");
                 Assert.True(binding.Evaluate());
@@ -170,7 +170,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
             {
                 var catalog = new TypeCatalog(typeof(Foo), typeof(Bar));
                 var container = new CompositionContainer(catalog);
-                var compositionService = new FeatureCompositionService(container);
+                var compositionService = new NuPatternCompositionService(container);
 
                 var binding = new DynamicBinding<IFoo>(new DelegatingCompositionService(compositionService), "Foo");
                 Assert.True(binding.Evaluate());
@@ -194,8 +194,8 @@ namespace NuPattern.Runtime.UnitTests.Binding
             IEnumerable<IBar> Bars { get; set; }
         }
 
-        [FeatureComponent(typeof(IFoo), Id = "Foo", Category = "Category", Description = "Description", DisplayName = "DisplayName")]
-        [FeatureComponentCatalog(typeof(Foo))]
+        [Component(typeof(IFoo), Id = "Foo", Category = "Category", Description = "Description", DisplayName = "DisplayName")]
+        [ComponentCatalog(typeof(Foo))]
         public class Foo : IFoo
         {
             // TODO: when bug BlueTab-PLATU11 is fixed, remove the AllowDefault and make it fail.
@@ -217,9 +217,9 @@ namespace NuPattern.Runtime.UnitTests.Binding
 
         [MetadataAttribute]
         [AttributeUsage(AttributeTargets.Class)]
-        public sealed class FeatureComponentCatalogAttribute : Attribute
+        public sealed class ComponentCatalogAttribute : Attribute
         {
-            public FeatureComponentCatalogAttribute(Type exportingType)
+            public ComponentCatalogAttribute(Type exportingType)
             {
                 this.ExportingType = exportingType;
             }

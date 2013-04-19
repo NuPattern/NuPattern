@@ -17,7 +17,7 @@ namespace NuPattern.Library.Commands
     /// Base command class for activating solution items.
     /// </summary>
     [CLSCompliant(false)]
-    public abstract class ActivateSolutionItemsCommand : FeatureCommand
+    public abstract class ActivateSolutionItemsCommand : Command
     {
         private const bool DefaultOpen = false;
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ActivateSolutionItemsCommand>();

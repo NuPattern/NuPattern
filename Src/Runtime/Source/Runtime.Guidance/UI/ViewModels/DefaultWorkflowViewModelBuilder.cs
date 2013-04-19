@@ -24,9 +24,9 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                 new Tuple<Type, ImageSource>(typeof(IJoin), ActivityIcons.JoinIcon)
             };
         private Dictionary<INode, NodeViewModel> viewModelMappings;
-        private IFeatureExtension feature;
+        private IGuidanceExtension feature;
 
-        public DefaultWorkflowViewModelBuilder(IFeatureExtension feature)
+        public DefaultWorkflowViewModelBuilder(IGuidanceExtension feature)
         {
             Guard.NotNull(() => feature, feature);
 

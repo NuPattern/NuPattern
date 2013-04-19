@@ -18,7 +18,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("SetBuildActionCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class SetBuildActionCommand : FeatureCommand
+    public class SetBuildActionCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SetBuildActionCommand>();
 

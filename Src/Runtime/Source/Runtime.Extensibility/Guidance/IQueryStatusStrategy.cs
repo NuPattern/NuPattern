@@ -10,6 +10,6 @@ namespace NuPattern.Runtime.Guidance
         /// Determines the status for the given <paramref name="feature"/>.
         /// </summary>
         /// <param name="feature">The feature to check the status for, or <see langword="null"/>.</param>
-        QueryStatus QueryStatus(IFeatureExtension feature);
+        QueryStatus QueryStatus(IGuidanceExtension feature);
     }
 }

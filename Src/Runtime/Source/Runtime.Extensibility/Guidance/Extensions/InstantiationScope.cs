@@ -4,7 +4,7 @@ using System.Runtime.Remoting.Messaging;
 namespace NuPattern.Runtime.Guidance.Extensions
 {
     /// <summary>
-    /// A scope for instantiating feature extensions
+    /// A scope for instantiating guidance extensions
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public abstract class InstantiationScope<T> : IDisposable

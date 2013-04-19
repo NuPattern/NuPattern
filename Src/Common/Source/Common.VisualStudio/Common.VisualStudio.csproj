@@ -112,7 +112,6 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="BananaAttribute.cs" />
     <Compile Include="Commands\MenuCommandServiceExtensions.cs" />
     <Compile Include="Commands\VsMenuCommand.cs" />
     <Compile Include="Commands\VsMenuCommandAdapter.cs" />
@@ -138,8 +137,6 @@
     <Compile Include="Extensions\VsExtensionRequirement.cs" />
     <Compile Include="Extensions\VsInstalledExtension.cs" />
     <Compile Include="Extensions\VsVersionRange.cs" />
-    <Compile Include="IBananaMetadata.cs" />
-    <Compile Include="IBananaRegistration.cs" />
     <Compile Include="ProvideCodeGeneratorAttribute.cs" />
     <Compile Include="Solution\HierarchyItem.cs" />
     <Compile Include="Solution\Hierarchy\Constants.cs" />

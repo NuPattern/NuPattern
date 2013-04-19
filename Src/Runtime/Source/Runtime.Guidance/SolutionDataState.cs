@@ -9,8 +9,6 @@ namespace NuPattern.Runtime.Guidance
     [Export(typeof(ISolutionState))]
     internal class SolutionDataState : ISolutionState
     {
-        public const string FeaturesProperty = "Features";
-
         private ISolution theSolution;
 
         [ImportingConstructor]
@@ -34,75 +32,75 @@ namespace NuPattern.Runtime.Guidance
             }
         }
 
-        public IEnumerable<ISolutionFeatureState> InstantiatedFeatures
+        public IEnumerable<IGuidanceExtensionPersistState> InstantiatedGuidanceExtensions
         {
             get
             {
-                var features = (string)Solution.Data.Features;
-                if (String.IsNullOrEmpty(features))
-                    return Enumerable.Empty<SolutionFeatureState>();
+                var extensions = (string)Solution.Data.Features;
+                if (String.IsNullOrEmpty(extensions))
+                    return Enumerable.Empty<GuidanceExtensionPersistState>();
 
                 Version version;
-                return from feature in features.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries)
-                       let state = feature.Split(new[] { ':' }, StringSplitOptions.RemoveEmptyEntries)
+                return from extension in extensions.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries)
+                       let state = extension.Split(new[] { ':' }, StringSplitOptions.RemoveEmptyEntries)
                        // We ignore whatever is mangled and invalid there
                        where state.Length == 3 &&
                             !String.IsNullOrEmpty(state[0]) &&
                             !String.IsNullOrEmpty(state[1]) &&
                             Version.TryParse(state[2], out version)
-                       select new SolutionFeatureState
+                       select new GuidanceExtensionPersistState
                        {
-                           FeatureId = state[0],
+                           ExtensionId = state[0],
                            InstanceName = state[1],
                            Version = new Version(state[2])
                        };
             }
         }
 
-        public void AddFeature(string featureId, string instanceName, Version version)
+        public void AddExtension(string extensionId, string instanceName, Version version)
         {
-            var existingFeatures = InstantiatedFeatures.ToList();
-            var thisFeature = existingFeatures.FirstOrDefault(f => f.FeatureId == featureId && f.InstanceName == instanceName && f.Version == version);
-            if (thisFeature != null)
+            var existingExtensions = InstantiatedGuidanceExtensions.ToList();
+            var thisExtension = existingExtensions.FirstOrDefault(f => f.ExtensionId == extensionId && f.InstanceName == instanceName && f.Version == version);
+            if (thisExtension != null)
                 return;
 
-            SerializeFeatures(
-                InstantiatedFeatures.Concat(new[] 
+            SerializeExtensions(
+                InstantiatedGuidanceExtensions.Concat(new[] 
                 { 
-                    new SolutionFeatureState 
+                    new GuidanceExtensionPersistState 
                     {
-                        FeatureId = featureId, 
+                        ExtensionId = extensionId, 
                         InstanceName = instanceName,
-                         Version = version
+                        Version = version,
                     }
                 })
             );
         }
 
-        public void RemoveFeature(string featureId, string instanceName)
+        public void RemoveExtension(string extensionId, string instanceName)
         {
-            var features = InstantiatedFeatures.ToList();
-            features.RemoveAll(state => state.FeatureId == featureId && state.InstanceName == instanceName);
+            var extensions = InstantiatedGuidanceExtensions.ToList();
+            extensions.RemoveAll(state => state.ExtensionId == extensionId && state.InstanceName == instanceName);
 
-            SerializeFeatures(features);
+            SerializeExtensions(extensions);
         }
 
-        public void Update(string featureId, string instanceName, Version newVersion)
+        public void Update(string extensionId, string instanceName, Version newVersion)
         {
-            var features = InstantiatedFeatures.ToList();
-            var feature = features.FirstOrDefault(f => f.FeatureId == featureId && f.InstanceName == instanceName);
+            var extensions = InstantiatedGuidanceExtensions.ToList();
+            var extension = extensions.FirstOrDefault(f => f.ExtensionId == extensionId && f.InstanceName == instanceName);
 
-            if (feature != null)
+            if (extension != null)
             {
-                feature.Version = newVersion;
-                SerializeFeatures(features);
+                extension.Version = newVersion;
+                SerializeExtensions(extensions);
             }
         }
 
-        private void SerializeFeatures(IEnumerable<ISolutionFeatureState> features)
+        private void SerializeExtensions(IEnumerable<IGuidanceExtensionPersistState> extensions)
         {
-            Solution.Data.Features = String.Join("|", features
-                .Select(state => state.FeatureId + ":" + state.InstanceName + ":" + state.Version.ToString())
+            Solution.Data.Features = String.Join("|", extensions
+                .Select(state => state.ExtensionId + ":" + state.InstanceName + ":" + state.Version.ToString())
                 .ToArray());
         }
     }

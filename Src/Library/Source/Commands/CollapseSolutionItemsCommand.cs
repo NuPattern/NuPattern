@@ -17,7 +17,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [DescriptionResource("CollapseSolutionItemsCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class CollapseSolutionItemsCommand : FeatureCommand
+    public class CollapseSolutionItemsCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CollapseSolutionItemsCommand>();
         private const bool DefaultIncludeProjects = false;

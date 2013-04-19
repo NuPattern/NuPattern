@@ -39,9 +39,9 @@ namespace NuPattern.Runtime.Bindings
             return attributes
                 .Where(a => !(a is EditorAttribute))
                 .Concat(new[] 
-				{ 
-					new EditorAttribute(typeof(StandardValuesEditor), typeof(UITypeEditor)) 
-				}).ToArray();
+                { 
+                    new EditorAttribute(typeof(StandardValuesEditor), typeof(UITypeEditor)) 
+                }).ToArray();
         }
 
         /// <summary>
@@ -161,10 +161,10 @@ namespace NuPattern.Runtime.Bindings
 
         /// <summary>
         /// Custom converter that customizes the way the binding is shown as a string.
-        /// It inherits from the FeatureComponentTypeConverter which already handles 
+        /// It inherits from the ComponentTypeConverter which already handles 
         /// the initialization of standard values.
         /// </summary>
-        private class TypeIdConverter : FeatureComponentTypeConverter<TValue>
+        private class TypeIdConverter : NuPatternComponentTypeConverter<TValue>
         {
             public override object ConvertTo(ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType)
             {

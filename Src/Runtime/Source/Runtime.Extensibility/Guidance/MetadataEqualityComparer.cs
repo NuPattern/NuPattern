@@ -3,14 +3,14 @@ using NuPattern.ComponentModel.Composition;
 
 namespace NuPattern.Runtime.Guidance
 {
-    internal class MetadataEqualityComparer : IEqualityComparer<IFeatureComponentMetadata>
+    internal class MetadataEqualityComparer : IEqualityComparer<IComponentMetadata>
     {
-        public bool Equals(IFeatureComponentMetadata x, IFeatureComponentMetadata y)
+        public bool Equals(IComponentMetadata x, IComponentMetadata y)
         {
             return object.ReferenceEquals(x, y) || object.Equals(x.Id, y.Id);
         }
 
-        public int GetHashCode(IFeatureComponentMetadata obj)
+        public int GetHashCode(IComponentMetadata obj)
         {
             if (obj.Id == null)
             {

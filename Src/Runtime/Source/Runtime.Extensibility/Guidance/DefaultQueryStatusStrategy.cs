@@ -15,7 +15,7 @@ namespace NuPattern.Runtime.Guidance
             this.launchPointName = launchPointName;
         }
 
-        public QueryStatus QueryStatus(IFeatureExtension feature)
+        public QueryStatus QueryStatus(IGuidanceExtension feature)
         {
             var status = new QueryStatus { Visible = false, Enabled = false };
             if (feature == null)
@@ -51,12 +51,12 @@ namespace NuPattern.Runtime.Guidance
                 //
                 // If we don't have a workflow, look at the "active" workflow
                 //
-                if (feature.FeatureManager != null &&
-                    feature.FeatureManager.ActiveFeature != null &&
-                    feature.FeatureManager.ActiveFeature.GuidanceWorkflow != null)
+                if (feature.GuidanceManager != null &&
+                    feature.GuidanceManager.ActiveGuidanceExtension != null &&
+                    feature.GuidanceManager.ActiveGuidanceExtension.GuidanceWorkflow != null)
                 {
                     status.Enabled = status.Visible = true;
-                    var associatedActions = feature.FeatureManager.ActiveFeature.GuidanceWorkflow.Successors
+                    var associatedActions = feature.GuidanceManager.ActiveGuidanceExtension.GuidanceWorkflow.Successors
                         .Traverse(node => node.Successors)
                         .OfType<IGuidanceAction>()
                         .Where(activity => activity.LaunchPoints.Contains(launchPointName))

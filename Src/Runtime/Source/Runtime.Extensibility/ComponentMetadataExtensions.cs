@@ -8,7 +8,7 @@ using NuPattern.Runtime.Properties;
 namespace NuPattern.Runtime
 {
     /// <summary>
-    /// Extensions to types for feature extensions.
+    /// Extensions to types for guidance extensions.
     /// </summary>
     [CLSCompliant(false)]
     public static class ComponentMetadataExtensions
@@ -16,9 +16,9 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Returns the component metadata
         /// </summary>
-        public static IFeatureComponentMetadata AsProjectFeatureComponent(this Type componentType)
+        public static IComponentMetadata AsProjectComponent(this Type componentType)
         {
-            var customAttribute = componentType.FeatureComponentDynamic();
+            var customAttribute = componentType.ComponentDynamic();
             if (customAttribute == null)
                 return null;
 
@@ -61,14 +61,14 @@ namespace NuPattern.Runtime
             return customAttribute;
         }
 
-        private static FeatureComponentAttribute FeatureComponentDynamic(this Type component)
+        private static ComponentAttribute ComponentDynamic(this Type component)
         {
             // The dynamic version is necessary when the component type was obtained using the type service
             foreach (var attribute in component.GetCustomAttributes(true))
             {
-                if (IsFeatureComponentMetadata(attribute.GetType()))
+                if (IsComponentMetadata(attribute.GetType()))
                 {
-                    var featureComponentAttribute = new FeatureComponentAttribute();
+                    var componentAttribute = new ComponentAttribute();
 
                     foreach (var property in attribute.GetType().GetProperties(
                         BindingFlags.Instance |
@@ -76,26 +76,26 @@ namespace NuPattern.Runtime
                         BindingFlags.GetProperty |
                         BindingFlags.SetProperty))
                     {
-                        var featureComponentAttributeProperty = featureComponentAttribute.GetType().GetProperty(property.Name);
-                        if (featureComponentAttributeProperty != null && featureComponentAttributeProperty.CanWrite)
-                            featureComponentAttributeProperty.SetValue(featureComponentAttribute, property.GetValue(attribute, null), null);
+                        var componentAttributeProperty = componentAttribute.GetType().GetProperty(property.Name);
+                        if (componentAttributeProperty != null && componentAttributeProperty.CanWrite)
+                            componentAttributeProperty.SetValue(componentAttribute, property.GetValue(attribute, null), null);
                     }
 
-                    return featureComponentAttribute;
+                    return componentAttribute;
                 }
             }
 
             return null;
         }
 
-        private static bool IsFeatureComponentMetadata(Type attributeType)
+        private static bool IsComponentMetadata(Type attributeType)
         {
             if (attributeType == null) return false;
 
-            if (attributeType.AssemblyQualifiedName == typeof(FeatureComponentAttribute).AssemblyQualifiedName)
+            if (attributeType.AssemblyQualifiedName == typeof(ComponentAttribute).AssemblyQualifiedName)
                 return true;
             else
-                return IsFeatureComponentMetadata(attributeType.BaseType);
+                return IsComponentMetadata(attributeType.BaseType);
         }
     }
 }

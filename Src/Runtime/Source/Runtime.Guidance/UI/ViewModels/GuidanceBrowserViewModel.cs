@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Windows.Input;
 using NuPattern.Presentation;
 using NuPattern.Runtime.Guidance.Workflow;
 
@@ -11,10 +10,10 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
     {
         private GuidanceBrowserContext context;
         private IServiceProvider serviceProvider;
-        private IFeatureManager featureManager;
+        private IGuidanceManager guidanceManager;
         private IUriReferenceService uriReferenceService;
         private INode node;
-        private IFeatureExtension featureExtension;
+        private IGuidanceExtension featureExtension;
         private Uri link;
         private string errorMessage;
         private bool hasErrorMessage;
@@ -29,7 +28,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             this.serviceProvider = serviceProvider;
 
             this.NavigationCommand = new RelayCommand<Uri>(uri => this.Navigate(uri));
-            this.featureManager = context.FeatureManager;
+            this.guidanceManager = context.GuidanceManager;
             this.uriReferenceService = context.UriReferenceService;
         }
 
@@ -82,7 +81,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             }
         }
 
-        public ICommand NavigationCommand { get; private set; }
+        public System.Windows.Input.ICommand NavigationCommand { get; private set; }
 
         public INode Node
         {
@@ -96,7 +95,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                 {
                     this.node = value;
                     this.OnPropertyChanged(() => this.Node);
-                    this.featureExtension = this.GetFeatureExtension();
+                    this.featureExtension = this.GetExtension();
                     this.Link = this.ResolveUri(value == null || value.Link == null ? null : new Uri(value.Link));
                 }
             }
@@ -119,7 +118,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             }
         }
 
-        private IFeatureExtension GetFeatureExtension()
+        private IGuidanceExtension GetExtension()
         {
             if (this.node == null)
             {
@@ -127,7 +126,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             }
 
             var workflow = this.node.Predecessors.Traverse(n => n.Predecessors).OfType<IGuidanceWorkflow>().First();
-            return this.featureManager.InstantiatedFeatures.First(fe => fe.GuidanceWorkflow == workflow);
+            return this.guidanceManager.InstantiatedGuidanceExtensions.First(fe => fe.GuidanceWorkflow == workflow);
         }
 
         private void Navigate(Uri uri)
@@ -151,7 +150,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                     this.Link = this.TryResolveUri<Uri>(uri);
                     if (this.Link == null)
                     {
-                        FeatureContent content = this.TryResolveUri<FeatureContent>(uri);
+                        GuidanceContent content = this.TryResolveUri<GuidanceContent>(uri);
                         IGuidanceAction matchingNode = null;
                         matchingNode = FindNodeBasedOnContentLink(featureExtension, uri.ToString());
                         if (matchingNode != null)
@@ -171,7 +170,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             }
         }
 
-        private IGuidanceAction FindNodeBasedOnContentLink(IFeatureExtension feature, string link)
+        private IGuidanceAction FindNodeBasedOnContentLink(IGuidanceExtension feature, string link)
         {
             IGuidanceAction focusedAction = feature.GuidanceWorkflow.Successors
                                 .Traverse<INode>(s => s.Successors)
@@ -189,7 +188,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                 //
                 // First see if it's a "content://" URI
                 //
-                var content = this.TryResolveUri<FeatureContent>(uri);
+                var content = this.TryResolveUri<GuidanceContent>(uri);
                 if (content != null)
                     return new Uri(content.Path);
 
@@ -202,7 +201,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                     if (launchPoint.CanExecute(featureExtension))
                     {
                         launchPoint.Execute(featureExtension);
-                        return (FeatureCallContext.Current.GuidanceBrowserControl.CurrentLink);
+                        return (GuidanceCallContext.Current.GuidanceBrowserControl.CurrentLink);
                     }
                 }
 

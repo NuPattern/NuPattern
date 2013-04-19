@@ -7,7 +7,7 @@ namespace NuPattern.Runtime.Guidance
     /// Attribute used to expose launchpoints.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
-    internal class LaunchPointAttribute : FeatureComponentAttribute
+    internal class LaunchPointAttribute : ComponentAttribute
     {
         public LaunchPointAttribute()
             : base(typeof(ILaunchPoint))

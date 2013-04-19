@@ -10,6 +10,7 @@ namespace NuPattern.Runtime.Guidance
         /// Whether the menu item is visible.
         /// </summary>
         public bool Visible { get; set; }
+
         /// <summary>
         /// Whether the menu item is enabled.
         /// </summary>

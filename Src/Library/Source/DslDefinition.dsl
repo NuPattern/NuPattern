@@ -96,7 +96,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -138,7 +138,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.Runtime.IFeatureCommand&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter&lt;NuPattern.Runtime.ICommand&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -204,7 +204,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.Runtime.UI.ICommandStatus&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter&lt;NuPattern.Runtime.UI.ICommandStatus&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
@@ -360,7 +360,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">

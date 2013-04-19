@@ -11,24 +11,24 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
     /// Launch point that controls visibility of templates.
     /// </summary>
     /// <remarks>
-    /// This base implementation verifies that the feature where this launchpoint 
+    /// This base implementation verifies that the guidance extension where this launchpoint 
     /// is included has been instantiated, and then delegates to the derived 
     /// class to check additional conditions eventually.
     /// </remarks>
     [DisplayName("VS Template Launch Point")]
     internal abstract class VsTemplateLaunchPoint : ILaunchPoint
     {
-        protected VsTemplateLaunchPoint(IFeatureManager featureManager, string id, string name, string category)
+        protected VsTemplateLaunchPoint(IGuidanceManager guidanceManager, string id, string name, string category)
         {
-            Guard.NotNull(() => featureManager, featureManager);
+            Guard.NotNull(() => guidanceManager, guidanceManager);
 
-            this.FeatureManager = featureManager;
+            this.GuidanceManager = guidanceManager;
             this.Id = id;
             this.Name = name;
             this.Category = category;
 
             this.QueryStatusStrategy = new DefaultQueryStatusStrategy(this.GetType().Name);
-            this.FeatureInstanceLocator = new DefaultFeatureInstanceLocator(featureManager, this.GetType());
+            this.GuidanceInstanceLocator = new DefaultGuidanceInstanceLocator(guidanceManager, this.GetType());
         }
 
         /// <summary>
@@ -47,43 +47,43 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
         public string Id { get; private set; }
 
         /// <summary>
-        /// Gets the default behavior of the feature when it is unfolded.
+        /// Gets the default behavior of the guidance extension when it is unfolded.
         /// </summary>
-        public virtual FeatureInstantiation FeatureInstantiation
+        public virtual GudianceInstantiation GuidanceInstantiation
         {
-            get { return FeatureInstantiation.None; }
+            get { return GudianceInstantiation.None; }
         }
 
         /// <summary>
-        /// Gets wheather the template is unfolded with the feature.
+        /// Gets wheather the template is unfolded with the guidance extension.
         /// </summary>
         public virtual bool IsDefaultTemplate
         {
             get { return false; }
         }
 
-        protected IFeatureManager FeatureManager { get; private set; }
+        protected IGuidanceManager GuidanceManager { get; private set; }
 
-        protected virtual IFeatureInstanceLocator FeatureInstanceLocator { get; set; }
+        protected virtual IGuidanceInstanceLocator GuidanceInstanceLocator { get; set; }
 
         protected virtual IQueryStatusStrategy QueryStatusStrategy { get; set; }
 
-        public virtual bool CanExecute(IFeatureExtension feature)
+        public virtual bool CanExecute(IGuidanceExtension extension)
         {
-            if (feature == null)
+            if (extension == null)
             {
-                feature = this.FeatureInstanceLocator.LocateInstance();
+                extension = this.GuidanceInstanceLocator.LocateInstance();
             }
 
-            if (this.FeatureInstantiation != FeatureInstantiation.None)
+            if (this.GuidanceInstantiation != GudianceInstantiation.None)
             {
                 return true;
             }
 
-            return this.QueryStatusStrategy.QueryStatus(feature).Enabled;
+            return this.QueryStatusStrategy.QueryStatus(extension).Enabled;
         }
 
-        public virtual void Execute(IFeatureExtension feature)
+        public virtual void Execute(IGuidanceExtension extension)
         {
         }
 
@@ -103,13 +103,13 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
 
         protected void OnUnfoldTemplate(string bindingName)
         {
-            var registration = this.FeatureManager.FindFeature(this.GetType());
-            var tracer = FeatureTracer.GetSourceFor(this, registration.FeatureId);
+            var registration = this.GuidanceManager.FindGuidanceExtension(this.GetType());
+            var tracer = GuidanceExtensionTracer.GetSourceFor(this, registration.ExtensionId);
 
-            var feature = this.FeatureManager.InstantiatedFeatures.FirstOrDefault(f => f.FeatureId == registration.FeatureId);
-            if (feature != null)
+            var extension = this.GuidanceManager.InstantiatedGuidanceExtensions.FirstOrDefault(f => f.ExtensionId == registration.ExtensionId);
+            if (extension != null)
             {
-                var commandBinding = feature.Commands.FindByName(bindingName);
+                var commandBinding = extension.Commands.FindByName(bindingName);
                 if (commandBinding == null || !commandBinding.Evaluate())
                 {
                     throw new InvalidOperationException(string.Format(

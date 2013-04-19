@@ -19,7 +19,7 @@ namespace NuPattern.Library.Commands
     [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("SaveArtifactCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class SaveArtifactCommand : FeatureCommand
+    public class SaveArtifactCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SaveArtifactCommand>();
 
