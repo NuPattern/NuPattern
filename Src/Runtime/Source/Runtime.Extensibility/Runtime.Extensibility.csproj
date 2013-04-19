@@ -193,7 +193,7 @@
     <Compile Include="Guidance\LaunchPoints\VsTemplateLaunchPointExtensions.cs" />
     <Compile Include="Guidance\GuidanceExtensionAttribute.cs" />
     <Compile Include="Guidance\GuidanceComponentCategories.cs" />
-    <Compile Include="Guidance\GudianceInstantiation.cs" />
+    <Compile Include="Guidance\GuidanceInstantiation.cs" />
     <Compile Include="Guidance\GuidanceManagerSettings.cs" />
     <Compile Include="Guidance\IGuidanceInstanceLocator.cs" />
     <Compile Include="Guidance\IGuidanceWindowsService.cs" />

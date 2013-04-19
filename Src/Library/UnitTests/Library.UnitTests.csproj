@@ -200,6 +200,7 @@
     </Content>
     <Content Include="Library.UnitTests.Content\VsTemplateConfigurator-Item.vstemplate">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Library.UnitTests.Content\VsTemplateConfigurator-Project.vstemplate">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

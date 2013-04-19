@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the instantiation modes for guidance extensions
     /// </summary>
-    public enum GudianceInstantiation
+    public enum GuidanceInstantiation
     {
         /// <summary>
         /// Cannot be instantiated

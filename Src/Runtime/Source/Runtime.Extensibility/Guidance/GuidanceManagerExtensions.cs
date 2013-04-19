@@ -63,7 +63,7 @@ namespace NuPattern.Runtime.Guidance
             var toolWindows = provider.GetService<IGuidanceWindowsService>();
             if (toolWindows != null)
             {
-                tracer.TraceVerbose(Resources.GudianceManagerExtensions_TraceShowingGuidanceWindows);
+                tracer.TraceVerbose(Resources.GuidanceManagerExtensions_TraceShowingGuidanceWindows);
 
                 toolWindows.ShowGuidanceExplorer(provider);
                 toolWindows.ShowGuidanceBrowser(provider);

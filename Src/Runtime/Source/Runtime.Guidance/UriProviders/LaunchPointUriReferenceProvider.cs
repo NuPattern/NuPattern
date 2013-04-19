@@ -16,7 +16,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
         private Dictionary<Uri, ILaunchPoint> launchPoints;
 
         [Import]
-        private IGuidanceManager GudianceManager { get; set; }
+        private IGuidanceManager GuidanceManager { get; set; }
 
         [Import]
         private INuPatternCompositionService CompositionService { get; set; }
@@ -59,7 +59,7 @@ namespace NuPattern.Runtime.Guidance.UriProviders
             foreach (var export in exports)
             {
                 var launchPoint = export.Value;
-                var feature = this.GudianceManager.FindGuidanceExtension(launchPoint.GetType());
+                var feature = this.GuidanceManager.FindGuidanceExtension(launchPoint.GetType());
                 var uri = new Uri(this.UriScheme + Uri.SchemeDelimiter + feature.ExtensionId + "/" + export.Metadata.Id);
 
                 tracer.TraceVerbose("Registering launch point uri {0}", uri);

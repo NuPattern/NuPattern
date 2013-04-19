@@ -30,7 +30,7 @@ namespace NuPattern.Runtime.Shell.Guidance
         /// </summary>
         [Import]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        private INuPatternCompositionService GudianceComposition
+        private INuPatternCompositionService GuidanceComposition
         {
             get;
             set;

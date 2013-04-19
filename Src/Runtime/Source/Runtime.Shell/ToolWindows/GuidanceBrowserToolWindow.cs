@@ -38,7 +38,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
         private IUriReferenceService UriReferenceService { get; set; }
 
         [Import]
-        private IGuidanceManager GudianceManager { get; set; }
+        private IGuidanceManager GuidanceManager { get; set; }
 
         [Import(typeof(SVsServiceProvider))]
         private IServiceProvider ServiceProvider { get; set; }
@@ -52,7 +52,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
             var context = new GuidanceBrowserContext
             {
-                GuidanceManager = this.GudianceManager,
+                GuidanceManager = this.GuidanceManager,
                 UriReferenceService = this.UriReferenceService,
                 UserMessageService = this.UserMessageService,
             };

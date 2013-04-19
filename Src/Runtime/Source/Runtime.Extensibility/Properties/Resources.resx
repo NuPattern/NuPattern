@@ -321,7 +321,7 @@
   <data name="GuidanceManagerExtensions_ErrorNoRegistration" xml:space="preserve">
     <value>Failed to activate an instance of the guidance extension '{0}'. It is not installed.</value>
   </data>
-  <data name="GudianceManagerExtensions_TraceShowingGuidanceWindows" xml:space="preserve">
+  <data name="GuidanceManagerExtensions_TraceShowingGuidanceWindows" xml:space="preserve">
     <value>Showing guidance windows</value>
   </data>
   <data name="GuidanceManagerExtensions_TraceActivation" xml:space="preserve">

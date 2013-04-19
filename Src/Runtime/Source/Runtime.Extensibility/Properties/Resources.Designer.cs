@@ -331,15 +331,6 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Showing guidance windows.
-        /// </summary>
-        internal static string GudianceManagerExtensions_TraceShowingGuidanceWindows {
-            get {
-                return ResourceManager.GetString("GudianceManagerExtensions_TraceShowingGuidanceWindows", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to General.
         /// </summary>
         internal static string GuidanceComponentAttribute_DefaultCategory {
@@ -390,6 +381,15 @@ namespace NuPattern.Runtime.Properties {
         internal static string GuidanceManagerExtensions_TraceActivation {
             get {
                 return ResourceManager.GetString("GuidanceManagerExtensions_TraceActivation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Showing guidance windows.
+        /// </summary>
+        internal static string GuidanceManagerExtensions_TraceShowingGuidanceWindows {
+            get {
+                return ResourceManager.GetString("GuidanceManagerExtensions_TraceShowingGuidanceWindows", resourceCulture);
             }
         }
         

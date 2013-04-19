@@ -47,16 +47,16 @@ namespace NuPattern.Runtime.Guidance.Diagnostics
 
         internal static ITraceSource GetSourceFor(ITraceSource innerSource, string extensionId, string instanceName = null)
         {
-            return new GudianceExtensionTraceSource(extensionId, instanceName, innerSource);
+            return new GuidanceExtensionTraceSource(extensionId, instanceName, innerSource);
         }
 
         [DebuggerStepThrough]
-        internal class GudianceExtensionTraceSource : ITraceSource
+        internal class GuidanceExtensionTraceSource : ITraceSource
         {
             string extensionId;
             string instanceName;
 
-            public GudianceExtensionTraceSource(string extensionId, string instanceName, ITraceSource innerSource)
+            public GuidanceExtensionTraceSource(string extensionId, string instanceName, ITraceSource innerSource)
             {
                 this.extensionId = extensionId;
                 this.instanceName = instanceName;

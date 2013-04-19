@@ -49,9 +49,9 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
         /// <summary>
         /// Gets the default behavior of the guidance extension when it is unfolded.
         /// </summary>
-        public virtual GudianceInstantiation GuidanceInstantiation
+        public virtual GuidanceInstantiation GuidanceInstantiation
         {
-            get { return GudianceInstantiation.None; }
+            get { return GuidanceInstantiation.None; }
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
                 extension = this.GuidanceInstanceLocator.LocateInstance();
             }
 
-            if (this.GuidanceInstantiation != GudianceInstantiation.None)
+            if (this.GuidanceInstantiation != GuidanceInstantiation.None)
             {
                 return true;
             }

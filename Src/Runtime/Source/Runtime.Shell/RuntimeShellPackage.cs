@@ -193,7 +193,7 @@ namespace NuPattern.Runtime.Shell
             // If initializing other packages launchpoints worked, 
             // they wouldn't need to do this themselves.
             this.RegisterRefreshGuidanceStates();
-            GuidanceManager.InstantiatedExtensionsChanged += this.OnInstantiatedGudianceExtensionChanged;
+            GuidanceManager.InstantiatedExtensionsChanged += this.OnInstantiatedGuidanceExtensionChanged;
             GuidanceManager.ActiveExtensionChanged += this.OnActiveGuidanceExtensionChanged;
         }
 
@@ -508,7 +508,7 @@ namespace NuPattern.Runtime.Shell
         }
 #endif
 
-        private void OnInstantiatedGudianceExtensionChanged(object sender, EventArgs args)
+        private void OnInstantiatedGuidanceExtensionChanged(object sender, EventArgs args)
         {
             this.showWindows = true;
         }
