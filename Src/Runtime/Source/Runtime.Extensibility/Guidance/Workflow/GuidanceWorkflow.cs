@@ -26,6 +26,11 @@ namespace NuPattern.Runtime.Guidance.Workflow
         {
         }
 
+        internal override NodeType Type
+        {
+            get { return NodeType.Workflow; }
+        }
+
         /// <summary>
         /// Gets the identifier of the owning feature
         /// </summary>

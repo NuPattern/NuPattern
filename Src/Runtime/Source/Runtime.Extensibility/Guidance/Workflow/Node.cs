@@ -116,6 +116,12 @@ namespace NuPattern.Runtime.Guidance.Workflow
         public string Link { get; set; }
 
         /// <summary>
+        /// Gets the type of this Node.
+        /// </summary>
+        [Browsable(false)]
+        internal abstract NodeType Type { get; }
+
+        /// <summary>
         /// Insert a workflow along side this node in a workflow
         /// (same successors and predecessors) and optionally delete this node
         /// </summary>

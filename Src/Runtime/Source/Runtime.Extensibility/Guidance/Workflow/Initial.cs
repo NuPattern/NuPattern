@@ -28,6 +28,11 @@ namespace NuPattern.Runtime.Guidance.Workflow
         {
         }
 
+        internal override NodeType Type
+        {
+            get { return NodeType.Initial; }
+        }
+
         /// <summary>
         /// Gets the initial activity contected to this initial node.
         /// </summary>

@@ -44,6 +44,11 @@ namespace NuPattern.Runtime.Guidance.Workflow
             this.LaunchPoints = Enumerable.Empty<string>();
         }
 
+        internal override NodeType Type
+        {
+            get { return NodeType.Action; }
+        }
+
         /// <summary>
         /// Gets or sets the launch points associated with the activity
         /// </summary>

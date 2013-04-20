@@ -11,8 +11,6 @@ namespace NuPattern.Runtime.Guidance.UI
     [ValueConversion(typeof(NodeState), typeof(System.Windows.Media.SolidColorBrush))]
     internal class NodeStateToBrushValueConverter : IValueConverter
     {
-
-
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value != null && value is NodeState)
@@ -20,7 +18,7 @@ namespace NuPattern.Runtime.Guidance.UI
                 var state = (NodeState)value;
 
                 Entry tuple;
-                Color color = Color.DarkGray;
+                Color color = Color.Black;
                 if (StateColorMapping.TryGetValue(state, out tuple))
                 {
                     color = (parameter == null) ? tuple.Fill : tuple.Stroke;
@@ -35,11 +33,11 @@ namespace NuPattern.Runtime.Guidance.UI
 
         private static readonly Dictionary<NodeState, Entry> StateColorMapping = new[]
         {
-            new Entry { State = NodeState.Enabled,   Fill = Color.LimeGreen,  Stroke = Color.LimeGreen },
-            new Entry { State = NodeState.Blocked,   Fill = Color.Red,     Stroke = Color.Red}, // Color.FromArgb(255, 64, 64)   --> Tomato
-            new Entry { State = NodeState.Completed, Fill = Color.Gainsboro,  Stroke = Color.Gainsboro },
-            new Entry { State = NodeState.Disabled,  Fill = Color.White,      Stroke = Color.Red},
-            new Entry { State = NodeState.Default,   Fill = Color.DarkGray,   Stroke = Color.DarkGray  },
+            new Entry { State = NodeState.Enabled,   Fill = Color.DarkGreen,  Stroke = Color.DarkGreen },
+            new Entry { State = NodeState.Blocked,   Fill = Color.DarkRed,     Stroke = Color.DarkRed}, // Color.FromArgb(255, 64, 64)   --> Tomato
+            new Entry { State = NodeState.Completed, Fill = Color.DarkSlateGray,  Stroke = Color.DarkSlateGray },
+            new Entry { State = NodeState.Disabled,  Fill = Color.White,      Stroke = Color.DarkRed},
+            new Entry { State = NodeState.Default,   Fill = Color.Black,   Stroke = Color.Black  },
         }.ToDictionary(t => t.State);
 
         private class Entry

@@ -138,4 +138,16 @@
   <data name="GuidanceManager_ExtensionAlreadyInstantiated" xml:space="preserve">
     <value>Guidance extension'{0}' instance name '{1}' is already instantiated.</value>
   </data>
+  <data name="GuidanceActionViewModel_PostConditionsLabel" xml:space="preserve">
+    <value>Post-Conditions</value>
+  </data>
+  <data name="GuidanceActionViewModel_PreConditionsLabel" xml:space="preserve">
+    <value>Pre-Conditions</value>
+  </data>
+  <data name="DefaultWorkflowViewModel_FinalLabel" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="DefaultWorkflowViewModel_InitialLabel" xml:space="preserve">
+    <value>Start</value>
+  </data>
 </root>

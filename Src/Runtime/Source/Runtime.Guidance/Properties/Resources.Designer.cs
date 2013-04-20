@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Runtime.Guidance.Properties
-{
-
-
+namespace NuPattern.Runtime.Guidance.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -57,6 +57,42 @@ namespace NuPattern.Runtime.Guidance.Properties
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to End.
+        /// </summary>
+        internal static string DefaultWorkflowViewModel_FinalLabel {
+            get {
+                return ResourceManager.GetString("DefaultWorkflowViewModel_FinalLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start.
+        /// </summary>
+        internal static string DefaultWorkflowViewModel_InitialLabel {
+            get {
+                return ResourceManager.GetString("DefaultWorkflowViewModel_InitialLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Post-Conditions.
+        /// </summary>
+        internal static string GuidanceActionViewModel_PostConditionsLabel {
+            get {
+                return ResourceManager.GetString("GuidanceActionViewModel_PostConditionsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pre-Conditions.
+        /// </summary>
+        internal static string GuidanceActionViewModel_PreConditionsLabel {
+            get {
+                return ResourceManager.GetString("GuidanceActionViewModel_PreConditionsLabel", resourceCulture);
             }
         }
         

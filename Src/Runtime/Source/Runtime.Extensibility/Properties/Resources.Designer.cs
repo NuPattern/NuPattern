@@ -502,7 +502,7 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Whether the reader has accepted this node.
+        ///   Looks up a localized string similar to Whether the reader has manually accepted this guidance node.
         /// </summary>
         internal static string GuidanceNode_IsUserAccepted_Description {
             get {
@@ -511,7 +511,7 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Is Accepted by User.
+        ///   Looks up a localized string similar to Accepted by User.
         /// </summary>
         internal static string GuidanceNode_IsUserAccepted_DisplayName {
             get {
@@ -529,7 +529,7 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The content for this node.
+        ///   Looks up a localized string similar to The content for this guidance node.
         /// </summary>
         internal static string GuidanceNode_Link_Description {
             get {
@@ -556,7 +556,7 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The name of the node.
+        ///   Looks up a localized string similar to The name of this guidance node.
         /// </summary>
         internal static string GuidanceNode_Name_Description {
             get {
@@ -592,7 +592,7 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The conditions that are satisifed by the completion of this node.
+        ///   Looks up a localized string similar to The conditions that are satisifed by the completion of this guidance node.
         /// </summary>
         internal static string GuidanceNode_PostConditions_Description {
             get {
@@ -610,7 +610,7 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The conditions that must be satisfied before this node can be completed.
+        ///   Looks up a localized string similar to The conditions that must be satisfied before this guidance node can be completed.
         /// </summary>
         internal static string GuidanceNode_PreConditions_Description {
             get {
@@ -637,7 +637,7 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The state of this node.
+        ///   Looks up a localized string similar to The state of this guidance node.
         /// </summary>
         internal static string GuidanceNode_State_Description {
             get {

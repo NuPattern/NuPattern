@@ -12,34 +12,22 @@ namespace NuPattern.Runtime.Shell
         {
             Guard.NotNull(() => serviceProvider, serviceProvider);
 
-            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
-
-            if (!packageToolWindow.IsWindowVisible<GuidanceExplorerToolWindow>())
-            {
-                packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>(true);
-            }
+            GuidanceExplorerToolWindow.OpenWindow(serviceProvider);
         }
 
         public void ShowGuidanceBrowser(IServiceProvider serviceProvider)
         {
             Guard.NotNull(() => serviceProvider, serviceProvider);
 
-            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
-
-            if (!packageToolWindow.IsWindowVisible<GuidanceBrowserToolWindow>())
-            {
-                packageToolWindow.ShowWindow<GuidanceBrowserToolWindow>(true);
-            }
+            GuidanceBrowserToolWindow.OpenWindow(serviceProvider);
         }
 
         public void HideGuidanceWindows(IServiceProvider serviceProvider)
         {
             Guard.NotNull(() => serviceProvider, serviceProvider);
 
-            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
-
-            packageToolWindow.HideWindow<GuidanceExplorerToolWindow>();
-            packageToolWindow.HideWindow<GuidanceBrowserToolWindow>();
+            GuidanceExplorerToolWindow.HideWindow(serviceProvider);
+            GuidanceBrowserToolWindow.HideWindow(serviceProvider);
         }
     }
 }

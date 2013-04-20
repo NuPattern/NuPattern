@@ -118,6 +118,7 @@
     <Compile Include="Bindings\BindingCompositionService.cs" />
     <Compile Include="Bindings\BindingFactory.cs" />
     <Compile Include="Bindings\BindingPropertyDescriptor.cs" />
+    <Compile Include="Guidance\Workflow\NodeType.cs" />
     <Compile Include="LaunchPointUri.cs" />
     <Compile Include="GuidanceContentUri.cs" />
     <Compile Include="Validation\DataAnnotationsValidator.cs" />

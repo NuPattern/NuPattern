@@ -25,5 +25,10 @@ namespace NuPattern.Runtime.Guidance.Workflow
             : base(stateComposer, NodeDescriptor.Final.FanIn, NodeDescriptor.Final.FanOut)
         {
         }
+
+        internal override NodeType Type
+        {
+            get { return NodeType.Final; }
+        }
     }
 }

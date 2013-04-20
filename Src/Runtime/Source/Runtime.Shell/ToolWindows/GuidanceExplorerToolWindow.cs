@@ -85,11 +85,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             Guard.NotNull(() => serviceProvider, serviceProvider);
 
             var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
-
-            if (!packageToolWindow.IsWindowVisible<GuidanceExplorerToolWindow>())
-            {
-                packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>(true);
-            }
+            packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>(true);
         }
 
         /// <summary>

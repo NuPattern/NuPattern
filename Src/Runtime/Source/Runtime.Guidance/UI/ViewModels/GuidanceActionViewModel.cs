@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Media;
 using NuPattern.Presentation;
+using NuPattern.Runtime.Guidance.Properties;
 using NuPattern.Runtime.Guidance.Workflow;
 
 namespace NuPattern.Runtime.Guidance.UI.ViewModels
@@ -87,8 +88,8 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
 
         private static IEnumerable<LabelViewModel> GetConditions(IGuidanceAction model)
         {
-            yield return new LabelViewModel("Preconditions", model.Preconditions);
-            yield return new LabelViewModel("Postconditions", model.Postconditions);
+            yield return new LabelViewModel(Resources.GuidanceActionViewModel_PreConditionsLabel, model.Preconditions);
+            yield return new LabelViewModel(Resources.GuidanceActionViewModel_PostConditionsLabel, model.Postconditions);
         }
 
         private void RefreshDetails()

@@ -8,7 +8,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
     {
         public static readonly NodeDescriptor Initial = new NodeDescriptor
         {
-            //Type = typeof(IInitialNode),
+            Type = NodeType.Initial,
             FanIn = Cardinality.None,
             FanOut = Cardinality.One,
             //ValidOutgoings = new[] { typeof(IOpaqueAction), typeof(IForkNode), typeof(IDecisionNode) }
@@ -16,7 +16,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
 
         public static readonly NodeDescriptor Final = new NodeDescriptor
         {
-            //Type = typeof(IFinalNode),
+            Type = NodeType.Final,
             FanIn = Cardinality.One,
             //ValidIncomings = new[] { typeof(IOpaqueAction), typeof(IJoinNode), typeof(IMergeNode) },
             FanOut = Cardinality.None
@@ -24,7 +24,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
 
         public static readonly NodeDescriptor Action = new NodeDescriptor
         {
-            //Type = typeof(IOpaqueAction),
+            Type = NodeType.Action,
             FanIn = Cardinality.One,
             //ValidIncomings = new[] { typeof(IOpaqueAction), typeof(IForkNode), typeof(IJoinNode), typeof(IDecisionNode), typeof(IMergeNode), typeof(IInitialNode) },
             FanOut = Cardinality.One,
@@ -33,7 +33,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
 
         public static readonly NodeDescriptor Decision = new NodeDescriptor
         {
-            //Type = typeof(IDecisionNode),
+            Type = NodeType.Decision,
             FanIn = Cardinality.One,
             //ValidIncomings = new[] { typeof(IJoinNode), typeof(IMergeNode), typeof(IOpaqueAction), typeof(IInitialNode), typeof(IForkNode), typeof(IDecisionNode) },
             FanOut = Cardinality.OneOrMore,
@@ -42,7 +42,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
 
         public static readonly NodeDescriptor Merge = new NodeDescriptor
         {
-            //Type = typeof(IMergeNode),
+            Type = NodeType.Merge,
             FanIn = Cardinality.OneOrMore,
             //ValidIncomings = new[] { typeof(IOpaqueAction), typeof(IJoinNode), typeof(IMergeNode) },
             FanOut = Cardinality.One,
@@ -51,7 +51,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
 
         public static readonly NodeDescriptor Fork = new NodeDescriptor
         {
-            //Type = typeof(IForkNode),
+            Type = NodeType.Fork,
             FanIn = Cardinality.One,
             //ValidIncomings = new[] { typeof(IJoinNode), typeof(IMergeNode), typeof(IOpaqueAction), typeof(IInitialNode), typeof(IForkNode), typeof(IDecisionNode) },
             FanOut = Cardinality.OneOrMore,
@@ -60,7 +60,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
 
         public static readonly NodeDescriptor Join = new NodeDescriptor
         {
-            //Type = typeof(IJoinNode),
+            Type = NodeType.Join,
             FanIn = Cardinality.OneOrMore,
             //ValidIncomings = new[] { typeof(IOpaqueAction), typeof(IJoinNode), typeof(IMergeNode) },
             FanOut = Cardinality.One,
@@ -71,9 +71,9 @@ namespace NuPattern.Runtime.Guidance.Workflow
         {
         }
 
-        //public Type Type { get; private set; }
         public Cardinality FanIn { get; private set; }
         public Cardinality FanOut { get; private set; }
+        public NodeType Type { get; private set; }
         //public Type[] ValidIncomings { get; private set; }
         //public Type[] ValidOutgoings { get; private set; }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Media;
+using NuPattern.Runtime.Guidance.Properties;
 using NuPattern.Runtime.Guidance.Workflow;
 
 namespace NuPattern.Runtime.Guidance.UI.ViewModels
@@ -172,12 +173,12 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
 
             if (node is IInitial)
             {
-                return "Start";
+                return Resources.DefaultWorkflowViewModel_InitialLabel;
             }
 
             if (node is IFinal)
             {
-                return "End";
+                return Resources.DefaultWorkflowViewModel_FinalLabel;
             }
 
             return node.GetType().Name;

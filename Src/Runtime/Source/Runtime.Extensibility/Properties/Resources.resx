@@ -509,16 +509,16 @@ Please add a new or existing image file {0} to the project and try again.</value
     <value>Initial</value>
   </data>
   <data name="GuidanceNode_IsUserAccepted_Description" xml:space="preserve">
-    <value>Whether the reader has accepted this node</value>
+    <value>Whether the reader has manually accepted this guidance node</value>
   </data>
   <data name="GuidanceNode_IsUserAccepted_DisplayName" xml:space="preserve">
-    <value>Is Accepted by User</value>
+    <value>Accepted by User</value>
   </data>
   <data name="GuidanceNode_Join_DisplayName" xml:space="preserve">
     <value>Join</value>
   </data>
   <data name="GuidanceNode_Link_Description" xml:space="preserve">
-    <value>The content for this node</value>
+    <value>The content for this guidance node</value>
   </data>
   <data name="GuidanceNode_Link_DisplayName" xml:space="preserve">
     <value>Content</value>
@@ -527,25 +527,25 @@ Please add a new or existing image file {0} to the project and try again.</value
     <value>Merge</value>
   </data>
   <data name="GuidanceNode_Name_Description" xml:space="preserve">
-    <value>The name of the node</value>
+    <value>The name of this guidance node</value>
   </data>
   <data name="GuidanceNode_Name_DisplayName" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="GuidanceNode_PostConditions_Description" xml:space="preserve">
-    <value>The conditions that are satisifed by the completion of this node</value>
+    <value>The conditions that are satisifed by the completion of this guidance node</value>
   </data>
   <data name="GuidanceNode_PostConditions_DisplayName" xml:space="preserve">
     <value>Post-Conditions</value>
   </data>
   <data name="GuidanceNode_PreConditions_Description" xml:space="preserve">
-    <value>The conditions that must be satisfied before this node can be completed</value>
+    <value>The conditions that must be satisfied before this guidance node can be completed</value>
   </data>
   <data name="GuidanceNode_PreConditions_DisplayName" xml:space="preserve">
     <value>Pre-Conditions</value>
   </data>
   <data name="GuidanceNode_State_Description" xml:space="preserve">
-    <value>The state of this node</value>
+    <value>The state of this guidance node</value>
   </data>
   <data name="GuidanceNode_State_DisplayName" xml:space="preserve">
     <value>State</value>
