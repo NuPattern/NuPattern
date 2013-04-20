@@ -88,6 +88,7 @@
     <Compile Include="Diagnostics\TraceRecordDefaultTraceListener.cs" />
     <Compile Include="Diagnostics\TraceRecordTextListener.cs" />
     <Compile Include="Diagnostics\TraceRecordXmlListener.cs" />
+    <Compile Include="Drawing\BitmapHelper.cs" />
     <Compile Include="IFluentInterface.cs" />
     <Compile Include="IO\RelativePathBuilder.cs" />
     <Compile Include="ISupportTransaction.cs" />

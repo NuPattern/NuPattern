@@ -130,6 +130,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Constants.tt</DependentUpon>
     </Compile>
+    <Compile Include="GuidanceRegistration.cs" />
+    <Compile Include="GuidanceRegistrationAdapter.cs" />
     <Compile Include="GuidanceWindowsService.cs" />
     <Compile Include="ToolWindows\GuidanceBrowserToolWindow.cs" />
     <Compile Include="ToolWindows\GuidanceExplorerToolWindow.cs" />
