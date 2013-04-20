@@ -27,13 +27,27 @@ namespace NuPattern.Runtime.Shell.ToolWindows
         /// Shows the window.
         /// </summary>
         /// <typeparam name="T">The type of the tool window to show.</typeparam>
+        /// <param name="activate">Whether to force the window to activate</param>
         /// <returns>
         /// The <see cref="ToolWindowPane"/> to show.
         /// </returns>
-        public T ShowWindow<T>() where T : ToolWindowPane
+        public T ShowWindow<T>(bool activate = true) where T : ToolWindowPane
         {
             var window = FindWindow<T>();
-            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(((IVsWindowFrame)window.Frame).Show());
+            var frame = ((IVsWindowFrame)window.Frame);
+            if (activate)
+            {
+                int onScreen;
+                Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(frame.IsOnScreen(out onScreen));
+                if (onScreen == 0)
+                {
+                    Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(frame.Show());
+                }
+            }
+            else
+            {
+                Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(((IVsWindowFrame)window.Frame).ShowNoActivate());
+            }
             return window;
         }
 
@@ -67,6 +81,16 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             var frame = (IVsWindowFrame)window.Frame;
 
             return frame.IsVisible() == 0;
+        }
+
+        /// <summary>
+        /// Gets the window instance
+        /// </summary>
+        /// <typeparam name="T">The type of the tool window</typeparam>
+        /// <returns></returns>
+        public ToolWindowPane GetWindow<T>() where T : ToolWindowPane
+        {
+            return FindWindow<T>();
         }
 
         private T FindWindow<T>() where T : ToolWindowPane

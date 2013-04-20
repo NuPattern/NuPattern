@@ -8,11 +8,18 @@ using NuPattern.Diagnostics;
 
 namespace NuPattern.Runtime.Guidance.UriProviders
 {
+    /// <summary>
+    /// A <see cref="IUriReferenceProvider"/> that resolves and creates Uris from 
+    /// <see cref="GuidanceContent"/> instances. The Uri format is: 
+    /// Example: <c>content://[VSIXID]/path</c>.
+    /// </summary>
+    // TODO: Fix FERT so that this class does not have ot be public to register itself.
+    [PartCreationPolicy(CreationPolicy.Shared)]
     [Export(typeof(IUriReferenceProvider))]
-    internal class GuidanceContentUriReferenceProvider : IUriReferenceProvider<GuidanceContent>
+    public class GuidanceContentUriReferenceProvider : IUriReferenceProvider<GuidanceContent>
     {
+        private const string UriFormat = GuidanceContentUri.HostFormat + "{ExtensionId}/{Path}";
         static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceContentUriReferenceProvider>();
-        public const string Scheme = "content";
 
         private IServiceProvider ServiceProvider { get; set; }
         private IGuidanceManager guidanceManager { get; set; }
@@ -27,27 +34,43 @@ namespace NuPattern.Runtime.Guidance.UriProviders
             this.guidanceManager = guidanceManager;
         }
 
+        /// <summary>
+        /// Gets the URI scheme.
+        /// </summary>
+        /// <value>The URI scheme.</value>
         public string UriScheme
         {
-            get { return Scheme; }
+            get { return GuidanceContentUri.UriScheme; }
         }
 
+        /// <summary>
+        /// Creates the URI.
+        /// </summary>
         public Uri CreateUri(GuidanceContent instance)
         {
             tracer.TraceVerbose("Creating uri for content with feature id {0}, path {1}", instance.GuidanceExtensionId, instance.Path);
 
-            var feature = this.guidanceManager.InstalledGuidanceExtensions
+            var extension = this.guidanceManager.InstalledGuidanceExtensions
                 .FirstOrDefault(installedFeature => installedFeature.ExtensionId.Equals(instance.GuidanceExtensionId, StringComparison.InvariantCultureIgnoreCase));
-            if (feature == null)
+            if (extension == null)
                 throw new ArgumentException(string.Format("Feature '{0}' not found", instance.GuidanceExtensionId));
 
-            var path = instance.Path.Replace(feature.InstallPath, string.Empty).Replace("\\", "/");
-            var uri = new Uri(UriScheme + Uri.SchemeDelimiter + feature.ExtensionId + path);
+            var path = instance.Path.Replace(extension.InstallPath, string.Empty).Replace("\\", "/");
+
+            var uri = new Uri(UriFormat.NamedFormat(new
+            {
+                ExtensionId = extension.ExtensionId,
+                Path = path,
+            }));
+
             tracer.TraceVerbose("Created uri {0}", uri);
 
             return uri;
         }
 
+        /// <summary>
+        /// Resolves the URI
+        /// </summary>
         public GuidanceContent ResolveUri(Uri uri)
         {
             tracer.TraceVerbose("Resolving uri {0}", uri);
@@ -56,12 +79,12 @@ namespace NuPattern.Runtime.Guidance.UriProviders
             if (extensionId == "." && guidanceManager.ActiveGuidanceExtension != null)
                 extensionId = guidanceManager.ActiveGuidanceExtension.ExtensionId;
 
-            var feature = this.guidanceManager.InstalledGuidanceExtensions
+            var extension = this.guidanceManager.InstalledGuidanceExtensions
                 .FirstOrDefault(installedFeature => installedFeature.ExtensionId.Equals(extensionId, StringComparison.InvariantCultureIgnoreCase));
-            if (feature == null)
+            if (extension == null)
                 throw new ArgumentException(string.Format("Guidance extension '{0}' not found", extensionId));
 
-            var path = Path.Combine(feature.InstallPath, Uri.UnescapeDataString(uri.PathAndQuery.Substring(1))
+            var path = Path.Combine(extension.InstallPath, Uri.UnescapeDataString(uri.PathAndQuery.Substring(1))
                 .Replace("/", @"\"));
 
             if (!File.Exists(path))
@@ -71,6 +94,9 @@ namespace NuPattern.Runtime.Guidance.UriProviders
             return new GuidanceContent(extensionId, path);
         }
 
+        /// <summary>
+        /// Opens the URI
+        /// </summary>
         public void Open(GuidanceContent instance)
         {
             tracer.TraceVerbose("Opening content ", instance.Path);

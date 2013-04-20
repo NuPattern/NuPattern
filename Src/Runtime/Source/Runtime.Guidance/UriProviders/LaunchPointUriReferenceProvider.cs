@@ -7,11 +7,18 @@ using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Runtime.Guidance.UriProviders
 {
+    /// <summary>
+    /// A <see cref="IUriReferenceProvider"/> that resolves and creates Uris from 
+    /// <see cref="ILaunchPoint"/> instances. The Uri format is: 
+    /// Example: <c>launchpoint://VSIXID/MetadataId</c>.
+    /// </summary>
+    // TODO: Fix FERT so that this class does not have ot be public to register itself.
+    [PartCreationPolicy(CreationPolicy.Shared)]
     [Export(typeof(IUriReferenceProvider))]
-    internal class LaunchPointUriReferenceProvider : IUriReferenceProvider<ILaunchPoint>
+    public class LaunchPointUriReferenceProvider : IUriReferenceProvider<ILaunchPoint>
     {
+        private const string UriFormat = LaunchPointUri.HostFormat + "{ExtensionId}/{ExportId}";
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<LaunchPointUriReferenceProvider>();
-        public const string Scheme = "launchpoint";
 
         private Dictionary<Uri, ILaunchPoint> launchPoints;
 
@@ -21,21 +28,26 @@ namespace NuPattern.Runtime.Guidance.UriProviders
         [Import]
         private INuPatternCompositionService CompositionService { get; set; }
 
+        /// <summary>
+        /// Gets the URI scheme.
+        /// </summary>
+        /// <value>The URI scheme.</value>
         public string UriScheme
         {
-            get { return Scheme; }
+            get { return LaunchPointUri.UriScheme; }
         }
 
+        /// <summary>
+        /// Creates the URI.
+        /// </summary>
         public Uri CreateUri(ILaunchPoint instance)
         {
             throw new NotImplementedException();
         }
 
-        public void Open(ILaunchPoint instance)
-        {
-            throw new NotImplementedException();
-        }
-
+        /// <summary>
+        /// Resolves the URI
+        /// </summary>
         public ILaunchPoint ResolveUri(Uri uri)
         {
             if (launchPoints == null)
@@ -52,6 +64,14 @@ namespace NuPattern.Runtime.Guidance.UriProviders
             return null;
         }
 
+        /// <summary>
+        /// Opens the URI
+        /// </summary>
+        public void Open(ILaunchPoint instance)
+        {
+            throw new NotImplementedException();
+        }
+
         private void Initialize()
         {
             var exports = this.CompositionService.GetExports<ILaunchPoint, IComponentMetadata>();
@@ -59,8 +79,13 @@ namespace NuPattern.Runtime.Guidance.UriProviders
             foreach (var export in exports)
             {
                 var launchPoint = export.Value;
-                var feature = this.GuidanceManager.FindGuidanceExtension(launchPoint.GetType());
-                var uri = new Uri(this.UriScheme + Uri.SchemeDelimiter + feature.ExtensionId + "/" + export.Metadata.Id);
+                var extension = this.GuidanceManager.FindGuidanceExtension(launchPoint.GetType());
+
+                var uri = new Uri(UriFormat.NamedFormat(new
+                {
+                    ExtensionId = extension.ExtensionId,
+                    ExportId = export.Metadata.Id,
+                }));
 
                 tracer.TraceVerbose("Registering launch point uri {0}", uri);
                 this.launchPoints.Add(uri, launchPoint);

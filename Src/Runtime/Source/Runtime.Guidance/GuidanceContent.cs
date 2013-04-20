@@ -5,7 +5,7 @@ namespace NuPattern.Runtime.Guidance
     /// <summary>
     /// Represents a content provided by a guidance extension
     /// </summary>
-    internal class GuidanceContent
+    public class GuidanceContent
     {
         /// <summary>
         /// Initializes a new instance of <see cref="GuidanceContent"/>

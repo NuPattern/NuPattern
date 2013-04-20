@@ -42,7 +42,7 @@ namespace NuPattern.Runtime.Shell.Commands
             /// </summary>
             public void Execute()
             {
-                this.toolWindow.ShowWindow<SolutionBuilderToolWindow>();
+                this.toolWindow.ShowWindow<SolutionBuilderToolWindow>(true);
             }
         }
     }

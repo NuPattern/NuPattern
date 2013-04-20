@@ -8,6 +8,7 @@ using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.Guidance.UI;
 using NuPattern.Runtime.Guidance.UI.ViewModels;
 using NuPattern.Runtime.Guidance.UI.Views;
+using NuPattern.Runtime.Guidance.Workflow;
 using NuPattern.Runtime.Shell.Properties;
 using NuPattern.VisualStudio;
 
@@ -87,7 +88,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
             if (!packageToolWindow.IsWindowVisible<GuidanceExplorerToolWindow>())
             {
-                packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>();
+                packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>(true);
             }
         }
 
@@ -108,14 +109,15 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
         private void OnCurrentNodeChanged(object sender, NodeChangedEventArgs e)
         {
-            var currentAction = this.viewModel.CurrentWorkflow == null ? new object[0] : new[] { this.viewModel.CurrentWorkflow.Model.FocusedAction };
-            SelectItem(currentAction);
+            var currentAction = this.viewModel.CurrentWorkflow == null ? null : this.viewModel.CurrentWorkflow.Model.FocusedAction;
+            if (currentAction != null)
+            {
+                SelectItem(new[] { currentAction });
+                BrowseNode(currentAction);
+            }
 
             //Ensure GuidanceBrowser tool window is open
             GuidanceBrowserToolWindow.OpenWindow(this);
-
-            //Set CurrentNode in Browser ViewModel
-
         }
 
         private void SelectItem(object[] selectedObjects)
@@ -123,6 +125,20 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             this.selectionContainer.SelectableObjects = selectedObjects;
             this.selectionContainer.SelectedObjects = selectedObjects;
             Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.trackSelection.OnSelectChange(this.selectionContainer));
+        }
+
+        private void BrowseNode(INode node)
+        {
+            var packageToolWindow = this.ServiceProvider.GetService<IPackageToolWindow>();
+            var toolWindow = packageToolWindow.GetWindow<GuidanceBrowserToolWindow>();
+            if (toolWindow != null)
+            {
+                var browser = toolWindow as GuidanceBrowserToolWindow;
+                if (browser != null)
+                {
+                    browser.SelectCurrentNode(node);
+                }
+            }
         }
     }
 }

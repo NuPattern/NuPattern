@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.Shell;
 using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.Guidance.UI.ViewModels;
 using NuPattern.Runtime.Guidance.UI.Views;
+using NuPattern.Runtime.Guidance.Workflow;
 using NuPattern.Runtime.Shell.Properties;
 using NuPattern.VisualStudio;
 
@@ -62,6 +63,14 @@ namespace NuPattern.Runtime.Shell.ToolWindows
         }
 
         /// <summary>
+        /// Selects the current action
+        /// </summary>
+        internal void SelectCurrentNode(INode action)
+        {
+            this.viewModel.Node = action;
+        }
+
+        /// <summary>
         /// Opens the window, if not already opened.
         /// </summary>
         internal static void OpenWindow(IServiceProvider serviceProvider)
@@ -70,10 +79,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
             var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
 
-            if (!packageToolWindow.IsWindowVisible<GuidanceBrowserToolWindow>())
-            {
-                packageToolWindow.ShowWindow<GuidanceBrowserToolWindow>();
-            }
+            packageToolWindow.ShowWindow<GuidanceBrowserToolWindow>(true);
         }
 
         /// <summary>

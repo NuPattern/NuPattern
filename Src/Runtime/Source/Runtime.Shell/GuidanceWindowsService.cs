@@ -16,7 +16,7 @@ namespace NuPattern.Runtime.Shell
 
             if (!packageToolWindow.IsWindowVisible<GuidanceExplorerToolWindow>())
             {
-                packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>();
+                packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>(true);
             }
         }
 
@@ -28,7 +28,7 @@ namespace NuPattern.Runtime.Shell
 
             if (!packageToolWindow.IsWindowVisible<GuidanceBrowserToolWindow>())
             {
-                packageToolWindow.ShowWindow<GuidanceBrowserToolWindow>();
+                packageToolWindow.ShowWindow<GuidanceBrowserToolWindow>(true);
             }
         }
 

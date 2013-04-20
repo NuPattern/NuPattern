@@ -100,7 +100,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
                   store.PropertyExists(Constants.SettingsName, SolutionBuilderVisibilitySetting)))
             {
                 //First time after installation
-                packageToolWindow.ShowWindow<SolutionBuilderToolWindow>();
+                packageToolWindow.ShowWindow<SolutionBuilderToolWindow>(true);
 
                 store.CreateCollection(Constants.SettingsName);
                 store.SetString(Constants.SettingsName, SolutionBuilderVisibilitySetting, bool.FalseString);
@@ -125,7 +125,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
             if (!packageToolWindow.IsWindowVisible<SolutionBuilderToolWindow>())
             {
-                packageToolWindow.ShowWindow<SolutionBuilderToolWindow>();
+                packageToolWindow.ShowWindow<SolutionBuilderToolWindow>(true);
 
                 var settingsManager = new ShellSettingsManager(serviceProvider);
                 var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
