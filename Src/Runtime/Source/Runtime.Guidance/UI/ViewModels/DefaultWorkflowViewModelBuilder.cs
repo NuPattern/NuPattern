@@ -24,18 +24,18 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                 new Tuple<Type, ImageSource>(typeof(IJoin), ActivityIcons.JoinIcon)
             };
         private Dictionary<INode, NodeViewModel> viewModelMappings;
-        private IGuidanceExtension feature;
+        private IGuidanceExtension extension;
 
-        public DefaultWorkflowViewModelBuilder(IGuidanceExtension feature)
+        public DefaultWorkflowViewModelBuilder(IGuidanceExtension extension)
         {
-            Guard.NotNull(() => feature, feature);
+            Guard.NotNull(() => extension, extension);
 
-            this.feature = feature;
+            this.extension = extension;
         }
 
         public virtual IEnumerable<NodeViewModel> GetNodes()
         {
-            var workflow = this.feature.GuidanceWorkflow;
+            var workflow = this.extension.GuidanceWorkflow;
             if (workflow == null || workflow.InitialNode == null)
             {
                 yield break;
@@ -190,7 +190,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             {
                 if (node is IGuidanceAction)
                 {
-                    viewModel = new GuidanceActionViewModel(feature, (IGuidanceAction)node, this.GetImageForNode(node));
+                    viewModel = new GuidanceActionViewModel(extension, (IGuidanceAction)node, this.GetImageForNode(node));
                 }
                 else
                 {

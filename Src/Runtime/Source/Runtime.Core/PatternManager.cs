@@ -53,6 +53,7 @@ namespace NuPattern.Runtime
         /// </summary>
         /// <param name="serviceProvider">The Service Provider.</param>
         /// <param name="solutionEvents">The solution events.</param>
+        /// <param name="solution">The solution</param>
         /// <param name="shellEvents">The shell events.</param>
         /// <param name="itemEvents">The item events</param>
         /// <param name="installedToolkits">The installed toolkits.</param>
@@ -60,6 +61,7 @@ namespace NuPattern.Runtime
         [ImportingConstructor]
         public PatternManager(
             [Import(typeof(SVsServiceProvider))] IServiceProvider serviceProvider,
+            ISolution solution,
             IShellEvents shellEvents,
             ISolutionEvents solutionEvents,
             IItemEvents itemEvents,
@@ -67,14 +69,15 @@ namespace NuPattern.Runtime
             IUserMessageService messageService)
         {
             Guard.NotNull(() => serviceProvider, serviceProvider);
-            Guard.NotNull(() => solutionEvents, solutionEvents);
+            Guard.NotNull(() => solution, solution);
             Guard.NotNull(() => shellEvents, shellEvents);
+            Guard.NotNull(() => solutionEvents, solutionEvents);
             Guard.NotNull(() => itemEvents, itemEvents);
             Guard.NotNull(() => installedToolkits, installedToolkits);
             Guard.NotNull(() => messageService, messageService);
 
             this.serviceProvider = serviceProvider;
-            this.solution = serviceProvider.GetService<ISolution, ISolution>();
+            this.solution = solution;
             this.solutionEvents = solutionEvents;
             this.shellEvents = shellEvents;
             this.itemEvents = itemEvents;
@@ -316,7 +319,6 @@ namespace NuPattern.Runtime
         {
             Guard.NotNull(() => toolkitInfo, toolkitInfo);
             Guard.NotNullOrEmpty(() => name, name);
-
 
             if (!this.IsOpen)
             {
