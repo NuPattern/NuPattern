@@ -57,6 +57,7 @@ namespace NuPattern.Runtime.Shell
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
     [ProvideService(typeof(IUriReferenceService), ServiceName = "IUriReferenceService")]
+    [ProvideService(typeof(ITemplateService), ServiceName = "TemplateService")]
     [ProvideService(typeof(ISolution), ServiceName = "ISolution")]
     [ProvideService(typeof(IExtensionManager), ServiceName = "IExtensionManager")]
     [ProvideService(typeof(IGuidanceManager), ServiceName = "IGuidanceManager")]
@@ -93,6 +94,8 @@ namespace NuPattern.Runtime.Shell
         private IGuidanceManager GuidanceManager { get; set; }
         [Import]
         private IUriReferenceService UriReferenceService { get; set; }
+        [Import]
+        private ITemplateService TemplateService { get; set; }
         [Import]
         private ISolution Solution { get; set; }
         [Import]
@@ -257,6 +260,7 @@ namespace NuPattern.Runtime.Shell
         {
             var serviceContainer = (IServiceContainer)this;
             serviceContainer.AddService(typeof(IUriReferenceService), new ServiceCreatorCallback((c, s) => this.UriReferenceService), true);
+            serviceContainer.AddService(typeof(ITemplateService), new ServiceCreatorCallback((c, s) => this.TemplateService), true);
             serviceContainer.AddService(typeof(ISolution), new ServiceCreatorCallback((c, s) => this.Solution), true);
             serviceContainer.AddService(typeof(IExtensionManager), new ServiceCreatorCallback((c, s) => this.ExtensionManager), true);
             serviceContainer.AddService(typeof(IGuidanceManager), new ServiceCreatorCallback((c, s) => this.GuidanceManager), true);
