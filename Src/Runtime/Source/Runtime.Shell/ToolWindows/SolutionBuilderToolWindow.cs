@@ -162,8 +162,11 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
         private void OnCurrentNodeChanged(object sender, EventArgs e)
         {
-            var selectedObjects = this.viewModel.CurrentNode == null ? new object[0] : new[] { this.viewModel.CurrentNode.Model };
+            SelectItem(this.viewModel.CurrentNode == null ? new object[0] : new[] { this.viewModel.CurrentNode.Model });
+        }
 
+        private void SelectItem(object[] selectedObjects)
+        {
             this.selectionContainer.SelectableObjects = selectedObjects;
             this.selectionContainer.SelectedObjects = selectedObjects;
             Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.trackSelection.OnSelectChange(this.selectionContainer));

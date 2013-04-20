@@ -287,7 +287,8 @@ namespace NuPattern.Runtime.Shell
         private void OnSolutionClosed(object sender, SolutionEventArgs e)
         {
             SolutionBuilderToolWindow.AutoHideWindow(this);
-            this.GuidanceWindowsService.HideGuidanceWindows(this);
+            GuidanceExplorerToolWindow.HideWindow(this);
+            GuidanceBrowserToolWindow.HideWindow(this);
         }
 
         private void OnSolutionOpened(object sender, SolutionEventArgs e)
@@ -302,7 +303,7 @@ namespace NuPattern.Runtime.Shell
                 var solutionFiles = e.Solution.Find<IItem>(pathExpression1);
                 if (solutionFiles.Any())
                 {
-                    this.AutoOpenSolutionBuilder();
+                    SolutionBuilderToolWindow.AutoOpenWindow(this);
                 }
                 else
                 {
@@ -310,15 +311,18 @@ namespace NuPattern.Runtime.Shell
                     solutionFiles = e.Solution.Find<IItem>(pathExpression2);
                     if (solutionFiles.Any())
                     {
-                        this.AutoOpenSolutionBuilder();
+                        SolutionBuilderToolWindow.AutoOpenWindow(this);
                     }
                 }
             }
 
-            // Open guidance windows
             if (!this.GuidanceManager.IsOpened)
             {
                 this.GuidanceManager.Open(new SolutionDataState(this.Solution));
+
+                // Open guidance windows
+                GuidanceExplorerToolWindow.OpenWindow(this);
+                GuidanceBrowserToolWindow.OpenWindow(this);
             }
         }
 

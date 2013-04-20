@@ -91,10 +91,10 @@
       <DependentUpon>GuidanceBrowserView.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\ViewModels\GuidanceBrowserViewModel.cs" />
-    <Compile Include="UI\Views\GuidanceWorkflowPanelView.xaml.cs">
-      <DependentUpon>GuidanceWorkflowPanelView.xaml</DependentUpon>
+    <Compile Include="UI\Views\GuidanceExplorerView.xaml.cs">
+      <DependentUpon>GuidanceExplorerView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\ViewModels\GuidanceWorkflowPanelViewModel.cs" />
+    <Compile Include="UI\ViewModels\GuidanceExplorerViewModel.cs" />
     <Compile Include="UI\Views\GuidanceWorkflowView.xaml.cs">
       <DependentUpon>GuidanceWorkflowView.xaml</DependentUpon>
     </Compile>
@@ -123,7 +123,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UI\Views\GuidanceWorkflowPanelView.xaml">
+    <Page Include="UI\Views\GuidanceExplorerView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

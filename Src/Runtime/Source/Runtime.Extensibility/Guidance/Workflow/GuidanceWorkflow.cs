@@ -15,7 +15,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
         private List<IConditionalNode> allNodesToEvaluate = null;
 
         /// <summary>
-        /// CReates a new instance of the <see cref="GuidanceWorkflow"/> class.
+        /// Creates a new instance of the <see cref="GuidanceWorkflow"/> class.
         /// </summary>
         public GuidanceWorkflow()
             : base(WorkflowStateComposer.Instance, Cardinality.None, Cardinality.One)
@@ -43,7 +43,6 @@ namespace NuPattern.Runtime.Guidance.Workflow
                 if (allNodesToEvaluate == null)
                 {
                     allNodesToEvaluate = new List<IConditionalNode>();
-
 
                     IList<IConditionalNode> successors =
                         this.Successors.Traverse(vm => vm.Successors).OfType<IConditionalNode>().ToList();

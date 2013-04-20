@@ -7,21 +7,21 @@ using NuPattern.Runtime.Guidance.Workflow;
 
 namespace NuPattern.Runtime.Guidance.UI.ViewModels
 {
-    internal class GuidanceWorkflowPanelViewModel : ViewModel
+    internal class GuidanceExplorerViewModel : ViewModel
     {
         private GuidanceWorkflowContext context;
         private IServiceProvider serviceProvider;
         private GuidanceWorkflowViewModel currentWorkflow;
         private IGuidanceManager guidanceManager;
 
-        public GuidanceWorkflowPanelViewModel(GuidanceWorkflowContext context, IServiceProvider serviceProvider)
+        public GuidanceExplorerViewModel(GuidanceWorkflowContext context, IServiceProvider serviceProvider)
         {
             Guard.NotNull(() => context, context);
             Guard.NotNull(() => serviceProvider, serviceProvider);
 
             this.context = context;
             this.serviceProvider = serviceProvider;
-            this.guidanceManager = context.Extension.GuidanceManager;
+            this.guidanceManager = context.GuidanceManager;
             this.Workflows = new ObservableCollection<GuidanceWorkflowViewModel>();
             this.SubscribeToExtensionChanges(guidanceManager);
             this.InitializeCommands();
@@ -113,6 +113,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                 {
                     var workflow = new GuidanceWorkflowViewModel(new GuidanceWorkflowContext
                         {
+                            GuidanceManager = this.context.GuidanceManager,
                             Extension = feature,
                             UserMessageService = this.context.UserMessageService,
                         }, this.serviceProvider);

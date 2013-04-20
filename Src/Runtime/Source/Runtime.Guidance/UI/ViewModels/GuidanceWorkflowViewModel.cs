@@ -112,15 +112,18 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
 
         private void LoadGuidanceTree()
         {
-            var viewModelBuilder = this.Extension as IWorkflowViewModelBuilder ?? new DefaultWorkflowViewModelBuilder(this.Extension);
-            this.nodes = new ObservableCollection<NodeViewModel>(viewModelBuilder.GetNodes());
-
-            foreach (var node in this.nodes.Traverse(node => node.Nodes))
+            if (this.Extension != null)
             {
-                node.SetSelected = currentNode => this.CurrentNode = (NodeViewModel)currentNode;
-            }
+                var viewModelBuilder = new DefaultWorkflowViewModelBuilder(this.Extension);
+                this.nodes = new ObservableCollection<NodeViewModel>(viewModelBuilder.GetNodes());
 
-            this.GoToFocusedAction();
+                foreach (var node in this.nodes.Traverse(node => node.Nodes))
+                {
+                    node.SetSelected = currentNode => this.CurrentNode = (NodeViewModel)currentNode;
+                }
+
+                this.GoToFocusedAction();
+            }
         }
 
         private void OnCurrentNodeChanged()

@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.UI;
 using NuPattern.Runtime.Guidance.UI.ViewModels;
 using NuPattern.Runtime.Guidance.UI.Views;
 using NuPattern.Runtime.Shell.Properties;
@@ -19,7 +20,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
     internal class GuidanceExplorerToolWindow : ToolWindowPane
     {
         private SelectionContainer selectionContainer;
-        private GuidanceWorkflowViewModel viewModel;
+        private GuidanceExplorerViewModel viewModel;
         private IVsTrackSelectionEx trackSelection;
 
         public object WorkflowMediator { get; set; }
@@ -50,7 +51,7 @@ namespace NuPattern.Runtime.Shell.ToolWindows
             base.OnToolWindowCreated();
 
             this.selectionContainer = new SelectionContainer();
-            //this.viewModel.CurrentNodeChanged += this.OnCurrentNodeChanged;
+            this.viewModel.CurrentNodeChanged += this.OnCurrentNodeChanged;
         }
 
         protected override void Initialize()
@@ -65,12 +66,63 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
             var context = new GuidanceWorkflowContext
             {
+                GuidanceManager = this.GuidanceManager,
                 Extension = this.GuidanceManager.ActiveGuidanceExtension,
                 UserMessageService = this.UserMessageService,
             };
 
-            this.viewModel = new GuidanceWorkflowViewModel(context, this.ServiceProvider);
-            this.Content = new GuidanceWorkflowView { DataContext = this.viewModel };
+            this.viewModel = new GuidanceExplorerViewModel(context, this.ServiceProvider);
+            this.Content = new GuidanceExplorerView { DataContext = this.viewModel };
+        }
+
+
+        /// <summary>
+        /// Opens the window, if not already opened.
+        /// </summary>
+        internal static void OpenWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+            if (!packageToolWindow.IsWindowVisible<GuidanceExplorerToolWindow>())
+            {
+                packageToolWindow.ShowWindow<GuidanceExplorerToolWindow>();
+            }
+        }
+
+        /// <summary>
+        /// Hides the window, if it was automatically opened.
+        /// </summary>
+        internal static void HideWindow(IServiceProvider serviceProvider)
+        {
+            Guard.NotNull(() => serviceProvider, serviceProvider);
+
+            var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
+
+            if (packageToolWindow.IsWindowVisible<GuidanceExplorerToolWindow>())
+            {
+                packageToolWindow.HideWindow<GuidanceExplorerToolWindow>();
+            }
+        }
+
+        private void OnCurrentNodeChanged(object sender, NodeChangedEventArgs e)
+        {
+            var currentAction = this.viewModel.CurrentWorkflow == null ? new object[0] : new[] { this.viewModel.CurrentWorkflow.Model.FocusedAction };
+            SelectItem(currentAction);
+
+            //Ensure GuidanceBrowser tool window is open
+            GuidanceBrowserToolWindow.OpenWindow(this);
+
+            //Set CurrentNode in Browser ViewModel
+
+        }
+
+        private void SelectItem(object[] selectedObjects)
+        {
+            this.selectionContainer.SelectableObjects = selectedObjects;
+            this.selectionContainer.SelectedObjects = selectedObjects;
+            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(this.trackSelection.OnSelectChange(this.selectionContainer));
         }
     }
 }

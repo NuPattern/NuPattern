@@ -5,9 +5,9 @@ namespace NuPattern.Runtime.Guidance.UI.Views
     /// <summary>
     /// Interaction logic for GuidanceWorkflowPanelView.xaml
     /// </summary>
-    partial class GuidanceWorkflowPanelView : UserControl
+    partial class GuidanceExplorerView : UserControl
     {
-        public GuidanceWorkflowPanelView()
+        public GuidanceExplorerView()
         {
             this.InitializeComponent();
         }

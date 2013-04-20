@@ -18,6 +18,11 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
         public IGuidanceExtension Extension { get; internal set; }
 
         /// <summary>
+        /// Gets the current guidance manager
+        /// </summary>
+        public IGuidanceManager GuidanceManager { get; internal set; }
+
+        /// <summary>
         /// Gets the user message service.
         /// </summary>
         public IUserMessageService UserMessageService { get; internal set; }
