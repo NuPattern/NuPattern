@@ -10,7 +10,7 @@ namespace NuPattern.Runtime.Shell.Commands
     internal class OpenGuidanceBrowserMenuCommand : VsMenuCommand
     {
         internal static readonly Guid CommandGroup = new Guid("678B7F72-E43F-46DE-AFFC-365896827954");
-        internal const int CommandId = 0x0101;
+        internal const int CommandId = 0x0103;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenGuidanceBrowserMenuCommand"/> class.

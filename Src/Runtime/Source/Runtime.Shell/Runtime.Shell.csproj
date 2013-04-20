@@ -161,11 +161,6 @@
     <Compile Include="ToolWindows\PackageToolWindow.cs" />
     <Compile Include="TemplateWizards\OpenSolutionBuilderTemplateWizard.cs" />
     <Compile Include="VsIdleTaskHost.cs" />
-    <Content Include="RuntimeShellVSCT.gen.vsct">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RuntimeShellVSCT.tt</DependentUpon>
-    </Content>
     <None Include="..\..\..\Common\Guidance\Creating the PDF Guidance.txt">
       <Link>Guidance\Creating the PDF Guidance.txt</Link>
     </None>
@@ -351,6 +346,13 @@
       <LastGenOutput>VSPackage.gen.resx</LastGenOutput>
     </None>
     <None Include="VsPackageInfo.ttinclude" />
+    <VSCTCompile Include="RuntimeShellVSCT.gen.vsct">
+      <ResourceName>Menus.ctmenu</ResourceName>
+      <SubType>Designer</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RuntimeShellVSCT.tt</DependentUpon>
+    </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(BranchRoot)\Images\$(TargetVsVersion)\ToolWindowSolutionBuilder.bmp">
