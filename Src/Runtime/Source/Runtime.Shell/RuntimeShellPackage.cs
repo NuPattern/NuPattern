@@ -38,7 +38,6 @@ using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Commands;
 using NuPattern.VisualStudio.Extensions;
 using NuPattern.VisualStudio.Solution;
-using ExtMan = Microsoft.VisualStudio.ExtensionManager;
 
 namespace NuPattern.Runtime.Shell
 {
@@ -59,6 +58,7 @@ namespace NuPattern.Runtime.Shell
     [CLSCompliant(false)]
     [ProvideService(typeof(IUriReferenceService), ServiceName = "IUriReferenceService")]
     [ProvideService(typeof(ISolution), ServiceName = "ISolution")]
+    [ProvideService(typeof(IExtensionManager), ServiceName = "IExtensionManager")]
     [ProvideService(typeof(IGuidanceManager), ServiceName = "IGuidanceManager")]
     [ProvideService(typeof(INuPatternCompositionService), ServiceName = "INuPatternCompositionService")]
     [ProvideService(typeof(IGuidanceWindowsService), ServiceName = "IGuidanceWindowsService")]
@@ -95,6 +95,8 @@ namespace NuPattern.Runtime.Shell
         private IUriReferenceService UriReferenceService { get; set; }
         [Import]
         private ISolution Solution { get; set; }
+        [Import]
+        private IExtensionManager ExtensionManager { get; set; }
         [Import]
         private IGuidanceWindowsService GuidanceWindowsService { get; set; }
         //[ImportMany(typeof(ILaunchPoint))]
@@ -256,6 +258,7 @@ namespace NuPattern.Runtime.Shell
             var serviceContainer = (IServiceContainer)this;
             serviceContainer.AddService(typeof(IUriReferenceService), new ServiceCreatorCallback((c, s) => this.UriReferenceService), true);
             serviceContainer.AddService(typeof(ISolution), new ServiceCreatorCallback((c, s) => this.Solution), true);
+            serviceContainer.AddService(typeof(IExtensionManager), new ServiceCreatorCallback((c, s) => this.ExtensionManager), true);
             serviceContainer.AddService(typeof(IGuidanceManager), new ServiceCreatorCallback((c, s) => this.GuidanceManager), true);
             serviceContainer.AddService(typeof(INuPatternCompositionService), new ServiceCreatorCallback((c, s) => this.CompositionService), true);
             serviceContainer.AddService(typeof(IGuidanceWindowsService), new ServiceCreatorCallback((c, s) => this.GuidanceWindowsService), true);
@@ -320,22 +323,39 @@ namespace NuPattern.Runtime.Shell
         {
             PackageUtility.ShowError(this, string.Format(CultureInfo.InvariantCulture, Resources.RuntimeShellPackage_DumpMefLogs, Constants.ProductName));
 
-            var tempFile = Path.Combine(Path.GetTempPath(), "mef.txt");
-            using (var writer = new StreamWriter(tempFile, false))
+            var tempFile = string.Empty;
+            try
             {
-                CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.DefaultCatalog, componentModel.DefaultExportProvider), writer);
+                // Write out the default VS catalog
+                tempFile = Path.Combine(Path.GetTempPath(), "mef.txt");
+                using (var writer = new StreamWriter(tempFile, false))
+                {
+                    CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.DefaultCatalog, componentModel.DefaultExportProvider), writer);
+                }
+
+                Process.Start(tempFile);
+            }
+            catch (IOException)
+            {
+                // Ignore writing issues
             }
 
-            Process.Start(tempFile);
-
-            tempFile = Path.Combine(Path.GetTempPath(), "mef-powertools.txt");
-            using (var writer = new StreamWriter(tempFile, false))
+            try
             {
-                CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.GetCatalog(
-                    Catalog.CatalogName), componentModel.DefaultExportProvider), writer);
-            }
+                // Write out the NuPattern catalog
+                tempFile = Path.Combine(Path.GetTempPath(), "mef-nupattern.txt");
+                using (var writer = new StreamWriter(tempFile, false))
+                {
+                    CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.GetCatalog(
+                        Catalog.CatalogName), componentModel.DefaultExportProvider), writer);
+                }
 
-            Process.Start(tempFile);
+                Process.Start(tempFile);
+            }
+            catch (IOException)
+            {
+                // Ignore writing issues
+            }
         }
 
         private static IEnumerable<string> GetConfiguredSourceNames(IRuntimeSettings settings)
@@ -371,10 +391,9 @@ namespace NuPattern.Runtime.Shell
         /// </remarks>
         private void CheckFertInstalled()
         {
-            var extensionManager = this.GetService<ExtMan.SVsExtensionManager, ExtMan.IVsExtensionManager>();
-            if (extensionManager != null)
+            if (this.ExtensionManager != null)
             {
-                var enabledExtensions = extensionManager.GetEnabledExtensions();
+                var enabledExtensions = this.ExtensionManager.GetEnabledExtensions();
                 var fertExtension = enabledExtensions.FirstOrDefault(ext =>
                         Constants.FertVsixIdentifiers.Contains(ext.Header.Identifier, StringComparer.OrdinalIgnoreCase));
                 if (fertExtension != null)

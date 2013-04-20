@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Diagnostics;
 using NuPattern.Drawing;
@@ -29,8 +28,8 @@ namespace NuPattern.Runtime.Shell
         static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceRegistrationAdapter>();
         const string ManifestFilename = "extension.vsixmanifest";
 
-        [Import(typeof(SVsServiceProvider))]
-        public SVsServiceProvider ServiceProvider { get; set; }
+        [Import(typeof(IExtensionManager))]
+        public IExtensionManager ExtensionManager { get; set; }
 
         /// <summary>
         /// Exposes the registrations that can be used to instantiate guidance extension.
@@ -47,10 +46,9 @@ namespace NuPattern.Runtime.Shell
                 }
                 else
                 {
-                    var extensionManager = this.ServiceProvider.GetService(typeof(SVsExtensionManager)) as IVsExtensionManager;
-                    if (extensionManager == null)
+                    if (this.ExtensionManager == null)
                     {
-                        tracer.TraceError("Extension Manager service not available. Cannot load registered features.");
+                        tracer.TraceError("Extension Manager service not available. Cannot load registered guidance extensions.");
                         yield break;
                     }
 
@@ -68,7 +66,7 @@ namespace NuPattern.Runtime.Shell
 
                         if (File.Exists(extensionManifestFilename))
                         {
-                            var vsExtension = extensionManager.CreateExtension(extensionManifestFilename);
+                            var extension = this.ExtensionManager.CreateExtension(extensionManifestFilename);
 
                             // The guidance extension id metadata value is used both as part 
                             // of the export definition as well as the assembly-level 
@@ -82,23 +80,23 @@ namespace NuPattern.Runtime.Shell
                             // or something.
 
                             // Verify that both IDs match and issue a warning if they don't.
-                            if (export.Metadata.ExtensionId != vsExtension.Header.Identifier)
+                            if (export.Metadata.ExtensionId != extension.Header.Identifier)
                             {
                                 tracer.TraceWarning("Guidance extension metadata attribute specifies idenfitier '{0}' but guidance extension vsix manifest specifies '{1}'.\nThe two values must match. Skipping guidance extension registration. Please contact guidance extension author.",
-                                    export.Metadata.ExtensionId, vsExtension.Header.Identifier);
+                                    export.Metadata.ExtensionId, extension.Header.Identifier);
                                 continue;
                             }
 
-                            registration.ExtensionId = vsExtension.Header.Identifier;
+                            registration.ExtensionId = extension.Header.Identifier;
                             registration.DefaultName = export.Metadata.DefaultName;
 
-                            var installedVsExtension = extensionManager.GetInstalledExtension(vsExtension.Header.Identifier);
+                            var installedExtension = this.ExtensionManager.GetInstalledExtension(extension.Header.Identifier);
 
-                            registration.ExtensionManifest = ExtensionFactory.CreateExtension(vsExtension);
-                            registration.InstalledExtension = ExtensionFactory.CreateInstalledExtension(installedVsExtension);
-                            registration.InstallPath = installedVsExtension.InstallPath;
-                            registration.PreviewImage = BitmapHelper.Load(registration.InstallPath, vsExtension.Header.PreviewImage);
-                            registration.Icon = BitmapHelper.Load(registration.InstallPath, vsExtension.Header.Icon).ToIcon();
+                            registration.ExtensionManifest = extension;
+                            registration.InstalledExtension = installedExtension;
+                            registration.InstallPath = installedExtension.InstallPath;
+                            registration.PreviewImage = BitmapHelper.Load(registration.InstallPath, extension.Header.PreviewImage);
+                            registration.Icon = BitmapHelper.Load(registration.InstallPath, extension.Header.Icon).ToIcon();
                         }
                         else
                         {

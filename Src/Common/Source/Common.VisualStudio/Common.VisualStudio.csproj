@@ -121,10 +121,10 @@
     <Compile Include="Events\SolutionEvents.cs" />
     <Compile Include="Extensions\EnabledState.cs" />
     <Compile Include="Extensions\ExtensionContentExtensions.cs" />
-    <Compile Include="Extensions\ExtensionFactory.cs" />
     <Compile Include="Extensions\ExtensionVisibility.cs" />
     <Compile Include="Extensions\IExtension.cs" />
     <Compile Include="Extensions\IExtensionHeader.cs" />
+    <Compile Include="Extensions\IExtensionManager.cs" />
     <Compile Include="Extensions\IExtensionReference.cs" />
     <Compile Include="Extensions\IExtensionRequirement.cs" />
     <Compile Include="Extensions\IInstalledExtension.cs" />
@@ -133,6 +133,7 @@
     <Compile Include="Extensions\VsExtension.cs" />
     <Compile Include="Extensions\VsExtensionContent.cs" />
     <Compile Include="Extensions\VsExtensionHeader.cs" />
+    <Compile Include="Extensions\VsExtensionManager.cs" />
     <Compile Include="Extensions\VsExtensionReference.cs" />
     <Compile Include="Extensions\VsExtensionRequirement.cs" />
     <Compile Include="Extensions\VsInstalledExtension.cs" />

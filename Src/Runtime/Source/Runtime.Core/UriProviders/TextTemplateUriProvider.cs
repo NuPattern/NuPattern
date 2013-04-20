@@ -2,12 +2,12 @@
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio.Extensions;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UriProviders

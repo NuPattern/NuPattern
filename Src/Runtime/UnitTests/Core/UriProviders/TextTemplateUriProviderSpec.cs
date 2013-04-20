@@ -1,12 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using Moq;
 using NuPattern.Runtime.UriProviders;
+using NuPattern.VisualStudio.Extensions;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UnitTests.UriProviders

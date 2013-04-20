@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Runtime.IntegrationTests.UriProviders
 {
@@ -47,7 +47,7 @@ namespace NuPattern.Runtime.IntegrationTests.UriProviders
         {
             var service = VsIdeTestHostContext.ServiceProvider.GetService<IUriReferenceService>();
             Assert.NotNull(service);
-            var installed = VsIdeTestHostContext.ServiceProvider.GetService<SVsExtensionManager, IVsExtensionManager>().GetInstalledExtensions().First();
+            var installed = VsIdeTestHostContext.ServiceProvider.GetService<IExtensionManager>().GetInstalledExtensions().First();
 
             Assert.True(service.CanCreateUri(installed));
             Assert.True(service.CanCreateUri<IExtension>(installed));

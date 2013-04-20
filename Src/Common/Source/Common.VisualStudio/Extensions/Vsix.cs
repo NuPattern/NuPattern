@@ -6,13 +6,21 @@ using System.IO.Packaging;
 using System.Linq;
 using System.Xml;
 using Microsoft.VisualStudio.Settings;
+using Microsoft.VisualStudio.Shell;
 using NuPattern.VisualStudio.Properties;
+using Microsoft.VisualStudio.ComponentModelHost;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.VisualStudio.Extensions
 {
     /// <summary>
     /// Helper methods for dealing with Visual Studio extension manifests.
     /// </summary>
+    /// <remarks>
+    /// This class is used for some integration tests that verify the contents of NuPattern VSIXes.
+    /// This class is intended to be used outside of the VS environment, 
+    /// and therefore does not use services from within VS.
+    /// </remarks>
     [CLSCompliant(false)]
     public static class Vsix
     {
@@ -123,10 +131,7 @@ namespace NuPattern.VisualStudio.Extensions
                 }
             }
 
-            //// \o/ TODO: we couldn't find a public API for reading the manifest outside of VS.
-            dynamic manager = Activator.CreateInstance(GetExtensionManagerType(), FakeSettings);
-
-            return (IExtension)manager.CreateExtension(vsixOrManifest);
+            return CreateExtension(vsixOrManifest);
         }
 
         /// <summary>
@@ -167,9 +172,7 @@ namespace NuPattern.VisualStudio.Extensions
                 }
             }
 
-            dynamic manager = Activator.CreateInstance(GetExtensionManagerType(), FakeSettings);
-
-            return (IExtension)manager.CreateExtension(vsixOrManifest);
+            return CreateExtension(vsixOrManifest);
         }
 
         /// <summary>
@@ -187,6 +190,14 @@ namespace NuPattern.VisualStudio.Extensions
             }
 
             return null;
+        }
+
+        private static IExtension CreateExtension(string vsixOrManifest)
+        {
+            //// \o/ TODO: we couldn't find a public API for reading the manifest outside of VS.
+            dynamic manager = Activator.CreateInstance(GetExtensionManagerType(), FakeSettings);
+
+            return new VsExtension(manager.CreateExtension(vsixOrManifest));
         }
 
         private static Type GetExtensionManagerType()

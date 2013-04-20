@@ -36,10 +36,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\EntLib5\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>

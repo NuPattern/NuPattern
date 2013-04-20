@@ -3,9 +3,9 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.ExtensionManager;
 using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Runtime
 {
