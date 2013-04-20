@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Reflection;
+using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Guidance.Workflow
 {
     /// <summary>
     /// Represents the guidance workflow.
     /// </summary>
+    [DisplayNameResource("GuidanceNode_GuidanceWorkflow_DisplayName", typeof(Resources))]
     public class GuidanceWorkflow : ConditionalNode, IGuidanceWorkflow
     {
         private string focusedActionName;
@@ -25,17 +29,19 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <summary>
         /// Gets the identifier of the owning feature
         /// </summary>
+        [Browsable(false)]
         public virtual string OwnerId { get; set; }
 
         /// <summary>
         /// Gets the Owning feature
         /// </summary>
-        [CLSCompliant(false)]
+        [Browsable(false)]
         public virtual IGuidanceExtension OwningExtension { get; set; }
 
         /// <summary>
         /// Gets all the nodes to evaluate in the workflow
         /// </summary>
+        [Browsable(false)]
         public virtual IList<IConditionalNode> AllNodesToEvaluate
         {
             get
@@ -91,6 +97,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// forever (i.e. never move to Completed status)
         /// </summary>
         /// <returns></returns>
+        [Browsable(false)]
         public virtual bool IgnorePostConditions
         {
             get { return false; }
@@ -105,6 +112,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// Gets the entry point to the guidance workflow.
         /// </summary>
         /// <value>The entry point to the guidance workflow.</value>
+        [Browsable(false)]
         public IInitial InitialNode
         {
             get { return (IInitial)this.Successors.FirstOrDefault(); }
@@ -114,6 +122,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// Gets the focused activity.
         /// </summary>
         /// <value>The focused activity.</value>
+        [Browsable(false)]
         public IGuidanceAction FocusedAction
         {
             get

@@ -1,8 +1,12 @@
-﻿namespace NuPattern.Runtime.Guidance.Workflow
+﻿using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime.Properties;
+
+namespace NuPattern.Runtime.Guidance.Workflow
 {
     /// <summary>
     /// Defines the exit point element for a process workflow.
     /// </summary>
+    [DisplayNameResource("GuidanceNode_Final_DisplayName", typeof(Resources))]
     public class Final : Node, IFinal
     {
         /// <summary>

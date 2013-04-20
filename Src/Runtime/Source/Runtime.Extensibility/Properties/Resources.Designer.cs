@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Runtime.Properties
-{
-
-
+namespace NuPattern.Runtime.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -394,6 +394,96 @@ namespace NuPattern.Runtime.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Decision.
+        /// </summary>
+        internal static string GuidanceNode_Decision_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Decision_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The description of this node.
+        /// </summary>
+        internal static string GuidanceNode_Description_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Description_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        internal static string GuidanceNode_Description_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Description_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Final.
+        /// </summary>
+        internal static string GuidanceNode_Final_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Final_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fork.
+        /// </summary>
+        internal static string GuidanceNode_Fork_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Fork_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Action.
+        /// </summary>
+        internal static string GuidanceNode_GuidanceAction_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_GuidanceAction_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guidance Workflow.
+        /// </summary>
+        internal static string GuidanceNode_GuidanceWorkflow_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_GuidanceWorkflow_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether the reader has overridden the completion of this node..
+        /// </summary>
+        internal static string GuidanceNode_HasStateOverride_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_HasStateOverride_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overridden.
+        /// </summary>
+        internal static string GuidanceNode_HasStateOverride_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_HasStateOverride_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Initial.
+        /// </summary>
+        internal static string GuidanceNode_Initial_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Initial_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The node &apos;{0}&apos; does not allow more incoming connections..
         /// </summary>
         internal static string GuidanceNode_InputCardinalityExceed {
@@ -408,6 +498,78 @@ namespace NuPattern.Runtime.Properties
         internal static string GuidanceNode_InvalidTargetGuidanceNodeState {
             get {
                 return ResourceManager.GetString("GuidanceNode_InvalidTargetGuidanceNodeState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether the reader has accepted this node.
+        /// </summary>
+        internal static string GuidanceNode_IsUserAccepted_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_IsUserAccepted_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Is Accepted by User.
+        /// </summary>
+        internal static string GuidanceNode_IsUserAccepted_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_IsUserAccepted_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Join.
+        /// </summary>
+        internal static string GuidanceNode_Join_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Join_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The content for this node.
+        /// </summary>
+        internal static string GuidanceNode_Link_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Link_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Content.
+        /// </summary>
+        internal static string GuidanceNode_Link_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Link_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merge.
+        /// </summary>
+        internal static string GuidanceNode_Merge_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Merge_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of the node.
+        /// </summary>
+        internal static string GuidanceNode_Name_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Name_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string GuidanceNode_Name_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Name_DisplayName", resourceCulture);
             }
         }
         
@@ -430,11 +592,65 @@ namespace NuPattern.Runtime.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The conditions that are satisifed by the completion of this node.
+        /// </summary>
+        internal static string GuidanceNode_PostConditions_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_PostConditions_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Post-Conditions.
+        /// </summary>
+        internal static string GuidanceNode_PostConditions_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_PostConditions_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The conditions that must be satisfied before this node can be completed.
+        /// </summary>
+        internal static string GuidanceNode_PreConditions_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_PreConditions_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pre-Conditions.
+        /// </summary>
+        internal static string GuidanceNode_PreConditions_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_PreConditions_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The property &apos;{0}&apos; only supports one set..
         /// </summary>
         internal static string GuidanceNode_PropertyAlreadySet {
             get {
                 return ResourceManager.GetString("GuidanceNode_PropertyAlreadySet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The state of this node.
+        /// </summary>
+        internal static string GuidanceNode_State_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_State_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State.
+        /// </summary>
+        internal static string GuidanceNode_State_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_State_DisplayName", resourceCulture);
             }
         }
         

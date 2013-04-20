@@ -1,10 +1,14 @@
-﻿using System.Linq;
+﻿using System.ComponentModel;
+using System.Linq;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Guidance.Workflow
 {
     /// <summary>
     /// Defines the entry point element for a guidance workflow.
     /// </summary>
+    [DisplayNameResource("GuidanceNode_Initial_DisplayName", typeof(Resources))]
     public class Initial : Node, IInitial
     {
         /// <summary>
@@ -27,6 +31,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <summary>
         /// Gets the initial activity contected to this initial node.
         /// </summary>
+        [Browsable(false)]
         public IGuidanceAction InitialActivity
         {
             get { return this.Successors.OfType<IGuidanceAction>().FirstOrDefault(); }

@@ -1,11 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Guidance.Workflow
 {
     /// <summary>
     /// Defines a guidance predecessor that allows choose between two activities in the workflow.
     /// </summary>
+    [DisplayNameResource("GuidanceNode_Decision_DisplayName", typeof(Resources))]
     public class Decision : ConditionalNode, IDecision
     {
         /// <summary>
@@ -29,6 +33,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <summary>
         /// Gets or sets the launch points associated with the activity
         /// </summary>
+        [Browsable(false)]
         public IEnumerable<string> LaunchPoints { get; set; }
 
         /// <summary>

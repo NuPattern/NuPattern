@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Properties;
 
@@ -47,23 +48,31 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// Gets or sets the node name.
         /// </summary>
         /// <value>The process element name.</value>
+        [DisplayNameResource("GuidanceNode_Name_DisplayName", typeof(Resources))]
+        [DescriptionResource("GuidanceNode_Name_Description", typeof(Resources))]
+        [ReadOnly(true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the node parent object.  Used only to build the outline from the graph
         /// </summary>
         /// <value>The process parent object.</value>
+        [Browsable(false)]
         public object ParentObject { get; set; }
 
         /// <summary>
         /// Gets or sets the node description.
         /// </summary>
         /// <value>The guidance predecessor description.</value>
+        [DisplayNameResource("GuidanceNode_Description_DisplayName", typeof(Resources))]
+        [DescriptionResource("GuidanceNode_Description_Description", typeof(Resources))]
+        [ReadOnly(true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets the predecessors of this node.
         /// </summary>
+        [Browsable(false)]
         public IEnumerable<INode> Predecessors
         {
             get { return this.predecessors; }
@@ -72,16 +81,21 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <summary>
         /// Gets the node state.
         /// </summary>
+        [DisplayNameResource("GuidanceNode_State_DisplayName", typeof(Resources))]
+        [DescriptionResource("GuidanceNode_State_Description", typeof(Resources))]
+        [ReadOnly(true)]
         public virtual NodeState State { get; protected set; }
 
         /// <summary>
         /// Gets the state composer which calculates the state of this node in the graph.
         /// </summary>
+        [Browsable(false)]
         protected IStateComposer StateComposer { get; private set; }
 
         /// <summary>
         /// Gets the successors of this node.
         /// </summary>
+        [Browsable(false)]
         public IEnumerable<INode> Successors
         {
             get { return this.successors; }
@@ -90,11 +104,15 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <summary>
         /// Optional guidance identifier associated with this node.
         /// </summary>
+        [Browsable(false)]
         public string GuidanceId { get; set; }
 
         /// <summary>
         /// Optional link to documentation about this node.
         /// </summary>
+        [DisplayNameResource("GuidanceNode_Link_DisplayName", typeof(Resources))]
+        [DescriptionResource("GuidanceNode_Link_Description", typeof(Resources))]
+        [ReadOnly(true)]
         public string Link { get; set; }
 
         /// <summary>

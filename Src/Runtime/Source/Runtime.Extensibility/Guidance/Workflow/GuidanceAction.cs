@@ -1,11 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using NuPattern.ComponentModel.Design;
+using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Guidance.Workflow
 {
     /// <summary>
     /// Represents an activity in the guidance workflow.
     /// </summary>
+    [DisplayNameResource("GuidanceNode_GuidanceAction_DisplayName", typeof(Resources))]
     public class GuidanceAction : ConditionalNode, IGuidanceAction
     {
         //private static readonly ITraceSource tracer = Tracer.GetSourceFor<Node>();
@@ -43,6 +47,7 @@ namespace NuPattern.Runtime.Guidance.Workflow
         /// <summary>
         /// Gets or sets the launch points associated with the activity
         /// </summary>
+        [Browsable(false)]
         public IEnumerable<string> LaunchPoints { get; set; }
 
         /// <summary>

@@ -478,4 +478,76 @@ Please add a new or existing image file {0} to the project and try again.</value
   <data name="GuidanceExtension_NoProjectTemplate" xml:space="preserve">
     <value>Guidance extension '{0}' project template could not be located. Please reinstall the extension.</value>
   </data>
+  <data name="GuidanceNode_Decision_DisplayName" xml:space="preserve">
+    <value>Decision</value>
+  </data>
+  <data name="GuidanceNode_Description_Description" xml:space="preserve">
+    <value>The description of this node</value>
+  </data>
+  <data name="GuidanceNode_Description_DisplayName" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="GuidanceNode_Final_DisplayName" xml:space="preserve">
+    <value>Final</value>
+  </data>
+  <data name="GuidanceNode_Fork_DisplayName" xml:space="preserve">
+    <value>Fork</value>
+  </data>
+  <data name="GuidanceNode_GuidanceAction_DisplayName" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="GuidanceNode_GuidanceWorkflow_DisplayName" xml:space="preserve">
+    <value>Guidance Workflow</value>
+  </data>
+  <data name="GuidanceNode_HasStateOverride_Description" xml:space="preserve">
+    <value>Whether the reader has overridden the completion of this node.</value>
+  </data>
+  <data name="GuidanceNode_HasStateOverride_DisplayName" xml:space="preserve">
+    <value>Overridden</value>
+  </data>
+  <data name="GuidanceNode_Initial_DisplayName" xml:space="preserve">
+    <value>Initial</value>
+  </data>
+  <data name="GuidanceNode_IsUserAccepted_Description" xml:space="preserve">
+    <value>Whether the reader has accepted this node</value>
+  </data>
+  <data name="GuidanceNode_IsUserAccepted_DisplayName" xml:space="preserve">
+    <value>Is Accepted by User</value>
+  </data>
+  <data name="GuidanceNode_Join_DisplayName" xml:space="preserve">
+    <value>Join</value>
+  </data>
+  <data name="GuidanceNode_Link_Description" xml:space="preserve">
+    <value>The content for this node</value>
+  </data>
+  <data name="GuidanceNode_Link_DisplayName" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="GuidanceNode_Merge_DisplayName" xml:space="preserve">
+    <value>Merge</value>
+  </data>
+  <data name="GuidanceNode_Name_Description" xml:space="preserve">
+    <value>The name of the node</value>
+  </data>
+  <data name="GuidanceNode_Name_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GuidanceNode_PostConditions_Description" xml:space="preserve">
+    <value>The conditions that are satisifed by the completion of this node</value>
+  </data>
+  <data name="GuidanceNode_PostConditions_DisplayName" xml:space="preserve">
+    <value>Post-Conditions</value>
+  </data>
+  <data name="GuidanceNode_PreConditions_Description" xml:space="preserve">
+    <value>The conditions that must be satisfied before this node can be completed</value>
+  </data>
+  <data name="GuidanceNode_PreConditions_DisplayName" xml:space="preserve">
+    <value>Pre-Conditions</value>
+  </data>
+  <data name="GuidanceNode_State_Description" xml:space="preserve">
+    <value>The state of this node</value>
+  </data>
+  <data name="GuidanceNode_State_DisplayName" xml:space="preserve">
+    <value>State</value>
+  </data>
 </root>
