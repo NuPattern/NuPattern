@@ -139,21 +139,21 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
                     Assert.Equal(CustomizationState.False, command.IsCustomizable);
                     Assert.True(command.IsSystem);
 
-                    Assert.Equal(commandSettings.TypeId, typeof(InstantiateFeatureCommand).FullName);
+                    Assert.Equal(commandSettings.TypeId, typeof(InstantiateGuidanceWorkflowCommand).FullName);
 
-                    var extensionProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.GuidanceExtensionId).Name]
+                    var extensionProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateGuidanceWorkflowCommand>.GetProperty(c => c.GuidanceExtensionId).Name]
                         .GetValue(commandSettings) as DesignProperty;
                     Assert.Equal(this.guidanceExtension.GuidanceFeatureId, extensionProperty.GetValue());
 
-                    var defaultInstanceProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.DefaultInstanceName).Name]
+                    var defaultInstanceProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateGuidanceWorkflowCommand>.GetProperty(c => c.DefaultInstanceName).Name]
                         .GetValue(commandSettings) as DesignProperty;
                     Assert.Equal(this.guidanceExtension.GuidanceInstanceName, defaultInstanceProperty.GetValue());
 
-                    var focusOnInstantiationProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.ActivateOnInstantiation).Name]
+                    var focusOnInstantiationProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateGuidanceWorkflowCommand>.GetProperty(c => c.ActivateOnInstantiation).Name]
                         .GetValue(commandSettings) as DesignProperty;
                     Assert.Equal(this.guidanceExtension.GuidanceActivateOnCreation, focusOnInstantiationProperty.GetValue());
 
-                    var sharedInstanceProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateFeatureCommand>.GetProperty(c => c.SharedInstance).Name]
+                    var sharedInstanceProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateGuidanceWorkflowCommand>.GetProperty(c => c.SharedInstance).Name]
                         .GetValue(commandSettings) as DesignProperty;
                     Assert.Equal(this.guidanceExtension.GuidanceSharedInstance, sharedInstanceProperty.GetValue());
                 }
@@ -174,7 +174,7 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
                     Assert.Equal(CustomizationState.False, command.IsCustomizable);
                     Assert.True(command.IsSystem);
 
-                    Assert.Equal(commandSettings.TypeId, typeof(ActivateFeatureCommand).FullName);
+                    Assert.Equal(commandSettings.TypeId, typeof(ActivateGuidanceWorkflowCommand).FullName);
                 }
 
                 return command;

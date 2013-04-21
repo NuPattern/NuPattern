@@ -176,7 +176,7 @@
     <Compile Include="Automation\Template\TemplateValidator.cs" />
     <Compile Include="Automation\Template\UnfoldPathHelper.cs" />
     <Compile Include="Automation\Template\UnfoldParentResolver.cs" />
-    <Compile Include="Commands\ActivateOrInstantiateSharedFeatureCommand.cs" />
+    <Compile Include="Commands\ActivateOrInstantiateSharedGuidanceWorkflowCommand.cs" />
     <Compile Include="Commands\ActivateSolutionItemsCommand.cs" />
     <Compile Include="Commands\ActivateElementSolutionItemCommand.cs" />
     <Compile Include="Commands\AggregatorCommand.cs" />
@@ -235,7 +235,7 @@
     </Compile>
     <Compile Include="Automation\Wizard\WizardAutomation.cs" />
     <Compile Include="Automation\Wizard\WizardSettings.cs" />
-    <Compile Include="Commands\ActivateFeatureCommand.cs" />
+    <Compile Include="Commands\ActivateGuidanceWorkflowCommand.cs" />
     <Compile Include="Commands\ActivateArtifactCommand.cs" />
     <Compile Include="Commands\UnfoldVsTemplateCommand.cs" />
     <Compile Include="Commands\UnfoldVsTemplateCommand.Validation.cs">
@@ -244,7 +244,7 @@
     <Compile Include="Commands\ValidateElementCommand.cs" />
     <Compile Include="Commands\GenerateProductCodeCommand.cs" />
     <Compile Include="Commands\GenerateModelingCodeCommand.cs" />
-    <Compile Include="Commands\InstantiateFeatureCommand.cs" />
+    <Compile Include="Commands\InstantiateGuidanceWorkflowCommand.cs" />
     <Compile Include="Commands\SynchArtifactNameCommand.cs" />
     <Compile Include="VsTemplateConfigurator.cs" />
     <Compile Include="Conditions\ArtifactReferenceExistsCondition.cs" />

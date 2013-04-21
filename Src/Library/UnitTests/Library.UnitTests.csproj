@@ -109,7 +109,7 @@
     <Compile Include="Automation\Extensions\ValidationExtensionDisplaySpec.cs" />
     <Compile Include="Automation\Wizard\WizardSettingsValidationSpec.cs" />
     <Compile Include="Automation\Wizard\WizardAutomationSpec.cs" />
-    <Compile Include="Commands\ActivateFeatureCommandSpec.cs" />
+    <Compile Include="Commands\ActivateGuidanceWorkflowCommandSpec.cs" />
     <Compile Include="Commands\ActivateArtifactCommandSpec.cs" />
     <Compile Include="Commands\CreateElementFromDroppedWindowsFileCommandSpec.cs" />
     <Compile Include="Commands\DeleteArtifactsCommandSpec.cs" />
@@ -122,7 +122,7 @@
     <Compile Include="Commands\ValidateElementCommandSpec.cs" />
     <Compile Include="Commands\GenerateProductCodeCommandSpec.cs" />
     <Compile Include="Commands\GenerateModelingCodeCommandSpec.cs" />
-    <Compile Include="Commands\InstantiateFeatureCommandSpec.cs" />
+    <Compile Include="Commands\InstantiateGuidanceWorkflowCommandSpec.cs" />
     <Compile Include="Commands\VsTemplateConfiguratorSpec.cs" />
     <Compile Include="Conditions\ArtifactReferenceExistsConditionSpec.cs" />
     <Compile Include="Conditions\ArtifactsSavedConditionSpec.cs" />
