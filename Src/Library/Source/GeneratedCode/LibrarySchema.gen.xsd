@@ -325,10 +325,10 @@
             <xsd:documentation>Whether to make this guidance the currently selected guidance in Guidance Explorer, when this element is created.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: GuidanceFeatureId -->
-        <xsd:attribute name="guidanceFeatureId" type="xsd:string" >
+        <!-- Property: ExtensionId -->
+        <xsd:attribute name="extensionId" type="xsd:string" >
           <xsd:annotation>
-            <xsd:documentation>The identifier of the feature extension associated to this element. This is the VSIX ID of the Feature Extension, found in the source.extension.vsixmanifest file in the feature extension project.</xsd:documentation>
+            <xsd:documentation>The identifier of the guidance extension associated to this element. This is the VSIX ID of the Guidance Extension, found in the source.extension.vsixmanifest file in the guidance extension project.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: GuidanceSharedInstance -->

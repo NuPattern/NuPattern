@@ -50,7 +50,7 @@ namespace NuPattern.Library.UnitTests.Automation.Guidance
             [TestMethod, TestCategory("Unit")]
             public void ThenGuidanceExtensionIdIsNotExist()
             {
-                var descriptor = TypedDescriptor.GetProperty(this.guidanceExtension, extension => extension.GuidanceFeatureId);
+                var descriptor = TypedDescriptor.GetProperty(this.guidanceExtension, extension => extension.ExtensionId);
 
                 Assert.Null(descriptor);
             }
@@ -89,7 +89,7 @@ namespace NuPattern.Library.UnitTests.Automation.Guidance
                 var descriptors = descriptor.Converter.GetProperties(mockContext.Object, string.Empty);
 
                 Assert.Equal(4, descriptors.Count);
-                Assert.NotNull(descriptors[Reflector<GuidanceExtension>.GetProperty(extension => extension.GuidanceFeatureId).Name]);
+                Assert.NotNull(descriptors[Reflector<GuidanceExtension>.GetProperty(extension => extension.ExtensionId).Name]);
                 Assert.NotNull(descriptors[Reflector<GuidanceExtension>.GetProperty(extension => extension.GuidanceActivateOnCreation).Name]);
                 Assert.NotNull(descriptors[Reflector<GuidanceExtension>.GetProperty(extension => extension.GuidanceInstanceName).Name]);
                 Assert.NotNull(descriptors[Reflector<GuidanceExtension>.GetProperty(extension => extension.GuidanceSharedInstance).Name]);

@@ -46,8 +46,8 @@ namespace NuPattern.Library.Design
                         new BrowsableAttribute(true), new DefaultValueAttribute(element.GetPropertyDefaultValue<GuidanceExtension, string>(e => e.GuidanceInstanceName))), 
                     new DelegatingPropertyDescriptor(element, TypedDescriptor.CreateProperty(element, extension => extension.GuidanceActivateOnCreation),
                         new BrowsableAttribute(true), new DefaultValueAttribute(element.GetPropertyDefaultValue<GuidanceExtension, bool>(e => e.GuidanceActivateOnCreation))), 
-                    new DelegatingPropertyDescriptor(element, TypedDescriptor.CreateProperty(element, extension => extension.GuidanceFeatureId),
-                        new BrowsableAttribute(true), new DefaultValueAttribute(element.GetPropertyDefaultValue<GuidanceExtension, string>(e => e.GuidanceFeatureId))), 
+                    new DelegatingPropertyDescriptor(element, TypedDescriptor.CreateProperty(element, extension => extension.ExtensionId),
+                        new BrowsableAttribute(true), new DefaultValueAttribute(element.GetPropertyDefaultValue<GuidanceExtension, string>(e => e.ExtensionId))), 
                     new DelegatingPropertyDescriptor(element, TypedDescriptor.CreateProperty(element, extension => extension.GuidanceSharedInstance),
                         new BrowsableAttribute(true), new DefaultValueAttribute(element.GetPropertyDefaultValue<GuidanceExtension, bool>(e => e.GuidanceSharedInstance))) 
                 });

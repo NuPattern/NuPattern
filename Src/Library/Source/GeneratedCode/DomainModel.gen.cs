@@ -111,7 +111,7 @@ namespace NuPattern.Library.Automation
 				new DomainMemberInfo(typeof(GuidanceExtension), "AssociatedGuidance", GuidanceExtension.AssociatedGuidanceDomainPropertyId, typeof(GuidanceExtension.AssociatedGuidancePropertyHandler)),
 				new DomainMemberInfo(typeof(GuidanceExtension), "GuidanceInstanceName", GuidanceExtension.GuidanceInstanceNameDomainPropertyId, typeof(GuidanceExtension.GuidanceInstanceNamePropertyHandler)),
 				new DomainMemberInfo(typeof(GuidanceExtension), "GuidanceActivateOnCreation", GuidanceExtension.GuidanceActivateOnCreationDomainPropertyId, typeof(GuidanceExtension.GuidanceActivateOnCreationPropertyHandler)),
-				new DomainMemberInfo(typeof(GuidanceExtension), "GuidanceFeatureId", GuidanceExtension.GuidanceFeatureIdDomainPropertyId, typeof(GuidanceExtension.GuidanceFeatureIdPropertyHandler)),
+				new DomainMemberInfo(typeof(GuidanceExtension), "ExtensionId", GuidanceExtension.ExtensionIdDomainPropertyId, typeof(GuidanceExtension.ExtensionIdPropertyHandler)),
 				new DomainMemberInfo(typeof(GuidanceExtension), "GuidanceSharedInstance", GuidanceExtension.GuidanceSharedInstanceDomainPropertyId, typeof(GuidanceExtension.GuidanceSharedInstancePropertyHandler)),
 				new DomainMemberInfo(typeof(WizardSettings), "TypeName", WizardSettings.TypeNameDomainPropertyId, typeof(WizardSettings.TypeNamePropertyHandler)),
 				new DomainMemberInfo(typeof(ArtifactExtension), "AssociatedArtifacts", ArtifactExtension.AssociatedArtifactsDomainPropertyId, typeof(ArtifactExtension.AssociatedArtifactsPropertyHandler)),

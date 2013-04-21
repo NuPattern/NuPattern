@@ -257,7 +257,7 @@
             <ExternalTypeMoniker Name="/System/Boolean" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="c305b11e-9e20-4250-ac67-1b25a5caab41" Description="The identifier of the feature extension associated to this element. This is the VSIX ID of the Feature Extension, found in the source.extension.vsixmanifest file in the feature extension project." Name="GuidanceFeatureId" DisplayName="Feature Id" Category="Guidance" IsBrowsable="false">
+        <DomainProperty Id="c305b11e-9e20-4250-ac67-1b25a5caab41" Description="The identifier of the guidance extension associated to this element. This is the VSIX ID of the Guidance Extension, found in the source.extension.vsixmanifest file in the guidance extension project." Name="ExtensionId" DisplayName="Guidance Id" Category="Guidance" IsBrowsable="false">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -543,8 +543,8 @@
           <XmlPropertyData XmlName="guidanceActivateOnCreation">
             <DomainPropertyMoniker Name="GuidanceExtension/GuidanceActivateOnCreation" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="guidanceFeatureId">
-            <DomainPropertyMoniker Name="GuidanceExtension/GuidanceFeatureId" />
+          <XmlPropertyData XmlName="extensionId">
+            <DomainPropertyMoniker Name="GuidanceExtension/ExtensionId" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="guidanceSharedInstance">
             <DomainPropertyMoniker Name="GuidanceExtension/GuidanceSharedInstance" />

@@ -3664,20 +3664,20 @@ namespace NuPattern.Library.Automation
 					}
 				}
 			}
-			// GuidanceFeatureId
+			// ExtensionId
 			if (!serializationContext.Result.Failed)
 			{
-				string attribGuidanceFeatureId = LibrarySerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "guidanceFeatureId");
-				if (attribGuidanceFeatureId != null)
+				string attribExtensionId = LibrarySerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "extensionId");
+				if (attribExtensionId != null)
 				{
-					global::System.String valueOfGuidanceFeatureId;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribGuidanceFeatureId, out valueOfGuidanceFeatureId))
+					global::System.String valueOfExtensionId;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribExtensionId, out valueOfExtensionId))
 					{
-						instanceOfGuidanceExtension.GuidanceFeatureId = valueOfGuidanceFeatureId;
+						instanceOfGuidanceExtension.ExtensionId = valueOfExtensionId;
 					}
 					else
 					{	// Invalid property value, ignored.
-						LibrarySerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "guidanceFeatureId", typeof(global::System.String), attribGuidanceFeatureId);
+						LibrarySerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "extensionId", typeof(global::System.String), attribExtensionId);
 					}
 				}
 			}
@@ -4135,14 +4135,14 @@ namespace NuPattern.Library.Automation
 					}
 				}
 			}
-			// GuidanceFeatureId
+			// ExtensionId
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfGuidanceExtension.GuidanceFeatureId;
+				global::System.String propValue = instanceOfGuidanceExtension.ExtensionId;
 				if (!serializationContext.Result.Failed)
 				{
 					if (!string.IsNullOrEmpty(propValue))
-						LibrarySerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "guidanceFeatureId", propValue);
+						LibrarySerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "extensionId", propValue);
 	
 				}
 			}

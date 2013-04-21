@@ -257,9 +257,9 @@ namespace NuPattern.Library.Automation
         global::System.Boolean GuidanceActivateOnCreation { get; set; }
         
         /// <summary>
-        /// The identifier of the feature extension associated to this element. This is the VSIX ID of the Feature Extension, found in the source.extension.vsixmanifest file in the feature extension project.
+        /// The identifier of the guidance extension associated to this element. This is the VSIX ID of the Guidance Extension, found in the source.extension.vsixmanifest file in the guidance extension project.
         /// </summary>
-        global::System.String GuidanceFeatureId { get; set; }
+        global::System.String ExtensionId { get; set; }
         
         /// <summary>
         /// Whether a single guidance instance is shared between all instances of this element, or a separate instance of guidance is created for each instance of this element.

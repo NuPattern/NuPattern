@@ -3147,63 +3147,63 @@ namespace NuPattern.Library.Automation
 		}
 		
 		#endregion
-		#region GuidanceFeatureId domain property code
+		#region ExtensionId domain property code
 		
 		/// <summary>
-		/// GuidanceFeatureId domain property Id.
+		/// ExtensionId domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid GuidanceFeatureIdDomainPropertyId = new global::System.Guid(0xc305b11e, 0x9e20, 0x4250, 0xac, 0x67, 0x1b, 0x25, 0xa5, 0xca, 0xab, 0x41);
+		public static readonly global::System.Guid ExtensionIdDomainPropertyId = new global::System.Guid(0xc305b11e, 0x9e20, 0x4250, 0xac, 0x67, 0x1b, 0x25, 0xa5, 0xca, 0xab, 0x41);
 		
 		/// <summary>
-		/// Storage for GuidanceFeatureId
+		/// Storage for ExtensionId
 		/// </summary>
-		private global::System.String guidanceFeatureIdPropertyStorage = string.Empty;
+		private global::System.String extensionIdPropertyStorage = string.Empty;
 		
 		/// <summary>
-		/// Gets or sets the value of GuidanceFeatureId domain property.
-		/// The identifier of the feature extension associated to this element. This is the
-		/// VSIX ID of the Feature Extension, found in the source.extension.vsixmanifest
-		/// file in the feature extension project.
+		/// Gets or sets the value of ExtensionId domain property.
+		/// The identifier of the guidance extension associated to this element. This is the
+		/// VSIX ID of the Guidance Extension, found in the source.extension.vsixmanifest
+		/// file in the guidance extension project.
 		/// </summary>
-		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.GuidanceExtension/ExtensionId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Library.Automation.GuidanceExtension/ExtensionId.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.GuidanceExtension/ExtensionId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[DslModeling::DomainObjectId("c305b11e-9e20-4250-ac67-1b25a5caab41")]
-		public global::System.String GuidanceFeatureId
+		public global::System.String ExtensionId
 		{
 		    [global::System.Diagnostics.DebuggerStepThrough]
 		    get
 		    {
-		        return guidanceFeatureIdPropertyStorage;
+		        return extensionIdPropertyStorage;
 		    }
 		    [global::System.Diagnostics.DebuggerStepThrough]
 		    set
 		    {
-		        GuidanceFeatureIdPropertyHandler.Instance.SetValue(this, value);
+		        ExtensionIdPropertyHandler.Instance.SetValue(this, value);
 		    }
 		}
 		/// <summary>
-		/// Value handler for the GuidanceExtension.GuidanceFeatureId domain property.
+		/// Value handler for the GuidanceExtension.ExtensionId domain property.
 		/// </summary>
-		internal sealed partial class GuidanceFeatureIdPropertyHandler : DslModeling::DomainPropertyValueHandler<GuidanceExtension, global::System.String>
+		internal sealed partial class ExtensionIdPropertyHandler : DslModeling::DomainPropertyValueHandler<GuidanceExtension, global::System.String>
 		{
-		    private GuidanceFeatureIdPropertyHandler() { }
+		    private ExtensionIdPropertyHandler() { }
 		
 		    /// <summary>
-		    /// Gets the singleton instance of the GuidanceExtension.GuidanceFeatureId domain property value handler.
+		    /// Gets the singleton instance of the GuidanceExtension.ExtensionId domain property value handler.
 		    /// </summary>
-		    public static readonly GuidanceFeatureIdPropertyHandler Instance = new GuidanceFeatureIdPropertyHandler();
+		    public static readonly ExtensionIdPropertyHandler Instance = new ExtensionIdPropertyHandler();
 		
 		    /// <summary>
-		    /// Gets the Id of the GuidanceExtension.GuidanceFeatureId domain property.
+		    /// Gets the Id of the GuidanceExtension.ExtensionId domain property.
 		    /// </summary>
 		    public sealed override global::System.Guid DomainPropertyId
 		    {
 		        [global::System.Diagnostics.DebuggerStepThrough]
 		        get
 		        {
-		            return GuidanceFeatureIdDomainPropertyId;
+		            return ExtensionIdDomainPropertyId;
 		        }
 		    }
 		    
@@ -3215,7 +3215,7 @@ namespace NuPattern.Library.Automation
 		    public override sealed global::System.String GetValue(GuidanceExtension element)
 		    {
 		        if (element == null) throw new global::System.ArgumentNullException("element");
-		        return element.guidanceFeatureIdPropertyStorage;
+		        return element.extensionIdPropertyStorage;
 		    }
 		
 		    /// <summary>
@@ -3251,9 +3251,9 @@ namespace NuPattern.Library.Automation
 		    private void SetValue(GuidanceExtension element, global::System.String oldValue, global::System.String newValue)
 		    {
 		        this.ValueChanging(element, oldValue, newValue);
-		        element.guidanceFeatureIdPropertyStorage = newValue;
+		        element.extensionIdPropertyStorage = newValue;
 		        ValueChanged(element, oldValue, newValue);
-		        element.PropertyChanges.NotifyChanged<GuidanceExtension>(x => x.GuidanceFeatureId);
+		        element.PropertyChanges.NotifyChanged<GuidanceExtension>(x => x.ExtensionId);
 		    }
 		}
 		

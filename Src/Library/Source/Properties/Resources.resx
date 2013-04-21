@@ -169,7 +169,7 @@
     <value>Executing automation from event '{0}'.</value>
   </data>
   <data name="GuidanceExtension_ActivateCommandName" xml:space="preserve">
-    <value>ActivateGuidanceWorkCommand</value>
+    <value>ActivateGuidanceCommand</value>
   </data>
   <data name="GuidanceExtension_ActivateMenuItemText" xml:space="preserve">
     <value>Show Guidance</value>

@@ -57,7 +57,7 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
             [TestMethod, TestCategory("Integration")]
             public void WhenSettingGuidanceExtensionIdProperty_ThenCreatesAutomationSettings()
             {
-                this.guidanceExtension.GuidanceFeatureId = "Foo";
+                this.guidanceExtension.ExtensionId = "Foo";
                 Assert.Equal(4, this.container.AutomationSettings.Count());
 
                 AssertInstantiateCommand(true);
@@ -70,8 +70,8 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
             [TestMethod, TestCategory("Integration")]
             public void WhenChangingGuidanceGuidanceExtensionIdProperty_ThenUpdatedCommandSettings()
             {
-                this.guidanceExtension.GuidanceFeatureId = "Foo";
-                this.guidanceExtension.GuidanceFeatureId = "Foo1";
+                this.guidanceExtension.ExtensionId = "Foo";
+                this.guidanceExtension.ExtensionId = "Foo1";
 
                 Assert.Equal(4, this.container.AutomationSettings.Count());
 
@@ -85,8 +85,8 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
             [TestMethod, TestCategory("Integration")]
             public void WhenChangingDefaultInstanceNameProperty_ThenUpdatedCommandSettings()
             {
-                this.guidanceExtension.GuidanceFeatureId = "Foo";
-                this.guidanceExtension.GuidanceFeatureId = "Foo1";
+                this.guidanceExtension.ExtensionId = "Foo";
+                this.guidanceExtension.ExtensionId = "Foo1";
 
                 Assert.Equal(4, this.container.AutomationSettings.Count());
 
@@ -102,8 +102,8 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
             [TestMethod, TestCategory("Integration")]
             public void WhenChangingActivateOnCreationProperty_ThenUpdatedCommandSettings()
             {
-                this.guidanceExtension.GuidanceFeatureId = "Foo";
-                this.guidanceExtension.GuidanceFeatureId = "Foo1";
+                this.guidanceExtension.ExtensionId = "Foo";
+                this.guidanceExtension.ExtensionId = "Foo1";
 
                 Assert.Equal(4, this.container.AutomationSettings.Count());
 
@@ -119,8 +119,8 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
             [TestMethod, TestCategory("Integration")]
             public void WhenResettingGuidanceGuidanceExtensionId_ThenDeletesCommandSettingAndEventSettings()
             {
-                this.guidanceExtension.GuidanceFeatureId = "Foo";
-                this.guidanceExtension.GuidanceFeatureId = string.Empty;
+                this.guidanceExtension.ExtensionId = "Foo";
+                this.guidanceExtension.ExtensionId = string.Empty;
 
                 Assert.Equal(0, this.container.AutomationSettings.Count());
                 Assert.Equal(0, this.container.Properties.Count());
@@ -143,7 +143,7 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
 
                     var extensionProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateGuidanceWorkflowCommand>.GetProperty(c => c.GuidanceExtensionId).Name]
                         .GetValue(commandSettings) as DesignProperty;
-                    Assert.Equal(this.guidanceExtension.GuidanceFeatureId, extensionProperty.GetValue());
+                    Assert.Equal(this.guidanceExtension.ExtensionId, extensionProperty.GetValue());
 
                     var defaultInstanceProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateGuidanceWorkflowCommand>.GetProperty(c => c.DefaultInstanceName).Name]
                         .GetValue(commandSettings) as DesignProperty;

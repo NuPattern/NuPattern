@@ -2869,7 +2869,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ActivateGuidanceWorkCommand.
+        ///   Looks up a localized string similar to ActivateGuidanceCommand.
         /// </summary>
         internal static string GuidanceExtension_ActivateCommandName {
             get {

@@ -393,17 +393,17 @@
     <value>Guidance</value>
     <comment>Category for DomainProperty &apos;GuidanceActivateOnCreation&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.Description" xml:space="preserve">
-    <value>The identifier of the feature extension associated to this element. This is the VSIX ID of the Feature Extension, found in the source.extension.vsixmanifest file in the feature extension project.</value>
-    <comment>Description for DomainProperty &apos;GuidanceFeatureId&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
+  <data name="NuPattern.Library.Automation.GuidanceExtension/ExtensionId.Description" xml:space="preserve">
+    <value>The identifier of the guidance extension associated to this element. This is the VSIX ID of the Guidance Extension, found in the source.extension.vsixmanifest file in the guidance extension project.</value>
+    <comment>Description for DomainProperty &apos;ExtensionId&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.DisplayName" xml:space="preserve">
-    <value>Feature Id</value>
-    <comment>DisplayName for DomainProperty &apos;GuidanceFeatureId&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
+  <data name="NuPattern.Library.Automation.GuidanceExtension/ExtensionId.DisplayName" xml:space="preserve">
+    <value>Guidance Id</value>
+    <comment>DisplayName for DomainProperty &apos;ExtensionId&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
-  <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.Category" xml:space="preserve">
+  <data name="NuPattern.Library.Automation.GuidanceExtension/ExtensionId.Category" xml:space="preserve">
     <value>Guidance</value>
-    <comment>Category for DomainProperty &apos;GuidanceFeatureId&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
+    <comment>Category for DomainProperty &apos;ExtensionId&apos; on DomainClass &apos;GuidanceExtension&apos;</comment>
   </data>
   <data name="NuPattern.Library.Automation.GuidanceExtension/GuidanceSharedInstance.Description" xml:space="preserve">
     <value>Whether a single guidance instance is shared between all instances of this element, or a separate instance of guidance is created for each instance of this element.</value>
