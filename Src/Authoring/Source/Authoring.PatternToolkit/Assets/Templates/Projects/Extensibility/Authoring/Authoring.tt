@@ -67,7 +67,7 @@
       </WizardExtension>
       <WizardExtension>
         <Assembly>NuPattern.Runtime.Shell, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
-        <FullClassName>NuPattern.Runtime.Shell.OpenSolutionBuilderTemplateWizard</FullClassName>
+        <FullClassName>NuPattern.Runtime.Shell.TemplateWizards.OpenSolutionBuilderTemplateWizard</FullClassName>
       </WizardExtension>
     </CoordinatedWizards>
   </WizardData>

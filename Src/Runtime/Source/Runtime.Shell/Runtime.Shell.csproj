@@ -119,8 +119,11 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Commands\OpenGuidanceBrowserMenuCommand.cs" />
-    <Compile Include="Commands\OpenGuidanceExplorerMenuCommand.cs" />
+    <Compile Include="Commands\OpenCommands.gen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpenCommands.tt</DependentUpon>
+    </Compile>
     <Compile Include="Constants.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -148,7 +151,6 @@
       <DependentUpon>TraceOptionsPageControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ToolWindows\SolutionBuilderToolWindow.cs" />
-    <Compile Include="Commands\OpenSolutionBuilderMenuCommand.cs" />
     <Compile Include="ProductStateEditorFactory.cs" />
     <Compile Include="ProductStateValidator.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -160,6 +162,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToolWindows\PackageToolWindow.cs" />
     <Compile Include="TemplateWizards\OpenSolutionBuilderTemplateWizard.cs" />
+    <Compile Include="ToolWindows\ToolWindows.gen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolWindows.tt</DependentUpon>
+    </Compile>
     <Compile Include="VsIdleTaskHost.cs" />
     <None Include="..\..\..\Common\Guidance\Creating the PDF Guidance.txt">
       <Link>Guidance\Creating the PDF Guidance.txt</Link>
@@ -340,7 +347,15 @@
     <Content Include="GeneratedCode\Guidance\Content\WhatistheGuidanceBrowser.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <None Include="Commands\OpenCommands.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>OpenCommands.gen.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
+    <None Include="ToolWindows\ToolWindows.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ToolWindows.gen.cs</LastGenOutput>
+    </None>
     <None Include="VSPackage.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VSPackage.gen.resx</LastGenOutput>

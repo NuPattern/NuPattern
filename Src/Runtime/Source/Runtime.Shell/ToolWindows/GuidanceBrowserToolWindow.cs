@@ -1,13 +1,11 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.Guidance.UI.ViewModels;
 using NuPattern.Runtime.Guidance.UI.Views;
 using NuPattern.Runtime.Guidance.Workflow;
-using NuPattern.Runtime.Shell.Properties;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Shell.ToolWindows
@@ -15,22 +13,9 @@ namespace NuPattern.Runtime.Shell.ToolWindows
     /// <summary>
     /// Provides the Guidance Browser tool window.
     /// </summary>
-    [Guid("167f0a44-f79b-4007-a084-8ecc1457776e")]
-    internal class GuidanceBrowserToolWindow : ToolWindowPane
+    internal partial class GuidanceBrowserToolWindow
     {
         private GuidanceBrowserViewModel viewModel;
-
-        /// <summary>
-        /// Creates a new instance of the <see cref="GuidanceExplorerToolWindow"/> class.
-        /// </summary>
-        public GuidanceBrowserToolWindow() :
-            base(null)
-        {
-            this.Caption = Resources.GuidanceBrowserToolWindow_WindowTitle;
-
-            this.BitmapResourceID = 303;
-            this.BitmapIndex = 0;
-        }
 
         [Import]
         private IUserMessageService UserMessageService { get; set; }

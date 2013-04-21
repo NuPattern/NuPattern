@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Settings;
 using Microsoft.VisualStudio.Shell;
@@ -8,7 +7,6 @@ using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.Shell.Settings;
 using NuPattern.Presentation.VsIde;
 using NuPattern.Runtime.Bindings;
-using NuPattern.Runtime.Shell.Properties;
 using NuPattern.Runtime.UI.ViewModels;
 using NuPattern.Runtime.UI.Views;
 using NuPattern.VisualStudio;
@@ -18,26 +16,13 @@ namespace NuPattern.Runtime.Shell.ToolWindows
     /// <summary>
     /// Provides the Pattern Explorer tool window.
     /// </summary>
-    [Guid("c44b2e95-86f4-40dd-8fc8-bbc9725ea86b")]
-    internal class SolutionBuilderToolWindow : ToolWindowPane
+    internal partial class SolutionBuilderToolWindow
     {
         private const string SolutionBuilderVisibilitySetting = "FirstTimeInitialization";
         private const string SolutionBuilderAutoOpenedSetting = "SolutionBuilderAutoOpened";
         private SelectionContainer selectionContainer;
         private SolutionBuilderViewModel viewModel;
         private IVsTrackSelectionEx trackSelection;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SolutionBuilderToolWindow"/> class.
-        /// </summary>
-        public SolutionBuilderToolWindow() :
-            base(null)
-        {
-            this.Caption = Resources.SolutionBuilderToolWindow_WindowTitle;
-
-            this.BitmapResourceID = 301;
-            this.BitmapIndex = 0;
-        }
 
         [Import]
         private IBindingFactory BindingFactory { get; set; }

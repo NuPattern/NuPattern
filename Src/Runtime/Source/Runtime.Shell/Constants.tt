@@ -57,5 +57,10 @@ namespace NuPattern.Runtime.Shell
         /// The name of the output window used for tracing.
         /// </summary>
         public const string OutputWindowTitle = "<#=RuntimeShellPackageInfo.OutputWindowTitle#>";
+
+        /// <summary>
+        /// The GUID of the Solution Builder tool window.
+        /// </summary>
+        public const string SolutionBuilderToolWindowGuid = "{<#=RuntimeShellPackageInfo.SolutionBuilder.ToolWindowGuid#>}";
     }
 }

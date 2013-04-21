@@ -134,13 +134,13 @@
     <value><#=RuntimeShellPackageInfo.OptionPageSubCategoryTracing#></value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="301" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Images\\<#=VersionInfo.TargetVsVersion #>\ToolWindowSolutionBuilder.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="<#=RuntimeShellPackageInfo.SolutionBuilder.BitmapResourceId#>" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Images\\<#=VersionInfo.TargetVsVersion #>\\<#=RuntimeShellPackageInfo.SolutionBuilder.ToolWindowIcon#>;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="302" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Images\\<#=VersionInfo.TargetVsVersion #>\ToolWindowGuidanceExplorer.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="<#=RuntimeShellPackageInfo.GuidanceExplorer.BitmapResourceId#>" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Images\\<#=VersionInfo.TargetVsVersion #>\\<#=RuntimeShellPackageInfo.GuidanceExplorer.ToolWindowIcon#>;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="303" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\Images\\<#=VersionInfo.TargetVsVersion #>\ToolWindowGuidanceBrowser.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="<#=RuntimeShellPackageInfo.GuidanceBrowser.BitmapResourceId#>" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Images\\<#=VersionInfo.TargetVsVersion #>\\<#=RuntimeShellPackageInfo.GuidanceBrowser.ToolWindowIcon#>;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
@@ -9,7 +8,6 @@ using NuPattern.Runtime.Guidance.UI;
 using NuPattern.Runtime.Guidance.UI.ViewModels;
 using NuPattern.Runtime.Guidance.UI.Views;
 using NuPattern.Runtime.Guidance.Workflow;
-using NuPattern.Runtime.Shell.Properties;
 using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Shell.ToolWindows
@@ -17,26 +15,11 @@ namespace NuPattern.Runtime.Shell.ToolWindows
     /// <summary>
     /// Provides the Guidance Explorer tool window.
     /// </summary>
-    [Guid("6A2D1053-BEEB-4FDF-9FB0-133CE1FE6D25")]
-    internal class GuidanceExplorerToolWindow : ToolWindowPane
+    internal partial class GuidanceExplorerToolWindow
     {
         private SelectionContainer selectionContainer;
         private GuidanceExplorerViewModel viewModel;
         private IVsTrackSelectionEx trackSelection;
-
-        public object WorkflowMediator { get; set; }
-
-        /// <summary>
-        /// Creates a new instance of the <see cref="GuidanceExplorerToolWindow"/> class.
-        /// </summary>
-        public GuidanceExplorerToolWindow() :
-            base(null)
-        {
-            this.Caption = Resources.GuidanceExplorerToolWindow_WindowTitle;
-
-            this.BitmapResourceID = 302;
-            this.BitmapIndex = 0;
-        }
 
         [Import]
         private IUserMessageService UserMessageService { get; set; }
