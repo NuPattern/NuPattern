@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NuPattern.Library.Commands;
-using NuPattern.Library.Migration;
+using NuPattern.Library.SchemaUpgrade;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
 
-namespace NuPattern.Library.UnitTests.Migration
+namespace NuPattern.Library.UnitTests.SchemaUpgrade
 {
     [TestClass]
     public class AggregatorCommandUpgradeProcessorSpec

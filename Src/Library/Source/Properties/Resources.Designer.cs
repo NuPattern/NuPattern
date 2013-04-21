@@ -198,10 +198,9 @@ namespace NuPattern.Library.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The Id of the extension containing the guidance to activate (or instantiate)..
         /// </summary>
-        internal static string ActivateOrInstantiateSharedGuidanceWorkflowCommand_GuidanceExtensionId_Description {
+        internal static string ActivateOrInstantiateSharedGuidanceWorkflowCommand_ExtensionId_Description {
             get {
-                return ResourceManager.GetString("ActivateOrInstantiateSharedGuidanceWorkflowCommand_GuidanceExtensionId_Descriptio" +
-                        "n", resourceCulture);
+                return ResourceManager.GetString("ActivateOrInstantiateSharedGuidanceWorkflowCommand_ExtensionId_Description", resourceCulture);
             }
         }
         
@@ -2869,6 +2868,15 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Upgrading FeatureCommand elements..
+        /// </summary>
+        internal static string GuidanceCommandUpgradeProcessor_TraceDeserialize {
+            get {
+                return ResourceManager.GetString("GuidanceCommandUpgradeProcessor_TraceDeserialize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ActivateGuidanceCommand.
         /// </summary>
         internal static string GuidanceExtension_ActivateCommandName {
@@ -2910,6 +2918,15 @@ namespace NuPattern.Library.Properties {
         internal static string GuidanceExtension_InstantiateEventName {
             get {
                 return ResourceManager.GetString("GuidanceExtension_InstantiateEventName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upgrading GuidanceExtension elements..
+        /// </summary>
+        internal static string GuidanceExtensionUpgradeProcessor_TraceDeserialize {
+            get {
+                return ResourceManager.GetString("GuidanceExtensionUpgradeProcessor_TraceDeserialize", resourceCulture);
             }
         }
         
@@ -3060,18 +3077,18 @@ namespace NuPattern.Library.Properties {
         /// <summary>
         ///   Looks up a localized string similar to The identifier of the guidance extension containing the guidance workflow to instantiate..
         /// </summary>
-        internal static string InstantiateGuidanceWorkflowCommand_GuidanceExtensionId_Description {
+        internal static string InstantiateGuidanceWorkflowCommand_ExtensionId_Description {
             get {
-                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_GuidanceExtensionId_Description", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_ExtensionId_Description", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Extension Id.
         /// </summary>
-        internal static string InstantiateGuidanceWorkflowCommand_GuidanceExtensionId_DisplayName {
+        internal static string InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName {
             get {
-                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_GuidanceExtensionId_DisplayName", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName", resourceCulture);
             }
         }
         

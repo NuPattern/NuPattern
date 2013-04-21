@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Xml.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NuPattern.Library.Migration;
+using NuPattern.Library.SchemaUpgrade;
 using NuPattern.Runtime.Bindings;
 
 namespace NuPattern.Library.UnitTests.Migration

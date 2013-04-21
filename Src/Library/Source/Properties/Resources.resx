@@ -201,10 +201,10 @@
   <data name="InstantiateGuidanceWorkflowCommand_DisplayName" xml:space="preserve">
     <value>Instantiates an Associated Guidance Workflow.</value>
   </data>
-  <data name="InstantiateGuidanceWorkflowCommand_GuidanceExtensionId_Description" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_ExtensionId_Description" xml:space="preserve">
     <value>The identifier of the guidance extension containing the guidance workflow to instantiate.</value>
   </data>
-  <data name="InstantiateGuidanceWorkflowCommand_GuidanceExtensionId_DisplayName" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName" xml:space="preserve">
     <value>Extension Id</value>
   </data>
   <data name="InstantiateGuidanceWorkflowCommand_TraceWorkflowNotFound" xml:space="preserve">
@@ -1877,7 +1877,7 @@ Evaluation results:
   <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_DisplayName" xml:space="preserve">
     <value>Activates or Instantiates a Shared Guidance Workflow</value>
   </data>
-  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_GuidanceExtensionId_Description" xml:space="preserve">
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_ExtensionId_Description" xml:space="preserve">
     <value>The Id of the extension containing the guidance to activate (or instantiate).</value>
   </data>
   <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceActivate" xml:space="preserve">
@@ -2425,5 +2425,11 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   </data>
   <data name="ValueIsNotNullCondition_Value_DisplayName" xml:space="preserve">
     <value>Value</value>
+  </data>
+  <data name="GuidanceCommandUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading FeatureCommand elements.</value>
+  </data>
+  <data name="GuidanceExtensionUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading GuidanceExtension elements.</value>
   </data>
 </root>

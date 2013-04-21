@@ -132,8 +132,8 @@
     <Compile Include="Conditions\ElementPropertyExistsConditionSpec.cs" />
     <Compile Include="Conditions\XmlNodeExistsConditionSpec.cs" />
     <Compile Include="Conditions\PropertyChangedEventArgsMatchesPropertyNameConditionSpec.cs" />
-    <Compile Include="Migration\CommandSettingsUpgradeProcessorSpec.cs" />
-    <Compile Include="Migration\AggregatorCommandUpgradeProcessorSpec.cs" />
+    <Compile Include="SchemaUpgrade\CommandSettingsUpgradeProcessorSpec.cs" />
+    <Compile Include="SchemaUpgrade\AggregatorCommandUpgradeProcessorSpec.cs" />
     <Compile Include="ModelElementDirectiveProcessorSpec.cs" />
     <Compile Include="Events\OnElementDeletedEventSpec.cs" />
     <Compile Include="Events\OnElementActivatedSpec.cs" />
@@ -141,6 +141,8 @@
     <Compile Include="Events\OnElementInstantiatedSpec.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchemaUpgrade\GuidanceExtensionUpgradeProcessorSpec.cs" />
+    <Compile Include="SchemaUpgrade\GuidanceCommandUpgradeProcessorSpec.cs" />
     <Compile Include="TypeEditors\TextTemplateUriEditorSpec.cs" />
     <Compile Include="ValidationRules\ArtifactsSavedValidationRuleSpec.cs" />
     <Compile Include="ValidationRules\CardinalityValidationRuleSpec.cs" />

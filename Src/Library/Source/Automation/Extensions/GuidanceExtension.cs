@@ -31,7 +31,7 @@ namespace NuPattern.Library.Automation
                 existanceCondition);
             if (instantiateCommand != null)
             {
-                instantiateCommand.SetPropertyValue<InstantiateGuidanceWorkflowCommand, string>(cmd => cmd.GuidanceExtensionId, this.ExtensionId);
+                instantiateCommand.SetPropertyValue<InstantiateGuidanceWorkflowCommand, string>(cmd => cmd.ExtensionId, this.ExtensionId);
                 instantiateCommand.SetPropertyValue<InstantiateGuidanceWorkflowCommand, string>(cmd => cmd.DefaultInstanceName, this.GuidanceInstanceName);
                 instantiateCommand.SetPropertyValue<InstantiateGuidanceWorkflowCommand, bool>(cmd => cmd.SharedInstance, this.GuidanceSharedInstance);
                 instantiateCommand.SetPropertyValue<InstantiateGuidanceWorkflowCommand, bool>(cmd => cmd.ActivateOnInstantiation, this.GuidanceActivateOnCreation);

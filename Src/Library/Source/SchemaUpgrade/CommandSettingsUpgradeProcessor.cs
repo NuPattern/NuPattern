@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
@@ -8,7 +7,7 @@ using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
 
-namespace NuPattern.Library.Migration
+namespace NuPattern.Library.SchemaUpgrade
 {
     /// <summary>
     /// Migrates CommandSetting properties from XML to JSon.
@@ -47,10 +46,8 @@ namespace NuPattern.Library.Migration
 
             this.IsModified = false;
 
-            // Locate all <commandSettings> that have <properties> that have <propertySettings> elements
+            // Locate all <commandSettings>
             var commandSettings = document.Descendants(CommandSettingsElementName)
-                        .Where(cs => cs.Descendants(CommandSettingsPropertiesElementName).Any())
-                        .Where(p => p.Descendants(PropertySettingsElementName).Any())
                         .Distinct();
             if (commandSettings.Any())
             {

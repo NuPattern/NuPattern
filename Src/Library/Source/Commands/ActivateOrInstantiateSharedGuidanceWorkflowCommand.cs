@@ -31,9 +31,9 @@ namespace NuPattern.Library.Commands
         [Required(AllowEmptyStrings = false)]
         [TypeConverter(typeof(GuidanceExtensionsTypeConverter))]
         [Editor(typeof(StandardValuesEditor), typeof(UITypeEditor))]
-        [DisplayNameResource("InstantiateGuidanceWorkflowCommand_GuidanceExtensionId_DisplayName", typeof(Resources))]
-        [DescriptionResource("ActivateGuidanceWorkCommand_GuidanceExtensionId_Description", typeof(Resources))]
-        public string GuidanceExtensionId { get; set; }
+        [DisplayNameResource("InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName", typeof(Resources))]
+        [DescriptionResource("ActivateGuidanceWorkCommand_ExtensionId_Description", typeof(Resources))]
+        public string ExtensionId { get; set; }
 
         /// <summary>
         /// Gets or sets the guidance extension manager.
@@ -65,11 +65,11 @@ namespace NuPattern.Library.Commands
             this.ValidateObject();
 
             tracer.TraceInformation(
-                Resources.ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInitial, this.GuidanceExtensionId);
+                Resources.ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInitial, this.ExtensionId);
 
             // Ensure the feature type exists
             var featureRegistration = this.GuidanceManager.InstalledGuidanceExtensions
-                .FirstOrDefault(feature => feature.ExtensionId.Equals(this.GuidanceExtensionId, StringComparison.OrdinalIgnoreCase));
+                .FirstOrDefault(feature => feature.ExtensionId.Equals(this.ExtensionId, StringComparison.OrdinalIgnoreCase));
             if (featureRegistration != null)
             {
                 // Show the guidance windows
@@ -82,17 +82,17 @@ namespace NuPattern.Library.Commands
                 }
 
                 // Ensure we are not sharing
-                var featureInstance = this.GuidanceManager.InstantiatedGuidanceExtensions.FirstOrDefault(f => f.ExtensionId.Equals(this.GuidanceExtensionId, StringComparison.OrdinalIgnoreCase));
+                var featureInstance = this.GuidanceManager.InstantiatedGuidanceExtensions.FirstOrDefault(f => f.ExtensionId.Equals(this.ExtensionId, StringComparison.OrdinalIgnoreCase));
                 if (featureInstance == null)
                 {
                     // Create a default name
                     var instanceName = this.GuidanceManager.GetUniqueInstanceName(featureRegistration.DefaultName);
 
                     tracer.TraceInformation(
-                        Resources.ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInstantiate, this.GuidanceExtensionId, instanceName);
+                        Resources.ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInstantiate, this.ExtensionId, instanceName);
 
                     // Instantiate the feature
-                    featureInstance = this.GuidanceManager.Instantiate(this.GuidanceExtensionId, instanceName);
+                    featureInstance = this.GuidanceManager.Instantiate(this.ExtensionId, instanceName);
                 }
 
                 tracer.TraceInformation(
@@ -104,7 +104,7 @@ namespace NuPattern.Library.Commands
             else
             {
                 tracer.TraceError(
-                    Resources.ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceWorkflowNotFound, this.GuidanceExtensionId);
+                    Resources.ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceWorkflowNotFound, this.ExtensionId);
             }
         }
     }

@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -12,7 +11,7 @@ using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
 
-namespace NuPattern.Library.Migration
+namespace NuPattern.Library.SchemaUpgrade
 {
     /// <summary>
     /// Migrates the delimited string values of the <see cref="AggregatorCommand"/>

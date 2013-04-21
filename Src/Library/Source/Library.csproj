@@ -158,6 +158,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="MessageLevel.cs" />
+    <Compile Include="SchemaUpgrade\GuidanceExtensionUpgradeProcessor.cs" />
+    <Compile Include="SchemaUpgrade\GuidanceCommandUpgradeProcessor.cs" />
     <Compile Include="TemplateWizards\ElementReplacementsTemplateWizard.cs" />
     <Compile Include="Automation\Template\ITemplateSettings.cs" />
     <Compile Include="Design\ProductElementDictionaryConverter.cs" />
@@ -206,8 +208,8 @@
     <Compile Include="Commands\ModifyXmlCommand.cs" />
     <Compile Include="Commands\SetBuildActionCommand.cs" />
     <Compile Include="Conditions\XmlNodeExistsCondition.cs" />
-    <Compile Include="Migration\CommandSettingsUpgradeProcessor.cs" />
-    <Compile Include="Migration\AggregatorCommandUpgradeProcessor.cs" />
+    <Compile Include="SchemaUpgrade\CommandSettingsUpgradeProcessor.cs" />
+    <Compile Include="SchemaUpgrade\AggregatorCommandUpgradeProcessor.cs" />
     <Compile Include="ValidationContextExtensions.cs" />
     <Compile Include="ValueComparers\PreserveOrderComparer.cs" />
     <Compile Include="ValueComparers\InstanceNameComparer.cs" />

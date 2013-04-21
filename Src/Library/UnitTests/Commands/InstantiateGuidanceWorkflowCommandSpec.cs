@@ -41,30 +41,30 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingAnInstanceOfAnotherWorkflow_ThenDoesNotCreateAWorkflow()
             {
-                this.command.GuidanceExtensionId = "AnId2";
+                this.command.ExtensionId = "AnId2";
                 this.command.Execute();
 
-                this.mockManager.Verify(fm => fm.Instantiate(this.command.GuidanceExtensionId, It.IsAny<string>()), Times.Never());
+                this.mockManager.Verify(fm => fm.Instantiate(this.command.ExtensionId, It.IsAny<string>()), Times.Never());
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingAnInstance_ThenCreatesAndActivatesWorkflowWithUniqueDefaultWorkflowName()
             {
-                this.command.GuidanceExtensionId = "AnId";
+                this.command.ExtensionId = "AnId";
                 this.command.ActivateOnInstantiation = true;
 
                 Mock<IGuidanceExtension> mockExtension = new Mock<IGuidanceExtension>();
                 this.mockManager.Setup(fm => fm.Instantiate(It.IsAny<string>(), It.IsAny<string>())).Returns(mockExtension.Object);
                 this.command.Execute();
 
-                this.mockManager.Verify(fm => fm.Instantiate(this.command.GuidanceExtensionId, "DefaultInstanceName"), Times.Once());
+                this.mockManager.Verify(fm => fm.Instantiate(this.command.ExtensionId, "DefaultInstanceName"), Times.Once());
                 this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = mockExtension.Object);
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingAnInstanceWithDefaultInstanceName_ThenCreatesAndActivatesWorkflowWithDefaultInstanceName()
             {
-                this.command.GuidanceExtensionId = "AnId";
+                this.command.ExtensionId = "AnId";
                 this.command.ActivateOnInstantiation = true;
                 this.command.DefaultInstanceName = "ADefaultName";
 
@@ -73,14 +73,14 @@ namespace NuPattern.Library.UnitTests.Commands
 
                 this.command.Execute();
 
-                this.mockManager.Verify(fm => fm.Instantiate(this.command.GuidanceExtensionId, this.command.DefaultInstanceName), Times.Once());
+                this.mockManager.Verify(fm => fm.Instantiate(this.command.ExtensionId, this.command.DefaultInstanceName), Times.Once());
                 this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = mockExtension.Object);
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingAnInstanceWithNoActivateOnInstantiation_ThenCreatesWorkflowWithNoActivation()
             {
-                this.command.GuidanceExtensionId = "AnId";
+                this.command.ExtensionId = "AnId";
                 this.command.ActivateOnInstantiation = false;
 
                 Mock<IGuidanceExtension> mockExtension = new Mock<IGuidanceExtension>();
@@ -88,7 +88,7 @@ namespace NuPattern.Library.UnitTests.Commands
 
                 this.command.Execute();
 
-                this.mockManager.Verify(fm => fm.Instantiate(this.command.GuidanceExtensionId, "DefaultInstanceName"), Times.Once());
+                this.mockManager.Verify(fm => fm.Instantiate(this.command.ExtensionId, "DefaultInstanceName"), Times.Once());
                 this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = mockExtension.Object, Times.Never());
             }
 
@@ -103,7 +103,7 @@ namespace NuPattern.Library.UnitTests.Commands
                     .Callback<Action<IReference>>(action => action(reference.Object))
                     .Returns(reference.Object);
 
-                this.command.GuidanceExtensionId = "AnId";
+                this.command.ExtensionId = "AnId";
                 this.command.CurrentElement = owner.Object;
                 this.command.ActivateOnInstantiation = false;
 
@@ -113,7 +113,7 @@ namespace NuPattern.Library.UnitTests.Commands
 
                 this.command.Execute();
 
-                this.mockManager.Verify(fm => fm.Instantiate(this.command.GuidanceExtensionId, "DefaultInstanceName"), Times.Once());
+                this.mockManager.Verify(fm => fm.Instantiate(this.command.ExtensionId, "DefaultInstanceName"), Times.Once());
                 this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = mockExtension.Object, Times.Never());
 
                 Assert.Equal(ReferenceKindConstants.Guidance, reference.Object.Kind);
@@ -131,7 +131,7 @@ namespace NuPattern.Library.UnitTests.Commands
                     .Callback<Action<IReference>>(action => action(reference.Object))
                     .Returns(reference.Object);
 
-                this.command.GuidanceExtensionId = "AnId";
+                this.command.ExtensionId = "AnId";
                 this.command.CurrentElement = owner.Object;
                 this.command.SharedInstance = true;
 
@@ -141,7 +141,7 @@ namespace NuPattern.Library.UnitTests.Commands
 
                 this.command.Execute();
 
-                this.mockManager.Verify(fm => fm.Instantiate(this.command.GuidanceExtensionId, "DefaultInstanceName"), Times.Once());
+                this.mockManager.Verify(fm => fm.Instantiate(this.command.ExtensionId, "DefaultInstanceName"), Times.Once());
 
                 Assert.Equal(ReferenceKindConstants.Guidance, reference.Object.Kind);
                 Assert.Equal("DefaultInstanceName", reference.Object.Value);
@@ -181,21 +181,21 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingAnInstance_ThenCreatesAndActivatesWorkflowWithUniqueDefaultWorkflowName()
             {
-                this.command.GuidanceExtensionId = "AnId";
+                this.command.ExtensionId = "AnId";
 
                 var mockExtension = new Mock<IGuidanceExtension>();
                 this.mockManager.Setup(fm => fm.Instantiate(It.IsAny<string>(), It.IsAny<string>())).Returns(mockExtension.Object);
 
                 this.command.Execute();
 
-                this.mockManager.Verify(fm => fm.Instantiate(this.command.GuidanceExtensionId, "DefaultInstanceName3"), Times.Once());
+                this.mockManager.Verify(fm => fm.Instantiate(this.command.ExtensionId, "DefaultInstanceName3"), Times.Once());
                 this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = mockExtension.Object);
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithSharedInstance_ThenSharesAndActivatesWorkflowWithUniqueDefaultWorkflowName()
             {
-                this.command.GuidanceExtensionId = "AnId";
+                this.command.ExtensionId = "AnId";
                 this.command.SharedInstance = true;
 
                 var mockExtension = new Mock<IGuidanceExtension>();
@@ -203,7 +203,7 @@ namespace NuPattern.Library.UnitTests.Commands
 
                 this.command.Execute();
 
-                this.mockManager.Verify(fm => fm.Instantiate(this.command.GuidanceExtensionId, "DefaultInstanceName3"), Times.Never());
+                this.mockManager.Verify(fm => fm.Instantiate(this.command.ExtensionId, "DefaultInstanceName3"), Times.Never());
                 var extension = Mock.Get(this.mockManager.Object.InstantiatedGuidanceExtensions.First());
                 this.mockManager.VerifySet(fm => fm.ActiveGuidanceExtension = extension.Object);
             }

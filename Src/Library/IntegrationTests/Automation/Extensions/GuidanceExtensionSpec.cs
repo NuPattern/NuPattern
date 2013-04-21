@@ -141,7 +141,7 @@ namespace NuPattern.Library.IntegrationTests.Automation.Guidance
 
                     Assert.Equal(commandSettings.TypeId, typeof(InstantiateGuidanceWorkflowCommand).FullName);
 
-                    var extensionProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateGuidanceWorkflowCommand>.GetProperty(c => c.GuidanceExtensionId).Name]
+                    var extensionProperty = TypeDescriptor.GetProperties(commandSettings)[Reflector<InstantiateGuidanceWorkflowCommand>.GetProperty(c => c.ExtensionId).Name]
                         .GetValue(commandSettings) as DesignProperty;
                     Assert.Equal(this.guidanceExtension.ExtensionId, extensionProperty.GetValue());
 
