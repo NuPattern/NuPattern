@@ -29,5 +29,12 @@
         /// <param name="message"></param>
         /// <returns></returns>
         bool PromptWarning(string message);
+
+        /// <summary>
+        /// Shows an input box that retrieves input from a user.
+        /// </summary>
+        /// <param name="message">The message to display.</param>
+        /// <param name="defaultValue">The default value to display.</param>
+        string PromptInput(string message, string defaultValue);
     }
 }

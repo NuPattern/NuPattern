@@ -23,6 +23,7 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
@@ -81,7 +82,6 @@
       <HintPath>$(BranchReferencesPath)\VisualStudio\VSLangProj.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -105,6 +105,10 @@
     </Compile>
     <Compile Include="Automation\Extensions\ArtifactExtension.cs" />
     <Compile Include="Automation\Extensions\ArtifactReferencesValidation.cs" />
+    <Compile Include="Commands\SetBlackboardValueCommand.cs" />
+    <Compile Include="Commands\ShowMessageCommand.cs" />
+    <Compile Include="Conditions\StringNotNullOrEmptyCondition.cs" />
+    <Compile Include="Conditions\ValueIsNotNullCondition.cs" />
     <Compile Include="Design\AssociatedArtifactsTypeConverter.cs" />
     <Compile Include="Design\CommandSettingsCollectionPropertyDescriptor.cs" />
     <Compile Include="Automation\Command\ICommandSettings.cs" />
@@ -153,6 +157,7 @@
     <Compile Include="Automation\SettingsValidationHelper.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MessageLevel.cs" />
     <Compile Include="TemplateWizards\ElementReplacementsTemplateWizard.cs" />
     <Compile Include="Automation\Template\ITemplateSettings.cs" />
     <Compile Include="Design\ProductElementDictionaryConverter.cs" />
@@ -190,6 +195,10 @@
     <Compile Include="Commands\GenerateProductCodeCommand.Validation.cs">
       <DependentUpon>GenerateProductCodeCommand.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValueProviders\FirstOrDefaultValueProvider.cs" />
+    <Compile Include="ValueProviders\FirstSolutionElementMatchValueProvider.cs" />
+    <Compile Include="ValueProviders\GetBlackboardValueValueProvider.cs" />
+    <Compile Include="ValueProviders\InputBoxValueProvider.cs" />
     <Compile Include="WindowsFileImporter.cs" />
     <Compile Include="XmlNamespace.cs" />
     <Compile Include="Commands\InstantiateSolutionElementCommand.cs" />

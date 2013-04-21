@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.VisualStudio.Properties
-{
-
-
+namespace NuPattern.VisualStudio.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -454,6 +454,15 @@ namespace NuPattern.VisualStudio.Properties
         internal static string TraceSourceExtensions_SeeDiagnosticsWindow {
             get {
                 return ResourceManager.GetString("TraceSourceExtensions_SeeDiagnosticsWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visual Studio.
+        /// </summary>
+        internal static string UserMessageService_MessageBoxTitle {
+            get {
+                return ResourceManager.GetString("UserMessageService_MessageBoxTitle", resourceCulture);
             }
         }
         

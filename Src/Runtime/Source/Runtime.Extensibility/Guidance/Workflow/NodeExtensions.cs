@@ -5,9 +5,9 @@ using System.Linq;
 namespace NuPattern.Runtime.Guidance.Workflow
 {
     /// <summary>
-    /// Provides usability extension methods for <see cref="INode"/>.
+    /// Extension to <see cref="INode"/>.
     /// </summary>
-    internal static class NodeExtensions
+    public static class NodeExtensions
     {
         /// <summary>
         /// Finds all the nodes that match the predicate.

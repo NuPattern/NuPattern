@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Library.Properties
-{
-
-
+namespace NuPattern.Library.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -2291,6 +2291,123 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Retrieves the first value in the collection of elements..
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_Description {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First or Default Value.
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_DisplayName {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The elements in the collection..
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_Elements_Description {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_Elements_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elements.
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_Elements_DisplayName {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_Elements_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated the first or default value of the set of elements, as &apos;{0}&apos;..
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating the first or default value of a set of elements..
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_TraceInitial {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to evaluate the first or default value of a null set of elements..
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_TraceNoElements {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_TraceNoElements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retrieves the first solution item that matches the path expression..
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_Description {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Solution Item.
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_DisplayName {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An expression that matches the item in the solution. May contain wildcard characters (&apos;*&apos;) to search any folder and file name or file extension. (i.e. MyProject\SubFolder\*.cs).
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_PathExpression_Description {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_PathExpression_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path Expression.
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_PathExpression_DisplayName {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_PathExpression_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated the first item in the solution with path expression &apos;{0}&apos;, as &apos;{1}&apos;..
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating the first item in the solution with path expression &apos;{0}&apos;..
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_TraceInitial {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Generates code by transforming a text template (also known as a T4 template), for any model element of any DSL model file..
         /// </summary>
         internal static string GenerateModelingCodeCommand_Description {
@@ -2697,6 +2814,60 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Retrieves the value of the item in the black board..
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_Description {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blackboard Value.
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_DisplayName {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of the item in the black board..
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_Key_Description {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_Key_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_Key_DisplayName {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_Key_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated blackboard value &apos;{0}&apos;, as &apos;{1}&apos;.
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating blackboard value &apos;{0}&apos;..
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_TraceInitial {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ActivateGuidanceCommand.
         /// </summary>
         internal static string GuidanceExtension_ActivateCommandName {
@@ -2738,6 +2909,78 @@ namespace NuPattern.Library.Properties
         internal static string GuidanceExtension_InstantiateEventName {
             get {
                 return ResourceManager.GetString("GuidanceExtension_InstantiateEventName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A default value to display to the user, and return if the user cancels the dialog..
+        /// </summary>
+        internal static string InputBoxValueProvider_DefaultValue_Description {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_DefaultValue_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default Value.
+        /// </summary>
+        internal static string InputBoxValueProvider_DefaultValue_DisplayName {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_DefaultValue_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retrieves a textual input from the user..
+        /// </summary>
+        internal static string InputBoxValueProvider_Description {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prompt User Input.
+        /// </summary>
+        internal static string InputBoxValueProvider_DisplayName {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The textual message to display to the user..
+        /// </summary>
+        internal static string InputBoxValueProvider_Message_Description {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_Message_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        internal static string InputBoxValueProvider_Message_DisplayName {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_Message_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated the input from user with message &apos;{0}&apos;, and default value &apos;{1}&apos;, as &apos;{2}&apos;..
+        /// </summary>
+        internal static string InputBoxValueProvider_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating the input from prompting user, with message &apos;{0}&apos;, and default value &apos;{1}&apos;..
+        /// </summary>
+        internal static string InputBoxValueProvider_TraceInitial {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_TraceInitial", resourceCulture);
             }
         }
         
@@ -4465,6 +4708,69 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sets a value in the black board..
+        /// </summary>
+        internal static string SetBlackboardValueCommand_Description {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set Value in Blackboard.
+        /// </summary>
+        internal static string SetBlackboardValueCommand_DisplayName {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of the item in the black board..
+        /// </summary>
+        internal static string SetBlackboardValueCommand_Key_Description {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_Key_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string SetBlackboardValueCommand_Key_DisplayName {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_Key_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing the setting of Blackboard property &apos;{0}&apos;, with value &apos;{1}&apos;.
+        /// </summary>
+        internal static string SetBlackboardValueCommand_TraceInitial {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The value of the item to set in the blackboard..
+        /// </summary>
+        internal static string SetBlackboardValueCommand_Value_Description {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_Value_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string SetBlackboardValueCommand_Value_DisplayName {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_Value_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The item build action..
         /// </summary>
         internal static string SetBuildActionCommand_BuildAction_Description {
@@ -4555,6 +4861,78 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;No Message Supplied&gt;.
+        /// </summary>
+        internal static string ShowMessageCommand_DefaultMessage {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_DefaultMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Displays text in a Message Box.
+        /// </summary>
+        internal static string ShowMessageCommand_Description {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Displays a Message Box.
+        /// </summary>
+        internal static string ShowMessageCommand_DisplayName {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The severity level of the message.
+        /// </summary>
+        internal static string ShowMessageCommand_Level_Description {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_Level_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Level.
+        /// </summary>
+        internal static string ShowMessageCommand_Level_DisplayName {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_Level_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text of the message to display.
+        /// </summary>
+        internal static string ShowMessageCommand_Message_Description {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_Message_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        internal static string ShowMessageCommand_Message_DisplayName {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_Message_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing the display of message &apos;{0}&apos;, with level &apos;{1}&apos;.
+        /// </summary>
+        internal static string ShowMessageCommand_TraceInitial {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Retrieves the name of the current solution..
         /// </summary>
         internal static string SolutionNameValueProvider_Description {
@@ -4587,6 +4965,60 @@ namespace NuPattern.Library.Properties
         internal static string SolutionNameValueProvider_TraceInitial {
             get {
                 return ResourceManager.GetString("SolutionNameValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Used to verify that the string value is neither Null nor Empty..
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_Description {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to String Value is Not Null or Empty.
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_DisplayName {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated empty or null value of string &apos;{0}&apos;, as &apos;{1}&apos;..
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating empty or null value of string: &apos;{0}&apos;..
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_TraceInitial {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The string value to verify..
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_Value_Description {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_Value_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_Value_DisplayName {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_Value_DisplayName", resourceCulture);
             }
         }
         
@@ -6035,6 +6467,60 @@ namespace NuPattern.Library.Properties
         internal static string ValidElementCondition_ValidateDescendantsDisplayName {
             get {
                 return ResourceManager.GetString("ValidElementCondition_ValidateDescendantsDisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Used to verify that the value is not Null..
+        /// </summary>
+        internal static string ValueIsNotNullCondition_Description {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value is Not Null.
+        /// </summary>
+        internal static string ValueIsNotNullCondition_DisplayName {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated null value of &apos;{0}&apos;, as &apos;{1}&apos;..
+        /// </summary>
+        internal static string ValueIsNotNullCondition_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating null value of: &apos;{0}&apos;..
+        /// </summary>
+        internal static string ValueIsNotNullCondition_TraceInitial {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The value to verify..
+        /// </summary>
+        internal static string ValueIsNotNullCondition_Value_Description {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_Value_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string ValueIsNotNullCondition_Value_DisplayName {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_Value_DisplayName", resourceCulture);
             }
         }
         

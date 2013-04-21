@@ -2264,4 +2264,166 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   <data name="AggregatorCommandUpgradeProcessor_TraceDeserializeCommandSettings" xml:space="preserve">
     <value>Upgrading AggregatorCommandSettings element '{0}', replacing string JSon with CommandReference collection JSon.</value>
   </data>
+  <data name="SetBlackboardValueCommand_Description" xml:space="preserve">
+    <value>Sets a value in the black board.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_DisplayName" xml:space="preserve">
+    <value>Set Value in Blackboard</value>
+  </data>
+  <data name="ShowMessageCommand_Description" xml:space="preserve">
+    <value>Displays text in a Message Box</value>
+  </data>
+  <data name="ShowMessageCommand_DisplayName" xml:space="preserve">
+    <value>Displays a Message Box</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Key_Description" xml:space="preserve">
+    <value>The name of the item in the black board.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Key_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Value_Description" xml:space="preserve">
+    <value>The value of the item to set in the blackboard.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Value_DisplayName" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ShowMessageCommand_DefaultMessage" xml:space="preserve">
+    <value>&lt;No Message Supplied&gt;</value>
+  </data>
+  <data name="ShowMessageCommand_Level_Description" xml:space="preserve">
+    <value>The severity level of the message</value>
+  </data>
+  <data name="ShowMessageCommand_Level_DisplayName" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="ShowMessageCommand_Message_Description" xml:space="preserve">
+    <value>The text of the message to display</value>
+  </data>
+  <data name="ShowMessageCommand_Message_DisplayName" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the first value in the collection of elements.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_DisplayName" xml:space="preserve">
+    <value>First or Default Value</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_Elements_Description" xml:space="preserve">
+    <value>The elements in the collection.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_Elements_DisplayName" xml:space="preserve">
+    <value>Elements</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated the first or default value of the set of elements, as '{0}'.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating the first or default value of a set of elements.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_TraceNoElements" xml:space="preserve">
+    <value>Failed to evaluate the first or default value of a null set of elements.</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the first solution item that matches the path expression.</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_DisplayName" xml:space="preserve">
+    <value>First Solution Item</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_PathExpression_Description" xml:space="preserve">
+    <value>An expression that matches the item in the solution. May contain wildcard characters ('*') to search any folder and file name or file extension. (i.e. MyProject\SubFolder\*.cs)</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_PathExpression_DisplayName" xml:space="preserve">
+    <value>Path Expression</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated the first item in the solution with path expression '{0}', as '{1}'.</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating the first item in the solution with path expression '{0}'.</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the value of the item in the black board.</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_DisplayName" xml:space="preserve">
+    <value>Blackboard Value</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated blackboard value '{0}', as '{1}'</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating blackboard value '{0}'.</value>
+  </data>
+  <data name="InputBoxValueProvider_Description" xml:space="preserve">
+    <value>Retrieves a textual input from the user.</value>
+  </data>
+  <data name="InputBoxValueProvider_DisplayName" xml:space="preserve">
+    <value>Prompt User Input</value>
+  </data>
+  <data name="InputBoxValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated the input from user with message '{0}', and default value '{1}', as '{2}'.</value>
+  </data>
+  <data name="InputBoxValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating the input from prompting user, with message '{0}', and default value '{1}'.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_TraceInitial" xml:space="preserve">
+    <value>Executing the setting of Blackboard property '{0}', with value '{1}'</value>
+  </data>
+  <data name="ShowMessageCommand_TraceInitial" xml:space="preserve">
+    <value>Executing the display of message '{0}', with level '{1}'</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_Key_Description" xml:space="preserve">
+    <value>The name of the item in the black board.</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_Key_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="InputBoxValueProvider_DefaultValue_Description" xml:space="preserve">
+    <value>A default value to display to the user, and return if the user cancels the dialog.</value>
+  </data>
+  <data name="InputBoxValueProvider_DefaultValue_DisplayName" xml:space="preserve">
+    <value>Default Value</value>
+  </data>
+  <data name="InputBoxValueProvider_Message_Description" xml:space="preserve">
+    <value>The textual message to display to the user.</value>
+  </data>
+  <data name="InputBoxValueProvider_Message_DisplayName" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_Description" xml:space="preserve">
+    <value>Used to verify that the string value is neither Null nor Empty.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_DisplayName" xml:space="preserve">
+    <value>String Value is Not Null or Empty</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated empty or null value of string '{0}', as '{1}'.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_TraceInitial" xml:space="preserve">
+    <value>Evaluating empty or null value of string: '{0}'.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_Value_Description" xml:space="preserve">
+    <value>The string value to verify.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_Value_DisplayName" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ValueIsNotNullCondition_Description" xml:space="preserve">
+    <value>Used to verify that the value is not Null.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_DisplayName" xml:space="preserve">
+    <value>Value is Not Null</value>
+  </data>
+  <data name="ValueIsNotNullCondition_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated null value of '{0}', as '{1}'.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_TraceInitial" xml:space="preserve">
+    <value>Evaluating null value of: '{0}'.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_Value_Description" xml:space="preserve">
+    <value>The value to verify.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_Value_DisplayName" xml:space="preserve">
+    <value>Value</value>
+  </data>
 </root>

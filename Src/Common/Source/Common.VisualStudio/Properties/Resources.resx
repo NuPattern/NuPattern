@@ -280,4 +280,7 @@ The solution item has instead been renamed to: '{1}'.</value>
   <data name="VsTemplateFile_ErrorNoTemplateInArchive" xml:space="preserve">
     <value>The .zip file does not contain any .vstemplate file</value>
   </data>
+  <data name="UserMessageService_MessageBoxTitle" xml:space="preserve">
+    <value>Visual Studio</value>
+  </data>
 </root>
