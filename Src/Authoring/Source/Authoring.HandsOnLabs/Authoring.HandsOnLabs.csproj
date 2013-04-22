@@ -443,7 +443,7 @@
     </None>
     <None Include="source.extension.gen.ttinclude">
       <DependentUpon>source.extension.tt</DependentUpon>
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252fa71545af-2d3b-4467-b23a-5b49138d4667</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\CodePlex\NuPattern\Sprint20\Src\Authoring\Authoring.slnbldr%252fa71545af-2d3b-4467-b23a-5b49138d4667</SourceModelReference>
       <ItemGuid>94470e9e-4cd7-447b-842b-5b18e708fd20</ItemGuid>
     </None>
   </ItemGroup>
