@@ -15,7 +15,7 @@ namespace NuPattern.Authoring.PatternToolkit
     [Guid("4AABC2F4-D907-4685-A5E7-9FB851DAC3E9")]
     [ComVisible(true)]
     [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
-    partial class AuthoringPackage
+    public partial class AuthoringPackage
     {
         /// <summary>
         /// Initializes the package.

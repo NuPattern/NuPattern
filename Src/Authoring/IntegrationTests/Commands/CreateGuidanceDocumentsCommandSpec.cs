@@ -1,9 +1,9 @@
-﻿using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Authoring.Guidance;
 using NuPattern.Authoring.PatternToolkit;
 using NuPattern.Authoring.PatternToolkit.Automation.Commands;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Authoring.IntegrationTests
 {
@@ -25,7 +25,7 @@ namespace NuPattern.Authoring.IntegrationTests
 
                 this.command = new CreateGuidanceDocumentsCommand(this.processor.Object);
                 this.command.Solution = new Mock<ISolution>().Object;
-                this.command.UriReferenceService = new Mock<IFxrUriReferenceService>().Object;
+                this.command.UriReferenceService = new Mock<IUriReferenceService>().Object;
                 this.command.CurrentElement = new Mock<IGuidance>().Object;
             }
 
@@ -61,7 +61,7 @@ namespace NuPattern.Authoring.IntegrationTests
 
                 this.command = new CreateGuidanceDocumentsCommand(this.processor.Object);
                 this.command.Solution = new Mock<ISolution>().Object;
-                this.command.UriReferenceService = new Mock<IFxrUriReferenceService>().Object;
+                this.command.UriReferenceService = new Mock<IUriReferenceService>().Object;
                 this.command.CurrentElement = new Mock<IGuidance>().Object;
             }
 

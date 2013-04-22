@@ -1,6 +1,6 @@
 ﻿using System;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Library;
+using NuPattern.Runtime.Guidance.Workflow;
 
 namespace NuPattern.Authoring.Guidance
 {

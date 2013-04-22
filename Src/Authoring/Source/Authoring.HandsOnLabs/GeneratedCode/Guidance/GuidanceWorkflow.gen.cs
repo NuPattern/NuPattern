@@ -10,12 +10,15 @@
 using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Composition;
+using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.Extensions;
+using NuPattern.Runtime.Guidance.Workflow;
 
 namespace NuPattern.Authoring.HandsOnLabs.Guidance
 {
 	/// <summary>
-	/// Defines a base class for the guidance workflow for this feature.
+	/// Defines a base class for the guidance workflow for this extension.
 	/// </summary>
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -23,11 +26,11 @@ namespace NuPattern.Authoring.HandsOnLabs.Guidance
 	public partial class ProcessWorkflow : GuidanceWorkflow
 	{
 		/// <summary>
-		/// Gets the feature composition service.
+		/// Gets the composition service.
 		/// </summary>
 		[Import]
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-		private IFeatureCompositionService FeatureComposition
+		private NuPatternCompositionService Composition
 		{
 			get;
 			set;
@@ -675,20 +678,20 @@ namespace NuPattern.Authoring.HandsOnLabs.Guidance
 	}
 
 	/// <summary>
-	/// Defines the feature extension containing the guidance workflow.
+	/// Defines the guidance extension containing the guidance workflow.
 	/// </summary>
-	[Feature("97bd7ab2-964b-43f1-8a08-be6db68b018b", DefaultName="")]
-	[Export(typeof(IFeatureExtension))]
+	[GuidanceExtension("97bd7ab2-964b-43f1-8a08-be6db68b018b", DefaultName="")]
+	[Export(typeof(IGuidanceExtension))]
 	[PartCreationPolicy(CreationPolicy.NonShared)]
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
-	public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
+	public partial class GuidanceExtension : BlackboardGuidanceExtension<ProcessWorkflow>
 	{
 		/// <summary>
-		/// Initializes a new instance of the <see cref="Feature"/> class.
+		/// Initializes a new instance of the <see cref="GuidanceExtension"/> class.
 		/// </summary>
-		public Feature()
+		public GuidanceExtension()
 			: base()
 		{
 		}

@@ -22,7 +22,11 @@
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
-    <Reference Include="System" />
+		<Reference Include="NuPattern.Common">
+			<HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>

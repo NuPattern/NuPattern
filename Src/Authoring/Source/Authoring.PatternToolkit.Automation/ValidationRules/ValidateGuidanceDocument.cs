@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.Guidance;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Validation;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.ValidationRules
 {
@@ -29,7 +29,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.ValidationRules
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriReferenceService
+        public IUriReferenceService UriReferenceService
         {
             get;
             set;

@@ -8,5 +8,5 @@ using Microsoft.VisualStudio.ExtensibilityHosting;
 
 [assembly: CLSCompliant(true)]
 
-[assembly: VsCatalogName(Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName)]
+[assembly: VsCatalogName(NuPattern.ComponentModel.Composition.Catalog.CatalogName)]
 [assembly: VsCatalogName("Microsoft.VisualStudio.Default")]

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.LaunchPoints;
 
 namespace NuPattern.Authoring.HandsOnLabs.Guidance
 {
@@ -17,8 +18,8 @@ namespace NuPattern.Authoring.HandsOnLabs.Guidance
         /// Initializes a new instance of the InstantiateHol class.
         /// </summary>
         [ImportingConstructor]
-        public InstantiatePatternToolkit(IFeatureManager featureManager)
-            : base(featureManager)
+        public InstantiatePatternToolkit(IGuidanceManager guidanceManager)
+            : base(guidanceManager)
         {
         }
 
@@ -26,7 +27,7 @@ namespace NuPattern.Authoring.HandsOnLabs.Guidance
         /// Determines if the link can be executed. Overrides the default implementation that checks
         /// if the current workflow node is in the enabled state.
         /// </summary>
-        public override bool CanExecute(IFeatureExtension feature)
+        public override bool CanExecute(IGuidanceExtension feature)
         {
             return true;
         }

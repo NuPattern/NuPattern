@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Schema.Properties;
 using NuPattern.VisualStudio.Solution;
 
@@ -144,7 +144,7 @@ namespace NuPattern.Runtime.Schema
             tracer.TraceInformation(ShellResources.SchemaUpgradeContext_TraceSaveSchemaFile, filePath);
 
             // Save file content
-            VsHelper.CheckOut(serviceProvider, filePath);
+            VsHelper.CheckOut(filePath);
             VsHelper.WithoutFileChangeNotification(serviceProvider, filePath, () =>
                 {
                     document.Save(filePath);

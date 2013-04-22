@@ -5,12 +5,10 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.Guidance;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.References;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
@@ -24,7 +22,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [CategoryResource("AutomationCategory_PatternToolkitAuthoring", typeof(Resources))]
     [DescriptionResource("CreateGuidanceDocumentsCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class CreateGuidanceDocumentsCommand : FeatureCommand
+    public class CreateGuidanceDocumentsCommand : NuPattern.Runtime.Command
     {
         private const string ProjectExtension = ".csproj";
         private const string GeneratedFileExtensionFilter = "*" + TocGuidanceProcessor.ContentFileExtension;
@@ -54,7 +52,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriReferenceService
+        public IUriReferenceService UriReferenceService
         {
             get;
             set;

@@ -6,8 +6,8 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
 using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Properties;
+using NuPattern.Diagnostics;
 
 namespace NuPattern.Authoring.PatternToolkit
 {

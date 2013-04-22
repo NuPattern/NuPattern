@@ -2,11 +2,10 @@
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.Zip;
 using Microsoft.Win32;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
+using NuPattern.Diagnostics;
 using NuPattern.Library;
 using NuPattern.Runtime;
 using NuPattern.VisualStudio.Solution;
@@ -36,7 +35,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
         /// <summary>
         /// Creates a new instance of the <see cref="VsTemplateFileImporter"/> class.
         /// </summary>
-        public VsTemplateFileImporter(ISolution solution, IFxrUriReferenceService uriService, IProductElement currentElement, string targetPath)
+        public VsTemplateFileImporter(ISolution solution, IUriReferenceService uriService, IProductElement currentElement, string targetPath)
             : base(solution, uriService, currentElement, targetPath)
         {
             this.currentElement = currentElement;

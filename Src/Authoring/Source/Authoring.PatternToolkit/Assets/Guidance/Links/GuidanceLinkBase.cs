@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.LaunchPoints;
 
 namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
 {
@@ -18,8 +19,8 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
         /// Initializes a new instance of the <see cref=" GuidanceLinkBase"/> class.
         /// </summary>
         [ImportingConstructor]
-        protected GuidanceLinkBase(IFeatureManager featureManager, string bindingName)
-            : base(featureManager)
+        protected GuidanceLinkBase(IGuidanceManager guidanceManager, string bindingName)
+            : base(guidanceManager)
         {
             Guard.NotNull(() => bindingName, bindingName);
 
@@ -30,7 +31,7 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
         /// Determines if the link can be executed. Overrides the default implementation that checks
         /// if the current workflow node is in the enabled state.
         /// </summary>
-        public override bool CanExecute(IFeatureExtension feature)
+        public override bool CanExecute(IGuidanceExtension feature)
         {
             return true;
         }

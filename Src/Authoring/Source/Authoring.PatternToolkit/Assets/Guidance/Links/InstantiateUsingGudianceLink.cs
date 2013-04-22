@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Guidance;
 
 namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
 {
@@ -17,8 +17,8 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
         /// Initializes a new instance of the <see cref="InstantiateUsingGuidanceLink"/> class.
         /// </summary>
         [ImportingConstructor]
-        public InstantiateUsingGuidanceLink(IFeatureManager featureManager)
-            : base(featureManager, CommandBindingName)
+        public InstantiateUsingGuidanceLink(IGuidanceManager guidanceManager)
+            : base(guidanceManager, CommandBindingName)
         {
         }
 

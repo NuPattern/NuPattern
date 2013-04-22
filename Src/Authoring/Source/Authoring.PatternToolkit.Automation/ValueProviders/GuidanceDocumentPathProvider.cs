@@ -1,10 +1,8 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.ValueProviders
@@ -16,7 +14,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.ValueProviders
     [CategoryResource("AutomationCategory_PatternToolkitAuthoring", typeof(Resources))]
     [DescriptionResource("GuidanceDocumentPathProvider_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class GuidanceDocumentPathProvider : ValueProvider
+    public class GuidanceDocumentPathProvider : NuPattern.Runtime.ValueProvider
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<GuidanceDocumentPathProvider>();
 
@@ -34,7 +32,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.ValueProviders
         /// Gets the URI reference service.
         /// </summary>
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriReferenceService
+        public IUriReferenceService UriReferenceService
         {
             get;
             set;

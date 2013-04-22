@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.Guidance.Properties;
+using NuPattern.Diagnostics;
+using NuPattern.Runtime.Guidance.Workflow;
 using DataAnnotations = System.ComponentModel.DataAnnotations;
 using Word = Microsoft.Office.Interop.Word;
 

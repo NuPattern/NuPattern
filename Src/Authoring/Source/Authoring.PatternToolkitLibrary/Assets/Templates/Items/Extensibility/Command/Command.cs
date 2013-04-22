@@ -3,8 +3,6 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern;
 using NuPattern.Runtime;
 
@@ -17,7 +15,7 @@ namespace $rootnamespace$
     [Category("General")]
     [Description("Performs some custom automation.")]
     [CLSCompliant(false)]
-    public class $safeitemname$ : FeatureCommand
+    public class $safeitemname$ : NuPattern.Runtime.Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<$safeitemname$>();
 

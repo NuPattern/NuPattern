@@ -2332,7 +2332,7 @@ style=3D'color:blue'>get</span>;&nbsp;<span style=3D'color:blue'>set</span>=
 style=3D'color:blue'>true</span>)]<br>
 <span style=3D'mso-tab-count:2'>              </span><span style=3D'color:b=
 lue'>public</span>&nbsp;<span
-style=3D'color:#2B91AF'>IFxrUriReferenceService</span>&nbsp;UriService&nbsp=
+style=3D'color:#2B91AF'>IUriReferenceService</span>&nbsp;UriService&nbsp=
 ;{&nbsp;<span
 style=3D'color:blue'>get</span>;&nbsp;<span style=3D'color:blue'>set</span>=
 ;&nbsp;}<o:p></o:p></p>
@@ -2513,7 +2513,7 @@ style=3D'color:#2B91AF'>Import</span>(AllowDefault&nbsp;=3D&nbsp;<span
 style=3D'color:blue'>true</span>)]<br>
 <span style=3D'mso-tab-count:2'>              </span><span style=3D'color:b=
 lue'>public</span>&nbsp;<span
-style=3D'color:#2B91AF'>IFxrUriReferenceService</span>&nbsp;UriService&nbsp=
+style=3D'color:#2B91AF'>IUriReferenceService</span>&nbsp;UriService&nbsp=
 ;{&nbsp;<span
 style=3D'color:blue'>get</span>;&nbsp;<span style=3D'color:blue'>set</span>=
 ;&nbsp;}<o:p></o:p></p>
@@ -2617,7 +2617,7 @@ style=3D'color:#2B91AF'>Import</span>(AllowDefault&nbsp;=3D&nbsp;<span
 style=3D'color:blue'>true</span>)]<br>
 <span style=3D'mso-tab-count:2'>              </span><span style=3D'color:b=
 lue'>public</span>&nbsp;<span
-style=3D'color:#2B91AF'>IFxrUriReferenceService</span>&nbsp;UriService&nbsp=
+style=3D'color:#2B91AF'>IUriReferenceService</span>&nbsp;UriService&nbsp=
 ;{&nbsp;<span
 style=3D'color:blue'>get</span>;&nbsp;<span style=3D'color:blue'>set</span>=
 ;&nbsp;}<o:p></o:p></p>

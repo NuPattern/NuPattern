@@ -5,7 +5,6 @@ using NuPattern.Library;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace $rootnamespace$
 {

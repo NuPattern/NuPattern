@@ -5,7 +5,7 @@ namespace NuPattern.Runtime.Guidance
     /// Interface implemented by components that can locate a guidance extension instance 
     /// for use by launch points.
     /// </summary>
-    internal interface IGuidanceInstanceLocator
+    public interface IGuidanceInstanceLocator
     {
         /// <summary>
         /// Attemps to find the guidance extension instance associated with the component type.

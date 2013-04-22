@@ -41,5 +41,5 @@ using Microsoft.VisualStudio.ExtensibilityHosting;
 [assembly: NeutralResourcesLanguage("en")]
 
 // Required to import/export MEF classes from this extension.
-[assembly: VsCatalogName(Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName)]
+[assembly: VsCatalogName(NuPattern.ComponentModel.Composition.Catalog.CatalogName)]
 [assembly: VsCatalogName("Microsoft.VisualStudio.Default")]

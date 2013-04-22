@@ -8,8 +8,9 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
+using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.LaunchPoints;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -54,19 +55,19 @@ namespace NuPattern.Runtime.Schema
 
         private void InitializeVsLaunchPoints()
         {
-            var menuCommandService = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
-            if (menuCommandService != null)
-            {
-                var featureLaunchPoints = this.LaunchPoints
-                    .Select(lazy => lazy.Value)
-                    .OfType<VsLaunchPoint>()
-                    .Where(launchPoint => launchPoint.GetType().Assembly == this.GetType().Assembly);
+			var menuCommandService = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
+			if (menuCommandService != null)
+			{
+				var featureLaunchPoints = this.LaunchPoints
+					.Select(lazy => lazy.Value)
+					.OfType<VsLaunchPoint>()
+					.Where(launchPoint => launchPoint.GetType().Assembly == this.GetType().Assembly);
 
-                foreach (var launchPoint in featureLaunchPoints)
-                {
-                    menuCommandService.AddCommand(launchPoint);
-                }
-            }
+				foreach (var launchPoint in featureLaunchPoints)
+				{
+					menuCommandService.AddCommand(launchPoint);
+				}
+			}
         }
     }
 }

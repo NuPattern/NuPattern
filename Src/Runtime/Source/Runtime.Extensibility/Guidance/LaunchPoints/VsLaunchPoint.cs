@@ -12,8 +12,14 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
     /// Represents the base implementation of a Command Extension launch point
     /// that is shown at arbitrary menu locations in Visual Studio menu system.
     /// </summary>
-    internal abstract class VsLaunchPoint : OleMenuCommand, ILaunchPoint
+    [CLSCompliant(false)]
+    public abstract class VsLaunchPoint : OleMenuCommand, ILaunchPoint
     {
+		/// <summary>
+		/// Creates a new instance of the <see cref="VsLaunchPoint"/> class.
+		/// </summary>
+		/// <param name="guidanceManager"></param>
+		/// <param name="id"></param>
         protected VsLaunchPoint(IGuidanceManager guidanceManager, CommandID id)
             : base(OnExecute, id)
         {
@@ -25,14 +31,28 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
             this.GuidanceInstanceLocator = new DefaultGuidanceInstanceLocator(guidanceManager, this.GetType());
         }
 
+		/// <summary>
+		/// Gets hte name of the binding.
+		/// </summary>
         protected abstract string BindingName { get; }
+
+		/// <summary>
+		/// Gets the instance locator.
+		/// </summary>
         protected virtual IGuidanceInstanceLocator GuidanceInstanceLocator { get; set; }
+
+		/// <summary>
+		/// Gets the <see cref="IGuidanceManager"/>.
+		/// </summary>
         protected virtual IGuidanceManager GuidanceManager { get; private set; }
+
+		/// <summary>
+		/// Gets the <see cref="IQueryStatusStrategy"/>.
+		/// </summary>
         protected virtual IQueryStatusStrategy QueryStatusStrategy { get; set; }
 
         /// <summary>
-        /// Optionally implements additional logic to determine if the command can be executed 
-        /// for the given feature.
+        /// Determines whether the launch point can execute.
         /// </summary>
         public virtual bool CanExecute(IGuidanceExtension extension)
         {
@@ -53,7 +73,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
         }
 
         /// <summary>
-        /// Implements the execution logic for the launch point.
+        /// Executes the launch point.
         /// </summary>
         public virtual void Execute(IGuidanceExtension extension)
         {
@@ -101,8 +121,7 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
         }
 
         /// <summary>
-        /// Implements the query status behavior, and determines which guidance extension 
-        /// owns the given command for the purposes of execution.
+        /// Returns the guidance extension that owns the given command to execute.
         /// </summary>
         protected virtual IGuidanceExtension OnQueryStatus(IMenuCommand command)
         {

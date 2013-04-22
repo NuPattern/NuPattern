@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.Runtime.Guidance.Workflow;
 using DataAnnotations = System.ComponentModel.DataAnnotations;
 
 namespace NuPattern.Authoring.Guidance.IntegrationTests

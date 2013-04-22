@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Guidance;
 
 namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
 {
@@ -18,8 +18,8 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
         /// Initializes a new instance of the InstantiateHol class.
         /// </summary>
         [ImportingConstructor]
-        public InstantiateHolLink(IFeatureManager featureManager)
-            : base(featureManager, CommandBindingName)
+        public InstantiateHolLink(IGuidanceManager guidanceManager)
+            : base(guidanceManager, CommandBindingName)
         {
         }
 
@@ -37,11 +37,11 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
         /// <summary>
         /// Determines if the link can execute
         /// </summary>
-        public override bool CanExecute(IFeatureExtension feature)
+        public override bool CanExecute(IGuidanceExtension extension)
         {
-            Guard.NotNull(() => feature, feature);
+            Guard.NotNull(() => extension, extension);
 
-            return feature.FeatureManager.InstalledFeatures.Any(f => f.FeatureId.Equals(HandsOnLabsToolkitInfo.Identifier, StringComparison.OrdinalIgnoreCase));
+            return extension.GuidanceManager.InstalledGuidanceExtensions.Any(f => f.ExtensionId.Equals(HandsOnLabsToolkitInfo.Identifier, StringComparison.OrdinalIgnoreCase));
         }
     }
 }

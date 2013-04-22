@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.Runtime;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.UriProviders
@@ -8,9 +7,9 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.UriProviders
     /// <summary>
     /// Defines a URI provider for Views
     /// </summary>
-    [Export(typeof(IFxrUriReferenceProvider))]
+    [Export(typeof(IUriReferenceProvider))]
     [CLSCompliant(false)]
-    public class ViewSchemaUriProvider : IFxrUriReferenceProvider<IViewSchema>
+    public class ViewSchemaUriProvider : IUriReferenceProvider<IViewSchema>
     {
         /// <summary>
         /// The Uri Scheme Name

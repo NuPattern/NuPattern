@@ -2755,7 +2755,7 @@ name, IItemContainer parent)<o:p></o:p></span></p>
 t-size:
 11.0pt;line-height:115%'><span style=3D'mso-spacerun:yes'>   </span>at NuPa=
 ttern.Library.Commands.UnfoldVsTemplateCommand.UnfoldTemplate(ISolution
-solution, IFxrUriReferenceService uriService, IServiceProvider serviceProvi=
+solution, IUriReferenceService uriService, IServiceProvider serviceProvi=
 der,
 IProductElement owner, UnfoldVsTemplateSettings settings, Boolean fromWizar=
 d)

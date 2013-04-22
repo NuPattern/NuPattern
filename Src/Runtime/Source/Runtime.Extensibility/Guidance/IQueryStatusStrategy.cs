@@ -2,14 +2,14 @@
 namespace NuPattern.Runtime.Guidance
 {
     /// <summary>
-    /// Implements a query status behavior that a launchpoint can use.
+    /// Defines the query status behavior that a launchpoint can use.
     /// </summary>
-    internal interface IQueryStatusStrategy
+    public interface IQueryStatusStrategy
     {
         /// <summary>
-        /// Determines the status for the given <paramref name="feature"/>.
+		/// Determines the status for the given <paramref name="extension"/>.
         /// </summary>
-        /// <param name="feature">The feature to check the status for, or <see langword="null"/>.</param>
-        QueryStatus QueryStatus(IGuidanceExtension feature);
+		/// <param name="extension">The extension to check the status for, or <see langword="null"/>.</param>
+        QueryStatus QueryStatus(IGuidanceExtension extension);
     }
 }

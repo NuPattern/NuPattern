@@ -7,11 +7,24 @@ using NuPattern.Runtime.Guidance.Workflow;
 
 namespace NuPattern.Runtime.Guidance.LaunchPoints
 {
-    internal abstract class LinkLaunchPoint : ILaunchPoint
+	/// <summary>
+	/// A base class for launchpoints that are links in guidance content.
+	/// </summary>
+    public abstract class LinkLaunchPoint : ILaunchPoint
     {
+		/// <summary>
+		/// Gets the strategy for querying the status.
+		/// </summary>
         protected virtual IQueryStatusStrategy QueryStatusStrategy { get; set; }
-        protected IGuidanceManager GuidanceManager;
 
+		/// <summary>
+		/// Gets the <see cref="IGuidanceManager"/>.
+		/// </summary>
+		protected IGuidanceManager GuidanceManager;
+
+		/// <summary>
+		/// Creates a new instance of the <see cref="LinkLaunchPoint"/> class.
+		/// </summary>
         protected LinkLaunchPoint(IGuidanceManager guidanceManager)
         {
             Guard.NotNull(() => guidanceManager, guidanceManager);
@@ -19,20 +32,25 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
             this.QueryStatusStrategy = new DefaultQueryStatusStrategy(this.GetType().Name);
         }
 
+		/// <summary>
+		/// Gets the name of the binding.
+		/// </summary>
         protected abstract string BindingName { get; }
 
+		/// <summary>
+		/// Whether the binding can be executed.
+		/// </summary>
+		/// <param name="extension"></param>
+		/// <returns></returns>
         public virtual bool CanExecute(IGuidanceExtension extension)
         {
             if (extension != null && this.QueryStatusStrategy.QueryStatus(extension).Enabled)
             {
-                //
-                // Ok, the default strategy said we're go.  Let's look at the active node
-                // in the workflow
-                //
-                IGuidanceWorkflow activeWorkflow = extension.GuidanceWorkflow != null ? extension.GuidanceWorkflow : GuidanceManager.ActiveGuidanceExtension.GuidanceWorkflow;
+				// Verify the action is enabled.
+                var activeWorkflow = extension.GuidanceWorkflow != null ? extension.GuidanceWorkflow : GuidanceManager.ActiveGuidanceExtension.GuidanceWorkflow;
                 if (activeWorkflow != null)
                 {
-                    INode node = activeWorkflow.FocusedAction as INode;
+                    var node = activeWorkflow.FocusedAction as INode;
                     if (node.State == NodeState.Enabled)
                         return true;
                 }
@@ -52,6 +70,10 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
             MessageBox.Show("Unable to execute command because the associated guidance action is not in the Enabled (green) state.");
         }
 
+		/// <summary>
+		/// Executes the binding
+		/// </summary>
+		/// <param name="extension"></param>
         public virtual void Execute(IGuidanceExtension extension)
         {
             if (!this.CanExecute(extension))

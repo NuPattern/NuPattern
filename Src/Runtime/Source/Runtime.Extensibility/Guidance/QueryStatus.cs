@@ -4,7 +4,7 @@ namespace NuPattern.Runtime.Guidance
     /// <summary>
     /// Represents the status of a menu in the user interface.
     /// </summary>
-    internal class QueryStatus
+    public class QueryStatus
     {
         /// <summary>
         /// Whether the menu item is visible.
