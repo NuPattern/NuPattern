@@ -15,8 +15,8 @@ namespace NuPattern.Library.Commands
     /// Command used to set a build action over a project item
     /// </summary>
     [DisplayNameResource("SetBuildActionCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("SetBuildActionCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class SetBuildActionCommand : Command
     {

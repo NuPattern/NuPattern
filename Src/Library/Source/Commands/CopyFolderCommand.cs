@@ -18,8 +18,8 @@ namespace NuPattern.Library.Commands
     /// Activates (opens or selects) the linked artifacts associated to current element.
     /// </summary>
     [DisplayNameResource("CopyFolderCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     [DescriptionResource("CopyFolderCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class CopyFolderCommand : Command
     {

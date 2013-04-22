@@ -11,8 +11,8 @@ namespace NuPattern.Library.Commands
     /// Activates (opens or selects) the linked artifacts associated to current element.
     /// </summary>
     [DisplayNameResource("ActivateArtifactCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("ActivateArtifactCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ActivateArtifactCommand : ActivateSolutionItemsCommand
     {

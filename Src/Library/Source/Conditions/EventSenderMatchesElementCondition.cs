@@ -14,8 +14,8 @@ namespace NuPattern.Library.Conditions
     /// A <see cref="Condition"/> that evaluates to true if the <see cref="CurrentElement"/> equals the <see cref="Event"/> sender.
     /// </summary>
     [DisplayNameResource("EventSenderMatchesElementCondition_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("EventSenderMatchesElementCondition_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class EventSenderMatchesElementCondition : Condition, IEventCondition
     {

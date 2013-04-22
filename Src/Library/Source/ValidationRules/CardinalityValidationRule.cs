@@ -17,6 +17,7 @@ namespace NuPattern.Library.ValidationRules
     /// </summary>
     [DescriptionResource("CardinalityValidationRule_Description", typeof(Resources))]
     [DisplayNameResource("CardinalityValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     public class CardinalityValidationRule : ValidationRule
     {
         /// <summary>

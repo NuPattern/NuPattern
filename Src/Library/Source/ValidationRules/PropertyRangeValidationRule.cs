@@ -14,6 +14,7 @@ namespace NuPattern.Library.ValidationRules
     /// </summary>
     [DescriptionResource("PropertyRangeValidationRule_Description", typeof(Resources))]
     [DisplayNameResource("PropertyRangeValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     public class PropertyRangeValidationRule : PropertyAttributeValidationRule
     {
         /// <summary>

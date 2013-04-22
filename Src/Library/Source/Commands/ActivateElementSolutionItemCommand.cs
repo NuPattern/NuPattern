@@ -16,8 +16,8 @@ namespace NuPattern.Library.Commands
     /// Activates (opens or selects) the specified solution item.
     /// </summary>
     [DisplayNameResource("ActivateElementSolutionItemCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("ActivateElementSolutionItemCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ActivateElementSolutionItemCommand : ActivateSolutionItemsCommand
     {

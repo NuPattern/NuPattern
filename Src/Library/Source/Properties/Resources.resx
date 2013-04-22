@@ -1872,7 +1872,7 @@ Evaluation results:
     <value>Condition '{0}' evaluated to false with the following configuration:</value>
   </data>
   <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_Description" xml:space="preserve">
-    <value>Activates the a shared instance of a guidance workflow, or instantiates it,  if it does not yet exist.</value>
+    <value>Activates a shared instance of a guidance workflow, or instantiates it, if it does not yet exist.</value>
   </data>
   <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_DisplayName" xml:space="preserve">
     <value>Activates or Instantiates a Shared Guidance Workflow</value>

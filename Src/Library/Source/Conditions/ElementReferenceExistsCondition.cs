@@ -13,8 +13,8 @@ namespace NuPattern.Library.Conditions
     /// A <see cref="Condition"/> that evaluates to true if a reference of the specified Reference Kind exists on the current element.
     /// </summary>
     [DisplayNameResource("ElementReferenceExistsCondition_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("ElementReferenceExistsCondition_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ElementReferenceExistsCondition : Condition
     {

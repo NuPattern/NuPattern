@@ -23,8 +23,8 @@ namespace NuPattern.Library.Commands
     ///  Command that executes a list of commands sequentially.
     /// </summary>
     [DisplayNameResource("AggregatorCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("AggregatorCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class AggregatorCommand : Command
     {

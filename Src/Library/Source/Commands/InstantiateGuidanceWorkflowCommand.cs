@@ -19,8 +19,8 @@ namespace NuPattern.Library.Commands
     /// Command that instantiates a new feature.
     /// </summary>
     [DisplayNameResource("InstantiateGuidanceWorkflowCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
     [DescriptionResource("InstantiateGuidanceWorkflowCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
     [CLSCompliant(false)]
     public class InstantiateGuidanceWorkflowCommand : Command
     {

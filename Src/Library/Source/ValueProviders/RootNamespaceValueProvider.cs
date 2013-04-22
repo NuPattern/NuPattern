@@ -12,7 +12,7 @@ namespace NuPattern.Library.ValueProviders
     /// </summary>
     [DisplayNameResource("RootNamespaceValueProvider_DisplayName", typeof(Resources))]
     [DescriptionResource("RootNamespaceValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class RootNamespaceValueProvider : VsProjectPropertyValueProvider
     {

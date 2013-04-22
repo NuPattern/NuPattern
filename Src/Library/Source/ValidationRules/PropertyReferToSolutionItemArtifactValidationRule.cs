@@ -16,6 +16,7 @@ namespace NuPattern.Library.ValidationRules
     /// </summary>
     [DescriptionResource("PropertyReferToSolutionItemArtifactValidationRule_Description", typeof(Resources))]
     [DisplayNameResource("PropertyReferToSolutionItemArtifactValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class PropertyReferToSolutionItemArtifactValidationRule : ValidationRule
     {

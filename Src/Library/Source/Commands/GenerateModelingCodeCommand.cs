@@ -24,8 +24,8 @@ namespace NuPattern.Library.Commands
     /// </summary>
     [CLSCompliant(false)]
     [DisplayNameResource("GenerateModelingCodeCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_DslAutomation", typeof(Resources))]
     [DescriptionResource("GenerateModelingCodeCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_DslAutomation", typeof(Resources))]
     public class GenerateModelingCodeCommand : Command
     {
         private const bool DefaultSantizeName = true;

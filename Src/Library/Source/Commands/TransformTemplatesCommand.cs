@@ -22,8 +22,8 @@ namespace NuPattern.Library.Commands
     /// Command used to Transform Templates
     /// </summary>
     [DisplayNameResource("TransformTemplatesCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("TransformTemplatesCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class TransformTemplatesCommand : NuPattern.Runtime.Command
     {

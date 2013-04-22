@@ -13,8 +13,8 @@ namespace NuPattern.Library.Commands
     /// Transforms all the Text Templates for the current solution.
     /// </summary>
     [DisplayNameResource("RunVsCommandCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [DescriptionResource("RunVsCommandCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class RunVsCommandCommand : Command
     {

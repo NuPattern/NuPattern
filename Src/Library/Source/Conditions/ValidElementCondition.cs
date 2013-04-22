@@ -13,9 +13,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// Indicates that an element, and its descendants are valid.
     /// </summary>
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("ValidElementCondition_Description", typeof(Resources))]
     [DisplayNameResource("ValidElementCondition_DisplayName", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ValidElementCondition : Condition
     {

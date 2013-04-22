@@ -19,8 +19,8 @@ namespace NuPattern.Library.Events
     /// Assumes there can only be one state opened at any given time.
     /// </summary>
     [DisplayNameResource("OnElementLoadedEvent_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("OnElementLoadedEvent_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [Event(typeof(IOnElementLoadedEvent))]
     [Export(typeof(IOnElementLoadedEvent))]
     internal sealed class OnElementLoadedEvent : IOnElementLoadedEvent, IDisposable

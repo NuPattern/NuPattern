@@ -10,6 +10,7 @@ namespace NuPattern.Library.ValidationRules
     /// </summary>
     [DescriptionResource("PropertyRequiredValidationRule_Description", typeof(Resources))]
     [DisplayNameResource("PropertyRequiredValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     public class PropertyRequiredValidationRule : PropertyAttributeValidationRule
     {
         /// <summary>

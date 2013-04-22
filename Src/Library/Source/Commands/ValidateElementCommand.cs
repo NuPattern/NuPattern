@@ -14,9 +14,9 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Invokes the validation of the current element.
     /// </summary>
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("ValidateElementCommand_Description", typeof(Resources))]
     [DisplayNameResource("ValidateElementCommand_DisplayName", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ValidateElementCommand : Command
     {

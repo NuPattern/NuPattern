@@ -14,8 +14,8 @@ namespace NuPattern.Library.Commands
     /// Displays a message box
     /// </summary>
     [DisplayNameResource("ShowMessageCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     [DescriptionResource("ShowMessageCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     public class ShowMessageCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ShowMessageCommand>();

@@ -12,8 +12,8 @@ namespace NuPattern.Library.ValueProviders
     /// A custom value provider that is used to provide values at runtime for other types of configured automation.
     /// </summary>
     [DisplayNameResource("ExpressionValueProvider_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("ExpressionValueProvider_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class ExpressionValueProvider : ValueProvider
     {

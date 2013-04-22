@@ -12,7 +12,7 @@ namespace NuPattern.Library.ValueProviders
     /// </summary>
     [DisplayNameResource("ProjectNameValueProvider_DisplayName", typeof(Resources))]
     [DescriptionResource("ProjectNameValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class ProjectNameValueProvider : VsProjectPropertyValueProvider
     {

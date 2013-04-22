@@ -14,7 +14,7 @@ namespace NuPattern.Library.ValueProviders
     /// </summary>
     [DisplayNameResource("ProjectGuidValueProvider_DisplayName", typeof(Resources))]
     [DescriptionResource("ProjectGuidValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class ProjectGuidValueProvider : VsProjectPropertyValueProvider
     {

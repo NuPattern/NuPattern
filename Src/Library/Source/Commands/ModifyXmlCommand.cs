@@ -19,8 +19,8 @@ namespace NuPattern.Library.Commands
     /// Updates or deletes a value in the specified XML file.
     /// </summary>
     [DisplayNameResource("ModifyXmlCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     [DescriptionResource("ModifyXmlCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class ModifyXmlCommand : Command
     {

@@ -11,9 +11,9 @@ namespace NuPattern.Library.ValueProviders
     /// <summary>
     /// A <see cref=" ValueProvider"/> that provides the current value of a variable property of the current element in the pattern model.
     /// </summary>
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("ElementPropertyValueProvider_Description", typeof(Resources))]
     [DisplayNameResource("ElementPropertyValueProvider_DisplayName", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ElementPropertyValueProvider : ValueProvider
     {

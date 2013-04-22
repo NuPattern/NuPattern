@@ -12,8 +12,8 @@ namespace NuPattern.Library.ValueProviders
     /// A custom value provider that is used to provide values at runtime for other types of configured automation.
     /// </summary>
     [DisplayNameResource("RemoveForbiddenCharsExpressionValueProvider_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("RemoveForbiddenCharsExpressionValueProvider_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class RemoveForbiddenCharsExpressionValueProvider : ValueProvider
     {

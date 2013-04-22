@@ -12,9 +12,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// An <see cref="IEventCondition"/> that evaluates to true if the specified <see cref="PropertyName"/> is the changed property.
     /// </summary>
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DisplayNameResource("PropertyChangedEventArgsMatchesPropertyNameCondition_DisplayName", typeof(Resources))]
     [DescriptionResource("PropertyChangedEventArgsMatchesPropertyNameCondition_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class PropertyChangedEventArgsMatchesPropertyNameCondition : Condition, IEventCondition
     {

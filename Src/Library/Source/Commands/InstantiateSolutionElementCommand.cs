@@ -14,8 +14,8 @@ namespace NuPattern.Library.Commands
     /// Creates a new instance of a pattern from another pattern toolkit.
     /// </summary>
     [DisplayNameResource("InstantiateSolutionElementCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("InstantiateSolutionElementCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class InstantiateSolutionElementCommand : Command
     {

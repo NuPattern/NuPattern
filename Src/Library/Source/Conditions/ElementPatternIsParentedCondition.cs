@@ -12,8 +12,8 @@ namespace NuPattern.Library.Conditions
     /// Condition to test if the element pattern is parented
     /// </summary>
     [DisplayNameResource("ElementPatternIsParentedCondition_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("ElementPatternIsParentedCondition_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ElementPatternIsParentedCondition : InvertableCondition
     {

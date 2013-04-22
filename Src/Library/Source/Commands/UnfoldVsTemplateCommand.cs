@@ -31,8 +31,8 @@ namespace NuPattern.Library.Commands
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", MessageId = "VsTemplate")]
     [DisplayNameResource("UnfoldVsTemplateCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("UnfoldVsTemplateCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public partial class UnfoldVsTemplateCommand : Command
     {

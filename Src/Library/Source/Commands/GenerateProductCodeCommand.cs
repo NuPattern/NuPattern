@@ -24,8 +24,8 @@ namespace NuPattern.Library.Commands
     /// </summary>
     [CLSCompliant(false)]
     [DisplayNameResource("GenerateProductCodeCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("GenerateProductCodeCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     public class GenerateProductCodeCommand : GenerateModelingCodeCommand
     {
         private const bool DefaultSyncName = false;

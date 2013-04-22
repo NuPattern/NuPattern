@@ -14,8 +14,8 @@ namespace NuPattern.Library.ValueProviders
     /// Provides the physical path for the first resolved artifact link.
     /// </summary>
     [DisplayNameResource("ReferencedSolutionItemPathValueProvider_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("ReferencedSolutionItemPathValueProvider_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class ReferencedSolutionItemPathValueProvider : ValueProvider
     {

@@ -18,8 +18,8 @@ namespace NuPattern.Library.Commands
     /// Command that activates or instantiates a new feature.
     /// </summary>
     [DisplayNameResource("ActivateOrInstantiateSharedGuidanceWorkflowCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
     [DescriptionResource("ActivateOrInstantiateSharedGuidanceWorkflowCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
     [CLSCompliant(false)]
     public class ActivateOrInstantiateSharedGuidanceWorkflowCommand : Command
     {

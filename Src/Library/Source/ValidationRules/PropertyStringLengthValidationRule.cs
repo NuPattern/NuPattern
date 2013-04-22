@@ -11,6 +11,7 @@ namespace NuPattern.Library.ValidationRules
     /// </summary>
     [DescriptionResource("PropertyStringLengthValidationRule_Description", typeof(Resources))]
     [DisplayNameResource("PropertyStringLengthValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     public class PropertyStringLengthValidationRule : PropertyAttributeValidationRule
     {
         /// <summary>

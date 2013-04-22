@@ -20,8 +20,8 @@ namespace NuPattern.Library.Commands
     /// Auto renames the owner's referenced artifact with the owner name.
     /// </summary>
     [DisplayNameResource("SynchArtifactNameCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("SynchArtifactNameCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class SynchArtifactNameCommand : Command
     {

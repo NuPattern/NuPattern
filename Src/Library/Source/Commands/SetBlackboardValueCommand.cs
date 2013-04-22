@@ -11,8 +11,8 @@ namespace NuPattern.Library.Commands
     /// Sets a value in the current guidance using the <see cref="BlackboardManager"/>
     /// </summary>
     [DisplayNameResource("SetBlackboardValueCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
     [DescriptionResource("SetBlackboardValueCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Guidance", typeof(Resources))]
     public class SetBlackboardValueCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SetBlackboardValueCommand>();

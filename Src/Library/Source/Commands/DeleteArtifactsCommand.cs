@@ -25,8 +25,8 @@ namespace NuPattern.Library.Commands
     /// Deletes the linked artifacts associated to current element from the solution.
     /// </summary>
     [DisplayNameResource("DeleteArtifactsCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("DeleteArtifactsCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class DeleteArtifactsCommand : Command
     {

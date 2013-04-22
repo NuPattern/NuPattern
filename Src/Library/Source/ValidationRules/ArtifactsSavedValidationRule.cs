@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,7 +17,7 @@ namespace NuPattern.Library.ValidationRules
     /// </summary>
     [DescriptionResource("ArtifactsSavedValidationRule_Description", typeof(Resources))]
     [DisplayNameResource("ArtifactsSavedValidationRule_DisplayName", typeof(Resources))]
-    [Category("General")]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ArtifactsSavedValidationRule : ValidationRule
     {

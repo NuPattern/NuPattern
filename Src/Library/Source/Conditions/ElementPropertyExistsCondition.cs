@@ -15,8 +15,8 @@ namespace NuPattern.Library.Conditions
     /// and optionally, if the property has a value.
     /// </summary>
     [DisplayNameResource("ElementPropertyExistsCondition_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("ElementPropertyExistsCondition_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class ElementPropertyExistsCondition : Condition
     {

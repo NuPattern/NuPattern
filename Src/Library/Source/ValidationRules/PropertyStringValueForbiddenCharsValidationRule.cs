@@ -17,6 +17,7 @@ namespace NuPattern.Library.ValidationRules
     /// </summary>
     [DescriptionResource("PropertyStringValueForbiddenCharsValidationRule_Description", typeof(Resources))]
     [DisplayNameResource("PropertyStringValueForbiddenCharsValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource("AutomationCategory_General", typeof(Resources))]
     public class PropertyStringValueForbiddenCharsValidationRule : ValidationRule
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<PropertyStringValueForbiddenCharsValidationRule>();

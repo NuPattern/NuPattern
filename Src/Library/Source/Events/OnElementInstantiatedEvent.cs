@@ -19,8 +19,8 @@ namespace NuPattern.Library.Events
     /// Assumes there can only be one state opened at any given time.
     /// </summary>
     [DisplayNameResource("OnElementInstantiatedEvent_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [DescriptionResource("OnElementInstantiatedEvent_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
     [Event(typeof(IOnElementInstantiatedEvent))]
     [Export(typeof(IOnElementInstantiatedEvent))]
     [PartCreationPolicy(CreationPolicy.NonShared)]

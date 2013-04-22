@@ -14,8 +14,8 @@ namespace NuPattern.Library.Commands
     /// Collapses all solution items from the specified path.
     /// </summary>
     [DisplayNameResource("CollapseSolutionItemsCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [DescriptionResource("CollapseSolutionItemsCommand_Description", typeof(Resources))]
+    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class CollapseSolutionItemsCommand : Command
     {

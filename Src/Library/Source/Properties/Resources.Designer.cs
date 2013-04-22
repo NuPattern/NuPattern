@@ -178,7 +178,7 @@ namespace NuPattern.Library.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activates the a shared instance of a guidance workflow, or instantiates it,  if it does not yet exist..
+        ///   Looks up a localized string similar to Activates a shared instance of a guidance workflow, or instantiates it, if it does not yet exist..
         /// </summary>
         internal static string ActivateOrInstantiateSharedGuidanceWorkflowCommand_Description {
             get {
