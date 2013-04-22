@@ -18,11 +18,11 @@ using NuPattern.Runtime.Guidance.Workflow;
 namespace NuPattern.Authoring.HandsOnLabs.Guidance
 {
 	/// <summary>
-	/// Defines a base class for the guidance workflow for this extension.
+	/// Defines a base class for the guidance workflow for this guidance extension.
 	/// </summary>
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder", "1.3.20.0")]
 	public partial class ProcessWorkflow : GuidanceWorkflow
 	{
 		/// <summary>
@@ -30,22 +30,12 @@ namespace NuPattern.Authoring.HandsOnLabs.Guidance
 		/// </summary>
 		[Import]
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-		private NuPatternCompositionService Composition
-		{
-			get;
-			set;
-		}
+		private INuPatternCompositionService Composition { get; set; }
 
 		/// <summary>
 		/// Gets whether to ignore all post conditions and enable all actions.
 		/// </summary>
-		public override bool IgnorePostConditions
-		{
-			get
-			{
-				return true;
-			}
-		}
+		public override bool IgnorePostConditions { get { return true; } }
 
 		/// <summary>
 		/// Initializes the workflow.
@@ -670,7 +660,7 @@ namespace NuPattern.Authoring.HandsOnLabs.Guidance
 				Name = "ActivityFinal1",
 			};
 			guidanceaction104.ConnectTo(final105);
-
+			
 			this.OnPostInitialize();
 		}
 
@@ -680,21 +670,18 @@ namespace NuPattern.Authoring.HandsOnLabs.Guidance
 	/// <summary>
 	/// Defines the guidance extension containing the guidance workflow.
 	/// </summary>
-	[GuidanceExtension("97bd7ab2-964b-43f1-8a08-be6db68b018b", DefaultName="")]
+	[GuidanceExtension("97bd7ab2-964b-43f1-8a08-be6db68b018b", DefaultName = "")]
 	[Export(typeof(IGuidanceExtension))]
 	[PartCreationPolicy(CreationPolicy.NonShared)]
 	[CLSCompliant(false)]
 	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
+	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder", "1.3.20.0")]
 	public partial class GuidanceExtension : BlackboardGuidanceExtension<ProcessWorkflow>
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="GuidanceExtension"/> class.
 		/// </summary>
-		public GuidanceExtension()
-			: base()
-		{
-		}
+		public GuidanceExtension() : base() { }
 
 		/// <summary>
 		/// Gets or sets the ServiceProvider.
@@ -703,4 +690,3 @@ namespace NuPattern.Authoring.HandsOnLabs.Guidance
 		public SVsServiceProvider ServiceProvider { get; set; }
 	}
 }
-
