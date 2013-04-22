@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDFC13.E31932B0"
+Content-Type: multipart/related; boundary="----=_NextPart_01CE3FB8.CE3C1720"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDFC13.E31932B0
+------=_NextPart_01CE3FB8.CE3C1720
 Content-Location: file:///C:/653456F9/AddingaVariableProperty.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -32,12 +32,12 @@ w\:* {behavior:url(#default#VML);}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:DocumentProperties>
-  <o:Author>Jezz Santos</o:Author>
-  <o:LastAuthor>Jezz Santos</o:LastAuthor>
+  <o:Author>Jezz</o:Author>
+  <o:LastAuthor>Jezz</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2013-01-26T09:24:00Z</o:Created>
-  <o:LastSaved>2013-01-26T09:24:00Z</o:LastSaved>
+  <o:Created>2013-04-22T12:23:00Z</o:Created>
+  <o:LastSaved>2013-04-22T12:23:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>47</o:Words>
   <o:Characters>272</o:Characters>
@@ -63,7 +63,7 @@ href=3D"AddingaVariableProperty_files/colorschememapping.xml">
   <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
   <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
   <w:DoNotPromoteQF/>
-  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeOther>EN-NZ</w:LidThemeOther>
   <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
   <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
   <w:Compatibility>
@@ -396,10 +396,10 @@ n"/>
 	{mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:"";
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
@@ -408,7 +408,9 @@ n"/>
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 h1
 	{mso-style-priority:9;
 	mso-style-unhide:no;
@@ -416,9 +418,9 @@ h1
 	mso-style-link:"Heading 1 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -435,6 +437,8 @@ h1
 	mso-themecolor:background2;
 	mso-themeshade:26;
 	mso-font-kerning:0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;}
 h2
 	{mso-style-priority:9;
@@ -442,9 +446,9 @@ h2
 	mso-style-link:"Heading 2 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -460,6 +464,8 @@ h2
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;}
 h3
 	{mso-style-priority:9;
@@ -467,9 +473,9 @@ h3
 	mso-style-link:"Heading 3 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -485,6 +491,8 @@ h3
 	color:#4A442A;
 	mso-themecolor:background2;
 	mso-themeshade:64;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;}
 h4
 	{mso-style-priority:9;
@@ -492,9 +500,9 @@ h4
 	mso-style-link:"Heading 4 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -510,6 +518,8 @@ h4
 	color:#948A54;
 	mso-themecolor:background2;
 	mso-themeshade:128;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;
 	font-style:italic;}
 h5
@@ -518,9 +528,9 @@ h5
 	mso-style-link:"Heading 5 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -536,6 +546,8 @@ h5
 	color:#17365D;
 	mso-themecolor:text2;
 	mso-themeshade:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;
 	mso-bidi-font-weight:normal;}
 h6
@@ -544,9 +556,9 @@ h6
 	mso-style-link:"Heading 6 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -562,6 +574,8 @@ h6
 	color:#548DD4;
 	mso-themecolor:text2;
 	mso-themetint:153;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:normal;
 	font-style:italic;}
 p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
@@ -571,9 +585,9 @@ p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
 	mso-style-link:"Heading 7 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -593,6 +607,8 @@ p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-style:italic;}
 p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	{mso-style-noshow:yes;
@@ -601,9 +617,9 @@ p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	mso-style-link:"Heading 8 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -621,7 +637,9 @@ p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	mso-bidi-theme-font:major-bidi;
 	color:#404040;
 	mso-themecolor:text1;
-	mso-themetint:191;}
+	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	{mso-style-noshow:yes;
 	mso-style-priority:9;
@@ -629,9 +647,9 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	mso-style-link:"Heading 9 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -650,15 +668,17 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-style:italic;}
 p.MsoToc1, li.MsoToc1, div.MsoToc1
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
@@ -667,13 +687,15 @@ p.MsoToc1, li.MsoToc1, div.MsoToc1
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc2, li.MsoToc2, div.MsoToc2
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:11.0pt;
 	line-height:115%;
@@ -684,13 +706,15 @@ p.MsoToc2, li.MsoToc2, div.MsoToc2
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc3, li.MsoToc3, div.MsoToc3
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:22.0pt;
 	line-height:115%;
@@ -701,13 +725,15 @@ p.MsoToc3, li.MsoToc3, div.MsoToc3
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc4, li.MsoToc4, div.MsoToc4
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:27.0pt;
 	line-height:115%;
@@ -718,13 +744,15 @@ p.MsoToc4, li.MsoToc4, div.MsoToc4
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc5, li.MsoToc5, div.MsoToc5
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:44.0pt;
 	line-height:115%;
@@ -738,13 +766,15 @@ p.MsoToc5, li.MsoToc5, div.MsoToc5
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc6, li.MsoToc6, div.MsoToc6
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:55.0pt;
 	line-height:115%;
@@ -758,13 +788,15 @@ p.MsoToc6, li.MsoToc6, div.MsoToc6
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc7, li.MsoToc7, div.MsoToc7
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:66.0pt;
 	line-height:115%;
@@ -778,13 +810,15 @@ p.MsoToc7, li.MsoToc7, div.MsoToc7
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc8, li.MsoToc8, div.MsoToc8
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:77.0pt;
 	line-height:115%;
@@ -798,13 +832,15 @@ p.MsoToc8, li.MsoToc8, div.MsoToc8
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc9, li.MsoToc9, div.MsoToc9
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:88.0pt;
 	line-height:115%;
@@ -818,106 +854,116 @@ p.MsoToc9, li.MsoToc9, div.MsoToc9
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
 	{mso-style-priority:99;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.25in;
+	margin-left:18.0pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpFirst, li.MsoListBulletCxSpFirst, div.MsoListBulletCxSpF=
 irst
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.25in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpMiddle, li.MsoListBulletCxSpMiddle, div.MsoListBulletCxS=
 pMiddle
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.25in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpLast, li.MsoListBulletCxSpLast, div.MsoListBulletCxSpLast
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.25in;
+	margin-left:18.0pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitle, li.MsoTitle, div.MsoTitle
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:15.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -929,22 +975,24 @@ p.MsoTitle, li.MsoTitle, div.MsoTitle
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -956,22 +1004,24 @@ p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -983,24 +1033,26 @@ p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:15.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -1012,7 +1064,9 @@ p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 a:link, span.MsoHyperlink
 	{mso-style-priority:99;
 	color:blue;
@@ -1030,55 +1084,63 @@ p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-link:"Document Map Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
 	mso-bidi-font-size:8.0pt;
 	font-family:"Tahoma","sans-serif";
 	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;}
+	mso-fareast-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:3.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Segoe UI","sans-serif";
-	mso-fareast-font-family:"Times New Roman";}
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 pre
 	{mso-style-priority:99;
 	mso-style-link:"HTML Preformatted Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 41=
 2.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
 	font-size:10.0pt;
 	font-family:"Courier New";
-	mso-fareast-font-family:"Times New Roman";}
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-link:"Balloon Text Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
 	mso-bidi-font-size:8.0pt;
 	font-family:"Tahoma","sans-serif";
 	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;}
+	mso-fareast-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	{mso-style-priority:34;
 	mso-style-unhide:no;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.5in;
+	margin-left:36.0pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1088,16 +1150,18 @@ p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParag=
 raphCxSpFirst
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1108,16 +1172,18 @@ raphCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListPar=
 agraphCxSpMiddle
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1128,16 +1194,18 @@ agraphCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagra=
 phCxSpLast
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.5in;
+	margin-left:36.0pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1147,7 +1215,9 @@ phCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	{mso-style-noshow:yes;
 	mso-style-priority:39;
@@ -1155,9 +1225,9 @@ p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	mso-style-parent:"Heading 1";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
@@ -1171,6 +1241,7 @@ p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	color:#1D1B11;
 	mso-themecolor:background2;
 	mso-themeshade:26;
+	mso-ansi-language:EN-US;
 	mso-fareast-language:JA;
 	font-weight:bold;}
 span.Heading1Char
@@ -1191,6 +1262,7 @@ span.Heading1Char
 	color:#1D1B11;
 	mso-themecolor:background2;
 	mso-themeshade:26;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading2Char
 	{mso-style-name:"Heading 2 Char";
@@ -1209,6 +1281,7 @@ span.Heading2Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading3Char
 	{mso-style-name:"Heading 3 Char";
@@ -1227,6 +1300,7 @@ span.Heading3Char
 	color:#4A442A;
 	mso-themecolor:background2;
 	mso-themeshade:64;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading4Char
 	{mso-style-name:"Heading 4 Char";
@@ -1245,6 +1319,7 @@ span.Heading4Char
 	color:#948A54;
 	mso-themecolor:background2;
 	mso-themeshade:128;
+	mso-ansi-language:EN-US;
 	font-weight:bold;
 	font-style:italic;}
 span.Heading5Char
@@ -1264,6 +1339,7 @@ span.Heading5Char
 	color:#17365D;
 	mso-themecolor:text2;
 	mso-themeshade:191;
+	mso-ansi-language:EN-US;
 	font-weight:bold;
 	mso-bidi-font-weight:normal;}
 span.Heading6Char
@@ -1283,6 +1359,7 @@ span.Heading6Char
 	color:#548DD4;
 	mso-themecolor:text2;
 	mso-themetint:153;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.Heading7Char
 	{mso-style-name:"Heading 7 Char";
@@ -1304,6 +1381,7 @@ span.Heading7Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.Heading8Char
 	{mso-style-name:"Heading 8 Char";
@@ -1325,7 +1403,8 @@ span.Heading8Char
 	mso-bidi-theme-font:major-bidi;
 	color:#404040;
 	mso-themecolor:text1;
-	mso-themetint:191;}
+	mso-themetint:191;
+	mso-ansi-language:EN-US;}
 span.Heading9Char
 	{mso-style-name:"Heading 9 Char";
 	mso-style-noshow:yes;
@@ -1347,6 +1426,7 @@ span.Heading9Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.TitleChar
 	{mso-style-name:"Title Char";
@@ -1367,7 +1447,8 @@ span.TitleChar
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;}
 span.BalloonTextChar
 	{mso-style-name:"Balloon Text Char";
 	mso-style-noshow:yes;
@@ -1380,15 +1461,16 @@ span.BalloonTextChar
 	font-family:"Tahoma","sans-serif";
 	mso-ascii-font-family:Tahoma;
 	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;}
+	mso-bidi-font-family:Tahoma;
+	mso-ansi-language:EN-US;}
 p.SourceCode, li.SourceCode, div.SourceCode
 	{mso-style-name:"Source Code";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	margin-top:12.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:12.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1401,16 +1483,18 @@ p.SourceCode, li.SourceCode, div.SourceCode
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
 	{mso-style-name:"Source CodeCxSpFirst";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
 	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1424,13 +1508,15 @@ p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.SourceCodeCxSpMiddle, li.SourceCodeCxSpMiddle, div.SourceCodeCxSpMiddle
 	{mso-style-name:"Source CodeCxSpMiddle";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1444,16 +1530,18 @@ p.SourceCodeCxSpMiddle, li.SourceCodeCxSpMiddle, div.SourceCodeCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.SourceCodeCxSpLast, li.SourceCodeCxSpLast, div.SourceCodeCxSpLast
 	{mso-style-name:"Source CodeCxSpLast";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:12.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1466,7 +1554,9 @@ p.SourceCodeCxSpLast, li.SourceCodeCxSpLast, div.SourceCodeCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.HTMLPreformattedChar
 	{mso-style-name:"HTML Preformatted Char";
 	mso-style-priority:99;
@@ -1479,7 +1569,8 @@ span.HTMLPreformattedChar
 	mso-ascii-font-family:"Courier New";
 	mso-fareast-font-family:"Times New Roman";
 	mso-hansi-font-family:"Courier New";
-	mso-bidi-font-family:"Courier New";}
+	mso-bidi-font-family:"Courier New";
+	mso-ansi-language:EN-US;}
 span.DocumentMapChar
 	{mso-style-name:"Document Map Char";
 	mso-style-noshow:yes;
@@ -1492,23 +1583,24 @@ span.DocumentMapChar
 	font-family:"Tahoma","sans-serif";
 	mso-ascii-font-family:Tahoma;
 	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;}
+	mso-bidi-font-family:Tahoma;
+	mso-ansi-language:EN-US;}
 p.Note, li.Note, div.Note
 	{mso-style-name:Note;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1517,17 +1609,19 @@ p.Note, li.Note, div.Note
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	{mso-style-name:NoteCxSpFirst;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1535,7 +1629,7 @@ p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1544,17 +1638,19 @@ p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	{mso-style-name:NoteCxSpMiddle;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1562,7 +1658,7 @@ p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1571,24 +1667,26 @@ p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
 	{mso-style-name:NoteCxSpLast;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1597,7 +1695,9 @@ p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.NoteChar
 	{mso-style-name:"Note Char";
 	mso-style-unhide:no;
@@ -1607,23 +1707,24 @@ span.NoteChar
 	font-family:"Segoe UI","sans-serif";
 	mso-ascii-font-family:"Segoe UI";
 	mso-hansi-font-family:"Segoe UI";
-	background:#FFFFCC;}
+	background:#FFFFCC;
+	mso-ansi-language:EN-US;}
 p.MissingContent, li.MissingContent, div.MissingContent
 	{mso-style-name:"Missing Content";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Missing Content Char";
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
 	background:#FFFF66;
 	border:none;
 	mso-border-alt:solid yellow 6.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:24.0pt 4.0pt 24.0pt 4.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
@@ -1634,7 +1735,9 @@ p.MissingContent, li.MissingContent, div.MissingContent
 	mso-bidi-theme-font:minor-bidi;
 	color:#A6A6A6;
 	mso-themecolor:background1;
-	mso-themeshade:166;}
+	mso-themeshade:166;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.MissingContentChar
 	{mso-style-name:"Missing Content Char";
 	mso-style-unhide:no;
@@ -1647,17 +1750,18 @@ span.MissingContentChar
 	color:#A6A6A6;
 	mso-themecolor:background1;
 	mso-themeshade:166;
-	background:#FFFF66;}
+	background:#FFFF66;
+	mso-ansi-language:EN-US;}
 p.Warning, li.Warning, div.Warning
 	{mso-style-name:Warning;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1666,7 +1770,7 @@ p.Warning, li.Warning, div.Warning
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1675,7 +1779,9 @@ p.Warning, li.Warning, div.Warning
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	{mso-style-name:WarningCxSpFirst;
 	mso-style-unhide:no;
@@ -1683,10 +1789,10 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1696,7 +1802,7 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1705,7 +1811,9 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	{mso-style-name:WarningCxSpMiddle;
 	mso-style-unhide:no;
@@ -1713,10 +1821,10 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1726,7 +1834,7 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1735,7 +1843,9 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	{mso-style-name:WarningCxSpLast;
 	mso-style-unhide:no;
@@ -1743,10 +1853,10 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1755,7 +1865,7 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1764,7 +1874,9 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.WarningChar
 	{mso-style-name:"Warning Char";
 	mso-style-unhide:no;
@@ -1777,17 +1889,18 @@ span.WarningChar
 	mso-hansi-font-family:"Segoe UI";
 	background:#F2DBDB;
 	mso-shading-themecolor:accent2;
-	mso-shading-themetint:51;}
+	mso-shading-themetint:51;
+	mso-ansi-language:EN-US;}
 p.Tip, li.Tip, div.Tip
 	{mso-style-name:Tip;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1796,7 +1909,7 @@ p.Tip, li.Tip, div.Tip
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1805,7 +1918,9 @@ p.Tip, li.Tip, div.Tip
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	{mso-style-name:TipCxSpFirst;
 	mso-style-unhide:no;
@@ -1813,10 +1928,10 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1826,7 +1941,7 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1835,7 +1950,9 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	{mso-style-name:TipCxSpMiddle;
 	mso-style-unhide:no;
@@ -1843,10 +1960,10 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1856,7 +1973,7 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1865,7 +1982,9 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	{mso-style-name:TipCxSpLast;
 	mso-style-unhide:no;
@@ -1873,10 +1992,10 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1885,7 +2004,7 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1894,7 +2013,9 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.TipChar
 	{mso-style-name:"Tip Char";
 	mso-style-unhide:no;
@@ -1907,7 +2028,8 @@ span.TipChar
 	mso-hansi-font-family:"Segoe UI";
 	background:#D6E3BC;
 	mso-shading-themecolor:accent3;
-	mso-shading-themetint:102;}
+	mso-shading-themetint:102;
+	mso-ansi-language:EN-US;}
 span.parameter
 	{mso-style-name:parameter;
 	mso-style-unhide:no;}
@@ -1917,10 +2039,10 @@ p.Recommend, li.Recommend, div.Recommend
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1929,7 +2051,7 @@ p.Recommend, li.Recommend, div.Recommend
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1938,7 +2060,9 @@ p.Recommend, li.Recommend, div.Recommend
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	{mso-style-name:RecommendCxSpFirst;
 	mso-style-unhide:no;
@@ -1946,10 +2070,10 @@ p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1959,7 +2083,7 @@ p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1968,7 +2092,9 @@ p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	{mso-style-name:RecommendCxSpMiddle;
 	mso-style-unhide:no;
@@ -1976,10 +2102,10 @@ p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1989,7 +2115,7 @@ p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1998,7 +2124,9 @@ p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	{mso-style-name:RecommendCxSpLast;
 	mso-style-unhide:no;
@@ -2006,10 +2134,10 @@ p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -2018,7 +2146,7 @@ p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -2027,7 +2155,9 @@ p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.RecommendChar
 	{mso-style-name:"Recommend Char";
 	mso-style-unhide:no;
@@ -2040,7 +2170,8 @@ span.RecommendChar
 	mso-hansi-font-family:"Segoe UI";
 	background:#D6E3BC;
 	mso-shading-themecolor:accent3;
-	mso-shading-themetint:102;}
+	mso-shading-themetint:102;
+	mso-ansi-language:EN-US;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -2052,16 +2183,17 @@ span.RecommendChar
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
 .MsoPapDefault
 	{mso-style-type:export-only;
 	margin-bottom:10.0pt;
 	line-height:115%;}
 @page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;
-	mso-header-margin:.5in;
-	mso-footer-margin:.5in;
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
 	mso-paper-source:0;}
 div.WordSection1
 	{page:WordSection1;}
@@ -2074,15 +2206,15 @@ div.WordSection1
 	{mso-level-number-format:bullet;
 	mso-level-style-link:"List Bullet";
 	mso-level-text:\F0B7;
-	mso-level-tab-stop:.25in;
+	mso-level-tab-stop:18.0pt;
 	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 ol
-	{margin-bottom:0in;}
+	{margin-bottom:0cm;}
 ul
-	{margin-bottom:0in;}
+	{margin-bottom:0cm;}
 -->
 </style>
 <!--[if gte mso 10]>
@@ -2095,11 +2227,11 @@ ul
 	mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-parent:"";
-	mso-padding-alt:0in 5.4pt 0in 5.4pt;
-	mso-para-margin-top:0in;
-	mso-para-margin-right:0in;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
 	mso-para-margin-bottom:10.0pt;
-	mso-para-margin-left:0in;
+	mso-para-margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:11.0pt;
@@ -2107,7 +2239,8 @@ ul
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;}
+	mso-hansi-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
 table.MsoTableGrid
 	{mso-style-name:"Table Grid";
 	mso-tstyle-rowband-size:0;
@@ -2116,10 +2249,10 @@ table.MsoTableGrid
 	mso-style-unhide:no;
 	border:solid windowtext 1.0pt;
 	mso-border-alt:solid windowtext .5pt;
-	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
 	mso-border-insideh:.5pt solid windowtext;
 	mso-border-insidev:.5pt solid windowtext;
-	mso-para-margin:0in;
+	mso-para-margin:0cm;
 	mso-para-margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:11.0pt;
@@ -2127,7 +2260,9 @@ table.MsoTableGrid
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;}
+	mso-hansi-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026"/>
@@ -2137,29 +2272,33 @@ table.MsoTableGrid
  </o:shapelayout></xml><![endif]-->
 </head>
 
-<body lang=3DEN-US link=3Dblue vlink=3Dpurple style=3D'tab-interval:.5in'>
+<body lang=3DEN-NZ link=3Dblue vlink=3Dpurple style=3D'tab-interval:36.0pt'>
 
 <div class=3DWordSection1>
 
 <h4 style=3D'page-break-before:auto'><a name=3D"_Toc344469431"></a><a
 name=3D"_Toc344467658"></a><a name=3D"_Toc344467116"><span style=3D'mso-boo=
 kmark:
-_Toc344467658'><span style=3D'mso-bookmark:_Toc344469431'>Adding a Variable
-Property</span></span></a><o:p></o:p></h4>
+_Toc344467658'><span style=3D'mso-bookmark:_Toc344469431'><span lang=3DEN-U=
+S>Adding
+a Variable Property</span></span></span></a><span lang=3DEN-US><o:p></o:p><=
+/span></h4>
 
-<p class=3DMsoNormal>To create a 'Variable Property' on the pattern, an ele=
-ment,
-or a collection, right-click on the 'Variable Properties' compartment and c=
-lick
-'Add Variable Property'.<o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>To create a 'Variable Property' on =
+the
+pattern, an element, or a collection, right-click on the 'Variable Properti=
+es'
+compartment and click 'Add Variable Property'.<o:p></o:p></span></p>
 
-<p class=3DMsoNormal>Simply type its name.<o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>Simply type its name.<o:p></o:p></s=
+pan></p>
 
-<p class=3DMsoNormal><span style=3D'mso-no-proof:yes'><!--[if gte vml 1]><v=
-:shapetype
- id=3D"_x0000_t75" coordsize=3D"21600,21600" o:spt=3D"75" o:preferrelative=
-=3D"t"
- path=3D"m@4@5l@4@11@9@11@9@5xe" filled=3D"f" stroked=3D"f">
+<p class=3DMsoNormal><span style=3D'mso-ansi-language:EN-NZ;mso-fareast-lan=
+guage:
+EN-NZ;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id=3D"_x0000_t75"
+ coordsize=3D"21600,21600" o:spt=3D"75" o:preferrelative=3D"t" path=3D"m@4@=
+5l@4@11@9@11@9@5xe"
+ filled=3D"f" stroked=3D"f">
  <v:stroke joinstyle=3D"miter"/>
  <v:formulas>
   <v:f eqn=3D"if lineDrawn pixelLineWidth 0"/>
@@ -2185,33 +2324,38 @@ re'>
 ""/>
 </v:shape><![endif]--><![if !vml]><img width=3D230 height=3D200
 src=3D"AddingaVariableProperty_files/image002.jpg" v:shapes=3D"Picture_x002=
-0_1"><![endif]></span><o:p></o:p></p>
+0_1"><![endif]></span><span
+lang=3DEN-US><o:p></o:p></span></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
-margin-left:.4in;margin-right:.4in'>
+margin-left:28.8pt;margin-right:28.8pt'>
 
-<p class=3DNote style=3D'margin-top:0in;margin-right:0in;margin-bottom:10.0=
+<p class=3DNote style=3D'margin-top:0cm;margin-right:0cm;margin-bottom:10.0=
 pt;
-margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
+margin-left:0cm;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
-normal'>Note</b>: For 'Collections', you need to expand the shape to see the
-'Variable Properties' compartment.<o:p></o:p></p>
+normal'><span lang=3DEN-US>Note</span></b><span lang=3DEN-US>: For 'Collect=
+ions',
+you need to expand the shape to see the 'Variable Properties' compartment.<=
+o:p></o:p></span></p>
 
 </div>
 
-<p class=3DMsoNormal><span style=3D'mso-no-proof:yes'><!--[if gte vml 1]><v=
-:shape
- id=3D"Picture_x0020_4" o:spid=3D"_x0000_i1025" type=3D"#_x0000_t75" style=
-=3D'width:141pt;
- height:111.75pt;visibility:visible;mso-wrap-style:square'>
+<p class=3DMsoNormal><span style=3D'mso-ansi-language:EN-NZ;mso-fareast-lan=
+guage:
+EN-NZ;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id=3D"Picture_x0020_4"
+ o:spid=3D"_x0000_i1025" type=3D"#_x0000_t75" style=3D'width:141pt;height:1=
+11.75pt;
+ visibility:visible;mso-wrap-style:square'>
  <v:imagedata src=3D"AddingaVariableProperty_files/image003.png" o:title=3D=
 ""/>
 </v:shape><![endif]--><![if !vml]><img width=3D188 height=3D149
 src=3D"AddingaVariableProperty_files/image004.jpg" v:shapes=3D"Picture_x002=
-0_4"><![endif]></span><o:p></o:p></p>
+0_4"><![endif]></span><span
+lang=3DEN-US><o:p></o:p></span></p>
 
-<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p>
 
 </div>
 
@@ -2219,7 +2363,7 @@ src=3D"AddingaVariableProperty_files/image004.jpg" v:shapes=3D"Picture_x002=
 
 </html>
 
-------=_NextPart_01CDFC13.E31932B0
+------=_NextPart_01CE3FB8.CE3C1720
 Content-Location: file:///C:/653456F9/AddingaVariableProperty_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2280,7 +2424,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDFC13.E31932B0
+------=_NextPart_01CE3FB8.CE3C1720
 Content-Location: file:///C:/653456F9/AddingaVariableProperty_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2290,7 +2434,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDFC13.E31932B0
+------=_NextPart_01CE3FB8.CE3C1720
 Content-Location: file:///C:/653456F9/AddingaVariableProperty_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -2719,7 +2863,7 @@ f7kJJ2ymyxKAABZSB7AZcrLQcoxnXbb77dYwcLVss1uNWBESUBQBiGHZZsgq9LOK6i80BgkgARck
 gPNnXbBTsUlIAAkoigCub6Co7kBjkAAScEECuL6BC3YqNgkJIAFFEcC8gaK6A41BAkjABQmgn3XB
 TsUmIQEkoCgCmJ9VVHegMUgACbggAczPumCnYpOQABJQFIH/Bx5/EkFkjXvIAAAAAElFTkSuQmCC
 
-------=_NextPart_01CDFC13.E31932B0
+------=_NextPart_01CE3FB8.CE3C1720
 Content-Location: file:///C:/653456F9/AddingaVariableProperty_files/image002.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -2735,119 +2879,118 @@ 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
-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
-LGhaWyWdskEWdiDAycmiiikB/9k=
+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
 
-------=_NextPart_01CDFC13.E31932B0
+------=_NextPart_01CE3FB8.CE3C1720
 Content-Location: file:///C:/653456F9/AddingaVariableProperty_files/image003.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3113,7 +3256,7 @@ Jxg4UAIDA319fcmuYm8uyDXePPs4dhkQ4PlFTDSEboCP4B1aIhtwvLYg13jt1OPA5UEAeERo0RB+
 gXfergGK8XKWIUAj18iz4FCLNyPAcw1PNIRuiFGDXINc482/Dhy7zAgQB4qnGPSexPj+f60bykkn
 OxPxAAAAAElFTkSuQmCC
 
-------=_NextPart_01CDFC13.E31932B0
+------=_NextPart_01CE3FB8.CE3C1720
 Content-Location: file:///C:/653456F9/AddingaVariableProperty_files/image004.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -3131,71 +3274,70 @@ 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
-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
-2R==
+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
+/wA+9v8A9+6PJi/597f/AL90UUWQWR//2R==
 
-------=_NextPart_01CDFC13.E31932B0
+------=_NextPart_01CE3FB8.CE3C1720
 Content-Location: file:///C:/653456F9/AddingaVariableProperty_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -3210,4 +3352,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image004.jpg"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDFC13.E31932B0--
+------=_NextPart_01CE3FB8.CE3C1720--
