@@ -35,7 +35,7 @@ namespace NuPattern.Runtime.Composition
         static NuPatternCompositionService()
         {
             Instance = new NuPatternCompositionService(NuPatternGlobalContainer.Instance);
-            // Publish our own service to the features global container.
+            // Publish our own service to the global container.
             NuPatternGlobalContainer.Instance.ComposeExportedValue<INuPatternCompositionService>(Instance);
         }
 

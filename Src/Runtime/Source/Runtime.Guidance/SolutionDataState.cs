@@ -36,7 +36,7 @@ namespace NuPattern.Runtime.Guidance
         {
             get
             {
-                var extensions = (string)Solution.Data.Features;
+                var extensions = (string)Solution.Data.GuidanceWorkflows;
                 if (String.IsNullOrEmpty(extensions))
                     return Enumerable.Empty<GuidanceExtensionPersistState>();
 
@@ -99,7 +99,7 @@ namespace NuPattern.Runtime.Guidance
 
         private void SerializeExtensions(IEnumerable<IGuidanceExtensionPersistState> extensions)
         {
-            Solution.Data.Features = String.Join("|", extensions
+            Solution.Data.GuidanceWorkflows = String.Join("|", extensions
                 .Select(state => state.ExtensionId + ":" + state.InstanceName + ":" + state.Version.ToString())
                 .ToArray());
         }

@@ -93,28 +93,28 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
             this.CurrentNodeChanged(this, new NodeChangedEventArgs(this.CurrentWorkflow.CurrentNode.Node));
         }
 
-        private void SetWorkflows(IEnumerable<IGuidanceExtension> features)
+        private void SetWorkflows(IEnumerable<IGuidanceExtension> extensions)
         {
             // Match the untouched ViewModels
-            var inmutedWorkflows = this.Workflows.Where(w => features.Any(f => f.GuidanceWorkflow == w.Model));
+            var inmutedWorkflows = this.Workflows.Where(w => extensions.Any(f => f.GuidanceWorkflow == w.Model));
 
-            // Remove all features removed
+            // Remove all extension removed
             foreach (var workflow in this.Workflows.Except(inmutedWorkflows).ToArray())
             {
                 workflow.CurrentNodeChanged -= this.OnCurrentNodeChanged;
                 this.Workflows.Remove(workflow);
             }
 
-            // Add all features added
-            var addedFeatures = features.Where(f => !this.Workflows.Any(w => w.Model == f.GuidanceWorkflow));
-            foreach (var feature in addedFeatures)
+            // Add all extensions added
+            var addedExtensions = extensions.Where(f => !this.Workflows.Any(w => w.Model == f.GuidanceWorkflow));
+            foreach (var extension in addedExtensions)
             {
-                if (feature.GuidanceWorkflow != null)
+                if (extension.GuidanceWorkflow != null)
                 {
                     var workflow = new GuidanceWorkflowViewModel(new GuidanceWorkflowContext
                         {
                             GuidanceManager = this.context.GuidanceManager,
-                            Extension = feature,
+                            Extension = extension,
                             UserMessageService = this.context.UserMessageService,
                         }, this.serviceProvider);
                     this.Workflows.Add(workflow);
@@ -122,7 +122,7 @@ namespace NuPattern.Runtime.Guidance.UI.ViewModels
                 }
             }
 
-            if (this.CurrentWorkflow != null && !features.Any(f => f.GuidanceWorkflow == this.CurrentWorkflow.Model))
+            if (this.CurrentWorkflow != null && !extensions.Any(f => f.GuidanceWorkflow == this.CurrentWorkflow.Model))
             {
                 this.CurrentWorkflow = null;
             }

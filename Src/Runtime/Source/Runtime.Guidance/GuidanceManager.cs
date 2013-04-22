@@ -174,7 +174,6 @@ namespace NuPattern.Runtime.Guidance
             var theSolution = ((SolutionDataState)solutionState).Solution;
             SetDslPathIfPresent();
 
-
             //
             // Ok, now let's load any guidance extensions we find from the "Solution State" which is
             // stored in the .SLN file's Solution Globals
@@ -194,7 +193,7 @@ namespace NuPattern.Runtime.Guidance
                     .Where(state => this.IsInstalled(state.ExtensionId))
                     .Select(state => new
                     {
-                        Registration = this.InstalledGuidanceExtensions.Where(reg => reg.ExtensionId == state.ExtensionId).First(),
+                        Registration = this.InstalledGuidanceExtensions.First(reg => reg.ExtensionId == state.ExtensionId),
                         State = state
                     });
 
@@ -225,13 +224,13 @@ namespace NuPattern.Runtime.Guidance
                     {
                         try
                         {
-                            IGuidanceExtension fx = this.InitializeExtension(extension.State.ExtensionId,
+                            var ext = this.InitializeExtension(extension.State.ExtensionId,
                                 extension.State.InstanceName,
                                 extension.Registration,
                                 extension.State.Version,
                                 false);  // isInstantiation
-                            fx.PostInitialize();
-                            this.ActiveGuidanceExtension = fx;
+                            ext.PostInitialize();
+                            this.ActiveGuidanceExtension = ext;
 
                             // If extension initialized fine and there was a version mismatch, consider it upgraded.
                             if (extension.State.Version != extension.Registration.ExtensionManifest.Header.Version)

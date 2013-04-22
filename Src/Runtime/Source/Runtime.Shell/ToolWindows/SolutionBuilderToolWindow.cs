@@ -108,8 +108,6 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
             var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
 
-            packageToolWindow.ShowWindow<SolutionBuilderToolWindow>(true);
-
             if (!packageToolWindow.IsWindowVisible<SolutionBuilderToolWindow>())
             {
                 var settingsManager = new ShellSettingsManager(serviceProvider);
@@ -122,6 +120,8 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
                 store.SetString(Constants.SettingsName, SolutionBuilderAutoOpenedSetting, bool.TrueString);
             }
+
+            packageToolWindow.ShowWindow<SolutionBuilderToolWindow>(true);
         }
 
         /// <summary>

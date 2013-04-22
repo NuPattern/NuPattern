@@ -606,6 +606,6 @@ Global
 		{6DDE6662-D037-45C1-8E80-960828CEB21C} = {2FBC5053-D55C-496D-AA01-41C2909D51FE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		Features = 9f6dc301-6f66-4d21-9f9c-b37412b162f6:Creating Pattern Toolkits:1.3.20.0
+		GuidanceWorkflows= 9f6dc301-6f66-4d21-9f9c-b37412b162f6:Creating Pattern Toolkits:1.3.20.0
 	EndGlobalSection
 EndGlobal
