@@ -1,7 +1,7 @@
 ﻿<#+
 private IPatternModelInfo LoadPatternModel(string patternModelFile)
 {
-    return (IPatternModelInfo)PatternModelSerializationHelper.LoadPatternModelFromFile(patternModelFile);
+    return ToolkitInterfaceCodeGenUtilities.LoadPatternModelFromFile(patternModelFile);
 }
 
 private string Pluralize(IContainedElementInfo element)

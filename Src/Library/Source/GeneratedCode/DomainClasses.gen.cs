@@ -2941,7 +2941,7 @@ namespace NuPattern.Library.Automation
 		/// Gets or sets the value of GuidanceInstanceName domain property.
 		/// The name of the created guidance workflow in the Guidance Explorer. If left
 		/// blank, the instance name is calculated from the configured default name of the
-		/// feature extension.
+		/// guidance extension.
 		/// </summary>
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.GuidanceExtension/GuidanceInstanceName.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Library.Automation.GuidanceExtension/GuidanceInstanceName.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]

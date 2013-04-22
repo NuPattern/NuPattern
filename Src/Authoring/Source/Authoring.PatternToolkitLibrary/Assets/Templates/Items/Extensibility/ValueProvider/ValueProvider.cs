@@ -4,6 +4,7 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using NuPattern;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime;
 
 namespace $rootnamespace$
@@ -69,10 +70,10 @@ namespace $rootnamespace$
             // TODO: Implement provider automation code to determine the evaluated result
             var result = "Some value";
 
-            //	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-            //	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-            //	TODO: Use tracer.TraceInformation() to note key results of execution
-            //	TODO: Raise exceptions for all other errors
+            // TODO: Use tracer.TraceWarning() to note expected and recoverable errors
+            // TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
+            // TODO: Use tracer.TraceInformation() to note key results of execution
+            // TODO: Raise exceptions for all other errors
 
             // Make resulting trace statement for this value provider
             tracer.TraceInformation(

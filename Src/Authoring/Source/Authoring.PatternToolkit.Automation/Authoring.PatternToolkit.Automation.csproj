@@ -32,6 +32,10 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="NuPattern.Runtime.Schema">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Schema.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="NuPattern.Runtime.Extensibility">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>false</Private>
@@ -97,6 +101,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ToolkitInterfaceCodeGenUtilities.cs" />
     <Compile Include="Commands\AddFromDroppedVSTemplateCommand.cs">
       <ItemGuid>bc8d0213-4a5e-4477-8e1e-6baf3961f38a</ItemGuid>
     </Compile>

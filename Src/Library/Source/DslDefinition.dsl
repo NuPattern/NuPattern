@@ -247,7 +247,7 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="86fdc7a3-d35e-4934-8bc1-e574376836bc" Description="The name of the created guidance workflow in the Guidance Explorer. If left blank, the instance name is calculated from the configured default name of the feature extension." Name="GuidanceInstanceName" DisplayName="Instance Name" Category="Guidance" IsBrowsable="false">
+        <DomainProperty Id="86fdc7a3-d35e-4934-8bc1-e574376836bc" Description="The name of the created guidance workflow in the Guidance Explorer. If left blank, the instance name is calculated from the configured default name of the guidance extension." Name="GuidanceInstanceName" DisplayName="Instance Name" Category="Guidance" IsBrowsable="false">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>

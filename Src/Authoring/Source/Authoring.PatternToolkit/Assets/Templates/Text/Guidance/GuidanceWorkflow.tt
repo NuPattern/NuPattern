@@ -8,12 +8,12 @@
 \<#@ Assembly Name="NuPattern.Authoring.Guidance.dll" \#>
 \<#@ Assembly Name="NuPattern.Authoring.PatternToolkit.Automation.dll" \#>
 \<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" \#>
-\<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll" \#>
 \<#@ Import Namespace="NuPattern.Authoring.PatternToolkit" \#>
 \<#@ Import Namespace="NuPattern.Authoring.Guidance" \#>
 \<#@ Import Namespace="NuPattern.Runtime" \#>
+\<#@ Import Namespace="NuPattern.Runtime.Guidance" \#>
+\<#@ Import Namespace="NuPattern.Runtime.Guidance.Workflow" \#>
 \<#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" \#>
-\<#@ Import Namespace="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features" \#>
 \<#@ Include File="..\Utilities.t4include" \#>
 \<#@ Include File="..\Header.t4include" \#>
 \<#
@@ -27,6 +27,10 @@ var controller = new TocProcessWorkflowController(this, guidance.DocumentFilePat
 using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
+using NuPattern.Runtime.Composition;
+using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.Extensions;
+using NuPattern.Runtime.Guidance.Workflow;
 
 namespace \<#=rootNamespace \#>.Guidance
 {
@@ -34,7 +38,7 @@ namespace \<#=rootNamespace \#>.Guidance
     Indent();
 \#>
 /// <summary>
-/// Defines a base class for the guidance workflow for this feature.
+/// Defines a base class for the guidance workflow for this guidance extension.
 /// </summary>
 [CLSCompliant(false)]
 \<#
@@ -52,11 +56,11 @@ public partial class ProcessWorkflow : GuidanceWorkflow
     Indent();
 \#>
 /// <summary>
-/// Gets the feature composition service.
+/// Gets the composition service.
 /// </summary>
 [Import]
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-private IFeatureCompositionService FeatureComposition { get; set; }
+private INuPatternCompositionService Composition { get; set; }
 \<#
     UnIndent();
     UnIndent();
@@ -113,10 +117,10 @@ partial void OnPostInitialize();
     Indent();
 \#>
 /// <summary>
-/// Defines the feature extension containing the guidance workflow.
+/// Defines the guidance extension containing the guidance workflow.
 /// </summary>
-[Feature("\<#= new Guid(guidance.Parent.Parent.PatternToolkitInfo.Identifier).ToString() \#>", DefaultName = "\<#=guidance.DefaultInstanceName\#>")]
-[Export(typeof(IFeatureExtension))]
+[GuidanceExtension("\<#= new Guid(guidance.Parent.Parent.PatternToolkitInfo.Identifier).ToString() \#>", DefaultName = "\<#=guidance.DefaultInstanceName\#>")]
+[Export(typeof(IGuidanceExtension))]
 [PartCreationPolicy(CreationPolicy.NonShared)]
 [CLSCompliant(false)]
 \<#
@@ -128,15 +132,15 @@ partial void OnPostInitialize();
     }
 \#>
 [System.CodeDom.Compiler.GeneratedCode("<#= VsixInfo.PatternToolkitBuilder.Name #>", "<#= VsixInfo.PatternToolkitBuilder.Version #>")]
-public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
+public partial class GuidanceExtension : BlackboardGuidanceExtension<ProcessWorkflow>
 {
 \<#
     Indent();
 \#>
 /// <summary>
-/// Initializes a new instance of the <see cref="Feature"/> class.
+/// Initializes a new instance of the <see cref="GuidanceExtension"/> class.
 /// </summary>
-public Feature() : base() { }
+public GuidanceExtension() : base() { }
 \<#
     UnIndent();
     UnIndent();

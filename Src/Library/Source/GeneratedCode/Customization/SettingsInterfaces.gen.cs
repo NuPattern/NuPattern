@@ -247,7 +247,7 @@ namespace NuPattern.Library.Automation
         global::System.String AssociatedGuidance { get; set; }
         
         /// <summary>
-        /// The name of the created guidance workflow in the Guidance Explorer. If left blank, the instance name is calculated from the configured default name of the feature extension.
+        /// The name of the created guidance workflow in the Guidance Explorer. If left blank, the instance name is calculated from the configured default name of the guidance extension.
         /// </summary>
         global::System.String GuidanceInstanceName { get; set; }
         

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using NuPattern.Diagnostics;
 
 namespace $rootnamespace$
 {
@@ -51,17 +52,17 @@ namespace $rootnamespace$
                 items.Add("Three");
 
                 // TOOD: If you want a dynamic list of values from somewhere your pattern model,
-                //	you can cast the 'context' parameter to be the type of the 
-                //  owning element of the property where the this converter is configured 
-                //  to gain access to the instances of elements your pattern model.
-                //  var currentElement = context.Instance as IProductElement;
-                //  var variableElement1 = currentElement.As<IVariableElement1>();
+                // you can cast the 'context' parameter to be the type of the 
+                // owning element of the property where the this converter is configured 
+                // to gain access to the instances of elements your pattern model.
+                // var currentElement = context.Instance as IProductElement;
+                // var variableElement1 = currentElement.As<IVariableElement1>();
 
 
-                //	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-                //	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-                //	TODO: Use tracer.TraceInformation() to note key results of execution
-                //	TODO: Raise exceptions for all other errors
+                // TODO: Use tracer.TraceWarning() to note expected and recoverable errors
+                // TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
+                // TODO: Use tracer.TraceInformation() to note key results of execution
+                // TODO: Raise exceptions for all other errors
 
                 return new StandardValuesCollection(items);
             }

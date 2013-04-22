@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Linq;
 using NuPattern;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Events;
 
 namespace $rootnamespace$

@@ -62,7 +62,6 @@
             <SpecificVersion>True</SpecificVersion>
         </Reference>
         <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.<#=VersionInfo.TargetVsVersion#>" />
-        <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams.<#=VersionInfo.TargetVsVersion#>" />
         <Reference Include="NuPattern.Library">
             <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
             <Private>false</Private>
@@ -86,15 +85,6 @@
         <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime">
             <HintPath>$(PatternToolkitRuntime)\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
             <Private>false</Private>
-        </Reference>
-        <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-            <HintPath>$(FeatureExtensionRuntime)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-            <Private>False</Private>
-        </Reference>
-        <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-            <SpecificVersion>False</SpecificVersion>
-            <HintPath>$(FeatureExtensionRuntime)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-            <Private>False</Private>
         </Reference>
     </ItemGroup>
     <ItemGroup>

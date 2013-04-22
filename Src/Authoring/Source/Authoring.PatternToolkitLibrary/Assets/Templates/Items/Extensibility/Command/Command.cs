@@ -4,6 +4,7 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using NuPattern;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime;
 
 namespace $rootnamespace$
@@ -67,10 +68,10 @@ namespace $rootnamespace$
                 "Executing $safeitemname$ on current element '{0}' with AProperty '{1}'", this.CurrentElement.InstanceName, this.AProperty);
 
             // TODO: Implement command automation code
-            //	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-            //	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-            //	TODO: Use tracer.TraceInformation() to note key results of execution
-            //	TODO: Raise exceptions for all other errors
+            // TODO: Use tracer.TraceWarning() to note expected and recoverable errors
+            // TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
+            // TODO: Use tracer.TraceInformation() to note key results of execution
+            // TODO: Raise exceptions for all other errors
         }
     }
 }

@@ -7,7 +7,7 @@ using NuPattern.Runtime.Guidance;
 namespace NuPattern.Library.Design
 {
     /// <summary>
-    /// Provides a standard values list of the instantiated feature extensions in the 
+    /// Provides a standard values list of the instantiated guidance extensions in the 
     /// <see cref="IGuidanceManager"/> service.
     /// </summary>
     internal class GuidanceInstanceNameTypeConverter : TypeConverter

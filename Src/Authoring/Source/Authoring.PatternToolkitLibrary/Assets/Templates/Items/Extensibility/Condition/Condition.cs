@@ -4,6 +4,7 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using NuPattern;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime;
 
 namespace $rootnamespace$
@@ -69,10 +70,10 @@ namespace $rootnamespace$
             // TODO: Implement condition automation code to determine the evaluated result
             var result = true;
 
-            //	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-            //	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-            //	TODO: Use tracer.TraceInformation() to note key results of execution
-            //	TODO: Raise exceptions for all other errors
+            // TODO: Use tracer.TraceWarning() to note expected and recoverable errors
+            // TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
+            // TODO: Use tracer.TraceInformation() to note key results of execution
+            // TODO: Raise exceptions for all other errors
 
             // Make resulting trace statement for this condition
             tracer.TraceInformation(
