@@ -47,7 +47,7 @@
                 <element Id="29623964-bb7b-4778-b7d4-d79652ac5a5e" definitionId="c3d66aa5-3199-44ad-b7d7-f375a9ab16d3" definitionName="Guidance" instanceName="Guidance">
                   <properties>
                     <property Id="adef027a-dd73-4ff6-b6f5-c825314c0184" definitionId="70d70df3-799d-4107-b77b-0001119484a6" definitionName="ProjectContentPath" rawValue="GeneratedCode\Guidance\Content" />
-                    <property Id="85aa968f-7a14-46bf-829e-b01da14e7cd2" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\NUPATTERN\sprint20\Src\Common\Guidance\RuntimeGuidance.doc" />
+                    <property Id="85aa968f-7a14-46bf-829e-b01da14e7cd2" definitionId="39537f0e-76a8-409b-adb5-e54fbdbd8b27" definitionName="DocumentFilePath" rawValue="C:\Projects\CodePlex\NuPattern\Sprint20\Src\Common\Guidance\RuntimeGuidance.doc" />
                     <property Id="64cf70d9-0d22-4696-948f-d96f8af287cd" definitionId="81c7a831-97e3-4067-9d15-8d7fb671a755" definitionName="DefaultInstanceName" rawValue="Using Patterns in Solution Development" />
                   </properties>
                   <references>

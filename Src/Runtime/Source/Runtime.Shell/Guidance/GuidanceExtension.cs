@@ -4,7 +4,7 @@ namespace NuPattern.Runtime.Shell.Guidance
     /// <summary>
     /// Defines the guidance extension containing the guidance workflow.
     /// </summary>
-    public partial class GuidanceExtension
+    partial class GuidanceExtension
     {
         /// <summary>
         /// Gets whether the guidance extension is persisted in solution.

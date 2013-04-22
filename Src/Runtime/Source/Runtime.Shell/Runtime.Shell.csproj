@@ -135,7 +135,7 @@
     <Compile Include="ToolWindows\GuidanceBrowserToolWindow.cs" />
     <Compile Include="ToolWindows\GuidanceExplorerToolWindow.cs" />
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.gen.cs">
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Runtime/Element/C:\Projects\NUPATTERN\sprint20\Src\Runtime\Runtime.slnbldr%252f29623964-bb7b-4778-b7d4-d79652ac5a5e</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Runtime/Element/C:\Projects\CodePlex\NuPattern\Sprint20\Src\Runtime\Runtime.slnbldr%252f29623964-bb7b-4778-b7d4-d79652ac5a5e</SourceModelReference>
       <ItemGuid>ae551abf-1da3-405b-8d82-c2ccb986c7f8</ItemGuid>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
