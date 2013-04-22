@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using NuPattern.Library.Commands;
+using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Guidance;
 
@@ -6,7 +8,6 @@ namespace NuPattern.Authoring.HandsOnLabs.Guidance
 {
     public partial class GuidanceExtension
     {
-        private const string PatternToolkitId = AuthoringToolkitInfo.VsixIdentifier;
         private const string WidgetPatternToolkitName = "WidgetToolkit";
         private ICommandBinding[] commands;
 
@@ -23,11 +24,11 @@ namespace NuPattern.Authoring.HandsOnLabs.Guidance
                     {
                         new CommandBinding(
                             this.GuidanceComposition, 
-                            "NuPattern.Library.Commands.InstantiateSolutionElementCommand",
-                            new FixedValuePropertyBinding("ToolkitIdentifier", PatternToolkitId), 
-                            new FixedValuePropertyBinding("InstanceName", WidgetPatternToolkitName))
+                            typeof(InstantiateSolutionElementCommand).FullName,
+                            new FixedValuePropertyBinding(Reflect<InstantiateSolutionElementCommand>.GetProperty(t => t.ToolkitIdentifier).Name, AuthoringToolkitInfo.VsixIdentifier), 
+                            new FixedValuePropertyBinding(Reflect<InstantiateSolutionElementCommand>.GetProperty(t => t.InstanceName).Name, WidgetPatternToolkitName)) 
                         {
-                            Name = "InstantiatePatternToolkit"
+                            Name = InstantiatePatternToolkitLink.CommandBindingName
                         }
                     };
                 }

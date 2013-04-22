@@ -26,6 +26,10 @@
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
       <Private>false</Private>
     </Reference>
+    <Reference Include="NuPattern.Library">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="NuPattern.Runtime.Extensibility">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
       <Private>false</Private>
@@ -49,7 +53,7 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Assets\Guidance\InstantiatePatternToolkit.cs" />
+    <Compile Include="Assets\Guidance\Links\InstantiatePatternToolkitLink.cs" />
     <Content Include="..\..\..\LICENSE.txt">
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>

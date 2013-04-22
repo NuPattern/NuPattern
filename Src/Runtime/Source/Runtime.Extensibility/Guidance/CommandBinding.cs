@@ -19,9 +19,9 @@ namespace NuPattern.Runtime.Guidance
         {
         }
 
-		/// <summary>
-		/// Gets the name of the binding.
-		/// </summary>
+        /// <summary>
+        /// Gets the name of the binding.
+        /// </summary>
         public string Name { get; set; }
     }
 }

@@ -100,7 +100,7 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Assets\Guidance\Links\GuidanceExtension.cs" />
+    <Compile Include="Assets\Guidance\GuidanceExtension.cs" />
     <Compile Include="Assets\Guidance\Links\HandOnLabsToolkitInfo.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -928,7 +928,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Compile Include="Assets\Guidance\Links\GuidanceLinkBase.cs" />
-    <Compile Include="Assets\Guidance\Links\InstantiateUsingGudianceLink.cs" />
+    <Compile Include="Assets\Guidance\Links\InstantiateUsingGuidanceLink.cs" />
     <Compile Include="Assets\Guidance\Links\InstantiateHolLink.cs" />
     <Compile Include="Assets\Wizards\Pages\ToolkitInfo.xaml.cs">
       <DependentUpon>ToolkitInfo.xaml</DependentUpon>

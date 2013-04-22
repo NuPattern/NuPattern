@@ -7,24 +7,24 @@ using NuPattern.Runtime.Guidance.Workflow;
 
 namespace NuPattern.Runtime.Guidance.LaunchPoints
 {
-	/// <summary>
-	/// A base class for launchpoints that are links in guidance content.
-	/// </summary>
+    /// <summary>
+    /// A base class for launchpoints that are links in guidance content.
+    /// </summary>
     public abstract class LinkLaunchPoint : ILaunchPoint
     {
-		/// <summary>
-		/// Gets the strategy for querying the status.
-		/// </summary>
+        /// <summary>
+        /// Gets the strategy for querying the status.
+        /// </summary>
         protected virtual IQueryStatusStrategy QueryStatusStrategy { get; set; }
 
-		/// <summary>
-		/// Gets the <see cref="IGuidanceManager"/>.
-		/// </summary>
-		protected IGuidanceManager GuidanceManager;
+        /// <summary>
+        /// Gets the <see cref="IGuidanceManager"/>.
+        /// </summary>
+        protected IGuidanceManager GuidanceManager;
 
-		/// <summary>
-		/// Creates a new instance of the <see cref="LinkLaunchPoint"/> class.
-		/// </summary>
+        /// <summary>
+        /// Creates a new instance of the <see cref="LinkLaunchPoint"/> class.
+        /// </summary>
         protected LinkLaunchPoint(IGuidanceManager guidanceManager)
         {
             Guard.NotNull(() => guidanceManager, guidanceManager);
@@ -32,21 +32,21 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
             this.QueryStatusStrategy = new DefaultQueryStatusStrategy(this.GetType().Name);
         }
 
-		/// <summary>
-		/// Gets the name of the binding.
-		/// </summary>
+        /// <summary>
+        /// Gets the name of the binding.
+        /// </summary>
         protected abstract string BindingName { get; }
 
-		/// <summary>
-		/// Whether the binding can be executed.
-		/// </summary>
-		/// <param name="extension"></param>
-		/// <returns></returns>
+        /// <summary>
+        /// Whether the binding can be executed.
+        /// </summary>
+        /// <param name="extension"></param>
+        /// <returns></returns>
         public virtual bool CanExecute(IGuidanceExtension extension)
         {
             if (extension != null && this.QueryStatusStrategy.QueryStatus(extension).Enabled)
             {
-				// Verify the action is enabled.
+                // Verify the action is enabled.
                 var activeWorkflow = extension.GuidanceWorkflow != null ? extension.GuidanceWorkflow : GuidanceManager.ActiveGuidanceExtension.GuidanceWorkflow;
                 if (activeWorkflow != null)
                 {
@@ -70,10 +70,10 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
             MessageBox.Show("Unable to execute command because the associated guidance action is not in the Enabled (green) state.");
         }
 
-		/// <summary>
-		/// Executes the binding
-		/// </summary>
-		/// <param name="extension"></param>
+        /// <summary>
+        /// Executes the binding
+        /// </summary>
+        /// <param name="extension"></param>
         public virtual void Execute(IGuidanceExtension extension)
         {
             if (!this.CanExecute(extension))

@@ -25,6 +25,7 @@ using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Diagnostics;
 using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.LaunchPoints;
 using NuPattern.Runtime.Guidance.Workflow;
 using NuPattern.Runtime.Settings;
 using NuPattern.Runtime.Shell.Commands;
@@ -102,8 +103,8 @@ namespace NuPattern.Runtime.Shell
         private IExtensionManager ExtensionManager { get; set; }
         [Import]
         private IGuidanceWindowsService GuidanceWindowsService { get; set; }
-        //[ImportMany(typeof(ILaunchPoint))]
-        //private IEnumerable<Lazy<ILaunchPoint>> LaunchPoints { get; set; }
+        [ImportMany(typeof(ILaunchPoint))]
+        private IEnumerable<Lazy<ILaunchPoint>> LaunchPoints { get; set; }
         [Import]
         private IPatternManager PatternManager { get; set; }
         [Import]
@@ -200,6 +201,8 @@ namespace NuPattern.Runtime.Shell
             this.RegisterRefreshGuidanceStates();
             this.GuidanceManager.InstantiatedExtensionsChanged += this.OnInstantiatedGuidanceExtensionChanged;
             this.GuidanceManager.ActiveExtensionChanged += this.OnActiveGuidanceExtensionChanged;
+
+            this.InitializeVsLaunchPoints();
         }
 
         /// <summary>
@@ -539,6 +542,22 @@ namespace NuPattern.Runtime.Shell
             return assembly;
         }
 #endif
+
+        private void InitializeVsLaunchPoints()
+        {
+            var menuCommandService = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
+            if (menuCommandService != null)
+            {
+                var lps = this.LaunchPoints
+                    .Select(lazy => lazy.Value)
+                    .OfType<VsLaunchPoint>();
+
+                foreach (var launchPoint in lps)
+                {
+                    menuCommandService.AddCommand(launchPoint);
+                }
+            }
+        }
 
         private void OnInstantiatedGuidanceExtensionChanged(object sender, EventArgs args)
         {

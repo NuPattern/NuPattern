@@ -2,21 +2,22 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
+using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Guidance.UI
 {
     internal class GuidanceBrowser : UserControl
     {
         public static readonly DependencyProperty SourceProperty =
-            DependencyProperty.Register("Source", typeof(Uri), typeof(GuidanceBrowser), new UIPropertyMetadata(OnSourceChanged));
+            DependencyProperty.Register(Reflector<GuidanceBrowser>.GetPropertyName(x => x.Source), typeof(Uri), typeof(GuidanceBrowser), new UIPropertyMetadata(OnSourceChanged));
         public static readonly DependencyProperty CommandProperty =
-            DependencyProperty.Register("Command", typeof(ICommand), typeof(GuidanceBrowser));
+            DependencyProperty.Register(Reflector<GuidanceBrowser>.GetPropertyName(x => x.Command), typeof(System.Windows.Input.ICommand), typeof(GuidanceBrowser));
         public static readonly DependencyProperty CommandParameterProperty =
-            DependencyProperty.Register("CommandParameter", typeof(object), typeof(GuidanceBrowser));
+            DependencyProperty.Register(Reflector<GuidanceBrowser>.GetPropertyName(x => x.CommandParameter), typeof(object), typeof(GuidanceBrowser));
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2104:DoNotDeclareReadOnlyMutableReferenceTypes", Justification = "It is immutable")]
         public static readonly DependencyPropertyKey CurrentLinkPropertyKey =
-            DependencyProperty.RegisterReadOnly("CurrentLink", typeof(Uri), typeof(GuidanceBrowser), new UIPropertyMetadata(null));
+            DependencyProperty.RegisterReadOnly(Reflector<GuidanceBrowser>.GetPropertyName(x => x.CurrentLink), typeof(Uri), typeof(GuidanceBrowser), new UIPropertyMetadata(null));
 
         private WebBrowser webBrowser;
 
@@ -27,7 +28,6 @@ namespace NuPattern.Runtime.Guidance.UI
 
             this.Content = this.webBrowser;
             GuidanceCallContext.Current.GuidanceBrowserControl = this;
-
         }
 
         public System.Windows.Input.ICommand Command

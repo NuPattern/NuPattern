@@ -14,8 +14,10 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
     [LaunchPoint(Id = "InstantiateHolToolkit")]
     public class InstantiateHolLink : GuidanceLinkBase
     {
+        internal const string CommandBindingName = "InstantiateHolCommandBinding";
+
         /// <summary>
-        /// Initializes a new instance of the InstantiateHol class.
+        /// Creates a new instance of the <see cref="InstantiateHolLink"/> class.
         /// </summary>
         [ImportingConstructor]
         public InstantiateHolLink(IGuidanceManager guidanceManager)
@@ -24,24 +26,14 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
         }
 
         /// <summary>
-        /// Gets the binding name
-        /// </summary>
-        internal static string CommandBindingName
-        {
-            get
-            {
-                return "InstantiateHolCommandBinding";
-            }
-        }
-
-        /// <summary>
-        /// Determines if the link can execute
+        /// Determines whether the link can be executed.
         /// </summary>
         public override bool CanExecute(IGuidanceExtension extension)
         {
             Guard.NotNull(() => extension, extension);
 
-            return extension.GuidanceManager.InstalledGuidanceExtensions.Any(f => f.ExtensionId.Equals(HandsOnLabsToolkitInfo.Identifier, StringComparison.OrdinalIgnoreCase));
+            return extension.GuidanceManager.InstalledGuidanceExtensions
+                .Any(f => f.ExtensionId.Equals(HandsOnLabsToolkitInfo.Identifier, StringComparison.OrdinalIgnoreCase));
         }
     }
 }

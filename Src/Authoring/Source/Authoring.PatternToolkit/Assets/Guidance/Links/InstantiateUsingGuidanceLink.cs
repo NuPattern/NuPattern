@@ -13,24 +13,15 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
     [LaunchPoint(Id = "InstantiateUsingGudiance")]
     public class InstantiateUsingGuidanceLink : GuidanceLinkBase
     {
+        internal const string CommandBindingName = "InstantiateUsingGuidanceCommandBinding";
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="InstantiateUsingGuidanceLink"/> class.
+        /// Creates a new instance of the <see cref="InstantiateUsingGuidanceLink"/> class.
         /// </summary>
         [ImportingConstructor]
         public InstantiateUsingGuidanceLink(IGuidanceManager guidanceManager)
             : base(guidanceManager, CommandBindingName)
         {
-        }
-
-        /// <summary>
-        /// Gets the binding name
-        /// </summary>
-        internal static string CommandBindingName
-        {
-            get
-            {
-                return "InstantiateUsingGuidanceCommandBinding";
-            }
         }
     }
 }

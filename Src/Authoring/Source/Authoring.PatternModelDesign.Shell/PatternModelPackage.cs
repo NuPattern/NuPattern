@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Composition;
+﻿using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
-using System.ComponentModel.Design;
-using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
-using NuPattern.Runtime.Guidance;
-using NuPattern.Runtime.Guidance.LaunchPoints;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -21,13 +15,6 @@ namespace NuPattern.Runtime.Schema
     [ProvideAutoLoad(UIContextGuids.SolutionExists)]
     internal sealed partial class PatternModelPackage
     {
-        [ImportMany(typeof(ILaunchPoint))]
-        private IEnumerable<Lazy<ILaunchPoint, IDictionary<string, object>>> LaunchPoints
-        {
-            get;
-            set;
-        }
-
         /// <summary>
         /// Initialization method called by the package base class when this package is loaded.
         /// </summary>
@@ -40,8 +27,6 @@ namespace NuPattern.Runtime.Schema
 
             var componentModel = this.GetService(typeof(SComponentModel)) as IComponentModel;
             componentModel.DefaultCompositionService.SatisfyImportsOnce(this);
-
-            this.InitializeVsLaunchPoints();
         }
 
         protected override void Dispose(bool disposing)
@@ -51,23 +36,6 @@ namespace NuPattern.Runtime.Schema
             if (disposing)
             {
             }
-        }
-
-        private void InitializeVsLaunchPoints()
-        {
-			var menuCommandService = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
-			if (menuCommandService != null)
-			{
-				var featureLaunchPoints = this.LaunchPoints
-					.Select(lazy => lazy.Value)
-					.OfType<VsLaunchPoint>()
-					.Where(launchPoint => launchPoint.GetType().Assembly == this.GetType().Assembly);
-
-				foreach (var launchPoint in featureLaunchPoints)
-				{
-					menuCommandService.AddCommand(launchPoint);
-				}
-			}
         }
     }
 }

@@ -15,11 +15,11 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
     [CLSCompliant(false)]
     public abstract class VsLaunchPoint : OleMenuCommand, ILaunchPoint
     {
-		/// <summary>
-		/// Creates a new instance of the <see cref="VsLaunchPoint"/> class.
-		/// </summary>
-		/// <param name="guidanceManager"></param>
-		/// <param name="id"></param>
+        /// <summary>
+        /// Creates a new instance of the <see cref="VsLaunchPoint"/> class.
+        /// </summary>
+        /// <param name="guidanceManager"></param>
+        /// <param name="id"></param>
         protected VsLaunchPoint(IGuidanceManager guidanceManager, CommandID id)
             : base(OnExecute, id)
         {
@@ -31,24 +31,24 @@ namespace NuPattern.Runtime.Guidance.LaunchPoints
             this.GuidanceInstanceLocator = new DefaultGuidanceInstanceLocator(guidanceManager, this.GetType());
         }
 
-		/// <summary>
-		/// Gets hte name of the binding.
-		/// </summary>
+        /// <summary>
+        /// Gets the name of the binding.
+        /// </summary>
         protected abstract string BindingName { get; }
 
-		/// <summary>
-		/// Gets the instance locator.
-		/// </summary>
+        /// <summary>
+        /// Gets the instance locator.
+        /// </summary>
         protected virtual IGuidanceInstanceLocator GuidanceInstanceLocator { get; set; }
 
-		/// <summary>
-		/// Gets the <see cref="IGuidanceManager"/>.
-		/// </summary>
+        /// <summary>
+        /// Gets the <see cref="IGuidanceManager"/>.
+        /// </summary>
         protected virtual IGuidanceManager GuidanceManager { get; private set; }
 
-		/// <summary>
-		/// Gets the <see cref="IQueryStatusStrategy"/>.
-		/// </summary>
+        /// <summary>
+        /// Gets the <see cref="IQueryStatusStrategy"/>.
+        /// </summary>
         protected virtual IQueryStatusStrategy QueryStatusStrategy { get; set; }
 
         /// <summary>
