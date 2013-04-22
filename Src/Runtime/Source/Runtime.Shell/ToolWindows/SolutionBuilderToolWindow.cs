@@ -108,10 +108,10 @@ namespace NuPattern.Runtime.Shell.ToolWindows
 
             var packageToolWindow = serviceProvider.GetService<IPackageToolWindow>();
 
+            packageToolWindow.ShowWindow<SolutionBuilderToolWindow>(true);
+
             if (!packageToolWindow.IsWindowVisible<SolutionBuilderToolWindow>())
             {
-                packageToolWindow.ShowWindow<SolutionBuilderToolWindow>(true);
-
                 var settingsManager = new ShellSettingsManager(serviceProvider);
                 var store = settingsManager.GetWritableSettingsStore(SettingsScope.UserSettings);
 

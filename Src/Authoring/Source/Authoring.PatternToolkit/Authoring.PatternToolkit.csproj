@@ -100,7 +100,7 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Assets\Guidance\Links\Feature.cs" />
+    <Compile Include="Assets\Guidance\Links\GuidanceExtension.cs" />
     <Compile Include="Assets\Guidance\Links\HandOnLabsToolkitInfo.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

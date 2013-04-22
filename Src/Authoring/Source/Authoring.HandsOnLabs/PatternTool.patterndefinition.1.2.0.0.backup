@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.3.0.0" Id="9060cbd8-62e7-4e45-a8b6-795a32676067" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.2.0.0" Id="9060cbd8-62e7-4e45-a8b6-795a32676067" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
   <dm0:extensions>
     <templateSettings Id="aed4ee56-bb0d-4fcd-95a8-8927bf6df103" templateUri="template://projectgroup/CSharp/c3c73531a152-PatternToolkitHOLs" unfoldOnElementCreated="false" commandId="00000000-0000-0000-0000-000000000000" wizardId="00000000-0000-0000-0000-000000000000" templateAuthoringUri="solution://fb67bcad-dfb0-40b1-9e02-ce4d8da5be9d/27fdaf3f-8ec0-409e-9664-7ba94c121dff">
       <extendedElement>
@@ -21,13 +21,13 @@
         <automationSettingsSchemaMoniker Id="c88a3a39-4321-4960-8edd-13fd61952167" />
       </extendedElement>
     </eventSettings>
-    <commandSettings Id="7e2c4448-9877-434c-8302-5abfaf7b870a" typeId="NuPattern.Library.Commands.InstantiateGuidanceWorkflowCommand">
+    <commandSettings Id="7e2c4448-9877-434c-8302-5abfaf7b870a" typeId="NuPattern.Library.Commands.InstantiateFeatureCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d6b5820b-135a-419b-9dc1-7f6279e1771d" />
       </extendedElement>
       <properties>[
   {
-    "Name": "ExtensionId",
+    "Name": "FeatureId",
     "Value": "5d64cfe6-a6ff-4e73-a000-c6a8832740ff",
     "ValueProvider": null
   },
@@ -48,7 +48,7 @@
   }
 ]</properties>
     </commandSettings>
-    <commandSettings Id="0433fe7d-38fd-4aa3-bcbd-fc9dccbf9205" typeId="NuPattern.Library.Commands.ActivateGuidanceWorkflowCommand">
+    <commandSettings Id="0433fe7d-38fd-4aa3-bcbd-fc9dccbf9205" typeId="NuPattern.Library.Commands.ActivateFeatureCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="010f16b7-1f97-4696-9a78-8e5336d9b68f" />
       </extendedElement>
@@ -70,7 +70,7 @@
   }
 ]</conditions>
     </menuSettings>
-    <guidanceExtension Id="e6de3e46-952d-4c32-bf68-38d0879bb653" guidanceInstanceName="Pattern Toolkit Hands-On Labs" guidanceSharedInstance="true" extensionId="5d64cfe6-a6ff-4e73-a000-c6a8832740ff">
+    <guidanceExtension Id="e6de3e46-952d-4c32-bf68-38d0879bb653" guidanceInstanceName="Pattern Toolkit Hands-On Labs" guidanceFeatureId="5d64cfe6-a6ff-4e73-a000-c6a8832740ff" guidanceSharedInstance="true">
       <extendedElement>
         <patternSchemaMoniker Id="71309920-c4ac-4283-b6bf-3cec975eca86" />
       </extendedElement>
