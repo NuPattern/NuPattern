@@ -26156,7 +26156,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternModelSchemaDiagramSerializerBase for DomainClass PatternModelSchemaDiagram.
 	/// </summary>
-	public abstract partial class PatternModelSchemaDiagramSerializerBase : DslDiagrams::DiagramSerializer
+	internal abstract partial class PatternModelSchemaDiagramSerializerBase : DslDiagrams::DiagramSerializer
 	{
 		#region Constructor
 		/// <summary>
@@ -26978,7 +26978,7 @@ namespace NuPattern.Runtime.Schema
 	/// <summary>
 	/// Serializer PatternModelSchemaDiagramSerializer for DomainClass PatternModelSchemaDiagram.
 	/// </summary>
-	public partial class PatternModelSchemaDiagramSerializer : PatternModelSchemaDiagramSerializerBase
+	internal partial class PatternModelSchemaDiagramSerializer : PatternModelSchemaDiagramSerializerBase
 	{
 		#region Constructor
 		/// <summary>

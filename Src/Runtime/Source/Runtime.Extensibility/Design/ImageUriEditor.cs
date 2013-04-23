@@ -4,12 +4,11 @@ using System.Drawing.Design;
 using System.Globalization;
 using System.Windows;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.UI;
 using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design
 {
@@ -19,7 +18,7 @@ namespace NuPattern.Runtime.Design
     public class ImageUriEditor : UITypeEditor
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ImageUriEditor>();
-        private const string ImageExtension = ".ico;*.png;*.jpg";
+        private const string ImageExtension = @".ico;*.png;*.jpg";
         private Window currentWindow;
 
         /// <summary>
@@ -47,7 +46,7 @@ namespace NuPattern.Runtime.Design
             Guard.NotNull(() => provider, provider);
             Guard.NotNull(() => value, value);
 
-            var uriService = provider.GetService<IFxrUriReferenceService>();
+            var uriService = provider.GetService<IUriReferenceService>();
 
             var iconUri = value as string;
 
@@ -68,7 +67,7 @@ namespace NuPattern.Runtime.Design
 
                     ConfigureSolutionItem(item);
 
-                    iconUri = uriService.CreateUri<ResourcePack>(new ResourcePack(item), "pack").AbsoluteUri;
+                    iconUri = uriService.CreateUri<ResourcePack>(new ResourcePack(item), PackUri.UriScheme).AbsoluteUri;
                 }
             }, Resources.ImageUriEditor_FailedToEdit);
 
@@ -80,7 +79,7 @@ namespace NuPattern.Runtime.Design
             if (item != null)
             {
                 var customTool = item.Data.CustomTool;
-                item.Data.ItemType = "Resource";
+                item.Data.ItemType = @"Resource";
                 item.Data.CustomTool = customTool;
             }
         }
@@ -93,7 +92,7 @@ namespace NuPattern.Runtime.Design
             return UITypeEditorEditStyle.Modal;
         }
 
-        private static void SetSelectedItem(ITypeDescriptorContext context, ISolutionPicker picker, IFxrUriReferenceService uriService, object value)
+        private static void SetSelectedItem(ITypeDescriptorContext context, ISolutionPicker picker, IUriReferenceService uriService, object value)
         {
             var uri = value as string;
             if (!string.IsNullOrEmpty(uri))

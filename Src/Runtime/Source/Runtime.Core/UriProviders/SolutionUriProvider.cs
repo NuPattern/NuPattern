@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using EnvDTE;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UriProviders
@@ -14,17 +13,13 @@ namespace NuPattern.Runtime.UriProviders
     /// </summary>
     // TODO: Fix FERT so that this class does not have ot be public to register itself.
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [Export(typeof(IFxrUriReferenceProvider))]
+    [Export(typeof(IUriReferenceProvider))]
     [CLSCompliant(false)]
-    public class SolutionUriProvider : IFxrUriReferenceProvider<IItemContainer>
+    public class SolutionUriProvider : IUriReferenceProvider<IItemContainer>
     {
-        /// <summary>
-        /// The default scheme for this provider.
-        /// </summary>
-        public const string UriSchemeName = "solution";
-
         internal const char UriPathDelimiter = '/';
         internal const char SolutionPathDelimiter = '\\';
+        private const string RootPrefix = @"root/";
 
         /// <summary>
         /// Gets the URI scheme for this provider.
@@ -34,7 +29,7 @@ namespace NuPattern.Runtime.UriProviders
         {
             get
             {
-                return UriSchemeName;
+                return SolutionUri.UriScheme;
             }
         }
 
@@ -48,7 +43,7 @@ namespace NuPattern.Runtime.UriProviders
         {
             Guard.NotNull(() => uri, uri);
 
-            if (!uri.Scheme.Equals(UriSchemeName))
+            if (!uri.Scheme.Equals(SolutionUri.UriScheme))
             {
                 throw new UriFormatException(string.Format(CultureInfo.CurrentCulture, Properties.Resources.SolutionUriProvider_InvalidSolutionUriProviderUri, uri.Scheme));
             }
@@ -115,7 +110,7 @@ namespace NuPattern.Runtime.UriProviders
                 return null;
             }
 
-            var hostPath = (UriSchemeName + Uri.SchemeDelimiter + projectId);
+            var hostPath = (SolutionUri.UriScheme + Uri.SchemeDelimiter + projectId);
             var originalPath = uri.OriginalString.Substring(hostPath.Length);
             var projectPath = originalPath.Trim(UriPathDelimiter);
 
@@ -296,7 +291,7 @@ namespace NuPattern.Runtime.UriProviders
             var builder = new StringBuilder()
                 .Append(this.UriScheme)
                 .Append(Uri.SchemeDelimiter)
-                .Append("root/");
+                .Append(RootPrefix);
 
             return new Uri(builder.ToString());
         }
@@ -313,7 +308,7 @@ namespace NuPattern.Runtime.UriProviders
             var builder = new StringBuilder()
                 .Append(this.UriScheme)
                 .Append(Uri.SchemeDelimiter)
-                .Append("root/")
+                .Append(RootPrefix)
                 .Append(MakeUriPath(solutionFolder.GetLogicalPath()));
 
             return new Uri(builder.ToString());
@@ -406,7 +401,7 @@ namespace NuPattern.Runtime.UriProviders
                 var builder = new StringBuilder()
                     .Append(this.UriScheme)
                     .Append(Uri.SchemeDelimiter)
-                    .Append("root/")
+                    .Append(RootPrefix)
                     .Append(MakeUriPath(solutionOrProjectItem.GetLogicalPath()));
 
                 return new Uri(builder.ToString());
@@ -427,9 +422,9 @@ namespace NuPattern.Runtime.UriProviders
         private static string GetProjectIdFromUri(Uri uri)
         {
             Guid projectId = Guid.Empty;
-            var result = Guid.TryParseExact(uri.Host, "D", out projectId);
+            var result = Guid.TryParseExact(uri.Host, @"D", out projectId);
 
-            return result ? projectId.ToString("D") : null;
+            return result ? projectId.ToString(@"D") : null;
         }
 
         /// <summary>
@@ -465,9 +460,9 @@ namespace NuPattern.Runtime.UriProviders
             var projectPath = GetProjectPathFromUri(uri);
 
             Guid itemId = Guid.Empty;
-            var result = Guid.TryParseExact(projectPath, "D", out itemId);
+            var result = Guid.TryParseExact(projectPath, @"D", out itemId);
 
-            return result ? itemId.ToString("D") : null;
+            return result ? itemId.ToString(@"D") : null;
         }
 
         /// <summary>

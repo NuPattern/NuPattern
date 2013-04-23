@@ -1,11 +1,11 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Automation;
 using NuPattern.Modeling;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.Store;
 
@@ -24,14 +24,14 @@ namespace NuPattern.Library.UnitTests.Automation.Guidance
             private DslTestStore<ProductStateStoreDomainModel> store = new DslTestStore<ProductStateStoreDomainModel>();
             private Product product;
             private GuidanceReferenceValidation validator;
-            private Mock<IFeatureManager> featureManager;
+            private Mock<IGuidanceManager> guidanceManager;
 
             [TestInitialize]
             public void InitializeContext()
             {
-                this.featureManager = new Mock<IFeatureManager>();
+                this.guidanceManager = new Mock<IGuidanceManager>();
                 this.validator = new GuidanceReferenceValidation();
-                this.validator.FeatureManager = this.featureManager.Object;
+                this.validator.GuidanceManager = this.guidanceManager.Object;
 
                 this.store.TransactionManager.DoWithinTransaction(() =>
                 {
@@ -85,9 +85,9 @@ namespace NuPattern.Library.UnitTests.Automation.Guidance
                     this.product.AddReference(ReferenceKindConstants.Guidance, "Bar");
                 });
 
-                Mock<IFeatureExtension> feature = new Mock<IFeatureExtension>();
+                Mock<NuPattern.Runtime.Guidance.IGuidanceExtension> feature = new Mock<NuPattern.Runtime.Guidance.IGuidanceExtension>();
                 feature.Setup(f => f.InstanceName).Returns("Bar");
-                this.featureManager.Setup(manager => manager.InstantiatedFeatures).Returns(new[] { feature.Object });
+                this.guidanceManager.Setup(manager => manager.InstantiatedGuidanceExtensions).Returns(new[] { feature.Object });
 
                 this.validator.ValidateGuidanceReference(validationContext, this.product);
 

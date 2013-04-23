@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using EnvDTE;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Diagnostics;
 using NuPattern.VisualStudio.Properties;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.VisualStudio.TemplateWizards
 {
@@ -13,7 +13,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
     /// Base template wizard that performs basic tracing.
     /// </summary>
     [CLSCompliant(false)]
-    public abstract class TemplateWizard : IWizard, IDisposable
+    public abstract class TemplateWizard : IDisposable, ITemplateWizard
     {
         private ITraceSource tracer;
         private IDisposable activity;
@@ -29,12 +29,12 @@ namespace NuPattern.VisualStudio.TemplateWizards
         /// <summary>
         /// Gets the template file being unfolded.
         /// </summary>
-        public string TemplateFile { get; private set; }
+        public string TemplateFile { get; protected set; }
 
         /// <summary>
         /// Gets the schema of the template being unfolded.
         /// </summary>
-        public IVsTemplate TemplateSchema { get; private set; }
+        public IVsTemplate TemplateSchema { get; protected set; }
 
         /// <summary>
         /// Executes when the wizard ends.
@@ -63,7 +63,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
         /// <summary>
         /// Executed before a file is opened.
         /// </summary>
-        public virtual void BeforeOpeningFile(ProjectItem projectItem)
+        public virtual void BeforeOpeningFile(EnvDTE.ProjectItem projectItem)
         {
             Guard.NotNull(() => projectItem, projectItem);
         }
@@ -88,7 +88,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
         /// Runs custom wizard logic when a project item has finished generating.
         /// </summary>
         /// <param name="projectItem">The project item that finished generating.</param>
-        public virtual void ProjectItemFinishedGenerating(ProjectItem projectItem)
+        public virtual void ProjectItemFinishedGenerating(EnvDTE.ProjectItem projectItem)
         {
             if (projectItem == null)
             {

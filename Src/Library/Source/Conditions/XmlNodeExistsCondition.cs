@@ -4,13 +4,12 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.XPath;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings.Design;
+using NuPattern.VisualStudio.Solution;
 using NuPattern.Xml;
 
 namespace NuPattern.Library.Conditions
@@ -18,9 +17,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// Indicates that an element orattribute of an XML document exists.
     /// </summary>
-    [DescriptionResource("XmlNodeExistsCondition_Description", typeof(Resources))]
-    [DisplayNameResource("XmlNodeExistsCondition_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
+    [DescriptionResource(@"XmlNodeExistsCondition_Description", typeof(Resources))]
+    [DisplayNameResource(@"XmlNodeExistsCondition_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class XmlNodeExistsCondition : Condition
     {
@@ -53,7 +52,7 @@ namespace NuPattern.Library.Conditions
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriReferenceService { get; set; }
+        public IUriReferenceService UriReferenceService { get; set; }
 
         /// <summary>
         /// Gets or sets the XML Processor.
@@ -65,23 +64,23 @@ namespace NuPattern.Library.Conditions
         /// <summary>
         /// Gets or sets the source path of the XML file.
         /// </summary>
-        [DisplayNameResource("ModifyXmlCommand_SourcePath_DisplayName", typeof(Resources))]
-        [DescriptionResource("ModifyXmlCommand_SourcePath_Description", typeof(Resources))]
+        [DisplayNameResource(@"ModifyXmlCommand_SourcePath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ModifyXmlCommand_SourcePath_Description", typeof(Resources))]
         public virtual string SourcePath { get; set; }
 
         /// <summary>
         /// Gets or sets the path in the XML element/attribute to modify.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("ModifyXmlCommand_XmlPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("ModifyXmlCommand_XmlPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"ModifyXmlCommand_XmlPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ModifyXmlCommand_XmlPath_Description", typeof(Resources))]
         public virtual string XmlPath { get; set; }
 
         /// <summary>
         /// Gets or sets the namespaces to use in the <see cref="XmlPath"/> query.
         /// </summary>
-        [DisplayNameResource("ModifyXmlCommand_Namespaces_DisplayName", typeof(Resources))]
-        [DescriptionResource("ModifyXmlCommand_Namespaces_Description", typeof(Resources))]
+        [DisplayNameResource(@"ModifyXmlCommand_Namespaces_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ModifyXmlCommand_Namespaces_Description", typeof(Resources))]
         [TypeConverter(typeof(DesignCollectionConverter<XmlNamespace>))]
         public Collection<XmlNamespace> Namespaces { get; set; }
 

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.UI.ViewModels;
 using NuPattern.Runtime.UI.Views;
 using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI
 {
@@ -32,7 +32,7 @@ namespace NuPattern.Runtime.UI
         /// <summary>
         /// Gets or sets the root item to pick from.
         /// </summary>
-        public IItemContainer RootItem { get; set; }
+        public ISolution RootItem { get; set; }
 
         /// <summary>
         /// Gets or sets the title of the picker.

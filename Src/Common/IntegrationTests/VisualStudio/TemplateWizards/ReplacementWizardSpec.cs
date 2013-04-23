@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using System.Xml.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.VisualStudio.Solution;
@@ -21,7 +20,7 @@ namespace NuPattern.IntegrationTests.TemplateWizards
             this.solution = (ISolution)VsIdeTestHostContext.ServiceProvider.GetService(typeof(ISolution));
             this.solution.CreateInstance(this.DeploymentDirectory, "EmptySolution");
 
-            var templates = (IFxrTemplateService)VsIdeTestHostContext.ServiceProvider.GetService(typeof(IFxrTemplateService));
+            var templates = (ITemplateService)VsIdeTestHostContext.ServiceProvider.GetService(typeof(ITemplateService));
             this.toolkitTemplate = templates.Find("MyTemplate2", "CSharp");
         }
 

@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Presentation.Properties {
-    using System;
-    
-    
+namespace NuPattern.Presentation.Properties
+{
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -75,6 +75,15 @@ namespace NuPattern.Presentation.Properties {
         internal static string GroupingEnumerableConverter_InvalidPropertyName {
             get {
                 return ResourceManager.GetString("GroupingEnumerableConverter_InvalidPropertyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The expression &apos;{0}&apos; does not contain a valid property..
+        /// </summary>
+        internal static string ViewModel_InvalidExpressionProperty {
+            get {
+                return ResourceManager.GetString("ViewModel_InvalidExpressionProperty", resourceCulture);
             }
         }
     }

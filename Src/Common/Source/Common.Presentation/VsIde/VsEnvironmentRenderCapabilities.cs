@@ -3,6 +3,7 @@ using System.ComponentModel;
 using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using NuPattern.Reflection;
 
 namespace NuPattern.Presentation.VsIde
 {
@@ -99,7 +100,7 @@ namespace NuPattern.Presentation.VsIde
                 if (this.areAnimationsAllowed != value)
                 {
                     this.areAnimationsAllowed = value;
-                    this.RaisePropertyChanged("AreAnimationsAllowed");
+                    this.RaisePropertyChanged(Reflector<VsEnvironmentRenderCapabilities>.GetPropertyName(x => x.AreAnimationsAllowed));
                 }
             }
         }
@@ -118,7 +119,7 @@ namespace NuPattern.Presentation.VsIde
                 if (this.areGradientsAllowed != value)
                 {
                     this.areGradientsAllowed = value;
-                    this.RaisePropertyChanged("AreGradientsAllowed");
+                    this.RaisePropertyChanged(Reflector<VsEnvironmentRenderCapabilities>.GetPropertyName(x => x.AreGradientsAllowed));
                 }
             }
         }
@@ -150,7 +151,7 @@ namespace NuPattern.Presentation.VsIde
                     this.visualEffectsAllowed = value;
                     this.AreGradientsAllowed = (value & 2) == 2;
                     this.AreAnimationsAllowed = (value & 1) == 1;
-                    this.RaisePropertyChanged("VisualEffectsAllowed");
+                    this.RaisePropertyChanged(Reflector<VsEnvironmentRenderCapabilities>.GetPropertyName(x => x.VisualEffectsAllowed));
                     this.RenderCapabilitiesChanged.RaiseEvent(this, EventArgs.Empty);
                 }
             }

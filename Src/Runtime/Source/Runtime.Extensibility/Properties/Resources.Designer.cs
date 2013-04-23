@@ -88,6 +88,24 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not resolve component with id &apos;{0}&apos; to an actual instance of type {1}..
+        /// </summary>
+        internal static string Binding_EvaluateBindingError {
+            get {
+                return ResourceManager.GetString("Binding_EvaluateBindingError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating binding {0}.
+        /// </summary>
+        internal static string Binding_TraceEvaluate {
+            get {
+                return ResourceManager.GetString("Binding_TraceEvaluate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Both the Visual Studio default catalog and the Feature Builder catalogs must be present in the system..
         /// </summary>
         internal static string BindingCompositionService_CatalogsNotAvailable {
@@ -178,6 +196,15 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Identification.
+        /// </summary>
+        internal static string Category_Identification {
+            get {
+                return ResourceManager.GetString("Category_Identification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Initialization has already been done. This invocation can only be performed before EndInit is been called..
         /// </summary>
         internal static string CodeGeneration_InitializationFinished {
@@ -219,6 +246,15 @@ namespace NuPattern.Runtime.Properties {
         internal static string ConditionBindingSettings_EmptyBinding {
             get {
                 return ResourceManager.GetString("ConditionBindingSettings_EmptyBinding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; validation failed..
+        /// </summary>
+        internal static string DataAnnotationsValidator_ValidationFailed {
+            get {
+                return ResourceManager.GetString("DataAnnotationsValidator_ValidationFailed", resourceCulture);
             }
         }
         
@@ -286,6 +322,15 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dynamic binding &apos;{0}&apos; failed on imported property &apos;{1}&apos;: {2}.
+        /// </summary>
+        internal static string DynamicBinding_TraceFailedDynamicBinding {
+            get {
+                return ResourceManager.GetString("DynamicBinding_TraceFailedDynamicBinding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dynamic context creation is only available for bindings created using the BindingFactory..
         /// </summary>
         internal static string DynamicBinding_UnsupportedCompositionService {
@@ -322,47 +367,326 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        internal static string GuidanceComponentAttribute_DefaultCategory {
+            get {
+                return ResourceManager.GetString("GuidanceComponentAttribute_DefaultCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guidance extension &apos;{0}&apos; project template could not be located. Please reinstall the extension..
+        /// </summary>
+        internal static string GuidanceExtension_NoProjectTemplate {
+            get {
+                return ResourceManager.GetString("GuidanceExtension_NoProjectTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to (None).
         /// </summary>
-        internal static string FeatureExtensionsTypeConverter_None {
+        internal static string GuidanceExtensionsTypeConverter_None {
             get {
-                return ResourceManager.GetString("FeatureExtensionsTypeConverter_None", resourceCulture);
+                return ResourceManager.GetString("GuidanceExtensionsTypeConverter_None", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Failed to create a new instance of the guidance workflow &apos;{0} ({1})&apos;. .
         /// </summary>
-        internal static string FeatureManagerExtensions_ErrorGuidanceInstantiationFailed {
+        internal static string GuidanceManagerExtensions_ErrorGuidanceInstantiationFailed {
             get {
-                return ResourceManager.GetString("FeatureManagerExtensions_ErrorGuidanceInstantiationFailed", resourceCulture);
+                return ResourceManager.GetString("GuidanceManagerExtensions_ErrorGuidanceInstantiationFailed", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to activate an instance of the feature extension &apos;{0}&apos;. It is not installed..
+        ///   Looks up a localized string similar to Failed to activate an instance of the guidance extension &apos;{0}&apos;. It is not installed..
         /// </summary>
-        internal static string FeatureManagerExtensions_ErrorNoRegistration {
+        internal static string GuidanceManagerExtensions_ErrorNoRegistration {
             get {
-                return ResourceManager.GetString("FeatureManagerExtensions_ErrorNoRegistration", resourceCulture);
+                return ResourceManager.GetString("GuidanceManagerExtensions_ErrorNoRegistration", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Activating guidance workflow &apos;{0}&apos;.
         /// </summary>
-        internal static string FeatureManagerExtensions_TraceActivation {
+        internal static string GuidanceManagerExtensions_TraceActivation {
             get {
-                return ResourceManager.GetString("FeatureManagerExtensions_TraceActivation", resourceCulture);
+                return ResourceManager.GetString("GuidanceManagerExtensions_TraceActivation", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Showing guidance windows.
         /// </summary>
-        internal static string FeatureManagerExtensions_TraceShowingGuidanceWindows {
+        internal static string GuidanceManagerExtensions_TraceShowingGuidanceWindows {
             get {
-                return ResourceManager.GetString("FeatureManagerExtensions_TraceShowingGuidanceWindows", resourceCulture);
+                return ResourceManager.GetString("GuidanceManagerExtensions_TraceShowingGuidanceWindows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Decision.
+        /// </summary>
+        internal static string GuidanceNode_Decision_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Decision_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The description of this node.
+        /// </summary>
+        internal static string GuidanceNode_Description_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Description_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        internal static string GuidanceNode_Description_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Description_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Final.
+        /// </summary>
+        internal static string GuidanceNode_Final_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Final_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fork.
+        /// </summary>
+        internal static string GuidanceNode_Fork_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Fork_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Action.
+        /// </summary>
+        internal static string GuidanceNode_GuidanceAction_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_GuidanceAction_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guidance Workflow.
+        /// </summary>
+        internal static string GuidanceNode_GuidanceWorkflow_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_GuidanceWorkflow_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether the reader has overridden the completion of this node..
+        /// </summary>
+        internal static string GuidanceNode_HasStateOverride_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_HasStateOverride_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overridden.
+        /// </summary>
+        internal static string GuidanceNode_HasStateOverride_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_HasStateOverride_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Initial.
+        /// </summary>
+        internal static string GuidanceNode_Initial_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Initial_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The node &apos;{0}&apos; does not allow more incoming connections..
+        /// </summary>
+        internal static string GuidanceNode_InputCardinalityExceed {
+            get {
+                return ResourceManager.GetString("GuidanceNode_InputCardinalityExceed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The state of the target guidance node  is invalid..
+        /// </summary>
+        internal static string GuidanceNode_InvalidTargetGuidanceNodeState {
+            get {
+                return ResourceManager.GetString("GuidanceNode_InvalidTargetGuidanceNodeState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether the reader has manually accepted this guidance node.
+        /// </summary>
+        internal static string GuidanceNode_IsUserAccepted_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_IsUserAccepted_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Accepted by User.
+        /// </summary>
+        internal static string GuidanceNode_IsUserAccepted_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_IsUserAccepted_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Join.
+        /// </summary>
+        internal static string GuidanceNode_Join_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Join_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The content for this guidance node.
+        /// </summary>
+        internal static string GuidanceNode_Link_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Link_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Content.
+        /// </summary>
+        internal static string GuidanceNode_Link_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Link_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merge.
+        /// </summary>
+        internal static string GuidanceNode_Merge_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Merge_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of this guidance node.
+        /// </summary>
+        internal static string GuidanceNode_Name_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Name_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string GuidanceNode_Name_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_Name_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The node &apos;{0}&apos; does not allow more outgoing connections..
+        /// </summary>
+        internal static string GuidanceNode_OutputCardinalityExceed {
+            get {
+                return ResourceManager.GetString("GuidanceNode_OutputCardinalityExceed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameter cannot be empty..
+        /// </summary>
+        internal static string GuidanceNode_ParameterNotEmpty {
+            get {
+                return ResourceManager.GetString("GuidanceNode_ParameterNotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The conditions that are satisifed by the completion of this guidance node.
+        /// </summary>
+        internal static string GuidanceNode_PostConditions_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_PostConditions_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Post-Conditions.
+        /// </summary>
+        internal static string GuidanceNode_PostConditions_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_PostConditions_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The conditions that must be satisfied before this guidance node can be completed.
+        /// </summary>
+        internal static string GuidanceNode_PreConditions_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_PreConditions_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pre-Conditions.
+        /// </summary>
+        internal static string GuidanceNode_PreConditions_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_PreConditions_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The property &apos;{0}&apos; only supports one set..
+        /// </summary>
+        internal static string GuidanceNode_PropertyAlreadySet {
+            get {
+                return ResourceManager.GetString("GuidanceNode_PropertyAlreadySet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The state of this guidance node.
+        /// </summary>
+        internal static string GuidanceNode_State_Description {
+            get {
+                return ResourceManager.GetString("GuidanceNode_State_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State.
+        /// </summary>
+        internal static string GuidanceNode_State_DisplayName {
+            get {
+                return ResourceManager.GetString("GuidanceNode_State_DisplayName", resourceCulture);
             }
         }
         
@@ -427,6 +751,204 @@ namespace NuPattern.Runtime.Properties {
         internal static string ImageUriEditor_PickerTitle {
             get {
                 return ResourceManager.GetString("ImageUriEditor_PickerTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The original author of this toolkit..
+        /// </summary>
+        internal static string IProductToolkitInfo_Author_Description {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Author_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author.
+        /// </summary>
+        internal static string IProductToolkitInfo_Author_DisplayName {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Author_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The description of this pattern toolkit..
+        /// </summary>
+        internal static string IProductToolkitInfo_Description_Description {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Description_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        internal static string IProductToolkitInfo_Description_DisplayName {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Description_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The unique identifier of this toolkit, also used as the VSIX identifier..
+        /// </summary>
+        internal static string IProductToolkitInfo_Identifier_Description {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Identifier_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Identifier.
+        /// </summary>
+        internal static string IProductToolkitInfo_Identifier_DisplayName {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Identifier_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of this pattern toolkit..
+        /// </summary>
+        internal static string IProductToolkitInfo_Name_Description {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Name_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string IProductToolkitInfo_Name_DisplayName {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Name_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The current version of this toolkit..
+        /// </summary>
+        internal static string IProductToolkitInfo_Version_Description {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Version_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version.
+        /// </summary>
+        internal static string IProductToolkitInfo_Version_DisplayName {
+            get {
+                return ResourceManager.GetString("IProductToolkitInfo_Version_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Command {0}&apos; can not be executed..
+        /// </summary>
+        internal static string LinkLaunchPoint_ErrorCommandCannotExecute {
+            get {
+                return ResourceManager.GetString("LinkLaunchPoint_ErrorCommandCannotExecute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to execute command because the associated guidance action is not in the Enabled (green) state..
+        /// </summary>
+        internal static string LinkLaunchPoint_NotifyUser {
+            get {
+                return ResourceManager.GetString("LinkLaunchPoint_NotifyUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing command {0}.
+        /// </summary>
+        internal static string LinkLaunchPoint_TraceExecute {
+            get {
+                return ResourceManager.GetString("LinkLaunchPoint_TraceExecute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Workflow actions containing include:// must have only one predecessor and one successor.
+        /// </summary>
+        internal static string Node_ErrorOnlySinglePredecessor {
+            get {
+                return ResourceManager.GetString("Node_ErrorOnlySinglePredecessor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blocked.
+        /// </summary>
+        internal static string NodeState_Blocked {
+            get {
+                return ResourceManager.GetString("NodeState_Blocked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Completed.
+        /// </summary>
+        internal static string NodeState_Completed {
+            get {
+                return ResourceManager.GetString("NodeState_Completed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disabled.
+        /// </summary>
+        internal static string NodeState_Disabled {
+            get {
+                return ResourceManager.GetString("NodeState_Disabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enabled.
+        /// </summary>
+        internal static string NodeState_Enabled {
+            get {
+                return ResourceManager.GetString("NodeState_Enabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        internal static string NodeState_Unknown {
+            get {
+                return ResourceManager.GetString("NodeState_Unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to initialize global container.
+        /// </summary>
+        internal static string NuPatternGlobalContainer_TraceFailedContainerInitialization {
+            get {
+                return ResourceManager.GetString("NuPatternGlobalContainer_TraceFailedContainerInitialization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not retrieve the catalog &apos;{0}&apos; from the global IComponentModel service..
+        /// </summary>
+        internal static string NuPatternGlobalContainer_TraceNoComponentModel {
+            get {
+                return ResourceManager.GetString("NuPatternGlobalContainer_TraceNoComponentModel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not retrieve the VS global IComponentModel service..
+        /// </summary>
+        internal static string NuPatternGlobalContainer_TraceNoComponentModelService {
+            get {
+                return ResourceManager.GetString("NuPatternGlobalContainer_TraceNoComponentModelService", resourceCulture);
             }
         }
         
@@ -692,6 +1214,33 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Provided value {0} is not compatible with property {1}.{2} of type {3}, and specific type conversion is not supported by provided converter {4}..
+        /// </summary>
+        internal static string PropertyBinding_PropertyNotCompatible {
+            get {
+                return ResourceManager.GetString("PropertyBinding_PropertyNotCompatible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provided value {0} is not compatible with property {1}.{2} of type {3}, and a custom type conversion is not provided..
+        /// </summary>
+        internal static string PropertyBinding_TracePropertyCustomNotCompatible {
+            get {
+                return ResourceManager.GetString("PropertyBinding_TracePropertyCustomNotCompatible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Property {0}.{1} not found.
+        /// </summary>
+        internal static string PropertyBinding_TracePropertyNotFound {
+            get {
+                return ResourceManager.GetString("PropertyBinding_TracePropertyNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The TypeConverter on this ReferenceKindProvider type does not support convert from System.String to of its declared type. The reference value cannot be read..
         /// </summary>
         internal static string ReferenceKindProvider_CanNotConvertFromString {
@@ -953,6 +1502,15 @@ namespace NuPattern.Runtime.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to instantiate the interface layer proxy type &apos;{0}&apos;..
+        /// </summary>
+        internal static string ToolkitInterfaceLayer_TraceFailedInstantiation {
+            get {
+                return ResourceManager.GetString("ToolkitInterfaceLayer_TraceFailedInstantiation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The product does not have a view named &apos;{0}&apos;..
         /// </summary>
         internal static string ToolkitInterfaceLayer_ViewNotFound {
@@ -1021,6 +1579,70 @@ namespace NuPattern.Runtime.Properties {
         internal static string ValueProviderBindingSettings_EmptyBinding {
             get {
                 return ResourceManager.GetString("ValueProviderBindingSettings_EmptyBinding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value provider binding for property {0}.{1} could not be successfully evaluated. Errors: 
+        ///.
+        /// </summary>
+        internal static string ValueProviderPropertyBinding_TraceFailedEvaluation {
+            get {
+                return ResourceManager.GetString("ValueProviderPropertyBinding_TraceFailedEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Command binding &apos;{0}&apos; can not be executed..
+        /// </summary>
+        internal static string VsLaunchPoint_ErrorCommandCannotExecute {
+            get {
+                return ResourceManager.GetString("VsLaunchPoint_ErrorCommandCannotExecute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing command {0}.
+        /// </summary>
+        internal static string VsLaunchPoint_TraceExecute {
+            get {
+                return ResourceManager.GetString("VsLaunchPoint_TraceExecute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attempted to execute launch point {0} but its querystatus did not return Enabled..
+        /// </summary>
+        internal static string VsLaunchPoint_TraceNotEnabled {
+            get {
+                return ResourceManager.GetString("VsLaunchPoint_TraceNotEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VS Template Launch Point.
+        /// </summary>
+        internal static string VsTemplateLaunchPoint_DisplayName {
+            get {
+                return ResourceManager.GetString("VsTemplateLaunchPoint_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Command binding &apos;{0}&apos; can not be executed..
+        /// </summary>
+        internal static string VsTemplateLaunchPoint_ErrorEvaluateFailed {
+            get {
+                return ResourceManager.GetString("VsTemplateLaunchPoint_ErrorEvaluateFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing command {0}.
+        /// </summary>
+        internal static string VsTemplateLaunchPoint_TraceExecuteCommand {
+            get {
+                return ResourceManager.GetString("VsTemplateLaunchPoint_TraceExecuteCommand", resourceCulture);
             }
         }
     }

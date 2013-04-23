@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime.Events;
@@ -18,9 +17,9 @@ namespace NuPattern.Library.Events
     /// <summary>
     /// Implements the <see cref="IOnBuildFinishedEvent"/>.
     /// </summary>
-    [DisplayNameResource("OnBuildStartedEvent_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_VisualStudio", typeof(Resources))]
-    [DescriptionResource("OnBuildStartedEvent_Description", typeof(Resources))]
+    [DisplayNameResource(@"OnBuildStartedEvent_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"OnBuildStartedEvent_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [Event(typeof(IOnBuildStartedEvent))]
     [Export(typeof(IOnBuildStartedEvent))]
     [PartCreationPolicy(CreationPolicy.Shared)]

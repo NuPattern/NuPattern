@@ -1,14 +1,12 @@
-using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.VisualStudio.Extensions;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Runtime
 {
     /// <summary>
     /// Represents an installed extension that provides a toolkit.
     /// </summary>
-    [CLSCompliant(false)]
     public interface IInstalledToolkitInfo : IToolkitInfo
     {
         /// <summary>

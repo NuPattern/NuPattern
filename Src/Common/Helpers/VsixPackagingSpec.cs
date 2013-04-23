@@ -2,10 +2,8 @@
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NuPattern.VisualStudio.Extensions;
-using System.Collections.ObjectModel;
 
 namespace NuPattern.IntegrationTests
 {

@@ -7,13 +7,12 @@ using System.Linq;
 using EnvDTE;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.References;
 using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 {
@@ -24,7 +23,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [CategoryResource("AutomationCategory_PatternToolkitAuthoring", typeof(Resources))]
     [DescriptionResource("SetManifestMSBuildCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class SetManifestMSBuildCommand : FeatureCommand
+    public class SetManifestMSBuildCommand : NuPattern.Runtime.Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SetManifestMSBuildCommand>();
 
@@ -52,7 +51,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public virtual IFxrUriReferenceService UriService { get; set; }
+        public virtual IUriReferenceService UriService { get; set; }
 
         /// <summary>
         /// Gets or sets the current element.

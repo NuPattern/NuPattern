@@ -1,10 +1,10 @@
 ﻿using System;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VsSDK.IntegrationTestLibrary;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Moq;
-using NuPattern.VisualStudio;
+using NuPattern.Diagnostics;
+using TraceSourceExtensions = NuPattern.VisualStudio.TraceSourceExtensions;
 
 namespace NuPattern.IntegrationTests.VisualStudio
 {

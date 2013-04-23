@@ -16,7 +16,7 @@ namespace NuPattern.Library.Automation
         {
             Guard.NotNull(() => e, e);
 
-            if ((e.DomainProperty.Id == GuidanceExtension.GuidanceFeatureIdDomainPropertyId)
+            if ((e.DomainProperty.Id == GuidanceExtension.ExtensionIdDomainPropertyId)
                 || (e.DomainProperty.Id == GuidanceExtension.GuidanceInstanceNameDomainPropertyId)
                 || (e.DomainProperty.Id == GuidanceExtension.GuidanceSharedInstanceDomainPropertyId)
                 || (e.DomainProperty.Id == GuidanceExtension.GuidanceActivateOnCreationDomainPropertyId))

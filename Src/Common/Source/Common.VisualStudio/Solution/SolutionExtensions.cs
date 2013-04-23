@@ -11,10 +11,8 @@ using EnvDTE;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Design;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.HierarchyNodes;
 using NuPattern.VisualStudio.Properties;
+using NuPattern.VisualStudio.Solution.Hierarchy;
 using VSLangProj;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
@@ -430,9 +428,7 @@ namespace NuPattern.VisualStudio.Solution
         {
             Guard.NotNull(() => item, item);
 
-            var serviceProvider = new ServiceProvider(item.As<ProjectItem>().DTE as Ole.IServiceProvider);
-
-            VsHelper.CheckOut(serviceProvider, item.PhysicalPath);
+            VsHelper.CheckOut(item.PhysicalPath);
         }
 
         /// <summary>
@@ -738,7 +734,7 @@ namespace NuPattern.VisualStudio.Solution
             var extension = Path.GetExtension(childNameSeed);
             var seed = Path.GetFileNameWithoutExtension(childNameSeed);
 
-            return String.Format(CultureInfo.CurrentCulture, "{0}{1}",
+            return String.Format(CultureInfo.CurrentCulture, @"{0}{1}",
                 UniqueNameGenerator.EnsureUnique(seed,
                     newName => parent.Items.Where(item => String.IsNullOrEmpty(extension) ? item.Name.Equals(newName, StringComparison.OrdinalIgnoreCase)
                         : item.Name.Equals(Path.ChangeExtension(newName, extension), StringComparison.OrdinalIgnoreCase)).FirstOrDefault() == null), extension);
@@ -922,6 +918,38 @@ namespace NuPattern.VisualStudio.Solution
 
                 frame.Show();
             }
+        }
+
+        /// <summary>
+        /// Returns the path to the given installed template
+        /// </summary>
+        public static string GetTemplatePath(this ISolution solution, string name, string category)
+        {
+            Guard.NotNull(() => solution, solution);
+            Guard.NotNullOrEmpty(() => name, name);
+            Guard.NotNullOrEmpty(() => category, category);
+
+            var solution2 = solution.As<EnvDTE80.Solution2>();
+            if (solution2 != null)
+            {
+                return solution2.GetProjectTemplate(name, category);
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Selects the root of the solution
+        /// </summary>
+        /// <remarks>
+        /// There is an issue in all versions of VS up to and including VS2008 SP1
+        /// that won't allow the expansion of a multi-project template unless the Solution node in the Solution explorer
+        /// is selected.  The code below works for any solution with less than 100,000 items
+        /// </remarks>
+        public static void SelectUp(this ISolution solution)
+        {
+            EnvDTE80.DTE2 dte2 = (EnvDTE80.DTE2)solution.As<EnvDTE.Solution>().DTE;
+            dte2.ToolWindows.SolutionExplorer.SelectUp(vsUISelectionType.vsUISelectionTypeSelect, 99999);
         }
 
         [ComImport, InterfaceType(ComInterfaceType.InterfaceIsIUnknown), Guid("55AB9450-F9C7-4305-94E8-BEF12065338D")]

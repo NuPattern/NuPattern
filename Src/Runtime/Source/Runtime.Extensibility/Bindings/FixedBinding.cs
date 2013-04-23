@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 
 namespace NuPattern.Runtime.Bindings
 {

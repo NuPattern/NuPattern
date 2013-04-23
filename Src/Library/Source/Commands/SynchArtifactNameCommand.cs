@@ -6,10 +6,8 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
@@ -21,11 +19,11 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Auto renames the owner's referenced artifact with the owner name.
     /// </summary>
-    [DisplayNameResource("SynchArtifactNameCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("SynchArtifactNameCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"SynchArtifactNameCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"SynchArtifactNameCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
-    public class SynchArtifactNameCommand : FeatureCommand
+    public class SynchArtifactNameCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SynchArtifactNameCommand>();
         internal const string FilteredReferenceTagValue = "FilteredByTag";
@@ -33,8 +31,8 @@ namespace NuPattern.Library.Commands
         /// <summary>
         /// Gets or sets the tag for the command.
         /// </summary>
-        [DisplayNameResource("SynchArtifactNameCommand_ReferenceTag_DisplayName", typeof(Resources))]
-        [DescriptionResource("SynchArtifactNameCommand_ReferenceTag_Description", typeof(Resources))]
+        [DisplayNameResource(@"SynchArtifactNameCommand_ReferenceTag_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"SynchArtifactNameCommand_ReferenceTag_Description", typeof(Resources))]
         public string ReferenceTag { get; set; }
 
         /// <summary>
@@ -49,7 +47,7 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriReferenceService { get; set; }
+        public IUriReferenceService UriReferenceService { get; set; }
 
         /// <summary>
         /// Gets or sets the service provider.
@@ -113,7 +111,7 @@ namespace NuPattern.Library.Commands
                                     // TODO: Determine whether any of the properties referenced in TargetFileName syntax 
                                     // (i.e. {InstanceName} or {PropertyName}) was the property actually changed, and if not, dont sync!
 
-                                    var resolver = new PathResolver(this.CurrentElement, this.UriReferenceService, "\\",
+                                    var resolver = new PathResolver(this.CurrentElement, this.UriReferenceService, @"\",
                                         string.IsNullOrEmpty(referenceTag.TargetFileName) ? this.CurrentElement.InstanceName : referenceTag.TargetFileName);
                                     resolver.Resolve();
 

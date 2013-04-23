@@ -22,8 +22,20 @@
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
   <Import Project="$(BranchRoot)BuildConfiguration.CSharp.VsixProjects.gen.props" />
   <ItemGroup>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Library">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="NuPattern.Runtime.Extensibility">
       <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="System" />
@@ -32,14 +44,6 @@
     <Reference Include="System.Xaml" />
     <Reference Include="PresentationCore" />
     <Reference Include="WindowsBase" />
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
@@ -53,8 +57,7 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
-    <Compile Include="Assets\Guidance\Feature.cs" />
-    <Compile Include="Assets\Guidance\InstantiatePatternToolkit.cs" />
+    <Compile Include="Assets\Guidance\Links\InstantiatePatternToolkitLink.cs" />
     <Content Include="..\..\..\LICENSE.txt">
       <Link>LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -147,6 +150,7 @@
     <Content Include="GeneratedCode\Guidance\Content\WhereAreWeNow.mht">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <None Include="Assets\Guidance\ToolkitGuidance.pdf" />
     <None Include="Authoring.PatternToolkitInfo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Authoring.PatternToolkitInfo.gen.cs</LastGenOutput>
@@ -162,8 +166,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="GeneratedCode\Guidance\GuidanceExtension.cs" />
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.gen.cs">
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252f14fc43ef-9d28-4b36-905f-adc76a9c92f3</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\CodePlex\NuPattern\Sprint20\Src\Authoring\Authoring.slnbldr%252f14fc43ef-9d28-4b36-905f-adc76a9c92f3</SourceModelReference>
       <ItemGuid>0ddee1e0-beae-431c-a10b-5379b9aa183f</ItemGuid>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -446,7 +451,7 @@
     </None>
     <None Include="source.extension.gen.ttinclude">
       <DependentUpon>source.extension.tt</DependentUpon>
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252fa71545af-2d3b-4467-b23a-5b49138d4667</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\CodePlex\NuPattern\Sprint20\Src\Authoring\Authoring.slnbldr%252fa71545af-2d3b-4467-b23a-5b49138d4667</SourceModelReference>
       <ItemGuid>94470e9e-4cd7-447b-842b-5b18e708fd20</ItemGuid>
     </None>
   </ItemGroup>

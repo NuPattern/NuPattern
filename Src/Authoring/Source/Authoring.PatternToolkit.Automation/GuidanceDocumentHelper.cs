@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
 
@@ -22,7 +21,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation
         /// <remarks>
         /// Returns the first artifact link with a *.doc extension of the current element.
         /// </remarks>
-        public static string GetDocumentPath(ITraceSource tracer, IProductElement element, IFxrUriReferenceService uriService)
+        public static string GetDocumentPath(ITraceSource tracer, IProductElement element, IUriReferenceService uriService)
         {
             // Return path of first reference
             var references = SolutionArtifactLinkReference.GetResolvedReferences(element, uriService);

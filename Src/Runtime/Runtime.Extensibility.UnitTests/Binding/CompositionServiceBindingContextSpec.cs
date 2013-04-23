@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.Composition.Hosting;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Runtime.UnitTests.Binding
 {
@@ -17,7 +17,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         {
             var catalog = new TypeCatalog(typeof(Foo));
             var container = new CompositionContainer(catalog);
-            var compositionService = new Mock<IFeatureCompositionService>();
+            var compositionService = new Mock<INuPatternCompositionService>();
             compositionService.Setup(x => x.GetExportedValue<ExportProvider>()).Returns(container);
 
             var service = new CompositionServiceBindingContext(compositionService.Object);
@@ -35,7 +35,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         {
             var catalog = new TypeCatalog(typeof(Foo));
             var container = new CompositionContainer(catalog);
-            var compositionService = new Mock<IFeatureCompositionService>();
+            var compositionService = new Mock<INuPatternCompositionService>();
             compositionService.Setup(x => x.GetExportedValue<ExportProvider>()).Returns(container);
 
             var service = new CompositionServiceBindingContext(compositionService.Object);

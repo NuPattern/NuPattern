@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Runtime;
 
 namespace NuPattern.Library.Automation
@@ -29,7 +28,7 @@ namespace NuPattern.Library.Automation
         /// <summary>
         /// Ensures specified command is either: present and configured correctly on the element, or removed from element, based on the evaluation of the given function. 
         /// </summary>
-        public static CommandSettings EnsureCommandAutomation<TCommand>(this IPatternElementSchema container, string instanceName, Func<bool> exists) where TCommand : IFeatureCommand
+        public static CommandSettings EnsureCommandAutomation<TCommand>(this IPatternElementSchema container, string instanceName, Func<bool> exists) where TCommand : ICommand
         {
             var settings = container.GetAutomationSettings<CommandSettings>(instanceName);
             if (exists() == true)
@@ -171,7 +170,7 @@ namespace NuPattern.Library.Automation
                     instantiateProperty.Description = description;
                     instantiateProperty.Category = category;
                     var converterType = typeof(TTypeConverter);
-                    instantiateProperty.TypeConverterTypeName = converterType.FullName + ", " + converterType.Assembly.FullName.Split(',')[0];
+                    instantiateProperty.TypeConverterTypeName = converterType.FullName + @", " + converterType.Assembly.FullName.Split(',')[0];
                 }
             }
             else
@@ -192,7 +191,7 @@ namespace NuPattern.Library.Automation
             if (!string.IsNullOrEmpty(iconPath))
             {
                 return string.Format(CultureInfo.CurrentCulture,
-                    "pack://application:,,,/{0};component/{1}", typeof(PatternElementSchemaExtensions).Assembly.GetName().Name, iconPath);
+                    @"pack://application:,,,/{0};component/{1}", typeof(PatternElementSchemaExtensions).Assembly.GetName().Name, iconPath);
             }
 
             else

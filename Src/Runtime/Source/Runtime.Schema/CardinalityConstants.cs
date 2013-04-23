@@ -36,22 +36,22 @@
             /// <summary>
             /// The text caption for OneToOne cardinality.
             /// </summary>
-            public static readonly string OneToOne = "1..1";
+            public static readonly string OneToOne = @"1..1";
 
             /// <summary>
             /// The text cpation for ZeroToOne cardinality.
             /// </summary>
-            public static readonly string ZeroToOne = "0..1";
+            public static readonly string ZeroToOne = @"0..1";
 
             /// <summary>
             /// The text cpation for OneToMany cardinality.
             /// </summary>
-            public static readonly string OneToMany = "1..*";
+            public static readonly string OneToMany = @"1..*";
 
             /// <summary>
             /// The text cpation for ZeroToMany cardinality.
             /// </summary>
-            public static readonly string ZeroToMany = "0..*";
+            public static readonly string ZeroToMany = @"0..*";
         }
     }
 }

@@ -4,13 +4,12 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.Validation;
-using ReflectionExtensions = Microsoft.VisualStudio.TeamArchitect.PowerTools.ReflectionExtensions;
 
 namespace NuPattern.Library.Automation
 {
@@ -25,7 +24,7 @@ namespace NuPattern.Library.Automation
         /// Gets the feature manager.
         /// </summary>
         [Import]
-        internal IFeatureManager FeatureManager { get; set; }
+        internal IGuidanceManager GuidanceManager { get; set; }
 
         [RuntimeValidationExtension]
         [ValidationMethod(CustomCategory = ValidationConstants.RuntimeValidationCategory)]
@@ -33,7 +32,7 @@ namespace NuPattern.Library.Automation
         {
             try
             {
-                if (this.FeatureManager == null)
+                if (this.GuidanceManager == null)
                 {
                     return;
                 }
@@ -41,7 +40,7 @@ namespace NuPattern.Library.Automation
                 var reference = element.TryGetReference(ReferenceKindConstants.Guidance);
                 if (!string.IsNullOrEmpty(reference))
                 {
-                    var uri = GuidanceReference.GetResolvedReferences(element, this.FeatureManager).FirstOrDefault();
+                    var uri = GuidanceReference.GetResolvedReferences(element, this.GuidanceManager).FirstOrDefault();
                     if (uri == null)
                     {
                         context.LogError(

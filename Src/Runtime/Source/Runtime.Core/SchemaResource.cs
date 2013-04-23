@@ -3,9 +3,9 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Runtime
 {
@@ -48,16 +48,16 @@ namespace NuPattern.Runtime
             {
                 this.ResourceName = content.RelativePath;
             }
-            else if (resourceNames.Contains(assemblyName.Name + "." + content.RelativePath))
+            else if (resourceNames.Contains(assemblyName.Name + @"." + content.RelativePath))
             {
-                this.ResourceName = assemblyName.Name + "." + content.RelativePath;
+                this.ResourceName = assemblyName.Name + @"." + content.RelativePath;
             }
             else
             {
                 var message = string.Format(CultureInfo.CurrentCulture,
                     Resources.SchemaResource_FailedToLoadSchemaStream,
                     content.RelativePath,
-                    assemblyName.Name + "." + this.ResourceName,
+                    assemblyName.Name + @"." + this.ResourceName,
                     this.AssemblyPath);
 
                 tracer.TraceError(message);
@@ -92,7 +92,7 @@ namespace NuPattern.Runtime
                 var message = string.Format(CultureInfo.CurrentCulture,
                     Resources.SchemaResource_FailedToLoadSchemaStream,
                     this.ResourceName,
-                    assemblyName.Name + "." + this.ResourceName,
+                    assemblyName.Name + @"." + this.ResourceName,
                     this.AssemblyPath);
 
                 tracer.TraceError(message);

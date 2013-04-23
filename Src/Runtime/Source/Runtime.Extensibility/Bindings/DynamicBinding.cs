@@ -5,8 +5,8 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Bindings
@@ -21,16 +21,16 @@ namespace NuPattern.Runtime.Bindings
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<DynamicBinding<T>>();
 
-        private IFeatureCompositionService originalComposition;
+        private INuPatternCompositionService originalComposition;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DynamicBinding{T}"/> class.
         /// </summary>
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Caller owns this instance.")]
-        public DynamicBinding(IFeatureCompositionService featureComposition, string componentTypeId, params PropertyBinding[] propertyBindings)
-            : base(featureComposition, componentTypeId, propertyBindings)
+        public DynamicBinding(INuPatternCompositionService composition, string componentTypeId, params PropertyBinding[] propertyBindings)
+            : base(composition, componentTypeId, propertyBindings)
         {
-            var delegatingComposition = this.FeatureComposition as DelegatingCompositionService;
+            var delegatingComposition = this.CompositionService as DelegatingCompositionService;
             if (delegatingComposition != null)
             {
                 this.originalComposition = delegatingComposition.CompositionService;
@@ -79,7 +79,7 @@ namespace NuPattern.Runtime.Bindings
             // Since we're the only ones that can create the valid binding context, 
             // and we're validating that the base FeatureComposition is a Delegating one 
             // at CreateDynamicContext time, we can simply cast here.
-            var delegatingComposition = (DelegatingCompositionService)this.FeatureComposition;
+            var delegatingComposition = (DelegatingCompositionService)this.CompositionService;
 
             try
             {
@@ -109,7 +109,7 @@ namespace NuPattern.Runtime.Bindings
 
                 foreach (var result in results)
                 {
-                    tracer.TraceError("Dynamic binding '{0}' failed on imported property '{1}': {2}", this.componentTypeId, property.Name, result.ErrorMessage);
+                    tracer.TraceError(Resources.DynamicBinding_TraceFailedDynamicBinding, this.ComponentTypeId, property.Name, result.ErrorMessage);
                     evaluationResult = false;
                 }
             }

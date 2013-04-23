@@ -19,16 +19,16 @@
         <ProjectItem TargetFileName="$fileinputname$.Validation.cs" ReplaceParameters="true">Command.Validation.cs</ProjectItem>
     </TemplateContent>
   <WizardExtension>
-    <Assembly>NuPattern.VisualStudio, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
     <FullClassName>NuPattern.VisualStudio.TemplateWizards.GuidGeneratorTemplateWizard</FullClassName>
   </WizardExtension>
   <WizardExtension>
-    <Assembly>NuPattern.VisualStudio, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
+    <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
     <FullClassName>NuPattern.VisualStudio.TemplateWizards.ReplacementTemplateWizard</FullClassName>
   </WizardExtension>
     <WizardExtension>
-      <Assembly>NuPattern.Library, Version=<#=VersionInfo.AssemblyVersion#>, Culture=neutral, PublicKeyToken=24c7786d4a8b1a88</Assembly>
-      <FullClassName>NuPattern.Library.TemplateWizards.ElementReplacementsWizard</FullClassName>
+      <Assembly>NuPattern.VisualStudio.TemplateWizards, Version=<#=VersionInfo.TemplateWizardVersion#>, Culture=neutral, PublicKeyToken=<#=VersionInfo.AssemblyPublicKeyToken#></Assembly>
+      <FullClassName>NuPattern.VisualStudio.TemplateWizards.ElementReplacementsTemplateWizard</FullClassName>
     </WizardExtension>
   <WizardData>
     <Replacement Key="$assemblyVersion$"  Value="<#=VersionInfo.AssemblyVersion#>" />

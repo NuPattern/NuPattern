@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Presentation;
+using NuPattern.Reflection;
+using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.UI.ViewModels;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
@@ -77,12 +78,12 @@ namespace NuPattern.Runtime.UnitTests.UI
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenInvokingGuidanceAndFeatureNotInstalled_ThenDisablesGuidance()
+            public void WhenInvokingGuidanceAndGuidanceNotInstalled_ThenDisablesGuidance()
             {
                 var serviceProvider = GetServiceProvider();
 
-                var featureManager = Mock.Get(serviceProvider.GetService<IFeatureManager>());
-                featureManager.Setup(x => x.InstalledFeatures).Returns(Enumerable.Empty<IFeatureRegistration>());
+                var guidanceManager = Mock.Get(serviceProvider.GetService<IGuidanceManager>());
+                guidanceManager.Setup(x => x.InstalledGuidanceExtensions).Returns(Enumerable.Empty<IGuidanceExtensionRegistration>());
 
                 var target = new SolutionBuilderViewModel(this.ctx, serviceProvider);
 
@@ -90,39 +91,39 @@ namespace NuPattern.Runtime.UnitTests.UI
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenInvokingGuidanceAndFeatureInstanciated_ThenActivatesFeature()
+            public void WhenInvokingGuidanceAndGuidanceInstantiated_ThenActivatesGuidance()
             {
                 var serviceProvider = GetServiceProvider();
 
-                var feature = Mocks.Of<IFeatureExtension>().First(x => x.FeatureId == SolutionBuilderViewModel.UsingGuidanceFeatureId);
+                var extension = Mocks.Of<IGuidanceExtension>().First(x => x.ExtensionId == SolutionBuilderViewModel.UsingGuidanceExtensionId);
 
-                var featureManager = Mock.Get(serviceProvider.GetService<IFeatureManager>());
-                featureManager.Setup(x => x.InstalledFeatures)
-                    .Returns(new[] { Mocks.Of<IFeatureRegistration>().First(x => x.FeatureId == SolutionBuilderViewModel.UsingGuidanceFeatureId) });
-                featureManager.Setup(x => x.InstantiatedFeatures)
-                    .Returns(new[] { feature });
+                var guidanceManager = Mock.Get(serviceProvider.GetService<IGuidanceManager>());
+                guidanceManager.Setup(x => x.InstalledGuidanceExtensions)
+                    .Returns(new[] { Mocks.Of<IGuidanceExtensionRegistration>().First(x => x.ExtensionId == SolutionBuilderViewModel.UsingGuidanceExtensionId) });
+                guidanceManager.Setup(x => x.InstantiatedGuidanceExtensions)
+                    .Returns(new[] { extension });
 
                 var target = new SolutionBuilderViewModel(this.ctx, serviceProvider);
                 target.GuidanceCommand.Execute(null);
 
-                featureManager.VerifySet(x => x.ActiveFeature = feature);
+                guidanceManager.VerifySet(x => x.ActiveGuidanceExtension = extension);
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenInvokingGuidanceAndFeatureNotInstanciated_ThenInstantiatesFeature()
+            public void WhenInvokingGuidanceAndGuidanceNotInstantiated_ThenInstantiatesGuidance()
             {
                 var serviceProvider = GetServiceProvider();
 
-                var featureManager = Mock.Get(serviceProvider.GetService<IFeatureManager>());
-                featureManager.Setup(x => x.InstalledFeatures)
-                    .Returns(new[] { Mocks.Of<IFeatureRegistration>().First(x => x.FeatureId == SolutionBuilderViewModel.UsingGuidanceFeatureId) });
-                featureManager.Setup(x => x.InstantiatedFeatures)
-                    .Returns(Enumerable.Empty<IFeatureExtension>());
+                var guidanceManager = Mock.Get(serviceProvider.GetService<IGuidanceManager>());
+                guidanceManager.Setup(x => x.InstalledGuidanceExtensions)
+                    .Returns(new[] { Mocks.Of<IGuidanceExtensionRegistration>().First(x => x.ExtensionId == SolutionBuilderViewModel.UsingGuidanceExtensionId) });
+                guidanceManager.Setup(x => x.InstantiatedGuidanceExtensions)
+                    .Returns(Enumerable.Empty<IGuidanceExtension>());
 
                 var target = new SolutionBuilderViewModel(this.ctx, serviceProvider);
                 target.GuidanceCommand.Execute(null);
 
-                featureManager.Verify(manager => manager.Instantiate(SolutionBuilderViewModel.UsingGuidanceFeatureId, It.IsAny<string>()), Times.Once());
+                guidanceManager.Verify(manager => manager.Instantiate(SolutionBuilderViewModel.UsingGuidanceExtensionId, It.IsAny<string>()), Times.Once());
             }
         }
 
@@ -544,7 +545,7 @@ namespace NuPattern.Runtime.UnitTests.UI
         {
             return Mocks.Of<IServiceProvider>().First(t =>
                 t.GetService(typeof(ISolutionEvents)) == new Mock<ISolutionEvents>().Object &&
-                t.GetService(typeof(IFeatureManager)) == new Mock<IFeatureManager>().Object);
+                t.GetService(typeof(IGuidanceManager)) == new Mock<IGuidanceManager>().Object);
         }
 
         private static IView[] GetViews()

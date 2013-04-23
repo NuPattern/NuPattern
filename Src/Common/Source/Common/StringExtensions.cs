@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
@@ -33,7 +34,7 @@ namespace NuPattern
                   var formatGroup = match.Groups["format"];
                   var endGroup = match.Groups["end"];
 
-                  values.Add((propertyGroup.Value == "0")
+                  values.Add((propertyGroup.Value == 0.ToString())
                     ? source
                     : Eval(source, propertyGroup.Value));
 
@@ -51,6 +52,23 @@ namespace NuPattern
               | RegexOptions.IgnoreCase);
 
             return string.Format(provider, rewrittenFormat, values.ToArray());
+        }
+
+        /// <summary>
+        /// Makes a string camel cased.
+        /// </summary>
+        /// <param name="identifier">The identifier to camel case</param>
+        public static string MakeCamel(this string identifier)
+        {
+            if (identifier.Length <= 2)
+            {
+                return identifier.ToLower(CultureInfo.InvariantCulture);
+            }
+            if (char.IsUpper(identifier[0]))
+            {
+                return char.ToLower(identifier[0], CultureInfo.InvariantCulture).ToString(CultureInfo.InvariantCulture) + identifier.Substring(1);
+            }
+            return identifier;
         }
 
         private static object Eval(object source, string expression)

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel.Composition;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
 
@@ -38,18 +38,18 @@ namespace NuPattern.Runtime.UnitTests.Binding
                 valueProvider.Setup(x => x.Evaluate()).Returns(ValueProviderValue);
 
                 var compositionService = new Mock<IBindingCompositionService>();
-                compositionService.Setup(cs => cs.GetExports<IFoo, IFeatureComponentMetadata>())
+                compositionService.Setup(cs => cs.GetExports<IFoo, IComponentMetadata>())
                     .Returns(new[]
                     {
-                        new Lazy<IFoo, IFeatureComponentMetadata>(() => value.Object, 
-                            Mocks.Of<IFeatureComponentMetadata>().First(m => m.CatalogName ==  Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName && m.Id == "Foo"))
+                        new Lazy<IFoo, IComponentMetadata>(() => value.Object, 
+                            Mocks.Of<IComponentMetadata>().First(m => m.CatalogName ==  Catalog.DefaultCatalogName && m.Id == "Foo"))
                     });
 
-                compositionService.Setup(cs => cs.GetExports<IValueProvider, IFeatureComponentMetadata>())
+                compositionService.Setup(cs => cs.GetExports<IValueProvider, IComponentMetadata>())
                     .Returns(new[]
                     {
-                        new Lazy<IValueProvider, IFeatureComponentMetadata>(() => valueProvider.Object, 
-                            Mocks.Of<IFeatureComponentMetadata>().First(m => m.CatalogName == Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName && m.Id == "ValueProvider"))
+                        new Lazy<IValueProvider, IComponentMetadata>(() => valueProvider.Object, 
+                            Mocks.Of<IComponentMetadata>().First(m => m.CatalogName == Catalog.DefaultCatalogName && m.Id == "ValueProvider"))
                     });
 
 
@@ -59,7 +59,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingABinding_ThenReturnsBinding()
             {
-                var binding = this.target.CreateBinding<IFeatureCommand>(Mocks.Of<IBindingSettings>().First(s => s.TypeId == "Foo"));
+                var binding = this.target.CreateBinding<ICommand>(Mocks.Of<IBindingSettings>().First(s => s.TypeId == "Foo"));
 
                 Assert.NotNull(binding);
             }

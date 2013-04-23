@@ -4,14 +4,14 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Authoring;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Library.Automation
 {
@@ -48,7 +48,7 @@ namespace NuPattern.Library.Automation
         /// Initializes a new instance of the <see cref="MenuSettingsValidations"/> class.
         /// </summary>
         [ImportingConstructor]
-        public MenuSettingsValidations(IFeatureCompositionService composition)
+        public MenuSettingsValidations(INuPatternCompositionService composition)
         {
             Guard.NotNull(() => composition, composition);
 
@@ -56,8 +56,8 @@ namespace NuPattern.Library.Automation
             // TODO: this could be refactored into a separate global service.
             if (ValueProviders == null || Conditions == null || Events == null)
             {
-                var valueProviders = composition.GetExports<IValueProvider, IFeatureComponentMetadata>();
-                var conditions = composition.GetExports<ICondition, IFeatureComponentMetadata>();
+                var valueProviders = composition.GetExports<IValueProvider, IComponentMetadata>();
+                var conditions = composition.GetExports<ICondition, IComponentMetadata>();
                 var events = composition.GetExports<IObservableEvent, IIdMetadata>();
 
                 ValueProviders = valueProviders.ToLookup(item => item.Metadata.Id, item => item.Metadata.ExportingType);
@@ -316,7 +316,7 @@ namespace NuPattern.Library.Automation
             {
                 if (!string.IsNullOrEmpty(settings.Icon))
                 {
-                    var uriService = ((IServiceProvider)settings.Store).GetService<IFxrUriReferenceService>();
+                    var uriService = ((IServiceProvider)settings.Store).GetService<IUriReferenceService>();
                     var resolvedIcon = uriService.ResolveUri<ResourcePack>(new Uri(settings.Icon));
 
                     if (resolvedIcon == null)
@@ -331,7 +331,7 @@ namespace NuPattern.Library.Automation
                     if (resolvedIcon.Type == ResourcePackType.ProjectItem)
                     {
                         var item = resolvedIcon.GetItem();
-                        if (item.Data.ItemType != "Resource")
+                        if (item.Data.ItemType != @"Resource")
                         {
                             context.LogError(
                                     string.Format(CultureInfo.CurrentCulture, Resources.Validate_MenuSettingsIconIsNotAResource, settings.Name, item.Name),

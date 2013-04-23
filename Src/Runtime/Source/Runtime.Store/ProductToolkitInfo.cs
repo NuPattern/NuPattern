@@ -24,8 +24,8 @@ namespace NuPattern.Runtime.Store
         ///	<summary>
         ///	The name of this pattern toolkit.
         ///	</summary>
-        [DescriptionResource("ProductToolkitInfo_NameDescription", typeof(Resources))]
-        [CategoryResource("Category_General", typeof(Resources))]
+        [DescriptionResource(@"ProductToolkitInfo_Name_Description", typeof(Resources))]
+        [CategoryResource(@"Category_General", typeof(Resources))]
         public String Name
         {
             get { return this.proxy.GetValue(() => this.Name); }
@@ -35,8 +35,8 @@ namespace NuPattern.Runtime.Store
         ///	<summary>
         ///	The description of this pattern toolkit.
         ///	</summary>
-        [DescriptionResource("ProductToolkitInfo_DescriptionDescription", typeof(Resources))]
-        [CategoryResource("Category_General", typeof(Resources))]
+        [DescriptionResource(@"ProductToolkitInfo_Description_Description", typeof(Resources))]
+        [CategoryResource(@"Category_General", typeof(Resources))]
         public String Description
         {
             get { return this.proxy.GetValue(() => this.Description); }
@@ -46,8 +46,8 @@ namespace NuPattern.Runtime.Store
         ///	<summary>
         ///	The original author of this toolkit.
         ///	</summary>
-        [DescriptionResource("ProductToolkitInfo_AuthorDescription", typeof(Resources))]
-        [CategoryResource("Category_Identification", typeof(Resources))]
+        [DescriptionResource(@"ProductToolkitInfo_Author_Description", typeof(Resources))]
+        [CategoryResource(@"Category_Identification", typeof(Resources))]
         public String Author
         {
             get { return this.proxy.GetValue(() => this.Author); }
@@ -57,8 +57,8 @@ namespace NuPattern.Runtime.Store
         ///	<summary>
         ///	The current version of this toolkit.
         ///	</summary>
-        [DescriptionResource("ProductToolkitInfo_VersionDescription", typeof(Resources))]
-        [CategoryResource("Category_Identification", typeof(Resources))]
+        [DescriptionResource(@"ProductToolkitInfo_Version_Description", typeof(Resources))]
+        [CategoryResource(@"Category_Identification", typeof(Resources))]
         public String Version
         {
             get { return this.proxy.GetValue(() => this.Version); }
@@ -68,8 +68,8 @@ namespace NuPattern.Runtime.Store
         ///	<summary>
         ///	The unique identifier of this toolkit, also used as the VSIX identifier.
         ///	</summary>
-        [DescriptionResource("ProductToolkitInfo_IdentifierDescription", typeof(Resources))]
-        [CategoryResource("Category_Identification", typeof(Resources))]
+        [DescriptionResource(@"ProductToolkitInfo_Identifier_Description", typeof(Resources))]
+        [CategoryResource(@"Category_Identification", typeof(Resources))]
         public String Identifier
         {
             get { return this.proxy.GetValue(() => this.Identifier); }

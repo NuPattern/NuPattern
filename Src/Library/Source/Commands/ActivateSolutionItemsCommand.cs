@@ -5,10 +5,8 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.VisualStudio.Solution;
@@ -19,7 +17,7 @@ namespace NuPattern.Library.Commands
     /// Base command class for activating solution items.
     /// </summary>
     [CLSCompliant(false)]
-    public abstract class ActivateSolutionItemsCommand : FeatureCommand
+    public abstract class ActivateSolutionItemsCommand : Command
     {
         private const bool DefaultOpen = false;
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ActivateSolutionItemsCommand>();
@@ -37,8 +35,8 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [Required]
         [DefaultValue(DefaultOpen)]
-        [DisplayNameResource("ActivateSolutionItemsCommand_Open_DisplayName", typeof(Resources))]
-        [DescriptionResource("ActivateSolutionItemsCommand_Open_Description", typeof(Resources))]
+        [DisplayNameResource(@"ActivateSolutionItemsCommand_Open_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"ActivateSolutionItemsCommand_Open_Description", typeof(Resources))]
         public bool Open { get; set; }
 
         /// <summary>
@@ -53,7 +51,7 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriReferenceService { get; set; }
+        public IUriReferenceService UriReferenceService { get; set; }
 
         /// <summary>
         /// Gets or sets the solution.

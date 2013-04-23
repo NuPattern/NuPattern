@@ -3,10 +3,9 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
 {
@@ -17,7 +16,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [CategoryResource("AutomationCategory_PatternToolkitAuthoring", typeof(Resources))]
     [DescriptionResource("CreateAutomationLibraryExtensionCommand_Description", typeof(Resources))]
     [CLSCompliant(false)]
-    public class CreateAutomationLibraryExtensionCommand : FeatureCommand
+	public class CreateAutomationLibraryExtensionCommand : NuPattern.Runtime.Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateAutomationLibraryExtensionCommand>();
 

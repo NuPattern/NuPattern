@@ -3,7 +3,6 @@ using System.ComponentModel;
 using Microsoft.Practices.EnterpriseLibrary.Common.Configuration.Design;
 using Microsoft.Practices.EnterpriseLibrary.Configuration.Design.ComponentModel.Editors;
 using NuPattern.ComponentModel.Design;
-using NuPattern.ComponentModel.Design.UI;
 using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Design

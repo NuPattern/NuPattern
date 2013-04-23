@@ -23,6 +23,9 @@
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Integration$(DslToolsVersionSuffix)">
+      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Integration(DslToolsVersionSuffix).dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
@@ -76,6 +79,7 @@
     </Compile>
     <Compile Include="CompartmentShapeExtensions.cs" />
     <Compile Include="DiagramExtensions.cs" />
+    <Compile Include="ModelBusUriReferenceProvider.cs" />
     <Compile Include="ShapeElementExtensions.cs" />
     <Compile Include="ElementFactoryExtensions.cs" />
     <Compile Include="ModelElementExtensions.cs" />

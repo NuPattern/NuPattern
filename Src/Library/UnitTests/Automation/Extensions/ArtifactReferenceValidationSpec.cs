@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Automation;
@@ -9,6 +8,7 @@ using NuPattern.Modeling;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.Store;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.UnitTests.Automation.Artifact
 {
@@ -24,12 +24,12 @@ namespace NuPattern.Library.UnitTests.Automation.Artifact
             private DslTestStore<ProductStateStoreDomainModel> store = new DslTestStore<ProductStateStoreDomainModel>();
             private Product product;
             private ArtifactReferenceValidation validator;
-            private Mock<IFxrUriReferenceService> uriService;
+            private Mock<IUriReferenceService> uriService;
 
             [TestInitialize]
             public void InitializeContext()
             {
-                this.uriService = new Mock<IFxrUriReferenceService>();
+                this.uriService = new Mock<IUriReferenceService>();
                 this.validator = new ArtifactReferenceValidation();
                 this.validator.UriReferenceService = this.uriService.Object;
 

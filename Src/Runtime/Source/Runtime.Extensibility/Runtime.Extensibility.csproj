@@ -35,27 +35,12 @@
       <HintPath>$(BranchReferencesPath)\EntLib5\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
-      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
@@ -85,13 +70,9 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Shell.Interop.9.0.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0" Condition="'$(TargetVsVersion)' &gt; '10.0'">
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Interop.10.0.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop$(VsxVersionSuffix)">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.Shell.Interop$(VsxVersionSuffix).dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell$(VsxVersionSuffix)">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -132,33 +113,53 @@
     <Compile Include="Automation\IAutomationMenuCommand.cs" />
     <Compile Include="Automation\IExportedAutomationMetadata.cs" />
     <Compile Include="Automation\IWizardAutomationExtension.cs" />
+    <Compile Include="Bindings\Binding.cs" />
+    <Compile Include="Bindings\BindingResult.cs" />
     <Compile Include="Bindings\BindingCompositionService.cs" />
     <Compile Include="Bindings\BindingFactory.cs" />
     <Compile Include="Bindings\BindingPropertyDescriptor.cs" />
+    <Compile Include="SolutionUri.cs" />
+    <Compile Include="Guidance\CommandBinding.cs" />
+    <Compile Include="Guidance\Workflow\NodeType.cs" />
+    <Compile Include="LaunchPointUri.cs" />
+    <Compile Include="GuidanceContentUri.cs" />
+    <Compile Include="PackUri.cs" />
+    <Compile Include="Validation\DataAnnotationsValidator.cs" />
     <Compile Include="Bindings\Design\DesignCollectionConverter.cs" />
     <Compile Include="Bindings\Design\DesignComponentTypeDescriptor.cs" />
     <Compile Include="Bindings\Design\DesignOnlyPropertyDescriptor.cs" />
     <Compile Include="Bindings\Design\DesignCollectionPropertyDescriptor.cs" />
     <Compile Include="Bindings\DynamicBindingExtensions.cs" />
+    <Compile Include="Bindings\FixedValuePropertyBinding.cs" />
     <Compile Include="Bindings\IBindingCompositionService.cs" />
     <Compile Include="Bindings\IBindingFactory.cs" />
     <Compile Include="Bindings\IBindingSettings.cs" />
     <Compile Include="Bindings\IDynamicBinding.cs" />
     <Compile Include="Bindings\IDynamicBindingContext.cs" />
     <Compile Include="Bindings\IPropertyBindingSettings.cs" />
+    <Compile Include="Validation\IValidator.cs" />
     <Compile Include="Bindings\IValueProviderBindingSettings.cs" />
+    <Compile Include="Bindings\PropertyBinding.cs" />
     <Compile Include="Bindings\PropertyBindingDescriptor.cs" />
+    <Compile Include="Validation\PropertyValidationResult.cs" />
+    <Compile Include="Bindings\ValueProviderPropertyBinding.cs" />
     <Compile Include="CodeGen\Pluralizer.cs" />
     <Compile Include="Comparers\FirstPropertyValueProductElementComparer.cs" />
     <Compile Include="Comparers\ProductElementComparer.cs" />
     <Compile Include="Comparers\ProductElementInstanceNameComparer.cs" />
     <Compile Include="ComponentMetadataExtensions.cs" />
+    <Compile Include="Composition\NuPatternCompositionService.cs" />
+    <Compile Include="Composition\NuPatternGlobalContainer.cs" />
+    <Compile Include="Condition.cs" />
+    <Compile Include="ConditionAttribute.cs" />
     <Compile Include="Events\EventAttribute.cs" />
     <Compile Include="Events\IEventCondition.cs" />
     <Compile Include="Events\IEventMetadata.cs" />
     <Compile Include="Events\IOnSolutionBuilderDragEnter.cs" />
     <Compile Include="Events\IOnSolutionBuilderDragLeave.cs" />
     <Compile Include="Events\IOnSolutionBuilderDrop.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="CommandAttribute.cs" />
     <Compile Include="GeneratedCode\InfoInterfaces.gen.cs">
       <DependentUpon>InfoInterfaces.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -174,19 +175,89 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Bindings\IBinding.cs" />
+    <Compile Include="Guidance\ICommandBinding.cs" />
+    <Compile Include="Guidance\CommandBindingExtensions.cs" />
+    <Compile Include="Guidance\DefaultGuidanceInstanceLocator.cs" />
+    <Compile Include="Guidance\DefaultQueryStatusStrategy.cs" />
+    <Compile Include="Guidance\Diagnostics\GuidanceExtensionTracer.cs" />
+    <Compile Include="Guidance\Diagnostics\GuidanceExtensionTraceRecord.cs" />
+    <Compile Include="Guidance\Extensions\BlackboardGuidanceExtension.cs" />
+    <Compile Include="Guidance\Extensions\BlackboardManager.cs" />
+    <Compile Include="Guidance\Extensions\BlackboardWorkflowBinder.cs" />
+    <Compile Include="Guidance\Extensions\DefaultTemplateInstantiationScope.cs" />
+    <Compile Include="Guidance\Extensions\GuidanceExtension.cs" />
+    <Compile Include="Guidance\Extensions\GuidanceExtensionInstantiationScope.cs" />
+    <Compile Include="Guidance\Extensions\InstantiationScope.cs" />
+    <Compile Include="Guidance\Extensions\StatelessGuidanceExtension.cs" />
+    <Compile Include="Guidance\LaunchPoints\IVsLaunchPointLocation.cs" />
+    <Compile Include="Guidance\LaunchPointAttribute.cs" />
+    <Compile Include="Guidance\LaunchPoints\LinkLaunchPoint.cs" />
+    <Compile Include="Guidance\LaunchPoints\VsLaunchPoint.cs" />
+    <Compile Include="Guidance\LaunchPoints\VsLaunchPointLocation.cs" />
+    <Compile Include="Guidance\LaunchPoints\VsTemplateLaunchPoint.cs" />
+    <Compile Include="Guidance\LaunchPoints\VsTemplateLaunchPointExtensions.cs" />
+    <Compile Include="Guidance\GuidanceExtensionAttribute.cs" />
+    <Compile Include="Guidance\GuidanceComponentCategories.cs" />
+    <Compile Include="Guidance\GuidanceInstantiation.cs" />
+    <Compile Include="Guidance\GuidanceManagerSettings.cs" />
+    <Compile Include="Guidance\IGuidanceInstanceLocator.cs" />
+    <Compile Include="Guidance\IGuidanceWindowsService.cs" />
+    <Compile Include="Guidance\ILaunchPoint.cs" />
+    <Compile Include="Guidance\IQueryStatusStrategy.cs" />
+    <Compile Include="Guidance\IGuidanceExtensionPersistState.cs" />
+    <Compile Include="Guidance\MetadataEqualityComparer.cs" />
+    <Compile Include="Guidance\QueryStatus.cs" />
+    <Compile Include="Guidance\Workflow\Cardinality.cs" />
+    <Compile Include="Guidance\Workflow\ConditionalNode.cs" />
+    <Compile Include="Guidance\Workflow\Decision.cs" />
+    <Compile Include="Guidance\Workflow\DefaultStateComposer.cs" />
+    <Compile Include="Guidance\Workflow\Final.cs" />
+    <Compile Include="Guidance\Workflow\Fork.cs" />
+    <Compile Include="Guidance\Workflow\GuidanceAction.cs" />
+    <Compile Include="Guidance\Workflow\GuidanceWorkflow.cs" />
+    <Compile Include="Guidance\Workflow\Initial.cs" />
+    <Compile Include="Guidance\Workflow\Join.cs" />
+    <Compile Include="Guidance\Workflow\Merge.cs" />
+    <Compile Include="Guidance\Workflow\Node.cs" />
+    <Compile Include="Guidance\Workflow\NodeDescriptor.cs" />
+    <Compile Include="Guidance\Workflow\NodeExtensions.cs" />
+    <Compile Include="Guidance\Workflow\StateChangeSource.cs" />
+    <Compile Include="ICondition.cs" />
     <Compile Include="IExpressionEvaluator.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="Composition\INuPatternCompositionService.cs" />
+    <Compile Include="Guidance\IGuidanceExtension.cs" />
+    <Compile Include="Guidance\IGuidanceManager.cs" />
+    <Compile Include="Guidance\IGuidanceExtensionMetadata.cs" />
+    <Compile Include="Guidance\IGuidanceExtensionRegistration.cs" />
     <Compile Include="IIdMetadata.cs" />
     <Compile Include="IInstalledToolkitInfo.cs" />
     <Compile Include="INuPatternProjectTypeProvider.cs" />
     <Compile Include="IPatternManager.cs" />
     <Compile Include="IPatternModelSchemaUpgradeManager.cs" />
     <Compile Include="IPatternModelSchemaUpgradeProcessor.cs" />
+    <Compile Include="IProjectTypeProvider.cs" />
     <Compile Include="IPropertyEvaluator.cs" />
     <Compile Include="ISchemaReader.cs" />
     <Compile Include="ISchemaUpgradeContext.cs" />
     <Compile Include="ISchemaUpgradeProccesorOptions.cs" />
+    <Compile Include="Guidance\ISolutionState.cs" />
     <Compile Include="IToolkitClassification.cs" />
     <Compile Include="IToolkitInfo.cs" />
+    <Compile Include="IValueProvider.cs" />
+    <Compile Include="Guidance\Workflow\IConditionalNode.cs" />
+    <Compile Include="Guidance\Workflow\IDecision.cs" />
+    <Compile Include="Guidance\Workflow\IFinal.cs" />
+    <Compile Include="Guidance\Workflow\IFork.cs" />
+    <Compile Include="Guidance\Workflow\IGuidanceAction.cs" />
+    <Compile Include="Guidance\Workflow\IGuidanceWorkflow.cs" />
+    <Compile Include="Guidance\Workflow\IInitial.cs" />
+    <Compile Include="Guidance\Workflow\IJoin.cs" />
+    <Compile Include="Guidance\Workflow\IMerge.cs" />
+    <Compile Include="Guidance\Workflow\INode.cs" />
+    <Compile Include="Guidance\Workflow\IStateComposer.cs" />
+    <Compile Include="Guidance\Workflow\NodeState.cs" />
     <Compile Include="Schema\NamedElementInfoExtensions.cs" />
     <Compile Include="Store\AutomationExtension.cs" />
     <Compile Include="Store\IAbstractElement.cs" />
@@ -312,21 +383,20 @@
     <Compile Include="Bindings\PropertyBindingSettings.cs" />
     <Compile Include="Bindings\ValueProviderBindingSettings.cs" />
     <Compile Include="CodeGen\CodeGeneration.cs" />
-    <Compile Include="Design\FeatureComponentTypeConverter.cs" />
+    <Compile Include="Design\NuPatternComponentTypeConverter.cs" />
     <Compile Include="Design\TransformOnBuildConverter.cs" />
     <Compile Include="Automation\ExportedAutomationAttribute.cs" />
     <Compile Include="ExpressionEvaluator.cs" />
     <Compile Include="Bindings\BindingSettingsExtensions.cs" />
     <Compile Include="References\ReferenceExtensions.cs" />
     <Compile Include="Bindings\BindingSerializer.cs" />
-    <Compile Include="Guidance\FeatureManagerExtensions.cs" />
+    <Compile Include="Guidance\GuidanceManagerExtensions.cs" />
     <Compile Include="ToolkitInterface\ToolkitInterfaceProxyAttribute.cs" />
     <Compile Include="UI\ICommandStatus.cs" />
     <Compile Include="UI\IPickerFilter.cs" />
     <Compile Include="UI\IProductPicker.cs" />
     <Compile Include="UI\ISolutionPicker.cs" />
     <Compile Include="UI\ISolutionSelector.cs" />
-    <Compile Include="UriReferenceServiceExtensions.cs" />
     <Compile Include="ToolkitInterface\ProxyServiceProvider.cs" />
     <Compile Include="References\SolutionArtifactLinkReference.cs" />
     <Compile Include="References\GuidanceReference.cs" />
@@ -338,7 +408,7 @@
     <Compile Include="Design\TypePicker.cs" />
     <Compile Include="CodeGen\ProductCodeGeneration.cs" />
     <Compile Include="Design\IconEditor.cs" />
-    <Compile Include="Design\FeatureExtensionsTypeConverter.cs" />
+    <Compile Include="Design\GuidanceExtensionsTypeConverter.cs" />
     <Compile Include="Design\ImageFilterAttribute.cs" />
     <Compile Include="Design\ImageKind.cs" />
     <Compile Include="Design\ImageDialog.cs">
@@ -370,6 +440,8 @@
     <Compile Include="Validation\ValidationRule.cs" />
     <Compile Include="Validation\ValidationRuleAttribute.cs" />
     <Compile Include="ValueEventArgs.cs" />
+    <Compile Include="ValueProvider.cs" />
+    <Compile Include="ValueProviderAttribute.cs" />
     <Compile Include="VsTemplateUri.cs" />
   </ItemGroup>
   <ItemGroup>

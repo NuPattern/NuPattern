@@ -12,29 +12,33 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using Microsoft.ComponentModel.Composition.Diagnostics;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Diagnostics;
 using NuPattern.IO;
 using NuPattern.Library;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Diagnostics;
+using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.LaunchPoints;
+using NuPattern.Runtime.Guidance.Workflow;
 using NuPattern.Runtime.Settings;
+using NuPattern.Runtime.Shell.Commands;
 using NuPattern.Runtime.Shell.OptionPages;
 using NuPattern.Runtime.Shell.Properties;
+using NuPattern.Runtime.Shell.ToolWindows;
 using NuPattern.Runtime.Store;
 using NuPattern.Runtime.ToolkitInterface;
 using NuPattern.Runtime.UI;
 using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Commands;
+using NuPattern.VisualStudio.Extensions;
 using NuPattern.VisualStudio.Solution;
-using Ole = Microsoft.VisualStudio.OLE.Interop;
 
 namespace NuPattern.Runtime.Shell
 {
@@ -45,67 +49,81 @@ namespace NuPattern.Runtime.Shell
     [ProvideEditorExtension(typeof(ProductStateEditorFactory), NuPattern.Runtime.StoreConstants.RuntimeStoreExtension, 8, DefaultName = NuPattern.Runtime.StoreConstants.RuntimeStoreEditorDescription)]
     [ProvideAutoLoad(UIContextGuids.NoSolution)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
-    [ProvideMenuResource("Menus.ctmenu", 1)]
+    [ProvideMenuResource(@"Menus.ctmenu", 1)]
     [ProvideToolWindow(typeof(SolutionBuilderToolWindow), Window = ToolWindowGuids.Toolbox, Orientation = ToolWindowOrientation.Right, Style = VsDockStyle.Tabbed)]
+    [ProvideToolWindow(typeof(GuidanceExplorerToolWindow), Window = Constants.SolutionBuilderToolWindowGuid, Orientation = ToolWindowOrientation.Bottom, Style = VsDockStyle.Linked)]
+    [ProvideToolWindow(typeof(GuidanceBrowserToolWindow), Window = ToolWindowGuids.TaskList, Style = VsDockStyle.Tabbed)]
     [ProvideDirectiveProcessor(typeof(ProductStateStoreDirectiveProcessor), ProductStateStoreDirectiveProcessor.ProductStateStoreDirectiveProcessorName, Constants.ProductStateStoreDirectiveProcessorDescription)]
     [Microsoft.VisualStudio.Modeling.Shell.ProvideBindingPath]
     [Guid(Constants.RuntimeShellPkgGuid)]
     [CLSCompliant(false)]
-    [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = "IPlatuProjectTypeProvider")]
-    [ProvideService(typeof(IPatternManager), ServiceName = "IPatternManager")]
-    [ProvideService(typeof(IPackageToolWindow), ServiceName = "IPackageToolWindow")]
-    [ProvideService(typeof(ISolutionEvents), ServiceName = "ISolutionEvents")]
-    [ProvideService(typeof(IUserMessageService), ServiceName = "IUserMessageService")]
-    [ProvideService(typeof(IBindingFactory), ServiceName = "IBindingFactory")]
-    [ProvideService(typeof(IBindingCompositionService), ServiceName = "IBindingCompositionService")]
-    [ProvideService(typeof(IToolkitInterfaceService), ServiceName = "IToolkitInferfaceService")]
-    [ProvideOptionPage(typeof(TraceOptionsPage), Constants.SettingsName, "TraceOptionsPage", 17131, 21356, true)]
+    [ProvideService(typeof(IUriReferenceService), ServiceName = @"IUriReferenceService")]
+    [ProvideService(typeof(ITemplateService), ServiceName = @"TemplateService")]
+    [ProvideService(typeof(ISolution), ServiceName = @"ISolution")]
+    [ProvideService(typeof(IExtensionManager), ServiceName = @"IExtensionManager")]
+    [ProvideService(typeof(IGuidanceManager), ServiceName = @"IGuidanceManager")]
+    [ProvideService(typeof(INuPatternCompositionService), ServiceName = @"INuPatternCompositionService")]
+    [ProvideService(typeof(IGuidanceWindowsService), ServiceName = @"IGuidanceWindowsService")]
+    [ProvideService(typeof(INuPatternProjectTypeProvider), ServiceName = @"INuPatternProjectTypeProvider")]
+    [ProvideService(typeof(IPatternManager), ServiceName = @"IPatternManager")]
+    [ProvideService(typeof(IPackageToolWindow), ServiceName = @"IPackageToolWindow")]
+    [ProvideService(typeof(ISolutionEvents), ServiceName = @"ISolutionEvents")]
+    [ProvideService(typeof(IUserMessageService), ServiceName = @"IUserMessageService")]
+    [ProvideService(typeof(IBindingFactory), ServiceName = @"IBindingFactory")]
+    [ProvideService(typeof(IBindingCompositionService), ServiceName = @"IBindingCompositionService")]
+    [ProvideService(typeof(IToolkitInterfaceService), ServiceName = @"IToolkitInferfaceService")]
+    [ProvideOptionPage(typeof(TraceOptionsPage), Constants.SettingsName, @"TraceOptionsPage", 17131, 21356, true)]
     [ProvideDirectiveProcessor(typeof(ModelElementDirectiveProcessor), ModelElementDirectiveProcessor.ProcessorName, Constants.LibraryDirectiveProcessorDescription)]
     public sealed class RuntimeShellPackage : Package
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<RuntimeShellPackage>();
+        private const int IdleTimeout = 5000;
+        private const int GuidanceEvalTimeGovernor = 1; // In Seconds
         private static readonly Guid OutputPaneGuid = new Guid(Constants.VsOutputWindowPaneId);
         private ProductStateValidator productStateValidator;
+        private VsIdleTaskHost idleTaskHost;
+        private bool showWindows = false;
 
         [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Justification = "Not sure if it's OK to leave this container unreferenced by anyone.")]
         private TracingSettingsMonitor tracingMonitor;
         private TraceOutputWindowManager traceOutputWindowManager;
 
+#pragma warning disable 0649
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
+        private INuPatternCompositionService CompositionService { get; set; }
+        [Import]
+        private IGuidanceManager GuidanceManager { get; set; }
+        [Import]
+        private IUriReferenceService UriReferenceService { get; set; }
+        [Import]
+        private ITemplateService TemplateService { get; set; }
+        [Import]
+        private ISolution Solution { get; set; }
+        [Import]
+        private IExtensionManager ExtensionManager { get; set; }
+        [Import]
+        private IGuidanceWindowsService GuidanceWindowsService { get; set; }
+        [ImportMany(typeof(ILaunchPoint))]
+        private IEnumerable<Lazy<ILaunchPoint>> LaunchPoints { get; set; }
+        [Import]
         private IPatternManager PatternManager { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private INuPatternProjectTypeProvider ProjectTypes { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IBindingFactory BindingFactory { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IBindingCompositionService BindingComposition { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private ISolutionEvents SolutionEvents { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IShellEvents ShellEvents { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private ISettingsManager SettingsManager { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IUserMessageService UserMessageService { get; set; }
-
         [Import]
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "MEF")]
         private IToolkitInterfaceService ToolkitInterfaceService { get; set; }
+#pragma warning restore 0649
 
 #if VSVER11
         private ResolveEventHandler assemblyResolve = OnAssemblyResolve;
@@ -178,27 +196,13 @@ namespace NuPattern.Runtime.Shell
             this.SolutionEvents.SolutionOpened += OnSolutionOpened;
             this.SolutionEvents.SolutionClosed += OnSolutionClosed;
 
-            EnsureVsHelperInitializedHack();
-        }
+            // If initializing other packages launchpoints worked, 
+            // they wouldn't need to do this themselves.
+            this.RegisterRefreshGuidanceStates();
+            this.GuidanceManager.InstantiatedExtensionsChanged += this.OnInstantiatedGuidanceExtensionChanged;
+            this.GuidanceManager.ActiveExtensionChanged += this.OnActiveGuidanceExtensionChanged;
 
-        private void EnsureVsHelperInitializedHack()
-        {
-            var helperType = Type.GetType("Microsoft.VisualStudio.TeamArchitect.PowerTools.VsIde.VsHelper, Microsoft.VisualStudio.TeamArchitect.PowerTools");
-            if (helperType != null)
-            {
-                var providerField = helperType.GetField("serviceProvider", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
-                if (providerField != null)
-                {
-                    var value = providerField.GetValue(null);
-                    if (value == null)
-                    {
-                        using (var provider = new ServiceProvider((Ole.IServiceProvider)this.GetService<SDTE, EnvDTE.DTE>()))
-                        {
-                            providerField.SetValue(null, provider);
-                        }
-                    }
-                }
-            }
+            this.InitializeVsLaunchPoints();
         }
 
         /// <summary>
@@ -226,10 +230,20 @@ namespace NuPattern.Runtime.Shell
                     this.productStateValidator.Dispose();
                 }
 
-                this.ShellEvents.ShellInitialized -= OnShellInitialized;
-                this.SolutionEvents.SolutionOpened -= OnSolutionOpened;
-                this.SolutionEvents.SolutionClosed -= OnSolutionClosed;
+                if (this.idleTaskHost != null)
+                {
+                    this.idleTaskHost.Dispose();
+                }
 
+                if (this.ShellEvents != null)
+                {
+                    this.ShellEvents.ShellInitialized -= OnShellInitialized;
+                }
+                if (this.SolutionEvents != null)
+                {
+                    this.SolutionEvents.SolutionOpened -= OnSolutionOpened;
+                    this.SolutionEvents.SolutionClosed -= OnSolutionClosed;
+                }
 #if VSVER11
                 _isResolveAssemblyRunningOnThisThread = false;
                 if (this.assemblyResolve != null)
@@ -248,6 +262,13 @@ namespace NuPattern.Runtime.Shell
         private void AddServices()
         {
             var serviceContainer = (IServiceContainer)this;
+            serviceContainer.AddService(typeof(IUriReferenceService), new ServiceCreatorCallback((c, s) => this.UriReferenceService), true);
+            serviceContainer.AddService(typeof(ITemplateService), new ServiceCreatorCallback((c, s) => this.TemplateService), true);
+            serviceContainer.AddService(typeof(ISolution), new ServiceCreatorCallback((c, s) => this.Solution), true);
+            serviceContainer.AddService(typeof(IExtensionManager), new ServiceCreatorCallback((c, s) => this.ExtensionManager), true);
+            serviceContainer.AddService(typeof(IGuidanceManager), new ServiceCreatorCallback((c, s) => this.GuidanceManager), true);
+            serviceContainer.AddService(typeof(INuPatternCompositionService), new ServiceCreatorCallback((c, s) => this.CompositionService), true);
+            serviceContainer.AddService(typeof(IGuidanceWindowsService), new ServiceCreatorCallback((c, s) => this.GuidanceWindowsService), true);
             serviceContainer.AddService(typeof(RuntimeShellPackage), this, true);
             serviceContainer.AddService(typeof(IPackageToolWindow), new PackageToolWindow(this), true);
             serviceContainer.AddService(typeof(IPatternManager), new ServiceCreatorCallback((s, t) => this.PatternManager), true);
@@ -269,6 +290,8 @@ namespace NuPattern.Runtime.Shell
         private void OnSolutionClosed(object sender, SolutionEventArgs e)
         {
             SolutionBuilderToolWindow.AutoHideWindow(this);
+            GuidanceExplorerToolWindow.HideWindow(this);
+            GuidanceBrowserToolWindow.HideWindow(this);
         }
 
         private void OnSolutionOpened(object sender, SolutionEventArgs e)
@@ -283,7 +306,7 @@ namespace NuPattern.Runtime.Shell
                 var solutionFiles = e.Solution.Find<IItem>(pathExpression1);
                 if (solutionFiles.Any())
                 {
-                    this.AutoOpenSolutionBuilder();
+                    SolutionBuilderToolWindow.AutoOpenWindow(this);
                 }
                 else
                 {
@@ -291,33 +314,59 @@ namespace NuPattern.Runtime.Shell
                     solutionFiles = e.Solution.Find<IItem>(pathExpression2);
                     if (solutionFiles.Any())
                     {
-                        this.AutoOpenSolutionBuilder();
+                        SolutionBuilderToolWindow.AutoOpenWindow(this);
                     }
                 }
             }
+
+            if (!this.GuidanceManager.IsOpened)
+            {
+                this.GuidanceManager.Open(new SolutionDataState(this.Solution));
+
+                // Open guidance windows
+                GuidanceExplorerToolWindow.OpenWindow(this);
+                GuidanceBrowserToolWindow.OpenWindow(this);
+            }
         }
 
-        [Conditional("DEBUG")]
+        [Conditional(@"DEBUG")]
         private void DumpMefLog(IComponentModel componentModel)
         {
             PackageUtility.ShowError(this, string.Format(CultureInfo.InvariantCulture, Resources.RuntimeShellPackage_DumpMefLogs, Constants.ProductName));
 
-            var tempFile = Path.Combine(Path.GetTempPath(), "mef.txt");
-            using (var writer = new StreamWriter(tempFile, false))
+            var tempFile = string.Empty;
+            try
             {
-                CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.DefaultCatalog, componentModel.DefaultExportProvider), writer);
+                // Write out the default VS catalog
+                tempFile = Path.Combine(Path.GetTempPath(), "mef.txt");
+                using (var writer = new StreamWriter(tempFile, false))
+                {
+                    CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.DefaultCatalog, componentModel.DefaultExportProvider), writer);
+                }
+
+                Process.Start(tempFile);
+            }
+            catch (IOException)
+            {
+                // Ignore writing issues
             }
 
-            Process.Start(tempFile);
-
-            tempFile = Path.Combine(Path.GetTempPath(), "mef-powertools.txt");
-            using (var writer = new StreamWriter(tempFile, false))
+            try
             {
-                CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.GetCatalog(
-                    Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName), componentModel.DefaultExportProvider), writer);
-            }
+                // Write out the NuPattern catalog
+                tempFile = Path.Combine(Path.GetTempPath(), "mef-nupattern.txt");
+                using (var writer = new StreamWriter(tempFile, false))
+                {
+                    CompositionInfoTextFormatter.Write(new CompositionInfo(componentModel.GetCatalog(
+                        Catalog.DefaultCatalogName), componentModel.DefaultExportProvider), writer);
+                }
 
-            Process.Start(tempFile);
+                Process.Start(tempFile);
+            }
+            catch (IOException)
+            {
+                // Ignore writing issues
+            }
         }
 
         private static IEnumerable<string> GetConfiguredSourceNames(IRuntimeSettings settings)
@@ -340,6 +389,8 @@ namespace NuPattern.Runtime.Shell
             if (menuCommandService != null)
             {
                 menuCommandService.AddCommand(new OpenSolutionBuilderMenuCommand(this.GetService<IPackageToolWindow>()));
+                menuCommandService.AddCommand(new OpenGuidanceExplorerMenuCommand(this.GetService<IPackageToolWindow>()));
+                menuCommandService.AddCommand(new OpenGuidanceBrowserMenuCommand(this.GetService<IPackageToolWindow>()));
             }
         }
 
@@ -351,10 +402,9 @@ namespace NuPattern.Runtime.Shell
         /// </remarks>
         private void CheckFertInstalled()
         {
-            var extensionManager = this.GetService<SVsExtensionManager, IVsExtensionManager>();
-            if (extensionManager != null)
+            if (this.ExtensionManager != null)
             {
-                var enabledExtensions = extensionManager.GetEnabledExtensions();
+                var enabledExtensions = this.ExtensionManager.GetEnabledExtensions();
                 var fertExtension = enabledExtensions.FirstOrDefault(ext =>
                         Constants.FertVsixIdentifiers.Contains(ext.Header.Identifier, StringComparer.OrdinalIgnoreCase));
                 if (fertExtension != null)
@@ -492,5 +542,43 @@ namespace NuPattern.Runtime.Shell
             return assembly;
         }
 #endif
+
+        private void InitializeVsLaunchPoints()
+        {
+            var menuCommandService = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
+            if (menuCommandService != null)
+            {
+                var lps = this.LaunchPoints
+                    .Select(lazy => lazy.Value)
+                    .OfType<VsLaunchPoint>();
+
+                foreach (var launchPoint in lps)
+                {
+                    menuCommandService.AddCommand(launchPoint);
+                }
+            }
+        }
+
+        private void OnInstantiatedGuidanceExtensionChanged(object sender, EventArgs args)
+        {
+            this.showWindows = true;
+        }
+
+        private void OnActiveGuidanceExtensionChanged(object sender, EventArgs args)
+        {
+            var activeExtension = this.GuidanceManager.ActiveGuidanceExtension;
+            if (activeExtension != null && this.showWindows && activeExtension.GuidanceWorkflow != null)
+            {
+                this.GuidanceWindowsService.ShowGuidanceExplorer(this);
+                this.GuidanceWindowsService.ShowGuidanceBrowser(this);
+            }
+        }
+
+        private void RegisterRefreshGuidanceStates()
+        {
+            var conditionsEvaluator = new GuidanceConditionsEvaluator(this.GuidanceManager);
+            this.idleTaskHost = new VsIdleTaskHost(this, () => conditionsEvaluator.EvaluateGraphs(), TimeSpan.FromSeconds(GuidanceEvalTimeGovernor));
+            this.idleTaskHost.Start(TimeSpan.FromMilliseconds(IdleTimeout));
+        }
     }
 }

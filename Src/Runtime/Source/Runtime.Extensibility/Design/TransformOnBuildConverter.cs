@@ -28,7 +28,7 @@ namespace NuPattern.Runtime.Design
         /// </returns>
         public override StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
         {
-            return new StandardValuesCollection(new string[] { "Always", "Never" });
+            return new StandardValuesCollection(new string[] { @"Always", @"Never" });
         }
 
         /// <summary>

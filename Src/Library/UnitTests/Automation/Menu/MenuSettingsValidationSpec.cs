@@ -2,12 +2,12 @@
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Automation;
 using NuPattern.Modeling;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests.Automation.Menu
@@ -37,7 +37,7 @@ namespace NuPattern.Library.UnitTests.Automation.Menu
                     this.settings = automationSettings.AddExtension<MenuSettings>();
                 });
 
-                this.validator = new MenuSettingsValidations(Mock.Of<IFeatureCompositionService>())
+                this.validator = new MenuSettingsValidations(Mock.Of<INuPatternCompositionService>())
                 {
                     ProjectTypeProvider = Mock.Of<INuPatternProjectTypeProvider>(),
                 };

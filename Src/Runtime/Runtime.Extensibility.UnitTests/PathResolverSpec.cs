@@ -1,9 +1,9 @@
 ﻿using System;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.Properties;
 using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UnitTests
 {
@@ -38,7 +38,7 @@ namespace NuPattern.Runtime.UnitTests
         [TestMethod, TestCategory("Unit")]
         public void WhenPathEndsWithSlash_ThenItIsRemoved()
         {
-            var resolver = new PathResolver(Mock.Of<IProductElement>(), Mock.Of<IFxrUriReferenceService>(), "Folder\\SubFolder\\");
+            var resolver = new PathResolver(Mock.Of<IProductElement>(), Mock.Of<IUriReferenceService>(), "Folder\\SubFolder\\");
 
             resolver.Resolve();
 
@@ -49,16 +49,16 @@ namespace NuPattern.Runtime.UnitTests
         public class GivenAProductElementHierarchy
         {
             public Mock<IProductElement> Element { get; private set; }
-            public Mock<IFxrUriReferenceService> UriService { get; private set; }
+            public Mock<IUriReferenceService> UriService { get; private set; }
             public PathResolver Resolver { get; private set; }
             public IProduct Root { get; private set; }
 
             [TestInitialize]
             public void Initialize()
             {
-                this.UriService = new Mock<IFxrUriReferenceService>();
+                this.UriService = new Mock<IUriReferenceService>();
                 this.Root = Mock.Of<IProduct>(p =>
-                        p.ProductState.GetService(typeof(IFxrUriReferenceService)) == Mock.Of<IFxrUriReferenceService>());
+                        p.ProductState.GetService(typeof(IUriReferenceService)) == Mock.Of<IUriReferenceService>());
 
                 this.Element = new Mock<IProductElement>();
                 this.Element

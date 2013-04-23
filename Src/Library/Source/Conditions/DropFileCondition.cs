@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 
 namespace NuPattern.Library.Conditions
@@ -11,9 +11,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// Checks if the dragged data contains files that can be dropped
     /// </summary>
-    [DisplayNameResource("DropFileCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("DropFileCondition_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"DropFileCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"DropFileCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class DropFileCondition : DropItemCondition
     {
@@ -22,8 +22,8 @@ namespace NuPattern.Library.Conditions
         /// <summary>
         /// Gets or sets the file extension which can be dropped.
         /// </summary>
-        [DisplayNameResource("DropFileCondition_Extension_DisplayName", typeof(Resources))]
-        [DescriptionResource("DropFileCondition_Extension_Description", typeof(Resources))]
+        [DisplayNameResource(@"DropFileCondition_Extension_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"DropFileCondition_Extension_Description", typeof(Resources))]
         [Required(AllowEmptyStrings = false)]
         public virtual string Extension
         {

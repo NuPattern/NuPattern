@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 
 namespace NuPattern.Library.Conditions
@@ -10,9 +10,9 @@ namespace NuPattern.Library.Conditions
     /// <summary>
     /// Checks if the dragged data contains solution items that can be dropped
     /// </summary>
-    [DisplayNameResource("DropSolutionItemCondition_DisplayName", typeof(Resources))]
-    [DescriptionResource("DropSolutionItemCondition_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"DropSolutionItemCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"DropSolutionItemCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class DropSolutionItemCondition : DropFileCondition
     {

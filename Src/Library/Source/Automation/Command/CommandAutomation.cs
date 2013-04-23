@@ -1,8 +1,6 @@
 ﻿using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.Globalization;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
@@ -31,7 +29,7 @@ namespace NuPattern.Library.Automation
         /// <summary>
         /// Gets the command binding.
         /// </summary>
-        internal IDynamicBinding<IFeatureCommand> CommandBinding { get; private set; }
+        internal IDynamicBinding<ICommand> CommandBinding { get; private set; }
 
         /// <summary>
         /// Gets or sets the binding factory.
@@ -47,7 +45,7 @@ namespace NuPattern.Library.Automation
         {
             base.EndInit();
 
-            this.CommandBinding = this.BindingFactory.CreateBinding<IFeatureCommand>(this.Settings);
+            this.CommandBinding = this.BindingFactory.CreateBinding<ICommand>(this.Settings);
         }
 
         /// <summary>

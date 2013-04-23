@@ -15,7 +15,7 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Current DSL Version
         /// </summary>
-        public static readonly Version DslVersion = new Version("1.3.0.0");
+        public static readonly Version DslVersion = new Version(@"1.3.0.0");
 
         /// <summary>
         /// Current DSL version

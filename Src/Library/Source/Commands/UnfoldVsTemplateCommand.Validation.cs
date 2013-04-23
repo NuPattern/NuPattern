@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Automation.Template;
 using NuPattern.Library.Properties;

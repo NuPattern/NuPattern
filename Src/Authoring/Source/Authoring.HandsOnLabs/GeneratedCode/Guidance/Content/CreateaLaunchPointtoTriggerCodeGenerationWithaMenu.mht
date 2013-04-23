@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDFC11.91B03420"
+Content-Type: multipart/related; boundary="----=_NextPart_01CE4000.0E2AD9B0"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDFC11.91B03420
+------=_NextPart_01CE4000.0E2AD9B0
 Content-Location: file:///C:/D6382235/CreateaLaunchPointtoTriggerCodeGenerationWithaMenu.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -35,12 +35,12 @@ w\:* {behavior:url(#default#VML);}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:DocumentProperties>
-  <o:Author>Jezz Santos</o:Author>
-  <o:LastAuthor>Jezz Santos</o:LastAuthor>
+  <o:Author>Jezz</o:Author>
+  <o:LastAuthor>Jezz</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2013-01-26T09:07:00Z</o:Created>
-  <o:LastSaved>2013-01-26T09:07:00Z</o:LastSaved>
+  <o:Created>2013-04-22T20:53:00Z</o:Created>
+  <o:LastSaved>2013-04-22T20:53:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>187</o:Words>
   <o:Characters>1071</o:Characters>
@@ -69,7 +69,7 @@ emapping.xml">
   <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
   <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
   <w:DoNotPromoteQF/>
-  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeOther>EN-NZ</w:LidThemeOther>
   <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
   <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
   <w:Compatibility>
@@ -416,10 +416,10 @@ n"/>
 	{mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:"";
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
@@ -428,7 +428,9 @@ n"/>
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 h1
 	{mso-style-priority:9;
 	mso-style-unhide:no;
@@ -436,9 +438,9 @@ h1
 	mso-style-link:"Heading 1 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -454,16 +456,18 @@ h1
 	color:#1D1B11;
 	mso-themecolor:background2;
 	mso-themeshade:26;
-	mso-font-kerning:0pt;}
+	mso-font-kerning:0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 h2
 	{mso-style-priority:9;
 	mso-style-qformat:yes;
 	mso-style-link:"Heading 2 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -478,16 +482,18 @@ h2
 	mso-bidi-theme-font:major-bidi;
 	color:#404040;
 	mso-themecolor:text1;
-	mso-themetint:191;}
+	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 h3
 	{mso-style-priority:9;
 	mso-style-qformat:yes;
 	mso-style-link:"Heading 3 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -502,16 +508,18 @@ h3
 	mso-bidi-theme-font:major-bidi;
 	color:#4A442A;
 	mso-themecolor:background2;
-	mso-themeshade:64;}
+	mso-themeshade:64;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 h4
 	{mso-style-priority:9;
 	mso-style-qformat:yes;
 	mso-style-link:"Heading 4 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -527,6 +535,8 @@ h4
 	color:#948A54;
 	mso-themecolor:background2;
 	mso-themeshade:128;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-style:italic;}
 h5
 	{mso-style-priority:9;
@@ -534,9 +544,9 @@ h5
 	mso-style-link:"Heading 5 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -552,6 +562,8 @@ h5
 	color:#17365D;
 	mso-themecolor:text2;
 	mso-themeshade:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	mso-bidi-font-weight:normal;}
 h6
 	{mso-style-noshow:yes;
@@ -560,9 +572,9 @@ h6
 	mso-style-link:"Heading 6 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -578,6 +590,8 @@ h6
 	color:#548DD4;
 	mso-themecolor:text2;
 	mso-themetint:153;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:normal;
 	font-style:italic;}
 p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
@@ -587,11 +601,11 @@ p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
 	mso-style-link:"Heading 7 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.9in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:64.8pt;
 	margin-bottom:.0001pt;
-	text-indent:-.9in;
+	text-indent:-64.8pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
@@ -611,6 +625,8 @@ p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-style:italic;}
 p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	{mso-style-noshow:yes;
@@ -619,11 +635,11 @@ p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	mso-style-link:"Heading 8 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:1.0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:72.0pt;
 	margin-bottom:.0001pt;
-	text-indent:-1.0in;
+	text-indent:-72.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
@@ -642,7 +658,9 @@ p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	mso-bidi-theme-font:major-bidi;
 	color:#404040;
 	mso-themecolor:text1;
-	mso-themetint:191;}
+	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	{mso-style-noshow:yes;
 	mso-style-priority:9;
@@ -650,11 +668,11 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	mso-style-link:"Heading 9 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:1.1in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:79.2pt;
 	margin-bottom:.0001pt;
-	text-indent:-1.1in;
+	text-indent:-79.2pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
@@ -674,15 +692,17 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-style:italic;}
 p.MsoToc1, li.MsoToc1, div.MsoToc1
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
@@ -691,13 +711,15 @@ p.MsoToc1, li.MsoToc1, div.MsoToc1
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc2, li.MsoToc2, div.MsoToc2
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:11.0pt;
 	line-height:115%;
@@ -708,13 +730,15 @@ p.MsoToc2, li.MsoToc2, div.MsoToc2
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc3, li.MsoToc3, div.MsoToc3
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:22.0pt;
 	line-height:115%;
@@ -725,43 +749,49 @@ p.MsoToc3, li.MsoToc3, div.MsoToc3
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoHeader, li.MsoHeader, div.MsoHeader
 	{mso-style-priority:99;
 	mso-style-link:"Header Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
-	tab-stops:center 3.25in right 6.5in;
+	tab-stops:center 234.0pt right 468.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoFooter, li.MsoFooter, div.MsoFooter
 	{mso-style-priority:99;
 	mso-style-link:"Footer Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
-	tab-stops:center 3.25in right 6.5in;
+	tab-stops:center 234.0pt right 468.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoCaption, li.MsoCaption, div.MsoCaption
 	{mso-style-priority:35;
 	mso-style-qformat:yes;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -771,107 +801,117 @@ p.MsoCaption, li.MsoCaption, div.MsoCaption
 	mso-bidi-theme-font:minor-bidi;
 	color:#4F81BD;
 	mso-themecolor:accent1;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;}
 p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
 	{mso-style-priority:99;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.25in;
+	margin-left:18.0pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo7;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpFirst, li.MsoListBulletCxSpFirst, div.MsoListBulletCxSpF=
 irst
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.25in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo7;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpMiddle, li.MsoListBulletCxSpMiddle, div.MsoListBulletCxS=
 pMiddle
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.25in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo7;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpLast, li.MsoListBulletCxSpLast, div.MsoListBulletCxSpLast
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.25in;
+	margin-left:18.0pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo7;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitle, li.MsoTitle, div.MsoTitle
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:15.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -883,7 +923,9 @@ p.MsoTitle, li.MsoTitle, div.MsoTitle
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
 	{mso-style-priority:10;
 	mso-style-unhide:no;
@@ -891,15 +933,15 @@ p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -911,7 +953,9 @@ p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
 	{mso-style-priority:10;
 	mso-style-unhide:no;
@@ -919,15 +963,15 @@ p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -939,7 +983,9 @@ p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
 	{mso-style-priority:10;
 	mso-style-unhide:no;
@@ -947,17 +993,17 @@ p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:15.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -969,7 +1015,9 @@ p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 a:link, span.MsoHyperlink
 	{mso-style-priority:99;
 	color:blue;
@@ -987,43 +1035,49 @@ p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-link:"Document Map Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
 	mso-bidi-font-size:8.0pt;
 	font-family:"Tahoma","sans-serif";
 	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;}
+	mso-fareast-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 pre
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-link:"HTML Preformatted Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
 	mso-bidi-font-size:10.0pt;
 	font-family:"Courier New";
-	mso-fareast-font-family:"Times New Roman";}
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-link:"Balloon Text Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
 	mso-bidi-font-size:8.0pt;
 	font-family:"Tahoma","sans-serif";
 	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;}
+	mso-fareast-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-parent:"";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:8.0pt;
@@ -1032,14 +1086,16 @@ p.MsoRMPane, li.MsoRMPane, div.MsoRMPane
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	{mso-style-priority:34;
 	mso-style-unhide:no;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.5in;
+	margin-left:36.0pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1049,16 +1105,18 @@ p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParag=
 raphCxSpFirst
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1069,16 +1127,18 @@ raphCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListPar=
 agraphCxSpMiddle
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1089,16 +1149,18 @@ agraphCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagra=
 phCxSpLast
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.5in;
+	margin-left:36.0pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1108,7 +1170,9 @@ phCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	{mso-style-noshow:yes;
 	mso-style-priority:39;
@@ -1116,9 +1180,9 @@ p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	mso-style-parent:"Heading 1";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
@@ -1132,6 +1196,7 @@ p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	color:#1D1B11;
 	mso-themecolor:background2;
 	mso-themeshade:26;
+	mso-ansi-language:EN-US;
 	mso-fareast-language:JA;
 	font-weight:bold;}
 span.Heading1Char
@@ -1152,6 +1217,7 @@ span.Heading1Char
 	color:#1D1B11;
 	mso-themecolor:background2;
 	mso-themeshade:26;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading2Char
 	{mso-style-name:"Heading 2 Char";
@@ -1170,6 +1236,7 @@ span.Heading2Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading3Char
 	{mso-style-name:"Heading 3 Char";
@@ -1188,6 +1255,7 @@ span.Heading3Char
 	color:#4A442A;
 	mso-themecolor:background2;
 	mso-themeshade:64;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading4Char
 	{mso-style-name:"Heading 4 Char";
@@ -1206,6 +1274,7 @@ span.Heading4Char
 	color:#948A54;
 	mso-themecolor:background2;
 	mso-themeshade:128;
+	mso-ansi-language:EN-US;
 	font-weight:bold;
 	font-style:italic;}
 span.Heading5Char
@@ -1225,6 +1294,7 @@ span.Heading5Char
 	color:#17365D;
 	mso-themecolor:text2;
 	mso-themeshade:191;
+	mso-ansi-language:EN-US;
 	font-weight:bold;
 	mso-bidi-font-weight:normal;}
 span.Heading6Char
@@ -1245,6 +1315,7 @@ span.Heading6Char
 	color:#548DD4;
 	mso-themecolor:text2;
 	mso-themetint:153;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.Heading7Char
 	{mso-style-name:"Heading 7 Char";
@@ -1266,6 +1337,7 @@ span.Heading7Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.Heading8Char
 	{mso-style-name:"Heading 8 Char";
@@ -1287,7 +1359,8 @@ span.Heading8Char
 	mso-bidi-theme-font:major-bidi;
 	color:#404040;
 	mso-themecolor:text1;
-	mso-themetint:191;}
+	mso-themetint:191;
+	mso-ansi-language:EN-US;}
 span.Heading9Char
 	{mso-style-name:"Heading 9 Char";
 	mso-style-noshow:yes;
@@ -1309,6 +1382,7 @@ span.Heading9Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.TitleChar
 	{mso-style-name:"Title Char";
@@ -1329,7 +1403,8 @@ span.TitleChar
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;}
 span.BalloonTextChar
 	{mso-style-name:"Balloon Text Char";
 	mso-style-noshow:yes;
@@ -1342,15 +1417,16 @@ span.BalloonTextChar
 	font-family:"Tahoma","sans-serif";
 	mso-ascii-font-family:Tahoma;
 	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;}
+	mso-bidi-font-family:Tahoma;
+	mso-ansi-language:EN-US;}
 p.SourceCode, li.SourceCode, div.SourceCode
 	{mso-style-name:"Source Code";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	margin-top:12.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:12.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1364,6 +1440,8 @@ p.SourceCode, li.SourceCode, div.SourceCode
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	mso-no-proof:yes;}
 p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
 	{mso-style-name:"Source CodeCxSpFirst";
@@ -1371,9 +1449,9 @@ p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
 	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1388,13 +1466,15 @@ p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	mso-no-proof:yes;}
 p.SourceCodeCxSpMiddle, li.SourceCodeCxSpMiddle, div.SourceCodeCxSpMiddle
 	{mso-style-name:"Source CodeCxSpMiddle";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1409,16 +1489,18 @@ p.SourceCodeCxSpMiddle, li.SourceCodeCxSpMiddle, div.SourceCodeCxSpMiddle
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	mso-no-proof:yes;}
 p.SourceCodeCxSpLast, li.SourceCodeCxSpLast, div.SourceCodeCxSpLast
 	{mso-style-name:"Source CodeCxSpLast";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:12.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1432,6 +1514,8 @@ p.SourceCodeCxSpLast, li.SourceCodeCxSpLast, div.SourceCodeCxSpLast
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
 	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	mso-no-proof:yes;}
 span.HTMLPreformattedChar
 	{mso-style-name:"HTML Preformatted Char";
@@ -1446,7 +1530,8 @@ span.HTMLPreformattedChar
 	mso-ascii-font-family:"Courier New";
 	mso-fareast-font-family:"Times New Roman";
 	mso-hansi-font-family:"Courier New";
-	mso-bidi-font-family:"Courier New";}
+	mso-bidi-font-family:"Courier New";
+	mso-ansi-language:EN-US;}
 span.DocumentMapChar
 	{mso-style-name:"Document Map Char";
 	mso-style-noshow:yes;
@@ -1459,23 +1544,24 @@ span.DocumentMapChar
 	font-family:"Tahoma","sans-serif";
 	mso-ascii-font-family:Tahoma;
 	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;}
+	mso-bidi-font-family:Tahoma;
+	mso-ansi-language:EN-US;}
 p.Note, li.Note, div.Note
 	{mso-style-name:Note;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1484,17 +1570,19 @@ p.Note, li.Note, div.Note
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	{mso-style-name:NoteCxSpFirst;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1502,7 +1590,7 @@ p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1511,17 +1599,19 @@ p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	{mso-style-name:NoteCxSpMiddle;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1529,7 +1619,7 @@ p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1538,24 +1628,26 @@ p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
 	{mso-style-name:NoteCxSpLast;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1564,7 +1656,9 @@ p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.NoteChar
 	{mso-style-name:"Note Char";
 	mso-style-unhide:no;
@@ -1574,23 +1668,24 @@ span.NoteChar
 	font-family:"Segoe UI","sans-serif";
 	mso-ascii-font-family:"Segoe UI";
 	mso-hansi-font-family:"Segoe UI";
-	background:#FFFFCC;}
+	background:#FFFFCC;
+	mso-ansi-language:EN-US;}
 p.MissingContent, li.MissingContent, div.MissingContent
 	{mso-style-name:"Missing Content";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Missing Content Char";
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
 	background:#FFFF66;
 	border:none;
 	mso-border-alt:solid yellow 6.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:24.0pt 4.0pt 24.0pt 4.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
@@ -1601,7 +1696,9 @@ p.MissingContent, li.MissingContent, div.MissingContent
 	mso-bidi-theme-font:minor-bidi;
 	color:#A6A6A6;
 	mso-themecolor:background1;
-	mso-themeshade:166;}
+	mso-themeshade:166;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.MissingContentChar
 	{mso-style-name:"Missing Content Char";
 	mso-style-unhide:no;
@@ -1614,17 +1711,18 @@ span.MissingContentChar
 	color:#A6A6A6;
 	mso-themecolor:background1;
 	mso-themeshade:166;
-	background:#FFFF66;}
+	background:#FFFF66;
+	mso-ansi-language:EN-US;}
 p.Warning, li.Warning, div.Warning
 	{mso-style-name:Warning;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1633,7 +1731,7 @@ p.Warning, li.Warning, div.Warning
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1642,7 +1740,9 @@ p.Warning, li.Warning, div.Warning
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	{mso-style-name:WarningCxSpFirst;
 	mso-style-unhide:no;
@@ -1650,10 +1750,10 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1663,7 +1763,7 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1672,7 +1772,9 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	{mso-style-name:WarningCxSpMiddle;
 	mso-style-unhide:no;
@@ -1680,10 +1782,10 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1693,7 +1795,7 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1702,7 +1804,9 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	{mso-style-name:WarningCxSpLast;
 	mso-style-unhide:no;
@@ -1710,10 +1814,10 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1722,7 +1826,7 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1731,7 +1835,9 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.WarningChar
 	{mso-style-name:"Warning Char";
 	mso-style-unhide:no;
@@ -1744,7 +1850,8 @@ span.WarningChar
 	mso-hansi-font-family:"Segoe UI";
 	background:#F2DBDB;
 	mso-shading-themecolor:accent2;
-	mso-shading-themetint:51;}
+	mso-shading-themetint:51;
+	mso-ansi-language:EN-US;}
 span.HeaderChar
 	{mso-style-name:"Header Char";
 	mso-style-priority:99;
@@ -1754,7 +1861,8 @@ span.HeaderChar
 	mso-ansi-font-size:9.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-ascii-font-family:"Segoe UI";
-	mso-hansi-font-family:"Segoe UI";}
+	mso-hansi-font-family:"Segoe UI";
+	mso-ansi-language:EN-US;}
 span.FooterChar
 	{mso-style-name:"Footer Char";
 	mso-style-priority:99;
@@ -1764,17 +1872,18 @@ span.FooterChar
 	mso-ansi-font-size:9.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-ascii-font-family:"Segoe UI";
-	mso-hansi-font-family:"Segoe UI";}
+	mso-hansi-font-family:"Segoe UI";
+	mso-ansi-language:EN-US;}
 p.Tip, li.Tip, div.Tip
 	{mso-style-name:Tip;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1783,7 +1892,7 @@ p.Tip, li.Tip, div.Tip
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1792,7 +1901,9 @@ p.Tip, li.Tip, div.Tip
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	{mso-style-name:TipCxSpFirst;
 	mso-style-unhide:no;
@@ -1800,10 +1911,10 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1813,7 +1924,7 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1822,7 +1933,9 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	{mso-style-name:TipCxSpMiddle;
 	mso-style-unhide:no;
@@ -1830,10 +1943,10 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1843,7 +1956,7 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1852,7 +1965,9 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	{mso-style-name:TipCxSpLast;
 	mso-style-unhide:no;
@@ -1860,10 +1975,10 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1872,7 +1987,7 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1881,7 +1996,9 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.TipChar
 	{mso-style-name:"Tip Char";
 	mso-style-unhide:no;
@@ -1894,7 +2011,8 @@ span.TipChar
 	mso-hansi-font-family:"Segoe UI";
 	background:#D6E3BC;
 	mso-shading-themecolor:accent3;
-	mso-shading-themetint:102;}
+	mso-shading-themetint:102;
+	mso-ansi-language:EN-US;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -1906,16 +2024,17 @@ span.TipChar
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
 .MsoPapDefault
 	{mso-style-type:export-only;
 	margin-bottom:10.0pt;
 	line-height:115%;}
 @page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;
-	mso-header-margin:.5in;
-	mso-footer-margin:.5in;
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
 	mso-paper-source:0;}
 div.WordSection1
 	{page:WordSection1;}
@@ -1928,10 +2047,10 @@ div.WordSection1
 	{mso-level-number-format:bullet;
 	mso-level-style-link:"List Bullet";
 	mso-level-text:\F0B7;
-	mso-level-tab-stop:.25in;
+	mso-level-tab-stop:18.0pt;
 	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l1
 	{mso-list-id:39331337;
@@ -1943,63 +2062,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l1:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l1:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l1:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l1:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l1:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l1:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l1:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l1:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l2
 	{mso-list-id:67967763;
@@ -2011,72 +2130,72 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.9in;
-	text-indent:-.25in;
+	margin-left:64.8pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l2:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.4in;
-	text-indent:-.25in;
+	margin-left:100.8pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l2:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.25in;
+	margin-left:136.8pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l2:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.4in;
-	text-indent:-.25in;
+	margin-left:172.8pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l2:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.9in;
-	text-indent:-.25in;
+	margin-left:208.8pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l2:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:3.4in;
-	text-indent:-.25in;
+	margin-left:244.8pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l2:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:3.9in;
-	text-indent:-.25in;
+	margin-left:280.8pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l2:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:4.4in;
-	text-indent:-.25in;
+	margin-left:316.8pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l2:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:4.9in;
-	text-indent:-.25in;
+	margin-left:352.8pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l3
 	{mso-list-id:201867361;
@@ -2088,63 +2207,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l3:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l3:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l3:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l3:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l3:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l3:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l3:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l3:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l4
 	{mso-list-id:469786085;
@@ -2156,63 +2275,63 @@ div.WordSection1
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l4:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l4:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l4:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l4:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l4:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l4:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l4:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l4:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l5
 	{mso-list-id:533268422;
@@ -2224,63 +2343,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l5:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l5:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l5:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l5:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l5:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l5:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l5:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l5:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l6
 	{mso-list-id:553198275;
@@ -2292,63 +2411,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l6:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l6:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l6:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l6:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l6:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l6:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l6:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l6:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l7
 	{mso-list-id:583610117;
@@ -2360,63 +2479,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l7:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l7:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l7:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l7:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l7:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l7:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l7:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l7:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l8
 	{mso-list-id:603617298;
@@ -2428,63 +2547,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l8:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l8:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l8:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l8:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l8:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l8:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l8:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l8:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l9
 	{mso-list-id:717629621;
@@ -2496,63 +2615,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l9:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l9:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l9:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l9:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l9:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l9:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l9:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l9:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l10
 	{mso-list-id:762147642;
@@ -2564,63 +2683,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l10:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l10:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l10:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l10:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l10:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l10:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l10:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l10:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l11
 	{mso-list-id:768114351;
@@ -2632,63 +2751,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l11:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l11:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l11:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l11:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l11:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l11:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l11:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l11:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l12
 	{mso-list-id:845747189;
@@ -2700,72 +2819,72 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l12:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.75in;
-	text-indent:-.25in;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l12:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.25in;
-	text-indent:-.25in;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l12:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.75in;
-	text-indent:-.25in;
+	margin-left:126.0pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l12:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.25in;
+	margin-left:162.0pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l12:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.75in;
-	text-indent:-.25in;
+	margin-left:198.0pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l12:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:3.25in;
-	text-indent:-.25in;
+	margin-left:234.0pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l12:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:3.75in;
-	text-indent:-.25in;
+	margin-left:270.0pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l12:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:4.25in;
-	text-indent:-.25in;
+	margin-left:306.0pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l13
 	{mso-list-id:858201295;
@@ -2775,12 +2894,12 @@ div.WordSection1
 @list l13:level1
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l13:level2
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l13:level3
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -2789,12 +2908,12 @@ div.WordSection1
 @list l13:level4
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l13:level5
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l13:level6
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -2803,12 +2922,12 @@ div.WordSection1
 @list l13:level7
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l13:level8
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l13:level9
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -2822,12 +2941,12 @@ div.WordSection1
 @list l14:level1
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l14:level2
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l14:level3
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -2836,12 +2955,12 @@ div.WordSection1
 @list l14:level4
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l14:level5
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l14:level6
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -2850,12 +2969,12 @@ div.WordSection1
 @list l14:level7
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l14:level8
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l14:level9
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -2871,63 +2990,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l15:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l15:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l15:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l15:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l15:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l15:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l15:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l15:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l16
 	{mso-list-id:982125348;
@@ -2939,63 +3058,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l16:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l16:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l16:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l16:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l16:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l16:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l16:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l16:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l17
 	{mso-list-id:982975902;
@@ -3007,63 +3126,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l17:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l17:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l17:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l17:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l17:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l17:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l17:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l17:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l18
 	{mso-list-id:1207261050;
@@ -3076,7 +3195,7 @@ div.WordSection1
 	mso-level-text:\F06E;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
@@ -3087,56 +3206,56 @@ div.WordSection1
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l18:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l18:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l18:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l18:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l18:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l18:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l18:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l19
 	{mso-list-id:1266616161;
@@ -3148,72 +3267,72 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.9in;
-	text-indent:-.25in;
+	margin-left:64.8pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l19:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.4in;
-	text-indent:-.25in;
+	margin-left:100.8pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l19:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.25in;
+	margin-left:136.8pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l19:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.4in;
-	text-indent:-.25in;
+	margin-left:172.8pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l19:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.9in;
-	text-indent:-.25in;
+	margin-left:208.8pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l19:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:3.4in;
-	text-indent:-.25in;
+	margin-left:244.8pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l19:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:3.9in;
-	text-indent:-.25in;
+	margin-left:280.8pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l19:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:4.4in;
-	text-indent:-.25in;
+	margin-left:316.8pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l19:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:4.9in;
-	text-indent:-.25in;
+	margin-left:352.8pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l20
 	{mso-list-id:1329362351;
@@ -3225,63 +3344,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l20:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l20:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l20:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l20:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l20:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l20:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l20:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l20:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l21
 	{mso-list-id:1366247185;
@@ -3293,63 +3412,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l21:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l21:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l21:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l21:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l21:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l21:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l21:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l21:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l22
 	{mso-list-id:1378822258;
@@ -3361,63 +3480,63 @@ div.WordSection1
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l22:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l22:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l22:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l22:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l22:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l22:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l22:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l22:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l23
 	{mso-list-id:1485118640;
@@ -3429,72 +3548,72 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l23:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.75in;
-	text-indent:-.25in;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l23:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.25in;
-	text-indent:-.25in;
+	margin-left:90.0pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l23:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.75in;
-	text-indent:-.25in;
+	margin-left:126.0pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l23:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.25in;
+	margin-left:162.0pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l23:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.75in;
-	text-indent:-.25in;
+	margin-left:198.0pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l23:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:3.25in;
-	text-indent:-.25in;
+	margin-left:234.0pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l23:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:3.75in;
-	text-indent:-.25in;
+	margin-left:270.0pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l23:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:4.25in;
-	text-indent:-.25in;
+	margin-left:306.0pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l24
 	{mso-list-id:1613897838;
@@ -3506,63 +3625,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l24:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l24:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l24:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l24:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l24:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l24:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l24:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l24:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l25
 	{mso-list-id:1656955962;
@@ -3574,63 +3693,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l25:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l25:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l25:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l25:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l25:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l25:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l25:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l25:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l26
 	{mso-list-id:1695959220;
@@ -3642,63 +3761,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l26:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l26:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l26:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l26:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l26:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l26:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l26:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l26:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l27
 	{mso-list-id:1730616985;
@@ -3708,12 +3827,12 @@ div.WordSection1
 @list l27:level1
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l27:level2
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l27:level3
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -3722,12 +3841,12 @@ div.WordSection1
 @list l27:level4
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l27:level5
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l27:level6
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -3736,12 +3855,12 @@ div.WordSection1
 @list l27:level7
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l27:level8
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l27:level9
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -3757,63 +3876,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l28:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l28:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l28:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l28:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l28:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l28:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l28:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l28:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l29
 	{mso-list-id:1748915759;
@@ -3823,53 +3942,53 @@ div.WordSection1
 @list l29:level1
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.9in;
-	text-indent:-.25in;}
+	margin-left:64.8pt;
+	text-indent:-18.0pt;}
 @list l29:level2
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.4in;
-	text-indent:-.25in;}
+	margin-left:100.8pt;
+	text-indent:-18.0pt;}
 @list l29:level3
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:right;
-	margin-left:1.9in;
+	margin-left:136.8pt;
 	text-indent:-9.0pt;}
 @list l29:level4
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.4in;
-	text-indent:-.25in;}
+	margin-left:172.8pt;
+	text-indent:-18.0pt;}
 @list l29:level5
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.9in;
-	text-indent:-.25in;}
+	margin-left:208.8pt;
+	text-indent:-18.0pt;}
 @list l29:level6
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:right;
-	margin-left:3.4in;
+	margin-left:244.8pt;
 	text-indent:-9.0pt;}
 @list l29:level7
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:3.9in;
-	text-indent:-.25in;}
+	margin-left:280.8pt;
+	text-indent:-18.0pt;}
 @list l29:level8
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:4.4in;
-	text-indent:-.25in;}
+	margin-left:316.8pt;
+	text-indent:-18.0pt;}
 @list l29:level9
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:right;
-	margin-left:4.9in;
+	margin-left:352.8pt;
 	text-indent:-9.0pt;}
 @list l30
 	{mso-list-id:1788741353;
@@ -3879,13 +3998,13 @@ div.WordSection1
 @list l30:level1
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l30:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l30:level3
 	{mso-level-number-format:roman-lower;
@@ -3895,12 +4014,12 @@ div.WordSection1
 @list l30:level4
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l30:level5
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l30:level6
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -3909,12 +4028,12 @@ div.WordSection1
 @list l30:level7
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l30:level8
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l30:level9
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -3930,63 +4049,63 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l31:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l31:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l31:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l31:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l31:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l31:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l31:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l31:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l32
 	{mso-list-id:1801650971;
@@ -3998,63 +4117,63 @@ div.WordSection1
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l32:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l32:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l32:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l32:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l32:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l32:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l32:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l32:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l33
 	{mso-list-id:1827743684;
@@ -4063,59 +4182,59 @@ div.WordSection1
 	{mso-level-text:%1;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.3in;
-	text-indent:-.3in;}
+	margin-left:21.6pt;
+	text-indent:-21.6pt;}
 @list l33:level2
 	{mso-level-text:"%1\.%2";
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.4in;
-	text-indent:-.4in;}
+	margin-left:28.8pt;
+	text-indent:-28.8pt;}
 @list l33:level3
 	{mso-level-text:"%1\.%2\.%3";
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.5in;
-	text-indent:-.5in;}
+	margin-left:36.0pt;
+	text-indent:-36.0pt;}
 @list l33:level4
 	{mso-level-text:"%1\.%2\.%3\.%4";
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.6in;
-	text-indent:-.6in;}
+	margin-left:43.2pt;
+	text-indent:-43.2pt;}
 @list l33:level5
 	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.7in;
-	text-indent:-.7in;}
+	margin-left:50.4pt;
+	text-indent:-50.4pt;}
 @list l33:level6
 	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.8in;
-	text-indent:-.8in;}
+	margin-left:57.6pt;
+	text-indent:-57.6pt;}
 @list l33:level7
 	{mso-level-style-link:"Heading 7";
 	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.9in;
-	text-indent:-.9in;}
+	margin-left:64.8pt;
+	text-indent:-64.8pt;}
 @list l33:level8
 	{mso-level-style-link:"Heading 8";
 	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.0in;
-	text-indent:-1.0in;}
+	margin-left:72.0pt;
+	text-indent:-72.0pt;}
 @list l33:level9
 	{mso-level-style-link:"Heading 9";
 	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.1in;
-	text-indent:-1.1in;}
+	margin-left:79.2pt;
+	text-indent:-79.2pt;}
 @list l34
 	{mso-list-id:1913926553;
 	mso-list-type:hybrid;
@@ -4124,12 +4243,12 @@ div.WordSection1
 @list l34:level1
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l34:level2
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l34:level3
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -4138,12 +4257,12 @@ div.WordSection1
 @list l34:level4
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l34:level5
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l34:level6
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -4152,12 +4271,12 @@ div.WordSection1
 @list l34:level7
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l34:level8
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l34:level9
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -4174,7 +4293,7 @@ div.WordSection1
 	mso-level-text:\F06E;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
@@ -4185,56 +4304,56 @@ div.WordSection1
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l35:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l35:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l35:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l35:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l35:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l35:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l35:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l36
 	{mso-list-id:1995253629;
@@ -4246,72 +4365,72 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:.9in;
-	text-indent:-.25in;
+	margin-left:64.8pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l36:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.4in;
-	text-indent:-.25in;
+	margin-left:100.8pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l36:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.25in;
+	margin-left:136.8pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l36:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.4in;
-	text-indent:-.25in;
+	margin-left:172.8pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l36:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:2.9in;
-	text-indent:-.25in;
+	margin-left:208.8pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l36:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:3.4in;
-	text-indent:-.25in;
+	margin-left:244.8pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l36:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:3.9in;
-	text-indent:-.25in;
+	margin-left:280.8pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l36:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:4.4in;
-	text-indent:-.25in;
+	margin-left:316.8pt;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l36:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	margin-left:4.9in;
-	text-indent:-.25in;
+	margin-left:352.8pt;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l37
 	{mso-list-id:2078284247;
@@ -4321,12 +4440,12 @@ div.WordSection1
 @list l37:level1
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l37:level2
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l37:level3
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -4335,12 +4454,12 @@ div.WordSection1
 @list l37:level4
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l37:level5
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l37:level6
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -4349,12 +4468,12 @@ div.WordSection1
 @list l37:level7
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l37:level8
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l37:level9
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -4370,68 +4489,68 @@ div.WordSection1
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l38:level2
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l38:level3
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l38:level4
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l38:level5
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l38:level6
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 @list l38:level7
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l38:level8
 	{mso-level-number-format:bullet;
 	mso-level-text:o;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:"Courier New";}
 @list l38:level9
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0A7;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	font-family:Wingdings;}
 ol
-	{margin-bottom:0in;}
+	{margin-bottom:0cm;}
 ul
-	{margin-bottom:0in;}
+	{margin-bottom:0cm;}
 -->
 </style>
 <!--[if gte mso 10]>
@@ -4444,11 +4563,11 @@ ul
 	mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-parent:"";
-	mso-padding-alt:0in 5.4pt 0in 5.4pt;
-	mso-para-margin-top:0in;
-	mso-para-margin-right:0in;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
 	mso-para-margin-bottom:10.0pt;
-	mso-para-margin-left:0in;
+	mso-para-margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:11.0pt;
@@ -4456,7 +4575,8 @@ ul
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;}
+	mso-hansi-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
 table.MsoTableGrid
 	{mso-style-name:"Table Grid";
 	mso-tstyle-rowband-size:0;
@@ -4465,10 +4585,10 @@ table.MsoTableGrid
 	mso-style-unhide:no;
 	border:solid windowtext 1.0pt;
 	mso-border-alt:solid windowtext .5pt;
-	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
 	mso-border-insideh:.5pt solid windowtext;
 	mso-border-insidev:.5pt solid windowtext;
-	mso-para-margin:0in;
+	mso-para-margin:0cm;
 	mso-para-margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:11.0pt;
@@ -4476,7 +4596,9 @@ table.MsoTableGrid
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;}
+	mso-hansi-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026"/>
@@ -4486,31 +4608,32 @@ table.MsoTableGrid
  </o:shapelayout></xml><![endif]-->
 </head>
 
-<body lang=3DEN-US link=3Dblue vlink=3Dpurple style=3D'tab-interval:.5in'>
+<body lang=3DEN-NZ link=3Dblue vlink=3Dpurple style=3D'tab-interval:36.0pt'>
 
 <div class=3DWordSection1>
 
-<h3 style=3D'page-break-before:auto'>Create a Launch Point to Trigger Code
-Generation With a Menu<o:p></o:p></h3>
+<h3 style=3D'page-break-before:auto'><span lang=3DEN-US>Create a Launch Poi=
+nt to Trigger
+Code Generation With a Menu<o:p></o:p></span></h3>
 
-<p class=3DMsoNormal>The next step is to create launch points for executing=
- the
-T4 template command.<o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>The next step is to create launch p=
+oints
+for executing the T4 template command.<o:p></o:p></span></p>
 
-<p class=3DMsoNormal>Right-click on the ‘Launch Points’ compartment of the =
-‘WidgetSolution’
-element in the Pattern Model.<span style=3D'mso-spacerun:yes'>  </span><o:p=
-></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>Right-click on the ‘Launch Points’
+compartment of the ‘WidgetSolution’ element in the Pattern Model.<span
+style=3D'mso-spacerun:yes'>  </span><o:p></o:p></span></p>
 
-<p class=3DMsoNormal>Click on ‘Add Automation’, and choose ‘Context Menu La=
-unch
-Point’ this time.<o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>Click on ‘Add Automation’, and choo=
+se ‘Context
+Menu Launch Point’ this time.<o:p></o:p></span></p>
 
-<p class=3DMsoNormal><span style=3D'mso-no-proof:yes'><!--[if gte vml 1]><v=
-:shapetype
- id=3D"_x0000_t75" coordsize=3D"21600,21600" o:spt=3D"75" o:preferrelative=
-=3D"t"
- path=3D"m@4@5l@4@11@9@11@9@5xe" filled=3D"f" stroked=3D"f">
+<p class=3DMsoNormal><span style=3D'mso-ansi-language:EN-NZ;mso-fareast-lan=
+guage:
+EN-NZ;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id=3D"_x0000_t75"
+ coordsize=3D"21600,21600" o:spt=3D"75" o:preferrelative=3D"t" path=3D"m@4@=
+5l@4@11@9@11@9@5xe"
+ filled=3D"f" stroked=3D"f">
  <v:stroke joinstyle=3D"miter"/>
  <v:formulas>
   <v:f eqn=3D"if lineDrawn pixelLineWidth 0"/>
@@ -4538,99 +4661,111 @@ es/image001.png"
 </v:shape><![endif]--><![if !vml]><img width=3D255 height=3D210
 src=3D"CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/image002.pn=
 g"
-v:shapes=3D"Picture_x0020_234"><![endif]></span><o:p></o:p></p>
+v:shapes=3D"Picture_x0020_234"><![endif]></span><span lang=3DEN-US><o:p></o=
+:p></span></p>
 
-<p class=3DMsoNormal>Rename the launch point to “GenerateAllWidgetsOnMenu”<=
-o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>Rename the launch point to “Generat=
+eAllWidgetsOnMenu”<o:p></o:p></span></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
-margin-left:.4in;margin-right:.4in'>
+margin-left:28.8pt;margin-right:28.8pt'>
 
-<p class=3DNote style=3D'margin-top:0in;margin-right:0in;margin-bottom:10.0=
+<p class=3DNote style=3D'margin-top:0cm;margin-right:0cm;margin-bottom:10.0=
 pt;
-margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
+margin-left:0cm;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
-normal'>Note</b>: This name follows the naming convention of
-&lt;CommandName&gt;&lt;LaunchEvent&gt; because we are creating a launch poi=
-nt
-for the ‘GenerateAllWidgets’ command when the user clicks on a context menu,
-which is triggered by the ‘OnMenu’ event.<o:p></o:p></p>
+normal'><span lang=3DEN-US>Note</span></b><span lang=3DEN-US>: This name fo=
+llows
+the naming convention of &lt;CommandName&gt;&lt;LaunchEvent&gt; because we =
+are
+creating a launch point for the ‘GenerateAllWidgets’ command when the user
+clicks on a context menu, which is triggered by the ‘OnMenu’ event.<o:p></o=
+:p></span></p>
 
 </div>
 
-<p class=3DMsoNormal><span style=3D'mso-no-proof:yes'><!--[if gte vml 1]><v=
-:shape
- id=3D"Picture_x0020_163" o:spid=3D"_x0000_i1026" type=3D"#_x0000_t75" styl=
-e=3D'width:237pt;
- height:145.5pt;visibility:visible;mso-wrap-style:square'>
+<p class=3DMsoNormal><span style=3D'mso-ansi-language:EN-NZ;mso-fareast-lan=
+guage:
+EN-NZ;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id=3D"Picture_x0020_163"
+ o:spid=3D"_x0000_i1026" type=3D"#_x0000_t75" style=3D'width:237pt;height:1=
+45.5pt;
+ visibility:visible;mso-wrap-style:square'>
  <v:imagedata src=3D"CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_fil=
 es/image003.png"
   o:title=3D""/>
 </v:shape><![endif]--><![if !vml]><img width=3D316 height=3D194
 src=3D"CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/image004.jp=
 g"
-v:shapes=3D"Picture_x0020_163"><![endif]></span><o:p></o:p></p>
+v:shapes=3D"Picture_x0020_163"><![endif]></span><span lang=3DEN-US><o:p></o=
+:p></span></p>
 
-<p class=3DMsoNormal>Select the launch point, and open the Properties windo=
-w (<b
-style=3D'mso-bidi-font-weight:normal'>F4</b>).<o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>Select the launch point, and open t=
+he
+Properties window (<b style=3D'mso-bidi-font-weight:normal'>F4</b>).<o:p></=
+o:p></span></p>
 
-<p class=3DMsoNormal>Expand the ‘Settings’ property, and set the ‘Command’
-property to “GenerateAllWidgets”, and set the ‘Menu Text’ property to “Gene=
-rate
-Widget Code”<o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>Expand the ‘Settings’ property, and=
+ set the
+‘Command’ property to “GenerateAllWidgets”, and set the ‘Menu Text’ propert=
+y to
+“Generate Widget Code”<o:p></o:p></span></p>
 
-<p class=3DMsoNormal><span style=3D'mso-no-proof:yes'><!--[if gte vml 1]><v=
-:shape
- id=3D"Picture_x0020_165" o:spid=3D"_x0000_i1025" type=3D"#_x0000_t75" styl=
-e=3D'width:204.75pt;
- height:357pt;visibility:visible;mso-wrap-style:square'>
+<p class=3DMsoNormal><span style=3D'mso-ansi-language:EN-NZ;mso-fareast-lan=
+guage:
+EN-NZ;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id=3D"Picture_x0020_165"
+ o:spid=3D"_x0000_i1025" type=3D"#_x0000_t75" style=3D'width:204.75pt;heigh=
+t:357pt;
+ visibility:visible;mso-wrap-style:square'>
  <v:imagedata src=3D"CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_fil=
 es/image005.png"
   o:title=3D"SNAGHTML3c26c241"/>
 </v:shape><![endif]--><![if !vml]><img width=3D273 height=3D476
 src=3D"CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/image006.pn=
 g"
-v:shapes=3D"Picture_x0020_165"><![endif]></span><o:p></o:p></p>
+v:shapes=3D"Picture_x0020_165"><![endif]></span><span lang=3DEN-US><o:p></o=
+:p></span></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#D6E3BC;
 mso-background-themecolor:accent3;mso-background-themetint:102;margin-left:
-.4in;margin-right:.4in'>
+28.8pt;margin-right:28.8pt'>
 
-<p class=3DTipCxSpFirst style=3D'margin-top:0in;margin-right:0in;margin-bot=
+<p class=3DTipCxSpFirst style=3D'margin-top:0cm;margin-right:0cm;margin-bot=
 tom:
-10.0pt;margin-left:0in;mso-add-space:auto;background:#D6E3BC;mso-background=
+10.0pt;margin-left:0cm;mso-add-space:auto;background:#D6E3BC;mso-background=
 -themecolor:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
-al'>Advanced
-Tip</b>: It is also possible to configure any ‘Conditions’ that must be
-evaluated before any menu is displayed and the selected command is executed=
- by
-the launch point. <o:p></o:p></p>
+al'><span
+lang=3DEN-US>Advanced Tip</span></b><span lang=3DEN-US>: It is also possibl=
+e to
+configure any ‘Conditions’ that must be evaluated before any menu is displa=
+yed
+and the selected command is executed by the launch point. <o:p></o:p></span=
+></p>
 
-<p class=3DTipCxSpMiddle style=3D'margin-top:0in;margin-right:0in;margin-bo=
+<p class=3DTipCxSpMiddle style=3D'margin-top:0cm;margin-right:0cm;margin-bo=
 ttom:
-10.0pt;margin-left:0in;mso-add-space:auto;background:#D6E3BC;mso-background=
+10.0pt;margin-left:0cm;mso-add-space:auto;background:#D6E3BC;mso-background=
 -themecolor:
-accent3;mso-background-themetint:102'>You can also set up a Wizard to run
-before the command is executed if you want to gather data from the user bef=
-ore
-the command runs. <o:p></o:p></p>
+accent3;mso-background-themetint:102'><span lang=3DEN-US>You can also set u=
+p a
+Wizard to run before the command is executed if you want to gather data from
+the user before the command runs. <o:p></o:p></span></p>
 
-<p class=3DTipCxSpLast style=3D'margin-top:0in;margin-right:0in;margin-bott=
+<p class=3DTipCxSpLast style=3D'margin-top:0cm;margin-right:0cm;margin-bott=
 om:10.0pt;
-margin-left:0in;mso-add-space:auto;background:#D6E3BC;mso-background-themec=
+margin-left:0cm;mso-add-space:auto;background:#D6E3BC;mso-background-themec=
 olor:
-accent3;mso-background-themetint:102'>See the topics in the guidance for
-Pattern Toolkits for instructions on how to create and configure conditions=
- and
-wizards.<o:p></o:p></p>
+accent3;mso-background-themetint:102'><span lang=3DEN-US>See the topics in =
+the
+guidance for Pattern Toolkits for instructions on how to create and configu=
+re
+conditions and wizards.<o:p></o:p></span></p>
 
 </div>
 
-<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p>
 
 </div>
 
@@ -4638,7 +4773,7 @@ wizards.<o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CDFC11.91B03420
+------=_NextPart_01CE4000.0E2AD9B0
 Content-Location: file:///C:/D6382235/CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -4699,7 +4834,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDFC11.91B03420
+------=_NextPart_01CE4000.0E2AD9B0
 Content-Location: file:///C:/D6382235/CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -4709,7 +4844,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDFC11.91B03420
+------=_NextPart_01CE4000.0E2AD9B0
 Content-Location: file:///C:/D6382235/CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -5373,7 +5508,7 @@ E0ZzycYsPz5PW7Fccsgdr1/98hdqms+SKZPp2rVr9a1gEqrZlMWLF4e37WjOnZZJTQWBHEZATQD4
 n/6iidRBqIZYqXiKZ3FqEYpW9/VilPK1JFXXiVUO49Obq37SiCF44YUXop4Q/wPGtXBFUbHoXwAA
 AABJRU5ErkJggk==
 
-------=_NextPart_01CDFC11.91B03420
+------=_NextPart_01CE4000.0E2AD9B0
 Content-Location: file:///C:/D6382235/CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/image002.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -6071,7 +6206,7 @@ ZZjzzqck/K+xPWfzL38655zfLWvXbi26+txzZ93++OMjtm7Z9NEXn3wYFxcb1aRoIk2ZPLPOfnGv
 UOtBoe78tRQP6jYcaLzwpaLmT6XYPyoqrcjbnlteVll+4qUXnrjEZgsq+3/SJqLfYSLaPgAAAABJ
 RU5ErkJggk==
 
-------=_NextPart_01CDFC11.91B03420
+------=_NextPart_01CE4000.0E2AD9B0
 Content-Location: file:///C:/D6382235/CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/image003.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -6341,7 +6476,7 @@ SwKCtjPkzZs38981h6/Q2amfgHVgP2rChAkJOHAcslsEwi15bvkdf3Zqa2vhOQj818fh5urvfve7
 76JiVtCJeCSAkhctswqq161bN+4N5rPRMivoR9wRQMmLoimNyLMPomj86AoS8J4ASp73jLEHJIAE
 ooYASl7UTAU6ggSQgPcE/j+RqN9esuCvMQAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDFC11.91B03420
+------=_NextPart_01CE4000.0E2AD9B0
 Content-Location: file:///C:/D6382235/CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/image004.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -6357,159 +6492,159 @@ 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
-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
+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
+UUUUAFFFFABRRRQB/9k=
 
-------=_NextPart_01CDFC11.91B03420
+------=_NextPart_01CE4000.0E2AD9B0
 Content-Location: file:///C:/D6382235/CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/image005.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -7095,7 +7230,7 @@ tooQDwIIIBAQyFw1/dXar4GXsxsBBBBAYL8EDnwxef7jfp2c8yKAAAIItC7wm9f/+ulA6y/nlQgg
 gAAC+yHgezVz2PshzzkRQACBAgIHPn7cmxE58uevmR4pgMghCCCAQK8EkrMg/wcnWWGemXOZxAAA
 AABJRU5ErkJggk==
 
-------=_NextPart_01CDFC11.91B03420
+------=_NextPart_01CE4000.0E2AD9B0
 Content-Location: file:///C:/D6382235/CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/image006.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -8311,7 +8446,7 @@ UBUBliuI8QTjCyIKykIggZhiYuwWi0RNTBSg9+eV+21Z6XjhCHAEOALXQ4ARiC1TIf1L/LFHTFG0
 R8hksqNGCl/I4pveUoAdji9HgCNw/yJAQcBZpkcp5c2GtnQkhXBXJJmLtQkUTnuORCpvYrEF4eSF
 I8AR4AhcGwGhiDIXmI17KCT6GJODw9n/AdnT5YpXqgvmAAAAAElFTkSuQmCC
 
-------=_NextPart_01CDFC11.91B03420
+------=_NextPart_01CE4000.0E2AD9B0
 Content-Location: file:///C:/D6382235/CreateaLaunchPointtoTriggerCodeGenerationWithaMenu_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -8329,4 +8464,4 @@ htm"/>
  <o:File HRef=3D"image006.png"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDFC11.91B03420--
+------=_NextPart_01CE4000.0E2AD9B0--

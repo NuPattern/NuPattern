@@ -23,7 +23,7 @@ namespace NuPattern.Authoring.HandsOnLabs
 	/// Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.
 	/// </summary>
 	[Description("Hands on Labs that guides you through creating and customizing your first Pattern Toolkit project.")]
-	[ToolkitInterface(ExtensionId = "97bd7ab2-964b-43f1-8a08-be6db68b018b", DefinitionId = "71309920-c4ac-4283-b6bf-3cec975eca86", ProxyType = typeof(PatternToolkitHandsOnLabs))]
+	[ToolkitInterface(ExtensionId = "5d64cfe6-a6ff-4e73-a000-c6a8832740ff", DefinitionId = "71309920-c4ac-4283-b6bf-3cec975eca86", ProxyType = typeof(PatternToolkitHandsOnLabs))]
 	[System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Library", "1.3.20.0")]
 	public partial interface IPatternToolkitHandsOnLabs : IToolkitInterface
 	{

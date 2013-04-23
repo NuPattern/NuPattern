@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Runtime.CodeGen;
 
 namespace NuPattern.Runtime.UnitTests.CodeGen

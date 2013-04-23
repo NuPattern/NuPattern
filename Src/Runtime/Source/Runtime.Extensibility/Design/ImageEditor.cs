@@ -7,8 +7,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design
 {
@@ -93,13 +92,13 @@ namespace NuPattern.Runtime.Design
         internal static bool IsCursorFile(string fileName)
         {
             return !string.IsNullOrEmpty(fileName) &&
-                string.Equals(Path.GetExtension(fileName), ".cur", StringComparison.OrdinalIgnoreCase);
+                string.Equals(Path.GetExtension(fileName), @".cur", StringComparison.OrdinalIgnoreCase);
         }
 
         internal static bool IsIconFile(string fileName)
         {
             return !string.IsNullOrEmpty(fileName) &&
-                string.Equals(Path.GetExtension(fileName), ".ico", StringComparison.OrdinalIgnoreCase);
+                string.Equals(Path.GetExtension(fileName), @".ico", StringComparison.OrdinalIgnoreCase);
         }
 
         private void SetContext(ITypeDescriptorContext context)
@@ -151,7 +150,7 @@ namespace NuPattern.Runtime.Design
 
                 if (item != null)
                 {
-                    var uriReferenceService = this.provider.GetService<IFxrUriReferenceService>();
+                    var uriReferenceService = this.provider.GetService<IUriReferenceService>();
 
                     if (uriReferenceService.CanCreateUri<IItemContainer>(item))
                     {
@@ -165,7 +164,7 @@ namespace NuPattern.Runtime.Design
 
         private string ResolveItemReference(Uri reference)
         {
-            var uriReferenceService = this.provider.GetService<IFxrUriReferenceService>();
+            var uriReferenceService = this.provider.GetService<IUriReferenceService>();
 
             var item = uriReferenceService.ResolveUri<IItemContainer>(reference);
             if (item != null)

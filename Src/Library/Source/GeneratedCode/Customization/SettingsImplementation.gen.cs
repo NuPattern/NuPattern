@@ -88,7 +88,7 @@ namespace NuPattern.Library.Automation
         /// </summary>
         public override string ToString()
         {
-            return string.Format(CultureInfo.CurrentCulture, "({0})", this.GetType().Name);
+            return string.Format(CultureInfo.CurrentCulture, @"({0})", this.GetType().Name);
         }
     }
 }
@@ -164,7 +164,7 @@ namespace NuPattern.Library.Automation
         /// </summary>
         public override string ToString()
         {
-            return string.Format(CultureInfo.CurrentCulture, "({0})", this.GetType().Name);
+            return string.Format(CultureInfo.CurrentCulture, @"({0})", this.GetType().Name);
         }
     }
 }
@@ -240,7 +240,7 @@ namespace NuPattern.Library.Automation
         /// </summary>
         public override string ToString()
         {
-            return string.Format(CultureInfo.CurrentCulture, "({0})", this.GetType().Name);
+            return string.Format(CultureInfo.CurrentCulture, @"({0})", this.GetType().Name);
         }
     }
 }
@@ -316,7 +316,7 @@ namespace NuPattern.Library.Automation
         /// </summary>
         public override string ToString()
         {
-            return string.Format(CultureInfo.CurrentCulture, "({0})", this.GetType().Name);
+            return string.Format(CultureInfo.CurrentCulture, @"({0})", this.GetType().Name);
         }
     }
 }
@@ -444,7 +444,7 @@ namespace NuPattern.Library.Automation
         /// </summary>
         public override string ToString()
         {
-            return string.Format(CultureInfo.CurrentCulture, "({0})", this.GetType().Name);
+            return string.Format(CultureInfo.CurrentCulture, @"({0})", this.GetType().Name);
         }
     }
 }
@@ -624,7 +624,7 @@ namespace NuPattern.Library.Automation
         /// </summary>
         public override string ToString()
         {
-            return string.Format(CultureInfo.CurrentCulture, "({0})", this.GetType().Name);
+            return string.Format(CultureInfo.CurrentCulture, @"({0})", this.GetType().Name);
         }
     }
 }

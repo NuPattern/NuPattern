@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NuPattern.ComponentModel.Design.UI
+namespace NuPattern.ComponentModel.Design
 {
     /// <summary>
     /// Defines a base editor attribute.

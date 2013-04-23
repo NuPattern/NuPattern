@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Reflection;
 using NuPattern.VisualStudio.Solution;
 
@@ -20,7 +20,7 @@ namespace NuPattern.Runtime.Schema
 
         private static readonly string[] ReservedCodeIdentifiers = new[] 
         { 
-            "Name", // From the 'Display Name' of the "Runtime.Store.ProductElement.InstanceName" property
+            @"Name", // From the 'Display Name' of the "Runtime.Store.ProductElement.InstanceName" property
             Reflector<Runtime.IProductElement>.GetProperty(p => p.InstanceName).Name, // 'InstanceName'
             //"Pattern", // From the 'Display Name' of the "Runtime.Store.Pattern" element
             //"View", // From the 'Display Name' of the "Runtime.Store.View" element
@@ -176,7 +176,7 @@ namespace NuPattern.Runtime.Schema
                 {
                     context.LogError(
                         string.Format(CultureInfo.CurrentCulture, Properties.Resources.Validate_NamedElementCodeIdentifierIsNotReserved, this.Name,
-                        string.Join(", ", ReservedCodeIdentifiers)),
+                        string.Join(@", ", ReservedCodeIdentifiers)),
                         Properties.Resources.Validate_NamedElementCodeIdentifierIsNotReservedCode, this);
                 }
             }

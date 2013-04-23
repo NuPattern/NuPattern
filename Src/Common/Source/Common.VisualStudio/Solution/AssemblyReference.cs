@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 
 namespace NuPattern.VisualStudio.Solution
 {
@@ -71,9 +70,9 @@ namespace NuPattern.VisualStudio.Solution
                         if (assembly != null)
                         {
                             // .NET resources
-                            resources.AddRange(LoadResources(assembly, ".resources").Select(r => new AssemblyResource(assemblyReference, r)));
+                            resources.AddRange(LoadResources(assembly, @".resources").Select(r => new AssemblyResource(assemblyReference, r)));
                             // XAML resources
-                            resources.AddRange(LoadResources(assembly, ".g.resources").Select(r => new AssemblyResource(assemblyReference, r)));
+                            resources.AddRange(LoadResources(assembly, @".g.resources").Select(r => new AssemblyResource(assemblyReference, r)));
                         }
                     }
                     catch (Exception)

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Guidance.Workflow;
 using DataAnnotations = System.ComponentModel.DataAnnotations;
 
 namespace NuPattern.Authoring.Guidance

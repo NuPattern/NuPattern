@@ -23,19 +23,8 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
-      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -60,7 +49,6 @@
       <HintPath>..\..\Runtime\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
   </ItemGroup>
@@ -75,9 +63,6 @@
     </Compile>
     <Compile Include="..\Helpers\Assertions.cs">
       <Link>Assertions.cs</Link>
-    </Compile>
-    <Compile Include="..\Helpers\DslTestStore.cs">
-      <Link>DslTestStore.cs</Link>
     </Compile>
     <Compile Include="..\Helpers\FakeSolution.cs">
       <Link>FakeSolution.cs</Link>
@@ -94,6 +79,7 @@
     <Compile Include="ReflectionExtensionsSpec.cs" />
     <Compile Include="StaticWeakReferenceSpec.cs" />
     <Compile Include="TypeExtensionsSpec.cs" />
+    <Compile Include="UriReferenceServiceSpec.cs" />
     <Compile Include="VisualStudio\Commands\VsMenuCommandAdapterSpec.cs" />
     <Compile Include="VisualStudio\Solution\SolutionExtensionsSpec.cs" />
     <Compile Include="WeakObservableEventSpec.cs" />

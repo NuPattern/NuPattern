@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using NuPattern.ComponentModel;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Runtime.Properties;
 
 namespace NuPattern.Runtime.Bindings.Design

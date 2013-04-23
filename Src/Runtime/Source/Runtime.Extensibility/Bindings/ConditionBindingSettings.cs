@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Linq;
 using System.Runtime.Serialization;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Runtime.Bindings.Design;
 using NuPattern.Runtime.Design;
@@ -12,8 +11,8 @@ namespace NuPattern.Runtime.Bindings
     /// <summary>
     /// Defines an <see cref="ICondition"/> implementation of <see cref="BindingSettings"/>.
     /// </summary>
-    [DisplayNameResource("ConditionBindingSettings_DisplayName", typeof(Resources))]
-    [DescriptionResource("ConditionBindingSettings_Description", typeof(Resources))]
+    [DisplayNameResource(@"ConditionBindingSettings_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"ConditionBindingSettings_Description", typeof(Resources))]
     [DataContract]
     [TypeDescriptionProvider(typeof(BindingSettingsTypeDescriptionProvider<ICondition>))]
     public class ConditionBindingSettings : BindingSettings
@@ -21,7 +20,7 @@ namespace NuPattern.Runtime.Bindings
         /// <summary>
         /// Gets or sets the identifier for the runtime implementation type of the binding.
         /// </summary>
-        [TypeConverter(typeof(FeatureComponentTypeConverter<ICondition>))]
+        [TypeConverter(typeof(NuPatternComponentTypeConverter<ICondition>))]
         [DataMember]
         public override string TypeId
         {

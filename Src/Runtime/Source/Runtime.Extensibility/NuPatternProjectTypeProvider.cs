@@ -8,7 +8,6 @@ using System.Windows.Input;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Design;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.Presentation;
 using NuPattern.VisualStudio.Solution;
 

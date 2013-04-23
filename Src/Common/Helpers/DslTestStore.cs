@@ -2,8 +2,8 @@
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Moq;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern
 {
@@ -19,7 +19,7 @@ namespace NuPattern
         public DslTestStore(Type extendedDomainModel)
         {
             this.ServiceProvider = Mock.Of<IServiceProvider>(sp =>
-                sp.GetService(typeof(IFeatureCompositionService)) == Mock.Of<IFeatureCompositionService>());
+                sp.GetService(typeof(INuPatternCompositionService)) == Mock.Of<INuPatternCompositionService>());
 
             if (extendedDomainModel == null)
             {

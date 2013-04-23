@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.IntegrationTests

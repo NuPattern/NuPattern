@@ -3,9 +3,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Data;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Presentation;
 using NuPattern.Runtime.Guidance;
 using NuPattern.Runtime.Properties;
@@ -18,7 +16,7 @@ namespace NuPattern.Runtime.UI.ViewModels
     /// </summary>
     internal partial class SolutionBuilderViewModel : ViewModel
     {
-        internal const string UsingGuidanceFeatureId = ShellConstants.VsixIdentifier;
+        internal const string UsingGuidanceExtensionId = ShellConstants.VsixIdentifier;
 
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<SolutionBuilderViewModel>();
 
@@ -40,7 +38,7 @@ namespace NuPattern.Runtime.UI.ViewModels
             Guard.NotNull(() => serviceProvider, serviceProvider);
 
             this.context = context;
-            this.context.SolutionBuilder = this;
+            this.context.ViewModel = this;
             this.serviceProvider = serviceProvider;
 
             this.context.SetSelected = p => this.CurrentNode = p;
@@ -223,7 +221,8 @@ namespace NuPattern.Runtime.UI.ViewModels
                     {
                         using (new MouseCursor(System.Windows.Input.Cursors.Wait))
                         {
-                            var product = this.context.PatternManager.CreateProduct(viewModel.CurrentToolkit, viewModel.ProductName);
+                            var toolkitInfo = viewModel.CurrentToolkit != null ? viewModel.CurrentToolkit.ToolkitInfo : null;
+                            var product = this.context.PatternManager.CreateProduct(toolkitInfo, viewModel.ProductName);
                             this.Select(product);
                         }
                     }
@@ -281,10 +280,10 @@ namespace NuPattern.Runtime.UI.ViewModels
 
         private bool CanShowGuidance()
         {
-            var featureManager = this.serviceProvider.GetService<IFeatureManager>();
-            if (featureManager != null)
+            var guidanceManager = this.serviceProvider.GetService<IGuidanceManager>();
+            if (guidanceManager != null)
             {
-                return featureManager.IsGuidanceRegistered(UsingGuidanceFeatureId);
+                return guidanceManager.IsGuidanceRegistered(UsingGuidanceExtensionId);
             }
 
             return false;
@@ -471,10 +470,10 @@ namespace NuPattern.Runtime.UI.ViewModels
 
         private void ShowGuidance()
         {
-            var featureManager = this.serviceProvider.GetService<IFeatureManager>();
-            if (featureManager != null)
+            var guidanceManager = this.serviceProvider.GetService<IGuidanceManager>();
+            if (guidanceManager != null)
             {
-                featureManager.ActivateSharedGuidanceWorkflow(this.serviceProvider, UsingGuidanceFeatureId);
+                guidanceManager.ActivateSharedGuidanceWorkflow(this.serviceProvider, UsingGuidanceExtensionId);
             }
         }
 

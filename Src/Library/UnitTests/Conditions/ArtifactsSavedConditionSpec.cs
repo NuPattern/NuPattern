@@ -1,10 +1,10 @@
 using System;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Conditions;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.UnitTests
 {
@@ -21,7 +21,7 @@ namespace NuPattern.Library.UnitTests
             [TestInitialize]
             public void InitializeContext()
             {
-                Mock<IFxrUriReferenceService> mockUriReferenceService = new Mock<IFxrUriReferenceService>();
+                Mock<IUriReferenceService> mockUriReferenceService = new Mock<IUriReferenceService>();
                 mockUriReferenceService.Setup(uriReferenceService => uriReferenceService.ResolveUri<IItemContainer>(It.IsAny<Uri>()))
                     .Returns((IItemContainer)null);
 
@@ -44,7 +44,7 @@ namespace NuPattern.Library.UnitTests
         {
             private ArtifactsSavedCondition condition;
             private Mock<EnvDTE.ProjectItem> mockProjectItem;
-            private Mock<IFxrUriReferenceService> mockUriReferenceService;
+            private Mock<IUriReferenceService> mockUriReferenceService;
 
             [TestInitialize]
             public void InitializeContext()
@@ -53,7 +53,7 @@ namespace NuPattern.Library.UnitTests
                 this.mockProjectItem.Setup(pi => pi.Saved).Returns(true);
                 var mockItem = new Mock<IItem>();
                 mockItem.Setup(i => i.As<EnvDTE.ProjectItem>()).Returns(this.mockProjectItem.Object);
-                this.mockUriReferenceService = new Mock<IFxrUriReferenceService>();
+                this.mockUriReferenceService = new Mock<IUriReferenceService>();
                 this.mockUriReferenceService.Setup(s => s.ResolveUri<IItemContainer>(It.IsAny<Uri>()))
                     .Returns(mockItem.Object);
 

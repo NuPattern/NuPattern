@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.Commands
 {
@@ -16,7 +15,7 @@ namespace NuPattern.Library.Commands
     /// Creates a new instance of a child element for each item.
     /// </summary>
     [CLSCompliant(false)]
-    public abstract class CreateElementFromItemCommand : FeatureCommand
+    public abstract class CreateElementFromItemCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateElementFromItemCommand>();
 
@@ -25,7 +24,7 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriService
+        public IUriReferenceService UriService
         {
             get;
             set;
@@ -57,8 +56,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the name of the  child element to create for each item.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("CreateElementFromItemCommand_ChildElementName_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromItemCommand_ChildElementName_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromItemCommand_ChildElementName_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromItemCommand_ChildElementName_Description", typeof(Resources))]
         public virtual string ChildElementName
         {
             get;

@@ -21,13 +21,13 @@
         <automationSettingsSchemaMoniker Id="c88a3a39-4321-4960-8edd-13fd61952167" />
       </extendedElement>
     </eventSettings>
-    <commandSettings Id="7e2c4448-9877-434c-8302-5abfaf7b870a" typeId="NuPattern.Library.Commands.InstantiateFeatureCommand">
+    <commandSettings Id="7e2c4448-9877-434c-8302-5abfaf7b870a" typeId="NuPattern.Library.Commands.InstantiateGuidanceWorkflowCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="d6b5820b-135a-419b-9dc1-7f6279e1771d" />
       </extendedElement>
       <properties>[
   {
-    "Name": "FeatureId",
+    "Name": "ExtensionId",
     "Value": "5d64cfe6-a6ff-4e73-a000-c6a8832740ff",
     "ValueProvider": null
   },
@@ -48,7 +48,7 @@
   }
 ]</properties>
     </commandSettings>
-    <commandSettings Id="0433fe7d-38fd-4aa3-bcbd-fc9dccbf9205" typeId="NuPattern.Library.Commands.ActivateFeatureCommand">
+    <commandSettings Id="0433fe7d-38fd-4aa3-bcbd-fc9dccbf9205" typeId="NuPattern.Library.Commands.ActivateGuidanceWorkflowCommand">
       <extendedElement>
         <automationSettingsSchemaMoniker Id="010f16b7-1f97-4696-9a78-8e5336d9b68f" />
       </extendedElement>
@@ -70,7 +70,7 @@
   }
 ]</conditions>
     </menuSettings>
-    <guidanceExtension Id="e6de3e46-952d-4c32-bf68-38d0879bb653" guidanceInstanceName="Pattern Toolkit Hands-On Labs" guidanceFeatureId="5d64cfe6-a6ff-4e73-a000-c6a8832740ff" guidanceSharedInstance="true">
+    <guidanceExtension Id="e6de3e46-952d-4c32-bf68-38d0879bb653" guidanceInstanceName="Pattern Toolkit Hands-On Labs" guidanceSharedInstance="true" extensionId="5d64cfe6-a6ff-4e73-a000-c6a8832740ff">
       <extendedElement>
         <patternSchemaMoniker Id="71309920-c4ac-4283-b6bf-3cec975eca86" />
       </extendedElement>

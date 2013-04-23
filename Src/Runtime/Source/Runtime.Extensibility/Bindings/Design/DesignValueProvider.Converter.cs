@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.ComponentModel;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Runtime.Composition;
+using NuPattern.Runtime.Guidance;
 
 namespace NuPattern.Runtime.Bindings.Design
 {
@@ -13,7 +15,7 @@ namespace NuPattern.Runtime.Bindings.Design
     /// </summary>
     internal class DesignValueProviderTypeConverter : ExpandableObjectConverter
     {
-        private static IEnumerable<Lazy<IValueProvider, IFeatureComponentMetadata>> ValueProviders { get; set; }
+        private static IEnumerable<Lazy<IValueProvider, IComponentMetadata>> ValueProviders { get; set; }
         private static INuPatternProjectTypeProvider ProjectTypeProvider { get; set; }
 
         /// <summary>
@@ -50,7 +52,7 @@ namespace NuPattern.Runtime.Bindings.Design
         {
             if (destinationType == typeof(string))
             {
-                var componentMetadata = value as IFeatureComponentMetadata;
+                var componentMetadata = value as IComponentMetadata;
                 if (componentMetadata != null)
                 {
                     return componentMetadata.Id;
@@ -125,10 +127,10 @@ namespace NuPattern.Runtime.Bindings.Design
         {
             if (ProjectTypeProvider == null || ValueProviders == null)
             {
-                ProjectTypeProvider = FeatureCompositionService.Instance.GetExportedValue<INuPatternProjectTypeProvider>();
-                ValueProviders = FeatureCompositionService.Instance
-                    .GetExports<IValueProvider, IFeatureComponentMetadata>()
-                    .FromFeaturesCatalog()
+                ProjectTypeProvider = NuPatternCompositionService.Instance.GetExportedValue<INuPatternProjectTypeProvider>();
+                ValueProviders = NuPatternCompositionService.Instance
+                    .GetExports<IValueProvider, IComponentMetadata>()
+                    .FromComponentCatalog()
                     .Where(value => value.Metadata.ExportingType.IsBrowsable());
             }
 
@@ -147,7 +149,7 @@ namespace NuPattern.Runtime.Bindings.Design
                     var types = ProjectTypeProvider
                         .GetTypes<IValueProvider>()
                         .Where(type => !type.IsAbstract)
-                        .Select(type => type.AsProjectFeatureComponent());
+                        .Select(type => type.AsProjectComponent());
 
                     var values = ValueProviders
                         .Select(value => value.Metadata)

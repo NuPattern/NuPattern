@@ -5,8 +5,8 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Validation;
 
@@ -78,10 +78,10 @@ namespace $rootnamespace$
                 "The element '{0}' is not valid in some way. <Some prescriptive action to make it valid.>",
                 this.CurrentElement.InstanceName)));
 
-            //	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-            //	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-            //	TODO: Use tracer.TraceInformation() to note key results of execution
-            //	TODO: Raise exceptions for all other errors
+            // TODO: Use tracer.TraceWarning() to note expected and recoverable errors
+            // TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
+            // TODO: Use tracer.TraceInformation() to note key results of execution
+            // TODO: Raise exceptions for all other errors
 
             tracer.TraceInformation(
                 "Validated $safeitemname$ on current element '{0}' with AProperty '{1}', as '{2}'", this.CurrentElement.InstanceName, this.AProperty, !errors.Any());

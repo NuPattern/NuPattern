@@ -3,13 +3,13 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Integration;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Commands;
 using NuPattern.Modeling;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Store;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.UnitTests.Commands
 {
@@ -21,7 +21,7 @@ namespace NuPattern.Library.UnitTests.Commands
         [TestClass]
         public class GivenASolution
         {
-            private Mock<IFxrUriReferenceService> uriService;
+            private Mock<IUriReferenceService> uriService;
             private Mock<ITemplate> template;
             private Mock<IServiceProvider> serviceProvider;
             private Mock<IModelBus> modelBus;
@@ -51,7 +51,7 @@ namespace NuPattern.Library.UnitTests.Commands
                     property.Info = Mocks.Of<IPropertyInfo>().First(i => i.Name == "GuidanceName" && i.Type == "System.String" && i.IsVisible == true && i.IsReadOnly == false);
                 });
 
-                this.uriService = new Mock<IFxrUriReferenceService>();
+                this.uriService = new Mock<IUriReferenceService>();
                 this.uriService.Setup(x => x.ResolveUri<ITemplate>(It.IsAny<Uri>())).Returns(this.template.Object);
 
                 this.command = new GenerateModelingCodeCommand

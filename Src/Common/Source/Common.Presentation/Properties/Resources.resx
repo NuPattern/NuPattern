@@ -123,4 +123,7 @@
   <data name="GroupingEnumerableConverter_InvalidPropertyName" xml:space="preserve">
     <value>You have to specify a valid property name in the 'ConverterParameter' property.</value>
   </data>
+  <data name="ViewModel_InvalidExpressionProperty" xml:space="preserve">
+    <value>The expression '{0}' does not contain a valid property.</value>
+  </data>
 </root>

@@ -6,12 +6,10 @@ using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.Authoring.PatternToolkit.Automation.UriProviders;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
 
@@ -24,7 +22,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [DisplayNameResource("AddViewCommand_DisplayName", typeof(Resources))]
     [CategoryResource("AutomationCategory_PatternToolkitAuthoring", typeof(Resources))]
     [DescriptionResource("AddViewCommand_Description", typeof(Resources))]
-    public class AddViewCommand : FeatureCommand
+    public class AddViewCommand : NuPattern.Runtime.Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<AddViewCommand>();
 
@@ -33,7 +31,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public virtual IFxrUriReferenceService UriService { get; set; }
+        public virtual IUriReferenceService UriService { get; set; }
 
         /// <summary>
         /// Gets or sets the current element.

@@ -5,15 +5,16 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using EnvDTE;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
+using NuPattern.VisualStudio.Solution.Templates;
 using NuPattern.VisualStudio.TemplateWizards;
 
 namespace NuPattern.Library.TemplateWizards
@@ -23,7 +24,7 @@ namespace NuPattern.Library.TemplateWizards
     /// the template is unfolded.
     /// </summary>
     [CLSCompliant(false)]
-    public sealed class InstantiationTemplateWizard : TemplateWizard
+    public class InstantiationTemplateWizard : TemplateWizard
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<InstantiationTemplateWizard>();
 
@@ -59,7 +60,7 @@ namespace NuPattern.Library.TemplateWizards
         /// Gets the URI service.
         /// </summary>
         [Import]
-        public IFxrUriReferenceService UriService { get; internal set; }
+        public IUriReferenceService UriService { get; internal set; }
 
         /// <summary>
         /// Gets or sets the binding factory.
@@ -125,7 +126,7 @@ namespace NuPattern.Library.TemplateWizards
         /// Runs custom wizard logic when a project item has finished generating.
         /// </summary>
         /// <param name="projectItem">The project item that finished generating.</param>
-        public override void ProjectItemFinishedGenerating(ProjectItem projectItem)
+        public override void ProjectItemFinishedGenerating(EnvDTE.ProjectItem projectItem)
         {
             base.ProjectItemFinishedGenerating(projectItem);
 
@@ -149,7 +150,7 @@ namespace NuPattern.Library.TemplateWizards
 
             if (this.PatternManager == null)
             {
-                FeatureCompositionService.Instance.SatisfyImportsOnce(this);
+                NuPatternCompositionService.Instance.SatisfyImportsOnce(this);
             }
 
             Guard.NotNull(() => this.PatternManager, this.PatternManager);
@@ -214,19 +215,19 @@ namespace NuPattern.Library.TemplateWizards
 
         private string GetSafeTemplateName(Dictionary<string, string> replacementsDictionary)
         {
-            if (replacementsDictionary.ContainsKey("$safeprojectname$"))
+            if (replacementsDictionary.ContainsKey(@"$safeprojectname$"))
             {
-                return replacementsDictionary["$safeprojectname$"];
+                return replacementsDictionary[@"$safeprojectname$"];
             }
             else
             {
-                if (replacementsDictionary.ContainsKey("$rootname$"))
+                if (replacementsDictionary.ContainsKey(@"$rootname$"))
                 {
-                    return Path.GetFileNameWithoutExtension(replacementsDictionary["$rootname$"]);
+                    return Path.GetFileNameWithoutExtension(replacementsDictionary[@"$rootname$"]);
                 }
                 else
                 {
-                    return Guid.NewGuid().ToString("N");
+                    return Guid.NewGuid().ToString(@"N");
                 }
             }
         }

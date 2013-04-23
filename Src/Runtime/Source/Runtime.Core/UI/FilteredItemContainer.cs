@@ -3,9 +3,9 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Media.Imaging;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.Presentation.Data;
 using NuPattern.Reflection;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI
 {

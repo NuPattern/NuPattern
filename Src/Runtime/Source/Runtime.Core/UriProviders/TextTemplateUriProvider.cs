@@ -2,14 +2,13 @@
 using System.ComponentModel.Composition;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Integration;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
-using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Extensions;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UriProviders
 {
@@ -30,29 +29,29 @@ namespace NuPattern.Runtime.UriProviders
     /// </example>
     // TODO: Fix FERT so that this class does not have ot be public to register itself.
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [Export(typeof(IFxrUriReferenceProvider))]
+    [Export(typeof(IUriReferenceProvider))]
     [CLSCompliant(false)]
-    public class TextTemplateUriProvider : IFxrUriReferenceProvider<ITemplate>
+    public class TextTemplateUriProvider : IUriReferenceProvider<ITemplate>
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<TextTemplateUriProvider>();
 
         /// <summary>
         /// The host to use in a uri that is resolved relative to the current solution.
         /// </summary>
-        public const string SolutionRelativeHost = SolutionUriProvider.UriSchemeName;
+        public const string SolutionRelativeHost = SolutionUri.UriScheme;
 
         private ITextTemplating templating;
         private IModelBus modelBus;
         /// <devdoc>
         /// This has to be lazy because otherwise it would cause a circular dependency.
         /// </devdoc>
-        private Lazy<IFxrUriReferenceService> uriService;
+        private Lazy<IUriReferenceService> uriService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TextTemplateUriProvider"/> class.
         /// </summary>
         [ImportingConstructor]
-        public TextTemplateUriProvider([Import(typeof(SVsServiceProvider))] IServiceProvider serviceProvider, Lazy<IFxrUriReferenceService> uriService)
+        public TextTemplateUriProvider([Import(typeof(SVsServiceProvider))] IServiceProvider serviceProvider, Lazy<IUriReferenceService> uriService)
             : this(serviceProvider.GetService<STextTemplating, ITextTemplating>(), serviceProvider.GetService<SModelBus, IModelBus>(), uriService)
         {
         }
@@ -60,7 +59,7 @@ namespace NuPattern.Runtime.UriProviders
         /// <summary>
         /// Initializes a new instance of the <see cref="TextTemplateUriProvider"/> class.
         /// </summary>
-        public TextTemplateUriProvider(ITextTemplating templating, IModelBus modelBus, Lazy<IFxrUriReferenceService> uriService)
+        public TextTemplateUriProvider(ITextTemplating templating, IModelBus modelBus, Lazy<IUriReferenceService> uriService)
         {
             Guard.NotNull(() => templating, templating);
             Guard.NotNull(() => modelBus, modelBus);

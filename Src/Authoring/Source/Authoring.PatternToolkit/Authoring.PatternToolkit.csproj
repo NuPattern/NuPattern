@@ -51,14 +51,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
@@ -108,6 +100,7 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="Assets\Guidance\GuidanceExtension.cs" />
     <Compile Include="Assets\Guidance\Links\HandOnLabsToolkitInfo.gen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -934,9 +927,8 @@
     <Content Include="Assets\Templates\Items\Extensibility\ProjectTemplate\Properties\AssemblyInfo.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="Assets\Guidance\Links\Feature.cs" />
     <Compile Include="Assets\Guidance\Links\GuidanceLinkBase.cs" />
-    <Compile Include="Assets\Guidance\Links\InstantiateUsingGudianceLink.cs" />
+    <Compile Include="Assets\Guidance\Links\InstantiateUsingGuidanceLink.cs" />
     <Compile Include="Assets\Guidance\Links\InstantiateHolLink.cs" />
     <Compile Include="Assets\Wizards\Pages\ToolkitInfo.xaml.cs">
       <DependentUpon>ToolkitInfo.xaml</DependentUpon>
@@ -948,7 +940,7 @@
       <DependentUpon>ToolkitCreationWizard.xaml</DependentUpon>
     </Compile>
     <Compile Include="GeneratedCode\Guidance\GuidanceWorkflow.gen.cs">
-      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\NUPATTERN\sprint20\Src\Authoring\Authoring.slnbldr%252fb05cc972-cb01-4a17-9627-cf110c7b376c</SourceModelReference>
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Authoring/Element/C:\Projects\CodePlex\NuPattern\Sprint20\Src\Authoring\Authoring.slnbldr%252fb05cc972-cb01-4a17-9627-cf110c7b376c</SourceModelReference>
       <ItemGuid>963aeb3b-af3f-4a89-ad89-63a71b77335f</ItemGuid>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />

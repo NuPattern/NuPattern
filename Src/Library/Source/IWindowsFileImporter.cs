@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library
 {

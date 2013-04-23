@@ -1,8 +1,8 @@
-﻿using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.UnitTests.Commands.Helpers
 {
@@ -20,7 +20,7 @@ namespace NuPattern.Library.UnitTests.Commands.Helpers
             public void InitializeContext()
             {
                 var solution = Mock.Of<ISolution>();
-                var uriService = Mock.Of<IFxrUriReferenceService>();
+                var uriService = Mock.Of<IUriReferenceService>();
                 var currentElement = Mock.Of<IProductElement>();
                 var importer = Mock.Of<IWindowsFileImporter>();
 
@@ -51,7 +51,7 @@ namespace NuPattern.Library.UnitTests.Commands.Helpers
             public void InitializeContext()
             {
                 var solution = Mock.Of<ISolution>();
-                var uriService = Mock.Of<IFxrUriReferenceService>();
+                var uriService = Mock.Of<IUriReferenceService>();
                 var currentElement = Mock.Of<IProductElement>();
                 var importer = Mock.Of<IWindowsFileImporter>();
 

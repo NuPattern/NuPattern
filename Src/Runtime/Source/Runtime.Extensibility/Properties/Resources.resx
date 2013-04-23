@@ -138,7 +138,7 @@
   <data name="DynamicBinding_UnsupportedCompositionService" xml:space="preserve">
     <value>Dynamic context creation is only available for bindings created using the BindingFactory.</value>
   </data>
-  <data name="FeatureExtensionsTypeConverter_None" xml:space="preserve">
+  <data name="GuidanceExtensionsTypeConverter_None" xml:space="preserve">
     <value>(None)</value>
   </data>
   <data name="IconFilter" xml:space="preserve">
@@ -315,16 +315,16 @@
   <data name="DesignProperty_ToStringValueProviderFormat" xml:space="preserve">
     <value>(provided by: '{0}')</value>
   </data>
-  <data name="FeatureManagerExtensions_ErrorGuidanceInstantiationFailed" xml:space="preserve">
+  <data name="GuidanceManagerExtensions_ErrorGuidanceInstantiationFailed" xml:space="preserve">
     <value>Failed to create a new instance of the guidance workflow '{0} ({1})'. </value>
   </data>
-  <data name="FeatureManagerExtensions_ErrorNoRegistration" xml:space="preserve">
-    <value>Failed to activate an instance of the feature extension '{0}'. It is not installed.</value>
+  <data name="GuidanceManagerExtensions_ErrorNoRegistration" xml:space="preserve">
+    <value>Failed to activate an instance of the guidance extension '{0}'. It is not installed.</value>
   </data>
-  <data name="FeatureManagerExtensions_TraceShowingGuidanceWindows" xml:space="preserve">
+  <data name="GuidanceManagerExtensions_TraceShowingGuidanceWindows" xml:space="preserve">
     <value>Showing guidance windows</value>
   </data>
-  <data name="FeatureManagerExtensions_TraceActivation" xml:space="preserve">
+  <data name="GuidanceManagerExtensions_TraceActivation" xml:space="preserve">
     <value>Activating guidance workflow '{0}'</value>
   </data>
   <data name="ImageUriEditor_EmptyItemsMessage" xml:space="preserve">
@@ -438,5 +438,213 @@ Please add a new or existing image file {0} to the project and try again.</value
   </data>
   <data name="ProductElementExtensions_ErrorNotElementContainer" xml:space="preserve">
     <value>'{0}' does not allow creation of child elements '{1}'.</value>
+  </data>
+  <data name="NodeState_Blocked" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="NodeState_Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="NodeState_Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="NodeState_Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="NodeState_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="GuidanceComponentAttribute_DefaultCategory" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="DataAnnotationsValidator_ValidationFailed" xml:space="preserve">
+    <value>'{0}' validation failed.</value>
+  </data>
+  <data name="GuidanceNode_InputCardinalityExceed" xml:space="preserve">
+    <value>The node '{0}' does not allow more incoming connections.</value>
+  </data>
+  <data name="GuidanceNode_InvalidTargetGuidanceNodeState" xml:space="preserve">
+    <value>The state of the target guidance node  is invalid.</value>
+  </data>
+  <data name="GuidanceNode_OutputCardinalityExceed" xml:space="preserve">
+    <value>The node '{0}' does not allow more outgoing connections.</value>
+  </data>
+  <data name="GuidanceNode_PropertyAlreadySet" xml:space="preserve">
+    <value>The property '{0}' only supports one set.</value>
+  </data>
+  <data name="GuidanceNode_ParameterNotEmpty" xml:space="preserve">
+    <value>Parameter cannot be empty.</value>
+  </data>
+  <data name="GuidanceExtension_NoProjectTemplate" xml:space="preserve">
+    <value>Guidance extension '{0}' project template could not be located. Please reinstall the extension.</value>
+  </data>
+  <data name="GuidanceNode_Decision_DisplayName" xml:space="preserve">
+    <value>Decision</value>
+  </data>
+  <data name="GuidanceNode_Description_Description" xml:space="preserve">
+    <value>The description of this node</value>
+  </data>
+  <data name="GuidanceNode_Description_DisplayName" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="GuidanceNode_Final_DisplayName" xml:space="preserve">
+    <value>Final</value>
+  </data>
+  <data name="GuidanceNode_Fork_DisplayName" xml:space="preserve">
+    <value>Fork</value>
+  </data>
+  <data name="GuidanceNode_GuidanceAction_DisplayName" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="GuidanceNode_GuidanceWorkflow_DisplayName" xml:space="preserve">
+    <value>Guidance Workflow</value>
+  </data>
+  <data name="GuidanceNode_HasStateOverride_Description" xml:space="preserve">
+    <value>Whether the reader has overridden the completion of this node.</value>
+  </data>
+  <data name="GuidanceNode_HasStateOverride_DisplayName" xml:space="preserve">
+    <value>Overridden</value>
+  </data>
+  <data name="GuidanceNode_Initial_DisplayName" xml:space="preserve">
+    <value>Initial</value>
+  </data>
+  <data name="GuidanceNode_IsUserAccepted_Description" xml:space="preserve">
+    <value>Whether the reader has manually accepted this guidance node</value>
+  </data>
+  <data name="GuidanceNode_IsUserAccepted_DisplayName" xml:space="preserve">
+    <value>Accepted by User</value>
+  </data>
+  <data name="GuidanceNode_Join_DisplayName" xml:space="preserve">
+    <value>Join</value>
+  </data>
+  <data name="GuidanceNode_Link_Description" xml:space="preserve">
+    <value>The content for this guidance node</value>
+  </data>
+  <data name="GuidanceNode_Link_DisplayName" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="GuidanceNode_Merge_DisplayName" xml:space="preserve">
+    <value>Merge</value>
+  </data>
+  <data name="GuidanceNode_Name_Description" xml:space="preserve">
+    <value>The name of this guidance node</value>
+  </data>
+  <data name="GuidanceNode_Name_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GuidanceNode_PostConditions_Description" xml:space="preserve">
+    <value>The conditions that are satisifed by the completion of this guidance node</value>
+  </data>
+  <data name="GuidanceNode_PostConditions_DisplayName" xml:space="preserve">
+    <value>Post-Conditions</value>
+  </data>
+  <data name="GuidanceNode_PreConditions_Description" xml:space="preserve">
+    <value>The conditions that must be satisfied before this guidance node can be completed</value>
+  </data>
+  <data name="GuidanceNode_PreConditions_DisplayName" xml:space="preserve">
+    <value>Pre-Conditions</value>
+  </data>
+  <data name="GuidanceNode_State_Description" xml:space="preserve">
+    <value>The state of this guidance node</value>
+  </data>
+  <data name="GuidanceNode_State_DisplayName" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Binding_TraceEvaluate" xml:space="preserve">
+    <value>Evaluating binding {0}</value>
+  </data>
+  <data name="Binding_EvaluateBindingError" xml:space="preserve">
+    <value>Could not resolve component with id '{0}' to an actual instance of type {1}.</value>
+  </data>
+  <data name="DynamicBinding_TraceFailedDynamicBinding" xml:space="preserve">
+    <value>Dynamic binding '{0}' failed on imported property '{1}': {2}</value>
+  </data>
+  <data name="PropertyBinding_PropertyNotCompatible" xml:space="preserve">
+    <value>Provided value {0} is not compatible with property {1}.{2} of type {3}, and specific type conversion is not supported by provided converter {4}.</value>
+  </data>
+  <data name="PropertyBinding_TracePropertyCustomNotCompatible" xml:space="preserve">
+    <value>Provided value {0} is not compatible with property {1}.{2} of type {3}, and a custom type conversion is not provided.</value>
+  </data>
+  <data name="PropertyBinding_TracePropertyNotFound" xml:space="preserve">
+    <value>Property {0}.{1} not found</value>
+  </data>
+  <data name="ValueProviderPropertyBinding_TraceFailedEvaluation" xml:space="preserve">
+    <value>Value provider binding for property {0}.{1} could not be successfully evaluated. Errors: 
+</value>
+  </data>
+  <data name="NuPatternGlobalContainer_TraceNoComponentModelService" xml:space="preserve">
+    <value>Could not retrieve the VS global IComponentModel service.</value>
+  </data>
+  <data name="NuPatternGlobalContainer_TraceNoComponentModel" xml:space="preserve">
+    <value>Could not retrieve the catalog '{0}' from the global IComponentModel service.</value>
+  </data>
+  <data name="NuPatternGlobalContainer_TraceFailedContainerInitialization" xml:space="preserve">
+    <value>Failed to initialize global container</value>
+  </data>
+  <data name="LinkLaunchPoint_NotifyUser" xml:space="preserve">
+    <value>Unable to execute command because the associated guidance action is not in the Enabled (green) state.</value>
+  </data>
+  <data name="LinkLaunchPoint_ErrorCommandCannotExecute" xml:space="preserve">
+    <value>Command {0}' can not be executed.</value>
+  </data>
+  <data name="LinkLaunchPoint_TraceExecute" xml:space="preserve">
+    <value>Executing command {0}</value>
+  </data>
+  <data name="VsLaunchPoint_ErrorCommandCannotExecute" xml:space="preserve">
+    <value>Command binding '{0}' can not be executed.</value>
+  </data>
+  <data name="VsLaunchPoint_TraceExecute" xml:space="preserve">
+    <value>Executing command {0}</value>
+  </data>
+  <data name="VsLaunchPoint_TraceNotEnabled" xml:space="preserve">
+    <value>Attempted to execute launch point {0} but its querystatus did not return Enabled.</value>
+  </data>
+  <data name="VsTemplateLaunchPoint_DisplayName" xml:space="preserve">
+    <value>VS Template Launch Point</value>
+  </data>
+  <data name="VsTemplateLaunchPoint_ErrorEvaluateFailed" xml:space="preserve">
+    <value>Command binding '{0}' can not be executed.</value>
+  </data>
+  <data name="VsTemplateLaunchPoint_TraceExecuteCommand" xml:space="preserve">
+    <value>Executing command {0}</value>
+  </data>
+  <data name="Node_ErrorOnlySinglePredecessor" xml:space="preserve">
+    <value>Workflow actions containing include:// must have only one predecessor and one successor</value>
+  </data>
+  <data name="Category_Identification" xml:space="preserve">
+    <value>Identification</value>
+  </data>
+  <data name="IProductToolkitInfo_Author_Description" xml:space="preserve">
+    <value>The original author of this toolkit.</value>
+  </data>
+  <data name="IProductToolkitInfo_Author_DisplayName" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="IProductToolkitInfo_Description_Description" xml:space="preserve">
+    <value>The description of this pattern toolkit.</value>
+  </data>
+  <data name="IProductToolkitInfo_Description_DisplayName" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="IProductToolkitInfo_Identifier_Description" xml:space="preserve">
+    <value>The unique identifier of this toolkit, also used as the VSIX identifier.</value>
+  </data>
+  <data name="IProductToolkitInfo_Identifier_DisplayName" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+  <data name="IProductToolkitInfo_Name_Description" xml:space="preserve">
+    <value>The name of this pattern toolkit.</value>
+  </data>
+  <data name="IProductToolkitInfo_Name_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="IProductToolkitInfo_Version_Description" xml:space="preserve">
+    <value>The current version of this toolkit.</value>
+  </data>
+  <data name="IProductToolkitInfo_Version_DisplayName" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="ToolkitInterfaceLayer_TraceFailedInstantiation" xml:space="preserve">
+    <value>Failed to instantiate the interface layer proxy type '{0}'.</value>
   </data>
 </root>

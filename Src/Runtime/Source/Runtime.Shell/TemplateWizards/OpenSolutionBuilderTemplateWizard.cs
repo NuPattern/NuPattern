@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using EnvDTE;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TemplateWizard;
 using NuPattern.VisualStudio.TemplateWizards;
 using Ole = Microsoft.VisualStudio.OLE.Interop;
 
-namespace NuPattern.Runtime.Shell
+namespace NuPattern.Runtime.Shell.TemplateWizards
 {
     /// <summary>
     /// Custom template wizard extension that opens the solution builder toolwindow.

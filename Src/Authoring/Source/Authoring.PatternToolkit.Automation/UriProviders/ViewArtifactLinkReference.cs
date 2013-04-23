@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Runtime;
@@ -21,7 +20,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.UriProviders
         /// Returns all the <see cref="IReference"/>s for the current element that can be converted to the given type and are not empty.
         /// </summary>
         [CLSCompliant(false)]
-        public static IEnumerable<Guid> GetResolvedReferences(IProductElement element, IFxrUriReferenceService uriService)
+        public static IEnumerable<Guid> GetResolvedReferences(IProductElement element, IUriReferenceService uriService)
         {
             return GetResolvedReferences(element, uriService, r => true);
         }
@@ -30,7 +29,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.UriProviders
         /// Returns all the <see cref="IReference"/>s for the current element that can be converted to the given type and are not empty.
         /// </summary>
         [CLSCompliant(false)]
-        public static IEnumerable<Guid> GetResolvedReferences(IProductElement element, IFxrUriReferenceService uriService, Func<IReference, bool> whereFilter)
+        public static IEnumerable<Guid> GetResolvedReferences(IProductElement element, IUriReferenceService uriService, Func<IReference, bool> whereFilter)
         {
             Guard.NotNull(() => element, element);
             Guard.NotNull(() => uriService, uriService);

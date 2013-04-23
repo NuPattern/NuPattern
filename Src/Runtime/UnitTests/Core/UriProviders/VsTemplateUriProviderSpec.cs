@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.UriProviders;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Runtime.UnitTests.UriProviders
 {
@@ -18,14 +18,14 @@ namespace NuPattern.Runtime.UnitTests.UriProviders
         public void WhenTemplateTypeIsItem_ThenReturnsBaseUri()
         {
             Assert.Equal("template://item",
-                VsTemplateUri.GetUriBase(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.VsTemplateType.Item));
+                VsTemplateUri.GetUriBase(VsTemplateType.Item));
         }
 
         [TestMethod, TestCategory("Unit")]
         public void WhenTemplateTypeIsProject_ThenReturnsBaseUri()
         {
             Assert.Equal("template://project",
-                VsTemplateUri.GetUriBase(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.VsTemplateType.Project));
+                VsTemplateUri.GetUriBase(VsTemplateType.Project));
         }
 
         [TestMethod, TestCategory("Unit")]
@@ -33,7 +33,7 @@ namespace NuPattern.Runtime.UnitTests.UriProviders
         {
             Assert.Equal("template://projectgroup",
                          VsTemplateUri.GetUriBase(
-                             Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.VsTemplateType.ProjectGroup));
+                             VsTemplateType.ProjectGroup));
         }
 
         [TestMethod, TestCategory("Unit")]

@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Globalization;
-using Microsoft.VisualStudio.Modeling;
+using Microsoft.VisualStudio.Modeling.Validation;
+using NuPattern.Diagnostics;
 using NuPattern.Library;
 using NuPattern.Library.Automation;
-using NuPattern.Library.Commands;
 using NuPattern.Runtime;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 
 namespace $rootnamespace$
 {
@@ -24,7 +22,7 @@ namespace $rootnamespace$
         /// <param name="context">Validation context to be assigned errors and warnings.</param>
         /// <param name="settingsElement">The settings element in the model being validated</param>
         /// <param name="settings">Settings for the command</param>
-        public void Validate(Microsoft.VisualStudio.Modeling.Validation.ValidationContext context, IAutomationSettingsSchema settingsElement, ICommandSettings settings)
+        public void Validate(ValidationContext context, IAutomationSettingsSchema settingsElement, ICommandSettings settings)
         {
             try
             {

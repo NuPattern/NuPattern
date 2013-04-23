@@ -27,7 +27,7 @@ namespace NuPattern.VisualStudio.Events
 
             if (dte != null)
             {
-                projectItemsEvents = dte.Events.GetObject("ProjectItemsEvents") as ProjectItemsEvents;
+                projectItemsEvents = dte.Events.GetObject(typeof(ProjectItemsEvents).Name) as ProjectItemsEvents;
                 projectItemsEvents.ItemRemoved += new _dispProjectItemsEvents_ItemRemovedEventHandler(OnItemRemoved);
             }
         }

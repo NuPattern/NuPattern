@@ -4,9 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using Microsoft.Practices.EnterpriseLibrary.Configuration.Design.Configuration.Design.HostAdapterV5;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio.Solution;
 
@@ -53,7 +51,7 @@ namespace NuPattern.Runtime
             tracer.TraceInformation(
                 Resources.AssemblyDiscoveryService_GetAssemblies_TraceAssembliesFound, assemblies.Count());
 
-            return new Dictionary<string, IEnumerable<Assembly>> { { "Types", assemblies } };
+            return new Dictionary<string, IEnumerable<Assembly>> { { @"Types", assemblies } };
         }
     }
 

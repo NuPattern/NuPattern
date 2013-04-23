@@ -11,6 +11,7 @@ public static class VersionInfo
     public const int AssemblyBuild = 20;
     public const int AssemblyRevision = 0;
     public static Version AssemblyVersion = new Version(AssemblyMajor, AssemblyMinor, AssemblyBuild, AssemblyRevision);
+    public static Version TemplateWizardVersion = new Version(AssemblyMajor, 0, 0, 0);
 
     //Note: To change Versions of DSL schemas, please change designer properties of DSLs (Schema, Store, Library)
 
@@ -26,5 +27,6 @@ public static class VersionInfo
     
     // Assembly Identity
     public const string AssemblyProductName = "NuPattern";
+    public const string AssemblyPublicKeyToken = "24c7786d4a8b1a88";
 }
 #>

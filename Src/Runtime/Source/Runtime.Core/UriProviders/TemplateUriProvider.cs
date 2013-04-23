@@ -1,21 +1,20 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.VsIde;
+using NuPattern.VisualStudio.Solution;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Runtime.UriProviders
 {
     /// <summary>
-    /// A <see cref="IFxrUriReferenceProvider"/> that resolves 
+    /// A <see cref="IUriReferenceProvider"/> that resolves 
     /// uris to <see cref="ITemplate"/> instances that can be 
     /// used to unfold templates.
     /// Example: <c>template://[Project | Item | ProjectGroup | Custom]/category/[id | name]</c>.
     /// </summary>
     // TODO: Fix FERT so that this class does not have ot be public to register itself.
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [Export(typeof(IFxrUriReferenceProvider))]
+    [Export(typeof(IUriReferenceProvider))]
     [CLSCompliant(false)]
     public class TemplateUriProvider : TemplateUriProviderBase<ITemplate>
     {

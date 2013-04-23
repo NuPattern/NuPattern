@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using Microsoft.VisualStudio.Modeling.Validation;
+using NuPattern.Runtime.Schema.Properties;
 using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 
@@ -84,7 +85,7 @@ namespace NuPattern.Runtime.Schema
             try
             {
                 var serializationResult = new DslModeling.SerializationResult();
-                tx = store.TransactionManager.BeginTransaction("Loading pattern model", true);
+                tx = store.TransactionManager.BeginTransaction(Resources.PatternModelSerializationHelper_TransactionDescriptionLoadingModel, true);
                 patternModel = Instance.LoadModel(serializationResult, store, modelFilePath, null, null, null);
                 if (serializationResult.Failed)
                 {
@@ -138,7 +139,7 @@ namespace NuPattern.Runtime.Schema
                 rootSerializer = directory.GetSerializer(rootElement.GetDomainClass().Id);
             }
 
-            global::System.Diagnostics.Debug.Assert(rootSerializer != null, "Cannot find serializer for " + rootElement.GetDomainClass().Name + "!");
+            global::System.Diagnostics.Debug.Assert(rootSerializer != null, @"Cannot find serializer for " + rootElement.GetDomainClass().Name + @"!");
 
             // Version check.
             this.CheckVersion(serializationContext, reader);
@@ -199,7 +200,7 @@ namespace NuPattern.Runtime.Schema
             var modelRootSerializer = directory.GetSerializer(PatternModelSchema.DomainClassId);
             var serializationResult = new DslModeling.SerializationResult();
 
-            Debug.Assert(modelRootSerializer != null, "Cannot find serializer for ProductLine!");
+            Debug.Assert(modelRootSerializer != null, @"Cannot find serializer for PatternModel!");
 
             if (modelRootSerializer != null)
             {
@@ -211,7 +212,7 @@ namespace NuPattern.Runtime.Schema
                 var transactionContext = new DslModeling.TransactionContext();
                 transactionContext.Add(DslModeling.SerializationContext.TransactionContextKey, serializationContext);
 
-                using (var tx = store.DefaultPartition.Store.TransactionManager.BeginTransaction("Loading Model", true, transactionContext))
+                using (var tx = store.DefaultPartition.Store.TransactionManager.BeginTransaction(Resources.PatternModelSerializationHelper_TransactionDescriptionLoadingModel, true, transactionContext))
                 {
                     try
                     {
@@ -506,7 +507,7 @@ namespace NuPattern.Runtime.Schema
                     var transactionContext = new DslModeling.TransactionContext();
                     transactionContext.Add(DslModeling.SerializationContext.TransactionContextKey, serializationContext);
 
-                    using (var transaction = diagramPartition.Store.TransactionManager.BeginTransaction("LoadDiagram", true, transactionContext))
+                    using (var transaction = diagramPartition.Store.TransactionManager.BeginTransaction(Resources.PatternModelSerializationHelper_TransactionDescriptionLoadingDiagram, true, transactionContext))
                     {
                         // Ensure there is some content in the file. Blank (or almost blank, to account for encoding header bytes, etc.)
                         // files will cause a new diagram to be created and returned 

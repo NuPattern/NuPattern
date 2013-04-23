@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Input;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
+using NuPattern.ComponentModel;
 using NuPattern.Presentation;
+using NuPattern.Reflection;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design
@@ -75,7 +74,7 @@ namespace NuPattern.Runtime.Design
 
             return new StandardValue(
                 displayNameAttribute != null ? displayNameAttribute.DisplayName : type.FullName,
-                type.FullName + ", " + type.Assembly.FullName.Split(',')[0],
+                type.FullName + @", " + type.Assembly.FullName.Split(',')[0],
                 descriptionAttribute != null ? descriptionAttribute.Description : string.Empty,
                 categoryAttribute != null ? categoryAttribute.Category : string.Empty);
         }

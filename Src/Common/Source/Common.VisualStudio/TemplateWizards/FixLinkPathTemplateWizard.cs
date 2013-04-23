@@ -5,8 +5,8 @@ using System.Linq;
 using EnvDTE;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Diagnostics;
 using NuPattern.VisualStudio.Properties;
 using NuPattern.VisualStudio.Solution;
 

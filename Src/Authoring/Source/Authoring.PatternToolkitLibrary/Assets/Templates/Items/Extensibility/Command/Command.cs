@@ -3,9 +3,8 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime;
 
 namespace $rootnamespace$
@@ -17,7 +16,7 @@ namespace $rootnamespace$
     [Category("General")]
     [Description("Performs some custom automation.")]
     [CLSCompliant(false)]
-    public class $safeitemname$ : FeatureCommand
+    public class $safeitemname$ : NuPattern.Runtime.Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<$safeitemname$>();
 
@@ -69,10 +68,10 @@ namespace $rootnamespace$
                 "Executing $safeitemname$ on current element '{0}' with AProperty '{1}'", this.CurrentElement.InstanceName, this.AProperty);
 
             // TODO: Implement command automation code
-            //	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-            //	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-            //	TODO: Use tracer.TraceInformation() to note key results of execution
-            //	TODO: Raise exceptions for all other errors
+            // TODO: Use tracer.TraceWarning() to note expected and recoverable errors
+            // TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
+            // TODO: Use tracer.TraceInformation() to note key results of execution
+            // TODO: Raise exceptions for all other errors
         }
     }
 }

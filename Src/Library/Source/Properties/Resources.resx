@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ActivateFeatureCommand_Description" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_Description" xml:space="preserve">
     <value>Activates an existing guidance workflow making it the currently selected guidance workflow in the 'Guidance Explorer' window.</value>
   </data>
-  <data name="ActivateFeatureCommand_DisplayName" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_DisplayName" xml:space="preserve">
     <value>Activates an Associated Guidance Workflow.</value>
   </data>
-  <data name="ActivateFeatureCommand_TraceFeatureNotFound" xml:space="preserve">
-    <value>Guidance instance with feature id '{0}' not found in solution.</value>
+  <data name="ActivateGuidanceWorkCommand_TraceGuidanceNotFound" xml:space="preserve">
+    <value>Guidance instance with id '{0}' was not found in solution.</value>
   </data>
   <data name="AddCommandCommand_AddCommandCommandText" xml:space="preserve">
     <value>Add New Command</value>
@@ -183,32 +183,32 @@
   <data name="GuidanceExtension_InstantiateEventName" xml:space="preserve">
     <value>InstantiateGuidanceEvent</value>
   </data>
-  <data name="InstantiateFeatureCommand_ActivateOnInstantiation_Description" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_Description" xml:space="preserve">
     <value>Whether to activate the instantiated guidance once created.</value>
   </data>
-  <data name="InstantiateFeatureCommand_ActivateOnInstantiation_DisplayName" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_DisplayName" xml:space="preserve">
     <value>Activate On Instantiation</value>
   </data>
-  <data name="InstantiateFeatureCommand_DefaultInstanceName_Description" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_DefaultInstanceName_Description" xml:space="preserve">
     <value>The default name of the created guidance workflow in the Guidance Explorer.</value>
   </data>
-  <data name="InstantiateFeatureCommand_DefaultInstanceName_DisplayName" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_DefaultInstanceName_DisplayName" xml:space="preserve">
     <value>Default Name</value>
   </data>
-  <data name="InstantiateFeatureCommand_Description" xml:space="preserve">
-    <value>Creates a new guidance workflow, with an optional default name, and optionally makes the guidance the currently selected feature in the 'Guidance Explorer' window.</value>
+  <data name="InstantiateGuidanceWorkflowCommand_Description" xml:space="preserve">
+    <value>Creates a new guidance workflow, with an optional default name, and optionally makes the guidance the currently selected workflow in the 'Guidance Explorer' window.</value>
   </data>
-  <data name="InstantiateFeatureCommand_DisplayName" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_DisplayName" xml:space="preserve">
     <value>Instantiates an Associated Guidance Workflow.</value>
   </data>
-  <data name="InstantiateFeatureCommand_FeatureId_Description" xml:space="preserve">
-    <value>The identifier of the Feature Extension containing the guidance process to instantiate.</value>
+  <data name="InstantiateGuidanceWorkflowCommand_ExtensionId_Description" xml:space="preserve">
+    <value>The identifier of the guidance extension containing the guidance workflow to instantiate.</value>
   </data>
-  <data name="InstantiateFeatureCommand_FeatureId_DisplayName" xml:space="preserve">
-    <value>Feature Id</value>
+  <data name="InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName" xml:space="preserve">
+    <value>Extension Id</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceFeatureNotFound" xml:space="preserve">
-    <value>Installed feature for current element '{0} with identifier '{1}' not installed.</value>
+  <data name="InstantiateGuidanceWorkflowCommand_TraceWorkflowNotFound" xml:space="preserve">
+    <value>Installed guidance extension for current element '{0} with identifier '{1}' not installed.</value>
   </data>
   <data name="InstantiationTemplateWizard_ToolkitInfoNotFound" xml:space="preserve">
     <value>Visual Studio extension providing template '{0}' is not a valid registered pattern toolkit extension.</value>
@@ -617,7 +617,7 @@ Please add or import a new 'Item/Project Template', or create a new folder withi
   <data name="Validate_GuidanceReferenceNotFoundCode" xml:space="preserve">
     <value>307</value>
   </data>
-  <data name="ActivateFeatureCommand_TraceNoReference" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_TraceNoReference" xml:space="preserve">
     <value>Current element '{0}' has no reference to an existing guidance instance.</value>
   </data>
   <data name="SettingsDescriptionProvider_ConditionsEditorCaption" xml:space="preserve">
@@ -770,10 +770,10 @@ Please add or import a new 'Item/Project Template', or create a new folder withi
   <data name="PropertyAttributeValidationRule_ErrorMessageDescription" xml:space="preserve">
     <value>Optional. The error message to show to the user when the validation fails. If no message is given, a default internal message will be shown instead.</value>
   </data>
-  <data name="InstantiateFeatureCommand_SharedInstance_Description" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_SharedInstance_Description" xml:space="preserve">
     <value>Whether all the instances of the current element share the same instance of guidance workflow, or have their own separate instances.</value>
   </data>
-  <data name="InstantiateFeatureCommand_SharedInstance_DisplayName" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_SharedInstance_DisplayName" xml:space="preserve">
     <value>Shared Instance</value>
   </data>
   <data name="Validate_CannotResolveType" xml:space="preserve">
@@ -1026,13 +1026,13 @@ Please open and make a note of the updates that were automatically made to the *
     <value>339</value>
   </data>
   <data name="Validate_TemplateSettingsWizardOrderIsNotCorrect" xml:space="preserve">
-    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' should appear before the &lt;WizardExtension&gt; element for the 'ElementReplacementsWizard'. You must correct the ordering of these &lt;TemplateWizard&gt; elements in the contents of the *.vstemplate file.</value>
+    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' should appear before the &lt;WizardExtension&gt; element for the 'ElementReplacementsTemplateWizard'. You must correct the ordering of these &lt;TemplateWizard&gt; elements in the contents of the *.vstemplate file.</value>
   </data>
   <data name="Validate_TemplateSettingsWizardOrderIsNotCorrectCode" xml:space="preserve">
     <value>341</value>
   </data>
   <data name="Validate_TemplateSettingsWizardsNotPresentInTemplate" xml:space="preserve">
-    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' or the &lt;WizardExtension&gt; element for the 'ElementReplacementsWizard' are missing from the contents of the file, or are not declared correctly. You can re-select the template in the 'Template' property in the 'Settings' to automatically correct this.</value>
+    <value>'{0}' template launch point or unfold command is configured with a 'Template' property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the 'InstantiationTemplateWizard' or the &lt;WizardExtension&gt; element for the 'ElementReplacementsTemplateWizard' are missing from the contents of the file, or are not declared correctly. You can re-select the template in the 'Template' property in the 'Settings' to automatically correct this.</value>
   </data>
   <data name="Validate_TemplateSettingsWizardsNotPresentInTemplateCode" xml:space="preserve">
     <value>340</value>
@@ -1458,31 +1458,31 @@ Please open and make a note of the updates that were automatically made to the *
   <data name="ActivateArtifactCommand_TraceInitial" xml:space="preserve">
     <value>Executing activation of all solution item references for current element '{0}' with Open '{1}'.</value>
   </data>
-  <data name="ActivateFeatureCommand_TraceInitial" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_TraceInitial" xml:space="preserve">
     <value>Executing activation of guidance instance for current element, '{0}'.</value>
   </data>
-  <data name="ActivateFeatureCommand_TraceReferenceFound" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_TraceReferenceFound" xml:space="preserve">
     <value>Guidance instance on current element '{0}' has instance name '{1}'</value>
   </data>
-  <data name="ActivateFeatureCommand_TraceActivation" xml:space="preserve">
+  <data name="ActivateGuidanceWorkCommand_TraceActivation" xml:space="preserve">
     <value>Activating guidance instance on current element '{0}' with instance name '{1}'</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceInitial" xml:space="preserve">
-    <value>Executing instantiation of guidance instance for current element '{0}' of feature '{1}' with instance name '{2}' as shared '{3}' and activateoncreation '{4}'.</value>
+  <data name="InstantiateGuidanceWorkflowCommand_TraceInitial" xml:space="preserve">
+    <value>Executing instantiation of guidance instance for current element '{0}' of extension '{1}' with instance name '{2}' as shared '{3}' and activateoncreation '{4}'.</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceActivateShared" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_TraceActivateShared" xml:space="preserve">
     <value>Activating existing shared guidance instance of current element '{0}' with name '{1}'</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceCreateUniqueInstanceName" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_TraceCreateUniqueInstanceName" xml:space="preserve">
     <value>Created new guidance instance name for current element '{0}' with name '{1}'</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceInstantiateNew" xml:space="preserve">
-    <value>Instantiating new guidance instance of current element '{0}' with feature id '{1}' and name '{2}'</value>
+  <data name="InstantiateGuidanceWorkflowCommand_TraceInstantiateNew" xml:space="preserve">
+    <value>Instantiating new guidance instance of current element '{0}' with extension id '{1}' and name '{2}'</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceActivateNew" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_TraceActivateNew" xml:space="preserve">
     <value>Activating new guidance instance of current element '{0}' with name '{1}'</value>
   </data>
-  <data name="InstantiateFeatureCommand_TraceAddingReference" xml:space="preserve">
+  <data name="InstantiateGuidanceWorkflowCommand_TraceAddingReference" xml:space="preserve">
     <value>Adding reference to new guidance instance of current element '{0}' with name '{1}'</value>
   </data>
   <data name="AggregatorCommand_TraceExecutingCommand" xml:space="preserve">
@@ -1871,28 +1871,28 @@ Evaluation results:
   <data name="MenuAutomation_ConditionEvaluatedFalse" xml:space="preserve">
     <value>Condition '{0}' evaluated to false with the following configuration:</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_Description" xml:space="preserve">
-    <value>Activates the a shared instance of a feature, or instantiates it,  if it does not yet exist.</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_Description" xml:space="preserve">
+    <value>Activates a shared instance of a guidance workflow, or instantiates it, if it does not yet exist.</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_DisplayName" xml:space="preserve">
-    <value>Activates or Instantiates a Shared Feature</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_DisplayName" xml:space="preserve">
+    <value>Activates or Instantiates a Shared Guidance Workflow</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_FeatureId_Description" xml:space="preserve">
-    <value>The Feature Id of the feature to activate (or instantiate).</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_ExtensionId_Description" xml:space="preserve">
+    <value>The Id of the extension containing the guidance to activate (or instantiate).</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_TraceActivate" xml:space="preserve">
-    <value>Activated feature named '{0}'</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceActivate" xml:space="preserve">
+    <value>Activated guidance workflow named '{0}'</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_TraceFeatureNotFound" xml:space="preserve">
-    <value>Feature with id '{0}' not registered.</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceWorkflowNotFound" xml:space="preserve">
+    <value>Guidance Workflow with id '{0}' not registered.</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_TraceInitial" xml:space="preserve">
-    <value>Executing activation or instantiation of feature '{0}'</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInitial" xml:space="preserve">
+    <value>Executing activation or instantiation of guidance workflow '{0}'</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_TraceInstantiate" xml:space="preserve">
-    <value>Instantiated new feature '{0}', named '{1}'</value>
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInstantiate" xml:space="preserve">
+    <value>Instantiated new guidance workflow '{0}', named '{1}'</value>
   </data>
-  <data name="ActivateOrInstantiateSharedFeatureCommand_TraceShowingGuidanceExplorer" xml:space="preserve">
+  <data name="ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceShowingGuidanceExplorer" xml:space="preserve">
     <value>Opening guidance windows.</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -2263,5 +2263,185 @@ Select the related solution items to delete and press 'OK', or press 'Cancel' to
   </data>
   <data name="AggregatorCommandUpgradeProcessor_TraceDeserializeCommandSettings" xml:space="preserve">
     <value>Upgrading AggregatorCommandSettings element '{0}', replacing string JSon with CommandReference collection JSon.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Description" xml:space="preserve">
+    <value>Sets a value in the black board.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_DisplayName" xml:space="preserve">
+    <value>Set Value in Blackboard</value>
+  </data>
+  <data name="ShowMessageCommand_Description" xml:space="preserve">
+    <value>Displays text in a Message Box</value>
+  </data>
+  <data name="ShowMessageCommand_DisplayName" xml:space="preserve">
+    <value>Displays a Message Box</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Key_Description" xml:space="preserve">
+    <value>The name of the item in the black board.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Key_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Value_Description" xml:space="preserve">
+    <value>The value of the item to set in the blackboard.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_Value_DisplayName" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ShowMessageCommand_DefaultMessage" xml:space="preserve">
+    <value>&lt;No Message Supplied&gt;</value>
+  </data>
+  <data name="ShowMessageCommand_Level_Description" xml:space="preserve">
+    <value>The severity level of the message</value>
+  </data>
+  <data name="ShowMessageCommand_Level_DisplayName" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="ShowMessageCommand_Message_Description" xml:space="preserve">
+    <value>The text of the message to display</value>
+  </data>
+  <data name="ShowMessageCommand_Message_DisplayName" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the first value in the collection of elements.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_DisplayName" xml:space="preserve">
+    <value>First or Default Value</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_Elements_Description" xml:space="preserve">
+    <value>The elements in the collection.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_Elements_DisplayName" xml:space="preserve">
+    <value>Elements</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated the first or default value of the set of elements, as '{0}'.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating the first or default value of a set of elements.</value>
+  </data>
+  <data name="FirstOrDefaultValueProvider_TraceNoElements" xml:space="preserve">
+    <value>Failed to evaluate the first or default value of a null set of elements.</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the first solution item that matches the path expression.</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_DisplayName" xml:space="preserve">
+    <value>First Solution Item</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_PathExpression_Description" xml:space="preserve">
+    <value>An expression that matches the item in the solution. May contain wildcard characters ('*') to search any folder and file name or file extension. (i.e. MyProject\SubFolder\*.cs)</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_PathExpression_DisplayName" xml:space="preserve">
+    <value>Path Expression</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated the first item in the solution with path expression '{0}', as '{1}'.</value>
+  </data>
+  <data name="FirstSolutionElementMatchValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating the first item in the solution with path expression '{0}'.</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_Description" xml:space="preserve">
+    <value>Retrieves the value of the item in the black board.</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_DisplayName" xml:space="preserve">
+    <value>Blackboard Value</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated blackboard value '{0}', as '{1}'</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating blackboard value '{0}'.</value>
+  </data>
+  <data name="InputBoxValueProvider_Description" xml:space="preserve">
+    <value>Retrieves a textual input from the user.</value>
+  </data>
+  <data name="InputBoxValueProvider_DisplayName" xml:space="preserve">
+    <value>Prompt User Input</value>
+  </data>
+  <data name="InputBoxValueProvider_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated the input from user with message '{0}', and default value '{1}', as '{2}'.</value>
+  </data>
+  <data name="InputBoxValueProvider_TraceInitial" xml:space="preserve">
+    <value>Evaluating the input from prompting user, with message '{0}', and default value '{1}'.</value>
+  </data>
+  <data name="SetBlackboardValueCommand_TraceInitial" xml:space="preserve">
+    <value>Executing the setting of Blackboard property '{0}', with value '{1}'</value>
+  </data>
+  <data name="ShowMessageCommand_TraceInitial" xml:space="preserve">
+    <value>Executing the display of message '{0}', with level '{1}'</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_Key_Description" xml:space="preserve">
+    <value>The name of the item in the black board.</value>
+  </data>
+  <data name="GetBlackboardValueValueProvider_Key_DisplayName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="InputBoxValueProvider_DefaultValue_Description" xml:space="preserve">
+    <value>A default value to display to the user, and return if the user cancels the dialog.</value>
+  </data>
+  <data name="InputBoxValueProvider_DefaultValue_DisplayName" xml:space="preserve">
+    <value>Default Value</value>
+  </data>
+  <data name="InputBoxValueProvider_Message_Description" xml:space="preserve">
+    <value>The textual message to display to the user.</value>
+  </data>
+  <data name="InputBoxValueProvider_Message_DisplayName" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_Description" xml:space="preserve">
+    <value>Used to verify that the string value is neither Null nor Empty.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_DisplayName" xml:space="preserve">
+    <value>String Value is Not Null or Empty</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated empty or null value of string '{0}', as '{1}'.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_TraceInitial" xml:space="preserve">
+    <value>Evaluating empty or null value of string: '{0}'.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_Value_Description" xml:space="preserve">
+    <value>The string value to verify.</value>
+  </data>
+  <data name="StringNotNullOrEmptyCondition_Value_DisplayName" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ValueIsNotNullCondition_Description" xml:space="preserve">
+    <value>Used to verify that the value is not Null.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_DisplayName" xml:space="preserve">
+    <value>Value is Not Null</value>
+  </data>
+  <data name="ValueIsNotNullCondition_TraceEvaluation" xml:space="preserve">
+    <value>Evaluated null value of '{0}', as '{1}'.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_TraceInitial" xml:space="preserve">
+    <value>Evaluating null value of: '{0}'.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_Value_Description" xml:space="preserve">
+    <value>The value to verify.</value>
+  </data>
+  <data name="ValueIsNotNullCondition_Value_DisplayName" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="GuidanceCommandUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading FeatureCommand elements.</value>
+  </data>
+  <data name="GuidanceExtensionUpgradeProcessor_TraceDeserialize" xml:space="preserve">
+    <value>Upgrading GuidanceExtension elements.</value>
+  </data>
+  <data name="ProductElementDictionaryConverter_ErrorElementNotSupportAncestors" xml:space="preserve">
+    <value>Element '{0}' does not support ancestors.</value>
+  </data>
+  <data name="ProductElementDictionaryConverter_ErrorElementNotSupportDescendants" xml:space="preserve">
+    <value>Element '{0}' does not support descendants.</value>
+  </data>
+  <data name="CreateElementFromPickedFileCommand_AllFilesFilter" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+  </data>
+  <data name="CreateElementFromPickedFileCommand_FilterFormat" xml:space="preserve">
+    <value>(*{0})|*{0}</value>
   </data>
 </root>

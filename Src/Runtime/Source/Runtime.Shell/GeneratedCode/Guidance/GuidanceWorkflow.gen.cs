@@ -10,39 +10,32 @@
 using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Composition;
+using NuPattern.Runtime.Guidance;
+using NuPattern.Runtime.Guidance.Extensions;
+using NuPattern.Runtime.Guidance.Workflow;
 
 namespace NuPattern.Runtime.Shell.Guidance
 {
     /// <summary>
-    /// Defines a base class for the guidance workflow for this feature.
+    /// Defines a base class for the guidance workflow for this guidance extension.
     /// </summary>
     [CLSCompliant(false)]
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-    [System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
+    [System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder", "1.3.20.0")]
     public partial class ProcessWorkflow : GuidanceWorkflow
     {
         /// <summary>
-        /// Gets the feature composition service.
+        /// Gets the composition service.
         /// </summary>
         [Import]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        private IFeatureCompositionService FeatureComposition
-        {
-            get;
-            set;
-        }
+        private INuPatternCompositionService Composition { get; set; }
 
         /// <summary>
         /// Gets whether to ignore all post conditions and enable all actions.
         /// </summary>
-        public override bool IgnorePostConditions
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool IgnorePostConditions { get { return true; } }
 
         /// <summary>
         /// Initializes the workflow.
@@ -468,23 +461,20 @@ namespace NuPattern.Runtime.Shell.Guidance
     }
 
     /// <summary>
-    /// Defines the feature extension containing the guidance workflow.
+    /// Defines the guidance extension containing the guidance workflow.
     /// </summary>
-    [Feature("93373818-600f-414b-8181-3a0cb79fa785", DefaultName = "Using Patterns in Solution Development")]
-    [Export(typeof(IFeatureExtension))]
+    [GuidanceExtension("93373818-600f-414b-8181-3a0cb79fa785", DefaultName = "Using Patterns in Solution Development")]
+    [Export(typeof(IGuidanceExtension))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
     [CLSCompliant(false)]
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-    [System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder VS2012", "1.3.20.0")]
-    public partial class Feature : BlackboardFeatureExtension<ProcessWorkflow>
+    [System.CodeDom.Compiler.GeneratedCode("NuPattern Toolkit Builder", "1.3.20.0")]
+    public partial class GuidanceExtension : BlackboardGuidanceExtension<ProcessWorkflow>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Feature"/> class.
+        /// Initializes a new instance of the <see cref="GuidanceExtension"/> class.
         /// </summary>
-        public Feature()
-            : base()
-        {
-        }
+        public GuidanceExtension() : base() { }
 
         /// <summary>
         /// Gets or sets the ServiceProvider.
@@ -493,4 +483,3 @@ namespace NuPattern.Runtime.Shell.Guidance
         public SVsServiceProvider ServiceProvider { get; set; }
     }
 }
-

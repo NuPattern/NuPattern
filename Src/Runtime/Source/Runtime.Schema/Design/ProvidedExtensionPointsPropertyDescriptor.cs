@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Modeling;
 using NuPattern.VisualStudio;
@@ -21,9 +20,9 @@ namespace NuPattern.Runtime.Schema.Design
         private IEnumerable<IExtensionPointSchema> extensionPoints;
         private IUserMessageService messageService;
 
-        private IFxrUriReferenceService uriService;
+        private IUriReferenceService uriService;
 
-        internal IFxrUriReferenceService UriService
+        internal IUriReferenceService UriService
         {
             get
             {
@@ -33,7 +32,7 @@ namespace NuPattern.Runtime.Schema.Design
 
                     if (componentModel != null)
                     {
-                        this.uriService = componentModel.GetService<IFxrUriReferenceService>();
+                        this.uriService = componentModel.GetService<IUriReferenceService>();
                     }
                 }
 

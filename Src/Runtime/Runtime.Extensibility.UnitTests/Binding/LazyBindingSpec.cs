@@ -4,8 +4,10 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Runtime.UnitTests.Binding
 {
@@ -47,7 +49,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
 
             // To re-assure this is the proper behavior, the unresolved import causes the 
             // component to be unavailable via a plain query:
-            var lazyValue = container.GetExports<IFoo, IFeatureComponentMetadata>()
+            var lazyValue = container.GetExports<IFoo, IComponentMetadata>()
                 .FirstOrDefault(component => component.Metadata.Id == "Foo");
             Assert.IsNull(lazyValue);
 
@@ -58,7 +60,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
 
             // Note how now the component becomes available via query, as 
             // the dependency is now satisfied.
-            lazyValue = container.GetExports<IFoo, IFeatureComponentMetadata>()
+            lazyValue = container.GetExports<IFoo, IComponentMetadata>()
                 .FirstOrDefault(component => component.Metadata.Id == "Foo");
             Assert.IsNotNull(lazyValue);
 
@@ -74,8 +76,8 @@ namespace NuPattern.Runtime.UnitTests.Binding
         {
         }
 
-        [FeatureComponent(typeof(IFoo), Id = "Foo", Category = "Category", Description = "Description", DisplayName = "DisplayName")]
-        [FeatureComponentCatalog(typeof(Foo))]
+        [Component(typeof(IFoo), Id = "Foo", Category = "Category", Description = "Description", DisplayName = "DisplayName")]
+        [ComponentCatalog(typeof(Foo))]
         public class Foo : IFoo
         {
             [Import]
@@ -93,9 +95,9 @@ namespace NuPattern.Runtime.UnitTests.Binding
 
         [MetadataAttribute]
         [AttributeUsage(AttributeTargets.Class)]
-        public sealed class FeatureComponentCatalogAttribute : Attribute
+        public sealed class ComponentCatalogAttribute : Attribute
         {
-            public FeatureComponentCatalogAttribute(Type exportingType)
+            public ComponentCatalogAttribute(Type exportingType)
             {
                 this.ExportingType = exportingType;
             }
@@ -105,12 +107,12 @@ namespace NuPattern.Runtime.UnitTests.Binding
             {
                 get
                 {
-                    return Microsoft.VisualStudio.TeamArchitect.PowerTools.Constants.CatalogName;
+                    return Catalog.DefaultCatalogName;
                 }
             }
         }
 
-        private class CompositionContainerService : IFeatureCompositionService
+        private class CompositionContainerService : INuPatternCompositionService
         {
             private CompositionContainer container;
 

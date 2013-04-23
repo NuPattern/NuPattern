@@ -40,7 +40,7 @@ namespace NuPattern
 
             for (ulong counter = 1L; counter < ulong.MaxValue; counter += (ulong)1L)
             {
-                newName = string.Format(CultureInfo.InvariantCulture, "{0}{1}", new object[] { name, counter });
+                newName = string.Format(CultureInfo.InvariantCulture, @"{0}{1}", new object[] { name, counter });
 
                 if (stopCondition(newName))
                 {

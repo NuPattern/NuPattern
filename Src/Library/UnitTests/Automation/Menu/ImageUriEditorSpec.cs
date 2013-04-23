@@ -4,7 +4,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.Drawing.Design;
 using System.Windows;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime;
@@ -50,12 +49,12 @@ namespace NuPattern.Library.UnitTests.Automation.Menu
 
             var pack = new ResourcePack(item);
 
-            var uriService = new Mock<IFxrUriReferenceService>();
+            var uriService = new Mock<IUriReferenceService>();
             uriService.Setup(u => u.CreateUri<ResourcePack>(It.IsAny<ResourcePack>(), "pack")).Returns(uriProvider.CreateUri(pack));
 
             serviceProvider.Setup(s => s.GetService(typeof(SComponentModel))).Returns(componentModel.Object);
             serviceProvider.Setup(s => s.GetService(typeof(ISolution))).Returns(solution);
-            serviceProvider.Setup(s => s.GetService(typeof(IFxrUriReferenceService))).Returns(uriService.Object);
+            serviceProvider.Setup(s => s.GetService(typeof(IUriReferenceService))).Returns(uriService.Object);
             componentModel.Setup(c => c.GetService<Func<ISolutionPicker>>()).Returns(new Func<ISolutionPicker>(() => { return picker.Object; }));
 
             picker.Setup(p => p.Filter).Returns(Mock.Of<IPickerFilter>());

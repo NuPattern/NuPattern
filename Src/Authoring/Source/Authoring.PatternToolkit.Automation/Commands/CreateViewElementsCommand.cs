@@ -2,11 +2,9 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.Schema;
@@ -20,7 +18,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
     [DisplayNameResource("CreateViewElementsCommand_DisplayName", typeof(Resources))]
     [CategoryResource("AutomationCategory_PatternToolkitAuthoring", typeof(Resources))]
     [DescriptionResource("CreateViewElementsCommand_Description", typeof(Resources))]
-    public class CreateViewElementsCommand : FeatureCommand
+    public class CreateViewElementsCommand : NuPattern.Runtime.Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<CreateViewElementsCommand>();
 
@@ -29,7 +27,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public virtual IFxrUriReferenceService UriService { get; set; }
+        public virtual IUriReferenceService UriService { get; set; }
 
         /// <summary>
         /// Gets or sets the current element.

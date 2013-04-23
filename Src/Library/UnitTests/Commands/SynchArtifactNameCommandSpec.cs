@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.References;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.UnitTests.Commands
 {
@@ -21,7 +21,7 @@ namespace NuPattern.Library.UnitTests.Commands
         public class GivenACommand
         {
             protected Mock<IProductElement> OwnerElement { get; private set; }
-            protected Mock<IFxrUriReferenceService> UriService { get; private set; }
+            protected Mock<IUriReferenceService> UriService { get; private set; }
             protected SynchArtifactNameCommand Command { get; private set; }
             protected Mock<IServiceProvider> ServiceProvider { get; private set; }
             protected Mock<TraceListener> Listener { get; private set; }
@@ -29,12 +29,12 @@ namespace NuPattern.Library.UnitTests.Commands
             [TestInitialize]
             public virtual void Initialize()
             {
-                this.UriService = new Mock<IFxrUriReferenceService>();
+                this.UriService = new Mock<IUriReferenceService>();
                 this.OwnerElement = new Mock<IProductElement>();
                 this.OwnerElement
                     .Setup(x => x.Root)
                     .Returns(Mock.Of<IProduct>(p =>
-                        p.ProductState.GetService(typeof(IFxrUriReferenceService)) == this.UriService.Object));
+                        p.ProductState.GetService(typeof(IUriReferenceService)) == this.UriService.Object));
 
                 this.ServiceProvider = new Mock<IServiceProvider>();
                 this.Listener = new Mock<TraceListener>();

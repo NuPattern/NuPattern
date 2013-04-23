@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38C7DB3F-1D03-4F1A-AEFE-B17741938516}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NuPattern.VisualStudio.TemplateWizards</RootNamespace>
+    <AssemblyName>NuPattern.VisualStudio.TemplateWizards</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\Runtime\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BranchRoot>..\..\..\</BranchRoot>
+  </PropertyGroup>
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.props" />
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\10.0\Microsoft.VisualStudio.Shell.Immutable.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\GlobalAssemblyInfo.NoVersion.gen.cs">
+      <Link>Properties\GlobalAssemblyInfo.NoVersion.gen.cs</Link>
+    </Compile>
+    <Compile Include="CoordinatorTemplateWizard.cs" />
+    <Compile Include="CustomToolRunnerTemplateWizard.cs" />
+    <Compile Include="FixLinkPathTemplateWizard.cs" />
+    <Compile Include="GuidGeneratorTemplateWizard.cs" />
+    <Compile Include="OpenDesignerTemplateWizard.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <CodeAnalysisDictionary Include="..\..\..\CodeAnalysis.Dictionary.xml">
+      <Link>Properties\CodeAnalysis.Dictionary.xml</Link>
+    </CodeAnalysisDictionary>
+    <Compile Include="ElementReplacementsTemplateWizard.cs" />
+    <Compile Include="Properties\VersionInfo.gen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VersionInfo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InstantiationTemplateWizard.cs" />
+    <Compile Include="ReplacementTemplateWizard.cs" />
+    <Compile Include="SolutionNameGetTemplateWizard.cs" />
+    <Compile Include="SolutionNameSetTemplateWizard.cs" />
+    <Compile Include="TemplateWizardInfo.gen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TemplateWizardInfo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VsRootSuffixTemplateWizard.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\VersionInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>VersionInfo.gen.cs</LastGenOutput>
+    </None>
+    <None Include="TemplateWizardInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateWizardInfo.gen.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Library\Source\Library.csproj">
+      <Project>{c6519e4a-2077-4e80-a280-e8ba90d53a3e}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.VisualStudio\Common.VisualStudio.csproj">
+      <Project>{5dcc5923-f1d8-43f1-b23f-178c7618819e}</Project>
+      <Name>Common.VisualStudio</Name>
+      <Aliases>global,npvs</Aliases>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{67a9dea6-d17d-453e-b55a-72b6223da3a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(BranchRoot)BuildConfiguration.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

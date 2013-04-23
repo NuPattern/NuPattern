@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.ComponentModel;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Design;
 
 namespace NuPattern.Runtime.Bindings.Design
@@ -38,7 +39,7 @@ namespace NuPattern.Runtime.Bindings.Design
 
 
         [ImportMany]
-        private IEnumerable<Lazy<TComponents, IFeatureComponentMetadata>> Components { get; set; }
+        private IEnumerable<Lazy<TComponents, IComponentMetadata>> Components { get; set; }
 
         [Import]
         private INuPatternProjectTypeProvider ProjectTypeProvider { get; set; }
@@ -52,7 +53,7 @@ namespace NuPattern.Runtime.Bindings.Design
         {
             if (this.ProjectTypeProvider == null)
             {
-                FeatureCompositionService.Instance.SatisfyImportsOnce(this);
+                NuPatternCompositionService.Instance.SatisfyImportsOnce(this);
             }
 
             var properties = this.Parent.GetProperties(attributes).Cast<PropertyDescriptor>().ToList();
@@ -73,7 +74,7 @@ namespace NuPattern.Runtime.Bindings.Design
         /// Returns the descriptors for the nested properties of the component type.
         /// </summary>
         [CLSCompliant(false)]
-        public static IEnumerable<PropertyDescriptor> GetComponentProperties(INuPatternProjectTypeProvider provider, IEnumerable<Lazy<TComponents, IFeatureComponentMetadata>> components, string extensionName)
+        public static IEnumerable<PropertyDescriptor> GetComponentProperties(INuPatternProjectTypeProvider provider, IEnumerable<Lazy<TComponents, IComponentMetadata>> components, string extensionName)
         {
             Guard.NotNull(() => provider, provider);
             Guard.NotNull(() => components, components);
@@ -126,7 +127,7 @@ namespace NuPattern.Runtime.Bindings.Design
         /// </summary>
         protected abstract string GetExtensionName();
 
-        private static Type GetExtensionType(INuPatternProjectTypeProvider provider, IEnumerable<Lazy<TComponents, IFeatureComponentMetadata>> components, string extensionName)
+        private static Type GetExtensionType(INuPatternProjectTypeProvider provider, IEnumerable<Lazy<TComponents, IComponentMetadata>> components, string extensionName)
         {
             if (string.IsNullOrEmpty(extensionName))
             {
@@ -134,7 +135,7 @@ namespace NuPattern.Runtime.Bindings.Design
             }
 
             // Locate type from exports first
-            var extensionType = components.FromFeaturesCatalog()
+            var extensionType = components.FromComponentCatalog()
                                     .Where(binding => binding.Metadata.Id == extensionName)
                                     .Select(binding => binding.Metadata.ExportingType)
                                     .FirstOrDefault();
@@ -147,7 +148,7 @@ namespace NuPattern.Runtime.Bindings.Design
 
                 // Locate type in solution assemblies
                 extensionType = (from type in provider.GetTypes<TComponents>()
-                                 let meta = type.AsProjectFeatureComponent()
+                                 let meta = type.AsProjectComponent()
                                  where meta != null && meta.Id == extensionName
                                  select type)
                                 .FirstOrDefault();

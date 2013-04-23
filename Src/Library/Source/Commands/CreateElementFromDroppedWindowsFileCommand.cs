@@ -1,19 +1,19 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.Commands
 {
     /// <summary>
     /// Creates a new instance of a child element for each dropped explorer file.
     /// </summary>
-    [DisplayNameResource("CreateElementFromDroppedWindowsFileCommand_DisplayName", typeof(Resources))]
-    [DescriptionResource("CreateElementFromDroppedWindowsFileCommand_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"CreateElementFromDroppedWindowsFileCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"CreateElementFromDroppedWindowsFileCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class CreateElementFromDroppedWindowsFileCommand : CreateElementFromDroppedFileCommand
     {
@@ -24,8 +24,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the target path.
         /// </summary>
         [Required(AllowEmptyStrings = false)]
-        [DisplayNameResource("CreateElementFromDroppedWindowsFileCommand_TargetPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("CreateElementFromDroppedWindowsFileCommand_TargetPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"CreateElementFromDroppedWindowsFileCommand_TargetPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"CreateElementFromDroppedWindowsFileCommand_TargetPath_Description", typeof(Resources))]
         public virtual string TargetPath { get; set; }
 
         /// <summary>

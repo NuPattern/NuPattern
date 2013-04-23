@@ -1,0 +1,17 @@
+<#@ output extension=".gen.cs" #>
+<#@ Include File="MasterVersion.gen.ttinclude" #>
+using System.Reflection;
+using System.Resources;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.InteropServices;
+
+[assembly: AssemblyCompany("<#=VersionInfo.AssemblyAuthor#>")]
+[assembly: AssemblyProduct("<#=VersionInfo.AssemblyProductName#>")]
+[assembly: AssemblyCopyright("<#=VersionInfo.AssemblyCopyright#>")]
+[assembly: AssemblyTrademark("<#=VersionInfo.AssemblyAuthor#>")]
+[assembly: AssemblyCulture("")]
+
+[assembly: ReliabilityContract(Consistency.MayCorruptProcess, Cer.None)]
+[assembly: ComVisible(false)]
+
+[assembly: NeutralResourcesLanguage("en")]

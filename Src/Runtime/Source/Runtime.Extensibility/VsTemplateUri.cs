@@ -1,6 +1,6 @@
 using System;
 using System.Globalization;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Runtime
 {

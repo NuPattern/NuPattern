@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using NuPattern.Library.Automation;
 using NuPattern.Reflection;
+using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Bindings.Design;
 
@@ -21,7 +22,7 @@ namespace NuPattern.Library.Commands
         public static void SetPropertyValue<TFeatureCommand, TProperty>(
             this CommandSettings commandSettings,
             Expression<Func<TFeatureCommand, TProperty>> expression,
-            object value) where TFeatureCommand : Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand
+            object value) where TFeatureCommand : ICommand
         {
             var descriptors = TypeDescriptor.GetProperties(commandSettings);
             var descriptor = descriptors[Reflector<TFeatureCommand>.GetPropertyName(expression)];

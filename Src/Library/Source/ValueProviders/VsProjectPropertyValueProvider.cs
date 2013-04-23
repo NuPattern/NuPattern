@@ -2,12 +2,11 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.ValueProviders
 {
@@ -35,7 +34,7 @@ namespace NuPattern.Library.ValueProviders
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriService
+        public IUriReferenceService UriService
         {
             get;
             set;
@@ -55,8 +54,8 @@ namespace NuPattern.Library.ValueProviders
         /// <summary>
         /// The project path.
         /// </summary>
-        [DisplayNameResource("VsProjectPropertyValueProvider_ProjectPath_DisplayName", typeof(Resources))]
-        [DescriptionResource("VsProjectPropertyValueProvider_ProjectPath_Description", typeof(Resources))]
+        [DisplayNameResource(@"VsProjectPropertyValueProvider_ProjectPath_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"VsProjectPropertyValueProvider_ProjectPath_Description", typeof(Resources))]
         public virtual string ProjectPath
         {
             get;

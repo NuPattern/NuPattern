@@ -114,15 +114,6 @@ namespace NuPattern.Runtime.IntegrationTests
                             "Microsoft.ComponentModel.Composition.Diagnostics.dll",
                             "Newtonsoft.Json.dll",
 
-                            //Feature Extension Assemblies
-                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.dll",
-                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll",
-                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Library.dll",
-                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.dll",
-                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Shell.pkgdef",
-                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.dll",
-                            "Microsoft.VisualStudio.TeamArchitect.PowerTools.Shell.pkgdef",
-
                             //EntLib Assemblies
                             "Microsoft.Practices.EnterpriseLibrary.Common.dll",
                             "Microsoft.Practices.EnterpriseLibrary.Configuration.Design.HostAdapterV5.dll",
@@ -133,6 +124,7 @@ namespace NuPattern.Runtime.IntegrationTests
                             "NuPattern.Modeling.dll",
                             "NuPattern.Presentation.dll",
                             "NuPattern.VisualStudio.dll",
+                            "NuPattern.VisualStudio.TemplateWizards.dll",
                             "NuPattern.Runtime.Extensibility.dll",
                             "NuPattern.Runtime.Extensibility.Serialization.dll",
                             "NuPattern.Library.dll",
@@ -148,6 +140,7 @@ namespace NuPattern.Runtime.IntegrationTests
                             "NuPattern.Modeling.xml",
                             "NuPattern.Presentation.xml",
                             "NuPattern.VisualStudio.xml",
+                            //"NuPattern.VisualStudio.TemplateWizards.xml",
                             "NuPattern.Runtime.Extensibility.xml",
                             //"NuPattern.Runtime.Extensibility.Serialization.xml",
                             "NuPattern.Library.xml",

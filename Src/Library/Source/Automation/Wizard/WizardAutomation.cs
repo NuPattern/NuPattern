@@ -7,13 +7,13 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Presentation;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.ToolkitInterface;
 using Application = System.Windows.Application;
 
@@ -49,7 +49,7 @@ namespace NuPattern.Library.Automation
         /// </summary>
         [Import]
         [Required]
-        public IFeatureCompositionService FeatureComposition { get; set; }
+        public INuPatternCompositionService CompositionService { get; set; }
 
         [Import(typeof(SVsServiceProvider))]
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
@@ -82,7 +82,7 @@ namespace NuPattern.Library.Automation
                 }
 
                 var wizard = (Window)Activator.CreateInstance(wizardType, this.GetArguments(wizardType));
-                this.FeatureComposition.SatisfyImportsOnce(wizard);
+                this.CompositionService.SatisfyImportsOnce(wizard);
 
                 if (Application.Current != null)
                 {

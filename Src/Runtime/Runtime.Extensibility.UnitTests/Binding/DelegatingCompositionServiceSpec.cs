@@ -2,10 +2,10 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Primitives;
 using System.Diagnostics.CodeAnalysis;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Runtime.UnitTests.Binding
 {
@@ -16,7 +16,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         [TestMethod, TestCategory("Unit")]
         public void WhenComposingParts_ThenDelegates()
         {
-            var composition = new Mock<IFeatureCompositionService>();
+            var composition = new Mock<INuPatternCompositionService>();
 
             var delegating = new DelegatingCompositionService(composition.Object);
 
@@ -28,7 +28,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         [TestMethod, TestCategory("Unit")]
         public void WhenDisposing_ThenDoesNotDisposeInnerService()
         {
-            var composition = new Mock<IFeatureCompositionService>();
+            var composition = new Mock<INuPatternCompositionService>();
 
             var delegating = new DelegatingCompositionService(composition.Object);
 
@@ -41,7 +41,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         [TestMethod, TestCategory("Unit")]
         public void WhenGettingExport_ThenDelegates()
         {
-            var composition = new Mock<IFeatureCompositionService>();
+            var composition = new Mock<INuPatternCompositionService>();
 
             var delegating = new DelegatingCompositionService(composition.Object);
 
@@ -54,7 +54,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         [TestMethod, TestCategory("Unit")]
         public void WhenGettingExportedValue_ThenDelegates()
         {
-            var composition = new Mock<IFeatureCompositionService>();
+            var composition = new Mock<INuPatternCompositionService>();
 
             var delegating = new DelegatingCompositionService(composition.Object);
 
@@ -67,7 +67,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
         public void WhenGettingExportedValueOrDefault_ThenDelegates()
         {
-            var composition = new Mock<IFeatureCompositionService>();
+            var composition = new Mock<INuPatternCompositionService>();
 
             var delegating = new DelegatingCompositionService(composition.Object);
 
@@ -80,7 +80,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
         public void WhenGettingExportedValues_ThenDelegates()
         {
-            var composition = new Mock<IFeatureCompositionService>();
+            var composition = new Mock<INuPatternCompositionService>();
 
             var delegating = new DelegatingCompositionService(composition.Object);
 
@@ -93,7 +93,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
         public void WhenGettingExports_ThenDelegates()
         {
-            var composition = new Mock<IFeatureCompositionService>();
+            var composition = new Mock<INuPatternCompositionService>();
 
             var delegating = new DelegatingCompositionService(composition.Object);
 
@@ -106,7 +106,7 @@ namespace NuPattern.Runtime.UnitTests.Binding
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope", Justification = "Test code.")]
         public void WhenSatisfyingImportsOnce_ThenDelegates()
         {
-            var composition = new Mock<IFeatureCompositionService>();
+            var composition = new Mock<INuPatternCompositionService>();
 
             var delegating = new DelegatingCompositionService(composition.Object);
 

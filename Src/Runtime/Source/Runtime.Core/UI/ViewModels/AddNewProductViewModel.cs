@@ -7,7 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Data;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Properties;
@@ -23,11 +22,11 @@ namespace NuPattern.Runtime.UI.ViewModels
     internal partial class AddNewProductViewModel : ValidationViewModel
     {
         private string productName;
-        private IInstalledToolkitInfo currentToolkit;
+        private InstalledToolkitInfo currentToolkit;
         private IPatternManager patternManager;
         private IUserMessageService userMessageService;
         private bool wasUserAssigned;
-        private ObservableCollection<IInstalledToolkitInfo> allToolkits;
+        private ObservableCollection<InstalledToolkitInfo> allToolkits;
         private CollectionView toolkitsView;
         private bool showAllPatterns = false;
         private SortItem sortingItem;
@@ -42,7 +41,7 @@ namespace NuPattern.Runtime.UI.ViewModels
             Guard.NotNull(() => patternManager, patternManager);
             Guard.NotNull(() => userMessageService, userMessageService);
 
-            this.allToolkits = new ObservableCollection<IInstalledToolkitInfo>(patternManager.InstalledToolkits);
+            this.allToolkits = new ObservableCollection<InstalledToolkitInfo>(patternManager.InstalledToolkits.Select(it => new InstalledToolkitInfo(it)));
             this.toolkitsView = new ListCollectionView(this.allToolkits);
             this.patternManager = patternManager;
             this.userMessageService = userMessageService;
@@ -57,7 +56,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// Gets or sets the current toolkit.
         /// </summary>
         [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "AddNewProductViewModel_ProductTypeRequired")]
-        public IInstalledToolkitInfo CurrentToolkit
+        public InstalledToolkitInfo CurrentToolkit
         {
             get
             {
@@ -71,7 +70,7 @@ namespace NuPattern.Runtime.UI.ViewModels
                     this.currentToolkit = value;
                     this.OnPropertyChanged(() => this.CurrentToolkit);
                     var generatedName = this.currentToolkit != null ?
-                        this.patternManager.Products.GetNewUniqueName(this.currentToolkit.Schema.Pattern.DisplayName) :
+                        this.patternManager.Products.GetNewUniqueName(this.currentToolkit.PatternDisplayName) :
                         string.Empty;
                     this.SetProductName(generatedName, false);
                 }
@@ -81,7 +80,7 @@ namespace NuPattern.Runtime.UI.ViewModels
         /// <summary>
         /// Gets all the installed toolkits
         /// </summary>
-        internal IEnumerable<IInstalledToolkitInfo> AllToolkits
+        internal IEnumerable<InstalledToolkitInfo> AllToolkits
         {
             get
             {
@@ -212,14 +211,14 @@ namespace NuPattern.Runtime.UI.ViewModels
             var sortingItems = new List<SortItem>();
             sortingItems.Add(new SortItem(
                     Resources.AddNewProductViewModel_SortFormatNameAscending,
-                    String.Format(CultureInfo.InvariantCulture, "{{{0}.{1}.{2}}}",
+                    String.Format(CultureInfo.InvariantCulture, @"{{{0}.{1}.{2}}}",
                         Reflector<IInstalledToolkitInfo>.GetPropertyName(x => x.Schema),
                         Reflector<IPatternModelInfo>.GetPropertyName(x => x.Pattern),
                         Reflector<IPatternInfo>.GetPropertyName(x => x.DisplayName)),
                     ListSortDirection.Ascending));
             sortingItems.Add(new SortItem(
                     Resources.AddNewProductViewModel_SortFormatNameDescending,
-                    String.Format(CultureInfo.InvariantCulture, "{{{0}.{1}.{2}}}",
+                    String.Format(CultureInfo.InvariantCulture, @"{{{0}.{1}.{2}}}",
                         Reflector<IInstalledToolkitInfo>.GetPropertyName(x => x.Schema),
                         Reflector<IPatternModelInfo>.GetPropertyName(x => x.Pattern),
                         Reflector<IPatternInfo>.GetPropertyName(x => x.DisplayName)),
@@ -253,8 +252,8 @@ namespace NuPattern.Runtime.UI.ViewModels
                 // All toolkits, except 'hidden' visibility
                 this.toolkitsView.Filter += new Predicate<object>(delegate(object x)
                 {
-                    var toolkitInfo = (IInstalledToolkitInfo)x;
-                    return toolkitInfo.Classification.CreateVisibility != ExtensionVisibility.Hidden;
+                    var toolkitInfo = (InstalledToolkitInfo)x;
+                    return toolkitInfo.ToolkitClassification.CreateVisibility != ExtensionVisibility.Hidden;
                 });
             }
             else
@@ -262,8 +261,8 @@ namespace NuPattern.Runtime.UI.ViewModels
                 // Only toolkits with 'expanded' visibility 
                 this.toolkitsView.Filter += new Predicate<object>(delegate(object x)
                 {
-                    var toolkitInfo = (IInstalledToolkitInfo)x;
-                    return toolkitInfo.Classification.CreateVisibility == ExtensionVisibility.Expanded;
+                    var toolkitInfo = (InstalledToolkitInfo)x;
+                    return toolkitInfo.ToolkitClassification.CreateVisibility == ExtensionVisibility.Expanded;
                 });
             }
         }
@@ -285,8 +284,8 @@ namespace NuPattern.Runtime.UI.ViewModels
 
             public int Compare(object x, object y)
             {
-                var toolkitInfo1 = x as IInstalledToolkitInfo;
-                var toolkitInfo2 = y as IInstalledToolkitInfo;
+                var toolkitInfo1 = x as InstalledToolkitInfo;
+                var toolkitInfo2 = y as InstalledToolkitInfo;
                 if (toolkitInfo1 == null || toolkitInfo2 == null)
                 {
                     return -1;
@@ -299,11 +298,11 @@ namespace NuPattern.Runtime.UI.ViewModels
                 // Sort in right direction
                 if (this.sortItem.Direction == ListSortDirection.Ascending)
                 {
-                    return value1.CompareTo(value2);
+                    return String.Compare(value1, value2, System.StringComparison.Ordinal);
                 }
                 else
                 {
-                    return value2.CompareTo(value1);
+                    return String.Compare(value2, value1, System.StringComparison.Ordinal);
 
                 }
             }

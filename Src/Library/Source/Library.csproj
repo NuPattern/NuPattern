@@ -23,14 +23,7 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
@@ -38,9 +31,6 @@
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
-      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
@@ -92,7 +82,6 @@
       <HintPath>$(BranchReferencesPath)\VisualStudio\VSLangProj.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -108,11 +97,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Common\Source\Common.VisualStudio.TemplateWizards\TemplateWizardInfo.gen.cs">
+      <Link>TemplateWizards\TemplateWizardInfo.gen.cs</Link>
+    </Compile>
     <Compile Include="..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
     <Compile Include="Automation\Extensions\ArtifactExtension.cs" />
     <Compile Include="Automation\Extensions\ArtifactReferencesValidation.cs" />
+    <Compile Include="Commands\SetBlackboardValueCommand.cs" />
+    <Compile Include="Commands\ShowMessageCommand.cs" />
+    <Compile Include="Conditions\StringNotNullOrEmptyCondition.cs" />
+    <Compile Include="Conditions\ValueIsNotNullCondition.cs" />
     <Compile Include="Design\AssociatedArtifactsTypeConverter.cs" />
     <Compile Include="Design\CommandSettingsCollectionPropertyDescriptor.cs" />
     <Compile Include="Automation\Command\ICommandSettings.cs" />
@@ -161,7 +157,10 @@
     <Compile Include="Automation\SettingsValidationHelper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TemplateWizards\ElementReplacementsWizard.cs" />
+    <Compile Include="MessageLevel.cs" />
+    <Compile Include="SchemaUpgrade\GuidanceExtensionUpgradeProcessor.cs" />
+    <Compile Include="SchemaUpgrade\GuidanceCommandUpgradeProcessor.cs" />
+    <Compile Include="TemplateWizards\ElementReplacementsTemplateWizard.cs" />
     <Compile Include="Automation\Template\ITemplateSettings.cs" />
     <Compile Include="Design\ProductElementDictionaryConverter.cs" />
     <Compile Include="Automation\Template\TemplateSettings.Validation.cs">
@@ -179,7 +178,7 @@
     <Compile Include="Automation\Template\TemplateValidator.cs" />
     <Compile Include="Automation\Template\UnfoldPathHelper.cs" />
     <Compile Include="Automation\Template\UnfoldParentResolver.cs" />
-    <Compile Include="Commands\ActivateOrInstantiateSharedFeatureCommand.cs" />
+    <Compile Include="Commands\ActivateOrInstantiateSharedGuidanceWorkflowCommand.cs" />
     <Compile Include="Commands\ActivateSolutionItemsCommand.cs" />
     <Compile Include="Commands\ActivateElementSolutionItemCommand.cs" />
     <Compile Include="Commands\AggregatorCommand.cs" />
@@ -198,6 +197,10 @@
     <Compile Include="Commands\GenerateProductCodeCommand.Validation.cs">
       <DependentUpon>GenerateProductCodeCommand.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValueProviders\FirstOrDefaultValueProvider.cs" />
+    <Compile Include="ValueProviders\FirstSolutionElementMatchValueProvider.cs" />
+    <Compile Include="ValueProviders\GetBlackboardValueValueProvider.cs" />
+    <Compile Include="ValueProviders\InputBoxValueProvider.cs" />
     <Compile Include="WindowsFileImporter.cs" />
     <Compile Include="XmlNamespace.cs" />
     <Compile Include="Commands\InstantiateSolutionElementCommand.cs" />
@@ -205,8 +208,8 @@
     <Compile Include="Commands\ModifyXmlCommand.cs" />
     <Compile Include="Commands\SetBuildActionCommand.cs" />
     <Compile Include="Conditions\XmlNodeExistsCondition.cs" />
-    <Compile Include="Migration\CommandSettingsUpgradeProcessor.cs" />
-    <Compile Include="Migration\AggregatorCommandUpgradeProcessor.cs" />
+    <Compile Include="SchemaUpgrade\CommandSettingsUpgradeProcessor.cs" />
+    <Compile Include="SchemaUpgrade\AggregatorCommandUpgradeProcessor.cs" />
     <Compile Include="ValidationContextExtensions.cs" />
     <Compile Include="ValueComparers\PreserveOrderComparer.cs" />
     <Compile Include="ValueComparers\InstanceNameComparer.cs" />
@@ -234,7 +237,7 @@
     </Compile>
     <Compile Include="Automation\Wizard\WizardAutomation.cs" />
     <Compile Include="Automation\Wizard\WizardSettings.cs" />
-    <Compile Include="Commands\ActivateFeatureCommand.cs" />
+    <Compile Include="Commands\ActivateGuidanceWorkflowCommand.cs" />
     <Compile Include="Commands\ActivateArtifactCommand.cs" />
     <Compile Include="Commands\UnfoldVsTemplateCommand.cs" />
     <Compile Include="Commands\UnfoldVsTemplateCommand.Validation.cs">
@@ -243,7 +246,7 @@
     <Compile Include="Commands\ValidateElementCommand.cs" />
     <Compile Include="Commands\GenerateProductCodeCommand.cs" />
     <Compile Include="Commands\GenerateModelingCodeCommand.cs" />
-    <Compile Include="Commands\InstantiateFeatureCommand.cs" />
+    <Compile Include="Commands\InstantiateGuidanceWorkflowCommand.cs" />
     <Compile Include="Commands\SynchArtifactNameCommand.cs" />
     <Compile Include="VsTemplateConfigurator.cs" />
     <Compile Include="Conditions\ArtifactReferenceExistsCondition.cs" />

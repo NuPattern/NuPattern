@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.References
 {
@@ -15,7 +15,7 @@ namespace NuPattern.Runtime.References
         /// <param name="referenceService"></param>
         /// <returns></returns>
         [CLSCompliant(false)]
-        public static IItemContainer Resolve(this IReference reference, IFxrUriReferenceService referenceService)
+        public static IItemContainer Resolve(this IReference reference, IUriReferenceService referenceService)
         {
             Guard.NotNull(() => reference, reference);
             Guard.NotNull(() => referenceService, referenceService);

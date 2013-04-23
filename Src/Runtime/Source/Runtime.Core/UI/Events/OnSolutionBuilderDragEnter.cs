@@ -11,9 +11,9 @@ namespace NuPattern.Runtime.UI.Events
     /// <summary>
     /// Assumes there can only be one state opened at any given time.
     /// </summary>
-    [DisplayNameResource("OnSolutionBuilderDragEnter_DisplayName", typeof(Resources))]
-    [DescriptionResource("OnSolutionBuilderDragEnter_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_DragDrop", typeof(Resources))]
+    [DisplayNameResource(@"OnSolutionBuilderDragEnter_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"OnSolutionBuilderDragEnter_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_DragDrop", typeof(Resources))]
     [Event(typeof(IOnSolutionBuilderDragEnter))]
     [Export(typeof(IOnSolutionBuilderDragEnter))]
     [PartCreationPolicy(CreationPolicy.Shared)]

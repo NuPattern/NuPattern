@@ -178,6 +178,24 @@ namespace NuPattern.VisualStudio.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Project with GUID &apos;{0}&apos; does not exist.
+        /// </summary>
+        internal static string HierarchyNode_ProjectDoesNotExist {
+            get {
+                return ResourceManager.GetString("HierarchyNode_ProjectDoesNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not retrieve tool window..
+        /// </summary>
+        internal static string HierarchyNodeFactory_ErrorNoToolWindow {
+            get {
+                return ResourceManager.GetString("HierarchyNodeFactory_ErrorNoToolWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Designer item for file {0} was not found..
         /// </summary>
         internal static string OpenDesignerTemplateWizard_DesignerItemNotFound {
@@ -201,6 +219,69 @@ namespace NuPattern.VisualStudio.Properties {
         internal static string OpenDesignerTemplateWizard_RetrievedDesignerFile {
             get {
                 return ResourceManager.GetString("OpenDesignerTemplateWizard_RetrievedDesignerFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot create project item with an empty name.
+        /// </summary>
+        internal static string ProjectNode_CannotCreateItemWithEmptyName {
+            get {
+                return ResourceManager.GetString("ProjectNode_CannotCreateItemWithEmptyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid name &apos;{0}&apos; for a file.
+        /// </summary>
+        internal static string ProjectNode_InvalidFileName {
+            get {
+                return ResourceManager.GetString("ProjectNode_InvalidFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The project name &apos;{0}&apos; was not found in the solution..
+        /// </summary>
+        internal static string ProjectNode_InvalidProjectUniqueName {
+            get {
+                return ResourceManager.GetString("ProjectNode_InvalidProjectUniqueName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The property &apos;{0}&apos; was not found in the project &apos;{1}&apos;.
+        /// </summary>
+        internal static string ProjectNode_PropertyNameNotFound {
+            get {
+                return ResourceManager.GetString("ProjectNode_PropertyNameNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project kind is unsupported..
+        /// </summary>
+        internal static string ProjectNode_UnsupportedProjectKind {
+            get {
+                return ResourceManager.GetString("ProjectNode_UnsupportedProjectKind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code generator:  {0}, {1}.
+        /// </summary>
+        internal static string ProvideCodeGeneratorAttribute_RegisterLog {
+            get {
+                return ResourceManager.GetString("ProvideCodeGeneratorAttribute_RegisterLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Code generator:  {0}, {1}.
+        /// </summary>
+        internal static string ProvideCodeGeneratorAttribute_UnregisterLog {
+            get {
+                return ResourceManager.GetString("ProvideCodeGeneratorAttribute_UnregisterLog", resourceCulture);
             }
         }
         
@@ -386,6 +467,87 @@ namespace NuPattern.VisualStudio.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Visual Studio.
+        /// </summary>
+        internal static string UserMessageService_MessageBoxTitle {
+            get {
+                return ResourceManager.GetString("UserMessageService_MessageBoxTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This method requires a hierarchy item.
+        /// </summary>
+        internal static string VsFileTemplate_ErrorParentNotHierarchy {
+            get {
+                return ResourceManager.GetString("VsFileTemplate_ErrorParentNotHierarchy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Source file for template was not found..
+        /// </summary>
+        internal static string VsFileTemplate_VsFileTemplate_ErrorTemplateNotFound {
+            get {
+                return ResourceManager.GetString("VsFileTemplate_VsFileTemplate_ErrorTemplateNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to set data on Globals bag. Key={0}, Value={1}, Error={2}.
+        /// </summary>
+        internal static string VsGlobalsDynamicProperties_TraceFailedToSetGlobals {
+            get {
+                return ResourceManager.GetString("VsGlobalsDynamicProperties_TraceFailedToSetGlobals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There is already an item named &apos;{0}&apos; inside &apos;{1}&apos;. Please choose a different name..
+        /// </summary>
+        internal static string VsItem_DuplicateItemName {
+            get {
+                return ResourceManager.GetString("VsItem_DuplicateItemName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot retrieve a VS solution from the given solution interface..
+        /// </summary>
+        internal static string VsItemContainerExtensions_ErrorNoSolution {
+            get {
+                return ResourceManager.GetString("VsItemContainerExtensions_ErrorNoSolution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot set null value for custom MSBuild item properties..
+        /// </summary>
+        internal static string VsItemDynamicProperties_ErrorNullItemProperies {
+            get {
+                return ResourceManager.GetString("VsItemDynamicProperties_ErrorNullItemProperies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specified template file does not exist..
+        /// </summary>
+        internal static string VsItemTemplate_FileNotExists {
+            get {
+                return ResourceManager.GetString("VsItemTemplate_FileNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can only unfold item templates directly to projects..
+        /// </summary>
+        internal static string VsItemTemplate_UnsupportedTarget {
+            get {
+                return ResourceManager.GetString("VsItemTemplate_UnsupportedTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vsix manifest file &apos;{0}&apos; does not contain required Identifier element..
         /// </summary>
         internal static string Vsix_InvalidManifest {
@@ -404,6 +566,15 @@ namespace NuPattern.VisualStudio.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Can only unfold project templates directly to solution or solution folders..
+        /// </summary>
+        internal static string VsProjectTemplate_UnsupportedTarget {
+            get {
+                return ResourceManager.GetString("VsProjectTemplate_UnsupportedTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to retrieve registry root suffix of the currently running Visual Studio instance..
         /// </summary>
         internal static string VsRootSuffixTemplateWizard_FailedToRetrieveRegistryRoot {
@@ -418,6 +589,24 @@ namespace NuPattern.VisualStudio.Properties {
         internal static string VsRootSuffixTemplateWizard_RootSuffixDetermined {
             get {
                 return ResourceManager.GetString("VsRootSuffixTemplateWizard_RootSuffixDetermined", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The .zip file does not contain any .vstemplate file.
+        /// </summary>
+        internal static string VsTemplateFile_ErrorNoTemplateInArchive {
+            get {
+                return ResourceManager.GetString("VsTemplateFile_ErrorNoTemplateInArchive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Template must have a .zip or .vstemplate extension.
+        /// </summary>
+        internal static string VsTemplateFile_ErrorUnsupportedVsTemplateExtension {
+            get {
+                return ResourceManager.GetString("VsTemplateFile_ErrorUnsupportedVsTemplateExtension", resourceCulture);
             }
         }
     }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using NuPattern.Properties;
 
 namespace NuPattern.ComponentModel
 {
@@ -136,7 +137,7 @@ namespace NuPattern.ComponentModel
             var lambda = propertyExpression as LambdaExpression;
             if (lambda == null)
             {
-                throw new ArgumentException("Expression is not a lambda.", "propertyExpression");
+                throw new ArgumentException(Resources.PropertyChangeManager_ErrorNotLambda, "propertyExpression");
             }
 
             MemberExpression memberExpr = null;
@@ -156,13 +157,13 @@ namespace NuPattern.ComponentModel
 
             if (memberExpr == null)
             {
-                throw new ArgumentException("Expression is not a property access.", "propertyExpression");
+                throw new ArgumentException(Resources.PropertyChangeManager_ErrorNotPropertyAccess, "propertyExpression");
             }
 
             var propertyInfo = memberExpr.Member;
             if (propertyInfo == null)
             {
-                throw new ArgumentException("Expression is not a property access.", "propertyExpression");
+                throw new ArgumentException(Resources.PropertyChangeManager_ErrorNotPropertyAccess, "propertyExpression");
             }
 
             return propertyInfo.Name;

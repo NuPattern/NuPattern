@@ -1,7 +1,6 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Presentation;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UI.ViewModels
 {

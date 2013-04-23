@@ -1,13 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Modeling.Integration;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using Moq;
 using NuPattern.Runtime.UriProviders;
+using NuPattern.VisualStudio.Extensions;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.UnitTests.UriProviders
 {
@@ -23,14 +23,14 @@ namespace NuPattern.Runtime.UnitTests.UriProviders
             {
                 this.Templating = new Mock<ITextTemplating>();
                 this.ModelBus = new Mock<IModelBus>();
-                this.UriService = new Mock<IFxrUriReferenceService>();
-                this.UriProvider = new TextTemplateUriProvider(this.Templating.Object, this.ModelBus.Object, new Lazy<IFxrUriReferenceService>(() => this.UriService.Object));
+                this.UriService = new Mock<IUriReferenceService>();
+                this.UriProvider = new TextTemplateUriProvider(this.Templating.Object, this.ModelBus.Object, new Lazy<IUriReferenceService>(() => this.UriService.Object));
             }
 
             protected Mock<ITextTemplating> Templating { get; private set; }
             protected Mock<IModelBus> ModelBus { get; private set; }
-            protected Mock<IFxrUriReferenceService> UriService { get; private set; }
-            protected IFxrUriReferenceProvider<ITemplate> UriProvider { get; private set; }
+            protected Mock<IUriReferenceService> UriService { get; private set; }
+            protected IUriReferenceProvider<ITemplate> UriProvider { get; private set; }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenExtensionRelativeUriCannotResolveExtension_ThenReturnsNull()

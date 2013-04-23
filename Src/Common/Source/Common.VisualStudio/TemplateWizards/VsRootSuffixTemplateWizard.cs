@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Diagnostics;
 using NuPattern.VisualStudio.Properties;
 using NuPattern.VisualStudio.Solution;
 
@@ -41,14 +41,14 @@ namespace NuPattern.VisualStudio.TemplateWizards
             {
                 using (var serviceProvider = new ServiceProvider((Microsoft.VisualStudio.OLE.Interop.IServiceProvider)vs))
                 {
-                    TraceSourceExtensions.ShieldUI(tracer, (Action)(() =>
+                    tracer.ShieldUI((Action)(() =>
                         {
                             var shell = serviceProvider.GetService<SVsShell, IVsShell>();
 
                             var registryRoot = VsHelper.GetPropertyOrDefault<string>(shell.GetProperty, (int)__VSSPROPID.VSSPROPID_VirtualRegistryRoot);
                             var suffix = registryRoot.Replace(VsSettingsRegistryKey, string.Empty);
 
-                            replacementsDictionary.Add("$vsrootsuffix$", suffix);
+                            replacementsDictionary.Add(@"$vsrootsuffix$", suffix);
 
                             tracer.TraceInformation(Resources.VsRootSuffixTemplateWizard_RootSuffixDetermined, suffix);
                         }),

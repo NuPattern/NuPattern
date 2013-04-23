@@ -9,7 +9,7 @@ namespace NuPattern.Library
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     [MetadataAttribute]
-    internal sealed class CommandValidationRuleAttribute : InheritedExportAttribute, ICommandValidationRuleMetadata
+    public sealed class CommandValidationRuleAttribute : InheritedExportAttribute, ICommandValidationRuleMetadata
     {
         /// <summary>
         /// Creates a new command change rule attribute

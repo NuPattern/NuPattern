@@ -3,11 +3,10 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Store.Properties;
 using NuPattern.Runtime.ToolkitInterface;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Store
 {
@@ -68,7 +67,7 @@ namespace NuPattern.Runtime.Store
             }
             else
             {
-                tracer.TraceWarning("DefinitionId not set for view '{0}', the schema information can not be loaded.", view.Id);
+                tracer.TraceWarning(Resources.ViewAddRule_TraceViewInfoLoadFailed, view.Id);
             }
         }
 

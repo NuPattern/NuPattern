@@ -3,11 +3,12 @@ using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.ComponentModel.Composition;
 using NuPattern.Library.Automation;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings.Design;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Library.Design
 {
@@ -56,15 +57,15 @@ namespace NuPattern.Library.Design
                 if (commandSettings != null)
                 {
                     var projectTypeProvider = commandSettings.Store.GetService<INuPatternProjectTypeProvider>();
-                    var components = commandSettings.Store.GetService<IFeatureCompositionService>()
-                                       .GetExports<IFeatureCommand, IFeatureComponentMetadata>();
+                    var components = commandSettings.Store.GetService<INuPatternCompositionService>()
+                                       .GetExports<ICommand, IComponentMetadata>();
 
                     // Remove the descriptor for the 'Properties 'property
                     properties.Remove(properties
                         .First(descriptor => descriptor.Name == Reflector<CommandSettings>.GetPropertyName(x => x.Properties)));
 
                     // Add CommandSettings properties
-                    properties.AddRange(DesignComponentTypeDescriptor<IFeatureCommand, CommandSettings>.GetComponentProperties(
+                    properties.AddRange(DesignComponentTypeDescriptor<ICommand, CommandSettings>.GetComponentProperties(
                         projectTypeProvider, components, commandSettings.TypeId));
                 }
 

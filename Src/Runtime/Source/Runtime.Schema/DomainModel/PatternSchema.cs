@@ -2,9 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.Runtime.Schema.Design;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -12,12 +10,12 @@ namespace NuPattern.Runtime.Schema
     partial class PatternSchema
     {
         private string extensionId;
-        private IFxrUriReferenceService uriService;
+        private IUriReferenceService uriService;
         private IPatternManager patternManager;
 
         internal string Identifier { get; set; }
 
-        internal IFxrUriReferenceService UriService
+        internal IUriReferenceService UriService
         {
             get
             {
@@ -27,7 +25,7 @@ namespace NuPattern.Runtime.Schema
 
                     if (componentModel != null)
                     {
-                        this.uriService = componentModel.GetService<IFxrUriReferenceService>();
+                        this.uriService = componentModel.GetService<IUriReferenceService>();
                     }
                 }
 

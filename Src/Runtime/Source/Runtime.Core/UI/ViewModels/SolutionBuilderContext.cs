@@ -16,9 +16,9 @@ namespace NuPattern.Runtime.UI.ViewModels
         public IBindingFactory BindingFactory { get; internal set; }
 
         /// <summary>
-        /// Gets or sets the solution builder.
+        /// Gets or sets the view model.
         /// </summary>
-        public SolutionBuilderViewModel SolutionBuilder { get; internal set; }
+        public SolutionBuilderViewModel ViewModel { get; internal set; }
 
         /// <summary>
         /// Gets the pattern manager.

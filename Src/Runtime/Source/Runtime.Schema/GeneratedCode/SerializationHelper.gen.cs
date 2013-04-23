@@ -850,7 +850,7 @@ namespace NuPattern.Runtime.Schema
 		/// Helper method to create and initialize a new PatternModelSchemaDiagram.
 		/// </summary>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId="modelRoot", Justification = "Signature enforced by caller.")]
-		internal protected virtual PatternModelSchemaDiagram CreateDiagramHelper(DslModeling::Partition diagramPartition, DslModeling::ModelElement modelRoot)
+		internal virtual PatternModelSchemaDiagram CreateDiagramHelper(DslModeling::Partition diagramPartition, DslModeling::ModelElement modelRoot)
 		{
 			PatternModelSchemaDiagram diagram = new PatternModelSchemaDiagram(diagramPartition);
 			return diagram;
@@ -866,7 +866,7 @@ namespace NuPattern.Runtime.Schema
 		/// <param name="modelFileName">Name of the file in which the CanonicalSampleRoot instance will be saved.</param>
 		/// <param name="diagram">PatternModelSchemaDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchema modelRoot, string modelFileName, PatternModelSchemaDiagram diagram, string diagramFileName)
+		internal virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchema modelRoot, string modelFileName, PatternModelSchemaDiagram diagram, string diagramFileName)
 		{
 			this.SaveModelAndDiagram(serializationResult, modelRoot, modelFileName, diagram, diagramFileName, global::System.Text.Encoding.UTF8, false);
 		}
@@ -880,7 +880,7 @@ namespace NuPattern.Runtime.Schema
 		/// <param name="diagram">PatternModelSchemaDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchema modelRoot, string modelFileName, PatternModelSchemaDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchema modelRoot, string modelFileName, PatternModelSchemaDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			this.SaveModelAndDiagram(serializationResult, modelRoot, modelFileName, diagram, diagramFileName, global::System.Text.Encoding.UTF8, writeOptionalPropertiesWithDefaultValue);
 		}
@@ -896,7 +896,7 @@ namespace NuPattern.Runtime.Schema
 		/// <param name="encoding">Encoding to use when saving the diagram.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		public virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchema modelRoot, string modelFileName, PatternModelSchemaDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveModelAndDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchema modelRoot, string modelFileName, PatternModelSchemaDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			if (serializationResult == null)
@@ -955,7 +955,7 @@ namespace NuPattern.Runtime.Schema
 		/// <param name="serializationResult">Stores serialization result from the save operation.</param>
 		/// <param name="diagram">PatternModelSchemaDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
-		public virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchemaDiagram diagram, string diagramFileName)
+		internal virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchemaDiagram diagram, string diagramFileName)
 		{
 			this.SaveDiagram(serializationResult, diagram, diagramFileName, global::System.Text.Encoding.UTF8, false);
 		}
@@ -967,7 +967,7 @@ namespace NuPattern.Runtime.Schema
 		/// <param name="diagram">PatternModelSchemaDiagram to be saved.</param>
 		/// <param name="diagramFileName">Name of the file in which the diagram will be saved.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
-		public virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchemaDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchemaDiagram diagram, string diagramFileName, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			this.SaveDiagram(serializationResult, diagram, diagramFileName, global::System.Text.Encoding.UTF8, writeOptionalPropertiesWithDefaultValue);
 		}
@@ -981,7 +981,7 @@ namespace NuPattern.Runtime.Schema
 		/// <param name="encoding">Encoding to use when saving the diagram.</param>
 		/// <param name="writeOptionalPropertiesWithDefaultValue">Whether optional properties with default value will be saved.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-		public virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchemaDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
+		internal virtual void SaveDiagram(DslModeling::SerializationResult serializationResult, PatternModelSchemaDiagram diagram, string diagramFileName, global::System.Text.Encoding encoding, bool writeOptionalPropertiesWithDefaultValue)
 		{
 			#region Check Parameters
 			if (serializationResult == null)

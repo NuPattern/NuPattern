@@ -1,11 +1,11 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.Modeling.Extensibility;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Automation;
 using NuPattern.Modeling;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.Schema;
 
 namespace NuPattern.Library.UnitTests.Automation.Command
@@ -38,7 +38,7 @@ namespace NuPattern.Library.UnitTests.Automation.Command
 
                 validationContext = new ValidationContext(ValidationCategories.Save, this.settings);
 
-                this.validators = new CommandSettingsValidations(Mock.Of<IFeatureCompositionService>());
+                this.validators = new CommandSettingsValidations(Mock.Of<INuPatternCompositionService>());
             }
 
             [TestCleanup]

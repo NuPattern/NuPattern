@@ -10,12 +10,11 @@ using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Library;
 using NuPattern.Modeling;
 using NuPattern.Runtime.References;
 using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Schema
 {
@@ -302,7 +301,7 @@ namespace NuPattern.Runtime.Schema
 
                         // Establish link between hydrdated product line and the runtime product model.
                         var patternManager = this.TryGetService<IPatternManager>();
-                        var uriService = this.TryGetService<IFxrUriReferenceService>();
+                        var uriService = this.TryGetService<IUriReferenceService>();
                         if (patternManager != null && uriService != null)
                         {
                             var fileName = Path.GetFileName(this.FileName);

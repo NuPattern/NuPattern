@@ -2,14 +2,11 @@
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Integration;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TextTemplating.VSHost;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using Moq;
 using NuPattern.Runtime.UriProviders;
-using NuPattern.VisualStudio;
 using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.IntegrationTests.UriProviders

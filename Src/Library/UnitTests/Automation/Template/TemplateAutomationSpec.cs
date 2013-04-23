@@ -2,16 +2,15 @@
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Automation;
-using NuPattern.Library.Commands;
 using NuPattern.Library.Events;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Automation;
 using NuPattern.Runtime.Bindings;
+using NuPattern.VisualStudio.Solution;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Library.UnitTests
 {
@@ -32,7 +31,7 @@ namespace NuPattern.Library.UnitTests
             private Mock<IAutomationExtension> command;
             private Mock<IWizardAutomationExtension> wizard;
             private Mock<IOnElementInstantiatedEvent> onInstantiated;
-            private Mock<IFxrUriReferenceService> uriService;
+            private Mock<IUriReferenceService> uriService;
             private Mock<IVsTemplate> assetVsTemplate;
             private Mock<ITemplate> assetUnfoldTemplate;
             private ReferenceTag tag;
@@ -120,7 +119,7 @@ namespace NuPattern.Library.UnitTests
                 this.automation.Solution = this.solution;
                 this.assetUnfoldTemplate = new Mock<ITemplate> { DefaultValue = DefaultValue.Mock };
 
-                this.uriService = Mock.Get(Mock.Of<IFxrUriReferenceService>(s =>
+                this.uriService = Mock.Get(Mock.Of<IUriReferenceService>(s =>
                     s.ResolveUri<ITemplate>(It.IsAny<Uri>()) == this.assetUnfoldTemplate.Object &&
                     s.CreateUri(It.IsAny<IItemContainer>(), null) == new Uri("solution://" + Guid.NewGuid().ToString())
                 ));

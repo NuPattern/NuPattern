@@ -12,8 +12,7 @@ using System.Xml.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling.Shell;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.IO;
 using NuPattern.Modeling;
 using NuPattern.Presentation;
@@ -54,6 +53,7 @@ namespace NuPattern.Runtime
         /// </summary>
         /// <param name="serviceProvider">The Service Provider.</param>
         /// <param name="solutionEvents">The solution events.</param>
+        /// <param name="solution">The solution</param>
         /// <param name="shellEvents">The shell events.</param>
         /// <param name="itemEvents">The item events</param>
         /// <param name="installedToolkits">The installed toolkits.</param>
@@ -61,6 +61,7 @@ namespace NuPattern.Runtime
         [ImportingConstructor]
         public PatternManager(
             [Import(typeof(SVsServiceProvider))] IServiceProvider serviceProvider,
+            ISolution solution,
             IShellEvents shellEvents,
             ISolutionEvents solutionEvents,
             IItemEvents itemEvents,
@@ -68,14 +69,15 @@ namespace NuPattern.Runtime
             IUserMessageService messageService)
         {
             Guard.NotNull(() => serviceProvider, serviceProvider);
-            Guard.NotNull(() => solutionEvents, solutionEvents);
+            Guard.NotNull(() => solution, solution);
             Guard.NotNull(() => shellEvents, shellEvents);
+            Guard.NotNull(() => solutionEvents, solutionEvents);
             Guard.NotNull(() => itemEvents, itemEvents);
             Guard.NotNull(() => installedToolkits, installedToolkits);
             Guard.NotNull(() => messageService, messageService);
 
             this.serviceProvider = serviceProvider;
-            this.solution = serviceProvider.GetService<ISolution, ISolution>();
+            this.solution = solution;
             this.solutionEvents = solutionEvents;
             this.shellEvents = shellEvents;
             this.itemEvents = itemEvents;
@@ -225,9 +227,9 @@ namespace NuPattern.Runtime
 
                     var dslStore = new Dsl.Store(this.serviceProvider, typeof(Dsl.CoreDomainModel), typeof(ProductStateStoreDomainModel));
 
-                    using (var tx = dslStore.TransactionManager.BeginTransaction("Loading", true))
+                    using (var tx = dslStore.TransactionManager.BeginTransaction(Resources.PatternManager_OpenTransactionDescription, true))
                     {
-                        using (var bag = new StorePropertyBag(dslStore, ProductState.IsSerializingKey, true))
+                        using (new StorePropertyBag(dslStore, ProductState.IsSerializingKey, true))
                         {
                             // Flag the state as being deserialized. This is 
                             // required by the ProductState class to ignore 
@@ -317,7 +319,6 @@ namespace NuPattern.Runtime
         {
             Guard.NotNull(() => toolkitInfo, toolkitInfo);
             Guard.NotNullOrEmpty(() => name, name);
-
 
             if (!this.IsOpen)
             {
@@ -460,7 +461,7 @@ namespace NuPattern.Runtime
                         {
                             document.Root.Attribute(DslVersionAttribute).Value = StoreConstants.DslVersion.ToString();
 
-                            VsHelper.CheckOut(this.serviceProvider, storeFile);
+                            VsHelper.CheckOut(storeFile);
 
                             document.Save(storeFile);
                         }

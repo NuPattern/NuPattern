@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Properties;
-using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Runtime
 {
     /// <summary>
-    /// Adapter class that exposes installed toolkits from the <see cref="IVsExtensionManager"/> 
+    /// Adapter class that exposes installed toolkits from the <see cref="IExtensionManager"/> 
     /// as <see cref="IInstalledToolkitInfo"/> instances.
     /// </summary>
     [PartCreationPolicy(CreationPolicy.Shared)]
@@ -22,15 +20,13 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Initializes a new instance of the <see cref="InstalledToolkitAdapter"/> class.
         /// </summary>
-        /// <param name="serviceProvider">The service provider.</param>
-        /// <param name="reader">The schema reader.</param>
+        /// <param name="extensionManager">The <see cref="IExtensionManager"/>.</param>
+        /// <param name="reader">The <see cref="ISchemaReader"/>.</param>
         [ImportingConstructor]
         public InstalledToolkitAdapter(
-            [Import(typeof(SVsServiceProvider))] IServiceProvider serviceProvider,
+            [Import(typeof(IExtensionManager))] IExtensionManager extensionManager,
             [Import(typeof(ISchemaReader))] ISchemaReader reader)
         {
-            var extensionManager = serviceProvider.GetService<SVsExtensionManager, IVsExtensionManager>();
-
             this.InstalledToolkits = GetInstalledToolkits(extensionManager, reader);
         }
 
@@ -40,7 +36,7 @@ namespace NuPattern.Runtime
         [Export]
         public IEnumerable<IInstalledToolkitInfo> InstalledToolkits { get; private set; }
 
-        private static IEnumerable<IInstalledToolkitInfo> GetInstalledToolkits(IVsExtensionManager extensionManager, ISchemaReader reader)
+        private static IEnumerable<IInstalledToolkitInfo> GetInstalledToolkits(IExtensionManager extensionManager, ISchemaReader reader)
         {
             Guard.NotNull(() => extensionManager, extensionManager);
 

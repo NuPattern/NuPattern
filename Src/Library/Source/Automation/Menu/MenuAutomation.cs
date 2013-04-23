@@ -9,7 +9,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Input;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
@@ -45,7 +45,7 @@ namespace NuPattern.Library.Automation
             this.text = settings.Text;
             this.enabled = true;
             this.visible = true;
-            this.Conditions = new IDynamicBinding<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ICondition>[0];
+            this.Conditions = new IDynamicBinding<ICondition>[0];
             this.CommandStatus = new FixedBinding<ICommandStatus>(new DefaultCommandStatus());
         }
 
@@ -64,7 +64,7 @@ namespace NuPattern.Library.Automation
         /// Gets the conditions that will be evaluated when the event is raised.
         /// </summary>
         [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
-        public IEnumerable<IDynamicBinding<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ICondition>> Conditions { get; private set; }
+        public IEnumerable<IDynamicBinding<ICondition>> Conditions { get; private set; }
 
         /// <summary>
         /// Gets or sets custom the command status binding.
@@ -165,7 +165,7 @@ namespace NuPattern.Library.Automation
             {
                 try
                 {
-                    this.Conditions = this.Settings.ConditionSettings.Select(x => this.BindingFactory.CreateBinding<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ICondition>(x)).ToArray();
+                    this.Conditions = this.Settings.ConditionSettings.Select(x => this.BindingFactory.CreateBinding<ICondition>(x)).ToArray();
                 }
                 catch (Exception e)
                 {
@@ -321,7 +321,7 @@ namespace NuPattern.Library.Automation
             }
         }
 
-        private bool Evaluate(IDynamicBinding<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.ICondition> binding)
+        private bool Evaluate(IDynamicBinding<ICondition> binding)
         {
             using (var context = binding.CreateDynamicContext(this))
             {

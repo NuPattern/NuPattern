@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Reflection;
 
 namespace NuPattern.Runtime.Bindings
 {

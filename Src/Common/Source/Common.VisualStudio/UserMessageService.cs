@@ -1,7 +1,9 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.Windows;
+using Microsoft.VisualBasic;
 using Microsoft.VisualStudio.Shell;
+using NuPattern.VisualStudio.Properties;
 
 namespace NuPattern.VisualStudio
 {
@@ -34,7 +36,7 @@ namespace NuPattern.VisualStudio
         /// <param name="message">The message to show.</param>
         public void ShowError(string message)
         {
-            System.Windows.MessageBox.Show(this.shell.GetMainWindow(), message, "Visual Studio", MessageBoxButton.OK, MessageBoxImage.Error);
+            System.Windows.MessageBox.Show(this.shell.GetMainWindow(), message, Resources.UserMessageService_MessageBoxTitle, MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         /// <summary>
@@ -47,7 +49,7 @@ namespace NuPattern.VisualStudio
             try
             {
                 ThreadHelper.Generic.Invoke(() =>
-                    System.Windows.MessageBox.Show(this.shell.GetMainWindow(), message, "Visual Studio", MessageBoxButton.OK, MessageBoxImage.Information));
+                    System.Windows.MessageBox.Show(this.shell.GetMainWindow(), message, Resources.UserMessageService_MessageBoxTitle, MessageBoxButton.OK, MessageBoxImage.Information));
             }
             finally
             {
@@ -65,7 +67,7 @@ namespace NuPattern.VisualStudio
             try
             {
                 ThreadHelper.Generic.Invoke(() =>
-                    System.Windows.MessageBox.Show(this.shell.GetMainWindow(), message, "Visual Studio", MessageBoxButton.OK, MessageBoxImage.Warning));
+                    System.Windows.MessageBox.Show(this.shell.GetMainWindow(), message, Resources.UserMessageService_MessageBoxTitle, MessageBoxButton.OK, MessageBoxImage.Warning));
             }
             finally
             {
@@ -83,12 +85,24 @@ namespace NuPattern.VisualStudio
             try
             {
                 return ThreadHelper.Generic.Invoke(() =>
-                    System.Windows.MessageBox.Show(this.shell.GetMainWindow(), message, "Visual Studio", MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK);
+                    System.Windows.MessageBox.Show(this.shell.GetMainWindow(), message, Resources.UserMessageService_MessageBoxTitle, MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK);
             }
             finally
             {
                 this.shell.EnableModeless(1);
             }
+        }
+
+        /// <summary>
+        /// Shows an input box that retrieves input from a user.
+        /// </summary>
+        /// <param name="message">The message to display.</param>
+        /// <param name="defaultValue">The default value to display.</param>
+        /// <returns></returns>
+        public string PromptInput(string message, string defaultValue)
+        {
+            // TODO: implment a better dialog box
+            return (Interaction.InputBox(message, Resources.UserMessageService_MessageBoxTitle, string.IsNullOrEmpty(defaultValue) ? string.Empty : defaultValue));
         }
     }
 }

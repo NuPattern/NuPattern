@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 
 namespace NuPattern.Runtime.Schema
 {

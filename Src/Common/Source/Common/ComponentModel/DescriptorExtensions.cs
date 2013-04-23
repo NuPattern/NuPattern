@@ -4,9 +4,11 @@ using System.ComponentModel.Composition;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Properties;
+#if VSVER10
+using NuPattern.Reflection;
+#endif
 
 namespace NuPattern.ComponentModel
 {
@@ -175,7 +177,7 @@ namespace NuPattern.ComponentModel
                 }
                 else
                 {
-                    throw new NotSupportedException(string.Format(
+                    throw new NotSupportedException(String.Format(
                         CultureInfo.CurrentCulture,
                         Resources.DescriptorExtensions_MustBeDelegatingDescriptor,
                         typeof(DelegatingPropertyDescriptor).FullName,
@@ -184,6 +186,17 @@ namespace NuPattern.ComponentModel
             }
 
             return property;
+        }
+
+        /// <summary>
+        /// Whether the type is browsable.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static bool IsBrowsable(this Type type)
+        {
+            var browsable = type.GetCustomAttribute<BrowsableAttribute>(true);
+            return browsable == null || browsable.Browsable;
         }
     }
 }

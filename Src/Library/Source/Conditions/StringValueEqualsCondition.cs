@@ -1,18 +1,19 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
+using NuPattern.Runtime;
 
 namespace NuPattern.Library.Conditions
 {
     /// <summary>
     /// A <see cref="Condition"/> that evaluates to true id the two strings compare with given comparison.
     /// </summary>
-    [CategoryResource("AutomationCategory_General", typeof(Resources))]
-    [DescriptionResource("StringValueEqualsCondition_Description", typeof(Resources))]
-    [DisplayNameResource("StringValueEqualsCondition_DisplayName", typeof(Resources))]
+    [DisplayNameResource(@"StringValueEqualsCondition_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"StringValueEqualsCondition_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
     public class StringValueEqualsCondition : Condition
     {
@@ -31,25 +32,26 @@ namespace NuPattern.Library.Conditions
         /// <summary>
         /// Gets the kind of comparison.
         /// </summary>
-        [DescriptionResource("StringValueEqualsCondition_ComparisonKind_Description", typeof(Resources))]
-        [DisplayNameResource("StringValueEqualsCondition_ComparisonKind_DisplayName", typeof(Resources))]
         [Required]
+        [DefaultValue(StringComparison.OrdinalIgnoreCase)]
+        [DisplayNameResource(@"StringValueEqualsCondition_ComparisonKind_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"StringValueEqualsCondition_ComparisonKind_Description", typeof(Resources))]
         public StringComparison ComparisonKind { get; set; }
 
         /// <summary>
         /// Gets the left value to compare
         /// </summary>
-        [DescriptionResource("StringValueEqualsCondition_LeftValue_Description", typeof(Resources))]
-        [DisplayNameResource("StringValueEqualsCondition_LeftValue_DisplayName", typeof(Resources))]
         [Required]
+        [DisplayNameResource(@"StringValueEqualsCondition_LeftValue_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"StringValueEqualsCondition_LeftValue_Description", typeof(Resources))]
         public string LeftValue { get; set; }
 
         /// <summary>
         /// Gets the right value to compare.
         /// </summary>
-        [DescriptionResource("StringValueEqualsCondition_RightValue_Description", typeof(Resources))]
-        [DisplayNameResource("StringValueEqualsCondition_RightValue_DisplayName", typeof(Resources))]
         [Required]
+        [DisplayNameResource(@"StringValueEqualsCondition_RightValue_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"StringValueEqualsCondition_RightValue_Description", typeof(Resources))]
         public string RightValue { get; set; }
 
         /// <summary>
@@ -58,6 +60,8 @@ namespace NuPattern.Library.Conditions
         /// <returns></returns>
         public override bool Evaluate()
         {
+            this.ValidateObject();
+
             tracer.TraceInformation(
                 Resources.StringValueEqualsCondition_TraceInitial, this.LeftValue, this.RightValue, this.ComparisonKind);
 

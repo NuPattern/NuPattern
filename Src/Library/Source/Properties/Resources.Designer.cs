@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NuPattern.Library.Properties
-{
-
-
+namespace NuPattern.Library.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -117,135 +117,135 @@ namespace NuPattern.Library.Properties
         /// <summary>
         ///   Looks up a localized string similar to Activates an existing guidance workflow making it the currently selected guidance workflow in the &apos;Guidance Explorer&apos; window..
         /// </summary>
-        internal static string ActivateFeatureCommand_Description {
+        internal static string ActivateGuidanceWorkCommand_Description {
             get {
-                return ResourceManager.GetString("ActivateFeatureCommand_Description", resourceCulture);
+                return ResourceManager.GetString("ActivateGuidanceWorkCommand_Description", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Activates an Associated Guidance Workflow..
         /// </summary>
-        internal static string ActivateFeatureCommand_DisplayName {
+        internal static string ActivateGuidanceWorkCommand_DisplayName {
             get {
-                return ResourceManager.GetString("ActivateFeatureCommand_DisplayName", resourceCulture);
+                return ResourceManager.GetString("ActivateGuidanceWorkCommand_DisplayName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Activating guidance instance on current element &apos;{0}&apos; with instance name &apos;{1}&apos;.
         /// </summary>
-        internal static string ActivateFeatureCommand_TraceActivation {
+        internal static string ActivateGuidanceWorkCommand_TraceActivation {
             get {
-                return ResourceManager.GetString("ActivateFeatureCommand_TraceActivation", resourceCulture);
+                return ResourceManager.GetString("ActivateGuidanceWorkCommand_TraceActivation", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Guidance instance with feature id &apos;{0}&apos; not found in solution..
+        ///   Looks up a localized string similar to Guidance instance with id &apos;{0}&apos; was not found in solution..
         /// </summary>
-        internal static string ActivateFeatureCommand_TraceFeatureNotFound {
+        internal static string ActivateGuidanceWorkCommand_TraceGuidanceNotFound {
             get {
-                return ResourceManager.GetString("ActivateFeatureCommand_TraceFeatureNotFound", resourceCulture);
+                return ResourceManager.GetString("ActivateGuidanceWorkCommand_TraceGuidanceNotFound", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Executing activation of guidance instance for current element, &apos;{0}&apos;..
         /// </summary>
-        internal static string ActivateFeatureCommand_TraceInitial {
+        internal static string ActivateGuidanceWorkCommand_TraceInitial {
             get {
-                return ResourceManager.GetString("ActivateFeatureCommand_TraceInitial", resourceCulture);
+                return ResourceManager.GetString("ActivateGuidanceWorkCommand_TraceInitial", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Current element &apos;{0}&apos; has no reference to an existing guidance instance..
         /// </summary>
-        internal static string ActivateFeatureCommand_TraceNoReference {
+        internal static string ActivateGuidanceWorkCommand_TraceNoReference {
             get {
-                return ResourceManager.GetString("ActivateFeatureCommand_TraceNoReference", resourceCulture);
+                return ResourceManager.GetString("ActivateGuidanceWorkCommand_TraceNoReference", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Guidance instance on current element &apos;{0}&apos; has instance name &apos;{1}&apos;.
         /// </summary>
-        internal static string ActivateFeatureCommand_TraceReferenceFound {
+        internal static string ActivateGuidanceWorkCommand_TraceReferenceFound {
             get {
-                return ResourceManager.GetString("ActivateFeatureCommand_TraceReferenceFound", resourceCulture);
+                return ResourceManager.GetString("ActivateGuidanceWorkCommand_TraceReferenceFound", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activates the a shared instance of a feature, or instantiates it,  if it does not yet exist..
+        ///   Looks up a localized string similar to Activates a shared instance of a guidance workflow, or instantiates it, if it does not yet exist..
         /// </summary>
-        internal static string ActivateOrInstantiateSharedFeatureCommand_Description {
+        internal static string ActivateOrInstantiateSharedGuidanceWorkflowCommand_Description {
             get {
-                return ResourceManager.GetString("ActivateOrInstantiateSharedFeatureCommand_Description", resourceCulture);
+                return ResourceManager.GetString("ActivateOrInstantiateSharedGuidanceWorkflowCommand_Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activates or Instantiates a Shared Feature.
+        ///   Looks up a localized string similar to Activates or Instantiates a Shared Guidance Workflow.
         /// </summary>
-        internal static string ActivateOrInstantiateSharedFeatureCommand_DisplayName {
+        internal static string ActivateOrInstantiateSharedGuidanceWorkflowCommand_DisplayName {
             get {
-                return ResourceManager.GetString("ActivateOrInstantiateSharedFeatureCommand_DisplayName", resourceCulture);
+                return ResourceManager.GetString("ActivateOrInstantiateSharedGuidanceWorkflowCommand_DisplayName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Feature Id of the feature to activate (or instantiate)..
+        ///   Looks up a localized string similar to The Id of the extension containing the guidance to activate (or instantiate)..
         /// </summary>
-        internal static string ActivateOrInstantiateSharedFeatureCommand_FeatureId_Description {
+        internal static string ActivateOrInstantiateSharedGuidanceWorkflowCommand_ExtensionId_Description {
             get {
-                return ResourceManager.GetString("ActivateOrInstantiateSharedFeatureCommand_FeatureId_Description", resourceCulture);
+                return ResourceManager.GetString("ActivateOrInstantiateSharedGuidanceWorkflowCommand_ExtensionId_Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Activated feature named &apos;{0}&apos;.
+        ///   Looks up a localized string similar to Activated guidance workflow named &apos;{0}&apos;.
         /// </summary>
-        internal static string ActivateOrInstantiateSharedFeatureCommand_TraceActivate {
+        internal static string ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceActivate {
             get {
-                return ResourceManager.GetString("ActivateOrInstantiateSharedFeatureCommand_TraceActivate", resourceCulture);
+                return ResourceManager.GetString("ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceActivate", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Feature with id &apos;{0}&apos; not registered..
+        ///   Looks up a localized string similar to Executing activation or instantiation of guidance workflow &apos;{0}&apos;.
         /// </summary>
-        internal static string ActivateOrInstantiateSharedFeatureCommand_TraceFeatureNotFound {
+        internal static string ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInitial {
             get {
-                return ResourceManager.GetString("ActivateOrInstantiateSharedFeatureCommand_TraceFeatureNotFound", resourceCulture);
+                return ResourceManager.GetString("ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInitial", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Executing activation or instantiation of feature &apos;{0}&apos;.
+        ///   Looks up a localized string similar to Instantiated new guidance workflow &apos;{0}&apos;, named &apos;{1}&apos;.
         /// </summary>
-        internal static string ActivateOrInstantiateSharedFeatureCommand_TraceInitial {
+        internal static string ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInstantiate {
             get {
-                return ResourceManager.GetString("ActivateOrInstantiateSharedFeatureCommand_TraceInitial", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Instantiated new feature &apos;{0}&apos;, named &apos;{1}&apos;.
-        /// </summary>
-        internal static string ActivateOrInstantiateSharedFeatureCommand_TraceInstantiate {
-            get {
-                return ResourceManager.GetString("ActivateOrInstantiateSharedFeatureCommand_TraceInstantiate", resourceCulture);
+                return ResourceManager.GetString("ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceInstantiate", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Opening guidance windows..
         /// </summary>
-        internal static string ActivateOrInstantiateSharedFeatureCommand_TraceShowingGuidanceExplorer {
+        internal static string ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceShowingGuidanceExplorer {
             get {
-                return ResourceManager.GetString("ActivateOrInstantiateSharedFeatureCommand_TraceShowingGuidanceExplorer", resourceCulture);
+                return ResourceManager.GetString("ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceShowingGuidanceExplorer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guidance Workflow with id &apos;{0}&apos; not registered..
+        /// </summary>
+        internal static string ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceWorkflowNotFound {
+            get {
+                return ResourceManager.GetString("ActivateOrInstantiateSharedGuidanceWorkflowCommand_TraceWorkflowNotFound", resourceCulture);
             }
         }
         
@@ -1340,6 +1340,15 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All files (*.*)|*.*.
+        /// </summary>
+        internal static string CreateElementFromPickedFileCommand_AllFilesFilter {
+            get {
+                return ResourceManager.GetString("CreateElementFromPickedFileCommand_AllFilesFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The file extensions to pick (i.e. *.zip). Multiple file extensions are delimited with a &apos;;&apos;. (i.e. *.zip;*.rar).
         /// </summary>
         internal static string CreateElementFromPickedFileCommand_Extension_Description {
@@ -1354,6 +1363,15 @@ namespace NuPattern.Library.Properties
         internal static string CreateElementFromPickedFileCommand_Extension_DisplayName {
             get {
                 return ResourceManager.GetString("CreateElementFromPickedFileCommand_Extension_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (*{0})|*{0}.
+        /// </summary>
+        internal static string CreateElementFromPickedFileCommand_FilterFormat {
+            get {
+                return ResourceManager.GetString("CreateElementFromPickedFileCommand_FilterFormat", resourceCulture);
             }
         }
         
@@ -2291,6 +2309,123 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Retrieves the first value in the collection of elements..
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_Description {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First or Default Value.
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_DisplayName {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The elements in the collection..
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_Elements_Description {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_Elements_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elements.
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_Elements_DisplayName {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_Elements_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated the first or default value of the set of elements, as &apos;{0}&apos;..
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating the first or default value of a set of elements..
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_TraceInitial {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to evaluate the first or default value of a null set of elements..
+        /// </summary>
+        internal static string FirstOrDefaultValueProvider_TraceNoElements {
+            get {
+                return ResourceManager.GetString("FirstOrDefaultValueProvider_TraceNoElements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retrieves the first solution item that matches the path expression..
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_Description {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Solution Item.
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_DisplayName {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An expression that matches the item in the solution. May contain wildcard characters (&apos;*&apos;) to search any folder and file name or file extension. (i.e. MyProject\SubFolder\*.cs).
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_PathExpression_Description {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_PathExpression_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path Expression.
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_PathExpression_DisplayName {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_PathExpression_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated the first item in the solution with path expression &apos;{0}&apos;, as &apos;{1}&apos;..
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating the first item in the solution with path expression &apos;{0}&apos;..
+        /// </summary>
+        internal static string FirstSolutionElementMatchValueProvider_TraceInitial {
+            get {
+                return ResourceManager.GetString("FirstSolutionElementMatchValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Generates code by transforming a text template (also known as a T4 template), for any model element of any DSL model file..
         /// </summary>
         internal static string GenerateModelingCodeCommand_Description {
@@ -2697,6 +2832,69 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Retrieves the value of the item in the black board..
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_Description {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blackboard Value.
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_DisplayName {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of the item in the black board..
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_Key_Description {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_Key_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_Key_DisplayName {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_Key_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated blackboard value &apos;{0}&apos;, as &apos;{1}&apos;.
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating blackboard value &apos;{0}&apos;..
+        /// </summary>
+        internal static string GetBlackboardValueValueProvider_TraceInitial {
+            get {
+                return ResourceManager.GetString("GetBlackboardValueValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upgrading FeatureCommand elements..
+        /// </summary>
+        internal static string GuidanceCommandUpgradeProcessor_TraceDeserialize {
+            get {
+                return ResourceManager.GetString("GuidanceCommandUpgradeProcessor_TraceDeserialize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ActivateGuidanceCommand.
         /// </summary>
         internal static string GuidanceExtension_ActivateCommandName {
@@ -2742,6 +2940,87 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Upgrading GuidanceExtension elements..
+        /// </summary>
+        internal static string GuidanceExtensionUpgradeProcessor_TraceDeserialize {
+            get {
+                return ResourceManager.GetString("GuidanceExtensionUpgradeProcessor_TraceDeserialize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A default value to display to the user, and return if the user cancels the dialog..
+        /// </summary>
+        internal static string InputBoxValueProvider_DefaultValue_Description {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_DefaultValue_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default Value.
+        /// </summary>
+        internal static string InputBoxValueProvider_DefaultValue_DisplayName {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_DefaultValue_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retrieves a textual input from the user..
+        /// </summary>
+        internal static string InputBoxValueProvider_Description {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prompt User Input.
+        /// </summary>
+        internal static string InputBoxValueProvider_DisplayName {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The textual message to display to the user..
+        /// </summary>
+        internal static string InputBoxValueProvider_Message_Description {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_Message_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        internal static string InputBoxValueProvider_Message_DisplayName {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_Message_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated the input from user with message &apos;{0}&apos;, and default value &apos;{1}&apos;, as &apos;{2}&apos;..
+        /// </summary>
+        internal static string InputBoxValueProvider_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating the input from prompting user, with message &apos;{0}&apos;, and default value &apos;{1}&apos;..
+        /// </summary>
+        internal static string InputBoxValueProvider_TraceInitial {
+            get {
+                return ResourceManager.GetString("InputBoxValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Compares product element instances alphabetically by their &apos;InstanceName&apos; property. This comparer is the default comparer used when no other comparer is specified..
         /// </summary>
         internal static string InstanceNameComparer_Description {
@@ -2762,153 +3041,153 @@ namespace NuPattern.Library.Properties
         /// <summary>
         ///   Looks up a localized string similar to Whether to activate the instantiated guidance once created..
         /// </summary>
-        internal static string InstantiateFeatureCommand_ActivateOnInstantiation_Description {
+        internal static string InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_Description {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_ActivateOnInstantiation_Description", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_Description", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Activate On Instantiation.
         /// </summary>
-        internal static string InstantiateFeatureCommand_ActivateOnInstantiation_DisplayName {
+        internal static string InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_DisplayName {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_ActivateOnInstantiation_DisplayName", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_ActivateOnInstantiation_DisplayName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to The default name of the created guidance workflow in the Guidance Explorer..
         /// </summary>
-        internal static string InstantiateFeatureCommand_DefaultInstanceName_Description {
+        internal static string InstantiateGuidanceWorkflowCommand_DefaultInstanceName_Description {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_DefaultInstanceName_Description", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_DefaultInstanceName_Description", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Default Name.
         /// </summary>
-        internal static string InstantiateFeatureCommand_DefaultInstanceName_DisplayName {
+        internal static string InstantiateGuidanceWorkflowCommand_DefaultInstanceName_DisplayName {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_DefaultInstanceName_DisplayName", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_DefaultInstanceName_DisplayName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Creates a new guidance workflow, with an optional default name, and optionally makes the guidance the currently selected feature in the &apos;Guidance Explorer&apos; window..
+        ///   Looks up a localized string similar to Creates a new guidance workflow, with an optional default name, and optionally makes the guidance the currently selected workflow in the &apos;Guidance Explorer&apos; window..
         /// </summary>
-        internal static string InstantiateFeatureCommand_Description {
+        internal static string InstantiateGuidanceWorkflowCommand_Description {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_Description", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_Description", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Instantiates an Associated Guidance Workflow..
         /// </summary>
-        internal static string InstantiateFeatureCommand_DisplayName {
+        internal static string InstantiateGuidanceWorkflowCommand_DisplayName {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_DisplayName", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_DisplayName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The identifier of the Feature Extension containing the guidance process to instantiate..
+        ///   Looks up a localized string similar to The identifier of the guidance extension containing the guidance workflow to instantiate..
         /// </summary>
-        internal static string InstantiateFeatureCommand_FeatureId_Description {
+        internal static string InstantiateGuidanceWorkflowCommand_ExtensionId_Description {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_FeatureId_Description", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_ExtensionId_Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Feature Id.
+        ///   Looks up a localized string similar to Extension Id.
         /// </summary>
-        internal static string InstantiateFeatureCommand_FeatureId_DisplayName {
+        internal static string InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_FeatureId_DisplayName", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_ExtensionId_DisplayName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Whether all the instances of the current element share the same instance of guidance workflow, or have their own separate instances..
         /// </summary>
-        internal static string InstantiateFeatureCommand_SharedInstance_Description {
+        internal static string InstantiateGuidanceWorkflowCommand_SharedInstance_Description {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_SharedInstance_Description", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_SharedInstance_Description", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Shared Instance.
         /// </summary>
-        internal static string InstantiateFeatureCommand_SharedInstance_DisplayName {
+        internal static string InstantiateGuidanceWorkflowCommand_SharedInstance_DisplayName {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_SharedInstance_DisplayName", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_SharedInstance_DisplayName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Activating new guidance instance of current element &apos;{0}&apos; with name &apos;{1}&apos;.
         /// </summary>
-        internal static string InstantiateFeatureCommand_TraceActivateNew {
+        internal static string InstantiateGuidanceWorkflowCommand_TraceActivateNew {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_TraceActivateNew", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_TraceActivateNew", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Activating existing shared guidance instance of current element &apos;{0}&apos; with name &apos;{1}&apos;.
         /// </summary>
-        internal static string InstantiateFeatureCommand_TraceActivateShared {
+        internal static string InstantiateGuidanceWorkflowCommand_TraceActivateShared {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_TraceActivateShared", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_TraceActivateShared", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Adding reference to new guidance instance of current element &apos;{0}&apos; with name &apos;{1}&apos;.
         /// </summary>
-        internal static string InstantiateFeatureCommand_TraceAddingReference {
+        internal static string InstantiateGuidanceWorkflowCommand_TraceAddingReference {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_TraceAddingReference", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_TraceAddingReference", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Created new guidance instance name for current element &apos;{0}&apos; with name &apos;{1}&apos;.
         /// </summary>
-        internal static string InstantiateFeatureCommand_TraceCreateUniqueInstanceName {
+        internal static string InstantiateGuidanceWorkflowCommand_TraceCreateUniqueInstanceName {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_TraceCreateUniqueInstanceName", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_TraceCreateUniqueInstanceName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Installed feature for current element &apos;{0} with identifier &apos;{1}&apos; not installed..
+        ///   Looks up a localized string similar to Executing instantiation of guidance instance for current element &apos;{0}&apos; of extension &apos;{1}&apos; with instance name &apos;{2}&apos; as shared &apos;{3}&apos; and activateoncreation &apos;{4}&apos;..
         /// </summary>
-        internal static string InstantiateFeatureCommand_TraceFeatureNotFound {
+        internal static string InstantiateGuidanceWorkflowCommand_TraceInitial {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_TraceFeatureNotFound", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_TraceInitial", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Executing instantiation of guidance instance for current element &apos;{0}&apos; of feature &apos;{1}&apos; with instance name &apos;{2}&apos; as shared &apos;{3}&apos; and activateoncreation &apos;{4}&apos;..
+        ///   Looks up a localized string similar to Instantiating new guidance instance of current element &apos;{0}&apos; with extension id &apos;{1}&apos; and name &apos;{2}&apos;.
         /// </summary>
-        internal static string InstantiateFeatureCommand_TraceInitial {
+        internal static string InstantiateGuidanceWorkflowCommand_TraceInstantiateNew {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_TraceInitial", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_TraceInstantiateNew", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Instantiating new guidance instance of current element &apos;{0}&apos; with feature id &apos;{1}&apos; and name &apos;{2}&apos;.
+        ///   Looks up a localized string similar to Installed guidance extension for current element &apos;{0} with identifier &apos;{1}&apos; not installed..
         /// </summary>
-        internal static string InstantiateFeatureCommand_TraceInstantiateNew {
+        internal static string InstantiateGuidanceWorkflowCommand_TraceWorkflowNotFound {
             get {
-                return ResourceManager.GetString("InstantiateFeatureCommand_TraceInstantiateNew", resourceCulture);
+                return ResourceManager.GetString("InstantiateGuidanceWorkflowCommand_TraceWorkflowNotFound", resourceCulture);
             }
         }
         
@@ -3578,6 +3857,24 @@ namespace NuPattern.Library.Properties
         internal static string PreserveOrderComparer_DisplayName {
             get {
                 return ResourceManager.GetString("PreserveOrderComparer_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Element &apos;{0}&apos; does not support ancestors..
+        /// </summary>
+        internal static string ProductElementDictionaryConverter_ErrorElementNotSupportAncestors {
+            get {
+                return ResourceManager.GetString("ProductElementDictionaryConverter_ErrorElementNotSupportAncestors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Element &apos;{0}&apos; does not support descendants..
+        /// </summary>
+        internal static string ProductElementDictionaryConverter_ErrorElementNotSupportDescendants {
+            get {
+                return ResourceManager.GetString("ProductElementDictionaryConverter_ErrorElementNotSupportDescendants", resourceCulture);
             }
         }
         
@@ -4465,6 +4762,69 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sets a value in the black board..
+        /// </summary>
+        internal static string SetBlackboardValueCommand_Description {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set Value in Blackboard.
+        /// </summary>
+        internal static string SetBlackboardValueCommand_DisplayName {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of the item in the black board..
+        /// </summary>
+        internal static string SetBlackboardValueCommand_Key_Description {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_Key_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string SetBlackboardValueCommand_Key_DisplayName {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_Key_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing the setting of Blackboard property &apos;{0}&apos;, with value &apos;{1}&apos;.
+        /// </summary>
+        internal static string SetBlackboardValueCommand_TraceInitial {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The value of the item to set in the blackboard..
+        /// </summary>
+        internal static string SetBlackboardValueCommand_Value_Description {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_Value_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string SetBlackboardValueCommand_Value_DisplayName {
+            get {
+                return ResourceManager.GetString("SetBlackboardValueCommand_Value_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The item build action..
         /// </summary>
         internal static string SetBuildActionCommand_BuildAction_Description {
@@ -4555,6 +4915,78 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;No Message Supplied&gt;.
+        /// </summary>
+        internal static string ShowMessageCommand_DefaultMessage {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_DefaultMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Displays text in a Message Box.
+        /// </summary>
+        internal static string ShowMessageCommand_Description {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Displays a Message Box.
+        /// </summary>
+        internal static string ShowMessageCommand_DisplayName {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The severity level of the message.
+        /// </summary>
+        internal static string ShowMessageCommand_Level_Description {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_Level_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Level.
+        /// </summary>
+        internal static string ShowMessageCommand_Level_DisplayName {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_Level_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The text of the message to display.
+        /// </summary>
+        internal static string ShowMessageCommand_Message_Description {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_Message_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        internal static string ShowMessageCommand_Message_DisplayName {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_Message_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executing the display of message &apos;{0}&apos;, with level &apos;{1}&apos;.
+        /// </summary>
+        internal static string ShowMessageCommand_TraceInitial {
+            get {
+                return ResourceManager.GetString("ShowMessageCommand_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Retrieves the name of the current solution..
         /// </summary>
         internal static string SolutionNameValueProvider_Description {
@@ -4587,6 +5019,60 @@ namespace NuPattern.Library.Properties
         internal static string SolutionNameValueProvider_TraceInitial {
             get {
                 return ResourceManager.GetString("SolutionNameValueProvider_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Used to verify that the string value is neither Null nor Empty..
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_Description {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to String Value is Not Null or Empty.
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_DisplayName {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated empty or null value of string &apos;{0}&apos;, as &apos;{1}&apos;..
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating empty or null value of string: &apos;{0}&apos;..
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_TraceInitial {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The string value to verify..
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_Value_Description {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_Value_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string StringNotNullOrEmptyCondition_Value_DisplayName {
+            get {
+                return ResourceManager.GetString("StringNotNullOrEmptyCondition_Value_DisplayName", resourceCulture);
             }
         }
         
@@ -5787,7 +6273,7 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; template launch point or unfold command is configured with a &apos;Template&apos; property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the &apos;InstantiationTemplateWizard&apos; should appear before the &lt;WizardExtension&gt; element for the &apos;ElementReplacementsWizard&apos;. You must correct the ordering of these &lt;TemplateWizard&gt; elements in the contents of the *.vstemplate file..
+        ///   Looks up a localized string similar to &apos;{0}&apos; template launch point or unfold command is configured with a &apos;Template&apos; property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the &apos;InstantiationTemplateWizard&apos; should appear before the &lt;WizardExtension&gt; element for the &apos;ElementReplacementsTemplateWizard&apos;. You must correct the ordering of these &lt;TemplateWizard&gt; elements in the contents of the *.vstemplate file..
         /// </summary>
         internal static string Validate_TemplateSettingsWizardOrderIsNotCorrect {
             get {
@@ -5805,7 +6291,7 @@ namespace NuPattern.Library.Properties
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &apos;{0}&apos; template launch point or unfold command is configured with a &apos;Template&apos; property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the &apos;InstantiationTemplateWizard&apos; or the &lt;WizardExtension&gt; element for the &apos;ElementReplacementsWizard&apos; are missing from the contents of the file, or are not declared correctly. You can re-select the template in the &apos;Template&apos; property in the &apos;Settings&apos; to automatically correct this..
+        ///   Looks up a localized string similar to &apos;{0}&apos; template launch point or unfold command is configured with a &apos;Template&apos; property for a *.vstemplate file that is not configured correctly. The &lt;WizardExtension&gt; element for the &apos;InstantiationTemplateWizard&apos; or the &lt;WizardExtension&gt; element for the &apos;ElementReplacementsTemplateWizard&apos; are missing from the contents of the file, or are not declared correctly. You can re-select the template in the &apos;Template&apos; property in the &apos;Settings&apos; to automatically correct this..
         /// </summary>
         internal static string Validate_TemplateSettingsWizardsNotPresentInTemplate {
             get {
@@ -6035,6 +6521,60 @@ namespace NuPattern.Library.Properties
         internal static string ValidElementCondition_ValidateDescendantsDisplayName {
             get {
                 return ResourceManager.GetString("ValidElementCondition_ValidateDescendantsDisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Used to verify that the value is not Null..
+        /// </summary>
+        internal static string ValueIsNotNullCondition_Description {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value is Not Null.
+        /// </summary>
+        internal static string ValueIsNotNullCondition_DisplayName {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluated null value of &apos;{0}&apos;, as &apos;{1}&apos;..
+        /// </summary>
+        internal static string ValueIsNotNullCondition_TraceEvaluation {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_TraceEvaluation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Evaluating null value of: &apos;{0}&apos;..
+        /// </summary>
+        internal static string ValueIsNotNullCondition_TraceInitial {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_TraceInitial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The value to verify..
+        /// </summary>
+        internal static string ValueIsNotNullCondition_Value_Description {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_Value_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string ValueIsNotNullCondition_Value_DisplayName {
+            get {
+                return ResourceManager.GetString("ValueIsNotNullCondition_Value_DisplayName", resourceCulture);
             }
         }
         

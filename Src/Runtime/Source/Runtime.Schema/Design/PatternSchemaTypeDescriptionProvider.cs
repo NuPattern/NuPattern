@@ -5,7 +5,6 @@ using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Design;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Runtime.Schema.Properties;
 using NuPattern.VisualStudio;
 
@@ -111,7 +110,7 @@ namespace NuPattern.Runtime.Schema.Design
                         element,
                         this.ExtensionPoints,
                         this.MessageService,
-                        "ImplementedExtensionPointsRaw",
+                        @"ImplementedExtensionPointsRaw",
                         new List<IExtensionPointSchema>(),
                         new CategoryAttribute(Resources.ExtensibilityCategory),
                         new DisplayNameAttribute(Resources.ProvidedExtensionPointsDisplayName),

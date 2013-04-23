@@ -8,4 +8,5 @@ using Microsoft.VisualStudio.ExtensibilityHosting;
 
 [assembly: CLSCompliant(false)]
 
-[assembly: VsCatalogName("Microsoft.VisualStudio.Default")]
+[assembly: VsCatalogName(NuPattern.ComponentModel.Composition.Catalog.DefaultCatalogName)]
+[assembly: VsCatalogName(NuPattern.VisualStudio.Composition.Catalog.DefaultCatalogName)]

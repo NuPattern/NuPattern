@@ -1,6 +1,4 @@
-﻿<#@ Assembly Name="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll" #>
-<#@ Import Namespace="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features" #>
-<#@ Import Namespace="System.Linq" #>
+﻿<#@ Import Namespace="System.Linq" #>
 <#@ Import Namespace="System.Collections.Generic" #>
 <#@ Import Namespace="System.ComponentModel" #>
 <#@ Import Namespace="System.Reflection" #>

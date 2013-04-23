@@ -24,14 +24,6 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\envdte.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
@@ -39,17 +31,11 @@
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost">
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ComponentModelHost.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.ExtensionManager">
-      <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensionManager.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)" Condition="'$(TargetVsVersion)' == '10.0'">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix).dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
-      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Integration$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Integration$(DslToolsVersionSuffix).dll</HintPath>
@@ -114,7 +100,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RuntimeShellVsixPackagingSpec.gen.cs</LastGenOutput>
     </None>
-    <Compile Include="Shell\FeatureExtensionSpec.cs" />
+    <Compile Include="Shell\GuidanceExtensionSpec.cs" />
     <Compile Include="InstalledToolkitInfoSpec.cs" />
     <Compile Include="Core\UriProviders\PackUriProviderSpec.cs" />
     <Compile Include="Shell\RuntimeShellVsixPackagingSpec.gen.cs">
@@ -228,6 +214,10 @@
     <ProjectReference Include="..\IntegrationTests.TestToolkit\Runtime.IntegrationTests.TestToolkit.csproj">
       <Project>{cb2872d6-f4b1-493c-be4e-b590c03f5fef}</Project>
       <Name>Runtime.IntegrationTests.TestToolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Source\Runtime.Guidance\Runtime.Guidance.csproj">
+      <Project>{6DDE6662-D037-45C1-8E80-960828CEB21C}</Project>
+      <Name>Runtime.Guidance</Name>
     </ProjectReference>
     <ProjectReference Include="..\Source\Runtime.Shell\Runtime.Shell.csproj">
       <Project>{D3E93083-99C9-4186-95B5-339A822C63EE}</Project>

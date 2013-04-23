@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
-using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Runtime.IntegrationTests.UriProviders
 {
@@ -18,7 +15,7 @@ namespace NuPattern.Runtime.IntegrationTests.UriProviders
         [TestMethod, TestCategory("Integration")]
         public void WhenResolvingUri_ThenNotFeatureRuntimeVsix()
         {
-            var service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
+            var service = VsIdeTestHostContext.ServiceProvider.GetService<IUriReferenceService>();
             Assert.NotNull(service);
             var uri = new Uri("vsix://FeatureExtensionRuntime");
 
@@ -33,7 +30,7 @@ namespace NuPattern.Runtime.IntegrationTests.UriProviders
         [TestMethod, TestCategory("Integration")]
         public void WhenResolvingUri_ThenRuntimeVsix()
         {
-            var service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
+            var service = VsIdeTestHostContext.ServiceProvider.GetService<IUriReferenceService>();
             Assert.NotNull(service);
             var uri = new Uri("vsix://" + Runtime.Shell.Constants.VsixIdentifier);
 
@@ -48,9 +45,9 @@ namespace NuPattern.Runtime.IntegrationTests.UriProviders
         [TestMethod, TestCategory("Integration")]
         public void WhenCreatingUri_ThenCanRoundTrip()
         {
-            var service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
+            var service = VsIdeTestHostContext.ServiceProvider.GetService<IUriReferenceService>();
             Assert.NotNull(service);
-            var installed = VsIdeTestHostContext.ServiceProvider.GetService<SVsExtensionManager, IVsExtensionManager>().GetInstalledExtensions().First();
+            var installed = VsIdeTestHostContext.ServiceProvider.GetService<IExtensionManager>().GetInstalledExtensions().First();
 
             Assert.True(service.CanCreateUri(installed));
             Assert.True(service.CanCreateUri<IExtension>(installed));

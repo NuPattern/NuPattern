@@ -3,27 +3,28 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Library.Properties;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Validation;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.ValidationRules
 {
     /// <summary>
     /// Specifies that a data field value is required.
     /// </summary>
-    [DescriptionResource("PropertyReferToSolutionItemArtifactValidationRule_Description", typeof(Resources))]
-    [DisplayNameResource("PropertyReferToSolutionItemArtifactValidationRule_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"PropertyReferToSolutionItemArtifactValidationRule_Description", typeof(Resources))]
+    [DisplayNameResource(@"PropertyReferToSolutionItemArtifactValidationRule_DisplayName", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
     public class PropertyReferToSolutionItemArtifactValidationRule : ValidationRule
     {
         /// <summary>
         /// Gets or sets the error message.
         /// </summary>
-        [DescriptionResource("PropertyReferToSolutionItemArtifactValidationRule_ErrorMessageDescription", typeof(Resources))]
-        [DisplayNameResource("PropertyReferToSolutionItemArtifactValidationRule_ErrorMessageDisplayName", typeof(Resources))]
+        [DescriptionResource(@"PropertyReferToSolutionItemArtifactValidationRule_ErrorMessageDescription", typeof(Resources))]
+        [DisplayNameResource(@"PropertyReferToSolutionItemArtifactValidationRule_ErrorMessageDisplayName", typeof(Resources))]
         public virtual string ErrorMessage { get; set; }
 
         /// <summary>

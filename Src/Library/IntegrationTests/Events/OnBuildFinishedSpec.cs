@@ -3,7 +3,6 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
 using NuPattern.Library.Events;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Library.IntegrationTests.Events
 {

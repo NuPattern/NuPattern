@@ -6,7 +6,6 @@ using System.ComponentModel;
 using System.Drawing.Design;
 using System.Linq;
 using System.Runtime.Serialization;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using NuPattern.ComponentModel;
 using NuPattern.ComponentModel.Design;
 using NuPattern.Runtime.Properties;
@@ -47,8 +46,8 @@ namespace NuPattern.Runtime.Bindings
         /// </summary>
         [DataMember]
         [Editor(typeof(StandardValuesEditor), typeof(UITypeEditor))]
-        [DescriptionResource("BindingSettings_TypeIdDescription", typeof(Resources))]
-        [DisplayNameResource("BindingSettings_TypeIdDisplayName", typeof(Resources))]
+        [DescriptionResource(@"BindingSettings_TypeIdDescription", typeof(Resources))]
+        [DisplayNameResource(@"BindingSettings_TypeIdDisplayName", typeof(Resources))]
         [RefreshProperties(RefreshProperties.All)]
         public virtual string TypeId
         {

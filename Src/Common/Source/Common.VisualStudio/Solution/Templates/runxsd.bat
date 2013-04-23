@@ -1,0 +1,2 @@
+rem Regenerates the vstemplate schema file for xml serialization/deserialization.
+xsd.exe "C:\Program Files\Microsoft Visual Studio 10.0\xml\Schemas\1033\vstemplate.xsd" /c /n:NuPattern.VisualStudio.Solution.Templates

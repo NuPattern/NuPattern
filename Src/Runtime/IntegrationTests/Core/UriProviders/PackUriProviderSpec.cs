@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.IntegrationTests.UriProviders
 {
@@ -15,7 +14,7 @@ namespace NuPattern.Runtime.IntegrationTests.UriProviders
         internal static readonly IAssertion Assert = new Assertion();
         private ISolution solution;
         private IProject project;
-        private IFxrUriReferenceService service;
+        private IUriReferenceService service;
 
         [TestInitialize]
         public void Initialize()
@@ -24,7 +23,7 @@ namespace NuPattern.Runtime.IntegrationTests.UriProviders
 
             this.solution = VsIdeTestHostContext.ServiceProvider.GetService<ISolution>();
             this.project = this.solution.Find<IProject>().First();
-            this.service = VsIdeTestHostContext.ServiceProvider.GetService<IFxrUriReferenceService>();
+            this.service = VsIdeTestHostContext.ServiceProvider.GetService<IUriReferenceService>();
         }
 
         [TestCleanup]

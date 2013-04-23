@@ -24,24 +24,24 @@ namespace NuPattern.Library.Automation
         internal void EnsureGuidanceExtensionAutomation()
         {
             IPatternElementSchema element = this.Extends as IPatternElementSchema;
-            Func<bool> existanceCondition = () => !string.IsNullOrEmpty(this.GuidanceFeatureId);
+            Func<bool> existanceCondition = () => !string.IsNullOrEmpty(this.ExtensionId);
 
             // Configure the instantiate command, event.
-            var instantiateCommand = element.EnsureCommandAutomation<InstantiateFeatureCommand>(Properties.Resources.GuidanceExtension_InstantiateCommandName,
+            var instantiateCommand = element.EnsureCommandAutomation<InstantiateGuidanceWorkflowCommand>(Properties.Resources.GuidanceExtension_InstantiateCommandName,
                 existanceCondition);
             if (instantiateCommand != null)
             {
-                instantiateCommand.SetPropertyValue<InstantiateFeatureCommand, string>(cmd => cmd.FeatureId, this.GuidanceFeatureId);
-                instantiateCommand.SetPropertyValue<InstantiateFeatureCommand, string>(cmd => cmd.DefaultInstanceName, this.GuidanceInstanceName);
-                instantiateCommand.SetPropertyValue<InstantiateFeatureCommand, bool>(cmd => cmd.SharedInstance, this.GuidanceSharedInstance);
-                instantiateCommand.SetPropertyValue<InstantiateFeatureCommand, bool>(cmd => cmd.ActivateOnInstantiation, this.GuidanceActivateOnCreation);
+                instantiateCommand.SetPropertyValue<InstantiateGuidanceWorkflowCommand, string>(cmd => cmd.ExtensionId, this.ExtensionId);
+                instantiateCommand.SetPropertyValue<InstantiateGuidanceWorkflowCommand, string>(cmd => cmd.DefaultInstanceName, this.GuidanceInstanceName);
+                instantiateCommand.SetPropertyValue<InstantiateGuidanceWorkflowCommand, bool>(cmd => cmd.SharedInstance, this.GuidanceSharedInstance);
+                instantiateCommand.SetPropertyValue<InstantiateGuidanceWorkflowCommand, bool>(cmd => cmd.ActivateOnInstantiation, this.GuidanceActivateOnCreation);
             }
 
             element.EnsureEventLaunchPoint<IOnElementInstantiatedEvent>(Properties.Resources.GuidanceExtension_InstantiateEventName,
-                instantiateCommand, () => !String.IsNullOrEmpty(this.GuidanceFeatureId));
+                instantiateCommand, () => !String.IsNullOrEmpty(this.ExtensionId));
 
             // Configure the activate command and menu.
-            var activateCommand = element.EnsureCommandAutomation<ActivateFeatureCommand>(Properties.Resources.GuidanceExtension_ActivateCommandName,
+            var activateCommand = element.EnsureCommandAutomation<ActivateGuidanceWorkflowCommand>(Properties.Resources.GuidanceExtension_ActivateCommandName,
                 existanceCondition);
 
             var activateMenu = element.EnsureMenuLaunchPoint(Resources.GuidanceExtension_ActivateContextMenuName,

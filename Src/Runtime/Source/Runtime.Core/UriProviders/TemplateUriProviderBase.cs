@@ -3,9 +3,8 @@ using System.Globalization;
 using System.IO;
 using EnvDTE;
 using EnvDTE80;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio.Solution.Templates;
 
 namespace NuPattern.Runtime.UriProviders
 {
@@ -14,7 +13,7 @@ namespace NuPattern.Runtime.UriProviders
     /// </summary>
     /// <typeparam name="T">The type representing a template.</typeparam>
     [CLSCompliant(false)]
-    public abstract class TemplateUriProviderBase<T> : IFxrUriReferenceProvider<T>
+    public abstract class TemplateUriProviderBase<T> : IUriReferenceProvider<T>
     {
         private IServiceProvider serviceProvider;
 

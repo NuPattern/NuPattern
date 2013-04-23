@@ -3,12 +3,10 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Moq.Protected;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
@@ -17,6 +15,7 @@ using NuPattern.Runtime;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.Store;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.UnitTests.Commands
 {
@@ -35,7 +34,7 @@ namespace NuPattern.Library.UnitTests.Commands
             protected IElement Element { get; private set; }
             protected ISolution Solution { get; private set; }
             protected Mock<IPatternManager> PatternManager { get; private set; }
-            protected Mock<IFxrUriReferenceService> UriService { get; private set; }
+            protected Mock<IUriReferenceService> UriService { get; private set; }
             protected Mock<ITemplate> Template { get; private set; }
             protected Mock<TraceListener> Listener { get; private set; }
             protected GenerateProductCodeCommand Command { get; private set; }
@@ -77,7 +76,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 };
 
                 this.PatternManager = new Mock<IPatternManager>();
-                this.UriService = new Mock<IFxrUriReferenceService>();
+                this.UriService = new Mock<IUriReferenceService>();
                 this.Listener = new Mock<TraceListener>();
 
                 this.Command = new Mock<GenerateProductCodeCommand> { CallBase = true }.Object;

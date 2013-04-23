@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime.Settings;
 
 namespace NuPattern.Runtime.UnitTests.Settings

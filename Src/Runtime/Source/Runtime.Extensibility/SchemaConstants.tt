@@ -20,7 +20,7 @@ namespace NuPattern.Runtime
         /// <summary>
         /// Current DSL Version
         /// </summary>
-        public static readonly Version DslVersion = new Version("<#= this.DslVersion #>");
+        public static readonly Version DslVersion = new Version(@"<#= this.DslVersion #>");
 
         /// <summary>
         /// Current DSL version

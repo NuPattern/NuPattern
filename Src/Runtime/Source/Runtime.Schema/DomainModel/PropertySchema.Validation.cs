@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Bindings;
 using NuPattern.Runtime.Schema.Properties;
@@ -22,9 +22,9 @@ namespace NuPattern.Runtime.Schema
 
         private static readonly string[] ReservedDisplayNames = new[] 
         { 
-            "Name", // From the Display Name of the "Runtime.Store.ProductElement.InstanceName" property
-            "Notes", // From the Display Name of the "Runtime.Store.InstanceBase.Notes" property
-            "Related Items", // From the Display Name of the "Runtime.Store.ProductElement.References" property
+            @"Name", // From the Display Name of the "Runtime.Store.ProductElement.InstanceName" property
+            @"Notes", // From the Display Name of the "Runtime.Store.InstanceBase.Notes" property
+            @"Related Items", // From the Display Name of the "Runtime.Store.ProductElement.References" property
         };
 
         /// <summary>
@@ -203,7 +203,7 @@ namespace NuPattern.Runtime.Schema
                 {
                     context.LogError(
                         string.Format(CultureInfo.CurrentCulture, Properties.Resources.Validate_PropertyDisplayNameReserved, this.Name,
-                        string.Join(", ", ReservedDisplayNames)),
+                        string.Join(@", ", ReservedDisplayNames)),
                         Properties.Resources.Validate_PropertyDisplayNameReservedCode, this);
                 }
             }

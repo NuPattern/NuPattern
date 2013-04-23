@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Guidance;
 
 namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
 {
@@ -14,34 +14,26 @@ namespace NuPattern.Authoring.PatternToolkit.Guidance.Links
     [LaunchPoint(Id = "InstantiateHolToolkit")]
     public class InstantiateHolLink : GuidanceLinkBase
     {
+        internal const string CommandBindingName = "InstantiateHolCommandBinding";
+
         /// <summary>
-        /// Initializes a new instance of the InstantiateHol class.
+        /// Creates a new instance of the <see cref="InstantiateHolLink"/> class.
         /// </summary>
         [ImportingConstructor]
-        public InstantiateHolLink(IFeatureManager featureManager)
-            : base(featureManager, CommandBindingName)
+        public InstantiateHolLink(IGuidanceManager guidanceManager)
+            : base(guidanceManager, CommandBindingName)
         {
         }
 
         /// <summary>
-        /// Gets the binding name
+        /// Determines whether the link can be executed.
         /// </summary>
-        internal static string CommandBindingName
+        public override bool CanExecute(IGuidanceExtension extension)
         {
-            get
-            {
-                return "InstantiateHolCommandBinding";
-            }
-        }
+            Guard.NotNull(() => extension, extension);
 
-        /// <summary>
-        /// Determines if the link can execute
-        /// </summary>
-        public override bool CanExecute(IFeatureExtension feature)
-        {
-            Guard.NotNull(() => feature, feature);
-
-            return feature.FeatureManager.InstalledFeatures.Any(f => f.FeatureId.Equals(HandsOnLabsToolkitInfo.Identifier, StringComparison.OrdinalIgnoreCase));
+            return extension.GuidanceManager.InstalledGuidanceExtensions
+                .Any(f => f.ExtensionId.Equals(HandsOnLabsToolkitInfo.Identifier, StringComparison.OrdinalIgnoreCase));
         }
     }
 }

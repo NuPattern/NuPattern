@@ -1,12 +1,12 @@
 ﻿using System;
 using EnvDTE;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Commands;
 using NuPattern.Runtime;
 using NuPattern.Runtime.References;
 using NuPattern.Runtime.UI;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.UnitTests.Commands
 {
@@ -19,13 +19,13 @@ namespace NuPattern.Library.UnitTests.Commands
         public class GivenNoContext
         {
             private DeleteArtifactsCommand command;
-            private Mock<IFxrUriReferenceService> uriService;
+            private Mock<IUriReferenceService> uriService;
             private Mock<IProductElement> currentElement;
 
             [TestInitialize]
             public void InitializeContext()
             {
-                this.uriService = new Mock<IFxrUriReferenceService>();
+                this.uriService = new Mock<IUriReferenceService>();
                 this.currentElement = new Mock<IProductElement>();
                 this.command = new DeleteArtifactsCommand
                     {
@@ -66,7 +66,7 @@ namespace NuPattern.Library.UnitTests.Commands
         public class GivenASolutionFileAndDeleteAction
         {
             private DeleteArtifactsCommand command;
-            private Mock<IFxrUriReferenceService> uriService;
+            private Mock<IUriReferenceService> uriService;
             private Mock<IProductElement> currentElement;
             private Mock<IItem> solutionItem;
             private Mock<EnvDTE.ProjectItem> projectItem;
@@ -78,7 +78,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 this.solutionItem = new Mock<IItem>();
                 this.solutionItem.Setup(si => si.Name).Returns("foo.cs");
                 this.solutionItem.Setup(si => si.As<EnvDTE.ProjectItem>()).Returns(this.projectItem.Object);
-                this.uriService = new Mock<IFxrUriReferenceService>();
+                this.uriService = new Mock<IUriReferenceService>();
                 this.uriService.Setup(us => us.ResolveUri<IItemContainer>(It.IsAny<Uri>())).Returns(solutionItem.Object);
                 this.currentElement = new Mock<IProductElement>();
                 this.currentElement.Setup(ce => ce.References).Returns(new[] { Mock.Of<IReference>(re => re.Kind == typeof(SolutionArtifactLinkReference).FullName && re.Value == "solution://foo") });
@@ -108,7 +108,7 @@ namespace NuPattern.Library.UnitTests.Commands
         public class GivenASolutionFileAndPromptAction
         {
             private DeleteArtifactsCommand command;
-            private Mock<IFxrUriReferenceService> uriService;
+            private Mock<IUriReferenceService> uriService;
             private Mock<IProductElement> currentElement;
             private Mock<IItem> solutionItem;
             private Mock<EnvDTE.ProjectItem> projectItem;
@@ -123,7 +123,7 @@ namespace NuPattern.Library.UnitTests.Commands
                 this.solutionItem = new Mock<IItem>();
                 this.solutionItem.Setup(si => si.Name).Returns("foo.cs");
                 this.solutionItem.Setup(si => si.As<EnvDTE.ProjectItem>()).Returns(this.projectItem.Object);
-                this.uriService = new Mock<IFxrUriReferenceService>();
+                this.uriService = new Mock<IUriReferenceService>();
                 this.uriService.Setup(us => us.ResolveUri<IItemContainer>(It.IsAny<Uri>())).Returns(solutionItem.Object);
                 this.currentElement = new Mock<IProductElement>();
                 this.currentElement.Setup(ce => ce.References).Returns(new[] { Mock.Of<IReference>(re => re.Kind == typeof(SolutionArtifactLinkReference).FullName && re.Value == "solution://foo") });

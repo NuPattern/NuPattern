@@ -9,10 +9,8 @@ using System.Windows;
 using System.Windows.Input;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Presentation;
 using NuPattern.Runtime;
@@ -26,11 +24,11 @@ namespace NuPattern.Library.Commands
     /// <summary>
     /// Deletes the linked artifacts associated to current element from the solution.
     /// </summary>
-    [DisplayNameResource("DeleteArtifactsCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("DeleteArtifactsCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"DeleteArtifactsCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"DeleteArtifactsCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     [CLSCompliant(false)]
-    public class DeleteArtifactsCommand : FeatureCommand
+    public class DeleteArtifactsCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<DeleteArtifactsCommand>();
         private ISolutionSelector selector;
@@ -55,7 +53,7 @@ namespace NuPattern.Library.Commands
         /// </summary>
         [Required]
         [Import(AllowDefault = true)]
-        public IFxrUriReferenceService UriReferenceService { get; set; }
+        public IUriReferenceService UriReferenceService { get; set; }
 
         /// <summary>
         /// Gets or sets the solution.
@@ -76,8 +74,8 @@ namespace NuPattern.Library.Commands
         [Required]
         [DesignOnly(true)]
         [DefaultValue(DeleteAction.DeleteAll)]
-        [DisplayNameResource("DeleteArtifactsCommand_Action_DisplayName", typeof(Resources))]
-        [DescriptionResource("DeleteArtifactsCommand_Action_Description", typeof(Resources))]
+        [DisplayNameResource(@"DeleteArtifactsCommand_Action_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"DeleteArtifactsCommand_Action_Description", typeof(Resources))]
         public DeleteAction Action { get; set; }
 
         /// <summary>

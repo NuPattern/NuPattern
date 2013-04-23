@@ -4,12 +4,13 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Authoring;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Library.Automation
 {
@@ -47,7 +48,7 @@ namespace NuPattern.Library.Automation
         /// Initializes a new instance of the <see cref="CommandSettingsValidations"/> class.
         /// </summary>
         [ImportingConstructor]
-        public CommandSettingsValidations(IFeatureCompositionService composition)
+        public CommandSettingsValidations(INuPatternCompositionService composition)
         {
             Guard.NotNull(() => composition, composition);
 
@@ -55,8 +56,8 @@ namespace NuPattern.Library.Automation
             // TODO: this could be refactored into a separate global service.
             if (ValueProviders == null || Commands == null || Validators == null)
             {
-                var valueProviders = composition.GetExports<IValueProvider, IFeatureComponentMetadata>();
-                var commands = composition.GetExports<IFeatureCommand, IFeatureComponentMetadata>();
+                var valueProviders = composition.GetExports<IValueProvider, IComponentMetadata>();
+                var commands = composition.GetExports<ICommand, IComponentMetadata>();
                 var validators = composition.GetExports<ICommandValidationRule, ICommandValidationRuleMetadata>();
 
                 ValueProviders = valueProviders.ToLookup(item => item.Metadata.Id, item => item.Metadata.ExportingType);

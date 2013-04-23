@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDFC13.A5A14440"
+Content-Type: multipart/related; boundary="----=_NextPart_01CE3FB8.BF0A51E0"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDFC13.A5A14440
+------=_NextPart_01CE3FB8.BF0A51E0
 Content-Location: file:///C:/A15C3D13/HowToCreatingYourOwnValidationRules.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -33,12 +33,12 @@ w\:* {behavior:url(#default#VML);}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:DocumentProperties>
-  <o:Author>Jezz Santos</o:Author>
-  <o:LastAuthor>Jezz Santos</o:LastAuthor>
+  <o:Author>Jezz</o:Author>
+  <o:LastAuthor>Jezz</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2013-01-26T09:22:00Z</o:Created>
-  <o:LastSaved>2013-01-26T09:22:00Z</o:LastSaved>
+  <o:Created>2013-04-22T12:23:00Z</o:Created>
+  <o:LastSaved>2013-04-22T12:23:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>200</o:Words>
   <o:Characters>1142</o:Characters>
@@ -65,7 +65,7 @@ href=3D"HowToCreatingYourOwnValidationRules_files/colorschememapping.xml">
   <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
   <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
   <w:DoNotPromoteQF/>
-  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeOther>EN-NZ</w:LidThemeOther>
   <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
   <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
   <w:Compatibility>
@@ -398,10 +398,10 @@ n"/>
 	{mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:"";
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
@@ -410,7 +410,9 @@ n"/>
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 h1
 	{mso-style-priority:9;
 	mso-style-unhide:no;
@@ -418,9 +420,9 @@ h1
 	mso-style-link:"Heading 1 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -437,6 +439,8 @@ h1
 	mso-themecolor:background2;
 	mso-themeshade:26;
 	mso-font-kerning:0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;}
 h2
 	{mso-style-priority:9;
@@ -444,9 +448,9 @@ h2
 	mso-style-link:"Heading 2 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -462,6 +466,8 @@ h2
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;}
 h3
 	{mso-style-priority:9;
@@ -469,9 +475,9 @@ h3
 	mso-style-link:"Heading 3 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -487,6 +493,8 @@ h3
 	color:#4A442A;
 	mso-themecolor:background2;
 	mso-themeshade:64;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;}
 h4
 	{mso-style-priority:9;
@@ -494,9 +502,9 @@ h4
 	mso-style-link:"Heading 4 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -512,6 +520,8 @@ h4
 	color:#948A54;
 	mso-themecolor:background2;
 	mso-themeshade:128;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;
 	font-style:italic;}
 h5
@@ -520,9 +530,9 @@ h5
 	mso-style-link:"Heading 5 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -538,6 +548,8 @@ h5
 	color:#17365D;
 	mso-themecolor:text2;
 	mso-themeshade:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;
 	mso-bidi-font-weight:normal;}
 h6
@@ -546,9 +558,9 @@ h6
 	mso-style-link:"Heading 6 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -564,6 +576,8 @@ h6
 	color:#548DD4;
 	mso-themecolor:text2;
 	mso-themetint:153;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:normal;
 	font-style:italic;}
 p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
@@ -573,9 +587,9 @@ p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
 	mso-style-link:"Heading 7 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -595,6 +609,8 @@ p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-style:italic;}
 p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	{mso-style-noshow:yes;
@@ -603,9 +619,9 @@ p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	mso-style-link:"Heading 8 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -623,7 +639,9 @@ p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	mso-bidi-theme-font:major-bidi;
 	color:#404040;
 	mso-themecolor:text1;
-	mso-themetint:191;}
+	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	{mso-style-noshow:yes;
 	mso-style-priority:9;
@@ -631,9 +649,9 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	mso-style-link:"Heading 9 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -652,15 +670,17 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-style:italic;}
 p.MsoToc1, li.MsoToc1, div.MsoToc1
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
@@ -669,13 +689,15 @@ p.MsoToc1, li.MsoToc1, div.MsoToc1
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc2, li.MsoToc2, div.MsoToc2
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:11.0pt;
 	line-height:115%;
@@ -686,13 +708,15 @@ p.MsoToc2, li.MsoToc2, div.MsoToc2
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc3, li.MsoToc3, div.MsoToc3
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:22.0pt;
 	line-height:115%;
@@ -703,13 +727,15 @@ p.MsoToc3, li.MsoToc3, div.MsoToc3
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc4, li.MsoToc4, div.MsoToc4
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:27.0pt;
 	line-height:115%;
@@ -720,13 +746,15 @@ p.MsoToc4, li.MsoToc4, div.MsoToc4
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc5, li.MsoToc5, div.MsoToc5
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:44.0pt;
 	line-height:115%;
@@ -740,13 +768,15 @@ p.MsoToc5, li.MsoToc5, div.MsoToc5
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc6, li.MsoToc6, div.MsoToc6
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:55.0pt;
 	line-height:115%;
@@ -760,13 +790,15 @@ p.MsoToc6, li.MsoToc6, div.MsoToc6
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc7, li.MsoToc7, div.MsoToc7
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:66.0pt;
 	line-height:115%;
@@ -780,13 +812,15 @@ p.MsoToc7, li.MsoToc7, div.MsoToc7
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc8, li.MsoToc8, div.MsoToc8
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:77.0pt;
 	line-height:115%;
@@ -800,13 +834,15 @@ p.MsoToc8, li.MsoToc8, div.MsoToc8
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc9, li.MsoToc9, div.MsoToc9
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:88.0pt;
 	line-height:115%;
@@ -820,106 +856,116 @@ p.MsoToc9, li.MsoToc9, div.MsoToc9
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
 	{mso-style-priority:99;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.25in;
+	margin-left:18.0pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpFirst, li.MsoListBulletCxSpFirst, div.MsoListBulletCxSpF=
 irst
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.25in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpMiddle, li.MsoListBulletCxSpMiddle, div.MsoListBulletCxS=
 pMiddle
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.25in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpLast, li.MsoListBulletCxSpLast, div.MsoListBulletCxSpLast
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.25in;
+	margin-left:18.0pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitle, li.MsoTitle, div.MsoTitle
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:15.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -931,22 +977,24 @@ p.MsoTitle, li.MsoTitle, div.MsoTitle
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -958,22 +1006,24 @@ p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -985,24 +1035,26 @@ p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:15.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -1014,7 +1066,9 @@ p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 a:link, span.MsoHyperlink
 	{mso-style-priority:99;
 	color:blue;
@@ -1032,55 +1086,63 @@ p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-link:"Document Map Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
 	mso-bidi-font-size:8.0pt;
 	font-family:"Tahoma","sans-serif";
 	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;}
+	mso-fareast-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:3.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Segoe UI","sans-serif";
-	mso-fareast-font-family:"Times New Roman";}
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 pre
 	{mso-style-priority:99;
 	mso-style-link:"HTML Preformatted Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 41=
 2.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
 	font-size:10.0pt;
 	font-family:"Courier New";
-	mso-fareast-font-family:"Times New Roman";}
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-link:"Balloon Text Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
 	mso-bidi-font-size:8.0pt;
 	font-family:"Tahoma","sans-serif";
 	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;}
+	mso-fareast-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	{mso-style-priority:34;
 	mso-style-unhide:no;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.5in;
+	margin-left:36.0pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1090,16 +1152,18 @@ p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParag=
 raphCxSpFirst
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1110,16 +1174,18 @@ raphCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListPar=
 agraphCxSpMiddle
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1130,16 +1196,18 @@ agraphCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagra=
 phCxSpLast
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.5in;
+	margin-left:36.0pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1149,7 +1217,9 @@ phCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	{mso-style-noshow:yes;
 	mso-style-priority:39;
@@ -1157,9 +1227,9 @@ p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	mso-style-parent:"Heading 1";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
@@ -1173,6 +1243,7 @@ p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	color:#1D1B11;
 	mso-themecolor:background2;
 	mso-themeshade:26;
+	mso-ansi-language:EN-US;
 	mso-fareast-language:JA;
 	font-weight:bold;}
 span.Heading1Char
@@ -1193,6 +1264,7 @@ span.Heading1Char
 	color:#1D1B11;
 	mso-themecolor:background2;
 	mso-themeshade:26;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading2Char
 	{mso-style-name:"Heading 2 Char";
@@ -1211,6 +1283,7 @@ span.Heading2Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading3Char
 	{mso-style-name:"Heading 3 Char";
@@ -1229,6 +1302,7 @@ span.Heading3Char
 	color:#4A442A;
 	mso-themecolor:background2;
 	mso-themeshade:64;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading4Char
 	{mso-style-name:"Heading 4 Char";
@@ -1247,6 +1321,7 @@ span.Heading4Char
 	color:#948A54;
 	mso-themecolor:background2;
 	mso-themeshade:128;
+	mso-ansi-language:EN-US;
 	font-weight:bold;
 	font-style:italic;}
 span.Heading5Char
@@ -1266,6 +1341,7 @@ span.Heading5Char
 	color:#17365D;
 	mso-themecolor:text2;
 	mso-themeshade:191;
+	mso-ansi-language:EN-US;
 	font-weight:bold;
 	mso-bidi-font-weight:normal;}
 span.Heading6Char
@@ -1285,6 +1361,7 @@ span.Heading6Char
 	color:#548DD4;
 	mso-themecolor:text2;
 	mso-themetint:153;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.Heading7Char
 	{mso-style-name:"Heading 7 Char";
@@ -1306,6 +1383,7 @@ span.Heading7Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.Heading8Char
 	{mso-style-name:"Heading 8 Char";
@@ -1327,7 +1405,8 @@ span.Heading8Char
 	mso-bidi-theme-font:major-bidi;
 	color:#404040;
 	mso-themecolor:text1;
-	mso-themetint:191;}
+	mso-themetint:191;
+	mso-ansi-language:EN-US;}
 span.Heading9Char
 	{mso-style-name:"Heading 9 Char";
 	mso-style-noshow:yes;
@@ -1349,6 +1428,7 @@ span.Heading9Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.TitleChar
 	{mso-style-name:"Title Char";
@@ -1369,7 +1449,8 @@ span.TitleChar
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;}
 span.BalloonTextChar
 	{mso-style-name:"Balloon Text Char";
 	mso-style-noshow:yes;
@@ -1382,15 +1463,16 @@ span.BalloonTextChar
 	font-family:"Tahoma","sans-serif";
 	mso-ascii-font-family:Tahoma;
 	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;}
+	mso-bidi-font-family:Tahoma;
+	mso-ansi-language:EN-US;}
 p.SourceCode, li.SourceCode, div.SourceCode
 	{mso-style-name:"Source Code";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	margin-top:12.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:12.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1403,16 +1485,18 @@ p.SourceCode, li.SourceCode, div.SourceCode
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
 	{mso-style-name:"Source CodeCxSpFirst";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
 	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1426,13 +1510,15 @@ p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.SourceCodeCxSpMiddle, li.SourceCodeCxSpMiddle, div.SourceCodeCxSpMiddle
 	{mso-style-name:"Source CodeCxSpMiddle";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1446,16 +1532,18 @@ p.SourceCodeCxSpMiddle, li.SourceCodeCxSpMiddle, div.SourceCodeCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.SourceCodeCxSpLast, li.SourceCodeCxSpLast, div.SourceCodeCxSpLast
 	{mso-style-name:"Source CodeCxSpLast";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:12.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1468,7 +1556,9 @@ p.SourceCodeCxSpLast, li.SourceCodeCxSpLast, div.SourceCodeCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.HTMLPreformattedChar
 	{mso-style-name:"HTML Preformatted Char";
 	mso-style-priority:99;
@@ -1481,7 +1571,8 @@ span.HTMLPreformattedChar
 	mso-ascii-font-family:"Courier New";
 	mso-fareast-font-family:"Times New Roman";
 	mso-hansi-font-family:"Courier New";
-	mso-bidi-font-family:"Courier New";}
+	mso-bidi-font-family:"Courier New";
+	mso-ansi-language:EN-US;}
 span.DocumentMapChar
 	{mso-style-name:"Document Map Char";
 	mso-style-noshow:yes;
@@ -1494,23 +1585,24 @@ span.DocumentMapChar
 	font-family:"Tahoma","sans-serif";
 	mso-ascii-font-family:Tahoma;
 	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;}
+	mso-bidi-font-family:Tahoma;
+	mso-ansi-language:EN-US;}
 p.Note, li.Note, div.Note
 	{mso-style-name:Note;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1519,17 +1611,19 @@ p.Note, li.Note, div.Note
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	{mso-style-name:NoteCxSpFirst;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1537,7 +1631,7 @@ p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1546,17 +1640,19 @@ p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	{mso-style-name:NoteCxSpMiddle;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1564,7 +1660,7 @@ p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1573,24 +1669,26 @@ p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
 	{mso-style-name:NoteCxSpLast;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1599,7 +1697,9 @@ p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.NoteChar
 	{mso-style-name:"Note Char";
 	mso-style-unhide:no;
@@ -1609,23 +1709,24 @@ span.NoteChar
 	font-family:"Segoe UI","sans-serif";
 	mso-ascii-font-family:"Segoe UI";
 	mso-hansi-font-family:"Segoe UI";
-	background:#FFFFCC;}
+	background:#FFFFCC;
+	mso-ansi-language:EN-US;}
 p.MissingContent, li.MissingContent, div.MissingContent
 	{mso-style-name:"Missing Content";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Missing Content Char";
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
 	background:#FFFF66;
 	border:none;
 	mso-border-alt:solid yellow 6.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:24.0pt 4.0pt 24.0pt 4.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
@@ -1636,7 +1737,9 @@ p.MissingContent, li.MissingContent, div.MissingContent
 	mso-bidi-theme-font:minor-bidi;
 	color:#A6A6A6;
 	mso-themecolor:background1;
-	mso-themeshade:166;}
+	mso-themeshade:166;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.MissingContentChar
 	{mso-style-name:"Missing Content Char";
 	mso-style-unhide:no;
@@ -1649,17 +1752,18 @@ span.MissingContentChar
 	color:#A6A6A6;
 	mso-themecolor:background1;
 	mso-themeshade:166;
-	background:#FFFF66;}
+	background:#FFFF66;
+	mso-ansi-language:EN-US;}
 p.Warning, li.Warning, div.Warning
 	{mso-style-name:Warning;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1668,7 +1772,7 @@ p.Warning, li.Warning, div.Warning
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1677,7 +1781,9 @@ p.Warning, li.Warning, div.Warning
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	{mso-style-name:WarningCxSpFirst;
 	mso-style-unhide:no;
@@ -1685,10 +1791,10 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1698,7 +1804,7 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1707,7 +1813,9 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	{mso-style-name:WarningCxSpMiddle;
 	mso-style-unhide:no;
@@ -1715,10 +1823,10 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1728,7 +1836,7 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1737,7 +1845,9 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	{mso-style-name:WarningCxSpLast;
 	mso-style-unhide:no;
@@ -1745,10 +1855,10 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1757,7 +1867,7 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1766,7 +1876,9 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.WarningChar
 	{mso-style-name:"Warning Char";
 	mso-style-unhide:no;
@@ -1779,17 +1891,18 @@ span.WarningChar
 	mso-hansi-font-family:"Segoe UI";
 	background:#F2DBDB;
 	mso-shading-themecolor:accent2;
-	mso-shading-themetint:51;}
+	mso-shading-themetint:51;
+	mso-ansi-language:EN-US;}
 p.Tip, li.Tip, div.Tip
 	{mso-style-name:Tip;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1798,7 +1911,7 @@ p.Tip, li.Tip, div.Tip
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1807,7 +1920,9 @@ p.Tip, li.Tip, div.Tip
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	{mso-style-name:TipCxSpFirst;
 	mso-style-unhide:no;
@@ -1815,10 +1930,10 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1828,7 +1943,7 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1837,7 +1952,9 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	{mso-style-name:TipCxSpMiddle;
 	mso-style-unhide:no;
@@ -1845,10 +1962,10 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1858,7 +1975,7 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1867,7 +1984,9 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	{mso-style-name:TipCxSpLast;
 	mso-style-unhide:no;
@@ -1875,10 +1994,10 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1887,7 +2006,7 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1896,7 +2015,9 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.TipChar
 	{mso-style-name:"Tip Char";
 	mso-style-unhide:no;
@@ -1909,7 +2030,8 @@ span.TipChar
 	mso-hansi-font-family:"Segoe UI";
 	background:#D6E3BC;
 	mso-shading-themecolor:accent3;
-	mso-shading-themetint:102;}
+	mso-shading-themetint:102;
+	mso-ansi-language:EN-US;}
 span.parameter
 	{mso-style-name:parameter;
 	mso-style-unhide:no;}
@@ -1919,10 +2041,10 @@ p.Recommend, li.Recommend, div.Recommend
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1931,7 +2053,7 @@ p.Recommend, li.Recommend, div.Recommend
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1940,7 +2062,9 @@ p.Recommend, li.Recommend, div.Recommend
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	{mso-style-name:RecommendCxSpFirst;
 	mso-style-unhide:no;
@@ -1948,10 +2072,10 @@ p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1961,7 +2085,7 @@ p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1970,7 +2094,9 @@ p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	{mso-style-name:RecommendCxSpMiddle;
 	mso-style-unhide:no;
@@ -1978,10 +2104,10 @@ p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1991,7 +2117,7 @@ p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -2000,7 +2126,9 @@ p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	{mso-style-name:RecommendCxSpLast;
 	mso-style-unhide:no;
@@ -2008,10 +2136,10 @@ p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -2020,7 +2148,7 @@ p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -2029,7 +2157,9 @@ p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.RecommendChar
 	{mso-style-name:"Recommend Char";
 	mso-style-unhide:no;
@@ -2042,7 +2172,8 @@ span.RecommendChar
 	mso-hansi-font-family:"Segoe UI";
 	background:#D6E3BC;
 	mso-shading-themecolor:accent3;
-	mso-shading-themetint:102;}
+	mso-shading-themetint:102;
+	mso-ansi-language:EN-US;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -2054,16 +2185,17 @@ span.RecommendChar
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
 .MsoPapDefault
 	{mso-style-type:export-only;
 	margin-bottom:10.0pt;
 	line-height:115%;}
 @page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;
-	mso-header-margin:.5in;
-	mso-footer-margin:.5in;
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
 	mso-paper-source:0;}
 div.WordSection1
 	{page:WordSection1;}
@@ -2076,15 +2208,15 @@ div.WordSection1
 	{mso-level-number-format:bullet;
 	mso-level-style-link:"List Bullet";
 	mso-level-text:\F0B7;
-	mso-level-tab-stop:.25in;
+	mso-level-tab-stop:18.0pt;
 	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 ol
-	{margin-bottom:0in;}
+	{margin-bottom:0cm;}
 ul
-	{margin-bottom:0in;}
+	{margin-bottom:0cm;}
 -->
 </style>
 <!--[if gte mso 10]>
@@ -2097,11 +2229,11 @@ ul
 	mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-parent:"";
-	mso-padding-alt:0in 5.4pt 0in 5.4pt;
-	mso-para-margin-top:0in;
-	mso-para-margin-right:0in;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
 	mso-para-margin-bottom:10.0pt;
-	mso-para-margin-left:0in;
+	mso-para-margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:11.0pt;
@@ -2109,7 +2241,8 @@ ul
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;}
+	mso-hansi-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
 table.MsoTableGrid
 	{mso-style-name:"Table Grid";
 	mso-tstyle-rowband-size:0;
@@ -2118,10 +2251,10 @@ table.MsoTableGrid
 	mso-style-unhide:no;
 	border:solid windowtext 1.0pt;
 	mso-border-alt:solid windowtext .5pt;
-	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
 	mso-border-insideh:.5pt solid windowtext;
 	mso-border-insidev:.5pt solid windowtext;
-	mso-para-margin:0in;
+	mso-para-margin:0cm;
 	mso-para-margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:11.0pt;
@@ -2129,7 +2262,9 @@ table.MsoTableGrid
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;}
+	mso-hansi-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026"/>
@@ -2139,42 +2274,42 @@ table.MsoTableGrid
  </o:shapelayout></xml><![endif]-->
 </head>
 
-<body lang=3DEN-US link=3Dblue vlink=3Dpurple style=3D'tab-interval:.5in'>
+<body lang=3DEN-NZ link=3Dblue vlink=3Dpurple style=3D'tab-interval:36.0pt'>
 
 <div class=3DWordSection1>
 
-<h4 style=3D'page-break-before:auto'>How To: Creating Your Own Validation R=
-ules<o:p></o:p></h4>
+<h4 style=3D'page-break-before:auto'><span lang=3DEN-US>How To: Creating Yo=
+ur Own
+Validation Rules<o:p></o:p></span></h4>
 
-<p class=3DMsoNormal><a name=3D"_HowTo:_Create_Your_8"></a>You can create y=
-our own
-custom validation rules, by adding a new ‘Element Validation Rule’ or ‘Prop=
-erty
-Validation Rule’ to your pattern toolkit project, and implementing the class
-defined within. <o:p></o:p></p>
+<p class=3DMsoNormal><a name=3D"_HowTo:_Create_Your_8"></a><span lang=3DEN-=
+US>You can
+create your own custom validation rules, by adding a new ‘Element Validation
+Rule’ or ‘Property Validation Rule’ to your pattern toolkit project, and
+implementing the class defined within. <o:p></o:p></span></p>
 
-<p class=3DMsoNormal>An ‘Element Validation Rule’ is intended for validating
-elements, and their attributes (i.e. configuration, relationships, cardinal=
-ity,
-etc.)<o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>An ‘Element Validation Rule’ is int=
+ended
+for validating elements, and their attributes (i.e. configuration,
+relationships, cardinality, etc.)<o:p></o:p></span></p>
 
-<p class=3DMsoNormal>A ‘Property Validation Rule’ is intended for validating
-individual variable properties of an element in the pattern model (i.e. inp=
-ut
-validation, bounds checking etc.). <o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>A ‘Property Validation Rule’ is int=
+ended
+for validating individual variable properties of an element in the pattern
+model (i.e. input validation, bounds checking etc.). <o:p></o:p></span></p>
 
-<h5>Create the Validation Rule<o:p></o:p></h5>
+<h5><span lang=3DEN-US>Create the Validation Rule<o:p></o:p></span></h5>
 
-<p class=3DMsoNormal>In your pattern toolkit project, in ‘Solution Builder’=
-, add
-a new ‘Element Validation Rule’ or a new ‘Property Validation Rule’<o:p></o=
-:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>In your pattern toolkit project, in
+‘Solution Builder’, add a new ‘Element Validation Rule’ or a new ‘Property
+Validation Rule’<o:p></o:p></span></p>
 
-<p class=3DMsoNormal><span style=3D'mso-no-proof:yes'><!--[if gte vml 1]><v=
-:shapetype
- id=3D"_x0000_t75" coordsize=3D"21600,21600" o:spt=3D"75" o:preferrelative=
-=3D"t"
- path=3D"m@4@5l@4@11@9@11@9@5xe" filled=3D"f" stroked=3D"f">
+<p class=3DMsoNormal><span style=3D'mso-ansi-language:EN-NZ;mso-fareast-lan=
+guage:
+EN-NZ;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id=3D"_x0000_t75"
+ coordsize=3D"21600,21600" o:spt=3D"75" o:preferrelative=3D"t" path=3D"m@4@=
+5l@4@11@9@11@9@5xe"
+ filled=3D"f" stroked=3D"f">
  <v:stroke joinstyle=3D"miter"/>
  <v:formulas>
   <v:f eqn=3D"if lineDrawn pixelLineWidth 0"/>
@@ -2200,46 +2335,48 @@ quare'>
   o:title=3D""/>
 </v:shape><![endif]--><![if !vml]><img width=3D302 height=3D161
 src=3D"HowToCreatingYourOwnValidationRules_files/image002.jpg" v:shapes=3D"=
-Picture_x0020_88"><![endif]></span><o:p></o:p></p>
+Picture_x0020_88"><![endif]></span><span
+lang=3DEN-US><o:p></o:p></span></p>
 
-<h5>Implement the Validation Rule<o:p></o:p></h5>
+<h5><span lang=3DEN-US>Implement the Validation Rule<o:p></o:p></span></h5>
 
-<p class=3DMsoNormal>Follow guidelines in the code provided.<o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>Follow guidelines in the code provi=
+ded.<o:p></o:p></span></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#D6E3BC;
 mso-background-themecolor:accent3;mso-background-themetint:102;margin-left:
-.4in;margin-right:.4in'>
+28.8pt;margin-right:28.8pt'>
 
-<p class=3DTipCxSpFirst style=3D'margin-top:0in;margin-right:0in;margin-bot=
+<p class=3DTipCxSpFirst style=3D'margin-top:0cm;margin-right:0cm;margin-bot=
 tom:
-10.0pt;margin-left:0in;mso-add-space:auto;background:#D6E3BC;mso-background=
+10.0pt;margin-left:0cm;mso-add-space:auto;background:#D6E3BC;mso-background=
 -themecolor:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
-al'>Recommend</b>:
-See the <a
+al'><span
+lang=3DEN-US>Recommend</span></b><span lang=3DEN-US>: See the <a
 href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToNamingYourOwnAutomationClasses.mht">Naming
 Custom Automation Classes</a> topic for guidelines on naming and preparing =
 your
-class for integration into a toolkit.<o:p></o:p></p>
+class for integration into a toolkit.<o:p></o:p></span></p>
 
-<p class=3DTipCxSpLast style=3D'margin-top:0in;margin-right:0in;margin-bott=
+<p class=3DTipCxSpLast style=3D'margin-top:0cm;margin-right:0cm;margin-bott=
 om:10.0pt;
-margin-left:0in;mso-add-space:auto;background:#D6E3BC;mso-background-themec=
+margin-left:0cm;mso-add-space:auto;background:#D6E3BC;mso-background-themec=
 olor:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
-al'>Recommend</b>:
-See <a
+al'><span
+lang=3DEN-US>Recommend</span></b><span lang=3DEN-US>: See <a
 href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToImplementingYourOwnAutomationClass.mht">Implementing
 Your Automation Own Automation Class</a> topic for adding properties, impor=
 ting
-services and navigating the pattern model.<o:p></o:p></p>
+services and navigating the pattern model.<o:p></o:p></span></p>
 
 </div>
 
-<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p>
 
 </div>
 
@@ -2247,7 +2384,7 @@ services and navigating the pattern model.<o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CDFC13.A5A14440
+------=_NextPart_01CE3FB8.BF0A51E0
 Content-Location: file:///C:/A15C3D13/HowToCreatingYourOwnValidationRules_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2308,7 +2445,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDFC13.A5A14440
+------=_NextPart_01CE3FB8.BF0A51E0
 Content-Location: file:///C:/A15C3D13/HowToCreatingYourOwnValidationRules_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2318,7 +2455,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDFC13.A5A14440
+------=_NextPart_01CE3FB8.BF0A51E0
 Content-Location: file:///C:/A15C3D13/HowToCreatingYourOwnValidationRules_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -2865,7 +3002,7 @@ mYlP/JOxGafufVg9MYw4CNIG2lIXwidsbCT5peS7ZJK0R3pXbwloR5gah1+wkVZUSZfNk8wMIv3x
 SNIOM7hhQREBExAwWxfiykmGMuIgIA5taSOFatjYEE9XsnQu7KaXhPgRLzfi5CgdO5IsnkP+975k
 3nRUhCaMLBgVEej0COB8Ic4XWqgN/D8YX2CElQ+6dAAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDFC13.A5A14440
+------=_NextPart_01CE3FB8.BF0A51E0
 Content-Location: file:///C:/A15C3D13/HowToCreatingYourOwnValidationRules_files/image002.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -2881,121 +3018,121 @@ AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
 BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
 U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
 uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDv21u9
-tLuaBLV50Em2MohVEXHCj5eW+vy8dR0qI+JNS2Qxiwk3hf37FGHO0kbeMZJA+mcVTudelg1BLTf8
-zY5ZsD/P86tx6k8sCypLIFbHyuMMp9CO1c8aVRy5VJXKc4rdFmHxDeyzop0x1jMm12LMCo3KP7vJ
-G7J7YBwTVeHxBqME10Li0mmQTMkW2MjHzEAcDnIwc/rzgF1eT2mpJZSS7pHiMoZGyAAQMH35py3c
-xi8xpiigAsWzgZ6dAav6vW7oPaQ7ELeJNViVT/Z0shBZiuwgsu04GQMDBAyevPArZ03VJ7y3aS4t
-vIIbaq7icjA55A7n9KzjPcCTYZG3ZC49z/8ArpBczEEiYkBynGev4gce9J0Kz6oPaQ7G79p9jR9p
-9jXMXesPaWjTO7sQhcICAWx9afa6lPcpuyyjAIyeeaj2NW/LzK4/aQ3sdJ9p9jR9p9jWF9pm/wCe
-rUfaZv8Anq1P6vW/mQe0h2N37T7Gj7T7GsL7TN/z1aj7TN/z1aj6vW/mQe0h2N37T7Gj7T7GsL7T
-N/z1aj7TN/z1aj6vW/mQe0h2N37T7Gj7T7GsL7TN/wA9Wo+0zf8APVqPq9b+ZB7SHY3ftPsaPtPs
-awvtM3/PVqPtM3/PVqPq9b+ZB7SHY3ftPsaPtPsawvtM3/PVqPtM3/PVqPq9b+ZB7SHY3ftPsaPt
-PsawvtM3/PVqPtM3/PVqPq9b+ZB7SHY1pbq7+1wiFITbHPmlid49MDoaguLq7/ta1EW77MQTIMjB
-GD+Oclf1qh9pm/56tR9pm/56tR9XrfzIXtIdjQkvb0akiIhNoSN77RkH0HqPU9v5eGeIsDxLqm0A
-D7VJgDt8xr2MXM2f9a1eM64S2v6gTyTcyZ/76NdOGpzg3zO5nUlGS0KNFFFdhiFFFFABRRRQAUUU
-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
+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
+CiiigAooooAKKKKACiiigApDRRQB/9k=
 
-------=_NextPart_01CDFC13.A5A14440
+------=_NextPart_01CE3FB8.BF0A51E0
 Content-Location: file:///C:/A15C3D13/HowToCreatingYourOwnValidationRules_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -3008,4 +3145,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image002.jpg"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDFC13.A5A14440--
+------=_NextPart_01CE3FB8.BF0A51E0--

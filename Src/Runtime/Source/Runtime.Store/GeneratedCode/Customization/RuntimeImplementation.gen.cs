@@ -14,8 +14,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using NuPattern.ComponentModel;
+using NuPattern.Modeling;
+using NuPattern.Runtime.Store.Properties;
 
 namespace NuPattern.Runtime.Store
 { 
@@ -82,7 +83,7 @@ namespace NuPattern.Runtime.Store
         /// </summary>
         public IProduct CreateProduct(Action<IProduct> initializer = null)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.ProductState_TransactionDescriptionCreate, this.IsSerializing))
             using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
             {
                 var instance = this.Create<Product>();
@@ -304,7 +305,7 @@ namespace NuPattern.Runtime.Store
         /// </summary>
         public IProperty CreateProperty(Action<IProperty> initializer = null)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.ProductState_TransactionDescriptionCreate, this.IsSerializing))
             using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
             {
                 var instance = this.Create<Property>();
@@ -334,7 +335,7 @@ namespace NuPattern.Runtime.Store
         /// </summary>
         public IReference CreateReference(Action<IReference> initializer = null)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.ProductState_TransactionDescriptionCreate, this.IsSerializing))
             using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
             {
                 var instance = this.Create<Reference>();
@@ -405,7 +406,7 @@ namespace NuPattern.Runtime.Store
         /// </summary>
         public IView CreateView(Action<IView> initializer = null)
         {
-            using (var tx = this.Store.TransactionManager.BeginTransaction("InnerTx", this.IsSerializing))
+            using (var tx = this.Store.TransactionManager.BeginTransaction(Resources.ProductState_TransactionDescriptionCreate, this.IsSerializing))
             using (new StorePropertyBag(this.Store, ProductState.IsCreatingElementKey, true))
             {
                 var instance = this.Create<View>();

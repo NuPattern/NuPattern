@@ -4,11 +4,10 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using EnvDTE;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using Microsoft.VisualStudio.TemplateWizard;
+using NuPattern.Diagnostics;
 using NuPattern.VisualStudio.Properties;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.VisualStudio.TemplateWizards
 {
@@ -90,7 +89,7 @@ namespace NuPattern.VisualStudio.TemplateWizards
 
             var dte = (automationObject as DTE);
 
-            if (!replacementsDictionary.TryGetValue("$patterndefinition$", out this.designerFileName))
+            if (!replacementsDictionary.TryGetValue(@"$patterndefinition$", out this.designerFileName))
                 tracer.TraceWarning(Resources.OpenDesignerTemplateWizard_DesignerItemNotFound);
 
             using (var serviceProvider = new ServiceProvider((Microsoft.VisualStudio.OLE.Interop.IServiceProvider)dte))

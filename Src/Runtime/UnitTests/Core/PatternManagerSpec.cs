@@ -4,7 +4,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.Store;
@@ -23,37 +22,43 @@ namespace NuPattern.Runtime.UnitTests
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithNullServiceProvider_ThenThrowsArgumentNullException()
             {
-                Assert.Throws<ArgumentNullException>(() => new PatternManager(null, Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
+                Assert.Throws<ArgumentNullException>(() => new PatternManager(null, Mock.Of<ISolution>(), Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
             }
 
             [TestMethod, TestCategory("Unit")]
-            public void WhenCreatingWithNullSolutionEvents_ThenThrowsArgumentNullException()
+            public void WhenCreatingWithNullSolution_ThenThrowsArgumentNullException()
             {
-                Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<IShellEvents>(), null, Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
+                Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), null, Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithNullShellEvents_ThenThrowsArgumentNullException()
             {
-                Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), null, Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
+                Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<ISolution>(), null, Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
+            }
+
+            [TestMethod, TestCategory("Unit")]
+            public void WhenCreatingWithNullSolutionEvents_ThenThrowsArgumentNullException()
+            {
+                Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<ISolution>(), Mock.Of<IShellEvents>(), null, Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithNullItemEvents_ThenThrowsArgumentNullException()
             {
-                Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), null, Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
+                Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<ISolution>(), Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), null, Enumerable.Empty<IInstalledToolkitInfo>(), Mock.Of<IUserMessageService>()));
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithNullInstalledFactories_ThenThrowsArgumentNullException()
             {
-                Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), null, Mock.Of<IUserMessageService>()));
+                Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<ISolution>(), Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), null, Mock.Of<IUserMessageService>()));
             }
 
             [TestMethod, TestCategory("Unit")]
             public void WhenCreatingWithNullMessageService_ThenThrowsArgumentNullException()
             {
-                Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), null));
+                Assert.Throws<ArgumentNullException>(() => new PatternManager(Mock.Of<IServiceProvider>(), Mock.Of<ISolution>(), Mock.Of<IShellEvents>(), Mock.Of<ISolutionEvents>(), Mock.Of<IItemEvents>(), Enumerable.Empty<IInstalledToolkitInfo>(), null));
             }
 
         }
@@ -127,7 +132,7 @@ namespace NuPattern.Runtime.UnitTests
                 this.shellEvents = new Mock<IShellEvents>();
                 this.shellEvents.Setup(x => x.IsInitialized).Returns(true);
 
-                this.manager = new TestPatternManager(this.store.ServiceProvider, this.shellEvents.Object, this.solutionEvents.Object, this.itemEvents.Object, installedFactories, this.messageService.Object);
+                this.manager = new TestPatternManager(this.store.ServiceProvider, this.solution, this.shellEvents.Object, this.solutionEvents.Object, this.itemEvents.Object, installedFactories, this.messageService.Object);
             }
 
             [TestCleanup]
@@ -483,8 +488,8 @@ namespace NuPattern.Runtime.UnitTests
 
             private class TestPatternManager : PatternManager
             {
-                public TestPatternManager(IServiceProvider serviceProvider, IShellEvents shellEvents, ISolutionEvents solutionEvents, IItemEvents itemEvents, IEnumerable<IInstalledToolkitInfo> installedFactories, IUserMessageService messageService)
-                    : base(serviceProvider, shellEvents, solutionEvents, itemEvents, installedFactories, messageService)
+                public TestPatternManager(IServiceProvider serviceProvider, ISolution solution, IShellEvents shellEvents, ISolutionEvents solutionEvents, IItemEvents itemEvents, IEnumerable<IInstalledToolkitInfo> installedFactories, IUserMessageService messageService)
+                    : base(serviceProvider, solution, shellEvents, solutionEvents, itemEvents, installedFactories, messageService)
                 {
                 }
 

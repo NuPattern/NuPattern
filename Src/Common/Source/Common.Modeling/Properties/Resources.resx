@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ModelBusUriReferenceProvider_CantCreateAdapterFromReference" xml:space="preserve">
+    <value>Model bus could not create an adapter for the reference {0}</value>
+  </data>
   <data name="ModelElementExtensions_ElementNameNotSupported" xml:space="preserve">
     <value>The domain class {0} doesn't have a Name domain property</value>
+  </data>
+  <data name="ModelElementExtensions_GetPropertyDefaultValue_NoProperty" xml:space="preserve">
+    <value>Property does not exist on element.</value>
+  </data>
+  <data name="TransactionManagerExtensions_DoWithinTransactionDescription" xml:space="preserve">
+    <value>Executing {0} @ {1}</value>
+  </data>
+  <data name="ModelElementExtensions_CreateTransactionText" xml:space="preserve">
+    <value>Creating: </value>
   </data>
 </root>

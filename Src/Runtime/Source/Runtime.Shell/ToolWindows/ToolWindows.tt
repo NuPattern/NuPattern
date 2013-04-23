@@ -1,0 +1,49 @@
+﻿<#@ Include File="..\VsPackageInfo.ttinclude" #>
+<#@ output extension=".gen.cs" #>
+<#
+
+var commands = new[]
+    {
+        new ToolWindowInfo { Name = "SolutionBuilder", BitmapResourceId = RuntimeShellPackageInfo.SolutionBuilder.BitmapResourceId, ToolWindowGuid = RuntimeShellPackageInfo.SolutionBuilder.ToolWindowGuid, },
+        new ToolWindowInfo { Name = "GuidanceExplorer", BitmapResourceId = RuntimeShellPackageInfo.GuidanceExplorer.BitmapResourceId, ToolWindowGuid = RuntimeShellPackageInfo.GuidanceExplorer.ToolWindowGuid, },
+        new ToolWindowInfo { Name = "GuidanceBrowser", BitmapResourceId = RuntimeShellPackageInfo.GuidanceBrowser.BitmapResourceId, ToolWindowGuid = RuntimeShellPackageInfo.GuidanceBrowser.ToolWindowGuid, },
+    };
+#>
+using System.Runtime.InteropServices;
+using Microsoft.VisualStudio.Shell;
+using NuPattern.Runtime.Shell.Properties;
+
+namespace NuPattern.Runtime.Shell.ToolWindows
+{
+<#
+    foreach (var command in commands)
+    {
+#>
+
+    [Guid("<#=command.ToolWindowGuid#>")]
+    partial class <#=command.Name#>ToolWindow : ToolWindowPane
+    {
+        /// <summary>
+        /// Creates a new instance of the <see cref="<#=command.Name#>ToolWindow"/> class.
+        /// </summary>
+        public <#=command.Name#>ToolWindow() :
+            base(null)
+        {
+            this.Caption = Resources.<#=command.Name#>ToolWindow_WindowTitle;
+
+            this.BitmapResourceID = <#=command.BitmapResourceId#>;
+            this.BitmapIndex = 0;
+        }
+    }
+<#
+    }
+#>
+}
+<#+
+struct ToolWindowInfo
+{
+    public string Name;
+    public string BitmapResourceId;
+    public string ToolWindowGuid;
+}
+#>

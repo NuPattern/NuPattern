@@ -11,7 +11,7 @@ namespace NuPattern.Presentation
     /// <summary>
     /// Represents a window that supports pages to compose a wizard.
     /// </summary>
-    [TemplatePart(Name = "PART_NavWinCP", Type = typeof(ContentPresenter))]
+    [TemplatePart(Name = @"PART_NavWinCP", Type = typeof(ContentPresenter))]
     public abstract class WizardWindow : NavigationWindow, IServiceProvider
     {
         private static readonly DependencyPropertyKey PagesPropertyKey = DependencyProperty.RegisterReadOnly(

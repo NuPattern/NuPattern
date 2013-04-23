@@ -27,14 +27,8 @@
       <HintPath>$(BranchReferencesPath)\VisualStudio\envdte80.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Build" />
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TeamArchitect.PowerTools.Features">
-      <HintPath>$(BranchReferencesPath)\Feature Extensions\$(TargetVsVersion)\Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="Microsoft.Build.Engine" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(BranchReferencesPath)\VisualStudio\$(TargetVsVersion)\Microsoft.VisualStudio.ExtensibilityHosting.dll</HintPath>
@@ -47,9 +41,6 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix).dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)">
-      <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix).dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)">
       <HintPath>$(BranchReferencesPath)\VMSDK\$(TargetVsVersion)\Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix).dll</HintPath>
@@ -92,9 +83,16 @@
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface">
       <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Zip.9.0">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\Microsoft.VisualStudio.Zip.9.0.dll</HintPath>
+    </Reference>
+    <Reference Include="VsWebSite.Interop">
+      <HintPath>$(BranchReferencesPath)\VisualStudio\VsWebSite.Interop.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Drawing" />
     <Reference Include="VSLangProj">
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>$(BranchReferencesPath)\VisualStudio\VSLangProj.dll</HintPath>
@@ -115,14 +113,93 @@
     <Compile Include="..\..\..\GlobalAssemblyInfo.gen.cs">
       <Link>Properties\GlobalAssemblyInfo.gen.cs</Link>
     </Compile>
+    <Compile Include="Composition\Catalog.cs" />
     <Compile Include="Commands\MenuCommandServiceExtensions.cs" />
     <Compile Include="Commands\VsMenuCommand.cs" />
     <Compile Include="Commands\VsMenuCommandAdapter.cs" />
+    <Compile Include="Diagnostics\OutputWindowTextWriter.cs" />
     <Compile Include="Events\ItemEvents.cs" />
     <Compile Include="Events\ShellEvents.cs" />
     <Compile Include="Events\SolutionEvents.cs" />
+    <Compile Include="Extensions\EnabledState.cs" />
     <Compile Include="Extensions\ExtensionContentExtensions.cs" />
     <Compile Include="Extensions\ExtensionVisibility.cs" />
+    <Compile Include="Extensions\IExtension.cs" />
+    <Compile Include="Extensions\IExtensionHeader.cs" />
+    <Compile Include="Extensions\IExtensionManager.cs" />
+    <Compile Include="Extensions\IExtensionReference.cs" />
+    <Compile Include="Extensions\IExtensionRequirement.cs" />
+    <Compile Include="Extensions\IInstalledExtension.cs" />
+    <Compile Include="Extensions\IExtensionContent.cs" />
+    <Compile Include="Extensions\IVersionRange.cs" />
+    <Compile Include="Extensions\VsExtension.cs" />
+    <Compile Include="Extensions\VsExtensionContent.cs" />
+    <Compile Include="Extensions\VsExtensionHeader.cs" />
+    <Compile Include="Extensions\VsExtensionManager.cs" />
+    <Compile Include="Extensions\VsExtensionReference.cs" />
+    <Compile Include="Extensions\VsExtensionRequirement.cs" />
+    <Compile Include="Extensions\VsInstalledExtension.cs" />
+    <Compile Include="Extensions\VsVersionRange.cs" />
+    <Compile Include="ProvideCodeGeneratorAttribute.cs" />
+    <Compile Include="Solution\HierarchyItem.cs" />
+    <Compile Include="Solution\Hierarchy\Constants.cs" />
+    <Compile Include="Solution\Hierarchy\Design\HierarchyNodeConverter.cs" />
+    <Compile Include="Solution\Hierarchy\HierarchyNode.cs" />
+    <Compile Include="Solution\Hierarchy\HierarchyNodeCollection.cs" />
+    <Compile Include="Solution\Hierarchy\HierarchyNodeEnumerator.cs" />
+    <Compile Include="Solution\Hierarchy\HierarchyNodeException.cs" />
+    <Compile Include="Solution\Hierarchy\HierarchyNodeFactory.cs" />
+    <Compile Include="Solution\Hierarchy\IHierarchyNode.cs" />
+    <Compile Include="Solution\Hierarchy\ProjectNode.cs" />
+    <Compile Include="Solution\IDataContainer.cs" />
+    <Compile Include="Solution\IFolder.cs" />
+    <Compile Include="Solution\IFolderContainer.cs" />
+    <Compile Include="Solution\ITemplateService.cs" />
+    <Compile Include="Solution\IHierarchyNodeFactory.cs" />
+    <Compile Include="Solution\IItem.cs" />
+    <Compile Include="Solution\IItemContainer.cs" />
+    <Compile Include="Solution\IItemContainerExtensions.cs" />
+    <Compile Include="Solution\IProject.cs" />
+    <Compile Include="Solution\ISolution.cs" />
+    <Compile Include="Solution\ISolutionFolder.cs" />
+    <Compile Include="Solution\ISolutionFolderContainer.cs" />
+    <Compile Include="Solution\ItemFactory.cs" />
+    <Compile Include="Solution\ItemKind.cs" />
+    <Compile Include="Solution\ITemplate.cs" />
+    <Compile Include="Solution\ProjectConfiguration.cs" />
+    <Compile Include="Solution\ProjectPlatform.cs" />
+    <Compile Include="Solution\Scope.cs" />
+    <Compile Include="Solution\Templates\IVsTemplate.cs" />
+    <Compile Include="Solution\Templates\IVsTemplateContent.cs" />
+    <Compile Include="Solution\Templates\IVsTemplateCustomParameter.cs" />
+    <Compile Include="Solution\Templates\IVsTemplateData.cs" />
+    <Compile Include="Solution\Templates\IVsTemplateResourceOrValue.cs" />
+    <Compile Include="Solution\Templates\IVsTemplateWizardData.cs" />
+    <Compile Include="Solution\Templates\IVsTemplateWizardExtension.cs" />
+    <Compile Include="Solution\Templates\VsTemplate.cs" />
+    <Compile Include="Solution\Templates\VsTemplateFile.cs" />
+    <Compile Include="Solution\Templates\VsTemplate.gen.cs" />
+    <Compile Include="Solution\Templates\VsTemplateType.cs" />
+    <Compile Include="Solution\VsDirectoryTemplate.cs" />
+    <Compile Include="Solution\VsFileContentTemplate.cs" />
+    <Compile Include="Solution\VsFileTemplate.cs" />
+    <Compile Include="Solution\VsFolder.cs" />
+    <Compile Include="Solution\VsGlobalsDynamicProperties.cs" />
+    <Compile Include="Solution\VsItem.cs" />
+    <Compile Include="Solution\VsItemContainerExtensions.cs" />
+    <Compile Include="Solution\VsItemDynamicProperties.cs" />
+    <Compile Include="Solution\VsItemTemplate.cs" />
+    <Compile Include="Solution\VsProject.cs" />
+    <Compile Include="Solution\VsProjectExtensions.cs" />
+    <Compile Include="Solution\VsProjectReference.cs" />
+    <Compile Include="Solution\VsProjectReferences.cs" />
+    <Compile Include="Solution\VsProjectTemplate.cs" />
+    <Compile Include="Solution\VsSolution.cs" />
+    <Compile Include="Solution\VsSolutionFolder.cs" />
+    <Compile Include="Solution\VsTemplate.cs" />
+    <Compile Include="Solution\VsTemplateService.cs" />
+    <Compile Include="Solution\VsUnknownItem.cs" />
+    <Compile Include="TemplateWizards\ITemplateWizard.cs" />
     <Compile Include="Windows\WindowExtensions.cs" />
     <Compile Include="Solution\AssemblyReference.cs" />
     <Compile Include="Solution\AssemblyResource.cs" />
@@ -135,10 +212,9 @@
     <Compile Include="Solution\Constants.cs" />
     <Compile Include="Solution\DteExtensions.cs" />
     <Compile Include="IErrorListExtensions.cs" />
-    <Compile Include="Solution\IVsHierarchyExtensions.cs" />
-    <Compile Include="Solution\Templates\IVsTemplateExtensions.cs" />
+    <Compile Include="Solution\Hierarchy\VsHierarchyExtensions.cs" />
+    <Compile Include="Solution\Templates\VsTemplateExtensions.cs" />
     <Compile Include="Solution\ProjectExtensions.cs" />
-    <Compile Include="ServiceProviderExtensions.cs" />
     <Compile Include="Solution\SolutionExtensions.cs" />
     <Compile Include="Solution\UIHierarchyExtensions.cs" />
     <Compile Include="VsUIShellExtensions.cs" />
@@ -191,6 +267,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Solution\Templates\runxsd.bat" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

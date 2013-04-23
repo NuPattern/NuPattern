@@ -6,9 +6,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Drawing.Design;
 using System.Linq;
 using System.Windows.Input;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Design;
 using NuPattern.Library.Properties;
@@ -23,11 +22,11 @@ namespace NuPattern.Library.Commands
     /// <summary>
     ///  Command that executes a list of commands sequentially.
     /// </summary>
-    [DisplayNameResource("AggregatorCommand_DisplayName", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
-    [DescriptionResource("AggregatorCommand_Description", typeof(Resources))]
+    [DisplayNameResource(@"AggregatorCommand_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"AggregatorCommand_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_General", typeof(Resources))]
     [CLSCompliant(false)]
-    public class AggregatorCommand : FeatureCommand
+    public class AggregatorCommand : Command
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<AggregatorCommand>();
 
@@ -35,8 +34,8 @@ namespace NuPattern.Library.Commands
         /// Gets or sets the command reference list.
         /// </summary>
         /// <value>The command reference list.</value>
-        [DisplayNameResource("AggregatorCommand_CommandReferences_DisplayName", typeof(Resources))]
-        [DescriptionResource("AggregatorCommand_CommandReferences_Description", typeof(Resources))]
+        [DisplayNameResource(@"AggregatorCommand_CommandReferences_DisplayName", typeof(Resources))]
+        [DescriptionResource(@"AggregatorCommand_CommandReferences_Description", typeof(Resources))]
         [TypeConverter(typeof(CommandReferencesConverter))]
         [Editor(typeof(CommandReferencesEditor), typeof(UITypeEditor))]
         public Collection<CommandReference> CommandReferenceList { get; set; }

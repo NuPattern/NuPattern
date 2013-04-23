@@ -96,12 +96,12 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -138,12 +138,12 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter&lt;NuPattern.Runtime.ICommand&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -204,12 +204,12 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.Runtime.UI.ICommandStatus&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter&lt;NuPattern.Runtime.UI.ICommandStatus&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -247,7 +247,7 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="86fdc7a3-d35e-4934-8bc1-e574376836bc" Description="The name of the created guidance workflow in the Guidance Explorer. If left blank, the instance name is calculated from the configured default name of the feature extension." Name="GuidanceInstanceName" DisplayName="Instance Name" Category="Guidance" IsBrowsable="false">
+        <DomainProperty Id="86fdc7a3-d35e-4934-8bc1-e574376836bc" Description="The name of the created guidance workflow in the Guidance Explorer. If left blank, the instance name is calculated from the configured default name of the guidance extension." Name="GuidanceInstanceName" DisplayName="Instance Name" Category="Guidance" IsBrowsable="false">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -257,7 +257,7 @@
             <ExternalTypeMoniker Name="/System/Boolean" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="c305b11e-9e20-4250-ac67-1b25a5caab41" Description="The identifier of the feature extension associated to this element. This is the VSIX ID of the Feature Extension, found in the source.extension.vsixmanifest file in the feature extension project." Name="GuidanceFeatureId" DisplayName="Feature Id" Category="Guidance" IsBrowsable="false">
+        <DomainProperty Id="c305b11e-9e20-4250-ac67-1b25a5caab41" Description="The identifier of the guidance extension associated to this element. This is the VSIX ID of the Guidance Extension, found in the source.extension.vsixmanifest file in the guidance extension project." Name="ExtensionId" DisplayName="Guidance Id" Category="Guidance" IsBrowsable="false">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -279,7 +279,7 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -360,12 +360,12 @@
           <Attributes>
             <ClrAttribute Name="System.ComponentModel.TypeConverter">
               <Parameters>
-                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
+                <AttributeParameter Value="typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter&lt;NuPattern.IObservableEvent&gt;)" />
               </Parameters>
             </ClrAttribute>
             <ClrAttribute Name="System.ComponentModel.Editor">
               <Parameters>
-                <AttributeParameter Value="typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor)" />
+                <AttributeParameter Value="typeof(NuPattern.ComponentModel.Design.StandardValuesEditor)" />
                 <AttributeParameter Value="typeof(System.Drawing.Design.UITypeEditor)" />
               </Parameters>
             </ClrAttribute>
@@ -543,8 +543,8 @@
           <XmlPropertyData XmlName="guidanceActivateOnCreation">
             <DomainPropertyMoniker Name="GuidanceExtension/GuidanceActivateOnCreation" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="guidanceFeatureId">
-            <DomainPropertyMoniker Name="GuidanceExtension/GuidanceFeatureId" />
+          <XmlPropertyData XmlName="extensionId">
+            <DomainPropertyMoniker Name="GuidanceExtension/ExtensionId" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="guidanceSharedInstance">
             <DomainPropertyMoniker Name="GuidanceExtension/GuidanceSharedInstance" />

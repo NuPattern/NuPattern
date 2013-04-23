@@ -3,15 +3,14 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Commands;
 using NuPattern.Library.Properties;
-using NuPattern.Library.TemplateWizards;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 using NuPattern.VisualStudio.Solution.Templates;
+using NuPattern.VisualStudio.TemplateWizards;
 
 namespace NuPattern.Library.Automation.Template
 {
@@ -132,7 +131,7 @@ namespace NuPattern.Library.Automation.Template
 
         private IItemContainer GetVsTemplateProjectItem()
         {
-            var uriService = serviceProvider.GetService<IFxrUriReferenceService>();
+            var uriService = serviceProvider.GetService<IUriReferenceService>();
             IItemContainer item = null;
             try
             {
@@ -197,11 +196,11 @@ namespace NuPattern.Library.Automation.Template
                             Resources.Validate_TemplateSettingsTemplateTypeDoesNotMatchReferencedTemplateCode, settings.SettingsElement as ModelElement);
                         }
 
-                        var elementReplacementsWizard = template.WizardExtension.GetExtension(typeof(ElementReplacementsWizard));
+                        var elementReplacementsWizard = template.WizardExtension.GetExtension(TemplateWizardInfo.ElementReplacementsTemplateWizardFullTypeName);
 
                         if (validatingTemplate)
                         {
-                            var instantiationWizard = template.WizardExtension.GetExtension(typeof(InstantiationTemplateWizard));
+                            var instantiationWizard = template.WizardExtension.GetExtension(TemplateWizardInfo.InstantiationTemplateWizardFullTypeName);
                             if (instantiationWizard == null || elementReplacementsWizard == null)
                             {
                                 //wizards not present
@@ -259,7 +258,7 @@ namespace NuPattern.Library.Automation.Template
             {
                 if (!string.IsNullOrEmpty(settings.TemplateAuthoringUri))
                 {
-                    var uriService = serviceProvider.GetService<IFxrUriReferenceService>();
+                    var uriService = serviceProvider.GetService<IUriReferenceService>();
                     IItem item = null;
                     try
                     {
@@ -276,8 +275,8 @@ namespace NuPattern.Library.Automation.Template
                         return;
                     }
 
-                    if (!(string.Equals(item.Data.ItemType, "ProjectTemplate", StringComparison.OrdinalIgnoreCase)
-                        || string.Equals(item.Data.ItemType, "ItemTemplate", StringComparison.OrdinalIgnoreCase)))
+                    if (!(string.Equals(item.Data.ItemType, @"ProjectTemplate", StringComparison.OrdinalIgnoreCase)
+                        || string.Equals(item.Data.ItemType, @"ItemTemplate", StringComparison.OrdinalIgnoreCase)))
                     {
                         //item type should be set to content
                         context.LogWarning(

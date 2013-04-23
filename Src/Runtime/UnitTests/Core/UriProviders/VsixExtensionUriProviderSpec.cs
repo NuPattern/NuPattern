@@ -1,11 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Runtime.UriProviders;
+using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Runtime.UnitTests.UriProviders
 {
@@ -23,20 +22,20 @@ namespace NuPattern.Runtime.UnitTests.UriProviders
         [TestMethod, TestCategory("Unit")]
         public void WhenNullOpenFileAction_ThenThrowsArgumentNullException()
         {
-            Assert.Throws<ArgumentNullException>(() => new VsixExtensionUriProvider(new Mock<IVsExtensionManager>().Object, null));
+            Assert.Throws<ArgumentNullException>(() => new VsixExtensionUriProvider(new Mock<IExtensionManager>().Object, null));
         }
 
         [TestClass]
         public class GivenAnExtensionManager
         {
-            IFxrUriReferenceProvider<IInstalledExtension> provider;
-            Mock<IVsExtensionManager> manager;
+            IUriReferenceProvider<IInstalledExtension> provider;
+            Mock<IExtensionManager> manager;
             Action<string> openFileAction = file => { };
 
             [TestInitialize]
             public void Initialize()
             {
-                this.manager = new Mock<IVsExtensionManager>();
+                this.manager = new Mock<IExtensionManager>();
                 this.provider = new VsixExtensionUriProvider(this.manager.Object, file => this.openFileAction(file));
             }
 

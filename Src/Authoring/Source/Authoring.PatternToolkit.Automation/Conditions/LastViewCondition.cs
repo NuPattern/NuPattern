@@ -2,9 +2,9 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.Authoring.PatternToolkit.Automation.Properties;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 
 namespace NuPattern.Authoring.PatternToolkit.Automation.Conditions
 {
@@ -15,7 +15,7 @@ namespace NuPattern.Authoring.PatternToolkit.Automation.Conditions
     [DisplayNameResource("LastViewCondition_DisplayName", typeof(Resources))]
     [CategoryResource("AutomationCategory_PatternToolkitAuthoring", typeof(Resources))]
     [DescriptionResource("LastViewCondition_Description", typeof(Resources))]
-    public class LastViewCondition : Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Condition
+    public class LastViewCondition : NuPattern.Runtime.Condition
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<LastViewCondition>();
 

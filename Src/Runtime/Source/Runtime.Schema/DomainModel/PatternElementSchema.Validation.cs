@@ -2,9 +2,7 @@
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Schema.Properties;
 
@@ -52,7 +50,7 @@ namespace NuPattern.Runtime.Schema
             {
                 if (!string.IsNullOrEmpty(this.Icon))
                 {
-                    var uriService = ((IServiceProvider)this.Store).GetService<IFxrUriReferenceService>();
+                    var uriService = ((IServiceProvider)this.Store).GetService<IUriReferenceService>();
                     ResourcePack resolvedIcon = null;
 
                     try
@@ -80,7 +78,7 @@ namespace NuPattern.Runtime.Schema
                     if (resolvedIcon.Type == ResourcePackType.ProjectItem)
                     {
                         var item = resolvedIcon.GetItem();
-                        if (item.Data.ItemType != "Resource")
+                        if (item.Data.ItemType != @"Resource")
                         {
                             context.LogError(
                                     string.Format(CultureInfo.CurrentCulture, Resources.Validate_NamedElementIconIsNotAResource, this.Name, item.Name),

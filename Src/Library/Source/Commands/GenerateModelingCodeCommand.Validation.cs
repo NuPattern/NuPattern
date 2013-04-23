@@ -4,9 +4,7 @@ using System.Globalization;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Validation;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Automation;
 using NuPattern.Library.Properties;
 using NuPattern.Reflection;
@@ -47,7 +45,7 @@ namespace NuPattern.Library.Commands
                 if (!string.IsNullOrEmpty(authoringUriString))
                 {
                     var authoringUri = new Uri(authoringUriString);
-                    var uriService = serviceProvider.GetService<IFxrUriReferenceService>();
+                    var uriService = serviceProvider.GetService<IUriReferenceService>();
                     IItem item = null;
                     try
                     {

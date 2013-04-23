@@ -3,12 +3,9 @@ using System.ComponentModel.Composition;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Runtime.Properties;
-using NuPattern.VisualStudio;
+using NuPattern.VisualStudio.Extensions;
 
 namespace NuPattern.Runtime.UriProviders
 {
@@ -20,25 +17,25 @@ namespace NuPattern.Runtime.UriProviders
     /// </remarks>
     // TODO: Fix FERT so that this class does not have ot be public to register itself.
     [PartCreationPolicy(CreationPolicy.Shared)]
-    [Export(typeof(IFxrUriReferenceProvider))]
+    [Export(typeof(IUriReferenceProvider))]
     [CLSCompliant(false)]
-    public class VsixExtensionUriProvider : IFxrUriReferenceProvider<IInstalledExtension>
+    public class VsixExtensionUriProvider : IUriReferenceProvider<IInstalledExtension>
     {
         /// <summary>
         /// Uri scheme for this provider, which is <c>vsix://</c>.
         /// </summary>
         public const string UriSchemeName = "vsix";
 
-        private IVsExtensionManager extensionManager;
+        private IExtensionManager extensionManager;
         private Action<string> openFileAction;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="VsixExtensionUriProvider"/> class.
         /// </summary>
         [ImportingConstructor]
-        internal VsixExtensionUriProvider([Import(typeof(SVsServiceProvider))] IServiceProvider serviceProvider)
-            : this(
-                serviceProvider.GetService<SVsExtensionManager, IVsExtensionManager>(),
+        internal VsixExtensionUriProvider([Import(typeof(SVsServiceProvider))] IServiceProvider serviceProvider,
+            [Import(typeof(IExtensionManager))] IExtensionManager extensionManager)
+            : this(extensionManager,
                 fileName => serviceProvider.GetService<EnvDTE.DTE>().ItemOperations.OpenFile(fileName))
         {
         }
@@ -46,7 +43,7 @@ namespace NuPattern.Runtime.UriProviders
         /// <summary>
         /// Initializes a new instance of the <see cref="VsixExtensionUriProvider"/> class.
         /// </summary>
-        public VsixExtensionUriProvider(IVsExtensionManager extensionManager, Action<string> openFileAction)
+        public VsixExtensionUriProvider(IExtensionManager extensionManager, Action<string> openFileAction)
         {
             Guard.NotNull(() => extensionManager, extensionManager);
             Guard.NotNull(() => openFileAction, openFileAction);

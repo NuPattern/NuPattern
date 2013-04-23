@@ -1,12 +1,12 @@
 ﻿using System;
 using System.ComponentModel.Composition.Primitives;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NuPattern.Library.Automation;
 using NuPattern.Presentation;
 using NuPattern.Runtime;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Library.IntegrationTests
 {
@@ -53,7 +53,7 @@ namespace NuPattern.Library.IntegrationTests
         {
             private WizardAutomation target;
 
-            public Mock<IFeatureCompositionService> CompositionService { get; private set; }
+            public Mock<INuPatternCompositionService> CompositionService { get; private set; }
 
             [TestInitialize]
             public void Initialize()
@@ -62,8 +62,8 @@ namespace NuPattern.Library.IntegrationTests
                     new Mock<IProductElement>().Object,
                     Mocks.Of<IWizardSettings>().First(s => s.Owner.Name == "Foo" && s.TypeName == typeof(MockWizardWindow).AssemblyQualifiedName));
 
-                this.CompositionService = new Mock<IFeatureCompositionService>();
-                this.target.FeatureComposition = this.CompositionService.Object;
+                this.CompositionService = new Mock<INuPatternCompositionService>();
+                this.target.CompositionService = this.CompositionService.Object;
             }
 
             [TestMethod, TestCategory("Unit")]

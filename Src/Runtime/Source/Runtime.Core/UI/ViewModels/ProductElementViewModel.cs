@@ -6,9 +6,7 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
 using NuPattern.Presentation;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Automation;
@@ -25,8 +23,8 @@ namespace NuPattern.Runtime.UI.ViewModels
     internal abstract class ProductElementViewModel : ViewModel<IProductElement>, IEditableObject
     {
         private static readonly string assemblyName = typeof(ProductElementViewModel).Assembly.GetName().Name;
-        private static readonly string deleteIconPath = "pack://application:,,,/" + assemblyName + ";component/Resources/CommandRemove.png";
-        private static readonly string propertiesIconPath = "pack://application:,,,/" + assemblyName + ";component/Resources/CommandProperties.png";
+        private static readonly string deleteIconPath = @"pack://application:,,,/" + assemblyName + @";component/Resources/CommandRemove.png";
+        private static readonly string propertiesIconPath = @"pack://application:,,,/" + assemblyName + @";component/Resources/CommandProperties.png";
 
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<ProductElementViewModel>();
 
@@ -437,9 +435,9 @@ namespace NuPattern.Runtime.UI.ViewModels
 
             this.ShowPropertiesCommand = new RelayCommand(this.Context.ShowProperties);
             this.DeleteCommand = new RelayCommand(this.Delete, this.CanDeleteInstance);
-            if (this.Context.SolutionBuilder != null)
+            if (this.Context.ViewModel != null)
             {
-                this.RenameCommand = new RelayCommand(this.Context.SolutionBuilder.BeginEditNode, this.Context.SolutionBuilder.CanBeginEditNode);
+                this.RenameCommand = new RelayCommand(this.Context.ViewModel.BeginEditNode, this.Context.ViewModel.CanBeginEditNode);
             }
         }
 
@@ -495,7 +493,7 @@ namespace NuPattern.Runtime.UI.ViewModels
                                 }
                                 else //Top level node
                                 {
-                                    this.Context.SolutionBuilder.Reorder();
+                                    this.Context.ViewModel.Reorder();
                                 }
                             });
                         }
@@ -522,7 +520,7 @@ namespace NuPattern.Runtime.UI.ViewModels
                 }
                 else
                 {
-                    this.Context.SolutionBuilder.Select(this.Model);
+                    this.Context.ViewModel.Select(this.Model);
                 }
             }
         }

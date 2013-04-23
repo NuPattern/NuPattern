@@ -8,9 +8,9 @@ namespace NuPattern.Library.ValueComparers
     /// <summary>
     /// Compares the <see cref="IProductElement.InstanceName"/> of two elements alphabetically.
     /// </summary>
-    [DisplayNameResource("InstanceNameComparer_DisplayName", typeof(Resources))]
-    [DescriptionResource("InstanceNameComparer_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"InstanceNameComparer_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"InstanceNameComparer_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_Automation", typeof(Resources))]
     public class InstanceNameComparer : ProductElementComparer
     {
         /// <summary>

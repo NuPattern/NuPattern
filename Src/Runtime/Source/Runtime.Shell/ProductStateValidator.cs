@@ -1,8 +1,6 @@
 ﻿using System;
 using EnvDTE;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.Shell
 {

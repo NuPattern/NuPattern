@@ -3,9 +3,8 @@ using System.ComponentModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern;
+using NuPattern.Diagnostics;
 using NuPattern.Runtime;
 
 namespace $rootnamespace$
@@ -17,7 +16,7 @@ namespace $rootnamespace$
     [Category("General")]
     [Description("Used to verify that the current element meets a custom condition.")]
     [CLSCompliant(false)]
-    public class $safeitemname$ : Condition
+    public class $safeitemname$ : NuPattern.Runtime.Condition
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<$safeitemname$>();
 
@@ -71,10 +70,10 @@ namespace $rootnamespace$
             // TODO: Implement condition automation code to determine the evaluated result
             var result = true;
 
-            //	TODO: Use tracer.TraceWarning() to note expected and recoverable errors
-            //	TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
-            //	TODO: Use tracer.TraceInformation() to note key results of execution
-            //	TODO: Raise exceptions for all other errors
+            // TODO: Use tracer.TraceWarning() to note expected and recoverable errors
+            // TODO: Use tracer.TraceVerbose() to note internal execution logic decisions
+            // TODO: Use tracer.TraceInformation() to note key results of execution
+            // TODO: Raise exceptions for all other errors
 
             // Make resulting trace statement for this condition
             tracer.TraceInformation(

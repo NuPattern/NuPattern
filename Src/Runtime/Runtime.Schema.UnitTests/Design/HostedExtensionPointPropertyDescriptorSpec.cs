@@ -5,9 +5,9 @@ using System.Diagnostics.CodeAnalysis;
 using System.Drawing.Design;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Immutability;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NuPattern.ComponentModel.Design;
 using NuPattern.Modeling;
 using NuPattern.Reflection;
 using NuPattern.Runtime.Schema.Design;
@@ -33,7 +33,7 @@ namespace NuPattern.Runtime.Schema.UnitTests.Design
             [TestInitialize]
             public void InitializeContext()
             {
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                     p.ToolkitInfo.Identifier == "ToolkitId"));
 
@@ -236,7 +236,7 @@ namespace NuPattern.Runtime.Schema.UnitTests.Design
             [TestInitialize]
             public void InitializeContext()
             {
-                var uriService = Mock.Of<Microsoft.VisualStudio.TeamArchitect.PowerTools.IFxrUriReferenceService>(
+                var uriService = Mock.Of<IUriReferenceService>(
                     u => u.ResolveUri<IInstanceBase>(It.IsAny<Uri>()) == Mock.Of<IProduct>(p =>
                     p.ToolkitInfo.Identifier == "ToolkitId"));
 

@@ -1,13 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using NuPattern.VisualStudio.Solution.Hierarchy;
 
 namespace NuPattern.VisualStudio.Solution
 {
     /// <summary>
     /// Helper for common calling patterns in VS-COM.
     /// </summary>
+    [CLSCompliant(false)]
     public static class VsHelper
     {
         /// <summary>
@@ -40,17 +45,60 @@ namespace NuPattern.VisualStudio.Solution
             return defaultValue;
         }
 
+
+        /// <summary>
+        /// Selected item in the solution explorer based on given hierarchyNode
+        /// </summary>
+        public static void Select(IServiceProvider serviceProvider, IHierarchyNode hierarchyNode)
+        {
+            Select(serviceProvider, new[] { hierarchyNode });
+        }
+
+        /// <summary>
+        /// Selected item in the solution explorer based on given hierarchyNode
+        /// </summary>
+        public static void Select(IServiceProvider serviceProvider, IEnumerable<IHierarchyNode> hierarchyNodes)
+        {
+            Debug.Assert(serviceProvider != null && hierarchyNodes != null);
+
+            if (serviceProvider != null && hierarchyNodes != null)
+            {
+                var uiShell = serviceProvider.GetService(typeof(SVsUIShell)) as IVsUIShell;
+                var slnExplorerGuid = new Guid(ToolWindowGuids80.SolutionExplorer);
+
+                IVsWindowFrame frame;
+                ErrorHandler.ThrowOnFailure(uiShell.FindToolWindow((uint)__VSFINDTOOLWIN.FTW_fForceCreate, ref slnExplorerGuid, out frame));
+
+                object view;
+                ErrorHandler.ThrowOnFailure(frame.GetProperty((int)__VSFPROPID.VSFPROPID_DocView, out view));
+
+                bool first = true;
+                var hierarchyWindow = view as IVsUIHierarchyWindow;
+                if (hierarchyWindow != null)
+                {
+                    foreach (var hierarchyNode in hierarchyNodes)
+                    {
+                        hierarchyWindow.ExpandItem(hierarchyNode.GetObject<IVsHierarchy>() as IVsUIHierarchy,
+                                                   hierarchyNode.ItemId,
+                                                   first ? EXPANDFLAGS.EXPF_SelectItem : EXPANDFLAGS.EXPF_AddSelectItem);
+
+                        if (first) first = false;
+                    }
+                }
+                frame.Show();
+            }
+        }
+
         /// <summary>
         /// Checks-out the file from source control.
         /// </summary>
-        public static void CheckOut(IServiceProvider serviceProvider, string fileName)
+        public static void CheckOut(string fileName)
         {
-            Guard.NotNull(() => serviceProvider, serviceProvider);
             Guard.NotNullOrEmpty(() => fileName, fileName);
 
             if (File.Exists(fileName))
             {
-                var vs = serviceProvider.GetService(typeof(EnvDTE.DTE)) as EnvDTE.DTE;
+                var vs = ServiceProvider.GlobalProvider.GetService(typeof(EnvDTE.DTE)) as EnvDTE.DTE;
 
                 if (vs != null && vs.SourceControl != null &&
                     vs.SourceControl.IsItemUnderSCC(fileName) && !vs.SourceControl.IsItemCheckedOut(fileName))

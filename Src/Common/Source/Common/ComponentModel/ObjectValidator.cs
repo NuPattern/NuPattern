@@ -20,7 +20,7 @@ namespace NuPattern.ComponentModel
         /// <param name="component">The component.</param>
         /// <param name="propertyName">Name of the property.</param>
         /// <returns></returns>
-        [Obsolete("This method is obsolete, use System.ComponentModel.DataAnnotations.Validator.TryValidateProperty() method instead.", true)]
+        [Obsolete(@"This method is obsolete, use System.ComponentModel.DataAnnotations.Validator.TryValidateProperty() method instead.", true)]
         public static IEnumerable<ValidationResult> Validate(object component, string propertyName)
         {
             Guard.NotNull(() => component, component);
@@ -37,7 +37,7 @@ namespace NuPattern.ComponentModel
         /// Validates the object by evaluating the <see cref="ValidationAttribute"/>s 
         /// against the property values.
         /// </summary>
-        [Obsolete("This method is obsolete, use System.ComponentModel.DataAnnotations.Validator.TryValidateObject() method instead.", true)]
+        [Obsolete(@"This method is obsolete, use System.ComponentModel.DataAnnotations.Validator.TryValidateObject() method instead.", true)]
         public static IEnumerable<ValidationResult> Validate(object component)
         {
             Guard.NotNull(() => component, component);
@@ -52,7 +52,7 @@ namespace NuPattern.ComponentModel
         /// Throws <see cref="InvalidOperationException"/> if the <paramref name="component"/> 
         /// fails to validate.
         /// </summary>
-        [Obsolete("This method is obsolete, use System.ComponentModel.DataAnnotations.Validator.ValidateObject() method instead.", true)]
+        [Obsolete(@"This method is obsolete, use System.ComponentModel.DataAnnotations.Validator.ValidateObject() method instead.", true)]
         public static void ThrowIfInvalid(object component)
         {
             Guard.NotNull(() => component, component);
@@ -65,7 +65,7 @@ namespace NuPattern.ComponentModel
                     Resources.Culture,
                     Resources.ObjectValidator_ValidationResult,
                     result.ErrorMessage,
-                    string.Join(", ", result.MemberNames));
+                    string.Join(@", ", result.MemberNames));
 
                 var message = results.Aggregate(
                     string.Format(Resources.Culture, Resources.ObjectValidator_ValidationException, component),

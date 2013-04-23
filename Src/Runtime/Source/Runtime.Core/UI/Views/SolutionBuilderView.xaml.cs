@@ -11,7 +11,6 @@ using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 using NuPattern.Presentation;
 using NuPattern.Runtime.UI.ViewModels;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.UI.Views
 {
@@ -79,7 +78,7 @@ namespace NuPattern.Runtime.UI.Views
                     if (viewModel == null)
                         return;
 
-                    var dragData = new DataObject("VSPAT", viewModel.Model);
+                    var dragData = new DataObject(@"VSPAT", viewModel.Model);
                     DragDrop.DoDragDrop(treeViewItem, dragData, DragDropEffects.Move);
                 }
             }

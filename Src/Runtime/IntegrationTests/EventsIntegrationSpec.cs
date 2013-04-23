@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.ComponentModelHost;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VSSDK.Tools.VsIdeTesting;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Runtime.Composition;
 using NuPattern.Runtime.IntegrationTests.SampleVsix;
-using NuPattern.VisualStudio;
 
 namespace NuPattern.Runtime.IntegrationTests
 {
@@ -17,13 +17,13 @@ namespace NuPattern.Runtime.IntegrationTests
         public class GivenExportedSourcePublisherAndSubscriber
         {
             private IComponentModel globalContainer;
-            private IFeatureCompositionService compositionService;
+            private INuPatternCompositionService compositionService;
 
             [TestInitialize]
             public void Initialize()
             {
                 this.globalContainer = VsIdeTestHostContext.ServiceProvider.GetService<SComponentModel, IComponentModel>();
-                this.compositionService = VsIdeTestHostContext.ServiceProvider.GetService<IFeatureCompositionService>();
+                this.compositionService = VsIdeTestHostContext.ServiceProvider.GetService<INuPatternCompositionService>();
             }
 
             [HostType("VS IDE")]
@@ -51,7 +51,7 @@ namespace NuPattern.Runtime.IntegrationTests
             public void WhenRetrievingEventExportMetadata_ThenContainsDescription()
             {
                 var info = this.compositionService
-                    .GetExports<IObservableEvent, IFeatureComponentMetadata>()
+                    .GetExports<IObservableEvent, IComponentMetadata>()
                     .Where(x => x.Metadata.ExportingType == typeof(EventPublisher))
                     .First();
 

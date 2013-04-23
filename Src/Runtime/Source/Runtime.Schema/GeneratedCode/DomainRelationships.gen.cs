@@ -1355,7 +1355,7 @@ namespace NuPattern.Runtime.Schema
 		/// then instances of all elements/collections are ordered together alphabetically
 		/// by their 'InstanceName' property.
 		/// </summary>
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasElements/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -2610,7 +2610,7 @@ namespace NuPattern.Runtime.Schema
 		/// then instances of all elements/collections are ordered together alphabetically
 		/// by their 'InstanceName' property.
 		/// </summary>
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasElements/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -3428,7 +3428,7 @@ namespace NuPattern.Runtime.Schema
 		/// then instances of all elements/collections are ordered together alphabetically
 		/// by their 'InstanceName' property.
 		/// </summary>
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ElementHasExtensionPoints/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
@@ -4008,7 +4008,7 @@ namespace NuPattern.Runtime.Schema
 		/// then instances of all elements/collections are ordered together alphabetically
 		/// by their 'InstanceName' property.
 		/// </summary>
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.Collections.IComparer>))]
 		[NuPattern.Runtime.Schema.CustomizableDomainElementSettingAttribute()]
 		[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.ViewHasExtensionPoints/OrderGroupComparerTypeName.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]

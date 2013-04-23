@@ -1,18 +1,18 @@
 ﻿using System;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
 using NuPattern.ComponentModel.Design;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
+using NuPattern.Runtime;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Library.ValueProviders
 {
     /// <summary>
     /// A <see cref=" ValueProvider"/> that provides the project root namespace.
     /// </summary>
-    [DisplayNameResource("RootNamespaceValueProvider_DisplayName", typeof(Resources))]
-    [DescriptionResource("RootNamespaceValueProvider_Description", typeof(Resources))]
-    [CategoryResource("AutomationCategory_Automation", typeof(Resources))]
+    [DisplayNameResource(@"RootNamespaceValueProvider_DisplayName", typeof(Resources))]
+    [DescriptionResource(@"RootNamespaceValueProvider_Description", typeof(Resources))]
+    [CategoryResource(@"AutomationCategory_VisualStudio", typeof(Resources))]
     [CLSCompliant(false)]
     public class RootNamespaceValueProvider : VsProjectPropertyValueProvider
     {

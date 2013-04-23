@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.Diagnostics;
+using NuPattern.Presentation;
 using NuPattern.Runtime.Properties;
 using NuPattern.VisualStudio;
 
@@ -169,7 +169,7 @@ namespace NuPattern.Runtime.UI.ViewModels
 
         private void InitializeCommands()
         {
-            this.ChangeViewCommand = new Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.RelayCommand<IView>(v => this.ChangeSelectedView(v));
+            this.ChangeViewCommand = new RelayCommand<IView>(v => this.ChangeSelectedView(v));
         }
 
         private void RefreshAddMenuOptions()

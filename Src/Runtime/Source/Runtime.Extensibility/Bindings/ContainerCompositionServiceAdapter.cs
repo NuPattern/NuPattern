@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Runtime.Bindings
 {
     /// <summary>
-    /// Exposes the <see cref="IFeatureCompositionService"/> API on top of 
+    /// Exposes the <see cref="INuPatternCompositionService"/> API on top of 
     /// a <see cref="CompositionContainer"/>.
     /// </summary>
-    internal class ContainerCompositionServiceAdapter : IFeatureCompositionService
+    internal class ContainerCompositionServiceAdapter : INuPatternCompositionService
     {
         private CompositionContainer container;
 

@@ -1304,8 +1304,8 @@ namespace NuPattern.Library.Automation
 		/// The type of event which triggers the command to execute when all conditions are
 		/// met.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<NuPattern.IObservableEvent>))]
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter<NuPattern.IObservableEvent>))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.EventSettings/EventId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.EventSettings/EventId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("4564d86b-cf9d-4fa2-9a11-339596bdf65c")]
@@ -1778,8 +1778,8 @@ namespace NuPattern.Library.Automation
 		/// The type of the command. Once selected, the specific properties of the selected
 		/// command can be configured.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.IFeatureCommand>))]
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter<NuPattern.Runtime.ICommand>))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.CommandSettings/TypeId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.CommandSettings/TypeId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslModeling::DomainObjectId("dc701988-b2bd-4576-97b6-93813069620f")]
@@ -2465,8 +2465,8 @@ namespace NuPattern.Library.Automation
 		/// Gets or sets the value of CustomStatus domain property.
 		/// An optional type that provides dynamic menu status updates for this menu.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<NuPattern.Runtime.UI.ICommandStatus>))]
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter<NuPattern.Runtime.UI.ICommandStatus>))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.MenuSettings/CustomStatus.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.MenuSettings/CustomStatus.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
@@ -2941,7 +2941,7 @@ namespace NuPattern.Library.Automation
 		/// Gets or sets the value of GuidanceInstanceName domain property.
 		/// The name of the created guidance workflow in the Guidance Explorer. If left
 		/// blank, the instance name is calculated from the configured default name of the
-		/// feature extension.
+		/// guidance extension.
 		/// </summary>
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.GuidanceExtension/GuidanceInstanceName.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Library.Automation.GuidanceExtension/GuidanceInstanceName.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -3147,63 +3147,63 @@ namespace NuPattern.Library.Automation
 		}
 		
 		#endregion
-		#region GuidanceFeatureId domain property code
+		#region ExtensionId domain property code
 		
 		/// <summary>
-		/// GuidanceFeatureId domain property Id.
+		/// ExtensionId domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid GuidanceFeatureIdDomainPropertyId = new global::System.Guid(0xc305b11e, 0x9e20, 0x4250, 0xac, 0x67, 0x1b, 0x25, 0xa5, 0xca, 0xab, 0x41);
+		public static readonly global::System.Guid ExtensionIdDomainPropertyId = new global::System.Guid(0xc305b11e, 0x9e20, 0x4250, 0xac, 0x67, 0x1b, 0x25, 0xa5, 0xca, 0xab, 0x41);
 		
 		/// <summary>
-		/// Storage for GuidanceFeatureId
+		/// Storage for ExtensionId
 		/// </summary>
-		private global::System.String guidanceFeatureIdPropertyStorage = string.Empty;
+		private global::System.String extensionIdPropertyStorage = string.Empty;
 		
 		/// <summary>
-		/// Gets or sets the value of GuidanceFeatureId domain property.
-		/// The identifier of the feature extension associated to this element. This is the
-		/// VSIX ID of the Feature Extension, found in the source.extension.vsixmanifest
-		/// file in the feature extension project.
+		/// Gets or sets the value of ExtensionId domain property.
+		/// The identifier of the guidance extension associated to this element. This is the
+		/// VSIX ID of the Guidance Extension, found in the source.extension.vsixmanifest
+		/// file in the guidance extension project.
 		/// </summary>
-		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::CategoryResource("NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
-		[DslDesign::DescriptionResource("NuPattern.Library.Automation.GuidanceExtension/GuidanceFeatureId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.GuidanceExtension/ExtensionId.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::CategoryResource("NuPattern.Library.Automation.GuidanceExtension/ExtensionId.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
+		[DslDesign::DescriptionResource("NuPattern.Library.Automation.GuidanceExtension/ExtensionId.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[global::System.ComponentModel.Browsable(false)]
 		[DslModeling::DomainObjectId("c305b11e-9e20-4250-ac67-1b25a5caab41")]
-		public global::System.String GuidanceFeatureId
+		public global::System.String ExtensionId
 		{
 		    [global::System.Diagnostics.DebuggerStepThrough]
 		    get
 		    {
-		        return guidanceFeatureIdPropertyStorage;
+		        return extensionIdPropertyStorage;
 		    }
 		    [global::System.Diagnostics.DebuggerStepThrough]
 		    set
 		    {
-		        GuidanceFeatureIdPropertyHandler.Instance.SetValue(this, value);
+		        ExtensionIdPropertyHandler.Instance.SetValue(this, value);
 		    }
 		}
 		/// <summary>
-		/// Value handler for the GuidanceExtension.GuidanceFeatureId domain property.
+		/// Value handler for the GuidanceExtension.ExtensionId domain property.
 		/// </summary>
-		internal sealed partial class GuidanceFeatureIdPropertyHandler : DslModeling::DomainPropertyValueHandler<GuidanceExtension, global::System.String>
+		internal sealed partial class ExtensionIdPropertyHandler : DslModeling::DomainPropertyValueHandler<GuidanceExtension, global::System.String>
 		{
-		    private GuidanceFeatureIdPropertyHandler() { }
+		    private ExtensionIdPropertyHandler() { }
 		
 		    /// <summary>
-		    /// Gets the singleton instance of the GuidanceExtension.GuidanceFeatureId domain property value handler.
+		    /// Gets the singleton instance of the GuidanceExtension.ExtensionId domain property value handler.
 		    /// </summary>
-		    public static readonly GuidanceFeatureIdPropertyHandler Instance = new GuidanceFeatureIdPropertyHandler();
+		    public static readonly ExtensionIdPropertyHandler Instance = new ExtensionIdPropertyHandler();
 		
 		    /// <summary>
-		    /// Gets the Id of the GuidanceExtension.GuidanceFeatureId domain property.
+		    /// Gets the Id of the GuidanceExtension.ExtensionId domain property.
 		    /// </summary>
 		    public sealed override global::System.Guid DomainPropertyId
 		    {
 		        [global::System.Diagnostics.DebuggerStepThrough]
 		        get
 		        {
-		            return GuidanceFeatureIdDomainPropertyId;
+		            return ExtensionIdDomainPropertyId;
 		        }
 		    }
 		    
@@ -3215,7 +3215,7 @@ namespace NuPattern.Library.Automation
 		    public override sealed global::System.String GetValue(GuidanceExtension element)
 		    {
 		        if (element == null) throw new global::System.ArgumentNullException("element");
-		        return element.guidanceFeatureIdPropertyStorage;
+		        return element.extensionIdPropertyStorage;
 		    }
 		
 		    /// <summary>
@@ -3251,9 +3251,9 @@ namespace NuPattern.Library.Automation
 		    private void SetValue(GuidanceExtension element, global::System.String oldValue, global::System.String newValue)
 		    {
 		        this.ValueChanging(element, oldValue, newValue);
-		        element.guidanceFeatureIdPropertyStorage = newValue;
+		        element.extensionIdPropertyStorage = newValue;
 		        ValueChanged(element, oldValue, newValue);
-		        element.PropertyChanges.NotifyChanged<GuidanceExtension>(x => x.GuidanceFeatureId);
+		        element.PropertyChanges.NotifyChanged<GuidanceExtension>(x => x.ExtensionId);
 		    }
 		}
 		
@@ -3426,7 +3426,7 @@ namespace NuPattern.Library.Automation
 		/// Gets or sets the value of TypeName domain property.
 		/// The type name of the wizard. 
 		/// </summary>
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FullTypeTypeConverter<System.Windows.Window>))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.WizardSettings/TypeName.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.WizardSettings/TypeName.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
@@ -4392,8 +4392,8 @@ namespace NuPattern.Library.Automation
 		/// A custom event to execute validation on the current element and all its
 		/// descendants.
 		/// </summary>
-		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.FeatureComponentTypeConverter<NuPattern.IObservableEvent>))]
-		[System.ComponentModel.Editor(typeof(Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		[System.ComponentModel.TypeConverter(typeof(NuPattern.Runtime.Design.NuPatternComponentTypeConverter<NuPattern.IObservableEvent>))]
+		[System.ComponentModel.Editor(typeof(NuPattern.ComponentModel.Design.StandardValuesEditor), typeof(System.Drawing.Design.UITypeEditor))]
 		[DslDesign::DisplayNameResource("NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.DisplayName", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::CategoryResource("NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.Category", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]
 		[DslDesign::DescriptionResource("NuPattern.Library.Automation.ValidationExtension/ValidationOnCustomEvent.Description", typeof(global::NuPattern.Library.Automation.LibraryDomainModel), "NuPattern.Library.GeneratedCode.DomainModelResx.gen")]

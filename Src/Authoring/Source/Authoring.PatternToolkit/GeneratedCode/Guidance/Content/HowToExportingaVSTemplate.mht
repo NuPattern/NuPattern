@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="----=_NextPart_01CDFC13.14533CF0"
+Content-Type: multipart/related; boundary="----=_NextPart_01CE3FB8.7BBA6AB0"
 
 This document is a Single File Web Page, also known as a Web Archive file.  If you are seeing this message, your browser or editor doesn't support Web Archive files.  Please download a browser that supports Web Archive, such as Windows® Internet Explorer®.
 
-------=_NextPart_01CDFC13.14533CF0
+------=_NextPart_01CE3FB8.7BBA6AB0
 Content-Location: file:///C:/213792E5/HowToExportingaVSTemplate.htm
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/html; charset="windows-1252"
@@ -32,12 +32,12 @@ w\:* {behavior:url(#default#VML);}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:DocumentProperties>
-  <o:Author>Jezz Santos</o:Author>
-  <o:LastAuthor>Jezz Santos</o:LastAuthor>
+  <o:Author>Jezz</o:Author>
+  <o:LastAuthor>Jezz</o:LastAuthor>
   <o:Revision>1</o:Revision>
   <o:TotalTime>0</o:TotalTime>
-  <o:Created>2013-01-26T09:18:00Z</o:Created>
-  <o:LastSaved>2013-01-26T09:18:00Z</o:LastSaved>
+  <o:Created>2013-04-22T12:21:00Z</o:Created>
+  <o:LastSaved>2013-04-22T12:21:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
   <o:Words>616</o:Words>
   <o:Characters>3512</o:Characters>
@@ -64,7 +64,7 @@ href=3D"HowToExportingaVSTemplate_files/colorschememapping.xml">
   <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
   <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
   <w:DoNotPromoteQF/>
-  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeOther>EN-NZ</w:LidThemeOther>
   <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
   <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
   <w:Compatibility>
@@ -397,10 +397,10 @@ n"/>
 	{mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:"";
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
@@ -409,7 +409,9 @@ n"/>
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 h1
 	{mso-style-priority:9;
 	mso-style-unhide:no;
@@ -417,9 +419,9 @@ h1
 	mso-style-link:"Heading 1 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -436,6 +438,8 @@ h1
 	mso-themecolor:background2;
 	mso-themeshade:26;
 	mso-font-kerning:0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;}
 h2
 	{mso-style-priority:9;
@@ -443,9 +447,9 @@ h2
 	mso-style-link:"Heading 2 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -461,6 +465,8 @@ h2
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;}
 h3
 	{mso-style-priority:9;
@@ -468,9 +474,9 @@ h3
 	mso-style-link:"Heading 3 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -486,6 +492,8 @@ h3
 	color:#4A442A;
 	mso-themecolor:background2;
 	mso-themeshade:64;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;}
 h4
 	{mso-style-priority:9;
@@ -493,9 +501,9 @@ h4
 	mso-style-link:"Heading 4 Char";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	page-break-before:always;
 	mso-pagination:widow-orphan lines-together;
@@ -511,6 +519,8 @@ h4
 	color:#948A54;
 	mso-themecolor:background2;
 	mso-themeshade:128;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;
 	font-style:italic;}
 h5
@@ -519,9 +529,9 @@ h5
 	mso-style-link:"Heading 5 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -537,6 +547,8 @@ h5
 	color:#17365D;
 	mso-themecolor:text2;
 	mso-themeshade:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:bold;
 	mso-bidi-font-weight:normal;}
 h6
@@ -545,9 +557,9 @@ h6
 	mso-style-link:"Heading 6 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -563,6 +575,8 @@ h6
 	color:#548DD4;
 	mso-themecolor:text2;
 	mso-themetint:153;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-weight:normal;
 	font-style:italic;}
 p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
@@ -572,9 +586,9 @@ p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
 	mso-style-link:"Heading 7 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -594,6 +608,8 @@ p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-style:italic;}
 p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	{mso-style-noshow:yes;
@@ -602,9 +618,9 @@ p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	mso-style-link:"Heading 8 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -622,7 +638,9 @@ p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
 	mso-bidi-theme-font:major-bidi;
 	color:#404040;
 	mso-themecolor:text1;
-	mso-themetint:191;}
+	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	{mso-style-noshow:yes;
 	mso-style-priority:9;
@@ -630,9 +648,9 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	mso-style-link:"Heading 9 Char";
 	mso-style-next:Normal;
 	margin-top:10.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -651,15 +669,17 @@ p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
 	font-style:italic;}
 p.MsoToc1, li.MsoToc1, div.MsoToc1
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
@@ -668,13 +688,15 @@ p.MsoToc1, li.MsoToc1, div.MsoToc1
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc2, li.MsoToc2, div.MsoToc2
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:11.0pt;
 	line-height:115%;
@@ -685,13 +707,15 @@ p.MsoToc2, li.MsoToc2, div.MsoToc2
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc3, li.MsoToc3, div.MsoToc3
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:22.0pt;
 	line-height:115%;
@@ -702,13 +726,15 @@ p.MsoToc3, li.MsoToc3, div.MsoToc3
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc4, li.MsoToc4, div.MsoToc4
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:27.0pt;
 	line-height:115%;
@@ -719,13 +745,15 @@ p.MsoToc4, li.MsoToc4, div.MsoToc4
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc5, li.MsoToc5, div.MsoToc5
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:44.0pt;
 	line-height:115%;
@@ -739,13 +767,15 @@ p.MsoToc5, li.MsoToc5, div.MsoToc5
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc6, li.MsoToc6, div.MsoToc6
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:55.0pt;
 	line-height:115%;
@@ -759,13 +789,15 @@ p.MsoToc6, li.MsoToc6, div.MsoToc6
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc7, li.MsoToc7, div.MsoToc7
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:66.0pt;
 	line-height:115%;
@@ -779,13 +811,15 @@ p.MsoToc7, li.MsoToc7, div.MsoToc7
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc8, li.MsoToc8, div.MsoToc8
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:77.0pt;
 	line-height:115%;
@@ -799,13 +833,15 @@ p.MsoToc8, li.MsoToc8, div.MsoToc8
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoToc9, li.MsoToc9, div.MsoToc9
 	{mso-style-update:auto;
 	mso-style-priority:39;
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:5.0pt;
 	margin-left:88.0pt;
 	line-height:115%;
@@ -819,106 +855,116 @@ p.MsoToc9, li.MsoToc9, div.MsoToc9
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
 	{mso-style-priority:99;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.25in;
+	margin-left:18.0pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpFirst, li.MsoListBulletCxSpFirst, div.MsoListBulletCxSpF=
 irst
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.25in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpMiddle, li.MsoListBulletCxSpMiddle, div.MsoListBulletCxS=
 pMiddle
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.25in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListBulletCxSpLast, li.MsoListBulletCxSpLast, div.MsoListBulletCxSpLast
 	{mso-style-priority:99;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.25in;
+	margin-left:18.0pt;
 	mso-add-space:auto;
-	text-indent:-.25in;
+	text-indent:-18.0pt;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	mso-list:l0 level1 lfo1;
-	tab-stops:list .25in;
+	tab-stops:list 18.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
 	font-family:"Segoe UI","sans-serif";
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitle, li.MsoTitle, div.MsoTitle
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:15.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -930,22 +976,24 @@ p.MsoTitle, li.MsoTitle, div.MsoTitle
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -957,22 +1005,24 @@ p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -984,24 +1034,26 @@ p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
 	{mso-style-priority:10;
 	mso-style-unhide:no;
 	mso-style-link:"Title Char";
 	mso-style-next:Normal;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:15.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	mso-pagination:widow-orphan;
 	border:none;
 	mso-border-bottom-alt:solid #4F81BD 1.0pt;
 	mso-border-bottom-themecolor:accent1;
-	padding:0in;
-	mso-padding-alt:0in 0in 4.0pt 0in;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
 	font-size:20.0pt;
 	mso-bidi-font-size:26.0pt;
 	font-family:"Segoe UI","sans-serif";
@@ -1013,7 +1065,9 @@ p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 a:link, span.MsoHyperlink
 	{mso-style-priority:99;
 	color:blue;
@@ -1031,55 +1085,63 @@ p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-link:"Document Map Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
 	mso-bidi-font-size:8.0pt;
 	font-family:"Tahoma","sans-serif";
 	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;}
+	mso-fareast-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:3.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Segoe UI","sans-serif";
-	mso-fareast-font-family:"Times New Roman";}
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 pre
 	{mso-style-priority:99;
 	mso-style-link:"HTML Preformatted Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 41=
 2.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
 	font-size:10.0pt;
 	font-family:"Courier New";
-	mso-fareast-font-family:"Times New Roman";}
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-link:"Balloon Text Char";
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:9.0pt;
 	mso-bidi-font-size:8.0pt;
 	font-family:"Tahoma","sans-serif";
 	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;}
+	mso-fareast-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	{mso-style-priority:34;
 	mso-style-unhide:no;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.5in;
+	margin-left:36.0pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1089,16 +1151,18 @@ p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParag=
 raphCxSpFirst
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1109,16 +1173,18 @@ raphCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListPar=
 agraphCxSpMiddle
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:.5in;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1129,16 +1195,18 @@ agraphCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagra=
 phCxSpLast
 	{mso-style-priority:34;
 	mso-style-unhide:no;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:10.0pt;
-	margin-left:.5in;
+	margin-left:36.0pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1148,7 +1216,9 @@ phCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	{mso-style-noshow:yes;
 	mso-style-priority:39;
@@ -1156,9 +1226,9 @@ p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	mso-style-parent:"Heading 1";
 	mso-style-next:Normal;
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
@@ -1172,6 +1242,7 @@ p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
 	color:#1D1B11;
 	mso-themecolor:background2;
 	mso-themeshade:26;
+	mso-ansi-language:EN-US;
 	mso-fareast-language:JA;
 	font-weight:bold;}
 span.Heading1Char
@@ -1192,6 +1263,7 @@ span.Heading1Char
 	color:#1D1B11;
 	mso-themecolor:background2;
 	mso-themeshade:26;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading2Char
 	{mso-style-name:"Heading 2 Char";
@@ -1210,6 +1282,7 @@ span.Heading2Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading3Char
 	{mso-style-name:"Heading 3 Char";
@@ -1228,6 +1301,7 @@ span.Heading3Char
 	color:#4A442A;
 	mso-themecolor:background2;
 	mso-themeshade:64;
+	mso-ansi-language:EN-US;
 	font-weight:bold;}
 span.Heading4Char
 	{mso-style-name:"Heading 4 Char";
@@ -1246,6 +1320,7 @@ span.Heading4Char
 	color:#948A54;
 	mso-themecolor:background2;
 	mso-themeshade:128;
+	mso-ansi-language:EN-US;
 	font-weight:bold;
 	font-style:italic;}
 span.Heading5Char
@@ -1265,6 +1340,7 @@ span.Heading5Char
 	color:#17365D;
 	mso-themecolor:text2;
 	mso-themeshade:191;
+	mso-ansi-language:EN-US;
 	font-weight:bold;
 	mso-bidi-font-weight:normal;}
 span.Heading6Char
@@ -1284,6 +1360,7 @@ span.Heading6Char
 	color:#548DD4;
 	mso-themecolor:text2;
 	mso-themetint:153;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.Heading7Char
 	{mso-style-name:"Heading 7 Char";
@@ -1305,6 +1382,7 @@ span.Heading7Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.Heading8Char
 	{mso-style-name:"Heading 8 Char";
@@ -1326,7 +1404,8 @@ span.Heading8Char
 	mso-bidi-theme-font:major-bidi;
 	color:#404040;
 	mso-themecolor:text1;
-	mso-themetint:191;}
+	mso-themetint:191;
+	mso-ansi-language:EN-US;}
 span.Heading9Char
 	{mso-style-name:"Heading 9 Char";
 	mso-style-noshow:yes;
@@ -1348,6 +1427,7 @@ span.Heading9Char
 	color:#404040;
 	mso-themecolor:text1;
 	mso-themetint:191;
+	mso-ansi-language:EN-US;
 	font-style:italic;}
 span.TitleChar
 	{mso-style-name:"Title Char";
@@ -1368,7 +1448,8 @@ span.TitleChar
 	mso-themecolor:text1;
 	mso-themetint:242;
 	letter-spacing:.25pt;
-	mso-font-kerning:14.0pt;}
+	mso-font-kerning:14.0pt;
+	mso-ansi-language:EN-US;}
 span.BalloonTextChar
 	{mso-style-name:"Balloon Text Char";
 	mso-style-noshow:yes;
@@ -1381,15 +1462,16 @@ span.BalloonTextChar
 	font-family:"Tahoma","sans-serif";
 	mso-ascii-font-family:Tahoma;
 	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;}
+	mso-bidi-font-family:Tahoma;
+	mso-ansi-language:EN-US;}
 p.SourceCode, li.SourceCode, div.SourceCode
 	{mso-style-name:"Source Code";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	margin-top:12.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:12.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1402,16 +1484,18 @@ p.SourceCode, li.SourceCode, div.SourceCode
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
 	{mso-style-name:"Source CodeCxSpFirst";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
 	margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:0in;
-	margin-left:0in;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1425,13 +1509,15 @@ p.SourceCodeCxSpFirst, li.SourceCodeCxSpFirst, div.SourceCodeCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.SourceCodeCxSpMiddle, li.SourceCodeCxSpMiddle, div.SourceCodeCxSpMiddle
 	{mso-style-name:"Source CodeCxSpMiddle";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
-	margin:0in;
+	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1445,16 +1531,18 @@ p.SourceCodeCxSpMiddle, li.SourceCodeCxSpMiddle, div.SourceCodeCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.SourceCodeCxSpLast, li.SourceCodeCxSpLast, div.SourceCodeCxSpLast
 	{mso-style-name:"Source CodeCxSpLast";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:0in;
+	margin-top:0cm;
+	margin-right:0cm;
 	margin-bottom:12.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan;
@@ -1467,7 +1555,9 @@ p.SourceCodeCxSpLast, li.SourceCodeCxSpLast, div.SourceCodeCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.HTMLPreformattedChar
 	{mso-style-name:"HTML Preformatted Char";
 	mso-style-priority:99;
@@ -1480,7 +1570,8 @@ span.HTMLPreformattedChar
 	mso-ascii-font-family:"Courier New";
 	mso-fareast-font-family:"Times New Roman";
 	mso-hansi-font-family:"Courier New";
-	mso-bidi-font-family:"Courier New";}
+	mso-bidi-font-family:"Courier New";
+	mso-ansi-language:EN-US;}
 span.DocumentMapChar
 	{mso-style-name:"Document Map Char";
 	mso-style-noshow:yes;
@@ -1493,23 +1584,24 @@ span.DocumentMapChar
 	font-family:"Tahoma","sans-serif";
 	mso-ascii-font-family:Tahoma;
 	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;}
+	mso-bidi-font-family:Tahoma;
+	mso-ansi-language:EN-US;}
 p.Note, li.Note, div.Note
 	{mso-style-name:Note;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1518,17 +1610,19 @@ p.Note, li.Note, div.Note
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	{mso-style-name:NoteCxSpFirst;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1536,7 +1630,7 @@ p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1545,17 +1639,19 @@ p.NoteCxSpFirst, li.NoteCxSpFirst, div.NoteCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	{mso-style-name:NoteCxSpMiddle;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1563,7 +1659,7 @@ p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1572,24 +1668,26 @@ p.NoteCxSpMiddle, li.NoteCxSpMiddle, div.NoteCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
 	{mso-style-name:NoteCxSpLast;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Note Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	background:#FFFFCC;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1598,7 +1696,9 @@ p.NoteCxSpLast, li.NoteCxSpLast, div.NoteCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.NoteChar
 	{mso-style-name:"Note Char";
 	mso-style-unhide:no;
@@ -1608,23 +1708,24 @@ span.NoteChar
 	font-family:"Segoe UI","sans-serif";
 	mso-ascii-font-family:"Segoe UI";
 	mso-hansi-font-family:"Segoe UI";
-	background:#FFFFCC;}
+	background:#FFFFCC;
+	mso-ansi-language:EN-US;}
 p.MissingContent, li.MissingContent, div.MissingContent
 	{mso-style-name:"Missing Content";
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-link:"Missing Content Char";
 	margin-top:6.0pt;
-	margin-right:0in;
+	margin-right:0cm;
 	margin-bottom:6.0pt;
-	margin-left:0in;
+	margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
 	background:#FFFF66;
 	border:none;
 	mso-border-alt:solid yellow 6.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:24.0pt 4.0pt 24.0pt 4.0pt;
 	font-size:9.0pt;
 	mso-bidi-font-size:11.0pt;
@@ -1635,7 +1736,9 @@ p.MissingContent, li.MissingContent, div.MissingContent
 	mso-bidi-theme-font:minor-bidi;
 	color:#A6A6A6;
 	mso-themecolor:background1;
-	mso-themeshade:166;}
+	mso-themeshade:166;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.MissingContentChar
 	{mso-style-name:"Missing Content Char";
 	mso-style-unhide:no;
@@ -1648,17 +1751,18 @@ span.MissingContentChar
 	color:#A6A6A6;
 	mso-themecolor:background1;
 	mso-themeshade:166;
-	background:#FFFF66;}
+	background:#FFFF66;
+	mso-ansi-language:EN-US;}
 p.Warning, li.Warning, div.Warning
 	{mso-style-name:Warning;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1667,7 +1771,7 @@ p.Warning, li.Warning, div.Warning
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1676,7 +1780,9 @@ p.Warning, li.Warning, div.Warning
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	{mso-style-name:WarningCxSpFirst;
 	mso-style-unhide:no;
@@ -1684,10 +1790,10 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1697,7 +1803,7 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1706,7 +1812,9 @@ p.WarningCxSpFirst, li.WarningCxSpFirst, div.WarningCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	{mso-style-name:WarningCxSpMiddle;
 	mso-style-unhide:no;
@@ -1714,10 +1822,10 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1727,7 +1835,7 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1736,7 +1844,9 @@ p.WarningCxSpMiddle, li.WarningCxSpMiddle, div.WarningCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	{mso-style-name:WarningCxSpLast;
 	mso-style-unhide:no;
@@ -1744,10 +1854,10 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-style-parent:Note;
 	mso-style-link:"Warning Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1756,7 +1866,7 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-background-themetint:51;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1765,7 +1875,9 @@ p.WarningCxSpLast, li.WarningCxSpLast, div.WarningCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.WarningChar
 	{mso-style-name:"Warning Char";
 	mso-style-unhide:no;
@@ -1778,17 +1890,18 @@ span.WarningChar
 	mso-hansi-font-family:"Segoe UI";
 	background:#F2DBDB;
 	mso-shading-themecolor:accent2;
-	mso-shading-themetint:51;}
+	mso-shading-themetint:51;
+	mso-ansi-language:EN-US;}
 p.Tip, li.Tip, div.Tip
 	{mso-style-name:Tip;
 	mso-style-unhide:no;
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1797,7 +1910,7 @@ p.Tip, li.Tip, div.Tip
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1806,7 +1919,9 @@ p.Tip, li.Tip, div.Tip
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	{mso-style-name:TipCxSpFirst;
 	mso-style-unhide:no;
@@ -1814,10 +1929,10 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1827,7 +1942,7 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1836,7 +1951,9 @@ p.TipCxSpFirst, li.TipCxSpFirst, div.TipCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	{mso-style-name:TipCxSpMiddle;
 	mso-style-unhide:no;
@@ -1844,10 +1961,10 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1857,7 +1974,7 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1866,7 +1983,9 @@ p.TipCxSpMiddle, li.TipCxSpMiddle, div.TipCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	{mso-style-name:TipCxSpLast;
 	mso-style-unhide:no;
@@ -1874,10 +1993,10 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-style-parent:Note;
 	mso-style-link:"Tip Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1886,7 +2005,7 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1895,7 +2014,9 @@ p.TipCxSpLast, li.TipCxSpLast, div.TipCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.TipChar
 	{mso-style-name:"Tip Char";
 	mso-style-unhide:no;
@@ -1908,7 +2029,8 @@ span.TipChar
 	mso-hansi-font-family:"Segoe UI";
 	background:#D6E3BC;
 	mso-shading-themecolor:accent3;
-	mso-shading-themetint:102;}
+	mso-shading-themetint:102;
+	mso-ansi-language:EN-US;}
 span.parameter
 	{mso-style-name:parameter;
 	mso-style-unhide:no;}
@@ -1918,10 +2040,10 @@ p.Recommend, li.Recommend, div.Recommend
 	mso-style-qformat:yes;
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -1930,7 +2052,7 @@ p.Recommend, li.Recommend, div.Recommend
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1939,7 +2061,9 @@ p.Recommend, li.Recommend, div.Recommend
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	{mso-style-name:RecommendCxSpFirst;
 	mso-style-unhide:no;
@@ -1947,10 +2071,10 @@ p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1960,7 +2084,7 @@ p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1969,7 +2093,9 @@ p.RecommendCxSpFirst, li.RecommendCxSpFirst, div.RecommendCxSpFirst
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	{mso-style-name:RecommendCxSpMiddle;
 	mso-style-unhide:no;
@@ -1977,10 +2103,10 @@ p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
-	margin-bottom:0in;
-	margin-left:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
+	margin-bottom:0cm;
+	margin-left:28.8pt;
 	margin-bottom:.0001pt;
 	mso-add-space:auto;
 	line-height:115%;
@@ -1990,7 +2116,7 @@ p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -1999,7 +2125,9 @@ p.RecommendCxSpMiddle, li.RecommendCxSpMiddle, div.RecommendCxSpMiddle
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	{mso-style-name:RecommendCxSpLast;
 	mso-style-unhide:no;
@@ -2007,10 +2135,10 @@ p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	mso-style-parent:Note;
 	mso-style-link:"Recommend Char";
 	mso-style-type:export-only;
-	margin-top:0in;
-	margin-right:.4in;
+	margin-top:0cm;
+	margin-right:28.8pt;
 	margin-bottom:10.0pt;
-	margin-left:.4in;
+	margin-left:28.8pt;
 	mso-add-space:auto;
 	line-height:115%;
 	mso-pagination:widow-orphan lines-together;
@@ -2019,7 +2147,7 @@ p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	mso-background-themetint:102;
 	border:none;
 	mso-border-alt:solid windowtext 1.0pt;
-	padding:0in;
+	padding:0cm;
 	mso-padding-alt:6.0pt 4.0pt 6.0pt 4.0pt;
 	mso-border-shadow:yes;
 	font-size:9.0pt;
@@ -2028,7 +2156,9 @@ p.RecommendCxSpLast, li.RecommendCxSpLast, div.RecommendCxSpLast
 	mso-fareast-font-family:Calibri;
 	mso-fareast-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 span.RecommendChar
 	{mso-style-name:"Recommend Char";
 	mso-style-unhide:no;
@@ -2041,7 +2171,8 @@ span.RecommendChar
 	mso-hansi-font-family:"Segoe UI";
 	background:#D6E3BC;
 	mso-shading-themecolor:accent3;
-	mso-shading-themetint:102;}
+	mso-shading-themetint:102;
+	mso-ansi-language:EN-US;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -2053,16 +2184,17 @@ span.RecommendChar
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;}
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
 .MsoPapDefault
 	{mso-style-type:export-only;
 	margin-bottom:10.0pt;
 	line-height:115%;}
 @page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;
-	mso-header-margin:.5in;
-	mso-footer-margin:.5in;
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
 	mso-paper-source:0;}
 div.WordSection1
 	{page:WordSection1;}
@@ -2075,10 +2207,10 @@ div.WordSection1
 	{mso-level-number-format:bullet;
 	mso-level-style-link:"List Bullet";
 	mso-level-text:\F0B7;
-	mso-level-tab-stop:.25in;
+	mso-level-tab-stop:18.0pt;
 	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
 	font-family:Symbol;}
 @list l1
 	{mso-list-id:1973171282;
@@ -2088,12 +2220,12 @@ div.WordSection1
 @list l1:level1
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l1:level2
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l1:level3
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -2102,12 +2234,12 @@ div.WordSection1
 @list l1:level4
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l1:level5
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l1:level6
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
@@ -2116,21 +2248,21 @@ div.WordSection1
 @list l1:level7
 	{mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l1:level8
 	{mso-level-number-format:alpha-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:left;
-	text-indent:-.25in;}
+	text-indent:-18.0pt;}
 @list l1:level9
 	{mso-level-number-format:roman-lower;
 	mso-level-tab-stop:none;
 	mso-level-number-position:right;
 	text-indent:-9.0pt;}
 ol
-	{margin-bottom:0in;}
+	{margin-bottom:0cm;}
 ul
-	{margin-bottom:0in;}
+	{margin-bottom:0cm;}
 -->
 </style>
 <!--[if gte mso 10]>
@@ -2143,11 +2275,11 @@ ul
 	mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-parent:"";
-	mso-padding-alt:0in 5.4pt 0in 5.4pt;
-	mso-para-margin-top:0in;
-	mso-para-margin-right:0in;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
 	mso-para-margin-bottom:10.0pt;
-	mso-para-margin-left:0in;
+	mso-para-margin-left:0cm;
 	line-height:115%;
 	mso-pagination:widow-orphan;
 	font-size:11.0pt;
@@ -2155,7 +2287,8 @@ ul
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;}
+	mso-hansi-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
 table.MsoTableGrid
 	{mso-style-name:"Table Grid";
 	mso-tstyle-rowband-size:0;
@@ -2164,10 +2297,10 @@ table.MsoTableGrid
 	mso-style-unhide:no;
 	border:solid windowtext 1.0pt;
 	mso-border-alt:solid windowtext .5pt;
-	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
 	mso-border-insideh:.5pt solid windowtext;
 	mso-border-insidev:.5pt solid windowtext;
-	mso-para-margin:0in;
+	mso-para-margin:0cm;
 	mso-para-margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:11.0pt;
@@ -2175,7 +2308,9 @@ table.MsoTableGrid
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;}
+	mso-hansi-theme-font:minor-latin;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
  <o:shapedefaults v:ext=3D"edit" spidmax=3D"1027"/>
@@ -2185,167 +2320,182 @@ table.MsoTableGrid
  </o:shapelayout></xml><![endif]-->
 </head>
 
-<body lang=3DEN-US link=3Dblue vlink=3Dpurple style=3D'tab-interval:.5in'>
+<body lang=3DEN-NZ link=3Dblue vlink=3Dpurple style=3D'tab-interval:36.0pt'>
 
 <div class=3DWordSection1>
 
-<h4 style=3D'page-break-before:auto'>How To: Exporting a VS Template<o:p></=
-o:p></h4>
+<h4 style=3D'page-break-before:auto'><span lang=3DEN-US>How To: Exporting a=
+ VS
+Template<o:p></o:p></span></h4>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
-margin-left:.4in;margin-right:.4in'>
+margin-left:28.8pt;margin-right:28.8pt'>
 
-<p class=3DNoteCxSpFirst style=3D'margin-top:0in;margin-right:0in;margin-bo=
+<p class=3DNoteCxSpFirst style=3D'margin-top:0cm;margin-right:0cm;margin-bo=
 ttom:
-10.0pt;margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b
-style=3D'mso-bidi-font-weight:normal'>Note</b>: Exporting/Importing a VS te=
-mplate
-is the recommended practice for creating new VS Templates (or customizing
-existing VS templates) in a pattern toolkit project. Creating a VS template
-from scratch is not recommended unless you are fluent in the detailed knowl=
-edge
-of VS template creation. If so, see <a
+10.0pt;margin-left:0cm;mso-add-space:auto;background:#FFFFCC'><b
+style=3D'mso-bidi-font-weight:normal'><span lang=3DEN-US>Note</span></b><sp=
+an
+lang=3DEN-US>: Exporting/Importing a VS template is the recommended practic=
+e for
+creating new VS Templates (or customizing existing VS templates) in a patte=
+rn
+toolkit project. Creating a VS template from scratch is not recommended unl=
+ess
+you are fluent in the detailed knowledge of VS template creation. If so, se=
+e <a
 href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToCreatingaVSTemplate.mht">Creating
 a VS Template</a> for the best way to create a new VS template from scratch=
  for
-a pattern toolkit.<o:p></o:p></p>
+a pattern toolkit.<o:p></o:p></span></p>
 
-<p class=3DNoteCxSpLast style=3D'margin-top:0in;margin-right:0in;margin-bot=
+<p class=3DNoteCxSpLast style=3D'margin-top:0cm;margin-right:0cm;margin-bot=
 tom:
-10.0pt;margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b
-style=3D'mso-bidi-font-weight:normal'>Important:</b> Exporting a VS templat=
-e is
-the first part of a two part process of adding a VS template to your pattern
-toolkit project. After exporting the VS template, you must import the templ=
-ate
-into your toolkit project. See <a
+10.0pt;margin-left:0cm;mso-add-space:auto;background:#FFFFCC'><b
+style=3D'mso-bidi-font-weight:normal'><span lang=3DEN-US>Important:</span><=
+/b><span
+lang=3DEN-US> Exporting a VS template is the first part of a two part proce=
+ss of
+adding a VS template to your pattern toolkit project. After exporting the VS
+template, you must import the template into your toolkit project. See <a
 href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToImportingaVSTemplate.mht">Importing
-a VS Template</a> for more details on that process.<o:p></o:p></p>
+a VS Template</a> for more details on that process.<o:p></o:p></span></p>
 
 </div>
 
-<h5>Process Overview<o:p></o:p></h5>
+<h5><span lang=3DEN-US>Process Overview<o:p></o:p></span></h5>
 
-<p class=3DMsoNormal>Before you can export a VS template from Visual Studio=
-, you
-must create the project and/or items in <a
+<p class=3DMsoNormal><span lang=3DEN-US>Before you can export a VS template=
+ from
+Visual Studio, you must create the project and/or items in <a
 href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/SolutionExplorer.mht">‘Solution
-Explorer’</a> to export.<o:p></o:p></p>
+Explorer’</a> to export.<o:p></o:p></span></p>
 
-<p class=3DMsoNormal>To export a VS template for use in a pattern toolkit:<=
-o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>To export a VS template for use in a
+pattern toolkit:<o:p></o:p></span></p>
 
-<p class=3DMsoListParagraphCxSpFirst style=3D'text-indent:-.25in;mso-list:l=
-1 level1 lfo2'><![if !supportLists]><span
-style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
-'><span
+<p class=3DMsoListParagraphCxSpFirst style=3D'text-indent:-18.0pt;mso-list:=
+l1 level1 lfo2'><![if !supportLists]><span
+lang=3DEN-US style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-fami=
+ly:"Segoe UI"'><span
 style=3D'mso-list:Ignore'>1.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Construct the desired Project or Items (file=
-s)
-you wish to export in a Visual Studio solution. Finalize the structure and
-naming, configuration of projects, and content of files.<o:p></o:p></p>
+</span></span></span><![endif]><span lang=3DEN-US>Construct the desired Pro=
+ject
+or Items (files) you wish to export in a Visual Studio solution. Finalize t=
+he
+structure and naming, configuration of projects, and content of files.<o:p>=
+</o:p></span></p>
 
-<p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
-l1 level1 lfo2'><![if !supportLists]><span
-style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
-'><span
+<p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-18.0pt;mso-list=
+:l1 level1 lfo2'><![if !supportLists]><span
+lang=3DEN-US style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-fami=
+ly:"Segoe UI"'><span
 style=3D'mso-list:Ignore'>2.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Harvest the template, by running the ‘Export
-Template Wizard’ to create a VS template (*.zip) archive on disk.<o:p></o:p=
-></p>
+</span></span></span><![endif]><span lang=3DEN-US>Harvest the template, by
+running the ‘Export Template Wizard’ to create a VS template (*.zip) archiv=
+e on
+disk.<o:p></o:p></span></p>
 
-<p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-.25in;mso-list:=
-l1 level1 lfo2'><![if !supportLists]><span
-style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
-'><span
+<p class=3DMsoListParagraphCxSpMiddle style=3D'text-indent:-18.0pt;mso-list=
+:l1 level1 lfo2'><![if !supportLists]><span
+lang=3DEN-US style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-fami=
+ly:"Segoe UI"'><span
 style=3D'mso-list:Ignore'>3.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Import the VS template package into your too=
-lkit
-project.<o:p></o:p></p>
+</span></span></span><![endif]><span lang=3DEN-US>Import the VS template pa=
+ckage
+into your toolkit project.<o:p></o:p></span></p>
 
-<p class=3DMsoListParagraphCxSpLast style=3D'text-indent:-.25in;mso-list:l1=
- level1 lfo2'><![if !supportLists]><span
-style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-family:"Segoe UI"=
-'><span
+<p class=3DMsoListParagraphCxSpLast style=3D'text-indent:-18.0pt;mso-list:l=
+1 level1 lfo2'><![if !supportLists]><span
+lang=3DEN-US style=3D'mso-fareast-font-family:"Segoe UI";mso-bidi-font-fami=
+ly:"Segoe UI"'><span
 style=3D'mso-list:Ignore'>4.<span style=3D'font:7.0pt "Times New Roman"'>&n=
 bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>Automate the unfolding of the template in the
-pattern model.<o:p></o:p></p>
+</span></span></span><![endif]><span lang=3DEN-US>Automate the unfolding of=
+ the
+template in the pattern model.<o:p></o:p></span></p>
 
-<h5>Constructing the Template<o:p></o:p></h5>
+<h5><span lang=3DEN-US>Constructing the Template<o:p></o:p></span></h5>
 
-<p class=3DMsoNormal>To construct the template, create and set up new proje=
-cts
-and add files in a solution in Visual Studio. You can use any existing proj=
-ect
-or item template already installed in Visual Studio to get started.<o:p></o=
-:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>To construct the template, create a=
+nd set
+up new projects and add files in a solution in Visual Studio. You can use a=
+ny
+existing project or item template already installed in Visual Studio to get
+started.<o:p></o:p></span></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#D6E3BC;
 mso-background-themecolor:accent3;mso-background-themetint:102;margin-left:
-.4in;margin-right:.4in'>
+28.8pt;margin-right:28.8pt'>
 
-<p class=3DTip style=3D'margin-top:0in;margin-right:0in;margin-bottom:10.0p=
+<p class=3DTip style=3D'margin-top:0cm;margin-right:0cm;margin-bottom:10.0p=
 t;
-margin-left:0in;mso-add-space:auto;background:#D6E3BC;mso-background-themec=
+margin-left:0cm;mso-add-space:auto;background:#D6E3BC;mso-background-themec=
 olor:
 accent3;mso-background-themetint:102'><b style=3D'mso-bidi-font-weight:norm=
-al'>Tip</b>:
-Consider creating the project or files in the toolkit solution and harvest =
-them
-from there. A separate solution is not necessary.<o:p></o:p></p>
+al'><span
+lang=3DEN-US>Tip</span></b><span lang=3DEN-US>: Consider creating the proje=
+ct or
+files in the toolkit solution and harvest them from there. A separate solut=
+ion
+is not necessary.<o:p></o:p></span></p>
 
 </div>
 
-<p class=3DMsoNormal>Pay special attention to naming, structure and configu=
-ration
-of projects, as these are also copied to the template.<o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>Pay special attention to naming, st=
+ructure
+and configuration of projects, as these are also copied to the template.<o:=
+p></o:p></span></p>
 
-<p class=3DMsoNormal>Remove any files, folders, references or configuration=
- not
-necessary in the template, and pare it down to its bare essentials. <o:p></=
-o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>Remove any files, folders, referenc=
+es or
+configuration not necessary in the template, and pare it down to its bare
+essentials. <o:p></o:p></span></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
-margin-left:.4in;margin-right:.4in'>
+margin-left:28.8pt;margin-right:28.8pt'>
 
-<p class=3DNote style=3D'margin-top:0in;margin-right:0in;margin-bottom:10.0=
+<p class=3DNote style=3D'margin-top:0cm;margin-right:0cm;margin-bottom:10.0=
 pt;
-margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
+margin-left:0cm;mso-add-space:auto;background:#FFFFCC'><b style=3D'mso-bidi=
 -font-weight:
-normal'>Note</b>: The basic principal is that the template only contains the
-bare fixed (or only slightly variable) essentials, and other things that are
-more variable can be added by your toolkit using automation. <o:p></o:p></p>
+normal'><span lang=3DEN-US>Note</span></b><span lang=3DEN-US>: The basic pr=
+incipal
+is that the template only contains the bare fixed (or only slightly variabl=
+e)
+essentials, and other things that are more variable can be added by your
+toolkit using automation. <o:p></o:p></span></p>
 
 </div>
 
-<h5>Exporting the Template<o:p></o:p></h5>
+<h5><span lang=3DEN-US>Exporting the Template<o:p></o:p></span></h5>
 
-<p class=3DMsoNormal>To export the project or just an item from the solutio=
-n, run
-the ‘Export Template Wizard’ in the solution (File | Export Template).<o:p>=
-</o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>To export the project or just an it=
+em from
+the solution, run the ‘Export Template Wizard’ in the solution (File | Expo=
+rt
+Template).<o:p></o:p></span></p>
 
 <table class=3DMsoTableGrid border=3D0 cellspacing=3D0 cellpadding=3D0
  style=3D'border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-pa=
 dding-alt:
- 0in 5.4pt 0in 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
+ 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:none;mso-border-insidev:none'>
  <tr style=3D'mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
-  <td width=3D179 valign=3Dtop style=3D'width:134.4pt;padding:0in 5.4pt 0in=
+  <td width=3D179 valign=3Dtop style=3D'width:134.4pt;padding:0cm 5.4pt 0cm=
  5.4pt'>
-  <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
 e-height:
-  normal'><span style=3D'mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype =
-id=3D"_x0000_t75"
+  normal'><span style=3D'mso-ansi-language:EN-NZ;mso-fareast-language:EN-NZ;
+  mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id=3D"_x0000_t75"
    coordsize=3D"21600,21600" o:spt=3D"75" o:preferrelative=3D"t" path=3D"m@=
 4@5l@4@11@9@11@9@5xe"
    filled=3D"f" stroked=3D"f">
@@ -2375,11 +2525,12 @@ ype=3D"#_x0000_t75"
 e=3D""/>
   </v:shape><![endif]--><![if !vml]><img border=3D0 width=3D159 height=3D222
   src=3D"HowToExportingaVSTemplate_files/image002.jpg" v:shapes=3D"Picture_=
-x0020_161"><![endif]></span><o:p></o:p></p>
+x0020_161"><![endif]></span><span
+  lang=3DEN-US><o:p></o:p></span></p>
   </td>
-  <td width=3D104 valign=3Dtop style=3D'width:78.0pt;padding:0in 5.4pt 0in =
+  <td width=3D104 valign=3Dtop style=3D'width:78.0pt;padding:0cm 5.4pt 0cm =
 5.4pt'>
-  <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
 e-height:
   normal'><!--[if gte vml 1]><v:shapetype id=3D"_x0000_t93" coordsize=3D"21=
 600,21600"
@@ -2457,110 +2608,117 @@ adient"/>
   position:absolute;z-index:251659264;margin-left:13px;margin-top:69px;
   width:91px;height:58px'><img width=3D91 height=3D58
   src=3D"HowToExportingaVSTemplate_files/image003.png" v:shapes=3D"Striped_=
-x0020_Right_x0020_Arrow_x0020_1"></span><![endif]><o:p></o:p></p>
+x0020_Right_x0020_Arrow_x0020_1"></span><![endif]><span
+  lang=3DEN-US><o:p></o:p></span></p>
   </td>
-  <td width=3D691 valign=3Dtop style=3D'width:7.2in;padding:0in 5.4pt 0in 5=
-.4pt'>
-  <p class=3DMsoNormal style=3D'margin-bottom:0in;margin-bottom:.0001pt;lin=
+  <td width=3D691 valign=3Dtop style=3D'width:518.4pt;padding:0cm 5.4pt 0cm=
+ 5.4pt'>
+  <p class=3DMsoNormal style=3D'margin-bottom:0cm;margin-bottom:.0001pt;lin=
 e-height:
-  normal'><span style=3D'mso-no-proof:yes'><!--[if gte vml 1]><v:shape id=
-=3D"Picture_x0020_162"
-   o:spid=3D"_x0000_i1026" type=3D"#_x0000_t75" style=3D'width:267.75pt;hei=
-ght:210.75pt;
-   visibility:visible;mso-wrap-style:square'>
+  normal'><span style=3D'mso-ansi-language:EN-NZ;mso-fareast-language:EN-NZ;
+  mso-no-proof:yes'><!--[if gte vml 1]><v:shape id=3D"Picture_x0020_162" o:=
+spid=3D"_x0000_i1026"
+   type=3D"#_x0000_t75" style=3D'width:267.75pt;height:210.75pt;visibility:=
+visible;
+   mso-wrap-style:square'>
    <v:imagedata src=3D"HowToExportingaVSTemplate_files/image004.png" o:titl=
 e=3D"SNAGHTMLbf3d32"/>
   </v:shape><![endif]--><![if !vml]><img border=3D0 width=3D357 height=3D281
   src=3D"HowToExportingaVSTemplate_files/image005.png" v:shapes=3D"Picture_=
-x0020_162"><![endif]></span><o:p></o:p></p>
+x0020_162"><![endif]></span><span
+  lang=3DEN-US><o:p></o:p></span></p>
   </td>
  </tr>
 </table>
 
-<p class=3DMsoNormal>The export wizard asks which kind of template to expor=
-t (Project
-or Item), then a set of questions on selecting exactly which project or ite=
-ms
-to select, and their dependencies.<o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>The export wizard asks which kind of
+template to export (Project or Item), then a set of questions on selecting
+exactly which project or items to select, and their dependencies.<o:p></o:p=
+></span></p>
 
-<p class=3DMsoNormal>On the final ‘Template Options’ page, the wizard asks =
-how to
-name the template and where to create the template archive (a *.zip file).<=
-o:p></o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US>On the final ‘Template Options’ pag=
+e, the
+wizard asks how to name the template and where to create the template archi=
+ve
+(a *.zip file).<o:p></o:p></span></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#F2DBDB;
-mso-background-themecolor:accent2;mso-background-themetint:51;margin-left:.=
-4in;
-margin-right:.4in'>
+mso-background-themecolor:accent2;mso-background-themetint:51;margin-left:2=
+8.8pt;
+margin-right:28.8pt'>
 
-<p class=3DWarning style=3D'margin-top:0in;margin-right:0in;margin-bottom:1=
+<p class=3DWarning style=3D'margin-top:0cm;margin-right:0cm;margin-bottom:1=
 0.0pt;
-margin-left:0in;mso-add-space:auto;background:#F2DBDB;mso-background-themec=
+margin-left:0cm;mso-add-space:auto;background:#F2DBDB;mso-background-themec=
 olor:
 accent2;mso-background-themetint:51'><b style=3D'mso-bidi-font-weight:norma=
-l'>Important</b>:
-It is vitally important that you <b style=3D'mso-bidi-font-weight:normal'>d=
-eselect</b>
-the <b style=3D'mso-bidi-font-weight:normal'>‘Automatically import the temp=
-late
-into Visual Studio’</b> option in this wizard page, failing to do this will
-mean that you will have two templates installed into Visual Studio causing
+l'><span
+lang=3DEN-US>Important</span></b><span lang=3DEN-US>: It is vitally importa=
+nt that
+you <b style=3D'mso-bidi-font-weight:normal'>deselect</b> the <b
+style=3D'mso-bidi-font-weight:normal'>‘Automatically import the template in=
+to
+Visual Studio’</b> option in this wizard page, failing to do this will mean
+that you will have two templates installed into Visual Studio causing
 unnecessary confusion, one created by this Export Wizard and one created by
-your pattern toolkit.<o:p></o:p></p>
+your pattern toolkit.<o:p></o:p></span></p>
 
 </div>
 
-<p class=3DMsoNormal><span style=3D'mso-no-proof:yes'><!--[if gte vml 1]><v=
-:shape
- id=3D"Picture_x0020_163" o:spid=3D"_x0000_i1025" type=3D"#_x0000_t75" styl=
-e=3D'width:267.75pt;
- height:210.75pt;visibility:visible;mso-wrap-style:square'>
+<p class=3DMsoNormal><span style=3D'mso-ansi-language:EN-NZ;mso-fareast-lan=
+guage:
+EN-NZ;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id=3D"Picture_x0020_163"
+ o:spid=3D"_x0000_i1025" type=3D"#_x0000_t75" style=3D'width:267.75pt;heigh=
+t:210.75pt;
+ visibility:visible;mso-wrap-style:square'>
  <v:imagedata src=3D"HowToExportingaVSTemplate_files/image006.png" o:title=
 =3D"SNAGHTMLc08f18"/>
 </v:shape><![endif]--><![if !vml]><img border=3D0 width=3D357 height=3D281
 src=3D"HowToExportingaVSTemplate_files/image007.png" v:shapes=3D"Picture_x0=
-020_163"><![endif]></span><o:p></o:p></p>
+020_163"><![endif]></span><span
+lang=3DEN-US><o:p></o:p></span></p>
 
 <div style=3D'mso-element:para-border-div;border:solid windowtext 1.0pt;
 padding:6.0pt 4.0pt 6.0pt 4.0pt;mso-border-shadow:yes;background:#FFFFCC;
-margin-left:.4in;margin-right:.4in'>
+margin-left:28.8pt;margin-right:28.8pt'>
 
-<p class=3DNoteCxSpFirst style=3D'margin-top:0in;margin-right:0in;margin-bo=
+<p class=3DNoteCxSpFirst style=3D'margin-top:0cm;margin-right:0cm;margin-bo=
 ttom:
-10.0pt;margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b
-style=3D'mso-bidi-font-weight:normal'>Note</b>: The name and description ar=
-e not
-so important at this stage as they will be updated when your template is
-imported and used in the pattern toolkit. Add an existing icon if you have =
-one.
-A default icon will be included if none provided, and that can be updated l=
-ater
-in the pattern toolkit.<o:p></o:p></p>
+10.0pt;margin-left:0cm;mso-add-space:auto;background:#FFFFCC'><b
+style=3D'mso-bidi-font-weight:normal'><span lang=3DEN-US>Note</span></b><sp=
+an
+lang=3DEN-US>: The name and description are not so important at this stage =
+as
+they will be updated when your template is imported and used in the pattern
+toolkit. Add an existing icon if you have one. A default icon will be inclu=
+ded
+if none provided, and that can be updated later in the pattern toolkit.<o:p=
+></o:p></span></p>
 
-<p class=3DNoteCxSpLast style=3D'margin-top:0in;margin-right:0in;margin-bot=
+<p class=3DNoteCxSpLast style=3D'margin-top:0cm;margin-right:0cm;margin-bot=
 tom:
-10.0pt;margin-left:0in;mso-add-space:auto;background:#FFFFCC'><b
-style=3D'mso-bidi-font-weight:normal'>Note</b>: The ‘Output Location’ is wh=
-ere
-the template archive (a *.zip file) will be deposited. This directory defau=
-lts
-to the ‘Exported Templates’ folder of the current users default Visual Stud=
-io
-directory. The template importer will start looking for your template in th=
-is
-directory by default also.<o:p></o:p></p>
+10.0pt;margin-left:0cm;mso-add-space:auto;background:#FFFFCC'><b
+style=3D'mso-bidi-font-weight:normal'><span lang=3DEN-US>Note</span></b><sp=
+an
+lang=3DEN-US>: The ‘Output Location’ is where the template archive (a *.zip=
+ file)
+will be deposited. This directory defaults to the ‘Exported Templates’ fold=
+er
+of the current users default Visual Studio directory. The template importer
+will start looking for your template in this directory by default also.<o:p=
+></o:p></span></p>
 
 </div>
 
-<h5>Importing the Template<o:p></o:p></h5>
+<h5><span lang=3DEN-US>Importing the Template<o:p></o:p></span></h5>
 
-<p class=3DMsoNormal>See <a
+<p class=3DMsoNormal><span lang=3DEN-US>See <a
 href=3D"content://9f6dc301-6f66-4d21-9f9c-b37412b162f6/GeneratedCode/Guidan=
 ce/Content/HowToImportingaVSTemplate.mht">Importing
-a VS Template</a> to complete this process.<o:p></o:p></p>
+a VS Template</a> to complete this process.<o:p></o:p></span></p>
 
-<p class=3DMsoNormal><o:p>&nbsp;</o:p></p>
+<p class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p>
 
 </div>
 
@@ -2568,7 +2726,7 @@ a VS Template</a> to complete this process.<o:p></o:p></p>
 
 </html>
 
-------=_NextPart_01CDFC13.14533CF0
+------=_NextPart_01CE3FB8.7BBA6AB0
 Content-Location: file:///C:/213792E5/HowToExportingaVSTemplate_files/themedata.thmx
 Content-Transfer-Encoding: base64
 Content-Type: application/vnd.ms-officetheme
@@ -2629,7 +2787,7 @@ AAAAAAAAANYCAAB0aGVtZS90aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAA3RkJ+2AAAA
 GwEAACcAAAAAAAAAAAAAAAAAsgkAAHRoZW1lL3RoZW1lL19yZWxzL3RoZW1lTWFuYWdlci54bWwu
 cmVsc1BLBQYAAAAABQAFAF0BAACtCgAAAAA=
 
-------=_NextPart_01CDFC13.14533CF0
+------=_NextPart_01CE3FB8.7BBA6AB0
 Content-Location: file:///C:/213792E5/HowToExportingaVSTemplate_files/colorschememapping.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml
@@ -2639,7 +2797,7 @@ Content-Type: text/xml
  bg1=3D"lt1" tx1=3D"dk1" bg2=3D"lt2" tx2=3D"dk2" accent1=3D"accent1" accent=
 2=3D"accent2" accent3=3D"accent3" accent4=3D"accent4" accent5=3D"accent5" a=
 ccent6=3D"accent6" hlink=3D"hlink" folHlink=3D"folHlink"/>
-------=_NextPart_01CDFC13.14533CF0
+------=_NextPart_01CE3FB8.7BBA6AB0
 Content-Location: file:///C:/213792E5/HowToExportingaVSTemplate_files/image001.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3230,7 +3388,7 @@ dUYg8OYdg/he4+meuCYcgbKKAPRcBmHv69wj8rpzBIoNAc7eYoOaF8QRKGIEOHuLGFAujiNQbAhw
 9hYb1LwgjkARI8DZW8SAcnEcgWJDgLO32KDmBXEEihgBfN5bxCK5OI4AR6BYEPg/VlGMSwKp8mAA
 AAAASUVORK5CYIJ=
 
-------=_NextPart_01CDFC13.14533CF0
+------=_NextPart_01CE3FB8.7BBA6AB0
 Content-Location: file:///C:/213792E5/HowToExportingaVSTemplate_files/image002.jpg
 Content-Transfer-Encoding: base64
 Content-Type: image/jpeg
@@ -3246,104 +3404,103 @@ AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
 BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
 U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
 uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCcaufN
-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
+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
 
-------=_NextPart_01CDFC13.14533CF0
+------=_NextPart_01CE3FB8.7BBA6AB0
 Content-Location: file:///C:/213792E5/HowToExportingaVSTemplate_files/image003.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -3399,7 +3556,7 @@ JW8Fg8FjAFDb0FynQKkHMTcY64Mie8VMT0i/1elUFCxsITj3f78hNqOi7CFvQ9McKeEDpCIhjopK
 d+9UAazJ2ekELja+/tWq0kg00fK3E4M1kouw4LH2zgPtYafzsotChd0/kkh2xaaV7Dp2aOuA08lk
 GwUJO/0fYDc6nUeuUZCwCzW+gJ3H+B9WltiE+pD4bAAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDFC13.14533CF0
+------=_NextPart_01CE3FB8.7BBA6AB0
 Content-Location: file:///C:/213792E5/HowToExportingaVSTemplate_files/image004.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -4479,7 +4636,7 @@ dpTGHYQ5mMihatqZjNCwxYk+chZ5xlja9DWzDmIbgHz4bzPqRxBmw1LnzV2/VFw6kAcTLtaLq0g5
 eaJ86b+fCOrpZNmozZPmK5Nf5OdqztUlFIIACIAACIAACIAACIBAcRDgC8gVlVXs1ovRjEuT/wNb
 kDvsneb2yQAAAABJRU5ErkJggk==
 
-------=_NextPart_01CDFC13.14533CF0
+------=_NextPart_01CE3FB8.7BBA6AB0
 Content-Location: file:///C:/213792E5/HowToExportingaVSTemplate_files/image005.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -5536,7 +5693,7 @@ iNKFgmKzyuuiHhPEtOpi4NzveTFoXpzS6YboEpNCUF8bxzn0mDft984C7jR+3dBsdTffv/FE9eKL
 bWPrEsLkphvuVYXihSDf5BRPM1yUtdScde9XaWqzHiEqN+S9X31ev33rtp811lc88v8D3lllT+A7
 OdIAAAAASUVORK5CYIJ=
 
-------=_NextPart_01CDFC13.14533CF0
+------=_NextPart_01CE3FB8.7BBA6AB0
 Content-Location: file:///C:/213792E5/HowToExportingaVSTemplate_files/image006.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -6540,7 +6697,7 @@ ob1ZQ2T5SWJ0E0/4XYWAJrjM+a4StUrn3zTGKSmyuT4AQ8xiqqgSrXptTUrO1Yui0/rmxgZbX1/j
 J8qwUf7x7SNHPd4sK2nYNB/s7xXzNed0qR1sEWgRaBFoEWgRaBFoEWgRaBFoBgJwgDx9rBf96sWn
 1KfJf0MP65LWa5MgAAAAAElFTkSuQmCC
 
-------=_NextPart_01CDFC13.14533CF0
+------=_NextPart_01CE3FB8.7BBA6AB0
 Content-Location: file:///C:/213792E5/HowToExportingaVSTemplate_files/image007.png
 Content-Transfer-Encoding: base64
 Content-Type: image/png
@@ -7310,7 +7467,7 @@ y3nee0LJ39MjtP8GDewlERY7MVe+jl8W2MleV3i2LvVZFutSkNSUHgiKiuVaFyUKV08Dp3zXi0Hr
 RZau80LpFjv0swt4Z+LQG4ntnBOiN40LLKBL/nOH2TrffO/3RO3Fhf6xlRtBh51I6aISSi8a0p8s
 gYPK7it29qxy1qsIbdYnRNmCfGT7Juu+PXt/ZLc2/fv/ASyY6EikiuKdAAAAAElFTkSuQmCC
 
-------=_NextPart_01CDFC13.14533CF0
+------=_NextPart_01CE3FB8.7BBA6AB0
 Content-Location: file:///C:/213792E5/HowToExportingaVSTemplate_files/filelist.xml
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/xml; charset="utf-8"
@@ -7328,4 +7485,4 @@ Content-Type: text/xml; charset="utf-8"
  <o:File HRef=3D"image007.png"/>
  <o:File HRef=3D"filelist.xml"/>
 </xml>
-------=_NextPart_01CDFC13.14533CF0--
+------=_NextPart_01CE3FB8.7BBA6AB0--

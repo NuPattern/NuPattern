@@ -4,13 +4,14 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.Modeling.Validation;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features.Diagnostics;
+using NuPattern.ComponentModel.Composition;
+using NuPattern.Diagnostics;
 using NuPattern.Library.Properties;
 using NuPattern.Reflection;
 using NuPattern.Runtime;
 using NuPattern.Runtime.Authoring;
 using NuPattern.Runtime.Bindings;
+using NuPattern.Runtime.Composition;
 
 namespace NuPattern.Library.Automation
 {
@@ -47,7 +48,7 @@ namespace NuPattern.Library.Automation
         /// Initializes a new instance of the <see cref="EventSettingsValidations"/> class.
         /// </summary>
         [ImportingConstructor]
-        public EventSettingsValidations(IFeatureCompositionService composition)
+        public EventSettingsValidations(INuPatternCompositionService composition)
         {
             Guard.NotNull(() => composition, composition);
 
@@ -55,8 +56,8 @@ namespace NuPattern.Library.Automation
             // TODO: this could be refactored into a separate global service.
             if (ValueProviders == null || Conditions == null || Events == null)
             {
-                var valueProviders = composition.GetExports<IValueProvider, IFeatureComponentMetadata>();
-                var conditions = composition.GetExports<ICondition, IFeatureComponentMetadata>();
+                var valueProviders = composition.GetExports<IValueProvider, IComponentMetadata>();
+                var conditions = composition.GetExports<ICondition, IComponentMetadata>();
                 var events = composition.GetExports<IObservableEvent, IIdMetadata>();
 
                 ValueProviders = valueProviders.ToLookup(item => item.Metadata.Id, item => item.Metadata.ExportingType);

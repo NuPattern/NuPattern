@@ -1,9 +1,8 @@
 using System;
 using System.ComponentModel;
 using System.Globalization;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools;
-using Microsoft.VisualStudio.TeamArchitect.PowerTools.Features;
 using NuPattern.Runtime.Properties;
+using NuPattern.VisualStudio.Solution;
 
 namespace NuPattern.Runtime.Design
 {
@@ -12,7 +11,7 @@ namespace NuPattern.Runtime.Design
     /// </summary>
     public class SolutionItemUriConverter : TypeConverter
     {
-        private IFxrUriReferenceService uriReferenceService;
+        private IUriReferenceService uriReferenceService;
 
         /// <summary>
         /// Returns whether this converter can convert an object of the given type to the type of this converter, using the specified context.
@@ -116,14 +115,14 @@ namespace NuPattern.Runtime.Design
         {
             if (this.uriReferenceService == null)
             {
-                this.uriReferenceService = context.GetService<IFxrUriReferenceService>();
+                this.uriReferenceService = context.GetService<IUriReferenceService>();
 
                 if (this.uriReferenceService == null)
                 {
                     throw new NotSupportedException(string.Format(
                         CultureInfo.CurrentCulture,
                         Resources.SolutionItemUriConverter_MissingService,
-                        typeof(IFxrUriReferenceService)));
+                        typeof(IUriReferenceService)));
                 }
             }
         }

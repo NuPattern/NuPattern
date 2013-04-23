@@ -520,4 +520,16 @@
   <data name="Validate_ContainedElementInfoOrderGroupComparerIsUniqueToGroup" xml:space="preserve">
     <value>'{0}' has a different 'Order Group Comparer' than that of another sibling element, collection or extension point in the same 'Order Group'. You can only define one 'Order Group Comparer' for each 'Order Group'. You must either change the 'Order Group' to order using this comparer. Or you can clear the value 'Order Group Comparer', or select the same value as the other sibling elements, collections and extension points in the same 'Order Group'.</value>
   </data>
+  <data name="SchemaImplementation_TransactionDescriptionCreate" xml:space="preserve">
+    <value>Creating new instance</value>
+  </data>
+  <data name="SchemaImplementation_TransactionDescriptionDelete" xml:space="preserve">
+    <value>Deleting instance</value>
+  </data>
+  <data name="PatternModelSerializationHelper_TransactionDescriptionLoadingModel" xml:space="preserve">
+    <value>Loading pattern model</value>
+  </data>
+  <data name="PatternModelSerializationHelper_TransactionDescriptionLoadingDiagram" xml:space="preserve">
+    <value>Loading Diagram</value>
+  </data>
 </root>
