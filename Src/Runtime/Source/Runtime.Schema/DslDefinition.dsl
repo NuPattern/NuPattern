@@ -1761,7 +1761,7 @@
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="PatternModelExplorer" />
-  <Diagram Id="bbbccbe0-cf42-4307-b8a3-d9ac6b7169ff" Description="Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram" Name="PatternModelSchemaDiagram" DisplayName="Pattern Model Schema Diagram" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true" FillColor="Silver">
+  <Diagram Id="bbbccbe0-cf42-4307-b8a3-d9ac6b7169ff" Description="Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram" Name="PatternModelSchemaDiagram" DisplayName="Pattern Model Schema Diagram" AccessModifier="Assembly" Namespace="NuPattern.Runtime.Schema" GeneratesDoubleDerived="true" FillColor="Silver">
     <Properties>
       <DomainProperty Id="dcf24a57-f408-4ebb-a7e9-ba4abd2ef52e" Description="The color of the gradient in the title of the background." Name="AuthoringGradientColor" DisplayName="Authoring Gradient Color" DefaultValue="WhiteSmoke" GetterAccessModifier="Assembly" SetterAccessModifier="Assembly" IsBrowsable="false" IsUIReadOnly="true">
         <Type>

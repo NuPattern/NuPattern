@@ -221,7 +221,8 @@ namespace NuPattern.Runtime.UI.ViewModels
                     {
                         using (new MouseCursor(System.Windows.Input.Cursors.Wait))
                         {
-                            var product = this.context.PatternManager.CreateProduct(viewModel.CurrentToolkit, viewModel.ProductName);
+                            var toolkitInfo = viewModel.CurrentToolkit != null ? viewModel.CurrentToolkit.ToolkitInfo : null;
+                            var product = this.context.PatternManager.CreateProduct(toolkitInfo, viewModel.ProductName);
                             this.Select(product);
                         }
                     }

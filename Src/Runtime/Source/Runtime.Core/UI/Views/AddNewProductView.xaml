@@ -105,24 +105,24 @@
                         <Image
                         Width="40"
                         Height="40"
-                        Source="{Binding Schema.Pattern.Icon,Converter={StaticResource UriToCachedImageConverter},FallbackValue={StaticResource DefaultProductIcon}}" />
+                        Source="{Binding PatternIconPath,Converter={StaticResource UriToCachedImageConverter},FallbackValue={StaticResource DefaultProductIcon}}" />
                     </DataTemplate>
                 </ListView.Resources>
                 <ListView.View>
                     <GridView>
                         <GridViewColumn x:Name="firstColumn" Width="50" CellTemplate="{StaticResource VsixIcon}" p:SortBehavior.CanUseSort="false" />
-                        <GridViewColumn Width="{Binding ElementName=resizerColumn, Path=ActualWidth}" p:SortBehavior.SortExpression="Schema.Pattern.DisplayName"  p:SortBehavior.SortDirection="Ascending">
+                        <GridViewColumn Width="{Binding ElementName=resizerColumn, Path=ActualWidth}" p:SortBehavior.SortExpression="PatternDisplayName"  p:SortBehavior.SortDirection="Ascending">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock>
-                                    <Run Text="{Binding Schema.Pattern.DisplayName,Mode=OneWay}" FontWeight="Bold" />
+                                    <Run Text="{Binding PatternDisplayName,Mode=OneWay}" FontWeight="Bold" />
                                     <LineBreak />
-                                    <Run Text="{Binding Schema.Pattern.Description,Mode=OneWay}" />
+                                    <Run Text="{Binding PatternDescription,Mode=OneWay}" />
                                         <TextBlock.ToolTip>
                                             <ToolTip MaxWidth="350">
                                                 <TextBlock TextWrapping="WrapWithOverflow">
                                                     <TextBlock.Text>
-                                                        <Binding Path="Schema.Pattern.Description" />
+                                                        <Binding Path="PatternDescription" />
                                                     </TextBlock.Text>
                                                 </TextBlock>
                                             </ToolTip>
@@ -175,18 +175,18 @@
                 Background="{StaticResource VsVersion.Controls.Fill}">
                 <Run FontWeight="Bold" Text="Toolkit Information: " />
                 <LineBreak />
-                <Run Text="{Binding CurrentToolkit.Name,Mode=OneWay}" />
+                <Run Text="{Binding CurrentToolkit.ToolkitName,Mode=OneWay}" />
                 <LineBreak />
                 <LineBreak />
                 <Run FontWeight="Bold" Text="Description: " />
-                <Run Text="{Binding CurrentToolkit.Description,Mode=OneWay}" />
+                <Run Text="{Binding CurrentToolkit.ToolkitDescription,Mode=OneWay}" />
                 <LineBreak />
                 <LineBreak />
                 <Run FontWeight="Bold" Text="Author: " />
-                <Run Text="{Binding CurrentToolkit.Author,Mode=OneWay}" />
+                <Run Text="{Binding CurrentToolkit.ToolkitAuthor,Mode=OneWay}" />
                 <LineBreak />
                 <Run FontWeight="Bold" Text="Version: " />
-                <Run Text="{Binding CurrentToolkit.Version,Mode=OneWay}" />
+                <Run Text="{Binding CurrentToolkit.ToolkitVersion,Mode=OneWay}" />
             </TextBlock>
         </DockPanel>
 

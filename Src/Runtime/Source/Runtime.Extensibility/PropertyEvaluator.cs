@@ -22,6 +22,7 @@ namespace NuPattern.Runtime
             if (target == null)
                 return null;
 
+            // Try via TypeDescriptor
             var property = TypeDescriptor.GetProperties(target)[propertyName];
             if (property != null)
                 return property.GetValue(target);
@@ -61,8 +62,8 @@ namespace NuPattern.Runtime
                 }
             }
 
-            // Try via reflection.
-            var propInfo = target.GetType().GetProperty(propertyName);
+            // Try via reflection (supported internal properties for internal DSL classes)
+            var propInfo = target.GetType().GetProperty(propertyName, (BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static));
             if (propInfo != null)
                 return propInfo.GetValue(target, null);
 

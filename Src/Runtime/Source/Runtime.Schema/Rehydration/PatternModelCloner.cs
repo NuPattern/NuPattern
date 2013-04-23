@@ -14,7 +14,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// Clones a pattern schema model from a source to a target.
     /// </summary>
-    public class PatternModelCloner
+    internal class PatternModelCloner
     {
         private static readonly ITraceSource tracer = Tracer.GetSourceFor<PatternModelCloner>();
 

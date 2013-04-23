@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.Modeling;
+﻿using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 using NuPattern.Modeling;
 
@@ -8,8 +7,7 @@ namespace NuPattern.Runtime.Schema
     /// <summary>
     /// Extensions to the <see cref="ModelElement"/> class.
     /// </summary>
-    [CLSCompliant(false)]
-    public static class ModelElementExtensions
+    internal static class ModelElementExtensions
     {
         /// <summary>
         /// Gets the (first) shape representing the given element, in the current view

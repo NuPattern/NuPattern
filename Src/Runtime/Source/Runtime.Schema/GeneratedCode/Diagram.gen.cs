@@ -22,9 +22,8 @@ namespace NuPattern.Runtime.Schema
 	[DslDesign::DisplayNameResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram.DisplayName", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslDesign::DescriptionResource("NuPattern.Runtime.Schema.PatternModelSchemaDiagram.Description", typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel), "NuPattern.Runtime.Schema.GeneratedCode.DomainModelResx.gen")]
 	[DslModeling::DomainModelOwner(typeof(global::NuPattern.Runtime.Schema.PatternModelDomainModel))]
-	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("bbbccbe0-cf42-4307-b8a3-d9ac6b7169ff")]
-	public abstract partial class PatternModelSchemaDiagramBase : DslDiagrams::Diagram
+	internal abstract partial class PatternModelSchemaDiagramBase : DslDiagrams::Diagram
 	{
 		#region Diagram boilerplate
 		private static DslDiagrams::StyleSet classStyleSet;
@@ -1594,9 +1593,8 @@ namespace NuPattern.Runtime.Schema
 	/// DomainClass PatternModelSchemaDiagram
 	/// Description for NuPattern.Runtime.Schema.PatternModelSchemaDiagram
 	/// </summary>
-	[global::System.CLSCompliant(true)]
 			
-	public partial class PatternModelSchemaDiagram : PatternModelSchemaDiagramBase
+	internal partial class PatternModelSchemaDiagram : PatternModelSchemaDiagramBase
 	{
 		#region Constructors
 		/// <summary>
